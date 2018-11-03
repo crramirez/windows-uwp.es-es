@@ -8,12 +8,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 323190b01cad8a0832d57386f6bde9fde4f2180c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4d502c721f98269c1256510a6f91f8c6dc8cd0fb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942444"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994403"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
@@ -73,7 +73,7 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios de banner qu
 
 * Omitir, de cualquier manera, el temporizador de actualización mínima integrado para anuncios de banner, lo que incluye, entre otros, intercambiar objetos [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) o forzar una actualización de la página sin interacción del usuario.
 
-* Usar unidades de anuncio dinámicas (es decir, unidades de anuncio que se obtienen a partir del panel del Centro de desarrollo de Windows) durante la etapa de desarrollo y pruebas o en un emulador.
+* Con unidades de anuncios dinámicos (es decir, unidades de anuncios que se obtienen del centro de partners) durante el desarrollo y pruebas, o en un emulador.
 
 * Escribir o distribuir código que llame a los servicios de anuncio a través de medios que no sean las bibliotecas de Microsoft Advertising que se ejecutan en el contexto de la aplicación.
 
@@ -157,7 +157,7 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios intersticial
 
 * Solicitar un anuncio intersticial solo para tener un anuncio de copia de seguridad para una secuencia de anuncios en cascada. Si solicitas un anuncio intersticial y luego recibes el evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready), el siguiente anuncio intersticial que se muestre en la aplicación debe ser el anuncio que está listo para mostrarse a través del método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-* Usar unidades de anuncio dinámicas (es decir, unidades de anuncio que se obtienen a partir del panel del Centro de desarrollo de Windows) durante la etapa de desarrollo y pruebas o en un emulador.
+* Con unidades de anuncios dinámicos (es decir, unidades de anuncios que se obtienen del centro de partners) durante el desarrollo y pruebas, o en un emulador.
 
 * Escribir o distribuir código que llame a los servicios de anuncio a través de medios que no sean las bibliotecas de Microsoft Advertising que se ejecutan en el contexto de la aplicación.
 

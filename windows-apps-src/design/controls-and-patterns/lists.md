@@ -14,12 +14,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f54985d446c0c95f4ee0b917a1d91e546e359483
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3594697292d6dfe9435036b838a0ba4bd2dbfc05
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928774"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5993293"
 ---
 # <a name="lists"></a>Listas
 
@@ -39,7 +39,7 @@ Se proporcionan directrices de diseño, características y ejemplos para cada pa
 > <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
 > </div>
 > De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo ahora se desplaza/realiza movimiento panorámico en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Consulta el tema de referencia de API [clase ScrollViewer] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obtener más información.
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Consulta el tema de referencia de API de la [Clase ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obtener más información.
 
 ## <a name="list-views"></a>Vistas de lista
 

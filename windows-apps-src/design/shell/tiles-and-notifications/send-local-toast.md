@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, cómo, inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
 ms.openlocfilehash: 95f72180038b6ccbed5f399c2cd58081915baf2c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941789"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990315"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar una notificación de icono local
 

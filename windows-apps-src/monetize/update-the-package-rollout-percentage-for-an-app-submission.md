@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, app submission, envío de la aplicación, update, actualizar, percentage, porcentaje
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
-ms.openlocfilehash: e943e27275f5938960f673ac68572593cf4ece57
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ee7657a1ebd08e70e6b5dac8a9a723637539066e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5923434"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990857"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>Actualizar el porcentaje de lanzamiento de un envío de aplicación
 
@@ -26,9 +26,9 @@ Usa este método en la API de envío de Microsoft Store para [actualizar el porc
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-* Crea un envío para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o con el método de [creación de un envío de aplicación](create-an-app-submission.md).
-* Habilita un lanzamiento de paquete gradual para el envío. Puedes hacerlo en el [panel del Centro de desarrollo](../publish/gradual-package-rollout.md) o mediante el [uso de la API de envío de Microsoft Store](manage-app-submissions.md#manage-gradual-package-rollout).
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Crear un envío para una de las aplicaciones. Puedes hacer esto en el centro de partners, o puedes hacerlo mediante el método [crea un envío de aplicación](create-an-app-submission.md) .
+* Habilita un lanzamiento de paquete gradual para el envío. Puedes hacer esto en el [Centro de partners](../publish/gradual-package-rollout.md), o puedes hacerlo mediante el [uso de la API de envío de Microsoft Store](manage-app-submissions.md#manage-gradual-package-rollout).
 
 ## <a name="request"></a>Solicitud
 
@@ -51,7 +51,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | cadena | Obligatorio. El id. de la Store de la aplicación que contiene el envío con el porcentaje de lanzamiento de paquete que quieres actualizar. Para obtener más información sobre el identificador de la Store, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | cadena | Obligatorio. El identificador del envío con el porcentaje de lanzamiento de paquete que quieres actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de aplicación](create-an-app-submission.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de envío del panel.   |
+| submissionId | cadena | Obligatorio. El identificador del envío con el porcentaje de lanzamiento de paquete que quieres actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de aplicación](create-an-app-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.   |
 | percentage  |  flotante  |  Obligatorio. El porcentaje de usuarios que recibirán el paquete de lanzamiento gradual.  |
 
 
@@ -88,7 +88,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el envío. |
-| 409  | Este código indica uno de los siguientes errores:<br/><br/><ul><li>El envío no está en un estado válido para la operación de lanzamiento gradual (antes de llamar a este método, se debe publicar el envío y se debe establecer el valor [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) en **PackageRolloutInProgress**).</li><li>El envío no pertenece a la aplicación especificada.</li><li>La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).</li></ul> |   
+| 409  | Este código indica uno de los siguientes errores:<br/><br/><ul><li>El envío no está en un estado válido para la operación de lanzamiento gradual (antes de llamar a este método, se debe publicar el envío y se debe establecer el valor [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) en **PackageRolloutInProgress**).</li><li>El envío no pertenece a la aplicación especificada.</li><li>La aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).</li></ul> |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

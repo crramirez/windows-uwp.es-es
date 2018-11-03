@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Crear un envío de aplicación
 ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create app submission, crear envío de aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 740e65d79636c9e5451e68fa84ce2eae4e3252c6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: fd97efca42049fd9f5adc4d051688074d91132fa
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935698"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992069"
 ---
 # <a name="create-an-app-submission"></a>Crear un envío de aplicación
 
-Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-app-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-app-submission.md) para la recopilación y la publicación.
+Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que está registrada en tu cuenta del centro de partners. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-app-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-app-submission.md) para la recopilación y la publicación.
 
 Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de aplicación mediante la API de envío de Microsoft Store, consulta [Administración de envíos de aplicación](manage-app-submissions.md).
 
@@ -188,7 +188,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo crear el envío porque la solicitud no es válida. |
-| 409  | No se pudo crear el envío debido al estado actual de la aplicación o a que esta aplicación usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo crear el envío debido al estado actual de la aplicación o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

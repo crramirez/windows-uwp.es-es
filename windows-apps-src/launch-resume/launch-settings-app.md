@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b86298ca671282dea201e3088bc60845231fe007
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920803"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990989"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 

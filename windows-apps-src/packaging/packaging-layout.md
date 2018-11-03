@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9342b4ce35cb50037813ed2210e2d7246411ad92
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5936433"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5997117"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Creación del paquete con el diseño del empaquetado  
 

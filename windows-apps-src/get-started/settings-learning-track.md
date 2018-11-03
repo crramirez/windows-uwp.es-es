@@ -8,11 +8,11 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, configuración, guardar configuración, cargar configuración
 ms.localizationpriority: medium
 ms.openlocfilehash: 18b11ea100915f8b6ff52db5223284da6f24a1d4
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938557"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996256"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Guardar y cargar la configuración en una aplicación para UWP
 

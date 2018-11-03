@@ -98,7 +98,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Chad | 19USD | 99USD | XAF pagados al banco | No | 
 |  Chile | 9776CLP | 46000CLP | USD pagados al banco | No | 
 |  China | 116CNY | 600CNY | USD pagados al banco | Sí* | 
-|  Colombia | 36543COP | 180000COP | USD pagados al banco | No | 
+|  Colombia | 36543 COP | 180000 COP | USD pagados al banco | No | 
 |  Comoras | 19USD | 99USD | USD pagados al banco | No | 
 |  Congo | 19USD | 99USD | XAF pagados al banco | No | 
 |  Congo (RDC) | 19USD | 99USD | USD pagados al banco | No | 
@@ -228,7 +228,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Suazilandia | 19USD | 99USD | No pago | No | 
 |  Suecia | 123SEK | 700SEK | SEK pagadas al banco | Sí | 
 |  Suiza | 17 CHF | 90 CHF | CHF pagados al banco | Sí | 
-|  Taiwán | 568TWD | 2840TWD | USD pagados al banco | Sí | 
+|  Taiwan | 568TWD | 2840TWD | USD pagados al banco | Sí | 
 |  Tayikistán | 19USD | 99USD | USD pagados al banco | No | 
 |  Tanzania | 19USD | 99USD | TZS pagados al banco | No | 
 |  Tailandia | 601THB | 3000THB | THB pagados al banco | Sí | 

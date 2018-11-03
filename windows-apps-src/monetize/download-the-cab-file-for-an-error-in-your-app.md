@@ -8,16 +8,16 @@ ms.date: 06/16/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab
 ms.localizationpriority: medium
-ms.openlocfilehash: af32a994f8dbfc7563c56f853bc0226f0da45940
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 047340d180e3de9f963dc76c85edaa6abea67327
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921431"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994474"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Descargar el archivo .cab para un error de la aplicación
 
-Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab que está asociado con un error concreto de la aplicación que se notificó al Centro de desarrollo. Este método solo puede descargar el archivo .cab para un error en la aplicación que se haya producido en los últimos 30 días. Las descargas del archivo .cab también están disponibles en la sección **Errores** del [informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab que está asociado con un error concreto de la aplicación que se ha notificado al centro de partners. Este método solo puede descargar el archivo .cab para un error en la aplicación que se haya producido en los últimos 30 días. Descargas del archivo .cab también están disponibles en la sección de **errores** del [informe de estado](../publish/health-report.md) en el centro de partners.
 
 Antes de poder usar este método, tienes que emplear primero el método para [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) y recuperar el id. del archivo .cab que quieres descargar.
 
@@ -51,7 +51,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  |
 |---------------|--------|---------------|------|
-| applicationId | string | El Id. de la Store de la aplicación para la que quieres descargar un archivo CAB. El Id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | string | El Id. de la Store de la aplicación para la que quieres descargar un archivo CAB. El identificador de la tienda está disponible en la [página de identidad de la aplicación](../publish/view-app-identity-details.md) del centro de partners. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
 | cabId | cadena | El id. exclusivo del archivo .cab que quieres descargar. Para obtener este identificador, usa el método [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabId** en el cuerpo de la respuesta de ese método. |  Sí  |
 
  

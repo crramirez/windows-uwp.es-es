@@ -7,16 +7,16 @@ ms.date: 07/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, perspectivas
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e1ecdf192f54c0158ce503a58aafb65108b8fdc
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8d0e117f8d71593874a7e65bdaf6590507db6456
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5931966"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990897"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para obtener detalles datos relacionados con las métricas de estado de una aplicación de escritorio que agregaste en el [programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de estado](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el panel del centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener detalles datos relacionados con las métricas de estado de una aplicación de escritorio que agregaste en el [programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de estado](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -46,7 +46,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto de la aplicación de escritorio para la que quieres obtener datos de información. Para obtener el id. del producto de una aplicación de escritorio, abra cualquier [informe de análisis del Centro de desarrollo de tu aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **Informe de estado**) y recuperara el id. del producto desde la dirección URL. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de información de todas las aplicaciones registradas en tu cuenta.  |  No  |
+| applicationId | string | El identificador de producto de la aplicación de escritorio para la que quieres obtener datos de información. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [informe de análisis de la aplicación de escritorio en el centro de partners](https://msdn.microsoft.com/library/windows/desktop/mt826504) (por ejemplo, el **informe de estado**) y recuperar el identificador de producto de la dirección URL. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de información de todas las aplicaciones registradas en tu cuenta.  |  No  |
 | startDate | date | La fecha de inicio del intervalo de fechas de datos de información para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | date | La fecha de finalización del intervalo de fechas de datos de información para recuperar. El valor predeterminado es la fecha actual. |  No  |
 | filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *filter = dataType eq 'adquisición'*. <p/><p/>Actualmente, este método solo admite el **estado**de filtro.  | No   |

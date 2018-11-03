@@ -954,7 +954,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Taiwán</td>
+    <td>Taiwan</td>
     <td>200USD</td>
     <td>Transferencia bancaria</td>
     <td>25USD</td>
@@ -2016,7 +2016,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Taiwán</td>
+    <td>Taiwan</td>
     <td>50USD</td>
     <td>Transferencia bancaria</td>
     <td>50USD</td>
@@ -3064,7 +3064,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>Taiwán</td>
+    <td>Taiwan</td>
     <td>200USD</td>
     <td>Transferencia bancaria</td>
     <td>25USD</td>
@@ -4055,7 +4055,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Taiwán</td>
+    <td>Taiwan</td>
     <td>200USD</td>
     <td>Transferencia bancaria</td>
     <td>25USD</td>

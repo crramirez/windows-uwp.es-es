@@ -8,16 +8,16 @@ ms.date: 08/15/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d42cf9f0ed0827b1d5c451ad9fed077ef6acc6b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 585e44a884bc90c5c7e69458ad5d024d7f26a79f
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5946116"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995833"
 ---
 # <a name="get-monthly-app-usage"></a>Obtener el uso mensual de la aplicación
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de uso agregados (sin incluir multijugador de Xbox) en formato JSON de una aplicación durante un intervalo de fechas (últimos 90 días solo) y otros filtros opcionales. Esta información también está disponible en el [informe de uso](../publish/usage-report.md) en el panel del centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de uso agregados (sin incluir multijugador de Xbox) en formato JSON de una aplicación durante un intervalo de fechas (últimos 90 días solo) y otros filtros opcionales. Esta información también está disponible en el [informe de uso](../publish/usage-report.md) del centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: Usa este método en la API de envío de Microsoft Store para eliminar un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para eliminar un complemento para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Eliminar un complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on, complemento, delete, eliminar, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: db8c394cac29afabba5229e21712320c82b89364
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 53c7125b48c32c8e39861f933f80fb88d6d904be
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935069"
+ms.locfileid: "5989774"
 ---
 # <a name="delete-an-add-on"></a>Eliminar un complemento
 
-Usa este método en la API de envío de Microsoft Store para eliminar un complemento (también conocido como producto desde la aplicación o IAP) de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para eliminar un complemento (también conocido como producto la aplicación o IAP) para una aplicación que está registrada en tu cuenta del centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -46,7 +46,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | cadena | Obligatorio. El Id. de la Store del complemento que se va a eliminar. El Id. de la Store está disponible en el panel del Centro de desarrollo.  |
+| id | cadena | Obligatorio. El Id. de la Store del complemento que se va a eliminar. El identificador de la tienda está disponible en el centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -75,10 +75,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | La solicitud no es válida. |
 | 404  | No se pudo encontrar el complemento especificado.  |
-| 409  | Se encontró el complemento especificado, pero no se ha podido eliminar en su estado actual o el complemento usa una función de panel del Centro de desarrollo que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Se encontró el complemento especificado, pero no se ha podido en su estado actual o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtención de todos los complementos](get-all-add-ons.md)

@@ -1,36 +1,36 @@
 ---
 author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
-description: Usa estos métodos en la API de envío de Microsoft Store para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows.
+description: Usa estos métodos en la API de envío de Microsoft Store para administrar envíos para las aplicaciones que están registradas en tu cuenta del centro de partners.
 title: Administración de envíos de aplicaciones
 ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f95e91c1ef9e47ab3371a1481237dc510eddae7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921083"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996678"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
 La API de envío de Microsoft Store proporciona métodos que puedes usar para administrar envíos para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Si usas la API de envío de Microsoft Store para crear un envío de una aplicación, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el panel del Centro de desarrollo. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
+> Si usas la API de envío de Microsoft Store para crear un envío para una aplicación, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de centro de partners. Si usas el centro de partners para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
 
 > [!IMPORTANT]
-> No puedes usar esta API para publicar envíos para [compras por volumen a través de Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md) o publicar envíos para [aplicaciones LOB](../publish/distribute-lob-apps-to-enterprises.md) directamente para empresas. Para estos dos escenarios, debes usar el panel del Centro de desarrollo de Windows para publicar el envío.
+> No puedes usar esta API para publicar envíos para [compras por volumen a través de Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md) o publicar envíos para [aplicaciones LOB](../publish/distribute-lob-apps-to-enterprises.md) directamente para empresas. Para estos dos escenarios, debes usar el centro de partners para publicar el envío.
 
 
 <span id="methods-for-app-submissions" />
 
 ## <a name="methods-for-managing-app-submissions"></a>Métodos para administrar envíos de aplicaciones
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de aplicación. Antes de poder usar estos métodos, la aplicación debe existir en tu cuenta del Centro de desarrollo y debes haber creado un envío para la aplicación del panel. Para obtener más información, consulta [Requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de aplicación. Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del centro de partners y primero debes crear un envío de la aplicación Centro de partners. Para obtener más información, consulta [Requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
 
 <table>
 <colgroup>
@@ -127,7 +127,7 @@ Para crear un envío de aplicación, sigue este proceso.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Ejecuta el siguiente método para [confirmar el envío de aplicación](commit-an-app-submission.md). Esta acción avisará al Centro de desarrollo que completaste el envío y que las actualizaciones deberían haberse aplicado a tu cuenta.
+5. Ejecuta el siguiente método para [confirmar el envío de aplicación](commit-an-app-submission.md). Esta acción avisará centro de partners que hayas terminado con el envío y que las actualizaciones ahora deben aplicarse a tu cuenta.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
@@ -141,13 +141,13 @@ Para crear un envío de aplicación, sigue este proceso.
 
     Para confirmar el estado del envío, revisa el valor de *status* en el cuerpo de la respuesta. Este valor debe cambiar de **CommitStarted** a **PreProcessing** si la solicitud se realiza correctamente o a **CommitFailed** si hay errores en la solicitud. Si hay errores, el campo *statusDetails* contendrá más detalles sobre el error.
 
-7. Después de completarse correctamente la confirmación, el envío se remite a la Store para su ingesta. Para continuar con la supervisión del progreso del envío, puedes usar el método anterior o visitar el panel del Centro de desarrollo.
+7. Después de completarse correctamente la confirmación, el envío se remite a la Store para su ingesta. Puedes seguir supervisar el progreso del envío mediante el método anterior, o visitando el centro de partners.
 
 <span id="manage-gradual-package-rollout">
 
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>Métodos para administrar un lanzamiento de paquete gradual
 
-Puedes lanzar gradualmente los paquetes actualizados de un envío de aplicación para un porcentaje de los clientes de tu aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Puedes cambiar el porcentaje de lanzamiento (o detener la actualización) para un envío publicado sin tener que crear un nuevo envío. Para obtener más detalles, incluidas instrucciones sobre cómo habilitar y administrar un lanzamiento de paquete gradual en el panel del Centro de desarrollo, consulta [este artículo](../publish/gradual-package-rollout.md).
+Puedes lanzar gradualmente los paquetes actualizados de un envío de aplicación para un porcentaje de los clientes de tu aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Puedes cambiar el porcentaje de lanzamiento (o detener la actualización) para un envío publicado sin tener que crear un nuevo envío. Para obtener más detalles, incluidas las instrucciones para habilitar y administrar un lanzamiento de paquete gradual en el centro de partners, consulta [este artículo](../publish/gradual-package-rollout.md).
 
 Para habilitar un lanzamiento de paquete gradual mediante programación para un envío de aplicación, sigue este proceso usando los siguientes métodos en la API de envío de Microsoft Store:
 
@@ -339,7 +339,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor      | Tipo   | Descripción      |
 |------------|--------|-------------------|
-| id            | string  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de aplicación](create-an-app-submission.md), [obtener todas las aplicaciones](get-all-apps.md) y [obtener una aplicación](get-an-app.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la dirección URL de la página de envío del panel.  |
+| id            | string  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de aplicación](create-an-app-submission.md), [obtener todas las aplicaciones](get-all-apps.md) y [obtener una aplicación](get-an-app.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
 | applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para la aplicación.        |   
 | visibility           |  string  |  Visibilidad de la app. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
@@ -362,7 +362,7 @@ Este recurso tiene los siguientes valores.
 | enterpriseLicensing           |  cadena  |  Uno de los [valores de licencia de empresa](#enterprise-licensing) indica el comportamiento de la licencia de empresa de la aplicación.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  booleano   |  Indica si se permite que Microsoft [tenga la aplicación disponible para futuras familias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | object   |  Un diccionario de pares clave y valor, donde cada clave es una [familia de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) y cada valor es un booleano que indica si la aplicación puede seleccionar como destino la familia de dispositivos especificada.     |    
-| friendlyName           |   cadena  |  El nombre descriptivo del envío, como se muestra en el panel del Centro de desarrollo. Generas este valor cuando creas el envío.       |  
+| friendlyName           |   string  |  El nombre descriptivo del envío, como se muestra en el centro de partners. Generas este valor cuando creas el envío.       |  
 | tráileres           |  matriz |   Matriz que contiene hasta 15 [recursos de tráileres](#trailer-object) que representan tráileres de vídeo para la descripción de la aplicación.<br/><br/>   |  
 
 
@@ -389,8 +389,8 @@ Este recurso contiene información de venta de una aplicación.
 
 > [!IMPORTANT]
 > El recurso **Sale** ya no se admite y actualmente no se pueden obtener ni modificar los datos de ventas del envío de una aplicación mediante la API de envío de Microsoft Store. En el futuro, actualizaremos la API de envío de Microsoft Store para incorporar una nueva forma de acceder mediante programación a la información de ventas de los envíos de aplicaciones.
->    * Después de llamar al [método GET para obtener un envío de aplicación](get-an-app-submission.md), el valor de *sales* estará vacío. Puedes seguir utilizando el panel del Centro de desarrollo para obtener los datos de ventas referentes al envío de la aplicación.
->    * Cuando se llama al [método PUT para actualizar un envío de aplicación](update-an-app-submission.md), la información del valor de *sales* se omite. Puedes seguir utilizando el panel del Centro de desarrollo para modificar los datos de ventas referentes al envío de la aplicación.
+>    * Después de llamar al [método GET para obtener un envío de aplicación](get-an-app-submission.md), el valor de *sales* estará vacío. Puedes seguir usar el centro de partners para obtener los datos de ventas de envío de la aplicación.
+>    * Cuando se llama al [método PUT para actualizar un envío de aplicación](update-an-app-submission.md), la información del valor de *sales* se omite. Puedes seguir utilizando el centro de partners para modificar los datos de ventas de envío de la aplicación.
 
 Este recurso tiene los siguientes valores.
 
@@ -425,9 +425,9 @@ Este recurso contiene la información de descripción de base de una aplicación
 |  copyrightAndTrademarkInfo                |   string      |  [Información de copyright o marcas comerciales](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info) opcional.  |
 |  keywords                |  array       |  Matriz de [palabras clave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ayudar a tu aplicación a aparecer en los resultados de búsqueda.    |
 |  licenseTerms                |    string     | [Términos de licencia](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionales para tu aplicación.     |
-|  privacyPolicy                |   string      |   Esta valor está obsoleta. Para establecer o cambiar la dirección URL de directiva de privacidad de la aplicación, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#privacy-policy-url) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
-|  supportContact                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la URL de contacto de soporte o la dirección de correo electrónico, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#support-contact-info) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se ignorará.        |
-|  websiteUrl                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la página web de la aplicación, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#website) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.      |    
+|  privacyPolicy                |   string      |   Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la directiva de privacidad de la aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#privacy-policy-url) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
+|  supportContact                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la compatibilidad con contacto dirección URL o correo electrónico para tu aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#support-contact-info) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se ignorará.        |
+|  websiteUrl                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la página web de la aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#website) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.      |    
 |  description               |    string     |   [Descripción](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) de la aplicación.   |     
 |  features               |    array     |  Matriz de hasta 20 cadenas que enumera las [características](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) de tu aplicación.     |
 |  releaseNotes               |  string       |  [Notas de la versión](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) de tu aplicación.    |
@@ -451,7 +451,7 @@ Este recurso contiene datos de imagen e icono para una descripción de la aplica
 |-----------------|---------|------|
 |  fileName               |    string     |   Nombre del archivo de imagen en el archivo ZIP que cargaste para el envío.    |     
 |  fileStatus               |   string      |  Estado del archivo de imagen. Puede ser uno de los valores siguientes: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
-|  id  |  string  | Identificador de la imagen. Este valor está proporcionado por el Centro de desarrollo.  |
+|  id  |  string  | Identificador de la imagen. Este valor lo proporciona el centro de partners.  |
 |  description  |  string  | Descripción de la imagen.  |
 |  imageType  |  string  | Indica el tipo de la imagen. Actualmente se admiten las siguientes cadenas. <p/>[Imágenes de captura de pantalla](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de pantalla (usa este valor para la captura de pantalla de escritorio)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos de la tienda](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Icono (usa este valor para el logotipo de 1:1 300 x 300 píxeles)</li></ul><p/>[Imágenes promocionales](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imágenes de Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imágenes promocionales opcionales](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
@@ -460,7 +460,7 @@ Este recurso contiene datos de imagen e icono para una descripción de la aplica
 
 ### <a name="gaming-options-resource"></a>Recurso de opciones de juegos
 
-Este recurso contiene configuración relacionada con juegos para la aplicación. Los valores de este recurso corresponden con la [configuración de juegos](../publish/enter-app-properties.md#game-settings) para los envíos en el panel del Centro de desarrollo.
+Este recurso contiene configuración relacionada con juegos para la aplicación. Los valores de este recurso corresponden a la [Configuración del juego](../publish/enter-app-properties.md#game-settings) para los envíos en el centro de partners.
 
 ```json
 {
@@ -567,14 +567,14 @@ Este recurso contiene detalles sobre un paquete de aplicación para el envío.
 Este recurso tiene los siguientes valores.  
 
 > [!NOTE]
-> Al llamar al método para [actualizar un envío de aplicación](update-an-app-submission.md), solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de este objeto son necesarios en el cuerpo de la solicitud. El Centro de desarrollo se encarga de rellenar el resto de valores.
+> Al llamar al método para [actualizar un envío de aplicación](update-an-app-submission.md), solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de este objeto son necesarios en el cuerpo de la solicitud. Los demás valores se encarga de rellenar el centro de partners.
 
 | Valor           | Tipo    | Descripción                   |
 |-----------------|---------|------|
 | fileName   |   string      |  Nombre del paquete.    |  
 | fileStatus    | string    |  Estado del paquete. Puede ser uno de los valores siguientes: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor lo proporciona el Centro de desarrollo.   |     
-| versión    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor lo proporciona el centro de partners.   |     
+| version    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  string   |  Arquitectura del paquete (por ejemplo, ARM).   |     
 | languages    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
 | capabilities    |  array   |  Matriz de funcionalidades necesarias para el paquete. Para obtener más información acerca de las funcionalidades, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
@@ -639,13 +639,13 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 | fallbackSubmissionId    |  cadena   |  El id. del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
 > [!NOTE]
-> El Centro de desarrollo asigna los valores *packageRolloutStatus* y *fallbackSubmissionId* y no está previsto que los establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
+> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no están destinados a ser establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
 
 <span id="trailer-object" />
 
 ### <a name="trailers-resource"></a>Recurso de tráileres
 
-Este recurso representa un tráiler para la descripción de la aplicación. Los valores de este recurso corresponden con las opciones de [tráileres](../publish/app-screenshots-and-images.md#trailers) para los envíos en el panel del Centro de desarrollo.
+Este recurso representa un tráiler para la descripción de la aplicación. Los valores de este recurso corresponden con las opciones de [tráileres](../publish/app-screenshots-and-images.md#trailers) para los envíos en el centro de partners.
 
 Puedes agregar hasta 15 recursos de tráileres a la matriz de *tráileres* en un [recurso de envío de aplicación](#app-submission-object). Para cargar archivos de vídeo de tráiler e imágenes en miniatura para un envío, agrega estos archivos al mismo archivo ZIP que contiene los paquetes y las imágenes de descripciones para el envío y, a continuación, carga este archivo ZIP en el URI de firma de acceso compartido (SAS) para el envío. Para obtener más información acerca de la carga del archivo ZIP en el URI de SAS, consulta [Crear un envío de aplicación](#create-an-app-submission).
 
@@ -677,9 +677,9 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-|  id               |    string     |   Identificador del tráiler. Este valor lo proporciona el Centro de desarrollo.   |
+|  id               |    string     |   Identificador del tráiler. Este valor lo proporciona el centro de partners.   |
 |  videoFileName               |    string     |    Nombre del archivo de vídeo de tráiler en el archivo ZIP que contiene archivos para el envío.    |     
-|  videoFileId               |   string      |  Identificador del archivo de vídeo de tráiler. Este valor lo proporciona el Centro de desarrollo.   |     
+|  videoFileId               |   string      |  Identificador del archivo de vídeo de tráiler. Este valor lo proporciona el centro de partners.   |     
 |  trailerAssets               |   object      |  Diccionario de pares de claves y valores en el cual cada clave hace referencia al código de un idioma y cada valor hace referencia a un [recurso de activos de tráiler](#trailer-assets-object) que contiene los activos específicos de configuración regional adicional para el tráiler. Para obtener más información acerca de los códigos de idioma admitidos, consulta [Idiomas admitidos](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
 
 > [!NOTE]
@@ -706,7 +706,7 @@ Este recurso describe la imagen en miniatura para un tráiler. Este recurso tien
 | Valor           | Tipo    | Descripción           |
 |-----------------|---------|------|
 |  fileName               |    string     |   Nombre del archivo de imagen en miniatura en el archivo ZIP que cargaste para el envío.    |     
-|  id  |  string  | Identificador de la imagen en miniatura. Este valor lo proporciona el Centro de desarrollo.  |
+|  id  |  string  | Identificador de la imagen en miniatura. Este valor lo proporciona el centro de partners.  |
 |  description  |  string  | Descripción de la imagen en miniatura. Este valor son solo metadatos y no se muestra a los usuarios.   |
 
 <span/>
@@ -726,7 +726,7 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 |  Base               |   No se establece la franja de precios; usa el precio base para la aplicación.      |     
 |  NotAvailable              |   La aplicación no está disponible en la región especificada.    |     
 |  Free              |   La aplicación es gratuita.    |    
-|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de franjas de precios que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **Precios y disponibilidad** para ver cualquiera de los envíos de aplicaciones del panel del Centro de desarrollo y haz clic en el vínculo **Ver tabla** en la sección **Mercados y precios personalizados** (en algunas cuentas de desarrollador, este vínculo está en la sección **Precios**).    |
+|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio niveles que están disponibles para tu cuenta de desarrollador, incluidos los precios específicas del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo **Ver la tabla** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).    |
 
 
 <span id="enterprise-licensing" />
@@ -736,7 +736,7 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 Los valores siguientes representan el comportamiento de las licencias organizativas para la aplicación. Para obtener más información acerca de estas opciones, consulta [Opciones de licencias organizativas](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
-> Aunque puedes configurar las opciones de licencias organizativas para el envío de aplicaciones a través de la API de envío, no puedes usar esta API para publicar envíos para [compras por volumen a través de la Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md). Para publicar envíos a Microsoft Store para Empresas y Microsoft Store para Educación, debes usar el panel del Centro de desarrollo de Windows.
+> Aunque puedes configurar las opciones de licencias organizativas para el envío de aplicaciones a través de la API de envío, no puedes usar esta API para publicar envíos para [compras por volumen a través de la Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md). Para publicar envíos a Microsoft Store para empresas y Microsoft Store para educación, debes usar el centro de partners.
 
 
 | Valor           |  Descripción      |
@@ -775,4 +775,4 @@ Los valores siguientes representan el código de estado de un envío.
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener datos de aplicación mediante la API de envío de Microsoft Store](get-app-data.md)
-* [Envíos de aplicaciones en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [Envíos de aplicaciones en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)

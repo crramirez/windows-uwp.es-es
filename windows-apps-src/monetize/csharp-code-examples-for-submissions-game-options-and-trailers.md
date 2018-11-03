@@ -7,12 +7,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: ab186c6139755ca2a8c823093268e6cf21956c90
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 61d2a919d6bebcb1807d8084dda39a2e6d660ca5
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929730"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990456"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>Muestra de C\#: envío de aplicación con opciones de juego y tráileres
 
@@ -39,7 +39,7 @@ Estos ejemplos cumplen los siguientes requisitos:
 
 La clase ```CreateAndSubmitSubmissionExample``` define un método ```Execute``` público que llama a otros métodos de ejemplo para usar la API de envío de Microsoft Store para crear y confirmar un envío de aplicación que contiene opciones de juego y un tráiler. Para adaptar este código a tu propio uso:
 
-* Asigna la variable ```tenantId``` al identificador de inquilino para tu aplicación y asigna las variables ```clientId``` y ```clientSecret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, consulta [Asociación de una aplicación de Azure AD a tu cuenta del Centro de desarrollo de Windows](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)
+* Asigna la variable ```tenantId``` al identificador de inquilino para tu aplicación y asigna las variables ```clientId``` y ```clientSecret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, consulta [cómo asociar una aplicación de Azure AD con tu cuenta del centro de partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Asigna la variable ```applicationId``` al [Id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la cual quieres crear un envío.
 
 > [!div class="tabbedCodeSnippets"]

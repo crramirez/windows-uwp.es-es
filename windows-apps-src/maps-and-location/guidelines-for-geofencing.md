@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, geovalla, geofencing
 ms.localizationpriority: medium
 ms.openlocfilehash: 86104f00ed0189290fd0cd718042573d9d592cc3
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919581"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5993269"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Directrices para usar geovallas en aplicaciones
 

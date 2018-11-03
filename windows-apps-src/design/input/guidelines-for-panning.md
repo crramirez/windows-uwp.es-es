@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 31725c6cb9a966f02f8d1f8d62ca980e72c95326
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0ca4bf518837f072fb58fc0a152e08a82cf5dfad
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939748"
+ms.locfileid: "5989632"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
@@ -84,7 +84,7 @@ El movimiento panorámico de forma táctil, mediante un gesto de deslizar o desl
 > <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
 > </div>
 > De manera predeterminada, en lugar de selección de texto, un lápiz activo ahora se desplaza o un movimiento panorámico en aplicaciones para UWP (como la entrada táctil, panel táctil y el lápiz pasivo).  
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Consulta el tema de referencia de API [ScrollViewer Class] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer)) para obtener más información.
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Consulta el tema de referencia de API de la [Clase ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obtener más información.
 
 Según el dispositivo de entrada, el usuario realiza movimientos panorámicos por una región desplazable usando uno de los elementos siguientes:
 

@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3adbc12b0e891461a97bb90575141517b280be76
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d1b3b1fb68ed246d6a5a8334c5cf4d1c0754b719
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941819"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992564"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
@@ -42,7 +42,7 @@ Si has creado un anuncio recientemente (menos de un día), podría no estar disp
 
 Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entre otros motivos se incluyen:
 
-* Seleccionar una unidad de anuncios en el Centro de desarrollo de Windows con un tamaño mayor o menor que el tamaño de **AdControl** en el código de la aplicación.
+* Selección de una unidad de anuncio en el centro de partners con un tamaño que sea mayor o menor que el tamaño de **AdControl** en el código de la aplicación.
 
 * Los anuncios no aparecerán si usas un [valor del modo de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para tu identificador de unidad de anuncio cuando se ejecuta una aplicación dinámica.
 
@@ -60,7 +60,7 @@ Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos.
 
 * Las aplicaciones de prueba o las aplicaciones que se ejecutan en el emulador no mostrará anuncios dinámicos.
 
-Cuando una unidad de anuncios dinámicos envía anuncios de prueba, el estado de la unidad de anuncios muestra **Active and serving test ads** en el Centro de desarrollo de Windows. Esto no corresponde actualmente a las aplicaciones para teléfonos.
+Cuando una unidad de anuncios dinámicos envía anuncios de prueba, el estado de la unidad de anuncios muestra **Active and serving anuncios de prueba** en el centro de partners. Esto no corresponde actualmente a las aplicaciones para teléfonos.
 
 
 <span id="reference_errors"/>
