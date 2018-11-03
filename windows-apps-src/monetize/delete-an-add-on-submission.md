@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, delete, eliminar, delete, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c5d9e905f6b3d8acffc53e943d946f6ac7c3c68
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ca534cfc7c38dba9d77749e17f15dd66766de7ca
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941628"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987822"
 ---
 # <a name="delete-an-add-on-submission"></a>Eliminar un envío de complemento
 
@@ -46,8 +46,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | cadena | Obligatorio. El Id. de la Store del complemento que contiene el envío que se va a eliminar. El Id. de la Store está disponible en el panel del Centro de desarrollo.  |
-| submissionId | cadena | Obligatorio. El identificador del envío que se va a eliminar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de envío del panel.  |
+| inAppProductId | cadena | Obligatorio. El Id. de la Store del complemento que contiene el envío que se va a eliminar. El identificador de la tienda está disponible en el centro de partners.  |
+| submissionId | cadena | Obligatorio. El identificador del envío que se va a eliminar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -76,10 +76,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido eliminar en su estado actual o el complemento usa una función de panel del Centro de desarrollo que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido en su estado actual o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener un envío de complemento](get-an-add-on-submission.md)

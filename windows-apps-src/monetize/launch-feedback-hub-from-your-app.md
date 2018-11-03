@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
 ms.localizationpriority: medium
-ms.openlocfilehash: 16802cd7b181a6381845a4f71efdbdfb2f3eb747
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8a92f839d122f6dbdf45693c99f984317421961d
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937032"
+ms.locfileid: "5987477"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 
-Puedes animar a los clientes a dejar comentarios agregando un control (como un botón) a la aplicación de la Plataforma universal de Windows (UWP) que inicia el Centro de opiniones. El Centro de opiniones es una aplicación preinstalada que proporciona un único lugar para recopilar comentarios sobre Windows y las aplicaciones instaladas. Todos los comentarios de los clientes sobre la aplicación enviados a través del Centro de opiniones se recopilan y se presentan en el [informe de comentarios](../publish/feedback-report.md), en el panel del Centro de desarrollo de Windows; por lo tanto, puedes ver los problemas, sugerencias y votos a favor que los clientes hayan enviado en un informe.
+Puedes animar a los clientes a dejar comentarios agregando un control (como un botón) a la aplicación de la Plataforma universal de Windows (UWP) que inicia el Centro de opiniones. El Centro de opiniones es una aplicación preinstalada que proporciona un único lugar para recopilar comentarios sobre Windows y las aplicaciones instaladas. Todos los comentarios de los clientes que se ha enviado para tu aplicación a través del centro de opiniones se recopilan y presentan en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners, para que puedas ver los problemas, sugerencias y votos a favor que los clientes han enviado en un informe.
 
 Para iniciar el Centro de opiniones desde la aplicación, usa una API que se incluya con el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Se recomienda usar esta API para iniciar el Centro de opiniones desde un elemento de la interfaz de usuario de tu aplicación que siga nuestras directrices para el diseño.
 

@@ -8,16 +8,16 @@ ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b078f0573d94e80b590f473f7c9a9b0395115ee
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d428128430a6d7743ebdf94fb8d9aff8286d8d77
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930870"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988219"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 
-Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
+Si [configuras la aplicación como una prueba gratuita en el centro de partners](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación de forma gratuita durante un período de prueba, animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
 En este artículo se muestra cómo usar miembros de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar si el usuario tiene una licencia de prueba para tu aplicación y recibir una notificación si cambia el estado de la licencia mientras se ejecuta la aplicación. 
 
@@ -63,7 +63,7 @@ Explica cómo se comportará la aplicación durante el período de prueba gratui
 
 Este ejemplo tiene los siguientes requisitos previos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Has creado una aplicación en el panel del Centro de desarrollo de Windows que está configurada como una [prueba gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sin límite de tiempo y esta aplicación está publicada en la Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en Microsoft Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Has creado una aplicación en el centro de partners que está configurada como una [prueba gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) con ningún límite de tiempo y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 
 El código de este ejemplo supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.

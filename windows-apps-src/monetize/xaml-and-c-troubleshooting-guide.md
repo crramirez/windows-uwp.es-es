@@ -8,12 +8,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ad78c282231d2f7ae7b3261fec0b0c1b59abc45
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 12789767694e4ab3fa13efec4a31c8db4acd5420
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932275"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5989198"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guía de solución de problemas de XAML y C#
 
@@ -39,7 +39,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
 
-2.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+2.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de anuncio que obtuviste en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -175,7 +175,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de anuncio que obtuviste en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs

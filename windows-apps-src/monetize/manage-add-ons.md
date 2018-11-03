@@ -1,19 +1,19 @@
 ---
 author: Xansky
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
-description: Usa estos métodos en la API de envío de Microsoft Store para administrar complementos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows.
+description: Usa estos métodos en la API de envío de Microsoft Store para administrar complementos para las aplicaciones que están registradas en tu cuenta del centro de partners.
 title: Administración de complementos
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: ab09f72e9cf2bd46246751aab790aa6bab84de10
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c3861d5a135e0ee7a688a93a57cce801a05cf9a5
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922284"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987601"
 ---
 # <a name="manage-add-ons"></a>Administración de complementos
 

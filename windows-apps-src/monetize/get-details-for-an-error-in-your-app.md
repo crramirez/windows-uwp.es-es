@@ -8,16 +8,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, errors, errores, details, detalles
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ad667f1da8b14c2ab60fb79369f0f4c51306ff6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: e947314da1309c3f31af292bc70addbad8b0d4d9
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5947906"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987931"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>Obtener los detalles de un error en la aplicación
 
-Usa este método en la API de análisis de Microsoft Store para obtener información detallada acerca de un error específico de tu aplicación en formato JSON. Este método solo puede recuperar detalles de errores que se hayan producido en los últimos 30 días. Los datos de error detallados también están disponibles en la sección **Errores** del [Informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener información detallada acerca de un error específico de tu aplicación en formato JSON. Este método solo puede recuperar detalles de errores que se hayan producido en los últimos 30 días. Datos de error detallados también están disponibles en la sección de **errores** del [informe de estado](../publish/health-report.md) en el centro de partners.
 
 Para poder usar este método, debes usar el método para [obtener los datos del informe de errores](get-error-reporting-data.md) con el fin de recuperar el identificador del error sobre el que quieres obtener información detallada.
 
@@ -51,7 +51,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El Id. de la Store de la aplicación sobre la que quieres recuperar los datos detallados del error. El Id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | cadena | El Id. de la Store de la aplicación sobre la que quieres recuperar los datos detallados del error. El identificador de la tienda está disponible en la [página de identidad de la aplicación](../publish/view-app-identity-details.md) en el centro de partners. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
 | failureHash | cadena | El identificador exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor respecto al error que te interesa, usa el método para [obtener los datos del informe de errores](get-error-reporting-data.md) y utiliza el valor **failureHash** del cuerpo de la respuesta de ese método. |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es 30 días antes de la fecha actual.<p/><p/>**Nota:**&nbsp;&nbsp;este método solo puede recuperar los detalles de errores que se han producido en los últimos 30 días. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es la fecha actual. |  No  |
