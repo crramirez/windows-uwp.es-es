@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 50960a079e2c38d52d3a15403aef091ea99d7696
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5925459"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981006"
 ---
 # <a name="manage-targeting-profiles"></a>Administrar perfiles objetivo
 
@@ -145,7 +145,7 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número entero   |  El id. del perfil de destino.     |   Sí    |       |   No      |       
 |  name   |  cadena   |   El nombre del perfil de destino.    |    No   |      |  Sí     |       
-|  targetingType   |  cadena   |  Uno de los siguientes valores: <ul><li>**Auto**: especifica este valor para permitir que Microsoft elija el perfil de destino en función de la configuración de la aplicación en el Centro de desarrollo.</li><li>**Manual**: especifica este valor para definir tu propio perfil de destino.</li></ul>     |  No     |  Automático    |   Sí    |       
+|  targetingType   |  cadena   |  Uno de los siguientes valores: <ul><li>**Auto**: especifica este valor para permitir que Microsoft elija el perfil de destino en función de la configuración de la aplicación en el centro de partners.</li><li>**Manual**: especifica este valor para definir tu propio perfil de destino.</li></ul>     |  No     |  Automático    |   Sí    |       
 |  age   |  matriz   |   Uno o más enteros que identifican los intervalos de edad de los usuarios de destino. Para obtener una lista completa de enteros, consulta [valores de edad](#age-values) en este artículo.    |    No    |  nulo    |     No    |       
 |  gender   |  matriz   |  Uno o más enteros que identifican el sexo de los usuarios de destino. Para obtener una lista completa de enteros, consulta [valores de sexo](#gender-values) en este artículo.       |  No    |  nulo    |     No    |       
 |  country   |  matriz   |  Uno o más enteros que identifican los códigos de país de los usuarios de destino. Para obtener una lista completa de enteros, consulta [valores de códigos de país](#country-code-values) en este artículo.    |  No    |  nulo   |      No   |       

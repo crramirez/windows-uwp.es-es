@@ -8,12 +8,12 @@ ms.date: 03/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dded9b66fbae4f65b936335eda406d8773420c4
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3e5d6376420a1ee4ac166330371cf6e058d3476e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920059"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979110"
 ---
 # <a name="query-for-products"></a>Consultar productos
 
@@ -134,7 +134,7 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | devOfferId           | string             | El identificador de la oferta de una compra desde la aplicación.              | No       |
 | endDate              | datetime           | La fecha de finalización del artículo.              | Sí      |
 | fulfillmentData      | string             | N/D         | No       |
-| inAppOfferToken      | string             | Identificador del producto especificado por el desarrollador que se asignó al artículo en el panel del Centro de desarrollo de Windows. Un ejemplo de identificador de producto es *product123*. | No       |
+| inAppOfferToken      | string             | La cadena de identificador de producto especificado por el desarrollador que se asigna al elemento en el centro de partners. Un ejemplo de identificador de producto es *product123*. | No       |
 | itemId               | string             | Id. que identifica este artículo de colección de otros artículos que posee el usuario. Este identificador es único para cada producto.   | Sí      |
 | localTicketReference | string             | Id. de *localTicketReference* que se suministró previamente en el cuerpo de la solicitud.                  | Sí      |
 | modifiedDate         | datetime           | Fecha de la última modificación de este artículo.              | Sí      |

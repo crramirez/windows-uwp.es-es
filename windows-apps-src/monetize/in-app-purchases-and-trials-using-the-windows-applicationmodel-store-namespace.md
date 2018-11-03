@@ -8,12 +8,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 330631afed95c3b0082de69d9369a62aad5a66d5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 28fe27cc4464598414fec11d6812e2e9ea377aff
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945852"
+ms.locfileid: "5978960"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
@@ -22,7 +22,7 @@ Puedes usar los miembros del espacio de nombres [Windows.ApplicationModel.Store]
 En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos básicos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md). Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
 > [!IMPORTANT]
-> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el Centro de desarrollo (por ejemplo, este es el caso de los juegos que se integran con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
+> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introducción a las clases CurrentApp y CurrentAppSimulator
 
@@ -390,7 +390,7 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 |  **AppId**  |    Sí   |  1   |   El GUID que identifica la aplicación en la Store. Puede ser cualquier GUID para pruebas.        |
 |  **LinkUri**  |    Sí  |  1   |    El URI de la página de descripción en la Store. Puede ser cualquier identificador URI válido para pruebas.         |
 |  **CurrentMarket**  |    Sí  |  1   |    El país o la región del cliente.         |
-|  **AgeRating**  |    Sí  |  1   |     Un número entero que representa la clasificación por edades mínima de la aplicación. Este es el mismo valor que se especificaría en el panel del Centro de desarrollo al enviar la aplicación. Los valores usados por la Store son: 3, 7, 12 y 16. Para obtener más información sobre estas clasificaciones, consulta [Clasificación por edades](../publish/age-ratings.md).        |
+|  **AgeRating**  |    Sí  |  1   |     Un número entero que representa la clasificación por edades mínima de la aplicación. Este es el mismo valor que se especificaría en el centro de partners al enviar la aplicación. Los valores usados por la Store son: 3, 7, 12 y 16. Para obtener más información sobre estas clasificaciones, consulta [Clasificación por edades](../publish/age-ratings.md).        |
 |  [MarketData](#marketdata-child-of-app)  |    Sí  |  1 o más      |    Contiene información sobre la aplicación para un país o una región determinados. Para cada país o región en que se muestra la aplicación, debes incluir un elemento **MarketData**.       |    |
 
 <span id="marketdata-child-of-app"/>

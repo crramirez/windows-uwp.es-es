@@ -8,12 +8,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, compras desde la aplicación, IAP, complementos, pruebas, consumible, duradero, suscripción
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a93e10f7b440ac7c1926bc64bba4d9be248710
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 2c1c4ea1923ff81754b9c8ed8328ba6ec670a3f1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927723"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979040"
 ---
 # <a name="in-app-purchases-and-trials"></a>Pruebas y compras desde la aplicación
 
@@ -21,7 +21,7 @@ Windows SDK proporciona API que puedes usar para implementar las siguientes cara
 
 * **Compras desde la aplicación**&nbsp;&nbsp;Independientemente de que la aplicación sea gratuita o no, puedes vender contenido o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación.
 
-* **Funcionalidad de prueba**&nbsp;&nbsp;Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial), puedes animar a los clientes a comprar la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Asimismo, puedes habilitar características tales como banners o marcas de agua que solo se muestren durante la prueba antes de que el cliente compre la aplicación.
+* **Funcionalidad de prueba**&nbsp;&nbsp;si [configuras la aplicación como una prueba gratuita en el centro de partners](../publish/set-app-pricing-and-availability.md#free-trial), puedes animar a los clientes a comprar la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Asimismo, puedes habilitar características tales como banners o marcas de agua que solo se muestren durante la prueba antes de que el cliente compre la aplicación.
 
 Este artículo proporciona una introducción de cómo funcionan las compras desde la aplicación y las pruebas en aplicaciones para UWP.
 
@@ -31,12 +31,12 @@ Este artículo proporciona una introducción de cómo funcionan las compras desd
 
 Existen dos espacios de nombres diferentes que puedes usar para agregar compras desde la aplicación y la funcionalidad de prueba a las aplicaciones para UWP, según la versión de Windows 10 a la que se destinen tus aplicaciones. Aunque las API de estos espacios de nombres tienen los mismos objetivos, se han diseñado de forma bastante diferente y el código no es compatible entre las dos API.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;A partir de la versión 1607 de Windows 10, las aplicaciones pueden usar la API de este espacio de nombres para implementar compras desde la aplicación y pruebas. Si el proyecto de la aplicación se destina a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio, te recomendamos que uses los miembros de este espacio de nombres. Este espacio de nombres admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. Para obtener más información acerca de este espacio de nombres, consulta la sección [Pruebas y compras desde la aplicación con el espacio de nombres Windows.Services.Store](#api_intro) de este artículo.
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;A partir de la versión 1607 de Windows 10, las aplicaciones pueden usar la API de este espacio de nombres para implementar compras desde la aplicación y pruebas. Si el proyecto de la aplicación se destina a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio, te recomendamos que uses los miembros de este espacio de nombres. Este espacio de nombres admite los tipos de complemento más recientes, como los complementos consumibles administrados por la tienda y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el centro de partners y la tienda. Para obtener más información acerca de este espacio de nombres, consulta la sección [Pruebas y compras desde la aplicación con el espacio de nombres Windows.Services.Store](#api_intro) de este artículo.
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;Todas las versiones de Windows 10 también admiten una API anterior para las compras desde la aplicación y las pruebas en este espacio de nombres. Para obtener información sobre el espacio de nombres **Windows.ApplicationModel.Store**, consulta [Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 > [!IMPORTANT]
-> El espacio de nombres **Windows.ApplicationModel.Store** ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres **Windows.Services.Store** en su lugar si es posible para tu aplicación. El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el Centro de desarrollo (por ejemplo, este es el caso de los juegos que se integran con Xbox Live).
+> El espacio de nombres **Windows.ApplicationModel.Store** ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres **Windows.Services.Store** en su lugar si es posible para tu aplicación. El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live).
 
 <span id="concepts" />
 
@@ -46,13 +46,13 @@ Por lo general, todos los elementos que se ofrecen en la Tienda se denominan *pr
 
 Un complemento es un producto o una característica que pones a disposición de tus clientes en el contexto de tu aplicación: por ejemplo, la moneda que se usará en una aplicación o un juego, los nuevos mapas o armas para un juego, la posibilidad de usar la aplicación sin anuncios o el contenido digital, como música o vídeos, para las aplicaciones capaces de ofrecer ese tipo de contenido. Cada aplicación y complemento tiene una licencia asociada que indica si el usuario tiene derecho a usar la aplicación o el complemento. Si el usuario tiene derecho a usar la aplicación o el complemento como una versión de prueba, la licencia también proporciona información adicional sobre la versión de prueba.
 
-Para ofrecer un complemento a los clientes en la aplicación, debes [definir el complemento de la aplicación en el panel del Centro de desarrollo](../publish/add-on-submissions.md) para comunicarlo a la Tienda. A continuación, la aplicación puede usar las API en los espacios de nombres **Windows.Services.Store** o **Windows.ApplicationModel.Store** para vender el complemento al usuario como una compra desde la aplicación.
+Para ofrecer un complemento a los clientes en la aplicación, debes [definir el complemento de la aplicación en el centro de partners](../publish/add-on-submissions.md) para comunicarlo a la tienda. A continuación, la aplicación puede usar las API en los espacios de nombres **Windows.Services.Store** o **Windows.ApplicationModel.Store** para vender el complemento al usuario como una compra desde la aplicación.
 
 Las aplicaciones para UWP pueden ofrecer los siguientes tipos de complementos.
 
 | Tipo de complemento |  Descripción  |
 |---------|-------------------|
-| Durable  |  Un complemento que persiste durante el ciclo de vida especificado en el [panel del Centro de desarrollo de Windows](../publish/enter-iap-properties.md). <p/><p/>De manera predeterminada, los complementos durables nunca expiran, por lo que solo se pueden adquirir una vez. Si especificas una duración particular para el complemento, el usuario puede volver a comprar el complemento después de su expiración. |
+| Durable  |  Un complemento que persiste durante el ciclo de vida [especificado en el centro de partners](../publish/enter-iap-properties.md). <p/><p/>De manera predeterminada, los complementos durables nunca expiran, por lo que solo se pueden adquirir una vez. Si especificas una duración particular para el complemento, el usuario puede volver a comprar el complemento después de su expiración. |
 | Consumible administrado por el desarrollador  |  Un complemento que se puede comprar, usar y volver a comprar después de que se consume. Es responsable de realizar un seguimiento del saldo del usuario de los elementos que representa el complemento.<p/><p/>Cuando el usuario consume elementos asociados con el complemento, eres responsable del mantenimiento del saldo del usuario y de informar de la compra del complemento cuando se complete en la Store y una vez que el usuario haya consumido todos los elementos. El usuario no puede comprar el complemento otra vez hasta que la aplicación notifique que la compra del complemento anterior se ha completado. <p/><p/>Por ejemplo, si el complemento representa 100 monedas en un juego y el usuario consume 10 monedas, la aplicación o el servicio debe mantener el nuevo saldo restante de 90 monedas para el usuario. Cuando el usuario haya consumido las 100 monedas, la aplicación debe notificar el complemento como completado y, a continuación, el usuario puede volver a comprar el complemento de 100 monedas.    |
 | Consumible administrado por la Store  |  Un complemento que se puede comprar, usar y volver a comprar en cualquier momento. La Store realiza un seguimiento del saldo del usuario de los elementos que representa el complemento.<p/><p/>Cuando el usuario consume algún elemento asociado al complemento, debes notificar dichos elementos como completados en la Store, tras lo cual la Store actualiza el saldo del usuario. Los usuarios pueden adquirir el complemento tantas veces como quieran (no necesitan consumir los elementos antes). La aplicación puede consultar el saldo actual del usuario en cualquier momento. <p/><p/> Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 50 monedas, la aplicación notifica a la Store que se han completado 50 unidades del complemento, y la Store actualiza el saldo restante. Si el usuario vuelve a comprar el complemento para adquirir 100 monedas más, ahora tendrá 150 monedas totales. <p/><p/>**Nota**&nbsp;&nbsp;Para usar consumibles administrados por Microsoft Store, la aplicación debe destinarse a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio, y debe usar el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**.  |
 | Suscripción | Un complemento duradero donde al cliente se le continúa cobrando en intervalos periódicos para poder seguir usando el complemento. El cliente puede cancelar la suscripción en cualquier momento para evitar más cargos. <p/><p/>**Nota**&nbsp;&nbsp;Para usar complementos de suscripción, la aplicación debe destinarse a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio, y debe usar el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**.  |
@@ -128,7 +128,7 @@ Para obtener una aplicación de muestra que indica cómo usar **StoreContext** y
 
 Para ofrecer una compra desde la aplicación a los clientes mediante el espacio de nombres **Windows.Services.Store**:
 
-1. Si tu aplicación ofrece complementos que los clientes pueden comprar, [crea envíos de complementos de la aplicación en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+1. Si tu aplicación ofrece complementos que los clientes pueden comprar, [crear envíos de complemento de la aplicación en el centro de partners ](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
 2. Escribe código en tu aplicación para [recuperar información de producto para la aplicación o un complemento que ofrece tu aplicación](get-product-info-for-apps-and-add-ons.md) y, después, [determina si la licencia está activa](get-license-info-for-apps-and-add-ons.md) (es decir, si el usuario tiene licencia para usar la aplicación o complemento). Si la licencia no está activa, muestra al usuario una interfaz que ofrezca la aplicación o el complemento a la venta como una compra desde la aplicación.
 
@@ -146,7 +146,7 @@ Para ofrecer una compra desde la aplicación a los clientes mediante el espacio 
 
 Para excluir o limitar características en una versión de prueba de la aplicación mediante el espacio de nombres **Windows.Services.Store**:
 
-1. [Configura la aplicación como una prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial).
+1. [Configurar la aplicación como una prueba gratuita en el centro de partners](../publish/set-app-pricing-and-availability.md#free-trial).
 
 2. Escribe código en tu aplicación para [recuperar información de producto para la aplicación o un complemento que ofrece tu aplicación](get-product-info-for-apps-and-add-ons.md) y, después, [determina si la licencia asociada a la aplicación es de prueba](get-license-info-for-apps-and-add-ons.md).
 
@@ -160,15 +160,15 @@ Para excluir o limitar características en una versión de prueba de la aplicaci
 
 Si la aplicación usa las API en el espacio de nombres **Windows.Services.Store** para implementar la compra desde la aplicación o la funcionalidad de prueba, debes publicar tu aplicación en Microsoft Store y descargar la aplicación en el dispositivo de desarrollo para usar su licencia para las pruebas. Sigue este proceso para probar el código:
 
-1. Si la aplicación aún no está publicada ni disponible en Microsoft Store, asegúrate de que tu aplicación cumpla con los requisitos mínimos del [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envía la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) al Panel del Centro de desarrollo de Windows y asegúrate de que la aplicación supera el proceso de certificación. Puedes [configurar la aplicación para que no se pueda descubrir en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mientras la pruebas. Ten en cuenta la configuración adecuada de [paquetes piloto](../publish/package-flights.md). Incorrectamente configurado paquete piloto puede no ser podrán descargarse.
+1. Si la aplicación aún no está publicada y disponible en la tienda, asegúrese de que la aplicación cumple los requisitos mínimos de [Kit de certificación de aplicaciones de Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y asegúrese de que la aplicación supera el proceso de certificación. Puedes [configurar la aplicación para que no se pueda descubrir en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mientras la pruebas. Ten en cuenta la configuración adecuada de [paquetes piloto](../publish/package-flights.md). Incorrectamente configurado paquete piloto puede no ser podrán descargarse.
 
 2. Después, asegúrate de haber seguido estos pasos:
 
     * Escribe código en la aplicación que usa la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) y otros tipos relacionados en el espacio de nombres **Windows.Services.Store** para implementar [compras desde la aplicación](#implement-iap) o una [funcionalidad de prueba](#implement-trial).
-    * Si tu aplicación ofrece un complemento que los clientes pueden comprar, [crea un envío de complemento para la aplicación en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
-    * Si quieres excluir o limitar ciertas funciones en una versión de prueba de la aplicación, [configura tu aplicación como una prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial).
+    * Si tu aplicación ofrece un complemento que los clientes pueden comprar, [crear un envío de complemento de la aplicación en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+    * Si quieres excluir o limitar ciertas funciones en una versión de prueba de la aplicación, [Configurar la aplicación como una prueba gratuita en el centro de partners](../publish/set-app-pricing-and-availability.md#free-trial).
 
-3. Abre tu proyecto en Visual Studio, haz clic en el **menú Proyecto**, selecciona **Tienda** y, después, haz clic en **Asociar aplicación con la Tienda**. Sigue las instrucciones del Asistente para asociar el proyecto de aplicación con la aplicación de tu cuenta del Centro de desarrollo de Windows que quieres usar para las pruebas.
+3. Abre tu proyecto en Visual Studio, haz clic en el **menú Proyecto**, selecciona **Tienda** y, después, haz clic en **Asociar aplicación con la Tienda**. Sigue las instrucciones en el Asistente para asociar el proyecto de aplicación con la aplicación en tu cuenta del centro de partners que quieras usar para las pruebas.
     > [!NOTE]
     > Si no asocias el proyecto con una aplicación de la Tienda, los métodos [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) establecen la propiedad **ExtendedError** de sus valores devueltos en el valor del código de error 0x803F6107. Este valor indica que la Tienda no tiene ningún conocimiento de la aplicación.
 4. Si aún no lo has hecho, instala la aplicación de la Tienda que especificaste en el paso anterior, ejecuta la aplicación una vez y ciérrala a continuación. Esta acción garantiza que una licencia válida de la aplicación está instalada en el dispositivo de desarrollo.
@@ -227,7 +227,7 @@ Para configurar un objeto **StoreContext** en una aplicación de escritorio que 
 
 ### <a name="products-skus-and-availabilities"></a>Productos, SKU y disponibilidades
 
-Cada producto de la Tienda tiene al menos una *SKU*, y cada SKU tiene al menos una *disponibilidad*. Estos conceptos se abstraen de la mayoría de los desarrolladores en el panel del Centro de desarrollo de Windows, y la mayoría de los desarrolladores nunca definirán las SKU ni las disponibilidades de sus aplicaciones o complementos. Sin embargo, dado que el modelo de objetos de los productos de la Tienda en el espacio de nombres **Windows.Services.Store** incluye las SKU y las disponibilidades, puede resultar útil disponer de un conocimiento básico de estos conceptos para algunos escenarios.
+Cada producto de la Tienda tiene al menos una *SKU*, y cada SKU tiene al menos una *disponibilidad*. Estos conceptos se abstraen de la mayoría de los desarrolladores en el centro de partners, y la mayoría de los desarrolladores nunca definirán las SKU ni las disponibilidades de sus aplicaciones o complementos. Sin embargo, dado que el modelo de objetos de los productos de la Tienda en el espacio de nombres **Windows.Services.Store** incluye las SKU y las disponibilidades, puede resultar útil disponer de un conocimiento básico de estos conceptos para algunos escenarios.
 
 | Objeto |  Descripción  |
 |---------|-------------------|
@@ -243,8 +243,8 @@ Cada aplicación, complemento u otro producto de la tienda tiene un **Id. de la 
 
 El identificador de la Tienda de cualquier producto de la Tienda es una cadena de 12 caracteres alfanuméricos, como ```9NBLGGH4R315```. Hay varias maneras diferentes de obtener el id. de la tienda para un producto de la Tienda:
 
-* Para una aplicación, puedes obtener el Id. de la Tienda en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo.
-* Para un complemento, puedes obtener el id. de la Tienda en la página de introducción del complemento en el panel.
+* Para una aplicación, puedes obtener el identificador de la tienda en la [página de identidad de la aplicación](../publish/view-app-identity-details.md) centro de partners.
+* Para un complemento, puedes obtener el identificador de la tienda en el página de introducción-add del centro de partners.
 * Para cualquier producto, también puedes obtener el id. de la tienda mediante programación usando la propiedad [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid) del objeto [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) objeto que representa el producto.
 
 Para los productos con SKU y disponibilidades, la SKU y las disponibilidades también tienen sus propios id. de tienda con diferentes formatos.
@@ -258,10 +258,10 @@ Para los productos con SKU y disponibilidades, la SKU y las disponibilidades tam
 
 ## <a name="how-to-use-product-ids-for-add-ons-in-your-code"></a>Cómo usar los identificadores de producto para complementos en tu código
 
-Si quieres que un complemento esté disponible para los clientes en el contexto de tu aplicación, debes [introducir un id. de producto único](../publish/set-your-add-on-product-id.md#product-id) para el complemento al [crear el envío de complemento](../publish/add-on-submissions.md) en el panel del Centro de desarrollo. Puedes usar este id. del producto para hacer referencia al complemento en tu código, aunque los escenarios específicos en los que puedes usar el identificador de producto dependen de qué espacio de nombres usas para las compras desde la aplicación en tu aplicación.
+Si quieres que un complemento esté disponible para los clientes en el contexto de la aplicación, debes [escribe un Id. del producto único](../publish/set-your-add-on-product-id.md#product-id) para el complemento al [crear el envío del complemento](../publish/add-on-submissions.md) en el centro de partners. Puedes usar este id. del producto para hacer referencia al complemento en tu código, aunque los escenarios específicos en los que puedes usar el identificador de producto dependen de qué espacio de nombres usas para las compras desde la aplicación en tu aplicación.
 
 > [!NOTE]
-> El id. del producto que especificas en el panel del Centro de desarrollo de un complemento es diferente del [id. de la Tienda ](#store-ids) del complemento. El id. de la Tienda lo genera el Centro de desarrollo.
+> El identificador de producto que especificaste en el centro de partners para un complemento es diferente a [Identificador de la tienda del](#store-ids). Se genera el identificador de la tienda mediante el centro de partners.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Aplicaciones que usan el espacio de nombres Windows.Services.Store
 
@@ -272,7 +272,7 @@ Si la aplicación usa el espacio de nombres **Windows.Services.Store**, puedes u
 
 ### <a name="apps-that-use-the-windowsapplicationmodelstore-namespace"></a>Aplicaciones que usan el espacio de nombres Windows.ApplicationModel.Store
 
-Si la aplicación usa el espacio de nombres **Windows.ApplicationModel.Store**, tendrás que usar el id. del producto que asignas a un complemento en el panel del Centro de desarrollo para la mayoría de las operaciones. Por ejemplo:
+Si la aplicación usa el espacio de nombres **Windows.ApplicationModel.Store** , tendrás que usar el identificador de producto que asignas a un complemento en el centro de partners para la mayoría de las operaciones. Por ejemplo:
 
 * Usa el id. del producto para identificar la [ProductListing](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting) que representa el complemento o la [ProductLicense](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense) que representa la licencia de tu complemento. El id. del producto se expone por las propiedades [ProductListing.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.ProductId) y [ProductLicense.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense.ProductId).
 
