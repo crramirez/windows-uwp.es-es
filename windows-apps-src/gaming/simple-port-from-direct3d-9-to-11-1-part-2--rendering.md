@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971706"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034931"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 

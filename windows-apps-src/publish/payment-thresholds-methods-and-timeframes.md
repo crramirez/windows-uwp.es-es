@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a62d08d540479daf77d532afa1b97ae128d2c1f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980293"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035057"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
@@ -954,7 +954,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Taiwan</td>
+    <td>Taiwán</td>
     <td>200USD</td>
     <td>Transferencia bancaria</td>
     <td>25USD</td>
@@ -2016,7 +2016,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Taiwan</td>
+    <td>Taiwán</td>
     <td>50USD</td>
     <td>Transferencia bancaria</td>
     <td>50USD</td>
@@ -3064,7 +3064,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>Taiwan</td>
+    <td>Taiwán</td>
     <td>200USD</td>
     <td>Transferencia bancaria</td>
     <td>25USD</td>
@@ -4055,7 +4055,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Taiwan</td>
+    <td>Taiwán</td>
     <td>200USD</td>
     <td>Transferencia bancaria</td>
     <td>25USD</td>
