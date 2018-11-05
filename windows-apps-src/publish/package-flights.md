@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp, distribución de paquetes piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: a873b6f6c0d1a35667b47109f5cc2205e5a02158
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987845"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039449"
 ---
 # <a name="package-flights"></a>Paquetes piloto
 
 Puedes usar paquetes piloto para distribuir paquetes específicos a un grupo de evaluadores limitado. Los paquetes que ya has publicado en la tienda se usará para otros clientes, por lo que no se interrumpa su experiencia.
 
-Con paquetes piloto, solo los paquetes son diferentes; la descripción de los detalles de la tienda serán los mismos para todos los clientes. Cualquier persona del grupo piloto recibirán los paquetes que se incluyen en el paquete piloto, mientras que los clientes que no están en el grupo piloto continuarán recibiendo los paquetes normales (versión final).  Si más adelante decides que quieres que los paquetes de un paquete piloto estén disponibles para todos los clientes, puede utilizar fácilmente esos mismos paquetes en un envío de versión final. Ten en cuenta que los paquetes piloto debe pasar el [proceso de certificación](the-app-certification-process.md), al igual que cualquier envío.
+Con los paquetes piloto, solo los paquetes son diferentes; la descripción de los detalles de la tienda serán los mismos para todos los clientes. Cualquier persona del grupo piloto recibirán los paquetes que se incluyen en el paquete piloto, mientras que los clientes que no están en el grupo piloto continuarán recibiendo los paquetes normales (versión final).  Si más adelante decides que quieres que paquetes desde un paquete piloto estén disponibles para todos los clientes, puede utilizar los mismos paquetes fácilmente en un envío de versión final. Ten en cuenta que los paquetes piloto debe pasar el [proceso de certificación](the-app-certification-process.md), al igual que cualquier envío.
 
-Cuando configuras paquetes piloto, puedes especificar las personas que deben obtener paquetes específicos agregándolos a un **grupo de usuarios conocido** (a veces se denomina grupo piloto). Cualquier persona de un grupo piloto que use un dispositivo con una versión de Windows 10 compatible con paquetes piloto (la compilación 10586 o posterior de Windows.Desktop, la compilación 10586.63 o posterior de Windows.Mobile, o Xbox One) obtendrá paquetes de los paquetes piloto que designes para ese grupo en concreto. (Los paquetes piloto pueden incluir paquetes destinados a cualquier versión de sistema operativo, incluidas Windows 8.1 o Windows Phone 8.1 o versiones anterior si la aplicación publicada anteriormente ya es compatible con ellos). Cualquier persona que no se ha agregado a uno de tus grupos piloto, o que use un dispositivo que no es compatible con paquetes piloto, obtendrá paquetes del envío de versión final.
+Cuando configuras paquetes piloto, puedes especificar qué personas deben obtener paquetes específicos agregándolos a un **grupo de usuarios conocido** (a veces se denomina grupo piloto). Cualquier persona de un grupo piloto que use un dispositivo con una versión de Windows 10 compatible con paquetes piloto (la compilación 10586 o posterior de Windows.Desktop, la compilación 10586.63 o posterior de Windows.Mobile, o Xbox One) obtendrá paquetes de los paquetes piloto que designes para ese grupo en concreto. (Los paquetes piloto pueden incluir paquetes destinados a cualquier versión de sistema operativo, incluidas Windows 8.1 o Windows Phone 8.1 o versiones anterior si la aplicación publicada anteriormente ya es compatible con ellos). Cualquier persona que no se ha agregado a uno de tus grupos piloto, o que use un dispositivo que no es compatible con paquetes piloto, obtendrá paquetes del envío de versión final.
 
 > [!IMPORTANT] 
 > En los dispositivo móviles y de escritorio, las personas incluidas en tus grupos piloto obtendrán automáticamente los paquetes de tu piloto cada vez que proporciones actualizaciones. Sin embargo, los **integrantes de tus grupos piloto que usan dispositivos de Xbox, tendrán que consultar manualmente si hay actualizaciones** para obtener los paquetes más recientes y asegurarse de iniciar sesión en el dispositivo con su cuenta de Microsoft (aquella que tenga la dirección de correo asociada que incluiste en el grupo de usuarios conocido).
@@ -46,14 +46,14 @@ Si no has creado ningún grupo de usuario conocido aún, se te pedirá que crees
 En la página de creación del paquete piloto, tendrás que introducir un nombre para dicho paquete y especificar al menos un grupo piloto. Cuando termines, selecciona **Crear piloto**. No podrás cambiar estos detalles más adelante (aunque si no estás satisfecho con lo que has introducido, puedes eliminar este paquete piloto y crear uno nuevo en su lugar).
 
 > [!NOTE]
-> Si tienes más de un paquete piloto, deberás asignar una clasificación a cada uno de ellos. Para obtener más información, vea [Agregar y clasificar paquetes piloto adicionales](#add-and-rank-additional-package-flights) a continuación.
+> Si tienes más de un paquete piloto, deberás asignar una clasificación a cada uno de ellos. Para obtener más información, vea [Agregar y clasificar paquetes piloto adicionales](#add-and-rank-additional-package-flights) más adelante.
 
 
 ## <a name="specify-packages-to-include-in-your-package-flight"></a>Especifica los paquetes que se incluirán en tu paquete piloto
 
 Después de guardar los detalles del paquete piloto, verás la página de información general. Haz clic en **Paquetes** para especificar los paquetes que te gustaría incluir en el paquete piloto. Puedes incluir paquetes destinados a cualquier versión del sistema operativo que admita la aplicación.
 
-Tienes la opción de seleccionar paquetes que estaban asociados con un envío publicado anterior (un envío de versión final o uno de tus otros paquetes piloto, si tienes más de uno). Si es necesario cargar nuevos paquetes que se usará para este paquete piloto, puedes cargarlos aquí (con el [mismo proceso que al cargar paquetes de aplicación en un envío de versión final normal](upload-app-packages.md)). Haz clic en **Guardar** cuando termines de especificar los paquetes que se incluirán en este paquete piloto.
+Tienes la opción de seleccionar paquetes que estaban asociados con un envío publicado anterior (un envío de versión final o uno de tus otros paquetes piloto, si tienes más de uno). Si necesitas cargar nuevos paquetes que se usará para este paquete piloto, puedes cargarlos aquí (con el [mismo proceso que al cargar paquetes de aplicación en un envío de versión final normal](upload-app-packages.md)). Haz clic en **Guardar** cuando termines de especificar los paquetes que se incluirán en este paquete piloto.
 
 Si la aplicación admite varias familias de dispositivos, asegúrate de que incluir paquetes para admitir el mismo conjunto de familias de dispositivos en tu piloto. Las personas en los grupos piloto **solo** podrán obtener paquetes de ese piloto. No podrán acceder a los paquetes de otros pilotos ni del envío de versión final. 
 
@@ -65,7 +65,7 @@ Además, recuerda la descripción de la tienda y disponibilidad de familia de di
 De manera predeterminada, los paquetes de tu envío estarán disponibles para todos los integrantes del grupo de piloto al mismo tiempo. Para cambiar esto, puedes activar la casilla que indica **Los lanzamientos se actualizan gradualmente una vez publicado el envío (solo a clientes de Windows 10). **. Puedes elegir un porcentaje de personas del grupo de piloto para que reciban los paquetes del nuevo envío, de modo que puedas supervisar los comentarios y los datos analíticos para asegurarte de estar convencido sobre la actualización antes de lanzarla más ampliamente al resto del grupo de piloto. Puedes aumentar el porcentaje (o detener la actualización) en cualquier tiempo sin necesidad de crear un nuevo envío de tu paquete piloto. 
 
 > [!IMPORTANT]
-> Cuando lanzar gradualmente los paquetes en un paquete piloto, las personas que no están incluidas en el porcentaje que recibe los nuevos paquetes recibirán los paquetes de envío del paquete piloto anterior (a menos que haya un paquete con mayor clasificación disponible para ellos).
+> Cuando lanzar gradualmente los paquetes en un paquete piloto, las personas que no están incluidas en el porcentaje que recibe los nuevos paquetes obtendrán los paquetes de envío del paquete piloto anterior (a menos que haya un paquete con mayor clasificación disponible para ellos).
 
 Para obtener más información, consulta [Gradual package rollout (Lanzamiento de paquete gradual)](gradual-package-rollout.md).
 
@@ -99,7 +99,7 @@ En la mayoría de los casos, querrás incluir paquetes que admitan el mismo conj
 
 ## <a name="update-or-modify-your-package-flight"></a>Actualizar o modificar el paquete piloto
 
-Para crear un nuevo envío de un paquete piloto que ya has publicado, haz clic en **Update** junto al nombre del piloto en la página de información general de la aplicación. Puedes cargar nuevos paquetes (y quitar los que no necesites), al igual que con un envío de versión final. Realiza los cambios necesarios y, a continuación, haz clic en **Enviar a la Tienda** para enviar el paquete piloto actualizado a través del [proceso de certificación de la aplicación](the-app-certification-process.md).
+Para crear un nuevo envío de un paquete piloto que ya has publicado, haz clic en la **actualización** junto al nombre del piloto en la página de información general de la aplicación. Puedes cargar nuevos paquetes (y quitar los que no necesites), al igual que con un envío de versión final. Realiza los cambios necesarios y, a continuación, haz clic en **Enviar a la Tienda** para enviar el paquete piloto actualizado a través del [proceso de certificación de la aplicación](the-app-certification-process.md).
 
 Para modificar un paquete piloto sin crear ni enviar una actualización nueva, haz clic en **Modificar** junto al nombre del paquete piloto. Esto te permite cambiar detalles como los grupos piloto, el nombre y la clasificación, sin necesidad de que paquete piloto vuelva a pasar por el proceso de certificación. Ten en cuenta que si tienes una actualización en curso, o si el paquete piloto no se ha publicado aún, no verás la opción **Modificar** . 
 
@@ -108,11 +108,11 @@ Para modificar un paquete piloto sin crear ni enviar una actualización nueva, h
 
 Puedes crear varios paquetes piloto de la misma aplicación, para distribuir varios paquetes distintos a conjuntos diferentes de clientes. 
 
-Después de crear tu primer paquete piloto, puedes crear otro siguiendo el proceso descrito anteriormente. La única diferencia es que si ya habías creado un paquete piloto, deberás especificar el orden de prioridad de todos los paquetes piloto en la sección **Clasificación**. Esto permite a la tienda determinar qué paquete proporcionar a un cliente individual si están en más de uno de tus grupos piloto. Las personas que estén en tus grupos piloto siempre obtendrán el paquete piloto disponible que tenga la clasificación más alta, aunque un paquete piloto de clasificación inferior contenga paquetes con un número de versión mayor.
+Después de crear tu primer paquete piloto, puedes crear otro siguiendo el proceso descrito anteriormente. La única diferencia es que si ya habías creado un paquete piloto, deberás especificar el orden de prioridad de todos los paquetes piloto en la sección **Clasificación**. Esto permite a la tienda determinar qué paquete proporcionar a un cliente individual, si están en más de uno de tus grupos piloto. Las personas que estén en tus grupos piloto siempre obtendrán el paquete piloto disponible que tenga la clasificación más alta, aunque un paquete piloto de clasificación inferior contenga paquetes con un número de versión mayor.
 
 De manera predeterminada, el nuevo paquete piloto tendrá la clasificación más alta. Si quieres cambiar su clasificación, puedes bajarla (o crear una copia de seguridad) para colocarla en la ubicación correcta entre los demás paquetes piloto.
 
-Ten en cuenta que el envío de versión final siempre están clasificado la más baja (1). Es decir, aquellas personas que no estén en ninguno de tus grupos piloto solo podrán obtener paquetes del envío de versión final a través de la Tienda. Las personas de un grupo piloto siempre obtendrán paquetes del paquete de clasificación más alta piloto disponible para ellos (pero nunca el envío de versión final, ya que no tiene la clasificación más baja). Esto proporciona flexibilidad para determinar cómo distribuir los paquetes a las personas que puedan ser miembros de más de uno de tus grupos piloto.
+Ten en cuenta que el envío de versión final siempre están clasificado el menor (1). Es decir, aquellas personas que no estén en ninguno de tus grupos piloto solo podrán obtener paquetes del envío de versión final a través de la Tienda. Las personas de un grupo piloto siempre obtendrán paquetes del paquete de clasificación más alta piloto disponible para ellos (pero nunca el envío de versión final, ya que tiene la clasificación más baja). Esto proporciona flexibilidad para determinar cómo distribuir los paquetes a las personas que puedan ser miembros de más de uno de tus grupos piloto.
 
 Por ejemplo, supongamos que quieres crear dos paquetes piloto además de tu envío de versión final normal: uno que sea relativamente estable y esté listo para probar con un público amplio y otro del que no estés seguro y que prefieras limitar a unos pocos evaluadores. Podrías crear un grupo piloto denominado Evaluadores e incluirlo en un paquete piloto denominado Piloto para evaluadores. Luego, podrías crear un grupo piloto denominado Entusiastas con más miembros e incluirlo en otro paquete piloto denominado Piloto para entusiastas. Si asignas al paquete Piloto para evaluadores un clasificación más alta que al paquete Piloto para entusiastas, podrás usar los paquetes que te inspiren confianza en el paquete Piloto para entusiastas y dejar los paquetes más arriesgados para los evaluadores del paquete Piloto para evaluadores. Los miembros del grupo Evaluadores siempre obtendrán los paquetes que proporciones en el paquete Piloto para evaluadores, aunque pertenezcan también al grupo de entusiastas. (Más adelante, si parece que los paquetes del paquete Piloto para evaluadores funcionan bien, puedes actualizar el paquete Piloto para entusiastas y usar los paquetes que originalmente se distribuían al paquete Piloto para evaluadores. Eventualmente, puedes usar estos paquetes en tu envío de versión final).
 

@@ -8,16 +8,16 @@ ms.topic: article
 keywords: Windows 10, uwp, xbox, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971544"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039300"
 ---
 # <a name="xbox-info-api-reference"></a>Referencia de API de información de Xbox   
 Puedes acceder a información del dispositivo Xbox One mediante esta API.
 
-## <a name="get-xbox-one-device-information"></a>Obtener información del dispositivo Xbox One
+## <a name="get-xbox-one-device-information"></a>Obtener información de dispositivo de Xbox One
 
 **Solicitud**
 
@@ -46,10 +46,10 @@ Un objeto JSON con los siguientes campos:
 * OsEdition - (cadena) la edición del sistema operativo, por ejemplo, "Marzo de 2017" o "marzo de 2017 QFE 1".
 * ConsoleId - Id.. del (cadena) la consola
 * DeviceId - Xbox Live dispositivo de (cadena) la consola identificador.
-* SerialNumber - número de serie del (cadena) la consola.
+* Número de serie: número de serie del (cadena) la consola.
 * DevMode - actual el modo de desarrollador del (cadena) la consola, por ejemplo, "None" o "Comercial".
 * ConsoleType - la consola del tipo de cadena) (, como "Xbox One" o "Xbox One S".
-* DevkitCertificateExpirationTime - (número) la hora UTC en segundos expirará certificado de kit de desarrollador de la consola.
+* DevkitCertificateExpirationTime - (número) la hora de UTC en segundos expirará un certificado kit de desarrollador de la consola.
 
 **Código de estado**
 

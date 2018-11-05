@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
 ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994513"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037370"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -23,7 +23,7 @@ Al [Agregar usuarios a tu cuenta del centro de partners](add-users-groups-and-az
 > Pueden aplicarse los mismos roles y permisos con independencia de que vayas a agregar un usuario, un grupo o una aplicación de AzureAD.
 
 Al determinar los roles o los permisos que desees aplicar, ten en cuenta: 
--   Los usuarios (incluyendo grupos y aplicaciones de Azure AD) podrán obtener acceso a toda la cuenta del centro de partners con los permisos asociados a sus asignado roles, a menos que puedes [Personalizar permisos](#custom) y asignar [permisos de nivel de producto](#product-level-permissions) para que solo pueda trabajar con determinadas aplicaciones o complementos.
+-   Los usuarios (incluyendo grupos y aplicaciones de Azure AD) podrán obtener acceso a toda la cuenta del centro de partners con los permisos asociados a sus asignado roles, a menos que puedes [Personalizar los permisos](#custom) y asignar [permisos de nivel de producto](#product-level-permissions) para que solo pueda trabajar con determinadas aplicaciones o complementos.
 -   Para permitir que un usuario, grupo o aplicación de Azure AD tengan acceso a las funciones de más de un rol, selecciona varios roles o utiliza permisos personalizados para conceder el acceso que quieras.
 -   Un usuario con un determinado rol (o un conjunto de permisos personalizados) también puede formar parte de un grupo que tenga un rol diferente (o un conjunto de permisos). En ese caso, el usuario tendrá acceso a toda la funcionalidad asociada con el grupo y con la cuenta individual.
 
@@ -35,7 +35,7 @@ Al determinar los roles o los permisos que desees aplicar, ten en cuenta:
 
 ## <a name="assign-roles-to-account-users"></a>Asignar roles a usuarios de la cuenta
 
-De manera predeterminada, se presenta un conjunto de roles estándar para que elijas entre agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
+De manera predeterminada, se presenta un conjunto de roles estándares para que elijas entre al agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
 
 A menos que decidas definir [permisos personalizados](#custom) seleccionando **Permisos personalizados**, a cada usuario, grupo o aplicación de AzureAD que agregas a una cuenta debes asignarle al menos uno de los siguientes roles. 
 
@@ -45,7 +45,7 @@ A menos que decidas definir [permisos personalizados](#custom) seleccionando **P
 
 | Rol                 | Descripción              |
 |----------------------|--------------------------|
-| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el centro de partners, pero ten en cuenta que la capacidad de crear y eliminar usuarios del inquilino de Azure AD depende de los permisos de la cuenta en Azure AD. Es decir, si un usuario se le asigna el rol de administrador, pero no tiene permisos de administrador global de la organización Azure AD, no podrán crear nuevos usuarios ni eliminar los usuarios del directorio (aunque puede cambiar un rol del usuario centro de partners). <p> Ten en cuenta que si la cuenta del centro de partners está asociada con más de un inquilino de Azure AD, un administrador no puede ver los detalles completos de un usuario (incluido el nombre, apellidos, correo electrónico de recuperación de contraseña, y si son un administrador global de Azure AD) a menos que estén iniciado sesión en el mismo inquilino como dicho usuario con una cuenta que tenga permisos de administrador global para ese inquilino. Sin embargo, pueden agregar y quitar usuarios en cualquier inquilino que está asociado con la cuenta del centro de partners. |
+| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el centro de partners, pero ten en cuenta que la capacidad de crear y eliminar usuarios del inquilino de Azure AD depende de los permisos de la cuenta en Azure AD. Es decir, si un usuario se le asigna el rol de administrador, pero no tiene permisos de administrador global de la organización Azure AD, no podrán crear nuevos usuarios ni eliminar los usuarios del directorio (aunque puede cambiar un rol del usuario centro de partners). <p> Ten en cuenta que si la cuenta del centro de partners está asociada con más de un inquilino de Azure AD, un administrador no puede ver los detalles completos de un usuario (incluido el nombre, apellidos, correo electrónico de recuperación de contraseña, y si son un administrador global de Azure AD) a menos que estén iniciar sesión en el mismo inquilino como dicho usuario con una cuenta que tenga permisos de administrador global para ese inquilino. Sin embargo, pueden agregar y quitar usuarios en cualquier inquilino que está asociado con la cuenta del centro de partners. |
 | Desarrollador            | Puede cargar paquetes y enviar aplicaciones y complementos, así como ver el [Informe de uso](usage-report.md) para obtener información detallada de telemetría. Puede acceder a la funcionalidad de [Experiencias entre dispositivos](https://go.microsoft.com/fwlink/?linkid=874042) . No puede ver la configuración de la cuenta ni la información financiera.   |
 | Colaborador empresarial | Puede ver informes de [estado](health-report.md) y de [uso](usage-report.md). No puede crear ni enviar productos, cambiar la configuración de cuenta ni ver información financiera.   |
 | Colaborador financiero  | Puede ver [informes de pago](payout-summary.md), información financiera e informes de adquisición. No puede modificar las aplicaciones, los complementos ni la configuración de la cuenta.    |

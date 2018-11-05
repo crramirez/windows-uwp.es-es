@@ -9,20 +9,20 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 02c856fd697bef958eb45a0f0f133e06f63a7f51
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973903"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039115"
 ---
 # <a name="binding-markup-extension"></a>Extensión de marcado {Binding}
 
 
-**Nota**un nuevo mecanismo de enlace está disponible para Windows 10, que se ha optimizado para la productividad del desarrollador y de rendimiento. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
+**Nota**un nuevo mecanismo de enlace está disponible para Windows 10, que está optimizado para la productividad del desarrollador y de rendimiento. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
 
 **Nota**para obtener información general sobre el uso de datos de enlace en la aplicación con **{Binding}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta el [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-Se usa la extensión de marcado **{Binding}** a las propiedades de enlace de datos en controles con valores procedentes de un origen de datos, como código. En el tiempo de carga de XAML, la extensión de marcado **{Binding}** se convierte en una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Este objeto de enlace obtiene un valor de propiedad en un origen de datos y lo inserta en la propiedad que está en el control. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de dichos cambios. Opcionalmente, también puede configurarse para insertar los cambios en el valor del control de nuevo en la propiedad de origen. La propiedad que es el destino de un enlace de datos debe ser una propiedad de dependencia. Para obtener más información, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
+Se usa la extensión de marcado **{Binding}** a las propiedades de enlace de datos en controles con valores procedentes de un origen de datos como el código. En el tiempo de carga de XAML, la extensión de marcado **{Binding}** se convierte en una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Este objeto de enlace obtiene un valor de propiedad en un origen de datos y lo inserta en la propiedad que está en el control. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de dichos cambios. Opcionalmente, también puede configurarse para insertar los cambios en el valor del control de nuevo en la propiedad de origen. La propiedad que es el destino de un enlace de datos debe ser una propiedad de dependencia. Para obtener más información, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
 
 **{Binding}** tiene la misma prioridad de propiedad de dependencia que un valor local, y definir un valor local en código imperativo quita el efecto de cualquier **{Binding}** definido en el marcado.
 

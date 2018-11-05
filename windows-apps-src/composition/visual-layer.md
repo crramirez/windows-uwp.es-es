@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988394"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037025"
 ---
 # <a name="visual-layer"></a>Capa visual
 
@@ -40,7 +40,7 @@ Las principales funciones de la capa visual son las siguientes:
 
 ### <a name="content"></a>Contenido
 
-El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Subclases de Visual incluyen [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir elementos secundarios crear árboles de elementos visuales y [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contiene contenido y se pueden dibujar con colores sólidos, personalizados dibujados contenido o efectos visuales. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
+El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Subclases de Visual incluyen [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir elementos secundarios crear árboles de elementos visuales y [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contiene contenido y se pueden dibujar con colores sólidos, personalizado dibujados contenidos o efectos visuales. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
 
 Para más información, consulta la información general sobre los [objetos visuales de composición](composition-visual-tree.md).
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, personalizada, aplicación, promoción, campaña
 ms.localizationpriority: medium
 ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989711"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037841"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Crear una campaña de promoción de la aplicación personalizada
 
@@ -22,7 +22,7 @@ Además de crear una [campaña publicitaria para tu aplicación](create-an-ad-ca
 Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic a la campaña personalizada correspondiente y tendrás los datos disponibles para TI del [Centro](https://partner.microsoft.com/dashboard)de partners.
 
 > [!IMPORTANT]
-> Estos datos se solo realiza un seguimiento de los clientes en Windows 10. Los clientes que usen otros sistemas operativos pueden seguir el vínculo a la descripción de la aplicación, pero no se incluirán los datos acerca de sus actividades.
+> Estos datos se sigue solo para los clientes en Windows 10. Los clientes que usen otros sistemas operativos pueden seguir el vínculo a la descripción de la aplicación, pero no se incluirán los datos acerca de sus actividades.
 
 Hay dos tipos principales de datos asociados a las campañas personalizadas: las *vistas de página* de la descripción de Store de la aplicación y las *conversiones*. Una conversión es una adquisición de la aplicación producida porque un cliente ha visto la página de la descripción de la Tienda de la aplicación desde una dirección URL que incluye un identificador de campaña personalizada. Para obtener más información acerca de las conversiones, consulta [Qué adquisiciones de la aplicación se califican como conversiones](#understanding-how-acquisitions-qualify-as-conversions) en este tema.
 

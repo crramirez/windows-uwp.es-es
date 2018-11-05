@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984469"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039524"
 ---
 # <a name="themeresource-markup-extension"></a>Extensión de marcado {ThemeResource}
 
@@ -69,7 +69,7 @@ Las definiciones XAML de los estados visuales en una plantilla de control deben 
 
 Los usos de **ThemeResource** se pueden ver en una serie de valores dependientes. Por ejemplo, un valor de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que también es un recurso con clave podría usar una referencia a **ThemeResource**. Sin embargo, las propiedades de la interfaz de usuario que usan el recurso **SolidColorBrush** con clave también usarían una referencia a **ThemeResource**, por lo que es cada propiedad del tipo [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) la que habilita específicamente un cambio de valor dinámico cuando el tema cambia.
 
-**Nota** `{ThemeResource}` y evaluación de recursos de tiempo de ejecución en tanto se admiten en XAML Windows8.1, pero no en XAML para aplicaciones destinadas a Windows8.
+**Nota** `{ThemeResource}` y evaluación de recursos de tiempo de ejecución en el cambio de tema se admiten en XAML Windows8.1, pero no en XAML para aplicaciones destinadas a Windows8.
 
 ### <a name="system-resources"></a>Recursos del sistema
 

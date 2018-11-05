@@ -2,7 +2,7 @@
 author: v-angraf
 ms.assetid: d40056bc-76bc-c123-4d36-973ec46d11fc
 title: Página rendimiento (Dev Home)
-description: Proporciona información sobre la página de rendimiento de la aplicación Dev Home para Xbox One.
+description: Proporciona información acerca de la página de rendimiento de la aplicación Dev Home para Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
@@ -10,11 +10,11 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 6035463473eb6ddb1a3ec7fa554f9a12b8f764fc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976395"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037085"
 ---
 # <a name="performance-page-dev-home"></a>Página rendimiento (Dev Home)
    

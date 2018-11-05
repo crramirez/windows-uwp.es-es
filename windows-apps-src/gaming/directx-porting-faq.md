@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972482"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039175"
 ---
 # <a name="directx-11-porting-faq"></a>Preguntas más frecuentes sobre la migración a DirectX11
 
@@ -46,7 +46,7 @@ Los juegos que todavía usan la instrucción RDTSC deben actualizarse. Consulta 
 
 El proyecto del [kit de herramientas de DirectX (DirectXTK)](http://go.microsoft.com/fwlink/p/?LinkID=248929) para la comunidad ofrece clases auxiliares para usar con Direct3D 11.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>¿Cómo mantengo las rutas de código para el escritorio y Microsoft Store?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>¿Cómo mantengo las rutas de código para el escritorio y Microsoft Store
 
 
 Serie de artículos de Chuck titulada [Uso Dual de técnicas de codificación para juegos](http://go.microsoft.com/fwlink/p/?LinkID=286210) ofrece instrucciones sobre cómo compartir código entre el escritorio y las rutas de acceso de código de Microsoft Store.
@@ -123,7 +123,7 @@ Dado que aún no tenemos un reemplazo oficial del formato de archivo .x, muchas 
 ## <a name="how-do-i-debug-my-shaders"></a>¿Cómo depuro mis sombreadores?
 
 
-Microsoft Visual Studio2015 incluye herramientas de diagnóstico para elementos gráficos de DirectX. Consulta [Depurar gráficos de DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
+Microsoft Visual Studio2015 incluye herramientas de diagnóstico de gráficos de DirectX. Consulta [Depurar gráficos de DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>¿Cuál es el equivalente de la función *x* en Direct3D 11?
 
