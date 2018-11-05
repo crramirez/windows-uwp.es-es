@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974539"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031689"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>Gráficos 3D básicos para juegos DirectX
 
@@ -35,7 +35,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Vamos a explicar cómo desarrollar gráficos 3D con DirectX y C++\\Cx. En este tutorial compuesto por cinco partes se presenta la API de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466), además de conceptos y códigos que también se usan en muchas otras muestras de DirectX. Estas partes se estructuran entre sí, desde la configuración de DirectX de una aplicación para UWP con C++ hasta las texturas de primitivos y adición de efectos.
 
-> **Nota**en este tutorial se usa un sistema de coordenadas a la derecha con vectores de columna. Muchas aplicaciones y muestras de DirectX usan un sistema de coordenadas a la izquierda con vectores de fila. Si quieres una solución matemática de gráficos completa que admita un sistema de coordenadas a la izquierda con vectores de fila, piensa en usar [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para más información, consulta [Usar DirectXMath con Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Nota**este tutorial usa un sistema de coordenadas a la derecha con vectores de columna. Muchas aplicaciones y muestras de DirectX usan un sistema de coordenadas a la izquierda con vectores de fila. Si quieres una solución matemática de gráficos completa que admita un sistema de coordenadas a la izquierda con vectores de fila, piensa en usar [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para más información, consulta [Usar DirectXMath con Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
 
  
 

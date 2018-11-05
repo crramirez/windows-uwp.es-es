@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, entrada táctil, controles, directx, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 53c4a91f3ef20c11783796c3ca362f74b3f39adb
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978370"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033277"
 ---
 # <a name="touch-controls-for-games"></a>Controles táctiles para juegos
 
@@ -23,7 +23,7 @@ Aprende a agregar controles táctiles básicos a tu juego C++ de la Plataforma u
 
 Puedes incorporar estos controles en juegos donde desees que el jugador arrastre para desplazarse o para obtener una panorámica de un entorno de 3D, como un mapa o un campo de juego. Por ejemplo, en un juego de estrategia o en un puzzle, puedes usar estos controles para que el jugador pueda ver un entorno de juego más grande que la pantalla desplazándose hacia la izquierda o la derecha.
 
-> **Nota**nuestro código también funciona con controles de movimiento panorámico en función del mouse. Las API de Windows Runtime abstraen los eventos relacionados con el puntero, de modo que pueden controlar eventos basados tanto en el toque como en el mouse.
+> **Nota**nuestro código también funciona con controles de movimiento panorámico basados en el mouse. Las API de Windows Runtime abstraen los eventos relacionados con el puntero, de modo que pueden controlar eventos basados tanto en el toque como en el mouse.
 
  
 

@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fe9bad5afabca3ef0b9c782446e581aea61fe4dc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995157"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031217"
 ---
 # <a name="xaml-platform"></a>Plataforma XAML
 
 
-En esta sección se incluye temas donde se explican los conceptos de programación que generalmente se aplican a cualquier aplicación que escribas si estás usando las extensiones de componentes de C#, Microsoft Visual Basic o VisualC ++ (C++ / CX) como lenguaje de programación y XAML para la interfaz de usuario definición. Esto incluye conceptos de programación básica, como el uso de propiedades y eventos, y el modo en que estos se aplican a la programación de aplicaciones de la Plataforma universal de Windows (UWP). La Plataforma universal de Windows (UWP) amplía los conceptos de propiedades de C#, Visual Basic o C++/CX y sus valores agregando el sistema de propiedades de dependencias. Los temas de esta sección también documentan el lenguaje XAML tal y como lo usa UWP y abarcan escenarios básicos y temas avanzados sobre el uso de XAML para definir la interfaz de usuario de una aplicación para UWP.
+Esta sección incluyen temas donde se explican los conceptos de programación que generalmente conciernen a cualquier aplicación que escribas si estás usando las extensiones de componentes de C#, Microsoft Visual Basic o VisualC ++ (C++ / CX) como lenguaje de programación y XAML para la interfaz de usuario definición. Esto incluye conceptos de programación básica, como el uso de propiedades y eventos, y el modo en que estos se aplican a la programación de aplicaciones de la Plataforma universal de Windows (UWP). La Plataforma universal de Windows (UWP) amplía los conceptos de propiedades de C#, Visual Basic o C++/CX y sus valores agregando el sistema de propiedades de dependencias. Los temas de esta sección también documentan el lenguaje XAML tal y como lo usa UWP y abarcan escenarios básicos y temas avanzados sobre el uso de XAML para definir la interfaz de usuario de una aplicación para UWP.
 
 | Tema | Descripción |
 |-------|-------------|

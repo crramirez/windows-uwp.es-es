@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: 4caf4333bb3d442779aedac2028b0996cbd17645
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969310"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032746"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar un conjunto relacionado con un archivo del Instalador de aplicación
 
@@ -89,7 +89,7 @@ La plantilla básica incluye la información del archivo del Instalador de aplic
 ```
 
 ### <a name="step-3-add-the-main-package-information"></a>Paso 3: Agregar la información del paquete principal 
-Si el paquete de aplicación principal es un archivo .appxbundle o .msixbundle, a continuación, usar el `<MainBundle>` se muestra a continuación. Si el paquete de aplicación principal es un archivo .appx o .msix, a continuación, usar `<MainPackage>` en lugar de `<MainBundle>` en el fragmento de código. 
+Si el paquete de aplicación principal es un archivo .appxbundle o .msixbundle, usa el `<MainBundle>` se muestra a continuación. Si el paquete de aplicación principal es un archivo .appx o .msix, a continuación, usar `<MainPackage>` en lugar de `<MainBundle>` en el fragmento de código. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

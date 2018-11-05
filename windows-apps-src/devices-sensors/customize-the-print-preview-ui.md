@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
 ms.openlocfilehash: 71fb45842e8aaa4200e2597ac0736d911ac9bf34
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984621"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031467"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de vista previa de impresión
 
@@ -50,7 +50,7 @@ Estas opciones se definen en la clase [**StandardPrintTaskOptions**](https://msd
 
 Pero los cambios que realices mediante este método afectan solo a la interfaz de usuario de vista previa de impresión. Los usuarios pueden acceder siempre a todas las opciones compatibles con la impresora presionando **Más configuraciones** en la interfaz de usuario de vista previa de impresión.
 
-**Nota**aunque la aplicación puede especificar las opciones de impresión que se muestre, solo aquellas que son compatibles con la impresora seleccionada se muestran en la interfaz de usuario de vista previa de impresión. La interfaz de impresión no mostrará opciones que no sean compatibles con la impresora seleccionada.
+**Nota**aunque la aplicación puede especificar las opciones de impresión que se muestre, solo aquellos que son compatibles con la impresora seleccionada se muestran en la interfaz de usuario de vista previa de impresión. La interfaz de impresión no mostrará opciones que no sean compatibles con la impresora seleccionada.
 
  
 
@@ -98,7 +98,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Importante**llamando a () [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)quita todas las opciones de impresión de la interfaz de usuario, incluido el vínculo de **opciones más** de vista previa de impresión. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
+**Importante**llamar a () [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)quita todas las opciones de impresión de la interfaz de usuario, incluido el vínculo de **configuración más** de vista previa de impresión. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
 
 ### <a name="specify-default-options"></a>Especificar las opciones predeterminadas
 

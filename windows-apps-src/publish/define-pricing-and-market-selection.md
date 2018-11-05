@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: ef7136868fc9c212640c142db2751bd6e9a0b179
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996570"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031678"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
 
 La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
 
-Para que obtener información ayudar a hacer que la aplicación adecuada para los clientes de todo el mundo, consulta [directrices para globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que la aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
+Para que obtener información ayudar a hacer que tu aplicación adecuada para los clientes de todo el mundo, consulta [directrices para globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que tu aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Aunque este tema hace referencia a las aplicaciones, la selección del mercado para envíos de complementos utiliza el mismo proceso.
@@ -302,7 +302,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Pakistán</td>
     <td>Palaos</td>
-    <td>Palestinian Authority</td>
+    <td>Autoridad Palestina</td>
     <td>Panamá</td>
   </tr>
   <tr>
@@ -368,7 +368,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Suecia *</td>
     <td>Suiza *</td>
-    <td>Taiwan *</td>
+    <td>Taiwán *</td>
     <td>Tayikistán</td>
   </tr>
   <tr>
@@ -410,7 +410,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Vietnam</td>
     <td>Wallis y Futuna</td>
-    <td>Western Sahara (Disputed)</td>
+    <td>Sáhara Occidental (en conflicto)</td>
     <td>Yemen</td>
   </tr>
   <tr>
@@ -468,7 +468,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | España                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Suecia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Suiza          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Taiwan               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Taiwán               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Turquía               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Reino Unido       | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
@@ -480,7 +480,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 Si la aplicación publicada anteriormente incluye paquetes destinados a Windows 8.x, es importante tener en cuenta que una serie de mercados se trata como un mercado único "resto del mundo" para los clientes que usen la tienda en Windows 8.x, incluso aunque se muestren como mercados individuales en el centro de partners.
 
-Si dejas la selección de mercado predeterminada al enviar la aplicación, no tienes que preocuparte de esto y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si quieres excluir determinados mercados, ten en cuenta que la exclusión de solo uno de estos mercados "Resto del mundo" significa que la aplicación no estará disponible en *cualquier* de los mercados "Resto del mundo" para los clientes de Windows8 o Windows8.1.
+Si dejas la selección de mercado predeterminada al enviar la aplicación, no tienes que preocuparte de esto, y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si quieres excluir determinados mercados, ten en cuenta que la exclusión de solo uno de estos mercados "Resto del mundo" significa que la aplicación no estará disponible en *cualquier* de los mercados "Resto del mundo" para los clientes de Windows8 o Windows8.1.
 
 Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los siguientes:
 
@@ -661,7 +661,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Palaos</td>
-    <td>Palestinian Authority</td>
+    <td>Autoridad Palestina</td>
     <td>Panamá</td>
     <td>Papúa Nueva Guinea</td>
   </tr>

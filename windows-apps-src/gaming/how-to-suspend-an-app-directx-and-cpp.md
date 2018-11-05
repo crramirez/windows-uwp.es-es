@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, suspensión, suspend, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987835"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034125"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>Cómo suspender una aplicación (DirectX y C++)
 

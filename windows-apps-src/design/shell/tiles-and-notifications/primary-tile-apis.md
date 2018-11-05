@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, anclar icono principal, api de icono principal, comprobar si el icono está anclado, icono dinámico
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d5c65881552199fce6f90bbf15e4bb2bac950ce
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997644"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033680"
 ---
 # <a name="primary-tile-apis"></a>API de icono principal
  
@@ -86,7 +86,7 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 Si actualmente tu icono principal no está anclado, y el icono es compatible con Inicio, es posible que quieras mostrar una sugerencia a los usuarios de que pueden anclar tu icono principal.
 
 > [!NOTE]
-> Debe llamar a esta API desde un subproceso de interfaz de usuario mientras la aplicación está en primer plano, y solo debes llamar a esta APIafterthe usuario haya solicitado intencionadamente el bepinned de icono principal (por ejemplo, después el usuario hizo clic en Sí a la sugerencia sobre cómo anclar el icono).
+> Debe llamar a esta API desde un subproceso de interfaz de usuario mientras la aplicación está en primer plano, y solo debes llamar a este APIafterthe usuario haya solicitado intencionadamente el bepinned de icono principal (por ejemplo, después el usuario hizo clic en Sí a la sugerencia sobre cómo anclar el icono).
 
 Si el usuario hace clic en el botón para anclar el icono principal, a continuación llamaría al método [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) para solicitar que el icono se anclar a Inicio. Esta acción mostrará un cuadro de diálogo en el que se le pedirá al usuario que confirme que quiere que el icono quede anclado a Inicio.
 

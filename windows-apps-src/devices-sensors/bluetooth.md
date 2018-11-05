@@ -9,20 +9,20 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f381b7fbd53ee50d4589201edf74ac1f241d40
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5991783"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031653"
 ---
 # <a name="bluetooth"></a>Bluetooth
-Esta sección contiene artículos sobre cómo integrar Bluetooth en aplicaciones de plataforma Universal de Windows (UWP). Existen dos tecnologías de bluetooth diferentes que puedes elegir implementar en tu aplicación.
+Esta sección contiene artículos sobre cómo integrar Bluetooth en aplicaciones de la plataforma Universal de Windows (UWP). Hay dos tecnologías de bluetooth diferentes que puedes elegir implementar en tu aplicación.
 
 ## <a name="classic-bluetooth-rfcomm"></a>Bluetooth clásico (RFCOMM)
-Antes de Bluetooth LE, dispositivos suele utilizan este protocolo para comunicarte a través de Bluetooth. Este protocolo es simple y útiles para la comunicación sin necesidad de ahorro de energía del dispositivo a otro. Para obtener más información acerca de este protocolo, incluidos los ejemplos de código, consulta el tema de [RFCOMM de Bluetooth](send-or-receive-files-with-rfcomm.md) .
+Antes de Bluetooth LE, dispositivos suele utilizan este protocolo para comunicarte a través de Bluetooth. Este protocolo es simple y útiles para la comunicación de dispositivo a otro sin necesidad de ahorro de energía. Para obtener más información acerca de este protocolo, incluidos los ejemplos de código, consulta el tema de [RFCOMM de Bluetooth](send-or-receive-files-with-rfcomm.md) .
 
 ## <a name="bluetooth-low-energy-le"></a>Bluetooth de bajo consumo (LE)
-Bluetooth de bajo consumo (LE) es una especificación que define protocolos para la detección y la comunicación entre los dispositivos que tienen un requisito de uso de ahorro de energía. Para obtener más información, incluidos los ejemplos de código, consulta el tema de [Bluetooth de bajo consumo](bluetooth-low-energy-overview.md) .
+Bluetooth de bajo consumo (LE) es una especificación que define los protocolos de detección y la comunicación entre los dispositivos que tienen un requisito de uso de ahorro de energía. Para obtener más información, incluidos los ejemplos de código, consulta el tema de [Bluetooth de bajo consumo](bluetooth-low-energy-overview.md) .
 
 ## <a name="see-also"></a>Consulta también
 - [Preguntas más frecuentes de los desarrolladores de Bluetooth](bluetooth-dev-faq.md)

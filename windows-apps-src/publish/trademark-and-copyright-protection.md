@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 68ef1a9372523ea489677620acc039642bfc64ae
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985903"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031607"
 ---
 # <a name="trademark-and-copyright-protection"></a>Protección de marcas comerciales y derechos de autor
 
@@ -23,7 +23,7 @@ Obtén información sobre qué hacer si crees que otra aplicación está infring
 ### <a name="1-how-may-i-report-an-infringement-of-my-intellectual-property-rights-within-a-windows-app"></a>1. ¿Cómo puedo comunicar una infracción de mis derechos de propiedad intelectual relativos a una aplicación de Windows?
 
 
-Usa el siguiente [formulario](http://go.microsoft.com/fwlink/p/?LinkId=273879) para denunciar una infracción de derechos de publicidad, marca comercial o copyright relativos a una aplicación de Windows. Para infracciones de derechos de publicidad, marca comercial o copyright en múltiples aplicaciones, envía tu denuncia a mktlegal@microsoft.com. Si necesitas más información acerca de digital.de de Microsoft, visite: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976).
+Usa el siguiente [formulario](http://go.microsoft.com/fwlink/p/?LinkId=273879) para denunciar una infracción de derechos de publicidad, marca comercial o copyright relativos a una aplicación de Windows. Para infracciones de derechos de publicidad, marca comercial o copyright en múltiples aplicaciones, envía tu denuncia a mktlegal@microsoft.com. Si necesitas información adicional sobre digital.de Microsoft, visita: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976).
 
 ### <a name="2-i-created-my-app-to-work-with-a-microsoft-productservice-may-i-use-the-microsoft-productservice-name-in-the-name-of-my-app"></a>2. He creado la aplicación para que funcione con un servicio/producto de Microsoft. ¿Podría usar el nombre del producto/servicio de Microsoft en el nombre de la aplicación?
 

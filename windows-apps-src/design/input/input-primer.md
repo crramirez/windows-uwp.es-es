@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5997085"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032959"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -66,7 +66,7 @@ Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dia
 
 ## <a name="cortana"></a>Cortana
 
-En Windows 10, extensibilidad de **Cortana** te permite controlar los comandos de voz de un usuario e iniciar la aplicación para llevar a cabo una acción única.
+En Windows 10, extensibilidad de **Cortana** te permite controlar los comandos de voz del usuario e iniciar la aplicación para llevar a cabo una única acción.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 

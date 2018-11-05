@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 14a2811f59b8de33db51b255aee8892abf553198
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974712"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032163"
 ---
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
@@ -156,7 +156,7 @@ Habrá veces que [**Range**](https://msdn.microsoft.com/library/windows/apps/dn9
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Ejemplos**
-* [Ejemplo de Control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
+* [Muestra de Control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
  **Muestras de archivo**
 * [Muestra de edición de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
 

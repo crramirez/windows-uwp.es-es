@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreados, shaders
 ms.localizationpriority: medium
 ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985728"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034002"
 ---
 # <a name="glsl-to-hlsl-reference"></a>Referencia de GLSL a HLSL
 

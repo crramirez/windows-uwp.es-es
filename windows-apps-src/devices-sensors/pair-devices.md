@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 64f4756df37cbfaf041e432b7e4a890123f52d2f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971422"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033783"
 ---
 # <a name="pair-devices"></a>Emparejar dispositivos
 
@@ -29,7 +29,7 @@ Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio 
 -   Emparejamiento básico
 -   Emparejamiento personalizado
 
-**Sugerencia**algunos dispositivos no necesitan emparejarse con el fin de usarse. Esto se explica en la sección de emparejamiento automático.
+**Sugerencia**algunos dispositivos no necesitan emparejarse para poder usarlos. Esto se explica en la sección de emparejamiento automático.
 
  
 

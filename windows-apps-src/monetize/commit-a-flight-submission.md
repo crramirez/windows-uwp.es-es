@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de envío de MicrosoftStore, confirmar envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 58293a73589c7d2780360df24bcc24f38335f1e5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996164"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034191"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar un envío de paquete piloto
 
-Usa este método en la API de envío de Microsoft Store para confirmar un envío de piloto del paquete nuevo o actualizado al centro de partners. La acción de confirmación alertas partners centro que los datos de envío se han cargado (incluidos los paquetes relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío de la recopilación y la publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
+Usa este método en la API de envío de Microsoft Store para confirmar un envío de piloto del paquete nuevo o actualizado al centro de partners. El centro de partners alertas de confirmación acción se que los datos de envío se han cargado (incluidos los paquetes relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío para su ingesta y publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de creación de un envío de paquete piloto mediante la API de envío de Microsoft Store, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
 
@@ -49,7 +49,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el envío de paquete piloto que quieres confirmar. El identificador de la tienda de la aplicación está disponible en el centro de partners.  |
+| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el envío de paquete piloto que quieres confirmar. El Id. de la tienda de la aplicación está disponible en el centro de partners.  |
 | flightId | cadena | Obligatorio. El identificador del paquete piloto que contiene el envío que se va a confirmar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.  |
 | submissionId | cadena | Obligatorio. El identificador del envío que se va a confirmar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
 
@@ -92,7 +92,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Temas relacionados

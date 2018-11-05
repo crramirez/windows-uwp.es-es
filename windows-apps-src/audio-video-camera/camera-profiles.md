@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1af7453e8bfea973a67dc878438050accc01fb4c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974973"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031976"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara
 
@@ -75,7 +75,7 @@ En el método de ejemplo siguiente se muestra cómo usar objetos **MediaFrameSou
 > [!NOTE] 
 > Las API descritas en esta sección están en desuso a partir de Windows 10, versión 1803. Consulta la sección anterior, **Usar grupo de origen de fotogramas multimedia para obtener perfiles**.
 
-La selección de un perfil que admita HDR comienza como los otros escenarios. Crear una **MediaCaptureInitializationSettings** y una cadena para contener el identificador de dispositivo de captura. Agrega una variable booleana que realizará un seguimiento de si se admite vídeo HDR.
+La selección de un perfil que admita HDR comienza como los otros escenarios. Crear un **MediaCaptureInitializationSettings** y una cadena que contenga el identificador de dispositivo de captura. Agrega una variable booleana que realizará un seguimiento de si se admite vídeo HDR.
 
 [!code-cs[GetHdrProfileSetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetHdrProfileSetup)]
 

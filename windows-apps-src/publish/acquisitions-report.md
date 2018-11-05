@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982057"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032726"
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe de **adquisiciones** del [Centro](https://partner.microsoft.com/dashboard) de partners te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y los detalles de la plataforma y se muestra información sobre cómo los clientes de Windows 10 (incluyendo Xbox) han llegado a la descripción de la aplicación. También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas. 
+El informe de **adquisiciones** del [Centro](https://partner.microsoft.com/dashboard) de partners te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y los detalles de la plataforma y se muestra información sobre cómo los clientes en Windows 10 (incluyendo Xbox) han llegado a la descripción de la aplicación. También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas. 
 
 Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -32,7 +32,7 @@ En este informe, una **adquisición** significa que un cliente nuevo ha obtenido
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. Casi en tiempo real se mostrarán datos de todas las opciones (excepto en los datos de la **aplicación acumulativa** ). El tiempo **1 H** y **72 H** períodos solo se aplican a la pestaña **aplicación diariamente** del gráfico **adquisiciones** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. Casi en tiempo real se mostrarán datos de todas las opciones (excepto en los datos de la **aplicación acumulativa** ). El tiempo **1 H** y **72 H** períodos solo se aplican a la pestaña **aplicación diariamente** del gráfico de **adquisiciones** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por mercado o por tipo de dispositivo.
 
@@ -48,14 +48,14 @@ En el gráfico **Adquisiciones** se muestra el número de adquisiciones diarias 
 
 De manera predeterminada, mostramos la vista de la **aplicación todos los días** , que incluye cerca de datos en tiempo real. También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Aplicación acumulativa**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
 
-**Ventas brutas** de la aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total obtenido de ventas (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para cualquier reembolsos, devoluciones, anulación, etcetera.
+**Ventas brutas** para la aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total acumulado de ventas de la aplicación (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para los reembolsos, devoluciones, anulación, etcetera.
 
 También puedes filtrar los resultados por si la adquisición se originó desde el cliente, la Tienda web o la versión del sistema operativo.
 
 > [!NOTE]
 > También puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
-En la vista de la **aplicación todos los días** , cuando el **30D** período de tiempo seleccionado, puede ver los marcadores de círculo. Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
+En la vista de la **aplicación todos los días** , cuando el **30D** período de tiempo seleccionado, puede ver los marcadores de círculo. Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 
 > [!TIP]
 > Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).
@@ -115,7 +115,7 @@ El gráfico **Grupo demográfico de clientes** muestra información demográfica
 
 ## <a name="app-page-views-and-conversions-by-channel"></a>Vistas de página de la aplicación y conversiones por canal
 
-El gráfico de **vistas de página y conversiones por canal** te permite ver cómo los clientes de Windows 10 llegaron a la descripción de la aplicación durante el período de tiempo seleccionado.
+El gráfico de **vistas de página y conversiones por canal** te permite ver cómo los clientes de Windows 10 llegaron hasta la descripción de la aplicación durante el período de tiempo seleccionado.
 
 En este gráfico, un *canal* hace referencia al método por el que un cliente llegó a la página de descripción de la aplicación (por ejemplo, explorando y buscando en la Tienda, un vínculo de un sitio web externo, un vínculo de una de las campañas personalizadas, etc.). Se incluyen los siguientes tipos de canal:
 

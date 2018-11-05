@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b79edc5499343498801081dd00554128c3b57eae
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 3ec0f99f069950776ab934c82bd3197bdd6c9dd6
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970172"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032929"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
@@ -67,7 +67,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Nota</strong>con el botón secundario para mostrar un menú contextual si la aplicación o selección de barra de comandos no es comportamientos de la interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Nota</strong>con el botón secundario para mostrar un menú contextual si la aplicación o selección de barra de comandos no es comportamientos de interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
  
@@ -98,14 +98,14 @@ Responde a las entradas de mouse de tus aplicaciones controlando los mismos even
 
 Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar la funcionalidad básica de entrada sin tener que escribir un código para cada dispositivo de entrada. Sin embargo, todavía puedes sacar provecho de las funcionalidades especiales de cada dispositivo (por ejemplo, los eventos de rueda del mouse) con el puntero, con gestos y con los eventos de manipulación de este objeto.
 
-**Muestras:** Consulta esta funcionalidad en acción en nuestras [muestras de aplicaciones](http://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Muestras:** Consulta esta funcionalidad en acción en nuestras [muestras de aplicaciones](https://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
-- [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+- [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
 
-- [Muestra de entrada](http://go.microsoft.com/fwlink/p/?linkid=226855)
+- [Muestra de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
 
-- [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+- [Entrada: gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
 
 ## <a name="guidelines-for-visual-feedback"></a>Instrucciones para la información visual
 
@@ -141,16 +141,16 @@ Si necesitas personalizar el cursor del mouse:
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 
 **Muestras**
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
  
 

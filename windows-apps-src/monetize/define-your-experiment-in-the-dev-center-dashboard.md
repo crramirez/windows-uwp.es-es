@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995104"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033155"
 ---
 # <a name="define-your-experiment-in-partner-center"></a>Definir el experimento en el centro de partners
 
@@ -36,7 +36,7 @@ Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecut
     > No actives esta casilla si vas a crear un experimento que publicarás para clientes (es decir, un experimento asociado a un id. de proyecto que se usa en una versión de tu aplicación que está disponible para clientes). La edición de un experimento mientras está activo invalida los resultados del experimento.
 
 7. En la lista desplegable **Nombre de proyecto**, se selecciona el proyecto actual automáticamente. Si quieres agregar el nuevo experimento a otro proyecto, puedes seleccionar ese proyecto aquí. De lo contrario, deja solo esta selección.
-8.   Anota el valor de [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando escribas el [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debe hacer referencia este identificador en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al centro de partners.
+8.   Anota el valor de [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando el [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debe hacer referencia a este identificador en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al centro de partners.
 9. En la sección **Evento de visualización**, escribe el nombre del [evento de visualización](run-app-experiments-with-a-b-testing.md#terms) para tu experimento en el campo **Nombre de evento de visualización**.
 10. En la sección **Objetivos y eventos de conversión**, define al menos un objetivo para tu experimento:
   * En el campo **Nombre del objetivo** , escribe un nombre descriptivo para tu objetivo. Después de ejecutar un experimento, este nombre aparece en el resumen de resultados del experimento.
@@ -44,7 +44,7 @@ Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecut
   * En el campo **Objetivo**, elige **Maximizar** o **Minimizar**, en función de si deseas maximizar o minimizar las repeticiones del evento de conversión. Esta información se usa en el resumen de resultados del experimento.
 
 > [!NOTE]
-> El centro de partners notifica solo el primer evento de conversión para cada visualización de usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. Esto está pensado para ayudar a evitar que un solo usuario sesgue los resultados del experimento de un grupo de muestra de usuarios cuando el objetivo es maximizar el número de usuarios que realizan una conversión.
+> Centro de partners notifica solo el primer evento de conversión para cada visualización de usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. Esto está pensado para ayudar a evitar que un solo usuario sesgue los resultados del experimento de un grupo de muestra de usuarios cuando el objetivo es maximizar el número de usuarios que realizan una conversión.
 
 <span id="define-the-variations-and-settings-for-the-experiment" />
 

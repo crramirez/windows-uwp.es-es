@@ -9,25 +9,25 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e3b9ed2d256fb9ea8d38690a703baf7fbd3e7f0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976951"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031862"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Crear componentes de Windows Runtime en C# y Visual Basic
-A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime. Puedes usar tu componente en aplicaciones de la Plataforma universal de Windows (UWP) con C++, JavaScript, Visual Basic o C#. En este tema se describe las reglas para la creación de un componente y se describe algunos aspectos de soporte técnico de .NET Framework para Windows Runtime. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET Framework. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime.
+A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime. Puedes usar tu componente en aplicaciones de la Plataforma universal de Windows (UWP) con C++, JavaScript, Visual Basic o C#. En este tema se describe las reglas para crear un componente y se describe algunos aspectos de la compatibilidad de .NET Framework para Windows Runtime. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET Framework. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime.
 
 Si vas a crear un componente para el uso solo en aplicaciones UWP con C# o Visual Basic, y el componente no contiene controles UWP, considera el uso de la plantilla **Biblioteca de clase** en lugar de la plantilla  **Componente de Windows Runtime**. Hay menos restricciones en una biblioteca de clase simple.
 
-En este tema contiene las siguientes secciones:
+Este tema contiene las siguientes secciones:
 
 ## <a name="declaring-types-in-windows-runtime-components"></a>Declarar tipos en componentes de Windows Runtime
 Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquier funcionalidad de .NET Framework que esté autorizada en una aplicación universal de Windows. (Consulta la introducción de [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) para obtener más información.) De manera externa, los miembros de los tipos pueden exponer solo los tipos de Windows Runtime para sus parámetros y valores devueltos. En la siguiente lista se describen las limitaciones de los tipos de .NET Framework expuestos de componentes de Windows Runtime.
 
 -   Los campos, los parámetros y los valores devueltos de todos los tipos públicos y miembros en tu componente deben ser tipos de Windows Runtime.
 
-    Esta restricción incluye los tipos de Windows Runtime que creas, así como los tipos proporcionados por el propio Windows Runtime. También incluye varios tipos de .NET Framework. La inclusión de estos tipos forma parte de la compatibilidad que .NET Framework proporciona para habilitar el uso natural de Windows Runtime en código administrado: tu código aparentemente usa los tipos de .NET Framework familiares en lugar de los tipos de Windows Runtime subyacentes. Por ejemplo, puedes usar tipos primitivos de .NET Framework como Int32 y Double, ciertos tipos fundamentales como DateTimeOffset y Uri, y algunos tipos de interfaz genéricos utilizados habitualmente como IEnumerable&lt;T&gt; (IEnumerable(Of T) en Visual Basic) e IDictionary&lt;, TValue&gt;. (Ten en cuenta que los argumentos de tipo de estos tipos genéricos deben ser tipos de Windows Runtime.) Esto se explica en las secciones tipos de aprobación de Windows Runtime a código administrado y pasar administrados tipos de Windows Runtime, más adelante en este tema.
+    Esta restricción incluye los tipos de Windows Runtime que creas, así como los tipos proporcionados por el propio Windows Runtime. También incluye varios tipos de .NET Framework. La inclusión de estos tipos forma parte de la compatibilidad que .NET Framework proporciona para habilitar el uso natural de Windows Runtime en código administrado: tu código aparentemente usa los tipos de .NET Framework familiares en lugar de los tipos de Windows Runtime subyacentes. Por ejemplo, puedes usar tipos primitivos de .NET Framework como Int32 y Double, ciertos tipos fundamentales como DateTimeOffset y Uri, y algunos tipos de interfaz genéricos utilizados habitualmente como IEnumerable&lt;T&gt; (IEnumerable(Of T) en Visual Basic) e IDictionary&lt;, TValue&gt;. (Ten en cuenta que los argumentos de tipo de estos tipos genéricos deben ser tipos de Windows Runtime.) Esto se explica en las secciones pasar de Windows Runtime tipos a código administrado y pasar administrados tipos de Windows Runtime, más adelante en este tema.
 
 -   Las interfaces y clases públicas pueden contener métodos, propiedades y eventos. Puedes declarar a delegados para tus eventos o usar el delegado EventHandler&lt;T&gt;. Una clase o interfaz pública no puede:
 
@@ -266,6 +266,6 @@ Una vez que hayas creado un componente de Windows Runtime para tu propio uso, es
 Para obtener más información acerca de las características de los lenguajes C# y Visual Basic, así como de la compatibilidad de .NET Framework con Windows Runtime, consulta [Referencia de los lenguajes Visual Basic y C#](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).
 
 ## <a name="related-topics"></a>Temas relacionados
-* [.NET para Introducción a las aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para Introducción a las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

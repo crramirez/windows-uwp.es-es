@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: ad6381562b37b1a759a575e070edd6b1bf63402d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5991240"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033287"
 ---
 # <a name="get-an-add-on-submission"></a>Obtener un envío de complemento
 
@@ -25,7 +25,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un envío de complemento para una de las aplicaciones. Puedes hacer esto en el centro de partners, o puedes hacerlo mediante el método de [crear un envío de complemento](create-an-add-on-submission.md) .
+* Crear un envío de complemento para una de las aplicaciones. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método de [crear un envío de complemento](create-an-add-on-submission.md) .
 
 ## <a name="request"></a>Solicitud
 
@@ -140,7 +140,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el envío. |
-| 409  | El envío no pertenece al complemento especificado o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | El envío no pertenece al complemento especificado o el complemento usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

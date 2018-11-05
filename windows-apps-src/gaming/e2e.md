@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
 ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971087"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031564"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -602,7 +602,7 @@ Direct3D 11.3 es una API de gráficos de bajo nivel que usa el ya familiar model
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Elección de Direct3D12 o Direct3D11</td>
+        <td>Elegir Direct3D12 o Direct3D11</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">¿Qué es Direct3D12?</a></td>
     </tr>
     <tr>

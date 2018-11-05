@@ -10,11 +10,11 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5997183"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031177"
 ---
 # <a name="home-page-dev-home"></a>Página principal (Dev Home)
    
@@ -43,7 +43,7 @@ El panel de **acciones rápidas** contiene los siguientes botones que proporcion
    *  **Espacio aislado de cambio:** Te permite cambiar qué espacio aislado de la consola está en.   
    *  **Consola de reinicio:** Reinicia la consola de desarrollo.   
    *  **Leave Dev Mode:** Devuelve la consola al modo comercial y reinicia la consola.   
-   *  **Inicia Home:** Inicia la pantalla de inicio de la versión comercial.   
+   *  **Principal de lanzamiento:** Inicia la pantalla de inicio de la versión comercial.   
    *  **Registrar un juego desde una ubicación compartida de red:** Registra un juego desde una ubicación de red compartida.   
 
   
@@ -72,8 +72,8 @@ El panel de **juegos y aplicaciones** puede usarse para realizar las siguientes 
   
 El panel de **cuentas de prueba** puede usarse para realizar las siguientes acciones:   
  
-   *  Ver la lista de usuarios registrados en la consola.  
-   *  Inicia sesión un usuario o cerrar con un solo clic.  
+   *  Ver la lista de los usuarios registrados en la consola.  
+   *  Inicia sesión un usuario o alejar con un solo clic.  
    *  Agregar usuarios y las cuentas de invitado.  
    *  Ver los detalles de los usuarios y las cuentas de invitado.  
 

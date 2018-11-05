@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, vínculo, protocolo de la tienda windows, vincular a una aplicación, vincular a aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: d0d0a9fc862734611167e5118392126cb42687f2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974575"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031417"
 ---
 # <a name="link-to-your-app"></a>Vincular a la aplicación
 
@@ -27,14 +27,14 @@ Para obtener la dirección URL de la descripción de la Tienda de tu aplicación
 Cuando un cliente hace clic en este vínculo, se abre la página de descripción basada en web de la aplicación. En los dispositivos Windows, la aplicación Tienda también se iniciará y mostrará la descripción de tu aplicación.
 
 
-## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Un vínculo a la descripción de la tienda de la aplicación con el distintivo de Microsoft Store
+## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Vincular a la descripción de la tienda de la aplicación con el distintivo de Microsoft Store
 
 Puedes vincular directamente a la descripción de la aplicación mediante un distintivo personalizado para informar a los clientes de que la aplicación está en la Microsoft Store.
 
 Para crear el distintivo, visita la página de [distintivos de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Debes tener el **Id. de la Tienda** de 12 caracteres de la aplicación para generar el distintivo y un vínculo. Encontrarás el **Id. de la Tienda** de la aplicación en la página [Identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones**.
 
 > [!NOTE]
-> Consulta las [directrices de marketing de aplicación](app-marketing-guidelines.md) para obtener información y los requisitos relacionados con el uso de la tarjeta de Microsoft Store.
+> Consulta las [directrices de marketing de la aplicación](app-marketing-guidelines.md) para obtener información y requisitos relacionados con el uso de la tarjeta de Microsoft Store.
 
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Vincular directamente a la aplicación en Microsoft Store
