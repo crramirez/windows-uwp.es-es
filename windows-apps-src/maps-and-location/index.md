@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services
 ms.localizationpriority: medium
 ms.openlocfilehash: 17d123b440b6ec7892c84a9a6bca9177799ad0fb
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970480"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6026949"
 ---
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
