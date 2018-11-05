@@ -9,16 +9,16 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f223b858861cf0f965c5b7ea8778426a8340af
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5991974"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6038293"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
  
 
-Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones para UWP o diseño Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
+Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones para UWP/diseño de Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de herramientas de diseño
@@ -107,15 +107,15 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 
 ![Imagen de Editor de tema XAML Fluent](images/XamlThemeEditor_screenshot.png)
 **Fluent Editor de tema XAML**<br>
-El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestra marco ResourceDictionary usada en las aplicaciones de la plataforma Universal de Windows (UWP).
-<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Descargar la muestra de herramienta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Echa un vistazo a la herramienta en GitHub</a>
+El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestra framework ResourceDictionary usada en las aplicaciones de la plataforma Universal de Windows (UWP).
+<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Descargar la muestra de la herramienta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Echa un vistazo a la herramienta en GitHub</a>
 
 ![Imagen de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la siguiente oleada de Fluent Design System de Microsoft. Hace un uso considerable de la densidad mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
+La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la siguiente oleada de Fluent Design System de Microsoft. Hace un uso considerable de la densidad mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Descargar la muestra de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Echa un vistazo a la muestra de VanArsdel en GitHub</a>
 
-![imagen de conversión de tipos de compilación](images/buildcast.png)
+![crear la imagen de conversión](images/buildcast.png)
 **BuildCast**<br>
 BuildCast es una muestra de principio a fin integrada para presentar el sistema Fluent Design y UWP. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar la muestra de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo a la muestra de BuildCast en GitHub</a>

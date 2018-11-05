@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bd34c285a74c0fbe7e51f1f3fa53cdde33733dd
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979864"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034304"
 ---
 # <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
@@ -32,9 +32,9 @@ Al elegir un paquete para UWP desde tu envío publicado, Microsoft Store siempre
 
 Puedes proporcionar varios paquetes para UWP con el mismo número de versión. Sin embargo, los paquetes con el mismo número de versión no pueden tener también la misma arquitectura, ya que la identidad completa que la Tienda usa para cada paquete debe ser exclusiva. Para obtener más información, consulta [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
 
-Al proporcionar varios paquetes UWP que usen el mismo número de versión, se usará la arquitectura (en orden x64, x 86, ARM, independiente) para decidir cuál es el intervalo superior (cuando el almacén determina qué paquete proporcionar a dispositivo del cliente). Al clasificar lotes de aplicaciones que usan el mismo número de versión, se detiene en cuenta la arquitectura de mayor rango. Un lote de aplicaciones con un paquete x64 tiene un rango superior a otro que solo contenga un paquete x86.
+Al proporcionar varios paquetes UWP que usen el mismo número de versión, se usará la arquitectura (en orden x64, x 86, ARM, independiente) para decidir cuál es el intervalo superior (cuando el almacén determina qué paquete proporcionar a los dispositivos de un cliente). Al clasificar lotes de aplicaciones que usan el mismo número de versión, se detiene en cuenta la arquitectura de mayor rango. Un lote de aplicaciones con un paquete x64 tiene un rango superior a otro que solo contenga un paquete x86.
 
-Esto ofrece mucha flexibilidad al evolucionar la aplicación a lo largo del tiempo. Puedes cargar y enviar paquetes nuevos que usan los números de versión inferiores para agregar compatibilidad con dispositivos Windows 10 que no admitían anteriormente, puedes agregar paquetes que tienen dependencias más estrictas para aprovechar las ventajas del hardware o características del sistema operativo o bien agregar paquetes que sirven como actualizaciones para algunos o todos los clientes base.
+Esto ofrece mucha flexibilidad al evolucionar la aplicación a lo largo del tiempo. Puedes cargar y enviar nuevos paquetes que usan los números de versión inferiores para agregar compatibilidad con dispositivos Windows 10 que no admitían anteriormente, puedes agregar paquetes que tienen dependencias más estrictas para aprovechar las ventajas del hardware o características del sistema operativo o bien agregar paquetes que sirven como actualizaciones para algunos o todos tus clientes base.
 
 El siguiente ejemplo muestra cómo se puede usar la numeración de versión a lo largo de varios envíos para ofrecer los paquetes previstos a los clientes.
 
@@ -42,7 +42,7 @@ El siguiente ejemplo muestra cómo se puede usar la numeración de versión a lo
 
 Windows 10 te permite escribir un único código base que se ejecuta en todos los lugares. Esto hace mucho más fácil iniciar un nuevo proyecto en varias plataformas. Sin embargo, por diversas razones, es posible que no quieras combinar código base ya existente para crear un único proyecto inmediatamente.
 
-Puedes usar las reglas de control de versiones del paquete para llevar gradualmente a los clientes hasta un único paquete de la familia de dispositivos universales, mientras que envías una serie de actualizaciones provisionales a las familias de dispositivos concretas (incluidas aquellas que sacar provecho de las API de Windows 10). El siguiente ejemplo muestra cómo se aplican las mismas reglas de forma coherente a través de una serie de envíos para la misma aplicación.
+Puedes usar las reglas de control de versiones del paquete para llevar gradualmente a los clientes hasta un único paquete de la familia de dispositivos Universal, mientras que envías una serie de actualizaciones provisionales a las familias de dispositivos concretas (incluidas aquellas que aprovechan las ventajas de las API de Windows 10). El siguiente ejemplo muestra cómo se aplican las mismas reglas de forma coherente a través de una serie de envíos para la misma aplicación.
 
 | Envío | Contenido                                                  | Experiencia del cliente                                                                                                                                                                             |
 |------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ Puedes usar las reglas de control de versiones del paquete para llevar gradualme
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Usar el número de versión para revertir a un paquete distribuido anteriormente para las nuevas adquisiciones
 
-Si guardas copias de los paquetes, tendrás la opción de revertir el paquete de la aplicación en el almacén de un paquete de Windows 10 anterior si debe detectar problemas con alguna versión. Se trata de una manera temporal de limitar la molestia para tus clientes mientras te tomas tiempo para solucionar el problema.
+Si guardas copias de los paquetes, tendrás la opción de revertir el paquete de la aplicación en el almacén de un paquete de Windows 10 anterior si debe detectar problemas con alguna versión. Se trata de una manera temporal de limitar la molestia para tus clientes mientras es dedicar tiempo a solucionar el problema.
 
 Para ello, crea un nuevo [envío](app-submissions.md). Quita el paquete problemático y carga el paquete anterior que quieras proporcionar en la Tienda. Los clientes que ya hayan recibido el paquete al que estás revirtiendo seguirán teniendo el paquete problemático (ya que el antiguo tiene un número de versión anterior). Sin embargo, así se evita que nadie pueda comprar el paquete problemático y mantiene la aplicación disponible en la Tienda.
 
@@ -66,18 +66,18 @@ Para solucionar el problema de los clientes que ya hayan recibido el paquete pro
 ## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>Números de versión para Windows8.1 (y versiones anteriores) y paquetes de Windows Phone 8.1
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 Para los paquetes .appx destinados a Windows Phone 8.1, el número de versión del paquete en un nuevo envío siempre debe ser mayor que el del paquete incluido en el último envío (o cualquier envío anterior).
 
 Para los paquetes .appx destinados a Windows8 y Windows8.1, se aplica la misma regla por arquitectura: el número de versión del paquete en un nuevo envío siempre debe ser mayor que el último paquete publicado en la tienda para la misma arquitectura.
 
-Además, el número de versión de los paquetes de Windows8.1 siempre debe ser mayor que los números de versión de cualquiera de los paquetes de Windows8 para la misma aplicación. En otras palabras, el número de versión de ningún paquete Windows8 que envías debe ser menor que el número de versión de ningún paquete Windows8.1 que hayas enviado para la misma aplicación.
+Además, el número de versión de los paquetes de Windows8.1 siempre debe ser mayor que los números de versión de cualquiera de los paquetes de Windows8 para la misma aplicación. En otras palabras, el número de versión de los paquetes de Windows8 que envíes debe ser menor que el número de versión de los paquetes de Windows8.1 que hayas enviado para la misma aplicación.
 
 > [!NOTE]
 > Si la aplicación también tiene los paquetes de Windows 10, el número de versión de los paquetes de Windows 10 debe ser mayor que los de cualquiera de los paquetes Windows8, Windows8.1 o Windows Phone 8.1. Para obtener más información, consulta [Agregar paquetes para Windows 10 a una aplicación publicada anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).
 
-Estos son algunos ejemplos de lo que sucede en los escenarios de actualización de número de versión diferente para los paquetes destinados a Windows8 y Windows8.1.
+Estos son algunos ejemplos de lo que sucede en los escenarios de actualización de número de versión diferente para paquetes destinados a Windows8 y Windows8.1.
 
 | Con esta versión de tu aplicación en la Tienda  | Después de cargar esta versión | Una vez que la nueva versión esté en Store, se instalará como nueva adquisición | Una vez que la nueva versión esté en Store, se actualizará si algún cliente ya tiene la aplicación |
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|

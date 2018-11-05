@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 91a1ca0ee99833280aaa41ca4d9c94d043a78e0a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972433"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034714"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar la navegación entre dos páginas
 
@@ -89,7 +89,7 @@ En Page1.xaml, agrega el siguiente contenido:
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) raíz y después de la `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) raíz y después el `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -126,7 +126,7 @@ En Page2.xaml, agrega el siguiente contenido:
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) raíz y después de la `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) raíz y después el `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -298,7 +298,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> El código aquí, usa el valor devuelto de [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) para generar una excepción de la aplicación si se produce un error en la navegación al marco de la ventana inicial de la aplicación. Cuando **Navigate** devuelve **true**, se produce la navegación.
+> El código usa el valor devuelto de [**navegar**](https://msdn.microsoft.com/library/windows/apps/br242694) para generar una excepción de la aplicación si se produce un error en la navegación al marco de la ventana inicial de la aplicación. Cuando **Navigate** devuelve **true**, se produce la navegación.
 
 Ahora, compila y ejecuta la aplicación. Haz clic en el vínculo que dice "Haz clic para ir a la página 2". La segunda página que muestra "Página 2" en la parte superior, se debería cargar y mostrar en el marco.
 

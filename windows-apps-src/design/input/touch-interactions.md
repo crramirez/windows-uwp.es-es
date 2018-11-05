@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fbb2b6e5edee47d75d7115a38f95abf5ae71529a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989857"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034261"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -82,7 +82,7 @@ En la tabla siguiente, se muestran algunas de las diferencias entre los disposit
 
 ## <a name="use-touch-feedback"></a>Usar la información táctil
 
-La información visual adecuada durante las interacciones con la aplicación ayuda a los usuarios a reconocer, aprender y adaptar cómo interpretan sus interacciones por la aplicación y el Windowsplatform. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
+La información visual adecuada durante las interacciones con la aplicación ayuda a los usuarios a reconocer, aprender y adaptar cómo se interpretan sus interacciones por la aplicación y el Windowsplatform. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
 
 La información visual es esencial cuando el usuario usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en lo que respecta a ubicación. Muestra información siempre que se detecte entrada táctil para ayudar al usuario a entender cualquier regla personalizada de selección de destinos que defina la aplicación y los controles correspondientes.
 
@@ -153,7 +153,7 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer aprendizaje y la exploración (por ejemplo, pulsar y sostener).
+    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer el aprendizaje y la exploración (por ejemplo, pulsar y sostener).
 
      
 
@@ -438,7 +438,7 @@ Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia
 
 A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946). Por ejemplo, si tocas la pantalla y luego arrastras el dedo por la pantalla. Por último, cuando termina la interacción, tiene lugar un evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).
 
-**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y la interfaz de rueda de mouse.
+**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y la interfaz de rueda del mouse.
 
  
 

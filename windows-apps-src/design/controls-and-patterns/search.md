@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b506b439ff98da873823bd586bb5388fe360b2ba
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990877"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035504"
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -33,7 +33,7 @@ Buscar es una de las formas principales en que los usuarios pueden buscar conten
 
 **Entrada.** Texto es el modo más común de entrada de búsqueda y es el objetivo de esta guía. Entre otros modos de entrada comunes se incluyen la voz y la cámara, pero estos por lo general requieren la capacidad de interactuar con el hardware del dispositivo y es posible que necesiten controles adicionales o una interfaz de usuario personalizada en la aplicación.
 
-**Entrada de cero.** Una vez que el usuario ha activado el campo de entrada, pero antes de que el usuario haya escrito texto, puedes mostrar lo que denomina un "lienzo de entrada cero." El lienzo de entrada cero aparecerá comúnmente en el lienzo de la aplicación para que [sugerencia automática](auto-suggest-box.md) sustituya este contenido cuando el usuario empiece a escribir su consulta. Historial de búsquedas recientes, tendencias de búsquedas, sugerencias de búsquedas contextuales, consejos y sugerencias son todos buenos candidatos para el estado de entrada cero.
+**Entrada de cero.** Una vez que el usuario ha activado el campo de entrada, pero antes de que el usuario ha escrito texto, puedes mostrar lo que denomina un "lienzo de entrada cero." El lienzo de entrada cero aparecerá comúnmente en el lienzo de la aplicación para que [sugerencia automática](auto-suggest-box.md) sustituya este contenido cuando el usuario empiece a escribir su consulta. Historial de búsquedas recientes, tendencias de búsquedas, sugerencias de búsquedas contextuales, consejos y sugerencias son todos buenos candidatos para el estado de entrada cero.
 
 ![Ejemplo de Cortana en un lienzo de entrada cero](images/search-cortana-example.png)
 
@@ -58,11 +58,11 @@ La búsqueda es una función común y los usuarios encontrarán la interfaz de u
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-**Global** y **contextual o refinado.** Búsqueda en varias fuentes de contenido local y en la nube. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+**Global** y **contextual o refinado.** Búsqueda en varias fuentes de nube y contenido local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
-**Web.** Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
+**Web.** Buscar un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
-**Mis cosas.** Búsqueda en todos los dispositivos, en la nube, gráficos sociales y mucho más. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
+**Mis cosas.** Búsqueda a través de dispositivos, en la nube, gráficos sociales y mucho más. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
 
 Usa el texto de la sugerencia para comunicar el ámbito de búsqueda. Algunos ejemplos son:
 

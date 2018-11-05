@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c874c690826dfa74b8dcb2312204cd549db3db2b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989270"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035690"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -60,7 +60,7 @@ El espacio de nombres [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/
 
 ## <a name="send-a-simple-get-request-over-http"></a>Enviar una solicitud GET sencilla a través de HTTP
 
-Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. El siguiente fragmento de código muestra cómo enviar una solicitud GET para http://www.contoso.com mediante la clase [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y la clase [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para leer la respuesta de la solicitud GET.
+Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. El siguiente fragmento de código muestra cómo enviar una solicitud GET para http://www.contoso.com mediante la clase [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y la clase de [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para leer la respuesta de la solicitud GET.
 
 ```csharp
 //Create an HTTP client object

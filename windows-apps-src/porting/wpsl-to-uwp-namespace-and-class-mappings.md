@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-description: Este tema proporciona una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de plataforma Universal de Windows (UWP).
-title: WindowsPhone Silverlight a asignaciones de espacios de nombres y clases UWP
+description: En este tema se ofrece una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de la plataforma Universal de Windows (UWP).
+title: WindowsPhone Silverlight para asignaciones de espacios de nombres y clases UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.author: stwhi
 ms.date: 02/08/2017
@@ -9,23 +9,23 @@ ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 54118b41fc1f3036dddba9a0cfb8ecd860c1e233
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986216"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036945"
 ---
-# <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight a las asignaciones de API de UWP
+# <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight para asignaciones de API de UWP
 
 
-Este tema proporciona una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de plataforma Universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
+En este tema se ofrece una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de la plataforma Universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
 
-La tabla de asignaciones te ayudará cuando trabajes en un proyecto de UWP y volver a estás usando código fuente de un proyecto de WindowsPhone Silverlight. Existen diferencias en los nombres de los espacios de nombres y las clases (incluidos los controles de la interfaz de usuario) entre ambas plataformas. En muchos casos, basta con cambiar el nombre de un espacio de nombres y, después, el código se compilará. A veces, una clase o el nombre la API han cambiado, así como el nombre del espacio de nombres. En otros casos, la asignación requiere un poco más de trabajo y, en raras ocasiones, requiere un cambio de enfoque.
+La tabla de asignaciones te ayudará cuando trabajes en un proyecto de UWP y volver a estás usando el código fuente de un proyecto de WindowsPhone Silverlight. Existen diferencias en los nombres de los espacios de nombres y las clases (incluidos los controles de la interfaz de usuario) entre ambas plataformas. En muchos casos, basta con cambiar el nombre de un espacio de nombres y, después, el código se compilará. A veces, una clase o el nombre la API han cambiado, así como el nombre del espacio de nombres. En otros casos, la asignación requiere un poco más de trabajo y, en raras ocasiones, requiere un cambio de enfoque.
 
 **Cómo usar la tabla:** En primer lugar, busca el nombre de la clase que estás usando. Las clases se muestran siempre que la asignación es más complicada que simplemente cambiar el nombre del espacio de nombres. Si la clase no aparece en la lista, significa que la asignación es simplemente un cambio de espacio de nombres. Por lo tanto, busca el nombre del espacio de nombres de la clase y encontrarás el nombre del espacio de nombres de UWP equivalente. La clase estará en ese espacio de nombres. Si el espacio de nombres no figura en la lista, su nombre no ha cambiado.
 
 **Nota**Windows 10 admite mucho más de .NET Framework que una aplicación de Windows Phone Store. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets.
-Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que una tecnología de compilación anticipada que convierte MSIL en código máquina ejecutable de forma nativa. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
+Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que una tecnología de compilación anticipada que convierte MSIL en código de máquina ejecutable de forma nativa. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
 
 | Windows Phone Silverlight | Windows Runtime |
 | ------------------------- | --------------- |

@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 0183e19135758f73dfea9b63535437ff9b66011a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996154"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036445"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -30,7 +30,7 @@ Para esta muestra, vamos a aprovechar la biblioteca de **three.js**. Esta biblio
 </iframe>
 
 > [!NOTE] 
-> Esto no es un juego completo; está diseñada para mostrar como usar JavaScript y una biblioteca de terceros para preparar una aplicación lista para publicar en Microsoft Store.
+> Esto no es un juego completo; está diseñada para mostrar como usar JavaScript y una biblioteca de terceros para preparar una aplicación lista para publicarse en la Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -642,7 +642,7 @@ Al final, aplicamos cualquiera de los valores actualizados `x` e `y` a la cámar
 
 ¡Enhorabuena! Ya tienes una cámara controlada por el jugador que puede moverse y mirar alrededor. Todavía podemos colarnos por las paredes, pero eso lo solucionaremos más tarde. A continuación, agregaremos el dinosaurio.
 
-<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el lápiz <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE]

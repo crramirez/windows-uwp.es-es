@@ -2,7 +2,7 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o varios dispositivos.
+title: Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o más dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -10,18 +10,18 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b16e06c81eeb90e500e40fc9b4d7ab709651091
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984187"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036093"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir una aplicación de escritorio empaquetada
 
-Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o varios dispositivos.  
+Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o más dispositivos.  
 
 > [!NOTE]
-> ¿Tienes un plan de cómo podría transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
+> ¿Tienes un plan para la forma de transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
 
@@ -79,7 +79,7 @@ Para obtener la lista completa de las extensiones y las instrucciones que indica
 
 Asimismo, puedes agregar código a la aplicación empaquetada que te permitirá realizar estas tareas:
 
-* Migrar los datos de usuario asociados a la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
+* Migrar los datos de usuario asociados con la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
 * Ofrecer a los usuarios la opción de desinstalar la versión de escritorio de la aplicación.
 
 Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de usuario.
@@ -125,7 +125,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>Desinstalar la versión de escritorio de la aplicación
 
-Es mejor no desinstalar la aplicación de escritorio de los usuarios sin antes solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si esto sucede, tendrás que decidir si quieres bloquear el uso de la aplicación de escritorio o permitir el uso en paralelo de ambas aplicaciones.
+Es mejor no desinstalar la aplicación de escritorio de los usuarios sin antes solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si esto sucede, tendrás que decidir si quieres bloquear el uso de la aplicación de escritorio o permitir el uso de side-by-side de ambas aplicaciones.
 
 Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación empaquetada basada en .NET.
 

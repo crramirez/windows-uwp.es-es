@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0628dcfc5ece046ca728763876e8e00c9a2d5904
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970295"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037115"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
 
 Puedes enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
 
-Para obtener más información sobre cómo configurar los idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
+Para obtener más información sobre la configuración de idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
 ## <a name="supported-languages"></a>Idiomas admitidos
 

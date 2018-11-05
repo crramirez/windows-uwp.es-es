@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e6a7e7a29d766cc226b3e4afd4376a6c5c9ec42a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973637"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034314"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Crear componentes de Windows Runtime en C++/CX
 > [!NOTE]
@@ -27,7 +27,7 @@ Hay varias razones para compilar un componente de Windows Runtime.
 
 Al compilar una solución que contiene un proyecto de JavaScript o. NET y un proyecto de componente de Windows Runtime, los archivos de proyecto de JavaScript y la DLL compilada se combinan en un paquete que se puede depurar localmente en el simulador o remotamente en un dispositivo amarrado. También puedes distribuir solo el proyecto del componente como un SDK de extensión. Para obtener más información, consulta [Crear un kit de desarrollo de software](https://msdn.microsoft.com/library/hh768146.aspx).
 
-En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en los límites de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa los tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en tu C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia del lenguaje Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en el límite de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en su C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia del lenguaje Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Reglas de nomenclatura y del uso de mayúsculas y minúsculas
 
@@ -129,7 +129,7 @@ namespace CppComponent
 }
 ```
 
-Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. Puedes pasar ese objeto como argumento a C++ / método CX para que el objeto se convierte implícitamente a C++ / tipo CX.
+Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. A continuación, puedes pasar ese objeto como un argumento para C++ / método CX para que el objeto se convierte implícitamente a C++ / tipo CX.
 
 ```javascript
 // Get and set the value struct
@@ -148,7 +148,7 @@ function GetAndSetPlayerData() {
 
 Otro enfoque es definir una clase que implemente IPropertySet (no se muestra).
 
-En los lenguajes. NET, solo tienes que crear una variable del tipo que se define en el C++ / componente CX.
+En los lenguajes. NET, solo tienes que crear una variable del tipo que se define en C ++ / componente CX.
 
 ```csharp
 private void GetAndSetPlayerData()
@@ -223,7 +223,7 @@ public:
 };
 ```
 
-Cuando se pasa un valor de DateTime de C++ / CX a JavaScript, JavaScript lo acepta como objeto Date y lo muestra de manera predeterminada como una cadena de fecha de formato largo.
+Cuando se pasa un valor de DateTime de C++ / CX a JavaScript, JavaScript lo acepta como objeto Date y lo muestra de forma predeterminada como una cadena de fecha de formato largo.
 
 ```javascript
 function SetAndGetDate() {
@@ -347,7 +347,7 @@ private void GetDictionary()
 ```
 
 ## <a name="properties"></a>Propiedades
-Una clase de referencia pública en C++ / extensiones de componentes de CX expone los miembros de datos públicos como propiedades, mediante el uso de la palabra clave de propiedad. El concepto es idéntico a las propiedades de .NET Framework. Una propiedad trivial es similar a un miembro de datos porque su funcionalidad es implícita. Una propiedad no trivial tiene descriptores de acceso get y set explícitos y una variable privada con nombre que es la "memoria auxiliar" para el valor. En este ejemplo, la variable de miembro privada \_propertyAValue es la copia de seguridad para PropertyA. Una propiedad puede generar un evento cuando cambia su valor, y una aplicación cliente puede registrarse para recibir ese evento.
+Una clase de referencia pública en C++ / extensiones de componentes CX expone los miembros de datos públicos como propiedades, mediante la palabra clave de propiedad. El concepto es idéntico a las propiedades de .NET Framework. Una propiedad trivial es similar a un miembro de datos porque su funcionalidad es implícita. Una propiedad no trivial tiene descriptores de acceso get y set explícitos y una variable privada con nombre que es la "memoria auxiliar" para el valor. En este ejemplo, la variable de miembro privada \_propertyAValue es la copia de seguridad para PropertyA. Una propiedad puede generar un evento cuando cambia su valor, y una aplicación cliente puede registrarse para recibir ese evento.
 
 ```cpp
 //Properties
@@ -394,7 +394,7 @@ nativeObject.propertyB = "What is the meaning of the universe?";
 document.getElementById('P9').innerHTML += nativeObject.propertyB;
 ```
 
-Los lenguajes .NET acceden a propiedades en nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
+Los lenguajes .NET tener acceso a las propiedades de nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
 
 ```csharp
 private void GetAProperty()

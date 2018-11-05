@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d24f40c32cfcf3d0efe8597c4d955ae4146cf9e8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974263"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035783"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
@@ -45,7 +45,7 @@ Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y
 Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
 ## <a name="using-the-icons"></a>Usar los iconos
-Si vas a desarrollar una aplicación en C# / VB/C++ y XAML, puedes usar glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Si estás desarrollando una aplicación en C# / VB/C++ y XAML, puedes usar los glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -57,14 +57,14 @@ Si quieres usar un glifo de la fuente **Segoe MDL2 Assets** que no está incluid
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-También puedes usar el recurso estático `SymbolThemeFontFamily` para acceder a **Segoe MDL2 Assets**, en lugar de especificar la fuente por nombre:
+También puedes usar el recurso estático `SymbolThemeFontFamily` para tener acceso a **Segoe MDL2 Assets**, en lugar de especificar la fuente por su nombre:
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
 
 
 ## <a name="how-do-i-get-this-font"></a>¿Cómo se puede obtener esta fuente?
-* En Windows 10: No hay nada que necesitas hacer, la fuente viene con Windows.
+* En Windows 10: No hay nada que necesitas hacer, la fuente se incluye con Windows.
 * En un equipo Mac, debes descargar e instalar la fuente: <a href="https://aka.ms/SegoeFonts">obtener el Segoe UI y MDL2 fuentes de icono</a>
 
 ## <a name="icon-list"></a>Lista de iconos
@@ -5016,7 +5016,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/F5ED.png" width="32" height="32" alt="Set" /></td>
   <td>F5ED</td>
-  <td>Establecer</td>
+  <td>Conjunto</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F5EE.png" width="32" height="32" alt="SetSolid" /></td>
   <td>F5EE</td>

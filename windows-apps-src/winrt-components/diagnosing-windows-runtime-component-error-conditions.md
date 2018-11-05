@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 833dd0a6447e9d0bb49c21a18d17bd7b0dc3455d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997664"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033889"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
@@ -83,7 +83,7 @@ En la UWP los métodos sobrecargados pueden tener el mismo número de parámetro
 | Número de error | Texto de mensaje                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WME1059      | Varios {0}-sobrecargas del parámetro de '{1}. {2}' se representan con Windows.Foundation.Metadata.DefaultOverloadAttribute.                                                            |
-| WME1085      | El {0}-sobrecargas del parámetro de {1}. {2} debe tener exactamente un método especificado como la sobrecarga predeterminada al representarla con Windows.Foundation.Metadata.DefaultOverloadAttribute. |
+| WME1085      | El {0}-sobrecargas del parámetro de {1}. {2} deben tener exactamente un método especificado como la sobrecarga predeterminada al representarla con Windows.Foundation.Metadata.DefaultOverloadAttribute. |
 
  
 
@@ -106,7 +106,7 @@ El componente debe contener al menos un tipo **public sealed** (**Public NotInhe
 
 Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico al de un espacio de nombres (WME1068).
 
-> **Precaución**si llamas directamente a Winmdexp.exe y no uses la opción /out para especificar un nombre para el componente de Windows Runtime, Winmdexp.exe intenta generar un nombre que incluya todos los espacios de nombres en el componente. Cambiar el nombre de los espacios de nombres puede alterar el nombre de tu componente.
+> **Precaución**si llamas directamente a Winmdexp.exe y no usa la opción /out para especificar un nombre para el componente de Windows Runtime, Winmdexp.exe intenta generar un nombre que incluya todos los espacios de nombres en el componente. Cambiar el nombre de los espacios de nombres puede alterar el nombre de tu componente.
 
  
 
@@ -154,7 +154,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 </tr>
 <tr class="even">
 <td align="left">WME1038</td>
-<td align="left">Método '{0}'tiene un parámetro de tipo'{1}' en su firma. Aunque este tipo no es un tipo válido de Windows Runtime, implementa interfaces que son tipos válidos de Windows Runtime. Considera la posibilidad de cambiar la firma de método para que use uno de los siguientes tipos en su lugar: '{2}'.</td>
+<td align="left">Método '{0}'tiene un parámetro de tipo'{1}' en su firma. Aunque este tipo no es un tipo válido de Windows Runtime, implementa interfaces que son tipos válidos de Windows Runtime. Considera la posibilidad de cambiar la firma del método para que use uno de los siguientes tipos en su lugar: '{2}'.</td>
 </tr>
 <tr class="odd">
 <td align="left">WME1039</td>
@@ -209,7 +209,7 @@ En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se 
 | WME1101      | Método '{0}'tiene el parámetro'{1}' que es una matriz, y que tiene tanto {2} y {3}. En Windows Runtime, los parámetros de la matriz de contenido deben ser o bien de lectura o bien de escritura. Quita uno de los atributos de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | WME1102      | Método '{0}'tiene un parámetro de salida'{1}' que es una matriz, pero que tiene {2}. En Windows Runtime, el contenido de las matrices de salida es modificable. Quita el atributo de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | WME1103      | Método '{0}'tiene el parámetro'{1}' que es una matriz, y que tiene un System.Runtime.InteropServices.InAttribute o un System.Runtime.InteropServices.OutAttribute. En Windows Runtime, los parámetros de matriz deben tener {2} o {3}. Quita estos atributos o reemplázalos con el atributo de Windows Runtime apropiado si es necesario.                                                                                                                                                                                                                                                                                                                                                                                          |
-| WME1104      | Método '{0}'tiene el parámetro'{1}' que no es una matriz, y que tiene un {2} o un {3}. Windows Runtime no admite parámetros de marcado que no son de matriz con {2} o {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| WME1104      | Método '{0}'tiene el parámetro'{1}' que no es una matriz, y que tiene un {2} o un {3}. Windows Runtime no es compatible con parámetros de marcado que no son de matriz con {2} o {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | WME1105      | Método '{0}'tiene el parámetro'{1}' con System.Runtime.InteropServices.InAttribute o System.Runtime.InteropServices.OutAttribute. Windows Runtime no es compatible con parámetros de marcado con System.Runtime.InteropServices.InAttribute o System.Runtime.InteropServices.OutAttribute. Por favor, considera la posibilidad de quitar System.Runtime.InteropServices.InAttribute y reemplaza System.Runtime.InteropServices.OutAttribute por el modificador 'out' en su lugar. Método '{0}'tiene el parámetro'{1}' con System.Runtime.InteropServices.InAttribute o System.Runtime.InteropServices.OutAttribute. Windows Runtime solo es compatible con los parámetros ByRef de marcado con System.Runtime.InteropServices.OutAttribute y no es compatible con otros usos de estos atributos. |
 | WME1106      | Método '{0}'tiene el parámetro'{1}' que es una matriz. En Windows Runtime, el contenido de los parámetros de la matriz debe ser o bien de lectura o bien de escritura. Aplica o bien {2} o {3} a '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
@@ -244,8 +244,8 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 
 | Número de error | Texto de mensaje |
 |--------------|--------------|
-| WME1091 | El método ' \{0}' tiene el valor devuelto denominado ' \{1}' que es el mismo que el nombre de un parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
-| WME1092 | El método ' \{0}' tiene un parámetro denominado ' \{1}' que el mismo que el valor predeterminado es devuelven el nombre del valor. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
+| WME1091 | El método ' \{0}' tiene el valor devuelto denominado ' \{1}' que es el mismo que un nombre de parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
+| WME1092 | El método ' \{0}' tiene un parámetro denominado ' \{1}' que el mismo que el valor predeterminado es devuelven el nombre de valor. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
 
 **Nota**el nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos.
 

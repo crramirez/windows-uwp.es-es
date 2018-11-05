@@ -10,12 +10,12 @@ ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c0bc236fd3e9e37a759f83e3f24bfcad4817f068
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 32d8e7d858ff28a6ef6a9af517e0a584c6106cd5
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974993"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039059"
 ---
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 
@@ -49,7 +49,7 @@ La selección y la manipulación de texto son particularmente sensibles frente a
 
 **Consideraciones y recomendaciones**
 
-Usa los controles integrados que se exponen a través de los marcos de lenguaje en las aplicaciones de compilación Windowsto que proporcionan la experiencia de interacción del usuario total de la plataforma, incluidos los comportamientos de selección y manipulación. Encontrarás que la funcionalidad de interacción de los controles integrados es suficiente para la mayoría de las aplicaciones para UWP.
+Usa los controles integrados que se exponen a través de los marcos de lenguaje en las aplicaciones de la compilación de Windowsto que proporcionan la experiencia de interacción del usuario total de la plataforma, incluidos los comportamientos de selección y manipulación. Encontrarás que la funcionalidad de interacción de los controles integrados es suficiente para la mayoría de las aplicaciones para UWP.
 
 Cuando usas controles de texto estándar para UWP, no puedes personalizar los elementos visuales y los comportamientos de selección que se describen en este tema.
 
@@ -60,7 +60,7 @@ Si la aplicación requiere una interfaz de usuario personalizada que admita la s
 **Contenido modificable y no modificable**
 
 
-Con la entrada táctil, las interacciones de selección se ejecutan básicamente mediante gestos, como pulsar para establecer un cursor de inserción o seleccionar una palabra y deslizar para modificar una selección. Al igual que con otras interacciones Windowstouch, las interacciones temporales están limitadas a la presión y mantenga gesto para mostrar la interfaz de usuario informativa. Para más información, consulta [Directrices para información visual](guidelines-for-visualfeedback.md).
+Con la entrada táctil, las interacciones de selección se ejecutan básicamente mediante gestos, como pulsar para establecer un cursor de inserción o seleccionar una palabra y deslizar para modificar una selección. Al igual que con otras interacciones Windowstouch, las interacciones temporales están limitadas a la press y mantenga el gesto para mostrar la interfaz de usuario informativa. Para más información, consulta [Directrices para información visual](guidelines-for-visualfeedback.md).
 
 Windowsrecognizes dos posibles estados de las interacciones de selección, modificables y no modificables y ajusta la interfaz de usuario, la información y funcionalidad según corresponda.
 
@@ -114,20 +114,20 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
 
 **Muestras**
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: ejemplo de entrada de lápiz simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: muestra de gestos de Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de prueba de acceso táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: ejemplo de entrada de lápiz simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: muestra de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: muestra de manipulaciones y gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Muestra de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

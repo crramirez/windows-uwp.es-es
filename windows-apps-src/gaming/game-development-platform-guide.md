@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, tecnología, technology, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980884"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034644"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologías de juego de aplicaciones para la UWP
 
@@ -24,9 +24,9 @@ En esta guía, encontrarás información sobre las tecnologías disponibles para
 ##  <a name="benefits-of-windows10-for-game-development"></a>Ventajas de Windows 10 para el desarrollo de juegos
 
 
-Con la introducción de UWP en Windows 10, tus títulos de Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de versiones anteriores de Windows, hay un constante aumento en el número de clientes de Windows 10. La combinación de estas dos cosas significa que tus títulos de Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
+Con la introducción de UWP en Windows 10, tus títulos de Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de versiones anteriores de Windows, hay un constante aumento del número de clientes de Windows 10. La combinación de estas dos cosas significa que tus títulos de Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
 
-Además, Windows 10 ofrece muchas características nuevas que son particularmente beneficiosas para los juegos:
+Además, Windows 10 ofrece muchas características nuevas que son particularmente beneficiosas para juegos:
 
 -   Menor paginación de memoria y menor tamaño del sistema de memoria global
 -   Mejoras en la administración de memoria de elementos gráficos que asigna y protege activamente más memoria para el juego en primer plano
@@ -39,7 +39,7 @@ Los juegos en tiempo real que requieren un alto rendimiento deben usar las API d
 ## <a name="development-environment"></a>Entorno de desarrollo
 
 
-Para crear juegos para UWP, tendrás que configurar el entorno de desarrollo instalando Visual Studio 2015 o posterior. Te recomendamos que instalar la versión más reciente de Visual Studio, lo que da acceso a las últimas actualizaciones de seguridad y desarrollo. Visual Studio permite crear aplicaciones para UWP y proporciona herramientas de desarrollo de juegos:
+Para crear juegos para UWP, tendrás que configurar el entorno de desarrollo instalando Visual Studio 2015 o posterior. Te recomendamos que instalar la versión más reciente de Visual Studio, lo que da acceso a las últimas actualizaciones de seguridad y desarrollo. Visual Studio te permite crear aplicaciones para UWP y proporciona herramientas de desarrollo de juegos:
 
 -   Herramientas de Visual Studio para programación de juegos DX: Visual Studio proporciona herramientas para crear, editar, obtener una vista previa y exportar una imagen, modelo y recursos de sombreador. También puedes usar herramientas para convertir recursos durante la compilación y depurar el código de elementos gráficos de DirectX. Para obtener más información, consulta [Herramientas de Visual Studio para programación de juegos](set-up-visual-studio-for-game-development.md).
 -   Características de diagnóstico de elementos gráficos de Visual Studio: las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Las herramientas de diagnóstico te permiten depurar elementos gráficos, analizar fotogramas de elementos gráficos y supervisar el uso de la GPU en tiempo real. Para obtener más información, consulta [Usar DirectX en tiempo de ejecución y las características de diagnóstico de elementos gráficos de Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).

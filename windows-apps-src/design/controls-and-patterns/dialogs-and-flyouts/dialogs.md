@@ -15,11 +15,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba4bfcd38acba2bcd7c8399b8b17184edacc15a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984545"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034734"
 ---
 ## <a name="dialog-controls"></a>Controles de cuadro de diálogo
 
@@ -34,7 +34,7 @@ Los controles de cuadro de diálogo son superposiciones modales en la interfaz d
 
 Usa los cuadros de diálogo para notificar a los usuarios información importante o para solicitar información adicional o confirmación para completar una acción.
 
-Para obtener recomendaciones sobre cuándo usar un cuadro de diálogo frente a cuándo usar un control flotante (un control similar), consulta [los cuadros de diálogo y controles flotantes](index.md). 
+Para obtener recomendaciones sobre cuándo usar un cuadro de diálogo frente a cuándo se debe usar un control flotante (un control similar), consulta [los cuadros de diálogo y controles flotantes](index.md). 
 
 ## <a name="examples"></a>Ejemplos
 

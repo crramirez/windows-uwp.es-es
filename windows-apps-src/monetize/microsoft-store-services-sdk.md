@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f29062e00701f578b63f79935d17b1203afc0f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984914"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037105"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
@@ -32,8 +32,8 @@ En este momento, Microsoft Store Services SDK es compatible con los siguientes e
 |------------|----------------|
 |  [Ejecutar experimentos con pruebas A/B en tu aplicación para UWP](run-app-experiments-with-a-b-testing.md)    |  Ejecuta pruebas A/B en la aplicación para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el centro de partners, usa la clase [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obtener las variaciones del experimento en tu aplicación, usa estos datos para modificar el comportamiento de la característica que estás probando y, a continuación, usar el [LogForVariation ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)método para enviar eventos de vista y conversión al centro de partners. Por último, usa el centro de partners para ver los resultados y administrar el experimento.  |
 |  [Iniciar el Centro de opiniones desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra esta información en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners. |
-|  [Configurar la aplicación para UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Usar la clase [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) en tu aplicación para UWP para registrar la aplicación para recibir notificaciones push dirigidas que envíes a tus clientes mediante el centro de partners.  |
-|   [Registrar eventos personalizados en la aplicación para UWP para el informe de uso del centro de partners](log-custom-events-for-dev-center.md)   |  Usar la clase [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) en tu aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.  |
+|  [Configurar la aplicación para UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Usa la clase [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) en tu aplicación para UWP para registrar la aplicación para recibir notificaciones push dirigidas que envíes a tus clientes mediante el centro de partners.  |
+|   [Registrar eventos personalizados en la aplicación para UWP para el informe de uso del centro de partners](log-custom-events-for-dev-center.md)   |  Usa la clase [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) en tu aplicación para UWP para registrar eventos personalizados que están asociados con tu aplicación en el centro de partners. A continuación, revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.  |
 
 <span id="prerequisites" />
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982999"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036935"
 ---
 # <a name="device-information-properties"></a>Propiedades de información de dispositivo
 
@@ -36,7 +36,7 @@ Un objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/app
 Cuando solicites propiedades, no estás limitado a las propiedades comunes con nombres descriptivos. Puedes especificar el GUID subyacente y el identificador de la propiedad (PID) para solicitar cualquier propiedad disponible, incluso las propiedades personalizadas proporcionadas por controladores o dispositivos individuales. El formato para especificar una propiedad personalizada es "`{GUID} PID`". Por ejemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
 
 > [!Note]
-> Puedes encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador de dispositivo.
+> Puedes encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador del dispositivo.
 
 Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind), aunque la mayoría son únicas para un tipo específico. En las secciones siguientes se muestran algunas propiedades comunes que se ordenan por la enumeración individual **DeviceInformationKind**. Para obtener más información sobre cómo se relacionan los diferentes tipos entre sí, consulta **DeviceInformationKind**.
 
