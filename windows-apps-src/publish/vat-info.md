@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 872d3967e48a9c8122e3cc3043a1440950f70e9b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978469"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029672"
 ---
 # <a name="vat-info"></a>Información sobre el IVA
 

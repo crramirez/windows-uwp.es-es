@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d1cdb80a2278850f18cecc631fef0b5dff0fefc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979463"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029054"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>Administrar tu experimento en el centro de partners
 
@@ -26,7 +26,7 @@ Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecut
 
 ## <a name="activate-your-experiment"></a>Activar el experimento
 
-Cuando estés satisfecho con los parámetros del experimento en el centro de partners y hayas actualizado tu código de la aplicación, estás listo para activar el experimento para que puedas iniciar la recopilación de datos del experimento de la aplicación. Cuando el experimento está activo, la aplicación puede recuperar los valores de variación y notificar los eventos de vista y conversión al centro de partners.
+Cuando estés satisfecho con los parámetros del experimento en el centro de partners y hayas actualizado tu código de la aplicación, estás listo para activar el experimento para que puedas iniciar la recopilación de datos del experimento de tu aplicación. Cuando el experimento está activo, la aplicación puede recuperar los valores de variación y notificar los eventos de vista y conversión al centro de partners.
 
 1. Inicia sesión en el [Centro de partners](https://partner.microsoft.com/dashboard).
 2. En **Tus aplicaciones**, selecciona la aplicación con el experimento que quieras activar.
@@ -47,7 +47,7 @@ Cuando estés satisfecho con los parámetros del experimento en el centro de par
   * La sección **Detalles de los resultados** proporciona más detalles para cada variación de todos los objetivos del experimento, incluidas vistas, conversiones, usuarios únicos, tasa de conversión, % diferencial, confianza y significación. La *confianza* es una medida estadística la confiabilidad de una estimación, que calcula el margen de error. La *importancia* es una medida estadística, basada en el tamaño de muestra para determinar la probabilidad de que un resultado no se deba al azar, sino que se atribuya a una causa específica.
 
 > [!NOTE]
-> El centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
+> Centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 
 
 ## <a name="complete-your-experiment"></a>Completar el experimento

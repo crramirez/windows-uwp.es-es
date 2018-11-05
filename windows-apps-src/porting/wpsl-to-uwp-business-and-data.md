@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: Detrás de la interfaz de usuario se encuentran las capas de negocio y de datos.
-title: Migración de empresas WindowsPhone Silverlight y las capas de datos a UWP
+title: Migración de empresas de WindowsPhone Silverlight y capas de datos y UWP
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 ms.author: stwhi
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 301dcbe95d7509db07d5b7dd11a16460063bbffe
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969330"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6027855"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Migración de empresas WindowsPhone Silverlight y las capas de datos a UWP
 
@@ -46,7 +46,7 @@ Pasa los URI absolutos, los URI no relativos, a tipos de Windows en tiempo de ej
 
 ## <a name="launchers-and-choosers"></a>Iniciadores y selectores
 
-Con los iniciadores y selectores (que se encuentra en el espacio de nombres **Microsoft.Phone.Tasks** ), una aplicación WindowsPhone Silverlight puede interactuar con el sistema operativo para realizar operaciones comunes como redactar un correo electrónico, elegir una foto o compartir determinados tipos de datos con otra aplicación. Buscar **Microsoft.Phone.Tasks** en el tema de [Windows Phone Silverlight a asignaciones de espacios de nombres y clases de Windows 10](wpsl-to-uwp-namespace-and-class-mappings.md) para encontrar el tipo equivalente de UWP. Estos van desde mecanismos similares, llamados iniciadores y selectores, hasta la implementación de un contrato para compartir datos entre aplicaciones.
+Con los iniciadores y selectores (que se encuentra en el espacio de nombres **Microsoft.Phone.Tasks** ), una aplicación WindowsPhone Silverlight puede interactuar con el sistema operativo para realizar operaciones comunes como redactar un correo electrónico, elegir una foto o compartir determinados tipos de datos con otra aplicación. Buscar **Microsoft.Phone.Tasks** en el tema de [Windows Phone Silverlight para asignaciones de espacios de nombres y clases de Windows 10](wpsl-to-uwp-namespace-and-class-mappings.md) para encontrar el tipo equivalente de UWP. Estos van desde mecanismos similares, llamados iniciadores y selectores, hasta la implementación de un contrato para compartir datos entre aplicaciones.
 
 Una aplicación WindowsPhone Silverlight se pueda poner en un estado inactivo o marcada para exclusión incluso cuando se usa, por ejemplo, la tarea de selector de fotos. Una aplicación para UWP permanece activa y en ejecución cuando se usa la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847).
 
@@ -103,7 +103,7 @@ Y el equivalente de UWP:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-Aunque un subconjunto del espacio de nombres **Windows.Storage** está disponible para ellos, muchas de las aplicaciones de WindowsPhone Silverlight realizan archivo e/s con el **IsolatedStorageFile** clase porque ha sido compatible para ya. Suponiendo que se está usando **IsolatedStorageFile** , este es un ejemplo de antes y después de escribir y leer un archivo, primero la versión de WindowsPhone Silverlight:
+Aunque un subconjunto del espacio de nombres **Windows.Storage** está disponible para ellos, muchas de las aplicaciones de WindowsPhone Silverlight realizan archivo e/s con el **IsolatedStorageFile** clase porque ha sido compatible para ya. Suponiendo que se usa **IsolatedStorageFile** , este es un ejemplo de antes y después de escribir y leer un archivo, primero la versión de WindowsPhone Silverlight:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";

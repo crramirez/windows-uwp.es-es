@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 74b915e4d698503a13c5066348f4e46ebd3125c8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988080"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030858"
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
  
@@ -24,7 +24,7 @@ Las plantillas de iconos especiales son plantillas únicas que, o bien están an
 ## <a name="iconic-tile-template"></a>Plantillas de iconos icónicas
 
 
-La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 es compatible con la plantilla en el teléfono y el escritorio o tableta.
+La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 admite la plantilla en el teléfono y el escritorio o tableta.
 
 ![iconos de correo pequeños y medianos](images/iconic-template-mail-2sizes.png)
 
@@ -186,7 +186,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>Plantilla de iconos de contactos
 
 
-La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
+La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos ha estado disponible desde Windows 10 compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
 
 Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 

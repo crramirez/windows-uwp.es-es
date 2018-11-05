@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982714"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029659"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalación de aplicaciones para UWP desde una página web
 
@@ -31,9 +31,9 @@ En este mecanismo, el Instalador de aplicación se registra con con el sistema o
 ### <a name="requirements-for-protocol-activation-scheme"></a>Requisitos para el esquema de activación de protocolos
 
 1. Servidores Web que admiten solicitudes de intervalo de bytes (HTTP/1.1)
-    - Los servidores que admiten el protocolo HTTP/1.1 deben tener soporte técnico para las solicitudes de intervalo de bytes 
+    - Los servidores que admiten el protocolo HTTP/1.1 deben tener el soporte técnico para las solicitudes de intervalo de bytes 
 2. Servidores Web que conocer acerca de los tipos de contenido del paquete de aplicación de Windows 10
-    - Aquí te mostramos cómo declarar los tipos de contenido nuevos como parte del [archivo de configuración de web](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
+    - Aquí te mostramos cómo declarar los nuevos tipos de contenido como parte del [archivo de configuración de web](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>Cómo habilitar esto en una página web 
 Los desarrolladores de aplicaciones que quieran hospedar paquetes de aplicaciones en sus sitios web deben seguir este paso:

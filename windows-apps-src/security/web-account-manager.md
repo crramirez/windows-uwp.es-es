@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: 71a5cddcd5ccb5185cda422c3df16797f5765688
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969211"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028061"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -337,7 +337,7 @@ Dado que es muy sencillo obtener un token de forma silenciosa, debes usar este p
 
 ## <a name="remove-a-stored-account"></a>Quitar una cuenta almacenada
 
-Si conservas una cuenta web, es recomendable que los usuarios tengan la capacidad de desasociar su cuenta con tu aplicación. De esta forma, puede eficazmente "cerrar sesión" de la aplicación: información de su cuenta ya no se cargará automáticamente al iniciarse. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor del almacenamiento. A continuación, llama a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
+Si conservas una cuenta web, es recomendable que los usuarios tengan la capacidad de desasociar su cuenta con tu aplicación. De esta forma, puede eficazmente "cerrar sesión" de la aplicación: su información de cuenta ya no se cargará automáticamente al iniciarse. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor del almacenamiento. A continuación, llama a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

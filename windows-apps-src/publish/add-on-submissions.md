@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
 ms.openlocfilehash: 28fd2e104de12cc297ce5d28ddd18b0ce550a5d0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982458"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028946"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 
-Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva función divertida, un juego nuevo nivel, o cualquier cosa que creas puede mantener a los usuarios interesados. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
+Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva característica, un juego nuevo nivel, o cualquier cosa que creas mantendrá a los usuarios interesados de diversión. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
 
-Complementos se publican a través del [Centro de partners](https://partner.microsoft.com/dashboard)y requieren que tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100)activa. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
+Complementos se publican a través del [Centro de partners](https://partner.microsoft.com/dashboard)y requieren que tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100)de activa. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
 El primer paso en el proceso de envío de complemento es crear el complemento en el centro de partners mediante la [definición de su tipo de producto y el Id. del producto](set-your-add-on-product-id.md). Después de eso, crearás un envío para que el complemento se puede comprar a través de Microsoft Store. Puedes enviar un complemento al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
@@ -83,7 +83,7 @@ Cuando hayas terminado de introducir esta información, haz clic en **Enviar a l
 
 ## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
-Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
+Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que normalmente no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
 Para enviar actualizaciones, ve a la página del complemento en el centro de partners y haz clic en la **actualización**. Esto creará un nuevo envío del complemento, con la información de tu envío anterior como punto de partida. Realiza los cambios que desees y, a continuación, haz clic en **Enviar a la tienda**.
 

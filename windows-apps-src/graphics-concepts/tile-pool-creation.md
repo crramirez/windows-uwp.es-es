@@ -1,6 +1,6 @@
 ---
 title: Creación de grupos de mosaicos
-description: Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño de recursos del Direct3D11, que es aproximadamente 1/4 de unidad de procesamiento gráfico (GPU) RAM.
+description: Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño de recursos del Direct3D11, que es aproximadamente 1/4 de la unidad de procesamiento gráfico (GPU) RAM.
 ms.assetid: BD51EDD3-4AD3-4733-B014-DD77B9D743BB
 keywords:
 - Creación de grupos de mosaicos
@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cbb8b61c8eeef1a842a7c6b61d09670f056bb409
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982359"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030207"
 ---
 # <a name="tile-pool-creation"></a>Creación de grupos de mosaicos
 
 
-Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño de recursos del Direct3D11, que es aproximadamente 1/4 de unidad de procesamiento gráfico (GPU) RAM.
+Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño de recursos del Direct3D11, que es aproximadamente 1/4 de la unidad de procesamiento gráfico (GPU) RAM.
 
 Un grupo de mosaicos está compuesto por mosaicos de 64KB, pero el sistema operativo (el controlador de pantalla) administra todo el grupo como una o varias asignaciones entre bastidores: el desglose no es visible para las aplicaciones. Para definir el contenido, los recursos de streaming apuntan a los mosaicos dentro de un grupo de mosaicos. Para desasignar un mosaicos desde un recurso de streaming, se selecciona dicho mosaico como **NULL**. Estos iconos sin asignar tienen reglas sobre el comportamiento de las lecturas o escrituras; consulta [Seguimiento de peligros frente a recursos de grupos de iconos](hazard-tracking-versus-tile-pool-resources.md).
 

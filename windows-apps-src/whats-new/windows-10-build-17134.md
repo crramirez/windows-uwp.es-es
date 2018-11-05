@@ -8,11 +8,11 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b25df0a8445322ceb422fd6485f7d08c1c49a25
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989284"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030011"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades de Windows 10 para desarrolladores, compilación 17134
 
@@ -36,7 +36,7 @@ Extraer para actualizar | El control [Extraer para actualizar](../design/control
 Vista de navegación | El control de [Vista de navegación](../design/controls-and-patterns/navigationview.md) proporciona un menú de navegación contraíble para la navegación de nivel superior de tu aplicación. Este control implementa el panel de navegación, o menú hamburguesa, y adapta automáticamente el modo de presentación del panel a diferentes tamaños de ventana.
 Reveal focus | El nuevo efecto [Reveal focus](../design/style/reveal-focus.md) proporciona iluminación para experiencias como las pantallas de televisión y la Xbox One. Anima el borde de los elementos activables, como los botones, cuando el usuario mueve el foco del teclado o del controlador para juegos a ellos.
 Sonido | XAML admite ahora 3D Audio con la propiedad **SpatialAudioMode**. Consulta [Sonido](../design/style/sound.md) para obtener información sobre cómo se puede configurar.
-Iconos | Ahora, las [notificaciones de iconos rastreables](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) son compatibles con aplicaciones para UWP basadas en JavaScript.<br><br>Las notificaciones de iconos y distintivos secundarias son [ahora admite desde las aplicaciones de puente de escritorio](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
+Iconos | Ahora, las [notificaciones de iconos rastreables](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) son compatibles con aplicaciones para UWP basadas en JavaScript.<br><br>Notificaciones de icono y distintivo secundarias son [ahora admite desde aplicaciones de puente de escritorio](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Vista de árbol | El control [TreeView](../design/controls-and-patterns/tree-view.md) permite una lista jerárquica con nodos que se expanden y se contraen, y que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 Estilo de escritura | Hemos actualizado y ampliado nuestro artículo en lo relativo a la voz y al tono, transformándolo en [directrices de estilo de escritura](../design/style/writing-style.md). Esta nueva información proporciona principios para crear texto eficaz en tu aplicación y recomienda los procedimientos recomendados para la escritura de controles como cuadros de diálogo o mensajes de error.
 

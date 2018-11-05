@@ -8,13 +8,13 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ab8e8c18a0b1db0991bf470f194f8774f2357b4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980996"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030001"
 ---
-# <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de aplicación de Fluent Design System para Windows
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de la aplicación de Fluent Design System para Windows
 
 ![Encabezado de diseño Fluent](images/fluentdesign-app-header.jpg)
 
@@ -41,11 +41,11 @@ Mediante la incorporación de elementos del mundo físico, una experiencia Fluen
 
 ![Logotipo de diseño Fluent](images/fluentdesign_header.png)
 
-Nuestras directrices de diseño explican cómo aplicar principios de diseño Fluent a las aplicaciones. ¿Qué tipo de aplicaciones? Mientras que muchas de nuestras directrices pueden aplicarse a cualquier plataforma, hemos creado para UWP (la plataforma Universal de Windows) para admitir Fluent Design.
+Nuestras directrices de diseño explican cómo aplicar los principios de diseño Fluent a las aplicaciones. ¿Qué tipo de aplicaciones? Mientras que muchas de nuestras directrices pueden aplicarse a cualquier plataforma, hemos creado para UWP (la plataforma Universal de Windows) para admitir Fluent Design.
 
 Las características de Fluent Design están integradas en UWP. Algunas de estas características&mdash;como píxeles efectivos y el sistema de entrada universal&mdash;son automáticas. No tienes que escribir código adicional para poder usarlas. Otras características, como acrílico, son opcionales; puedes agregarlas a tu aplicación escribiendo el código que las incluye.
 
-> Estamos incorporando controles de UWP en el escritorio para que puedas mejorar el aspecto, la sensación y la funcionalidad de las aplicaciones de Windows o WPF existentes con características de Fluent Design. Para obtener más información, consulta [controles de UWP de Host en aplicaciones de WPF y Windows Forms](/windows/uwp/xaml-platform/xaml-host-controls).
+> Estamos incorporando controles de UWP en el escritorio para que puedas mejorar el aspecto, la sensación y la funcionalidad de las aplicaciones de Windows o WPF existentes con características de Fluent Design. Para obtener más información, vea [los controles de UWP de Host en aplicaciones de WPF y Windows Forms](/windows/uwp/xaml-platform/xaml-host-controls).
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
@@ -60,7 +60,7 @@ Además de instrucciones de diseño, nuestros artículos de Fluent Design tambi�
 ![](images/xaml-example.png)
 
 
-> Si estás familiarizado con el desarrollo de UWP, echa un vistazo a nuestra [empezar a trabajar con la página UWP](https://developer.microsoft.com/windows/apps/getstarted).
+> Si estás familiarizado con el desarrollo de UWP, consulta nuestro [empezar a trabajar con la página UWP](https://developer.microsoft.com/windows/apps/getstarted).
 
 ## <a name="find-a-natural-fit"></a>Encontrar un ajuste natural
 

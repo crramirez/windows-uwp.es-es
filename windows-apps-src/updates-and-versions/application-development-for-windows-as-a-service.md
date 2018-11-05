@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969729"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029357"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desarrollo de aplicaciones para Windows como servicio
 
@@ -30,13 +30,13 @@ Las compilaciones que se distribuyen como Programa Windows Insider proporcionan 
 
 Aunque Microsoft lanza compilaciones piloto para usuarios de Windows Insider, Microsoft publicará continuamente dos tipos de versiones de Windows10 de manera amplia destinadas al público en general:
 
-**Actualizaciones de características de** instalar las características nuevas más recientes, experiencias y funcionalidades en dispositivos que ya ejecutan Windows 10. Dado que las actualizaciones de funciones contienen una copia completa de Windows, también son lo que los clientes usan para instalar Windows 10 en dispositivos existentes que ejecutan Windows 7 o Windows8.1 y en los nuevos dispositivos que no tienen instalado ningún sistema operativo. Microsoft espera publicar actualizaciones cada seis meses. 
+**Las actualizaciones de características** instalar la última nuevas características, experiencias y capacidades en dispositivos que ya ejecutan Windows 10. Dado que las actualizaciones de funciones contienen una copia completa de Windows, también son lo que los clientes usan para instalar Windows 10 en dispositivos existentes que ejecutan Windows 7 o Windows8.1 y en dispositivos nuevos que no tienen instalado ningún sistema operativo. Microsoft espera publicar actualizaciones cada seis meses. 
 
 **Actualizaciones de calidad** que proporcionan resoluciones de problemas de seguridad y otras correcciones de errores importantes. Se proporcionarán actualizaciones de calidad para mejorar cada característica compatible actualmente, a un ritmo de una o más veces al mes. Microsoft seguirá publicando actualizaciones de calidad los martes de actualización (conocidos a veces como martes de revisiones). Además, Microsoft puede publicar actualizaciones de calidad adicionales para Windows 10 fuera del proceso de martes de actualización cuando sea necesario para satisfacer las necesidades de cliente.
 
-Durante el desarrollo de Windows 10, Microsoft perfeccionó el ciclo de ingeniería y lanzamiento de productos de Windows, por lo que se puedan ofrecer las características, experiencias y funcionalidad que los clientes que desean más rápidamente que nunca. También creó nuevas formas de entregar e instalar actualizaciones de características y actualizaciones de calidad que simplifican las implementaciones y la administración continua, amplían la base de empleados que se puede mantener actualizada con las capacidades y experiencias de Windows más recientes y reducen el coste total de propiedad. Por lo tanto, hemos implementado nuevas opciones de mantenimiento, conocidas como canal semianual y canal de mantenimiento de a largo plazo (LTSC), que ofrecen soluciones prácticas para mantener los dispositivos más más actual en entornos empresariales que era posible anteriormente.
+Durante el desarrollo de Windows 10, Microsoft perfeccionó el ciclo de ingeniería y lanzamiento de productos de Windows para que se puedan ofrecer las características, experiencias y funcionalidades que los clientes quieran más rápidamente que nunca. También creó nuevas formas de entregar e instalar actualizaciones de características y actualizaciones de calidad que simplifican las implementaciones y la administración continua, amplían la base de empleados que se puede mantener actualizada con las capacidades y experiencias de Windows más recientes y reducen el coste total de propiedad. Por lo tanto, hemos implementado nuevas opciones de mantenimiento, conocidas como versión del canal semianual y canal de mantenimiento de a largo plazo (LTSC), que ofrecen soluciones prácticas para mantener los dispositivos más actual en los entornos empresariales que era posible anteriormente.
 
-La tabla siguiente se muestra se describen los diversos canales de mantenimiento y sus atributos principales.
+La siguiente tabla muestra se describen los diversos canales de mantenimiento y sus atributos principales.
 
 | Opción de mantenimiento | Disponibilidad de actualizaciones de nuevas funciones para la instalación | Ciclo de vida de mantenimiento | Ventajas clave | Ediciones admitidas |
 | --- | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ En las siguientes secciones, encontrarás información adicional acerca de las m
 
 Sabemos que la compatibilidad es importante para los desarrolladores. Los ISV y los desarrolladores quieren garantizar que sus aplicaciones funcionen según lo previsto en todas las versiones compatibles del SO Windows. Este aspecto es clave para la inversión de los consumidores y las empresas: desean saber con seguridad que las aplicaciones por las que han pagado continuarán funcionando. Sabemos que la compatibilidad es el criterio principal para la toma de decisiones de compra. Las aplicaciones que estén bien escritas, basándose en los procedimientos recomendados, obligarán a una menor renovación del código cuando se publique una nueva versión de Windows, lo que reducirá la fragmentación; además, se reducirá la inversión en ingeniería para el mantenimiento de estas aplicaciones y se lanzará al mercado mucho más rápido.
 
-En el período de tiempo de Windows 7, la compatibilidad era mucho un enfoque reactivo. En Windows8, empezamos a este, trabajamos en el interior de Windows para garantizar que la compatibilidad era por diseño, en lugar de manera adicional. Windows 10 es la versión más compatible por diseño del sistema operativo hasta la fecha. A continuación se muestran algunas de los aspectos clave gracias a los que lo hemos conseguido:
+En el período de tiempo de Windows 7, la compatibilidad era mucho más de un enfoque reactivo. En Windows8, empezamos a este, trabajamos en el interior de Windows para garantizar que la compatibilidad era por diseño, en lugar de manera adicional. Windows 10 es la versión más compatible por diseño del sistema operativo hasta la fecha. A continuación se muestran algunas de los aspectos clave gracias a los que lo hemos conseguido:
 -   **Telemetría de la aplicación**: Esto nos ayuda a comprender la popularidad de la aplicación en el ecosistema de Windows para notificar las pruebas de compatibilidad.
 -   **Asociaciones con ISV**: Trabajar directamente con asociados externos para proporcionarles datos y ayudar a resolver los problemas que sufren nuestros usuarios.
 -   **Revisiones del diseño y detección en dirección ascendente**: Asociación con los equipos de característica para reducir el número de cambios importantes en Windows. La revisión de la compatibilidad es una prueba que nuestros equipos de características deben superar.
@@ -75,7 +75,7 @@ En el período de tiempo de Windows 7, la compatibilidad era mucho un enfoque re
 
 ## <a name="best-practices-for-app-compatibility"></a>Procedimientos recomendados para la compatibilidad de las aplicaciones
 
-Microsoft utiliza datos de diagnóstico y uso para identificar y solucionar problemas, mejorar los productos y servicios y proporcionar experiencias personalizadas a los usuarios. Los datos de uso que recopilamos también incluyen las aplicaciones que se ejecutan en los equipos del ecosistema de Windows. Creamos nuestra lista en función de lo que utilizan nuestros clientes y probamos estas aplicaciones, dispositivos y controladores en las nuevas versiones del SO Windows. Windows 10 ha sido la versión más compatible de Windows hasta la fecha, con más de un 90% compatibilidad con miles de aplicaciones populares. El equipo de compatibilidad de Windows contacta con los ISV asociados para proporcionarles comentarios si se detectan problemas, de forma que podamos colaborar en la búsqueda de soluciones. Lo ideal sería que nuestros clientes comunes pudieran actualizar Windows sin problemas y sin perder ninguna funcionalidad ni en su sistema operativo ni en las aplicaciones de las que dependen para su productividad o entretenimiento.
+Microsoft utiliza datos de diagnóstico y uso para identificar y solucionar problemas, mejorar los productos y servicios y proporcionar experiencias personalizadas a los usuarios. Los datos de uso que recopilamos también incluyen las aplicaciones que se ejecutan en los equipos del ecosistema de Windows. Creamos nuestra lista en función de lo que utilizan nuestros clientes y probamos estas aplicaciones, dispositivos y controladores en las nuevas versiones del SO Windows. Windows 10 ha sido la versión más compatible de Windows hasta la fecha, con más del 90% compatibilidad con miles de aplicaciones populares. El equipo de compatibilidad de Windows contacta con los ISV asociados para proporcionarles comentarios si se detectan problemas, de forma que podamos colaborar en la búsqueda de soluciones. Lo ideal sería que nuestros clientes comunes pudieran actualizar Windows sin problemas y sin perder ninguna funcionalidad ni en su sistema operativo ni en las aplicaciones de las que dependen para su productividad o entretenimiento.
 
 Las secciones siguientes contienen algunos procedimientos recomendados que Microsoft sugiere para que asegurarte de que tus aplicaciones sean compatibles con Windows 10.
 

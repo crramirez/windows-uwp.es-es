@@ -1,7 +1,7 @@
 ---
 author: normesta
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes VisualC ++ (C++ / CX) mediante el uso de la clase de tarea definida en el espacio de nombres concurrency en ppltasks.h.
+description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de VisualC ++ (C++ / CX) mediante el uso de la clase de tarea definida en el espacio de nombres concurrency en ppltasks.h.
 title: Programación asincrónica en C++
 ms.author: normesta
 ms.date: 05/14/2018
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows 10, UWP, subprocesos, asincrónicos, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989814"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028641"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programación asincrónica en C++/CX
 > [!NOTE]
 > Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime, implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
 
-Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes VisualC ++ (C++ / CX) mediante el uso de la `task` clase que se define en el `concurrency` espacio de nombres en ppltasks.h.
+Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de VisualC ++ (C++ / CX) usando la `task` clase que se define en el `concurrency` espacio de nombres en ppltasks.h.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Tipos asincrónicos de Plataforma universal de Windows (UWP)
 La Plataforma universal de Windows (UWP) cuenta con un modelo bien definido para llamar a métodos asincrónicos y proporciona los tipos que necesitas para consumirlos. Si no estás familiarizado con el modelo asincrónico de UWP, lee [Programación asincrónica][AsyncProgramming] antes de leer el resto de este artículo.

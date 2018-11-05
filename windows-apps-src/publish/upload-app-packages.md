@@ -9,18 +9,18 @@ ms.topic: article
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: f02ca7c43443289ef9d2d0562be25f277068685b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987102"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031057"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 
 La página **paquetes** es donde se cargan todos los archivos del paquete (.msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle) de la aplicación que vas a enviar. Puedes cargar todos los paquetes para la misma aplicación en esta página y, cuando un cliente descarga la aplicación, la tienda le proporciona automáticamente cada cliente con el paquete que funciona mejor para su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrás obtener información sobre [cómo los números de versión afectar qué paquetes se entregan a clientes específicos](package-version-numbering.md) y [cómo administrar paquetes para varios escenarios](guidance-for-app-package-management.md).
 
@@ -34,7 +34,7 @@ Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-Si se detectan los errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber qué es incorrecto. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
+Si se detectan los errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber cuál es el problema. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
 
 
 ## <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos

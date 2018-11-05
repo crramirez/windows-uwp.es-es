@@ -14,11 +14,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 9bc19460fe1b9b9c6b637606a737e1157d98feef
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969590"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029991"
 ---
 # <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
 
@@ -37,7 +37,7 @@ Leer y escribir un archivo con un objeto [**StorageFile**](/uwp/api/windows.stor
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
-    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para obtener información sobre cómo escribir aplicaciones asincrónicas en C++ / WinRT, consulta [operaciones simultáneas y asincrónicas con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para obtener información sobre cómo escribir aplicaciones asincrónicas en C++ / CX, consulta [programación asincrónica en C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++ / WinRT, consulta [operaciones simultáneas y asincrónicas con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para aprender a escribir aplicaciones asincrónicas en C++ / CX, consulta [programación asincrónica en C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Aprender a obtener el archivo del que deseas leer o en el que quieres escribir**
 
@@ -152,7 +152,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 
 **Escritura de bytes en un archivo con un búfer (2 pasos)**
 
-1.  En primer lugar, llama a [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obtener un búfer de bytes (basado en una cadena) que quieras que escribe en el archivo.
+1.  En primer lugar, llama a [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obtener un búfer de bytes (basado en una cadena) que quieres escribir en el archivo.
 
 ```csharp
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -256,7 +256,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  A continuación, obtén un flujo de salida llamando al método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) desde el `stream`. Si estás usando C#, a continuación, escriba esto en una instrucción **using** para administrar la duración de la secuencia de salida. Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, puedes controlar su ciclo de vida envolvente en un bloque, o si se establece en `nullptr` cuando hayas terminado con él.
+2.  A continuación, obtén un flujo de salida llamando al método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) desde el `stream`. Si estás usando C#, a continuación, encierra esto en una instrucción **using** para administrar la duración de la secuencia de salida. Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, puedes controlar su ciclo de vida incluirlo en un bloque, o si se establece en `nullptr` cuando hayas terminado con él.
 
 ```csharp
 using (var outputStream = stream.GetOutputStreamAt(0))
@@ -308,7 +308,7 @@ Dim dataWriter As New DataWriter(outputStream)
 dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
-4.  Por último, agrega este código (si estás usando C#, dentro de la instrucción interna **usando** ) para guardar el texto en el archivo con [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) y cierra el flujo con [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).
+4.  Por último, agrega este código (si estás usando C#, dentro de la instrucción interno **utilizando** ) para guardar el texto en el archivo con [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) y cierra el flujo con [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).
 
 ```csharp
 await dataWriter.StoreAsync();
@@ -392,7 +392,7 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 
 **Lectura de texto desde un archivo mediante un búfer (2 pasos)**
 
-1.  En primer lugar, llama al método [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) .
+1.  En primer lugar, llama al método de [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) .
 
 ```csharp
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -496,7 +496,7 @@ UINT64 size = stream->Size;
 Dim size = stream.Size
 ```
 
-3.  Obtener un flujo de entrada llamando al método [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) . Coloca esto en una instrucción **using** para administrar la duración de la secuencia. Especifica 0 cuando llames a **GetInputStreamAt** para establecer la posición al principio de la secuencia.
+3.  Obtén un flujo de entrada llamando al método [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) . Coloca esto en una instrucción **using** para administrar la duración de la secuencia. Especifica 0 cuando llames a **GetInputStreamAt** para establecer la posición al principio de la secuencia.
 
 ```csharp
 using (var inputStream = stream.GetInputStreamAt(0))

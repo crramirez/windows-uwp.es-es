@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981227"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028691"
 ---
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
@@ -45,7 +45,7 @@ Los datos de vértices procedentes de una fase anterior del sombreador.
 
 La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior, como la fase del sombreador de geometría (GS). Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de flujo (SO) transmite continuamente los datos de vértices procedentes de la fase del sombreador de dominio (DS) a los búferes de la memoria (o si la fase DS también está inactiva, desde la fase del sombreador de vértices [VS]).
 
-Cuando una franja de triángulos o líneas está enlazada a la fase del ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices a la vez de triángulos); los primitivos incompletos nunca se transmiten. Los tipos primitivos con proximidad descartan los datos de adyacencia antes de transmitir los datos.
+Cuando una franja de triángulos o líneas está enlazada a la fase de ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices a la vez para triángulos); los primitivos incompletos nunca se transmiten. Los tipos primitivos con proximidad descartan los datos de adyacencia antes de transmitir los datos.
 
 La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
 

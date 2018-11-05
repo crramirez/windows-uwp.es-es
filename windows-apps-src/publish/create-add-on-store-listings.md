@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 811c2c978d04e7636bb5f52a2ebf7587193c4786
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973298"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029922"
 ---
 # <a name="create-add-on-store-listings"></a>Crear descripciones de la Tienda de los complementos
 
-Cuando envías un complemento en [El centro de partners](https://partner.microsoft.com/dashboard), la información que proporciones en el paso de **descripciones de la tienda** se mostrará a los clientes cuando vean la opción para adquirir tu complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
+Cuando envías un complemento en [El centro de partners](https://partner.microsoft.com/dashboard), la información que proporciones en las **descripciones de la tienda** se mostrará a los clientes cuando vean la opción para adquirir tu complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
 
 > [!TIP]
 > También puedes [Importar y exportar las descripciones de la tienda](import-and-export-store-listings.md) para el complemento si quieres escribir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el centro de partners. Esto puede ser especialmente útil al crear descripciones en varios idiomas. Sin embargo, siempre puedes escribir tu información directamente en [El centro de partners](https://partner.microsoft.com/dashboard) en lugar de usar la característica de importar o exportar.

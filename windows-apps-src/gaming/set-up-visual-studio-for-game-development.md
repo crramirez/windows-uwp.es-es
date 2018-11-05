@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, visual studio, herramientas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986509"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029882"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 
@@ -47,7 +47,7 @@ Crea [archivos de personalizaciones de compilación](#build-customizations-for-3
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Nota**el Editor de imágenes no está pensado para reemplazar una aplicación de edición de imágenes completo de características, pero es apropiado para escenarios de edición y visualización simple muchos.
+> **Nota**el Editor de imágenes no está pensado para reemplazar una aplicación de edición de imágenes de completo de características, pero es apropiado para escenarios de edición y visualización simple muchos.
 
  
 
@@ -118,7 +118,7 @@ Para obtener más información, consulta [Trabajar con sombreadores](https://msd
 
 Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. A continuación, puedes cargar los activos en tu aplicación y usarlos al crear y llenar recursos de DirectX tal como lo harías en cualquier otra aplicación de DirectX.
 
-Para agregar una personalización de compilación, haz clic en el proyecto en el **Explorador de soluciones** y selecciona la **Compilación personalizaciones**. Puedes agregar los siguientes tipos de personalizaciones de compilación al proyecto.
+Para agregar una personalización de compilación, haz clic en el proyecto en el **Explorador de soluciones** y selecciona **Generar personalizaciones**. Puedes agregar los siguientes tipos de personalizaciones de compilación al proyecto.
 
 -   La canalización de contenido de imagen toma archivos de imagen como entrada y muestra archivos de DirectDraw Surface (.dds) como salida.
 -   La canalización de contenido de malla toma archivos de malla (como .fbx) y muestra archivos de malla .cmo como salida.

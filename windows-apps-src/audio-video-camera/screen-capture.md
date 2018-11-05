@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
 ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970928"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029593"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -22,7 +22,7 @@ A partir de Windows 10, versión 1803, el espacio de nombres [Windows.Graphics.C
 Con la captura de pantalla, los desarrolladores invocan la interfaz de usuario de sistema seguro para que los usuarios finales elijan la pantalla o la ventana de la aplicación que se capturará, y se dibuja un borde de notificación amarilla alrededor del elemento capturado activamente. En el caso de varias sesiones de captura simultánea, se dibuja un borde amarillo alrededor de cada elemento que se captura.
 
 > [!NOTE]
-> La captura de pantalla API solo se admiten en cascos envolventes de realidad mixta de Windows y de escritorio.
+> La API de captura de pantalla solo se admiten en escritorio y cascos envolventes de realidad mixta de Windows.
 
 ## <a name="add-the-screen-capture-capability"></a>Agregar la funcionalidad de captura de pantalla
 
@@ -30,7 +30,7 @@ Las API que se encuentran en el espacio de nombres **Windows.Graphics.Capture** 
     
 1. Abre **Package.appxmanifest** en el **Explorador de soluciones**.
 2. Selecciona la pestaña **Funcionalidades**.
-3. Comprobar la **captura de gráficos**.
+3. Comprueba la **captura de gráficos**.
 
 ![Captura de gráficos](images/screen-capture-1.png)
 
@@ -70,7 +70,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Dado que este es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente para una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se realiza por TI automáticamente, pero si no, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
+Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente de una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no es así, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -165,7 +165,7 @@ Cuando se llama a **Recreate**, se descartan todos los marcos existentes. Esto e
 
 ## <a name="putting-it-all-together"></a>Implementación
 
-El siguiente fragmento de código es un ejemplo de principio a fin de cómo implementar la captura de pantalla en una aplicación para UWP. En este ejemplo, tenemos un botón en el front-end que, al hacer clic en, llama al método **Button_ClickAsync** .
+El siguiente fragmento de código es un ejemplo de principio a fin de cómo implementar la captura de pantalla en una aplicación para UWP. En este ejemplo, tenemos un botón en el front-end que, al hacer clic, llama al método **Button_ClickAsync** .
 
 > [!NOTE]
 > Este fragmento de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), una biblioteca para la representación de gráficos 2D. Consulta su documentación para obtener información acerca de cómo se configura para el proyecto.

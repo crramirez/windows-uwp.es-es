@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, sizes, tamaños, banner, banner
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f23be9a58a138a82cc4510039a1c0899ef092a2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984479"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030652"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamaños admitidos de anuncios de banner
 
-Los siguientes tamaños de anuncios de banner son compatibles con las aplicaciones de la plataforma Universal de Windows (UWP). Al crear una instancia del objeto **AdControl** en la aplicación, asegúrate de que establecer las propiedades height y width para que coincida con uno de estos tamaños admitidos.
+Los siguientes tamaños de anuncios de banner se admiten para aplicaciones de la plataforma Universal de Windows (UWP). Cuando crees una instancia del objeto **AdControl** en la aplicación, asegúrate de que establecer las propiedades height y width para que coincida con uno de estos tamaños admitidos.
 
 * 160 x 600
 * 300 x 50
@@ -30,7 +30,7 @@ Los siguientes tamaños de anuncios de banner son compatibles con las aplicacion
 > [!NOTE]
 > Para una mejor experiencia, te recomendamos que uses los siguientes tamaños en dispositivos Windows 10 Mobile: 300 x 50, 320 x 50 y 640 x 100.
 
-En la siguiente tabla proporciona ejemplos que muestran cada tamaño de anuncio de banner.
+La siguiente tabla proporciona ejemplos que muestran cada tamaño de anuncio de banner.
 
 <table>
 <colgroup>

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, suspensión de publicación, fecha de publicación, realizar un envío para publicar, aprobación de funcionalidad restringida
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f7d58989035db1a14aba685c8951d23d2f94b52
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978242"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028505"
 ---
 # <a name="manage-submission-options"></a>Administrar las opciones de envío
 
@@ -28,12 +28,12 @@ De manera predeterminada, publicaremos tu envío en cuanto supere la certificaci
 
 **Publicar este envío tan pronto como supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación)** es la selección predeterminada y significa que el envío comenzará el proceso de publicación en cuanto supere la certificación, a menos que tengas fechas configuradas en la sección [Programación](configure-precise-release-scheduling.md) de la página **Precios y disponibilidad**.   
 
-Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de suspensión de publicación** manteniendo esta opción. Si quieres especificar determinadas fechas para la publicación de tu envío, usa **Publicar este envío en cuanto supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación**. Dejar esta sección en la opción predeterminada no provocará que el envío se publique antes de las fechas que hayas establecido en la sección **Programación**. Las fechas que seleccionaste en la sección **programación** se usará para determinar cuando tu producto esté disponible para los clientes en la tienda.
+Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de suspensión de publicación** manteniendo esta opción. Si quieres especificar determinadas fechas para la publicación de tu envío, usa **Publicar este envío en cuanto supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación**. Dejar esta sección en la opción predeterminada no provocará que el envío se publique antes de las fechas que hayas establecido en la sección **Programación**. Las fechas que seleccionaste en la sección **programación** se usará para determinar cuándo tu producto esté disponible para los clientes en la tienda.
 
 
 ### <a name="publish-your-submission-manually"></a>Publicar el envío manualmente
 
-Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Después de la certificación de pases de envío, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica de la misma manera, tal como se describe a continuación.
+Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Después de la certificación de pasadas envío, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica de la misma manera, como se describe a continuación.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Empezar a publicar el envío en una fecha determinada

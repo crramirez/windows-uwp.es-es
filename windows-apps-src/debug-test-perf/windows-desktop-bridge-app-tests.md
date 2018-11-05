@@ -2,18 +2,18 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Usar pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
+description: Usa las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para la conversión a una aplicación para UWP.
 ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 8363bc3085e9d6ec4e1a86751b691266b12b365c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978820"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029553"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
@@ -48,7 +48,7 @@ Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación]
 Esta prueba verifica que la appx no es una versión de depuración.
  
 **Antecedentes**  
-Para certificarse para Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
  
 **Detalles de la prueba**  
 Prueba la aplicación para asegurarte de que no sea una versión de depuración y no esté vinculada con ningún marco de depuración.
@@ -123,7 +123,7 @@ La imagen "BadgeLogo" tiene un valor ABGR {value} en la posición (x, y) que no 
 La imagen debe definir al menos una variante sin un calificador TargetSize. Debe definir un calificador Scale o dejar Scale y TargetSize sin especificar, para que de manera predeterminada se establezca Scale-100.  | Para más información, consulta las guías sobre el [diseño adaptativo](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) y los [recursos de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
 Al paquete le falta un archivo "resources.pri".  | Si tienes contenido localizable en el manifiesto de la aplicación, asegúrate de que el paquete de la aplicación incluya un archivo resources.pri válido. 
 El archivo "resources.pri" debe tener un mapa de recursos cuyo nombre coincida con el nombre del paquete {package full name}.  | Este error puede obtenerse si el manifiesto cambió y el nombre del mapa de recursos del archivo resources.pri deja de coincidir con el nombre del paquete en el manifiesto. En el mensaje en sí, {package full name} contiene el nombre del paquete que resources.pri debe tener. Para corregir esto, debes reconstruir resources.pri y la forma más fácil de hacerlo es reconstruyendo el paquete de la aplicación. 
-El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No recomendamos esto para las aplicaciones que intentas distribuir a través de Microsoft Store. El archivo resources.pri de una aplicación que se distribuye a través de Microsoft Store debe estar en la raíz del paquete de la aplicación y contener todas las referencias de idiomas que admite la aplicación. 
+El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No recomendamos esto para las aplicaciones que intentas distribuir a través de Microsoft Store. El archivo resources.pri de una aplicación que se distribuye a través de Microsoft Store debe estar en la raíz del paquete de la aplicación y contener todas las referencias de idioma que admita la aplicación. 
 La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.  | Consulta los [requisitos de metadatos del paquete](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error y {number} contiene la longitud máxima. 
 La cadena {string} no debe tener espacios en blanco iniciales ni finales.  | El esquema de los elementos en el manifiesto de la aplicación no permite caracteres de espacio en blanco inicial ni final. En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error. Asegúrate de que ninguno de los valores localizados en los campos del manifiesto en resources.pri tenga caracteres de espacio en blanco inicial o final. 
 La cadena debe ser no vacía (mayor que cero en longitud).  | Consulta el tema sobre los [requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements) para más información. 
@@ -212,7 +212,7 @@ Las aplicaciones Puente de dispositivo de escritorio pueden aprovechar algunas A
  
 **Detalles de la prueba**  
 Esta prueba verifica todos los componentes para UWP en la aplicación:
-* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no es compatible para el desarrollo de aplicaciones para UWP con la tabla de direcciones de importación del binario.
+* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la comprobación de la tabla de direcciones de importación del binario.
 * Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado. 
 
 **Acciones correctivas**  
