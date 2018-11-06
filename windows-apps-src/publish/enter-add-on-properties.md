@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976208"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049526"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 
@@ -86,7 +86,7 @@ Tienes la opción de proporcionar hasta diez palabras clave de hasta 30 caracter
 Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
 
 > [!NOTE]
-> Las palabras clave no están disponibles para su uso en paquetes destinados a Windows8 y Windows8.1.
+> Palabras clave no están disponibles para su uso en paquetes destinados a Windows8 y Windows8.1.
 
 <span id="custom-developer-data" />
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b86298ca671282dea201e3088bc60845231fe007
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990989"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050725"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 
@@ -95,7 +95,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Permisos e historial | ms-settings:cortana-permissions |
 | Más detalles | ms-settings:cortana-moredetails |
-| Cortana en todos mis dispositivos | ms-settings:cortana-notifications |
+| Cortana en Mis dispositivos | ms-settings:cortana-notifications |
 | Hablar con Cortana | ms-settings:cortana-language |
 
 > [!NOTE] 
@@ -125,7 +125,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Audio | ms-settings:easeofaccess-audio |
 | Subtítulos | ms-settings:easeofaccess-closedcaptioning |
-| Filtros de color | MS-opciones de configuración: easeofaccess-colorfilter |
+| Filtros de color | MS-configuración: easeofaccess-colorfilter |
 | Pantalla | ms-settings:easeofaccess-display |
 | Control ocular | ms-settings:easeofaccess-eyecontrol |
 | Fuentes | ms-settings:fonts |

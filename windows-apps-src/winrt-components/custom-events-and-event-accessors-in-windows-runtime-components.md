@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990221"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050444"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 
@@ -33,7 +33,7 @@ Por suerte, los compiladores de Visual Basic y C# simplifican este proceso: cuan
 
 El siguiente código para el evento NumberChanged muestra el patrón básico para eventos de la UWP. En este ejemplo, el constructor para el objeto "event argument", NumberChangedEventArgs, usa un solo parámetro de número entero que representa el valor numérico modificado.
 
-> **Nota**este es el mismo patrón que usan los compiladores para los eventos habituales que Declaras en un componente de Windows en tiempo de ejecución.
+> **Nota**este es el mismo patrón que usan los compiladores para los eventos habituales que Declaras en un componente de Windows Runtime.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -126,6 +126,6 @@ Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegad
 
 * [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
 * [Eventos (Guía de programación de C#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [.NET para Introducción a las aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para Introducción a las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

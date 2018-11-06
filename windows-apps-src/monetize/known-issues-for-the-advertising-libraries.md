@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: d1b3b1fb68ed246d6a5a8334c5cf4d1c0754b719
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992564"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049192"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
@@ -42,7 +42,7 @@ Si has creado un anuncio recientemente (menos de un día), podría no estar disp
 
 Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entre otros motivos se incluyen:
 
-* Selección de una unidad de anuncio en el centro de partners con un tamaño que sea mayor o menor que el tamaño de **AdControl** en el código de la aplicación.
+* Seleccionar una unidad de anuncios del centro de partners con un tamaño que sea mayor o menor que el tamaño de **AdControl** en el código de la aplicación.
 
 * Los anuncios no aparecerán si usas un [valor del modo de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para tu identificador de unidad de anuncio cuando se ejecuta una aplicación dinámica.
 

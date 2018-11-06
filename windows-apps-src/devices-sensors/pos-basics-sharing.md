@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 591ba592d1c17b03ae29c6fb98ef546bc18b8bdc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976820"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050161"
 ---
 # <a name="pointofservice-device-sharing"></a>Uso compartido de dispositivos PointOfService
 
@@ -20,11 +20,11 @@ Obtén información sobre cómo compartir la red o periféricos Bluetooth conect
 
 ## <a name="device-sharing"></a>Uso compartido de dispositivos
 
-Red y Bluetooth periféricos de PointOfService conectados por lo general, se usan en un entorno wheere varios dispositivos cliente están compartiendo los mismos periféricos durante todo el día.  En un entorno comercial o de servicios de alimentos ocupado cualquier retraso en la posibilidad de un dispositivo de cliente adjuntar a un periférico tiene un impacto en la eficacia en el que un asociado puede cerrar una transacción con el cliente y pasar al siguiente. En un escenario de restaurantes servicio rápido donde se usa una impresora de recibos como una impresora de cocina para transferir los detalles del pedido de un cliente a la cocina para la preparación habrá varios dispositivos cliente toma pedidos de clientes.  Una vez completado el orden de cada dispositivo de cliente debe ser capaz de reclamar la impresora compartida e imprimir inmediatamente el orden de la cocina.
+Red y Bluetooth periféricos de PointOfService conectados por lo general, se usan en un entorno wheere varios dispositivos cliente están compartiendo los mismos periféricos durante todo el día.  En un entorno comercial o servicios de alimentos ocupado cualquier retraso en la posibilidad de que un dispositivo de cliente adjuntar a un periférico tiene un impacto en la eficacia en el que un asociado puede cerrar una transacción con el cliente y pasar al siguiente. En un escenario de restaurantes servicio rápido donde se usa una impresora de recibos como una impresora de cocina para transferir los detalles del pedido de un cliente a la cocina para la preparación habrá varios dispositivos de cliente, toma nota de pedidos de clientes.  Una vez completado el orden de cada dispositivo de cliente debe ser capaz de notificación de la impresora compartida e imprimir inmediatamente el orden de la cocina.
 
 En estos entornos, es importante para la aplicación totalmente **Eliminar** el objeto de dispositivo para que otro puede reclamar el mismo dispositivo.
 
-Eliminar una PosPrinter al final de un bloque 'using'
+Eliminar una PosPrinter al final de un bloque 'usando'
 
 ```Csharp 
 using Windows.Devices.PointOfService;

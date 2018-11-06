@@ -9,22 +9,22 @@ ms.topic: article
 keywords: Windows 10, uwp, 3dprinting, impresión en 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: d09ed242b2c5f0186b05279706943c9a65ee7c8a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968481"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051264"
 ---
 # <a name="3d-printing"></a>Impresión 3D
 
 
-En esta sección se describe cómo usar el [espacio de nombres Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) para agregar la funcionalidad de impresión 3D a tu aplicación Universal de Windows.  
+En esta sección se describe cómo usar el [espacio de nombres Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) para agregar la funcionalidad de impresión en 3D a tu aplicación Universal de Windows.  
 
-Para obtener más información sobre la impresión en 3D con Windows 10, incluidos los recursos para los partners de hardware, los foros de la Comunidad y obtener información general sobre las capacidades de impresión 3D, consulta el sitio de [impresión 3D con Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) en el centro de desarrollo de Hardware.
+Para obtener más información sobre la impresión en 3D con Windows 10, incluidos los recursos para asociados de hardware, los foros de la Comunidad y obtener información general sobre las capacidades de impresión 3D, consulta el sitio de [impresión 3D con Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) en el centro de desarrollo de Hardware.
 
 | Tema | Descripción |
 |-------|-------------|
-| [Impresión en 3D desde la aplicación](3d-print-from-app.md) | Obtén información sobre cómo agregar la funcionalidad de impresión 3D a tu aplicación para UWP. En este tema se explica cómo iniciar el cuadro de diálogo de impresión en 3D después de asegurarte de que el modelo 3D se puede imprimir y tiene el formato correcto. |
+| [Impresión en 3D desde la aplicación](3d-print-from-app.md) | Obtén información sobre cómo agregar la funcionalidad de impresión en 3D a tu aplicación para UWP. En este tema se explica cómo iniciar el cuadro de diálogo de impresión en 3D después de asegurarte de que el modelo 3D se puede imprimir y tiene el formato correcto. |
 | [Generar un paquete 3MF](generate-3mf.md) | Describe la estructura del tipo de archivo de formato de fabricación 3D y cómo puede crearse y manipularse con la API Windows.Graphics.Printing3D. |
 
 ## <a name="related-topics"></a>Temas relacionados

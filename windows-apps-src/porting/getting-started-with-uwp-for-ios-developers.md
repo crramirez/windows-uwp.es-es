@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 485dc6f93cb0fd83601b3202ef9965e625b2a0b4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995495"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050751"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introducción a UWP para desarrolladores de iOS
 
@@ -26,7 +26,7 @@ Windows 10 presenta una nueva plataforma para crear aplicaciones atractivas en e
 
 En conclusión: no te limites a migrar tu aplicación, **reimagina** tu aplicación y aprovecha las nuevas funcionalidades y dispositivos. No te conformes con el mínimo común denominador, pero crea experiencias enriquecidas que usen características únicas de Windows 10, como iconos dinámicos, notificaciones e interactuar con Cortana.
 
-Para empezar con estos tutoriales, tendrás que un equipo con Windows 10 y Microsoft Visual Studio instalado. Descargarlos en las [descargas para desarrolladores para programar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/downloads). ¿No tienes PC? No te preocupes, puedes usar tu Mac. Consulta [Instalar Windows y las herramientas de desarrollador en un Mac](setting-up-your-mac-with-windows-10.md).
+Para empezar a trabajar con estos tutoriales, tendrás que un equipo con Windows 10 y Microsoft Visual Studio instalado. Descargarlos en las [descargas para desarrolladores para programar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/downloads). ¿No tienes PC? No te preocupes, puedes usar tu Mac. Consulta [Instalar Windows y las herramientas de desarrollador en un Mac](setting-up-your-mac-with-windows-10.md).
 
 | Tema | Descripción |
 |-------|-------------|

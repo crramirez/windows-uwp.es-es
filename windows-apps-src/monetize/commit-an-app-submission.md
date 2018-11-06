@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, commit app submission, confirmar envío de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a61fb1568cf85d01a31e5921fa757d3e8c767ff
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995045"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6050111"
 ---
 # <a name="commit-an-app-submission"></a>Confirmar un envío de aplicación
 
 
-Usa este método en la API de envío de Microsoft Store para confirmar un envío de aplicación nuevo o actualizado al centro de partners. La acción de confirmación alertas partners centro que los datos de envío se han cargado (incluidos los paquetes e imágenes relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío de la recopilación y la publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
+Usa este método en la API de envío de Microsoft Store para confirmar un envío de aplicación nuevo o actualizado al centro de partners. El centro de partners alertas de confirmación acción se que los datos de envío se han cargado (incluidos los paquetes e imágenes relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío para su ingesta y publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de envío de una aplicación mediante la API de envío de Microsoft Store, consulta [Administración de envíos de aplicaciones](manage-app-submissions.md).
 
@@ -92,7 +92,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Temas relacionados

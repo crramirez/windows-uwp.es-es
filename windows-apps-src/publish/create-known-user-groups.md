@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, grupo de destino, clientes, grupo piloto, grupos de usuarios, usuarios conocidos
 ms.localizationpriority: medium
 ms.openlocfilehash: 44f0ea17d1034ae617b4b8c96cf61cc4829a6704
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993249"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051804"
 ---
 # <a name="create-known-user-groups"></a>Crear grupos de usuarios conocidos
 
@@ -22,7 +22,7 @@ Para que se contabilice como miembro del grupo, cada persona debe autenticarse e
 
 ## <a name="to-create-a-known-user-group"></a>Para crear un grupo de usuarios conocido
 
-1. En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y, a continuación, seleccionar **grupos de clientes**. 
+1. En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y, a continuación, selecciona **los grupos de clientes**. 
 2. En la sección **Mis grupos de clientes**, selecciona **Crear nuevo grupo**.
 3. En la página siguiente, escribe un nombre para el grupo en el cuadro **Nombre de grupo**.
 4. Asegúrate de que esté seleccionado el botón de radio **Grupo de usuarios conocido**.

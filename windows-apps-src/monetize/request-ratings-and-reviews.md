@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, calificaciones, opiniones
 ms.localizationpriority: medium
 ms.openlocfilehash: c00e69ed7d5057db4f835f3d91320806067d86e1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981194"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050460"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y opiniones de tu aplicación
 
@@ -20,10 +20,10 @@ Puedes agregar código a la aplicación Plataforma universal de Windows (UWP) pa
 * Puedes mostrar un diálogo de calificaciones y opiniones directamente en el contexto de la aplicación.
 * Puedes abrir mediante programación la página de calificaciones y opiniones para tu aplicación en Microsoft Store.
 
-Cuando estés listo para analizar las clasificaciones y los datos de opiniones, puedes ver los datos en el centro de partners o usar la API de análisis de Microsoft Store para recuperar mediante programación estos datos.
+Cuando estés listo para analizar las clasificaciones y los datos de opiniones, puedes ver los datos en el centro de partners o usar la API de análisis de Microsoft Store para recuperar estos datos mediante programación.
 
 > [!IMPORTANT]
-> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas de la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador de código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas en la tienda pero que se envía directamente al desarrollador de la aplicación. Consulta el desarrollador código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un diálogo de calificaciones y opiniones en la aplicación
 

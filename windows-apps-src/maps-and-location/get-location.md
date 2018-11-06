@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability
 ms.localizationpriority: medium
 ms.openlocfilehash: 2187bafa9fd2b4fdce049f3ef11d4e6766613de3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990272"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050992"
 ---
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
@@ -46,7 +46,7 @@ En esta sección se describe cómo detectar la ubicación geográfica del usuari
 
 ### <a name="step-1-request-access-to-the-users-location"></a>Paso 1: Solicitar acceso a la ubicación del usuario
 
-A menos que la aplicación tiene la funcionalidad de ubicación aproximada (ver nota), debes solicitar acceso a la ubicación del usuario mediante el método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de intentar acceder a la ubicación. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. Hasta que el usuario no conceda permiso a la aplicación, esta no podrá acceder a la información de ubicación del usuario.\*
+A menos que la aplicación tiene la funcionalidad de ubicación aproximada (ver nota), debes solicitar acceso a la ubicación del usuario mediante el método de [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de intentar acceder a la ubicación. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. Hasta que el usuario no conceda permiso a la aplicación, esta no podrá acceder a la información de ubicación del usuario.\*
 
 ```csharp
 using Windows.Devices.Geolocation;

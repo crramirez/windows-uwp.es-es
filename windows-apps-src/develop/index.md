@@ -9,11 +9,11 @@ ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988352"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049516"
 ---
 <div> 
 <h1>Desarrollo de aplicaciones para UWP</h1>
@@ -33,7 +33,7 @@ ms.locfileid: "5988352"
                     </div>
                     <div class="cardText">
                         <h3>Información general de la plataforma Universal de Windows</h3>
-                        <p>Una explicación de para qué UWP es, cómo funciona, y las características que proporciona.</p>
+                        <p>Es una explicación de para qué UWP, cómo funciona, y las características que proporciona.</p>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ ms.locfileid: "5988352"
                     </div>                
                     <div class="cardText">
                         <h3>Guía de migración</h3>
-                        <p>Llevar tu existentes de Windows Forms, WPF, Android o aplicación de iOS a UWP. </p>
+                        <p>Llevar tu existente o Windows Forms, WPF, Android, aplicación de iOS a UWP. </p>
                     </div>
                 </div>
             </div>
@@ -214,7 +214,7 @@ ms.locfileid: "5988352"
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">Impresión</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">Impresión en 3D</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/nfc">NFC</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Información de batería</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Información de la batería</a></p>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@ ms.locfileid: "5988352"
                     </div>
                     <div class="cardText">
                         <h3>Ejemplos</h3>
-                        <p> Aprende a crear magníficas aplicaciones para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo funcionan las características y ayudarán a puedes empezar a tus propias aplicaciones para UWP.</p>
+                        <p> Obtén información sobre cómo compilar aplicaciones increíbles para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo las características funcionan y ayudar a impulsar tus propias aplicaciones para UWP.</p>
                     </div>
                 </div>
             </div>

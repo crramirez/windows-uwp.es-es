@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988588"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049626"
 ---
 # <a name="xaml-namescopes"></a>Ámbitos de nombres XAML
 
@@ -32,7 +32,7 @@ También puedes usar el método de utilidad [**FindName**](https://msdn.microsof
 
 Técnicamente, lo que sucede es que el código XAML se somete a un pase del compilador de marcado al mismo tiempo que el código XAML y la clase parcial que define para el código subyacente se compilan juntos. Cada elemento de objeto con un **Name** o [atributo x:Name](x-name-attribute.md) definido en el marcado genera un campo interno con un nombre que coincide con el nombre XAML. Este campo inicialmente está vacío. Después, la clase genera un método **InitializeComponent** que solo se llama cuando todo el código XAML está cargado. Dentro de la lógica de **InitializeComponent**, cada campo interno se rellena con el valor devuelto [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para la cadena de nombre equivalente. Para observar esta infraestructura por ti mismo, examina los archivos ".g" (generados) que se crean para cada página XAML en la subcarpeta /obj de un proyecto de aplicación de Windows Runtime después de la compilación. También puedes considerar a los campos y el método **InitializeComponent** como miembros de los ensamblados resultantes si reflexionas sobre ellos o examinas el contenido del lenguaje de la interfaz.
 
-**Nota**específicamente para las extensiones de componentes VisualC ++ (C++ / CX) de las aplicaciones, no se crea un campo de respaldo de una referencia de **x: Name** para el elemento raíz de un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++/CX, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Nota**específicamente para las extensiones de componentes de VisualC ++ (C++ / CX) de las aplicaciones, no se crea un campo de respaldo de una referencia de **x: Name** para el elemento raíz de un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++/CX, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ## <a name="creating-objects-at-run-time-with-xamlreaderload"></a>Creación de objetos en tiempo de ejecución con XamlReader.Load
 

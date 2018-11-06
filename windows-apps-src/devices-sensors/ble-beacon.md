@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
 ms.openlocfilehash: 38f850cfb811260758377d5404e01c8e540e7ec2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990168"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048984"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anuncios de Bluetooth de bajo consumo (LE)
 
@@ -45,7 +45,7 @@ Para usar la funcionalidad básica de Bluetooth LE en una aplicación para la Pl
 
 Los anuncios de Bluetooth LE permiten que tu dispositivo señalice constantemente una carga específica, denominada anuncio. Este anuncio puede verse en cualquier otro dispositivo cercano compatible con Bluetooth LE, si está configurado para escuchar este anuncio específico.
 
-> **Nota**: para privacidad del usuario, la vida útil de tu anuncio está vinculada a la de la aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Nota**: para la privacidad del usuario, la vida útil de tu anuncio está vinculada a la de la aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicación básica
 

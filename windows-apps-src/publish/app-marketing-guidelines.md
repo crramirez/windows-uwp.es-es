@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 38dfdbc94112caa5e3fff7c1605fecece83b202d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971120"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048748"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Directrices para aplicaciones de marketing de Microsoft Store
 
@@ -39,7 +39,7 @@ También puedes descargar el conjunto completo de imágenes de distintivos (en f
 
 Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes pueden encontrarse en las [Directrices de Marketing de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
-[ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivos Windows**
+[ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivo de Windows**
 
 ## <a name="license-to-microsoft-marks"></a>Licencia para las marcas Microsoft
 
@@ -47,7 +47,7 @@ Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se
 
 -   Tener la aplicación u otro contenido disponible en Microsoft Store o formar parte del [Programa de afiliados de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Si estás registrado como desarrollador de aplicaciones en el centro de partners, cumplir con la sección ["licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del acuerdo para desarrolladores.
+-   Si estás registrado como desarrollador de aplicaciones en el centro de partners, cumplir con la sección de ["licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del acuerdo para desarrolladores.
 
 -   Si no estás registrado como desarrollador de aplicaciones en el centro de partners, Microsoft te concede una licencia mundial, no exclusiva, has, libre de regalías para usar los distintivos únicamente como se describe en las directrices de distintivo de Microsoft Store. Microsoft podría cambiar estas directrices, pero en el caso de que lo haga, usará los medios razonables para redirigirte a cualquier URL nueva donde se publiquen estas especificaciones. Microsoft se reserva todos los derechos no concedidos expresamente en el presente documento.
 

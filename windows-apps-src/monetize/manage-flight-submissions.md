@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f2a643aa80a59dd64ec1e7b829c02470aaed8bd
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973318"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049285"
 ---
 # <a name="manage-package-flight-submissions"></a>Administrar envíos de paquetes piloto
 
@@ -26,7 +26,7 @@ La API de envío de Microsoft Store proporciona métodos que puedes usar para ad
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>Métodos para administrar envíos de paquetes piloto
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de paquete piloto. Antes de poder usar estos métodos, el paquete piloto ya debe existir en el centro de partners. Puedes crear un paquete piloto [del centro de partners](https://msdn.microsoft.com/windows/uwp/publish/package-flights) o mediante el uso de los métodos de API de envío de Microsoft Store en que se describen en [Administrar paquetes piloto](manage-flights.md).
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de paquete piloto. Antes de poder usar estos métodos, el paquete piloto ya debe existir en el centro de partners. Puedes crear un paquete piloto [del centro de partners](https://msdn.microsoft.com/windows/uwp/publish/package-flights) o mediante los métodos de API de envío de Microsoft Store en que se describen en [Administrar paquetes piloto](manage-flights.md).
 
 <table>
 <colgroup>
@@ -81,7 +81,7 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 
 Para crear un envío de un paquete piloto, sigue este proceso.
 
-1. Si no lo ha hecho aún, completa los requisitos previos se describen en [crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluida la asociación de una aplicación de Azure AD con tu cuenta del centro de partners y la obtención del cliente del identificador y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
+1. Si no lo ha hecho aún, completa los requisitos previos se describen en [crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluida la asociación de una aplicación de Azure AD con tu cuenta del centro de partners y obtener su cliente identificador y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
 
 2. [Obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
@@ -391,7 +391,7 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 | fallbackSubmissionId    |  cadena   |  El id. del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
 > [!NOTE]
-> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no están destinados a ser establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
+> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no están destinados a ser establecidos por el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
 
 <span/>
 

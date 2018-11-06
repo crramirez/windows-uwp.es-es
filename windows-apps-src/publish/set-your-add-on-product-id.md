@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d0cd40e0a7a170a835b000dc66ec683c2fb59c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984115"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051334"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
-Un complemento deben asociarse con una aplicación que has creado en [El centro de partners](https://partner.microsoft.com/dashboard) (incluso si no la has enviado aún). Puedes encontrar el botón para **Crear un complemento nuevo** en la página **Introducción** de la aplicación o en su página **Complemento**.
+Un complemento debe estar asociado con una aplicación que has creado en [El centro de partners](https://partner.microsoft.com/dashboard) (incluso si no la has enviado aún). Puedes encontrar el botón para **Crear un complemento nuevo** en la página **Introducción** de la aplicación o en su página **Complemento**.
 
 Después de seleccionar **Crear un nuevo complemento**, se te pedirá que especifiques un tipo de producto y asignes un id. de producto para el complemento.
 
@@ -42,7 +42,7 @@ Si el complemento se puede comprar, usar (consumir) y después se puede volver a
 
 Hay dos tipos de complementos consumibles:
 - **Consumible administrado por el desarrollador**: el saldo y el suministro deben administrarse dentro de la aplicación. Compatible en todas las versiones de SO.
-- **Consumible administrado por la Tienda:** Microsoft realizará un seguimiento del saldo de todos los dispositivos de clientes que ejecuten la versión 1607 de Windows 10 o posterior. No es compatible con ninguna versión de SO anterior. Para usar esta opción, el producto principal se debe compilar con la versión 14393 del SDK de Windows 10 o posterior. Ten en cuenta también que no podrás enviar un complemento consumible administrado por la tienda a la tienda hasta que se publique el producto principal (aunque puedes crear el envío en el centro de partners y empezar a trabajar en cualquier momento). Tendrás que escribir la cantidad del complemento consumible administrado por la Tienda en el paso **Propiedades** del envío.
+- **Consumible administrado por la Tienda:** Microsoft realizará un seguimiento del saldo de todos los dispositivos de clientes que ejecuten la versión 1607 de Windows 10 o posterior. No es compatible con ninguna versión de SO anterior. Para usar esta opción, el producto principal se debe compilar con la versión 14393 del SDK de Windows 10 o posterior. Ten en cuenta que no podrás enviar un complemento consumible administradas por la tienda a la tienda hasta que se publique el producto principal (aunque puedes crear el envío en el centro de partners y empezar a trabajar en cualquier momento). Tendrás que escribir la cantidad del complemento consumible administrado por la Tienda en el paso **Propiedades** del envío.
 
 ### <a name="subscription"></a>Suscripción
 
@@ -64,7 +64,7 @@ A continuación, se detallan algunos aspectos que se deben tener en cuenta al el
 -   No se puede cambiar ni eliminar el id. del producto del complemento una vez que se haya publicado.
 -   Un id. del producto no puede tener más de 100 caracteres de longitud.
 -   Un id. del producto no puede incluir ninguno de los caracteres siguientes: **&lt; &gt; \* % & : \\ ? + ,**
--   Los clientes no verán el identificador del producto. (Más adelante, puedes escribir un [título y descripción](create-add-on-descriptions.md) que se muestre a los clientes.)
+-   Los clientes no verán el identificador de producto. (Más adelante, puedes escribir un [título y descripción](create-add-on-descriptions.md) que se muestre a los clientes.)
 -   Si la aplicación publicada anteriormente es compatible con Windows Phone 8.1 o versiones anteriores, debes usar solo caracteres alfanuméricos, puntos o guiones bajos en tu identificador de producto. Si usas otros tipos de caracteres, el complemento no estará disponible para su compra para clientes que ejecutan Windows Phone 8.1 o versiones anteriores.
 
  
