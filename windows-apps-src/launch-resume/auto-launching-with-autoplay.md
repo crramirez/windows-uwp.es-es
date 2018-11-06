@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c537ef3b2a5d002644cc554eae72b89a1799b0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980795"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046868"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática
 
@@ -220,7 +220,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, inserta una tarjeta de memoria de una cámara u otro dispositivo de almacenamiento de una cámara en el equipo. A continuación, selecciona una de las opciones de evento de contenido que especificaste en el archivo package.appxmanifest de la lista de opciones de Reproducción automática. Este código de muestra solo muestra o copia imágenes de la carpeta DCIM de una tarjeta de memoria de una cámara. Si la tarjeta de memoria de tu cámara almacena imágenes en una carpeta AVCHD o PRIVATE\\ACHD, tendrás que actualizar el código como corresponda.
-    **Nota**si no tienes una tarjeta de memoria de cámara, puedes usar una unidad flash si tiene una carpeta denominada **carpeta DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contiene las imágenes.
+    **Nota**si no tienes una tarjeta de memoria de cámara, puedes usar una unidad flash si tiene una carpeta denominada **carpeta DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contenga imágenes.
 
 ## <a name="register-for-an-autoplay-device"></a>Registro para el dispositivo de reproducción automática
 
@@ -338,7 +338,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **Nota**el `ShowImages` método se agrega en el paso siguiente.
+> **Nota**el `ShowImages` se agrega el método en el siguiente paso.
 
 ### <a name="step-5-add-code-to-display-device-information"></a>Paso 5: Agregar código para mostrar información de dispositivo
 
@@ -477,7 +477,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Nota**el `DisplayFiles` método se agrega en el paso siguiente.
+> **Nota**el `DisplayFiles` se agrega el método en el siguiente paso.
 
  
 

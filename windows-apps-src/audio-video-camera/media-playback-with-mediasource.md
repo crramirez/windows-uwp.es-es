@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995556"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048313"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Elementos multimedia, listas de reproducción y pistas
 
@@ -194,7 +194,7 @@ En este ejemplo se agrega una pista de texto personalizado al especificar **Time
 
 El objeto [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear una lista de reproducción de elementos multimedia, que se representan con objetos **MediaPlaybackItem**.
 
-**Nota**los elementos en una [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) se representan mediante la reproducción sin pausas. El sistema usará los metadatos proporcionados en archivos codificados MP3 o AAC para determinar la compensación del retraso o el espaciado interno necesaria para la reproducción sin pausas. Si los archivos codificados MP3 o AAC no proporcionan estos metadatos, el sistema determina el retraso o el espaciado interno de forma heurística. Para los formatos sin pérdida, como PCM, FLAC o ALAC, el sistema no realiza ninguna acción porque estos codificadores no introducen ningún retraso ni espaciado interno.
+**Nota**elementos en una [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) se representan mediante la reproducción sin pausas. El sistema usará los metadatos proporcionados en archivos codificados MP3 o AAC para determinar la compensación del retraso o el espaciado interno necesaria para la reproducción sin pausas. Si los archivos codificados MP3 o AAC no proporcionan estos metadatos, el sistema determina el retraso o el espaciado interno de forma heurística. Para los formatos sin pérdida, como PCM, FLAC o ALAC, el sistema no realiza ninguna acción porque estos codificadores no introducen ningún retraso ni espaciado interno.
 
 Para empezar, declara una variable para almacenar el objeto **MediaPlaybackList**.
 

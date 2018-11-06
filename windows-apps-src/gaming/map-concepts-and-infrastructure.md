@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, portar, games, porting
 ms.localizationpriority: medium
 ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983522"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047410"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Asignar OpenGL ES2.0 a Direct3D11
 

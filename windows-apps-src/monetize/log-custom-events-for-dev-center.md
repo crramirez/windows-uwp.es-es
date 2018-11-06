@@ -9,11 +9,11 @@ keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log 
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: 47c1eb02434dc71cb7da949d58ec38cf3b4cf65a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970348"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047460"
 ---
 # <a name="log-custom-events-for-partner-center"></a>Registrar eventos personalizados para el centro de partners
 
@@ -22,7 +22,7 @@ El [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
 Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) proporcionado por el Microsoft Store Services SDK. Puedes revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.
 
 > [!NOTE]
-> Eventos personalizados que inicie sesión en el centro de partners están relacionados con los [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)y no aparecen en **El Visor de eventos**.
+> Eventos personalizados que inicie sesión en el centro de partners que están relacionados con los [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)y no aparecen en **El Visor de eventos**.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

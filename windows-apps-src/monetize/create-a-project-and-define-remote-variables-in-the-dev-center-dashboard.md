@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 19a59110fa094aeae3d40dca1372fde9889c108e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972306"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047806"
 ---
 # <a name="create-an-experiment-project-in-partner-center"></a>Crear un proyecto de experimento en el centro de partners
 
-Para comenzar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el centro de partners y definir las variables remotas que puede acceder la aplicación.
+Para empezar a trabajar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el centro de partners y definir las variables remotas que puede acceder la aplicación.
 
 Las siguientes instrucciones describen los pasos básicos para crear un proyecto. Para ver un tutorial detallado que muestre de principio a fin el proceso de crear un proyecto y luego ejecutar un experimento, consulta [Crear y ejecutar el primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -32,7 +32,7 @@ Las siguientes instrucciones describen los pasos básicos para crear un proyecto
   1. Si la sección **Variables remotas** está contraída, haz clic en **Mostrar** en el encabezado de la sección.
   2. Haz clic en **Agregar variable** para crear cada nueva variable que quieras que esté disponible para cualquier experimento en este proyecto y escribe el nombre de la variable y el valor predeterminado de la variable.
   3. Cuando hayas terminado de agregar variables, haz clic en **Guardar**.
-3. En la sección **Integración de SDK**, asegúrate de anotar el valor del [id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando el [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debe hacer referencia a este Id. de proyecto en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al centro de partners.
+3. En la sección **Integración de SDK**, asegúrate de anotar el valor del [id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando escribas el [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debe hacer referencia a este Id. de proyecto en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al centro de partners.
 
 > [!NOTE]
 > No puedes editar, agregar o quitar variables remotas mientras haya un experimento activo en el proyecto. Esta limitación ayuda a proteger la integridad de los datos para el grupo de control del experimento activo.

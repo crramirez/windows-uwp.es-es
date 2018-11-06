@@ -9,18 +9,18 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c41801362a03bb8d1d5e06b3ada876014237b1f7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993117"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048023"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de productos consumibles desde la aplicación
 
 Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Store para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas incluidas en el juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
 
 > [!IMPORTANT]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos consumibles desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la tienda y suscripciones y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el centro de partners y la tienda. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información sobre cómo habilitar las compras de productos consumibles desde la aplicación con el espacio de nombres **Windows.Services.Store**, consulta [este artículo](enable-consumable-add-on-purchases.md).
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos consumibles desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos consumibles administrados por la tienda y suscripciones y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el centro de partners y la tienda. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información sobre cómo habilitar las compras de productos consumibles desde la aplicación con el espacio de nombres **Windows.Services.Store**, consulta [este artículo](enable-consumable-add-on-purchases.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

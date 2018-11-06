@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: a2e92dc10dbcdc3a511c1b1a1271ae759cc03c60
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989132"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047836"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
@@ -248,7 +248,7 @@ Figura 1
 
 ![figura 1: latencia de entrada en directx ](images/input-latency1.png)
 
-En Windows8.1, DXGI introdujo la marca **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** la cadena de intercambio, lo que permite a las aplicaciones reducir esta latencia fácilmente sin tener que implementar la heurística para mantener la cola vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
+Windows8.1, DXGI presenta la marca **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** la cadena de intercambio, que permite a las aplicaciones fácilmente reducir esta latencia sin tener que implementar la heurística para mantener la cola vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
 
 Figura 2
 

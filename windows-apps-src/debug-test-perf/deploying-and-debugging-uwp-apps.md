@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a398b621ff309af8c6f8252613d3ea106d96485
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973258"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048629"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
 
 Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración.
 
-Microsoft Visual Studio permite implementar y depurar tus aplicaciones de plataforma Universal de Windows (UWP) en una variedad de dispositivos de Windows 10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
+Microsoft Visual Studio permite implementar y depurar tus aplicaciones de la plataforma Universal de Windows (UWP) en una variedad de dispositivos de Windows 10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
 
 ## <a name="picking-a-deployment-target"></a>Elección de un destino de implementación
 
@@ -67,7 +67,7 @@ Para especificar una máquina remota para aplicaciones de C# o Microsoft Visual 
 
 ![Cuadro de diálogo Conexiones remotas](images/debug-remote-connections.png)
 
-Para volver a este cuadro de diálogo, puede abrir las propiedades del proyecto y ve a la pestaña **Depurar** . Desde allí, selecciona **encontrar** junto a **máquina remota:**
+Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto y ve a la pestaña **Depurar** . Desde allí, selecciona **encontrar** junto a **máquina remota:**
 
 ![Pestaña Depurar](images/debug-remote-machine-config.png)
 
@@ -125,7 +125,7 @@ Existen tres modos de autenticación para la implementación del equipo remoto:
 - **Ninguno**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
 
 ## <a name="advanced-remote-deployment-options"></a>Opciones avanzadas de implementación remota
-Como de la versión de Visual Studio 2015 Update 3 y la actualización de aniversario de Windows 10, hay nuevas avanzadas de implementación remota de las opciones para determinados dispositivos Windows 10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
+Como de la versión de Visual Studio 2015 Update 3 y la actualización de aniversario de Windows 10, hay nuevas avanzadas de implementación remota opciones para determinados dispositivos Windows 10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
 
 Las nuevas propiedades incluyen lo siguiente:
 * Tipo de implementación
@@ -184,7 +184,7 @@ En el dispositivo remoto, el diseño se registrará en la siguiente ubicación p
 
 ## <a name="debugging-options"></a>Opciones de depuración
 
-En Windows 10, se mejora el rendimiento de inicio de las aplicaciones para UWP al inicio de forma proactiva y, a continuación, suspender las aplicaciones de una técnica llamada [el inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
+En Windows 10, se mejora el rendimiento de inicio de aplicaciones para UWP al inicio de forma proactiva y, a continuación, suspender las aplicaciones en una técnica llamada [el inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
 
 La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en la máquina (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=717245).
 
@@ -192,7 +192,7 @@ Puedes establecer las siguientes opciones de implementación en la página de pr
 
 - **Permitir bucle invertido de la red local**
 
-  Por cuestiones de seguridad, no se permite que una aplicación para UWP instalada de modo estándar realice llamadas de red al dispositivo en el que está instalada. De manera predeterminada, la implementación de Visual Studio crea una exención de esta regla para la aplicación implementada. Esta exención te permite probar los procedimientos de comunicación en un solo equipo. Antes de enviar la aplicación a la Microsoft Store, debes probar la aplicación sin la exención.
+  Por cuestiones de seguridad, no se permite que una aplicación para UWP instalada de modo estándar realice llamadas de red al dispositivo en el que está instalada. De manera predeterminada, la implementación de Visual Studio crea una exención de esta regla para la aplicación implementada. Esta exención te permite probar los procedimientos de comunicación en un solo equipo. Antes de enviar la aplicación en la Microsoft Store, debes probar la aplicación sin la exención.
 
   Para quitar la exención de bucle invertido de red de la aplicación:
 

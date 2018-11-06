@@ -9,11 +9,11 @@ keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impue
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 326de9b3160f492566306b18252bbc3bacf58531
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986812"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047962"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -25,7 +25,7 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
 
 | Formulario fiscal del IRS | Descripción | Disponibilidad |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Se relacionan con la actividad de venta o los pagos realizados a raíz de la participación en los catálogos de soluciones de Microsoft. | Formularios impresos se sellarán o antes **del 31 de enero**y copias en formato PDF estarán disponibles en [El centro de partners](https://partner.microsoft.com/dashboard) (en **configuración de la cuenta > perfil fiscal**) al mismo tiempo |
+|1099-MISC, 1099-K | Se relacionan con la actividad de venta o los pagos realizados a raíz de la participación en los catálogos de soluciones de Microsoft. | Formularios impresos se sellarán en o antes **del 31 de enero**y copias en formato PDF estarán disponibles en [El centro de partners](https://partner.microsoft.com/dashboard) (en **configuración de la cuenta > perfil fiscal**) al mismo tiempo |
 |1042-S | Se relaciona con los pagos que te efectuamos que están sujetos a la retención de impuestos de Estados Unidos. | Formularios impresos se sellarán en o antes **del 15 de marzo**y copias en formato PDF estarán disponibles en el centro de partners (en **configuración de la cuenta > perfil fiscal**) al mismo tiempo |
 
 > [!NOTE]
@@ -35,17 +35,17 @@ Enviará los formularios fiscales de las siguientes direcciones:
 
 **Ciudadanos de Estados Unidos:**
 <table>
-<tr><th>Grupo de negocio</th><th>Entidad jurídica</th><th>Dirección</th></tr>
+<tr><th>Grupo de negocio</th><th>Jurídica</th><th>Dirección</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 EE.</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE</td></tr>
+<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil carretera<br>Estados Unidos Reno, NV 89511</td></tr>
 <table> 
 
-**Ciudadanos EE:**
+**No-US ciudadanos:**
 <table>
-<tr><th>Grupo de negocio</th><th>Entidad jurídica</th><th>Dirección</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Corporation a través de Microsoft Irlanda actúa como intermediario calificado de Microsoft Corporation)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
-<tr><td>La publicidad *</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Online Inc. a través de Microsoft Irlanda actúa como agente de pago de Microsoft Online Inc.)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE</td></tr>
+<tr><th>Grupo de negocio</th><th>Jurídica</th><th>Dirección</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Corporation a través de Microsoft Irlanda actúa como intermediario completo de Microsoft Corporation)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
+<tr><td>Publicidad *</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Online Inc. a través de Microsoft Irlanda actúa como agente de pago de Microsoft Online Inc.)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
+<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil carretera<br>Estados Unidos Reno, NV 89511</td></tr>
 <tr><td colspan="3">* Se te pagará ciudadanos de los siguientes países ganancias ingresos publicitarios a través de Microsoft Irlanda Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, Isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, países bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza, Reino Unido</td></tr>
 </table>
 

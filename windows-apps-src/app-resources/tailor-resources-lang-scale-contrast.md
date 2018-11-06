@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 563807798cefe083fa1de85dc1f7e4c3ae679211
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992521"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048484"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, la escala, el contraste alto y otros calificadores
 
@@ -39,7 +39,7 @@ Por lo tanto, para contraste alto, el conjunto de calificadores es `contrast-sta
 
 Este es un ejemplo del uso de calificadores para dar nombres a carpetas que contienen los archivos de activos. Usa los calificadores en los nombres de carpeta si tienes varios archivos de activos por calificador. De este modo, se define el calificador una vez en el nivel de carpeta y el calificador se aplica a todos los elementos que se encuentran dentro de la carpeta.
 
-```
+```console
 \Assets\Images\contrast-standard\<logo.png, and other image files>
 \Assets\Images\contrast-high\<logo.png, and other image files>
 \Assets\Images\contrast-black\<logo.png, and other image files>
@@ -52,7 +52,7 @@ Si das nombres a las carpetas como en el ejemplo anterior, la aplicación usa la
 
 En lugar de crear y asignar nombres a carpetas, puedes usar un calificador para que asigne nombres a los propios archivos de recursos. Puede que prefieras hacerlo si solamente tienes un archivo de recursos por calificador. Este es un ejemplo.
 
-```
+```console
 \Assets\Images\logo.contrast-standard.png
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.contrast-black.png
@@ -68,7 +68,7 @@ Consulta [Hacer referencia a un identificador de recursos de cadena desde el mar
 ## <a name="actual-and-neutral-qualifier-matches"></a>Los calificadores real y neutro concuerdan
 No es necesario proporcionar un archivo de recursos para *cada* valor de calificador. Por ejemplo, si te encuentras con que solo necesitas un activo visual para contraste alto y uno para contraste estándar, puedes ponerles nombres a esos activos de esta forma.
 
-```
+```console
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.png
 ```
@@ -81,7 +81,7 @@ Si desearas cambiar el nombre de `logo.png` a `logo.contrast-standard.png`, en e
 
 Si solo necesitas un conjunto de activos de contraste alto y un conjunto para contraste estándar, puedes usar nombres de carpeta en lugar de nombres de archivo. En este caso, al omitir el nombre de carpeta por completo, obtienes la coincidencia neutra.
 
-```
+```console
 \Assets\Images\contrast-high\<logo.png, and other images to load when high contrast theme is not None>
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
@@ -92,7 +92,7 @@ Para obtener más información sobre cómo funciona la coincidencia de calificad
 
 Puedes combinar los calificadores en los nombres de carpetas y archivos. Por ejemplo, es aconsejable que tu aplicación cargue activos de imagen cuando el modo de contraste alto esté activado *y* el factor de escala de pantalla sea de 400. Una manera de hacerlo es con carpetas anidadas.
 
-```
+```console
 \Assets\Images\contrast-high\scale-400\<logo.png, and other image files>
 ```
 
@@ -100,7 +100,7 @@ Para `logo.png` y los demás archivos que se cargarán, la configuración debe c
 
 Otra opción consiste en combinar varios calificadores en un nombre de carpeta.
 
-```
+```console
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
@@ -108,7 +108,7 @@ En un nombre de carpeta, puedes combinar varios calificadores separados por un c
 
 Puedes combinar varios calificadores en un nombre de archivo en el mismo formato.
 
-```
+```console
 \Assets\Images\logo.contrast-high_scale-400.png
 ```
 
@@ -160,14 +160,14 @@ Es poco probable que necesites el nombre de calificador `devicefamily`. Puedes y
 
 Pero, como último recurso, es posible usar calificadores devicefamily para dar nombre a carpetas que contengan las vistas XAML (una vista XAML es un archivo XAML que contiene diseños y controles de interfaz de usuario).
 
-```
+```console
 \devicefamily-desktop\<MainPage.xaml, and other markup files to load when running on a desktop computer>
 \devicefamily-mobile\<MainPage.xaml, and other markup files to load when running on a phone>
 ```
 
 O bien, puedes ponerles nombres a los archivos.
 
-```
+```console
 \MainPage.devicefamily-desktop.xaml
 \MainPage.devicefamily-mobile.xaml
 ```
@@ -203,21 +203,21 @@ Si quieres que tu aplicación admita diferentes idiomas de pantalla y tienes lit
 
 Normalmente se usa un calificador `language` para dar nombre a las carpetas que contienen los archivos de recursos (`.resw`).
 
-```
+```console
 \Strings\language-en\Resources.resw
 \Strings\language-ja\Resources.resw
 ```
 
 Puedes omitir la parte `language-` de un calificador `language` (es decir, el nombre de calificador). No puedes hacerlo con los otros tipos de calificadores; y sólo puedes hacerlo en un nombre de carpeta.
 
-```
+```console
 \Strings\en\Resources.resw
 \Strings\ja\Resources.resw
 ```
 
 En lugar de dar nombres a carpetas, puedes usar un calificador `language` para que los archivos de recursos se den nombre ellos mismos.
 
-```
+```console
 \Strings\Resources.language-en.resw
 \Strings\Resources.language-ja.resw
 ```
@@ -234,7 +234,7 @@ Windows selecciona automáticamente un factor de escala para cada pantalla en fu
 
 Este es un ejemplo de cómo establecer el calificador del nivel de carpeta.
 
-```
+```console
 \Assets\Images\scale-100\<logo.png, and other image files>
 \Assets\Images\scale-200\<logo.png, and other image files>
 \Assets\Images\scale-400\<logo.png, and other image files>
@@ -242,7 +242,7 @@ Este es un ejemplo de cómo establecer el calificador del nivel de carpeta.
 
 Y este ejemplo lo establece en el nivel de archivo.
 
-```
+```console
 \Assets\Images\logo.scale-100.png
 \Assets\Images\logo.scale-200.png
 \Assets\Images\logo.scale-400.png

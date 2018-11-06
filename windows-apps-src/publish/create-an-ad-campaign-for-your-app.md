@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
 ms.openlocfilehash: c6df022cbd474c9e73a84b86b245511d23293b0e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992323"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047723"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 
-Puedes crear campañas de anuncios en el [Centro de partners](https://partner.microsoft.com/dashboard) para ayudar a promocionar la aplicación y aumentar la base de usuarios. De manera predeterminada, elegimos el público de destino de tus anuncios en función de la configuración de la aplicación en el centro de partners, pero, opcionalmente, puedes definir tu propio público. También puedes usar un conjunto predeterminado de plantillas de anuncios o cargar tus propios diseños de anuncio. Para obtener más información sobre las campañas publicitarias, consulta [Preguntas comunes sobre las campañas de anuncios](common-questions.md).
+Puedes crear campañas de anuncios en el [Centro de partners](https://partner.microsoft.com/dashboard) para ayudar a promocionar la aplicación y aumentar la base de usuarios. De manera predeterminada, elegimos el público de destino para tus anuncios en función de la configuración de la aplicación en el centro de partners, pero se puede definir tu propio público. También puedes usar un conjunto predeterminado de plantillas de anuncios o cargar tus propios diseños de anuncio. Para obtener más información sobre las campañas publicitarias, consulta [Preguntas comunes sobre las campañas de anuncios](common-questions.md).
 
 Puedes crear campañas de anuncios solo para las aplicaciones que hayan pasado a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md).
 
@@ -48,11 +48,11 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
         El presupuesto mensual se prorratea el mes en el que se crea la campaña publicitaria. En otras palabras, si creas una campaña publicitaria a mitad de un mes natural, se te cobrará la mitad del presupuesto mensual para ese mes.
 
-    * Especifica un método de pago para la campaña publicitaria haciendo clic en **Agregar nuevo método de pago** y rellena los detalles de la cuenta. Si ya dispones de un instrumento de pago, puedes seleccionar **Elige otro método de pago** si necesitas actualizarlo. El país o región de la dirección de facturación del método de pago debe coincidir con el país o región asociado a tu cuenta de desarrollador.
+    * Especifica un método de pago para la campaña publicitaria haciendo clic en **Agregar nuevo método de pago** y rellena los detalles de la cuenta. Si ya dispones de un instrumento de pago, puedes seleccionar **Elige otro método de pago** si necesitas actualizarlo. El país o región de la dirección de facturación de la forma de pago debe coincidir con el país o región asociado a tu cuenta de desarrollador.
 
     * Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
 
-    Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus aplicaciones.
+    Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus propias aplicaciones.
 
 9.  En la página **Audiencia**, mostraremos la configuración de audiencia que recomendamos para la campaña. También puedes ajustar esta información:
     * **Países/regiones**: elige hasta 5 países o regiones en los que quieras que aparezca tu anuncio. Para obtener una lista de los países o regiones admitidos, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#where-will-my-ad-appear).

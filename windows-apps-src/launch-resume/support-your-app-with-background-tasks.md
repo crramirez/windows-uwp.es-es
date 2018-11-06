@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: a72d13689b278c1048cab6b1fcb4fd788658602c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981871"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048043"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
@@ -75,7 +75,7 @@ Puedes controlar cuándo se ejecuta la tarea en segundo plano, incluso después 
 
 Agrega la condición **InternetAvailable** a tu tarea en segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para retrasar la activación de la tarea en segundo plano hasta que la pila de red se ejecute. Esta condición ahorra energía porque no ejecutará la tarea en segundo plano hasta que la red está disponible. Esta condición no proporciona una activación en tiempo real.
 
-Si la tarea en segundo plano requiere conectividad de red, establece [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener conectada la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si la tarea en segundo plano no establece **IsNetworkRequested**, a continuación, la tarea en segundo plano no podrá acceder a la red cuando esté en modo de espera conectado (por ejemplo, cuando se apague la pantalla del teléfono).
+Si la tarea en segundo plano requiere conectividad de red, establece [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener conectada la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si la tarea en segundo plano no establece **IsNetworkRequested**, a continuación, la tarea en segundo plano no podrá tener acceso a la red cuando esté en modo de espera conectado (por ejemplo, cuando se apague la pantalla del teléfono).
  
 Para obtener más información acerca de las condiciones de tarea en segundo plano, consulta [establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
@@ -169,7 +169,7 @@ Las tareas en segundo plano pueden notificar progreso, finalización o cancelaci
 [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)  
 [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 
-Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que estén presentes en BackgroundTaskBuilder.AllTasks tareas en segundo plano no agrupada la aplicación. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicie la aplicación.
+Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que las tareas de la aplicación no agrupada en segundo plano están presentes en BackgroundTaskBuilder.AllTasks. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicia la aplicación.
 
 ## <a name="related-topics"></a>Temas relacionados
 

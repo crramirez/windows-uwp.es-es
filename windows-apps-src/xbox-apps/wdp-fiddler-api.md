@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982468"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047227"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
@@ -42,7 +42,7 @@ GET | /ext/fiddler
 
 **Respuesta**   
 
-- Propiedad JSON bool IsProxyEnabled qué especificadores indica si el proxy está habilitado o no.
+- Propiedad JSON bool IsProxyEnabled qué especificadores indica si está habilitado el proxy o no.
 
 **Código de estado**
 

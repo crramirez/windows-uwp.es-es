@@ -10,12 +10,12 @@ ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d04ea3506fc909b115ba9aab397ded9e4464479
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: a9a9dd4347cc682f384c2d408d30820acf76ce34
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982140"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047510"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones para UWP
 
@@ -51,8 +51,8 @@ Para obtener directrices sobre la experiencia del usuario de Windows Ink, consul
 | --- | --- |
 | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Un control de plataforma XAMLUI que, de manera predeterminada, recibe y muestra todas las entradas de lápiz como trazos de lápiz o trazos de borrado.<br/>Para obtener más información sobre cómo usar InkCanvas, consulta [Reconocer trazos de Windows Ink como texto](convert-ink-to-text.md) y [Almacenar y recuperar datos de trazos de lápiz de Windows Ink](save-and-load-ink.md). |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Un objeto de código subyacente, cuya instancia se creó con un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)). Este objeto proporciona todas las funcionalidades de entrada manuscrita predeterminadas y que expuso **InkCanvas**, junto con un completo conjunto de API para la personalización adicional.<br/>Para obtener más información sobre cómo usar InkPresenter, consulta [Reconocer trazos de Windows Ink como texto](convert-ink-to-text.md) y [Almacenar y recuperar datos de trazos de lápiz de Windows Ink](save-and-load-ink.md). |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Un control de plataforma XAMLUI que contiene una colección personalizable y extensible de botones que activan características relacionadas con la entrada de lápiz en un [**control InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)asociado.<br/>Para obtener más información sobre cómo usar InkToolbar, consulta [Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)](ink-toolbar.md). |
-| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) predeterminado. Esto permite la personalización completa de la experiencia de entrada manuscrita.<br/>Para obtener más información, consulta [Complex ink sample (Muestra de entrada de lápiz compleja)](http://go.microsoft.com/fwlink/p/?LinkID=620314). |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Un control de plataforma XAMLUI que contiene una colección personalizable y extensible de botones que activan características relacionadas con la entrada de lápiz en un asociado de [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas).<br/>Para obtener más información sobre cómo usar InkToolbar, consulta [Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)](ink-toolbar.md). |
+| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) predeterminado. Esto permite la personalización completa de la experiencia de entrada manuscrita.<br/>Para obtener más información, consulta [Complex ink sample (Muestra de entrada de lápiz compleja)](https://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
 ## <a name="basic-inking-with-inkcanvas"></a>Entrada manuscrita básica con InkCanvas
 
@@ -456,7 +456,7 @@ Ambos objetos [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Window
 
 También puedes secar de forma personalizada la entrada de lápiz para [SwapChainPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.swapchainpanel), pero la sincronización con el subproceso de interfaz de usuario no se garantiza y puede haber un retraso entre el momento en el que la entrada de lápiz se representa en SwapChainPanel y el momento en el que la entrada de lápiz se quita de InkCanvas.
 
-Para obtener un ejemplo completo de esta funcionalidad, consulta la [muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314).
+Para obtener un ejemplo completo de esta funcionalidad, consulta la [muestra de entrada de lápiz compleja](https://go.microsoft.com/fwlink/p/?LinkID=620314).
 
 > [!NOTE]
 > El secado personalizado y la clase [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
@@ -484,18 +484,18 @@ Para obtener un ejemplo completo de esta funcionalidad, consulta la [muestra de 
 
 **Muestras**
 * [Tutorial de introducción: Admitir la entrada de lápiz en tu aplicación para UWP](https://aka.ms/appsample-ink)
-* [Muestra de entrada de lápiz simple (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Muestra de entrada de lápiz compleja (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Muestra de entrada de lápiz (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Muestra de entrada de lápiz simple (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Muestra de entrada de lápiz compleja (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Muestra de entrada de lápiz (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Muestra de libro para colorear](https://aka.ms/cpubsample-coloringbook)
 * [Muestra de notas familiares](https://aka.ms/cpubsample-familynotessample)
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
