@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, stick arcade, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 13bc03559fb32156f5ff8bb29ed96f8a1e4ac84f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981703"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040830"
 ---
 # <a name="arcade-stick"></a>Stick arcade
 
@@ -30,7 +30,7 @@ En esta página encontrarás información sobre:
 
 Los sticks arcade son dispositivos de entrada apreciados por reproducir la sensación de las máquinas arcade de pie y por sus controles de alta precisión digital. Los sticks arcade son el dispositivo de entrada perfecto para los combates cara a acara y otros juegos de estilo arcade, además de ser adecuados para cualquier juego que funcione con controles totalmente digitales. Los sticks arcade son compatibles con aplicaciones para UWP de Windows 10 y Xbox One en el espacio de nombres [Windows.Gaming.Input][].
 
-Sticks arcade de Xbox One están equipados con un joystick digital de 8 vías, seis botones de **acción** (representados como A1 A6 en la imagen siguiente) y dos botones **especial** (representados como S1 y S2); se encuentra en los dispositivos de entrada totalmente digital que no admiten controles analógicos o vibración. Sticks arcade de Xbox One también están equipados con botones de **vista** y el **menú** que se usan para admitir la navegación de la interfaz de usuario, pero no está pensadas para admitir comandos de juego y no se puede acceder a ellos fácilmente como botones de joystick.
+Sticks arcade de Xbox One están equipados con un joystick digital de 8 vías, seis botones de **acción** (representados como A1 A6 en la imagen siguiente) y dos botones **especial** (representados como S1 y S2); son los dispositivos de entrada totalmente digital que no admiten controles analógicos o vibración. Sticks arcade de Xbox One también están equipados con botones de **vista** y el **menú** que se usan para admitir la navegación de la interfaz de usuario, pero no está pensadas para admitir comandos de juego y no se puede acceder a ellos fácilmente como botones de joystick.
 
 ![Stick con 4 direccional joystick, Arcade 6 botones de acción (A1 A6) y 2 botones especiales (S1 y S2)](images/arcade-stick-1.png)
 
@@ -38,7 +38,7 @@ Sticks arcade de Xbox One están equipados con un joystick digital de 8 vías, s
 
 Para aliviar la carga de la compatibilidad con muchos dispositivos de entrada diferentes para la navegación de la interfaz de usuario y fomentar la coherencia entre dispositivos y juegos, la mayoría de dispositivos de entrada _física_ actúan simultáneamente como dispositivo independiente de entrada _lógica_, llamado [controlador de navegación de la interfaz de usuario](ui-navigation-controller.md). El controlador de navegación de la interfaz de usuario proporciona un vocabulario común para los comandos de navegación de la interfaz de usuario entre los dispositivos de entrada.
 
-Como un controlador de navegación de la interfaz de usuario, los sticks arcade asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación al joystick y los botones de **vista**, **menú**, **acción 1**y **2 de acción** .
+Como un controlador de navegación de la interfaz de usuario, los sticks arcade asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación al joystick y los botones de **vista**, **menú**, **acción 1**y **2 de la acción** .
 
 | Comando de navegación | Entrada del stick arcade  |
 | ------------------:| ------------------- |

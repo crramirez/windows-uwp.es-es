@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973670"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046998"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -104,7 +104,7 @@ Para crear un paquete que se puede cargar en la Tienda:
 2. En la página __Información general del panel__ o __Todas las aplicaciones__, haz clic en la aplicación con la que quieres trabajar. Si aún no creaste un envío de aplicación, haz clic en __Crear una nueva aplicación__ y reserva un nombre.
 3. En la página __Información general de la aplicación__, haz clic en __Iniciar el envío__.
 4. Configura este nuevo envío. En la página de envío:
-    * Haz clic en __Precios y disponibilidad__. En la sección __visibilidad__ , elige '__ocultar esta aplicación e impedir la compra …__' para asegurarse de que solo el equipo de desarrollo tenga acceso al juego. Para obtener más información, consulta [Distribución y visibilidad](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
+    * Haz clic en __Precios y disponibilidad__. En la sección __visibilidad__ , elige '__ocultar esta aplicación e impedir la compra …__"para asegurarse de que solo el equipo de desarrollo tenga acceso al juego. Para obtener más información, consulta [Distribución y visibilidad](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
     * Haz clic en __Propiedades__. En la sección __Categoría y subcategoría__, elige __Juegos__ y luego elige una subcategoría adecuada para el juego.
     * Haz clic en __Clasificaciones por edades__. Completa el cuestionario con precisión.
     * Haz clic en __Paquetes__. Carga el paquete de juego creado en el paso anterior.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 64da4418e25f77f49854c054d9cb468f0d89f16c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986177"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046515"
 ---
 # <a name="create-your-first-app"></a>Crear tu primera aplicación
 
@@ -40,9 +40,9 @@ Si estás listo para probar algo un poco más divertido que "¡Hello, World!", p
 * [Un sencillo juego 2D de UWP para Microsoft Store, escrito en C# y MonoGame](get-started-tutorial-game-mg2d.md)
 
 
-## <a name="visualc-component-extensions-ccx-and-xaml"></a>Las extensiones de componentes VisualC ++ (C++ / CX) y XAML
+## <a name="visualc-component-extensions-ccx-and-xaml"></a>Las extensiones de componentes de VisualC ++ (C++ / CX) y XAML
 
-Aprovecha tu experiencia en programación con c++ para compilar aplicaciones mediante extensiones de componentes de VisualC ++ (C++ / CX) con XAML.
+Aprovecha tu experiencia en programación con c++ para compilar aplicaciones mediante extensiones de componentes VisualC ++ (C++ / CX) con XAML.
 
 * [Crear una aplicación "Hello, world" mediante XAML con C++/CX](create-a-basic-windows-10-app-in-cpp.md)
 

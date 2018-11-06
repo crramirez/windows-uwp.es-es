@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 14e78aec9afa361b2627d62d92f0ee7d7ab0565b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987997"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040860"
 ---
 # <a name="introduction-to-buffers"></a>Introducción a los búferes
 
@@ -23,12 +23,12 @@ Un recurso de búfer es una colección de datos completos, agrupados en elemento
 
 Un elemento de búfer se compone de 1 a 4 componentes. Los elementos de búfer pueden incluir valores de datos agrupados (por ejemplo, valores de superficie R8G8B8A8), enteros de 8 bits únicos o cuatro valores de punto flotante de 32 bits.
 
-Un búfer se crea como un recurso no estructurado. Dado que es no estructurado, un búfer no puede contener cualquier niveles de mapas MIP, no se puede obtener filtrado cuando se leen y no puede ser varias muestras.
+Un búfer se crea como un recurso no estructurado. Dado que es no estructurado, un búfer no puede contener los niveles de mapas MIP, no se puede obtener filtrado cuando se leen y no puede ser varias muestras.
 
 ## <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>Tipos de búfer
 
 
-La siguiente es los tipos de recurso de búfer compatibles con Direct3D 11.
+Las siguientes son los tipos de recurso de búfer compatibles con Direct3D 11.
 
 -   [Búfer de vértices](#vertex-buffer)
 -   [Búfer de índices](#index-buffer)
@@ -46,9 +46,9 @@ Con más frecuencia, un búfer de vértices contiene todos los datos necesarios 
 
 ![Ilustración de un búfer de vértices que contiene la posición, la normal y datos de textura](images/d3d10-vertex-buffer-element.png)
 
-Este búfer de vértices contiene datos de vértice; cada vértice almacena los tres elementos (posición, la normal y coordenadas de textura). La posición y la normal suelen especificarse con tres controles flotantes de 32 bits y las coordenadas de textura, con dos controles flotantes de 32 bits.
+Este búfer de vértices contiene datos de vértice; cada vértice almacena tres elementos (posición, la normal y coordenadas de textura). La posición y la normal suelen especificarse con tres controles flotantes de 32 bits y las coordenadas de textura, con dos controles flotantes de 32 bits.
 
-Para obtener acceso a datos de un búfer de vértices debes saber el vértice al acceso, además de los siguientes parámetros de búfer adicionales:
+Para obtener acceso a datos de un búfer de vértices, debes saber el vértice al acceso, además de los siguientes parámetros de búfer adicional:
 
 -   Offset: número de bytes desde el principio del búfer hasta los datos del primer vértice.
 -   BaseVertexLocation: número de bytes desde el desplazamiento hasta el primer vértice utilizado por la llamada a draw correspondiente.
@@ -67,7 +67,7 @@ Los índices secuenciales almacenados en un búfer de índices se encuentran con
 -   StartIndexLocation - especifica el primer elemento de búfer de índice de la dirección base y el desplazamiento. La ubicación de inicio representa el primer índice para representar.
 -   IndexCount: número de índices que se van a representar.
 
-Inicio del búfer de índices = dirección de Base de búfer de índice, desplazamiento (bytes) + StartIndexLocation \ * ElementSize (bytes);
+Inicio de búfer de índices = dirección de Base de búfer de índice, desplazamiento (bytes) + StartIndexLocation \ * ElementSize (bytes);
 
 En este cálculo, ElementSize es el tamaño de cada elemento de búfer de índices, que es dos o cuatro bytes.
 
@@ -79,7 +79,7 @@ Un búfer de constantes te permite suministrar de forma eficiente datos de const
 
 Cada elemento almacena una constante de 1 a 4 componentes, que se determina por el formato de los datos almacenados.
 
-Un búfer de constantes solo puede usar una marca de enlace único, lo que no puede combinarse con cualquier otra marca de enlace.
+Un búfer de constantes solo puede usar una marca de enlace único, que no puede combinarse con cualquier otra marca de enlace.
 
 Para leer un búfer de constantes de sombreador de un sombreador, usa una función de la carga HLSL. Cada fase del sombreador permite un máximo de 15 búferes de constantes de sombreador; cada búfer puede contener hasta 4096 constantes.
 

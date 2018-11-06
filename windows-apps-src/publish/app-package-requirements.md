@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c76cb26d91ecd1f72b71f90b9ef464cdf52ba55
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5977107"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045089"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -32,14 +32,14 @@ Si usas MicrosoftVisual Studio como entorno de desarrollo, ya cuentas con herram
 
 Cuando crees el paquete en Visual Studio, asegúrate de iniciar sesión con la misma cuenta asociada con tu cuenta de desarrollador. Algunas partes del manifiesto del paquete tienen detalles específicos relacionados con tu cuenta. Esta información se detecta y se agrega automáticamente. Sin la información adicional agregada al manifiesto, se pueden producir errores al cargar el paquete. 
 
-Al compilar paquetes de la aplicación para UWP, Visual Studio puede crear un .msix o archivo appx o un archivo .msixupload o .appxupload. Las aplicaciones para UWP, te recomendamos que siempre carga el archivo .msixupload o .appxupload en la página [paquetes](upload-app-packages.md) . Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Store, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
+Al compilar paquetes de la aplicación para UWP, Visual Studio puede crear un .msix o archivo appx o un archivo .msixupload o .appxupload. Las aplicaciones para UWP, te recomendamos que siempre carga el archivo .msixupload o .appxupload en la página de [paquetes](upload-app-packages.md) . Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Store, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
 
 No es necesario que los paquetes de la aplicación estén firmados con un certificado con la raíz en una entidad de certificación de confianza.
 
 
 ### <a name="app-bundles"></a>Paquetes de aplicaciones
 
-Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que los usuarios descargar. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
+Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > [!NOTE]
 > Un paquete de aplicaciones puede contener tus paquetes para todas las arquitecturas.
@@ -75,7 +75,7 @@ Los paquetes de la aplicación deben cumplir con estos requisitos.
 | Hash de asignación de bloque     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="supported-versions"></a>Versiones compatibles
 

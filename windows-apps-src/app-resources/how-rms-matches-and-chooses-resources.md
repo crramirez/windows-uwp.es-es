@@ -8,12 +8,12 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c7576f98045bce3bcfcee093aa8d61059354d45a
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996860"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045282"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo compara y elige recursos el sistema de administración
 Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato que se va a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.
@@ -22,7 +22,7 @@ En este proceso de clasificación, se asignan prioridades diferentes a los disti
 
 Para conocer detalles más concretos sobre cómo se realiza la coincidencia de la etiqueta de idiomas, consulta [Cómo compara etiquetas de idioma el sistema de administración de recursos](how-rms-matches-lang-tags.md).
 
-En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado como "scale-100"coincide con un contexto de "escala-400" hasta cierto pequeña, aunque no así como un candidato calificado como"escala-200"o (para coincidencia perfecta)"escala-400".
+En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado como "scale-100"coincide con un contexto de "escala-400" en cierta medida pequeña, aunque no así como un candidato calificado como"escala-200"o (para coincidencia perfecta)"escala-400".
 
 Sin embargo, en el resto de calificadores, como el idioma o la región principal, es posible que haya una comparación no coincidente (además de grados de coincidencia). Por ejemplo, un candidato con la calificación de idioma "en-US" representa una coincidencia parcial en un contexto "en-GB", pero un candidato con la calificación "fr" no es coincidente en modo alguno. De manera similar, un candidato con la calificación de región principal "155" (Europa occidental) coincide bien de alguna manera con un contexto de usuario cuya región principal esté definida en "FR", pero un candidato calificado como "US" no coincide en modo alguno.
 
@@ -41,7 +41,7 @@ Si hay un empate, se inspeccionará el valor de calificador de contexto de mayor
 ## <a name="example-of-choosing-a-resource-candidate"></a>Ejemplo de elección de un candidato de recurso
 Supónganse estos archivos.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -53,7 +53,7 @@ de/images/logo.jpg
 
 Y supóngase que esta sea la configuración en el contexto actual.
 
-```
+```console
 Application language: en-US; fr-FR;
 Scale: 400
 Contrast: Standard
@@ -61,7 +61,7 @@ Contrast: Standard
 
 El Sistema de administración de recursos elimina tres de los archivos, porque el contraste alto y el idioma alemán no coinciden con el contexto definido por la configuración. Eso deja a estos candidatos.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -70,7 +70,7 @@ fr/images/logo.scale-100.jpg
 
 Para los candidatos restantes, el sistema de administración de recursos usa el calificador de contexto de prioridad más alta, que es el idioma. Los recursos de inglés son una mejor coincidencia que los de francés, porque el inglés aparece antes del francés en la configuración.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -78,13 +78,13 @@ en/images/logo.scale-100.jpg
 
 A continuación, el sistema de administración de recursos usa el calificador de contexto de mayor prioridad siguiente, la escala. Por ello, este será el recurso devuelto.
 
-```
+```console
 en/images/logo.scale-400.jpg
 ```
 
 Puedes usar el método avanzado [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) para recuperar todos los candidatos en el orden en que coincidan con la configuración de contexto. Para el ejemplo en el que nos hemos desenvuelto, **ResolveAll** devuelve candidatos en este orden.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -94,7 +94,7 @@ fr/images/logo.scale-100.jpg
 ## <a name="example-of-producing-a-fallback-choice"></a>Ejemplo de producción de una elección de reserva
 Supónganse estos archivos.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -105,7 +105,7 @@ de/images/contrast-standard/logo.jpg
 
 Y supóngase que esta sea la configuración en el contexto actual.
 
-```
+```console
 User language: de-DE;
 Scale: 400
 Contrast: High
@@ -113,7 +113,7 @@ Contrast: High
 
 Todos los archivos se eliminan porque no coinciden con el contexto. De modo que entramos en un paso predeterminado, donde el valor predeterminado (véase [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)) durante la creación del archivo PRI era este.
 
-```
+```console
 Language: fr-FR;
 Scale: 400
 Contrast: Standard
@@ -121,7 +121,7 @@ Contrast: Standard
 
 Esto deja todos los recursos que coincidan con el usuario actual o con el predeterminado.
 
-```
+```console
 fr/images/contrast-standard/logo.scale-400.jpg
 fr/images/contrast-standard/logo.scale-100.jpg
 de/images/contrast-standard/logo.jpg
@@ -129,7 +129,7 @@ de/images/contrast-standard/logo.jpg
 
 El sistema de administración de recursos usa el calificador de contexto de prioridad más alta, el idioma, para devolver el recurso con nombre que tenga la mayor puntuación.
 
-```
+```console
 de/images/contrast-standard/logo.jpg
 ```
 

@@ -10,17 +10,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 252b1309f1218a872ea49dcce7048b890a6139b4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974762"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041585"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación de escritorio empaquetada con Windows 10
 
 Usa extensiones para integrar la aplicación de escritorio empaquetada con Windows 10 mediante formas predefinidas.
 
-Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación de la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
+Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación sea la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
 
 En este tema se describen estas extensiones y las tareas que puedes realizar al usarlas.
 
@@ -94,7 +94,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>Hacer que la aplicación empaquetada abra archivos en lugar de la aplicación de escritorio
 
-Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada de manera predeterminada para determinados tipos de archivos en lugar de abrir la versión de escritorio de la aplicación.
+Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada para determinados tipos de archivos en lugar de abrir la versión de escritorio de la aplicación de forma predeterminada.
 
 Para ello, especifica el [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) de cada aplicación desde la cual quieras heredar asociaciones de archivos.
 
@@ -280,7 +280,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="open-certain-types-of-files-directly-by-using-a-url"></a>Abrir determinados tipos de archivos mediante una dirección URL
 
-Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada de manera predeterminada para determinados tipos de archivos en lugar de abrir la versión de escritorio de la aplicación.
+Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada para determinados tipos de archivos en lugar de abrir la versión de escritorio de la aplicación de forma predeterminada.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -305,7 +305,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
-|UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, intenta por la aplicación para abrir un archivo mediante una dirección URL, provocará que el sistema descargue el archivo localmente. |
+|UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, cualquier intento que realice la aplicación para abrir un archivo mediante una URL, provocará que el sistema descargue el archivo localmente. |
 |Parameters |parámetros opcionales. |
 |FileType |Extensiones de archivo relevantes. |
 
@@ -456,7 +456,7 @@ Declara esta extensión en el nivel de paquete del manifiesto de la aplicación.
 
 Esta opción permite que los usuarios organicen tus archivos e interactúen con ellos de forma común.
 
-* [Definir cómo se comporta la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo](#define)
+* [Definir el comportamiento de la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo](#define)
 * [Mostrar el contenido del archivo en una imagen en miniatura en el Explorador de archivos](#show)
 * [Mostrar el contenido del archivo en un panel de vista previa del Explorador de archivos](#preview)
 * [Permitir que los usuarios agrupen los archivos mediante la columna Tipo del Explorador de archivos](#enable)
@@ -465,9 +465,9 @@ Esta opción permite que los usuarios organicen tus archivos e interactúen con 
 
 <a id="define" />
 
-### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definir cómo se comporta la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo
+### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definir el comportamiento de la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo
 
-Especificar cómo se comporta la aplicación cuando el usuario abre varios archivos al mismo tiempo.
+Especificar cómo se comporta la aplicación cuando un usuario abre varios archivos al mismo tiempo.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -852,7 +852,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 * [Iniciar la aplicación mediante un protocolo](#protocol)
 * [Iniciar la aplicación mediante un alias](#alias)
 * [Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows](#executable)
-* [Permitir que los usuarios inicien la aplicación cuando conecten un dispositivo a su PC](#autoplay)
+* [Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC](#autoplay)
 * [Reiniciar automáticamente después de recibir una actualización de Microsoft Store](#updates)
 
 <a id="protocol" />
@@ -909,7 +909,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-your-application-by-using-an-alias"></a>Iniciar la aplicación mediante un alias
 
-Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
+Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -963,7 +963,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-an-executable-file-when-users-log-into-windows"></a>Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows
 
-Las tareas de inicio que la aplicación pueda ejecutar un archivo ejecutable automáticamente cuando un usuario inicia sesión.
+Las tareas de inicio que la aplicación pueda ejecutar un archivo ejecutable automáticamente cada vez que un usuario inicia sesión.
 
 > [!NOTE]
 > El usuario tiene que iniciar la aplicación al menos una vez para registrar esta tarea de inicio.
@@ -1023,7 +1023,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 ```
 <a id="autoplay" />
 
-### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios inicien la aplicación cuando conecten un dispositivo a su PC
+### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC
 
 Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecta un dispositivo a su PC.
 
@@ -1088,9 +1088,9 @@ Si la aplicación está abierta cuando los usuarios instalar una actualización,
 
 Si quieres que esa aplicación se reinicie una vez completada la actualización, llama a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) en cada proceso que quieras reiniciar.
 
-Cada ventana activa de la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
+Cada ventana activa en la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
 
-Cuando cada ventana activa de la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar datos y apagar.
+Cuando cada ventana activa en la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar los datos y se cierra.
 
 >[!NOTE]
 Las ventanas activas también reciben el mensaje [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) en caso de que la aplicación no controle el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) .
@@ -1135,7 +1135,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
-|Parameters |Los parámetros que requiere la aplicación para controlar correctamente la solicitud. |
+|Parameters |Los parámetros que necesita la aplicación para controlar correctamente la solicitud. |
 
 #### <a name="example"></a>Ejemplo
 

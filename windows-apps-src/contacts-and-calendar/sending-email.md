@@ -9,11 +9,11 @@ ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a28809210f71bf523e3cc5f9c8da1db9fbcc90c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980418"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046978"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
 
@@ -49,7 +49,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> Los datos adjuntos que agregas a un correo electrónico mediante el uso de la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecerá únicamente en la aplicación de correo. Si los usuarios tienen cualquier otro programa de correo configurado como su programa de correo predeterminada, aparecerá la ventana de la redacción sin los datos adjuntos. Este es un problema conocido.
+> Los datos adjuntos que agregas a un correo electrónico mediante el uso de la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecerá únicamente en la aplicación de correo. Si los usuarios tienen que cualquier otro programa de correo configurado como su programa de correo predeterminada, aparecerá la ventana de la redacción sin los datos adjuntos. Este es un problema conocido.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 

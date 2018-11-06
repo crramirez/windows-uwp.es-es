@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, latency, latencia, dxgi, swap chains, cadenas de intercambio, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 51a1dd6d7f1c39d82201d3b9741276a54e4c06a8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972990"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041218"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reducir la latencia con cadenas de intercambio de DXGI1.3
 
@@ -37,7 +37,7 @@ Especifica la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Nota**  a diferencia de otras marcas, esta no se puede agregar ni quitar con [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). DXGI devuelve un código de error si esta marca se configura de otro modo distinto de cuando se creó la cadena de intercambio.
+> **Nota**  a diferencia de otras marcas, esta marca no se puede agregar ni quitar con [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). DXGI devuelve un código de error si esta marca se configura de otro modo distinto de cuando se creó la cadena de intercambio.
 
  
 

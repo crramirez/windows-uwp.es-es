@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df6e2c15260759f164a37b68365e0268633b22d5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981036"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042370"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos con puntos de servicio compatibles
 
@@ -77,7 +77,7 @@ Firmware mínimo de ² 016 (2018.01.18) necesarios. Actualizable con Zebra [123S
 ### <a name="windows-devices-with-built-in-barcode-scanner"></a>Dispositivos de Windows con el escáner de códigos de barras integrado
 | Fabricante   | Modelo | Sistema operativo |
 |----------------|-------|------------------|
-| Innowi         | M ChecOut | Windows 10   |
+| Innowi         | ChecOut M | Windows 10   |
 
 ### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>Dispositivos Windows Mobile con el escáner de códigos de barras integrado
 | Fabricante   | Modelo | Sistema operativo |

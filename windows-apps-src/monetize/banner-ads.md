@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, AdControl, anuncios de banner
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8a08f81328be5dcf28a3f73a592e88e1edd135
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978532"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046908"
 ---
 # <a name="banner-ads"></a>Anuncios de banner
 

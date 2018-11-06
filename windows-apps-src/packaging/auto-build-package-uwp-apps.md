@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fd82e4574ab6c6aff30d762f2eacc0d62fd6bdf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996065"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040820"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -79,7 +79,7 @@ Esta tarea restaura los paquetes de NuGet definidos en el proyecto. Algunos paqu
 
 #### <a name="configure-the-build-solution-build-task"></a>Configurar la tarea de compilación de compilación de soluciones
 
-Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo para los archivos binarios y produce el archivo de paquete de aplicación de salida. Esta tarea utiliza argumentos de MSBuild.  Tendrás que especificar el valor de los argumentos. Usa la siguiente tabla como guía. 
+Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo a los archivos binarios y produce el archivo de paquete de aplicación de salida. Esta tarea utiliza argumentos de MSBuild.  Tendrás que especificar el valor de los argumentos. Usa la siguiente tabla como guía. 
 
 |**Argumento de MSBuild**|**Valor**|**Descripción**|
 |--------------------|---------|---------------|
@@ -109,7 +109,7 @@ Esta tarea almacena los artefactos generados en VSTS. Puedes verlos en la pesta�
 
 ![artefactos](images/building-screen6.png)
 
-Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puede enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
+Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puedes enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
 
 
 >[!NOTE]
@@ -266,7 +266,7 @@ Para establecer este parámetro, combina el nombre de aplicación, la variable A
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es un procedimiento recomendado consiste en incluir los símbolos con el lote.
+Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es recomendable incluir los símbolos con el paquete.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar una compilación de implementación continua que envía un paquete a la Store 
 
@@ -314,7 +314,7 @@ Tienes que activar manualmente esta compilación. Puedes usarla para actualizar 
 
 Si quieres distribuir tu aplicación sin publicarla en la Store, puedes realizar instalaciones de prueba de la aplicación directamente en dispositivos, siempre que dichos dispositivos confíen en el certificado que se usó para firmar el paquete de la aplicación. 
 
-Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de aplicación.
+Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de la aplicación.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Realizar una instalación de prueba de la aplicación con la Actualización de aniversario de Windows 10
 En la actualización de aniversario de Windows 10, puedes haz doble clic en el archivo de paquete de aplicación e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 

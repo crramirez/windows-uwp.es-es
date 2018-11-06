@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, port, portar, shader, sombreador, direct3d, opengl
 ms.localizationpriority: medium
 ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974585"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042116"
 ---
 # <a name="port-the-shader-objects"></a>Portar objetos de sombreador
 
@@ -80,7 +80,7 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 En Direct3D, los sombreadores no se compilan en tiempo de ejecución; siempre se compilan en archivos CSO cuando se compila el resto del programa. Cuando compilas tu aplicación con Microsoft Visual Studio, los archivos HLSL se compilan en archivos CSO (.cso) que la aplicación debe cargar. Asegúrate de incluir estos archivos CSO con la aplicación cuando la empaquetes.
 
-> **Nota**  en el ejemplo siguiente se realiza la carga y sombreador compilación asincrónicamente mediante la sintaxis de expresión lambda y la palabra clave **auto** . ReadDataAsync() es un método implementado en la plantilla que se lee en un archivo CSO como una matriz de datos de bytes (fileData).
+> **Nota**  en el ejemplo siguiente, se realiza la carga y sombreador compilación asincrónicamente mediante la sintaxis de expresión lambda y la palabra clave **auto** . ReadDataAsync() es un método implementado en la plantilla que se lee en un archivo CSO como una matriz de datos de bytes (fileData).
 
  
 

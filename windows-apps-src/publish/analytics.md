@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, análisis, informes, panel, aplicaciones, datos, las métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996926"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042722"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de las aplicaciones
 
@@ -57,7 +57,7 @@ Usa la [API de análisis de Store](../monetize/access-analytics-data-using-windo
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>Paquete de contenido del Centro de desarrollo de Windows para Power BI
 
-Usar el [paquete de contenido del centro de desarrollo de Windows para Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) para explorar y supervisar los datos de análisis del centro de partners en Power BI. Power BI es un servicio de análisis de negocio en la nube que ofrece una vista única de los datos empresariales.
+Usa el [paquete de contenido del centro de desarrollo de Windows para Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) para explorar y supervisar los datos de análisis del centro de partners en Power BI. Power BI es un servicio de análisis de negocio en la nube que ofrece una vista única de los datos empresariales.
 
 Usa los siguientes recursos para empezar a usar Power BI para acceder a los datos de análisis.
 
@@ -66,7 +66,7 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 * [Aprender a usar el paquete de contenido del Centro de desarrollo de Windows para Power BI para conectar con los datos de análisis](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Para conectar con el paquete de contenido del centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD que está asociado con tu cuenta del centro de partners. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información sobre cómo configurar la asociación, consulta [Asociar Azure Active Directory con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md).
+> Para conectar con el paquete de contenido del centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD que está asociado con tu cuenta del centro de partners. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información acerca de cómo configurar la asociación, consulta [Asociar Azure Active Directory con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md).
 
 ### <a name="dev-center-app"></a>Aplicación del Centro de desarrollo
 

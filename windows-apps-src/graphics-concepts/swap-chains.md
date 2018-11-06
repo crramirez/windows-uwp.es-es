@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b38dc50f38276fb367402b230e6199fbabdcef80
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5975608"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043518"
 ---
 # <a name="swap-chains"></a>Cadenas de intercambio
 
@@ -32,7 +32,7 @@ Direct3D implementa dos opciones para evitar las divisiones:
 
 -   Una opción para permitir solamente las actualizaciones del monitor en la operación de retrazado vertical (o sincronización vertical). Un monitor normalmente actualiza su imagen moviendo un punto de luz horizontalmente, en zigzag desde la parte superior izquierda del monitor hasta la parte inferior derecha. Cuando el punto de luz llega al final, el monitor vuelve a calibrar dicho punto de la luz moviéndolo hacia atrás hasta la parte superior izquierda, para que el proceso pueda empezar de nuevo.
 
-    Esta recalibración se denomina una sincronización vertical. Durante una sincronización vertical, el monitor no dibuja nada, por lo que no se ven las actualizaciones en el búfer frontal hasta que el monitor comienza a dibujar otra vez. La sincronización vertical es relativamente lenta; sin embargo, no es tan lenta como para representar una escena compleja mientras se espera. Lo que se necesita para evitar las divisiones y poder representar escenas complejas es un proceso denominado almacenamiento en búfer de reserva.
+    Esta recalibración se denomina sincronización vertical. Durante una sincronización vertical, el monitor no dibuja nada, por lo que no se ven las actualizaciones en el búfer frontal hasta que el monitor comienza a dibujar otra vez. La sincronización vertical es relativamente lenta; sin embargo, no es tan lenta como para representar una escena compleja mientras se espera. Lo que se necesita para evitar las divisiones y poder representar escenas complejas es un proceso denominado almacenamiento en búfer de reserva.
 
 -   Una opción es usar una técnica llamada almacenamiento en búfer de reserva. El almacenamiento en búfer de reserva es el proceso de dibujar una escena en una superficie fuera de la pantalla, denominada búfer de reserva. Cualquier superficie que no sea el búfer frontal se conoce como superficie fuera de la pantalla, ya que el monitor nunca la ve directamente.
 

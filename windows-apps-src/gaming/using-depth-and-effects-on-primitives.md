@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, profundidad, efectos, primitivos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f81c441910cd0d0205641a119c243cb22d0b695e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993942"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041595"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Usar profundidad y efectos en primitivos
 

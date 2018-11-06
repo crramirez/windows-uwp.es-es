@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, intercambiar escalado de cadenas, superposiciones, directx, games, swap chain scaling, overlays
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983131"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043820"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Escalado y superposiciones de cadenas de intercambio
 
@@ -150,7 +150,7 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Nota**  si el adaptador DXGI admite las superposiciones, continúa con el paso siguiente. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
+    > **Nota**  si el adaptador DXGI admite las superposiciones, continúa al paso siguiente. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
 
      
 

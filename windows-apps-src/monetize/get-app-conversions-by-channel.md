@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, API de análisis de Microsoft Store, conversiones de complementos, canal
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb5d5dfbfcbabbd3fa3004c84e2a1a5fff9f2d6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987338"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043162"
 ---
 # <a name="get-app-conversions-by-channel"></a>Obtener conversiones de aplicaciones por canal
 
@@ -21,7 +21,7 @@ Usa este método en la API de análisis de Microsoft Store para obtener conversi
 * Una *conversión* significa que un cliente (que ha iniciado sesión con una cuenta de Microsoft) acaba de obtener una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis).
 * El *canal* es el método en que un cliente llegó a la página de descripción de tu aplicación (por ejemplo, a través de la Store o una [campaña de promoción de la aplicación personalizada](../publish/create-a-custom-app-promotion-campaign.md)).
 
-Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) del centro de partners.
+Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) en el centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

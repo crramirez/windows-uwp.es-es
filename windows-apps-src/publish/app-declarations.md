@@ -9,21 +9,21 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: de519f37c5eacfa64f23d0f438701d4ae9dbc934
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974884"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041119"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
 La sección **declaraciones de producto** de la página de [Propiedades](enter-app-properties.md) del [proceso de envío](app-submissions.md) de ayuda a asegurarse de que la aplicación se muestra correctamente y que ofrece al conjunto adecuado de los clientes y ayuda a comprender cómo pueden usar la aplicación.
 
-Las siguientes secciones describen algunas de las declaraciones y lo que debes tener en cuenta al determinar si cada una de ellas se aplica a la aplicación. Ten en cuenta que dos de estas declaraciones se comprueban de manera predeterminada (tal y como se describe a continuación). Según la categoría de producto, también es posible que veas declaraciones adicionales. Asegúrate de revisar todas las declaraciones y asegurarse de que reflejan con precisión el envío.
+Las siguientes secciones describen algunas de las declaraciones y lo que debes tener en cuenta al determinar si cada una de ellas se aplica a la aplicación. Ten en cuenta que dos de estas declaraciones se comprueban de forma predeterminada (tal y como se describe a continuación). Dependiendo de la categoría de producto, también es posible que veas declaraciones adicionales. Asegúrate de revisar todas las declaraciones y asegurarse de que reflejan con precisión el envío.
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esta aplicación permite a los usuarios realizar compras, pero no usa el sistema de comercio de Microsoft Store.
 
-Para casi cualquier envío, debes dejar esta casilla sin marcar, dado que las aplicaciones que ofrecen oportunidades para comprar elementos o pueden ser consumidos o que se usa dentro de la aplicación deben usar la compra de la aplicación de Microsoft Store API para crear y enviar los complementos. Por el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearan y enviaran antes del 29 de junio de 2015, podrían continuar ofreciendo en la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumple con los [ Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
+Para casi cualquier envío, debes dejar esta casilla sin marcar, dado que las aplicaciones que ofrecen oportunidades para comprar artículos que son o que se pueden consumir o utiliza dentro de la aplicación deben usar la compra de la aplicación de Microsoft Store API para crear y enviar los complementos. Por el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearan y enviaran antes del 29 de junio de 2015, podrían seguir ofreciendo la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumpla con los [ Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Esta aplicación se ha probado y cumple las directrices de accesibilidad.
 
@@ -42,13 +42,13 @@ Cuando declaras que tu aplicación es accesible, aceptas que será accesible par
 Para obtener más información, consulta la [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y la [accesibilidad en la tienda](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> No lista tu aplicación como accesible a menos que específicamente tienes diseñado y probado para ese propósito. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
+> No lista tu aplicación como accesible a menos que se ha diseñado y probado para ese propósito específicamente. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
-Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen la aplicación en almacenamiento extraíble o externa multimedia, como una tarjeta SD, o en un volumen del sistema que no son de unidad, como una unidad externa.
+Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen la aplicación en almacenamiento extraíble o externa multimedia como una tarjeta SD, o a un volumen del sistema que no sea la unidad como una unidad externa.
 
-Si quieres impedir que la aplicación se instale en unidades alternativas o almacenamiento extraíble y solo permiten la instalación en la unidad de disco duro interna en su dispositivo, desactiva esta casilla. (Ten en cuenta que no hay ninguna opción para restringir la instalación para que una aplicación *solo* puede instalarse en un medio de almacenamiento extraíble).
+Si quieres impedir que la aplicación se instale en unidades alternativas o almacenamiento extraíble y solo permiten la instalación en la unidad de disco duro interna en su dispositivo, desactiva esta casilla. (Ten en cuenta que no hay ninguna opción para restringir la instalación para que una aplicación *solo* pueda instalarse en medios de almacenamiento extraíbles).
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows puede incluir los datos de la aplicación en copias de seguridad automáticas en OneDrive.

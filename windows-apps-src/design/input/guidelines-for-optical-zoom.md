@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1643638eaf7eb625defe1f25b44cae20faf0a5c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 2087debd758a24b50ac1885cb68d4b97ea2898fd
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990364"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040243"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico y cambio de tamaño
 
@@ -67,7 +67,7 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
     -   Las aplicaciones de dibujo en las que pueden aparecer elementos redimensionables en un elemento canvas redimensionable.
     -   Las páginas web con un objeto incrustado, como por ejemplo un mapa.
 
-    **Nota**  en todos los casos, el área de contenido cambia de tamaño a menos que todos los puntos táctiles están dentro del objeto redimensionable.
+    **Nota**  en todos los casos, el área de contenido cambia de tamaño a menos que todos los puntos táctiles se encuentran dentro del objeto redimensionable.
 
      
 
@@ -75,20 +75,20 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
 
 **Ejemplos**
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: ejemplo de entrada de lápiz simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: muestra de gestos de Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de prueba de acceso táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: ejemplo de entrada de lápiz simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: muestra de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: muestra de manipulaciones y gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Muestra de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

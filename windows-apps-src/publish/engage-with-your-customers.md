@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9f266538c42b83da9135079f51a3f935f459020
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978890"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045222"
 ---
 # <a name="engage-with-your-customers"></a>Interactuar con tus clientes
 
-[El centro de partners](https://partner.microsoft.com/dashboard) incluye características que te ayudarán a satisfacción y fomentar la participación de clientes. Obtén información sobre cómo usar las notificaciones, las ofertas dirigidas, responder a las valoraciones y comentarios y mucho más.
+[El centro de partners](https://partner.microsoft.com/dashboard) incluye características que te ayudarán a satisfacción y fomentar la participación de clientes. Aprende a usar las notificaciones, las ofertas dirigidas, responder a valoraciones y comentarios y mucho más.
 
 -   [Crear grupos de clientes](create-customer-groups.md)
 -   [Responder a las opiniones de los clientes](respond-to-customer-reviews.md)

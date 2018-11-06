@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995242"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042136"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -28,12 +28,12 @@ MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te ense
 
 ## <a name="prerequisites"></a>Requisitos previos
 +   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener se vuelve a ejecutar al instalador de Visual Studio y modificando la instalación de Visual Studio 2017.
++ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar el programa de instalación de Visual Studio y modificando la instalación de Visual Studio 2017.
 +   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
 ## <a name="why-monogame"></a>¿Por qué MonoGame?
-No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store u otras plataformas similares de distribución.
+No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store o de otras plataformas similares de distribución.
 
 ## <a name="get-the-code"></a>Obtener el código
 Si no te apetece seguir el tutorial paso a paso y solo quieres ver MonoGame en acción, [haz clic aquí para obtener la aplicación acabada](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
@@ -326,7 +326,7 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 La imagen del brécol es un poco más grande de lo que queríamos, así que la reduciremos verticalmente a 0,2 veces su tamaño original.
 
 ### <a name="5-program-obstacle-behaviour"></a>5. comportamiento del obstáculo programa
-Queremos que el brécol se genere fuera de pantalla y se dirija hacia el avatar del jugador para que tenga que esquivarlo. Para ello, agrega este método a la clase **Game1.cs** :
+Queremos que el brécol se genere fuera de pantalla y se dirija hacia el avatar del jugador para que tenga que esquivarlo. Para ello, agrega este método a la clase de **Game1.cs** :
 
 ```CSharp
 public void SpawnBroccoli()
@@ -381,7 +381,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. controlar la entrada de teclado
-A continuación, necesitamos un nuevo método para controlar la entrada de usuario mediante el teclado. Agrega este método a **Game1.cs**:
+A continuación, necesitamos un nuevo método para controlar la entrada de usuario a través del teclado. Agrega este método a **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -430,7 +430,7 @@ La primera cierra el juego si se pulsa la tecla **Escape**.
 
 La segunda, inicia el juego si se presiona la **barra espaciadora** y el juego todavía no comenzó.
 
-La tercera hace que el avatar del dinosaurio salte si se pulsa la **barra espaciadora**, al modificar su propiedad **dY**. Ten en cuenta que el jugador no puede saltar a menos que estén en el "suelo" (dino.y = screenHeight * SKYRATIO) y tampoco saltará si la barra espaciadora se está sosteniendo hacia abajo en lugar de una vez está presionada. Esto impide que el dinosaurio salte tan pronto como comienza el juego, aprovechándose del mismo toque que inicia el juego.
+La tercera hace que el avatar del dinosaurio salte si se pulsa la **barra espaciadora**, al modificar su propiedad **dY**. Ten en cuenta que el jugador no puede saltar a menos que estén en el "suelo" (dino.y = screenHeight * SKYRATIO) y tampoco saltará si la barra espaciadora se está sosteniendo hacia abajo en lugar de una vez presionada. Esto impide que el dinosaurio salte tan pronto como comienza el juego, aprovechándose del mismo toque que inicia el juego.
 
 Por último, la cláusula if/else permite comprobar si las flechas izquierda y derecha se están presionando y, si es el caso, cambia la propiedad **dX** del dinosaurio consecuentemente.
 
@@ -484,7 +484,7 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-En MonoGame, las llamadas nuevas de **spriteBatch.Draw** prevalecerán sobre cualquier llamada anterior. Esto significa que tanto el sprite brécol como el dinosaurio prevalecerán sobre el sprite del césped existente, por lo que no pueden nunca puedan esconderse independientemente de su posición.
+En MonoGame, las llamadas nuevas de **spriteBatch.Draw** prevalecerán sobre cualquier llamada anterior. Esto significa que el brécol y los sprites de dinosaurio prevalecerán sobre el sprite del césped existente, por lo que no pueden nunca puedan esconderse independientemente de su posición.
 
 Intenta ejecutar el juego ahora, y mover el dinosaurio con las teclas de dirección y la barra espaciadora. Si has seguido los pasos anteriores, debe ser capaz de realizar el avatar mover dentro de la ventana del juego y el brécol debería generar a una velocidad creciente.
 
@@ -685,7 +685,7 @@ Aquí usamos el mismo método que antes para dibujar el texto centrado horizonta
 
 ![Fin del juego](images/monogame-tutorial-4.png)
 
-## <a name="publish-to-the-microsoft-store"></a>Publicar en Microsoft Store
+## <a name="publish-to-the-microsoft-store"></a>Publicar en la Microsoft Store
 Dado que compilamos este juego como una aplicación para UWP, es posible publicar este proyecto en Microsoft Store. Este proceso tiene diferentes pasos.
 
 Tienes que estar [registrado](https://developer.microsoft.com/en-us/store/register) como desarrollador de Windows.

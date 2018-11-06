@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: beb7165586c62770fd6b18fff8c7ad0095bc78ba
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981145"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045674"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras desde la aplicación de aplicaciones y complementos
 
@@ -32,7 +32,7 @@ Cada método presenta una interfaz de usuario de compra estándar para el usuari
 
 Este ejemplo tiene los siguientes requisitos previos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Tienes [creado un envío de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Ha [creado un envío de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 * Si quieres habilitar compras desde la aplicación de un complemento de la aplicación, también debes [crear el complemento en el centro de partners](../publish/add-on-submissions.md).
 
 El código de este ejemplo supone que:

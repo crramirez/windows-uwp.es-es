@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d7c3c4a9e46ce38298d7dcdd50477c4de0e9960c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996886"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041129"
 ---
 # <a name="animations-in-xaml"></a>Animaciones en XAML
 
@@ -351,7 +351,7 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 Al contrario que las animaciones de transición, una animación de tema no cuenta con un desencadenador integrado (la transición) que la ejecuta automáticamente. Debes usar un objeto [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) para incluir una animación de tema al definirla en XAML. También puedes cambiar el comportamiento predeterminado de la animación. Por ejemplo, puedes ralentizar el fundido de salida aumentando el valor de tiempo del objeto [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) en el objeto [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302).
 
-**Nota**para fines de mostrar técnicas de animación básicas, usamos código de la aplicación para iniciar la animación llamando a métodos de [**guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490). Puedes controlar cómo se ejecutan las animaciones **Storyboard** mediante los métodos [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) y [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard**. Pero esa no es la manera más común de incluir animaciones de la biblioteca en las aplicaciones. En cambio, las bibliotecas de animaciones se suelen integrar en los estilos y las plantillas de XAML que se aplican a los controles o elementos. Comprender el uso de plantillas y estados visuales es un poco más complicado. Pero sí explicamos cómo usar las animaciones de la biblioteca en los estados visuales como parte del tema sobre las [animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+**Nota**con fines de mostrar técnicas de animación básicas, usamos código de la aplicación para iniciar la animación llamando a métodos de [**guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490). Puedes controlar cómo se ejecutan las animaciones **Storyboard** mediante los métodos [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) y [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard**. Pero esa no es la manera más común de incluir animaciones de la biblioteca en las aplicaciones. En cambio, las bibliotecas de animaciones se suelen integrar en los estilos y las plantillas de XAML que se aplican a los controles o elementos. Comprender el uso de plantillas y estados visuales es un poco más complicado. Pero sí explicamos cómo usar las animaciones de la biblioteca en los estados visuales como parte del tema sobre las [animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
  
 

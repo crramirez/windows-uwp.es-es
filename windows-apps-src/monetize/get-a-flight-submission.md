@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: f9f40219503c0a57f76fcee81858acf51f59b1df
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990732"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043734"
 ---
 # <a name="get-a-package-flight-submission"></a>Obtener un envío de paquete piloto
 
@@ -25,7 +25,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un envío de paquete piloto para una aplicación en el centro de partners. Puedes hacer esto en el centro de partners, o puedes hacerlo mediante el método [crea un envío de paquete piloto](create-a-flight-submission.md) .
+* Crear un envío de paquete piloto para una aplicación en el centro de partners. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método [crea un envío de paquete piloto](create-a-flight-submission.md) .
 
 ## <a name="request"></a>Solicitud
 
@@ -115,7 +115,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el envío de paquete piloto. |
-| 409  | El envío de paquete piloto no pertenece del paquete piloto especificado o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | El envío de paquete piloto no pertenece del paquete piloto especificado o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

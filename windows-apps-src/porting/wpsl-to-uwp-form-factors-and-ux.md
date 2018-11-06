@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 809cf2691a2bc7b7c72d4ba031fa4c6b45335dde
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984105"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045644"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migración WindowsPhone Silverlight a UWP para factor de forma y experiencia del usuario
 
@@ -32,7 +32,7 @@ La respuesta corta es que es subjetivo, dado que no solo depende del tamaño de 
 
 Objetivamente, una pantalla se mide en unidades de pulgadas y píxeles físicos (sin procesar). Conocer estas dos métricas te permite saber cuántos píxeles caben en una pulgada. Esa es la densidad de píxeles, también conocida como puntos por pulgada y píxeles por pulgada. Y el valor recíproco de los DPI es el tamaño físico de los píxeles como una fracción de una pulgada. Densidad de píxeles también se conoce como *resolución*, aunque ese término a menudo se usa libremente para referirse al número de píxeles.
 
-Cuando la distancia de visión aumenta, todas esas métricas objetivo *parecen* más pequeñas y se resuelven en el *tamaño eficaz* de la pantalla y su *resolución eficaz*. El teléfono normalmente se mantiene más cercano a los ojos; después la tableta, a continuación el monitor del equipo y los más alejados son los dispositivos [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) y los televisores. Para compensarlo, los dispositivos tienden a ser objetivamente más grandes con la distancia de visualización. Cuando configuras los tamaños de los elementos de interfaz de usuario, estableces esos tamaños en unidades denominadas píxeles efectivos (epx). Y Windows 10 tendrá en cuenta PPP y la distancia típica desde un dispositivo, para calcular el mejor tamaño de los elementos de la interfaz de usuario en píxeles físicos para ofrecer la mejor experiencia de visualización. Consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
+Cuando la distancia de visión aumenta, todas esas métricas objetivo *parecen* más pequeñas y se resuelven en el *tamaño eficaz* de la pantalla y su *resolución eficaz*. El teléfono normalmente se mantiene más cercano a los ojos; después la tableta, a continuación el monitor del equipo y los más alejados son los dispositivos [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) y los televisores. Para compensarlo, los dispositivos tienden a ser objetivamente más grandes con la distancia de visualización. Cuando configuras los tamaños de los elementos de interfaz de usuario, estableces esos tamaños en unidades denominadas píxeles efectivos (epx). Y Windows 10 tendrá en cuenta los PPP y la distancia típica desde un dispositivo, para calcular el mejor tamaño de los elementos de la interfaz de usuario en píxeles físicos para ofrecer la mejor experiencia de visualización. Consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 Aun así, te recomendamos probar la aplicación con muchos dispositivos distintos, para poder confirmar cada experiencia por ti mismo.
 
@@ -54,11 +54,11 @@ Si se hace zoom óptico de la aplicación para que se parezca a la versión móv
 
 Además de los controles nuevos, como la vista de lista y vista de cuadrícula, la mayoría de los tipos de diseño establecidos de WindowsPhone Silverlight tiene equivalentes en la plataforma Universal de Windows (UWP). Por ejemplo, [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). La migración de gran parte de la interfaz de usuario que usa estos tipos debe ser un proceso sencillo, pero busca siempre formas de sacar provecho de las funcionalidades de diseño dinámico de estos paneles para que automáticamente se cambie el tamaño y se vuelva a diseñar en dispositivos de diferentes tamaños.
 
-Va más allá del diseño dinámico integrado en los controles del sistema y los paneles de diseño, podemos usar una nueva característica de Windows 10 denominada [Visual State Manager adaptativo](wpsl-to-uwp-porting-xaml-and-ui.md).
+Intenta ir más allá del diseño dinámico integrado en los controles del sistema y paneles de diseño, podemos usar una nueva característica de Windows 10 denominada [Visual State Manager adaptativo](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 ## <a name="input-modalities"></a>Modalidades de entrada
 
-Una interfaz WindowsPhone Silverlight es táctil. Y, por supuesto, la interfaz de la aplicación portada debe admitir la entrada táctil, pero puedes elegir admitir también otras modalidades de entrada, como el mouse y el teclado. En UWP, se unifican mouse, lápiz y entrada táctil como *entrada del puntero*. Para obtener más información, consulta [Controlar la entrada de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610) e [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607).
+Una interfaz de WindowsPhone Silverlight es táctil. Y, por supuesto, la interfaz de la aplicación portada debe admitir la entrada táctil, pero puedes elegir admitir también otras modalidades de entrada, como el mouse y el teclado. En UWP, se unifican mouse, lápiz y entrada táctil como *entrada del puntero*. Para obtener más información, consulta [Controlar la entrada de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610) e [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607).
 
 ## <a name="maximizing-markup-and-code-re-use"></a>Maximización de la reutilización de código y marcado
 

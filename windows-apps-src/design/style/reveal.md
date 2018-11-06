@@ -13,22 +13,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: db71916c9297296c4d3bb89e05032c5f413f332e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986114"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043089"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
 ![imagen principal](images/header-reveal-highlight.svg)
 
-Mostrar que resaltado es un efecto de iluminación que resalta los elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
+Mostrar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Así es cómo funciona
-Mostrar resaltado llama la atención a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
+Mostrar resaltado llama la atención respecto a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
 
 ![Elemento visual de Reveal](images/Nav_Reveal_Animation.gif)
 

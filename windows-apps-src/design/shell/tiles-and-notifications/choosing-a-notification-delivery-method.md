@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c01b96f70bd39c43f321935aa47393ada0400319
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5977646"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045847"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Elegir un método de entrega de notificaciones
 

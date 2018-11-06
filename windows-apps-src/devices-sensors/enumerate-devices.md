@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df6082665136442c03273dea4132417b0fd7033c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973152"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041380"
 ---
 # <a name="enumerate-devices"></a>Enumerar dispositivos
 
@@ -84,7 +84,7 @@ La clase [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn93
 
 Mientras se muestra la clase [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841), el contenido de la interfaz de usuario se actualizará automáticamente si se agregan, quitan o actualizan los dispositivos.
 
-**Nota**no se puede especificar el [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) mediante el [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841). Si quieres tener dispositivos con un elemento **DeviceInformationKind** determinado, tendrás que compilar una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) y proporcionar tu propia interfaz de usuario.
+**Nota**no puedes especificar el [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) con el [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841). Si quieres tener dispositivos con un elemento **DeviceInformationKind** determinado, tendrás que compilar una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) y proporcionar tu propia interfaz de usuario.
 
  
 
@@ -125,7 +125,7 @@ Para crear una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/wind
 
 Ver dispositivos como una tarea en segundo plano es muy similar a crear una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446), tal como se describió anteriormente. De hecho, deberás crear primero un objeto **DeviceWatcher** normal, tal como se describe en la sección anterior. Una vez creado, debes llamar al método [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx) en vez de a [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start). Cuando llames a **GetBackgroundTrigger**, debes especificar cuál de las notificaciones te interesa: agregar, quitar o actualizar. No se puede solicitar la notificación de actualizar o quitar sin solicitar la de agregar. Una vez registres el desencadenador, la clase **DeviceWatcher** comenzará a ejecutarse inmediatamente en segundo plano. De ahora en adelante, siempre que recibas una nueva notificación para la aplicación que coincida con los criterios, se desencadenará la tarea en segundo plano y te proporcionará los cambios más recientes desde la última vez que se desencadenó la aplicación.
 
-**Importante**será la primera vez que un [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) desencadene tu aplicación cuando el observador cambiará el estado de **EnumerationCompleted** . Esto significa que contendrá todos los resultados iniciales. Las siguientes veces que desencadene tu aplicación, solo contendrá las notificaciones de agregar, actualizar y quitar que se hayan producido desde que se activó el último desencadenador. Esta acción se diferencia de un objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) de primer plano, ya que los resultados iniciales no llegan de uno en uno y solo se entregan en conjunto después alcanzar el estado **EnumerationCompleted**.
+**Importante**será la primera vez que un [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) desencadena la aplicación cuando el observador cambiará el estado de **EnumerationCompleted** . Esto significa que contendrá todos los resultados iniciales. Las siguientes veces que desencadene tu aplicación, solo contendrá las notificaciones de agregar, actualizar y quitar que se hayan producido desde que se activó el último desencadenador. Esta acción se diferencia de un objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) de primer plano, ya que los resultados iniciales no llegan de uno en uno y solo se entregan en conjunto después alcanzar el estado **EnumerationCompleted**.
 
  
 

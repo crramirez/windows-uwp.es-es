@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 80242b95e64f0d642df0284c94455d60825f6daf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992998"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046423"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Mostrar una pantalla de presentación durante más tiempo
 
@@ -34,7 +34,7 @@ Muestra una pantalla de presentación más tiempo creando una pantalla de presen
 
 Asegúrate de que tu pantalla de presentación extendida imite la pantalla de presentación predeterminada; para ello, sigue estas recomendaciones:
 
--   La página de pantalla de presentación extendida debe usar una imagen de 620 x 300 píxeles que sea coherente con la imagen especificada para tu pantalla de presentación en el manifiesto de la aplicación (la imagen de la pantalla de presentación de tu aplicación). En Microsoft Visual Studio2015, configuración de la pantalla de presentación se almacena en la sección de la **Pantalla de presentación** de la pestaña de **Activos visuales** en el manifiesto de la aplicación (archivo Package.appxmanifest).
+-   La página de pantalla de presentación extendida debe usar una imagen de 620 x 300 píxeles que sea coherente con la imagen especificada para tu pantalla de presentación en el manifiesto de la aplicación (la imagen de la pantalla de presentación de tu aplicación). En Microsoft Studio2015 Visual, la configuración de la pantalla de presentación se almacena en la sección de la **Pantalla de presentación** de la pestaña de **Activos visuales** en el manifiesto de la aplicación (archivo Package.appxmanifest).
 -   La pantalla de presentación extendida debe usar un color de fondo que sea coherente con el color de fondo especificado para la pantalla de presentación en el manifiesto de la aplicación (el fondo de la pantalla de presentación de tu aplicación).
 -   El código debe usar la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para posicionar la imagen de la pantalla de presentación de tu aplicación en las mismas coordenadas que la pantalla de presentación predeterminada.
 -   El código debe responder a los eventos de cambio de tamaño de la ventana (como cuando se gira la pantalla o la aplicación se sitúa junto a otra aplicación en la pantalla) usando la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para volver a posicionar los elementos en la pantalla de presentación extendida.
@@ -219,7 +219,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     }
     ```
 
-    **Nota**antes de intentar obtener la ubicación de la imagen Asegúrate de que la variable de clase (`splash`) contiene un objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
+    **Nota**antes de intentar obtener la ubicación de la imagen Asegúrate de que la variable de clase (`splash`) contiene un objeto de [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
 
      
 

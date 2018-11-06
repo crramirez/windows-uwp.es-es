@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cd958ba5f9025430be2736329c5a909233461039
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987154"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041350"
 ---
 # <a name="xdeferloadstrategy-attribute"></a>Atributo x:DeferLoadStrategy
 
@@ -34,7 +34,7 @@ Sin embargo, el seguimiento de los elementos aplazados por el marco XAML agrega 
 
 Las restricciones para usar **x: DeferLoadStrategy** son las siguientes:
 
-- Debes definir una [x: Name](x-name-attribute.md)para el elemento, ya que es necesario tener una manera de encontrar el elemento más adelante.
+- Debes definir un [x: Name](x-name-attribute.md)para el elemento, ya que es necesario tener una manera de encontrar el elemento más adelante.
 - Solo puedes postergar los tipos que se derivan de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) o [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
 - No se pueden postergar los elementos raíz en las clases [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) o [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 - No puedes postergar los elementos de la clase [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) no.

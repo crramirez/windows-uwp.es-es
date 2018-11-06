@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, response info, información de respuesta
 ms.localizationpriority: medium
 ms.openlocfilehash: 466455a5e8da9364206245f1e0ac10acfed07ee7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968649"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6044911"
 ---
 # <a name="get-response-info-for-reviews"></a>Obtener información de respuesta de opiniones
 

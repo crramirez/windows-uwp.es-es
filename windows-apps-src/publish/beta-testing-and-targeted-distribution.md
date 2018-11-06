@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, prueba beta, distribución limitada, beta, versiones beta, pruebas, evaluadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989185"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045425"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Pruebas beta y distribución dirigida
 
@@ -33,7 +33,7 @@ Sea cual sea el método que elijas, estas son algunas cosas que debes tener en c
 
 Si quieres permitir que los evaluadores usen tu aplicación antes de que esté disponible para otras personas y asegurarte de que nadie más pueda ver su descripción, usa la opción **Audiencia privada** en [visibilidad](choose-visibility-options.md) (en la página **Precios y disponibilidad** de tu envío). Este es el único método que te permite distribuir tu aplicación a los evaluadores mientras que impide por completo que el resto pueda ver una descripción de Store de la aplicación, incluso si pudieran escribirla en su vínculo directo. 
 
-La opción de **audiencia privada** solo puede usarse cuando ya no haya publicado la aplicación a una audiencia pública. Puedes usar esta opción con las aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben haber iniciado sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
+La opción de **audiencia privada** solo puede usarse cuando ya no haya publicado la aplicación a una audiencia pública. Puedes usar esta opción con aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben iniciar sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
 
 Para obtener más información, consulta [Audiencia privada](choose-visibility-options.md#audience).
 
@@ -51,7 +51,7 @@ Para obtener más información, consulta [Paquetes piloto](package-flights.md).
 
 ## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ocultación de la aplicación en Store y uso de códigos promocionales
 
-Esta opción ofrece otra forma de limitar la distribución de una aplicación a solo un determinado grupo de evaluadores, mientras se impide que cualquier otra persona descubrir tu aplicación en la tienda (o adquirir sin un código promocional). Sin embargo, a diferencia de la opción de audiencia pública, podría ser posible para cualquiera ver la descripción de tu aplicación si dispone del vínculo directo. Si la confidencialidad es fundamental para el envío, se recomienda por el contrario publicar para una audiencia privada.
+Esta opción ofrece otra forma de limitar la distribución de una aplicación a solo un determinado grupo de evaluadores, mientras se impide que cualquier otra persona descubrir tu aplicación en la tienda (o adquirirla sin un código promocional). Sin embargo, a diferencia de la opción de audiencia pública, podría ser posible para cualquiera ver la descripción de tu aplicación si dispone del vínculo directo. Si la confidencialidad es fundamental para el envío, se recomienda por el contrario publicar para una audiencia privada.
 
 La ocultación de la aplicación y el uso de códigos promocionales pueden usarse con aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores solo podrán obtener la aplicación si ejecutan Windows 10.
 
@@ -72,7 +72,7 @@ Para usar esta opción:
 - Cuando estés listo para poner la aplicación a disposición del público, crea un nuevo envío y cambia la opción **Visibilidad** a **Hacer disponible y descubrible esta aplicación en Store** (junto con cualquier otro cambio que quieras realizar).
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Distribución dirigida a clientes de Windows Phone con direcciones de correo electrónico específicas
 

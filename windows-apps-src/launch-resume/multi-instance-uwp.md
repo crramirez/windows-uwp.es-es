@@ -8,20 +8,20 @@ ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c70d696c1211cfa4f929178f0cf0d9da76ae74c2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979276"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041073"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 
 En este tema, se describe cómo crear aplicaciones para la Plataforma universal de Windows (UWP) de instancias múltiples.
 
-Desde Windows 10, versión 1803 (10.0; Compilación 17134) en adelante, la aplicación para UWP puede optar por admitir varias instancias. Si se está ejecutando una instancia de una aplicación para UWP de varias instancias y llega una solicitud de activación posterior, la plataforma no activará la instancia existente. En su lugar, creará una instancia nueva, que se ejecuta en un proceso independiente.
+Desde Windows 10, versión 1803 (10.0; Compilación 17134) en adelante, tu aplicación para UWP puede optar por admitir varias instancias. Si se está ejecutando una instancia de una aplicación para UWP de varias instancias y llega una solicitud de activación posterior, la plataforma no activará la instancia existente. En su lugar, creará una instancia nueva, que se ejecuta en un proceso independiente.
 
 > [!IMPORTANT]
-> Instancias múltiples se admiten para aplicaciones de JavaScript, pero no es el redireccionamiento de instancias múltiples. Dado que no se admite el redireccionamiento de instancias múltiples para aplicaciones de JavaScript, la clase [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) no es útil para dichas aplicaciones.
+> Instancias múltiples se admiten para aplicaciones de JavaScript, pero no es el redireccionamiento de instancias múltiples. Dado que no se admite el redireccionamiento de instancias múltiples para aplicaciones de JavaScript, la clase [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) no es útil para esas aplicaciones.
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>Participar en el comportamiento de instancias múltiples
 
@@ -29,7 +29,7 @@ Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar e
 
 Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo deseas que un mismo documento solo pueda editarlo una instancia al mismo tiempo, por lo que llevas al primer plano la instancia que tiene abierto el archivo en lugar de iniciar una nueva instancia.
 
-Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: solo proyectos destinados al escritorio o los proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
+Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: sólo los proyectos destinados al escritorio o los proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
 
 ```xml
 <Package
@@ -60,7 +60,7 @@ Para ver esto en acción, mira este vídeo acerca de cómo crear aplicaciones pa
 
 La plantilla **Aplicación para UWP de varias instancias** agrega `SupportsMultipleInstances`al archivo package.appxmanifest, como se ha mostrado anteriormente, y también agrega un **Program.cs** (o **Program.cpp**, si estás usando la versión C++ de la plantilla) al proyecto que contiene una función `Main()`. La lógica para redirigir la activación se incluye en la función `Main`. A continuación se muestra la plantilla para **Program.cs** .
 
-La propiedad [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida siempre shell para esta solicitud de activación, si existe una (o `null` si hay uno). Si el shell proporciona una preferencia, a continuación, puede redirigir la activación a esa instancia, o puede omitir si eliges.
+La propiedad [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida siempre shell para esta solicitud de activación, si hay uno (o `null` si no hay uno). Si el shell proporciona una preferencia, a continuación, puedes redirigir la activación a esa instancia, o puede omitir si eliges.
 
 ``` csharp
 public static class Program

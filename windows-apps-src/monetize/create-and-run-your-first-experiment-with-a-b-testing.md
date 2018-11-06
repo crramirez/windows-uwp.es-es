@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: e5a4c3607486a7163648c7aa5a0e1d03d37e421f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985016"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043694"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
 En este tutorial, podrás:
 * Crear un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación en el centro de partners que defina varias variables remotas que representen el texto y el color de un botón de la aplicación.
-* Crear una aplicación con código que recupere los valores de variables remotas, use estos datos para cambiar el color de fondo de un botón y registra vista y datos de evento de conversión en el centro de partners.
+* Crear una aplicación con código que recupere los valores de variables remotas, use estos datos para cambiar el color de fondo de un botón y registra la vista y datos de evento de conversión en el centro de partners.
 * Crear un experimento en el proyecto para comprobar si al cambiar el color de fondo de un botón de una aplicación aumenta satisfactoriamente el número de clics.
 * Ejecutar la aplicación para recopilar datos del experimento.
 * Revisar los resultados del experimento en el centro de partners, elige una variación para habilitar para todos los usuarios de la aplicación y completar el experimento.
@@ -33,7 +33,7 @@ Para seguir este tutorial, debes tener una cuenta del centro de partners y debes
 ## <a name="create-a-project-with-remote-variables-in-partner-center"></a>Crear un proyecto con variables remotas en el centro de partners
 
 1. Inicia sesión en el [Centro de partners](https://partner.microsoft.com/dashboard).
-2. Si ya tienes una aplicación en el centro de partners que quieres usar para crear un experimento, selecciona la aplicación Centro de partners. Si todavía no tienes una aplicación en el centro de partners, [crear una nueva aplicación reservando un nombre](../publish/create-your-app-by-reserving-a-name.md) y, a continuación, selecciona la aplicación en el centro de partners.
+2. Si ya tienes una aplicación en el centro de partners que quieres usar para crear un experimento, selecciona la aplicación Centro de partners. Si aún no tienes una aplicación en el centro de partners, [crear una nueva aplicación reservando un nombre](../publish/create-your-app-by-reserving-a-name.md) y, a continuación, selecciona la aplicación en el centro de partners.
 3. En el panel de navegación, haz clic en **Servicios** y, a continuación, haz clic en **Experimentación**.
 4. En la sección de **Proyectos** de la página siguiente, haz clic en el botón **Nuevo proyecto**.
 5. En la página **Nuevo proyecto**, escribe el nombre **Experimentos de clics de botón** para el nuevo proyecto.
@@ -60,7 +60,7 @@ Para seguir este tutorial, debes tener una cuenta del centro de partners y debes
 
 ## <a name="create-the-experiment-in-partner-center"></a>Crear el experimento en el centro de partners
 
-1. Vuelve a la página del proyecto **Experimentos de clics de botón** en el centro de partners.
+1. Vuelve a la página del proyecto de **Experimentos de clics de botón** en el centro de partners.
 2. En la sección **Experimentos**, haz clic en el botón **Nuevo experimento**.
 3. En la sección **Datos del experimento**, escribe el nombre **Optimizar clics de botón** en el campo **Nombre del experimento**.
 4. En la sección **Evento de visualización** , escribe **userViewedButton** en el campo de **Nombre del evento de visualización**. Ten en cuenta que este nombre coincida con la cadena de evento de visualización en la que has iniciado sesión en el código que agregaste en la sección anterior.
@@ -96,7 +96,7 @@ Espera al menos varias horas después de completar la sección anterior y, a con
 2. En la sección **Experimentos activos**, haz clic en **Optimizar clics de botón** y ve a la página de este experimento.
 3. Confirma que los resultados que se muestran en las secciones **Resumen de resultados** y **Detalles de resultados** coinciden con lo que se espera ver. Para obtener más información acerca de estas secciones, consulte [Administrar tu experimento en el centro de partners](manage-your-experiment.md#review-the-results-of-your-experiment).
     > [!NOTE]
-    > El centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
+    > Centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 
 4. Ahora estás listo para finalizar el experimento. En la sección **Resumen de resultados**, en la columna **Variación B**, haz clic en **Cambiar**. Esto cambia todos los usuarios de la aplicación al botón azul.
 5. Haz clic en **Aceptar** para confirmar que deseas finalizar el experimento.

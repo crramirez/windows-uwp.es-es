@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, operadores de telefonía móviles, facturación móvil, facturación de operador de telefonía móvil
 ms.localizationpriority: medium
 ms.openlocfilehash: ff02cfc287bc1d88485a713390e233fc7a742a01
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5991227"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045525"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -49,7 +49,7 @@ La facturación de operadores de telefonía móvil se admite actualmente por est
 | España           | Orange                           |
 | Suecia          | Telenor, 3                       |
 | Suiza     | Swisscom, Sunrise                |
-| Taiwan          | FarEasTone                       |
+| Taiwán          | FarEasTone                       |
 | Turquía          | Turkcell                         |
 | Emiratos Árabes Unidos | Etisalat                    |
 | Estados Unidos   | Sprint, Verizon                  |

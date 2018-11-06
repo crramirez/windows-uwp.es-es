@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: Aprende a agregar valores de Id. de unidad de y el Id. aplicación del centro de partners a la aplicación antes de enviar la aplicación a la tienda.
+description: Obtén información sobre cómo agregar los valores de Id. de unidad de ad y el Id. de aplicación del centro de partners a la aplicación antes de enviar la aplicación a la tienda.
 title: Configurar unidades de anuncios en la aplicación
 ms.author: mhopkins
 ms.date: 05/11/2018
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, unidades de anuncios, pruebas
 ms.localizationpriority: medium
 ms.openlocfilehash: 11c66756d95e041a45fbc075b02eb744bf542871
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988404"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045485"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anuncios en la aplicación
 
@@ -21,7 +21,7 @@ Cada control de anuncio de la aplicación de Plataforma universal de Windows (UW
 
 Proporcionamos [valores de unidad de anuncios de prueba](#test-ad-units) que puedes usar durante las pruebas para confirmar que la aplicación muestra anuncios de prueba. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Si intentas usar valores de prueba en tu aplicación después de publicarla, la aplicación dinámica no recibirá anuncios.
 
-Cuando termines de probar la aplicación para UWP y estás listo para enviarla al centro de partners, debes [crear una unidad de anuncios dinámicos](#live-ad-units) desde la página de [anuncios en la aplicación](../publish/in-app-ads.md) en el centro de partners y actualizar el código de aplicación para usar los valores de Id. de la aplicación y el Id. unidad para esta unidad de anuncios.
+Cuando termines de probar tu aplicación para UWP y estás listo para enviarla al centro de partners, debes [crear una unidad de anuncios dinámicos](#live-ad-units) desde la página de [anuncios en la aplicación](../publish/in-app-ads.md) en el centro de partners y actualizar el código de tu aplicación para usar los valores de Id. de la aplicación y el Id. unidad para esta unidad de anuncios.
 
 Para obtener más información sobre cómo asignar los valores de Id. de aplicación e Id. de unidad de anuncio en el código de la aplicación, consulta los siguientes artículos:
 * [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)
@@ -52,7 +52,7 @@ Mientras desarrollas la aplicación, usa los valores de identificador de aplicac
 
 ## <a name="live-ad-units"></a>Unidades de anuncios dinámicos
 
-Para obtener una unidad de anuncios dinámicos desde el centro de partners y usar en la aplicación:
+Para obtener una unidad de anuncios dinámicos desde el centro de partners y usarla en tu aplicación:
 
 1.  [Crear una unidad de anuncio](../publish/in-app-ads.md#create-ad-unit) en la página de **anuncios en la aplicación** en el centro de partners. Asegúrate de especificar el tipo correcto de la unidad de anuncio para el control de anuncios que usas en tu aplicación.
     > [!NOTE]

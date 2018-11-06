@@ -9,11 +9,11 @@ ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 62c62aacd894163ef2c65b9ddfe6d8299733a2e5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985962"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042255"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: compatibilidad con la entrada de lápiz en tu aplicación para UWP
 
@@ -70,7 +70,7 @@ Estos objetos proporcionan la mayor parte de la experiencia de la entrada de lá
 | --- | --- |
 | [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Un control de plataforma XAMLUI que, de manera predeterminada, recibe y muestra todas las entradas de lápiz como trazos de lápiz o trazos de borrado. |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Un objeto de código subyacente, cuya instancia se creó con un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)). Este objeto proporciona todas las funcionalidades de entrada de lápiz predeterminadas expuestas por [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), junto con un completo conjunto de API para la personalización adicional. |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Un control de plataforma XAMLUI que contiene una colección personalizable y extensible de botones que activan características relacionadas con la entrada de lápiz en un [**control InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)asociado. |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Un control de plataforma XAMLUI que contiene una colección personalizable y extensible de botones que activan características relacionadas con la entrada de lápiz en un asociado de [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas). |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)<br/>Esta funcionalidad no se explica aquí, para más información, consulta [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314). | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) predeterminado. |
 
 ## <a name="step-1-run-the-sample"></a>Paso 1: ejecutar la muestra

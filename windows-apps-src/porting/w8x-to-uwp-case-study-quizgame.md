@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: En este tema se presenta un caso práctico de migración de una cuestionario de punto a punto juego WinRT 8.1 aplicación de muestra funcional a una aplicación de plataforma Universal de Windows (UWP) de Windows 10.
+description: Este tema presenta un caso práctico de migración de una cuestionario de punto a punto juego WinRT 8.1 aplicación de muestra funcional a una aplicación de plataforma Universal de Windows (UWP) de Windows 10.
 title: Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
 ms.author: stwhi
 ms.date: 02/08/2017
@@ -9,30 +9,30 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986127"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039737"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows Runtime 8.x a UWP caso práctico: QuizGame aplicación de muestra
 
 
 
 
-En este tema se presenta un caso práctico de migración de una cuestionario de punto a punto juego WinRT 8.1 aplicación de muestra funcional a una aplicación de plataforma de Windows Windows10Universal (UWP).
+Este tema presenta un caso práctico de migración de una cuestionario de punto a punto juego WinRT 8.1 aplicación de muestra funcional a una aplicación de plataforma de Windows Windows10Universal (UWP).
 
-Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: paquete de una aplicación para Windows8.1 y un paquete de aplicación diferentes para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación Windows8.1 actúa como el host de sesión de juego de preguntas, mientras que el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
+Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: paquete de una aplicación para Windows8.1 y un paquete de la aplicación diferente para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación Windows8.1 actúa como el host de sesión de juego de preguntas, mientras que el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
 
 La adaptación de las dos partes al equipo y al teléfono, respectivamente, tiene sentido. Pero, ¿no sería aún mejor si se pudieran ejecutar el host y el cliente en prácticamente cualquier dispositivo que quisieras? En este caso práctico, se portarán las dos aplicaciones a Windows 10 donde se compilarán en un paquete de aplicación única que los usuarios pueden instalar en una amplia gama de dispositivos.
 
 La aplicación usa patrones que usan vistas y modelos de vista. Como resultado de esta clara separación, el proceso de migración de esta aplicación es, como se verá, muy sencillo.
 
-**Nota**en este ejemplo se da por hecho que la red está configurada para enviar y recibir UDP personalizados (la mayoría de las redes domésticas están, aunque no puede ser la red del trabajo) los paquetes de multidifusión de grupo. La muestra también envía y recibe paquetes TCP.
+**Nota**en este ejemplo se da por hecho que la red está configurada para enviar y recibir UDP personalizados (la mayoría de las redes doméstica está, aunque no puede ser la red del trabajo) de paquetes de multidifusión de grupo. La muestra también envía y recibe paquetes TCP.
 
  
 
-**Nota**  cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Requiere la actualización de Visual Studio", sigue los pasos descritos en [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
+**Nota**  cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Requiere la actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
  
 
@@ -179,7 +179,7 @@ Es posible usar la función adaptativa de Visual State Manager para solucionarlo
 ## <a name="universal-styling"></a>Estilos universales
 
 
-Verás que en Windows 10, los botones no tienen el mismo táctil del destino padding en su plantilla. Dos pequeños cambios lo solucionarán. En primer lugar, agrega este marcado a app.xaml en QuizGameHost y QuizGameClient.
+Verás que en Windows 10, los botones no tienen el mismo táctil del destino de relleno en su plantilla. Dos pequeños cambios lo solucionarán. En primer lugar, agrega este marcado a app.xaml en QuizGameHost y QuizGameClient.
 
 ```xml
 <Style TargetType="Button">

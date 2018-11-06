@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e1a015d5d51ad0c15f20755afcb0d324acd1f36
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979923"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041185"
 ---
 # <a name="raw-notification-overview"></a>Introducción a las notificaciones sin procesar
 
@@ -115,7 +115,7 @@ Solo se puede ejecutar una tarea en segundo plano en una aplicación cada vez. E
 ## <a name="other-resources"></a>Otros recursos
 
 
-Puedes obtener más información, descarga la [muestra de notificaciones sin procesar](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows8.1 y la [muestra de inserción y las notificaciones periódicas](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows8.1 y volver a usar su código fuente en la aplicación de Windows 10.
+Puedes obtener más información, descarga la [muestra de notificaciones sin procesar](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows8.1 y la [muestra de inserción y las notificaciones periódicas](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows8.1 y vuelve a usar su código fuente en la aplicación de Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 

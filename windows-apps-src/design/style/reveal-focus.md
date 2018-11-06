@@ -12,11 +12,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: b7c80ed7521d797602cde15607f966a1fc3665cd
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974552"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045714"
 ---
 # <a name="reveal-focus"></a>Reveal Focus
 
@@ -54,7 +54,7 @@ Esto es especialmente útil en escenarios de 10 pies, donde el usuario podría n
 
 ## <a name="how-to-use-it"></a>Cómo se usa
 
-Reveal que Focus está desactivada de manera predeterminada. Para habilitarla:
+Reveal que Focus está desactivada de forma predeterminada. Para habilitarla:
 1. En el constructor de tu aplicación, llama a la propiedad [AnalyticsInfo.VersionInfo.DeviceFamily](/uwp/api/windows.system.profile.analyticsversioninfo.DeviceFamily) y comprueba si la familia de dispositivos actual es `Windows.Xbox`.
 2. Si la familia de dispositivos es `Windows.Xbox`, establece la propiedad [Application.FocusVisualKind](/uwp/api/windows.ui.xaml.application.FocusVisualKind) en `FocusVisualKind.Reveal`. 
 
@@ -68,13 +68,13 @@ Reveal que Focus está desactivada de manera predeterminada. Para habilitarla:
 Después de establecer la propiedad **FocusVisualKind** , el sistema aplica automáticamente el efecto Reveal Focus a todos los controles cuya propiedad [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) se establece en **True** (el valor predeterminado para la mayoría de los controles). 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>¿Por qué no se encuentra Reveal Focus en de manera predeterminada? 
-Como puedes ver, es bastante sencillo activar Reveal Focus cuando la aplicación detecte que se está ejecutando en una consola Xbox. Por lo tanto, ¿por qué no el sistema no lo activa por ti? Porque Reveal Focus aumenta el tamaño del foco visual, que podría causar problemas con el diseño de la interfaz de usuario. En algunos casos, querrás personalizar el efecto de Reveal Focus para optimizarlo para tu aplicación.
+Como puedes ver, es bastante sencillo activar Reveal Focus cuando la aplicación detecta que se está ejecutando en una consola Xbox. Por lo tanto, ¿por qué no el sistema no lo activa por ti? Porque Reveal Focus aumenta el tamaño del foco visual, que podría causar problemas con el diseño de la interfaz de usuario. En algunos casos, querrás personalizar el efecto de Reveal Focus para optimizarlo para tu aplicación.
 
 ## <a name="customizing-reveal-focus"></a>Personalización de Reveal Focus
 
 Puedes personalizar el efecto Reveal Focus modificando las propiedades visuales de foco para cada control: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)y [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Estas propiedades te permiten personalizar el color y el grosor del rectángulo del foco. (Son las mismas propiedades que usas para crear [Elementos visuales de foco de alta visibilidad](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals).) 
 
-Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que componen Reveal Focus.
+Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que conforman el foco Reveal.
 
 Hay tres partes en los elementos visuales de foco Reveal de predeterminados: el borde principal, el borde secundario y el resplandor de Reveal. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario. El resplandor de Reveal Focus tiene un grosor proporcional al grosor del borde principal y se ejecuta alrededor de la *fuera* del borde principal.
 
