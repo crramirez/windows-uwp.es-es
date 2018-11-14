@@ -2,7 +2,7 @@
 author: v-angraf
 ms.assetid: 67934477-337a-5235-b0de-8ac038177267
 title: Página (Dev Home) de captura multimedia
-description: Proporciona información sobre la página de captura multimedia de la aplicación Dev Home para Xbox One.
+description: Proporciona información acerca de la página de captura multimedia de la aplicación Dev Home para Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
@@ -10,16 +10,16 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 1866c4f94c5ef681080ae2a5658c6edba11ec44b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024439"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6452611"
 ---
 # <a name="media-capture-page-dev-home"></a>Página (Dev Home) de captura multimedia
    
   
-La página **de captura multimedia** de Dev Home captura de vídeo del título que se está ejecutando actualmente en la consola.   
+La página de **captura multimedia** de Dev Home captura de vídeo del título que se está ejecutando en la consola.   
  ![Página de captura de Dev Home](images/devhome_capture.png)   
   
 La página de **que captura multimedia** contiene los paneles siguientes:   

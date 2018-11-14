@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4be90230407c3d539c55dc05d1272fbaaa2ae10e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190076"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6458397"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
@@ -108,7 +108,7 @@ Para declarar una funcionalidad restringida, modificar el archivo de origen de [
 
 ### <a name="restricted-capability-approval-process"></a>Proceso de aprobación de la funcionalidad restringida
 
-Anteriormente, solicitábamos que te pusieras en contacto con soporte técnico para obtener la aprobación para usar una funcionalidad. Te permite ahora proporcionar esta información en el panel del Centro de desarrollo como parte del [proceso de envío](../publish/app-submissions.md).
+Anteriormente, solicitábamos que te pusieras en contacto con soporte técnico para obtener la aprobación para usar una funcionalidad. Ahora nos permiten proporcionar esta información en [El centro de partners](https://partner.microsoft.com/dashboard/) como parte del [proceso de envío](../publish/app-submissions.md).
 
 Al cargar paquetes para el envío, detectaremos si se declaran funcionalidades restringidas. Si lo hacemos,se te pedirá que proporciones detalles acerca de cómo usa tu producto cada funcionalidad la página [Opciones de envío](../publish/manage-submission-options.md#restricted-capabilities). Asegúrate de incluir tantos detalles como sea posible para ayudarnos a comprender por qué el producto tiene que declarar la funcionalidad. Ten en cuenta que esto demora el envío para completar el proceso de certificación.
 
@@ -117,7 +117,7 @@ Durante el proceso de certificación, nuestros evaluadores revisarán la informa
 Si no aprobamos el uso de la funcionalidad, tu envío logrará la certificación e incluiremos comentarios en el informe de certificación. A continuación, tienes la opción de crear un nuevo envío y cargar los paquetes que no declaren la funcionalidad o, si procede, solucionar los problemas relacionados con el uso de la funcionalidad y solicitar la autorización en un nuevo envío.
 
 > [!NOTE]
-> Si tu envío usa un espacio aislado de desarrollo en el Centro de desarrollo (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), debes solicitar la aprobación por adelantado en lugar de proporcionar información en la página **Opciones de envío**. Para hacerlo, visita la [página de soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support). Selecciona el tema de soporte técnico de desarrolladores **problema de panel**, **envíos de aplicaciones**del tipo de problema y subcategoría **otros**. A continuación, se describe cómo usas la funcionalidad y por qué es necesario para el producto. Si no proporcionas toda la información necesaria, tu solicitud se denegará. También es posible que se te pida que proporciones más información. Ten en cuenta que este proceso normalmente tarda 5 días laborables o más, por lo que debes enviar solicitud con antelación.
+> Si tu envío usa un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), debes solicitar la aprobación por adelantado en lugar de proporcionar información en la página de **Opciones de envío** . Para hacerlo, visita la [página de soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support). Selecciona el tema de soporte técnico de desarrolladores **problema de panel**, **envíos de aplicaciones**del tipo de problema y subcategoría **otros**. A continuación, se describe cómo usas la funcionalidad y por qué es necesario para el producto. Si no proporcionas toda la información necesaria, tu solicitud se denegará. También es posible que se te pida que proporciones más información. Ten en cuenta que este proceso normalmente tarda 5 días laborables o más, por lo que debes enviar solicitud con antelación.
 >
 > También puede usar este método para solicitar la aprobación (en lugar de proporcionar esta información durante el envío), o no estás usando un espacio aislado de desarrollo, si prefieres confirmar que se aprueban para usar una funcionalidad restringida antes de empezar la envío.
 

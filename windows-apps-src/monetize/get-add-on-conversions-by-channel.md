@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, API de análisis de Microsoft Store, conversiones de complementos, canal
 ms.localizationpriority: medium
 ms.openlocfilehash: 0cf4e0f2cad0ea497e7d97c9b415ab385703c5c4
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6258829"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6451719"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>Obtener conversiones de complementos por canal
 

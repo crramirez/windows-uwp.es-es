@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX 9, DirectX 11, porting, portar
 ms.localizationpriority: medium
 ms.openlocfilehash: 05549b0f3696067689f7e8fbd05dfb0f8f1bb528
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662239"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6471723"
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>Migrar de DirectX9 a la Plataforma universal de Windows (UWP)
 

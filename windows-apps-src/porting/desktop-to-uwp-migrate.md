@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a4eda15a18a441da2e06db17aaf7bea3d1842d1
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6658051"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6254477"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Compartir código entre una aplicación de escritorio y una aplicación para UWP
 

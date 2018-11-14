@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b28653fc7746075c57f862b0c885beac6d4934f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6661411"
+ms.locfileid: "6471234"
 ---
 # <a name="spring-animations"></a>Animaciones de muelle
 

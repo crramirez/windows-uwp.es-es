@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 3eb26a8e4939ade3b12e4527b7452a9c6b535a77
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6660293"
+ms.locfileid: "6453918"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>Compilar recursos manualmente con MakePri.exe
 
