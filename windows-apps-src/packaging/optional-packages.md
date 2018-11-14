@@ -8,12 +8,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, uwp, paquetes opcionales, conjunto relacionado, extensión de paquete, visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a782ba90fbf350d9a18098d342c05c75dca6ceb
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: c21b84467151493836186d1d55ab5e4e542899ec
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6192206"
+ms.locfileid: "6259127"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Paquetes opcionales y creación de conjuntos relacionados
 Los paquetes opcionales tienen contenido que se puede integrar con un paquete principal. Estos son útiles para el contenido descargable (DLC), dividir una aplicación grande que tenga restricciones de tamaño, o para enviar cualquier contenido adicional aparte de la aplicación original.
@@ -29,7 +29,7 @@ Conjuntos relacionados son una extensión de paquetes opcionales: permiten aplic
 Para obtener todas las herramientas de desarrollo más recientes, consulta [las descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
-> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados en la Microsoft Store, tendrás que permiso. Aun así, puedes usar los paquetes opcionales y los conjuntos relacionados en aplicaciones de línea de negocio (LOB) o de empresa sin el permiso del Centro de desarrollo, si no los vas a enviar a la Store. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
+> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados en la Microsoft Store, tendrás que permiso. Paquetes opcionales y conjuntos relacionados pueden usarse para las aplicaciones de línea de negocio (LOB) o enterprise sin el permiso del centro de partners si no vas a enviar a la tienda. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
 
 ### <a name="code-sample"></a>Ejemplo de código
 Mientras que estás leyendo este artículo, se recomienda que sigue los pasos indicados en el [ejemplo de código de paquete opcional](https://github.com/AppInstaller/OptionalPackageSample) en GitHub para obtener una descripción de los paquetes opcionales cómo práctica y relacionadas con conjuntos de trabajo en Visual Studio.

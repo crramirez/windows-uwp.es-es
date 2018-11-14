@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6196839"
+ms.locfileid: "6255915"
 ---
 # <a name="in-app-ads"></a>Anuncios desde la aplicación
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f6438b8d1d7b8a8ce47ed4e5baddcb59285e660
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6185277"
+ms.locfileid: "6259844"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permiten que las aplicaciones para sitios Web con los controladores de URI de aplicación
 

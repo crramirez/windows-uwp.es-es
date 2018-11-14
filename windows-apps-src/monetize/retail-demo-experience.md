@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, aplicación de demostración comercial
 ms.localizationpriority: medium
 ms.openlocfilehash: ee0344d521b4c31449a2291517b20a09280818fc
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6141459"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6455668"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de (RDX) de demostración comercial a la aplicación
 

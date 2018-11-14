@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a62d08d540479daf77d532afa1b97ae128d2c1f
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6138071"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272540"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 

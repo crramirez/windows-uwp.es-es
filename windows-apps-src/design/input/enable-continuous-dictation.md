@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ea7c0b92c5900e468023dd5b972942a89c2833c3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023703"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187261"
 ---
 # <a name="continuous-dictation"></a>Dictado continuo
 
@@ -127,7 +127,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  Igualmente, comprobamos la propiedad [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434). Si el valor de la propiedad Confidence es [**medio**](https://msdn.microsoft.com/library/windows/apps/dn631409) o mejor, anexamos el texto a StringBuilder. También actualizaremos la interfaz de usuario a medida que recopilemos entradas.
 
-    **Nota**se genera el evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si un controlador necesita actualizar la interfaz de usuario (igual que lo hace la opción [\Muestra de voz y TTS\]), debes enviar las actualizaciones al subproceso de interfaz de usuario a través del método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) del distribuidor.
+    **Nota**se genera el evento de [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si un controlador necesita actualizar la interfaz de usuario (igual que lo hace la opción [\Muestra de voz y TTS\]), debes enviar las actualizaciones al subproceso de interfaz de usuario a través del método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) del distribuidor.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -167,7 +167,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  El controlador de eventos comprueba la propiedad Status para determinar si el reconocimiento se realizó correctamente. También controla el caso en el que el usuario ha dejado de hablar. A menudo, el elemento [**TimeoutExceeded**](https://msdn.microsoft.com/library/windows/apps/dn631433) se considera como un reconocimiento correcto, ya que significa que el usuario ha terminado de hablar. Debes controlar este caso en el código para obtener una buena experiencia.
 
-    **Nota**se genera el evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si un controlador necesita actualizar la interfaz de usuario (igual que lo hace la opción [\Muestra de voz y TTS\]), debes enviar las actualizaciones al subproceso de interfaz de usuario a través del método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) del distribuidor.
+    **Nota**se genera el evento de [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si un controlador necesita actualizar la interfaz de usuario (igual que lo hace la opción [\Muestra de voz y TTS\]), debes enviar las actualizaciones al subproceso de interfaz de usuario a través del método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) del distribuidor.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,

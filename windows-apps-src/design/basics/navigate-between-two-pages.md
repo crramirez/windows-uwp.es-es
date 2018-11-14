@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 91a1ca0ee99833280aaa41ca4d9c94d043a78e0a
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6163092"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6271031"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar la navegación entre dos páginas
 

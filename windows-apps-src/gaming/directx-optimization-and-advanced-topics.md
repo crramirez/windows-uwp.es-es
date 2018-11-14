@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, optimizar, muestreo múltiple, cadenas de intercambio
 ms.localizationpriority: medium
 ms.openlocfilehash: e1a9b16dcf8c40c2b1db4af172d97009563e677a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025988"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258872"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>Optimización y temas avanzados para juegos DirectX
 

@@ -7,12 +7,12 @@ ms.date: 9/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f454c7e7386ba829cf6c99edc0b5b8f2d831f00
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f38604ea7fc25038bdd4b07b952e4dbab151bf56
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025195"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268840"
 ---
 # <a name="optional-packages-with-executable-code"></a>Paquetes opcionales con código ejecutable
  
@@ -26,7 +26,7 @@ Los paquetes opcionales con código ejecutable son útiles para dividir una apli
 Para obtener las herramientas de desarrollo más recientes, consulta [Descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados a la Store, necesitarás tener permiso. Aun así, puedes usar los paquetes opcionales y los conjuntos relacionados en aplicaciones de línea de negocio (LOB) o de empresa sin el permiso del Centro de desarrollo, si no los vas a enviar a la Store. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
+> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados a la Store, necesitarás tener permiso. Paquetes opcionales y conjuntos relacionados pueden usarse para las aplicaciones de línea de negocio (LOB) o enterprise sin el permiso del centro de partners si no vas a enviar a la tienda. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Paquetes opcionales de C++ con código ejecutable
 

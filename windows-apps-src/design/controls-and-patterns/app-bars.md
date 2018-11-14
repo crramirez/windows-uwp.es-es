@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d3c8aad90e028ece42128e86f5e255be7fd29177
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6208778"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6451256"
 ---
 # <a name="command-bar"></a>Barra de comandos
 

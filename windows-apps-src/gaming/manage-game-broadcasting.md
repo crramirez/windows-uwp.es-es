@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, juego, difusión
 ms.localizationpriority: medium
 ms.openlocfilehash: ae70c29927925abcf948435ed768871ba2427fd9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047164"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6455600"
 ---
 # <a name="manage-game-broadcasting"></a>Administrar la difusión de juegos
 Este artículo muestra cómo administrar la difusión de juegos para una aplicación para UWP. Los usuarios deben iniciar la difusión usando la interfaz de usuario del sistema integrada en Windows pero, a partir de Windows 10, versión 1709, las aplicaciones pueden iniciar la interfaz de usuario de difusión del sistema y pueden recibir notificaciones cuando se inicia y se detiene la difusión.

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 84b42460ce5368bdac6ab84a9f9c65d0cb8231a1
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6182932"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6262553"
 ---
 # <a name="blending-stages"></a>Fases de combinación
 

@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
 ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026926"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202550"
 ---
 # <a name="getting-paid"></a>Recibir pagos
 Es aquí encontrarás información importante sobre cómo recibir el pago de tus aplicaciones, complementos y las ganancias de publicidad.
 
 > [!IMPORTANT]
-> Antes de que recibas dinero ventas de aplicaciones en Microsoft Store, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
+> Para poder recibir dinero ventas de aplicaciones en Microsoft Store, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 
@@ -48,7 +48,7 @@ Recuerda que el precio que seleccionaste puede incluir el impuesto sobre el valo
 
 ## <a name="payout-reporting"></a>Informes de pago
 
-Puedes obtener acceso a los detalles sobre la información de pago y descargar los informes en el **Resumen de pago** del [Centro](https://partner.microsoft.com/dashboard)de partners. Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
+Puedes obtener acceso a detalles sobre la información de pago y descargar los informes en el **Resumen de pago** del [Centro](https://partner.microsoft.com/dashboard)de partners. Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Período de pago

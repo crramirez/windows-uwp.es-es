@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: caa0063c0aa919e094abedd96b6205e83467e0e5
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6189986"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266320"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
 
