@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de la Tienda
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d13c5c9428a38dd212e59688d2b4b5eae187ea4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039793"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6143371"
 ---
 # <a name="microsoft-store-services"></a>Servicios de Microsoft Store
 

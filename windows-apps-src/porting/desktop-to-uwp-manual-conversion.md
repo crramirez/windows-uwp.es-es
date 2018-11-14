@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 29fd7faec6f78b5f01469e7bfa6c01a8831f07eb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023009"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6143659"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
@@ -27,11 +27,11 @@ Considera la posibilidad de empaquetado manual si instala la aplicación mediant
 Si no estás seguro de qué cambios realiza el instalador en el sistema o si prefieres usar herramientas automáticas para crear el manifiesto de paquete, puedes tener en cuenta alguna de estas [opciones](desktop-to-uwp-root.md#convert).
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (de lo contrario se conoce como el puente de escritorio, se introdujo en Windows 10, versión 1607, y solo puede usarse en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Revisar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
+Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Crear un manifiesto de paquete
 
@@ -85,7 +85,7 @@ Este es un ejemplo del elemento **Identity** con texto del marcador de posición
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Si has reservado el nombre de la aplicación en la tienda Windows, puedes obtener el nombre y el publicador mediante el panel del centro de desarrollo de Windows. Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos siempre que el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
+> Si has reservado el nombre de la aplicación en la tienda Windows, puedes obtener el nombre y el publicador mediante el panel del centro de desarrollo de Windows. Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos como el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
 
 ### <a name="properties"></a>Propiedades
 
@@ -110,7 +110,7 @@ Este es un ejemplo del nodo [Resources](https://docs.microsoft.com/uwp/schemas/a
 ```
 ### <a name="dependencies"></a>Dependencias
 
-Para aplicaciones de escritorio que crear un paquete, establece siempre el ``Name`` atributo para ``Windows.Desktop``.
+Para aplicaciones de escritorio que crear un paquete, establece siempre el ``Name`` atributo a ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -222,6 +222,6 @@ Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md)
 
-**Firmar la aplicación y distribuye**
+**Firmar la aplicación y, a continuación, distribuirlo**
 
 Consulta [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-distribute.md)

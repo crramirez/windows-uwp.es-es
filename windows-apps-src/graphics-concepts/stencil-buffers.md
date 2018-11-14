@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 090dcab3b46b031a16be35973e1183220d5b1da0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028824"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6141250"
 ---
 # <a name="stencil-buffers"></a>Búferes de galerías de símbolos
 

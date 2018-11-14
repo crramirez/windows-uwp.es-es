@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services
 ms.localizationpriority: medium
 ms.openlocfilehash: 17d123b440b6ec7892c84a9a6bca9177799ad0fb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026949"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152223"
 ---
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
@@ -53,7 +53,7 @@ Agrega rutas, indicaciones y funcionalidades de geocodificación a tu aplicació
 | [Mostrar puntos de interés en un mapa](display-poi.md) | Agrega puntos de interés a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
 | [Mostrar rutas e indicaciones](routes-and-directions.md) | Solicita rutas e indicaciones y muéstralas en tu aplicación. |
 | [Realizar geocodificación y geocodificación inversa](geocoding.md) | Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) del espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). |
-| [Buscar y descargar paquetes de mapa para uso sin conexión](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| En el pasado, la aplicación tenía dirigir a los usuarios a la aplicación configuración para descargar mapas sin conexión. Ahora, puedes usar las clases del espacio de nombres [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para encontrar los paquetes descargados en un área determinada (en función de un [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etcetera.). <br> Puedes también comprueba y escuchar el estado descargado de paquetes de mapa como así como iniciar una descarga sin necesidad de que el usuario salir de la aplicación. <br> Encontrarás ejemplos de cómo hacer esto en el contenido de referencia y la [muestra de mapa de la plataforma Universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
+| [Buscar y descargar paquetes de mapa para poder usarlos sin conexión](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| En el pasado, la aplicación debía dirigir a los usuarios a la aplicación configuración para descargar mapas sin conexión. Ahora, puedes usar las clases del espacio de nombres [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para encontrar los paquetes descargados en un área determinada (en función de un [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etcetera.). <br> Se puede también comprobar y escuchar el estado descargado de paquetes de mapa, así como iniciar una descarga sin requerir que el usuario deja la aplicación. <br> Encontrarás ejemplos de cómo hacer esto en el contenido de referencia y la [muestra de mapa de la plataforma Universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 ## <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 

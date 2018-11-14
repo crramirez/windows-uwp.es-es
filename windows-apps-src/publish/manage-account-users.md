@@ -6,14 +6,14 @@ ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, uwp, los usuarios de la cuenta, administración usuarios, azure ad, multiusuario, varios usuarios
+keywords: Windows 10, uwp, los usuarios de cuentas, administración usuarios, azure ad, multiusuario, varios usuarios
 ms.localizationpriority: medium
 ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024813"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6137323"
 ---
 # <a name="manage-account-users"></a>Administrar usuarios de la cuenta
 
@@ -28,4 +28,4 @@ En esta sección se describe cómo hacer lo siguiente:
 -   [Establecer roles y permisos personalizados para usuarios de cuentas](set-custom-permissions-for-account-users.md)
 
 > [!TIP]
-> Estos temas son específicos para el programa de desarrolladores de aplicaciones de Windows en el centro de partners, pero la asociación de un inquilino y la administración de usuarios funcionan de forma similar para las cuentas en el programa de desarrolladores de Hardware de Windows (consulta [Administración del panel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obtener más información) o en el Programa de aplicaciones de escritorio de Windows (consulta el [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obtener más información).
+> Estos temas son específicos del programa de desarrolladores de aplicaciones de Windows en el centro de partners, pero la asociación de un inquilino y la administración de usuarios funcionan de forma similar para las cuentas en el programa de desarrolladores de Hardware de Windows (consulta [Administración del panel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obtener más información) o en el Programa de aplicaciones de escritorio de Windows (consulta el [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obtener más información).

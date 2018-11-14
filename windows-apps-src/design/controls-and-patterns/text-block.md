@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 423634acc2d3806b4652618331fafd68c908e477
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051214"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6137426"
 ---
 # <a name="text-block"></a>Bloque de texto
 

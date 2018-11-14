@@ -8,12 +8,12 @@ ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, aprobación del concepto
 ms.localizationpriority: medium
-ms.openlocfilehash: a14a9b3f1e059019afa042a47dcaeb9373a69934
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 9b63e3002d6816b30a71c775cfcf87817d4f9879
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025010"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183966"
 ---
 # <a name="concept-approval"></a>Aprobación del concepto
 
@@ -23,7 +23,7 @@ La aprobación del concepto es el proceso de envío a Microsoft de una propuesta
 
 Este proceso solo es necesario si vas a publicar un juego de Xbox a través de [ID@Xbox](http://www.xbox.com/Developers/id) o como asociado administrado. No es necesario seguir este proceso si te unes al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) y creas un juego para la Plataforma universal de Windows (UWP), que luego podrás publicar automáticamente en Xbox. Sin embargo, los juegos realizadas a través de este programa se mostrarán en una sección independiente de la Tienda. Si quieres que tu juego aparezca con los juegos de AAA grandes, o si quieres crear un juego más intenso con el Kit de desarrollo de Xbox (XDK), debes pasar por la aprobación de concepto.
 
-Tampoco necesitas aprobación de concepto si vas a desarrollar un juego UWP para escritorio de Windows o dispositivos móviles (o si vas a publicar una aplicación para UWP que *no* un juego, destinada a cualquier dispositivo). Todo lo que necesitas es una [cuenta de desarrollador](https://go.microsoft.com/fwlink/?LinkId=817223), y puedes configurar y enviar libremente la aplicación a la Tienda a través del panel de información.
+Tampoco necesitas aprobación de concepto si vas a desarrollar un juego UWP para escritorio de Windows o dispositivos móviles (o si vas a publicar una aplicación para UWP que *no* un juego, destinada a cualquier dispositivo). Todo lo que necesitas es una [cuenta de desarrollador](https://go.microsoft.com/fwlink/?LinkId=817223), y puedes configurar y enviar la aplicación a la tienda a través del centro de partners libremente.
 
 ## <a name="submit-your-concept-for-approval"></a>Envío de tu concepto para la aprobación
 

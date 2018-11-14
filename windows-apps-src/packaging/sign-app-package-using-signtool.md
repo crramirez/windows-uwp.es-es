@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: adb94257f6a978ba0b5ea56facf3894e2cfae32b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6022962"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140649"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicación con SignTool
 

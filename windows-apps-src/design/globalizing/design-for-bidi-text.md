@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: 24e4c5dfce4aa3e773ab8c334ca732ac5ed53030
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023411"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140499"
 ---
 # <a name="design-your-app-for-bidirectional-text"></a>Diseña tu aplicación para el texto bidireccional
 

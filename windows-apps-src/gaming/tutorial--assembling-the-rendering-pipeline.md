@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044045"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140309"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 
@@ -618,7 +618,7 @@ Para obtener más información consulta [Introducción a los búferes en Direct3
 
 ### <a name="dxgi"></a>DXGI
 
-Infraestructura de gráficos de Microsoft DirectX (DXGI) es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que se necesitan Direct3D 10, 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Infraestructura de gráficos de DirectX (DXGI) de Microsoft es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que se necesitan Direct3D 10, 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
 
 ### <a name="feature-level"></a>Nivel de características
 

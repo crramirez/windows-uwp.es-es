@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, rendering, representación, scene, escena, depth testing, pruebas de profundidad, direct3d, shadows, sombras
 ms.localizationpriority: medium
 ms.openlocfilehash: dc776a60e771cc8d5961e8c7b9c67eb99fabea3a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051065"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6136644"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Representar la escena con prueba de profundidad
 

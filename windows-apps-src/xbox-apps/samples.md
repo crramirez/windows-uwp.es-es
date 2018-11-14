@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be6cfbc40fc645bfb66ef2f0fb9b8b5f2976da8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023219"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142390"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>UWP en muestras de Xbox One
 
@@ -29,13 +29,13 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 
 ## <a name="the-news-experience"></a>La experiencia de noticias
 
-[La experiencia de noticias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café cuarta, es una aplicación de noticias de muestra que funciona entre el escritorio, teléfono y Xbox One y ofrece una experiencia premium que aprovecha las ventajas de las ventajas de cada dispositivo. En Xbox, que está optimizado para el controlador para juegos, la interfaz de usuario se adapte a la experiencia de 10 pies y mantiene contenido en el área segura del Televisor, entre otras optimizaciones. Consulta [la entrada de blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obtener más información.
+[La experiencia de noticias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café cuarto, es una aplicación de noticias de muestra que funciona entre el escritorio, teléfono y Xbox One y ofrece una experiencia de premium que aprovecha las ventajas de las ventajas de cada dispositivo. En Xbox, que está optimizado para el controlador para juegos, la interfaz de usuario se adapte a la experiencia de 10 pies y mantiene contenido en el área segura del Televisor, entre otras optimizaciones. Consulta [la entrada de blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obtener más información.
 
 ![La experiencia de noticias](images/samples-1.png)
 
 ## <a name="gamepad-style-navigation-xaml-sample"></a>Muestra de controlador para juegos de estilo de navegación (XAML)
 
-La [muestra de controlador para juegos de estilo de navegación (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) es un ejemplo UWP que muestra formas de mejorar la navegación direccional en la aplicación. Aunque también es aplicable a las aplicaciones de escritorio, donde un cliente quiere para que puedan usar un teclado para navegar por la aplicación, es especialmente importante para aplicaciones de Xbox, donde es el principal método de entrada del controlador para juegos o control remoto.
+La [muestra de controlador para juegos de estilo de navegación (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) es un ejemplo UWP que muestra formas de mejorar la navegación direccional en la aplicación. Aunque también es aplicable a las aplicaciones de escritorio, donde un cliente quiere poder usar un teclado para navegar por la aplicación, es especialmente importante para aplicaciones de Xbox, donde el principal método de entrada es controlador para juegos o control remoto.
 
 ![Muestra de plataforma de Windows universal: cambiar el tamaño de la vista de la aplicación](images/samples-2.png)
 

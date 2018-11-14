@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create flight submission, crear envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdcc0f06820600523be111d67d3cad5e38b6ceb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035011"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142112"
 ---
 # <a name="create-a-package-flight-submission"></a>Crear un envío de paquete piloto
 
@@ -30,7 +30,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un paquete piloto para una aplicación. Puedes hacer esto en el centro de partners, o puedes hacerlo mediante el método de [creación de un paquete piloto](create-a-flight.md) .
+* Crear un paquete piloto para una aplicación. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método para [crear un paquete piloto](create-a-flight.md) .
 
 ## <a name="request"></a>Solicitud
 
@@ -119,7 +119,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo crear el envío del paquete piloto porque la solicitud no es válida. |
-| 409  | No se pudo crear el envío del paquete piloto debido al estado actual de la aplicación o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo crear el envío del paquete piloto debido al estado actual de la aplicación o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

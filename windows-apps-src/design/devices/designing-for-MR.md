@@ -16,11 +16,11 @@ dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f392d1d6c8eaa309e1774e8a98671a7743fdc9d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051294"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6136033"
 ---
 # <a name="designing-for-mixed-reality"></a>Diseñar para realidad mixta
 

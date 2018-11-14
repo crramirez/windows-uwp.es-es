@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, ejemplo, DirectX, gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027695"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146185"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Agregar contenido visual a la muestra de Marble Maze
 
@@ -25,14 +25,14 @@ En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D
 A la hora de desarrollar los aspectos visuales de Marble Maze, seguimos estos pasos básicos:
 
 1.  Crear un marco básico que inicialice los entornos de Direct3D y de Direct2D.
-2.  Usa imágenes y programas de edición de modelos para diseñar los activos 2D y 3D que aparecen en el juego.
+2.  Usar imágenes y programas de edición de modelos para diseñar los activos 2D y 3D que aparecen en el juego.
 3.  Asegúrate de que los activos 2D y 3D correctamente cargarán y aparecen en el juego.
 4.  Integrar sombreadores de vértices y píxeles que mejoren la calidad visual de los activos del juego.
 5.  Integrar la lógica de juego, como la animación y la entrada de usuario.
 
-Además, nos centramos primero en agregar los activos 3D y, a continuación, los activos 2D. Por ejemplo, nos centramos en la lógica de juego básica antes de agregar el sistema de menús y el temporizador.
+Además, nos centramos primero en agregar los activos 3D y luego los activos 2D. Por ejemplo, nos centramos en la lógica de juego básica antes de agregar el sistema de menús y el temporizador.
 
-Durante el proceso de desarrollo también fue necesario iterar varias veces algunos de estos pasos. Por ejemplo, como se realizan cambios en los modelos de malla y Canica, tuvimos que también cambiar parte del código del sombreador que admite esos modelos.
+Durante el proceso de desarrollo también fue necesario iterar varias veces algunos de estos pasos. Por ejemplo, tal y como hemos realizado cambios a los modelos de malla y Canica, tuvimos que cambiar parte del código de sombreador que admite esos modelos.
 
 > [!NOTE]
 > El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
@@ -46,20 +46,20 @@ A continuación ofrecemos algunos de los puntos clave tratados en este documento
 -   Crea los dispositivos de Direct3D y Direct2D en una aplicación para UWP de forma similar a como lo harías en una aplicación de escritorio de Windows clásica. Una diferencia importante es cómo se asocia la cadena de intercambio a la ventana de entrada.
 -   Cuando diseñes tu juego, asegúrate de que el formato de malla que elijas admita los escenarios clave. Por ejemplo, si tu juego requiere colisiones, asegúrate de que puedes obtener datos de colisión de tus mallas.
 -   Separa la lógica de juego de la lógica de representación actualizando primero todos los objetos de escena antes de representarlos.
--   Normalmente, se dibujan los objetos de escena 3D y, a continuación, objetos cualquier 2D que aparecen delante de la escena.
+-   Normalmente, se dibujan los objetos de escena 3D y, a continuación, cualquier 2D objetos que aparecen delante de la escena.
 -   Sincroniza el dibujo con el espacio en blanco vertical para garantizar que tu juego no pierde tiempo dibujando fotogramas que nunca se mostrarán realmente en la pantalla. Un *espacio en blanco vertical* es el tiempo entre cuando un fotograma termina de dibujar en el monitor y comienza el siguiente fotograma.
 
 ## <a name="getting-started-with-directx-graphics"></a>Introducción a los elementos gráficos de DirectX
 
 
-Cuando planeamos el juego de plataforma de Windows Universal (UWP) de Marble Maze, elegimos C++ y Direct3D 11.1 porque son opciones excelente para crear juegos 3D que requieren el máximo control sobre la representación y un alto rendimiento. DirectX 11.1 admite hardware de DirectX 9 a DirectX 11 y, por lo tanto, puede ayudarte a llegar a más clientes de forma más eficaz porque no necesitas reescribir el código para cada una de las versiones anteriores de DirectX.
+Cuando planeamos el juego Universal Windows Platform (UWP) de Marble Maze, elegimos C++ y Direct3D 11.1 porque son opciones excelente para crear juegos 3D que requieren el máximo control sobre la representación y un alto rendimiento. DirectX 11.1 admite hardware de DirectX 9 a DirectX 11 y, por lo tanto, puede ayudarte a llegar a más clientes de forma más eficaz porque no necesitas reescribir el código para cada una de las versiones anteriores de DirectX.
 
 Marble Maze usa Direct3D 11.1 para representar los activos del juego 3D, es decir, la Canica y el laberinto. Marble Maze también usa Direct2D, DirectWrite y Windows Imaging Component (WIC) para dibujar los activos del juego 2D, como los menús y el temporizador.
 
-El desarrollo de un juego exige una buena planificación. Si estás familiarizado con gráficos de DirectX, te recomendamos que lea [DirectX: Introducción a](directx-getting-started.md) para familiarizarte con los conceptos básicos de creación de un juego DirectX UWP. Lee este documento y trabajas con el código fuente de Marble Maze, puedes consultar los siguientes recursos para obtener información más detallada sobre los elementos gráficos de DirectX:
+El desarrollo de un juego exige una buena planificación. Si estás familiarizado con gráficos de DirectX, te recomendamos que lea [DirectX: Introducción a](directx-getting-started.md) para familiarizarte con los conceptos básicos de creación de un juego DirectX UWP. Que lees este documento y trabajas con el código fuente de Marble Maze, puedes consultar los siguientes recursos para obtener información más detallada sobre los elementos gráficos de DirectX:
 
--   [Gráficos de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080): se describe Direct3D 11, una eficaz acelerados por hardware 3D API de elementos gráficos para representar la geometría 3D en la plataforma Windows.
--   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): se describe Direct2D, una API de gráficos 2D con aceleración por hardware, que proporciona alto rendimiento y representación de alta calidad de geometría 2D, mapas de bits y texto.
+-   [Gráficos de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080): se describe Direct3D 11, una eficaz acelerados por hardware 3D de elementos gráficos API para representar la geometría 3D en la plataforma de Windows.
+-   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): se describe Direct2D, una API de gráficos 2D acelerados por hardware, que proporciona alto rendimiento y representación de alta calidad de geometría 2D, mapas de bits y texto.
 -   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038): se describe DirectWrite, que admite la representación de texto de alta calidad.
 -   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902): describe WIC, una plataforma extensible que proporciona la API de bajo nivel para imágenes digitales.
 
@@ -72,9 +72,9 @@ Direct3D 11 introduce un paradigma llamado *niveles de característica*. Un nive
 
 Un dispositivo representa el adaptador de pantalla. Crea los dispositivos de Direct3D y Direct2D en una aplicación para UWP de forma similar a como lo harías en una aplicación de escritorio de Windows clásica. La principal diferencia es cómo conectas la cadena de intercambio de Direct3D al sistema basado en ventanas.
 
-La clase **DeviceResources** actúa como base para administrar Direct3D y Direct2D. Esta clase controla la infraestructura general, activos específicos del juego no. Marble Maze define la clase **MarbleMazeMain** para controlar los activos específicos del juego, lo que tiene una referencia a un objeto **DeviceResources** para proporcionarle acceso a Direct3D y Direct2D.
+La clase **DeviceResources** actúa como base para administrar Direct3D y Direct2D. Esta clase controla la infraestructura general, activos específicos del juego no. Marble Maze define la clase **MarbleMazeMain** para controlar los activos específicos del juego, que tiene una referencia a un objeto de **DeviceResources** para proporcionarle acceso a Direct3D y Direct2D.
 
-Durante la inicialización, el constructor **DeviceResources** crea recursos independientes de dispositivo y los dispositivos Direct3D y Direct2D.
+Durante la inicialización, el constructor de **DeviceResources** crea recursos independientes de dispositivo y los dispositivos Direct3D y Direct2D.
 
 ```cpp
 // Initialize the Direct3D resources required to run. 
@@ -146,7 +146,7 @@ void DX::DeviceResources::CreateDeviceIndependentResources()
 
 ###  <a name="creating-the-direct3d-and-direct2d-devices"></a>Crear los dispositivos Direct3D y Direct2D
 
-El método **DeviceResources::CreateDeviceResources** llama a [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el objeto de dispositivo que representa el adaptador de pantalla de Direct3D. Dado que Marble Maze admite el nivel de característica 9.1 y posterior, el método **deviceresources:: Createdeviceresources** especifica los niveles de 9.1 a 11.1 en la matriz **featureLevels** . Direct3D recorre la lista en orden y asigna a la aplicación el primer nivel de características disponible. Por lo tanto, las entradas de matriz **D3D\_FEATURE\_LEVEL** se enumeran de mayor a menor para que la aplicación obtenga el nivel de características más alto disponible. El método **DeviceResources::CreateDeviceResources** obtiene el dispositivo de Direct3D 11.1 al consultar al dispositivo de Direct3D 11 devuelto por **D3D11CreateDevice**.
+El método **DeviceResources::CreateDeviceResources** llama a [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el objeto de dispositivo que representa el adaptador de pantalla de Direct3D. Dado que Marble Maze admite el nivel de característica 9.1 y posterior, el método **deviceresources:: Createdeviceresources** especifica los niveles de 9.1 a 11.1 en la matriz **featureLevels** . Direct3D recorre la lista en orden y asigna a la aplicación el primer nivel de características disponible. Por lo tanto, las entradas de la matriz **D3D\_FEATURE\_LEVEL** se enumeran de mayor a menor para que la aplicación obtenga el nivel de características más alto disponible. El método **DeviceResources::CreateDeviceResources** obtiene el dispositivo de Direct3D 11.1 al consultar al dispositivo de Direct3D 11 devuelto por **D3D11CreateDevice**.
 
 ```cpp
 // This flag adds support for surfaces with a different color channel ordering
@@ -250,7 +250,7 @@ Para obtener más información sobre DXGI y la interoperabilidad entre Direct2D 
 
 ### <a name="associating-direct3d-with-the-view"></a>Asociar Direct3D con la vista
 
-El método **DeviceResources::CreateWindowSizeDependentResources** crea los recursos de elementos gráficos que dependen de un tamaño de ventana determinado, como la cadena de intercambio y los destinos de presentación de Direct3D y Direct2D. Una diferencia importante entre una aplicación DirectX para UWP y una aplicación de escritorio es la forma en que se asocia la cadena de intercambio a la ventana de salida. Una cadena de intercambio es responsable de mostrar el búfer donde realiza la representación el dispositivo en el monitor. [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md) se describe cómo el sistema de ventanas para una aplicación para UWP difiere de una aplicación de escritorio. Dado que una aplicación para UWP no funciona con objetos [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) , Marble Maze debe usar el método [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) para asociar la salida del dispositivo a la vista. El siguiente ejemplo muestra la parte del método **DeviceResources::CreateWindowSizeDependentResources** que crea la cadena de intercambio.
+El método **DeviceResources::CreateWindowSizeDependentResources** crea los recursos de elementos gráficos que dependen de un tamaño de ventana determinado, como la cadena de intercambio y los destinos de presentación de Direct3D y Direct2D. Una diferencia importante entre una aplicación DirectX para UWP y una aplicación de escritorio es la forma en que se asocia la cadena de intercambio a la ventana de salida. Una cadena de intercambio es responsable de mostrar el búfer donde realiza la representación el dispositivo en el monitor. [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md) se describe cómo el sistema de ventanas para una aplicación para UWP difiere de una aplicación de escritorio. Dado que una aplicación para UWP no funciona con objetos [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) , Marble Maze debe usar el método de [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) para asociar la salida del dispositivo a la vista. El siguiente ejemplo muestra la parte del método **DeviceResources::CreateWindowSizeDependentResources** que crea la cadena de intercambio.
 
 ```cpp
 // Obtain the final swap chain for this window from the DXGI factory.
@@ -280,7 +280,7 @@ El método **DeviceResources::CreateWindowSizeDependentResources** inicializa lo
 
 > [!NOTE]
 > El término *vista* tiene un significado diferente en el tiempo de ejecución de Windows que tiene en Direct3D. En Windows en tiempo de ejecución, una vista se refiere a la colección de configuraciones de la interfaz de usuario de una aplicación, incluidos el área de presentación y los comportamientos de entrada, además del subproceso que usa para el procesamiento. La configuración y los parámetros que se necesitan se especifican al crear una vista. El proceso de configuración de la vista de la aplicación se describe en [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md).
-> En Direct3D, el término vista tiene varios significados. Una vista de recursos define los subrecursos a los que puede tener acceso un recurso. Por ejemplo, cuando un objeto de textura se asocia a una vista de recursos de sombreador, dicho sombreador podrá obtener acceso a la textura más adelante. Una de las ventajas de una vista de recursos es que puedes interpretar datos de formas distintas en diferentes etapas del proceso de representación. Para obtener más información sobre las vistas de recursos, consulta [Las vistas de recursos](https://msdn.microsoft.com/library/windows/desktop/ff476900#Views).
+> En Direct3D, el término vista tiene varios significados. Una vista de recursos define los subrecursos a los que puede tener acceso un recurso. Por ejemplo, cuando un objeto de textura se asocia a una vista de recursos de sombreador, dicho sombreador podrá obtener acceso a la textura más adelante. Una de las ventajas de una vista de recursos es que puedes interpretar datos de formas distintas en diferentes etapas del proceso de representación. Para obtener más información sobre las vistas de recurso, consulta [Las vistas de recurso](https://msdn.microsoft.com/library/windows/desktop/ff476900#Views).
 > Cuando se usa en el contexto de una transformación de vista o de una matriz de transformación de vista, vista se refiere a la ubicación y la orientación de la cámara. Una transformación de vista cambia la posición de los objetos en el mundo alrededor de la posición y la orientación de la cámara. Para más información sobre las transformaciones de vistas, consulta [Transformación de vista (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). El modo en que Marble Maze usa las vistas de recursos y las vistas de matrices se describe con más detalle en este tema.
 
  
@@ -294,7 +294,7 @@ Para garantizar que la aplicación responda adecuadamente, Marble Maze carga los
 
 ###  <a name="loading-the-2d-overlay-and-user-interface"></a>Cargar la interfaz de usuario y la superposición 2D
 
-En Marble Maze, la superposición es la imagen que aparece en la parte superior de la pantalla. La superposición siempre aparece delante de la escena. En Marble Maze, la superposición contiene el logotipo de Windows y la cadena de texto **muestra del juego Marble Maze con DirectX**. La administración de la superposición se realiza mediante la clase **SampleOverlay** , que se define en **SampleOverlay.h**. Aunque usamos la superposición como parte de las muestras Direct3D, puedes adaptar este código para que muestre cualquier imagen que aparezca delante de tu escena.
+En Marble Maze, la superposición es la imagen que aparece en la parte superior de la pantalla. La superposición siempre aparece delante de la escena. En Marble Maze, la superposición contiene el logotipo de Windows y la cadena de texto **muestra de juego de Marble Maze con DirectX**. La administración de la superposición se realiza mediante la clase **SampleOverlay** , que se define en **SampleOverlay.h**. Aunque usamos la superposición como parte de las muestras Direct3D, puedes adaptar este código para que muestre cualquier imagen que aparezca delante de tu escena.
 
 Otro aspecto importante de la superposición es que, debido a que su contenido no cambia, la clase **SampleOverlay** dibuja, o almacena en caché, su contenido en un objeto [ID2D1Bitmap1](https://msdn.microsoft.com/library/windows/desktop/hh404349) durante la inicialización. En el momento del dibujo, la clase **SampleOverlay** solo tiene que dibujar el mapa de bits en la pantalla. De esta forma, las rutinas costosas, como el dibujo de texto, no deben realizarse para cada trama.
 
@@ -306,7 +306,7 @@ La interfaz de usuario (IU) consiste en componentes 2D, como los menús y las pa
 -   Una tabla que enumera los tiempos de finalización más rápidos.
 -   Texto que se lee **en pausa** cuando se pausa el juego.
 
-Marble Maze define los elementos de la interfaz de usuario de específicos del juego en **UserInterface.h**. Marble Maze define la clase **ElementBase** como un tipo base para todos los elementos de la interfaz de usuario. La clase **ElementBase** define atributos como el tamaño, la posición, la alineación y la visibilidad de un elemento de la interfaz de usuario. También controla cómo se actualizan y se presentan los elementos.
+Marble Maze define los elementos de interfaz de usuario específicos del juego en **UserInterface.h**. Marble Maze define la clase **ElementBase** como un tipo base para todos los elementos de la interfaz de usuario. La clase **ElementBase** define atributos como el tamaño, la posición, la alineación y la visibilidad de un elemento de la interfaz de usuario. También controla cómo se actualizan y se presentan los elementos.
 
 ```cpp
 class ElementBase
@@ -339,7 +339,7 @@ protected:
 Al proporcionar una clase base común para los elementos de la interfaz de usuario, la clase **UserInterface**, que administra la interfaz de usuario, solo necesita tener una colección de objetos **ElementBase**, lo que simplifica la administración de la interfaz de usuario y proporciona un administrador de interfaz de usuario reusable. Marble Maze define tipos que derivan de **ElementBase** que implementan comportamientos específicos del juego. Por ejemplo, **HighScoreTable** define el comportamiento de la tabla de puntuaciones máximas. Para obtener más información sobre estos tipos, consulta el código fuente.
 
 > [!NOTE]
-> Dado que XAML te permite crear más fácilmente interfaces de usuario complejas, como las de simulación y juegos de estrategia, considera la posibilidad de usar XAML para definir la interfaz de usuario. Para obtener información sobre cómo desarrollar una interfaz de usuario en XAML en un juego DirectX de UWP, consulta [Extender la muestra de juego](tutorial-resources.md), lo que hace referencia a la muestra de juego de disparos opción 3D DirectX.
+> Dado que XAML te permite crear más fácilmente las interfaces de usuario complejas, como las de simulación y juegos de estrategia, considera la posibilidad de usar XAML para definir la interfaz de usuario. Para obtener información sobre cómo desarrollar una interfaz de usuario en XAML en un juego DirectX de UWP, consulta [Extender la muestra de juego](tutorial-resources.md), lo que hace referencia a la muestra de juego de disparos opción 3D DirectX.
 
  
 
@@ -347,7 +347,7 @@ Al proporcionar una clase base común para los elementos de la interfaz de usuar
 
 Marble Maze usa el método **BasicLoader::LoadShader** para cargar un sombreador a partir de un archivo.
 
-En la actualidad, los sombreadores son una unidad fundamental de la programación de GPU en los juegos. Casi todos los gráficos 3D se procesan mediante sombreadores, ya sea una transformación de modelo y la iluminación de una escena o más complejo procesamiento de geometría, de carácter enmascarar hasta la teselación. Para más información sobre el modelo de programación con sombreadores, consulta [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561).
+En la actualidad, los sombreadores son una unidad fundamental de la programación de GPU en los juegos. Casi todos los gráficos 3D se procesan mediante sombreadores, ya sea una transformación de modelo y la iluminación de una escena o procesamiento, de carácter enmascarar hasta la teselación de geometría más compleja. Para más información sobre el modelo de programación con sombreadores, consulta [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561).
 
 Marble Maze usa sombreadores de vértices y de píxeles. Un sombreador de vértices siempre funciona en un vértice de entrada y produce un vértice como salida. Un sombreador de píxeles toma valores numéricos, datos de textura, valores interpolados por vértice y otros datos para producir un color de píxel como salida. Dado que un sombreador transforma un elemento cada vez, el hardware gráfico que proporciona varias canalizaciones de sombreador puede procesar conjuntos de elementos en paralelo. El número de canalizaciones paralelas disponibles para la GPU puede ser muchísimo mayor que el número disponible para la CPU. Por lo tanto, incluso los sombreadores básicos pueden mejor la capacidad de proceso de forma significativa.
 
@@ -416,7 +416,7 @@ float4 main(sPSInput input) : SV_TARGET
 
  
 
-El método **marblemazemain:: Loaddeferredresources** usa el método **basicloader:: Loadshader** para cargar a los sombreadores. El siguiente ejemplo carga el sombreador de vértices. El formato de tiempo de ejecución para este sombreador es **BasicVertexShader.cso**. La variable de miembro **m\_vertexShader** es un objeto [ID3D11VertexShader](https://msdn.microsoft.com/library/windows/desktop/ff476641).
+El método **marblemazemain:: Loaddeferredresources** usa el método **basicloader:: Loadshader** para cargar a los sombreadores. El siguiente ejemplo carga el sombreador de vértices. El formato en tiempo de ejecución para este sombreador es **BasicVertexShader.cso**. La variable de miembro **m\_vertexShader** es un objeto [ID3D11VertexShader](https://msdn.microsoft.com/library/windows/desktop/ff476641).
 
 ```cpp
 BasicLoader^ loader = ref new BasicLoader(m_deviceResources->GetD3DDevice());
@@ -486,7 +486,7 @@ En el documento [Semántica](https://msdn.microsoft.com/library/windows/desktop/
 
  
 
-Para obtener más información sobre la fase de ensamblado de entrada, consulta [Fase del ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116) y [Comenzar a trabajar con la fase de ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117).
+Para obtener más información sobre la fase de ensamblado de entrada, consulta la [Fase del ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116) y [Comenzar a trabajar con la fase de ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117).
 
 El proceso según el cual se usan los sombreadores de vértices y de píxeles para representar la escena se describe en la sección [Representar la escena](#rendering-the-scene) más adelante en este documento.
 
@@ -494,7 +494,7 @@ El proceso según el cual se usan los sombreadores de vértices y de píxeles pa
 
 El búfer de Direct3D agrupa una colección de datos. Un búfer de constantes es un tipo de búfer que puedes usar para pasarles datos a los sombreadores. Marble Maze usa un búfer de constantes para conservar la vista de modelo (o global) y las matrices de proyección para el objeto activo de la escena.
 
-En el siguiente ejemplo se muestra cómo el método **marblemazemain:: Loaddeferredresources** crea un búfer de constantes que más tarde albergará datos de matriz. El ejemplo crea una estructura **D3D11\_BUFFER\_DESC** que usa la marca **D3D11\_BIND\_CONSTANT\_BUFFER** para especificar el uso como búfer de constantes. A continuación, este ejemplo pasa dicha estructura al método [ID3D11Device::CreateBuffer](https://msdn.microsoft.com/library/windows/desktop/ff476501). La variable **m\_constantBuffer** es un objeto [ID3D11Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476351).
+El siguiente ejemplo muestra cómo el método **marblemazemain:: Loaddeferredresources** crea un búfer de constantes que más tarde albergará datos de matriz. El ejemplo crea una estructura **D3D11\_BUFFER\_DESC** que usa la marca **D3D11\_BIND\_CONSTANT\_BUFFER** para especificar el uso como búfer de constantes. A continuación, este ejemplo pasa dicha estructura al método [ID3D11Device::CreateBuffer](https://msdn.microsoft.com/library/windows/desktop/ff476501). La variable **m\_constantBuffer** es un objeto [ID3D11Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476351).
 
 ```cpp
 // Create the constant buffer for updating model and camera data.
@@ -520,7 +520,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-El método **marblemazemain:: Update** actualizaciones más adelante objetos **ConstantBuffer** , uno para el laberinto y otro para la Canica. El método **marblemazemain:: Render** vincula cada objeto **ConstantBuffer** al búfer de constantes antes de que se representa cada objeto. En el siguiente ejemplo se muestra la estructura **ConstantBuffer** , que se encuentra en **MarbleMazeMain.h**.
+El método **marblemazemain:: Update** actualiza más tarde objetos **ConstantBuffer** , uno para el laberinto y otro para la Canica. El método **marblemazemain:: Render** vincula cada objeto **ConstantBuffer** al búfer de constantes antes de que se representa cada objeto. El siguiente ejemplo muestra la estructura **ConstantBuffer** , que se encuentra en **MarbleMazeMain.h**.
 
 ```cpp
 // Describes the constant buffer that draws the meshes.
@@ -536,7 +536,7 @@ struct ConstantBuffer
 };
 ```
 
-Para comprender mejor cómo se asignan búferes de constantes al código de sombreador, compara la estructura de **ConstantBuffer** en **MarbleMazeMain.h** en el búfer de constantes **ConstantBuffer** definido por el sombreador de vértices en BasicVertexShader.hlsl ** **:
+Para comprender mejor cómo se asignan búferes de constantes al código de sombreador, compara la estructura de **ConstantBuffer** en **MarbleMazeMain.h** en el búfer de constantes **ConstantBuffer** definido por el sombreador de vértices en BasicVertexShader.hlsl de ** **:
 
 ```hlsl
 cbuffer ConstantBuffer : register(b0)
@@ -558,7 +558,7 @@ Para obtener más información sobre los búferes de constantes, consulta [Intro
 
 Marble Maze usa SDK-Mesh como formato en tiempo de ejecución porque dicho formato proporciona un modo básico de cargar datos de malla para aplicaciones de ejemplo. Para uso de producción, deberías usar un formato de malla que cumpla los requisitos específicos de tu juego.
 
-El método **marblemazemain:: Loaddeferredresources** carga los datos de malla después de cargar a los sombreadores de vértices y píxeles. Una malla es una colección de datos de vértices que a menudo incluye información como posiciones, datos de valores normales, colores, materiales y coordenadas de textura. Las mallas por lo general, se crean en software de creación 3D y mantenerse en archivos independientes del código de la aplicación. La canica y el laberinto son dos ejemplos de mallas usadas por el juego.
+El método **marblemazemain:: Loaddeferredresources** carga los datos de malla después de cargar a los sombreadores de vértices y píxeles. Una malla es una colección de datos de vértices que a menudo incluye información como posiciones, datos de valores normales, colores, materiales y coordenadas de textura. Mallas normalmente se crean en software de creación 3D y mantenerse en archivos independientes del código de la aplicación. La canica y el laberinto son dos ejemplos de mallas usadas por el juego.
 
 Marble Maze usa la clase **SDKMesh** para administrar mallas. Esta clase se declara en **SDKMesh.h**. **SDKMesh** proporciona métodos para cargar, representar y destruir datos de malla.
 
@@ -567,7 +567,7 @@ Marble Maze usa la clase **SDKMesh** para administrar mallas. Esta clase se decl
 
  
 
-En el siguiente ejemplo se muestra cómo el método **marblemazemain:: Loaddeferredresources** usa el método **sdkmesh:: Create** para cargar datos de malla para el laberinto y la bola.
+El siguiente ejemplo muestra cómo el método **marblemazemain:: Loaddeferredresources** usa el método **sdkmesh:: Create** para cargar datos de malla para el laberinto y la bola.
 
 ```cpp
 // Load the meshes.
@@ -623,7 +623,7 @@ float radius = m_marbleMesh.GetMeshBoundingBoxExtents(0).x / 2;
 m_physics.SetRadius(radius);
 ```
 
-La manera en que se cargan los datos de colisión prácticamente depende del formato de tiempo de ejecución que usas. Para obtener más información sobre cómo Marble Maze carga la geometría de colisión de un archivo SDK-Mesh, consulta el método **MarbleMazeMain::ExtractTrianglesFromMesh** en el código fuente.
+La forma en que se cargan los datos de colisión prácticamente depende el formato en tiempo de ejecución que usas. Para obtener más información sobre cómo Marble Maze carga la geometría de colisión de un archivo SDK-Mesh, consulta el método **MarbleMazeMain::ExtractTrianglesFromMesh** en el código fuente.
 
 ## <a name="updating-game-state"></a>Actualizar el estado del juego
 
@@ -654,7 +654,7 @@ void UserInterface::Update(float timeTotal, float timeDelta)
 }
 ```
 
-Las clases que derivan de **ElementBase** (definidos en **UserInterface.h**) implementan el método de **actualización** para realizar comportamientos específicos. Por ejemplo, el método **StopwatchTimer::Update** actualiza el tiempo transcurrido con la cantidad proporcionada y actualiza el texto que muestra más tarde.
+Las clases que derivan de **ElementBase** (definida en **UserInterface.h**) implementan el método de **actualización** para realizar comportamientos específicos. Por ejemplo, el método **StopwatchTimer::Update** actualiza el tiempo transcurrido con la cantidad proporcionada y actualiza el texto que muestra más tarde.
 
 ```cpp
 void StopwatchTimer::Update(float timeTotal, float timeDelta)
@@ -674,9 +674,9 @@ void StopwatchTimer::Update(float timeTotal, float timeDelta)
 
 ###  <a name="updating-the-scene"></a>Actualizar la escena
 
-El método **marblemazemain:: Update** actualizaciones el juego según el estado actual de la máquina de estado (el **GameState**, almacenada en **m_gameState**). Cuando el juego está en el estado activo (**GameState::InGameActive**), Marble Maze actualiza la cámara para seguir la Canica, actualiza la parte de la matriz de vista de los búferes de constantes y actualiza la simulación física.
+El método de **marblemazemain:: Update** actualiza el juego según el estado actual de la máquina de estado (el **GameState**, almacenados en **m_gameState**). Cuando el juego está en el estado activo (**GameState::InGameActive**), Marble Maze actualiza la cámara para seguir la Canica, actualiza la parte de la matriz de vista de los búferes de constantes y actualiza la simulación física.
 
-En el siguiente ejemplo se muestra cómo el método **marblemazemain:: Update** actualiza la posición de la cámara. Marble Maze usa la variable **m\_resetCamera** para indicar que la cámara debe restablecerse para que se posicione directamente por encima de la canica. La cámara se restablece cuando el juego comienza o cuando la canica se cae dentro del laberinto. Cuando el menú principal o la pantalla de máximas puntuaciones están activos, la cámara se establece en una ubicación constante. De lo contrario, Marble Maze usa el parámetro *timeDelta* para interpolar la posición de la cámara entre su posición actual y su posición de destino. La posición de destino es ligeramente por encima y delante de la canica. El uso del tiempo transcurrido entre fotogramas permite a la cámara seguir, o perseguir, de forma gradual a la canica.
+El siguiente ejemplo muestra cómo el método **marblemazemain:: Update** actualiza la posición de la cámara. Marble Maze usa la variable **m\_resetCamera** para indicar que la cámara debe restablecerse para que se posicione directamente por encima de la canica. La cámara se restablece cuando el juego comienza o cuando la canica se cae dentro del laberinto. Cuando el menú principal o la pantalla de máximas puntuaciones están activos, la cámara se establece en una ubicación constante. De lo contrario, Marble Maze usa el parámetro *timeDelta* para interpolar la posición de la cámara entre su posición actual y su posición de destino. La posición de destino es ligeramente por encima y delante de la canica. El uso del tiempo transcurrido entre fotogramas permite a la cámara seguir, o perseguir, de forma gradual a la canica.
 
 ```cpp
 static float eyeDistance = 200.0f;
@@ -723,7 +723,7 @@ else
 }
 ```
 
-En el siguiente ejemplo se muestra cómo el método **marblemazemain:: Update** actualiza los búferes de constantes para la Canica y el laberinto. La matriz de modelo, o global, del laberinto siempre permanece como la matriz de identidad. Excepto por la diagonal principal, cuyos elementos son todos unos, la matriz de identidad es una matriz cuadrada compuesta de ceros. La matriz de modelo de la canica se basa en su matriz de posición multiplicada por su matriz de rotación.
+El siguiente ejemplo muestra cómo el método **marblemazemain:: Update** actualiza los búferes de constantes para la Canica y el laberinto. La matriz de modelo, o global, del laberinto siempre permanece como la matriz de identidad. Excepto por la diagonal principal, cuyos elementos son todos unos, la matriz de identidad es una matriz cuadrada compuesta de ceros. La matriz de modelo de la canica se basa en su matriz de posición multiplicada por su matriz de rotación.
 
 ```cpp
 // Update the model matrices based on the simulation.
@@ -766,7 +766,7 @@ El método **marblemazemain:: Render** enlaza el destino de representación y Ga
 
 Antes de representar la escena, debes establecer el búfer actual de la galería de símbolos de profundidad de destino de representación. Si no está garantizado que tu escena dibuje encima de todos los píxeles de la pantalla, borra también las vistas de representación y de galería de símbolos. Marble Maze borra las vistas de presentación y de galería de símbolos en cada fotograma para garantizar que no haya artefactos visibles del fotograma anterior.
 
-En el siguiente ejemplo se muestra cómo el método **marblemazemain:: Render** llama al método [id3d11devicecontext:: omsetrendertargets](https://msdn.microsoft.com/library/windows/desktop/ff476464) para establecer el destino de representación y el búfer de galería de símbolos de profundidad como los actuales.
+El siguiente ejemplo muestra cómo el método **marblemazemain:: Render** llama al método [id3d11devicecontext:: omsetrendertargets](https://msdn.microsoft.com/library/windows/desktop/ff476464) para establecer el destino de representación y el búfer de galería de símbolos de profundidad como los actuales.
 
 ```cpp
 auto context = m_deviceResources->GetD3DDeviceContext();
@@ -808,7 +808,7 @@ Antes de presentar los objetos de la escena, sigue estos pasos para preparar los
 
  
 
-En la sección [Cargar sombreadores](#loading-shaders) de este documento se describe cómo crear el diseño de entrada cuando se crea el sombreador de vértices. En el siguiente ejemplo se muestra cómo el método **marblemazemain:: Render** usa el método [id3d11devicecontext:: iasetinputlayout](https://msdn.microsoft.com/library/windows/desktop/ff476454) para establecer este diseño como el diseño actual.
+En la sección [Cargar sombreadores](#loading-shaders) de este documento se describe cómo crear el diseño de entrada cuando se crea el sombreador de vértices. El siguiente ejemplo muestra cómo el método **marblemazemain:: Render** usa el método [id3d11devicecontext:: iasetinputlayout](https://msdn.microsoft.com/library/windows/desktop/ff476454) para establecer este diseño como el diseño actual.
 
 ```cpp
 m_deviceResources->GetD3DDeviceContext()->IASetInputLayout(m_inputLayout.Get());
@@ -923,9 +923,9 @@ El método **SampleOverlay::Render** usa una técnica similar para dibujar el ma
 
 ###  <a name="presenting-the-scene"></a>Presentar la escena
 
-Una vez dibujados todos los 2D y 3D objetos de la escena, Marble Maze presenta la imagen representada en el monitor. Sincroniza el dibujo con el espacio en blanco vertical para garantizar que no se pierde tiempo dibujando fotogramas que nunca se mostrarán realmente en la pantalla. Marble Maze también controla los cambios de dispositivo cuando presenta la escena.
+Una vez dibujados todos los 2D y 3D objetos de escena, Marble Maze presenta la imagen representada en el monitor. Sincroniza el dibujo con el espacio en blanco vertical para garantizar que no se pierde tiempo dibujando fotogramas que nunca se mostrarán realmente en la pantalla. Marble Maze también controla los cambios de dispositivo cuando presenta la escena.
 
-Después de que el método **marblemazemain:: Render** devuelve, el bucle del juego llama al método **DX::DeviceResources::Present** para enviar la imagen representada en el monitor o pantalla. El método **DX::DeviceResources::Present** llama a [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/bb174576) para realizar la operación de presentación, tal como se muestra en el siguiente ejemplo:
+Después de que el método **marblemazemain:: Render** devuelve, el bucle del juego llama al método **DX::DeviceResources::Present** para enviar la imagen representada en el monitor o pantalla. El método **DX::DeviceResources::Present** llama a [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/bb174576) para realizar la operación de presentación, tal como se muestra en el ejemplo siguiente:
 
 ```cpp
 // The first argument instructs DXGI to block until VSync, putting the application
@@ -936,7 +936,7 @@ HRESULT hr = m_swapChain->Present(1, 0);
 
 En este ejemplo, **m\_swapChain** es un objeto [IDXGISwapChain1](https://msdn.microsoft.com/library/windows/desktop/hh404631). La inicialización de este objeto se describe en la sección [Inicializar Direct3D y Direct2D](#initializing-direct3d-and-direct2d) en este documento.
 
-El primer parámetro para [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/hh446797), *SyncInterval*, especifica el número de los espacios en blanco verticales que esperar antes de presentar el fotograma. Marble Maze especifica 1 de modo que espera hasta el siguiente espacio en blanco vertical.
+El primer parámetro para [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/hh446797), *SyncInterval*, especifica el número de los espacios en blanco verticales debe esperar antes de presentar el fotograma. Marble Maze especifica 1 de modo que espera hasta el siguiente espacio en blanco vertical.
 
 El método [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/bb174576) devuelve un código de error que indica que el dispositivo se ha quitado o de lo contrario no se pudo. En este caso, Marble Maze reinicializa el dispositivo.
 
@@ -956,7 +956,7 @@ else
 ## <a name="next-steps"></a>Pasos siguientes
 
 
-Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para obtener información sobre algunos de los procedimientos clave a tener en cuenta cuando trabajes con dispositivos de entrada. En este documento se describe cómo Marble Maze admite entrada táctil, acelerómetro, mandos de Xbox y la entrada de mouse.
+Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para obtener información sobre algunos de los procedimientos clave a tener en cuenta cuando trabajes con dispositivos de entrada. Este documento describe cómo Marble Maze admite la entrada táctil, acelerómetro, mandos de Xbox y la entrada del mouse.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eaca23a72ff794a85ffd8ac13c3f522cabf32aa7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026720"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190291"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones para UWP
  
@@ -41,7 +41,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 | [Crear iconos](creating-tiles.md) | Personaliza el icono predeterminado de la aplicación y proporciona activos para diferentes tamaños de pantalla. |
 | [Activos de icono de la aplicación](app-assets.md) | Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados. |
 | [API de icono principal](primary-tile-apis.md) | Solicita anclar el icono principal de la aplicación y comprueba si el icono principal está anclado actualmente. |
-| [Contenido de icono](create-adaptive-tiles.md) | Contenido de notificación de icono se especifica con adaptable, una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla de iconos. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). |
+| [Contenido de icono](create-adaptive-tiles.md) | Contenido de la notificación de icono se especifica con adaptable, una nueva característica de Windows 10, que te permite diseñar tu propio contenido con un lenguaje de marcado sencillo y flexible que se adapte a diferentes densidades de pantalla de la notificación de icono. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). |
 | [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md) | Estos son los elementos y atributos que usas para crear iconos adaptables. |
 | [Plantillas de iconos especiales](special-tile-templates-catalog.md) | Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. |
 | [Enviar notificación de icono local](sending-a-local-tile-notification.md) | Aprende a enviar una notificación de icono local, agregando contenido dinámico enriquecido a tu icono dinámico. |

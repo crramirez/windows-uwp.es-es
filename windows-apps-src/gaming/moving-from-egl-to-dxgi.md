@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, EGL, DXGI, Direct3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 64f237fd26a2ed7328e2c2264da17d3a5d7ba588
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027242"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142456"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL con DXGI y Direct3D
 
@@ -74,7 +74,7 @@ A continuación, te describimos el modo más básico de configurar una pantalla 
 6.  Cuando la canalización se haya ejecutado y se haya dibujado un fotograma en el búfer de reserva, muéstralo en pantalla con [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
 
 Echa un vistazo a [Getting Started with DirectX Graphics (Introducción a los gráficos DirectX)](https://msdn.microsoft.com/library/windows/desktop/hh309467) para estudiar este proceso con mayor detenimiento. En lo que queda de artículo se abordarán muchos de los pasos básicos habituales para configurar y administrar la canalización de gráficos.
-> **Nota**  las aplicaciones de escritorio de Windows tienen diferentes API para obtener una cadena de intercambio de Direct3D, por ejemplo, [**d3d11device:: createdeviceandswapchain**](https://msdn.microsoft.com/library/windows/desktop/ff476083)y no uses un objeto de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) .
+> **Nota**  las aplicaciones de escritorio de Windows tienen diferentes API para obtener una cadena de intercambio de Direct3D, como [**d3d11device:: createdeviceandswapchain**](https://msdn.microsoft.com/library/windows/desktop/ff476083)y no uses un objeto de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) .
 
  
 

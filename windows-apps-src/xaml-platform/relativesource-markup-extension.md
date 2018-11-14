@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023533"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159580"
 ---
 # <a name="relativesource-markup-extension"></a>Extensión de marcado {RelativeSource}
 
@@ -62,7 +62,7 @@ A continuación te mostramos un ejemplo. Este [**Rectangle**](/uwp/api/Windows.U
 
 Otro uso de `RelativeSource={RelativeSource Self}` es como una forma de establecer el [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) de un objeto en sí mismo.  Por ejemplo, esta técnica puede verse en algunos ejemplos del SDK, en los que la clase [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) se ha extendido con una propiedad personalizada que ya proporciona un modelo de vista listo para el enlace de sus propios datos, como, por ejemplo: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Nota**el uso de XAML para **RelativeSource** solo muestra el uso para el que está destinado: establecer un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
+**Nota**el uso de XAML para **RelativeSource** solo muestra el uso para el que se pretende: establecer un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
 ## <a name="related-topics"></a>Temas relacionados
 

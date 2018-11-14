@@ -8,11 +8,11 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e51a7fb64dae42307960aa90f85463d11aecadc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049880"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151533"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Nuevas API en Windows 10 compilación 17763
 

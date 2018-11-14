@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
-ms.openlocfilehash: e08856006bc3ed6348a6ded69421ef0be9fc69e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 184cd246019bacc6419580cd47d2904374606031
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036955"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6145123"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empaquetar aplicaciones de escritorio (puente de escritorio)
 
@@ -27,7 +27,7 @@ Al crear un paquete de la aplicación de escritorio, la aplicación obtendrá un
 Además del código que usas para destacar las experiencias de Windows 10, la aplicación permanece intacta y puedes seguir distribuyéndola a tu existentes de Windows 7, Windows Vista o base de usuarios de Windows XP. En Windows 10, la aplicación continúa ejecutándose en plena confianza al igual que el modo de usuario hace hoy.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (de lo contrario se conoce como el puente de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 > [!NOTE]
 > Consulta <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta serie</a> de vídeos cortos que publicó Microsoft Virtual Academy. Estos vídeos te proporcionarán todo el proceso de incorporación de la aplicación de escritorio para la plataforma Universal de Windows (UWP).

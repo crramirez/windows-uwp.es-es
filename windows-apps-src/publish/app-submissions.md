@@ -9,11 +9,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051426"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140679"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
