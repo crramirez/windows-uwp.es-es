@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, malla, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: e3ae6416217efa16d70b65b8ff55e36654a11557
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6453737"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6660105"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Crear y mostrar una malla básica
 

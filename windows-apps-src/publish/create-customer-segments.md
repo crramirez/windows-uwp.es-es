@@ -9,11 +9,11 @@ keywords: windows 10, uwp, segmento, segmentos, grupo dirigido, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aa61056a25fca4193cf325c8573813bf1f6a560
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6252955"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6657021"
 ---
 # <a name="create-customer-segments"></a>Crear segmentos de clientes
 

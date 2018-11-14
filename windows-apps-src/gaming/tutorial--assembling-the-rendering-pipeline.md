@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6661683"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6260231"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 

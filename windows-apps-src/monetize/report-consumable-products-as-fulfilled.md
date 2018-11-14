@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, completar, consumible, Microsoft Store collection API, fulfill, consumable
 ms.localizationpriority: medium
 ms.openlocfilehash: 69795a40ae5e46f95330cd6a6d2738adc9a74686
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6257370"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6656928"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Notificar productos consumibles como completados
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 72be66c3bf7b0e58092ae3a7e1baf82c9e686f0c
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6199679"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668604"
 ---
 # <a name="rasterization-rules"></a>Reglas de rasterización
 

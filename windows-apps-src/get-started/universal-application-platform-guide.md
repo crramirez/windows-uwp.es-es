@@ -8,16 +8,16 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: a687aa7ed1115692f765e516dc8c8b15504b709e
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: a506eec99aabaddac6251eb6548a671ecd283d0b
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648207"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6281122"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para Plataforma universal de Windows (UWP)?
 
-![Aplicaciones de Windows para la plataforma universales ejecutan en una variedad de dispositivos, el soporte de interfaz de usuario adaptables, entrada de usuario intuitiva, una tienda, el centro de partners y servicios en la nube](images/universalapps-overview.png)
+![Las aplicaciones para la Plataforma universal de Windows se ejecutan en una amplia variedad de dispositivos, son compatibles con interfaces de usuario adaptables y ofrecen una entrada de usuario intuitiva, una sola Tienda, un solo Centro de desarrollo y servicios en la nube.](images/universalapps-overview.png)
 
 Una aplicación para UWP es:
 
@@ -132,9 +132,9 @@ Además de la interacción en diferentes dispositivos, [planea la aplicación](h
 - Aprende a [agregar Cortana a tu aplicación](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382) para que tu aplicación pueda responder a comandos de voz.
 - Incluye [notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/mt187203) y [compras desde la aplicación](https://msdn.microsoft.com/library/windows/apps/mt219684) en tu planificación. Estas características deberían funcionar en todos los dispositivos.
 
-### <a name="submit-your-app-to-the-store"></a>Enviar la aplicación a la tienda
+### <a name="submit-your-app-to-the-store"></a>Envía tu aplicación a la tienda.
 
-[El centro de partners](https://partner.microsoft.com/dashboard) te permite administrar y enviar todas las aplicaciones para dispositivos de Windows en un solo lugar. Ver [juegos y publicar aplicaciones de Windows](../publish/index.md) para aprender a enviar tus aplicaciones para publicarlas en Microsoft Store.
+El nuevo panel unificado del Centro de desarrollo de Windows te permite administrar y enviar todas las aplicaciones para dispositivos Windows en un solo lugar. Consulta [Usar el panel unificado del Centro de desarrollo de Windows](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar tus aplicaciones para publicarlas en Microsoft Store.
 
 Las nuevas funciones simplifican los procesos y te dan más control. También encontrarás [informes analíticos](https://msdn.microsoft.com/library/windows/apps/mt148522) detallados combinados con [detalles de pago](https://msdn.microsoft.com/library/windows/apps/dn986925), formas de [promocionar la aplicación y atraer a los clientes](https://msdn.microsoft.com/library/windows/apps/mt148526) y mucho más.
 

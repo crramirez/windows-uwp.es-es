@@ -7,12 +7,12 @@ ms.author: twhitney
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 37b7ed35edecb95deb4b3ba568227f4cd8e32d9a
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 8e99796decfa5ed434fddee3be4340380e2376a2
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6455357"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654055"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continuar la actividad del usuario, incluso en diferentes dispositivos
 
@@ -157,7 +157,7 @@ Una vez que la aplicación o el servicio se autentica con una cuenta de Microsof
 ## <a name="summary"></a>Resumen
 
 Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) para que tu aplicación aparezca en la línea de tiempo y Cortana.
-* Obtén más información acerca de la API **UserActivity** en el [Centro de desarrollo de Windows](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* Obtener más información sobre la [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Echa un vistazo al [código de ejemplo](https://github.com/Microsoft/project-rome).
 * Consulta [tarjetas adaptables más sofisticadas](http://adaptivecards.io/).
 * Publicar una **UserActivity** de iOS, Android o el servicio web a través de [Microsoft Graph](https://developer.microsoft.com/graph/).

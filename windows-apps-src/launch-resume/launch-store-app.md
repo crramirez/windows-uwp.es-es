@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: ecb99c16d413e5e9869215f2d048ad6d9d52206f
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6454120"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668480"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
 
@@ -43,7 +43,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>El Id. de la Tienda se recomienda para los clientes de Windows 10 y funcionará en todas las versiones del sistema operativo, pero aún se admiten las formas anteriores de hacerlo anteriores (por ejemplo, PFN).</p>
-<p>Estos valores se pueden encontrar en el panel del Centro de desarrollo de Windows en la página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">Identidad de la aplicación</a> en la sección de administración de cada aplicación.</p>
+<p>Estos valores se pueden encontrar en [El centro de partners](https://partner.microsoft.com/dashboard) en la página de <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidad de la aplicación</a> en la sección de administración para cada aplicación.</p>
 </td>
 <td>
 Id. de la Tienda <p>(recomendado)</p>

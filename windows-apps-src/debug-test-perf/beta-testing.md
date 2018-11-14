@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 55d90ffb50d6db71e135cbecf56487b96ba3377c
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451586"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668325"
 ---
 # <a name="beta-testing"></a>Pruebas beta
 
@@ -42,9 +42,9 @@ Es mejor realizar las pruebas beta como la fase final de las pruebas antes de pu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En el panel Centro de desarrollo de Windows unificado, podrás limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de los sistemas operativos a los que esté destinada la aplicación. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto del nombre de la aplicación público.)
+En el [Centro de partners](https://partner.microsoft.com/dashboard), puede limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de qué sistemas operativos de destino de tu aplicación. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto del nombre de la aplicación público.)
 
-Consulta [Pruebas beta y distribución dirigida](https://msdn.microsoft.com/library/windows/apps/Mt185377) para aprender a enviar la aplicación a la Tienda para realizar pruebas beta.
+Consulta [Pruebas beta y distribución dirigida](../publish/beta-testing-and-targeted-distribution.md) para aprender a enviar la aplicación a la Tienda para realizar pruebas beta.
 
  
 
