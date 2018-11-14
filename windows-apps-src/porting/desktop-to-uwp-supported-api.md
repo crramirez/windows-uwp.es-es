@@ -10,11 +10,11 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: 086025e46e0e5293e44dda61896fa3fd4ae6115b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027529"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6273722"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>API de UWP disponibles para una aplicación de escritorio empaquetada
 
@@ -28,7 +28,7 @@ La mayoría de las API de UWP funcionan bien en aplicaciones de escritorio empaq
 <tr><td>Tareas en segundo plano</td><td>Mientras que las aplicaciones empaquetadas pueden registrar tareas en segundo plano, solo las aplicaciones que sean completamente para UWP se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">muestra de tarea en segundo plano en GitHub</a>.</td></tr>
 <tr><td>Bluetooth</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Chat y llamadas de teléfono</td><td>Las aplicaciones empaquetadas no se pueden ejecutar en dispositivos móviles hasta que se porten completamente a UWP.</td></tr>
-<tr><td>Activación del contrato</td><td>Solo las aplicaciones para UWP completas se pueden activar mediante un contrato.</td></tr>
+<tr><td>Activación del contrato</td><td>Solo las aplicaciones UWP completas pueden activarse mediante un contrato.</td></tr>
 <tr><td>Criptografía</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Geolocalización</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Selectores de archivos y carpetas</td><td>Las aplicaciones empaquetadas tienen acceso completo al sistema de archivos y no necesitas selectores de UWP.</td></tr>

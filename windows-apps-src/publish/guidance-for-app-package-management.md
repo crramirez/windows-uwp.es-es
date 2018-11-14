@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e625522b0e9fd03fda49eb28bbedb20c00c15634
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025344"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272175"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -30,10 +30,10 @@ Descubre cómo se ponen los paquetes de la aplicación a disposición de los cli
 
 Distintos sistemas operativos pueden ejecutar distintos tipos de paquetes. Si en el dispositivo de un cliente puede ejecutarse más de uno de los paquetes, Microsoft Store proporcionará el más apropiado.
 
-En general, las versiones más posteriores del sistema operativo pueden ejecutar paquetes destinados a versiones anteriores del sistema operativo de la misma familia de dispositivos. Dispositivos de Windows 10 pueden ejecutar todas las versiones anteriores compatibles del sistema operativo (por familia de dispositivos). Dispositivos de escritorio de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows8.1 o Windows8; Los dispositivos móviles Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows Phone 8.1, WindowsPhone8 e incluso de Windows Phone 7.x. Sin embargo, los clientes de Windows 10 solo obtendrán esos paquetes si la aplicación no incluye paquetes para UWP destinada a la familia de dispositivos aplicables.
+En general, las versiones más posteriores del sistema operativo pueden ejecutar paquetes destinados a versiones anteriores del sistema operativo de la misma familia de dispositivos. Dispositivos de Windows 10 pueden ejecutar todas las versiones anteriores compatibles del sistema operativo (por familia de dispositivos). Dispositivos de escritorio de Windows 10 pueden ejecutar aplicaciones que se crearon para Windows8.1 o Windows8; Los dispositivos móviles de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows Phone 8.1, WindowsPhone8 e incluso de Windows Phone 7.x. Sin embargo, los clientes de Windows 10 solo obtendrán esos paquetes si la aplicación no incluye paquetes para UWP destinada a la familia de dispositivos aplicable.
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).
+> A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).
 
 
 ## <a name="removing-an-app-from-the-store"></a>Quitar una aplicación de Store
@@ -50,12 +50,12 @@ Ten en cuenta que los clientes que ya tengan la aplicación podrán seguir usán
 Después de que la aplicación está disponible, aún tendrás verla en el centro de partners. Si decides volver a ofrecer la aplicación a los clientes, puedes hacer clic en **Make app available** en la página de información general de la aplicación. Después de confirmar la acción, la aplicación estará disponible para los nuevos clientes (a menos que la configuración de tu último envío lo impida) en cuestión de horas.
 
 > [!NOTE]
-> Si quieres que tu aplicación siga estando disponible, pero no quieres seguir ofreciéndola a los nuevos clientes con una versión de sistema operativo determinada, puedes crear un nuevo envío y quitar todos los paquetes de la versión de sistema operativo para la que quieres impedir nuevas compras. Por ejemplo, si anteriormente tenías paquetes para Windows Phone 8.1 y Windows 10 y no quieres seguir ofreciendo la aplicación a los clientes nuevos de WindowsPhone8.1, quita todos los paquetes de WindowsPhone8.1 del envío. Después se publique la actualización, ningún cliente nuevo en WindowsPhone8.1 no podrá comprar la aplicación, aunque los clientes que ya la tengan podrán seguir usándola). Sin embargo, la aplicación seguirá estando disponible para los clientes nuevos de Windows 10.
+> Si quieres que tu aplicación siga estando disponible, pero no quieres seguir ofreciéndola a los nuevos clientes con una versión de sistema operativo determinada, puedes crear un nuevo envío y quitar todos los paquetes de la versión de sistema operativo para la que quieres impedir nuevas compras. Por ejemplo, si anteriormente tenías paquetes para Windows Phone 8.1 y Windows 10 y no quieres seguir ofreciendo la aplicación a los clientes nuevos de WindowsPhone8.1, quita todos los paquetes de WindowsPhone8.1 del envío. Después de publica la actualización, ningún cliente nuevo en WindowsPhone8.1 podrán comprar la aplicación, aunque los clientes que ya la tengan podrán seguir usándola). Sin embargo, la aplicación seguirá estando disponible para los clientes nuevos de Windows 10.
 
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Quitar paquetes de una familia de dispositivos anteriormente compatibles
 
-Si quitas todos los paquetes de un determinado [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que anteriormente compatible con la aplicación, se te pedirá para confirmar que esta es tu intención antes de poder guardar los cambios en la página de **paquetes** .
+Si quitas todos los paquetes de un determinado [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que anteriormente compatible con la aplicación, se te pedirá que confirme que esta es tu intención antes de poder guardar los cambios en la página de **paquetes** .
 
 Al publicar un envío que quite todos los paquetes que podrían ejecutarse en una familia de dispositivos que era compatible con la aplicación, los clientes nuevos no podrán comprar la aplicación en esa familia. Siempre puedes publicar otra actualización más adelante para proporcionar paquetes para esa familia de dispositivos de nuevo.
 
@@ -66,10 +66,10 @@ Ten en cuenta que aunque quites todos los paquetes que admitan una determinada f
 
 ## <a name="adding-packages-for-windows10-to-a-previously-published-app"></a>Agregar paquetes para Windows 10 a una aplicación publicada anteriormente
 
-Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [los paquetes](upload-app-packages.md) . Después de que la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
+Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [paquetes](upload-app-packages.md) . Después de la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
 
 > [!NOTE]
-> Una vez que un cliente de Windows 10 obtenga el paquete para UWP, no puede revertirlo para que use un paquete para cualquier versión del sistema operativo anterior. 
+> Una vez que un cliente de Windows 10 obtenga el paquete para UWP, no puede revertirlo para que use un paquete para una versión anterior del sistema operativo. 
 
 Ten en cuenta que el número de versión de los paquetes de Windows 10 debe ser mayor que los paquetes Windows8, Windows8.1 o Windows Phone 8.1 que has usado. Para obtener más información, consulta [Numeración de la versión del paquete](package-version-numbering.md).
 
