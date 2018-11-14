@@ -9,11 +9,11 @@ keywords: windows 10, uwp, versión, compilación, versiones, windows, elegir, a
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e2b241d0369d50e600a5497811ac7d4bbb823bc
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6467521"
+ms.locfileid: "6662395"
 ---
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 

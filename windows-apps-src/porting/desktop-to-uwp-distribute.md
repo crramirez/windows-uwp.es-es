@@ -2,23 +2,23 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o más dispositivos.
+title: Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o más dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b16e06c81eeb90e500e40fc9b4d7ab709651091
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: f79e641b377f0e34ece8f0be434fae11cba621a6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6452744"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668712"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir una aplicación de escritorio empaquetada
 
-Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o más dispositivos.  
+Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o más dispositivos.  
 
 > [!NOTE]
 > ¿Tienes un plan para la forma de transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
@@ -27,14 +27,14 @@ Publicar la aplicación de escritorio empaquetada en una tienda Windows o la ins
 
 [Microsoft Store](https://www.microsoft.com/store/apps) es la forma más cómoda para que los clientes obtengan la aplicación.
 
-Publicar la aplicación en ese almacén para llegar a un público. Asimismo, los clientes de empresas pueden comprar tu aplicación para distribuirla de manera interna en sus organizaciones mediante la [Tienda Microsoft para empresas](https://www.microsoft.com/business-store).
+Publicar la aplicación en la Microsoft Store para llegar a un público. Asimismo, los clientes de empresas pueden comprar tu aplicación para distribuirla de manera interna en sus organizaciones mediante la [Tienda Microsoft para empresas](https://www.microsoft.com/business-store).
 
 Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puedes leer más acerca de este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 No tienes que firmar la aplicación antes de enviarla a la tienda.
 
 >[!IMPORTANT]
-> Si vas a publicar la aplicación en la Microsoft Store, asegúrate de que la aplicación funciona correctamente en dispositivos que ejecutan Windows 10 S. Este es un requisito de store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
+> Si vas a publicar la aplicación en la Microsoft Store, asegúrate de que la aplicación funciona correctamente en dispositivos que ejecutan Windows 10 S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
 
 <a id="side-load" />
 
@@ -44,7 +44,7 @@ Si prefieres distribuir la aplicación sin tener que usar la tienda, puedes manu
 
 Esta opción puede serte de ayuda si quieres controlar mejor la experiencia de distribución o si no quieres realizar el proceso de certificación de Microsoft Store.
 
-Para distribuir la aplicación a otros dispositivos sin enviarla a la tienda, tienes que obtener un certificado, firmar la aplicación con ese certificado y, a continuación, transferir localmente la aplicación en esos dispositivos.
+Para distribuir la aplicación a otros dispositivos sin enviarla en la tienda, tienes que obtener un certificado, firmar la aplicación con ese certificado y, a continuación, transferir localmente la aplicación en esos dispositivos.
 
 Puedes [crear un certificado](../packaging/create-certificate-package-signing.md) u obtenerlo de un proveedor habitual como [Verisign](https://www.verisign.com/).
 
