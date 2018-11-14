@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, publicar, preprocesamiento, certificación, lanzamiento, pendientes, enviar, publicar, estado, tiempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 161a95141511bc00b1d1a707e893d85dccfa8409
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024613"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209317"
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
@@ -38,9 +38,9 @@ Una vez completado el proceso de certificación, obtendrás un informe donde se 
 Cuando la aplicación supere la certificación, está listo para trasladar el proceso de **publicación** .
 
 - Si has indicado que se debe publicar el envío tan pronto como sea posible (opción predeterminada), el proceso de publicación comenzará de inmediato.
-- Si es la primera vez que has publicado la aplicación y especifica una **fecha de lanzamiento** en la sección [programación](configure-precise-release-scheduling.md#release) , la aplicación estará disponible en función de las selecciones de la **fecha de lanzamiento** .
+- Si es la primera vez que hayas publicado la aplicación y especifica una **fecha de lanzamiento** en la sección [programación](configure-precise-release-scheduling.md#release) , la aplicación estará disponible en función de las selecciones de la **fecha de lanzamiento** .
 - Si has usado [las opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options) para especificar que no se debe lanzar hasta una fecha determinada, esperaremos hasta esa fecha para comenzar el proceso de publicación, a menos que selecciones **Cambiar fecha de lanzamiento**.
-- Si has usado [las opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options) para especificar que quieres publicar el envío manualmente, hemos no se inicia el proceso de publicación hasta que seleccione **Publicar ahora** (o selecciona **Cambiar fecha de lanzamiento** y elige una fecha específica).
+- Si has usado [las opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options) para especificar que quieres publicar el envío manualmente, te no se inicia el proceso de publicación hasta que seleccione **Publicar ahora** (o selecciona **Cambiar fecha de lanzamiento** y elige una fecha específica).
 
 
 ## <a name="publishing"></a>Publicación
@@ -49,7 +49,7 @@ Los paquetes de la aplicación se firman digitalmente para protegerlos de altera
 
 Para nuevas aplicaciones y actualizaciones que se incluyen los cambios en los paquetes de la aplicación, se completará el proceso de publicación en 24 horas. Para las actualizaciones que solo cambian opciones como la descripción de los detalles de la tienda, pero no cambian los paquetes de la aplicación, el proceso de publicación tardará menos de una hora.
 
-Mientras la aplicación está en la fase de publicación, el vínculo **Mostrar detalles** de la columna de estado de envío de la aplicación te permite saber cuándo están disponibles para los clientes en cada uno de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles de descripción de la tienda. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que se complete el proceso, lo que significa que los nuevos paquetes o detalles del listado estén disponibles para todos los clientes potenciales de la aplicación.
+Mientras la aplicación está en la fase de publicación, el vínculo **Mostrar detalles** en la columna Estado para el envío de la aplicación te permite saber cuándo están disponibles para los clientes en cada uno de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles de descripción de la tienda. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que se complete el proceso, lo que significa que los nuevos paquetes o detalles del listado estén disponibles para todos los clientes potenciales de la aplicación de.
 
 ## <a name="in-the-store"></a>En Store 
 

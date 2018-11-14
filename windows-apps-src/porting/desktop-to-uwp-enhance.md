@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e76d3d517be73417777eb31dfc3994f92186522
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044672"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191398"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -48,7 +48,7 @@ En la ventana **Propiedades**, establece el campo **Copia local** de cada archiv
 
 ### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Modificar un proyecto de C++ para usar Windows Runtime APIs
 
-Uso [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir Windows Runtime APIs. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
+Usa [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir Windows Runtime APIs. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
 
 Configurar el proyecto para C++ / WinRT, consulta [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / WinRT soporte](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
@@ -167,7 +167,7 @@ En primer lugar, agrega una nueva configuración de compilación al proyecto.
 
 ![Configuración de compilación](images/desktop-to-uwp/build-config.png)
 
-Para esa configuración de compilación, crea una constante para identificar el código que llama Windows Runtime APIs.  
+Para esta configuración de compilación, crea una constante para identificar el código que llama Windows Runtime APIs.  
 
 Para los proyectos basados en .NET, la constante se llama **constante de compilación condicional**.
 

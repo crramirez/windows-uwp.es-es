@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025696"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6210036"
 ---
 # <a name="ad-campaign-report"></a>Informe Campaña publicitaria
 
@@ -69,7 +69,7 @@ Una instalación se sigue en la Tienda por teléfono, tableta, PC y otros dispos
 2.  El cliente ha iniciado sesión con una cuenta Microsoft.
 3.  El cliente cumple los requisitos [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (no se puede hacer un seguimiento de los clientes que no los cumplen).
 
-En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones de una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) del centro de partners.
+En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones de una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) en el centro de partners.
 
 
 ## <a name="account-billing-history"></a>Historial de facturación de la cuenta

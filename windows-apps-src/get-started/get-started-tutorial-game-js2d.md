@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044452"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6263993"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -28,11 +28,11 @@ ms.locfileid: "6044452"
 
 Publicación de una aplicación a los medios de Microsoft Store puede compartirla (o venderla a!) con millones de personas con muchos dispositivos diferentes.  
 
-Para poder publicar la aplicación en Microsoft Store debe estar escrita como una aplicación para UWP (plataforma Universal de Windows). Sin embargo, la UWP es muy flexible y admite una amplia variedad de lenguajes y marcos. Para demostrar esto, en este ejemplo se muestra un juego sencillo escrito en JavaScript, haciendo uso de varias bibliotecas CreateJS, y se muestra cómo dibujar sprites, crear un bucle de juego, ofrecer compatibilidad con el teclado y el mouse, y adaptarse a pantallas de diferentes tamaños.
+Para publicar la aplicación en Microsoft Store debe estar escrita como una aplicación para UWP (plataforma Universal de Windows). Sin embargo, la UWP es muy flexible y admite una amplia variedad de lenguajes y marcos. Para demostrar esto, en este ejemplo se muestra un juego sencillo escrito en JavaScript, haciendo uso de varias bibliotecas CreateJS, y se muestra cómo dibujar sprites, crear un bucle de juego, ofrecer compatibilidad con el teclado y el mouse, y adaptarse a pantallas de diferentes tamaños.
 
 Este proyecto se crea con JavaScript mediante Visual Studio. Con algunos cambios menores, también puede hospedarse en un sitio web o adaptarse para otras plataformas. 
 
-**Nota:** Esto no es un juego completo (ni necesariamente bueno); está diseñada para mostrar como usar JavaScript y un tercer biblioteca de terceros para preparar una aplicación lista para publicar en Microsoft Store.
+**Nota:** Esto no es un juego completo (ni necesariamente bueno); está diseñada para mostrar como usar JavaScript y un tercer biblioteca de terceros para preparar una aplicación lista para publicarse en la Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos

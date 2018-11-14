@@ -7,12 +7,12 @@ ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, simultaneidad, async, asincrónico, asincronía
 ms.localizationpriority: medium
-ms.openlocfilehash: d943a43629860f666c9ec9eb7f0b3bb406b1b1b5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 18eddbc9356f126e887ae2731ea87381352ea061
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040372"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208947"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -282,7 +282,7 @@ IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 Este escenario se expande en el anterior. Descargas cierto trabajo en el grupo de subprocesos, pero quieres mostrar el progreso en la interfaz de usuario (UI).
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock const& textblock)
+IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -294,7 +294,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 El código anterior lanza una excepción [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread), porque debe actualizarse un **TextBlock** desde el subproceso que lo creó, que es el subproceso de interfaz de usuario. Una solución es capturar el contexto del subproceso dentro del cual se llamó originalmente a nuestra corrutina. Para ello, crea una instancia de un objeto [**apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) , trabajo en segundo plano y, a continuación, `co_await` la **apartment_context** para volver al contexto de la llamada.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock const& textblock)
+IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     winrt::apartment_context ui_thread; // Capture calling context.
 
@@ -313,7 +313,7 @@ Una solución más general para actualizar la interfaz de usuario, que cubre los
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
-IAsyncAction DoWorkAsync(TextBlock const& textblock)
+IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -361,7 +361,7 @@ Para mantener los cambios de contexto reduce al mínimo, puedes usar algunas de 
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
-IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
 {
     // We begin in the UI context.
 
@@ -387,7 +387,7 @@ Para este escenario, hay un poco de ineffiency alrededor de la llamada a **Stora
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
-IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
 {
     // We begin in the UI context.
 
@@ -480,7 +480,7 @@ struct MainPage : MainPageT<MainPage>
         InitializeComponent();
     }
 
-    IAsyncAction OnWork(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    IAsyncAction OnWork(IInspectable /* sender */, RoutedEventArgs /* args */)
     {
         workButton().Content(winrt::box_value(L"Working..."));
 

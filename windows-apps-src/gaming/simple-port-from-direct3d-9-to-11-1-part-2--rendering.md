@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034931"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207829"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
@@ -99,7 +99,7 @@ En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombre
 
 Después de definir el diseño de entrada, nos aseguramos de que este represente la misma estructura de datos que usamos para almacenar datos de vértice en la memoria del sistema y en la memoria de GPU. De manera similar, la salida de un sombreador de vértices debe coincidir con la estructura que se usó como entrada en el sombreador de píxeles. Las reglas difieren de las de pasar datos de una función a otra en C++. Puedes omitir las variables no usadas al final de la estructura. No obstante, no se puede reorganizar el orden ni omitir contenido en el medio de la estructura de datos.
 
-> **Nota**  las reglas en Direct3D 9 para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
+> **Nota**  las reglas de Direct3D 9 para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
 
  
 
@@ -238,7 +238,7 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
-> **Nota**  Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL: haz clic en el archivo de origen HLSL en Visual Studio, selecciona propiedades y cambiar la configuración de **Modelo de sombreador** en **compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
+> **Nota**  Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL: haz clic en el archivo de origen HLSL en Visual Studio, selecciona propiedades y cambiar la configuración del **Modelo de sombreador** en **compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
  
 

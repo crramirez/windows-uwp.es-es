@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 610b794c0ded6791e93c14d8960366132afd973b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044585"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6201921"
 ---
 # <a name="game-flow-management"></a>Administración del flujo de los juegos
 
@@ -291,7 +291,7 @@ Estos son los controladores de eventos usados en esta muestra y los eventos que 
 <td align="left">OnDpiChanged</td>
 <td align="left">Controla <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. Los PPP de la pantalla han cambiado, por lo que la aplicación del juego ajusta sus recursos en consonancia.
 <div class="alert">
-<strong>Nota</strong>[<strong>CoreWindow</strong>] (https://msdn.microsoft.com/library/windows/desktop/hh404559) las coordenadas son en DIP (píxeles independientes del dispositivo) para [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D del cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
+<strong>Nota</strong>[<strong>CoreWindow</strong>] (https://msdn.microsoft.com/library/windows/desktop/hh404559) coordenadas son en DIP (píxeles independientes del dispositivo) para [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D del cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
 </div>
 <div>
 </div></td>

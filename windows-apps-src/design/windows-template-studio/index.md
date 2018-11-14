@@ -11,17 +11,17 @@ pm-contact: clint.rutkas
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 97df5037d2cdc07361cbc7f80830ba951a0a3caa
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052000"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6251105"
 ---
 # <a name="windows-template-studio"></a>Windows Template Studio
 
 ![imagen principal](images/wts1.png)
 
-Windows plantilla Studio (WTS) es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto UWP resultante es correcto y legible del código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados. Salteados en todo el código generado tenemos vínculos documentos, Stack Overflow y blogs para proporcionar información útil. WTS admite la creación de aplicaciones en C# o Visual Basic.
+Studio de plantilla de Windows (WTS) es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto UWP resultante es correcto y legible del código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados. Salteados en todo el código generado tenemos vínculos a documentos, Stack Overflow y blogs para proporcionar información útil. WTS admite la creación de aplicaciones en C# o Visual Basic.
 
-Para obtener más información, visita el [repositorio de proyecto en GitHub](https://github.com/microsoft/windowsTemplateStudio).
+Para obtener más información, visita el [repositorio de project en GitHub](https://github.com/microsoft/windowsTemplateStudio).
 

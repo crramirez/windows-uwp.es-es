@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 title: Conceptos básicos sobre la muestra de Marble Maze
-description: En este documento se describe las características fundamentales del proyecto Marble Maze; Por ejemplo, cómo usa Visual C++ en el entorno de Windows Runtime, cómo se crea y estructura, y cómo se compila.
+description: Este documento describe las características fundamentales del proyecto Marble Maze; Por ejemplo, cómo usa Visual C++ en el entorno de Windows Runtime, cómo se crea y estructura, y cómo se compila.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ms.author: elcowle
 ms.date: 08/22/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
 ms.openlocfilehash: f595c8f429c93a13d6342c281a90f3b0f5741621
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035182"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200711"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -31,7 +31,7 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 -   Windows Runtime proporciona clases e interfaces para que puedas desarrollar aplicaciones para UWP de una manera más moderna y orientada a los objetos.
 -   Usa referencias a objetos con el símbolo circunflejo (^) para administrar la duración de las variables de Windows Runtime, [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) para administrar la duración de los objetos COM y [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) o [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class) para administrar la duración de todos los demás objetos de C++ asignados por montón.
 -   En la mayoría de los casos, usa el controlador de excepciones en vez de los códigos de resultados para tratar los errores inesperados.
--   Usar [las anotaciones de sal](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) junto con herramientas de análisis de código para ayudar a detectar errores en la aplicación.
+-   Usa [anotaciones de SAL](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) junto con herramientas de análisis de código para ayudar a detectar errores en la aplicación.
 
 ## <a name="creating-the-visual-studio-project"></a>Creación del proyecto de Visual Studio
 
@@ -44,9 +44,9 @@ Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un p
 
 2. En la ventana **Nuevo proyecto** , en la barra lateral izquierda, selecciona **instalado > Plantillas > Visual C++**.
 
-3. En la lista central, selecciona **DirectX 11 App (Universal Windows)**. Si no ves esta opción, puede que no tenga instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando componentes y las cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
+3. En la lista central, selecciona **DirectX 11 App (Universal Windows)**. Si no ves esta opción, puede que no tenga los componentes necesarios instalados&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando los componentes y las cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
 
-4. Da a tu proyecto un **nombre**, una **ubicación** para los archivos se almacenen y un **nombre de la solución**y haz clic en **Aceptar**.
+4. Dar al proyecto un **nombre**, una **ubicación** para los archivos se almacenen y un **nombre de la solución**y haz clic en **Aceptar**.
 
 ![Nuevo proyecto](images/marble-maze-sample-fundamentals-1.png)
 
@@ -56,7 +56,7 @@ Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows unive
 
  
 
-Cada aplicación para UWP que adquieras de Microsoft Store viene en forma de un paquete de aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Cada aplicación para UWP que compres en la Microsoft Store viene en forma de un paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
 ##  <a name="building-deploying-and-running-the-game"></a>Compilar, implementar y ejecutar el juego
 
@@ -72,7 +72,7 @@ Puedes usar táctil, el acelerómetro, el controlador de Xbox One o el mouse par
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para seleccionar un elemento de menú.
 -   Usa la entrada táctil, el acelerómetro, el stick analógico izquierdo o el mouse para inclinar el laberinto.
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para cerrar menús, como por ejemplo la tabla de puntuaciones máximas.
--   Usa el botón de inicio en el controlador o la tecla P del teclado para pausar o reanudar el juego.
+-   Usa el botón de inicio en el controlador o la tecla P el teclado para pausar o reanudar el juego.
 -   Usa el botón Back del mando o la tecla Inicio del teclado para reiniciar el juego.
 -   Cuando la tabla de puntuaciones máximas esté visible, usa el botón Atrás en el controlador o la tecla inicio del teclado para borrar las puntuaciones.
 
@@ -101,7 +101,7 @@ Recomendamos que uses las siguientes convenciones en tu modelo de administració
 -   Usa excepciones para comunicar errores inesperados.
 -   No uses excepciones para controlar el flujo de código.
 -   Captura solo las excepciones que puedas administrar y de las que te puedas recuperar de forma segura. De lo contrario, no captures la excepción y deja que la aplicación termine.
--   Cuando llames a una rutina de DirectX que devuelva **HRESULT**, usa la función **DX::ThrowIfFailed**. Esta función se define en [DirectXHelper.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** inicia una excepción si el **valor HRESULT** proporcionado es un código de error. Por ejemplo, **E\_POINTER** hace que **ThrowIfFailed** inicie [Platform::NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
+-   Cuando llames a una rutina de DirectX que devuelva **HRESULT**, usa la función **DX::ThrowIfFailed**. Esta función se define en [DirectXHelper.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** inicia una excepción si el proporcionado **HRESULT** es un código de error. Por ejemplo, **E\_POINTER** hace que **ThrowIfFailed** inicie [Platform::NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
 
     Cuando uses **ThrowIfFailed**, pon la llamada de DirectX en una línea aparte para mejorar la lectura del código, tal como se muestra en el siguiente ejemplo.
 
@@ -133,7 +133,7 @@ void LoadMesh(
     );
 ```
 
-Para realizar análisis de código en la aplicación, en la barra de menús, elige **de compilación > Ejecutar análisis de código en la solución**. Para más información sobre el análisis de código, consulta [Analizar la calidad del código C/C++ mediante el análisis de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Para realizar análisis de código en la aplicación, en la barra de menús, elige **compilación > Ejecutar análisis de código en la solución**. Para más información sobre el análisis de código, consulta [Analizar la calidad del código C/C++ mediante el análisis de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 La lista completa de anotaciones disponibles está definida en sal.h. Para obtener más información, consulta [Anotaciones de SAL](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

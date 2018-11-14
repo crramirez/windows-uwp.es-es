@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Windows Store analytics API, adquisiciones de juegos de Xbox One, Xbox One game acquisitions
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bf37fa03209561540d63dd4f63a76878f9d813c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035152"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6155087"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obtener adquisiciones de juegos de Xbox One
 
-Usa este método en la Microsoft Store analytics API para obtener datos de adquisición agregados en formato JSON de una consola Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y disponible en el panel de análisis de XDP.
+Usa este método en la Microsoft Store analytics API para obtener datos de adquisición agregados en formato JSON de una consola Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel de análisis de XDP.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -47,7 +47,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | cadena | Identificador de producto del juego para Xbox One para el que recuperas los datos de adquisición. Para obtener el identificador de producto de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el identificador de producto de la dirección URL. Como alternativa, si descargas los datos de adquisiciones desde el informe de análisis del centro de partners, el identificador de producto se incluye en el archivo TSV.  |  Sí  |
+| applicationId | cadena | Identificador de producto del juego para Xbox One para el que recuperas los datos de adquisición. Para obtener el identificador de producto de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el identificador de producto de la dirección URL. Como alternativa, si descargas los datos de adquisición del informe de análisis del centro de partners, el identificador de producto se incluye en el archivo TSV.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de compra que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de compra que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | int | Número de filas de datos que se van a devolver. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |

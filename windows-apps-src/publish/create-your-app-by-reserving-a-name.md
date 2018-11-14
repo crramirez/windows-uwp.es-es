@@ -9,22 +9,22 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a94a07eb80e0b181e49a74beba7690d8a57bfaa6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026556"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266650"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
 El primer paso para crear una nueva aplicación en el [Centro de partners](https://partner.microsoft.com/dashboard) es reservar un nombre de aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
 
-Puedes reservar un nombre para tu aplicación incluso si aún no has empezado a crearla. Te recomendamos hacerlo tan pronto como sea posible, para que nadie más pueda usar el nombre. Ten en cuenta que necesitarás enviar la aplicación en un plazo de tres meses para poder mantener ese nombre reservado para tu uso.
+Puedes reservar un nombre para tu aplicación incluso si aún no has empezado a crearla. Te recomendamos hacerlo tan pronto como sea posible, por lo que nadie más pueda usar el nombre. Ten en cuenta que necesitarás enviar la aplicación en un plazo de tres meses para poder mantener ese nombre reservado para tu uso.
 
 Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) debe coincidir con el nombre que reservaste para la aplicación. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
 
 > [!IMPORTANT]
-> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva al crear la aplicación en primer lugar en el centro de partners. Sin embargo, ten en cuenta que el nombre que escribas aquí se usará en la parte de [los detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN) la aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre que reservas es apropiado para este uso.
+> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva al crear la aplicación en primer lugar en el centro de partners. Sin embargo, ten en cuenta que el nombre que escribas aquí se usará en la parte de [los detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN) la aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se ha cambiado, así que asegúrate de que el nombre de la reserva es apropiado para este uso.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crear la aplicación reservando un nuevo nombre
@@ -49,7 +49,7 @@ Elegir el nombre correcto para la aplicación es una tarea importante. Elige un 
 
 -   **Elige un nombre corto.** El espacio dedicado para mostrar el nombre de tu aplicación es limitado en la mayoría de los casos, por lo que sugerimos que uses el nombre más corto posible. Aunque el nombre de tu aplicación puede tener hasta 256 caracteres, puede suceder que el final de un nombre muy largo no siempre esté visible para los clientes.
     > [!NOTE]
-    > El número real de caracteres mostrados puede variar en función de la longitud asignada y de los tipos de caracteres que se usen en el nombre de la aplicación. Por ejemplo, en la fuente Segoe UI que usa Windows, caben unos 30 caracteres "I" en el mismo espacio que 10 caracteres "W". Debido a esta variación, asegúrate de probar la aplicación y comprobar cómo aparece su nombre en los iconos (si eliges superponer el nombre de la aplicación), en los resultados de búsqueda y dentro de la propia aplicación. Ten en cuenta también cada idioma en el que ofreces tu aplicación. Ten en cuenta que los caracteres asiáticos suelen ser más anchos que los latinos, por lo que se muestran menos caracteres.
+    > El número real de caracteres mostrados puede variar en función de la longitud asignada y de los tipos de caracteres que se usen en el nombre de la aplicación. Por ejemplo, en la fuente Segoe UI que usa Windows, caben unos 30 caracteres "I" en el mismo espacio que 10 caracteres "W". Debido a esta variación, asegúrate de probar la aplicación y comprobar cómo aparece su nombre en los iconos (si eliges superponer el nombre de la aplicación), en resultados de búsqueda y dentro de la propia aplicación. Ten en cuenta también cada idioma en el que ofreces tu aplicación. Ten en cuenta que los caracteres asiáticos suelen ser más anchos que los latinos, por lo que se muestran menos caracteres.
 -   **Sé original.** Procura que el nombre de tu aplicación sea lo suficientemente distintivo como para que no se confunda fácilmente con una aplicación existente.
 -   **No uses nombres registrados por otros.** Asegúrate de tener los derechos de usar el nombre que reservas. Si alguien más tiene los derechos de marca comercial de ese nombre, puede denunciar una infracción y no podrás seguir usándolo. Si esto sucede después de publicada la aplicación, se quitará de la Tienda. Deberás cambiar el nombre de tu aplicación, incluyendo todas las instancias del nombre que aparecen en la aplicación y el contenido, antes de que puedas [enviar la aplicación](app-submissions.md) nuevamente para su certificación.
 -   **Evita agregar información diferenciadora al final del nombre.** Si la información que distingue las distintas aplicaciones se agrega al final de un nombre, los clientes pueden no verla, especialmente si el nombre es largo y puede parecer que todas las aplicaciones tienen el mismo nombre. Si esto es inevitable, usa logotipos y diferentes imágenes de la aplicación para que sea más fácil diferenciar una aplicación de otro.

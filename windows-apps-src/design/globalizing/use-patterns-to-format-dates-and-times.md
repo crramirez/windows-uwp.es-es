@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024724"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185975"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
 
@@ -27,7 +27,7 @@ La clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 Sin embargo, cuando quieras tener aún más control sobre el orden y el formato de los componentes del objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que quieres mostrar, puedes pasar el patrón de formato al argumento *formatTemplate* del constructor. Un patrón de formato usa una sintaxis especial que te permite obtener los componentes individuales de un objeto **DateTime**&mdash;solo el nombre del mes o el valor del año, por ejemplo&mdash; para mostrarlos en el formato personalizado que desees. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota**esto es solo una descripción general de patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Nota**esto es solo una introducción de patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>La diferencia entre los patrones y plantillas de formato
 

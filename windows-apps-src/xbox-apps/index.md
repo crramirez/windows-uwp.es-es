@@ -8,18 +8,18 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b35733978ffbaca00caae2128b799d6cc923542
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: e7c14c51c0b5b09b96859a8aba97172485a14c85
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039478"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258489"
 ---
 # <a name="uwp-on-xbox-one"></a>UWP en Xbox One
 
 Introducción a la creación de una aplicación para la Plataforma universal de Windows (UWP) en Xbox One.
 
-UWP en Xbox One admite el desarrollo de aplicaciones y juegos. No hace falta formar parte de un programa para desarrolladores para experimentar, crear y probar juegos o aplicaciones en Xbox. Todo lo que necesitas es una [cuenta de desarrollador](https://developer.microsoft.com/en-us/store/register) en el Centro de desarrollo de Windows. Cuando estés listo para publicar y vender juegos en Xbox One o aprovechar las ventajas de Xbox Live en Windows 10, tendrás que unirte al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) o ser un desarrollador [ID@Xbox](http://www.xbox.com/Developers/id). Si estás planeando ser un desarrollador ID@Xbox, recomendamos enviar, en primer lugar, una solicitud al programa antes de registrarte para conseguir una cuenta de desarrollador. Para más información, consulta [Introducción al programa para desarrolladores](../xbox-live/developer-program-overview.md).
+UWP en Xbox One admite el desarrollo de aplicaciones y juegos. No hace falta formar parte de un programa para desarrolladores para experimentar, crear y probar juegos o aplicaciones en Xbox. Todo lo que necesitas es una [cuenta de desarrollador](https://developer.microsoft.com/en-us/store/register) en [El centro de partners](https://partner.microsoft.com/dashboard). Cuando estés listo para publicar y vender juegos en Xbox One o aprovechar las ventajas de Xbox Live en Windows 10, tendrás que unirte al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) o ser un desarrollador [ID@Xbox](http://www.xbox.com/Developers/id). Si estás planeando ser un desarrollador ID@Xbox, recomendamos enviar, en primer lugar, una solicitud al programa antes de registrarte para conseguir una cuenta de desarrollador. Para más información, consulta [Introducción al programa para desarrolladores](../xbox-live/developer-program-overview.md).
 
 Esta sección incluye pasos de configuración, una guía por el proceso de autenticación, información sobre la instalación de las versiones de las herramientas de Visual Studio y Windows 10 necesarias y, finalmente, los pasos para configurar, compilar, ejecutar y depurar tu primera aplicación sencilla. 
 

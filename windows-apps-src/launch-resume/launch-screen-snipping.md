@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.openlocfilehash: 64df8d9768fa20a6d6819e93fe06904feede6223
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042169"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264646"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 

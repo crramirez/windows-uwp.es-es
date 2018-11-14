@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Descargar e instalar actualizaciones de paquete desde la Store.
-description: Obtén información sobre cómo marcar paquetes como obligatorios en el panel del Centro de desarrollo y escribir código en tu aplicación para descargar e instalar las actualizaciones del paquete.
+description: Obtén información sobre cómo marcar paquetes como obligatorios en el centro de partners y escribir código en tu aplicación para descargar e instalar actualizaciones de paquete.
 ms.author: mcleans
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5a6cc57a7af63d9aee3685d5bfc3e3fd72fac0a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a2bc0cfbdd722a4842758be0f3b794aafe808bc3
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052070"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255335"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Descargar e instalar actualizaciones de paquete desde la Store.
 
-A partir de la versión 1607 de Windows 10, puedes usar métodos de la clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para comprobar actualizaciones de paquete de la aplicación actual desde Microsoft Store y descargar e instalar los paquetes actualizados. También puedes consultar los paquetes que se marcaron como obligatorios en el panel del Centro de desarrollo de Windows y deshabilitar la funcionalidad en tu aplicación hasta que se instale la actualización obligatoria.
+A partir de la versión 1607 de Windows 10, puedes usar métodos de la clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para comprobar actualizaciones de paquete de la aplicación actual desde Microsoft Store y descargar e instalar los paquetes actualizados. También puedes consultar los paquetes que se marcaron como obligatorios en el centro de partners y deshabilitar la funcionalidad de la aplicación hasta que se instale la actualización obligatoria.
 
 Los métodos [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) adicionales introducidas en Windows 10, versión 1803 permiten descargar e instalar actualizaciones del paquete de forma silenciosa (sin mostrar al usuario una notificación de la interfaz de usuario), desinstalar un [paquete opcional](optional-packages.md) y obtener información sobre los paquetes en la cola de descarga e instalación de tu aplicación.
 
@@ -195,14 +195,14 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Actualizaciones de paquete obligatorias
 
-Cuando creas un envío de paquete para una aplicación destinada a la versión de Windows 10 o posterior, puedes [marcar el paquete como obligatorio](../publish/upload-app-packages.md#mandatory-update) y la fecha y hora a partir de la cual es obligatorio. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
+Cuando creas un envío de paquete en el centro de partners para una aplicación que está destinada a Windows 10, versión 1607 o posterior, puedes [Marcar el paquete como obligatorio](../publish/upload-app-packages.md#mandatory-update) y la fecha y hora en que es obligatoria. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
 
 > [!NOTE]
 > El estado obligatorio de una actualización de paquete no lo exige Microsoft, y el sistema operativo no proporciona ninguna interfaz de usuario para indicar a los usuarios que deben instalar una actualización de la aplicación obligatoria. Se pretende que los desarrolladores usen la opción "mandatory" para aplicar las actualizaciones de la aplicación obligatorias en su propio código.  
 
 Para marcar un envío de paquete como obligatorio:
 
-1. Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview) y navega hasta la página de información general de la aplicación.
+1. Inicia sesión en [El centro de partners](https://partner.microsoft.com/dashboard) y navegar a la página de información general de la aplicación.
 2. Haz clic en el nombre de la presentación que contiene la actualización de paquete que quieres que sea obligatoria.
 3. Navega a la página **Paquetes** del envío. En la parte inferior de esta página, selecciona **Hacer que esta actualización sea obligatoria** y, a continuación, elige el día y la hora en que la actualización de paquete es obligatoria. Esta opción se aplica a todos los paquetes para UWP en el envío.
 

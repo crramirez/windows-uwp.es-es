@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6137749"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189119"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -29,7 +29,7 @@ Puedes promocionar y monetizar un juego para UWP de una o varias de las siguient
 
 ## <a name="worldwide-distribution-channel"></a>Canal de distribución en todo el mundo
 
-Microsoft Store pueden hacer que tu juego disponibles para su descarga en más de 200 países y regiones en todo el mundo, con compatibilidad para la facturación a través de diversas formas de pago, como Visa, Mastercard y PayPal. Para obtener una lista completa de los países y las regiones, consulta [Mercados y precios personalizados](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
+Microsoft Store pueden hacer que tu juego disponibles para su descarga en más de 200 países y regiones en todo el mundo, con compatibilidad para la facturación a través de diversas formas de pago, como Visa, Mastercard y PayPal. Para obtener una lista completa de los países y regiones, consulta [definir la selección de mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Establecer un precio para el juego
 
@@ -39,8 +39,8 @@ A continuación se detallan algunos conceptos importantes en relación con el pr
 
 ### <a name="base-price"></a>Precio base
 
-El precio base del juego es lo que determina si el juego se clasifica como _de pago_ o _gratuito_. Puedes usar el [panel del Centro de desarrollo](https://developer.microsoft.com/windows) para configurar el precio base en función del país y la región.
-Es posible que el proceso de determinación del precio incluya tus [responsabilidades fiscales si vendes en diferentes países](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) y las [consideraciones relativas a los precios para mercados concretos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). También puedes [establecer precios personalizados para mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Para obtener más información, consulta [Definir los precios y la selección del mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+El precio base del juego es lo que determina si el juego se clasifica como _de pago_ o _gratuito_. Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) para configurar el precio base en función de los países y regiones.
+Es posible que el proceso de determinación del precio incluya tus [responsabilidades fiscales si vendes en diferentes países](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) y las [consideraciones relativas a los precios para mercados concretos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). También puedes [establecer precios personalizados para mercados específicos](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets).
 
 ### <a name="sale-price"></a>Precio de venta
 
@@ -49,7 +49,7 @@ Puedes programar campañas de oferta de antemano al definir la fecha de inicial 
 
 ## <a name="in-game-purchases"></a>Compras desde el juego
 
-Las compras desde el juego son productos que se compran dentro de un juego. También se conocen de forma genérica como _compras desde la aplicación_. En la Microsoft Store, estos productos se denominan _complementos_. [Los complementos se publican](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) a través del panel del Centro de desarrollo de Windows. También tendrás que habilitar los complementos en el código del juego.
+Las compras desde el juego son productos que se compran dentro de un juego. También se conocen de forma genérica como _compras desde la aplicación_. En la Microsoft Store, estos productos se denominan _complementos_. [Los complementos se publican](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) a través de centro de partners. También tendrás que habilitar los complementos en el código del juego.
 
 ### <a name="types-of-add-ons"></a>Tipos de complementos
 
@@ -60,7 +60,7 @@ Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es
 ### <a name="create-in-game-purchases"></a>Crear compras desde el juego
 
 Las API más recientes de información de licencia y compras desde la aplicación forman parte del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) de Windows SDK (a partir de Windows 10, versión 1607). Si vas a desarrollar un juego nuevo destinado a la versión 1607 o posterior, te recomendamos que uses el espacio de nombres __Windows.Services.Store__ porque admite los tipos de complemento más recientes y tiene un mejor rendimiento.
-También se ha diseñado para que sea compatible con los tipos futuros de productos y características admitidos por el Centro de desarrollo de Windows y la Tienda. Al desarrollar para versiones anteriores de Windows 10, usa el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en su lugar.
+También se ha diseñado para ser compatible con futuros tipos de productos y características compatibles con el centro de partners y la tienda. Al desarrollar para versiones anteriores de Windows 10, usa el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en su lugar.
 
 Para obtener más información, visita [Pruebas y compras desde la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials).
 
@@ -93,14 +93,14 @@ Para crear un paquete que se puede cargar en la Tienda:
 1. Abre la solución de juego en Visual Studio.
 2. En Visual Studio, ve a __Proyecto__ > __Tienda__ > __Crear paquetes de aplicaciones...__
 3. Para el __¿desea compilar paquetes para cargarlos en la Microsoft Store?__ opción, selecciona __"Sí"__.
-4. Inicia sesión en tu cuenta de desarrollador del Centro de desarrollo. O bien, [regístrate](https://developer.microsoft.com/store/register) para obtener una cuenta de desarrollador si no tienes ninguna.
+4. Inicia sesión en tu cuenta de desarrollador del [Centro de partners](https://partner.microsoft.com/dashboard) . O bien, [regístrate](https://developer.microsoft.com/store/register) para obtener una cuenta de desarrollador si no tienes ninguna.
 5. Selecciona una aplicación para la que se va a crear el paquete de carga. Si aún no creaste un envío de aplicación, proporciona un nuevo nombre de aplicación para crear un nuevo envío. Para obtener más información, consulta [Crear la aplicación reservando un nombre](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Una vez creado correctamente el paquete, haz clic en __Iniciar el Kit para la certificación de aplicaciones en Windows__ para comenzar el proceso de prueba.
 7. Corrige los errores para crear un paquete de juego.
 
 #### <a name="publish-the-game-as-hidden"></a>Publicar el juego como oculto
 
-1. Ve al [Centro de desarrollo](https://developer.microsoft.com/store) e inicia sesión.
+1. Ve al [Centro de partners](https://partner.microsoft.com/dashboard) e inicia sesión.
 2. En la página __Información general del panel__ o __Todas las aplicaciones__, haz clic en la aplicación con la que quieres trabajar. Si aún no creaste un envío de aplicación, haz clic en __Crear una nueva aplicación__ y reserva un nombre.
 3. En la página __Información general de la aplicación__, haz clic en __Iniciar el envío__.
 4. Configura este nuevo envío. En la página de envío:
@@ -120,7 +120,7 @@ Cuando el juego se envía a la Tienda, pasa al [proceso de certificación de la 
 Con la solución de juego abierta en Visual Studio:
 
 1. Ve a __Proyecto__ > __Tienda__ > __Asociar aplicación con la Tienda...__
-2. Inicia sesión en tu cuenta de desarrollador del Centro de desarrollo y selecciona el nombre de la aplicación a la que se va a asociar esta solución.
+2. Inicia sesión en tu cuenta de desarrollador del centro de partners y seleccionar el nombre de la aplicación para asociar esta solución.
 3. Haz doble clic en el __archivo Package.appxmanifest.xml__ y ve a la pestaña __Empaquetado__ para comprobar que el juego se asoció correctamente.
 
 Si asociaste la solución a un juego publicado que está disponible y figura en la Tienda, la solución tendrá una licencia activa y, de este modo, ya estás un paso más cerca de la creación de complementos para tu juego. Para más información, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/windows/uwp/packaging/index).
@@ -129,7 +129,7 @@ Si asociaste la solución a un juego publicado que está disponible y figura en 
 
 A medida que creas complementos, asegúrate de asociarlos al envío de juego correcto. Para conocer más detalles sobre cómo configurar toda la información asociada a un complemento, consulta [Envíos de complementos](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
-1. Ve al [Centro de desarrollo](https://developer.microsoft.com/store) e inicia sesión.
+1. Ve al [Centro de partners](https://partner.microsoft.com/dashboard) e inicia sesión.
 2. En la página __Información general del panel__ o __Todas las aplicaciones__, haz clic en la aplicación para la que quieres crear el complemento.
 3. En la página __Información general de la aplicación__, en la sección __Complementos__, selecciona __Crear un nuevo complemento__.
 4. Selecciona el tipo de producto para el complemento: __consumible administrado por el desarrollador__, __consumible administrado por la Tienda__ o __Duradero__.

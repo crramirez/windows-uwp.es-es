@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, sombreadores, primitivos, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 475a69837796b0b64be27c96f10b42d5b61390c1
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6141283"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188212"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>Crear sombreadores y dibujar primitivos
 

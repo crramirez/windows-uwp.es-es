@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: a29c4aeb5a5928e04e0018d68884fdb4a4876332
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052050"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266083"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 
@@ -23,7 +23,7 @@ Usa esta información para determinar si la aplicación usa algún tipo de cript
 
 La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Microsoft Store deben cumplir estas leyes y reglamentos, porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Microsoft Store, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
 
-> **Nota**la información proporcionada aquí orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en Microsoft Store para asegurarte de que la aplicación cumple con todas las leyes y normativas aplicables.
+> **Nota**la información que se ofrece aquí orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en Microsoft Store para asegurarte de que la aplicación cumple con todas las leyes y normativas aplicables.
 
  
 
@@ -35,7 +35,7 @@ Para obtener información sobre la Normativa de la Administración de Exportacio
 
 En primer lugar, determina si tu aplicación usa un tipo de criptografía que esté regulada por la Normativa de la Administración de Exportaciones. La pregunta incluye los ejemplos que se muestran en esta lista, pero recuerda que esta lista no incluye cada aplicación de criptografía posible.
 
-> **Importante**considera la posibilidad de no solo el código que has escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que incluye la aplicación o vínculos a.
+> **Importante**considera la posibilidad de no solo el código que has escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que incluye la aplicación o vincula a.
 
 -   Todo uso de firmas digitales, como autenticaciones o controles de integridad
 -   Cifrado de cualquier dato o archivos que la aplicación usa o a los que accede

@@ -9,18 +9,18 @@ ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052220"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154915"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
 Las ventanas de programas en [El centro de partners](https://partner.microsoft.com/dashboard) ofrece ambos individuales y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
 
 > [!NOTE]
-> Al abrir la cuenta de desarrollador, asegúrate de iniciar sesión en [El centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
+> Cuando se abre tu cuenta de desarrollador, asegúrate de iniciar sesión en [El centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
 Cuando [comiences el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 
@@ -35,11 +35,11 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 |--------------------|-----------------|
 | <ul><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por las [Directivas de la tienda](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), las aplicaciones con ciertas funciones, como aquellos que tienen acceso a cuentas financieras información o requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar por las cuentas de empresa.
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por las [Directivas de la tienda](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), las aplicaciones con ciertas funciones, como aquellos que tienen acceso cuentas financieras información o que requieren autenticación para tener acceso a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar por las cuentas de empresa.
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en conseguir que los envíos listo.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que esté comprobada pero, mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en la preparación de los envíos.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
 

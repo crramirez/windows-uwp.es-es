@@ -10,11 +10,11 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 5968a2dad76343a1aa589caadf62ec3cd823aed0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025112"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252981"
 ---
 # <a name="networking-page-dev-home"></a>Página de red (Dev Home)
    
@@ -44,7 +44,7 @@ El panel de **simulación de red** ejecuta una simulación de red para probar fr
 ## <a name="xbtrace-netcap"></a>XBTrace (netcap)  
    
   
-El panel **XBTrace (netcap)** se inicie o detenga un seguimiento de paquetes de red.   
+El panel **XBTrace (netcap)** se inicia o detiene el seguimiento de paquetes de red.   
   
 <a id="ID4E2B"></a>
 

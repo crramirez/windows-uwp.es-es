@@ -1,19 +1,19 @@
 ---
-author: normesta
+author: hickeys
 Description: Fix issues that prevent your desktop application from running in an MSIX container
 Search.Product: eADQiWindows 10XVcnh
 title: Solucionar problemas que impiden que la aplicación de escritorio desde que se ejecuta en un contenedor MSIX
-ms.author: normesta
+ms.author: hickeys
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f17bb6bbefb2fd3266edac20ca1f23af76eb0a3c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: fe869cee0d59eb099e3cb828dfee4eccd27a56ae
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030974"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194716"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correcciones de tiempo de ejecución a un paquete MSIX con el marco de soporte técnico de paquete
 
@@ -90,7 +90,7 @@ Vamos a través de cada tarea.
 
 Si ya tienes un archivo .msix (o .appx), puede desempaquetar su contenido en una carpeta de diseño que se usará como el área de ensayo para el paquete. Puedes hacerlo desde un símbolo del sistema con la herramienta makemsix, en función de la ruta de acceso de instalación del SDK, esto es donde encontrarás la herramienta makemsix.exe en tu equipo Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makemsix.exe
 
-```
+```ps
 makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
 
 ```
@@ -109,14 +109,13 @@ Puedes obtener el paquete de Nuget PSF mediante la herramienta de línea de coma
 
 Instalar la herramienta de línea de comandos de Nuget desde esta ubicación: https://www.nuget.org/downloads. A continuación, desde la línea de comandos de Nuget, ejecuta el siguiente comando:
 
-```
+```ps
 nuget install Microsoft.PackageSupportFramework
 ```
 
 #### <a name="get-the-package-by-using-visual-studio"></a>Obtener el paquete mediante el uso de Visual Studio
 
 En Visual Studio, haz clic en el nodo del proyecto o solución y seleccionar uno de los comandos de administrar paquetes de Nuget.  Buscar **Microsoft.PackageSupportFramework** o **PSF** encontrar el paquete en Nuget.org. A continuación, instalarlo.
-
 
 ### <a name="add-the-package-support-framework-files-to-your-package"></a>Agregar los archivos de paquete de la compatibilidad con Framework al paquete
 
@@ -186,6 +185,7 @@ Crear un nombre de archivo ``config.json``y guardar el archivo en la carpeta ra�
     ]
 }
 ```
+
 La siguiente es una guía para el esquema de config.json:
 
 | Matriz | key | Valor |
@@ -199,18 +199,17 @@ La siguiente es una guía para el esquema de config.json:
 
 El `applications`, `processes`, y `fixups` las claves son matrices. Esto significa que puedes usar el archivo config.json para especificar más de una aplicación, los procesos y corrección DLL.
 
-
 ### <a name="package-and-test-the-app"></a>Paquete y prueba la aplicación
 
 A continuación, crea un paquete.
 
-```
+```ps
 makeappx pack /d PackageContents /p PSFSamplePackageFixup.msix
 ```
 
 A continuación, firmarlo.
 
-```
+```ps
 signtool sign /a /v /fd sha256 /f ExportedSigningCertificate.pfx PSFSamplePackageFixup.msix
 ```
 
@@ -221,7 +220,7 @@ Uso de PowerShell, instale el paquete.
 >[!NOTE]
 > Recuerda que tienes que desinstalar el paquete primero.
 
-```
+```ps
 powershell Add-MSIXPackage .\PSFSamplePackageFixup.msix
 ```
 
@@ -277,7 +276,6 @@ Para ver una muestra completa que contiene todos estos tipos de proyectos, consu
 
 Veamos los pasos para crear y configurar cada uno de estos proyectos en la solución.
 
-
 ### <a name="create-a-package-solution"></a>Crear una solución de paquete
 
 Si aún no tienes una solución para la aplicación de escritorio, crea una nueva **Solución en blanco** en Visual Studio.
@@ -296,7 +294,7 @@ Para obtener más información sobre el proyecto de empaquetado de aplicaciones 
 
 En el **Explorador de soluciones**, haz clic en el proyecto de empaquetado, selecciona **Editar**y, a continuación, agregar esto a la parte inferior del archivo de proyecto:
 
-```
+```xml
 <Target Name="PSFRemoveSourceProject" AfterTargets="ExpandProjectReferences" BeforeTargets="_ConvertItems">
 <ItemGroup>
   <FilteredNonWapProjProjectOutput Include="@(_FilteredNonWapProjProjectOutput)">
@@ -400,6 +398,7 @@ Agrega un archivo denominado ``config.json`` al proyecto de empaquetado, a conti
     ]
 }
 ```
+
 Proporcionar un valor para cada clave. Usa esta tabla como guía.
 
 | Matriz | key | Valor |
@@ -460,6 +459,7 @@ Declarar la ``FIXUP_DEFINE_EXPORTS`` macro y, a continuación, agrega una declar
 #define FIXUP_DEFINE_EXPORTS
 #include <fixup_framework.h>
 ```
+
 >[!IMPORTANT]
 >Asegúrate de que el `FIXUP_DEFINE_EXPORTS` macro aparece antes de la instrucción de inclusión.
 
@@ -524,25 +524,27 @@ Para solucionar este problema, usa a un depurador que admite Adjuntar proceso se
 
 Para depurar el inicio de la aplicación de destino como un proceso secundario, iniciar ``WinDbg``.
 
-```
+```ps
 windbg.exe -plmPackage PSFSampleWithFixup_1.0.59.0_x86__7s220nvg1hg3m -plmApp PSFSample
 ```
 
 En el ``WinDbg`` pedir, habilitar secundarios depuración y establecer puntos de interrupción apropiados.
 
-```
+```ps
 .childdbg 1
 g
 ```
+
 (se ejecuta hasta que la aplicación de destino se inicia y entra en el depurador)
 
-```
+```ps
 sxe ld fixup.dll
 g
 ```
+
 (que se ejecuta hasta que la corrección que se carga el archivo DLL)
 
-```
+```ps
 bp ...
 ```
 
@@ -554,4 +556,3 @@ bp ...
 **Encuentra respuestas a tus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-

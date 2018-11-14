@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ffac7fa77191bbe56e7aa3870c71c3c02254d72
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044465"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185674"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
 Puedes administrar y ver los detalles relacionados con cada una de las aplicaciones en [centro de partners y configurar servicios como notificaciones, pruebas A/b y mapas.
 
-Al trabajar con una aplicación en el centro de partners, verás secciones en el menú de navegación izquierdo para la **administración de aplicaciones**y **Servicios** . Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
+Al trabajar con una aplicación en el centro de partners, verás secciones en el menú de navegación izquierdo para **administración de aplicaciones**y **Servicios** . Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
 
 ## <a name="services"></a>Servicios
 
@@ -39,13 +39,13 @@ Para obtener más información, consulta [Ejecutar experimentos en la aplicació
 
 ## <a name="maps"></a>Mapas
 
-Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obtener información sobre cómo solicitar una clave de autenticación de mapas de Bing Maps Developer Center y agrega a la aplicación, consulta la [solicitud de una clave de autenticación de mapas](../maps-and-location/authentication-key.md) para obtener más información. 
+Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obtener información sobre cómo solicitar una clave de autenticación de mapas de Bing Maps Developer Center y agregarlo a la aplicación, consulta [una clave de autenticación de mapas de la solicitud](../maps-and-location/authentication-key.md) para obtener más información. 
 
-Usar la página **mapas** solo para las aplicaciones publicado anteriormente para Windows Phone 8.1 y versiones anteriores. Para usar los servicios de mapa en estas aplicaciones, tendrás que solicitar un identificador de aplicación de servicio de mapas y un token para incluirlo en el código de la aplicación. Al hacer clic en **obtener token**, generaremos un servicio de mapa Id. de aplicación (**ApplicationID**) y servicio de Token de autenticación (**AuthenticationToken**) de la aplicación de mapa. Asegúrate de agregar estos valores en el código antes de paquete y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+Usar la página **mapas** solo para las aplicaciones publicado anteriormente para Windows Phone 8.1 y versiones anteriores. Para usar los servicios de mapa en estas aplicaciones, tendrás que solicitar un identificador de aplicación de servicio de mapas y un token para incluirlo en el código de la aplicación. Al hacer clic en **obtener token**, generaremos un servicio de mapas Id. de aplicación (**ApplicationID**) y asignar el servicio de Token de autenticación (**AuthenticationToken**) para la aplicación. Asegúrate de agregar estos valores en el código antes de paquete y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
 ## <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
-Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes escribir el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](../monetize/view-and-grant-products-from-a-service.md).
 
@@ -53,7 +53,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 f tu producto se integra con Azure AD y llama a las API que solicitan [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
 
-Para obtener más información, consulta [solicitar consentimiento para un inquilino de todo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
+Para obtener más información, consulta la [solicitud de consentimiento para un inquilino de todo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
 ## <a name="app-management"></a>Administración de aplicaciones
 
@@ -87,7 +87,7 @@ Los desarrolladores con permisos de OEM también pueden [generar paquetes de pre
 La sección **WNS/MPNS** proporciona opciones que te ayudarán a crear y enviar notificaciones a clientes de la aplicación. 
 
 > [!TIP]
-> Las aplicaciones para UWP, se recomienda usar la característica de **notificaciones** del centro de partners. Esta característica te permite enviar notificaciones a todos los clientes de la aplicación o a un subconjunto de destino de los clientes de Windows 10 que cumplan los criterios que hayas definido en un [segmento de clientes](create-customer-segments.md). Para obtener más información, consulta [Enviar notificaciones a los clientes de la aplicación](send-push-notifications-to-your-apps-customers.md).
+> Para aplicaciones para UWP, se recomienda usar la característica de **notificaciones** del centro de partners. Esta característica te permite enviar notificaciones a todos los clientes de la aplicación o a un subconjunto de destino de los clientes de Windows 10 que cumplan los criterios que hayas definido en un [segmento de clientes](create-customer-segments.md). Para obtener más información, consulta [Enviar notificaciones a los clientes de la aplicación](send-push-notifications-to-your-apps-customers.md).
 
 Según el tipo de paquete de la aplicación y sus requisitos específicos, también puedes usar una de las siguientes opciones: 
 

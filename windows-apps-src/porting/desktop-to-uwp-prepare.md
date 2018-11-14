@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a0b3a9f5ce7c03b8add9cc459bade684b9daf21
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ba89ab06062f5ba40bb96f4d558bd89a16e591d1
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034178"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205190"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>Preparar para empaquetar una aplicación de escritorio
 
 En este artículo se enumeran los aspectos que debes tener en cuenta antes de empaquetar tu aplicación de escritorio. Tal vez no tengas que hacer mucho para preparar la aplicación para el proceso de empaquetado, pero si alguno de los siguientes elementos se aplica a la aplicación, debes que abordarlo antes de empaquetado. Recuerda que Microsoft Store administra licencias y actualizaciones automáticas; por lo tanto, puedes quitar cualquier característica que relacione esas tareas del código base.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (de lo contrario se conoce como el puente de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 + __La aplicación requiere una versión de .NET anterior a 4.6.2__. Debes asegurarte de que la aplicación se ejecuta en .NET 4.6.2. No puedes exigir o redistribuir versiones anteriores a 4.6.2. Esta es la versión de .NET incluida en la Actualización de aniversario de Windows 10. Verificar que la aplicación funciona en esta versión garantizará que la aplicación seguirá siendo compatible con futuras actualizaciones de Windows 10.  Si la aplicación está destinada a .NET Framework 4.0 o posterior, se espera que se ejecute en .NET 4.6.2, pero debes probarla.
 

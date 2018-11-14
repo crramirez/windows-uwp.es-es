@@ -5,15 +5,15 @@ description: Esta sección describe cómo usar la plataforma de sistemas remotos
 ms.author: pafarley
 ms.date: 06/08/2018
 ms.topic: article
-keywords: los dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c462bb28de23db735b957870cf456d3649282ae
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024884"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152055"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Aplicaciones y dispositivos conectados (Project Rome)
 

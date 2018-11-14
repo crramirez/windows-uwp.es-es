@@ -8,11 +8,11 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b25df0a8445322ceb422fd6485f7d08c1c49a25
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030011"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200040"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades de Windows 10 para desarrolladores, compilación 17134
 
