@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cbaa56f9c25c0e4ea1f10c79b4f7d1100748532
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6208280"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6650198"
 ---
 # <a name="optimize-suspendresume"></a>Optimizar la suspensión y reanudación
 

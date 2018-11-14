@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 61803e3a4a18dee260b78468c7970a875d8aff73
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045312"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255272"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conocidos de las aplicaciones de escritorio empaquetadas
 

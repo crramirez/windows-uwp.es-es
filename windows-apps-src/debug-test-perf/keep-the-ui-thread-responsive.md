@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7884c7187bf127e15aaaed38a55e5f9827a3990d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024190"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252613"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 
@@ -24,7 +24,7 @@ La aplicación se controla mediante eventos, lo que significa que el código rea
 
 Deberás usar el subproceso de la interfaz de usuario para que realice casi todos los cambios en el subproceso de la interfaz de usuario, incluida la creación de tipos de interfaz de usuario y el acceso a sus miembros. La interfaz de usuario no se puede actualizar desde un subproceso, aunque puedes publicar un mensaje con [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para hacer que el código se ejecute allí.
 
-> **Nota**la única excepción es que hay un subproceso de representación separado que puede aplicar cambios a la interfaz de usuario que no afectan a cómo se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
+> **Nota**la única excepción es que hay un subproceso de representación separado que puede aplicar cambios de la interfaz de usuario que no afectan a cómo se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
 
 ## <a name="delay-element-instantiation"></a>Retrasar la creación de instancias de elementos
 
@@ -103,7 +103,7 @@ public class AsyncExample
 
 En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantener la capacidad de respuesta del subproceso de la interfaz de usuario. Sin embargo, la ejecución se retoma en dicho controlador después de completar `ComputeNextMove` (que se ejecuta en un subproceso en segundo plano). El código restante del controlador actualiza la interfaz de usuario con los resultados.
 
-> **Nota**también existe una API de [**grupo de subprocesos**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para la UWP, que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+> **Nota**también es una API de [**grupo de subprocesos**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para la UWP, que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 17970d509fa2bf6b80431e1c07b5d135c7dcb112
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044006"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193416"
 ---
 # <a name="texture3d-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture3D
 
@@ -23,7 +23,7 @@ Esta tabla muestra cómo los subrecursos [**Texture3D**](https://msdn.microsoft.
 
 Esta tabla toma la organización en mosaico de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525), divide las dimensiones x/y por 4 y agrega 16 capas de profundidad. Todos los mosaicos del primer plano (plano 2D del mosaicos que definen las primeras 16 capas de profundidad) aparecen antes que los planos posteriores.
 
-**Nota** Soporte de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) en los recursos de streaming no se expone en la implementación inicial de los recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
+**Nota** Soporte técnico de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) en los recursos de streaming no se expone en la implementación inicial de los recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
 
  
 

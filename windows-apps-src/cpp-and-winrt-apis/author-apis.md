@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 21670e0908a212341d401b4cbca314a9242b26a2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026371"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203950"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -32,7 +32,7 @@ El escenario más sencillo es aquel en el que implementas una interfaz de Window
 > [!NOTE]
 > Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-En Visual Studio, **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** plantilla de proyecto de muestra el modelo de **CoreApplication** . El patrón empieza pasando una implementación de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) a [**CoreApplication: Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+En Visual Studio, **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** plantilla de proyecto muestra el patrón de **CoreApplication** . El patrón empieza pasando una implementación de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) a [**CoreApplication: Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -260,7 +260,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > Sin embargo, si vas a hacer referencia a tu tipo desde tu interfaz de usuario de XAML, entonces habrá un tipo de implementación y un tipo proyectado en el mismo proyecto. En ese caso, **hacer que** devuelve una instancia del tipo proyectado. Para ver un ejemplo de código de este escenario, consulta [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-Solo podemos usar `istringable` (en el ejemplo de código anterior) para llamar a los miembros de la interfaz **IStringable**. Pero una interfaz C++/WinRT (que es una interfaz proyectada) se deriva desde [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Por lo tanto, puedes llamar a [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (o [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) en ella para consultar para otros tipos proyectados o interfaces, que también pueden usar o devolver.
+Solo podemos usar `istringable` (en el ejemplo de código anterior) para llamar a los miembros de la interfaz **IStringable**. Pero una interfaz C++/WinRT (que es una interfaz proyectada) se deriva desde [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Por lo tanto, puedes llamar a [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (o [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) en ella para consultar para otros tipos proyectados o interfaces, que es también pueden usar o devolver.
 
 ```cppwinrt
 istringable.ToString();
@@ -280,12 +280,12 @@ iclosable.Close();
 
 La clase **MyType** no forma parte de la proyección, es la implementación. Pero de este modo puedes llamar a sus métodos de implementación directamente, sin la sobrecarga de una llamada de función virtual. En el ejemplo anterior, aunque **MyType::ToString** usa la misma firma que el método proyectado en **IStringable**, llamamos al método no virtual directamente, sin cruzar la interfaz binaria de la aplicación (ABI) El **com_ptr** simplemente tiene un puntero en la estructura **MyType**, por lo que también puedes acceder a los demás detalles internos de **MyType** a través de la variable `myimpl` y el operador de flecha.
 
-En el caso donde tienes un objeto de interfaz y descubres que es una interfaz en la implementación, a continuación, puedes obtener vuelve a la implementación mediante la plantilla de función [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . De nuevo, es una técnica que evita llamadas a funciones virtuales y te permite acceder directamente a la implementación.
+En el caso de que tengas un objeto de interfaz y descubres que es una interfaz en la implementación, a continuación, puede volver a la implementación mediante la plantilla de función [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . De nuevo, es una técnica que evita llamadas a funciones virtuales y te permite acceder directamente a la implementación.
 
 > [!NOTE]
-> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o una versión posterior, a continuación, tienes que llamar [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
+> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o posterior, a continuación, debes llamar a [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-A continuación te mostramos un ejemplo. Hay otro ejemplo en [implementa la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
+A continuación te mostramos un ejemplo. Hay otro ejemplo en [implementar la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
@@ -313,7 +313,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Si tienes una instancia de tu tipo de implementación y necesitas pasarla a una función que espera el correspondiente tipo proyectado, puedes hacerlo. Existe un operador de conversión en tu tipo de implementación (siempre que el tipo de implementación se ha generado por el `cppwinrt.exe` herramienta) que hace que esto sea posible.
+Si tienes una instancia de tu tipo de implementación y necesitas pasarla a una función que espera el correspondiente tipo proyectado, puedes hacerlo. Existe un operador de conversión en tu tipo de implementación (siempre que el tipo de implementación se ha generado por el `cppwinrt.exe` herramienta) que hace posible.
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Derivar de un tipo que tiene un constructor no predeterminado
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) es un ejemplo de un constructor no predeterminado. No hay ningún constructor predeterminado, por lo tanto, para construir un **ToggleButtonAutomationPeer**, necesitas pasar un *propietario*. Como consecuencia, si derivas desde **ToggleButtonAutomationPeer**, tienes que proporcionar un constructor que tome un *propietario* y que lo pase a la base. Veamos cómo se ve esto en la práctica.

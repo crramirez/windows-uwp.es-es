@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6280708"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6444895"
 ---
 # <a name="controller-api-reference"></a>Referencia de API de controladora   
 Puedes obtener el número de controladoras físicas conectadas y desactivarlas con esta API REST.

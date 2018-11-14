@@ -11,33 +11,33 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0ed6cb2fe2b932dcb3011ff7cf9cf7ce197182
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 03d656d7a79dfa2a09e98f0fd54d9d0a4924559e
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6197070"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261183"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
 Para vender tu aplicación Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas empaquetarla. Si no quieres distribuir tu aplicación a través de Microsoft Store, puedes transferir localmente el paquete de la aplicación directamente a un dispositivo o distribuirla a través de [Web Install](installing-UWP-apps-web.md). Este artículo describe el proceso de configuración, creación y prueba de un paquete de la aplicación para UWP con Visual Studio. Para obtener más información sobre cómo administrar e implementar aplicaciones de línea de negocio (LOB), consulta [Administración de aplicaciones de empresa](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
-En Windows 10, puedes enviar un paquete de aplicación, un lote de aplicaciones o un archivo de carga del paquete de aplicación completa para el centro de desarrollo de Windows. De estas opciones, enviar un archivo de carga del paquete proporcionará la mejor experiencia. 
+En Windows 10, puedes enviar un paquete de aplicación, un lote de aplicaciones o un archivo de carga del paquete de aplicación completa al [Centro de partners](https://partner.microsoft.com/dashboard). De estas opciones, enviar un archivo de carga del paquete proporcionará la mejor experiencia. 
 
 ## <a name="types-of-app-packages"></a>Tipos de paquetes de aplicación
 
 - **Paquete de la aplicación (.appx o .msix)**  
-    Un archivo que contiene tu aplicación en un formato que pueda instalarse de prueba en un dispositivo. Cualquier archivo de paquete de aplicación única creado por Visual Studio es **no** está pensado para ser enviado al centro de desarrollo y debe usarse para la instalación de prueba y solo con fines de pruebas. Si quieres enviar tu aplicación al Centro de desarrollo, usa el archivo de carga del paquete de aplicación.  
+    Un archivo que contiene tu aplicación en un formato que pueda instalarse de prueba en un dispositivo. Cualquier archivo de paquete de aplicación única creado por Visual Studio es **no** está pensado para ser enviado al centro de partners y debe usarse para la instalación de prueba y solo con fines de pruebas. Si quieres enviar la aplicación Centro de partners, usa el archivo de carga del paquete de aplicación.  
 
 - **Recopilación de aplicación (.appxbundle o .msixbundle)**  
     Una recopilación de aplicación es un tipo de paquete que puede contener varios paquetes de aplicación, cada uno de ellos integrado para admitir una arquitectura de dispositivo específica. Por ejemplo, una recopilación de aplicación puede contener tres paquetes de aplicación independientes para las configuraciones x86, x64 y ARM. Las recopilaciones de aplicaciones deberían generarse siempre que sea posible, ya que permiten que tu aplicación esté disponible en la gama de dispositivos más amplia posible.  
 
 - **Archivo de carga de paquete de aplicación (.appxupload)**  
-    Un único archivo que puede contener varios paquetes de aplicación o una recopilación de aplicación para admitir distintas arquitecturas de procesador. El archivo de carga también contiene un archivo de símbolos para [analizar el rendimiento de la aplicación](https://docs.microsoft.com/windows/uwp/publish/analytics) tras haber publicado la aplicación en Microsoft Store. Este archivo se creará automáticamente para ti si vas a empaquetar la aplicación con Visual Studio con la intención de enviarla al Centro de desarrollo para la publicación. Es importante tener en cuenta que esta es el **único** paquete de aplicación válido de los envíos del Centro de desarrollo que se pueden crear con Visual Studio.
+    Un único archivo que puede contener varios paquetes de aplicación o una recopilación de aplicación para admitir distintas arquitecturas de procesador. El archivo de carga también contiene un archivo de símbolos para [analizar el rendimiento de la aplicación](https://docs.microsoft.com/windows/uwp/publish/analytics) tras haber publicado la aplicación en Microsoft Store. Este archivo se creará automáticamente para TI si vas a empaquetar la aplicación con Visual Studio con la intención de enviarla al centro de partners para la publicación. Es importante tener en cuenta que estos son los **solo** válido aplicación Centro de partners envíos de paquetes que se pueden crear con Visual Studio.
 
 A continuación describimos los pasos para preparar y crear un paquete de la aplicación:
 
-1.  [Antes de empaquetar la aplicación](#before-packaging-your-app). Sigue estos pasos para asegurarte de que la aplicación está lista para empaquetarse para el envío al Centro de desarrollo.
+1.  [Antes de empaquetar la aplicación](#before-packaging-your-app). Sigue estos pasos para garantizar que la aplicación está lista para empaquetarse para el envío al centro de partners.
 2.  [Configura un paquete de la aplicación](#configure-an-app-package). Usa el diseñador de manifiestos de Visual Studio para configurar el paquete. Por ejemplo, agrega imágenes de icono y elige las orientaciones que admitirá la aplicación.
 3.  [Crear un archivo de carga del paquete de aplicación](#create-an-app-package-upload-file). Usa el asistente del paquete de aplicación de Visual Studio para crear un paquete de la aplicación y, después, certifica el paquete con el Kit para la certificación de aplicaciones en Windows.
 4.  [Transfiere localmente el paquete de la aplicación](#sideload-your-app-package). Después de realizar la instalación de prueba de la aplicación en un dispositivo, puedes probar si funciona de la forma esperada.
@@ -46,7 +46,7 @@ Después de completar los pasos anteriores, estás listo para distribuir tu apli
 
 ## <a name="before-packaging-your-app"></a>Antes de empaquetar la aplicación
 
-1.  **Prueba la aplicación.** Antes de empaquetar la aplicación para su envío al Centro de desarrollo, asegúrate de que funciona según lo previsto en todas las familias de dispositivos que planeas admitir. Estas familias de dispositivos pueden incluir los equipos de escritorio, móviles, Surface Hub, Xbox, dispositivos de IoT, etc.
+1.  **Prueba la aplicación.** Antes de empaquetar la aplicación para el envío al centro de partners, asegúrate de que funciona según lo previsto en todas las familias de dispositivos que Planeas admitir. Estas familias de dispositivos pueden incluir los equipos de escritorio, móviles, Surface Hub, Xbox, dispositivos de IoT, etc.
 2.  **Optimiza la aplicación.** Puedes usar las herramientas de generación de perfiles y depuración de Visual Studio para optimizar el rendimiento de tu aplicación para UWP. Por ejemplo, la herramienta Línea de tiempo para la capacidad de respuesta de la interfaz de usuario, la herramienta Uso de memoria, la herramienta Uso de CPU, etc. Para obtener más información acerca de estas herramientas de línea de comandos, consulta el tema [Recorrido por las funciones de perfiles](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour):
 3.  **Comprueba la compatibilidad de .NET nativo (para aplicaciones de VB y C#).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
 
@@ -78,12 +78,12 @@ Si distribuyes la aplicación a través de Microsoft Store, Visual Studio puede 
 
 ## <a name="create-an-app-package-upload-file"></a>Crear un archivo de carga del paquete de aplicación
 
-Para distribuir una aplicación a través de Microsoft Store debe crear un paquete de aplicación (.appx o .msix), un lote de aplicaciones (.appxbundle o .msixbundle), o un paquete de carga (.appxupload) y [enviar la aplicación empaquetada al centro de desarrollo](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Aunque es posible enviar un paquete de aplicación o una recopilación de aplicación al Centro de desarrollo solo, se recomienda enviar un paquete de carga.
+Para distribuir una aplicación a través de Microsoft Store debe crear un paquete de aplicación (.appx o .msix), un lote de aplicaciones (.appxbundle o .msixbundle), o un paquete de carga (.appxupload) y [enviar la aplicación empaquetada al centro de partners](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Aunque es posible enviar un lote de aplicación o paquete de aplicaciones al centro de partners por sí solo, se recomienda enviar un paquete de carga.
 
 >[!NOTE]
-> El archivo de carga del paquete de aplicación (.appxupload) es el **único** tipo de paquete de aplicación válido para el Centro de desarrollo que se puede crear con Visual Studio. Otros [paquetes de aplicación válidos pueden crearse manualmente](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool) sin Visual Studio. 
+> El archivo de carga del paquete de aplicación (.appxupload) es el tipo **solo** del paquete de aplicación válido para el centro de partners que se puede crear con Visual Studio. Otros [paquetes de aplicación válidos pueden crearse manualmente](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool) sin Visual Studio. 
 
-Puedes hacerlo mediante el asistente **Crear paquetes de aplicaciones**. Sigue estos pasos para crear un paquete apropiado para el envío al Centro de desarrollo con Visual Studio.
+Puedes hacerlo mediante el asistente **Crear paquetes de aplicaciones**. Sigue estos pasos para crear un paquete apropiado para el envío al centro de partners con Visual Studio.
 
 **Para crear tu archivo de carga del paquete de aplicación**
 
@@ -93,23 +93,23 @@ Puedes hacerlo mediante el asistente **Crear paquetes de aplicaciones**. Sigue e
 
     A continuación, se mostrará el asistente **Crear paquetes de aplicaciones**.
 
-3.  Selecciona "Sí" en el primer cuadro de diálogo que te pregunte si quieres compilar paquetes para cargarlos en el Centro de desarrollo y, a continuación, haz clic en Siguiente.  
+3.  Selecciona "Sí" en el primer cuadro de diálogo que te pregunte si quieres compilar paquetes para cargarlos en el centro de partners y luego haz clic en siguiente.  
     ![Visualización de la ventana de diálogo Crear los paquetes](images/packaging-screen3.jpg)
 
-    Si eliges No, Visual Studio no generará el paquete de carga del paquete de aplicación (.appxupload) para envíos del Centro de desarrollo. Si solo quieres realizar la instalación de prueba de la aplicación para ejecutarla en dispositivos internos o para pruebas, puedes seleccionar esta opción. Para obtener más información acerca de la instalación de prueba, consulta [Habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
-4.  Inicia sesión con tu cuenta de desarrollador en el Centro de desarrollo de Windows. Si aún no tienes una cuenta de desarrollador, el asistente te ayudará a crear una.
-5.  Selecciona el nombre de aplicación para el paquete o reserva uno nuevo si todavía no lo has hecho en el portal del Centro de desarrollo de Windows.  
+    Si eliges No, Visual Studio no generará el archivo de carga (.appxupload) del paquete de aplicación para envíos del centro de partners. Si solo quieres realizar la instalación de prueba de la aplicación para ejecutarla en dispositivos internos o para pruebas, puedes seleccionar esta opción. Para obtener más información acerca de la instalación de prueba, consulta [Habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
+4.  Inicia sesión con tu cuenta de desarrollador en el centro de partners. Si aún no tienes una cuenta de desarrollador, el asistente te ayudará a crear una.
+5.  Selecciona el nombre de la aplicación para el paquete o reserva uno nuevo si todavía no lo has hecho en el centro de partners.  
     ![Visualización de la ventana Crear paquetes de aplicaciones con la selección del nombre de aplicación](images/packaging-screen4.jpg)
 6.  Asegúrate de seleccionar las tres configuraciones de arquitectura (x86, x64 y ARM) en el diálogo **Seleccionar y configurar paquetes** para garantizar que tu aplicación se puede implementar en la gama de dispositivos más amplia. En el cuadro de lista **Crear lote de aplicaciones**, selecciona **Siempre**. Un lote de aplicaciones (.appxbundle) se prefiere un archivo de paquete de aplicación única porque contiene una colección de paquetes de aplicación configurados para cada tipo de arquitectura de procesador. Cuando eliges generar la recopilación de aplicación, esta se incluirá en el archivo de carga (.appxupload) del paquete final junto con la información de depuración a análisis de bloqueo. Si no estás seguro de qué arquitecturas elegir o quieres obtener más información sobre qué arquitecturas se usan en varios dispositivos, consulta [Arquitecturas de paquete de aplicación](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Visualización de la ventana de Crear paquetes de aplicaciones con la configuración del paquete](images/packaging-screen5.jpg)
 
 
-7.  Incluye archivos de símbolos de PDB completos para [analizar el rendimiento de la aplicación](https://docs.microsoft.com/windows/uwp/publish/analytics) desde el Centro de desarrollo de Windows después de haber publicado la aplicación. Configura detalles adicionales, como la numeración de la versión o la ubicación de salida del paquete.
-9.  Haz clic en **Crear** para generar el paquete de aplicación. Si has seleccionado **Sí** en el paso 3 y estás creando un paquete de envío del Centro de desarrollo, el asistente creará un archivo de carga de paquete (.appxupload). Si has seleccionado **No** en el paso 3, el asistente creará un único paquete de aplicación o una recopilación de aplicación en función de tus selecciones en el paso 6.
+7.  Incluir archivos de símbolos PDB completos para [analizar el rendimiento de aplicación](https://docs.microsoft.com/windows/uwp/publish/analytics) del centro de partners se haya publicado la aplicación. Configura detalles adicionales, como la numeración de la versión o la ubicación de salida del paquete.
+9.  Haz clic en **Crear** para generar el paquete de aplicación. Si ha seleccionado **Sí** en el paso 3 y estás creando un paquete para el envío al centro de partners, el asistente creará un archivo de carga (.appxupload) del paquete. Si has seleccionado **No** en el paso 3, el asistente creará un único paquete de aplicación o una recopilación de aplicación en función de tus selecciones en el paso 6.
 10. Cuando la aplicación se haya empaquetado correctamente, verás este cuadro de diálogo.  
     ![Visualización de la ventana de creación del paquete completada con las opciones de validación](images/packaging-screen6.jpg)
 
-    Valida la aplicación antes de enviarla al Centro de desarrollo para la certificación en un equipo local o remoto. Solo se pueden validar las compilaciones de versiones del paquete de la aplicación, no las compilaciones de depuración.
+    Valida la aplicación antes de enviarla al centro de partners para la certificación en un equipo local o remoto. Solo se pueden validar las compilaciones de versiones del paquete de la aplicación, no las compilaciones de depuración.
 
 11. Para validar localmente tu aplicación, deja la opción **Máquina local** seleccionada y haz clic en **Iniciar el Kit para la certificación de aplicaciones en Windows**. Para obtener más información sobre la prueba de la aplicación con el Kit para la certificación de hardware en Windows, consulta [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
 
@@ -117,9 +117,9 @@ Puedes hacerlo mediante el asistente **Crear paquetes de aplicaciones**. Sigue e
 
     Si tienes un dispositivo remoto de Windows 10 que quieres usar para las pruebas, tendrás que instalar el Kit de certificación de aplicaciones de Windows de forma manual en ese dispositivo. La siguiente sección te guiará a través de estos pasos. Después de realizar estos pasos, puedes seleccionar **Máquina remota** y hacer clic en **Iniciar el Kit para la certificación de aplicaciones en Windows** para conectarte al dispositivo remoto y ejecutar las pruebas de validación.
 
-12. Cuando la herramienta WACK haya terminado y la aplicación haya pasado la certificación, podrás enviar la aplicación al Centro de desarrollo. Asegúrate de cargar el archivo correcto. La ubicación predeterminada del archivo puedes encontrarlo en la carpeta raíz de la solución `\[AppName]\AppPackages` y terminará con la extensión de archivo .appxupload. El nombre tendrá el formato `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` si has optado por una recopilación de aplicación con toda la arquitectura del paquete seleccionada.
+12. Después de herramienta WACK haya terminado y la aplicación haya pasado la certificación, estás listo para enviar la aplicación Centro de partners. Asegúrate de cargar el archivo correcto. La ubicación predeterminada del archivo puedes encontrarlo en la carpeta raíz de la solución `\[AppName]\AppPackages` y terminará con la extensión de archivo .appxupload. El nombre tendrá el formato `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` si has optado por una recopilación de aplicación con toda la arquitectura del paquete seleccionada.
 
-Para obtener más información sobre el envío de la aplicación al Centro de desarrollo, consulta [Envíos de aplicaciones](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
+Para obtener más información sobre el envío de la aplicación al centro de partners, consulta [envíos de aplicaciones](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
 
 **Validar el paquete de la aplicación en un dispositivo remoto de Windows 10**
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026776"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6206668"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
@@ -63,7 +63,7 @@ El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, 
 
 -   **Atributos d:DesignHeight y d:DesignWidth:** a veces, estos atributos se aplican a la raíz de un archivo XAML que Visual Studio u otra superficie de diseñador XAML crean automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
 
-   **Nota**si migras el XAML desde Microsoft Silverlight estos atributos podrían encontrarse en los elementos raíz que representan la página interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
+   **Nota**si migras el XAML desde Microsoft Silverlight estos atributos podrían encontrarse en los elementos raíz que representan una página de la interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
 
 -   **Atributo d:DataContext:** puedes establecer este atributo en una raíz de página o en un control para invalidar cualquier elemento [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito o heredado que tenga el objeto.
 -   **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un elemento [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), lo que invalida la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
