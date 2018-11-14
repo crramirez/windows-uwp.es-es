@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b2ea47f819d3a187621615ee3a85be5af895d3b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a5ac814dfb86259791de2632587a1cfd0d456a37
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049390"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184828"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -61,15 +61,15 @@ Consulta el tema [Desactivación del modo de desarrollador de Xbox One](devkit-d
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>He vendido mi consola Xbox One y la he dejado en el modo de desarrollador. ¿Cómo puedo desactivar el modo de desarrollador?
 
-Si ya no tienes acceso a tu Xbox One, puedes desactivarla en el Centro de desarrollo de Windows. Para obtener más información, consulta la sección **Desactivar la consola con el Centro de desarrollo de Windows** en el tema [Desactivación del modo de desarrollador de Xbox One](devkit-deactivation.md#deactivate-your-console-using-windows-dev-center). 
+Si ya no tienes acceso a tu Xbox One, puedes desactivar Windows del centro de partners. Para obtener más información, consulta la sección de **desactivar la consola con el centro de partners** en el tema de la [Desactivación del modo de desarrollador One de Xbox](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
-### <a name="i-left-the-developer-program-using-windows-dev-center-but-im-in-still-developer-mode-what-do-i-do"></a>Abandoné el programa para desarrolladores desde el Centro de desarrollo de Windows, pero aún estoy en el modo de desarrollador. ¿Qué puedo hacer?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Abandoné el programa para desarrolladores en el centro de partners, pero estoy en modo de desarrollador aún. ¿Qué puedo hacer?
 
 Inicia la Página principal para desarrolladores y selecciona el botón **Leave developer mode**. La consola se reiniciará en modo comercial. 
 
 ### <a name="can-i-publish-my-app"></a>¿Puedo publicar mi aplicación?
 
-Puedes [publicar aplicaciones](../publish/index.md) a través del Centro de desarrollo si tienes una [cuenta de desarrollador](https://developer.microsoft.com/store/register). Las aplicaciones para UWP creadas y probadas en una consola XboxOne comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de XboxOne.
+Si tienes una [cuenta de desarrollador](https://developer.microsoft.com/store/register), puede [publicar aplicaciones](../publish/index.md) a través del centro de partners. Las aplicaciones para UWP creadas y probadas en una consola XboxOne comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de XboxOne.
 
 ### <a name="can-i-publish-my-game"></a>¿Puedo publicar mi juego?
 

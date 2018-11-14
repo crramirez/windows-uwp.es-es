@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, interfaz de usuario, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9962cc9043bd650390721715ca73b2e85a219c25
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035099"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183916"
 ---
 # <a name="add-a-user-interface"></a>Agregar una interfaz de usuario
 
 
-Ahora que nuestro juego tiene sus vistas 3D en su lugar, es el momento para centrarte en agregar algunos elementos 2D para que el juego puede proporcionar comentarios sobre el estado del Reproductor. Esto puede realizarlo agregar sencillas opciones de menú y componentes de visualización frontal encima de los gráficos 3D canalización de salida.
+Ahora que nuestro juego tiene sus vistas en 3D en su lugar, es tiempo para centrarse en agregar algunos elementos 2D para que el juego puede proporcionar comentarios sobre el estado del Reproductor. Esto puede realizarlo agregar sencillas opciones de menú y la salida de la canalización de componentes de visualización frontal encima de los gráficos 3D.
 
 >[!Note]
 >Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Ten en cuenta que este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -33,24 +33,24 @@ Usar Direct2D, agrega un número de elementos gráficos de interfaz de usuario y
 ## <a name="the-user-interface-overlay"></a>La superposición de la interfaz de usuario
 
 
-Si bien existen muchas formas de mostrar elementos de interfaz de usuario y texto en un juego DirectX, vamos a foco sobre el uso de [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx). También usaremos [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) para los elementos de texto.
+Si bien existen muchas formas de mostrar elementos de la interfaz de usuario y texto en un juego DirectX, vamos a foco sobre el uso de [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx). También usaremos [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) para los elementos de texto.
 
 
-Direct2D es que un conjunto de API de dibujo 2D se usa para dibujar primitivos basados en píxeles y efectos. Al iniciar un vistazo a con Direct2D, es mejor hacerlo más sencillo. Los diseños y los comportamientos de interfaz complejos requieren tiempo y planificación. Si tu juego requiere una interfaz de usuario compleja, como las de simulación y juegos de estrategia, considera la posibilidad de usar XAML en su lugar.
+Direct2D es que un conjunto de API de dibujos 2D se usa para dibujar primitivos basados en píxeles y efectos. Cuando se inicia un vistazo a con Direct2D, es mejor hacerlo más sencillo. Los diseños y los comportamientos de interfaz complejos requieren tiempo y planificación. Si tu juego requiere una interfaz de usuario compleja, como las de simulación y juegos de estrategia, considera la posibilidad de usar XAML en su lugar.
 
 > [!NOTE]
 > Para obtener información sobre cómo desarrollar una interfaz de usuario con XAML en un juego DirectX de UWP, vea [Extender la muestra de juego](tutorial-resources.md).
 
-Direct2D no está diseñado específicamente para interfaces de usuario o diseños, como HTML y XAML. No proporciona componentes de interfaz de usuario como botones, cuadros o listas. No proporciona componentes de diseño como etiquetas div, tablas o cuadrículas.
+Direct2D no está diseñado específicamente para interfaces de usuario o diseños como HTML y XAML. No proporciona componentes de interfaz de usuario como botones, cuadros o listas. No proporciona componentes de diseño como etiquetas div, tablas o cuadrículas.
 
 
 Para esta muestra de juego tenemos dos componentes principales de la interfaz de usuario.
 1. Una pantalla de visualización frontal para la puntuación y los controles en el juego.
-2. La superposición se usa para mostrar texto de estado del juego y las opciones, como información de pausa y opciones de inicio de nivel.
+2. Una superposición que se usa para mostrar texto de estado del juego y las opciones, como información de pausa y opciones de inicio de nivel.
 
 ### <a name="using-direct2d-for-a-heads-up-display"></a>Usar Direct2D para una pantalla de visualización frontal
 
-La siguiente imagen muestra la pantalla de visualización frontal en el juego para la muestra. Es sencilla y despejada, lo que permite al jugador centrarse en navegar por el mundo en 3D y destinos de disparos. Una buena interfaz o pantalla de visualización frontal nunca debe complicar la capacidad de un jugador de procesar y reaccionar a los eventos en el juego.
+La siguiente imagen muestra la pantalla de visualización frontal en el juego para la muestra. Es sencilla y despejada, lo que permite al jugador centrarse en navegar por el mundo en 3D y destinos de disparos. Una buena interfaz o pantalla de visualización frontal nunca debe complicar la posibilidad de que el jugador de procesar y reaccionar a los eventos en el juego.
 
 ![captura de pantalla de la superposición del juego](images/simple-dx-game-ui-overlay.png)
 
@@ -66,13 +66,13 @@ La superposición consta de los primitivos básicos siguientes.
 
 El estado de visualización frontal en el juego de la superposición se dibuja en el método [**gamehud:: Render**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L234-L358) de la clase [**GameHud**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.h) . Dentro de este método, la superposición Direct2D que representa nuestra interfaz de usuario se actualiza para reflejar los cambios en el número de visitas, número de tiempo restante y nivel.
 
-Si el juego se ha inicializado, agregamos `TotalHits()`, `TotalShots()`, y `TimeRemaining()` a una [**swprintf_s**](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) búfer y especificar el formato de impresión. A continuación, podemos dibujar mediante el método [**DrawText**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742848) . Hacemos los mismos para el indicador de nivel actual, dibujar vacíos números para mostrar los niveles de incompletas como ➀ y rellenado como ➊ para mostrar que se ha completado el nivel específico.
+Si el juego se ha inicializado, agregamos `TotalHits()`, `TotalShots()`, y `TimeRemaining()` a un [**swprintf_s**](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) búfer y especificar el formato de impresión. A continuación, podemos dibujar mediante el método [**DrawText**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742848) . Hacemos los mismos para el indicador de nivel actual, números vacíos para mostrar los niveles incompletas como ➀ y números de rellenados como ➊ para mostrar que se ha completado el nivel específico de dibujo.
 
 
-El siguiente fragmento de código te guiará a través de proceso del método **gamehud:: Render** para 
-- Crear un mapa de bits mediante [** ID2D1RenderTarget::DrawBitmap **](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371880)
-- Las secciones desactivar las áreas de la interfaz de usuario en rectángulos con [ **D2D1::RectF**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368184)
-- Uso de **DrawText** para hacer que los elementos de texto
+El siguiente fragmento de código que te guiará a través de proceso del método **gamehud:: Render** para 
+- Crear un mapa de bits con [** ID2D1RenderTarget::DrawBitmap **](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371880)
+- Las secciones desactivar áreas de la interfaz de usuario en los rectángulos que utilizan [ **D2D1::RectF**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368184)
+- Usar **DrawText** para preparar los elementos de texto
 
 ```cpp
 void GameHud::Render(_In_ Simple3DGame^ game)
@@ -173,7 +173,7 @@ void GameHud::Render(_In_ Simple3DGame^ game)
 }
 ```
 
-Interrumpir el método abajo más allá, esta parte del [**gamehud:: Render**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) método dibuja nuestro movimiento y disparo rectángulos con [**ID2D1RenderTarget::DrawRectangle**](https://msdn.microsoft.com/library/windows/desktop/dd371902)y cruz con dos llamadas a [**ID2D1RenderTarget::DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895).
+Dividir el método abajo más allá, esta parte del [**gamehud:: Render**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) método dibuja nuestro movimiento y disparo rectángulos con [**ID2D1RenderTarget::DrawRectangle**](https://msdn.microsoft.com/library/windows/desktop/dd371902)y cruz mediante dos llamadas a [**ID2D1RenderTarget::DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895).
 
 ```cpp
         // Check if game is playing
@@ -227,19 +227,19 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
 
 ### <a name="displaying-game-state-info"></a>Mostrar información de estado del juego
 
-Además de la pantalla de visualización frontal, la muestra de juego tiene una superposición que representa seis estados del juego. Todos los Estados de características de un primitivo de gran tamaño rectángulo negro con texto para el jugador lo lea. Los rectángulos de controlador de movimiento y vista y cruz no se dibuja porque no están activos en estos Estados.
+Además de la pantalla de visualización frontal, la muestra de juego tiene una superposición que representa seis estados del juego. Todos los Estados de características de un primitivo de gran rectángulo negro con texto para el jugador lo lea. Los rectángulos de controlador de movimiento y vista y cruz no se dibuja porque no están activos en estos Estados.
 
 La superposición se crea mediante la clase [**GameInfoOverlay**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.h) , lo que nos permite cambiar el texto que se muestra para alinearse con el estado del juego.
 
 ![estado y la acción de superposición](images/simple-dx-game-ui-finaloverlay.png)
 
-La superposición se divide en dos secciones: **estado** y la **acción**. La sección de **estado** aún más se desglosa en rectángulos de **título** y **cuerpo** . La sección **acción** solo tiene un rectángulo. Cada rectángulo tiene un propósito diferente.
+La superposición se divide en dos secciones: **estado** y la **acción**. La sección de **estado** más se desglosa en rectángulos de **título** y **cuerpo** . La sección **acción** solo tiene un rectángulo. Cada rectángulo tiene un propósito diferente.
 
 -   `titleRectangle` contiene el texto del título.
--   `bodyRectangle` contiene el texto del cuerpo.
+-   `bodyRectangle` contiene el texto de cuerpo.
 -   `actionRectangle` contiene el texto que informa al jugador para realizar una acción específica.
 
-El juego tiene seis Estados que se pueden establecer. El estado del juego transmitido con la parte del **estado** de la superposición. Los rectángulos de **estado** se actualizan mediante una serie de métodos correspondientes con los siguientes estados.
+El juego tiene seis Estados que se pueden establecer. El estado del juego transmitido con la parte del **estado** de la superposición. Los rectángulos de **estado** se actualizan con una serie de métodos correspondientes con los siguientes estados.
 
 - Cargando
 - Estadísticas de puntuación de inicio/alto inicial
@@ -251,33 +251,33 @@ El juego tiene seis Estados que se pueden establecer. El estado del juego transm
 
 La parte de la **acción** de la superposición se actualiza con el método [**gameinfooverlay:: Setaction**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L522-L564) , lo que permite el texto de acción establecer en uno de los siguientes.
 - "Pulsar para volver a jugar …"
-- "La carga de nivel, por favor, espere …"
+- "Nivel de carga, por favor, espere …"
 - "Toca para continuar …"
 - Ninguno
 
 > [!NOTE]
 > Estos dos métodos se describirán más adelante en la sección [que representa el estado del juego](#representing-game-state) .
 
-Según el qué está sucediendo en el juego, el **estado** y la sección **acción** se ajustan los campos de texto.
+Dependiendo de qué está sucediendo en el juego, el **estado** y la sección **acción** se ajustan los campos de texto.
 Echemos un vistazo a cómo inicializamos y dibujamos la superposición para estos seis estados.
 
 ### <a name="initializing-and-drawing-the-overlay"></a>Inicialización y dibujo de la superposición
 
-Los seis estados de **estado** tienen algunas cosas en común, hacer que los recursos y los métodos que necesitan muy similar.
+**Los seis Estados** tienen algunas cosas en común, hacer que los recursos y los métodos que necesitan muy similar.
     - Todos los usan un rectángulo negro en el centro de la pantalla como su fondo.
     - El texto mostrado es texto de **título** o de **cuerpo** .
     - El texto usa la fuente Segoe UI y se dibuja encima del rectángulo negro. 
 
 
-La muestra de juego tiene cuatro métodos que entran en juego al crear la superposición.
+La muestra de juego tiene cuatro métodos que entran en juego cuando se crea la superposición.
  
 
 #### <a name="gameinfooverlaygameinfooverlay"></a>GameInfoOverlay::GameInfoOverlay
-El constructor [**GameInfoOverlay::GameInfoOverlay**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) inicializa la superposición, mantener la superficie de mapa de bits que se usarán para mostrar información al jugador en. El constructor Obtiene una fábrica del objeto [**ID2D1Device**](https://msdn.microsoft.com/library/windows/desktop/hh404478) pasado, que se usa para crear un [**ID2D1DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/hh404479) que el propio objeto de superposición puede dibujar a. [IDWriteFactory::CreateTextFormat](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368203) 
+El constructor de [**GameInfoOverlay::GameInfoOverlay**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) inicializa la superposición, mantener la superficie de mapa de bits que se usarán para mostrar información al jugador en. El constructor Obtiene una fábrica del objeto [**ID2D1Device**](https://msdn.microsoft.com/library/windows/desktop/hh404478) pasado, que se usa para crear un [**ID2D1DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/hh404479) que el propio objeto de superposición puede dibujar a. [IDWriteFactory::CreateTextFormat](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368203) 
 
 
 #### <a name="gameinfooverlaycreatedevicedependentresources"></a>Gameinfooverlay:: Createdevicedependentresources
-[**Gameinfooverlay:: Createdevicedependentresources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) es nuestro método para crear pinceles que se usará para dibujar el texto. Para ello, hemos obtener un objeto [**ID2D1DeviceContext2**](https://msdn.microsoft.com/en-us/library/windows/desktop/dn890789) que permite la creación y dibujo de geometría, además de funcionalidad como entrada de lápiz y el degradado malla de representación. A continuación, creamos una serie de pinceles con color con [**ID2D1SolidColorBrush**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd372207) para dibujar los elementos de la interfaz de usuario siguientes.
+[**Gameinfooverlay:: Createdevicedependentresources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) es nuestro método para crear pinceles que se usará para dibujar el texto. Para ello, hemos obtener un objeto [**ID2D1DeviceContext2**](https://msdn.microsoft.com/en-us/library/windows/desktop/dn890789) que permite la creación y dibujo de geometría, además de funcionalidad como entrada de lápiz y un degradado malla de representación. A continuación, creamos una serie de color pinceles con [**ID2D1SolidColorBrush**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd372207) para dibujar los elementos de la interfaz de usuario siguientes.
 - Pincel negro para fondos de rectángulo
 - Pincel blanco para el texto de estado
 - Pincel de color naranja para el texto de acción
@@ -288,7 +288,7 @@ El método [**DeviceResources::SetDpi**](https://github.com/Microsoft/Windows-un
 
 #### <a name="gameinfooverlaycreatewindowssizedependentresources"></a>GameInfoOverlay::CreateWindowsSizeDependentResources
 El método [**GameInfoOverlay::CreateWindowsSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L108-L225) es donde todo nuestro dibujo tiene lugar. El siguiente es un esquema de los pasos del método.
-- Se crean tres rectángulos a sección desactivar el texto de la interfaz de usuario para el texto del **título**, **cuerpo**y **acción** .
+- Se crean tres rectángulos sección desactivar el texto de la interfaz de usuario para el texto de **título**, el **cuerpo**y la **acción** .
     ```cpp 
     m_titleRectangle = D2D1::RectF(
         GameInfoOverlayConstant::SideMargin,
@@ -313,10 +313,10 @@ El método [**GameInfoOverlay::CreateWindowsSizeDependentResources**](https://gi
 - Un mapa de bits se crea con nombre `m_levelBitmap`, tomando el valor de PPP actual en cuenta con **CreateBitmap**.
 - `m_levelBitmap` se establece como destino con [**ID2D1DeviceContext::SetTarget**](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404533)de representación de nuestro 2D.
 - Se borra el mapa de bits con cada píxel realizado negro usando [**ID2D1RenderTarget::Clear**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371772).
-- Se llama [**ID2D1RenderTarget::BeginDraw**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371768) para iniciar el proceso de dibujo. 
-- **DrawText** se llama para dibujar el texto que se almacenan en `m_titleString`, `m_bodyString`, y `m_actionString` en el rectángulo de adecuado mediante el correspondiente **ID2D1SolidColorBrush**.
-- Se llama a [**ID2D1RenderTarget::EndDraw**](ID2D1RenderTarget::EndDraw) para dejar de todas las operaciones de dibujo en `m_levelBitmap`.
-- Mapa de bits de otro se crea mediante **CreateBitmap** denominado `m_tooSmallBitmap` que se usará como reserva, que muestra solo si la configuración de presentación es demasiado pequeña para el juego.
+- [**ID2D1RenderTarget::BeginDraw**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371768) se llama para iniciar el proceso de dibujo. 
+- **DrawText** se llama para dibujar el texto que se almacenan en `m_titleString`, `m_bodyString`, y `m_actionString` en el rectángulo de adecuado con el correspondiente **ID2D1SolidColorBrush**.
+- Se llama a [**ID2D1RenderTarget::EndDraw**](ID2D1RenderTarget::EndDraw) para detener todas las operaciones de dibujos en `m_levelBitmap`.
+- Mapa de bits de otro se crea mediante **CreateBitmap** denominado `m_tooSmallBitmap` usar como reserva, que muestra solo si la configuración de pantalla es demasiado pequeña para el juego.
 - Repite el proceso para dibujar en `m_levelBitmap` para `m_tooSmallBitmap`, esta vez solo dibujar la cadena `Paused` en el cuerpo.
 
 
@@ -329,7 +329,7 @@ Ahora, todo lo que necesitamos son seis métodos para rellenar el texto de nuest
 
 Cada uno de los Estados de seis superposición en el juego tiene un método correspondiente en el objeto **GameInfoOverlay** . Estos métodos dibujan una variación de la superposición para comunicar información explícita al jugador acerca del propio juego. Esta comunicación se representa con una cadena de **título** y **cuerpo** . Dado que la muestra ya configuró los recursos y el diseño para esta información cuando se inicializa y con el método [**gameinfooverlay:: Createdevicedependentresources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) , solo debe proporcionar cadenas específicas del estado de la superposición.
 
-La parte del **estado** de la superposición se establece con una llamada a uno de los métodos siguientes.
+La parte del **estado** de la superposición se establece con una llamada a uno de los siguientes métodos.
 
 Estado del juego | Método set de estado | Campos de estado
 :----- | :------- | :---------

@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: En este tema se presenta un caso práctico de migración de una aplicación WindowsPhone Silverlight muy simple a una aplicación de plataforma Universal de Windows (UWP) de Windows 10.
+description: Este tema presenta un caso práctico de migración de una aplicación WindowsPhone Silverlight muy simple a una aplicación de plataforma Universal de Windows (UWP) de Windows 10.
 title: WindowsPhone Silverlight a UWP caso práctico, Bookstore1
 ms.author: stwhi
 ms.date: 02/08/2017
@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c335f607eb1897f79035850cd6a5af9e7a7a56dc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035281"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186883"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>WindowsPhone Silverlight a UWP caso práctico: Bookstore1
 
 
-En este tema se presenta un caso práctico de migración de una aplicación WindowsPhone Silverlight muy simple a una aplicación de plataforma de Windows Windows10Universal (UWP). Con Windows 10, puedes crear un paquete de aplicación única que los clientes pueden instalar en una amplia gama de dispositivos, y eso es lo que haremos en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tema presenta un caso práctico de migración de una aplicación WindowsPhone Silverlight muy simple a una aplicación de plataforma de Windows Windows10Universal (UWP). Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia gama de dispositivos, y eso es lo que haremos en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 La aplicación que portaremos consta de un enlace **ListBox** enlazado con un modelo de vista. El modelo de vista tiene una lista de libros que muestra el título, el autor y la portada de libro. Las imágenes de portada de libro tienen el valor de **Acción de compilación** establecido en **Contenido** y de **Copiar en el directorio de salida** establecido en **No copiar**.
 
@@ -32,7 +32,7 @@ En los temas anteriores de esta sección se describen las diferencias entre las 
 
 [Descargar el Bookstore1Universal\_10 de aplicación de Windows 10](http://go.microsoft.com/fwlink/?linkid=532950).
 
-## <a name="the-windowsphone-silverlight-app"></a>La aplicación Windows Phone Silverlight
+## <a name="the-windowsphone-silverlight-app"></a>La aplicación de Windows Phone Silverlight
 
 Este es el aspecto de Bookstore1WPSL8 (la aplicación que vamos a portar). Es simplemente un cuadro de lista de libros con desplazamiento vertical debajo del encabezado del nombre de aplicación y título de la página.
 
@@ -78,7 +78,7 @@ La vista y el modelo de vista funcionan juntos correctamente y **ListBox** está
 
 ## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Saldar la deuda de elementos y algunos estilos iniciales
 
-De forma predeterminada, se admiten todas las orientaciones. La aplicación de WindowsPhone Silverlight restringe explícitamente el propio en orientación vertical solo, sin embargo, por lo tanto, deuda elementos \#1 1 y \#2 se pagan va en el manifiesto del paquete de la aplicación en el nuevo proyecto y comprobando **vertical** en **Supported orientaciones**.
+De forma predeterminada, se admiten todas las orientaciones. La aplicación WindowsPhone Silverlight se restringe explícitamente sí a la orientación vertical solo, sin embargo, por lo tanto, deuda elementos \#1 1 y \#2 se pagan entrar en el manifiesto del paquete de aplicación en el nuevo proyecto y comprobando **vertical** en **Supported orientaciones**.
 
 En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la barra de estado (anteriormente denominada bandeja del sistema) se muestra de forma predeterminada. Para los elementos \#4 y \#5, tenemos que encontrar cuatro estilos de **TextBlock** de plataforma Universal de Windows (UWP) que corresponden a los estilos WindowsPhone Silverlight que estábamos usando. Puedes ejecutar la aplicación WindowsPhone Silverlight en el emulador y compararla en paralelo con la ilustración en la sección de [texto](wpsl-to-uwp-porting-xaml-and-ui.md) . Si hacemos esto y echamos una mirada a las propiedades de los estilos de sistema WindowsPhone Silverlight, podemos generar esta tabla.
 
