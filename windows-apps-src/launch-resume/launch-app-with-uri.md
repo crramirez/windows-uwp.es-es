@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9126d33c18ede90e9c20339d9a793f3ab2835e76
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6196849"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6468471"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar una aplicación con un URI
 

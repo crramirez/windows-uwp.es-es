@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio nativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 36b96add3aa785ad20ddd1c42cd46e498d0264a6
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6185599"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6457849"
 ---
 # <a name="native-ads"></a>Anuncios nativos
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6163909"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6457784"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 

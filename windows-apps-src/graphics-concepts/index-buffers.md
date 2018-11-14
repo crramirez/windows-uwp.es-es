@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0df56ebeefdbdabe5904547d77e90077549422c2
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6266710"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6459377"
 ---
 # <a name="index-buffers"></a>Búferes de índices
 

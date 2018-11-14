@@ -12,11 +12,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ad096389c27fb65970424569c7c1d2ea0cb097
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6183540"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6468977"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a>Cómo se organiza en iconos el área de un recurso de streaming
 
