@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 21b51e50415e85f8cb1ddca6c358c8d27aa5f0fe
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6262809"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6469555"
 ---
 # <a name="tools-for-profiling-and-performance"></a>Herramientas de creación de perfiles y rendimiento
 

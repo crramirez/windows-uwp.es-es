@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras desde la aplicación, IAP, complementos, pruebas, consumible, duradero, suscripción
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c1c4ea1923ff81754b9c8ed8328ba6ec670a3f1
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6276731"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6672906"
 ---
 # <a name="in-app-purchases-and-trials"></a>Pruebas y compras desde la aplicación
 
