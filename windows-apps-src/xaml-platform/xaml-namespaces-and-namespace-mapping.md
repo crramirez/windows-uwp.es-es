@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6278417"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6448895"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 

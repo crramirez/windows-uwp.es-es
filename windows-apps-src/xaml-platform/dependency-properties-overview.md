@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fbf6e7ee8a224a6957428fddd11a2922adbecf4
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6267657"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6442902"
 ---
 # <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 

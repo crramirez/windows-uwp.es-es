@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e76d3d517be73417777eb31dfc3994f92186522
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6191398"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6274658"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 

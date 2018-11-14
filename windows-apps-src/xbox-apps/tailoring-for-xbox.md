@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 604e6dc5381a36d4dbda70e3435e5cd6fa44cc04
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6471561"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6281684"
 ---
 # <a name="xbox-best-practices"></a>Procedimientos recomendados de Xbox
 

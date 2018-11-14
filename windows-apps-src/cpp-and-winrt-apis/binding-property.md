@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, propiedad
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b7c20e0e6cf56afa7e2193739401bf49e0403a2
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6467232"
+ms.locfileid: "6654989"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; enlazar a una propiedad C++/WinRT
 Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Esta idea se basa en el modelo de diseño de software conocido como el *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)y cómo enlazar controles de XAML a ellos.
@@ -208,7 +208,7 @@ namespace Bookstore
 
 Guarda el archivo. No se compilará el proyecto para finalización en ese momento, pero ahora compilar es algo útil hacer porque vuelve a crear los archivos de código de origen en el que se implementa la clase en tiempo de ejecución de **MainPage** (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Por lo tanto, seguir adelante y generar ahora. El error de compilación que puede esperar ver en esta etapa es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
 
-Si se omite la inclusión de `BookstoreViewModel.idl` (vea la descripción de `MainPage.idl` anteriormente), a continuación, podrás ver el error **espera \ < cerca de "MainViewModel"**. Otra sugerencia es asegurarse de que deja todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en las listas de código.
+Si se omite la inclusión de `BookstoreViewModel.idl` (vea la descripción de `MainPage.idl` anteriormente), a continuación, podrás ver el error **se esperaba \< cerca de "MainViewModel"**. Otra sugerencia es asegurarse de que deja todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en las listas de código.
 
 Para resolver el error que esperamos ver, tendrás que ahora copiar los códigos auxiliares de descriptor de acceso para la propiedad **MainViewModel** fuera de los archivos generados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`) y en `\Bookstore\Bookstore\MainPage.h` y `MainPage.cpp`.
 

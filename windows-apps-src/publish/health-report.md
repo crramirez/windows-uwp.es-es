@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mantenimiento, bloqueos, eventos que no responden, estado de la aplicación, datos de estado, seguimiento de la pila, archivo cab, error, errores, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 06cf6a7050f7598e86582393a92b92d1bdd877d1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6447899"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6655268"
 ---
 # <a name="health-report"></a>Informe Mantenimiento
 

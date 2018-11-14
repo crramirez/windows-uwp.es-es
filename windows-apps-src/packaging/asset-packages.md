@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de recursos
 ms.localizationpriority: medium
 ms.openlocfilehash: 98980e67d24eb96aa55af7fefe10b5e4c2cdfa67
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6260648"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6450040"
 ---
 # <a name="introduction-to-asset-packages"></a>Introducción a los paquetes de activos
 

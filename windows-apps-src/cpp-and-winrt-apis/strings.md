@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
 ms.openlocfilehash: 72032c3c522a8434d266842a83c443889e8efc19
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6278391"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6471996"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, compras desde la aplicación, IAP, complementos, códigos de error
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a4eff890da48bd60405cadee2d7ecb92bb1b2fa
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6264479"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181751"
 ---
 # <a name="error-codes-for-store-operations"></a>Códigos de error para las operaciones de Microsoft Store
 

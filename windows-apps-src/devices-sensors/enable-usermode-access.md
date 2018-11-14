@@ -9,11 +9,11 @@ keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
 ms.openlocfilehash: ead1ef6dc9c9a840b61b1d18567860d85201b26a
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6186293"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6462423"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
 

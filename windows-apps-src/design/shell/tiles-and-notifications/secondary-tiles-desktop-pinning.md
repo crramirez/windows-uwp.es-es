@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, puente de dispositivo de escritorio, iconos secundarios, anclar, anclado, inicio rápido, muestra de código, ejemplo, secondarytile, aplicación de escritorio, win32, winforms, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: 44e37b47e22d10f509afd5d7503fa8f7a43ab365
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6452856"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6282696"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde una aplicación de escritorio
 

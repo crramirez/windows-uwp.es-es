@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6154915"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6652636"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 

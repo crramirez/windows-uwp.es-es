@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b309064c0110084d5445e8680d65f9935a3f69fe
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6445184"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654409"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
@@ -85,7 +85,7 @@ Este es un ejemplo del elemento **Identity** con texto del marcador de posición
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Si has reservado el nombre de la aplicación en la tienda Windows, puedes obtener el nombre y el publicador mediante el panel del centro de desarrollo de Windows. Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos como el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
+> Si has reservado el nombre de la aplicación en Microsoft Store, puedes obtener el nombre y el publicador mediante el [Centro de partners](https://partner.microsoft.com/dashboard). Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos como el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
 
 ### <a name="properties"></a>Propiedades
 

@@ -11,11 +11,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b9148b2d57c55bdff09be9a9d6bb8a6b65d93f12
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6249533"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6161314"
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 

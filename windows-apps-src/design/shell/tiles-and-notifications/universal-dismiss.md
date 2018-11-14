@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, descartar universal, notificación, entre dispositivos, descartar una vez descartar en todas partes
 ms.localizationpriority: medium
 ms.openlocfilehash: 40a9c446172b25f2430a3f75014c8e168a91c233
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6454345"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6276711"
 ---
 # <a name="universal-dismiss"></a>Descartar universal
 

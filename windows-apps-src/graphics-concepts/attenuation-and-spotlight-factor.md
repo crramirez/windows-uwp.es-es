@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648158"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6164458"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Atenuación y factor de foco de luz
 
