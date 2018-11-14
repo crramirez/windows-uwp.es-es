@@ -9,11 +9,11 @@ keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicid
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: 48fc818c1ae7a9a46912ff52c2b00b07f19c366e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024107"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207885"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Actualizar la aplicación a las bibliotecas de publicidad más recientes de anuncios de banner
 
@@ -88,4 +88,4 @@ Elimina todas las referencias existentes a las bibliotecas de publicidad de Micr
 
 Prueba la aplicación para asegurarte de que muestra anuncios de banner según lo previsto.
 
-Si la versión anterior de la aplicación ya está disponible en la tienda, [crea un nuevo envío](../publish/app-submissions.md) de la aplicación actualizada en el centro de partners para publicar la aplicación.
+Si la versión anterior de la aplicación ya está disponible en la tienda, [crea un nuevo envío](../publish/app-submissions.md) para la aplicación actualizada en el centro de partners para publicar la aplicación.

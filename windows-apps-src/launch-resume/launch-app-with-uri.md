@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9126d33c18ede90e9c20339d9a793f3ab2835e76
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026916"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196849"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar una aplicación con un URI
 
@@ -30,7 +30,7 @@ En esta sección describe cómo usar un identificador uniforme de recursos (URI)
 | [Iniciar la aplicación Mapas de Windows](launch-maps-app.md) | Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. |
 | [Iniciar la aplicación Contactos](launch-people-apps.md) | En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas. |
 | [Iniciar recortes de pantalla](launch-screen-snipping.md) | Obtén información sobre cómo usar los esquemas de URI para abrir un nuevo recorte, o para abrir la aplicación de recorte & boceto. |
-| [Permiten que las aplicaciones para sitios Web con los controladores URI de aplicación](web-to-app-linking.md) | Compatibilidad con las aplicaciones para sitios Web función para controlar la interacción del usuario con la aplicación. |
+| [Permiten que las aplicaciones para sitios Web con los controladores de URI de aplicación](web-to-app-linking.md) | Compatibilidad con las aplicaciones para sitios Web función para controlar la interacción del usuario con la aplicación. |
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md)

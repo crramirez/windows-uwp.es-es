@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e292e0c992edb26da2a92885e1f949d254d75da6
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6141293"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252799"
 ---
 # <a name="depth-and-stencil-buffers"></a>Búferes de profundidad y de galerías de símbolos
 
