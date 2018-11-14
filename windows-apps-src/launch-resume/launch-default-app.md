@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a5a0af7b7227f149722cf34a368fc588198880ef
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035321"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187158"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar la aplicación predeterminada para un URI
 
@@ -242,8 +242,8 @@ Para obtener más información, consulta [Iniciar la aplicación para UWP](launc
 
 ### <a name="weather-app-uri-scheme"></a>Esquema de URI de aplicación de información meteorológica
 
-Usa el **msnweather:** esquema de URI para iniciar la aplicación de información meteorológica.
+Usa el **msnweather:** esquema de URI para iniciar la aplicación meteorológica.
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| msnweather://Forecast?la= \[latitude\] & lo = \ [longitude\] | Inicia la aplicación el tiempo en la página de previsión en función de un coordenadas de ubicación geográfica.<br>`latitude` hace referencia a la latitud de la ubicación.<br> `longitude` hace referencia a la longitud de la ubicación.<br> |
+| msnweather://Forecast?la= \[latitude\] y lo = \ [longitude\] | Inicia la aplicación el tiempo en la página de previsión en función de un coordenadas de ubicación geográfica.<br>`latitude` hace referencia a la latitud de la ubicación.<br> `longitude` hace referencia a la longitud de la ubicación.<br> |

@@ -9,13 +9,13 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 301dcbe95d7509db07d5b7dd11a16460063bbffe
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027855"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191703"
 ---
-#  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Migración de empresas WindowsPhone Silverlight y las capas de datos a UWP
+#  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Migración de empresas de WindowsPhone Silverlight y capas de datos y UWP
 
 
 El tema anterior era [Migración de modelo de E/S, dispositivos y aplicaciones](wpsl-to-uwp-input-and-sensors.md).
@@ -48,11 +48,11 @@ Pasa los URI absolutos, los URI no relativos, a tipos de Windows en tiempo de ej
 
 Con los iniciadores y selectores (que se encuentra en el espacio de nombres **Microsoft.Phone.Tasks** ), una aplicación WindowsPhone Silverlight puede interactuar con el sistema operativo para realizar operaciones comunes como redactar un correo electrónico, elegir una foto o compartir determinados tipos de datos con otra aplicación. Buscar **Microsoft.Phone.Tasks** en el tema de [Windows Phone Silverlight para asignaciones de espacios de nombres y clases de Windows 10](wpsl-to-uwp-namespace-and-class-mappings.md) para encontrar el tipo equivalente de UWP. Estos van desde mecanismos similares, llamados iniciadores y selectores, hasta la implementación de un contrato para compartir datos entre aplicaciones.
 
-Una aplicación WindowsPhone Silverlight se pueda poner en un estado inactivo o marcada para exclusión incluso cuando se usa, por ejemplo, la tarea de selector de fotos. Una aplicación para UWP permanece activa y en ejecución cuando se usa la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847).
+Una aplicación WindowsPhone Silverlight se puede colocar en un estado inactivo o marcada para exclusión incluso cuando se usa, por ejemplo, la tarea de selector de fotos. Una aplicación para UWP permanece activa y en ejecución cuando se usa la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847).
 
 ## <a name="monetization-trial-mode-and-in-app-purchases"></a>Rentabilidad: modo de prueba y compras desde la aplicación
 
-Una aplicación WindowsPhone Silverlight puede usar la clase UWP [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) para la mayoría de sus funcionalidades de compra desde la aplicación y el modo de prueba para que no es necesario portar código. Sin embargo, una aplicación WindowsPhone Silverlight llama a **MarketplaceDetailTask.Show** para ofrecer la aplicación para la compra:
+Una aplicación de WindowsPhone Silverlight puede usar la clase [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) UWP para la mayoría de sus funcionalidades de compra desde la aplicación y el modo de prueba para que no es necesario portar código. Sin embargo, una aplicación WindowsPhone Silverlight llama a **MarketplaceDetailTask.Show** para ofrecer la aplicación para la compra:
 
 ```csharp
     private void Buy()
@@ -76,7 +76,7 @@ Si tienes código que simula las funciones de compra y de compra desde la aplica
 
 ## <a name="notifications-for-tile-or-toast-updates"></a>Notificaciones de las actualizaciones de iconos o de notificaciones del sistema
 
-Las notificaciones son una extensión del modelo de notificación de inserción para las aplicaciones de WindowsPhone Silverlight. Cuando recibas una notificación de los Servicios de notificaciones de inserción de Windows (WNS), puedes exponer la información en la interfaz de usuario con una actualización de icono o con una notificación del sistema. Para portar el lado de la interfaz de usuario correspondiente a las funciones de notificación, consulta [Iconos y notificaciones del sistema](w8x-to-uwp-porting-xaml-and-ui.md).
+Las notificaciones son una extensión del modelo de notificación de inserción para las aplicaciones WindowsPhone Silverlight. Cuando recibas una notificación de los Servicios de notificaciones de inserción de Windows (WNS), puedes exponer la información en la interfaz de usuario con una actualización de icono o con una notificación del sistema. Para portar el lado de la interfaz de usuario correspondiente a las funciones de notificación, consulta [Iconos y notificaciones del sistema](w8x-to-uwp-porting-xaml-and-ui.md).
 
 Si quieres más información sobre el uso de notificaciones en una aplicación para UWP, consulta [Envío de notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868266).
 

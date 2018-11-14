@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: c2c1f54a402fc4ae7184f1d588cc255525f762c2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043328"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154892"
 ---
 # <a name="xbox-analytics-report"></a>Informe de análisis de Xbox
 

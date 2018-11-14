@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 971e828f4642a0a9c47994b1c7c0bfdbc5f01ad3
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024839"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183582"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para tu aplicación
 
@@ -70,8 +70,8 @@ Los ejemplos de código de esta sección muestran cómo usar las API en el espac
 
 Estos ejemplos cumplen los siguientes requisitos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Tienes [creado un envío de aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
-* Tienes [creado un complemento de suscripción para la aplicación](../publish/add-on-submissions.md) en el centro de partners.
+* Ha [creado un envío de aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Has [creado un complemento de suscripción para la aplicación](../publish/add-on-submissions.md) de centro de partners.
 
 El código de estos ejemplos supone que:
 * El archivo de código requiere el **uso** de instrucciones para los espacios de nombres **Windows.Services.Store** y **System.Threading.Tasks**.
@@ -126,7 +126,7 @@ No ofrecemos período de gracia para la facturación de la suscripción. Si no p
 Los siguientes escenarios no son compatibles actualmente con complementos de una suscripción.
 
 * En este momento no se admite la venta de suscripciones a clientes directamente a través de la Tienda. Las suscripciones solo están disponibles para compras desde la aplicación de productos digitales.
-* Los clientes no pueden cambiar periodos de suscripción utilizando la página [http://account.microsoft.com/services](http://account.microsoft.com/services) de su cuenta de Microsoft. Para cambiar a un período de suscripción diferente, los clientes deben cancelar su suscripción actual y comprar luego una suscripción con un período de suscripción diferente desde tu aplicación.
+* Los clientes no pueden cambiar periodos de suscripción utilizando la página [http://account.microsoft.com/services](http://account.microsoft.com/services) de su cuenta de Microsoft. Para cambiar a un período de suscripción diferente, los clientes deben cancelar su suscripción actual y, a continuación, comprar una suscripción con un período de suscripción diferente desde la aplicación.
 * El cambio de nivel no se admite actualmente para complementos de una suscripción (por ejemplo, el cambio de un cliente de una suscripción básica a una suscripción premium con más características).
 * Las [Ventas](../publish/put-apps-and-add-ons-on-sale.md) y los [códigos promocionales](../publish/generate-promotional-codes.md) no se admiten actualmente para complementos de una suscripción.
 

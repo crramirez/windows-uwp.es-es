@@ -6,19 +6,19 @@ description: La instalación en streaming de la Plataforma universal de Windows 
 ms.author: lahugh
 ms.date: 04/05/2017
 ms.topic: article
-keywords: Windows 10, uwp, instalación, de streaming de instalación de aplicaciones de uwp de streaming
+keywords: aplicación para uwp de streaming de Windows 10, uwp, streaming de instalación, instalar
 ms.localizationpriority: medium
 ms.openlocfilehash: e4915d2fb4d1133cd190d766d38c79934d9f3956
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052140"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6141637"
 ---
 # <a name="uwp-app-streaming-install"></a>Instalación en streaming de aplicaciones para UWP
 La instalación en streaming de la Plataforma universal de Windows (UWP) te permite especificar qué partes de la aplicación deben descargarse primero de Microsoft Store. Al descargar primero los archivos esenciales de la aplicación, el usuario puede iniciarla e interactuar con ella mientras el resto de archivos terminan de descargarse en segundo plano. 
 
-Para usar la instalación en Streaming UWP debes dividir los archivos de la aplicación en secciones. Para ello, se creará una asignación de grupo de contenido, que es un archivo XML que se empaqueta con tu aplicación, lo que le permite establecer la prioridad de descarga y el orden. Consulta el tema que se vinculan a continuación para obtener más información.
+Para usar la instalación en Streaming UWP tendrás que dividir los archivos de la aplicación en secciones. Para ello, se creará una asignación de grupo de contenido, que es un archivo XML que se empaqueta con tu aplicación, lo que le permite establecer la prioridad de descarga y el orden. Consulta el tema que se vinculan a continuación para obtener más información.
 
 Para obtener una guía completa sobre cómo agregar instalación en Streaming UWP a tu aplicación para UWP, echa un vistazo a esta [serie de blogs](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
 

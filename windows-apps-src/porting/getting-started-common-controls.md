@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: db2b4a74b5b40060779dd82764dcf2ed2799b285
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028250"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151447"
 ---
 # <a name="getting-started-common-controls"></a>Introducción: controles habituales
 
@@ -32,7 +32,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Selector de fecha (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Vista de imagen (UIImageView) | [Imagen](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulta también [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Etiqueta (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Consulta también [Inicio rápido: mostrar texto](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
-| Vista de mapa (MKMapView) y delegado de vista de mapa (MKMapViewDelegate) | Ver [mapas de Bing para aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
+| Vista de mapa (MKMapView) y delegado de vista de mapa (MKMapViewDelegate) | Consulta los [mapas de Bing para aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Controlador de navegación (UINavigationController) y delegado de controlador de navegación (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Consulta también [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344). |
 | Control de páginas (UIPageControl) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/> Consulta también [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344). |
 | Vista de selector (UIPickerView) y delegado de vista de selector (UIPickerViewDelegate) | [ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348) <br/> Consulta también [Agregar cuadros combinados y cuadros de lista](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616) |

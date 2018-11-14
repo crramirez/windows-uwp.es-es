@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b0dcb3e49bb35902a17f829c0222c570265be8b5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044105"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181681"
 ---
 # <a name="optimize-your-xaml-layout"></a>Optimiza tu diseño XAML
 
@@ -136,7 +136,7 @@ Tal como se muestra en estos ejemplos, existen muchas formas de lograr la misma 
 
 Un requisito común de la interfaz de usuario es tener un diseño en el que los elementos se superpongan entre sí. Por lo general el espaciado interno, los márgenes, las alineaciones y las transformaciones se usan para ubicar los elementos de esta forma. El control [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de XAML está optimizado para mejorar el rendimiento de diseño de los elementos que se superponen.
 
-**Importante**para ver la mejora, usa una [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/BR242704)de una sola celda. No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**para ver la mejora, usa una sola celda [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/BR242704). No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### <a name="examples"></a>Ejemplos
 

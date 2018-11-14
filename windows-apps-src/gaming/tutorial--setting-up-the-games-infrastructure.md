@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, el programa de instalación, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034866"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193574"
 ---
 # <a name="set-up-the-game-project"></a>Configurar el proyecto de juego
 
@@ -35,7 +35,7 @@ Si no estás familiarizado con el desarrollo de la Plataforma Universal de Windo
 
 ### <a name="use-directx-template-to-create-a-project"></a>Usa la plantilla de DirectX para crear un proyecto
 
-Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio2017, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de aplicaciones de juego y los gráficos. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
+Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Studio2017 Visual, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de aplicaciones de juegos y gráficos. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
 
 La plantilla usada para este tutorial es la titulada **DirectX 11 App (Universal Windows)**. 
 

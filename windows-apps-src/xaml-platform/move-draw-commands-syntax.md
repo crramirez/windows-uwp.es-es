@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024234"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6148963"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxis de comandos de movimiento y dibujo
 
@@ -229,7 +229,7 @@ En lugar de usar valores decimales o enteros, puedes usar la notación científi
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>Herramientas de diseño que producen comandos de movimiento y dibujo
 
-Con la herramienta de **lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio2015 suele producir un objeto de [**ruta de acceso**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , con movimiento y comandos de dibujo.
+Mediante la herramienta de **lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio2015 suele producir un objeto de [**ruta de acceso**](/uwp/api/Windows.UI.Xaml.Shapes.Path) de movimiento y comandos de dibujo.
 
 Es posible que encuentres datos de comandos de movimiento y dibujo existentes en algunas partes del control definidas en las plantillas XAML predeterminadas para los controles en Windows Runtime. Por ejemplo, algunos controles usan una clase [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tiene los datos definidos como comandos de movimiento y dibujo.
 

@@ -1,20 +1,20 @@
 ---
-author: normesta
+author: hickeys
 Description: You can use extensions to integrate your packaged desktop app with Windows 10 in predefined ways.
 Search.Product: eADQiWindows 10XVcnh
 title: Integrar la aplicación con Windows 10 (Puente de dispositivo de escritorio)
-ms.author: normesta
+ms.author: hickeys
 ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
-ms.openlocfilehash: 252b1309f1218a872ea49dcce7048b890a6139b4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6761ec38b470b798740cbabc72a648f51557edbc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041585"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196401"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación de escritorio empaquetada con Windows 10
 
@@ -86,6 +86,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
   </Applications>
 </Package>
 ```
+
 #### <a name="related-sample"></a>Muestra relacionada
 
 [Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
@@ -146,6 +147,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
   </Applications>
 </Package>
 ```
+
 #### <a name="related-sample"></a>Muestra relacionada
 
 [Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
@@ -194,8 +196,8 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap3:FileTypeAssociation Name="Contoso">
             <uap:SupportedFileTypes>
-              <uap:FileType>.txt</uap:FileType>
-              <uap:FileType>.avi</uap:FileType>
+            <uap:FileType>.txt</uap:FileType>
+            <uap:FileType>.avi</uap:FileType>
             </uap:SupportedFileTypes>
           </uap3:FileTypeAssociation>
         </uap:Extension>
@@ -223,14 +225,13 @@ Puedes agregar opciones a ese menú. Estas opciones ofrecen a los usuarios difer
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/2
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
-
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
     <FileTypeAssociation Name="[AppID]">
         <SupportedVerbs>
-              <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
+           <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
         </SupportedVerbs>
     </FileTypeAssociation>
 </Extension>
@@ -272,6 +273,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
   </Applications>
 </Package>
 ```
+
 #### <a name="related-sample"></a>Muestra relacionada
 
 [Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
@@ -294,7 +296,7 @@ Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada para
     <FileTypeAssociation Name="[AppID]" UseUrl="true" Parameters="%1">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
-        </SupportedFileTypes> 
+        </SupportedFileTypes>
     </FileTypeAssociation>
 </Extension>
 ```
@@ -324,7 +326,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
               <uap:SupportedFileTypes>
                 <uap:FileType>.txt</uap:FileType>
                 <uap:FileType>.doc</uap:FileType>
-              </uap:SupportedFileTypes> 
+              </uap:SupportedFileTypes>
             </uap3:FileTypeAssociation>
           </uap:Extension>
         </Extensions>
@@ -351,8 +353,8 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
 ```XML
-<Extension Category="windows.firewallRules">  
-  <FirewallRules Executable="[executable file name]">  
+<Extension Category="windows.firewallRules">
+  <FirewallRules Executable="[executable file name]">
     <Rule
       Direction="[Direction]"
       IPProtocol="[Protocol]"
@@ -360,10 +362,11 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
       LocalPortMax="LocalPortMax"
       RemotePortMin="RemotePortMin"
       RemotePortMax="RemotePortMax"
-      Profile="[Profile]"/>  
-  </FirewallRules>  
+      Profile="[Profile]"/>
+  </FirewallRules>
 </Extension>
 ```
+
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).
 
 |Nombre |Descripción |
@@ -378,8 +381,6 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |RemotePortMax |El mayor número de puerto de un intervalo de números de puerto remoto. |
 |Perfil |Tipo de red |
 
-
-
 #### <a name="example"></a>Ejemplo
 
 ```XML
@@ -387,15 +388,15 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
   xmlns:desktop2="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
   IgnorableNamespaces="desktop2">
   <Extensions>
-    <desktop2:Extension Category="windows.firewallRules">  
-      <desktop2:FirewallRules Executable="Contoso.exe">  
-          <desktop2:Rule Direction="in" IPProtocol="TCP" Profile="all"/>  
-          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="domain"/>  
-          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="public"/>  
+    <desktop2:Extension Category="windows.firewallRules">
+      <desktop2:FirewallRules Executable="Contoso.exe">
+          <desktop2:Rule Direction="in" IPProtocol="TCP" Profile="all"/>
+          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="domain"/>
+          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="public"/>
           <desktop2:Rule Direction="out" IPProtocol="UDP" LocalPortMin="1339" LocalPortMax="1340" RemotePortMin="15"
-                         RemotePortMax="19" Profile="domainAndPrivate"/>  
-          <desktop2:Rule Direction="out" IPProtocol="GRE" Profile="private"/>  
-      </desktop2:FirewallRules>  
+                         RemotePortMax="19" Profile="domainAndPrivate"/>
+          <desktop2:Rule Direction="out" IPProtocol="GRE" Profile="private"/>
+      </desktop2:FirewallRules>
   </desktop2:Extension>
 </Extensions>
 </Package>
@@ -416,6 +417,7 @@ Cada paquete puede contener solo una de estas extensiones. Esto significa que pu
 http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
+
 Declara esta extensión en el nivel de paquete del manifiesto de la aplicación.
 
 ```XML
@@ -483,11 +485,12 @@ Especificar cómo se comporta la aplicación cuando un usuario abre varios archi
         <SupportedVerbs>
             <Verb Id="Edit" MultiSelectModel="[SelectionModel]">Edit</Verb>
         </SupportedVerbs>
-          <SupportedFileTypes>
-                <FileType>"[FileExtension]"</FileType>
+        <SupportedFileTypes>
+            <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
 </Extension>
 ```
+
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
 |Nombre |Descripción |
@@ -501,9 +504,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Las aplicaciones de escritorio empaquetadas tienen las mismas tres opciones que las aplicaciones de escritorio normales.
 
- * ``Player``: La aplicación se activa una vez. Todos los archivos seleccionados se pasan a la aplicación como parámetros de argumento.
- * ``Single``: La aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten.
- * ``Document``: Una nueva instancia independiente de la aplicación se activa para cada archivo seleccionado.
+* ``Player``: La aplicación se activa una vez. Todos los archivos seleccionados se pasan a la aplicación como parámetros de argumento.
+* ``Single``: La aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten.
+* ``Document``: Una nueva instancia independiente de la aplicación se activa para cada archivo seleccionado.
 
  Puedes establecer preferencias diferentes para distintos tipos de archivo y acciones. Por ejemplo, si deseas abrir *documentos* en el modo *Document* y las *imágenes* en el modo *Player*.
 
@@ -525,7 +528,7 @@ Las aplicaciones de escritorio empaquetadas tienen las mismas tres opciones que 
               <uap3:Verb Id="Preview" MultiSelectModel="Document">Preview</uap3:Verb>
             </uap2:SupportedVerbs>
             <uap:SupportedFileTypes>
-                <uap:FileType>.txt</uap:FileType>
+              <uap:FileType>.txt</uap:FileType>
             </uap:SupportedFileTypes>
         </uap:Extension>
       </Extensions>
@@ -689,6 +692,7 @@ Para obtener más información sobre el campo **Kind** y los valores que puedes 
     </FileTypeAssociation>
 </Extension>
 ```
+
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
 |Nombre |Descripción |
@@ -726,6 +730,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
   </Applications>
 </Package>
 ```
+
 <a id="make-file-properties" />
 
 ### <a name="make-file-properties-available-to-search-index-property-dialogs-and-the-details-pane"></a>Hacer que las propiedades de archivo tengan disponibles las opciones de búsqueda, índice, diálogos de propiedad y panel de detalles
@@ -748,6 +753,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
     </uap:FileTypeAssociation>
 </uap:Extension>
 ```
+
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
 |Nombre |Descripción |
@@ -833,7 +839,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
                 <ThumbnailProviderHandler Clsid ="20000000-0000-0000-0000-000000000001"/>
                 <ExtendedPropertyhandler Clsid ="20000000-0000-0000-0000-000000000001"/>
                 <desktop:CloudFilesContextMenus>
-                    <desktop:Verb Id ="keep" Clsid=     
+                    <desktop:Verb Id ="keep" Clsid=
                        "20000000-0000-0000-0000-000000000001">
                        Always keep on this device</desktop:Verb>
                 </desktop:CloudFilesContextMenus>
@@ -859,19 +865,18 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 ### <a name="start-your-application-by-using-a-protocol"></a>Iniciar la aplicación mediante un protocolo
 
-Las asociaciones de protocolos permiten que otros programas y componentes del sistema interactúen con la aplicación empaquetada. Cuando la aplicación empaquetada se inicia mediante un protocolo, puedes especificar parámetros específicos que pasar a sus argumentos de evento de activación, de forma que se comporte en consecuencia. Los parámetros solo son compatibles con aplicaciones empaquetadas de plena confianza. Las aplicaciones para UWP no pueden usar parámetros.  
+Las asociaciones de protocolos permiten que otros programas y componentes del sistema interactúen con la aplicación empaquetada. Cuando la aplicación empaquetada se inicia mediante un protocolo, puedes especificar parámetros específicos que pasar a sus argumentos de evento de activación, de forma que se comporte en consecuencia. Los parámetros solo son compatibles con aplicaciones empaquetadas de plena confianza. Las aplicaciones para UWP no pueden usar parámetros.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
 http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
 ```XML
 <Extension
     Category="windows.protocol">
-    <Protocol
+  <Protocol
       Name="[Protocol name]"
       Parameters="[Parameters]" />
 </Extension>
@@ -896,15 +901,16 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
       <Extensions>
         <uap3:Extension
           Category="windows.protocol">
-        <uap3:Protocol
-          Name="myapp-cmd"
-          Parameters="/p &quot;%1&quot;" />
+          <uap3:Protocol
+            Name="myapp-cmd"
+            Parameters="/p &quot;%1&quot;" />
         </uap3:Extension>
       </Extensions>
     </Application>
   </Applications>
 </Package>
 ```
+
 <a id="alias" />
 
 ### <a name="start-your-application-by-using-an-alias"></a>Iniciar la aplicación mediante un alias
@@ -916,7 +922,6 @@ Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tene
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
-
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
 ```XML
@@ -925,8 +930,8 @@ Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tene
     Executable="[ExecutableName]"
     EntryPoint="Windows.FullTrustApplication">
     <AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="[AliasName]" />
-      </AppExecutionAlias>
+        <desktop:ExecutionAlias Alias="[AliasName]" />
+    </AppExecutionAlias>
 </Extension>
 ```
 
@@ -949,9 +954,9 @@ Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tene
         Category="windows.appExecutionAlias"
         Executable="exes\launcher.exe"
         EntryPoint="Windows.FullTrustApplication">
-        <uap3:AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="Contoso.exe" />
-        </uap3:AppExecutionAlias>
+      <uap3:AppExecutionAlias>
+        <desktop:ExecutionAlias Alias="Contoso.exe" />
+      </uap3:AppExecutionAlias>
   </uap3:Extension>
 ...
 </Package>
@@ -983,7 +988,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
     Category="windows.startupTask"
     Executable="[ExecutableName]"
     EntryPoint="Windows.FullTrustApplication">
-    <StartupTask
+  <StartupTask
       TaskId="[TaskID]"
       Enabled="true"
       DisplayName="[DisplayName]" />
@@ -1011,7 +1016,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
           Category="windows.startupTask"
           Executable="bin\MyStartupTask.exe"
           EntryPoint="Windows.FullTrustApplication">
-          <desktop:StartupTask
+        <desktop:StartupTask
           TaskId="MyStartupTask"
           Enabled="true"
           DisplayName="My App Service" />
@@ -1021,6 +1026,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
  </Package>
 ```
+
 <a id="autoplay" />
 
 ### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC
@@ -1030,7 +1036,6 @@ Reproducción automática puede presentar tu aplicación como una opción cuando
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
-
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1080,6 +1085,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </Applications>
 </Package>
 ```
+
 <a id="updates" />
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Reiniciar automáticamente después de recibir una actualización de Microsoft Store
@@ -1156,6 +1162,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 </Applications>
 </Package>
 ```
+
 Puedes encontrar un ejemplo que use esa extensión [aquí](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF)
 
 <a id="fonts" />
@@ -1179,7 +1186,6 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 ```
 
 Puedes encontrar la referencia de esquema completa [aquí](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).
-
 
 |Nombre |Descripción |
 |-------|-------------|
@@ -1206,6 +1212,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://review.docs.m
   </Applications>
 </Package>
 ```
+
 <a id="win32-process" />
 
 ### <a name="start-a-win32-process-from-a-universal-windows-platform-uwp-app"></a>Iniciar un proceso de Win32 desde una aplicación de la Plataforma universal de Windows (UWP)
@@ -1258,6 +1265,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
 </Package>
 ```
+
 Esta extensión puede resultar útil si quieres crear una interfaz de usuario de plataforma Universal de Windows que se ejecuta en todos los dispositivos, pero quieres que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
 
 Solo tienes que crear un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Este extensiones indica que quieres iniciar un archivo ejecutable en el paquete de aplicación de Windows.  Si quieres comunicarte entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](../launch-resume/app-services.md) para poder hacerlo. Puedes leer más acerca de este ejemplo [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, DirectX, objeto de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e29a19410915836be3c54c0dc04a6d7dc29ceeb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027615"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162305"
 ---
 # <a name="the-app-object-and-directx"></a>El objeto de aplicación y DirectX
 
@@ -21,7 +21,7 @@ ms.locfileid: "6027615"
 
 Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows. Como se ejecutan a un nivel más bajo en la pila de Windows Runtime, deben interoperar con el marco de la interfaz de usuario de una manera más básica, mediante el acceso y la interoperación con el objeto de aplicación directamente. Aprende cuándo y cómo se realiza esta interoperación y de qué manera puedes usar eficazmente, como desarrollador de DirectX, este modelo en el desarrollo de una aplicación para UWP.
 
-Consulte el [Glosario de gráficos de Direct3D](../graphics-concepts/index.md) para obtener información acerca de los términos de gráficos desconocidos o los conceptos que se producen durante la lectura.
+Consulte el [Glosario de gráficos de Direct3D](../graphics-concepts/index.md) para obtener información sobre los términos de gráficos desconocidos o los conceptos que se producen durante la lectura.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>Los espacios de nombres de interfaz de usuario principales
 

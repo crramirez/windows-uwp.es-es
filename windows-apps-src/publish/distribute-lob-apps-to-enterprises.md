@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa
 ms.localizationpriority: medium
 ms.openlocfilehash: d90a3b3b0eb216dbc07bbc331d7d461ed0f825c4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044495"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149271"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de LOB a empresas
 
@@ -94,7 +94,7 @@ Después de que el envío pase por el proceso de certificación, la aplicación 
 
 La creación de aplicaciones para una empresa a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación garantiza que la aplicación esté firmada por la Tienda y que cumpla con las directivas estándar de esta.
 
-En algunos casos, las empresas no es posible que quieran que sus aplicaciones de línea de negocio para ser enviado a través del centro de partners (por ejemplo, cuestiones de cumplimiento o para las aplicaciones que necesitan funciones adicionales). En este caso, la empresa puede implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación.
+En algunos casos, es podrán que las empresas no quieran sus aplicaciones de línea de negocio para ser enviado a través del centro de partners (por ejemplo, cuestiones de cumplimiento o para las aplicaciones que necesitan funciones adicionales). En este caso, la empresa puede implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación.
 
 Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 

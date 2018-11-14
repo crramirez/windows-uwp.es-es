@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 283ea63d118f9a61fe745dd3eb60b68594c32279
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023896"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198542"
 ---
 # <a name="specular-lighting"></a>Luz especular
 
@@ -57,7 +57,7 @@ El valor de Cₛ es uno de los siguientes:
 -   El color del vértice 2, si el origen del material especular es el color del vértice especular y el segundo color del vértice se suministra en la declaración de vértices.
 -   El color del material especular.
 
-**Nota**  si se usa cualquiera de las opciones origen del material especular y no se proporciona el color del vértice, se usa el color del material especular.
+**Nota**  si se usa cualquier opción de origen del material especular y no se proporciona el color del vértice, se usa el color del material especular.
 
  
 
