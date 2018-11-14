@@ -9,15 +9,15 @@ keywords: windows10, uwp, insiders, insider centro de desarrollo, característic
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: medium
 ms.openlocfilehash: 950c80967851c858212fecc6999c93b55dd439de
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044016"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6279131"
 ---
 # <a name="dev-center-insider-program"></a>Programa Insider del Centro de desarrollo
 
-Como un [desarrollador registrado](http://go.microsoft.com/fwlink/?LinkID=615100), puede ayudar a influir en la funcionalidad que ofrecemos unir el programa Insider del centro de desarrollo. Este programa permite probar las nuevas características antes de que estén disponibles para todos los desarrolladores. Te animamos a enviarnos tus comentarios sobre estas características mediante el vínculo comentarios debajo del icono de signo de interrogación en la esquina superior derecha del panel de información. Todos los comentarios que recibamos por parte de usuarios de Insider del Centro de desarrollo se leerán atentamente y se les dará prioridad.
+Como un [desarrollador registrado](http://go.microsoft.com/fwlink/?LinkID=615100), puede ayudar a influir en la funcionalidad que ofrecemos unir el programa Insider del centro de desarrollo. Este programa permite probar las nuevas características antes de que estén disponibles para todos los desarrolladores. Te animamos a enviarnos tus comentarios sobre estas características mediante el vínculo comentarios debajo del icono de signo de interrogación en la esquina superior derecha del panel. Todos los comentarios que recibamos por parte de usuarios de Insider del Centro de desarrollo se leerán atentamente y se les dará prioridad.
 
 Para unirte al programa, participar en la página de **configuración de la cuenta** . Puedes dejar de participar en cualquier momento.
 

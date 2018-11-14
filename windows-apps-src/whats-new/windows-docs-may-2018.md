@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74fc017453472b515e597b73ee8bb582376f6b12
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 2dc2f8e65ec9ed4e05b6b62e9fc28bbc75f28075
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6464376"
+ms.locfileid: "6650555"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos de Windows de mayo de 2018
 
@@ -114,11 +114,11 @@ Nos hemos revitalizado nuestro Get a contenido con nuevas pistas de aprendizaje.
 
 ### <a name="advertising-performance-report"></a>Informe de rendimiento de publicidad
 
-Ahora, el [informe de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del centro de desarrollo proporciona métricas de visualización. También hemos agregado el artículo de [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md) para proporcionar recomendaciones para optimizar la visualización de tus anuncios.
+El [informe de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners ahora proporciona métricas de visualización. También hemos agregado el artículo de [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md) para proporcionar recomendaciones para optimizar la visualización de tus anuncios.
 
 ### <a name="targeted-push-notifications"></a>Notificaciones push dirigidas
 
-Ahora, la página de [notificaciones](../publish/send-push-notifications-to-your-apps-customers.md) en el panel del centro de desarrollo proporciona datos de análisis adicionales para todas las notificaciones en las vistas de mapa gráfico y mapamundi.
+Ahora, la página de [notificaciones](../publish/send-push-notifications-to-your-apps-customers.md) del centro de partners proporciona datos de análisis adicionales para todas las notificaciones en las vistas de mapa gráfico y mapamundi.
 
 ## <a name="videos"></a>Vídeos
 

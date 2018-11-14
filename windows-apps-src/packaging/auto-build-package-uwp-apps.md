@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 78cb7240fd11cee77556078f10500ca1a2087f0e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 775e780be823b6e7b80eda9f488d69fe4fc29edf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194849"
+ms.locfileid: "6258188"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -292,7 +292,7 @@ Para generar paquetes de envío a la Store, asocia tu aplicación con la Store m
 
 El Asistente para asociación con la Store genera un archivo denominado Package.StoreAssociation.xml que contiene la información de asociación con la Store. Si almacenas el código fuente en un repositorio público como GitHub, este archivo contendrá todos los nombres reservados de aplicación para esa cuenta. Puedes excluir o eliminar este archivo antes de hacerlo público.
 
-Si no tienes acceso a la cuenta del Centro de desarrollo que se usó para publicar la aplicación, puedes seguir las instrucciones de este documento: [¿Crear una aplicación para terceros? Cómo empaquetar su aplicación de la Store](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
+¿Si no tienes acceso a la cuenta del centro de partners que se usó para publicar la aplicación, puedes seguir las instrucciones de este documento: [crear una aplicación para una parte 3? Cómo empaquetar su aplicación de la tienda](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
 
 A continuación, debes comprobar que el paso de compilación incluye el parámetro siguiente:
 
@@ -306,11 +306,11 @@ Esto generará un archivo de carga que se puede enviar a la tienda.
 
 Usa la extensión de Visual Studio Team Services para Microsoft Store para realizar la integración con la API de la Store y enviar el paquete de la aplicación a la Store.
 
-Debes conectar tu cuenta del Centro de desarrollo con Azure Active Directory (AD) y, a continuación, crear una aplicación en tu AD para autenticar las solicitudes. Puedes seguir las instrucciones de la página de extensión para lograrlo.
+Debes conectar tu cuenta del centro de partners con Azure Active Directory (AD) y, a continuación, crear una aplicación en tu AD para autenticar las solicitudes. Puedes seguir las instrucciones de la página de extensión para lograrlo.
 
 Una vez que hayas configurado la extensión, puedes agregar la tarea de compilación y configurarla con el identificador de la aplicación y la ubicación del archivo de carga.
 
-![configurar el centro de desarrollo](images/building-screen17.png)
+![configurar el centro de partners](images/building-screen17.png)
 
 Donde el valor del parámetro `Package File` será:
 

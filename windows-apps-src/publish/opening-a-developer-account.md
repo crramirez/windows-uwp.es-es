@@ -2,22 +2,22 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrir una cuenta de desarrollador
-description: Esta es una descripción general de cómo registrarse para una cuenta de desarrollador de Windows de Microsoft Store y otros programas de Microsoft en el centro de partners.
+description: Esta es una introducción de cómo registrarse para una cuenta de desarrollador configura para Microsoft Store y otros programas de Microsoft en el centro de partners.
 ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b34bdfae8faf7fee2b2eae373483eb9e4dea1972
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024488"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258953"
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
 
-Esta es una descripción general de cómo registrarse para una cuenta de desarrollador de Windows en [El centro de partners](https://partner.microsoft.com/dashboard).
+Esta es una introducción de cómo registrarse para una cuenta de desarrollador de Windows en [El centro de partners](https://partner.microsoft.com/dashboard).
 
 > [!NOTE]
 > Cuando te registres para obtener una cuenta de desarrollador, usaremos la dirección de correo electrónico proporcionada en la información de contacto para enviar comunicaciones por correo electrónico relacionadas con tu cuenta. En ocasiones, pueden ser mensajes informativos acerca de nuestros programas. Si eliges no recibir estos mensajes informativos y [no participar](http://go.microsoft.com/fwlink/p/?LinkId=533280), ten en cuenta que seguiremos enviándote correos electrónicos transaccionales (por ejemplo, para que sepas que la aplicación supera la certificación o que hay un pago en camino). Estos mensajes de correo electrónico son una parte necesaria de tu cuenta y, a menos que la cierres, seguirás recibiendo estos mensajes transaccionales.
@@ -59,12 +59,12 @@ Después de completar el registro, tu cuenta pasará por el proceso de verificac
 > [!IMPORTANT]
 > Para permitir que varios usuarios accedan a tu cuenta de desarrollador, te recomendamos que uses Azure Active Directory para asignar roles a usuarios individuales (en lugar de acceso compartido a la cuenta de Microsoft). Cada usuario puede acceder a la cuenta de desarrollador, iniciar sesión en el centro de partners con sus credenciales de Azure AD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
 
-Si necesitas tener acceso de varias personas la cuenta de empresa al iniciar sesión con la cuenta de Microsoft que abrió (en lugar de a usuarios individuales agregados a la cuenta), las siguientes directrices puede resultar útil:
+Si necesitas tener acceso a las personas varios la cuenta de empresa al iniciar sesión con la cuenta de Microsoft que abrió (en lugar de como usuarios individuales agregados a la cuenta), las siguientes directrices puede resultar útil:
 
--   Crear la cuenta de Microsoft con una dirección de correo electrónico que ya no pertenece a usted o a otra persona, tales como MyCompany_PartnerCenter@outlook.com. No uses una dirección de correo electrónico en el dominio de tu empresa, especialmente si tu empresa ya usa Azure AD. (Como se indicó anteriormente, puedes agregar usuarios adicionales de Azure tu empresa AD más adelante.)
+-   Crear la cuenta de Microsoft con una dirección de correo electrónico que ya no pertenece a usted o a otra persona, como MyCompany_PartnerCenter@outlook.com. No uses una dirección de correo electrónico en el dominio de tu empresa, especialmente si tu empresa ya usa Azure AD. (Como se indicó anteriormente, puedes agregar usuarios adicionales de Azure tu empresa AD más adelante.)
 -   Limita el acceso a esta cuenta Microsoft al menor número posible de usuarios.
--   Configurar una lista de distribución de correo electrónico corporativa que incluya todos los que necesita tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a la [información de seguridad asociada con la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados de la lista reciban códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puedes agregar dirección de correo electrónico de la persona a tu información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se te solicite (por ejemplo, cuando se agrega nueva información de seguridad a t la cuenta o cuando se accede desde un nuevo dispositivo).
--   Agrega un número de teléfono de la empresa a la información de seguridad de la cuenta de Microsoft. Intenta usar un número que no requiere una extensión y que puedan acceder los integrantes principales del equipo.
+-   Configurar una lista de distribución de correo electrónico corporativa que incluya todos los usuarios que necesitan tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a la [información de seguridad asociada con la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados de la lista reciban códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puedes agregar la dirección de correo electrónico de la persona a tu información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad para t él cuenta o cuando se accede desde un nuevo dispositivo).
+-   Agrega un número de teléfono de la empresa a la información de seguridad de la cuenta de Microsoft. Intenta usar un número que no requiera una extensión y que puedan acceder los integrantes principales del equipo.
 -   En general, haz que los desarrolladores usen [dispositivos de confianza](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para iniciar sesión en la cuenta de desarrollador de tu empresa. Todos los integrantes principales del equipo deben tener acceso a estos dispositivos de confianza. Así se reducirá la necesidad de enviar códigos de seguridad cuando se acceda a la cuenta. Existe un límite en cuanto al número de códigos que pueden generarse por cuenta, por semana.
 -   Si tienes que permitir el acceso a la cuenta desde un equipo que no es de confianza, limita ese acceso a un máximo de cinco desarrolladores. Lo ideal es que estos desarrolladores accedan a la cuenta desde equipos que compartan la misma ubicación de red y geográfica.
 -   Revisa con frecuencia la información de seguridad de tu empresa en https://account.microsoft.com/security para asegurarte de que esté actualizada.
@@ -76,7 +76,7 @@ Usamos la información de seguridad que proporcionas para aumentar el nivel de s
 
 Debes tener al menos dos direcciones de correo electrónico o números de teléfono en la cuenta de Microsoft. Te recomendamos que agregues todas las que puedas. Recuerda que alguna de esta información de seguridad debe confirmarse para ser válida. Asimismo, procura revisar tu información de seguridad con frecuencia, para asegurarte de que esté actualizada. Puedes administrar tu información de seguridad yendo a https://account.microsoft.com/security e iniciando sesión con tu cuenta de Microsoft. Para obtener más información, consulta [la información de seguridad y códigos de seguridad](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
 
-Al iniciar sesión el centro de partners con tu cuenta de Microsoft, el sistema puede solicitarte que confirmes tu identidad mediante el envío de un código de seguridad que debe proporcionar para completar el proceso de inicio de sesión. Te recomendamos que designes equipos que uses con frecuencia como *dispositivos de confianza*. Cuando inicias sesión un dispositivo de confianza, por lo general, no se le ningún código, aunque es posible que, en ocasiones, se te pida en situaciones específicas o si no has iniciado sesión en ese dispositivo en mucho tiempo. Para obtener más información, consulte [Agregar un dispositivo de confianza a tu cuenta de Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
+Al iniciar sesión el centro de partners con su cuenta de Microsoft, el sistema puede solicitarte que confirmes tu identidad mediante el envío de un código de seguridad que debe proporcionar para completar el proceso de inicio de sesión. Te recomendamos que designes equipos que puedes usar con frecuencia como *dispositivos de confianza*. Cuando inicias sesión un dispositivo de confianza, por lo general, no se le ningún código, aunque es posible que, en ocasiones, se te pida en situaciones específicas o si no has iniciado sesión en ese dispositivo en mucho tiempo. Para obtener más información, consulte [Agregar un dispositivo de confianza a tu cuenta de Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
 
 
 ## <a name="closing-your-account"></a>Cerrar la cuenta
