@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, geocodificación, geocoding, mapa, map, ubicación, location
 ms.localizationpriority: medium
 ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6457632"
+ms.locfileid: "6662620"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Realizar geocodificación y geocodificación inversa
 

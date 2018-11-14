@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, games, juegos, input, entrada, raw game controller, dispositivo de juego sin procesar
 ms.localizationpriority: medium
 ms.openlocfilehash: c57db3f9604e20d0dc83d6c3cf2ced87b1f5dcc1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6465491"
+ms.locfileid: "6651697"
 ---
 # <a name="raw-game-controller"></a>Dispositivo de juego sin procesar
 

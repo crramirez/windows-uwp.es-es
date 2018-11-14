@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f87b17ff4452417a06817ee5128d66af4b0e53b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: cc71a58594c8794369bedd7f415518100892ff67
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6280538"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6667300"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio con Visual Studio
 
-Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. Luego, puedes publicar que ese paquete en Microsoft Store o transferirlo localmente a uno o más equipos.
+Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. A continuación, puedes publicar que el paquete a la Microsoft Store o la instalación de prueba en uno o más equipos.
 
 La versión más reciente de Visual Studio proporciona una nueva versión del proyecto de empaquetado que elimina todos los pasos manuales se solían ser necesarios para empaquetar tu aplicación. Tan solo tienes que agregar un proyecto de empaquetado, hacer referencia al proyecto de escritorio y luego presionar F5 para depurar la aplicación. No es necesario realizar ajustes manuales. Esta nueva experiencia optimizada es una gran mejora de la experiencia que estaba disponible en la versión anterior de Visual Studio.
 
@@ -66,7 +66,7 @@ Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Prepa
 
 7. Usa el asistente [Crear paquetes de aplicaciones](../packaging/packaging-uwp-apps.md) para generar un archivo appxupload.
 
-   Puedes cargar dicho archivo directamente a la Store.
+   Puedes cargar dicho archivo directamente a la tienda.
 
 **Vídeo**
 

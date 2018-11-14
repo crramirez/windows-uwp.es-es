@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 773216dc392f7bb234e232f3dd3e7c2190a22de1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 79c1cd5b83c013bdf601022aa7fec9e661b80857
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6450993"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6660482"
 ---
 # <a name="playready-drm"></a>DRM de PlayReady
 
@@ -513,10 +513,10 @@ Para una implementación de muestra de detención segura, consulta el archivo se
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Usar DRM de PlayReady en Xbox One
 
-Si quieres usar DRM de PlayReady en una aplicación para UWP en Xbox One, primero tienes que registrar la cuenta del Centro de desarrollo que estés usando para publicar la aplicación para que se autorice el uso de PlayReady. Puedes hacerlo de dos maneras distintas:
+Para usar DRM de PlayReady en una aplicación para UWP en Xbox One, primero debes registrar tu cuenta del [Centro de partners](https://partner.microsoft.com/dashboard) que estés usando para publicar la aplicación para la autorización de uso de PlayReady. Puedes hacerlo de dos maneras distintas:
 
 * Hacer que tu contacto de Microsoft solicite permiso.
-* Solicitar autorización mediante el envío de tu nombre de empresa y cuenta del Centro de desarrollo a [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
+* Solicitar autorización mediante el envío de tu nombre de empresa y cuenta de centro de partners a [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
 
 Una vez que recibas la autorización, tendrás que agregar un elemento `<DeviceCapability>` adicional en el manifiesto de la aplicación. Tendrás que hacerlo de forma manual porque actualmente no hay ninguna opción disponible en el Diseñador de manifiestos de aplicaciones. Sigue estos pasos para configurarlo:
 
