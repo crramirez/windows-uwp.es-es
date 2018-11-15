@@ -49,7 +49,7 @@ La facturación de operadores de telefonía móvil se admite actualmente por est
 | España           | Orange                           |
 | Suecia          | Telenor, 3                       |
 | Suiza     | Swisscom, Sunrise                |
-| Taiwán          | FarEasTone                       |
+| Taiwan          | FarEasTone                       |
 | Turquía          | Turkcell                         |
 | Emiratos Árabes Unidos | Etisalat                    |
 | Estados Unidos   | Sprint, Verizon                  |

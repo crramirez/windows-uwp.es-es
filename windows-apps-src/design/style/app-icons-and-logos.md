@@ -10,12 +10,12 @@ keywords: Windows 10, UWP
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c389aa207b0756a222c1c82ea99ea007b451b1e
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: d31916c4db51d278c294de56a7ec8a56d2178a91
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6450120"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6663664"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -52,7 +52,7 @@ De manera predeterminada, Visual Studio almacena los activos de icono en un subd
 | Icono de la aplicación | Lista de aplicaciones en el menú Inicio, barra de tareas, Administrador de tareas | Square44x44Logo.png |
 | Pantalla de presentación | Pantalla de presentación de la aplicación | SplashScreen.png  |
 | Logotipo del distintivo | Iconos de la aplicación | BadgeLogo.png  |
-| Logotipo de la tienda o logotipo de paquete | Instalador de aplicación, centro de desarrollo, la opción "Informar de una aplicación" en la tienda, la opción "Escribir una opinión" en la tienda | StoreLogo.png  |
+| Logotipo de la tienda o logotipo de paquete | Instalador de aplicación, el centro de partners, la opción "Informar de una aplicación" en la tienda, la opción "Escribir una opinión" en la tienda | StoreLogo.png  |
 
 \ * Usa a menos que elijas para [Mostrar solo carga imágenes en la tienda](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store). 
 

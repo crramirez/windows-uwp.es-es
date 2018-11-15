@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be084091f041d574445080cd7976318a35fedcea
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 458a5999c1f56a3bc9f445f260d1d294c395b850
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6269514"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6674376"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Novedades para desarrolladores en Windows 10, compilación 16299
 
@@ -80,7 +80,7 @@ Las funciones de esta sección se han agregado desde el lanzamiento de la versi�
 
 Función | Descripción
  :------ | :------
-Administración de cuentas | Se proporciona más flexibilidad al [asociar inquilinos de Azure AD con tu cuenta del Centro de desarrollo](../publish/associate-azure-ad-with-dev-center.md) para agregar varios usuarios de la cuenta. Puedes asociar varios inquilinos de AzureAD a tu cuenta del Centro de desarrollo o asociar un único inquilino de AzureAD a más de una cuenta del Centro de desarrollo.
+Administración de cuentas | Se proporciona más flexibilidad al [asociar inquilinos de Azure AD con tu cuenta del centro de partners](../publish/associate-azure-ad-with-dev-center.md) para agregar varios usuarios de la cuenta. Puedes asociar varios inquilinos de Azure AD con una sola cuenta de centro de partners o asociar un único inquilino de Azure AD con más de una cuenta del centro de partners.
 Publicidad | El SDK de Microsoft Advertising ahora te permite mostrar [anuncios nativos](../monetize/native-ads.md) en tus aplicaciones. Un anuncio nativo es un formato de anuncio basados en componentes, donde cada parte del anuncio creativo (por ejemplo, el título, la imagen, la descripción y el texto de llamada a la acción) se entrega a la aplicación como un elemento individual. Los anuncios nativos están únicamente disponibles actualmente a los desarrolladores que se unan a un programa piloto, pero queremos que esta característica esté disponible para todos los desarrolladores pronto.
 Precios y disponibilidad |  Las nuevas opciones de precios y disponibilidad te permiten [programar cambios en los precios](../publish/set-and-schedule-app-pricing.md) y [establecer las fechas de lanzamiento precisas](../publish/configure-precise-release-scheduling.md).
 API de análisis de Store | La [API de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) ahora proporciona un método que puedes usar para [descargar el archivo CAB para un error de la aplicación](../monetize/download-the-cab-file-for-an-error-in-your-app.md).

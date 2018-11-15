@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, ads, publicidad, tutoriales
 ms.localizationpriority: medium
 ms.openlocfilehash: 55d6c7c0cbc1999c0b4afc33cb84479294d2b18f
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6457958"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6832394"
 ---
 # <a name="best-practices-for-ads-in-apps"></a>Procedimientos recomendados para anuncios en aplicaciones
 

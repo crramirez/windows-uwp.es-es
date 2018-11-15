@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b8faed0719419d4be8ac1e5d493610ec2660598
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6666057"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6861308"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 

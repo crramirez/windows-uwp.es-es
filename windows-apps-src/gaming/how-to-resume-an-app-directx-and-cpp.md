@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, reanudar, resuming, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 1149bebfd837e3d4051b5e0fca10aac248d909c5
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6670516"
+ms.locfileid: "6832484"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Cómo reanudar una aplicación (DirectX y C++)
 
