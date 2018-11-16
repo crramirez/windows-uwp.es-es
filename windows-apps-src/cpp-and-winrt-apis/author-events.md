@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, autor, evento
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6444602"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6859105"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
@@ -148,7 +148,7 @@ Cada vez que hagas clic en la ventana, restarás 1 del saldo de la cuenta bancar
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Delegados con parámetros y señales simple, a través de una ABI
 
-Si el evento debe ser accesible a través de una interfaz binaria de aplicaciones (ABI)&mdash;como entre un componente y su aplicación consumo&mdash;, a continuación, el evento debe usar un tipo de delegado en tiempo de ejecución de Windows. El ejemplo anterior, usa el tipo de delegado [**Windows::Foundation::EventHandler\ < T\ >**](/uwp/api/windows.foundation.eventhandler) Windows Runtime. [**TypedEventHandler\ < TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) es otro ejemplo de un tipo de delegado en tiempo de ejecución de Windows.
+Si el evento debe ser accesible a través de una interfaz binaria de aplicaciones (ABI)&mdash;como entre un componente y su aplicación consumo&mdash;, a continuación, el evento debe usar un tipo de delegado en tiempo de ejecución de Windows. En el ejemplo anterior usa la [**Windows::Foundation::EventHandler\<T\ >**](/uwp/api/windows.foundation.eventhandler) el tipo de delegado en tiempo de ejecución de Windows. [**TypedEventHandler\<TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) es otro ejemplo de un tipo de delegado en tiempo de ejecución de Windows.
 
 Los parámetros de tipo para esos tipos de dos delegado tienen cruzar la ABI, por lo que los parámetros de tipo deben ser tipos de Windows Runtime, demasiado. Que incluye las clases en tiempo de ejecución de terceros y primero, así como los tipos primitivos como cadenas y números. El compilador te ayuda a con un error de "*debe ser de tipo WinRT*" Si olvida esa restricción.
 

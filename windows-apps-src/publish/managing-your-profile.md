@@ -8,16 +8,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: medium
-ms.openlocfilehash: 90bf81f23bcffe05278d12bab7abb2425f7eb773
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 0acbf8378d2cffa7c083e1da06ed0775df69d60e
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6670651"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6974640"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
-Puedes ver y actualizar la configuración de la cuenta de desarrollador y la información del perfil en la sección de **configuración de la cuenta** del [Centro de partners](https://partner.microsoft.com/dashboard). 
+Puedes ver y actualizar la configuración de la cuenta de desarrollador y la información de perfil en la sección de **configuración de la cuenta** del [Centro](https://partner.microsoft.com/dashboard)de partners. 
 
 > [!NOTE]
 > Preferencias de notificación (por ejemplo, qué tipo de notificaciones recibir y cómo recibirlas) se pueden administrar en el **Centro de mensajes** (que puedes acceder seleccionando el icono de mensaje en la parte superior del centro de partners).

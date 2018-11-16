@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 4db96cea273348b4e1bc7059446f7528ba30a645
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6833773"
+ms.locfileid: "6981075"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Cargar imágenes y activos adaptados a escala, tema, contraste alto y otros
 La aplicación puede cargar archivos de recursos de imagen (u otros archivos de activos) adaptados para [factor de escala de visualización](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, contraste alto y otros contextos de tiempo de ejecución. Estas imágenes pueden referenciarse desde código imperativo o desde marcado XAML, por ejemplo como la propiedad **Origen** de una **Imagen**. También pueden aparecer en el archivo de origen del manifiesto del paquete de la aplicación (el archivo `Package.appxmanifest`), por ejemplo, como el valor de icono de la aplicación en la pestaña de activos visuales del Diseñador de manifiestos de Visual Studio en los iconos y notificaciones del sistema. Con calificadores en los nombres de archivo de las imágenes y, opcionalmente, cargándolas dinámicamente con ayuda de un [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), puedes hacer que se cargue el archivo de imagen más adecuado que coincida mejor con la configuración de tiempo de ejecución del usuario en lo relativo a escala de la pantalla, tema, contraste alto, idioma y otros contextos.

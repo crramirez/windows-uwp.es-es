@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: e5a4c3607486a7163648c7aa5a0e1d03d37e421f
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6446553"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6992442"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
@@ -106,7 +106,7 @@ Espera al menos varias horas después de completar la sección anterior y, a con
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear un proyecto y definir variables remotas en el centro de partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
-* [Definir el experimento en el centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Administrar tu experimento en el centro de partners](manage-your-experiment.md)
+* [Programar tu aplicación para experimentación](code-your-experiment-in-your-app.md)
+* [Definir el experimento en el Centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Administrar tu experimento en el Centro de partners](manage-your-experiment.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
