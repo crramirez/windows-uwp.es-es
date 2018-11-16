@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, DirectX, port, migración
 ms.localizationpriority: medium
 ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6664856"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845751"
 ---
 # <a name="plan-your-directx-port"></a>Planear la migración de DirectX
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eca34975217bace912ee06b967e028f30155452
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665647"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6983370"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -31,7 +31,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 | [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md)      |   Ejecuta pruebas A/B en las aplicaciones para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Esta característica requiere Microsoft Store Services SDK.  |
 | [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md)      |   Agrega código a tus aplicaciones para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas y sugerencias, así como votar. A continuación, administra esta información en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners. Esta característica requiere Microsoft Store Services SDK.   |
 | [Configurar la aplicación para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)  |  Registra un canal de notificación para tu aplicación para UWP para que pueda recibir [notificaciones de inserción del centro de partners](../publish/send-push-notifications-to-your-apps-customers.md)y supervisar la tasa de inicios de la aplicación que se derivan de las notificaciones de inserción. Esta característica requiere Microsoft Store Services SDK.  |
-| [Registrar eventos personalizados para el centro de partners](log-custom-events-for-dev-center.md)  | Registrar eventos personalizados de tu aplicación para UWP y revisar los eventos en el [informe de uso](../publish/usage-report.md) del centro de partners. Esta característica requiere Microsoft Store Services SDK. |
+| [Registrar eventos personalizados para el Centro de partners](log-custom-events-for-dev-center.md)  | Registrar eventos personalizados de tu aplicación para UWP y revisar los eventos en el [informe de uso](../publish/usage-report.md) del centro de partners. Esta característica requiere Microsoft Store Services SDK. |
 | [Solicitar valoraciones y opiniones](request-ratings-and-reviews.md) |  Animar a los clientes a evaluar o revisar la aplicación mediante programación mostrando una interfaz de usuario de clasificación y revisión.  |
 | [Servicios de Microsoft Store](using-windows-store-services.md)    |  Obtén información sobre cómo usar las API de RESTful para automatizar envíos a la Store, obtener acceso a datos de análisis de las aplicaciones y automatizar otras tareas relacionadas con la Store.    |
 | [Agregar características de (RDX) de demostración comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |

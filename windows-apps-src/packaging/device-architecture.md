@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, empaquetado, arquitectura, configuración de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6858027"
+ms.locfileid: "6976636"
 ---
 # <a name="app-package-architectures"></a>Arquitecturas de paquetes de aplicaciones
 

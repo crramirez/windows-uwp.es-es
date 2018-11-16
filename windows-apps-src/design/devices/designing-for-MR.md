@@ -15,12 +15,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f392d1d6c8eaa309e1774e8a98671a7743fdc9d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: e6bba6c22b7f0055a93bfd1826bc3a2acc0f2164
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665025"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6968389"
 ---
 # <a name="designing-for-mixed-reality"></a>Diseñar para realidad mixta
 
@@ -86,7 +86,7 @@ Se han diseñado novedosos métodos de entrada especialmente para usarlos con re
 * [Dispositivo de control de presentaciones](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (solo HoloLens)
 * [Controladores de movimiento](https://developer.microsoft.com/windows/mixed-reality/motion_controllers) (solo dispositivos de realidad mixta, mostrados anteriormente)
 
-Estos controladores hacen que interactuar con objetos virtuales parezca natural y preciso. Algunas de las interacciones que consigues de forma gratuita. Por ejemplo, HoloLens selecciona el gesto, o bien al hacer clic en la tecla Windows o gatillo del controlador de movimiento, se generará la respuesta de entrada que esperas, nuevamente, sin ninguna codificación de tu parte.
+Estos controladores hacen que interactuar con objetos virtuales parezca natural y preciso. Algunas de las interacciones que consigues de forma gratuita. Por ejemplo, HoloLens selecciona el gesto o al hacer clic en la tecla de Windows del controlador de movimiento o un desencadenador, se generará la respuesta de entrada que esperas, nuevamente, sin ninguna codificación por tu parte.
 
 En otras ocasiones querrás agregar código para aprovechar la información adicional y las entradas disponibles. Por ejemplo, los controladores de movimiento pueden usarse para manipular los objetos con un nivel preciso de control, si escribes código que tenga en cuenta su posición y pulsaciones de botones.
 
