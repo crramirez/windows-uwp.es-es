@@ -12,12 +12,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f9d56090e8fc1de83eeb4e8a68ca1830692c5b2f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.openlocfilehash: c116a6131889e1d87642165f4e1d9883d78add33
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6854945"
+ms.locfileid: "6981161"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -85,7 +85,6 @@ Ten en cuenta los siguientes patrones de uso para decidir la mejor manera de inc
 
 Si la aplicación no es capaz de aprovechar NavigationView y piensas en Agregar acrílico por tu cuenta, te recomendamos usar un acrílico relativamente translúcido con opacidad del tono del 60%.
  - Cuando el panel se abre como una superposición sobre otro contenido de la aplicación, este debe ser [acrílico en la aplicación al 60%](#acrylic-theme-resources).
- - Cuando el panel abre en paralelo con el contenido principal de la aplicación, este debe ser [acrílico en el fondo al 60%](#acrylic-theme-resources).
 
 ![Aplicación de mapas con comandos horizontal de aplicación](images/Maps_In_App_Acrylic_1.png)
 
@@ -93,7 +92,7 @@ Además, tener la extensión de contenido o desplazamiento en el acrílico en la
 
 ### <a name="vertical-panes"></a>Paneles verticales
 
-Para verticales o superficies que ayudan a la sección de contenido de la aplicación, te recomendamos que uses un fondo opaco en lugar de acrílico. Si tus verticales abren encima del contenido, como en de NavigationView **Collapsed** o modos **mínima** , se recomienda que usar acrílico en la aplicación para ayudar a mantener el contexto de la página cuando el usuario tiene este panel abierto.
+Para verticales o superficies que ayudan a la sección de contenido de la aplicación, te recomendamos que uses un fondo opaco en lugar de acrílico. Si tus verticales abren encima del contenido, como en de NavigationView **compacto** o modos **mínima** , se recomienda que usar acrílico en la aplicación para ayudar a mantener el contexto de la página cuando el usuario tiene este panel abierto.
 
 ### <a name="transient-surfaces"></a>Superficies transitorias
 
