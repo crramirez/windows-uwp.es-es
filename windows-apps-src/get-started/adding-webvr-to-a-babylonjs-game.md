@@ -8,11 +8,11 @@ ms.topic: article
 keywords: webvr, edge, desarrollo web, babylon, babylonjs, babylon.js, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 72681c3f91fc2dcbfcc4e4531359d6d668e18b80
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6856172"
+ms.locfileid: "6987946"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Agregar compatibilidad con WebVR a un juego de Babylon.js 3D
 
@@ -39,7 +39,7 @@ En este tutorial, te guiaremos por los pasos se toma para obtener este y ejecuci
 
 
 
-## <a name="getting-started"></a>Introducción
+## <a name="getting-started"></a>Tareas iniciales
 
 La forma más sencilla de empezar es visitar el [repositorio de GitHub de web de tutoriales de Windows](https://github.com/Microsoft/Windows-tutorials-web), presione el verde **clonar o descarga** botón y selecciona **Abrir en Visual Studio**.
 

@@ -1,7 +1,7 @@
 ---
 author: Xansky
 Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must create a project and define your remote variables in Partner Center.
-title: Crear un proyecto de experimento en el centro de partners
+title: Crear un proyecto de experimento en el Centro de partners
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 19a59110fa094aeae3d40dca1372fde9889c108e
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6849273"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6992382"
 ---
-# <a name="create-an-experiment-project-in-partner-center"></a>Crear un proyecto de experimento en el centro de partners
+# <a name="create-an-experiment-project-in-partner-center"></a>Crear un proyecto de experimento en el Centro de partners
 
 Para empezar a trabajar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el centro de partners y definir las variables remotas que puede acceder la aplicación.
 
@@ -44,8 +44,8 @@ Después de crear un proyecto, puedes [codificar la aplicación para la experime
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
-* [Definir el experimento en el centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Administrar tu experimento en el centro de partners](manage-your-experiment.md)
+* [Programar tu aplicación para experimentación](code-your-experiment-in-your-app.md)
+* [Definir el experimento en el Centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Administrar tu experimento en el Centro de partners](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
