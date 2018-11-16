@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, formularios windows forms, wpf, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6455922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848929"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usar la API de hospedaje en una aplicación de escritorio de XAML de UWP
 

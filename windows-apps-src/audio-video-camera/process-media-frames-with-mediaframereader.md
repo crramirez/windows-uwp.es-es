@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c733fe0f4e8ee955c68ff4ec30bd9f9f2675899d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 6d4c752438af3425fffc69ecf71ff0dc8abe5963
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6649779"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851579"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -50,7 +50,7 @@ Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fot
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-También puedes crear una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) con un método [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) y el valor devuelto desde el método [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para recibir notificaciones cuando el origen de fotogramas disponible se agrupa en los cambios de dispositivo, como cuando se conecta una cámara externa. Para obtener más información, consulta [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+También puedes crear un [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) con [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) y el valor devuelto desde [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para recibir notificaciones cuando el origen de fotogramas disponible se agrupa en el dispositivo cambia, como cuando se conecta una cámara externa de. Para obtener más información, consulta [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Una clase [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tiene una colección de objetos [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que describen los orígenes de fotogramas que se incluyen en el grupo. Después de recuperar los grupos de origen de fotogramas disponibles en el dispositivo, puedes seleccionar el grupo que expone los orígenes de fotogramas que te interesan.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
 ms.openlocfilehash: b35d11e9dcf1e79296e0eeaff85c975c24d65920
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6279466"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848880"
 ---
 # <a name="print-from-your-app"></a>Imprimir desde tu aplicación
 

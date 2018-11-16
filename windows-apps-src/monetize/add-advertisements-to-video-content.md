@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, video, vídeo, scheduler, programador, javascript, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 158817aa0abea1ddb1247188ec69389a7682e899
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6674616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853244"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anuncios en contenido de vídeo
 

@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 6df7d7dc7d35ed46f3f741bd1783b5af2755f0a2
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6203594"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6850749"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -304,7 +304,7 @@ private DisplayRequest appDisplayRequest = null;
 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo a través de la propiedad [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Para obtener una lista completa de propiedades, métodos y eventos, consulta la página de referencia de [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx).
 
 ### <a name="advanced-media-playback-scenarios"></a>Escenarios de reproducción avanzada de contenido multimedia
-Para los escenarios más complejos de reproducción de contenido multimedia, como reproducir una lista de reproducción, cambiar entre idiomas de audio o crear pistas de metadatos personalizadas, establece la propiedad [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en una clase [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) o [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx). Consulta la página de [Reproducción de contenido multimedia](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) del Centro de desarrollo para obtener más información sobre cómo habilitar diversas funciones multimedia avanzadas.
+Para los escenarios más complejos de reproducción de contenido multimedia, como reproducir una lista de reproducción, cambiar entre idiomas de audio o crear pistas de metadatos personalizadas, establece la propiedad [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en una clase [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) o [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx). Consulta la página de [reproducción de contenido multimedia](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) para obtener más información sobre cómo habilitar diversas funciones multimedia avanzadas.
 
 ### <a name="enable-full-window-video-rendering"></a>Habilitar la representación de vídeo a pantalla completa
 

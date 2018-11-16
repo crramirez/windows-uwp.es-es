@@ -9,11 +9,11 @@ keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Micr
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
 ms.localizationpriority: medium
 ms.openlocfilehash: 560576dd60c42f48c625b8c4c55a2b0c85ce511c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6674244"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848299"
 ---
 # <a name="finalize-the-rollout-for-a-flight-submission"></a>Finalizar el lanzamiento de un envío piloto
 

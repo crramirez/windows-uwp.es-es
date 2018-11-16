@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, Direct3D, búfer de profundidad
 ms.localizationpriority: medium
 ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6458291"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851040"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Crear recursos de dispositivo para búferes de profundidad
 

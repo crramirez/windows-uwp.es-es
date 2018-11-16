@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: 4caf4333bb3d442779aedac2028b0996cbd17645
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6660801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851802"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar un conjunto relacionado con un archivo del Instalador de aplicación
 
