@@ -8,11 +8,11 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1503b6816a1ebd687ddd320c550c4476a4c5a038
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6848385"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6995053"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>What ' s New in Windows 10 para los desarrolladores, compilación 17763
 
@@ -46,7 +46,7 @@ C++/WinRT | [C++ / WinRT](https://aka.ms/cppwinrt) contiene muchas característi
 C++ / WinRT ejemplos de código | Hemos agregado 250 C++ / WinRT descripciones de código para temas en nuestra documentación, que acompaña a C++ existente / ejemplos de código CX.
 Instrucciones que contribuyen | Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación para UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
 Garantizarse de gráficos de DirectX (DXGI) | Se ha agregado nueva documentación para los que faltan las API de DXGI y hemos proporcionado un artículo sobre los procedimientos recomendados cuando se le presenten en Windows 10. </br> * [Para un rendimiento óptimo, usa el modelo de volteo de DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/for-best-performance--use-dxgi-flip-model): proporciona instrucciones sobre cómo maximizar el rendimiento y la eficacia de la pila de presentación en las versiones actuales de Windows. </br> * [Método IDXGIOutput6::CheckHardwareCompositionSupport](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport): notifica a las aplicaciones que se admite la expansión de hardware. </br> * [Enumeración de DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags): describe qué niveles de composición de hardware son compatibles.
-Introducción | Se ha revitalizado nuestro contenido [Empezar a trabajar](../get-started/index.md) con temas nuevos, proporcionar información e instrucciones sobre cómo los desarrolladores nuevos a Windows 10 pueden realizar las siguientes tareas comunes: </br> * [Construir un formulario](../get-started/construct-form-learning-track.md) </br> * [Mostrar clientes en una lista](../get-started/display-customers-in-list-learning-track.md) </br> * [Guardar y cargar la configuración](../get-started/settings-learning-track.md) </br> * [Trabajar con archivos](../get-started/fileio-learning-track.md)
+Comenzar | Se ha revitalizado nuestro contenido [Empezar a trabajar](../get-started/index.md) con temas nuevos, proporcionar información e instrucciones sobre cómo los desarrolladores nuevos a Windows 10 pueden realizar las siguientes tareas comunes: </br> * [Construir un formulario](../get-started/construct-form-learning-track.md) </br> * [Mostrar clientes en una lista](../get-started/display-customers-in-list-learning-track.md) </br> * [Guardar y cargar la configuración](../get-started/settings-learning-track.md) </br> * [Trabajar con archivos](../get-started/fileio-learning-track.md)
 Editor de hoja de estilo de mapas | Usar la nueva aplicación de [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) para personalizar la apariencia de mapas que se agrega a la aplicación de forma interactiva.
 Obtén información sobre Microsoft | El nuevo [sitio de aprendizaje de Microsoft](https://www.microsoft.com/learning/default.aspx) proporciona una nueva experiencia práctica y oportunidades de aprendizaje a los desarrolladores de Microsoft. Actualmente, Microsoft Learn proporciona formación y certificación de Microsoft 365, Microsoft Azure, Office 365 y Windows Server.
 Bloc de notas | [Que se ha actualizado el Bloc de notas](http://aka.ms/ant-man), agregar zoom, ajuste automático buscar y reemplazar y soporte técnico para finales de línea de Unix/Linux (LF) y Mac (CR).
