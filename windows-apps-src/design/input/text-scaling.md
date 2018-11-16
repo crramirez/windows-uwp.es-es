@@ -10,11 +10,11 @@ ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ce3ec15a45f812162c7aab0cb9683183d7196ae3
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6835288"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6989468"
 ---
 # <a name="text-scaling"></a>Ajuste de escala de texto
 
@@ -27,7 +27,7 @@ Lectura de texto en una pantalla de equipo (de dispositivos móviles para equipo
 
 Para garantizar que el texto sea legible como sea posible para la gama más amplia de usuarios, Windows proporciona la capacidad para que los usuarios cambiar el tamaño de fuente relativa en el sistema operativo y en aplicaciones individuales. En lugar de con una aplicación de lupa (que normalmente solo se amplía todo el contenido dentro de un área de la pantalla y presenta sus propios problemas de facilidad de uso), cambiar la resolución de pantalla o depender de escalado de PPP (que cambia el tamaño de todo el contenido en función de la pantalla y visualización típico distancia), un usuario puede acceder rápidamente a una configuración para cambiar el tamaño de solo texto, que van desde el 100% (el tamaño predeterminado) hasta 225%.
 
-## <a name="support"></a>Soporte
+## <a name="support"></a>Compatibilidad
 
 Aplicaciones universales de Windows (estándar y PWA), compatible con texto de escala de manera predeterminada.
 

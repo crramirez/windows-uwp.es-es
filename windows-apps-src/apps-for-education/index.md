@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, educación
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
 ms.openlocfilehash: d55aaab22ff51112ca69d1ead72e31468d7fb1ab
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6850098"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6995549"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desarrollar aplicaciones universales de Windows para la educación
 ![captura de pantalla de aplicación de la aplicación hacer un examen](images/take-a-test-screen-small.png)

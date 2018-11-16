@@ -1,7 +1,7 @@
 ---
 author: Xansky
 Description: To run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must code the experiment in your app.
-title: Programar tu aplicación para los experimentos
+title: Programar tu aplicación para experimentación
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: c9212f3a120e03bd436b77e0dd66be4367ded8e1
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6857134"
+ms.locfileid: "6971907"
 ---
-# <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para los experimentos
+# <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para experimentación
 
 Después de [crear un proyecto y definir variables remotas en el centro de partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md), estás listo para actualizar el código de tu aplicación de plataforma Universal de Windows (UWP) para:
 * Recibir los valores de variables remotas del centro de partners.
@@ -106,7 +106,7 @@ Después de programar el experimento en la aplicación, estás listo para los si
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear un proyecto y definir variables remotas en el centro de partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Definir el experimento en el centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Administrar tu experimento en el centro de partners](manage-your-experiment.md)
+* [Definir el experimento en el Centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Administrar tu experimento en el Centro de partners](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)

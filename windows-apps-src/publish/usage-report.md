@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f22d9aafada5bab8deaef246f64a7447569c82
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838133"
+ms.locfileid: "6976726"
 ---
 # <a name="usage-report"></a>Informe Uso
 
