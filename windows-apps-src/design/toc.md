@@ -170,7 +170,6 @@
 ### [Icono, compatibilidad de notificación del sistema para idioma, escala, contraste](shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
 ## [Anclar la aplicación a la barra de tareas](shell/pin-to-taskbar.md)
 ## [Personalización de la barra de título](shell/title-bar.md)
-## [Diseños para Conjuntos](shell/design-for-sets.md)
 
 ## Notificaciones
 ### Notificaciones del sistema

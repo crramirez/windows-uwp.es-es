@@ -12,12 +12,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: cf3a69de36f1292dd6ccabb945a33a893064bd02
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 0c34dda3039a9b6a66428266e37f81b41695fbc0
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6647517"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849517"
 ---
 # <a name="combo-box"></a>Cuadro combinado
 
@@ -224,7 +224,7 @@ El evento TextSubmitted no ocurre si el usuario escribe texto y, a continuación
 
 ### <a name="sample---validate-input-and-use-locally"></a>Ejemplo: validar la entrada y usar localmente
 
-En este examle, un selector de tamaño de fuente contiene un conjunto de valores correspondientes a la rampa de tamaño de fuente, pero el usuario puede escribir los tamaños de fuentes que no están en la lista.
+En este ejemplo, un selector de tamaño de fuente contiene un conjunto de valores correspondientes a la rampa de tamaño de fuente, pero el usuario puede escribir los tamaños de fuentes que no están en la lista.
 
 Cuando el usuario agrega un valor que no está en la lista, las actualizaciones de tamaño de fuente, pero el valor no se agrega a la lista de tamaños de fuente.
 

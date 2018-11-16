@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, citas, calendario, appointments, calendar
 ms.localizationpriority: medium
 ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6275960"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6847213"
 ---
 # <a name="manage-appointments"></a>Administrar citas
 

@@ -7,12 +7,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: medium
-ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 9f44d5bc0e07ab40a396c103d2a8ba6db5427ae8
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853640"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Asociar Azure Active Directory con tu cuenta del centro de partners
 
@@ -47,7 +47,7 @@ Si la organización ya usa Azure AD, sigue estos pasos para vincular tu cuenta d
 
 Si necesitas configurar un nuevo Azure AD para vincular a tu cuenta del centro de partners, sigue estos pasos.
 
-1.  Desde el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **Configuración del desarrollador**. En el menú de **configuración** , selecciona **los inquilinos**.
+1.  Desde [El centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **Configuración del desarrollador**. En el menú de **configuración** , selecciona **los inquilinos**.
 2.  Selecciona **Crear nuevo Azure AD**.
 3.  Escribe la información de directorio para el nuevo Azure AD:
     - **Nombre de dominio**: nombre único que usaremos para tu dominio de Azure AD, junto con ".onmicrosoft.com". Por ejemplo, si escribes "ejemplo", el dominio de Azure AD sería "ejemplo.onmicrosoft.com".
