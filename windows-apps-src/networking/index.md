@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e01ac3a0dcab0bc82835b97d70477bf585ab4570
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6658084"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6831986"
 ---
 # <a name="networking-and-web-services"></a>Redes y servicios web
 
@@ -27,5 +27,5 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | [Sockets](sockets.md) | Los sockets son una tecnología de transferencia de datos de bajo nivel en cuya parte superior se implementan muchas protocolos de red. UWP ofrece las clases de socket TCP y UDP de cliente-servidor o aplicaciones de punto a punto, si las conexiones son de larga duración o una conexión establecida no es necesaria. |
 | [WebSockets](websockets.md) | Los WebSockets ofrecen un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S) y compatible con mensajes UTF-8 y binarios. |
 | [HttpClient](httpclient.md) | Usa la API del espacio de nombres [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1. |
-| [Fuentes RSS y Atom](web-feeds.md) | Retrieve or create the most current and popular Web content using syndicated feeds generated according to the RSS and Atom standards using features in the [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632) namespace. |
+| [Fuentes RSS y Atom](web-feeds.md) | Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632). |
 | [Transferencias en segundo plano](background-transfers.md) | Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red. |

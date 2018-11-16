@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Store, API de Servicios web de Windows, adquisición, embudo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aaceb9af3eed04039148bdd863ca3e473c7c245
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6657074"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858222"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obtener datos de embudo de adquisiciones de aplicaciones
 

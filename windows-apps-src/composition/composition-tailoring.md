@@ -7,12 +7,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2efea81f3520e6fb1a797394656587d2a29201aa
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: e6060e8da2ab4308deb3896b3ad209ab1093b056
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673254"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6970428"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptación de efectos y experiencias con la interfaz de usuario de Windows
 
@@ -118,7 +118,7 @@ Código de ejemplo completo puede encontrarse en el [repositorio de Github de la
 
 ## <a name="fast-vs-slow-effects"></a>Modo rápido frente a los efectos lentos
 
-En función de los comentarios de los métodos [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) y [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) proporcionados en la API de CompositionCapabilties, la aplicación puede decidir intercambiar efectos costosos o no es compatibles con otros efectos de su elección que estén optimizados para el dispositivo. Algunos efectos se saben que son más recursos que otros usuarios de forma coherente y deben usarse con moderación y se pueden usar otros efectos más libremente. Para todos los efectos, sin embargo, la atención debe usarse cuando encadenamiento y animación como algunos escenarios o combinaciones pueden cambiar las características de rendimiento del gráfico de efecto. A continuación mostramos algunas características de rendimiento de la regla general de los efectos individuales:
+En función de los comentarios de los métodos [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) y [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) proporcionados en la API de CompositionCapabilities, la aplicación puede decidir intercambiar efectos costosos o no es compatibles con otros efectos de su elección que estén optimizados para el dispositivo. Algunos efectos se saben que son más recursos que otros usuarios de forma coherente y deben usarse con moderación y se pueden usar otros efectos más libremente. Para todos los efectos, sin embargo, la atención debe usarse cuando encadenamiento y animación como algunos escenarios o combinaciones pueden cambiar las características de rendimiento del gráfico de efecto. A continuación mostramos algunas características de rendimiento de la regla general de los efectos individuales:
 
 - Los efectos que se saben que tienen impacto de alto rendimiento son los siguientes: Desenfoque gausiano, máscara de sombras, BackDropBrush, HostBackDropBrush y capa Visual. Estos no se recomiendan para dispositivos de gama baja [(nivel de característica 9.1 9.3)](https://msdn.microsoft.com/library/windows/desktop/ff476876(v=vs.85).aspx)y deben usarse con precaución en dispositivos de gama alta.
 - Efectos con el impacto en el rendimiento medio incluyen la matriz de colores, determinados BlendModes de efecto de fusión (luminosidad, Color, saturación y tono), contenido destacado, SceneLightingEffect y (según el escenario) BorderEffect. Estos efectos pueden funcionar con determinados escenarios en los dispositivos de gama baja, pero debe usarse cuidado cuando encadenamiento y animar. Recomendamos limitar el uso a dos o menos y animación de transiciones solo.

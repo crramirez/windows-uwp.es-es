@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bd5a92f1e8dfe762ac3433bf64f9fe705644a9f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 4899e117096cf6d03c497fec79038e6d96aca3fd
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6669080"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6840962"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -65,7 +65,7 @@ Puedes proporcionar estas imágenes como archivos .png (no mayores de 50MB), deb
 
 ### <a name="916-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>Ilustración de póster 9:16 (720 x 1080 or 1440 x 2160 píxeles)
 
-Se usa como la imagen de logotipo principal para clientes de Windows 10 y dispositivos Xbox, por lo que **recomendamos encarecidamente** facilitar esta imagen para asegurar una adecuada visualización. Tu descripción puede no tener buen aspecto si no la incluyes y no será coherente con otras descripciones que los clientes verán mientras miran Store. Esta imagen también puede usarse en resultados de búsqueda o en colecciones supervisadas editorialmente.
+Se usa como la imagen de logotipo principal para clientes de Windows 10 y dispositivos Xbox, por lo que **recomendamos encarecidamente** facilitar esta imagen para asegurar una adecuada visualización. La descripción puede no tener buen aspecto si no la incluyes y no será coherente con otras descripciones que los clientes verán mientras exploración en la tienda. Esta imagen también puede usarse en resultados de búsqueda o en colecciones supervisadas editorialmente.
 
 Esta imagen debe incluir el nombre de tu aplicación y todo el texto que aparezca en la imagen debe cumplir los requisitos de legibilidad accesible (relación de contraste 4.51). Ten en cuenta que puede aparecer texto superpuesto en el cuarto inferior de esta imagen, por lo que debes asegurarte de no incluir allí imágenes de texto o que sean clave.
 

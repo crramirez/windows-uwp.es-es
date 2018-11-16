@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificación, colección, agrupar, experiencia del usuario y directrices de experiencia del usuario, instrucciones, acción, notificación del sistema, centro de actividades, noninterruptive, notificaciones efectiva, las notificaciones no intrusivos, accionables, administrar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ac7eab73f2bcfa57ac37ea6da99e1da6b235159
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6463485"
+ms.locfileid: "6666588"
 ---
 # <a name="toast-notification-ux-guidance"></a>Instrucciones de experiencia de usuario de notificación del sistema
 Las notificaciones son una parte necesaria de la vida moderna; que ayudan a los usuarios a ser más productivos y establecido con las aplicaciones y sitios Web, así como mantenerse actual con las actualizaciones. Sin embargo, las notificaciones pueden activar rápidamente desde útil overbearing e intrusivo si no se han diseñado de forma centrado en el usuario. Las notificaciones son una contextual lejos que se ha desactivado y es poco probable que una vez que se desactive, se activará nuevo.  Por lo tanto, asegúrate de que las notificaciones son respetuosas de espacio de pantalla del usuario y el tiempo, para poder mantener este canal de participación abierta.
@@ -59,7 +59,7 @@ Ambas notificaciones en una forma para que el contenido relevante permanece junt
 ## <a name="other-resources"></a>Otros recursos
 Estos cuatro puntos anteriores son instrucciones que hemos encontrado eficaces a través de nuestro propio análisis de telemetría y primero y experimentos de terceros. Ten en cuenta, sin embargo, que estas directrices son precisamente eso: directrices.  Estamos seguros de estas reglas ayudará a aumentar la interacción y la productividad de las notificaciones, pero nada puede sustituir thinking centrado en el usuario y el aprendizaje de sus propios datos.  
 
-Si enviar notificaciones a tu aplicación para UWP hoy en día, puedes ver análisis en qué ha ocurrido con las notificaciones del [Centro](https://developer.microsoft.com/en-us/windows)de desarrollo. Estos datos proceden libres al usar el [SDK de servicios de Store](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) o las [API de WNS](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview). Estas métricas te proporcionará más información sobre lo que sucede con las notificaciones en la plataforma de windows, así como el comportamiento de los usuarios interactúan con las notificaciones. Obtener acceso a este panel, ve al menú en el lado izquierdo interactuar > notificaciones, a continuación, al hacer clic en la pestaña "Analizar" dentro de la página de notificaciones.  Esto se encuentra en el mismo lugar que vas a enviar notificaciones desde el portal del centro de desarrollo.
+Si enviar notificaciones a tu aplicación para UWP hoy en día, puedes ver análisis en qué ha ocurrido con las notificaciones del [Centro](https://partner.microsoft.com/dashboard)de partners! Estos datos proceden libres al usar el [SDK de servicios de Store](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) o las [API de WNS](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview). Estas métricas te proporcionará más información sobre lo que sucede con las notificaciones en la plataforma de windows, así como el comportamiento de los usuarios interactúan con las notificaciones. Acceso a estos datos, ve al menú en el lado izquierdo interactuar > notificaciones, a continuación, al hacer clic en la pestaña "Analizar" dentro de la página de notificaciones.  Esto se encuentra en el mismo lugar que vas a enviar notificaciones del centro de partners.
 
 ## <a name="related-topics"></a>Temas relacionados
 

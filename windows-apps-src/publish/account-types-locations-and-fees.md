@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6652636"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6970950"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -98,7 +98,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Chad | 19USD | 99USD | XAF pagados al banco | No | 
 |  Chile | 9776CLP | 46000CLP | USD pagados al banco | No | 
 |  China | 116CNY | 600CNY | USD pagados al banco | Sí* | 
-|  Colombia | 36543 COP | 180000 COP | USD pagados al banco | No | 
+|  Colombia | 36543COP | 180000COP | USD pagados al banco | No | 
 |  Comoras | 19USD | 99USD | USD pagados al banco | No | 
 |  Congo | 19USD | 99USD | XAF pagados al banco | No | 
 |  Congo (RDC) | 19USD | 99USD | USD pagados al banco | No | 
@@ -228,7 +228,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Suazilandia | 19USD | 99USD | No pago | No | 
 |  Suecia | 123SEK | 700SEK | SEK pagadas al banco | Sí | 
 |  Suiza | 17 CHF | 90 CHF | CHF pagados al banco | Sí | 
-|  Taiwan | 568TWD | 2840TWD | USD pagados al banco | Sí | 
+|  Taiwán | 568TWD | 2840TWD | USD pagados al banco | Sí | 
 |  Tayikistán | 19USD | 99USD | USD pagados al banco | No | 
 |  Tanzania | 19USD | 99USD | TZS pagados al banco | No | 
 |  Tailandia | 601THB | 3000THB | THB pagados al banco | Sí | 

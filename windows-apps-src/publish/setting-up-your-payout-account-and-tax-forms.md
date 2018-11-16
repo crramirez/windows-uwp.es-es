@@ -8,12 +8,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 767ea7ca6a5f226fda75d97c3497ae77a5819626
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665927"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845656"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
@@ -44,8 +44,8 @@ Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por 
  
 **Para configurar tu cuenta de pago**
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), ve a **configuración de la cuenta** , selecciona el icono de la esquina superior derecha.
-2.  En el menú de navegación izquierdo de la página **Configuración de la cuenta**, haz clic en **Cuenta de pago**.
+1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de **configuración de la cuenta** en la esquina superior derecha y luego selecciona la **Configuración del desarrollador**.
+2.  En el menú de navegación izquierdo, selecciona la **cuenta de pago**.
 
    > [!NOTE]
    > Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
@@ -136,8 +136,8 @@ Puedes completar y enviar los formularios fiscales vía en el centro de partners
  
 **Completar tu perfil fiscal**
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), haz clic en el icono de **configuración de la cuenta** en la esquina superior derecha.
-2.  En el menú de navegación izquierdo de la página **Configuración de la cuenta**, haz clic en **Perfil fiscal**.
+1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de **configuración de la cuenta** en la esquina superior derecha y luego selecciona la **Configuración del desarrollador**.
+2.  En el menú de navegación izquierdo, selecciona el **perfil fiscal**.
 
    > [!NOTE]
    > Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
