@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: e64f36eb400d683da1cb52a819da5aa245a41ac4
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7102867"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7165931"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Establecer condiciones para ejecutar una tarea en segundo plano
 

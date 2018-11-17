@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7105287"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7168171"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
 

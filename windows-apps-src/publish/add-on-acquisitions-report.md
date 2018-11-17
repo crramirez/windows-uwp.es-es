@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 63884d9cce24e6b85f3001ac4c6eb1a07141bfd4
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7102450"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7165872"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 

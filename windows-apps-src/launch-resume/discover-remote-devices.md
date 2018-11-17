@@ -9,11 +9,11 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e6d3d4a549c5e815464ef696a938b44dbe6128c
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6973649"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7166367"
 ---
 # <a name="discover-remote-devices"></a>Detectar dispositivos remotos
 Tu aplicación puede usar la red inalámbrica, Bluetooth y conexión de nube para detectar dispositivos Windows en los que se inicie sesión con la misma cuenta de Microsoft que en el dispositivo detectado. Los dispositivos remotos no necesitan tener instalado ningún software especial para que se puedan reconocer.

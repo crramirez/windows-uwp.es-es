@@ -12,12 +12,13 @@ pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: aa235086f2410fb97ea60e35fb03c586824928a2
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.custom: RS5
+ms.openlocfilehash: dd0031affaf5ae48553479660d91ae610e7f1acb
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980718"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169781"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto con la vista de escritura a mano
 
@@ -318,6 +319,7 @@ private double GetPopupVerticalOffset()
 Al igual que con todos los controles de marco XAML, puedes personalizar la estructura visual y el comportamiento visual de un [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para sus requisitos específicos.
 
 Para ver un ejemplo completo de creación de una plantilla personalizada, consultar los procedimientos de [crear controles de transporte personalizados](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/custom-transport-controls) o la [muestra de Control de edición personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+
 
 
 

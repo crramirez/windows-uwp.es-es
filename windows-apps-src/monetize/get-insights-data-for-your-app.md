@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, servicios de la tienda, API de información de análi
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fbca074cffba64067b22d94aea6e0476c10480af
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7102897"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7168959"
 ---
 # <a name="get-insights-data"></a>Obtener datos de información
 
