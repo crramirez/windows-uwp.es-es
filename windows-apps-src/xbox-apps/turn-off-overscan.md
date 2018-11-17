@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 1adb221f-6f70-4255-9329-2046a486ca45
 ms.localizationpriority: medium
 ms.openlocfilehash: 32932845db47ed47b7e80f68cf4e424ba97e85c0
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "6993466"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163449"
 ---
 # <a name="how-to-draw-ui-to-the-edge-of-the-screen"></a>Cómo dibujar la interfaz de usuario hasta el borde de la pantalla   
 De manera predeterminada, las aplicaciones tendrán márgenes situados en los bordes del área de visualización, para que así puedas tener en cuenta la zona segura del televisor (para obtener más información, consulta [Diseño para Xbox y televisión](../design/devices/designing-for-tv.md#tv-safe-area)). 

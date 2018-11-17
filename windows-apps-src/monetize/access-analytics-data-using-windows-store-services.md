@@ -8,12 +8,13 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a5d2689f5041035ba78cd9aef1f0610f0e1619dd
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.custom: RS5
+ms.openlocfilehash: aaf1675d102a714b32d2e59483f6c10ad704284f
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6968485"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7162557"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -120,7 +121,7 @@ Los siguientes métodos adicionales están disponibles para su uso por las cuent
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
 
-Las cuentas de desarrollador que pertenecen al [programa del centro de desarrollo de Hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar datos de análisis de hardware y controladores. Para obtener más información, consulta [API del panel de Hardware](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Las cuentas de desarrollador que pertenecen al [programa de panel de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar datos de análisis de hardware y controladores. Para obtener más información, consulta [API del panel de Hardware](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Ejemplo de código
 

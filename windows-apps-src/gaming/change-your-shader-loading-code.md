@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador
 ms.localizationpriority: medium
 ms.openlocfilehash: f8e3671b5d3490cf565db34ec891c203ee1f7c7a
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "6995291"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161705"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
 
