@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, asincrónico, asincrónica, subprocesos, subprocesamiento
 ms.localizationpriority: medium
 ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7099796"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7156011"
 ---
 # <a name="threading-and-async-programming"></a>Subprocesamiento y programación asincrónica
 El subprocesamiento y la programación asincrónica permiten a tu aplicación realizar el trabajo de forma asincrónica en subprocesos paralelos.

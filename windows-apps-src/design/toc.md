@@ -30,7 +30,6 @@
 ## Transformaciones
 ### [Introducción](layout/transforms.md)
 ### [Efectos de perspectiva 3D](layout/3-d-perspective-effects.md)
-## [Profundidad Z y sombra](layout/depth-shadow.md)
 
 # Controles
 ## [Introducción](controls-and-patterns/index.md)

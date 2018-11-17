@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 2215231b21700fc17b08c2149316f9a59f8d1f04
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6984493"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7149885"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil de usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede utilizar **Configuración** > **Hora e idioma** > **Región e idioma** para configurar una lista ordenada de idiomas de visualización preferidos o simplemente un único idioma de visualización preferido. Un idioma puede tener una variante regional. Por ejemplo, puedes seleccionar el español de España, el español de México o el español que se habla en Estados Unidos, entre otros.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, directx 11, dispositivo perdido, device lost
 ms.localizationpriority: medium
 ms.openlocfilehash: 888b3ec7ab667a8a92ae638a9d5c456c3180df0d
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7104801"
+ms.locfileid: "7145325"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar escenarios cuando se quitan dispositivos en Direct3D11
 

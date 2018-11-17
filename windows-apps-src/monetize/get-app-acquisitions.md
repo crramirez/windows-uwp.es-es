@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, adquisiciones de aplicaciones, app acquisitions
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c2e972b46c830dd6c9ea778e525f0abceda3e99
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7100214"
+ms.locfileid: "7147613"
 ---
 # <a name="get-app-acquisitions"></a>Obtener los datos de las adquisiciones de la aplicación
 

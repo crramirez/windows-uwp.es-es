@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, seguimiento de la pila, stack trace, error
 ms.localizationpriority: medium
-ms.openlocfilehash: df3af90bda9d972a891dce67730f8f320b7607c1
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 78e65ad78079762ea5aabb95ddcaf4ce508b89bc
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6976826"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7173548"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Obtener el seguimiento de la pila de un error en tu Xbox One juego
 
-Usa este método en la Microsoft Store analytics API para obtener el seguimiento de la pila de un error en tu Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de desarrollo de análisis de XDP. Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días.
+Usa este método en la Microsoft Store analytics API para obtener el seguimiento de la pila de un error en tu Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de partners de análisis de XDP. Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días.
 
 Antes de que puedes usar este método, primero debes usar el método [obtener detalles de un error en tu juego de Xbox One](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar el identificador del archivo .cab que está asociado con el error para el que quieres recuperar el seguimiento de la pila.
 
@@ -50,7 +50,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  |
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto del juego de Xbox One para el que quieres recuperar un seguimiento de la pila. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado del informe de análisis del centro de desarrollo de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
+| applicationId | string | El identificador de producto del juego de Xbox One para el que quieres recuperar un seguimiento de la pila. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado desde el informe de análisis del centro de partners de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
 | cabId | cadena | El identificador exclusivo del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este Id., usa el método [obtener detalles de un error en tu Xbox One en juegos](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar los detalles de un error específico de la aplicación y usa el valor de **cabId** en el cuerpo de respuesta de ese método. |  Sí  |
 
  

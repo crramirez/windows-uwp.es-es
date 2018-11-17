@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 4899e117096cf6d03c497fec79038e6d96aca3fd
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7100462"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7156057"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 

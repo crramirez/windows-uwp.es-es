@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: d262a86c4a177095015c3f1391b19f1a7719d0a4
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7106521"
+ms.locfileid: "7172466"
 ---
 # <a name="create-an-add-on"></a>Crear un complemento
 

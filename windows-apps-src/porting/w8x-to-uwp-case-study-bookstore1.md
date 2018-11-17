@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cec8171b381a607616e2054784fa888074d3f90e
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6972090"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7153364"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
 

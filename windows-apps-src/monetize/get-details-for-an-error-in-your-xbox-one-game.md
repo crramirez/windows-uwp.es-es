@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de la Store Windows, errors, errores, details, detalles
 ms.localizationpriority: medium
-ms.openlocfilehash: 33733af7f323817bc82d49800c2dc17c5f7b9887
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 6f665b99b7f64e41597a5767d58b86ac8e85c6bd
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6978354"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7155541"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Obtener los detalles de un error en tu Xbox One juego
 
-Usa este método en la Microsoft Store analytics API para obtener información detallada sobre un error específico de la Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de desarrollo de análisis de XDP. Este método solo puede recuperar detalles de errores que se hayan producido en los últimos 30 días.
+Usa este método en la Microsoft Store analytics API para obtener información detallada sobre un error específico de la Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de partners de análisis de XDP. Este método solo puede recuperar detalles de errores que se hayan producido en los últimos 30 días.
 
 Antes de que puedes usar este método, primero debes usar el método [get para tu juego de Xbox One los datos de informes de errores](get-error-reporting-data-for-your-xbox-one-game.md) para recuperar el identificador del error para el que quieres obtener información detallada.
 
@@ -50,7 +50,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto del juego de Xbox One para el que quieres recuperar los detalles de errores. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado del informe de análisis del centro de desarrollo de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
+| applicationId | string | El identificador de producto del juego de Xbox One para el que quieres recuperar los detalles de errores. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado desde el informe de análisis del centro de partners de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
 | failureHash | cadena | El id. exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor para el error que te interesa, usa el método [obtener datos informes de errores de la Xbox One en juegos](get-error-reporting-data-for-your-xbox-one-game.md) y usa el valor de **failureHash** en el cuerpo de respuesta de ese método. |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es la fecha actual. |  No  |
