@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
-ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 7481c1d0f64ccb25168200cdf5e6ccc068f769b9
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7155403"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291639"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -247,8 +247,8 @@ Los foros para desarrolladores son un buen lugar para hacer y responder pregunta
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Foros para desarrolladores de aplicaciones para Windows</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Tienda Windows y foros de aplicaciones</a></td>
+        <td>Foros para desarrolladores de juegos y aplicaciones de publicación</td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Publicación y anuncios en aplicaciones</a></td>
     </tr>
     <tr>
         <td>Foro para desarrolladores de aplicaciones para UWP</td>
@@ -1661,10 +1661,6 @@ Después haber terminado el desarrollo y enviado tu juego, todavía no has termi
     <col width="50%" />
     <col width="50%" />
     </colgroup>
-    <tr>
-        <td>Aplicación del Centro de desarrollo</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Obtener la aplicación para ver el rendimiento de las aplicaciones publicadas</a></td>
-    </tr>  
     <tr>
         <td>Análisis del centro de partners</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">Analizar el rendimiento de las aplicaciones</a></td>

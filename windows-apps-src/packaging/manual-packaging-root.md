@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, packaging, empaquetado
 ms.localizationpriority: medium
 ms.openlocfilehash: 0268e858ecbcaaee95796fa590d4a9994dcfb505
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150727"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7284985"
 ---
 # <a name="manual-app-packaging"></a>Empaquetado manual de la aplicación
 
