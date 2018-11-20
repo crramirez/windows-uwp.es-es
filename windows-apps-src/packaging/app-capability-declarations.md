@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: bb692aaada7296f230e1243a3ce515b471f1ba98
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7152683"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7296970"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
@@ -208,7 +208,7 @@ La siguiente tabla enumera las funcionalidades restringidas. Puedes solicitar la
 | **Firmware del sistema y BIOS** | La funcionalidad **smbios** permite que las aplicaciones tengan acceso a los datos de la BIOS y del firmware del sistema. |
 | **Nivel de permiso de plena confianza** | La funcionalidad de las **runFullTrust** restringido permite aplicaciones se ejecuten en el nivel de permiso de plena confianza en el equipo del usuario. Esta funcionalidad es necesaria para usar la API [FullTrustProcessLauncher](https://docs.microsoft.com/uwp/api/windows.applicationmodel.fulltrustprocesslauncher) .<br /><br />Esta funcionalidad también es necesaria para cualquier aplicación de escritorio que se entrega como un paquete appx o msix (como sucede con el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop)), y aparecerá automáticamente en el manifiesto al empaquetar estas aplicaciones con Desktop App Converter (DAC) o Visual Studio. |
 | **Elevación** | La funcionalidad de **allowElevation** restringido permite que las aplicaciones creadas por los partners de Microsoft y las empresas para conservar la funcionalidad de escritorio existente que requiere elevación automática en el inicio o durante el ciclo de vida de la aplicación.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones que envías a la Microsoft Store. En la mayoría de los casos, no se aprueba el uso de esta funcionalidad. Solo se aprobará para las aplicaciones de línea de negocio implementadas por las empresas a su tienda privada a través de Microsoft Store para empresas.  |
-| **Credenciales del dispositivo de equipo de Windows** | La funcionalidad de **teamEditionDeviceCredentials** restringido permite que las aplicaciones accedan a las API que solicitar credenciales de cuenta del dispositivo en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones que envías a la Microsoft Store. En la mayoría de los casos, no se aprueba el uso de esta funcionalidad. |
+| **Credenciales del dispositivo de equipo de Windows** | La funcionalidad de **teamEditionDeviceCredential** restringido permite que las aplicaciones accedan a las API que solicitar credenciales de cuenta del dispositivo en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones que envías a la Microsoft Store. En la mayoría de los casos, no se aprueba el uso de esta funcionalidad. |
 | **Vista de aplicación del equipo de Windows** | La funcionalidad de **teamEditionView** restringido permite que las aplicaciones accedan a las API para el hospedaje de una vista de la aplicación en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones que envías a la Microsoft Store. En la mayoría de los casos, no se aprueba el uso de esta funcionalidad. |
 | **Extensión de procesamiento de cámara** | La funcionalidad de **cameraProcessingExtension** restringido permite a las aplicaciones procesar imágenes capturadas desde la cámara sin control directo de la cámara.<br /><br />Esta funcionalidad es necesaria para llamar a las API en el espacio de nombres [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) .<br /><br />Cualquier persona puede solicitar acceso a esta funcionalidad de envío a la Tienda. |
 | **Administración de uso de datos*** | La funcionalidad de **networkDataUsageManagement** restringido permite a las aplicaciones recopilar información de uso de datos de red.<br /><br />Esta funcionalidad es necesaria para llamar a [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync).<br /><br />Cualquier persona puede solicitar acceso a esta funcionalidad de envío a la Tienda. |

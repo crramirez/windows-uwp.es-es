@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f44d5bc0e07ab40a396c103d2a8ba6db5427ae8
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149635"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7294245"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Asociar Azure Active Directory con tu cuenta del centro de partners
 

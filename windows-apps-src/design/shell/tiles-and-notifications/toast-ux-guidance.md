@@ -9,19 +9,19 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificación, colección, agrupar, experiencia del usuario y directrices de experiencia del usuario, instrucciones, acción, notificación del sistema, centro de actividades, noninterruptive, notificaciones efectiva, las notificaciones no intrusivos, accionables, administrar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 4d9c33a4fa4b9c408927292b7def38f42d53b816
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158552"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7294405"
 ---
 # <a name="toast-notification-ux-guidance"></a>Instrucciones de experiencia de usuario de notificación del sistema
 Las notificaciones son una parte necesaria de la vida moderna; que ayudan a los usuarios a ser más productivos y establecido con las aplicaciones y sitios Web, así como mantenerse actual con las actualizaciones. Sin embargo, las notificaciones pueden activar rápidamente desde útil overbearing e intrusivo si no se han diseñado de forma centrado en el usuario. Las notificaciones son una contextual lejos que se ha desactivado y es poco probable que una vez que se desactive, se activará nuevo.  Por lo tanto, asegúrate de que las notificaciones son respetuosas de espacio de pantalla del usuario y el tiempo, para poder mantener este canal de participación abierta.
 
 > **API importantes**: [paquete de nuget de notificaciones del Kit de herramientas de comunidad de Windows](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
-Hemos analizamos nuestra telemetría de Windows, así como otras primero y casos prácticos de terceros, para elaborar cuatro reglas en torno a lo que hace una historia de notificación excelente.  Estamos seguros de estas reglas son universalmente, independientemente de la plataforma y le ayudará a tu notificaitons tener un impacto positivo en los usuarios.
+Hemos analizamos nuestra telemetría de Windows, así como otras primero y casos prácticos de terceros, para elaborar cuatro reglas en torno a lo que hace una historia de notificación excelente.  Estamos seguros de estas reglas son universalmente, independientemente de la plataforma y ayudar a las notificaciones a tener un impacto positivo en los usuarios.
 
 ## <a name="1-actionable-notifications"></a>1. accionables notificaciones
 Notificaciones accionables permiten a los usuarios a ser productivos sin tener que abrir la aplicación.  Si bien es excelente para que la aplicación se inicia, no es la única medición de éxito y realizar pequeño permitiendo a los usuarios realizar tareas sin tener que ir a la aplicación pueden ser una herramienta muy eficaz en mimar a los usuarios.
@@ -42,7 +42,7 @@ las notificaciones de ctionable son una herramienta muy eficaz para ayudar a los
 
 **Notificaciones sin procesar:** Usar [las notificaciones sin procesar](raw-notification-overview.md) puede ser útil por muchas razones, especialmente cuando se trate o minimizar las interrupciones para el usuario.  Enviar notificaciones sin procesar se reactive la aplicación en segundo plano, por lo que puedes evaluar si la notificación tenga sentido para entregar inmediatamente en el contexto de la aplicación. Si es algo que crees que se deben mostrar al usuario al instante, es posible que aparezca una [notificación del sistema local](send-local-toast.md) desde allí.  Si es algo que el usuario no tiene que ver ahora, puedes crear una [notificación del sistema programada](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) que se activará en un momento posterior.
 
-**Ghost notificación del sistema:** también puede generar una notificación que omitiremos aparecerán en la esquina inferior derecha de la pantalla y, en su lugar enviar la notificación directamente en el centro de actividades. Esto se logra estableciendo la [propiedad SuppressPopup](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) en True. Aunque es posible que haya algunos escepticismo alrededor no aparecerán notificaciones fuera del centro de actividades, vemos un 2-3 veces mayor participación para las notificaciones del sistema que se encuentran en el centro de actividades a través de extrae del sistema.  Los usuarios responden mejor cuando están listos para recibir notificaitons y controlar cuándo se interrumpen, motivo por el contenido en el centro de actividades puede ser mucho más eficaz de noninvasively notificar a los usuarios.
+**Ghost notificación del sistema:** también puede generar una notificación que omitiremos aparecerán en la esquina inferior derecha de la pantalla y, en su lugar enviar la notificación directamente en el centro de actividades. Esto se logra estableciendo la [propiedad SuppressPopup](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) en True. Aunque es posible que haya algunos escepticismo alrededor no aparecerán notificaciones fuera del centro de actividades, vemos un 2-3 veces mayor participación para las notificaciones del sistema que se encuentran en el centro de actividades a través de extrae del sistema.  Los usuarios responden mejor cuando están listos para recibir notificaciones y controlar cuándo se interrumpen, motivo por el contenido en el centro de actividades puede ser mucho más eficaz de noninvasively notificar a los usuarios.
 
 ## <a name="3-clear-out-the-clutter"></a>3. borrar el desorden
 Las notificaciones pueden permanecen en el centro de actividades durante mucho tiempo (el valor predeterminado es tres días).  Es fundamental que asegurarse de que el contenido que se encuentra aquí es actualizado y relevante cada vez que el usuario abre el centro de actividades. Son una pérdida de espacio de pantalla del usuario y ocupar ranuras que podrían usarse para algo más actualizada.  Supongamos que el usuario instala la aplicación de administración de correo electrónico y recibe diez notificaciones junto con los mensajes de correo electrónico y mensajes de correo diez electrónico.  Dependiendo de la experiencia deseada, podrías considerar la posibilidad de borrar las notificaciones si el usuario tiene leer el correo electrónico correspondiente, o abrir la aplicación como una manera de quitar el desorden antiguo desde el centro de actividades.
@@ -54,7 +54,7 @@ Como se mencionó anteriormente, se conserva el contenido en el centro de activi
 
 ![Ejemplos de notificación del sistema con encabezados con la etiqueta 'Camping!!'](images/toast-headers-action-center.png)
 
-Ambas notificaciones en una forma para que el contenido relevante permanece juntos Group (es decir, piensa en la separación de ligas deportes diferentes en una aplicación de deportes u ordenar mensajes por grupo de chat). Las colecciones son una manera más evidente notificaitons de grupo, mientras que los encabezados son más sutiles, pero ambas permiten a los usuarios clasificar y seleccionar las notificaciones de manera más rápida. 
+Ambas notificaciones en una forma para que el contenido relevante permanece juntos Group (es decir, piensa en la separación de ligas deportes diferentes en una aplicación de deportes u ordenar mensajes por grupo de chat). Las colecciones son una manera más evidente agrupar notificaciones, mientras que los encabezados son más sutiles, pero ambas permiten a los usuarios clasificar y seleccionar las notificaciones de manera más rápida. 
 
 ## <a name="other-resources"></a>Otros recursos
 Estos cuatro puntos anteriores son instrucciones que hemos encontrado eficaces a través de nuestro propio análisis de telemetría y primero y experimentos de terceros. Ten en cuenta, sin embargo, que estas directrices son precisamente eso: directrices.  Estamos seguros de estas reglas ayudará a aumentar la interacción y la productividad de las notificaciones, pero nada puede sustituir thinking centrado en el usuario y el aprendizaje de sus propios datos.  
