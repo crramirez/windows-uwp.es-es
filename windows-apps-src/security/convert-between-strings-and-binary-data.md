@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 030fe81685fbc6caea0b9847b366384476f6298f
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7161525"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307485"
 ---
 # <a name="convert-between-strings-and-binary-data"></a>Convertir entre datos binarios y cadenas
 

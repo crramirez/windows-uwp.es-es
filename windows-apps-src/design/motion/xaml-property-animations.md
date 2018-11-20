@@ -11,11 +11,11 @@ design-contact: jeffarn
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 2a7e2c3a08fc925c57e19b9c51011854b947a52d
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7154431"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7288111"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animación de elementos XAML con las animaciones de composición
 

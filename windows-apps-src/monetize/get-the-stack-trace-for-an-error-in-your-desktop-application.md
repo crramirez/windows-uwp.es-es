@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, error, error, stack trace, seguimiento de la pila
 ms.localizationpriority: medium
 ms.openlocfilehash: 024c903ea43d9fabc90b2f6b7891f6de4e92b1d5
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7159489"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280717"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Obtener el seguimiento de la pila de un error en la aplicación de escritorio
 

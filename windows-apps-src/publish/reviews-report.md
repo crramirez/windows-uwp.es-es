@@ -8,12 +8,12 @@ ms.date: 08/16/2018
 ms.topic: article
 keywords: Windows 10, uwp, revisión, comentario, revisor
 ms.localizationpriority: medium
-ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: e5deef6d5e67c1236fb88f93269fcf91bb50243c
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158256"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7281787"
 ---
 # <a name="reviews-report"></a>Informe de críticas
 
@@ -22,7 +22,7 @@ El informe **de opiniones** en [El centro de partners](https://partner.microsoft
 
 Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener opiniones de la aplicación](../monetize/get-app-reviews.md) en la [API de REST de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-También puedes responder a clientes opiniones [directamente desde esta página](respond-to-customer-reviews.md), mediante programación [a través de la API de opiniones de Microsoft Store](../monetize/submit-responses-to-app-reviews.md), o mediante el uso de la [aplicación Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+También puedes responder a los clientes opiniones [directamente desde esta página](respond-to-customer-reviews.md) o mediante programación [a través de Microsoft Store API de opiniones](../monetize/submit-responses-to-app-reviews.md).
 
 > [!TIP]
 > Para obtener una vista rápida de las valoraciones, clasificaciones y comentarios de los usuarios de todas las aplicaciones en los últimos 30 días, expande **Interactuar** en el menú de navegación izquierdo y selecciona **Valoraciones y comentarios**. 
@@ -114,7 +114,7 @@ Como se indicó anteriormente, cuando buscan tus valoraciones, busca el texto or
 
 ## <a name="responding-to-customer-reviews"></a>Responder a las valoraciones de los clientes
 
-Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard), la [API de opiniones de Microsoft Store](../monetize/submit-responses-to-app-reviews.md)o la [aplicación Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respuestas a muchas de las valoraciones de tus clientes. Para más información, consulta [Responder a las valoraciones de los clientes](respond-to-customer-reviews.md).
+Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) o la [que API de opiniones de Microsoft Store](../monetize/submit-responses-to-app-reviews.md) para enviar respuestas a muchas de las valoraciones de tus clientes. Para más información, consulta [Responder a las valoraciones de los clientes](respond-to-customer-reviews.md).
 
 Estas son algunas acciones adicionales que puedes considerar según las críticas y clasificaciones que estás viendo.
 

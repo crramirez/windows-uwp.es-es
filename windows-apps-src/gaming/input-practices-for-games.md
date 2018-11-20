@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, entrada, games, input
 ms.localizationpriority: medium
 ms.openlocfilehash: ed0d611c761315e42decb89e1a5a5ad84f4b067a
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158605"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307213"
 ---
 # <a name="input-practices-for-games"></a>Procedimientos de entrada para juegos
 

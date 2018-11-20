@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, templates, plantillas, tools, herramientas, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: ac33b242e2351c21ea22aa9bbb6bf74693e8d4ef
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150088"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7286739"
 ---
 # <a name="project-templates-and-tools-for-games"></a>Plantillas de proyectos y herramientas para juegos
 

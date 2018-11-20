@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, análisis, informes, panel, aplicaciones, datos, las métricas
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 8d7998366d484c95b90b765eb9227a7c3df41b6f
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7167321"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289869"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de las aplicaciones
 
@@ -49,7 +49,7 @@ En esta sección encontrarás detalles sobre la información presentada en cada 
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>Acceder a los datos de análisis fuera del centro de partners
 
-Además de ver los informes en el centro de partners, puedes acceder el análisis de la aplicación en un número de diferentes maneras.
+Además de ver los informes en el centro de partners, puedes acceder de otras maneras de análisis de la aplicación.
 
 ### <a name="microsoft-store-analytics-api"></a>API de análisis de Microsoft Store
 
@@ -67,8 +67,3 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 
 > [!NOTE]
 > Para conectar con el paquete de contenido del centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD que está asociado con tu cuenta del centro de partners. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información acerca de cómo configurar la asociación, consulta [Asociar Azure Active Directory con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md).
-
-### <a name="dev-center-app"></a>Aplicación del Centro de desarrollo
-
-Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows 10.
-
