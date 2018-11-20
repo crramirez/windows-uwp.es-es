@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, commit app submission, confirmar envío de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a61fb1568cf85d01a31e5921fa757d3e8c767ff
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7295219"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7422961"
 ---
 # <a name="commit-an-app-submission"></a>Confirmar un envío de aplicación
 
