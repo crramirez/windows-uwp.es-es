@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.topic: article
 keywords: Windows 10 en ARM, ARM, creación de aplicaciones de ARM64 de win32, compilar controladores de ARM64
 ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166102"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7301766"
 ---
 # <a name="windows-10-on-arm"></a>Windows10 en ARM
 Windows 10 se ejecuta en equipos equipados con procesadores ARM. Esta página proporciona la información para obtener más información acerca de la plataforma y empezar a desarrollar aplicaciones. También te animamos a proporcionar tus comentarios mediante el uso de los vínculos en la parte inferior de la página.

@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, responder, respuestas, revisar
 ms.localizationpriority: medium
-ms.openlocfilehash: 32ded7cc66cda75fbb6edb9ab9d84c21c2d02cff
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 9552e9dede62d4d89b71f031cd2ff2c76964d0cb
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158562"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7305036"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
@@ -23,7 +23,7 @@ Puedes responder a las opiniones de la aplicación para permitir que los cliente
 Para ver las opiniones de la aplicación y proporcionar respuestas, busca la aplicación [Centro](https://partner.microsoft.com/dashboard)de partners. En el menú de navegación izquierdo, expande el *análisis** y, a continuación, haz clic en **las valoraciones** para mostrar el [informe de críticas](reviews-report.md). Selecciona **responder para revisar** para proporcionar tu respuesta.
 
 > [!TIP]
-> Además de usar el centro de partners para responder a las opiniones, puedes responder a las opiniones [mediante programación](../monetize/submit-responses-to-app-reviews.md)o mediante el uso de la [aplicación Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+> Además de usar el centro de partners para responder a las opiniones, puedes responder a las opiniones [mediante programación](../monetize/submit-responses-to-app-reviews.md).
 
 De manera predeterminada, la respuesta se registrará en la tienda, justo debajo de la opinión del cliente original. Estas respuestas será visibles para los clientes que visualicen la tienda en un dispositivo Windows 10. Si el cliente que ha dejado la crítica está usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior, y no han optado por no recibir respuestas de correo electrónico, una copia de la respuesta se enviará también a dicho cliente por correo electrónico.  Tendrás que proporcionar una dirección de correo electrónico válida para enviar tu respuesta, que se incluirá en el correo electrónico al cliente. A continuación, pueden utilizar esta dirección de correo electrónico en contacto contigo directamente.
 
