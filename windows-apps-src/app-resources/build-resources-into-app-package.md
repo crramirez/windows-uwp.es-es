@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 61b526cd7aa2da8733457b16dd0487ef4ead9cca
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7301958"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7431349"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Crear recursos en el paquete de aplicación, en lugar de en un paquete de recursos
 
