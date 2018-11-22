@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, gráficos, diagnósticos, herramientas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7433902"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581304"
 ---
 # <a name="graphics-diagnostics-tools"></a>Herramientas de diagnóstico de elementos gráficos
 

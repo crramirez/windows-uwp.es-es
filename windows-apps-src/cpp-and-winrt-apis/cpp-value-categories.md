@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, movimiento,
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 854bc14c37a70cdb4e7e4113a10ca977582cbb77
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7426635"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7579153"
 ---
 # <a name="value-categories-and-references-to-them"></a>Categorías de valor y referencias a ellos
 Este tema describe las distintas categorías de valores (y las referencias a valores) que existen en C++. Sin duda habrá oído hablar de *valores l* y *valores r*, pero no puede pensar de ellos en los términos de este tema se presenta. Y hay otros tipos de valores.
