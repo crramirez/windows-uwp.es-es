@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7443169"
+ms.locfileid: "7569667"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, la escala, el contraste alto y otros calificadores
 

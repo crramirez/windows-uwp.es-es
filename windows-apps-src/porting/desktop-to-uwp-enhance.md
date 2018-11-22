@@ -8,12 +8,12 @@ ms.date: 10/15/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e76d3d517be73417777eb31dfc3994f92186522
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: ff1a6d5913316596e4a002e9f69a0ffdc85f1803
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7442219"
+ms.locfileid: "7571905"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -35,10 +35,9 @@ A continuación, agrega una referencia a estos archivos.
 
 |Archivo|Ubicación|
 |--|--|
-|System.Runtime.WindowsRuntime|C:\Archivos de programa (x86)\Reference Assemblies\Microsoft\Framework\\.NETCore\v4.5|
-|System.Runtime.WindowsRuntime.UI.Xaml|C:\Archivos de programa (x86)\Reference Assemblies\Microsoft\Framework\\.NETCore\v4.5|
-|System.Runtime.InteropServices.WindowsRuntime|C:\Archivos de programa (x86)\Reference Assemblies\Microsoft\Framework\\.NETCore\v4.5|
-|Windows.winmd|C:\Archivos de programa (x86)\Windows Kits\10\UnionMetadata\Facade|
+|System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+|System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+|System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*versión de sdk*>\Windows.Foundation.UniversalApiContract\<*versión*>|
 |Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*versión de sdk*>\Windows.Foundation.FoundationContract\<*versión*>|
 

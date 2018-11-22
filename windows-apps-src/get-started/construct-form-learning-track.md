@@ -9,11 +9,11 @@ keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formula
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: c624a3c666dcc405ee2375738c605ae147b7d9d3
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7430548"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7575237"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 

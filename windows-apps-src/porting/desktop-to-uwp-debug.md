@@ -10,11 +10,11 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: 041bf37072b595c0889bd1493857e508e27c510c
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7437306"
+ms.locfileid: "7572871"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Ejecutar, depurar y probar una aplicación de escritorio empaquetada
 

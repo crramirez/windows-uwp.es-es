@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f2eb12092d27c0033563ebf8cebbe96f949eadf8
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: e1ec460403617cbbf0fb6d6bbff9950046790039
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7423881"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7574561"
 ---
 # <a name="play-media-in-the-background"></a>Reproducción de contenidos multimedia en segundo plano
 En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que incluso después de que el usuario haya minimizado la aplicación, haya regresado a la pantalla principal o haya salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 

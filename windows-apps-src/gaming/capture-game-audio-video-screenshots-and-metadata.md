@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, juego, capturar, audio, vídeo, metadatos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1641cb4c50b86d7f678bf18fa85ad0215b4b15
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 906422e8bcca90c35821ecac95c02279c65fa400
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7423031"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7569871"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>Capturar audio para juegos, vídeo, capturas de pantalla y metadatos
 Este artículo describe cómo capturar vídeo, audio y capturas de pantalla de juegos, y cómo enviar los metadatos que el sistema incrustará en medios capturados y difundidos, permitiendo que tus aplicaciones y otras puedan crear experiencias dinámicas que se sincronizan con eventos de los juegos. 
@@ -59,7 +59,7 @@ La clase **[AppRecordingManager](https://docs.microsoft.com/uwp/api/windows.medi
 [!code-cpp[GetAppRecordingManager](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetGetAppRecordingManager)]
 
 ## <a name="determine-if-your-app-can-currently-record"></a>Determinar si la aplicación puede grabar actualmente
-Existen varios motivos por los que la aplicación tal vez no pueda capturar audio o vídeo actualmente, incluyendo si el dispositivo actual no cumple los requisitos de hardware para la grabación o si otra aplicación está actualmente difundiendo. Antes de iniciar una grabación, puedes comprobar si la aplicación es capaz de grabar actualmente. Llama al método **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** del objeto **AppRecordingManager** y, a continuación, comprueba la propiedad **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** del objeto devuelto **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)**. Si **CanRecord** devuelve **false**, lo que significa que la aplicación no puede grabar actualmente, puedes comprobar la propiedad **[Detalles](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** para determinar el motivo. Según el motivo, puede que te interese mostrar el estado al usuario o mostrar las instrucciones para habilitar la grabación de la aplicación.
+Existen varios motivos por los que la aplicación tal vez no pueda capturar audio o vídeo actualmente, incluyendo si el dispositivo actual no cumple los requisitos de hardware para la grabación o si otra aplicación está actualmente difundiendo. Antes de iniciar una grabación, puedes comprobar si la aplicación es capaz de grabar actualmente. Llama al método **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** del objeto **AppRecordingManager** y, a continuación, comprueba la propiedad **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** del objeto devuelto **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)**. Si **CanRecord** devuelve **false**, lo que significa que la aplicación no puede grabar actualmente, puedes comprobar la propiedad de **[Detalles](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** para determinar el motivo por el. Según el motivo, puede que te interese mostrar el estado al usuario o mostrar las instrucciones para habilitar la grabación de la aplicación.
 
 
 
@@ -145,7 +145,7 @@ Puedes finalizar todos los estados abiertos llamando a **[StopAllStates](https:/
 [!code-cpp[RaceComplete](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetRaceComplete)]
 
 ### <a name="manage-metadata-cache-storage-limit"></a>Administrar el límite de almacenamiento de caché de metadatos
-Los metadatos que escribes con **AppCaptureMetadataWriter** se almacenan en caché por parte del sistema hasta que se escriben en la emisión multimedia asociada. El sistema define un límite de tamaño de la caché de metadatos de cada aplicación. Una vez alcanzado el límite de tamaño de caché, el sistema empezará a purgar los metadatos almacenados en caché. El sistema eliminará los metadatos escritos con valor de prioridad **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** antes de eliminar los metadatos con prioridad **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)**.
+Los metadatos que escribes con **AppCaptureMetadataWriter** se almacenan en caché por parte del sistema hasta que se escriben en la emisión multimedia asociada. El sistema define un límite de tamaño de la caché de metadatos de cada aplicación. Una vez alcanzado el límite de tamaño de caché, el sistema empezará a purgar los metadatos almacenados en caché. El sistema eliminará los metadatos escritos con valor de prioridad **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** antes de eliminar los metadatos con la prioridad de **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** .
 
 En cualquier momento, puedes comprobar para ver el número de bytes disponibles en la caché de metadatos de la aplicación mediante una llamada a **[RemainingStorageBytesAvailable](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.RemainingStorageBytesAvailable)**. Puedes establecer tu propio umbral definido por la aplicación, tras lo cual puedes decidir reducir la cantidad de metadatos que escribes en la memoria caché. El siguiente ejemplo muestra una sencilla implementación de este patrón.
 
