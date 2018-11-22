@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: ef7136868fc9c212640c142db2751bd6e9a0b179
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7445599"
+ms.locfileid: "7564286"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 

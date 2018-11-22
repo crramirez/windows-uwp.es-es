@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, registro, cuenta de desarrollador
 ms.localizationpriority: medium
 ms.openlocfilehash: dc7f887018dc550ff28101acc6187c9b06235f1f
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7438081"
+ms.locfileid: "7563058"
 ---
 # <a name="create-a-developer-account"></a>Crea una cuenta de desarrollador
 

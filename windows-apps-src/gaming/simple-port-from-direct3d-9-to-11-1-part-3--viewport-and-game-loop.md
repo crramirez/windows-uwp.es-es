@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, migración, bucle del juego, direct3d 9, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7432977"
+ms.locfileid: "7563738"
 ---
 # <a name="port-the-game-loop"></a>Migrar el bucle del juego
 

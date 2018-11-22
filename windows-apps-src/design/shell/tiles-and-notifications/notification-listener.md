@@ -10,12 +10,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: c67f3531d248ef46a162b992850d0240c37ba21a
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7416831"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7568098"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
 
@@ -259,7 +259,7 @@ foreach (UserNotification userNotification in userNotifications)
         toBeRemoved.Remove(userNotification.Id);
     }
  
-    // Othwerise it's a new notification
+    // Otherwise it's a new notification
     else
     {
         // Display it on the Wearable
@@ -296,4 +296,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>Cómo fixdelays en la tarea en segundo plano
 
-Al probar la aplicación, es posible que observes que a veces la tarea en segundo plano se retrasa y no se desencadena durante varios minutos. Para corregir esto, querrás pedir al usuario togo a la configuración del sistema -> sistema -> batería -> uso de batería por aplicación, busca la aplicación en la lista, selecciónalo y cambiar a "Siempre permitido en segundo plano".Una vez hecho esto, la tarea en segundo plano debe desencadenarse siempre dentro de un segundo de recibirse la notificación.
+Al probar la aplicación, es posible que tenga en cuenta que la tarea en segundo plano a veces se retrasa y no se desencadena durante varios minutos. Para corregir el retraso, símbolo del sistema la togo de usuario para la configuración del sistema -> sistema -> batería -> uso de batería por aplicación, busca la aplicación en la lista, selecciónalo y establecerlo en "Siempre permitido en segundo plano".Una vez hecho esto, la tarea en segundo plano debe desencadenarse siempre dentro de un segundo de recibirse la notificación.
