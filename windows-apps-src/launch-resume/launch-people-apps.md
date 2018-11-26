@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Iniciar la aplicación Contactos
 description: En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b87a49f24035215d44dbabcf9e401ddfefdff47
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 46a297c3a611882724b18242d1c6272c3345ffc2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569115"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706943"
 ---
 # <a name="launch-the-people-app"></a>Iniciar la aplicación Contactos
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
 description: Usa este método en la API de envío de Microsoft Store para confirmar un envío de complemento nuevo o actualizado al centro de partners.
 title: Confirmar un envío de complemento
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, commit add-on submission, confirmar envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577483"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694934"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar un envío de complemento
 

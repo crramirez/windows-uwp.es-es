@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
 title: Sistema de administración de recursos
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/20/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563695"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695723"
 ---
 # <a name="resource-management-system"></a>Sistema de administración de recursos
 El sistema de administración de recursos tiene funciones de tiempo de compilación y de tiempo de ejecución. Al compilar, el sistema crea un índice de todas las diferentes variantes de los recursos que se empaquetan con tu aplicación. Este índice es el índice de recursos del paquete, o PRI, y también se incluye en el paquete de la aplicación. En tiempo de ejecución, el sistema detecta el usuario y la configuración de la máquina que están en vigor, consulta la información del PRI y carga automáticamente los recursos que son la mejor coincidencia para esa configuración.

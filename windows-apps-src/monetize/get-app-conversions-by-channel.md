@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener conversiones agregadas por datos de canal de una aplicación durante un intervalo de fechas concreto y según otros filtros opcionales.
 title: Obtener conversiones de aplicaciones por canal
-ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, API de análisis de Microsoft Store, conversiones de complementos, canal
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb5d5dfbfcbabbd3fa3004c84e2a1a5fff9f2d6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d196ffeebcda7653e7464358b772def48c17cefb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568161"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692039"
 ---
 # <a name="get-app-conversions-by-channel"></a>Obtener conversiones de aplicaciones por canal
 

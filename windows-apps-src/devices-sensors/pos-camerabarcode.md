@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Escáner de código de barras basado en cámara
 description: Este artículo muestra las características del escáner de código de barras basado en cámara que están disponibles para aplicaciones para UWP, así como los vínculos a los artículos de procedimientos que muestran cómo usarlos.
-ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: c647846aaaf8f7a5cef96e267ad979dc68ee004a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c946d9f72107dd787efec34b12272402fc660cbf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556545"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694512"
 ---
 # <a name="camera-barcode-scanner"></a>Escáner de código de barras basado en cámara
 Un escáner de código de barras basado en cámara se crea dinámicamente cuando Windows empareja las cámaras conectadas a tu equipo con un descodificador de software.  Cada conjunto descodificador-equipo es un escáner de código de barras totalmente funcional.   

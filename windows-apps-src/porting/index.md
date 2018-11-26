@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
 description: En esta sección se describe cómo migrar tu aplicación existente a la plataforma de Windows Universal (UWP) donde puedes crear un único paquete de aplicación de Windows 10 que los clientes pueden instalar en todos los tipos de dispositivos. La aplicación se beneficiará de nuevo y apasionante hardware, oportunidades de gran rentabilidad, un conjunto de API moderno, controles de interfaz de usuario adaptables y una variedad de modalidades de entrada como el mouse, el teclado, la funcionalidad táctil y voz.
 title: Migración de aplicaciones a Windows 10
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5c6ae373e4e35e640223fe08a5a49f2e7a5dd3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eefebbd7087070f85ead09e562f154f43ed49e37
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580854"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692796"
 ---
 # <a name="porting-apps-to-windows10"></a>Migración de aplicaciones a Windows 10
 

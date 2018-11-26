@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Representar el mapa de sombras en el búfer de profundidad
 description: Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, rendering, representación, shadow map, mapa de sombras, depth buffer, búfer de profundidad, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: a73754fef6d87505751460ec134d853c6bca0530
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559254"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692273"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: Usa este método en la API de envío de Microsoft Store para actualizar un envío de aplicación ya existente.
 title: Actualizar un envío de aplicación
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, update, actualizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 82311d96296b3b7c7db0a3485348b7d1bf4a734c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b61508edf2ebc2ab155110189fe67df63e2bab30
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557950"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712682"
 ---
 # <a name="update-an-app-submission"></a>Actualizar un envío de aplicación
 

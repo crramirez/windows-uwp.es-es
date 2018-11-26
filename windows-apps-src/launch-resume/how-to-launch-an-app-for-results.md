@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Iniciar una aplicación para obtener resultados
 description: Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina iniciar una aplicación para obtener resultados.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f627cf2a897de32aea0e35faf66f5ea70695efd5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557708"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695004"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar una aplicación para obtener resultados
 

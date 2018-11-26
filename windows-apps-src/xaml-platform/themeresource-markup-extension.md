@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso, con lógica del sistema adicional que recupera diferentes recursos en función del tema activo en ese momento.
 title: Extensión de marcado ThemeResource
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568443"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691289"
 ---
 # <a name="themeresource-markup-extension"></a>Extensión de marcado {ThemeResource}
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Preguntas más frecuentes sobre la migración a DirectX11
 description: Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP).
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574691"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692646"
 ---
 # <a name="directx-11-porting-faq"></a>Preguntas más frecuentes sobre la migración a DirectX11
 

@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: En este artículo se describe los códigos de error comunes para las operaciones de la tienda para aplicaciones y complementos, incluidos en la aplicación de compras, licencias y actualizaciones de la aplicación de la instalación automática.
 title: Códigos de error para las operaciones de Microsoft Store
-ms.author: mhopkins
 ms.date: 08/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, compras desde la aplicación, IAP, complementos, códigos de error
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4eff890da48bd60405cadee2d7ecb92bb1b2fa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ba505b30076c356a39ae195e1d187cbc49d8a66a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582195"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720311"
 ---
 # <a name="error-codes-for-store-operations"></a>Códigos de error para las operaciones de Microsoft Store
 

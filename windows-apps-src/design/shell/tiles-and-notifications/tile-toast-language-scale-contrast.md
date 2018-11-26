@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: Your tiles and toasts can load strings and images tailored for display language, display scale factor, high contrast, and other runtime contexts.
 title: Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 89a97342139449b6c333055ec66e8939234a9507
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568576"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698464"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
 

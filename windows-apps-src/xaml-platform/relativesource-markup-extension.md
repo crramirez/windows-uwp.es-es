@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución.
 title: Extensión de marcado RelativeSource
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 26cde97f82e6962d530721f1e0230138e5917016
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557341"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694944"
 ---
 # <a name="relativesource-markup-extension"></a>Extensión de marcado {RelativeSource}
 

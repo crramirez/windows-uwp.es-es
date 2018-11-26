@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: FAD033C7-F887-4217-A385-089F09242827
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de instalación agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales.
 title: Obtener instalaciones de la aplicación
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de Microsoft Store, app installs, instalaciones de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 72efc20e218cdf718b67c949bd7c71108921bf9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e2dc604e15180296e84d6177aa3d9b71a0bf82dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574155"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692766"
 ---
 # <a name="get-app-installs"></a>Obtener instalaciones de la aplicación
 

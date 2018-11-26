@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
 description: Esta sección de la documentación describe cómo usar DirectX y Visual C++ para crear un juego 3D de la Plataforma universal de Windows (UWP).
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
-ms.author: elcowle
 ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, ejemplo, sample, DirectX, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a808c36ab319d76f16c653c5812ebe4b269ec59
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e61c96a1b4deb7dd1beb0233814f86ce1b5fb42c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575217"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712794"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
 

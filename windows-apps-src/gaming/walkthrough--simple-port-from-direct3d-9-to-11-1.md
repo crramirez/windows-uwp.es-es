@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 'Tutorial: Migrar de Direct3D 9 a DirectX 11 y UWP'
 description: En este ejercicio de migración se muestra cómo llevar un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, directx, puerto, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572587"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712171"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Tutorial Portar una aplicación de Direct3D 9 sencilla a DirectX 11 y la Plataforma universal de Windows (UWP)
 

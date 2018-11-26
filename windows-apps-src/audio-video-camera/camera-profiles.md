@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
 description: En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo. Esto incluye tareas como la selección de perfiles que admiten resoluciones específicas o velocidades de fotogramas, perfiles que admiten el acceso simultáneo con varias cámaras y perfiles que admiten HDR.
 title: Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1af7453e8bfea973a67dc878438050accc01fb4c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fe876b362f09eaca68d84516d413d3f458edf0a6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555040"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706764"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara
 

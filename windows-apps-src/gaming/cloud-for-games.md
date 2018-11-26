@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Uso de servicios en la nube con juegos para UWP
 description: Obtén más información acerca de cómo implementar la nube como un back-end para tus juegos para UWP.
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
-ms.author: joanlee
 ms.date: 03/27/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, servicios en la nube
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d15d3e6b6beb773a8d606db7a5d8a17544270be
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 12f9125b4a128b754fc90c48e6a289cec40a7f54
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576219"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692184"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 

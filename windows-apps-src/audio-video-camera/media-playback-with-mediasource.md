@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: En este artículo se muestra cómo usar la clase MediaSource, que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente.
 title: Elementos multimedia, listas de reproducción y pistas
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3c3929c2b3765bd90dbe0be687834e94b4f222fc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557467"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695958"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Elementos multimedia, listas de reproducción y pistas
 

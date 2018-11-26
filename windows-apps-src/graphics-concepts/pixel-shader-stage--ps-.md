@@ -4,17 +4,15 @@ description: La fase del sombreador de píxeles (PS) recibe datos interpolados d
 ms.assetid: 0AEBFDFB-0AD8-4633-AE4E-A44004B57745
 keywords:
 - Fase del sombreador de píxeles (PS)
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 84178a4e5cf993574e7553da44beecf13622bd65
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e1f7e787f2ee80a3168d38a9afd9a249dc0e6de0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557645"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698764"
 ---
 # <a name="pixel-shader-ps-stage"></a>Fase del sombreador de píxeles (PS)
 

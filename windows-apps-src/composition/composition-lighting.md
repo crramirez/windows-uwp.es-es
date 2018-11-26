@@ -1,18 +1,16 @@
 ---
-author: daneuber
 title: Iluminación de composición
 description: Las API de iluminación de composición puede usarse para agregar iluminación 3D dinámicas a la aplicación.
-ms.author: jimwalk
 ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c5c7bfcb06eb673b0516cef7882685ebd19ddb97
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d8c33504fcc785aa2f1fc94796e47fe097fbea96
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573079"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706725"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de luces en la interfaz de usuario de Windows
 

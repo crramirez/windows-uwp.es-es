@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío de paquete piloto para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Crear un envío de paquete piloto
-ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create flight submission, crear envío piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cdcc0f06820600523be111d67d3cad5e38b6ceb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568996"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691666"
 ---
 # <a name="create-a-package-flight-submission"></a>Crear un envío de paquete piloto
 

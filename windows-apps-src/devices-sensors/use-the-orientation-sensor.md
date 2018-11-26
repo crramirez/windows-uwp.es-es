@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: Usar el sensor de orientación
 description: Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49199a91f6713b3f18928eaafb6875a49deaf451
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 16d1ea6186cc8ccabacd1751db61e752a97930f7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580170"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718960"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar el sensor de orientación
 

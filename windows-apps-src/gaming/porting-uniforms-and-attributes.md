@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portar búferes, uniformes y vértices de OpenGL ES 2.0 a Direct3D
 description: Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d, buffers, búferes, uniforms, uniformes, vertex attributes, atributos de vértice
 ms.localizationpriority: medium
-ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566486"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691526"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 

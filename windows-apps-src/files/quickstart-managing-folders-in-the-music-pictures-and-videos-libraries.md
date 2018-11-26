@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 description: Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
-ms.author: lahugh
 ms.date: 06/18/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1859d758806b4e92758decb40b8a30d02acb254d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567819"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692303"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 

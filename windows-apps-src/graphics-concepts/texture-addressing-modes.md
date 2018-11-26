@@ -8,17 +8,15 @@ keywords:
 - Modo de direccionamiento de las texturas Mirror
 - Modo de direccionamiento de las texturas Clamp
 - Modo de direccionamiento de las texturas Border Color
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5e263876f414e5683ffc8a5645a12e5031b3d6fb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564599"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696763"
 ---
 # <a name="texture-addressing-modes"></a>Modos de direccionamiento de las texturas
 

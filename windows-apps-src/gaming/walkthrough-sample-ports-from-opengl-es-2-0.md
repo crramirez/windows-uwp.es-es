@@ -1,15 +1,14 @@
 ---
-author: mtoepke
 title: Tutorial sobre migraciones de muestra desde OpenGL ES 2.0
 description: En este conjunto de temas se analizan diversos escenarios de migración de canalizaciones de elementos gráficos de OpenGL ES 2.0 de diversas complejidades.
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a4416150a0d536dfa1c4f572d79c26990d3f6e7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652284"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691100"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>Tutorial sobre migraciones de muestra desde OpenGL ES 2.0
 
@@ -39,11 +38,11 @@ En este conjunto de temas se analizan diversos escenarios de migración de canal
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

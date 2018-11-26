@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Animaciones de composición
 description: Muchas de las propiedades de objetos y efectos de composición se pueden animar con animaciones de fotogramas y expresión clave, lo que permite a las propiedades de un elemento de la interfaz de usuario cambiar con el tiempo o según un cálculo concreto.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f9d0daf230007d1d32a7d2187d54baa90986e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566081"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712764"
 ---
 # <a name="composition-animations"></a>Animaciones de composición
 

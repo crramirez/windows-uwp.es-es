@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 'Novedades en los documentos de Windows de febrero de 2018: desarrollar aplicaciones para UWP'
 description: Se han agregado nuevas características, vídeos y directrices para los desarrolladores a la documentación de febrero de 2018 para los desarrolladores de Windows 10.
 keywords: novedades, actualización, características, directrices para los desarrolladores, Windows 10, febrero
-ms.author: quradic
 ms.date: 2/5/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d6eb9b95ad7c5f7c63bca5b11fbbbf9018b75fcf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4e42401000d6333c2309933f0bd8244690aac3fd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553852"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693516"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novedades de la documentación de los desarrolladores de Windows de febrero de 2018
 

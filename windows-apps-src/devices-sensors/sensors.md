@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensores
 description: Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e05c18bd2c8fa2ddd7d6a9bc8e474d02f27a93e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c29673a0b41b4f071d438f0c03255c2d73831dc5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578906"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693276"
 ---
 # <a name="sensors"></a>Sensores
 

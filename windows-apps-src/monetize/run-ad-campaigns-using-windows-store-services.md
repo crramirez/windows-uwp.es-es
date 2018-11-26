@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: Usar la API de promociones de Microsoft Store para administrar mediante programación campañas de anuncios promocionales para las aplicaciones que están registradas en la cuenta del centro de partners de tu o tu organización.
 title: Ejecutar campañas de anuncios con los servicios de la Store
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 81e77fb01347c2a6ec2630e08f3a00ee6cf47de7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 038003714d6543580f618b381ac7f4ecbde22da9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575267"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698354"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de anuncios con los servicios de la Store
 

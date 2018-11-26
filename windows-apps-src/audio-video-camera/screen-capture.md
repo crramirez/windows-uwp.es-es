@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Captura de pantalla
 description: El espacio de nombres Windows.Graphics.Capture proporciona API para adquirir fotogramas desde una pantalla o ventana de aplicación, para crear secuencias de vídeo o instantáneas para crear experiencias interactivas y de colaboración.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
-ms.author: elcowle
 ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555502"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698314"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 

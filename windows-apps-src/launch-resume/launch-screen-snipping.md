@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: Iniciar recortes de pantalla
 description: En este tema se describe los esquemas de URI ms-screenclip y ms-screensketch. La aplicación puede usar estos esquemas de URI para iniciar la aplicación de recorte & boceto o abrir un recorte nuevo.
-ms.author: quradic
 ms.date: 8/1/2017
 ms.topic: article
 keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ef83c3b5c23b703fcd40f7e4a7570b263cbc8e00
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7aa0b70aee50c79088a68378fa75664711c3d564
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556804"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691089"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 

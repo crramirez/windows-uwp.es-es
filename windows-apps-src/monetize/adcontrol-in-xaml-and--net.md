@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación XAML para Windows10 (UWP).
 title: AdControl en XAML y .NET
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, AdControl, control de anuncios, XAML, .NET, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: b2346fceaae3996de8aa54640c206b5fcd8c4a87
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 161718bb88d7588db345f3de26de2a955ca6620e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572777"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691165"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl en XAML y .NET
 

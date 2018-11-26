@@ -4,17 +4,15 @@ description: Los indicadores de uso indican cómo la aplicación pretende utiliz
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
 keywords:
 - Copia y acceso a datos de recursos
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e7b0f06711b4a908f8990dfb16968400c685c15f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3d4364bf9973b69587ae042a809d026b553ee2ea
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563408"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695064"
 ---
 # <a name="copying-and-accessing-resource-data"></a>Copia y acceso a datos de recursos
 

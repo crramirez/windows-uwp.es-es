@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: df4d227c-21f9-4f99-9e95-3305b149d9c5
 title: Instalación en streaming de aplicaciones para UWP
 description: La instalación en streaming de la Plataforma universal de Windows (UWP) te permite especificar qué partes de la aplicación deben descargarse primero de Microsoft Store. Al descargar primero los archivos esenciales de la aplicación, el usuario puede iniciarla e interactuar con ella mientras el resto de archivos terminan de descargarse en segundo plano.
-ms.author: lahugh
 ms.date: 04/05/2017
 ms.topic: article
 keywords: aplicación para uwp de streaming de Windows 10, uwp, streaming de instalación, instalar
 ms.localizationpriority: medium
-ms.openlocfilehash: e4915d2fb4d1133cd190d766d38c79934d9f3956
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3fa33410be31b1732a04c51d14dbbd114e1f5e0c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576559"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694964"
 ---
 # <a name="uwp-app-streaming-install"></a>Instalación en streaming de aplicaciones para UWP
 La instalación en streaming de la Plataforma universal de Windows (UWP) te permite especificar qué partes de la aplicación deben descargarse primero de Microsoft Store. Al descargar primero los archivos esenciales de la aplicación, el usuario puede iniciarla e interactuar con ella mientras el resto de archivos terminan de descargarse en segundo plano. 

@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Novedades de Windows 10 para desarrolladores; herramientas y características
 description: Tanto la compilación 16299 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
 keywords: novedades, novedad, actualización, actualizaciones, característica, características, nuevo, Windows 10, 1709, octubre, lo último, desarrolladores, 16299, Fall Creators
-ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 458a5999c1f56a3bc9f445f260d1d294c395b850
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bd333cecc5f9141b3fd34593ea10d17fe6face1e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562989"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693496"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Novedades para desarrolladores en Windows 10, compilación 16299
 

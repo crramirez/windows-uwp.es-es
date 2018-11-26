@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: a128edc8-8a80-4645-ac29-908ede2d1c72
 description: En este artículo se muestra cómo usar MediaFrameReader con MediaCapture para obtener fotogramas multimedia de uno o más orígenes disponibles, lo que incluye cámaras a color, de profundidad y de infrarrojos, dispositivos de audio o incluso orígenes de fotogramas personalizados, como los que producen fotogramas de seguimiento estructurales.
 title: Procesar fotogramas multimedia con MediaFrameReader
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d4c752438af3425fffc69ecf71ff0dc8abe5963
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554716"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706676"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 

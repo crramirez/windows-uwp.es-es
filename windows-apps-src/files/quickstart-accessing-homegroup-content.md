@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
 description: Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
-ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 398c44db6a391008605ed6fa4dad877bcead035d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 422d02b8797bef8ea4f793ba652e9e4e34421a9b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569082"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712774"
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 

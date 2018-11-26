@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Usar profundidad y efectos en primitivos
 description: Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos.
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, profundidad, efectos, primitivos, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f81c441910cd0d0205641a119c243cb22d0b695e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 02911338da858e3718235736cee7969a7bdebae2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558324"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691506"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Usar profundidad y efectos en primitivos
 
@@ -34,7 +32,6 @@ Suponemos además que has consultado [Inicio rápido: configurar recursos de Dir
 
 <a name="instructions"></a>Instrucciones
 ------------
-
 ### <a name="1-defining-cube-variables"></a>1. Definir variables del cubo
 
 Primero necesitamos definir las estructuras **SimpleCubeVertex** y **ConstantBuffer** para el cubo. Estas estructuras especifican las posiciones de los vértices, los colores para el cubo y de qué manera se visualizará el cubo. Declaramos [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) y [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) con [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) y declaramos una instancia de **ConstantBuffer**.

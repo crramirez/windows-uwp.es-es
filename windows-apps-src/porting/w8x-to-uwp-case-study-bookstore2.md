@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Este caso práctico, que se basa en la información proporcionada en Bookstore1, comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control SemanticZoom.
 title: Caso práctico de Windows Runtime 8.x a UWP Bookstore2
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36d37f2507f3e4c96c3462fd075dbe945117dd82
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 156f780e5637852d554488adfeeb9d688fa4a4d7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564075"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693691"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore2
 

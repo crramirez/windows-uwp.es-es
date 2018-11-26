@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Asignar OpenGL ES2.0 a Direct3D11
 description: Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API.
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, portar, games, porting
 ms.localizationpriority: medium
-ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e09dcb1830e62d17983f564771b4808d132179a0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581635"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712284"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Asignar OpenGL ES2.0 a Direct3D11
 

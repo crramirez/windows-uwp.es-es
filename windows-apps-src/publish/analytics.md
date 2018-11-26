@@ -1,19 +1,17 @@
 ---
-author: JnHs
 Description: Get detailed analytics for your Windows apps, in Partner Center or via other methods.
 title: Analizar el rendimiento de las aplicaciones
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, análisis, informes, panel, aplicaciones, datos, las métricas
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d7998366d484c95b90b765eb9227a7c3df41b6f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560759"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691466"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de las aplicaciones
 

@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Iniciar la aplicación Configuración de Windows
 description: Aprende a iniciar la aplicación Configuración de Windows desde la aplicación. En este tema se describe el esquema de URI ms-settings. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.author: twhitney
 ms.date: 03/20/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b86298ca671282dea201e3088bc60845231fe007
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ff9510b65bd635b5b10e0cbea551c12b29ef8f37
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570900"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691586"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 

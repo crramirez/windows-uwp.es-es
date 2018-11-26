@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Usa este método en la API de envío de Microsoft Store para detener el lanzamiento de paquete para un envío de aplicación.
 title: Detener el lanzamiento de un envío de aplicación
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, app submission, envío de aplicación, halt, detener
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
-ms.openlocfilehash: df6db5ee434aabaaa56b309e02aa9197d72f4469
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 08450b7aa9608e610a31d114059dd49e3ef3e10c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572517"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720111"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a>Detener el lanzamiento de un envío de aplicación
 

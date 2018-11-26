@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: En este artículo se muestra cómo capturar una secuencia de fotos variable, que permite capturar varios fotogramas de imágenes en sucesión rápida y configurar cada uno para que use una configuración de foco, flash, ISO, exposición y compensación de la exposición diferente.
 title: Secuencia de fotos variable
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91a7d69d945b2ba2452d5bc477b6c17bf1dc6845
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 208a61b565c0522d3e9ce88f3938f57dfa1fbddd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561669"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695779"
 ---
 # <a name="variable-photo-sequence"></a>Secuencia de fotos variable
 

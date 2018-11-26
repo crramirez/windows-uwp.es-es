@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Paquetes de aplicaciones de recopilaciones planos
 description: Describe cómo crear una recopilación plana para empaquetar los archivos de paquetes .appx de la aplicación con referencias a los paquetes de aplicaciones.
-ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, packaging, empaquetado, package configuration, configuración de paquete, flat bundle, recopilación plana
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d95591f12b61054a654b9b1284bdd90d74a937b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b7066b7f2e5bd72ebee3169e03c7940b6fef4dba
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555072"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712857"
 ---
 # <a name="flat-bundle-app-packages"></a>Paquetes de aplicaciones de recopilaciones planas 
 

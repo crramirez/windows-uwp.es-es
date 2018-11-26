@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Una introducción a C++/WinRT&mdash;una proyección de lenguaje C++ estándar para las API de Windows Runtime.
 title: Introducción a C++/WinRT
-ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b88eac972cd65b771827d7e3125476265cf671e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b92d0def08267c36497f0afd24d23308bc4a2e85
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554610"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695137"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;

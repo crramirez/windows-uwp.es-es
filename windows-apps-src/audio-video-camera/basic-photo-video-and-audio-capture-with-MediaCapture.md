@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 66d0c3dc-81f6-4d9a-904b-281f8a334dd0
 description: Este artículo muestra la forma más sencilla de capturar fotos y vídeos mediante la clase MediaCapture.
 title: Captura básica de fotos, audio y vídeo con MediaCapture
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7204c01cc80c50dacb2009b2138a7c046974dc62
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d0aa227a47fc3940f3fa5c3010eed70f37067935
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574776"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696108"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>Captura básica de fotos, audio y vídeo con MediaCapture
 

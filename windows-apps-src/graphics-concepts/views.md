@@ -4,17 +4,15 @@ description: El término \ 0034;vista \ 0034; se usa para referirse a \ 0034;dat
 ms.assetid: 0C7FB99F-7391-472F-BA53-576888DFC171
 keywords:
 - Vistas
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 77ac16c55bb4292ea7c5362d007ff9569812954f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: df106a400a7ba8c8f94aa6dd35325aabacd36eca
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559034"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719430"
 ---
 # <a name="views"></a>Vistas
 

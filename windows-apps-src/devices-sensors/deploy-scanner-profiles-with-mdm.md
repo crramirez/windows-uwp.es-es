@@ -1,19 +1,17 @@
 ---
 title: Implementar perfiles de escáner de códigos de barras con MDM
-author: PatrickFarley
 description: Es posible implementar perfiles de escáner de códigos de barras con un servidor MDM.
 ms.assetid: 99ED3BD8-022C-40C2-9C65-F599186548FE
-ms.author: pafarley
 ms.date: 09/26/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: cfd9692620273952483ec7da65a69b643cb5bf4f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dbcaa683e2c7a2bb18d88fcba03e10fa951d4459
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568025"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719100"
 ---
 # <a name="deploy-barcode-scanner-profiles-with-mdm"></a>Implementar perfiles de escáner de códigos de barras con MDM
 

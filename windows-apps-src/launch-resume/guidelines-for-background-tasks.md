@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Directrices para tareas en segundo plano
 description: Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano.
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: fd98a3019efc8f2774fb7a1b52f5dcd27778cd2a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bd851b6deab0f7a2772720fac83bb2bfa3175071
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576319"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691646"
 ---
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 

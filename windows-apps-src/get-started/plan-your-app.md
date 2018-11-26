@@ -1,19 +1,17 @@
 ---
-author: GrantMeStrength
 title: Creación de una aplicación compleja de plataforma Universal de Windows (UWP)
 description: 'En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.'
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
-ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ce5e0d272e14b9c69f660c8c7de6a838fa7956ac
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 05a69cfdf96d6c7d3426b8d1ba414a42ff48a117
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559787"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691846"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Creación de una aplicación compleja de plataforma Universal de Windows (UWP)
 

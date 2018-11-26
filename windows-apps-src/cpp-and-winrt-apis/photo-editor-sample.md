@@ -1,18 +1,16 @@
 ---
-author: JoshuaPartlow
 description: Photo Editor es una aplicación de ejemplo para UWP que muestra el desarrollo con proyección de lenguaje de C++/WinRT. La aplicación de ejemplo permite recuperar fotos desde la biblioteca Imágenes y, a continuación, modificar la imagen seleccionada con distintos efectos fotográficos.
 title: Aplicación de ejemplo de C++/WinRT de Photo Editor
-ms.author: wdg-dev-content
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, muestra, aplicación, foto, editor
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bfcd79ed2d659aff8d435bd397df05eb45af72
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8c6f668ef3d92f968e75659b0ba1937abadb079c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578846"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694914"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Aplicación de ejemplo de C++/WinRT de Photo Editor
 Puedes clonar o descargar la aplicación de ejemplo desde el repositorio de GitHub [aplicación de ejemplo C++/WinRT Photo Editor](https://github.com/Microsoft/Windows-appsample-photo-editor).

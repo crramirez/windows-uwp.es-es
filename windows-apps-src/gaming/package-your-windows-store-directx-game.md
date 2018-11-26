@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 description: Los juegos para la Plataforma universal de Windows UWP de gran tamaño, especialmente aquellos que admiten varios idiomas con activos específicos de alguna región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables.
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, package, paquete
 ms.localizationpriority: medium
-ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555607"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692174"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 
