@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: EE0C1B28-EF9C-4BD9-A3C0-BDF11E75C752
 description: En este artículo se explica cómo las aplicaciones para UWP pueden detectar y responder a los cambios iniciados por el sistema en los niveles de secuencia de audio
 title: Detectar y responder a cambios de estado de audio
-ms.author: drewbat
 ms.date: 04/03/2018
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f7b4addf2a7bdc2d93cbcf64f13a640a4ef5b12a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 69eeb82fd9a1e043e99b7fe0d635ca750779eda5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572881"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706686"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Detectar y responder a cambios de estado de audio
 A partir de Windows 10, versión 1803, la aplicación puede detectar cuándo el sistema reduce o silencia el nivel de audio de una secuencia de audio que tu aplicación está usando. Puedes recibir notificaciones para capturar y representar secuencias, para una categoría de audio y dispositivo de audio concretos, o para un objeto [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) que tu aplicación está usando para la reproducción multimedia. Por ejemplo, el sistema puede reducir, o atenuar, el nivel de reproducción de audio cuando suena una alarma. El sistema silenciará la aplicación cuando pasa al segundo plano si la aplicación no ha declarado la funcionalidad *backgroundMediaPlayback* en el manifiesto de la aplicación. 

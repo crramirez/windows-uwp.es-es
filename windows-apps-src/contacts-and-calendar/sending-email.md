@@ -1,19 +1,17 @@
 ---
-author: normesta
 description: Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
 title: Enviar correo electrónico
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: contactos, correo electrónico, enviar
-ms.author: normesta
 ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28809210f71bf523e3cc5f9c8da1db9fbcc90c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1593ab8b547a464492a35aa7d49d38f667a8210b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565576"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695282"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: B356C442-998F-4B2C-B550-70070C5E4487
 description: Aprende a usar el espacio de nombres Windows.Services.Store para comprar una aplicación o uno de sus complementos.
 title: Habilitar compras desde la aplicación de aplicaciones y complementos
 keywords: windows 10, uwp, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
-ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: beb7165586c62770fd6b18fff8c7ad0095bc78ba
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a64a52005221c418ea82e8fffa9ecf94b6d1bef3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560666"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720171"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras desde la aplicación de aplicaciones y complementos
 

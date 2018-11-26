@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: Usa este método en la API de promociones de Microsoft Store para administrar los perfiles objetivo para las campañas de anuncios promocionales.
 title: Administrar perfiles objetivo
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0d84c6eb678bf884709e13ecefd81e64097ee738
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573475"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712847"
 ---
 # <a name="manage-targeting-profiles"></a>Administrar perfiles objetivo
 

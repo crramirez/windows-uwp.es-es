@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Con C++/WinRT, puedes llamar a las API de Windows Runtime usando tipos de cadena de caracteres anchos de C++ estándar, o puedes usar el tipo winrt::hstring.
 title: Control de cadenas en C++/WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
-ms.openlocfilehash: 72032c3c522a8434d266842a83c443889e8efc19
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578318"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695346"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 

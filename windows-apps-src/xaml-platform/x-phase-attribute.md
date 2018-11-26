@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 title: Atributo xPhase
 description: Usa xPhase con la extensión de marcado xBind para representar los elementos ListView y GridView de forma incremental y mejorar la experiencia de movimiento panorámica.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ee99553b5713acb1917ccb697abb2387d00da2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6def088b3e7f6410f12d1b2e411bcb547c90a09a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567726"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718989"
 ---
 # <a name="xphase-attribute"></a>Atributo x:Phase
 

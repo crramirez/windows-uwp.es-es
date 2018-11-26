@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 description: Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9d0fdee4ba9f44f15c461e5a53dad28700023a4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7575943"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720151"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 

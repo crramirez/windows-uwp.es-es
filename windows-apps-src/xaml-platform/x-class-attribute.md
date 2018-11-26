@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Configura la compilación de XAML para unir clases parciales entre el marcado y el código subyacente. La clase parcial de código se define en un archivo de código separado y la clase parcial de marcado se crea mediante la generación del código durante la compilación de XAML.
 title: Atributo xClass
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6746969b1b717183894d6b941be41c9aca452960
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8eb1238499355cf37b3f5113dbb10c456de55961
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573753"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694794"
 ---
 # <a name="xclass-attribute"></a>Atributo x:Class
 

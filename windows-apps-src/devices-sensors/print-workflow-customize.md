@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 67a46812-881c-404b-9f3b-c6786f39e72b
 title: Personalizar el flujo de trabajo de impresión
 description: Crea experiencias personalizadas del flujo de trabajo de impresión para satisfacer las necesidades de tu organización.
-ms.author: pafarley
 ms.date: 08/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
-ms.openlocfilehash: f58c0c8397831595c237b7bd9fe4eafb25594ab3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 96e308793e60c0367c712fb93a5d25a056397568
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561195"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698744"
 ---
 # <a name="customize-the-print-workflow"></a>Personalizar el flujo de trabajo de impresión
 

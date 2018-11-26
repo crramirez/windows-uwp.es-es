@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: Usa los ejemplos de código de C# de esta sección para obtener más información sobre cómo usar la API de envío de Microsoft Store.
 title: 'Muestra de C#: envíos de aplicaciones, complementos y pilotos'
-ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 495bf2e58fafd9e321937bd6fdb3be8c8dea68e2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565629"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712449"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de C\#: envíos de aplicaciones, complementos y pilotos
 

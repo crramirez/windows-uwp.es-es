@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: Uso de modificadores de inercia para crear puntos de acoplamiento
 description: Obtener más información sobre cómo usar la característica InertiaModifier de InteractionTracker para crear experiencias de movimiento que se acoplen a un punto especificado.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 20c10b1cc621da834a8a7c411e75eb92b1944b5a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f99ebc4b98c87a4bc6d77fd2c626f481563e50c5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562414"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712350"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>Creación de puntos de acoplamiento con modificadores de inercia
 

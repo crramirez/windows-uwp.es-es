@@ -1,19 +1,17 @@
 ---
-author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 description: Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena.
-ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 60d283f41c495f9612311e4b9b9da3df1a44d498
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 194bbeefbd3ca5f8237bb3449ec935211056aea3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560467"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720091"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 

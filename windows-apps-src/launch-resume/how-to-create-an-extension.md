@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: Crear y usar una extensión de aplicación
 description: Crea y hospeda las extensiones de aplicaciones de la Plataforma universal de Windows (UWP) que te permiten ampliar tu aplicación mediante paquetes que los usuarios pueden instalar desde la Microsoft Store.
 keywords: extensión de aplicación, servicio de la aplicación, en segundo plano
-ms.author: twhitney
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c4c326dbafa719273c4535a42d58184c7ce360fe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 99ba3ee5f62ed9455e95d9e760abdba6009e5027
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569393"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712370"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 

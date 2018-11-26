@@ -2,18 +2,16 @@
 title: Agente de autenticación web
 description: En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc.
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: 88210182f46fa8149e4b2d0278d7df89033e62b6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8781cbffcb8d5c433c58865fba38cd65369b5c49
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557831"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707367"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticación web
 

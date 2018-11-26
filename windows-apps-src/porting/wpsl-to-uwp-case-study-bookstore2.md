@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: En este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación de WindowsPhone Silverlight que muestra datos agrupados en un LongListSelector.
 title: WindowsPhone Silverlight a UWP caso práctico, Bookstore2
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e518439ddd4e131c2d045f4467670b42a392fca
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5b75da7d50135ee8d40f8ed44f0239edb54dcf65
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577496"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719547"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight a UWP caso práctico: Bookstore2
 
@@ -275,8 +273,8 @@ Esta sección contiene un ejemplo de las instalaciones que se nos abren después
 Cuando enlazamos **CollectionViewSource.Source** a Authors, lo único que comunicamos es que cada autor de Authors es un grupo de *algo*. Dejamos a **CollectionViewSource** la determinación de que Author es, en este caso, un grupo de BookSku. Eso funciona, pero no es flexible. ¿Qué ocurre si queremos que Author sea *tanto* un grupo de BookSku *como* un grupo de las direcciones en las que ha vivido el autor? El Autor no puede *ser* ambos grupos. No obstante, el Autor puede *tener* cualquier número de grupos. Y esta es la solución: usa el patrón *has-a-group* en lugar del patrón *is-a-group* que estamos usando actualmente (o usa ambos). Se hace así:
 
 -   Cambia Author de modo que ya no derive de **List&lt;T&gt;**.
--   Agrega este campo a Author: `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();`.
--   Agrega esta propiedad a Author: `public ObservableCollection<BookSku> BookSkus { get { return this.bookSkus; } }`.
+-   Agrega este campo para 
+-   Agrega esta propiedad a 
 -   Por supuesto, podemos repetir los dos pasos anteriores para agregar tantos grupos en Author como necesitamos.
 -   Cambia la implementación del método AddBookSku por `this.BookSkus.Add(bookSku);`.
 -   Ahora que Author *tiene* al menos un grupo, necesitamos comunicar a **CollectionViewSource** cuál de ellos debe usar. Para ello, agrega esta propiedad a **CollectionViewSource**: `ItemsPath="BookSkus"`

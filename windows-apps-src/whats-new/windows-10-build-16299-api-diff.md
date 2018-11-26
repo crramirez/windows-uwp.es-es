@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Cambios en las API de Windows 10 Fall Creators Update
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, compilación 16299
 keywords: novedades, novedad, actualizaciones, Windows 10, 1709, fall, creators, apis, 16299
-ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 95f7b7adb351db840647cc3f4a69ad7f43663a03
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 25707dfbf6753c51b4cf47bcbe95dc66802ee781
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581217"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712297"
 ---
 # <a name="new-apis-in-windows-10-build-16299"></a>Nuevas API en la compilación 16299 de Windows 10
 

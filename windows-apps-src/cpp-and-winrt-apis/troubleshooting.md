@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: La tabla de solución de problemas de síntomas y soluciones de este tema puede resultarte útil si vas a cortar nuevo código o portar una aplicación existente.
 title: Solucionar problemas de C++/WinRT
-ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, solución de problemas, HRESULT, error
 ms.localizationpriority: medium
-ms.openlocfilehash: f1a25b606def215defb8be0e0a38c628349f2440
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 120d5c8014ce9ac3cab9b2dfb1d778173f2434c4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569380"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695014"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solucionar problemas de C++/WinRT
 

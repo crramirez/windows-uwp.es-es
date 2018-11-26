@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: You can help customers discover your app by linking to your app's listing in the Microsoft Store.
 title: Vincular a la aplicación
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows10, uwp, vínculo, protocolo de la tienda windows, vincular a una aplicación, vincular a aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: d0d0a9fc862734611167e5118392126cb42687f2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 59df207adf44cea04505e41a3323da1743170c46
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564807"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712330"
 ---
 # <a name="link-to-your-app"></a>Vincular a la aplicación
 

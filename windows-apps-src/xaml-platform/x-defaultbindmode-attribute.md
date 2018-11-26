@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 description: En un marcado XAML, especifica un modo predeterminado para x:Bind.
 title: Atributo xDefaultBindMode
-ms.author: jimwalk
 ms.date: 02/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2696cb46591757421795b15083ea7fdab54943c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c8917b09f04206a5466797f48414defeb35baf5e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578780"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719272"
 ---
 # <a name="xdefaultbindmode-attribute"></a>Atributo x:DefaultBindMode
 

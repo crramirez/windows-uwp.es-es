@@ -1,19 +1,17 @@
 ---
-author: normesta
 title: Mostrar puntos de interés en un mapa
 description: Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML.
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
-ms.author: normesta
 ms.date: 08/11/2017
 ms.topic: article
 keywords: Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins
 ms.localizationpriority: medium
-ms.openlocfilehash: 13c0ea463cbab97e03c87c4e558bba0eff92300c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554119"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720341"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Mostrar puntos de interés en un mapa
 
