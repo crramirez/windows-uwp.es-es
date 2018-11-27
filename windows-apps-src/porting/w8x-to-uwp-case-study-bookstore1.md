@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 title: Caso práctico de Windows Runtime 8.x a UWP, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: Este tema presenta un caso práctico de migración de una aplicación Universal 8.1 muy simple a una aplicación de plataforma Universal de Windows (UWP) de Windows 10.
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cec8171b381a607616e2054784fa888074d3f90e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 88a5492116eaf48f72d512a093001a5c3835f0d2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566838"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704426"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
 

@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: Declaraciones de funcionalidades de las aplicaciones
 description: Las funcionalidades deben declararse en el manifiesto del paquete de la aplicación de la Plataforma universal de Windows (UWP) para acceder a determinadas API o ciertos recursos como imágenes, música o dispositivos, como la cámara o el micrófono.
-ms.author: misatran
 ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: bb692aaada7296f230e1243a3ce515b471f1ba98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca3a56d97a77ef5a377d8d7b0c22bb94e4ab34a9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582185"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698061"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 

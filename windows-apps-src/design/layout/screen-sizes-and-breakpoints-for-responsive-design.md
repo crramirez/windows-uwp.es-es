@@ -1,19 +1,17 @@
 ---
-author: mijacobs
 title: Tamaños de pantalla y puntos de interrupción de diseño adaptativo
 description: En lugar de optimizar tu interfaz de usuario de los muchos dispositivos en el ecosistema de Windows 10, te recomendamos diseñar para unas cuantas categorías de ancho clave denominadas puntos de interrupción.
-ms.author: mijacobs
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dbe71805ac0607a974374fb7a4f50a1d3f4d6811
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574481"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708920"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 

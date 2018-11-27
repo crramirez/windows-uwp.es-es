@@ -2,18 +2,16 @@
 layout: LandingPage
 description: Introducción a la Plataforma universal de Windows (UWP) y el desarrollo de aplicaciones para Windows 10.
 title: Introducción a la Plataforma universal de Windows (UWP)
-author: QuinnRadich
-ms.author: quradic
 ms.date: 03/23/2018
 ms.topic: article
 keywords: introducción, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 0193209c1a603bb253b07b084dd62d29c91009a3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a2a1452de6fe602c8fd21e510de070f49d806eec
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572057"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702413"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10 
  
@@ -209,7 +207,6 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
 </div>
 
 ---
-
 <ul class="panelContent cardsW">
     <li>
         <div class="cardSize">

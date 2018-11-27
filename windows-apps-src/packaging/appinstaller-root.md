@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Instalar aplicaciones para UWP con el Instalador de aplicación
 description: Esta sección contiene o vincula a artículos sobre el Instalador de aplicación y acerca de cómo usar las características del Instalador de aplicación.
-ms.author: lahugh
 ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: f3da1f4f393eea1362b6e59d2ad7e9a2a97bc33b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca72f9570c5ecef4a93b03f297ecb1d5064c5bef
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565959"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703249"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>Instalar aplicaciones para UWP con el Instalador de aplicación
 

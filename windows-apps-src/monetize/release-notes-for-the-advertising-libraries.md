@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
 description: Revisa las notas de la versión de las bibliotecas de Microsoft Advertising.
 title: Notas de la versión de las bibliotecas de publicidad
-ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
 ms.localizationpriority: medium
-ms.openlocfilehash: dbe932eb9391a4de0304b4be42944b2bced3287a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1bab822c81cdd5af1e6b00ca8d33ed7f7ea3838f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564391"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703479"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 

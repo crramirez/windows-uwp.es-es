@@ -1,18 +1,16 @@
 ---
-author: PatrickFarley
 title: Procedimientos recomendados de las actividades de usuario
 description: Esta guía describe los procedimientos recomendados para crear y actualizar las actividades del usuario.
 keywords: actividad del usuario, actividades del usuario, línea de tiempo, cortana continúa donde lo dejaste, cortana continúa desde donde lo dejé, proyecto rome
-ms.author: pafarley
 ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 199499e8737d638301f32d01a00ac603e3f5348f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33103ebfc7ee3e26a11de781af7981bce78b349c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577676"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699323"
 ---
 # <a name="user-activities-best-practices"></a>Procedimientos recomendados de las actividades de usuario
 

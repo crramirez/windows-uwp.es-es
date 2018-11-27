@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Desarrollar con paquetes de activos y plegado de paquete
 description: Aprende a organizar de forma eficaz tu aplicación con paquetes de activos y plegado de paquete.
-ms.author: lahugh
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
-ms.openlocfilehash: efdf560158e2b57ae9e05ecc31d49c7cf981d8c0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9241ffeb6b232c5b5be3098b114f6c7bf00bcf0d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567680"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708052"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desarrollar con paquetes de activos y plegado de paquete 
 

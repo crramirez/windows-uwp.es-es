@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Cambios en la API de Windows 10, compilación 17134
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, compilación 17134
 keywords: novedades, novedad, actualizaciones, Windows 10, más reciente, apis, 17134
-ms.author: quradic
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 40a5621dbd5729d31e2b288b912b10c638ca4f36
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed4682b6deac68d74d40576d0eb9cbafc6bfdd1d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572361"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698794"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a>Nuevas API en la compilación 17134 de Windows 10
 

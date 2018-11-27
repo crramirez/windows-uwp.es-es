@@ -1,19 +1,17 @@
 ---
-author: payzer
 title: Referencia de API de SMB de Device Portal
 description: Obtén información sobre cómo tener acceso a las API de SMB mediante programación.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a337fe722d73a08c1c75a84478fc31e5bdf6b03
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e248a6ff666efe7dca262daa81a21ab44a4dc5aa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562434"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704854"
 ---
 # <a name="developer-folder-api-reference"></a>Referencia de API de carpeta de desarrollador   
 Puedes obtener acceso a archivos relacionados con el desarrollo en la Xbox One mediante un explorador de archivos estándar. Esto te permite ver y reemplazar archivos fácilmente desde el equipo a la consola.

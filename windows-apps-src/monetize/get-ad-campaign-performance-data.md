@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: A26A287C-B4B0-49E9-BB28-6F02472AE1BA
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de rendimiento de la campaña de anuncios de la aplicación especificada durante un intervalo de fechas indicado y según otros filtros opcionales.
 title: Obtener los datos de rendimiento de la campaña publicitaria
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, campañas publicitarias, ad campaigns
 ms.localizationpriority: medium
-ms.openlocfilehash: c9d348ffc0895d5adb16886c5a66af14a1884b8b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1190ec43c5b98eabd897a3bed3788aaf6eb0cb7d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569035"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697598"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obtener los datos de rendimiento de la campaña publicitaria
 

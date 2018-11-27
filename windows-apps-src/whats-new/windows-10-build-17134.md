@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 'Novedades de Windows 10 para desarrolladores: herramientas y características'
 description: Tanto la compilación 17134 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
 keywords: novedad, novedades, actualización, actualizaciones, características, nuevo, Windows 10, más reciente, desarrolladores, 17134
-ms.author: quradic
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b25df0a8445322ceb422fd6485f7d08c1c49a25
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 72319e7d97bfaaff4595c56a09fb7d3a874faa50
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567148"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705087"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades de Windows 10 para desarrolladores, compilación 17134
 

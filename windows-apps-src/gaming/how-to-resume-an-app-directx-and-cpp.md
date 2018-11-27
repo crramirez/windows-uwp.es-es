@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Cómo reanudar una aplicación (DirectX y C++)
 description: En este tema se muestra cómo restaurar datos importantes de la aplicación cuando el sistema reanuda la aplicación DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, reanudar, resuming, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 1149bebfd837e3d4051b5e0fca10aac248d909c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576529"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702586"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Cómo reanudar una aplicación (DirectX y C++)
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: FD381669-F962-465E-940B-AED9C8D19C90
 description: Aprende a usar el espacio de nombres Windows.Services.Store para trabajar con complementos consumibles.
 title: Habilitar compras de complementos consumibles
 keywords: windows 10, uwp, consumibles, consumable, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
-ms.author: mhopkins
 ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e4687833b55f1456d298b552f5cce897f8b4eaa1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572934"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705147"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumibles
 

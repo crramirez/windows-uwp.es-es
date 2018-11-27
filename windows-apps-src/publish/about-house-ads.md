@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: You can create an ad to promote one of your apps in your other apps, for free. We call these house ads.
 title: Acerca de los anuncios internos
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 93c8a9ad51baab0edf96d08682aefce99ba04fd5
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 8f5a42d6c4a4de15105afdec2bc9bc0b4cb27c94
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7433712"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703905"
 ---
 # <a name="about-house-ads"></a>Acerca de los anuncios internos
 

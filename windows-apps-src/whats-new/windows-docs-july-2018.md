@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 'Novedades en los documentos de Windows de julio de 2018: desarrollar aplicaciones para UWP'
 description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de julio de 2018.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, julio
-ms.author: quradic
 ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b9c2ff7e809c635eb97e818c91e5d6647a963560
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d445f31d22baaafeb16c004543770cf5d6df05a7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582285"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708295"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en los documentos de Windows de julio de 2018
 

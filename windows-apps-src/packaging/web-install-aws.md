@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Hospedaje de paquetes de aplicación para UWP en AWS para instalación web
 description: Tutorial para configurar el servidor web AWS validar la instalación de la aplicación a través de la aplicación del instalador de aplicación
-ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
 keywords: Windows 10, Windows 10, UWP, paquetes opcionales, Establece, AWS relacionadas con la instalación de prueba de instalador, AppInstaller, aplicación,
 ms.localizationpriority: medium
-ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 53fe01a1c1a825377e886e042b4eef3868cbf5eb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579090"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696202"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hospedaje de paquetes de aplicación para UWP en AWS para instalación web
 

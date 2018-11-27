@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: Aplicaciones adaptables para versiones
 description: Aprende a sacar partido de las nuevas API mientras mantienes la compatibilidad con versiones anteriores
-ms.author: jimwalk
 ms.date: 09/17/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b96fafe380c08c74c4e411c7d559cc961c6da1ed
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8bbe7875fcd35003b1ec35b02da0f1a86a54ef31
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568906"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701985"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables para versiones: Usa las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 

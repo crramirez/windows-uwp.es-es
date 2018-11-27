@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: Usa este método en la API de envío de Microsoft Store para recuperar información sobre una aplicación específica registrada en tu cuenta del centro de partners.
 title: Obtener una aplicación
-ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app, aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c43a946234c738198e7ab929171051e4bafff63
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ccb5473f85cba08c170af2334b0894a11e27a15a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569743"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707916"
 ---
 # <a name="get-an-app"></a>Obtener una aplicación
 

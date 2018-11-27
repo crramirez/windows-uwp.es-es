@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Uso compartido de dispositivos PointOfService
 description: Compartir dispositivos periféricos de PointOfService con otras personas
-ms.author: jken
 ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 591ba592d1c17b03ae29c6fb98ef546bc18b8bdc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 53dc22b2aa35b5e69854f6fb489ff6a454c73bf6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579785"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699092"
 ---
 # <a name="pointofservice-device-sharing"></a>Uso compartido de dispositivos PointOfService
 

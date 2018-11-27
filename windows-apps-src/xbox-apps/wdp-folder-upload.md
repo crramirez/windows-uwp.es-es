@@ -1,19 +1,17 @@
 ---
-author: WilliamsJason
 title: Referencia de API de carga de carpeta del Device Portal
 description: Obtén información sobre cómo tener acceso mediante programación a la API de carga de carpeta.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
-ms.openlocfilehash: 481ec666c327b15088d8e60577c51fa1697918fe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557798"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699750"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>Cargar una carpeta en el directorio de desarrollo
 

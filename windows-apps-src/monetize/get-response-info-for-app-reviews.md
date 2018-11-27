@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
 description: Usa este método en la API de opiniones de Microsoft Store para determinar si puedes responder a una opinión particular, o si puedes responder a cualquier opinión de una aplicación determinada.
 title: Obtener información de respuesta de opiniones
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, response info, información de respuesta
 ms.localizationpriority: medium
-ms.openlocfilehash: 466455a5e8da9364206245f1e0ac10acfed07ee7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0497b5eec67f9204139cd10d4523b534d6c8779f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554001"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698214"
 ---
 # <a name="get-response-info-for-reviews"></a>Obtener información de respuesta de opiniones
 

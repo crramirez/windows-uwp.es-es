@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 99DB5622-3700-4FB2-803B-DA447A1FD7B7
 description: Usa este método en la API de análisis de Microsoft Store para obtener datos de uso diario de aplicación para un intervalo de fechas dado y según otros filtros opcionales.
 title: Obtener el uso diario de la aplicación
-ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
-ms.openlocfilehash: 24542f165c0caa2c07db1866c96603916c6ac750
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d3460b61e6a9a7c36be6fd87c4dc7fcc1ab811d1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563652"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703349"
 ---
 # <a name="get-daily-app-usage"></a>Obtener el uso diario de la aplicación
 

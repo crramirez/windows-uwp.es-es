@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
 description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Crear un envío de aplicación
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create app submission, crear envío de aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: fd97efca42049fd9f5adc4d051688074d91132fa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a90be116a9d85eeae7cb7c44c2bbfe96da472f65
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562454"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702859"
 ---
 # <a name="create-an-app-submission"></a>Crear un envío de aplicación
 

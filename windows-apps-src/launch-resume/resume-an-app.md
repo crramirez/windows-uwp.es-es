@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: Administrar la reanudación de la aplicación
 description: Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
-ms.author: twhitney
 ms.date: 07/06/2018
 ms.topic: article
 keywords: Windows 10, UWP
@@ -13,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 717c819aaa732cf8d29e0a701a1fec81485f48ac
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f424a274d3e96b58f32875620f3165ccfac82ba6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581177"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699270"
 ---
 # <a name="handle-app-resume"></a>Controlar la reanudación de aplicaciones
 

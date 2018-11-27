@@ -2,18 +2,16 @@
 title: Comparar búferes
 description: Este código de ejemplo muestra cómo comparar búferes en una aplicación para la Plataforma universal de Windows (UWP).
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: f307b459dad90f5204364a8c58a186ffae40c455
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 828f3a081aa3dcd095f036fb47385fc261335a7a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574789"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699800"
 ---
 # <a name="compare-buffers"></a>Comparar búferes
 

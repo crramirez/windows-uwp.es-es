@@ -4,17 +4,15 @@ description: Las luces se usan para iluminar objetos de una escena. El color del
 ms.assetid: AB16CF5B-47CE-455C-A8BD-36305E54BEA9
 keywords:
 - Iluminación
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f690e08d211692b05f0a80722aa4a3e3a06b39f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 012b0bae7c0abdacba352a3e8f60bcfd0aa1dd54
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568065"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705200"
 ---
 # <a name="lighting"></a>Iluminación
 

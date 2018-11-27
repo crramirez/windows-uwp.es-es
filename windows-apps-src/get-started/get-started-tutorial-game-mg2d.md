@@ -1,19 +1,17 @@
 ---
 title: Crear un juego para UWP en MonoGame 2D
 description: Un sencillo juego para UWP para Microsoft Store, escrito en C# y MonoGame
-author: muhsinking
-ms.author: mukin
 ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559833"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702669"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 

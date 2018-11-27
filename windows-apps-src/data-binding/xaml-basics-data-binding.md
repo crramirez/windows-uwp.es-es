@@ -1,18 +1,16 @@
 ---
-author: KarlErickson
 title: Crear enlaces de datos
 description: Este artículo describe los conceptos básicos del enlace de datos en XAML
 keywords: XAML, UWP, Introducción
-ms.author: karler
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8000d9105481bc177eb2fc64646aec009fd80d36
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 21a053934d7391d12f7cd987026524b9ff4c279d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557698"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705579"
 ---
 # <a name="create-data-bindings"></a>Crear enlaces de datos
 

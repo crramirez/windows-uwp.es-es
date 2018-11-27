@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: Controlar la activación de aplicaciones
 description: Descubre cómo controlar la activación de aplicaciones mediante la invalidación del método OnLaunched.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
-ms.author: twhitney
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows 10, UWP
@@ -13,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 4d69680df1684da756219c180bbe6d47263801b9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559777"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705298"
 ---
 # <a name="handle-app-activation"></a>Controlar la activación de aplicaciones
 

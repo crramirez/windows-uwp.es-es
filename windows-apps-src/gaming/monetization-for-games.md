@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Monetización para juegos
 description: Implementa anuncios de banner, anuncios intersticiales en vídeo y compras desde la aplicación para juegos para Plataforma universal de Windows (UWP) en Windows10.
 ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
-ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561768"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697125"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 

@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener conversiones agregadas por datos de canal de un complemento durante un intervalo de fechas concreto y según otros filtros opcionales.
 title: Obtener conversiones de complementos por canal
-ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, API de análisis de Microsoft Store, conversiones de complementos, canal
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cf4e0f2cad0ea497e7d97c9b415ab385703c5c4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b1cbc33b2ce53ea7f851e78433b74b103e5a035
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568516"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705269"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>Obtener conversiones de complementos por canal
 

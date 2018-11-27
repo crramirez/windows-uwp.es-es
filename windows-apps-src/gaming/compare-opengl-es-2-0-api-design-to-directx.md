@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Planear la migración de OpenGL ES 2.0 a Direct3D
 description: Si vas a migrar un juego de las plataformas iOS o Android, probablemente hayas hecho una gran inversión en OpenGLES2.0.
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D
 ms.localizationpriority: medium
-ms.openlocfilehash: 2308c0b931b58209d1233205c355ac09680803dd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b17f18876ebc2faead08d8c777c7502e937aef86
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574621"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703099"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planear la migración de OpenGL ES 2.0 a Direct3D
 

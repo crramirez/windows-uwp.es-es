@@ -1,18 +1,16 @@
 ---
-author: ridomin
 title: Solucionar problemas de instalación con el archivo del Instalador de aplicación
 description: Problemas comunes al instalar aplicaciones de prueba con el archivo del Instalador de aplicación.
-ms.author: rmpablos
 ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, instalador de aplicaciones, AppInstaller, sideload, realizar instalación de prueba
 ms.localizationpriority: medium
-ms.openlocfilehash: 499bb0b32e494441e547421094f42fbc6156044a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579642"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701576"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Solucionar problemas de instalación con el archivo del Instalador de aplicación
 

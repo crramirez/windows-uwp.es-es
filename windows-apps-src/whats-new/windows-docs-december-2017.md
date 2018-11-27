@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 'Novedades en los documentos de Windows de diciembre de 2017: desarrollar aplicaciones para UWP'
 description: Se han agregado nuevas características, vídeos y directrices para los desarrolladores a la documentación de diciembre de 2017 para los desarrolladores de Windows 10.
 keywords: novedades, actualización, características, directrices para los desarrolladores, Windows 10, diciembre
-ms.author: quradic
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 394dbdb5ae9065aa9424a470ad2e9295ddd63c8d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c9b4c834c646aed7953dc2b0f992dea579d8b9fd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560906"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701040"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novedades de la documentación de los desarrolladores de Windows de diciembre de 2017
 

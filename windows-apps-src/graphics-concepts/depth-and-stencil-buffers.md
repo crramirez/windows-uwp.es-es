@@ -4,17 +4,15 @@ description: Un búfer de profundidad almacena la información de profundidad pa
 ms.assetid: 98B9D73A-04A7-4758-AC27-33CD4CB24216
 keywords:
 - Búferes de profundidad y de galerías de símbolos
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e292e0c992edb26da2a92885e1f949d254d75da6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0336054b99e5aae6739e22afd29ee344aad3d42c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577072"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702533"
 ---
 # <a name="depth-and-stencil-buffers"></a>Búferes de profundidad y de galerías de símbolos
 

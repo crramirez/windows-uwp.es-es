@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Aprende a usar el espacio de nombres Windows.Services.Store para implementar complementos de una suscripción.
 title: Habilitar complementos de una suscripción para tu aplicación
 keywords: windows 10, uwp, suscripciones, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
-ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 971e828f4642a0a9c47994b1c7c0bfdbc5f01ad3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577954"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697498"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para tu aplicación
 

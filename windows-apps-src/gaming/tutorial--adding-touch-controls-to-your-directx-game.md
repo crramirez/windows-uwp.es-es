@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Controles táctiles para juegos
 description: Aprende a agregar controles táctiles básicos a tu juego C++ de la Plataforma universal de Windows (UWP) con DirectX.
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, entrada táctil, controles, directx, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 53c4a91f3ef20c11783796c3ca362f74b3f39adb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562391"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697015"
 ---
 # <a name="touch-controls-for-games"></a>Controles táctiles para juegos
 

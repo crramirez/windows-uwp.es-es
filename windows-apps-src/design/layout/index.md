@@ -1,19 +1,17 @@
 ---
 description: Aprende a diseñar y codificar una aplicación para UWP en la que resulte fácil navegar y cuyo aspecto sea perfecto en varios dispositivos y tamaños de pantalla.
 title: Introducción a los diseños de aplicaciones para UWP
-author: mijacobs
 keywords: diseño de aplicaciones para UWP, plataforma universal de Windows, diseño de aplicaciones, interfaz
-ms.author: mijacobs
 ms.date: 3/7/2018
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 4dd8717b50460f5353bea67840a337a063f6603a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 826fb141fd636ae899fff9696108965d94187f8d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576742"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699042"
 ---
 # <a name="layout"></a>Diseño
 

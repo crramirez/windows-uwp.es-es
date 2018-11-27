@@ -1,23 +1,22 @@
 ---
-author: WilliamsJason
-title: Referencia de API de credenciales de red de Portal de dispositivo
-description: Obtenga información sobre cómo agregar, quitar o actualizar las credenciales de red mediante programación.
+title: Referencia de API de credenciales de red de Device Portal
+description: Obtén información sobre cómo agregar, quitar o actualizar las credenciales de red mediante programación.
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e00169f92ee6f0aa48df64ec4a1186f9682b358
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "410184"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705107"
 ---
-# <a name="network-credentials-api-reference"></a>Referencia de la API de credenciales de red
-Puede agregar, quitar o actualizar las credenciales de red almacenados en su devkit con esta API de REST.
+# <a name="network-credentials-api-reference"></a>Referencia de API de credenciales de red
+Puedes agregar, quitar o actualizar las credenciales de red almacenado en el Kit de desarrollo con esta API de REST.
 
 ## <a name="get-existing-credentials"></a>Obtener las credenciales existentes
 
 **Solicitud**
 
-Puede obtener una lista de los recursos compartidos almacenados junto con el nombre de usuario del usuario que tiene credenciales para ese recurso compartido de red.
+Puedes obtener una lista de los recursos compartidos almacenados junto con el nombre de usuario del usuario que tenga credenciales de ese recurso compartido de red.
 
 Método      | URI de solicitud
 :------     | :-----
@@ -40,7 +39,7 @@ GET | /ext/networkcredential
 - Matriz JSON en el siguiente formato:
 * Credenciales
   * NetworkPath - la ruta de acceso al recurso compartido de red.
-  * Nombre de usuario - el nombre de usuario que se almacena las credenciales.
+  * Nombre de usuario: el nombre de usuario que se almacena las credenciales.
 
 **Código de estado**
 
@@ -66,7 +65,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
-| NetworkPath        | La ruta de acceso de red al recurso compartido va a agregar las credenciales para tener acceso a. |
+| NetworkPath        | Estás agregando credenciales para acceder a la ruta de acceso de red al recurso compartido. |
 <br>
 
 **Encabezados de solicitud**
@@ -77,7 +76,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 - Los siguientes elementos JSON:
 * NetworkPath - la ruta de acceso al recurso compartido de red.
-* Nombre de usuario - el nombre de usuario para almacenar las credenciales en.
+* Nombre de usuario: para almacenar las credenciales en el nombre de usuario.
 * Contraseña: la contraseña nueva o actualizada para este usuario.
 
 **Respuesta**   
@@ -94,7 +93,7 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## <a name="remove-stored-credentials-for-a-share"></a>Eliminar credenciales almacenadas para un recurso compartido.
+## <a name="remove-stored-credentials-for-a-share"></a>Quitar las credenciales almacenadas para un recurso compartido.
 
 **Solicitud**
 
@@ -108,7 +107,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
-| NetworkPath        | La ruta de acceso de red al recurso compartido desde el que se van a eliminar credenciales almacenadas. |
+| NetworkPath        | La ruta de acceso de red al recurso compartido que va a quitar las credenciales almacenadas. |
 <br>
 
 **Encabezados de solicitud**
@@ -129,7 +128,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
-204 | La solicitud a las credenciales es correcta.
+204 | La solicitud a las credenciales fue correcta.
 4XX | Códigos de error
 5XX | Códigos de error
 

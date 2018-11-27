@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Asignaciones de .NET Framework de tipos de Windows Runtime
 description: En la tabla siguiente se enumeran las asignaciones que .NET Framework realiza entre los tipos de Plataforma universal de Windows (UWP) y los tipos de .NET Framework.
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f1869038ad98b8b4103b9706534a2d456f17e734
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ef98f3f4a9d20e836d5f9bddbc111a232f864bf5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559393"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701637"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Asignaciones de .NET Framework de tipos de Windows Runtime
 

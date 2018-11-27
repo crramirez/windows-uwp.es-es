@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 description: Aprender a usar la ejecución extendida para mantener la aplicación en ejecución mientras está minimizada
 title: Aplazar la suspensión de la aplicación con ejecución ampliada
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, ejecución extendida, minimizada, ExtendedExecutionSession, tarea en segundo plano, ciclo de vida de la aplicación, pantalla de bloqueo
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
-ms.openlocfilehash: 30e05259306a222a3cb18268aeb58a8380f6d4d2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8cc67a7593a340ada8f807fc0fb0c1b846c6f05b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566420"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699356"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a>Aplazar la suspensión de la aplicación con ejecución ampliada
 

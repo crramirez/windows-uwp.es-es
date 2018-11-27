@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: Usa los tutoriales de esta sección para aprender a agregar anuncios de banner, anuncios intersticiales y anuncios nativos a las aplicaciones mediante el SDK de Microsoft Advertising.
 title: Implementar anuncios en tu aplicación
-ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, walkthroughs, tutoriales
 ms.localizationpriority: medium
-ms.openlocfilehash: eed52167655e16b3245bdb5f918244f95b378676
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 423b005028ca7796dbab81d2c26a68c3d74fc922
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579795"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700257"
 ---
 # <a name="implement-ads-in-your-app"></a>Implementar anuncios en tu aplicación
 

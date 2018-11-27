@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: Cambios en la API de Windows10, versión 1607
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, versión 1607
 keywords: novedades, novedad, actualizar, actualizaciones, Windows 10, 1607, 14393, aniversario
-ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 ms.localizationpriority: medium
-ms.openlocfilehash: 58c6ea939e96a2172c9f008d2238d5a84c228afe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1635ab0d7043057c09a3e9ac451ccdba1410b471
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553832"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706247"
 ---
 # <a name="new-apis-in-windows-10-build-14393"></a>Nuevas API en la compilación 14393 de Windows 10
 

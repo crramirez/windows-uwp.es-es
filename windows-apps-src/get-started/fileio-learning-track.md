@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Trabajar con archivos
 description: Aprende a trabajar con archivos en la Plataforma universal de Windows.
-ms.author: twhitney
 ms.date: 05/01/2018
 ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, archivos, e/s de archivos, leer archivo, escribir archivo, crear archivo, escribir texto, leer texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 68240e5b3d2fb476b731853e6a7d020ecd9e2887
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556957"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707876"
 ---
 # <a name="work-with-files"></a>Trabajar con archivos
 

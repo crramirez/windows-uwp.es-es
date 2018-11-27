@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: Usar el inclinómetro
 description: Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje y la rotación alrededor del eje Y (yaw).
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dd335d56fb2a01ed1b9255f974bcaacd47f623f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565099"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703845"
 ---
 # <a name="use-the-inclinometer"></a>Usar el inclinómetro
 

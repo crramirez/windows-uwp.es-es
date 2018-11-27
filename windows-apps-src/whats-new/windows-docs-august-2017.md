@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 'Novedades en los documentos de Windows de agosto de 2017: desarrollar aplicaciones para UWP'
 description: Se han agregado nuevas características, vídeos y directrices para los desarrolladores a la documentación de agosto de 2017 para los desarrolladores de Windows 10.
 keywords: novedades, actualización, características, directrices para los desarrolladores, Windows 10, 1708
-ms.author: quradic
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6dcb5c9044cd74f26c06253f22b6672bc5e727dd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aeb6f60396b270a78df5203106635436fe2dabe5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570165"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708615"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novedades de la documentación de los desarrolladores de Windows de agosto de 2017
 

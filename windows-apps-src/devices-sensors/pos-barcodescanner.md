@@ -1,19 +1,17 @@
 ---
-author: TerryWarwick
 title: Escáner de código de barras
 description: Este artículo muestra las características del escáner de código de barras que están disponibles para aplicaciones para UWP, así como los vínculos a los artículos de procedimientos que muestran cómo usarlos.
-ms.author: jken
 ms.date: 08/29/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3a58062ba3908287f9009288136814e7e26d3127
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7a4021a2a0fb6c84755730e4f0e9917b10e94ec8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580313"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703958"
 ---
 # <a name="barcode-scanner"></a>Escáner de código de barras
 

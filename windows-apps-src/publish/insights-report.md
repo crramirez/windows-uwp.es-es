@@ -1,18 +1,16 @@
 ---
-author: jnHs
 Description: The Insights report in Partner Center highlights significant changes about your apps.
 title: Informe de información
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, insight, tendencia, anomalías, anomalía, cambios de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 324666095c26eb8d05732ce7e1ad3217b210d406
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 95cb43c45731c88ec758806aef91c3d7d8f36ad6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7573960"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702566"
 ---
 # <a name="insights-report"></a>Informe de información
 

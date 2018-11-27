@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: Establecer condiciones para ejecutar una tarea en segundo plano
 description: Aprende a establecer condiciones que controlan cuándo se ejecutará tu tarea en segundo plano.
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
-ms.author: twhitney
 ms.date: 07/06/2018
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
@@ -12,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: e64f36eb400d683da1cb52a819da5aa245a41ac4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ac6dd17f31dab1898aa394f901613d268c159b06
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560709"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698903"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Establecer condiciones para ejecutar una tarea en segundo plano
 

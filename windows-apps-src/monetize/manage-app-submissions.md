@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: Usa estos métodos en la API de envío de Microsoft Store para administrar envíos para las aplicaciones que están registradas en tu cuenta del centro de partners.
 title: Administración de envíos de aplicaciones
-ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575432"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698011"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 

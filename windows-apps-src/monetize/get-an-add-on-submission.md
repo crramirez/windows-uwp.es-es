@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: Usa este método en la API de envío de Microsoft Store para obtener datos para un envío de complemento existente.
 title: Obtener un envío de complemento
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: ad6381562b37b1a759a575e070edd6b1bf63402d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a87f0e694434774db215f3f5323588f94ec0465b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565841"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697578"
 ---
 # <a name="get-an-add-on-submission"></a>Obtener un envío de complemento
 
