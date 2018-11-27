@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Este tema te guiará a través de los pasos de la creación de un control personalizado simple con C++ / WinRT. Puedes crear en la información aquí para crear tus propios controles de interfaz de usuario enriquecida y personalizables.
 title: Controles (con plantilla) personalizados de XAML con C++ / WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, XAML, un control personalizado con plantilla,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 64df2314ced09f0adad575f4c6a382f2e12d843c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e929f217c71a90540803b180e6e79b98802f9c7a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715497"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles (con plantilla) personalizados de XAML con C++ / WinRT
 

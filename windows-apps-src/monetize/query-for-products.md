@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Usa este método en la API de colecciones de Microsoft Store para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros.
 title: Consultar productos
-ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ed5e4b34f3ad46daaaac8310b6eced8639bde27
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5e0f7f8c0f682eaa129f44eaa421fabd63dbfce4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581408"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713166"
 ---
 # <a name="query-for-products"></a>Consultar productos
 

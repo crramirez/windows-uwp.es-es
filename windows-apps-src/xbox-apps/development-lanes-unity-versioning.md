@@ -1,12 +1,13 @@
 ---
-author: JordanEllis6809
 title: 'Unity: Control de versiones del proyecto para UWP'
 description: Control de versiones del proyecto para UWP.
-ms.openlocfilehash: 3b796c31e6b284cea628ba68a34799cf9317ee2e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240022"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711637"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones del proyecto para UWP
 
@@ -48,19 +49,19 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 
 ## <a name="folders"></a>Carpetas  
 
-`Assets` | ***Incluir*** | Contiene imágenes de la Tienda Windows.  
-`Data`   | ***Omitir*** | La ubicación donde Unity compila el proyecto (escenas, sombreadores, scripts, prefabs, etc.).  
-`Dependencies` | ***Incluir*** | Esta carpeta es la que he creado para mantener en ella todas las dependencias de UWP (por ejemplo, XboxLiveSDK.dll).  
-`Properties` | ***Incluir*** | Contiene valores de configuración más avanzados que el desarrollador puede modificar.  
-`Unprocessed` | ***Omitir*** | Contiene los archivos `.dll` y `.pdb` de Unity.  
+`Assets` | ***Incluir*** | Contiene imágenes de Microsoft Store  
+`Data`   | ***Omitir*** | Donde Unity compila el proyecto (escenas, sombreadores, Scripts, Prefabs, etcetera.)  
+`Dependencies` | ***Incluir*** | Esta carpeta es que he creado para mantener todas las dependencias UWP en (por ejemplo, XboxLiveSDK.dll)  
+`Properties` | ***Incluir*** | Contiene la configuración más avanzada que se puede modificar el desarrollador  
+`Unprocessed` | ***Omitir*** | Contiene Unity `.dll` y `.pdb` archivos  
 
 ## <a name="files"></a>Archivos  
 
-`App.cs` | ***Incluir*** | El punto de entrada de la aplicación para UWP. Se puede modificar y ampliar con otros archivos de origen.  
-`Package.appxmanifest` | ***Incluir*** | El manifiesto del paquete para tu AppX.  
-`project.json` | ***Incluir*** | Describe los paquetes de NuGet de los que depende tu archivo `*.csproj`.  
-`ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de la compilación para UWP. Si agregas dependencias adicionales al proyecto para UWP, este archivo `*.csproj` contendrá dicha información.  
-`ScrapyardPhoenix.csproj.user` | ***Omitir*** | Este archivo contiene información sobre el usuario local.
+`App.cs` | ***Incluir*** | Punto de entrada de la aplicación para UWP. se puede modificar y ampliar con otros archivos de origen  
+`Package.appxmanifest` | ***Incluir*** | Archivo de manifiesto de paquete de aplicación para tu AppX  
+`project.json` | ***Incluir*** | Describe los paquetes de NuGet tu `*.csproj` depende  
+`ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de compilación para UWP; Si agregas dependencias adicionales a tu UWP proyecto, este `*.csproj` archivo contendrá dicha información  
+`ScrapyardPhoenix.csproj.user` | ***Omitir*** | Este archivo contiene información de usuario local
 
 ## <a name="resulting-gitignore"></a>Archivo .gitignore resultante
 

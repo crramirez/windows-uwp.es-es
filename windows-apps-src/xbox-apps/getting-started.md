@@ -1,18 +1,16 @@
 ---
-author: Mtoepke
 title: Introducción al desarrollo de aplicaciones para UWP en Xbox One
 description: Cómo configurar el equipo y Xbox One para el desarrollo para UWP.
-ms.author: scotmi
 ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4761b668877af6380ad176e56fb84410a4f509fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4a8f217322d6d10b91ebc82c3434c88e9d11128f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711813"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introducción al desarrollo de aplicaciones para UWP en Xbox One
 

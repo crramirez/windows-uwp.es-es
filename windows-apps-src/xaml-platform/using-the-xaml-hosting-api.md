@@ -1,18 +1,16 @@
 ---
-author: mcleanbyron
 description: En este artículo se describe cómo hospedar la interfaz de usuario de XAML de UWP en la aplicación de escritorio.
 title: Usar la API de hospedaje en una aplicación de escritorio de XAML de UWP
-ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
 keywords: Windows 10, uwp, formularios windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 69eb9f72d6b4cf01185f7e4886a7ed5c30a669df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b6883b605bed0b259cd70d1f6dc0264476eddd40
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571925"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711986"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usar la API de hospedaje en una aplicación de escritorio de XAML de UWP
 

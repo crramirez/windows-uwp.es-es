@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Optimizar el marcado XAML
 description: El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación.
-ms.author: jimwalk
 ms.date: 08/10/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 884825f2e9639f620d8db4e6110791fddf2d7e77
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ec88af01e46788ea9f24760af7f9a3b81281ba8d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560367"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716005"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 

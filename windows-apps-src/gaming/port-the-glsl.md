@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Migrar GLSL
 description: Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, glsl, port, portar
 ms.localizationpriority: medium
-ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554034"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713086"
 ---
 # <a name="port-the-glsl"></a>Portar GLSL
 
@@ -60,7 +58,6 @@ En este ejemplo, el búfer de constantes usa el registro b0 para mantener el bú
 
 <a name="instructions"></a>Instrucciones
 ------------
-
 ### <a name="step-1-port-the-vertex-shader"></a>Paso 1: portar el sombreador de vértices
 
 En nuestro ejemplo simple de OpenGL ES 2.0, el sombreador de vértices tiene tres entradas: una matriz 4x4 de proyección de vista de modelo constante y dos vectores de 4 coordenadas. Estos dos vectores contienen la posición de vértice y su color. El sombreador transforma el vector de posición en coordenadas de perspectiva y lo asigna al elemento intrínseco gl\_Position para su rasterización. Asimismo, el color de vértice se copia en una variable de la interpolación durante la rasterización.
@@ -160,10 +157,8 @@ El color para el píxel en posición se escribe en el destino de representación
 
 [Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md) Paso siguiente
 ---------
-
 [Dibujar en la pantalla](draw-to-the-screen.md) Observaciones
 -------
-
 Comprender la semántica de HLSL y el empaquetado de los búferes de constantes puede ahorrarte un buen dolor de cabeza por culpa de la depuración, además de ofrecerte oportunidades de optimización. Si tienes la opción de hacerlo, lee [Sintaxis de variables (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introducción a los búferes en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) y [Cómo: crear un búfer de constantes](https://msdn.microsoft.com/library/windows/desktop/ff476896). De lo contrario, estas son algunas sugerencias iniciales para que tengas en cuenta sobre semántica y búferes de constantes.
 
 -   Siempre comprueba dos veces el código de configuración Direct3D del representador para asegurarte de que las estructuras de tus búferes de constantes coincidan con las declaraciones de struct cbuffer en HLSL, y de que los tipos escalares de componentes coincidan en ambas declaraciones.

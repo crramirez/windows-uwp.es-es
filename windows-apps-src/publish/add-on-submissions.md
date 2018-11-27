@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Add-ons (or in-app products) are published through Partner Center.
 title: Envíos de complementos
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
-ms.openlocfilehash: 28fd2e104de12cc297ce5d28ddd18b0ce550a5d0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3dc3e9b928c544b8552abc6c289c682694f623c0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563886"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714942"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 

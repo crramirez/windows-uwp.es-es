@@ -1,9 +1,7 @@
 ---
-author: cphilippona
 description: Reveal que Focus es un efecto de iluminación que anima el borde de los elementos activables cuando el usuario mueve el foco del teclado o del controlador para juegos a ellos.
 title: Reveal Focus
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 03/1/2018
 ms.topic: article
 keywords: Windows 10, UWP
@@ -11,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: b7c80ed7521d797602cde15607f966a1fc3665cd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581227"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711591"
 ---
 # <a name="reveal-focus"></a>Reveal Focus
 

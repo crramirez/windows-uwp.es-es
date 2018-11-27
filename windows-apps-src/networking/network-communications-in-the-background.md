@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Para continuar la comunicación de red mientras no esté en segundo plano, una aplicación puede usar tareas en segundo plano y cualquier agente de socket o desencadenadores de canal de control.
 title: Comunicaciones de red en segundo plano
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
-ms.author: stwhi
 ms.date: 06/14/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555387"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713572"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicaciones de red en segundo plano
 Para continuar la comunicación de red mientras no esté en primer plano, la aplicación puede usar tareas en segundo plano y una de estas dos opciones.
