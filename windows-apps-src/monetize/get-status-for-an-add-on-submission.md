@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 55315F38-6EC5-4889-A14E-7D8EC282FE98
 description: Usa este método en la API de envío de Microsoft Store para obtener el estado de un envío de complemento.
 title: Obtener el estado de un envío de complemento
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, status, estado
 ms.localizationpriority: medium
-ms.openlocfilehash: e2013a081898dbf46958190da1df01adaac9d820
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1bfec8232fe8e410e65997098954e35d3f5fdc1b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564860"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718237"
 ---
 # <a name="get-the-status-of-an-add-on-submission"></a>Obtener el estado de un envío de complemento
 

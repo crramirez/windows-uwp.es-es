@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Obtén información sobre cómo usar anuncios de banner en tu aplicación para UWP.
 title: Anuncios de banner
-ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, AdControl, anuncios de banner
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a8a08f81328be5dcf28a3f73a592e88e1edd135
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564441"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716809"
 ---
 # <a name="banner-ads"></a>Anuncios de banner
 

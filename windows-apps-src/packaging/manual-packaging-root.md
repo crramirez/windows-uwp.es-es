@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: ee51eae3-ed55-419e-ad74-6adf1e1fb8b9
 title: Empaquetado manual de la aplicación
 description: En esta sección se incluyen artículos o vínculos a artículos sobre el empaquetado manual de aplicaciones para la Plataforma universal de Windows (UWP).
-ms.author: lahugh
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, packaging, empaquetado
 ms.localizationpriority: medium
-ms.openlocfilehash: 0268e858ecbcaaee95796fa590d4a9994dcfb505
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5c429c3c88b0ae23cb518a59cab2e5a3c4f380a2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556173"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718759"
 ---
 # <a name="manual-app-packaging"></a>Empaquetado manual de la aplicación
 

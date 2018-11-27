@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de adquisición agregados del complemento.
 title: Obtener adquisiciones de complementos de Xbox One
-ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, adquisiciones de complementos de Xbox One
 ms.localizationpriority: medium
-ms.openlocfilehash: e703c0c07e981ebf21ad3388ad178eabdd5c068d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f102d2d692a2307c25dcb95e66d612fc561dec70
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717985"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Obtener adquisiciones de complementos de Xbox One
 

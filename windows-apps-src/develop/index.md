@@ -1,19 +1,17 @@
 ---
 description: Obtén información sobre cómo desarrollar una aplicación para UWP.
 title: Desarrollo de aplicaciones para UWP
-author: mijacobs
 layout: LandingPage
 keywords: los desarrolladores de desarrollo de UWP desarrollo subprocesos async plataforma Introducción a portal de la aplicación
-ms.author: mijacobs
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558981"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718646"
 ---
 <div> 
 <h1>Desarrollo de aplicaciones para UWP</h1>

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
 description: Usa este método en la API de promociones de Microsoft Store para administrar los creativos para las campañas de anuncios promocionales.
 title: Administrar creativos
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 97a7ac89585cbcf7a4609aee16978d36be027a24
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572954"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718055"
 ---
 # <a name="manage-creatives"></a>Administrar creativos
 

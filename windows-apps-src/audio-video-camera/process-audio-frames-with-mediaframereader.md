@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: D6A785C6-DF28-47E6-BDC1-7A7129EC40A0
 description: En este artículo se muestra cómo usar un MediaFrameReader con MediaCapture para obtener AudioFrames que contienen datos de audio desde un origen de captura.
 title: Procesar tramas de audio con MediaFrameReader
-ms.author: drewbat
 ms.date: 04/18/2018
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d69e8d8cca3932045d4b43d727210f84e816f30b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f85570d5c66db1641ec6352526d4db6213e199b4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560523"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716613"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 

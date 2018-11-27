@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de adquisición agregados de un juego de Xbox One durante un intervalo de fechas especificado y otros filtros opcionales.
 title: Obtener adquisiciones de juegos de Xbox One
-ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Windows Store analytics API, adquisiciones de juegos de Xbox One, Xbox One game acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: 200f18e443e8a130a7e5c673b03c146b73c9083b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559515"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717900"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obtener adquisiciones de juegos de Xbox One
 

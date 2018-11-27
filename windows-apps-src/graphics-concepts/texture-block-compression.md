@@ -4,17 +4,15 @@ description: La compatibilidad de la compresión por bloques (BC) para las textu
 ms.assetid: 63506C46-BF14-464B-B20C-8B8F359E7AFE
 keywords:
 - Compresión por bloques de las texturas
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 46c58da3dbe425b055855423aa9e9cebaa06f929
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dec33768eff90b9bd35a3ea60f3158fce663345e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7575227"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716280"
 ---
 # <a name="texture-block-compression"></a>Compresión por bloques de las texturas
 

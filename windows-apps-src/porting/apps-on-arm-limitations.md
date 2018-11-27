@@ -1,19 +1,17 @@
 ---
 title: Limitaciones de aplicaciones y experiencias en ARM
-author: msatranjr
 description: Pasos de solución de problemas para las aplicaciones que no están funcionando correctamente en ARM.
-ms.author: misatran
 ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, always connected, siempre conectado, limitations, limitaciones, windows 10 on ARM, windows 10 en ARM
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 24afc8a876b976f21d0f4ebd5892ceef7c403018
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580831"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716257"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Limitaciones de aplicaciones y experiencias en ARM
 Windows 10 en ARM tiene las siguientes limitaciones necesarias:

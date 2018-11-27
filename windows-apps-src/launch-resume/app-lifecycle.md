@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Ciclo de vida de una aplicación para UWP de Windows10
 description: En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) desde el momento en que se activa hasta que se cierra.
 keywords: ciclo de vida de una aplicación, suspendida, reanudar, iniciar, activar
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
-ms.author: twhitney
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574285"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718433"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) de Windows10
 

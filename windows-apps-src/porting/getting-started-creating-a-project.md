@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
 description: MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio.
 title: Creación de un proyecto en Visual Studio
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b10d615146c8989231c4fe36ad9588716c59c34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b6ea9fdf2e504e1ceee71658eab308751e1745c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566342"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716939"
 ---
 # <a name="getting-started-creating-a-project"></a>Introducción: creación de un proyecto
 

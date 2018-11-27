@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Introducción a los paquetes de activos
 description: Los paquetes de recurso son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura.
-ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: 98980e67d24eb96aa55af7fefe10b5e4c2cdfa67
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b7ae65d13f92f5ab28f2f5eda468032bb7f83793
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566183"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718105"
 ---
 # <a name="introduction-to-asset-packages"></a>Introducción a los paquetes de activos
 

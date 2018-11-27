@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Guías para portar juegos
 description: Proporciona a guías para portar los juegos existentes a Direct3D 11, plataforma Universal de Windows (UWP) y Windows 10.
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, porting, portar, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 47892bac1a19018201187cbc901e4b680480268b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6eaa057c700c69621fd66090618ca7c945522d57
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559274"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717595"
 ---
 # <a name="game-porting-guides"></a>Guías de la portabilidad de juegos
 

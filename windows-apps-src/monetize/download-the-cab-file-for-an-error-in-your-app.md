@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: ''
 description: Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab para un error de la aplicación.
 title: Descargar el archivo .cab para un error de la aplicación
-ms.author: mhopkins
 ms.date: 06/16/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab
 ms.localizationpriority: medium
-ms.openlocfilehash: 047340d180e3de9f963dc76c85edaa6abea67327
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a4643f94236e62c46c12fd656ab5ddba5e1e0632
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582305"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718025"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Descargar el archivo .cab para un error de la aplicación
 

@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: Identificadores de clase de servicio AEP
 description: Los servicios de extremo de asociación (AEP) proporcionan un contrato de programación de los servicios que admite un dispositivo a través de un protocolo determinado. Algunos de estos servicios han establecido identificadores que deben usarse al hacer referencia a ellos.
-ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f103ee3c281ca95abcaee76cdc6f88b74a49eb1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: faa9e3f8936e8650af905678ce7434c4b9967be0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568393"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718373"
 ---
 # <a name="aep-service-class-ids"></a>Identificadores de clase de servicio AEP
 

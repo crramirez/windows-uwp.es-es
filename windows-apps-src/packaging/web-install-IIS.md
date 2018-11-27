@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Instalar una aplicación para UWP desde un servidor IIS
 description: Este tutorial muestra cómo configurar un servidor IIS, comprueba que la aplicación web puede hospedar paquetes de aplicación e invocar y utilizar al instalador de aplicación de forma eficaz.
-ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
 keywords: Windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, relacionados con los paquetes opcionales, Establece, servidor IIS
 ms.localizationpriority: medium
-ms.openlocfilehash: 2898a3450f75379492bae1ade5c85581cc8e5a4e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b447093ba54f2c979d35793a6a4eaa7538ee4892
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575639"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716955"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instalar una aplicación para UWP desde un servidor IIS
 

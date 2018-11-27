@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de compra agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales.
 title: Obtener los datos de las adquisiciones de la aplicación
-ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, adquisiciones de aplicaciones, app acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c2e972b46c830dd6c9ea778e525f0abceda3e99
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4ef5c9cedcb828f6c7df8a294fc4aad87e9f74ae
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562594"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718320"
 ---
 # <a name="get-app-acquisitions"></a>Obtener los datos de las adquisiciones de la aplicación
 

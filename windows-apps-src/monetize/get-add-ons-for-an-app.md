@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
 description: Usa este método en la API de envío de Microsoft Store para recuperar información sobre las compras desde la aplicación para una aplicación que está registrada en tu centro de partners.
 title: Obtener complementos para una aplicación
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app products, productos desde la aplicación, IAPs, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3689a4fe16d016bb23bb7141630fd1f6a7b83142
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ec065eef5d411e35515837b169fd57d71e4ef6ac
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718476"
 ---
 # <a name="get-add-ons-for-an-app"></a>Obtener complementos para una aplicación
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: Usa este método en la API de envío de Microsoft Store para obtener los datos de un paquete piloto para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Obtener un paquete piloto
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight, piloto, package flight, paquete piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 09fd5c703e4a601ad28a05156aec9133444cfd9e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c4ff6c929a7264b5dece0057701c8348fe5d39be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568204"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717975"
 ---
 # <a name="get-a-package-flight"></a>Obtener un paquete piloto
 

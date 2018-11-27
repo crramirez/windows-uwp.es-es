@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 9F0A59A1-FAD7-4AD5-B78B-C1280F215D23
 description: Usa la API de ofertas dirigidas de Microsoft Store para obtener ofertas dirigidas que están disponibles para el usuario actual de la aplicación.
 title: Administrar ofertas dirigidas usando los servicios de la Store
-ms.author: mhopkins
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, ofertas dirigidas
 ms.localizationpriority: medium
-ms.openlocfilehash: dbfefefdb7f7b96dbe99b35656b610b393ab3afa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576549"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718516"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Administrar ofertas dirigidas usando los servicios de la Store
 
