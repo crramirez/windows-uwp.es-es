@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Programación con DirectX
 description: Programación de juegos para UWP con DirectX.
 ms.assetid: ba77b081-b8c0-4674-b8bf-7a94466a67f7
-ms.author: joanlee
 ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, game, juego, overview, información general, programming, programación, directx, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: e422dab7f06e314d849cacc361b51d2f68f0de98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 83ac401892761e1e6433d337babbce00dc559b98
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554931"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707721"
 ---
 # <a name="directx-programming"></a>Programación con DirectX
 

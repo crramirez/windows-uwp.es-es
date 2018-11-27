@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Identify the input devices connected to a Universal Windows Platform (UWP) device and identify their capabilities and attributes.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
 keywords: dispositivo, digitalizador, entrada, interacción
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 77d2a914147fb2cd20f8043e0b52a824ddf3710d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c45ad71643b0d75efcb130c1175952822197a161
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568383"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711205"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 

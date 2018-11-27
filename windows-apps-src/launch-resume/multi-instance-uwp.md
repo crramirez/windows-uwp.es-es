@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: Crear una aplicación universal de Windows de instancias múltiples
 description: En este tema, se describe cómo escribir aplicaciones para UWP que admiten instancias múltiples.
 keywords: uwp de instancias múltiples
-ms.author: twhitney
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c70d696c1211cfa4f929178f0cf0d9da76ae74c2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710627"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 

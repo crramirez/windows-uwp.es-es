@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Este tema muestra cómo crear un componente de Windows Runtime con una clase en tiempo de ejecución que genera eventos. También muestra una aplicación que consume el componente y controla los eventos.
 title: Crear eventos en C++/WinRT
-ms.author: stwhi
 ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, autor, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 31f076ca259d10cc5bd49daea66741ead6e117c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710675"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 

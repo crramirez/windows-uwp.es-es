@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Packages page is where you upload all of the package files (.appxupload, .appx, .appxbundle, and/or .xap) for the app that you're submitting.
 title: Cargar paquetes de aplicaciones
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
-ms.author: wdg-dev-content
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
-ms.openlocfilehash: f02ca7c43443289ef9d2d0562be25f277068685b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577321"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711442"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 

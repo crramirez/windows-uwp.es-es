@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Componentes negociados de Windows Runtime para una aplicación de prueba para UWP
 description: En este artículo se describe una función compatible con Windows 10, lo que permite a las aplicaciones de .NET cuentan con asistencia de entrada táctil usar el código existente responsable de importantes operaciones fundamentales de la empresa.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 3228cd80e7a9e8efb5dca1ec3a2d469e40a52c8a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d9665ba3af10091ddc652198d5340e00456a65a7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575867"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711105"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes negociados de Windows Runtime para una aplicación de prueba para UWP
 

@@ -1,18 +1,16 @@
 ---
-author: jnHs
 Description: Manage submission options such as publishing hold options, notes for certification, and more.
 title: Administrar las opciones de envío
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, suspensión de publicación, fecha de publicación, realizar un envío para publicar, aprobación de funcionalidad restringida
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f7d58989035db1a14aba685c8951d23d2f94b52
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3fb075a4d8766f4f9bfc352160c6a1f5d99d9a0e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582455"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707480"
 ---
 # <a name="manage-submission-options"></a>Administrar las opciones de envío
 

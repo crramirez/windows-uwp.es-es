@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: Mejorar las experiencias existentes de ScrollViewer
 description: Aprende cómo usar ScrollViewer de XAML y ExpressionAnimations para crear experiencias de movimiento dinámicas controladas por entradas.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: a078d096a9cffe26e9b342250726dd75cdf48817
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568736"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710880"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>Mejorar las experiencias existentes de ScrollViewer
 

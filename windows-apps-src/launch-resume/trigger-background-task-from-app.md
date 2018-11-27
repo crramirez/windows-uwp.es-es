@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: Desencadenar una tarea en segundo plano desde dentro de la aplicación
 description: Describe cómo desencadenar una tarea en segundo plano desde dentro de una aplicación
-ms.author: twhitney
 ms.date: 07/06/2018
 ms.topic: article
 keywords: desencadenador de tarea en segundo plano, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 6846cfe77272a78eff7ddc05c9a7e48dddd21fc2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 237f342029f8d9bc0bbec1fcef5c7059cbf09840
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571065"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710461"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Desencadenar una tarea en segundo plano desde dentro de la aplicación
 

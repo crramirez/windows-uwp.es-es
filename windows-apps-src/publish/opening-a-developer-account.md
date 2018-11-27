@@ -1,19 +1,17 @@
 ---
-author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrir una cuenta de desarrollador
 description: Esta es una introducción de cómo registrarse para una cuenta de desarrollador configura para Microsoft Store y otros programas de Microsoft en el centro de partners.
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b34bdfae8faf7fee2b2eae373483eb9e4dea1972
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e1c2567393e6d6bfab75b2db068f0b61f7fb6893
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576043"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7709748"
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
 

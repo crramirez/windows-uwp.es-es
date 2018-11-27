@@ -1,18 +1,16 @@
 ---
-author: daneuber
 title: Adaptación de composición
 description: Usa las API de composición para adaptar la interfaz de usuario, optimizar el rendimiento y dar cabida a la configuración de usuario y las características del dispositivo.
-ms.author: jimwalk
 ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e6060e8da2ab4308deb3896b3ad209ab1093b056
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e6252ce3d2e213602250f6c24f8867767accecbe
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561060"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707460"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptación de efectos y experiencias con la interfaz de usuario de Windows
 

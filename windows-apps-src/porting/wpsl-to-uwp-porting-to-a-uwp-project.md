@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Comenzar el proceso de migración creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
 title: Migración de proyectos de WindowsPhone Silverlight a proyectos de UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d1224c1707d3e86c9ddd309ecf06bd0c0767fb83
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 55c4347b85d94d183d44599f7d34bc750d34d181
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575751"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7711833"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Migración de proyectos de WindowsPhone Silverlight a proyectos de UWP
 

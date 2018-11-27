@@ -1,19 +1,17 @@
 ---
-author: abbycar
 title: Agregar controles
 description: Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego en 3-D, y a cómo desarrollar controles básicos para mandos, toque y mouse.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
-ms.author: abigailc
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: bc5873486bdd9c4adf4ea74b10a240617143ad23
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 01c0d1361dcc0858a54792adc0d17408ed281c99
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553692"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711906"
 ---
 # <a name="add-controls"></a>Agregar controles
 
