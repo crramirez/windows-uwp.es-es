@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales.
 title: Obtener los datos del informe de la Xbox One de errores de juego
-ms.author: mhopkins
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Windows Store analytics API, API de análisis de Microsoft Store, errors, errores
 ms.localizationpriority: medium
-ms.openlocfilehash: 45e494b3e93e2dd6ac23ef1562c32485bf2e7ddb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f9ae7c75fb332e910aa1b63712cf0d230172afd3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560321"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713479"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Obtener los datos del informe de la Xbox One de errores de juego
 

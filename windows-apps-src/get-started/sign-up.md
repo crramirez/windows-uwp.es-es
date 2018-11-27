@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
 title: Crea una cuenta de desarrollador
 description: Regístrate ahora para obtener una cuenta de desarrollador y, de este modo, lograr que tus aplicaciones se incluyan en Microsoft Store y participar en otros programas de Microsoft.
-ms.author: quradic
 ms.date: 4/04/2018
 ms.topic: article
 keywords: windows 10, uwp, registro, cuenta de desarrollador
 ms.localizationpriority: medium
-ms.openlocfilehash: dc7f887018dc550ff28101acc6187c9b06235f1f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6c15f6df30477f11c8b20afd08fa1c1cd55b34b3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563058"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715853"
 ---
 # <a name="create-a-developer-account"></a>Crea una cuenta de desarrollador
 

@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Agregar una pantalla de presentación
 description: Establece la imagen de la pantalla de presentación y el color de fondo de tu aplicación con MicrosoftVisualStudio.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
-ms.author: twhitney
 ms.date: 05/08/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560044"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715873"
 ---
 # <a name="add-a-splash-screen"></a>Agregar una pantalla de presentación
 

@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 description: En este artículo se explica cómo usar la clase LowLightFusion para procesar mapas de bits.
 title: Procesar mapas de bits la API Low Light Fusion
-ms.author: lahugh
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, fusión de poca luz, low light fusion, mapas de bits, procesamiento de imágenes
 ms.localizationpriority: medium
-ms.openlocfilehash: aa1fa0ae298bf9f0403a3a565f44010b022ba1f6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0677d2e4ce5e412c158b8a00da3a6338bae6c46
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562920"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713379"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>Procesar mapas de bits la API LowLightFusion
 

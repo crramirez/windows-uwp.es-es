@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones.
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
-ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d502c721f98269c1256510a6f91f8c6dc8cd0fb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564168"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7713279"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Herramientas de diagnóstico de gráficos
 description: Obtén información sobre cómo obtener y usar las características de diagnóstico de elementos gráficos como, por ejemplo, el uso de la GPU, los análisis de fotogramas de gráficos y la depuración de elementos gráficos en Visual Studio.
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, gráficos, diagnósticos, herramientas, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f9fc1f6fa28fa36c876517eb0653693c670282ff
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581304"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716653"
 ---
 # <a name="graphics-diagnostics-tools"></a>Herramientas de diagnóstico de elementos gráficos
 

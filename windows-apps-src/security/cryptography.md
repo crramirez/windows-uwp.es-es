@@ -2,18 +2,16 @@
 title: Criptografía
 description: El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo.
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: 0caa3f63d8a92c75bdce10cdb277967dca21fafb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 156c4cc62e1997f5d647c06c87e226fe519de168
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568363"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715345"
 ---
 # <a name="cryptography"></a>Criptografía
 

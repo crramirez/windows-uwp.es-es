@@ -1,9 +1,7 @@
 ---
-author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: Crear, escribir y leer archivos
 description: Lee y escribe un archivo mediante un objeto StorageFile.
-ms.author: lahugh
 ms.date: 06/28/2018
 ms.topic: article
 keywords: Windows 10, UWP
@@ -13,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 9bc19460fe1b9b9c6b637606a737e1157d98feef
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577178"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714356"
 ---
 # <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
 

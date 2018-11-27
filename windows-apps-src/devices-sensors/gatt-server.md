@@ -1,18 +1,16 @@
 ---
-author: msatranjr
 title: Servidor GATT de Bluetooth
 description: Este artículo se proporciona una visión general de servidor de perfil de atributo genérico (GATT) de Bluetooth para las aplicaciones de la plataforma Universal de Windows (UWP), junto con el código de muestra para casos de uso común.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a941b7b80bd5d34e88798ec586d9c1d52e2887
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a68e78bef540717d4f4c33d3132748fa727b4068
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560407"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7714091"
 ---
 # <a name="bluetooth-gatt-server"></a>Servidor GATT de Bluetooth
 

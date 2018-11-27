@@ -2,18 +2,16 @@
 title: Tareas comunes de criptografía
 description: En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía de la Plataforma universal de Windows (UWP), como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas, y codificar y descodificar datos.
 ms.assetid: 2DE094F4-28E2-4C5D-BF8C-617BD90AB119
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bca6496498c9d7a9caaf958fdc7e74dc16ccc98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d52943ab28ba9cb7544db827528985746585e361
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570195"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715256"
 ---
 # <a name="common-cryptography-tasks"></a>Tareas comunes de criptografía
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: To run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must code the experiment in your app.
 title: Programar tu aplicación para experimentación
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: c9212f3a120e03bd436b77e0dd66be4367ded8e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f0d977d41cea873fc0f5e00bea8d0259586517d5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715645"
 ---
 # <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para experimentación
 

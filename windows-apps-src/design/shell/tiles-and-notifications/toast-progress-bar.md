@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: Learn how to use a progress bar within your toast notification.
 title: Enlace de datos y barra de progreso de notificación del sistema
 label: Toast progress bar and data binding
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 12/7/2017
 ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, barra de progreso, barra de progreso de notificación del sistema, notificación, enlace de datos de notificación del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ca144f92676f87fcdade37b280c39640bc74624
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570572"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714011"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Enlace de datos y barra de progreso de notificación del sistema
 

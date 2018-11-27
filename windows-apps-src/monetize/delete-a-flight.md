@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
 description: Usa este método en la API de envío de Microsoft Store para eliminar un paquete piloto para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Eliminar un paquete piloto
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, delete flight, eliminar piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 23e90a322f347375cfdb33eca9315a5ca538fd4c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fa3fa78c695538ec13dbd20d38a24224c560463e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555551"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715823"
 ---
 # <a name="delete-a-package-flight"></a>Eliminar un paquete piloto
 

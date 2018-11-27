@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7b07a6ca-4be1-497c-a901-0a2da3762555
 description: Usa este método en la API de promociones de Microsoft Store para crear, editar y obtener campañas de anuncios promocionales.
 title: Administrar campañas de anuncios
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c86c0d5d1a10442c7addeed11cdbfc37846f337
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573922"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715717"
 ---
 # <a name="manage-ad-campaigns"></a>Administrar campañas de anuncios
 

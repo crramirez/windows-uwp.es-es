@@ -1,19 +1,17 @@
 ---
 title: Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 description: Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales).
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bf1ae02a1c1937c02b6c750872dc784d28cd8e0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b33cf07ef10d0891f2747a06caf098b7d37b62f3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582155"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716733"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) de Windows Hello
 

@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Pruebas beta
 description: Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d90ffb50d6db71e135cbecf56487b96ba3377c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715425"
 ---
 # <a name="beta-testing"></a>Pruebas beta
 
