@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: e986880ccedfdb4648b1554c35c23a8a841fe820
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7841525"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 

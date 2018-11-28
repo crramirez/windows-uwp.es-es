@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697768"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7848112"
 ---
 # <a name="networking-basics"></a>Conceptos básicos de redes
 Cosas que debes hacer para cualquier aplicación habilitada para la red

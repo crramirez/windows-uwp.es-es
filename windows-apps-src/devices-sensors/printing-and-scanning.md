@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, imprimir, 3dprinting, impresión en 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 5cfc91ae6f74117c6c3414691137b334cfd0dc4f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7853450"
 ---
 # <a name="printing-and-scanning"></a>Impresión y digitalización
 

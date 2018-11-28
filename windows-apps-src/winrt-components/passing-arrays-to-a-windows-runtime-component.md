@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 60c2e2221cd174ffd75a45d6fe8e2f66744d67a0
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711700"
+ms.locfileid: "7854533"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Pasar matrices a un componente de Windows Runtime
 

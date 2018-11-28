@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, interfaz de usuario, navegación
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cc879ba89dc3c70ebc08d948b25f31bc30a3c6e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696404"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7848240"
 ---
 # <a name="ui-navigation-controller"></a>Controlador de navegación de la interfaz de usuario
 

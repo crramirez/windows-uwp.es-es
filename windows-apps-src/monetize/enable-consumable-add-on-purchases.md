@@ -7,11 +7,11 @@ ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705147"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7837964"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumibles
 

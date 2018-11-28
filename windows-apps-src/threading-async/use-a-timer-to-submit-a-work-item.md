@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
 ms.openlocfilehash: 2537bad82fc4a17b964f5871ab6ae1434c417f66
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711886"
+ms.locfileid: "7844735"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 

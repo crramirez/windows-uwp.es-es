@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, javascript, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: a6c14ecf8e8909ab6cd95a54ca8144fbf8a8d912
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712489"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854573"
 ---
 # <a name="handle-ad-errors"></a>Controlar errores de anuncios
 

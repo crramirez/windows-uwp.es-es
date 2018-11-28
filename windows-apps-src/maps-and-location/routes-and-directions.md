@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, ruta, mapa, ubicación, indicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: dd93a092ee0db0821e9326d0f9ffa86890850b87
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7841978"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 

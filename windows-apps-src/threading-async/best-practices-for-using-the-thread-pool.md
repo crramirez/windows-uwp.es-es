@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c004feabf561c5a94fadba858762bf683c9ff0e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7845890"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>Procedimientos recomendados para usar el grupo de subprocesos
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, packaging, empaquetado, package configuration, configuración de paquete, flat bundle, recopilación plana
 ms.localizationpriority: medium
 ms.openlocfilehash: b7066b7f2e5bd72ebee3169e03c7940b6fef4dba
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851156"
 ---
 # <a name="flat-bundle-app-packages"></a>Paquetes de aplicaciones de recopilaciones planas 
 

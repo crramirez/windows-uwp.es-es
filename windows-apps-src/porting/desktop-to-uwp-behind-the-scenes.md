@@ -1,19 +1,17 @@
 ---
-author: normesta
 Description: This article provides a deeper dive on how the Desktop Bridge works under the covers.
 title: Segundo plano del Puente de dispositivo de escritorio
-ms.author: normesta
 ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff5cd40cad43a73a8ba51a25710e2f2cbaf2a7b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f5320d4d6a4f43ee8d94a55e46333821656adb20
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578391"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7853022"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>En segundo plano de la aplicación de escritorio empaquetada
 

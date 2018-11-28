@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 604ad25bb65486b3b388a9a03d7503b0c1ce9c03
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7841893"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxis de comandos de movimiento y dibujo
 

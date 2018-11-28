@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7710880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847716"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>Mejorar las experiencias existentes de ScrollViewer
 

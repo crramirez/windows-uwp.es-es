@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ed9124b0b66239c10b277f070ac2c9594c336fdd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7853613"
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>Plantillas de iconos adaptables: esquema e instrucciones
 

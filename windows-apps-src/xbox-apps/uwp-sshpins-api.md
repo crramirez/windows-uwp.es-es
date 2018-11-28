@@ -3,11 +3,11 @@ title: Referencia de API de anclas SSH del Portal de dispositivos
 description: Obtén información sobre cómo quitar todas las anclas SSH de confianza mediante programación.
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ddf15d3cdb4089a8ef010a4ae46d247a06a10d7
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691061"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848194"
 ---
 # <a name="ssh-pins-api-reference"></a>Referencia de API de anclas SSH
 Puedes quitar todas las anclas SSH de confianza de tu kit de desarrollo con esta API de REST.

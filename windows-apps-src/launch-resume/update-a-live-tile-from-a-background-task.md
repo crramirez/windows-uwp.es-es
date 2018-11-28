@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d5d9e1b93c9f769a748a6a44d0ed77f5bd3a9da
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855193"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Actualizar un icono dinámico desde una tarea en segundo plano
 

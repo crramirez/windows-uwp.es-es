@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, controles, movimiento y vista
 ms.localizationpriority: medium
 ms.openlocfilehash: b5d0bf41a8f74882f621de01040f49adde288e1d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696747"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854393"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de movimiento y vista para juegos
 

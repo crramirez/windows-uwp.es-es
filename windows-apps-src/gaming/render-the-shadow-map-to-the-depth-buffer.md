@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, rendering, representación, shadow map, mapa de sombras, depth buffer, búfer de profundidad, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692273"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855253"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 
