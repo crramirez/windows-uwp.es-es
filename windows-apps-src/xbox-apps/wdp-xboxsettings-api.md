@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7707380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7844642"
 ---
 # <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.
