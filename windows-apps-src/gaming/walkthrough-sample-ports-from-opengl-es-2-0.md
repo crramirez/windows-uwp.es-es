@@ -4,11 +4,11 @@ description: En este conjunto de temas se analizan diversos escenarios de migrac
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691100"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830609"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>Tutorial sobre migraciones de muestra desde OpenGL ES 2.0
 

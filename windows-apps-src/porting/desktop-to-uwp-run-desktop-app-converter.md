@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: ca618dde24c1eed254d89c2d84734b7e3aec6306
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699621"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833908"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empaquetar una aplicación de escritorio con Desktop App Converter
 
