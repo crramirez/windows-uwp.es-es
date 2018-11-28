@@ -6,26 +6,18 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b3106df6d8a1fd85b92aa06dd5c5cf7a7f79ded5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 6cce98591cdaa78a887d7a5fb495e999a4ffc453
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696711"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833165"
 ---
 # <a name="enterprise"></a>Enterprise
 
-Esta guía básica proporciona una visión general de las características fundamentales de empresa para las aplicaciones de la plataforma de Windows Windows10Universal (UWP).
+Este artículo se proporciona una visión general de las características fundamentales de empresa proporcionados por la plataforma Universal de Windows (UWP) para aplicaciones de Windows 10.
 
-**Nota**en este artículo está dirigido a los desarrolladores que escriban aplicaciones para UWP de empresa. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
-
-¿Hay una versión de esta aplicación que se muestra algunos de los avances en el que se mostrarán en la compilación durante esta presentación [Rápidamente construir las aplicaciones de LOB con UWP y Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
-
-Cosas que vale la pena una llamada a en primer plano:
-
-## <a name="whats-new-for-enterprise-applications"></a>Novedades para las aplicaciones empresariales
-
-Te mostramos algunas herramientas, las bibliotecas y funcionalidades que se han creado bastante recientemente.
+## <a name="whats-new-and-recent-for-enterprise-applications"></a>Novedades y recientes para aplicaciones de empresa
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
@@ -36,6 +28,8 @@ Te mostramos algunas herramientas, las bibliotecas y funcionalidades que se han 
 > * [.NET Standard 2.0](#standard)
 > * [Conectividad de SQL Server](#sql-server)
 > * [Implementación de MSIX](#MSIX)
+
+Para ver un vídeo que muestra algunas de estas características en detalle, consulta [Rápidamente construir las aplicaciones de LOB con UWP y Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
 
 <a id="template-studio" />
 
@@ -110,7 +104,7 @@ MSIX es el formato de paquete de aplicación de Windows que proporciona una expe
 
 MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, las tecnologías de instalación de App-V y ClickOnce.
 
-![Icono MSIX](images/WinUI_MSIX_2col_740x417.png)
+![Icono MSIX](images/MSIX-App-Package.ico)
 
 Consulta la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
 
@@ -181,14 +175,10 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 
 ## <a name="enterprise-uwp-samples"></a>Muestras de UWP de empresa
 
-Texto de introducción se incluye aquí.
-
-Acción: hablar Josh o Karl para obtener más ejemplos de centrado en la empresa juntos.
-
 | Tema |  Descripción |
 |------ |--------------|
-| [Muestra de inventario VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las características más recientes de Windows en aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
-Destaca MVVM, base de datos SQL, Entity Framework. Lista de otros usuarios.|
+| [Muestra de inventario VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de muestra UWP que presenta escenarios de línea de negocio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel. |
+| [Muestra de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Una aplicación de muestra UWP que presenta características útiles para los desarrolladores empresariales, como la autenticación de Azure Active Directory (AAD), controles (como una cuadrícula de datos) de la interfaz de usuario, integración de bases de datos de Sqlite y SQL Azure, Entity Framework y servicios de API en la nube. La muestra se basa en la creación y administración de cuentas de clientes, pedidos y productos de la empresa ficticia Contoso. |
 
 ## <a name="patterns-and-practices"></a>Patrones y prácticas
 

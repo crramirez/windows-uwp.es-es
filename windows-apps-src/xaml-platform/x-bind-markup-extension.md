@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5407849c15da25adc29fa97c0215b9734a5d3258
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 1c0eb1eb798cceb5c7a534c3aed1b8988bd1a42b
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855403"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
@@ -143,7 +143,7 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 | **Modo** | Especifica el modo de enlace como una de las siguientes cadenas: "OneTime", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}**, que es "OneWay" en la mayoría de los casos. |
 | **TargetNullValue** | Especifica el valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
 | **BindBack** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. |
-| **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox.Text es PropertyChanged, para TextBox.Text es LostFocus.|
+| **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox.Text es PropertyChanged; TextBox.Text es LostFocus.|
 
 > [!NOTE]
 > Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
@@ -154,7 +154,7 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 
 Dado que **{x:Bind}** usa código generado para lograr sus ventajas, necesita la información de tipo en el momento de compilación. Esto significa que no puedes enlazar a propiedades de las que no conoces el tipo antes de tiempo. Por este motivo, no puedes usar **{x:Bind}** con la propiedad **DataContext**, que es de tipo **Object** y también está sujeta a cambios en el tiempo de ejecución.
 
-Al usar **{x:Bind}** con plantillas de datos, debes indicar el tipo al que se enlazan estableciendo un valor **x:DataType**, como se muestra en el siguiente ejemplo. También puedes establecer el tipo de una interfaz o de una clase base y luego usar conversiones si es necesario para formular una expresión completa.
+Al usar **{X: Bind}** con plantillas de datos, debes indicar el tipo enlazado a estableciendo un valor **x: DataType** , como se muestra en la sección [ejemplos](#examples) . También puedes establecer el tipo de una interfaz o de una clase base y luego usar conversiones si es necesario para formular una expresión completa.
 
 Los enlaces compilados dependen de la generación de código. Por tanto, si usas **{x:Bind}** en un diccionario de recursos, entonces el diccionario de recursos debe tener una clase de código subyacente. Consulta [Diccionarios de recursos con {x:Bind}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind) para ver un ejemplo de código.
 
