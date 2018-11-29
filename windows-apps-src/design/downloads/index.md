@@ -8,11 +8,11 @@ ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704997"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977414"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
  
@@ -106,15 +106,15 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 
 ![Imagen de Editor de tema XAML Fluent](images/XamlThemeEditor_screenshot.png)
 **Fluent Editor de tema XAML**<br>
-El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestra framework ResourceDictionary usada en las aplicaciones de la plataforma Universal de Windows (UWP).
+El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestra marco ResourceDictionary usada en las aplicaciones de la plataforma Universal de Windows (UWP).
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Descargar la muestra de la herramienta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Echa un vistazo a la herramienta en GitHub</a>
 
 ![Imagen de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la siguiente oleada de Fluent Design System de Microsoft. Hace un uso considerable de la densidad mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
+La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la próxima serie de Fluent Design System de Microsoft. Hace un uso considerable de los controles nuevas y mejorada densidad en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Descargar la muestra de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Echa un vistazo a la muestra de VanArsdel en GitHub</a>
 
-![crear la imagen de conversión](images/buildcast.png)
+![imagen de la conversión de tipos de compilación](images/buildcast.png)
 **BuildCast**<br>
 BuildCast es una muestra de principio a fin integrada para presentar el sistema Fluent Design y UWP. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar la muestra de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo a la muestra de BuildCast en GitHub</a>

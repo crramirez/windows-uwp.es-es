@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978265"
 ---
 # <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
@@ -21,10 +21,10 @@ Las aplicaciones universales de Windows pueden obtener acceso a determinadas ubi
 
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
-### <a name="application-install-directory"></a>Directorio de instalación de la aplicación
+### <a name="application-install-directory"></a>Directorio de instalación de aplicación
 La carpeta donde está instalada la aplicación en el sistema del usuario.
 
-Hay dos formas principales para acceder a los archivos y carpetas en tu aplicación directorio de instalación:
+Hay dos formas principales para acceder a los archivos y carpetas en la aplicación el directorio de instalación:
 
 1. Puedes recuperar una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente el directorio de instalación de la aplicación como, por ejemplo:
 
@@ -92,7 +92,7 @@ El directorio de instalación de la aplicación es una ubicación de solo lectur
 ### <a name="application-data-locations"></a>Ubicaciones de datos de aplicación
 Son las carpetas en las que la aplicación puede almacenar datos. Estas carpetas (locales, móviles o temporales) se crean al instalar la aplicación.
 
-Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaciones de datos de la aplicación:
+Hay dos formas principales para acceder a archivos y carpetas desde ubicaciones de datos de la aplicación:
 
 1.  Usa las propiedades de [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar una carpeta de datos de la aplicación.
 
@@ -159,7 +159,7 @@ El prefijo "ms-appdata:///local/" del URI hace referencia a la carpeta local de 
 
 Asimismo, a diferencia de lo que sucede con otras ubicaciones, también puedes tener acceso a los archivos de las ubicaciones de datos de tu aplicación si usas las API [Win32 y COM para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br205757) y algunas de las funciones de la biblioteca estándar de C/C++ de Visual Studio.
 
-No se puede tener acceso a las carpetas locales, móviles o temporales mediante el selector de archivos.
+No puede acceder a las carpetas locales, móviles o temporales mediante el selector de archivos.
 
 ### <a name="removable-devices"></a>Dispositivos extraíbles
 Igualmente, la aplicación puede obtener acceso a algunos de los archivos en los dispositivos conectados de manera predeterminada. Esto es una alternativa en caso de que la aplicación use la [extensión de reproducción automática](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para iniciarse automáticamente cuando los usuarios conecten al sistema un dispositivo, como una cámara o una unidadUSB. Los archivos a los que la aplicación puede acceder se limitan a los tipos de archivo específicos que se definan a través de declaraciones de asociación de tipo de archivo en el manifiesto de la aplicación.
