@@ -1,25 +1,25 @@
 ---
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o más dispositivos.
+title: Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o varios dispositivos.
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe216b70b7c10f254c0e3b7b18275a72d46215c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967007"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200098"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir una aplicación de escritorio empaquetada
 
-Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o más dispositivos.  
+Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o varios dispositivos.  
 
 > [!NOTE]
-> ¿Tienes un plan para la forma de transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
+> ¿Tienes un plan es posible que permita realizar la transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
 
@@ -53,7 +53,7 @@ Si decides crear un certificado, tienes que instalarlo en el almacén de certifi
 > [!IMPORTANT]
 > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
 
-Para firmar la aplicación con un certificado, vea [firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+Para firmar la aplicación con un certificado, consulta [firmar un paquete de la aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
 
 Para transferir localmente la aplicación a otros dispositivos, consulta [transferir localmente aplicaciones LOB en Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
@@ -77,7 +77,7 @@ Para obtener la lista completa de las extensiones y las instrucciones que indica
 
 Asimismo, puedes agregar código a la aplicación empaquetada que te permitirá realizar estas tareas:
 
-* Migrar los datos de usuario asociados con la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
+* Migrar los datos de usuario asociados a la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
 * Ofrecer a los usuarios la opción de desinstalar la versión de escritorio de la aplicación.
 
 Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de usuario.

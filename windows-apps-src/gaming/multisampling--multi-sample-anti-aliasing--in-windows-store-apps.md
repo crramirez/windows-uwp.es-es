@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969228"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200626"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
 
@@ -82,7 +82,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Nota**  uso [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) en su lugar si es necesario comprobar la compatibilidad con muestreo múltiple en mosaico búferes de recursos.
+    > **Nota**  uso [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) en su lugar, si es necesario comprobar la compatibilidad con multimuestra en mosaico búferes de recursos.
 
      
 
