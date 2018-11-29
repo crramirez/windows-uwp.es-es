@@ -3,11 +3,11 @@ title: 'Unity: Control de versiones del proyecto para UWP'
 description: Control de versiones del proyecto para UWP.
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837083"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992017"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones del proyecto para UWP
 
@@ -58,7 +58,7 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 ## <a name="files"></a>Archivos  
 
 `App.cs` | ***Incluir*** | Punto de entrada de la aplicación para UWP. se puede modificar y ampliar con otros archivos de origen  
-`Package.appxmanifest` | ***Incluir*** | Archivo de manifiesto de paquete de aplicación para tu AppX  
+`Package.appxmanifest` | ***Incluir*** | Archivo de origen del manifiesto del paquete de aplicación para tu AppX  
 `project.json` | ***Incluir*** | Describe los paquetes de NuGet tu `*.csproj` depende  
 `ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de compilación para UWP; Si agregas dependencias adicionales a tu UWP proyecto, este `*.csproj` archivo contendrá dicha información  
 `ScrapyardPhoenix.csproj.user` | ***Omitir*** | Este archivo contiene información de usuario local

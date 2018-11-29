@@ -1,17 +1,17 @@
 ---
 title: Conceptos básicos sobre la muestra de Marble Maze
-description: Este documento describe las características fundamentales del proyecto Marble Maze; Por ejemplo, cómo usa Visual C++ en el entorno de Windows Runtime, cómo se crea y estructura, y cómo se compila.
+description: En este documento se describe las características fundamentales del proyecto Marble Maze; Por ejemplo, cómo usa Visual C++ en el entorno de Windows Runtime, cómo se crea y estructura, y cómo se compila.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7854992"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991208"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -29,7 +29,7 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 -   Windows Runtime proporciona clases e interfaces para que puedas desarrollar aplicaciones para UWP de una manera más moderna y orientada a los objetos.
 -   Usa referencias a objetos con el símbolo circunflejo (^) para administrar la duración de las variables de Windows Runtime, [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) para administrar la duración de los objetos COM y [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) o [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class) para administrar la duración de todos los demás objetos de C++ asignados por montón.
 -   En la mayoría de los casos, usa el controlador de excepciones en vez de los códigos de resultados para tratar los errores inesperados.
--   Usa [anotaciones de SAL](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) junto con herramientas de análisis de código para ayudar a detectar errores en la aplicación.
+-   Usar [las anotaciones de sal](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) junto con herramientas de análisis de código para ayudar a detectar errores en la aplicación.
 
 ## <a name="creating-the-visual-studio-project"></a>Creación del proyecto de Visual Studio
 
@@ -42,9 +42,9 @@ Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un p
 
 2. En la ventana **Nuevo proyecto** , en la barra lateral izquierda, selecciona **instalado > Plantillas > Visual C++**.
 
-3. En la lista central, selecciona **DirectX 11 App (Universal Windows)**. Si no ves esta opción, puede que no tenga los componentes necesarios instalados&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando los componentes y las cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
+3. En la lista central, selecciona **DirectX 11 App (Universal Windows)**. Si no ves esta opción, puede que no tenga instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando los componentes y las cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
 
-4. Dar al proyecto un **nombre**, una **ubicación** para los archivos se almacenen y un **nombre de la solución**y haz clic en **Aceptar**.
+4. Da a tu proyecto un **nombre**, una **ubicación** para los archivos se almacenen y un **nombre de la solución**y haz clic en **Aceptar**.
 
 ![Nuevo proyecto](images/marble-maze-sample-fundamentals-1.png)
 
@@ -54,7 +54,7 @@ Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows unive
 
  
 
-Cada aplicación para UWP que compres en la Microsoft Store viene en forma de un paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Cada aplicación para UWP que adquieras de Microsoft Store viene en forma de un paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
 ##  <a name="building-deploying-and-running-the-game"></a>Compilar, implementar y ejecutar el juego
 
@@ -70,7 +70,7 @@ Puedes usar táctil, el acelerómetro, el controlador de Xbox One o el mouse par
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para seleccionar un elemento de menú.
 -   Usa la entrada táctil, el acelerómetro, el stick analógico izquierdo o el mouse para inclinar el laberinto.
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para cerrar menús, como por ejemplo la tabla de puntuaciones máximas.
--   Usa el botón de inicio en el controlador o la tecla P el teclado para pausar o reanudar el juego.
+-   Usa el botón de inicio en el controlador o la tecla P para pausar o reanudar el juego.
 -   Usa el botón Back del mando o la tecla Inicio del teclado para reiniciar el juego.
 -   Cuando la tabla de puntuaciones máximas esté visible, usa el botón Atrás en el controlador o la tecla inicio del teclado para borrar las puntuaciones.
 
@@ -119,7 +119,7 @@ Usa anotaciones de SAL junto con herramientas de análisis de código para detec
 
 Al usar el lenguaje de anotaciones de código fuente (SAL) de Microsoft, puedes anotar, o describir, cómo las funciones usan sus parámetros. Las anotaciones de SAL también describen valores de retorno. Las anotaciones de SAL funcionan con la herramienta de análisis de código C/C++ para detectar los posibles defectos en el código fuente C y C++. Los errores de codificación comunes notificados por la herramienta incluyen las saturaciones del búfer, la memoria sin inicializar, las desreferencias de puntero nulas y la pérdida de recursos y de memoria.
 
-Ten en cuenta el método **basicloader:: Loadmesh** , que se declara en [BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h). Este método usa `_In_` para especificar el *nombre de archivo* es un parámetro de entrada (y, por tanto, solo se pueden leer desde), `_Out_` para especificar que *vertexBuffer* y *indexBuffer* son parámetros de salida (y, por tanto, solo se escribirá en) y `_Out_opt_` para especificar que *vertexCount* y *indexCount* son opcionales parámetros de salida (y es posible que se escriben en). Como *vertexCount* y *indexCount* son parámetros de salida opcionales, pueden ser **nullptr**. La herramienta de análisis de código C/C++ examina las llamadas a este método para asegurarse de que los parámetros que pase cumplan estos criterios.
+Ten en cuenta el método **basicloader:: Loadmesh** , que se declara en [BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h). Este método usa `_In_` para especificar el *nombre de archivo* es un parámetro de entrada (y, por tanto, solo se pueden leer desde), `_Out_` para especificar que *vertexBuffer* y *indexBuffer* son parámetros de salida (y, por tanto, solo se escribirá) y `_Out_opt_` para especificar que *vertexCount* y *indexCount* son opcionales parámetros de salida (y es posible que se escriben en). Como *vertexCount* y *indexCount* son parámetros de salida opcionales, pueden ser **nullptr**. La herramienta de análisis de código C/C++ examina las llamadas a este método para asegurarse de que los parámetros que pase cumplan estos criterios.
 
 ```cpp
 void LoadMesh(

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
 ms.openlocfilehash: c2f1a2b5ae514222ed6ef06cc7099a0261747dbc
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854513"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984621"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Controles y patrones para aplicaciones para UWP
  
@@ -40,7 +40,7 @@ El marco XAML te permite personalizar la apariencia de tus aplicaciones de varia
 :::row-end:::
 
 ## <a name="get-the-windows-ui-library"></a>Obtén la biblioteca de la interfaz de usuario de Windows
-Algunos controles solo están disponibles en la biblioteca de la interfaz de usuario de Windows. Para acceder a ella, consulta las [instrucciones de instalación y de información general de la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
+Algunos controles solo están disponibles en la biblioteca de la interfaz de usuario de Windows. Para acceder a ella, consulta las [instrucciones de instalación y de la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
 
 ## <a name="alphabetical-index"></a>Índice alfabético 
 

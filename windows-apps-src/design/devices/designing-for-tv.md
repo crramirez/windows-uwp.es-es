@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7850114"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988543"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Diseño para Xbox y televisión
 
@@ -832,7 +832,7 @@ La idea es colocar el fragmento de código anterior en los recursos de la págin
 > [!NOTE]
 > Este fragmento de código es específico para `ListView`s; para un estilo `GridView` establece el atributo [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) tanto para [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) como para [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) para conseguir una `GridView`.
 
-Para un mayor control sobre cómo los elementos se incluyen en la vista, si la aplicación está destinada a la versión 1803 o posterior, puedes usar el [evento UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Para poner en la [propiedad ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para la **ListView**/**GridView** lo capture antes de **ScrollViewer** interno, al igual que en los siguientes fragmentos de código:
+Para un mayor control sobre cómo elementos se incluyen en la vista, si la aplicación está destinada a la versión 1803 o posterior, puedes usar el [evento UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Puedes colocarla en la [propiedad ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para **ListView**/**GridView** lo capture antes de **ScrollViewer** interno, al igual que en los siguientes fragmentos de código:
 
 ```xaml
 <GridView x:Name="gridView">

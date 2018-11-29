@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, control de errores, error handling, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 68f49cd97e8b4e2ef5e20502909a7dc8cb4ab676
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837524"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992849"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
 

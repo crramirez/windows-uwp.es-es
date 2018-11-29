@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 33d5885c5161793807bf32f62ff2df4bab5b2c1d
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847239"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985815"
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
@@ -30,7 +30,7 @@ En este informe, una **adquisición** significa que un cliente nuevo ha obtenido
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. Casi en tiempo real se mostrarán datos de todas las opciones (excepto en los datos de la **aplicación acumulativa** ). El tiempo **1 H** y **72 H** períodos solo se aplican a la pestaña **aplicación diariamente** del gráfico de **adquisiciones** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. Casi en tiempo real se mostrarán datos de todas las opciones (excepto en los datos de la **aplicación acumulativa** ). El tiempo **1 H** y **72 H** períodos solo se aplican a la pestaña de la **aplicación todos los días** del gráfico **adquisiciones** y a la pestaña de **adquisiciones** del gráfico **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por mercado o por tipo de dispositivo.
 
@@ -46,14 +46,14 @@ En el gráfico **Adquisiciones** se muestra el número de adquisiciones diarias 
 
 De manera predeterminada, mostramos la vista de la **aplicación todos los días** , que incluye cerca de datos en tiempo real. También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Aplicación acumulativa**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
 
-**Ventas brutas** para la aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total acumulado de ventas de la aplicación (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para los reembolsos, devoluciones, anulación, etcetera.
+**Ventas brutas** para la aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total acumulado ventas de aplicaciones (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para cualquier reembolsos, devoluciones, anulación, etcetera.
 
 También puedes filtrar los resultados por si la adquisición se originó desde el cliente, la Tienda web o la versión del sistema operativo.
 
 > [!NOTE]
 > También puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
-En la vista de la **aplicación todos los días** , cuando el **30D** período de tiempo seleccionado, puede ver los marcadores de círculo. Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
+En la vista de la **aplicación todos los días** , cuando el **30D** período de tiempo seleccionado, puede ver los marcadores de círculo. Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 
 > [!TIP]
 > Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).
@@ -121,7 +121,7 @@ En este gráfico, un *canal* hace referencia al método por el que un cliente ll
 -   **Campaña personalizada:** El cliente ha seguido un vínculo que usa un [identificador de campaña personalizado](create-a-custom-app-promotion-campaign.md).
 -   **Otro:** El cliente ha seguido un vínculo externo (sin ningún identificador de campaña personalizado) desde un sitio web hasta la descripción de la aplicación o el cliente ha seguido un vínculo desde un motor de búsqueda a la descripción de la aplicación.
 
-Una *vista de página* significa que un cliente vio la página de descripción de la tienda de la aplicación, a través de la tienda Web o desde la aplicación de la tienda en Windows 10. Se incluyen vistas por personas que no inician sesión con una cuenta de Microsoft. Algunos clientes han decidido no proporcionar esta información a Microsoft.
+Una *vista de página* significa que un cliente vio la página de descripción de la tienda de la aplicación, ya sea a través de la tienda Web o desde la aplicación de la tienda en Windows 10. Se incluyen vistas por personas que no inician sesión con una cuenta de Microsoft. Algunos clientes han decidido no proporcionar esta información a Microsoft.
 
 Una *conversión* significa que un cliente (que ha iniciado sesión con una cuenta de Microsoft) acaba de obtener una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis).
 

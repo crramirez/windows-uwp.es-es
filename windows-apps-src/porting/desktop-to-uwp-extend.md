@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828804"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991961"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -20,7 +20,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usua
 En muchos casos puede llamar a Windows Runtime APIs directamente desde la aplicación de escritorio, por lo tanto, antes de revisar esta guía, consulta [mejorar para Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Esta guía se da por hecho que has creado un paquete de aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, consulta [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
+>Esta guía se da por hecho que has creado un paquete de la aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, consulta [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
 
 Si estás listo, comencemos.
 
@@ -93,7 +93,7 @@ Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de us
 ![diseño adaptativo](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->En este ejemplo se muestra una UI de XAML mediante la adición de un proyecto de UWP a la solución. Este es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurez y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>Este ejemplo muestra una UI de XAML agregando un proyecto de UWP a la solución. Que es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
@@ -264,7 +264,7 @@ Para que la aplicación sea un destino de recursos compartidos, deberás hacer l
 
 : dos: [invalidar el controlador de eventos OnShareTargetActivated](#override)
 
-: tres: [Agregar extensiones de escritorio al proyecto de UWP](#desktop-extensions)
+: tres: [extensiones de escritorio de agregar al proyecto de UWP](#desktop-extensions)
 
 : four: [Agregar la extensión del proceso de plena confianza](#full-trust)
 
@@ -296,13 +296,13 @@ En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del
 
 Proporciona el nombre del archivo ejecutable generado por el proyecto de UWP y el nombre de la clase del punto de entrada. Este marcado, se da por hecho que el nombre del archivo ejecutable de la aplicación para UWP es `ShareTarget.exe`.
 
-También tendrás que especificar qué tipos de archivos se pueden compartir con la aplicación. En este ejemplo, vamos a poner la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) destino de contenido compartido para las imágenes de mapa de bits por lo que especificamos `Bitmap` para el tipo de archivo admitido.
+También tendrás que especificar qué tipos de archivos se pueden compartir con la aplicación. En este ejemplo, vamos a poner la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) un destino de contenido compartido para las imágenes de mapa de bits por lo que especificamos `Bitmap` para el tipo de archivo admitido.
 
 <a id="override" />
 
 ### <a name="override-the-onsharetargetactivated-event-handler"></a>Invalidar el controlador de eventos OnShareTargetActivated
 
-Invalidar el controlador de eventos **OnShareTargetActivated** en la clase de la **aplicación** de tu proyecto UWP.
+Invalidar el controlador de eventos **OnShareTargetActivated** en la clase de **aplicación** de tu proyecto UWP.
 
 A este controlador de eventos se llama cuando los usuarios eligen tu aplicación para compartir sus archivos.
 
@@ -335,7 +335,7 @@ En este código, se guarda la imagen que se comparte por el usuario en una carpe
 
 ### <a name="add-desktop-extensions-to-the-uwp-project"></a>Agregar extensiones de escritorio al proyecto UWP
 
-Agregar la extensión de **Extensiones de escritorio de Windows para UWP** para el proyecto de aplicación para UWP.
+Agrega la extensión de **Extensiones de escritorio de Windows para UWP** al proyecto de aplicación para UWP.
 
 ![extensión de escritorio](images/desktop-to-uwp/desktop-extensions.png)
 
@@ -343,7 +343,7 @@ Agregar la extensión de **Extensiones de escritorio de Windows para UWP** para 
 
 ### <a name="add-the-full-trust-process-extension"></a>Agrega la extensión del proceso de plena confianza
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y, a continuación, agrega la extensión de proceso de plena confianza junto a la extensión de destino de recurso compartido de agregar este archivo anteriormente.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y, a continuación, agrega la extensión de proceso de plena confianza junto a la extensión de destino de recurso compartido de agregar este archivo anteriormente.
 
 ```xml
 <Extensions>
@@ -353,19 +353,19 @@ En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del
 </Extensions>  
 ```
 
-Esta extensión habilitará la aplicación para UWP iniciar la aplicación de escritorio a la que quieres que el recurso compartido de un archivo. En el ejemplo, hacemos referencia al archivo ejecutable de la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) .
+Esta extensión habilitará la aplicación para UWP iniciar la aplicación de escritorio a la que te gustaría el recurso compartido de un archivo. En el ejemplo, hacemos referencia al archivo ejecutable de la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) .
 
 <a id="modify-desktop" />
 
 ### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>Modificar la aplicación de escritorio para obtener el archivo compartido
 
-Modificar la aplicación de escritorio para buscar y procesar el archivo compartido. En este ejemplo, la aplicación para UWP almacena el archivo compartido en la carpeta de datos locales de la aplicación. Por lo tanto, se podría modificar la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) a fotos de extracción de esa carpeta.
+Modificar la aplicación de escritorio para buscar y procesar el archivo compartido. En este ejemplo, la aplicación para UWP almacena el archivo compartido en la carpeta de datos locales de la aplicación. Por lo tanto, se podría modificar la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para fotos de extracción de esa carpeta.
 
 ```csharp
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-Durante las instancias de la aplicación de escritorio que ya están abiertos por el usuario, también nos podríamos controlar el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) y pasa la ruta de acceso a la ubicación del archivo. De este modo, todas las instancias de la aplicación de escritorio abiertas mostrará la foto compartida.
+Para las instancias de la aplicación de escritorio que ya están abierta por el usuario, te podríamos controlar el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) y pasa la ruta de acceso a la ubicación del archivo. De este modo, todas las instancias de la aplicación de escritorio abiertas mostrará la foto compartida.
 
 ```csharp
 ...

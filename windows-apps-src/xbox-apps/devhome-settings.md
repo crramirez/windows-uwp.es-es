@@ -8,16 +8,16 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847564"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989843"
 ---
 # <a name="settings-page-dev-home"></a>Página de configuración (Dev Home)
    
   
-La página de **configuración** de Dev Home proporciona acceso a diversas opciones de configuración de la consola de desarrollo.   
+La página de **configuración** de Dev Home proporciona acceso a diversas opciones de configuración para la consola de desarrollo.   
  ![Página de configuración de Dev Home](images/devhome_settings.png)   
   
 La página de **configuración** contiene los paneles siguientes:   
@@ -37,7 +37,7 @@ La página de **configuración** contiene los paneles siguientes:
 ## <a name="console-settings"></a>Configuración de la consola  
    
   
-El panel de **configuración de la consola** proporciona una vista "de un vistazo" de la configuración de la consola y la información. Puedes usar estas herramientas para ver y editar el nombre de host, espacio aislado y configuración de teclas de acceso de seguridad de la consola.   
+El panel de **configuración de la consola** proporciona una vista "un vistazo" de la configuración de la consola y la información. Puedes usar estas herramientas para ver y editar el nombre de host, espacio aislado y configuración de teclas de acceso de seguridad de la consola.   
   
 <a id="ID4EOB"></a>
 
@@ -55,7 +55,7 @@ El panel de **recuperación del sistema operativo actualizar la configuración**
 ## <a name="visual-studio"></a>Visual Studio  
    
   
-El panel de **Visual Studio** se usa para emparejar la consola con Visual Studio. También puedes quitar todas las instancias de Visual Studio emparejadas.   
+El panel de **Visual Studio** utilizado para emparejar la consola con Visual Studio. También puedes quitar todas las instancias de Visual Studio emparejadas.   
   
 <a id="ID4ECC"></a>
 
@@ -73,7 +73,7 @@ Se usa el panel de **configuración de depuración** para ver y alternar comunes
 ## <a name="unattended-script-configuration"></a>Configuración de script de instalación desatendida  
    
   
-El panel de **configuración desatendida la secuencia de comandos** administra los scripts de instalación de consolas Xbox One.   
+El panel de **configuración desatendida la secuencia de comandos** administra los scripts de instalación para consolas Xbox One.   
   
 <a id="ID4E3C"></a>
 

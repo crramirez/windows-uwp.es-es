@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, servicios de la tienda, API de información de análi
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851582"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992459"
 ---
 # <a name="get-insights-data"></a>Obtener datos de información
 
@@ -46,7 +46,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El [Identificador de la tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar datos de información. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de información de todas las aplicaciones registradas en tu cuenta.  |  No  |
+| applicationId | string | El [Identificador de la tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar datos de información. Si no se especifica este parámetro, el cuerpo de la respuesta contendrá los datos de información de todas las aplicaciones registradas en tu cuenta.  |  No  |
 | startDate | date | La fecha de inicio del intervalo de fechas de los datos de información para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | date | La fecha de finalización del intervalo de fechas de los datos de información para recuperar. El valor predeterminado es la fecha actual. |  No  |
 | filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *filter = dataType eq 'adquisición'*. <p/><p/>Puedes especificar los siguientes campos de filtro:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul> | No   |
@@ -66,7 +66,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de Insight](#insight-values) a continuación.                                                                                                                      |
+| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                 |
 
 
@@ -76,10 +76,10 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | El identificador de la aplicación para la que estás recuperando los datos de información de la tienda.     |
+| applicationId       | string | El identificador de la aplicación para la que quieres recuperar datos de información de la tienda.     |
 | insightDate                | string | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
-| tipo de datos     | string | Una de las siguientes cadenas que especifica el área de análisis general que se describe en esta información:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
-| insightDetail          | array | Uno o más [valores InsightDetail](#insightdetail-values) que representan los detalles de la información actual.    |
+| tipo de datos     | string | Una de las siguientes cadenas que especifica el área de análisis general que describe esta información:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
+| insightDetail          | array | Uno o más [valores InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
@@ -88,10 +88,10 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | FactName           | string | Uno de los valores siguientes que indica la métrica que describe la información actual o la dimensión actual, según el valor de **tipo de datos** .<ul><li>**Estado**, este valor es siempre **recuento de visitas**.</li><li>Para la **adquisición**, este valor es siempre **AcquisitionQuantity**.</li><li>Para el **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | array |  Uno o varios objetos que describen una métrica única para la perspectiva.   |
-| CambioPorcentual            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes completa.  |
+| CambioPorcentual            | string |  El porcentaje de la métrica ha cambiado a través de la base de clientes completa.  |
 | DimensionName           | string |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** y **sexo**.   |
 | DimensionValue              | string | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, podría ser **DimensionValue** **bloqueo** o **falta de respuesta**.   |
-| FactValue     | string | El valor absoluto de la métrica en la fecha en que se detectó la perspectiva.  |
+| FactValue     | string | El valor absoluto de la métrica en la fecha en que se detectó la idea.  |
 | Direction | string |  La dirección del cambio (**positivo** o **negativo**).   |
 | Date              | cadena |  La fecha en el que hemos identificado el cambio relacionadas con la información actual o la dimensión actual.   |
 

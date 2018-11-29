@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 312729c25d5d9f34471c7154a84273bcbf844da4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 54f5989f0aa2fb5eeed26f16ab9e07671e26832c
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829960"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992390"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
@@ -100,7 +100,7 @@ Este recurso tiene los siguientes valores.
 | primaryName   | cadena  | Nombre principal de la aplicación.      |
 | packageFamilyName | cadena  | El nombre de familia de paquete de la aplicación.      |
 | packageIdentityName          | cadena  | El nombre de identidad de paquete de la aplicación.                       |
-| publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor de **Paquete/identidad/Editor** que aparece en la página de [identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para la aplicación en el centro de partners.       |
+| publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor **Paquete/identidad/Editor** que aparece en la página de [identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para la aplicación en el centro de partners.       |
 | firstPublishedDate      | cadena  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
 | pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
@@ -109,7 +109,7 @@ Este recurso tiene los siguientes valores.
 
 <span id="add-on-object" />
 
-### <a name="add-on-resouce"></a>Recursos de complemento
+### <a name="add-on-resource"></a>Recurso de complemento
 
 Este recurso proporciona información sobre un complemento.
 

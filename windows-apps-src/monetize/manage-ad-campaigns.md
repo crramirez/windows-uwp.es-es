@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
 ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835847"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990448"
 ---
 # <a name="manage-ad-campaigns"></a>Administrar campañas de anuncios
 
 Usa estos métodos en la [API de promociones de Microsoft Store](run-ad-campaigns-using-windows-store-services.md) para crear, editar y obtener campañas de anuncios promocionales para tu aplicación. Cada campaña que crees con este método puede asociarse con solo una aplicación.
 
->**Nota**&nbsp;&nbsp;también puede crear y administrar las campañas publicitarias mediante el centro de partners y se pueden tener acceso a las campañas que crees mediante programación en el centro de partners. Para obtener más información acerca de cómo administrar las campañas de anuncios del centro de partners, consulta [crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
+>**Nota**&nbsp;&nbsp;también puede crear y administrar las campañas publicitarias mediante el centro de partners y se pueden tener acceso a las campañas que crees mediante programación en el centro de partners. Para obtener más información sobre cómo administrar las campañas de anuncios del centro de partners, consulta [crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
 
 Cuando usas estos métodos para crear o actualizar una campaña, normalmente también llamas a uno o varios de los siguientes métodos para administrar las *líneas de entrega*, los *perfiles de destino* y los *creativos* asociados a la campaña. Para obtener más información sobre la relación entre las campañas, las líneas de entrega, los perfiles de destino y los creativos, consulta [Ejecutar campañas de anuncios con servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 

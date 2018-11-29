@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826361"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986353"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Descargar e instalar actualizaciones de paquete desde la Store.
 
@@ -193,7 +193,7 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Actualizaciones de paquete obligatorias
 
-Cuando creas un envío de paquete en el centro de partners para una aplicación que está destinada a Windows 10, versión 1607 o posterior, puedes [Marcar el paquete como obligatorio](../publish/upload-app-packages.md#mandatory-update) y la fecha y hora en que es obligatoria. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
+Al crear un envío de paquete en el centro de partners para una aplicación que está destinada a Windows 10, versión 1607 o posterior, puedes [Marcar el paquete como obligatorio](../publish/upload-app-packages.md#mandatory-update) y la fecha y hora en que es obligatoria. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
 
 > [!NOTE]
 > El estado obligatorio de una actualización de paquete no lo exige Microsoft, y el sistema operativo no proporciona ninguna interfaz de usuario para indicar a los usuarios que deben instalar una actualización de la aplicación obligatoria. Se pretende que los desarrolladores usen la opción "mandatory" para aplicar las actualizaciones de la aplicación obligatorias en su propio código.  

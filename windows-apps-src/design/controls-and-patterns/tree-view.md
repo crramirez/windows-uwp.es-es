@@ -14,11 +14,11 @@ dev_langs:
 - vb
 ms.custom: RS5
 ms.openlocfilehash: 753d0cd808daef96aa16c34c3962201ca73e5be9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853490"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990996"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -37,7 +37,7 @@ Las API TreeView admiten las siguientes características:
 | - |
 | Este control se incluye como parte de la biblioteca de la interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y funciones de la interfaz de usuario para aplicaciones para UWP. Para obtener más información, incluidas las instrucciones de instalación, vea la [información general de la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **API de la plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
+| **API de plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
 | - | - |
 | [Clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview), [clase TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource propiedad](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) | [Clase TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [clase TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource propiedad](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource) |
 
@@ -82,7 +82,7 @@ Para crear una vista de árbol, usa un control [TreeView](/uwp/api/windows.ui.xa
 A partir de Windows Insider Preview, puedes enlazar un origen de datos jerárquicos a la propiedad [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para proporcionar el contenido de la vista de árbol, al igual que con ItemsSource de ListView. Del mismo modo, se usa [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (y la opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para proporcionar una clase DataTemplate que representa el elemento.
 
 > [!IMPORTANT]
-> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control de vista de árbol. No se puede establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, nodos crean y puede tener acceso a ellos desde la propiedad TreeView.RootNodes.
+> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control de vista de árbol. No puedes establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, nodos crean para TI y puede acceder a ellos desde la propiedad TreeView.RootNodes.
 
 Este es un ejemplo de una vista de árbol sencilla que se ha declarado en XAML. Normalmente se agregan los nodos en el código, pero te mostramos aquí la jerarquía XAML, porque puede resultar útil para visualizar cómo se crea la jerarquía de nodos.
 
@@ -104,7 +104,7 @@ En la mayoría de los casos, la vista de árbol muestra datos desde un origen de
 
 ### <a name="bind-to-a-hierarchical-data-source"></a>Enlazar a un origen de datos jerárquicos
 
-Para crear una vista de árbol con enlace de datos, Establece la propiedad de TreeView.ItemsSource una colección jerárquica. A continuación, en la clase ItemTemplate, establece al elemento secundario colección de elementos a la propiedad TreeViewItem.ItemsSource.
+Para crear una vista de árbol con enlace de datos, Establece la propiedad de TreeView.ItemsSource una colección jerárquica. A continuación, en la clase ItemTemplate, establece al elemento secundario colección items a la propiedad TreeViewItem.ItemsSource.
 
 ```xaml
 <TreeView ItemsSource="{x:Bind DataSource}">
@@ -117,7 +117,7 @@ Para crear una vista de árbol con enlace de datos, Establece la propiedad de Tr
 </TreeView>
 ```
 
-Consulta la _vista de árbol con enlace de datos_ en la sección ejemplos para obtener el código completo.
+Consulta la _vista de árbol con enlace de datos_ de la sección ejemplos para obtener el código completo.
 
 #### <a name="items-and-item-containers"></a>Elementos y contenedores de elementos
 
@@ -133,7 +133,7 @@ Si usas TreeView.ItemsSource, estas API están disponibles para obtener el eleme
 | [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | Obtiene la TreeViewNode el contenedor TreeViewItem especificado. |
 | [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | Obtiene el contenedor TreeViewItem el TreeViewNode especificado. |
 
-### <a name="manage-tree-view-nodes"></a>Administrar los nodos de la vista de árbol
+### <a name="manage-tree-view-nodes"></a>Administrar los nodos de vista de árbol
 
 Esta vista de árbol es la misma que se creó anteriormente en XAML, pero los nodos se crean en código en su lugar.
 
@@ -383,11 +383,11 @@ El control TreeView admite tanto la selección única como la múltiple. De mane
 
 Cuando se habilita la selección múltiple, se muestra una casilla junto a cada nodo de vista de árbol, y se resaltan los elementos seleccionados. Un usuario puede seleccionar o anular la selección de un elemento usando la casilla; al hacer clic en el elemento se le sigue invocando.
 
-Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios debajo de ese nodo. Si algunos, pero no todas, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
+Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no todos, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
 
 ![Selección múltiple en una vista de árbol](images/treeview-selection.png)
 
-Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios debajo de ese nodo. Si algunos, pero no todas, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
+Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no todos, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
 
 ![Selección múltiple en una vista de árbol](images/treeview-selection.png)
 
@@ -517,7 +517,7 @@ End Sub
 
 ### <a name="tree-view-using-data-binding"></a>Vista de árbol con enlace de datos
 
-Este ejemplo muestra cómo crear la misma vista de árbol que el ejemplo anterior. Sin embargo, en lugar de crear la jerarquía de datos en XAML, los datos se crea en el código y enlazados a la propiedad ItemsSource de la vista de árbol. (Los controladores de eventos del botón que se muestra en el ejemplo anterior se aplican a este ejemplo también).
+Este ejemplo muestra cómo crear la misma vista de árbol que el ejemplo anterior. Sin embargo, en lugar de crear la jerarquía de datos en XAML, los datos se crea en el código y enlazados a la propiedad ItemsSource de la vista de árbol. (Los controladores de eventos de botón que se muestra en el ejemplo anterior se aplican a este ejemplo también.)
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="100">

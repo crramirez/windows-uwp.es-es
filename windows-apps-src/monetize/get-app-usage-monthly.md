@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849422"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990665"
 ---
 # <a name="get-monthly-app-usage"></a>Obtener el uso mensual de la aplicación
 
@@ -84,7 +84,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | date                      | string  | La primera fecha del intervalo de fechas de los datos de uso. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.                          |
 | applicationId             | string  | El identificador de la aplicación para la que estás recuperando los datos de uso de la tienda.                            |
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                                                |
-| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación.                   |
+| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación.                   |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                                            |
 | deviceType                | string  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
 | subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                                              |

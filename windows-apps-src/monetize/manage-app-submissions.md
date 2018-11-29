@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838066"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990065"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -387,7 +387,7 @@ Este recurso contiene información de venta de una aplicación.
 
 > [!IMPORTANT]
 > El recurso **Sale** ya no se admite y actualmente no se pueden obtener ni modificar los datos de ventas del envío de una aplicación mediante la API de envío de Microsoft Store. En el futuro, actualizaremos la API de envío de Microsoft Store para incorporar una nueva forma de acceder mediante programación a la información de ventas de los envíos de aplicaciones.
->    * Después de llamar al [método GET para obtener un envío de aplicación](get-an-app-submission.md), el valor de *sales* estará vacío. Seguir usando el centro de partners para obtener los datos de ventas del envío de la aplicación.
+>    * Después de llamar al [método GET para obtener un envío de aplicación](get-an-app-submission.md), el valor de *sales* estará vacío. Seguir usando el centro de partners para obtener los datos de ventas de envío de la aplicación.
 >    * Cuando se llama al [método PUT para actualizar un envío de aplicación](update-an-app-submission.md), la información del valor de *sales* se omite. Puedes seguir utilizando el centro de partners para modificar los datos de ventas de envío de la aplicación.
 
 Este recurso tiene los siguientes valores.
@@ -423,7 +423,7 @@ Este recurso contiene la información de descripción de base de una aplicación
 |  copyrightAndTrademarkInfo                |   string      |  [Información de copyright o marcas comerciales](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info) opcional.  |
 |  keywords                |  array       |  Matriz de [palabras clave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ayudar a tu aplicación a aparecer en los resultados de búsqueda.    |
 |  licenseTerms                |    string     | [Términos de licencia](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionales para tu aplicación.     |
-|  privacyPolicy                |   string      |   Esta valor está obsoleta. Para establecer o cambiar la dirección URL de directiva de privacidad de la aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#privacy-policy-url) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
+|  privacyPolicy                |   string      |   Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la directiva de privacidad de la aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#privacy-policy-url) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
 |  supportContact                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la compatibilidad con contacto dirección URL o correo electrónico para tu aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#support-contact-info) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se ignorará.        |
 |  websiteUrl                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la página web de la aplicación, debes hacer esto en la página de [Propiedades](../publish/enter-app-properties.md#website) en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.      |    
 |  description               |    string     |   [Descripción](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) de la aplicación.   |     
@@ -637,7 +637,7 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 | fallbackSubmissionId    |  cadena   |  El id. del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
 > [!NOTE]
-> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no están destinados a ser establecidos por el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
+> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no están destinados a ser establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
 
 <span id="trailer-object" />
 
@@ -724,7 +724,7 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 |  Base               |   No se establece la franja de precios; usa el precio base para la aplicación.      |     
 |  NotAvailable              |   La aplicación no está disponible en la región especificada.    |     
 |  Free              |   La aplicación es gratuita.    |    
-|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio niveles que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo **Ver la tabla** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).    |
+|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio franjas que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo de **tabla de vista** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).    |
 
 
 <span id="enterprise-licensing" />

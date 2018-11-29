@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7844705"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992350"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -21,7 +21,7 @@ Al [Agregar usuarios a tu cuenta del centro de partners](add-users-groups-and-az
 > Pueden aplicarse los mismos roles y permisos con independencia de que vayas a agregar un usuario, un grupo o una aplicación de AzureAD.
 
 Al determinar los roles o los permisos que desees aplicar, ten en cuenta: 
--   Los usuarios (incluyendo grupos y aplicaciones de Azure AD) podrán obtener acceso a toda la cuenta del centro de partners con los permisos asociados a sus asignado roles, a menos que puedes [Personalizar los permisos](#custom) y asignar [permisos de nivel de producto](#product-level-permissions) para que solo pueda trabajar con determinadas aplicaciones o complementos.
+-   Los usuarios (incluyendo grupos y aplicaciones de Azure AD) podrán obtener acceso a toda la cuenta del centro de partners con los permisos asociados a sus asignado roles, a menos que puedes [Personalizar permisos](#custom) y asignar [permisos de nivel de producto](#product-level-permissions) para que solo pueda trabajar con determinadas aplicaciones o complementos.
 -   Para permitir que un usuario, grupo o aplicación de Azure AD tengan acceso a las funciones de más de un rol, selecciona varios roles o utiliza permisos personalizados para conceder el acceso que quieras.
 -   Un usuario con un determinado rol (o un conjunto de permisos personalizados) también puede formar parte de un grupo que tenga un rol diferente (o un conjunto de permisos). En ese caso, el usuario tendrá acceso a toda la funcionalidad asociada con el grupo y con la cuenta individual.
 
@@ -33,7 +33,7 @@ Al determinar los roles o los permisos que desees aplicar, ten en cuenta:
 
 ## <a name="assign-roles-to-account-users"></a>Asignar roles a usuarios de la cuenta
 
-De manera predeterminada, se presenta un conjunto de roles estándares para que elijas entre al agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
+De manera predeterminada, se presenta un conjunto de roles estándar para que elijas entre al agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
 
 A menos que decidas definir [permisos personalizados](#custom) seleccionando **Permisos personalizados**, a cada usuario, grupo o aplicación de AzureAD que agregas a una cuenta debes asignarle al menos uno de los siguientes roles. 
 
@@ -115,7 +115,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
 <tr><td align="left">    <b>Anuncios de la comunidad</b>                       </td><td align="left">  Permite ver de forma gratuita la utilización del <a href="about-community-ads.md">anuncio de la comunidad</a> de todos los productos de la cuenta.          </td><td align="left">  Permite crear, administrar y ver la utilización del <a href="about-community-ads.md">anuncio de la comunidad</a> gratuito de todos los productos de la cuenta.               </td></tr>
 <tr><td align="left">    <b>Información de contacto</b>                        </td><td align="left">  Permite ver la <a href="managing-your-profile.md">información de contacto</a> en la sección de configuración de la cuenta.        </td><td align="left">  Permite ver y editar la <a href="managing-your-profile.md">información de contacto</a> en la sección de configuración de la cuenta.            </td></tr>
 <tr><td align="left">    <b>Cumplimiento de COPPA</b>                    </td><td align="left">  Permite ver selecciones del <a href="in-app-ads.md#coppa-compliance">cumplimiento de COPPA</a> (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.                                            </td><td align="left">  Permite ver y editar selecciones del <a href="in-app-ads.md#coppa-compliance">cumplimiento de COPPA</a> (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.         </td></tr>
-<tr><td align="left">    <b>Grupos de clientes</b>                     </td><td align="left">  Puede ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).      </td><td align="left">  Puede crear, editar y ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).       </td></tr>
+<tr><td align="left">    <b>Grupos de clientes</b>                     </td><td align="left">  Ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).      </td><td align="left">  Puede crear, editar y ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).       </td></tr>
 <tr><td align="left">    <b>Administrar grupos de productos</b>&nbsp;*                            </td><td align="left">  Permite ver la nueva página de creación de grupos de productos, pero en realidad no permite crear nuevos grupos de productos.    </td><td align="left">  Permite crear y editar grupos de productos.     </td></tr>
 <tr><td align="left">    <b>Nuevas aplicaciones</b>                            </td><td align="left">  Permite ver la nueva página de creación de aplicaciones, pero en realidad no permite crear nuevas aplicaciones en la cuenta.    </td><td align="left">  Permite <a href="create-your-app-by-reserving-a-name.md">crear nuevas aplicaciones</a> en la cuenta mediante la reserva de nuevos nombres de aplicación, y crear envíos y enviar aplicaciones a la Tienda.     </td></tr>
 <tr><td align="left">    <b>Nuevos conjuntos</b>&nbsp;*                       </td><td align="left">  Permite ver la nueva página de creación de conjuntos, pero en realidad no permite crear nuevos conjuntos en la cuenta.     </td><td align="left">  Permite crear nuevos conjuntos de productos.          </td></tr>

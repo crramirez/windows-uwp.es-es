@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, relacionados con los paquetes opcionales, Establece, servidor IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: b447093ba54f2c979d35793a6a4eaa7538ee4892
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7849570"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7993027"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instalar una aplicación para UWP desde un servidor IIS
 
@@ -59,13 +59,13 @@ Inicia Visual Studio 2017 como **Administrador** y crea un nuevo proyecto de **A
 
 Desde el Explorador de soluciones, haz clic en el proyecto raíz y selecciona **Propiedades**.
 
-En las propiedades de aplicación web, selecciona la pestaña de la **Web** . En la sección de **servidores** , elija **IIS Local** en el menú desplegable y haz clic en **Crear directorio Virtual**. 
+En las propiedades de aplicación web, selecciona la pestaña de la **Web** . En la sección de **servidores** , elegir **IIS Local** en el menú desplegable y haz clic en **Crear directorio Virtual**. 
 
 ![pestaña Web](images/web-tab.png)
 
 ## <a name="step-5---add-an-app-package-to-a-web-application"></a>Paso 5: agregar un paquete de la aplicación a una aplicación web 
 
-Agregar el paquete de aplicación que vas a distribuir en la aplicación web. Puedes usar el paquete de la aplicación que forma parte de los [paquetes de proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) de proporcionado en GitHub si no tienes un paquete de aplicación disponible. El certificado (MySampleApp.cer) con el que se firmó el paquete también está con la muestra en GitHub. Debe tener el certificado instalado en el dispositivo antes de instalar la aplicación (paso 9).
+Agrega el paquete de la aplicación que vas a distribuir en la aplicación web. Puedes usar el paquete de la aplicación que forma parte de los [paquetes de proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) de proporcionado en GitHub si no tienes un paquete de aplicación disponible. El certificado (MySampleApp.cer) con el que se firmó el paquete también está con la muestra en GitHub. Debe tener el certificado instalado en el dispositivo antes de instalar la aplicación (paso 9).
 
 En la aplicación web de proyecto de inicio, se agregó una nueva carpeta a la aplicación web denominada `packages` que contiene los paquetes de aplicaciones a distribuirse. Para crear la carpeta en Visual Studio, haz clic en la raíz del explorador de soluciones, selecciona **Agregar** -> **Nueva carpeta** y asígnale `packages`. Para agregar paquetes de la aplicación a la carpeta, haz clic en el `packages` carpeta y selecciona **Agregar** -> ubicación del paquete de**Elemento existente** y busca la aplicación. 
 
@@ -73,7 +73,7 @@ En la aplicación web de proyecto de inicio, se agregó una nueva carpeta a la a
 
 ## <a name="step-6---create-a-web-page"></a>Paso 6: crear una página Web
 
-Esta aplicación web de muestra usa HTML sencillo. Eres libre para crear la aplicación web según sea necesario por sus necesidades. 
+Esta aplicación web de muestra usa HTML sencillo. Eres libre para crear la aplicación web según sea necesario por tus necesidades. 
 
 Haz clic en el proyecto de la raíz del explorador de soluciones, selecciona **Agregar** -> **Nuevo elemento**, y agrega una nueva **Página HTML** de la sección de la **Web** .
 
@@ -100,7 +100,7 @@ Incluir el siguiente código HTML en la página web. La clave para invocar corre
 
 ## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>Paso 7: configurar la aplicación web para tipos MIME de paquete de aplicación
 
-Abre el archivo **Web.config** desde el Explorador de soluciones y agrega las siguientes líneas en la `<configuration>` elemento. 
+Abre el archivo **Web.config** desde el Explorador de soluciones y agrega las siguientes líneas dentro de la `<configuration>` elemento. 
 
 ```xml
 <system.webServer>
@@ -115,7 +115,7 @@ Abre el archivo **Web.config** desde el Explorador de soluciones y agrega las si
 </system.webServer>
 ```
 
-## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Paso 8: agregar la exención de bucle invertido de instalador de aplicación
+## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Paso 8: agregar exención de bucle invertido de instalador de aplicación
 
 Debido al aislamiento de red, aplicaciones para UWP como instalador de aplicación están restringidas a usar direcciones de bucle invertido IP como http://localhost/. Al usar el servidor IIS local, el instalador de aplicación debe agregarse a la lista de exención de bucle invertido. 
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 0019ded3b409acf0e6530bffa4ad73f85bfa8855
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854363"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992588"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -81,15 +81,15 @@ Esta imagen puede aparecer en varias páginas de Store para Windows 10 (incluida
 
 Esta imagen es necesaria para la visualización correcta en Windows Phone 8.1 y versiones anteriores. Si la aplicación publicada anteriormente es compatible con Windows Phone 8.1 o versiones anterior y no proporcionas esta imagen, los clientes verán un icono en blanco con la descripción de la aplicación. (Esto también se aplica a los clientes de Windows 10 si la aplicación solo tiene paquetes destinados a Windows Phone 8.1 o versiones anterior).
 
-Si tu envío *solo* incluye paquetes para UWP, no tienes que proporcionar esta imagen (a menos que la casilla para **para los clientes de Windows 10 y Xbox, mostrar imágenes de logotipo cargado en lugar de las imágenes de Mis paquetes**, como se describe en la siguiente sección).
+Si tu envío *solo* incluye paquetes para UWP, no necesitas proporcionar esta imagen (a menos que la casilla para **para los clientes de Windows 10 y Xbox, mostrar imágenes de logotipo cargadas en lugar de las imágenes de Mis paquetes**, como se describe en la siguiente sección).
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>Mostrar solo carga las imágenes del logotipo de la tienda
 
 Tienes la opción de evitar que Store utilice las imágenes de logotipo en los paquetes de la aplicación al mostrar la descripción a los clientes de Windows 10 (incluyendo Xbox) y en su lugar hacer que Store utilice solo las imágenes que cargues. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas por todo Store, para los clientes de Windows10 (incluyendo Xbox). (Si la aplicación publicada anteriormente es compatible con versiones anteriores del sistema operativo, los clientes pueden seguirán viendo las imágenes de los paquetes.)
 
-Para que la tienda utilice solo las imágenes que se cargan (para los clientes de Windows 10, incluida la Xbox), y no use las imágenes de los paquetes, activa la casilla que dice **para los clientes de Windows 10 y Xbox, mostrar cargar imágenes de logotipo en lugar de las imágenes de Mis paquetes **.
+Para que la tienda utilice solo las imágenes que se cargan (para los clientes de Windows 10, incluida la Xbox), y no usar las imágenes de los paquetes, activa la casilla que dice **para los clientes de Windows 10 y Xbox, mostrar cargar imágenes de logotipo en lugar de las imágenes de Mis paquetes **.
 
-Al marcar esta casilla, aparecerá una nueva sección denominada **tienda Mostrar imágenes** . Aquí, puedes cargar 3 imágenes, incluido el tamaño de **icono (300 x 300 píxeles) de icono de la aplicación de 1:1** (si marcas la casilla, el campo para proporcionar que esa imagen se moverá a esta sección). Te recomendamos que proporciones los tres tamaños de imagen si usas esta opción: 71 x 71, 300 x 300 y 150 x 150 píxeles. Sin embargo, solo el tamaño de 300 x 300 es obligatorio.
+Al marcar esta casilla, aparecerá una nueva sección denominada **Store mostrar imágenes** . Aquí, puedes cargar 3 imágenes, incluido el tamaño de **icono (300 x 300 píxeles) de icono de la aplicación de 1:1** (si marcas la casilla, el campo para proporcionar que esa imagen se moverá a esta sección). Te recomendamos que proporciones los tres tamaños de imagen si usas esta opción: 71 x 71, 300 x 300 y 150 x 150 píxeles. Sin embargo, solo el tamaño de 300 x 300 es obligatorio.
 
 
 <span id="promotional-images" />
@@ -99,7 +99,7 @@ Al marcar esta casilla, aparecerá una nueva sección denominada **tienda Mostra
 Esta sección te permite suministrar ilustraciones para mostrar tu producto de manera más eficaz en Store. Recomendamos proporcionar estas imágenes para crear una descripción de Store más atractiva.
 
 > [!TIP]
-> La imagen [principal súper 16:9](#windows-10-and-xbox-image-169-super-hero-art) se recomienda especialmente si tienes previsto incluir [tráileres de vídeo](#trailers) en la tienda de la descripción; Si no la incluyes, los tráileres no aparecerán en la parte superior de la descripción.
+> La imagen [principal súper 16:9](#windows-10-and-xbox-image-169-super-hero-art) se recomienda especialmente si tienes previsto incluir [tráileres de vídeo](#trailers) en tu tienda descripción; Si no la incluyes, los tráileres no aparecerán en la parte superior de la descripción.
 
 
 ### <a name="trailers"></a>Tráileres
@@ -118,7 +118,7 @@ Puedes agregar hasta 15 tráileres a la descripción de Store. Asegúrate de que
 En cada tráiler que proporciones, debes cargar un archivo de vídeo (.mp4 o .mov), una imagen en miniatura y un título.
 
 > [!IMPORTANT]
-> Al utilizar tráileres, también debes proporcionar una sección de la imagen de [imágenes de 16:9 ilustración principal súper](#windows-10-and-xbox-image-169-super-hero-art) en orden de los tráileres aparezcan en la parte superior de la descripción de Store. Esta imagen aparecerá después de finalizar la reproducción de los tráileres.
+> Al utilizar tráileres, también debes proporcionar una sección de imagen de [gráficos de ilustración principal súper 16:9](#windows-10-and-xbox-image-169-super-hero-art) en orden de los tráileres aparezcan en la parte superior de la descripción de Store. Esta imagen aparecerá después de finalizar la reproducción de los tráileres.
 
 Sigue estas recomendaciones para facilitar tus tráileres de manera eficaz:
 - Los tráileres deben ser de buena calidad y con una longitud mínima (se recomienda 60 segundos o menos y menos de 2GB). 
@@ -221,7 +221,7 @@ Para los archivos de Mezzanine H.264, se recomienda lo siguiente:
 
 ### <a name="windows-10-and-xbox-image-169-super-hero-art"></a>Imagen de Windows 10 y Xbox (imagen principal súper 16:9)
 
-En la sección **de Windows 10 y Xbox imagen** , la imagen de **portada de ilustración principal súper 16:9 (1920 x 1080 o 3840 x 2160 píxeles)** se usa en varios diseños en Microsoft Store en todos los tipos de dispositivos de Windows 10 (incluyendo Xbox). Recomendamos proporcionar esta imagen, independientemente de las versiones del sistema operativo o de los tipos de dispositivo al que tu aplicación esté destinada.
+En la sección de **Windows 10 y Xbox imagen** , la imagen de **portada de ilustración principal súper 16:9 (1920 x 1080 o 3840 x 2160 píxeles)** se usa en varios diseños en Microsoft Store en todos los tipos de dispositivos de Windows 10 (incluyendo Xbox). Recomendamos proporcionar esta imagen, independientemente de las versiones del sistema operativo o de los tipos de dispositivo al que tu aplicación esté destinada.
 
 Esta imagen es *obligatoria* para la visualización correcta si tu descripción incluye [tráileres de vídeo](#trailers). En el caso de clientes de Windows10, versión 1607 o posterior (que incluye Xbox), se usa como imagen principal en la parte superior de la descripción de Store (o aparece después de finalizar la reproducción de los tráileres). También puede usarse para presentar tu aplicación en diseños promocionales por todo Store. Ten en cuenta que esta imagen no debe incluir el título del producto ni otros textos.
 
@@ -263,7 +263,7 @@ El formato de imagen **2:1 (2400 x 1200)** solo se usa si la aplicación es comp
 
 ### <a name="images-only-for-windows-8x-andor-windows-phone-8x"></a>Imágenes solo para Windows 8.x y/o Windows Phone 8.x 
 
-Si la aplicación enviado anteriormente admite versiones anteriores del sistema operativo (Windows 8.x o Windows Phone 8.x), estas imágenes deben proporcionarse para que podamos tener en cuenta tu aplicación en diseños promocionales (aunque no garantizan que se seleccione la aplicación). Si la aplicación no admite estas versiones anteriores del sistema operativo, omite esta sección. (Esta sección se llamaba anteriormente **Imágenes promocionales opcionales**).
+Si la aplicación anteriormente enviado admite versiones anteriores del sistema operativo (Windows 8.x o Windows Phone 8.x), estas imágenes deben proporcionarse para que podamos tener en cuenta tu aplicación en diseños promocionales (aunque no garantizan que se seleccione la aplicación). Si la aplicación no admite estas versiones anteriores del sistema operativo, omite esta sección. (Esta sección se llamaba anteriormente **Imágenes promocionales opcionales**).
 
 **En el caso de WindowsPhone8.1 y versiones anteriores**, se pueden usar dos tamaños de imagen en los diseños promocionales: **1000 x 800 píxeles (5:4)** y **358 x 358 píxeles (1:1)**. Si la aplicación se ejecuta en Windows Phone 8.1 o versiones anteriores, te recomendamos que proporciones imágenes en estos dos tamaños.  
 

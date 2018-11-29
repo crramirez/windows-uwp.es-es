@@ -7,24 +7,24 @@ ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: d4f5271d70cefea99a9caff04e7203e05043440c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848323"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989965"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Ejecuta experimentos para aplicaciones con pruebas A/B
 
 Puedes usar el centro de partners para definir variables remotas que se pueden recuperar en tiempo de ejecución de aplicaciones en la plataforma Universal de Windows (UWP) y puedes probar las variaciones de estos valores con los usuarios para identificar los valores más eficaces para manejar el comportamiento de usuario deseado. Tu aplicación puede usar variables remotas para configurar las experiencias de aplicación, como las compras desde la aplicación, el flujo de registros, subtítulos y colocación de anuncios.
 
-El objetivo de la prueba A/B debe ser identificar una variación de los valores de variables remotos que probablemente obtenga mejores tasas de conversión (por ejemplo, más compras desde la aplicación) al mismo tiempo que se te proporciona una experiencia de aplicación más atractiva. Después de haber identificado una variación correcta, puede finalizar el experimento inmediatamente y habilitar esa variación para todos los usuarios del centro de partners, sin tener que volver a publicar la aplicación.
+El objetivo de la prueba A/B debe ser identificar una variación de los valores de variables remotos que probablemente obtenga mejores tasas de conversión (por ejemplo, más compras desde la aplicación) al mismo tiempo que se te proporciona una experiencia de aplicación más atractiva. Después de que se ha identificado una variación correcta, puedes inmediatamente finalizar el experimento y habilitar esa variación para todos los usuarios del centro de partners, sin tener que volver a publicar la aplicación.
 
 ## <a name="create-and-run-an-ab-test"></a>Crear y ejecutar una prueba A/B
 
 Para crear y ejecutar una prueba A/B, sigue estos pasos:
 
 1. [Crear un proyecto y definir variables remotas en el centro de partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). Este proyecto contiene las variables y los valores de variables predeterminados para los experimentos.  
-2. [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md). Usa una API en Microsoft Store Services SDK para obtener los valores de variables remotos del proyecto que creaste en el centro de partners, usa estos datos para modificar el comportamiento de la característica que estás probando y enviar los eventos de vista y conversión al centro de partners.
+2. [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md). Usa una API en el SDK de servicios de Microsoft Store para obtener los valores de variables remotos del proyecto que creaste en el centro de partners, usa estos datos para modificar el comportamiento de la característica que estás probando y enviar los eventos de vista y conversión al centro de partners.
 3. [Definir tu experimento en el centro de partners ](define-your-experiment-in-the-dev-center-dashboard.md). Crea un experimento en el proyecto que defina las variaciones y los objetivos únicos de tu prueba A/B.
 4. [Ejecutar y administrar tu experimento en el centro de partners especific](manage-your-experiment.md). Activar el experimento y usar el centro de partners para revisar los resultados del experimento y completarlo.
 
@@ -32,7 +32,7 @@ Para ver un tutorial que muestra el proceso de principio a fin, consulta [Create
 
 ## <a name="requirements"></a>Requisitos
 
-A / pruebas A/b del centro de partners es compatible solo para las aplicaciones para UWP.
+A / B de prueba en el centro de partners se admite solo para aplicaciones para UWP.
 
 Para poder ejecutar experimentos con pruebas A/B, debes configurar el equipo de desarrollo:
 

@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de la Store Windows, errors, errores, details, detalles
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827779"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992197"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Obtener los detalles de un error en tu Xbox One juego
 
-Usa este método en la Microsoft Store analytics API para obtener información detallada sobre un error específico de la Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de partners de análisis de XDP. Este método solo puede recuperar detalles de errores que se hayan producido en los últimos 30 días.
+Usa este método en la Microsoft Store analytics API para obtener información detallada sobre un error específico de la Xbox One juego integrado mediante el Portal de desarrollador de Xbox (XDP) y disponible en el panel del centro de partners de análisis de XDP. Este método solo puede recuperar detalles de errores que se hayan producido en los últimos 30 días.
 
 Antes de que puedes usar este método, primero debes usar el método [get para tu juego de Xbox One los datos de informes de errores](get-error-reporting-data-for-your-xbox-one-game.md) para recuperar el identificador del error para el que quieres obtener información detallada.
 
@@ -25,7 +25,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
-* Obtén el id. del error sobre el que quieres obtener información detallada. Para obtener este Id., usa el método [obtener datos informes de errores de la Xbox One en juegos](get-error-reporting-data-for-your-xbox-one-game.md) y usa el valor de **failureHash** en el cuerpo de respuesta de ese método.
+* Obtén el id. del error sobre el que quieres obtener información detallada. Para obtener este Id., usa el método [obtener datos informes de errores para Xbox One en juegos](get-error-reporting-data-for-your-xbox-one-game.md) y usa el valor de **failureHash** en el cuerpo de respuesta de ese método.
 
 ## <a name="request"></a>Solicitud
 
@@ -49,7 +49,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
 | applicationId | string | El identificador de producto del juego de Xbox One para el que quieres recuperar los detalles de errores. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado desde el informe de análisis del centro de partners de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
-| failureHash | cadena | El id. exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor para el error que te interesa, usa el método [obtener datos informes de errores de la Xbox One en juegos](get-error-reporting-data-for-your-xbox-one-game.md) y usa el valor de **failureHash** en el cuerpo de respuesta de ese método. |  Sí  |
+| failureHash | cadena | El id. exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor para el error que te interesa, usa el método [obtener datos informes de errores para Xbox One en juegos](get-error-reporting-data-for-your-xbox-one-game.md) y usa el valor de **failureHash** en el cuerpo de respuesta de ese método. |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
@@ -101,7 +101,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | packageVersion  | cadena  | La versión del paquete de juego que está asociado al error.    |
 | deviceModel           | cadena  | Una de las cadenas siguientes que especifica la consola Xbox One en el que se estaba ejecutando el juego cuando se produjo el error.<p/><ul><li><strong>Microsoft Xbox uno</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
 | osVersion       | cadena  | Versión del sistema operativo en el que sucedió el error. Este es siempre el valor **de Windows 10**.    |
-| osRelease       | cadena  |  Una de las cadenas siguientes que especifica la versión del sistema operativo de Windows 10 o (como una subpoblación dentro de la versión del sistema operativo) en el que se produjo el error.<p/><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Versión 1803</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
+| osRelease       | cadena  |  Una de las cadenas siguientes que especifica la versión de sistema operativo Windows 10 o (como una subpoblación dentro de la versión del sistema operativo) en el que se produjo el error.<p/><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Versión 1803</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
 | deviceType      | cadena  | El tipo de dispositivo en el que se produjo el error. Este es siempre el valor de la **consola**.     |
 | cabDownloadable           | Booleano  | Indica si el usuario puede descargar el archivo CAB.   |
 

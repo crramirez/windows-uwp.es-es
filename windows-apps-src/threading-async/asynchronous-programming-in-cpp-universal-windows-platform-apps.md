@@ -1,17 +1,17 @@
 ---
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de VisualC ++ (C++ / CX) mediante el uso de la clase de tarea definida en el espacio de nombres concurrency en ppltasks.h.
+description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de VisualC ++ (C++ / CX) usando la clase de tarea definida en el espacio de nombres concurrency en ppltasks.h.
 title: Programación asincrónica en C++
 ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP, subprocesos, asincrónicos, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834733"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992157"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programación asincrónica en C++/CX
 > [!NOTE]

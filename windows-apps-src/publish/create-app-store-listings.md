@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: medium
 ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835300"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987819"
 ---
 # <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
 
@@ -23,7 +23,7 @@ Muchos de los campos de una **descripción de Store** son opcionales, pero recom
 > [!TIP]
 > Opcionalmente, puedes [Importar y exportar las descripciones de la tienda](import-and-export-store-listings.md) si prefieres introducir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar información y cargar archivos directamente en el centro de partners. Usar la opción Importar y exportar puede ser especialmente conveniente si tienes descripciones en varios lenguajes, ya que te permite hacer varias actualizaciones a la vez. 
 
-Si la aplicación publicada anteriormente admite Windows 8.x o Windows Phone 8.x o versiones anteriores, puedes [crear descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para mostrar a esos clientes. 
+Si la aplicación publicada anteriormente es compatible con Windows 8.x o Windows Phone 8.x o versiones anteriores, puedes [crear descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para mostrar a esos clientes. 
 
 ## <a name="store-listing-languages"></a>Idiomas de la descripción de la Store
 
@@ -38,9 +38,9 @@ En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío. 
 
-## <a name="add-and-edit-store-listing-info"></a>Agregar y editar la información de descripción de la tienda
+## <a name="add-and-edit-store-listing-info"></a>Agregar y editar la descripción de la tienda
 
-Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío. Debes editar cada idioma por separado, a menos que elijas exportar las descripciones de Store, trabajar sin conexión y, a continuación, importar todos los datos de la descripción a la vez. Para obtener más información acerca de cómo funciona, consulta [Importar y exportar descripciones de Store](import-and-export-store-listings.md).
+Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío. Debes editar cada idioma por separado, a menos que elijas exportar las descripciones de Store y funcione sin conexión y, a continuación, importa todos los datos de la descripción a la vez. Para obtener más información sobre cómo funciona, consulta [Importar y exportar las descripciones de Store](import-and-export-store-listings.md).
 
 A continuación se describen los campos disponibles.
 
@@ -48,12 +48,12 @@ A continuación se describen los campos disponibles.
 
 Este cuadro de lista desplegable te permite especificar el nombre que debe usarse en la descripción de la tienda (si lo ha reservado más de un nombre de la aplicación).
 
-Si has cargado los paquetes en el mismo idioma que la tienda de la descripción están trabajando en, se seleccionará el nombre usado en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente cuando se crea un nuevo envío, después de haber cargado los paquetes que usan el nuevo nombre.
+Si has cargado los paquetes en el mismo idioma que la tienda de la descripción están trabajando en, se seleccionará el nombre usado en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente al crear un nuevo envío, después de haber cargado los paquetes que usan el nuevo nombre.
 
-Si no has cargado paquetes para el idioma que estás trabajando y has reservado más de un nombre, tendrás que seleccionar uno de los nombres de aplicación reservado, dado que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre.
+Si no has cargado paquetes para el idioma que estás trabajando y has reservado más de un nombre, tendrás que seleccionar uno de los nombres de aplicación reservado, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre.
 
 > [!NOTE]
-> El **nombre del producto** que se selecciona solo se aplica a la descripción de la tienda en el lenguaje que estás trabajando. No afecta el nombre que aparece cuando un usuario instala la aplicación; ese nombre procedente del manifiesto del paquete que se instala. Para evitar confusiones, te recomendamos que los paquetes y descripción de la tienda de cada idioma usen el mismo nombre.
+> El **nombre del producto** que selecciones solo se aplica a la descripción de la tienda en el idioma que estás trabajando. No afecta el nombre que aparece cuando un usuario instala la aplicación; ese nombre procedente del manifiesto del paquete que se instala. Para evitar confusiones, te recomendamos que los paquetes y la descripción de la tienda de cada idioma usen el mismo nombre.
 
 ## <a name="description"></a>Descripción
 
@@ -130,7 +130,7 @@ Una descripción más corta y pegadizo que se puede usar en la parte superior de
 
 Para los juegos, la descripción corta también puede aparecer en la sección Información del Hub de juegos de Xbox One.
 
-Para obtener resultados óptimos, mantener la descripción breve en 270 caracteres. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán únicamente los caracteres en primer lugar 270 (con un vínculo que están disponible para ver el resto de la descripción breve).
+Para obtener resultados óptimos, mantener la descripción breve en 270 caracteres. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán únicamente los caracteres en primer lugar 270 (con un vínculo para ver el resto de la descripción breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionales del sistema
