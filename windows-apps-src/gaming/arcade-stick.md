@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, stick arcade, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965027"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190354"
 ---
 # <a name="arcade-stick"></a>Stick arcade
 
@@ -28,7 +28,7 @@ En esta página encontrarás información sobre:
 
 Los sticks arcade son dispositivos de entrada apreciados por reproducir la sensación de las máquinas arcade de pie y por sus controles de alta precisión digital. Los sticks arcade son el dispositivo de entrada perfecto para los combates cara a acara y otros juegos de estilo arcade, además de ser adecuados para cualquier juego que funcione con controles totalmente digitales. Los sticks arcade son compatibles con aplicaciones para UWP de Windows 10 y Xbox One en el espacio de nombres [Windows.Gaming.Input][].
 
-Sticks arcade de Xbox One están equipados con un joystick digital de 8 vías, seis botones de **acción** (representados como A1 A6 en la imagen siguiente) y dos botones **especial** (representados como S1 y S2); son los dispositivos de entrada totalmente digital que no admiten controles analógicos o vibración. Sticks arcade de Xbox One también están equipados con botones de **vista** y el **menú** que se usan para admitir la navegación de la interfaz de usuario, pero no está pensadas para admitir comandos de juego y no se puede acceder a ellos fácilmente como botones de joystick.
+Sticks arcade de Xbox One están equipados con un joystick digital de 8 vías, seis botones de **acción** (representados como A1 A6 en la imagen siguiente) y dos botones **especial** (representados como S1 y S2); se encuentra en los dispositivos de entrada totalmente digital que no admiten controles analógicos o vibración. Sticks arcade de Xbox One también están equipados con botones de **vista** y el **menú** que se usan para admitir la navegación de la interfaz de usuario, pero no está pensadas para admitir comandos de juego y no se puede acceder a ellos fácilmente como botones de joystick.
 
 ![Stick con 4 direccional joystick, Arcade 6 botones de acción (A1 A6) y 2 botones especiales (S1 y S2)](images/arcade-stick-1.png)
 
@@ -53,7 +53,7 @@ Los sticks arcade no se asignan a ninguno de los comandos del [conjunto opcional
 
 ## <a name="detect-and-track-arcade-sticks"></a>Detección y seguimiento de los sticks arcade
 
-Detección y seguimiento sticks arcade funciona exactamente del mismo modo que lo hace para los controladores para juegos, excepto con la clase [ArcadeStick][] en lugar de la clase del [controlador para juegos](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) . Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
+Arcade de detección y seguimiento vuelo funciona exactamente del mismo modo que para los controladores para juegos, excepto con la clase [ArcadeStick][] en lugar de la clase del [controlador para juegos](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) . Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
 
 <!-- Arcade sticks are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected arcades sticks and events to notify you when an arcade stick is added or removed.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envío de MicrosoftStore, confirmar envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 820e10695cce2d6242a51b0017d2fe3981cf77b1
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970471"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8194764"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar un envío de paquete piloto
 
@@ -47,7 +47,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el envío de paquete piloto que quieres confirmar. El Id. de la tienda de la aplicación está disponible en el centro de partners.  |
+| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el envío de paquete piloto que quieres confirmar. El identificador de la tienda de la aplicación está disponible en el centro de partners.  |
 | flightId | cadena | Obligatorio. El identificador del paquete piloto que contiene el envío que se va a confirmar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.  |
 | submissionId | cadena | Obligatorio. El identificador del envío que se va a confirmar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
 
@@ -90,7 +90,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Temas relacionados

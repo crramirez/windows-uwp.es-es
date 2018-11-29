@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d2e883fca2b5ca350322fc44c1de51a02aaa4d85
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967571"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190524"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
 
 Puedes enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
 
-Para obtener más información sobre la configuración de idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
+Para obtener más información sobre cómo configurar los idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
 ## <a name="supported-languages"></a>Idiomas admitidos
 
 
 Estos son los idiomas que admite Microsoft Store. La aplicación debe admitir al menos uno de estos idiomas. 
 
-Códigos de idioma que no se incluyen aquí no son compatibles con la tienda. Te recomendamos que no incluye paquetes destinados a los códigos de idioma que no sean los que se indican a continuación; dichos paquetes no se distribuirán a los clientes y pueden causar retrasos o errores de certificación.
+Códigos de idioma que no se incluyen aquí no son compatibles con la tienda. Te recomendamos que no se incluye paquetes destinados a los códigos de idioma que no sean los que se indican a continuación; dichos paquetes no se distribuirán a los clientes y pueden producirse retrasos o errores de certificación.
 
 | Nombre de idioma         | Códigos de idiomas admitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

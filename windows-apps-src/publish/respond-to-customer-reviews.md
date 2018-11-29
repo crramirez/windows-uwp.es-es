@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, responder, respuestas, revisar
 ms.localizationpriority: medium
 ms.openlocfilehash: 1feb6f463fe018d356d678b23199716ad0cbd3e8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993158"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8193413"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
@@ -23,16 +23,16 @@ Para ver las opiniones de la aplicación y proporcionar respuestas, busca la apl
 > [!TIP]
 > Además de usar el centro de partners para responder a las opiniones, puedes responder a las opiniones [mediante programación](../monetize/submit-responses-to-app-reviews.md).
 
-De manera predeterminada, la respuesta se registrará en la tienda, justo debajo de la opinión del cliente original. Estas respuestas será visibles para los clientes que visualicen la tienda en un dispositivo Windows 10. Si el cliente que ha dejado la crítica está usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior, y no han optado por no recibir respuestas de correo electrónico, una copia de la respuesta se enviará también a dicho cliente por correo electrónico.  Tendrás que proporcionar una dirección de correo electrónico válida para enviar tu respuesta, que se incluirá en el correo electrónico al cliente. A continuación, pueden utilizar esta dirección de correo electrónico en contacto contigo directamente.
+De manera predeterminada, la respuesta se registrará en la tienda, justo debajo de la opinión del cliente original. Estas respuestas será visibles para los clientes que visualicen la tienda en un dispositivo Windows 10. Si el cliente que ha dejado la crítica está usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior, y no han optado por no recibir respuestas de correo electrónico, una copia de la respuesta se enviará también a dicho cliente por correo electrónico.  Tendrás que proporcionar una dirección de correo electrónico válida para poder enviar tu respuesta, que se incluirá en el correo electrónico al cliente. A continuación, pueden utilizar esta dirección de correo electrónico en contacto contigo directamente.
 
-Si no quieres que la respuesta que aparezca en la tienda y, en su lugar quieres responder únicamente a través de correo electrónico al cliente, desactiva la casilla **hacer pública la respuesta** . Ten en cuenta que no podrás desactivar esta casilla si el cliente ha optado por no recibir respuestas de correo electrónico o si usan un dispositivo que no se está ejecutando Windows 10, versión 1803 o posterior.
+Si no quieres que tu respuesta que aparezca en la tienda y, en su lugar quieres responder únicamente por correo electrónico al cliente, desactiva la casilla **hacer pública la respuesta** . Ten en cuenta que no podrás desactivar esta casilla si el cliente ha optado por no recibir respuestas de correo electrónico o si usan un dispositivo que no se está ejecutando Windows 10, versión 1803 o posterior.
 
 ## <a name="guidelines-for-responses"></a>Orientación para las respuestas
 
-Al responder a la crítica de un cliente, debes seguir estas instrucciones. Se aplican a todas las respuestas, independientemente de si están públicas o no.
+Al responder a la crítica de un cliente, debes seguir estas instrucciones. Esto se aplica a todas las respuestas, independientemente de si están públicas o no.
 
 > [!IMPORTANT]
-> No podrás cambiar las respuestas que publicar en la tienda (a menos que el cliente revise su valoración original), por lo tanto, revisa la respuesta cuidadosamente. Si un cliente revisa la valoración original, tu respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tienes la opción de enviar una nueva respuesta a la valoración revisada seleccionando **actualizar tu respuesta**.
+> No podrás cambiar las respuestas que registrar en la tienda (a menos que el cliente revise su valoración original), por lo tanto, revisa la respuesta cuidadosamente. Si un cliente revisa la valoración original, tu respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tienes la opción de enviar una nueva respuesta a la valoración revisada seleccionando **actualizar tu respuesta**.
 
 -   Las respuestas no pueden tener más de 1000 caracteres.
 -   No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por cambiar la clasificación de la aplicación. Recuerda que no se permiten los intentos de manipular las clasificaciones en virtud del [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
@@ -46,7 +46,7 @@ Al responder a la crítica de un cliente, debes seguir estas instrucciones. Se a
 >
 > Microsoft se reserva el derecho a revocar un permiso de desarrollador para enviar respuestas por cualquier motivo, incluso si tus respuestas dan lugar a un número elevado de informes de respuesta inadecuados o si un número elevado de clientes opta por no recibir respuestas a valoraciones.
 
-La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. Sin embargo, si una revisión de la aplicación contiene lenguaje ofensivo, irreverente o abusivo, abre una [solicitud de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. Sin embargo, si una opinión sobre tu aplicación contiene lenguaje ofensivo, irreverente o abusivo, abre una [solicitud de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
 
 
 ## <a name="use-customer-reviews-to-improve-your-app"></a>Usar las valoraciones de los clientes para mejorar la aplicación

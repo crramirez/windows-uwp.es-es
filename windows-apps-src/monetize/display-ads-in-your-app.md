@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972271"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192255"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
-Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de anuncio que se pueden integrar sin problemas en su aplicaciones y admite mediación con muchas redes de anuncios populares. Nuestra plataforma es compatible con OpenRTB, gran 2.x, MRAID 2 y 3 VPAID estándares y es compatible con MOAT y IAS. 
+Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de anuncio que pueden integrarse sin problemas en tu aplicaciones y admite mediación con muchas redes de anuncios populares. Nuestra plataforma compatible con la OpenRTB, gran 2.x, MRAID 2 y 3 VPAID estándares y es compatible con MOAT y IAS. 
 
 <br/>
 
@@ -100,7 +100,7 @@ Para empezar a usar la mediación de anuncios en tu aplicación para UWP, [defin
 
 Después de finalizar el desarrollo de la aplicación con anuncios, puedes [enviar la aplicación actualizada](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners que esté disponible en la tienda. Las aplicaciones que muestran anuncios deben cumplir los requisitos adicionales que se especifican en la [sección 10.10 de las Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) y en el [anexo E del Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-Después de la aplicación está publicada y disponible en la tienda, puedes revisar los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners y seguir realizando cambios a la configuración de mediación para optimizar el rendimiento de tus anuncios. Tus ingresos publicitarios se incluyen en tu [resumen de pago](../publish/payout-summary.md).
+Después de que la aplicación está publicada y disponible en la tienda, puedes revisar los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners y seguir realizando cambios a la configuración de mediación para optimizar el rendimiento de tus anuncios. Tus ingresos publicitarios se incluyen en tu [resumen de pago](../publish/payout-summary.md).
 
 <span id="additional-help" />
 

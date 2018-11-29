@@ -8,11 +8,11 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc109fe2e684dd3bc1fef62cece5cac3ab50d246
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967295"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8215086"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Crear un paquete de la aplicación con la herramienta MakeAppx.exe
 
@@ -24,7 +24,7 @@ ms.locfileid: "7967295"
 
 Ten en cuenta que **MakeAppx.exe** no crea ningún archivo .appxupload. El archivo .appxupload, se crea como parte del proceso de empaquetado de Visual Studio y contiene otros dos archivos: .msix o .appx y .appxsym. El archivo .appxsym es un archivo .pdb comprimido que contiene los símbolos públicos de la aplicación que se usa para [análisis de bloqueo](../publish/health-report.md) en el centro de partners. También se puede enviar un archivo .appx normal, pero no habrá disponible ninguna información de análisis o de depuración de bloqueos. Para obtener más información sobre el envío de paquetes a la Store, consulta [Cargar paquetes de aplicación](../publish/upload-app-packages.md). 
 
- Las actualizaciones de esta herramienta en la versión más reciente de Windows 10 no afectan al uso del paquete .appx. Puedes seguir usando esta herramienta con los paquetes .appx, o usar la herramienta de soporte técnico para los paquetes de .msix tal como se describe a continuación.
+ Las actualizaciones de esta herramienta en la versión más reciente de Windows 10 no afectan al uso de paquete .appx. Puedes seguir usando esta herramienta con los paquetes .appx, o usar la herramienta de soporte técnico para los paquetes de .msix tal como se describe a continuación.
 
 Para crear un archivo .appxupload manualmente:
 - Coloca el .msix y .appxsym en una carpeta
@@ -96,7 +96,7 @@ La siguiente lista contiene posibles argumentos:
 
 ### <a name="create-an-app-package"></a>Crear un paquete de la aplicación
 
-Un paquete de aplicación es un conjunto completo de archivos de la aplicación empaquetado en un archivo de paquete .appx o de .msix. Para crear un paquete de aplicación mediante el comando **pack**, debes proporcionar un directorio de contenido o un archivo de asignación de la ubicación del paquete. También puedes cifrar un paquete mientras lo creas. Si deseas cifrar el paquete, debes usar /ep y especificar si estás usando un archivo de clave (/kf) o la clave de prueba global (/kt). Para obtener más información sobre cómo crear un paquete cifrado, consulta [Cifrar o descifrar un paquete o lote](#encrypt-or-decrypt-a-package-or-bundle).
+Un paquete de la aplicación es un conjunto completo de archivos de la aplicación empaquetado en un archivo de paquete .msix o .appx. Para crear un paquete de aplicación mediante el comando **pack**, debes proporcionar un directorio de contenido o un archivo de asignación de la ubicación del paquete. También puedes cifrar un paquete mientras lo creas. Si deseas cifrar el paquete, debes usar /ep y especificar si estás usando un archivo de clave (/kf) o la clave de prueba global (/kt). Para obtener más información sobre cómo crear un paquete cifrado, consulta [Cifrar o descifrar un paquete o lote](#encrypt-or-decrypt-a-package-or-bundle).
 
 Opciones específicas del comando **pack**:
 

@@ -6,11 +6,11 @@ ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 33103ebfc7ee3e26a11de781af7981bce78b349c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7980465"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8217928"
 ---
 # <a name="user-activities-best-practices"></a>Procedimientos recomendados de las actividades de usuario
 

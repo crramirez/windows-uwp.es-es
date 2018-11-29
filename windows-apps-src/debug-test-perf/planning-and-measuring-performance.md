@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966304"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8194268"
 ---
 # <a name="planning-for-performance"></a>Planeación del rendimiento
 
@@ -171,7 +171,7 @@ Usa estas técnicas y herramientas para probar la aplicación con respecto a los
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
 -   Prueba si se ha reducido la disponibilidad de consumo de energía. El dispositivo de tus usuarios podría tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de bajo consumo funciona, aproximadamente, a un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
 -   Combina herramientas, como Microsoft Visual Studio y el Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan captura y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
--   Antes de enviar la aplicación a la tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos de prueba relacionados con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de [pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"de [los casos de prueba de aplicación para UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Antes de enviar la aplicación a la tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos de prueba relativos al rendimiento, como se describe en la sección "Pruebas de rendimiento" de [pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"de [los casos de prueba de aplicación para UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Para más información, consulta estos recursos y herramientas de generación de perfiles.
 

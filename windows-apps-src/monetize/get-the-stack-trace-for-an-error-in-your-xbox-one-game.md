@@ -6,17 +6,17 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, seguimiento de la pila, stack trace, error
 ms.localizationpriority: medium
 ms.openlocfilehash: fd43305c54245c3281a0e840d3df4c5c87ff7ad8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969593"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8194448"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Obtener el seguimiento de la pila de un error en tu Xbox One juego
 
-Usa este método en la Microsoft Store analytics API para obtener el seguimiento de la pila de un error en tu Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de partners de análisis de XDP. Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días.
+Usa este método en la Microsoft Store analytics API para obtener el seguimiento de la pila de un error en tu Xbox One juego integrado mediante el Portal de desarrollador de Xbox (XDP) y disponible en el panel del centro de partners de análisis de XDP. Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días.
 
-Antes de que puedes usar este método, primero debes usar el método [obtener detalles de un error en tu juego de Xbox One](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar el identificador del archivo .cab que está asociado con el error para el que quieres recuperar el seguimiento de la pila.
+Antes de que puedes usar este método, primero debes usar el método [obtener detalles para un error en tu juego de Xbox One](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar el identificador del archivo .cab que está asociado con el error para el que quieres recuperar el seguimiento de la pila.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -54,7 +54,7 @@ Para usar este método, primero debes hacer lo siguiente:
  
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra cómo obtener un seguimiento de la pila para una consola Xbox One juego mediante este método. Reemplaza el valor de *applicationId* con el identificador de producto para tu juego.
+El siguiente ejemplo muestra cómo obtener un seguimiento de la pila para una consola Xbox One juego con este método. Reemplaza el valor de *applicationId* con el identificador de producto para tu juego.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/stacktrace?applicationId=BRRT4NJ9B3D1&cabId=1336373323853 HTTP/1.1

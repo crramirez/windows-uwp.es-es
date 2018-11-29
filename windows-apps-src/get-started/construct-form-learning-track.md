@@ -7,11 +7,11 @@ keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formula
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0cb42552139fd706dd9e87d61c24f8fe2c2d51f7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964775"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192182"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -45,7 +45,7 @@ Lee [esta documentación sobre paneles de diseño](../design/layout/layout-panel
 
 ## <a name="what-goes-in-a-form"></a>Qué se incluye en un formulario
 
-Tendrás que rellenar tu formulario con una gran variedad de [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Probablemente ya estás familiarizado con ellos, pero puedes consultar la información si necesitas ponerte al día. En concreto, querrás controles que permiten al usuario escribir texto o elegir de una lista de valores. Esta es una lista básica de opciones que puedes agregar; no tienes que leer todo sobre ellas, solo lo suficiente para comprender su aspecto y funcionamiento.
+Tendrás que rellenar tu formulario con una gran variedad de [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Probablemente ya estás familiarizado con ellos, pero puedes consultar la información si necesitas ponerte al día. En concreto, querrás controles que permiten al usuario escribir texto o elegir de una lista de valores. Esta es una lista básica de opciones que puedes agregar; no es necesario leer todo sobre ellas, solo lo suficiente para comprender su aspecto y funcionamiento.
 
 * [TextBox](../design/controls-and-patterns/text-box.md) permite a un texto de entrada de usuario en la aplicación.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite al usuario elegir entre dos opciones.

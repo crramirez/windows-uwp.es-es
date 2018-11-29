@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: f99c9af9fd3f8c9a94b79b3324fea6ebbd710c5b
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993122"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8195407"
 ---
 # <a name="ad-campaign-report"></a>Informe Campaña publicitaria
 
-El informe **campaña publicitaria** en [El centro de partners](https://partner.microsoft.com/dashboard) te permite ver el rendimiento de la promoción de aplicación [campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
+El informe **campaña publicitaria** en [El centro de partners](https://partner.microsoft.com/dashboard) te permite ver el rendimiento de tu de promoción de la aplicación [las campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
 
 ## <a name="definitions"></a>Definiciones
 
@@ -48,7 +48,7 @@ Puedes mostrar datos de rendimiento de hasta seis campañas publicitarias a la v
 
 ## <a name="install-tracking"></a>Seguimiento de instalaciones
 
-Ejecutar una campaña publicitaria de instalaciones a través del centro de partners proporciona una exposición muy necesaria para anunciar las aplicaciones. Las impresiones de anuncios se muestran a los clientes que probablemente están más interesados en la aplicación, y estos clientes pueden hacer clic en el anuncio e instalar la aplicación desde la Tienda. Antes, era difícil distinguir entre instalaciones que procedían de una campaña publicitaria frente a las instalaciones procedentes de otras fuentes.
+Ejecutar una campaña de anuncios de instalaciones a través del centro de partners proporciona una exposición muy necesaria para anunciar las aplicaciones. Las impresiones de anuncios se muestran a los clientes que probablemente están más interesados en la aplicación, y estos clientes pueden hacer clic en el anuncio e instalar la aplicación desde la Tienda. Antes, era difícil distinguir entre instalaciones que procedían de una campaña publicitaria frente a las instalaciones procedentes de otras fuentes.
 
 Este informe te muestra cuántas instalaciones has ganado mediante la ejecución de campañas publicitarias. Esto solo representa las descargas que son un resultado directo de las campañas publicitarias y no incluye las descargas de otras fuentes.
 
@@ -67,7 +67,7 @@ Una instalación se sigue en la Tienda por teléfono, tableta, PC y otros dispos
 2.  El cliente ha iniciado sesión con una cuenta Microsoft.
 3.  El cliente cumple los requisitos [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (no se puede hacer un seguimiento de los clientes que no los cumplen).
 
-En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones de una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) en el centro de partners.
+En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones para una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) del centro de partners.
 
 
 ## <a name="account-billing-history"></a>Historial de facturación de la cuenta

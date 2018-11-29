@@ -6,11 +6,11 @@ ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 601478e2479dddc06b6f8f55bc607fd58f07a3b7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965077"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189796"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crea una web de una sola página con back-end de API de REST
 
@@ -294,7 +294,7 @@ Estos son algunos recursos útiles para ir más allá:
 
  - [Documentos Azure DocumentDB](https://docs.microsoft.com/en-us/azure/documentdb/index)
 
-## <a name="part-ii-build-a-single-page-web-application"></a>Parte II: Crear una aplicación de la página web
+## <a name="part-ii-build-a-single-page-web-application"></a>Parte II: Crear una aplicación web de página
 
 Ahora que has creado (o [descargado](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)) el [back-end de la API de REST](#part-i-build-a-rest-api-backend) de la parte I, estás listo para crear el front-end del juego de memoria de una sola página con [Node](https://nodejs.org/en/), [Express](http://expressjs.com/) y [Bootstrap](http://getbootstrap.com/).
 

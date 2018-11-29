@@ -6,21 +6,21 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, COM, componente, clase, interfaz
 ms.localizationpriority: medium
 ms.openlocfilehash: 9000cad79e12a645689d90ef37a8ff43b9fc95b7
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836260"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191010"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM con C++ / WinRT
 
-Puedes usar las funciones de la [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) biblioteca consumir componentes COM, como los gráficos 2D y 3D de alto rendimiento de las APIs de DirectX. C++ / WinRT es la forma más sencilla de usar DirectX sin comprometer el rendimiento. Este tema usa un ejemplo de código de Direct2D para mostrar cómo usar C++ / WinRT para consumir COM clases e interfaces. Por supuesto, puede, mezclar programación COM y Windows Runtime dentro de la misma C++ / WinRT proyecto.
+Puedes usar las instalaciones de la [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) biblioteca consumir componentes COM, como los gráficos 2D y 3D de alto rendimiento de las APIs de DirectX. C++ / WinRT es la forma más sencilla de usar DirectX sin comprometer el rendimiento. Este tema usa un ejemplo de código de Direct2D para mostrar cómo usar C++ / WinRT para consumir COM clases e interfaces. Por supuesto, puede, mezclar programación COM y Windows Runtime dentro de la misma C++ / WinRT proyecto.
 
-Al final de este tema, encontrarás una lista de código fuente completo de una aplicación mínima de Direct2D. Hemos tendrás levantar extractos de ese código y usarlos para ilustrar cómo consumir componentes COM con C++ / WinRT con varias instalaciones de C++ / WinRT biblioteca.
+Al final de este tema, encontrarás una lista de código fuente completo de una aplicación mínima de Direct2D. Te enviaremos levantar extractos de ese código y usarlos para ilustrar cómo consumir componentes COM con C++ / WinRT con varias instalaciones de C++ / WinRT biblioteca.
 
 ## <a name="com-smart-pointers-winrtcomptruwpcpp-ref-for-winrtcom-ptr"></a>Punteros inteligentes COM ([**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
-Cuando programa con COM, trabajas directamente con interfaces en lugar de con objetos (que también es true en segundo plano para Windows en tiempo de ejecución APIs, que son una evolución de COM). Para llamar a una función en una clase de COM, por ejemplo, activar la clase, obtener una interfaz atrás y, a continuación, llamar a funciones en esa interfaz. Para obtener acceso al estado de un objeto, no tengan acceso a sus miembros de datos directamente; en su lugar, se llama a las funciones de descriptor de acceso y mutación en una interfaz.
+Programación con COM, trabajar directamente con interfaces en lugar de con objetos (ese es también true en segundo plano para Windows en tiempo de ejecución APIs, que son una evolución del COM). Para llamar a una función en una clase de COM, por ejemplo, activar la clase, una interfaz atrás y, a continuación, llamamos funciones en esa interfaz. Para obtener acceso al estado de un objeto, no tengan acceso a sus miembros de datos directamente; en su lugar, se llama a las funciones de descriptor de acceso y mutación en una interfaz.
 
 Para ser más específico, estamos hablando de interactuar con *punteros*de interfaz. Y para ello, se benefician de la existencia del tipo de puntero inteligente COM en C++ / WinRT&mdash;el tipo de [**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) .
 
@@ -28,7 +28,7 @@ Para ser más específico, estamos hablando de interactuar con *punteros*de inte
 winrt::com_ptr<ID2D1Factory1> factory;
 ```
 
-El código anterior muestra cómo declarar un puntero inteligente sin inicializar a una interfaz COM de [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) . El puntero inteligente se ha inicializado, por lo que todavía no señala a una interfaz **ID2D1Factory1** que pertenecen a cualquier objeto real (no señala a una interfaz en absoluto). Pero tiene el potencial de hacerlo; y (que se va a un puntero inteligente) tiene la capacidad de a través de referencias de COM para administrar la duración del objeto de la interfaz que señala al propietario y para que sea el medio por el que se llama a funciones en esa interfaz.
+El código anterior muestra cómo declarar un puntero inteligente sin inicializar a una interfaz COM de [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) . El puntero inteligente no está inicializado, por lo que todavía no señala a una interfaz **ID2D1Factory1** que pertenecen a cualquier objeto real (no apunta a una interfaz en absoluto). Pero tiene el potencial de hacerlo; y (que se va a un puntero inteligente) tiene la capacidad de a través de COM de referencias para administrar la duración del objeto propietario de la interfaz que señale a y para que sea el medio por el que llamar a funciones en esa interfaz.
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>Funciones de COM que devuelven un puntero de interfaz como **void**
 
@@ -43,7 +43,7 @@ D2D1CreateFactory(
 );
 ```
 
-El código anterior, llama a la función [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory) , que devuelve un puntero de interfaz **ID2D1Factory1** a través de su último parámetro, que tiene **void\ * \ *** tipo. Muchas de las funciones de COM devuelven un **void\ * \ ***. Para estas funciones, usa [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) tal como se muestra.
+El código anterior llama a la función [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory) , que devuelve un puntero de interfaz **ID2D1Factory1** a través de su último parámetro, que tiene **void\ * \ *** tipo. Muchas de las funciones de COM devuelven un **void\ * \ ***. Para estas funciones, usa [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) tal como se muestra.
 
 ## <a name="com-functions-that-return-a-specific-interface-pointer"></a>Funciones de COM que devuelven un puntero de interfaz específica
 
@@ -69,7 +69,7 @@ D2D1CreateFactory(
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-iunknown"></a>Funciones de COM que devuelven un puntero de interfaz **IUnknown**
 
-La función [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) devuelve un puntero de interfaz de fábrica DirectWrite a través de su último parámetro, que tiene un tipo [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) . Para esta función, uso [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function), pero reinterpretar convertirse **IUnknown**.
+La función [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) devuelve un puntero de interfaz de fábrica DirectWrite a través de su último parámetro, que tiene el tipo de [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) . Para esta función, uso [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function), pero reinterpretar convertirse **IUnknown**.
 
 ```cppwinrt
 DWriteCreateFactory(
@@ -78,10 +78,10 @@ DWriteCreateFactory(
     reinterpret_cast<IUnknown**>(dwriteFactory2.put()));
 ```
 
-## <a name="re-seat-a-winrtcomptr"></a>Número de puestos volver a un **winrt:: com_ptr**
+## <a name="re-seat-a-winrtcomptr"></a>Número de puestos volver a una **winrt:: com_ptr**
 
 > [!IMPORTANT]
-> Si tienes un [**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que ya está instalada (su puntero sin procesar interno ya tiene un objetivo) y quieres volver a número de puestos para que apunte a un objeto diferente, a continuación, primero debes asignar `nullptr` a ella&mdash;tal como se muestra en el siguiente ejemplo de código. Si no lo haces, a continuación, un sentado ya **com_ptr** dibujará el problema a tu atención (cuando se llame a [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) o [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) por una aserción que su puntero interno no es null.
+> Si tienes un [**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que ya esté colocado (su puntero sin procesar interno ya tiene un destino) y quieres volver a número de puestos para que apunte a un objeto diferente, a continuación, primero debes asignar `nullptr` a ella&mdash;tal como se muestra en el siguiente ejemplo de código. Si no lo haces, a continuación, un sentado ya **com_ptr** se dibujará el problema a tu atención (cuando se llama a [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) o [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) mediante la aserción que su puntero interno no es null.
 
 ```cppwinrt
 winrt::com_ptr<ID2D1SolidColorBrush> brush;
@@ -97,7 +97,7 @@ target->CreateSolidColorBrush(
 
 ## <a name="handle-hresult-error-codes"></a>Controlar códigos de error HRESULT
 
-Para comprobar que el valor de un valor de HRESULT devuelto por una función de COM y generar una excepción en caso de que representa un código de error, llamar a [**winrt:: check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult).
+Para comprobar que el valor de un valor de HRESULT devuelto desde una función de COM y generar una excepción en caso de que representa un código de error, llamar a [**winrt:: check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult).
 
 ```cppwinrt
 winrt::check_hresult(D2D1CreateFactory(
@@ -166,7 +166,7 @@ Como alternativa, usar [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#comp
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>Listado de código fuente completo de una aplicación mínima de Direct2D
 
-Si quieres compilar y ejecutar este ejemplo de código de origen, a continuación, en primer lugar, en Visual Studio, crea un nuevo **Core App (C++ / WinRT)**. `Direct2D` es un nombre razonable para el proyecto, pero puede asignarle un nombre cualquier cosa que quieras. Abre `App.cpp`, eliminar todo su contenido y pegar en la siguiente lista.
+Si quieres compilar y ejecutar este ejemplo de código de origen, a continuación, en primer lugar, en Visual Studio, crea un nuevo **Core App (C++ / WinRT)**. `Direct2D` es un nombre razonable para el proyecto, pero puede asignarle un nombre cualquier cosa que quieras. Abre `App.cpp`, eliminar todo su contenido y pegarlo en la siguiente lista.
 
 ```cppwinrt
 #include "pch.h"
@@ -478,7 +478,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="working-with-com-types-such-as-bstr-and-variant"></a>Trabajar con tipos de COM, como BSTR y VARIANT
 
-Como puedes ver, C++ / WinRT proporciona soporte técnico para implementar y llamar a las interfaces COM. Para usar tipos de COM, como BSTR y VARIANT, siempre hay la opción para usarlos en su forma sin procesar (junto con las API adecuadas). Como alternativa, puedes usar contenedores proporcionados por un marco de trabajo, como la [Biblioteca de plantilla Active (ATL)](/cpp/atl/active-template-library-atl-concepts), o [Compatibilidad con COM el compilador de Visual C++](/cpp/cpp/compiler-com-support)o incluso por tus propios contenedores.
+Como puedes ver, C++ / WinRT proporciona soporte técnico para implementar y llamar a las interfaces COM. Para el uso de tipos de COM, como BSTR y VARIANT, siempre hay la opción para usarlos en su forma sin procesar (junto con las API adecuadas). Como alternativa, puedes usar contenedores proporcionados por un marco de trabajo, como la [Biblioteca de plantilla Active (ATL)](/cpp/atl/active-template-library-atl-concepts), por el compilador de Visual C++ [Compatibilidad con COM](/cpp/cpp/compiler-com-support)o incluso por tus propios contenedores.
 
 ## <a name="important-apis"></a>API importantes
 * [Función winrt::check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)

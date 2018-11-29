@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
 ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969095"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190449"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 
-Con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), puedes llamar a Windows en tiempo de ejecución APIs con tipos de cadena de caracteres anchos de la biblioteca estándar de C++ como **std:: wstring** (Nota: no con tipos de cadena de caracteres estrechos como **std:: String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
+Con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), puedes llamar a Windows Runtime APIs con tipos de cadena de caracteres anchos de la biblioteca estándar de C++ como **std:: wstring** (Nota: no con tipos de cadena de caracteres estrechos como **std:: String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
 
 Hay muchos tipos de cadena en C++. Las variantes existen en muchas bibliotecas además de **std::basic_string** de la biblioteca estándar de C++. C++17 tiene utilidades de conversión de cadena y **std::basic_string_view** para enlazar las separaciones entre todos los tipos de cadena.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) proporciona convertibilidad con **std::wstring_view** para proporcionar la interoperabilidad para la que se ha diseñado **std::basic_string_view**.
 

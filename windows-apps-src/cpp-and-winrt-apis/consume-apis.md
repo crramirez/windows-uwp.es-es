@@ -6,15 +6,15 @@ ms.topic: article
 keywords: wndows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 59b056e160a1d7782e054ad4dbf1b63e91be42e9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970348"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190945"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir API con C++/WinRT
 
-En este tema muestra cómo usar [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API, ya formen parte de Windows, implementada por un proveedor de componentes de terceros o por TI mismo.
+En este tema muestra cómo usar [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API, ya formen parte de Windows, hayan implementado por un proveedor de componentes de terceros, o por TI mismo.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Si la API está en un espacio de nombres de Windows
 Este es el caso más común en el que consumirás una API de Windows Runtime. Para cada tipo en un espacio de nombres de Windows definido en los metadatos, C++/WinRT define un equivalente de C++ descriptivo (denominado el *tipo proyectado*). Un tipo proyectado tiene el mismo nombre totalmente cualificado que el tipo de Windows, pero se coloca en el espacio de nombres **winrt** de C++ mediante la sintaxis de C++. Por ejemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) se proyecta en C++/WinRT como **winrt::Windows::Foundation::Uri**.
@@ -176,7 +176,7 @@ MainPage::MainPage()
 Para obtener más detalles, el código y un tutorial sobre cómo consumir una clase en tiempo de ejecución implementada en el proyecto, consulta [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Crear instancias y devolver tipos e interfaces proyectados
-Aquí se muestra un ejemplo del aspecto que podrían tener los tipos e interfaces proyectados en tu proyecto de consumo. Recuerda que un tipo proyectado (por ejemplo, el que aparece en este ejemplo), se genera a la herramienta de forma y no es algo que podría crear tú mismo.
+Aquí se muestra un ejemplo del aspecto que podrían tener los tipos e interfaces proyectados en tu proyecto de consumo. Recuerda que un tipo proyectado (por ejemplo, el uno en este ejemplo), se genera herramienta y no es algo que podría autor tú mismo.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,

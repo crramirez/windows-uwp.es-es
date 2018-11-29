@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d2c965bcfbf81efe73ce8aff93cdb8b31163fbd
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847302"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191221"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>Experiencias de manipulación personalizadas con InteractionTracker
 
@@ -59,7 +59,7 @@ Como máquina de estado, las propiedades de InteractionTracker se pueden control
 
 ### <a name="interactiontracker-state-machine"></a>Máquina de estado InteractionTracker
 
-Como se mencionó anteriormente, InteractionTracker es una máquina de estado con 4 estados, cada uno de los cuales puede realizar la transición a cualquiera de los otros fourstates. (Para obtener más información acerca de cómo realiza InteractionTracker una transición entre estos estados, consulta la documentación de la clase [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker)).
+Como se mencionó anteriormente, InteractionTracker es una máquina de estado con 4 estados, cada uno de los cuales puede realizar una transición a cualquiera de los otros fourstates. (Para obtener más información acerca de cómo realiza InteractionTracker una transición entre estos estados, consulta la documentación de la clase [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker)).
 
 | Estado | Descripción |
 |-------|-------------|
