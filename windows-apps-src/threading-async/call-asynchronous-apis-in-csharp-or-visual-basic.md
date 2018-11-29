@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, C#, Visual Basic, asincrónica
 ms.localizationpriority: medium
 ms.openlocfilehash: 899af2ffd26419d4c8906d703d6708d202f8c150
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7841840"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985261"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Llamar a API asincrónicas en C# o Visual Basic
 
@@ -79,7 +79,7 @@ Cuando uses el operador **await** para recuperar tus resultados de un método as
 
 Cuando los métodos asincrónicos llaman a otros métodos asincrónicos, cualquier método asincrónico que dé origen a una excepción se propagará a los métodos externos. Esto significa que puedes poner un bloque **try/catch** en el método más externo para capturar los errores de los métodos asincrónicos anidados. Una vez más, esto es similar al modo en que capturas excepciones para los métodos sincrónicos. Sin embargo, no puedes usar **await** en el bloque **catch**.
 
-**Sugerencia**comenzar con C# en Microsoft Visual Studio2005, puedes usar **await** en el bloque **catch** .
+**Sugerencia**partir de C# en Microsoft Visual Studio2005, puedes usar **await** en el bloque **catch** .
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 

@@ -7,11 +7,11 @@ keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7a4021a2a0fb6c84755730e4f0e9917b10e94ec8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7844814"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985043"
 ---
 # <a name="barcode-scanner"></a>Escáner de código de barras
 
@@ -22,9 +22,9 @@ Esta sección proporciona instrucciones para crear aplicaciones de la Plataforma
 |Tema |Descripción |
 |------|------------|
 | [Configurar un escáner de códigos de barras](../devices-sensors/pos-barcodescanner-configure.md)  | Obtén información sobre cómo configurar un escáner de códigos de barras para la aplicación deseada. |
-| [Usar un desencadenador de software](../devices-sensors/pos-barcodescanner-software-trigger.md) | Obtén información sobre cómo controlar la digitalización desde software de. |
+| [Usar un desencadenador de software](../devices-sensors/pos-barcodescanner-software-trigger.md) | Aprende a controlar la digitalización desde software de. |
 | [El trabajo con simbologías](pos-barcodescanner-symbologies.md) | Aprende a determinar los tipos de códigos de barras que admite un escáner de códigos de barras y a controlar qué tipos de códigos de barras reconoce el escáner de códigos de barras de la aplicación. |
-| [Obtener y conocer los datos de código de barras](pos-barcodescanner-scan-data.md) | Obtén información sobre cómo obtener e interpretar los datos de códigos de barras que digitalizar. |
+| [Obtener y conocer los datos de código de barras](pos-barcodescanner-scan-data.md) | Obtén información sobre cómo obtener e interpretar los datos de código de barras que digitalizar. |
 | [Escáner de código de barras basado en cámara](pos-camerabarcode.md) | Lee códigos de barras a través de una lente de cámara estándar desde una aplicación de la Plataforma universal de Windows. Requiere la Actualización de abril de 2018 de Windows 10 (compilación 17134 o posterior). |
 |
  
