@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965588"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197538"
 ---
 # <a name="xaml-syntax-guide"></a>Guía de sintaxis XAML
 
@@ -238,7 +238,7 @@ En primer lugar, la presencia del elemento de objeto indica que se debe crear un
 
 Otra regla de XAML es que los atributos de un elemento deben poder establecerse en cualquier orden. Por ejemplo, no existe ninguna diferencia entre `<Rectangle Height="50" Width="100" />` y `<Rectangle Width="100"  Height="50" />`. El orden utilizado es una cuestión de estilo.
 
-**Nota**diseñadores XAML suelen promoción para ordenar cuando se usan superficies de diseño que no sean el editor XML, pero puedes editar libremente ese código XAML más adelante, para reordenar los atributos e introducir otros nuevos.
+**Nota**los diseñadores XAML suelen promoción para ordenar cuando se usan superficies de diseño que no sean el editor XML, pero puedes editar libremente ese código XAML más adelante, para reordenar los atributos e introducir otros nuevos.
 
 ## <a name="attached-properties"></a>Propiedades adjuntas
 
@@ -268,7 +268,7 @@ Para obtener más información, consulta [Introducción a las propiedades adjunt
 
 Ya que la llave de apertura \{ es la apertura de la secuencia de la extensión de marcado, debes usar una secuencia de escape para especificar un valor de cadena literal que comienza con "\{". La secuencia de escape es "\{\}". Por ejemplo, para especificar un valor de cadena que es una única llave de apertura, especifica el valor de atributo como "\{\}\{". También puedes usar otras comillas (por ejemplo, **'** dentro de un valor de atributo delimitado por **""**) para proporcionar un valor "\{" como cadena.
 
-**Nota**"{\\}" también funciona si se encuentra dentro de un atributo entre comillas.
+**Nota**"{\\}" también funciona si está dentro de un atributo entre comillas.
  
 ## <a name="enumeration-values"></a>Valores de enumeración
 

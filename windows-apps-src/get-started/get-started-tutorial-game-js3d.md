@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f707e72e73398ae21cd391da16a0f2b40dcd7ee
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967962"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8198434"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -640,7 +640,7 @@ Al final, aplicamos cualquiera de los valores actualizados `x` e `y` a la cámar
 
 ¡Enhorabuena! Ya tienes una cámara controlada por el jugador que puede moverse y mirar alrededor. Todavía podemos colarnos por las paredes, pero eso lo solucionaremos más tarde. A continuación, agregaremos el dinosaurio.
 
-<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el lápiz <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE]

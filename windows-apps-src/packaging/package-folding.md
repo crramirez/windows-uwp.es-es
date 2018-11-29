@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9241ffeb6b232c5b5be3098b114f6c7bf00bcf0d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971927"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200207"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desarrollar con paquetes de activos y plegado de paquete 
 
@@ -45,7 +45,7 @@ C:\Program Files\WindowsApps\
 
 Ten en cuenta que el paquete de la aplicación no estará archivos que no son aplicables al usuario instala (el x86 y paquetes alemán). 
 
-Para este usuario, el archivo ejecutable principal de tu juego estará dentro de la carpeta **MyGame_1.0_x64** y se ejecutará desde allí y, normalmente, solo tendrá acceso a los archivos de esta carpeta. Para obtener acceso a los archivos de la carpeta **MyGame_1.0_language-fr**, tendrías que usar las API de MRT o las API de PackageManager. Las API de MRT puede seleccionar automáticamente el archivo más apropiado de los idiomas instalados, puedes encontrar más información sobre las API de MRT en [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, puedes encontrar la ubicación instalada del paquete de idioma francés usando la [clase PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Nunca debes dar por supuesta la ubicación instalada de los paquetes de la aplicación ya que puede cambiar y puede variar entre usuarios. 
+Para este usuario, el archivo ejecutable principal de tu juego estará dentro de la carpeta **MyGame_1.0_x64** y se ejecutará desde allí y, normalmente, solo tendrá acceso a los archivos de esta carpeta. Para obtener acceso a los archivos de la carpeta **MyGame_1.0_language-fr**, tendrías que usar las API de MRT o las API de PackageManager. Las API de MRT puede seleccionar automáticamente el archivo más adecuado de los idiomas instalados, puedes encontrar más información sobre las API de MRT en [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, puedes encontrar la ubicación instalada del paquete de idioma francés usando la [clase PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Nunca debes dar por supuesta la ubicación instalada de los paquetes de la aplicación ya que puede cambiar y puede variar entre usuarios. 
 
 ## <a name="asset-package-folding"></a>plegado de paquete de activos
 
