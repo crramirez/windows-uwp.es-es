@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 01c0d1361dcc0858a54792adc0d17408ed281c99
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846807"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991182"
 ---
 # <a name="add-controls"></a>Agregar controles
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Un buen juego de la plataforma universal de Windows (UWP) admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos, un equipo con un mando de Xbox conectado, o la última escritorio plataforma de juego con un mouse de alto rendimiento y un teclado. En nuestro juego los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Esta clase concentra los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) en un único controlador. El resultado final es un tiros en primera persona que usa controles de movimiento y vista estándares en el género y que funcionan con varios dispositivos.
+Un buen juego de la plataforma universal de Windows (UWP) admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos, un equipo con un mando de Xbox conectado, o la última escritorio plataforma de juego con un ratón de alto rendimiento y un teclado. En nuestro juego los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Esta clase concentra los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) en un único controlador. El resultado final es un tiros en primera persona que usa controles de movimiento y vista estándares en el género y que funcionan con varios dispositivos.
 
 > [!NOTE]
 > Para obtener más información acerca de los controles, consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md).
@@ -95,7 +95,7 @@ Estado | Descripción
 El juego entra en el estado **WaitForInput** cuando se ha pausado. Esto ocurre si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla P o el botón **Inicio** del controlador para juegos). **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127). En ese punto, si **IsPauseRequested** devuelve **verdadero**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el controlador al estado **WaitForInput**. 
 
 
-Una vez en el estado **WaitForInput**, el juego detiene el procesamiento de casi todos los eventos de entrada de juego hasta que regrese al estado **Activo**. La excepción es el botón de pausa, al presionarlo, el juego vuelve al estado activo. Que no sea el botón de pausa, para que el juego vuelve al estado **activo** el jugador debe seleccionar un elemento de menú. 
+Una vez en el estado **WaitForInput**, el juego detiene el procesamiento de casi todos los eventos de entrada de juego hasta que regrese al estado **Activo**. La excepción es el botón de pausa, al presionarlo, el juego vuelve al estado activo. Que no sea el botón de pausa, para el juego vuelve al estado **activo** el jugador debe seleccionar un elemento de menú. 
 
 
 

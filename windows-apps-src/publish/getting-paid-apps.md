@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
 ms.openlocfilehash: 91289948f2f4745456b9cebe587cf75366a4877b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831441"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7993198"
 ---
 # <a name="getting-paid"></a>Recibir pagos
 Es aquí encontrarás información importante sobre cómo recibir el pago de tus aplicaciones, complementos y las ganancias de publicidad.
@@ -46,7 +46,7 @@ Recuerda que el precio que seleccionaste puede incluir el impuesto sobre el valo
 
 ## <a name="payout-reporting"></a>Informes de pago
 
-Puedes obtener acceso a detalles sobre la información de pago y descargar los informes en el **Resumen de pago** del [Centro](https://partner.microsoft.com/dashboard)de partners. Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
+Puedes obtener acceso a los detalles sobre la información de pago y descargar los informes en el **Resumen de pago** del [Centro](https://partner.microsoft.com/dashboard)de partners. Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Período de pago
