@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e54b74cf3052fdeb5b70cc90f59ab0ea59aef76
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835440"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988312"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Creación del paquete con el diseño del empaquetado  
 
@@ -51,7 +51,7 @@ Este es un ejemplo del aspecto de un diseño de empaquetado simple:
 Desglosemos este ejemplo para comprender cómo funciona.
 
 ### <a name="packagefamily"></a>PackageFamily
-Este diseño de empaquetado creará un archivo de paquete de aplicación plana único con un x64 paquete de arquitectura y un paquete de activos "Medio". 
+Este diseño de empaquetado creará un archivo de recopilación de aplicación plana única con un x64 paquete de arquitectura y un paquete de activos "Media". 
 
 El elemento **PackageFamily** se usa para definir una recopilación de aplicaciones. Debes usar el atributo **ManifestPath** para proporcionar un **AppxManifest** para la recopilación, el **AppxManifest** debe coincidir con el**AppxManifest** para el paquete de arquitectura de la recopilación. El atributo **ID** también debe proporcionarse. Esto se usa con MakeAppx.exe durante la creación del paquete para que puedas crear solo este paquete si quieres, y este será el nombre de archivo del paquete resultante. El atributo **FlatBundle** se usa para describir qué tipo de recopilación quieres crear, **true** para una recopilación plana (aquí puedes leer más sobre ella), y **false** para una recopilación clásica. El atributo **ResourceManager** se usa para especificar si los paquetes de recursos dentro de esta recopilación usarán MRT para acceder a los archivos. De manera predeterminada es **true**, pero a partir de Windows 10, versión 1803, este aún no está listo, por lo que este atributo debe establecerse en **false**.
 

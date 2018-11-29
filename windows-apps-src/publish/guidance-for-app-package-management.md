@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0548ae9f9b3b33808cd7420eb542bcbac6a1a431
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828860"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991550"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -28,7 +28,7 @@ Descubre cómo se ponen los paquetes de la aplicación a disposición de los cli
 
 Distintos sistemas operativos pueden ejecutar distintos tipos de paquetes. Si en el dispositivo de un cliente puede ejecutarse más de uno de los paquetes, Microsoft Store proporcionará el más apropiado.
 
-En general, las versiones más posteriores del sistema operativo pueden ejecutar paquetes destinados a versiones anteriores del sistema operativo de la misma familia de dispositivos. Dispositivos de Windows 10 pueden ejecutar todas las versiones anteriores compatibles del sistema operativo (por familia de dispositivos). Dispositivos de escritorio de Windows 10 pueden ejecutar aplicaciones que se crearon para Windows8.1 o Windows8; Los dispositivos móviles de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows Phone 8.1, WindowsPhone8 e incluso de Windows Phone 7.x. Sin embargo, los clientes de Windows 10 solo obtendrán esos paquetes si la aplicación no incluye paquetes para UWP destinada a la familia de dispositivos aplicable.
+En general, las versiones más posteriores del sistema operativo pueden ejecutar paquetes destinados a versiones anteriores del sistema operativo de la misma familia de dispositivos. Dispositivos de Windows 10 pueden ejecutar todas las versiones anteriores compatibles del sistema operativo (por familia de dispositivos). Dispositivos de escritorio de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows8.1 o Windows8; Los dispositivos móviles de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows Phone 8.1, WindowsPhone8 e incluso de Windows Phone 7.x. Sin embargo, los clientes de Windows 10 solo obtendrán esos paquetes si la aplicación no incluye paquetes para UWP destinada a la familia de dispositivos aplicable.
 
 > [!IMPORTANT]
 > A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).
@@ -53,7 +53,7 @@ Después de que la aplicación está disponible, aún tendrás verla en el centr
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Quitar paquetes de una familia de dispositivos anteriormente compatibles
 
-Si quitas todos los paquetes de un determinado [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que anteriormente compatible con la aplicación, se te pedirá que confirme que esta es tu intención antes de poder guardar los cambios en la página de **paquetes** .
+Si quitas todos los paquetes de un determinado de [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que anteriormente compatible con la aplicación, se te pedirá que confirme que esta es tu intención antes de poder guardar los cambios en la página de **paquetes** .
 
 Al publicar un envío que quite todos los paquetes que podrían ejecutarse en una familia de dispositivos que era compatible con la aplicación, los clientes nuevos no podrán comprar la aplicación en esa familia. Siempre puedes publicar otra actualización más adelante para proporcionar paquetes para esa familia de dispositivos de nuevo.
 
@@ -64,10 +64,10 @@ Ten en cuenta que aunque quites todos los paquetes que admitan una determinada f
 
 ## <a name="adding-packages-for-windows10-to-a-previously-published-app"></a>Agregar paquetes para Windows 10 a una aplicación publicada anteriormente
 
-Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [paquetes](upload-app-packages.md) . Después de la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
+Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [paquetes](upload-app-packages.md) . Después de que la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
 
 > [!NOTE]
-> Una vez que un cliente de Windows 10 obtenga el paquete para UWP, no puede revertirlo para que use un paquete para una versión anterior del sistema operativo. 
+> Una vez que un cliente de Windows 10 obtenga el paquete para UWP, no puede revertirlo para que use un paquete para una versión de sistema operativo anterior. 
 
 Ten en cuenta que el número de versión de los paquetes de Windows 10 debe ser mayor que los paquetes Windows8, Windows8.1 o Windows Phone 8.1 que has usado. Para obtener más información, consulta [Numeración de la versión del paquete](package-version-numbering.md).
 
