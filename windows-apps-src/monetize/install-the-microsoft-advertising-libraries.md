@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
 ms.openlocfilehash: 2066d055f7abf0e9a34e245d9c6a95e14596d362
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847341"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983208"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar el SDK de Microsoft Advertising
 
 Para mostrar anuncios en las aplicaciones para UWP en Windows10, instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
 
 > [!NOTE]
-> Si estás desarrollando una aplicación para UWP HTML o JavaScript e instalaste el SDK de Windows 10 versión 10.0.14393 (actualización de aniversario) o una versión posterior, debes instalar también la biblioteca [WinJS](https://github.com/winjs/winjs) . Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado.
+> Si vas a desarrollar una aplicación para UWP HTML o JavaScript e instalaste el SDK de Windows 10 versión 10.0.14393 (actualización de aniversario) o una versión posterior, debes instalar también la biblioteca [WinJS](https://github.com/winjs/winjs) . Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado.
 
 <span id="install-msi" />
 

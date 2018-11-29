@@ -4,14 +4,14 @@ description: Esta sección describe lo que sucede cuando se inicia, suspende, re
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 ms.date: 10/04/2017
 ms.topic: article
-keywords: Windows 10, uwp, la tarea en segundo plano, servicio de aplicaciones, los dispositivos, sistemas remotos conectados
+keywords: Windows 10, uwp, la tarea en segundo plano, el servicio de aplicaciones, los dispositivos, sistemas remotos conectados
 ms.localizationpriority: medium
 ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839331"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984099"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Inicio, reanudación y tareas en segundo plano
 

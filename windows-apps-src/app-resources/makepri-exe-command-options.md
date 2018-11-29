@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832065"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984445"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) tiene el conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` y `versioned`. En este tema se detallan las opciones de línea de comandos para su uso.
 
 > [!NOTE]
-> MakePri.exe se instala al comprobar la opción de **SDK de Windows administra las aplicaciones para UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en carpetas con el nombre para el resto de arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe se instala al comprobar la opción de **SDK de Windows administra las aplicaciones para UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (también en carpetas con el nombre para el resto de arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="getting-help-from-the-command-line"></a>Obtener ayuda de la línea de comandos
 
-Puedes ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que se pueden usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en casos muy raros, incluso `MakePri.exe <command> <option>` para ver detalles acerca de una opción.
+Puedes ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que se pueden usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en casos muy raros, incluso `MakePri.exe <command> <option>` para obtener información específica sobre una opción de consulta.
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 
@@ -418,7 +418,7 @@ Para `resourcepack` y `versioned`, en lugar de proporcionar un archivo PRI como 
 
 ## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) opción
 
-Debes usar la opción de opciones de índice (o e/s) con `new`, `resourcepack`, y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de indizadores de recursos. Opciones de índice se deshabilitan de manera predeterminada.
+Debes usar la opción de opciones de índice (/ io) con `new`, `resourcepack`, y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de indizadores de recursos. Opciones de índices se deshabilitan de manera predeterminada.
 
 ```console
 /IndexOptions(io) <OPTIONS>

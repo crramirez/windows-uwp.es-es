@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850449"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983469"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Migración WindowsPhone Silverlight a UWP para E/S, dispositivo y modelo de aplicaciones
 
@@ -22,7 +22,7 @@ El código que se integra con el dispositivo y sus sensores implica la entrada d
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>Ciclo de vida de la aplicación (administración de la duración de los procesos)
 
-La aplicación WindowsPhone Silverlight contiene código para guardar y restaurar el estado de la aplicación y su estado de vista para poder admitir su exclusión y posterior reactivación. El ciclo de vida de las aplicaciones de la plataforma Universal de Windows (UWP) presenta grandes paralelismos con la de las aplicaciones de WindowsPhone Silverlight, ya que están diseñadas con el mismo objetivo de maximizar los recursos disponibles para las aplicaciones que el usuario ha elegido que en el en primer plano en cualquier momento. Verás que tu código se adaptará al nuevo sistema con razonable facilidad.
+La aplicación WindowsPhone Silverlight contiene código para guardar y restaurar el estado de la aplicación y su estado de vista con el fin de admitir su exclusión y posterior reactivación. El ciclo de vida de las aplicaciones de la plataforma Universal de Windows (UWP) presenta grandes paralelismos con el que las aplicaciones de WindowsPhone Silverlight, ya que están diseñadas con el mismo objetivo de maximizar los recursos disponibles para las aplicaciones que el usuario ha elegido tener en el en primer plano en cualquier momento. Verás que tu código se adaptará al nuevo sistema con razonable facilidad.
 
 **Nota**  al presionar el botón **Atrás** de hardware automáticamente finaliza una aplicación WindowsPhone Silverlight. Al presionar el botón **Atrás** del hardware en un dispositivo móvil *no* finaliza automáticamente una aplicación para UWP. En su lugar, se suspende y, después, se puede finalizar. Pero esos detalles son transparentes para una aplicación que responde adecuadamente a los eventos de ciclo de vida de la aplicación.
 
@@ -32,9 +32,9 @@ Para obtener más información, consulta [Ciclo de vida de la aplicación](https
 
 ## <a name="camera"></a>Cámara
 
-Código de captura de cámara WindowsPhone Silverlight usa las clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**o **Microsoft.Phone.Tasks.CameraCaptureTask** . Para migrar el código a la Plataforma universal de Windows (UWP), puedes usar la clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). En el tema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) se ofrece un ejemplo de código. Ese método permite capturar una foto en un archivo de almacenamiento y requiere el **micrófono** y la **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) esté establecido en el manifiesto del paquete de aplicación.
+Código de captura de cámara WindowsPhone Silverlight usa las clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**o **Microsoft.Phone.Tasks.CameraCaptureTask** . Para migrar el código a la Plataforma universal de Windows (UWP), puedes usar la clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). En el tema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) se ofrece un ejemplo de código. Ese método permite capturar una foto en un archivo de almacenamiento y requiere el **micrófono** y **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) esté establecido en el manifiesto del paquete de aplicación.
 
-Otra opción es la clase [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) , que también requiere el **micrófono** y la **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747).
+Otra opción es la clase [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) , que también requiere el **micrófono** y **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747).
 
 No se admiten las aplicaciones de modos para las aplicaciones para UWP.
 

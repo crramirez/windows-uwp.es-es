@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, achievements, logros
 ms.localizationpriority: medium
 ms.openlocfilehash: 23a99c637dfd466ba21169626315803dec60e4e8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826162"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982235"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Obtener datos de logros de Xbox Live
 

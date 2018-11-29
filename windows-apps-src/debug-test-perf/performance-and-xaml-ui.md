@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b65a62c2a6182e3b120f8ae8cb6b5fe3a0bf45aa
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7845880"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983138"
 ---
 # <a name="performance"></a>Rendimiento
 
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones desde el principio y con la suficiente frecuencia durante el ciclo de vida del proyecto para estar seguro que cumples los objetivos. En esta sección se muestra cómo organizar el flujo de trabajo de rendimiento, solucionar problemas de animaciones y los problemas de velocidad de fotogramas y ajustar el tiempo de inicio, tiempo de navegación de páginas y el uso de la memoria.
 
-Si se lo has hecho, un paso que hemos visto en importantes mejoras de rendimiento es simplemente migrar la aplicación a Windows 10. Varias optimizaciones de XAML (por ejemplo, [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) solo están disponibles en las aplicaciones de Windows 10. Consulta la sesión de //build/ [mover a la plataforma Universal de Windows](http://channel9.msdn.com/Events/Build/2015/3-741)y [aplicaciones de portar a Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) .
+Si lo has hecho, un paso que hemos visto en importantes mejoras de rendimiento es simplemente migrar la aplicación a Windows 10. Varias optimizaciones de XAML (por ejemplo, [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) solo están disponibles en las aplicaciones de Windows 10. Consulta la sesión de //build/ [Moving a la plataforma Universal de Windows](http://channel9.msdn.com/Events/Build/2015/3-741)y [aplicaciones de portar a Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) .
 
 | Tema | Descripción |
 |-------|-------------|

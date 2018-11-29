@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
 ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851831"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982794"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 

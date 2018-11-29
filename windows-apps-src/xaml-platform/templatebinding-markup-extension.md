@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ade10b4d5e2653eb214d93c2c9166e6a3e3defc
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7841132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982103"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
@@ -57,15 +57,15 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 ### <a name="xbind-in-controltemplate"></a>x: Bind en ControlTemplate
 
 > [!NOTE]
-> El uso de x: Bind en ControlTemplate requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> El uso de x: Bind en ControlTemplate requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-A partir de Windows 10, versión 1809, puedes usar la extensión de marcado **x: Bind** en cualquier lugar de usar **TemplateBinding** en [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
+A partir de Windows 10, versión 1809, puedes usar la extensión de marcado **x: Bind** en cualquier lugar que usas **TemplateBinding** en un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
 La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) es necesaria (no opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
 
-Con el soporte de **x: Bind** , puedes usar ambos [enlaces de función](../data-binding/function-bindings.md) como enlaces bidireccionales bien como en un [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
+Con el soporte de **x: Bind** , puedes usar ambos [enlaces de función](../data-binding/function-bindings.md) como enlaces bidireccionales bien como en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
 
-En este ejemplo, la propiedad **TextBlock.Text** se evalúa como **Button.Content.ToString**. TargetType en ControlTemplate actúa como el origen de datos y se lleva a cabo el mismo resultado que TemplateBinding al elemento primario.
+En este ejemplo, la propiedad **TextBlock.Text** se evalúa como **Button.Content.ToString**. TargetType en ControlTemplate actúa como el origen de datos y te permitirá realizar el mismo resultado que TemplateBinding al elemento primario.
 
 ```xaml
 <ControlTemplate TargetType="Button">

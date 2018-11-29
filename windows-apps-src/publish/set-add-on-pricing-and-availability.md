@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, iap, precio
 ms.localizationpriority: medium
 ms.openlocfilehash: 062337c82d2567d15b0eff1767ab157618da257e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7845251"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983062"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 
@@ -33,7 +33,7 @@ La opción predeterminada es **Puede mostrarse en la descripción de la Tienda d
 
 En el caso delos complementos que no quieres que estén ampliamente disponibles, selecciona **Oculto en la Tienda** y una de las siguientes opciones:
 
--   **Disponible para su compra desde el producto principal solo**: elegir esta opción permite a los clientes comprar el complemento desde dentro de la aplicación, pero el complemento no se muestra en la descripción de la tienda de la aplicación o detectables en la tienda. Usa esta opción solo cuando la oferta no esté ampliamente disponible, por ejemplo, durante los períodos iniciales de pruebas internas.
+-   **Disponible para su compra desde el producto principal solo**: elegir esta opción permite a los clientes comprar el complemento desde dentro de la aplicación, pero el complemento no se muestran en la descripción de la tienda de la aplicación o detectable en Store. Usa esta opción solo cuando la oferta no esté ampliamente disponible, por ejemplo, durante los períodos iniciales de pruebas internas.
 -   **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción de la aplicación en la Tienda, pero solo podrán descargarla si ya tienen el producto, tienen un código promocional y están usando un dispositivo Windows 10. Este complemento no se muestra en la descripción del producto principal**: elegir esta opción significa que el complemento no se mostrará en la descripción de la aplicación y los nuevos clientes no podrán comprar el complemento. Sin embargo, **esta opción no se admite para los clientes en Windows8.1 o versiones anteriores**. Si la aplicación publicada anteriormente está disponible en Windows8.1 o versiones anteriores, el complemento seguirá estando disponible para su compra para dichos clientes. Para dejar de ofrecer el complemento a los clientes en Windows8.1 o versiones anteriores, tendrás que actualizar la aplicación para quitar el código que ofrece el complemento, a continuación, publicar un nuevo envío de la aplicación. Esto se recomienda incluso si la aplicación no destinarse Windows8.1 o versiones anteriores; es una mejor experiencia para los clientes si nunca les ofreces un complemento que has optado por que no esté disponible.
     
  > [!NOTE] 
@@ -49,12 +49,12 @@ Para obtener más información, consulta [Configurar la programación de lanzami
 
 ## <a name="pricing"></a>Precios
 
-Debes seleccionar un precio base para el complemento (a menos que hayas seleccionado la opción de **Detener la compra** en la sección **visibilidad** ). La selección predeterminada es **gratuita**, por lo tanto, si quieres cobrar dinero por el complemento, asegúrate de elegir una de las franjas de precios disponibles (a partir de.99 USD).
+Debes seleccionar un precio base para el complemento (a menos que hayas seleccionado la opción de **Detener la compra** en la sección **visibilidad** ). La selección predeterminada es **gratuito**, por lo tanto, si quieres cobrar dinero por el complemento, asegúrate de elegir una de las franjas de precios disponibles (a partir de.99 USD).
 
 También puedes programar los cambios de precio para indicar la fecha y la hora en las que el precio del complemento debería cambiar. Además, tienes la opción de personalizar estos cambios para mercados específicos. 
 
 > [!TIP]
-> Complementos de suscripción, no puedes Subir el precio de después de publicar el complemento, al seleccionar un precio base superior en envíos posteriores o mediante programación un cambio de precio que aumenta el precio. Puedes seleccionar un precio más bajo usar cualquiera de estos métodos, pero una vez que se reduce el precio no podrás generar mayor que el precio nuevo. Por este motivo, es especialmente importante para estar seguro de que seleccionas la franja de precios adecuado para complementos de suscripción. 
+> Complementos de suscripción, no puedes Subir el precio de después de publicar el complemento, al seleccionar un precio base superior en envíos posteriores o mediante programación un cambio de precio que aumenta el precio. Puedes seleccionar un precio más bajo usar cualquiera de estos métodos, pero una vez que se reduce el precio no podrás generarlo mediante ese precio nuevo. Por este motivo, es especialmente importante para asegurarse de seleccionar la franja de precios adecuados para los complementos de suscripción. 
 
 Para obtener más información, consulta [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md).
 

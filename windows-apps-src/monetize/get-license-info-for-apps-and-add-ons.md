@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, licencias, licenses, aplicaciones, apps, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827859"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982949"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Obtener información sobre licencias de las aplicaciones y los complementos
 
@@ -24,7 +24,7 @@ En este artículo se demuestra cómo usar métodos de la clase [StoreContext](ht
 
 Este ejemplo tiene los siguientes requisitos previos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Ha [creado un envío de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Tienes [creado un envío de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 * Si quieres obtener información de licencia de un complemento de la aplicación, también debes [crear el complemento en el centro de partners](../publish/add-on-submissions.md).
 
 El código de este ejemplo supone que:
