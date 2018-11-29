@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831016"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987176"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 
-La página **paquetes** es donde se cargan todos los archivos del paquete (.msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle) de la aplicación que vas a enviar. Puedes cargar todos los paquetes para la misma aplicación en esta página y, cuando un cliente descarga la aplicación, la tienda le proporciona automáticamente cada cliente con el paquete que funciona mejor para su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
+La página **paquetes** es donde se cargan todos los archivos del paquete (.msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle) de la aplicación que vas a enviar. Puedes cargar todos los paquetes para la misma aplicación en esta página y, cuando un cliente descarga la aplicación, cada vez con el paquete que funciona mejor para su dispositivo le proporciona automáticamente en la tienda. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
 
 > [!IMPORTANT]
 > A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
@@ -28,11 +28,11 @@ Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md)
 Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **paquetes** te permite cargar archivos .msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle.
 
 > [!IMPORTANT]
-> Para Windows 10, se recomienda cargar aquí archivo .msixupload o .appxupload en lugar de .msix, .appx, .msixbundle o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
+> Para Windows 10, se recomienda cargar el archivo de .msixupload o .appxupload aquí en lugar de .msix, .appx, .msixbundle o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-Si se detectan los errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber cuál es el problema. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
+Si se detectan errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber cuál es el problema. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
 
 
 ## <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos

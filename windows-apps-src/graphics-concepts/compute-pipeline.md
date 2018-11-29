@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826740"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991842"
 ---
 # <a name="compute-pipeline"></a>Canalización del proceso
 

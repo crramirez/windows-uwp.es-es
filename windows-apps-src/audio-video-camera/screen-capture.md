@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
 ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826381"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992575"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -28,7 +28,7 @@ Las API que se encuentran en el espacio de nombres **Windows.Graphics.Capture** 
     
 1. Abre **Package.appxmanifest** en el **Explorador de soluciones**.
 2. Selecciona la pestaña **Funcionalidades**.
-3. Comprueba la **captura de gráficos**.
+3. Comprobar la **captura de gráficos**.
 
 ![Captura de gráficos](images/screen-capture-1.png)
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente de una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no es así, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
+Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente para una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;

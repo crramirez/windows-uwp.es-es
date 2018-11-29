@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, commit app submission, confirmar envío de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a860239bcd266f577abca3af1cfc994393cae8e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826152"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987383"
 ---
 # <a name="commit-an-app-submission"></a>Confirmar un envío de aplicación
 
@@ -90,7 +90,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Temas relacionados

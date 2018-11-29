@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, juego, capturar, audio, vídeo, metadatos
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bdc5c210c466d6065fbcf1c856276bbb485788a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: c4d4d764395d7f383e9cefcb9d8b1121db098780
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839803"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992237"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>Capturar audio para juegos, vídeo, capturas de pantalla y metadatos
 Este artículo describe cómo capturar vídeo, audio y capturas de pantalla de juegos, y cómo enviar los metadatos que el sistema incrustará en medios capturados y difundidos, permitiendo que tus aplicaciones y otras puedan crear experiencias dinámicas que se sincronizan con eventos de los juegos. 
@@ -57,7 +57,7 @@ La clase **[AppRecordingManager](https://docs.microsoft.com/uwp/api/windows.medi
 [!code-cpp[GetAppRecordingManager](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetGetAppRecordingManager)]
 
 ## <a name="determine-if-your-app-can-currently-record"></a>Determinar si la aplicación puede grabar actualmente
-Existen varios motivos por los que la aplicación tal vez no pueda capturar audio o vídeo actualmente, incluyendo si el dispositivo actual no cumple los requisitos de hardware para la grabación o si otra aplicación está actualmente difundiendo. Antes de iniciar una grabación, puedes comprobar si la aplicación es capaz de grabar actualmente. Llama al método **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** del objeto **AppRecordingManager** y, a continuación, comprueba la propiedad **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** del objeto devuelto **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)**. Si **CanRecord** devuelve **false**, lo que significa que la aplicación no puede grabar actualmente, puedes comprobar la propiedad de **[Detalles](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** para determinar el motivo por el. Según el motivo, puede que te interese mostrar el estado al usuario o mostrar las instrucciones para habilitar la grabación de la aplicación.
+Existen varios motivos por los que la aplicación tal vez no pueda capturar audio o vídeo actualmente, incluyendo si el dispositivo actual no cumple los requisitos de hardware para la grabación o si otra aplicación está actualmente difundiendo. Antes de iniciar una grabación, puedes comprobar si la aplicación es capaz de grabar actualmente. Llama al método **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** del objeto **AppRecordingManager** y, a continuación, comprueba la propiedad **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** del objeto devuelto **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)**. Si **CanRecord** devuelve **false**, lo que significa que la aplicación no puede grabar actualmente, puedes comprobar la propiedad de **[los detalles](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** para determinar el motivo. Según el motivo, puede que te interese mostrar el estado al usuario o mostrar las instrucciones para habilitar la grabación de la aplicación.
 
 
 
@@ -152,7 +152,7 @@ En cualquier momento, puedes comprobar para ver el número de bytes disponibles 
 [!code-cpp[ComboExecuted](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetComboExecuted)]
 
 ### <a name="receive-notifications-when-the-system-purges-metadata"></a>Recibir notificaciones cuando el sistema depura metadatos
-Puedes registrar para recibir una notificación cuando el sistema comienza la depuración de metadatos de la aplicación, registrando un controlador para el evento **[MetadataPurged](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.MetadataPurged)**.
+Puedes registrar para recibir una notificación cuando el sistema comienza la depuración de metadatos de la aplicación, registrando un controlador para el evento **[MetadataPurged](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.MetadataPurged)** .
 
 [!code-cpp[RegisterMetadataPurged](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetRegisterMetadataPurged)]
 

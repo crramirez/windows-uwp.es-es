@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828007"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988981"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Acceder a sensores y dispositivos desde una tarea en segundo plano
 
@@ -91,7 +91,7 @@ Para usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps
 
 -   Windows podría cancelar las tareas en segundo plano que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) cuando ya no se cumplan ciertos requisitos de directivas, incluida una cantidad máxima de tiempo en segundo plano (tiempo de reloj). Es importante tener en cuenta dichos requisitos de directivas al usar estas tareas en segundo plano para interactuar con el dispositivo periférico.
 
-**Sugerencia**para ver cómo funcionan estas tareas en segundo plano, descargar una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+**Sugerencia**para ver cómo funcionan estas tareas en segundo plano, descarga una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
  
 ## <a name="frequency-and-foreground-restrictions"></a>Restricciones de frecuencia y primer plano
 

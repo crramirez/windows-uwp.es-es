@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852286"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983848"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
 
 
 
-**Nota**el grado al que necesite datos de muestra, y cuánto le ayudará: depende de si tus enlaces usan la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) o la [extensión de marcado {x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), por lo que solo son apropiadas para la extensión **{Binding}**. Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
+**Nota**el grado al que necesite datos de muestra, y cuánto le ayudará a: depende de si tus enlaces usan la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) o la [extensión de marcado {x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), por lo que solo son apropiadas para la extensión **{Binding}**. Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
 
 Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio. Para hacer que los controles se rellenen con datos (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales.
 

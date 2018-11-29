@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ff9510b65bd635b5b10e0cbea551c12b29ef8f37
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848591"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991709"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 
@@ -93,7 +93,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Permisos e historial | ms-settings:cortana-permissions |
 | Más detalles | ms-settings:cortana-moredetails |
-| Cortana en Mis dispositivos | ms-settings:cortana-notifications |
+| Cortana en todos mis dispositivos | ms-settings:cortana-notifications |
 | Hablar con Cortana | ms-settings:cortana-language |
 
 > [!NOTE] 

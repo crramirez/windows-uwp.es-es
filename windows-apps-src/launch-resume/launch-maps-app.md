@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08fab2b312fa4ea79d03f350d62070e205d535f8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831594"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992721"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 
@@ -328,7 +328,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>Cuando se proporciona una ruta incompleta, no se dibuja ninguna línea de ruta.</p>
 <p>Usar conjuntamente con el parámetro **mode** para especificar el modo de transporte (ir en coche, en transporte público o a pie). Si **mode** no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario.</p>
 <div class="alert">
-**Nota**un título puede usarse para una ubicación si se especifica la ubicación mediante el valor del parámetro **pos** . En lugar de mostrar la latitud y la longitud, se mostrará el título.
+**Nota**un título puede usarse para una ubicación si la ubicación se especifica mediante el valor del parámetro **pos** . En lugar de mostrar la latitud y la longitud, se mostrará el título.
 </div>
 <div>
  

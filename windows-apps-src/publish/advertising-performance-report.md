@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7845930"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986933"
 ---
 # <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
 
-El **informe de rendimiento de publicidad** en [El centro de partners](https://partner.microsoft.com/dashboard) se muestra cómo se están comportando las [unidades de anuncios](in-app-ads.md) , incluidos los anuncios de la Comunidad. En este informe se incluyen datos de varios proveedores de anuncios de aplicaciones para UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
+El **informe de rendimiento de publicidad en el** [Centro](https://partner.microsoft.com/dashboard) de partners se muestra cómo se están comportando las [unidades de anuncios](in-app-ads.md) , incluidos los anuncios de la Comunidad. En este informe se incluyen datos de varios proveedores de anuncios de aplicaciones para UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
 
 Para ver este informe, amplía **Analizar** en el menú de navegación izquierdo y luego selecciona **Rendimiento de los anuncios**. Puedes visualizar estos datos en el centro de partners, o descargar los datos del informe para consultarlo sin conexión haciendo clic en los iconos de flecha en la página. También puedes recuperar mediante programación estos datos mediante el método [Obtener los datos de rendimiento de los anuncios](../monetize/get-ad-performance-data.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -58,7 +58,7 @@ El informe **Rendimiento de publicidad** incluye los datos de las siguientes mé
 | Velocidad de relleno  | El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.  |
 | Clics  |  El número de veces que alguien ha hecho clic en un anuncio en la aplicación. |
 | CTR  |  La tasa de clics, es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones. |
-| Visualización | El porcentaje de las impresiones de anuncios que sean visibles en la aplicación. Para obtener más información acerca de cómo se calcula este valor, consulte [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
+| Visualización | El porcentaje de las impresiones de anuncios que sean visibles en la aplicación. Para obtener más información sobre cómo se calcula este valor, consulte [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
 | Créditos ganados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has ganado por el espacio de anuncios promocionales al mostrar anuncios de la comunidad en tu aplicación.  |
 | Créditos gastados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has gastado en los anuncios para tu aplicación.  |
 

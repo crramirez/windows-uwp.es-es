@@ -8,11 +8,11 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833533"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985931"
 ---
 # <a name="home-page-dev-home"></a>Página principal (Dev Home)
    
@@ -38,10 +38,10 @@ La página **principal** contiene los paneles siguientes:
 El panel de **acciones rápidas** contiene los siguientes botones que proporcionan acceso rápido a las acciones realizadas con frecuencia:   
  
    *  **Pin mostrar Visual Studio:** Muestra un código que puedes usar para emparejar la consola de desarrollo con la instalación de Visual Studio en el equipo.   
-   *  **Espacio aislado de cambio:** Te permite cambiar qué espacio aislado de la consola está en.   
+   *  **Espacio aislado de cambio:** Permite cambiar qué espacio aislado de la consola está en.   
    *  **Consola de reinicio:** Reinicia la consola de desarrollo.   
    *  **Leave Dev Mode:** Devuelve la consola al modo comercial y reinicia la consola.   
-   *  **Principal de lanzamiento:** Inicia la pantalla de inicio de la versión comercial.   
+   *  **Inicia Home:** Inicia la pantalla de inicio de la versión comercial.   
    *  **Registrar un juego desde una ubicación compartida de red:** Registra un juego desde una ubicación de red compartida.   
 
   
@@ -70,8 +70,8 @@ El panel de **juegos y aplicaciones** puede usarse para realizar las siguientes 
   
 El panel de **cuentas de prueba** puede usarse para realizar las siguientes acciones:   
  
-   *  Ver la lista de los usuarios registrados en la consola.  
-   *  Inicia sesión un usuario o alejar con un solo clic.  
+   *  Ver la lista de usuarios registrados en la consola.  
+   *  Inicia sesión un usuario o cerrar con un solo clic.  
    *  Agregar usuarios y las cuentas de invitado.  
    *  Ver los detalles de los usuarios y las cuentas de invitado.  
 

@@ -7,11 +7,11 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1338373226b30c3126782a62f3b5260a47e86d63
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828037"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985478"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -146,7 +146,7 @@ En ocasiones, debido a problemas de red o administrativos, el modo de desarrolla
 Consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas. 
 
 > [!NOTE]
-> Si el modo de desarrollador no se instala correctamente, te animamos a presentar una solicitud de comentarios. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
+> Si el modo de desarrollador no se instala correctamente, te animamos a que presenta una solicitud de comentarios. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
 
 ### <a name="failed-to-locate-the-package"></a>No se pudo ubicar el paquete
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, publicar, preprocesamiento, certificación, lanzamiento, pendientes, enviar, publicar, estado, tiempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 733d5ff882d7ed7c574f6fe6fedd28b79c3913d9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7849920"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986254"
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a Store**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Cuando el envío supere la certificación, puede tardar hasta 24 horas para los clientes vean la descripción de la aplicación para un nuevo envío, o para un envío actualizado con los cambios a los paquetes. Si la actualización solo cambia los detalles de descripción de la tienda, se completará el proceso de publicación en menos de una hora.  Se te notificará cuando el envío se publique y estado de la aplicación en el panel será **En la tienda**.
+Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a Store**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Cuando el envío supere la certificación, puede tardar hasta 24 horas para los clientes vean la descripción de la aplicación para un nuevo envío, o para un envío actualizado con los cambios a los paquetes. Si la actualización solo cambia los detalles de la descripción de Store, se completará el proceso de publicación en menos de una hora.  Se te notificará cuando el envío se publique y estado de la aplicación en el panel será **En la tienda**.
 
 ## <a name="preprocessing"></a>Preprocesamiento
 
@@ -36,9 +36,9 @@ Una vez completado el proceso de certificación, obtendrás un informe donde se 
 Cuando la aplicación supere la certificación, está listo para trasladar el proceso de **publicación** .
 
 - Si has indicado que se debe publicar el envío tan pronto como sea posible (opción predeterminada), el proceso de publicación comenzará de inmediato.
-- Si es la primera vez que hayas publicado la aplicación y especifica una **fecha de lanzamiento** en la sección [programación](configure-precise-release-scheduling.md#release) , la aplicación estará disponible en función de las selecciones de la **fecha de lanzamiento** .
+- Si se trata de la primera vez que has publicado la aplicación y especifica una **fecha de lanzamiento** en la sección [programación](configure-precise-release-scheduling.md#release) , la aplicación estará disponible en función de las selecciones de la **fecha de lanzamiento** .
 - Si has usado [las opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options) para especificar que no se debe lanzar hasta una fecha determinada, esperaremos hasta esa fecha para comenzar el proceso de publicación, a menos que selecciones **Cambiar fecha de lanzamiento**.
-- Si has usado [las opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options) para especificar que quieres publicar el envío manualmente, te no se inicia el proceso de publicación hasta que seleccione **Publicar ahora** (o selecciona **Cambiar fecha de lanzamiento** y elige una fecha específica).
+- Si has usado [las opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options) para especificar que quieres publicar el envío manualmente, hemos no se inicia el proceso de publicación hasta que seleccione **Publicar ahora** (o selecciona **Cambiar fecha de lanzamiento** y elige una fecha específica).
 
 
 ## <a name="publishing"></a>Publicación
@@ -47,7 +47,7 @@ Los paquetes de la aplicación se firman digitalmente para protegerlos de altera
 
 Para nuevas aplicaciones y actualizaciones que se incluyen los cambios en los paquetes de la aplicación, se completará el proceso de publicación en 24 horas. Para las actualizaciones que solo cambian opciones como la descripción de los detalles de la tienda, pero no cambian los paquetes de la aplicación, el proceso de publicación tardará menos de una hora.
 
-Mientras la aplicación está en la fase de publicación, el vínculo **Mostrar detalles** en la columna Estado para el envío de la aplicación te permite saber cuándo están disponibles para los clientes en cada uno de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles de descripción de la tienda. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que se complete el proceso, lo que significa que los nuevos paquetes o detalles del listado estén disponibles para todos los clientes potenciales de la aplicación de.
+Mientras la aplicación está en la fase de publicación, el vínculo **Mostrar detalles** de la columna de estado de envío de la aplicación te permite saber cuándo están disponibles para los clientes en cada uno de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la tienda. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que se complete el proceso, lo que significa que los nuevos paquetes o detalles del listado estén disponibles para todos los clientes potenciales de la aplicación.
 
 ## <a name="in-the-store"></a>En Store 
 

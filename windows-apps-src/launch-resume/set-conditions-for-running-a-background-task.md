@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ac6dd17f31dab1898aa394f901613d268c159b06
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839853"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986459"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Establecer condiciones para ejecutar una tarea en segundo plano
 
@@ -29,7 +29,7 @@ Aprende a establecer condiciones que controlan cuándo se ejecutará tu tarea en
 
 En ocasiones, las tareas en segundo plano requieren ciertas condiciones deben cumplirse para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) al registrar tu tarea en segundo plano. La condición se comprobará después de que se ha desencadenado el desencadenador. La tarea en segundo plano, a continuación, se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
 
-Establecer condiciones sobre tareas en segundo plano, ahorra batería y la CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
+Establecer condiciones sobre tareas en segundo plano, ahorra batería y CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
 
 También es posible combinar varias condiciones mediante una llamada a **AddCondition** varias veces en el mismo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Procura no agregar condiciones conflictivas, como **UserPresent** y **UserNotPresent**.
 
@@ -178,7 +178,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Observaciones
 
 > [!NOTE]
-> Elige las condiciones adecuadas para tu tarea en segundo plano para que solo se ejecuta cuando es necesario y no se ejecute cuando no deba. Consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
+> Elige las condiciones adecuadas para tu tarea en segundo plano para que solo se ejecuta cuando se necesita y no se ejecute cuando no deba. Consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Usa las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para la conversión a una aplicación para UWP.
+description: Usa las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
 ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835003"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989425"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
@@ -46,7 +46,7 @@ Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación]
 Esta prueba verifica que la appx no es una versión de depuración.
  
 **Antecedentes**  
-Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para certificarse para Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
  
 **Detalles de la prueba**  
 Prueba la aplicación para asegurarte de que no sea una versión de depuración y no esté vinculada con ningún marco de depuración.
@@ -210,7 +210,7 @@ Las aplicaciones Puente de dispositivo de escritorio pueden aprovechar algunas A
  
 **Detalles de la prueba**  
 Esta prueba verifica todos los componentes para UWP en la aplicación:
-* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la comprobación de la tabla de direcciones de importación del binario.
+* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la tabla de direcciones de importación del binario.
 * Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado. 
 
 **Acciones correctivas**  

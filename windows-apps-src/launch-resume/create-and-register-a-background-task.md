@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: eb6cde0c3c31f0116c65e5d5dc4a0d8ae4a1b540
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832235"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989014"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Crear y registrar una tarea en segundo plano fuera de proceso
 
@@ -36,9 +36,9 @@ Puedes ejecutar código en segundo plano escribiendo clases que implementen la i
 
 En estos pasos te mostramos cómo escribir una nueva clase que implemente la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
-1.  Crea un nuevo proyecto para tareas en segundo plano y agrégalo a tu solución. Para ello, haz clic en el nodo solución en el **Explorador de soluciones** y selecciona **Agregar** \> **Nuevo proyecto**. A continuación, selecciona el tipo de proyecto de **Componente de Windows Runtime** , el nombre del proyecto y haz clic en Aceptar.
+1.  Crea un nuevo proyecto para tareas en segundo plano y agrégalo a tu solución. Para ello, haz clic en el nodo solución en el **Explorador de soluciones** y selecciona **Agregar** \> **Nuevo proyecto**. A continuación, selecciona el tipo de proyecto de **Componente de Windows en tiempo de ejecución** , el nombre del proyecto y haz clic en Aceptar.
 2.  Haz referencia al proyecto de tareas en segundo plano desde tu proyecto de aplicación de la Plataforma universal de Windows (UWP). Para un C# o aplicación de C++, en el proyecto de aplicación, haz clic en **las referencias** y selecciona **Agregar nueva referencia**. En **Solución**, selecciona **Proyectos**, selecciona el nombre de tu proyecto de tarea en segundo plano y haz clic en **Aceptar**.
-3.  En el proyecto de tareas en segundo plano, agrega una nueva clase que implementa la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . El método [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) es un punto de entrada necesario al que se llamará cuando se desencadene el evento especificado; Este método es necesario en todas las tareas en segundo plano.
+3.  En el proyecto de tareas en segundo plano, agrega una nueva clase que implemente la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . El método [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) es un punto de entrada necesario al que se llamará cuando se desencadene el evento especificado; Este método es necesario en todas las tareas en segundo plano.
 
 > [!NOTE]
 > La propia clase de tarea en segundo plano&mdash;y todas las demás clases en el proyecto de tarea en segundo plano&mdash;deben ser clases **públicas** que están **selladas** (o **final**).
@@ -140,11 +140,11 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 }
 ```
 
-4.  Si ejecutas algún código asincrónico en tu tarea en segundo plano, entonces esta necesita usar un aplazamiento. A continuación, si no usas un aplazamiento, el proceso de la tarea en segundo plano puede terminar de forma inesperada si el método **Run** devuelve antes de cualquier trabajo asincrónico se ha ejecutado finalización.
+4.  Si ejecutas algún código asincrónico en tu tarea en segundo plano, entonces esta necesita usar un aplazamiento. Si no usas un aplazamiento, el proceso de la tarea en segundo plano puede finalizar inesperadamente si el método **Run** devuelve antes de que cualquier trabajo asincrónico se ha ejecutado finalización.
 
-Solicita el aplazamiento en el método **Run** antes de llamar al método asincrónico. Guarda el aplazamiento a un miembro de datos de clase para que se pueda acceder desde el método asincrónico. Declara el aplazamiento completo después de que se complete el código asincrónico.
+Solicita el aplazamiento en el método **Run** antes de llamar al método asincrónico. Guarda el aplazamiento en un miembro de datos de clase para que se puede tener acceso desde el método asincrónico. Declara el aplazamiento completo después de que se complete el código asincrónico.
 
-El siguiente código de ejemplo obtiene el aplazamiento, lo guarda y lo libera cuando se completa el código asincrónico.
+El siguiente código de ejemplo obtiene el aplazamiento, lo guarda y lo libera cuando se complete el código asincrónico.
 
 ```csharp
 BackgroundTaskDeferral _deferral; // Note: defined at class scope so that we can mark it complete inside the OnCancel() callback if we choose to support cancellation
@@ -207,7 +207,7 @@ Para más información acerca de los modelos asincrónicos, consulta el tema sob
 Los siguientes pasos se completan en una de tus clases de aplicaciones (por ejemplo, MainPage.xaml.cs).
 
 > [!NOTE]
-> También puedes crear una función dedicada al registro de tareas en segundo plano&mdash;consulta [registrar una tarea en segundo plano](register-a-background-task.md). En ese caso, en lugar de usar los siguientes tres pasos, puedes simplemente construir el desencadenador y proporcionar a la función de registro junto con el nombre de la tarea, punto de entrada de tarea y (opcionalmente) una condición.
+> También puedes crear una función dedicada al registro de tareas en segundo plano&mdash;consulta [registrar una tarea en segundo plano](register-a-background-task.md). En ese caso, en lugar de usar los siguientes tres pasos, puedes simplemente construir el desencadenador y proporcionar la función de registro junto con el nombre de la tarea, punto de entrada de tarea y (opcionalmente) una condición.
 
 ## <a name="register-the-background-task-to-run"></a>Registrar la tarea en segundo plano por ejecutar
 
@@ -272,7 +272,7 @@ while (hascur)
 
 El desencadenador de tarea en segundo plano controla cuándo se ejecutará la tarea en segundo plano. Para obtener una lista de posibles desencadenadores del sistema, consulta [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Por ejemplo, este código crea una nueva tarea en segundo plano y establece que se ejecute cuando se produce el desencadenador **TimeZoneChanged** :
+Por ejemplo, este código crea una nueva tarea en segundo plano y establece que se ejecute cuando se produce el desencadenador de **TimeZoneChanged** :
 
 ```csharp
 var builder = new BackgroundTaskBuilder();

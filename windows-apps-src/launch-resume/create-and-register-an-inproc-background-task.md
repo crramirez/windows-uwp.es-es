@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, tarea en segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a59fe6056661289726fdaa6c2dd26e90d5e3fad
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849586"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987269"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Crear y registrar una tarea en segundo plano dentro de proceso
 
@@ -88,7 +88,7 @@ sealed partial class App : Application
 }
 ```
 
-Para obtener un ejemplo de **OnBackgroundActivated** más enriquecido, vea [convertir un servicio de aplicación para ejecutarse en el mismo proceso que su aplicación host](convert-app-service-in-process.md).
+Para ver un ejemplo **OnBackgroundActivated** más enriquecido, vea [convertir un servicio de aplicación para ejecutarse en el mismo proceso que su aplicación host](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Administración del progreso y la finalización de tareas en segundo plano
 

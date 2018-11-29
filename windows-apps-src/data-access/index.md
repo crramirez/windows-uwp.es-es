@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, datos, base de datos, relacional, tablas, data, database, relational, tables, sqlite
 ms.localizationpriority: medium
 ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846392"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989571"
 ---
 # <a name="data-access"></a>Acceso a datos
 
-Puedes almacenar datos en el dispositivo del usuario mediante el uso de una base de datos de SQLite. Puedes conectar la aplicación directamente a una base de datos de SQL Server sin tener que usar a cualquier tipo de capa de servicio.
+Puedes almacenar datos en el dispositivo del usuario mediante el uso de una base de datos de SQLite. También puede conectar la aplicación directamente a una base de datos de SQL Server sin tener que usar a cualquier tipo de capa de servicio.
 
 | Tema | Descripción|
 |-------|------------|

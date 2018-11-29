@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839733"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989392"
 ---
 # <a name="page-transitions"></a>Transiciones de página
 
@@ -56,9 +56,9 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>Deslizamiento horizontal
 
-Usar deslizamiento horizontal para mostrar que entres las páginas aparecen junto a entre sí. El control [NavigationView](../controls-and-patterns/navigationview.md) usa automáticamente esta animación de navegación superior, pero si vas a crear tu propia experiencia de navegación horizontal, a continuación, puedes implementar el deslizamiento horizontal con SlideNavigationTransitionInfo.
+Usa el deslizamiento horizontal para mostrar que entres las páginas aparecen junto a entre sí. El control [NavigationView](../controls-and-patterns/navigationview.md) usa automáticamente esta animación de navegación superior, pero si vas a crear tu propia experiencia de navegación horizontal, a continuación, puedes implementar el deslizamiento horizontal con SlideNavigationTransitionInfo.
 
-La sensación deseada es que el usuario está navegando entre las páginas que están cerca entre sí. 
+La sensación deseada es que el usuario es navegar entre páginas que están cerca entre sí. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage

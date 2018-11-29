@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8126ac8fa738a2b8a9680d215179fe23f77c5d44
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849235"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984651"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Atenuación y factor de foco de luz
 
@@ -42,7 +42,7 @@ Donde:
 
 La distancia entre la luz y la posición del vértice siempre es positiva.
 
-d. = | L<sub>dir</sub> |
+Pad = | L<sub>dir</sub> |
 
 Donde:
 

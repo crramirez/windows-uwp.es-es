@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, uwp, punto de servicio, pos, lector de bandas magnéticas
 ms.localizationpriority: medium
 ms.openlocfilehash: ed1fb5b393f96a793ff90ec0df354e04de270ccf
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826248"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985941"
 ---
 # <a name="magnetic-stripe-reader"></a>Lector de bandas magnéticas
 
-Un lector de bandas magnéticas examinar determinados tipos de tarjetas que tienen una banda magnética, tales como tarjetas de crédito, las licencias del controlador y almacenan tarjetas de fidelización. Es probable que ha encontrado una al comprar algo en una tienda.
+Un lector de bandas magnéticas puede examinar determinados tipos de tarjetas que tienen una banda magnética en ellos, tales como tarjetas de crédito, las licencias del controlador y almacenan tarjetas de fidelización. Es probable que haya encontrado uno al comprar algo en una tienda.
 
-Es similar al uso de cualquier otro dispositivo de punto de servicio, usando un lector de bandas magnéticas en la aplicación de plataforma Universal de Windows (UWP) en que se deben enumerar los dispositivos disponibles, crear el objeto de dispositivo y reclamar el dispositivo antes de poder usar. Sigue la documentación en [Introducción al punto de servicio](pos-basics.md) para obtener más información.
+Es similar al uso de cualquier otro dispositivo de punto de servicio, usando un lector de bandas magnéticas en la aplicación de plataforma Universal de Windows (UWP) en que se deben enumerar los dispositivos disponibles, crea el objeto de dispositivo y reclamar el dispositivo antes de que se puede usar. Sigue la documentación en [Introducción al punto de servicio](pos-basics.md) para obtener más información.
 
-Los temas siguientes proporcionan más información sobre el uso de un lector de bandas magnéticas en la aplicación.
+Los siguientes temas proporcionan más información sobre el uso de un lector de bandas magnéticas en la aplicación.
 
 ## <a name="in-this-section"></a>En esta sección
 

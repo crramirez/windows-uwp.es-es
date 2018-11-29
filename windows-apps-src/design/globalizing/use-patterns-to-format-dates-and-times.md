@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a86d0b29b39ecb4d2793e641c8c53f6c2a4e3c0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830369"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989232"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
 
@@ -25,7 +25,7 @@ La clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 Sin embargo, cuando quieras tener aún más control sobre el orden y el formato de los componentes del objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que quieres mostrar, puedes pasar el patrón de formato al argumento *formatTemplate* del constructor. Un patrón de formato usa una sintaxis especial que te permite obtener los componentes individuales de un objeto **DateTime**&mdash;solo el nombre del mes o el valor del año, por ejemplo&mdash; para mostrarlos en el formato personalizado que desees. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota**esto es solo una introducción de patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Nota**esto es solo una descripción general de los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>La diferencia entre los patrones y plantillas de formato
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 Esto crea un formateador basado en el valor de región e idioma del contexto actual. No importa el orden de los componentes de la plantilla de formato; el formateador los muestra en el orden correcto del idioma actual. Por ejemplo, muestra "January 1" para inglés (Estados Unidos), pero "1 janvier" para francés (Francia) y "1月1日" para japonés.
 
-Por otro lado, los patrones de formato son específicos de cada cultura. Accedamos ahora al patrón de formato de nuestra plantilla de formato.
+Por otro lado, los patrones de formato son específicos de cada cultura. Vamos a obtener acceso a los patrones de formato de nuestra plantilla de formato.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;

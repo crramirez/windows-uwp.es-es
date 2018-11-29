@@ -11,11 +11,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831630"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986982"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -48,7 +48,7 @@ Te recomendamos que especifiques los aceleradores de teclado siempre que sea ade
 
   Una interfaz de usuario de teclado bien diseñada es un aspecto importante de la accesibilidad del software. Permite a usuarios con dificultades visuales o con ciertas discapacidades motrices navegar por una aplicación e interactuar con sus funciones. Es posible que estos usuarios no puedan controlar un mouse y empleen varias tecnologías de ayuda, como herramientas para la mejora del teclado, teclados en pantalla, ampliadores de pantallas, lectores de pantalla y utilidades de entrada de voz. Para estos usuarios, es fundamental que la cobertura completa de los comandos.
 
-- Los aceleradores de teclado que tu aplicación más usuarios avanzados de usablefor que prefieren interactuar a través del teclado.
+- Los aceleradores de teclado que tu aplicación más usuarios de inicio/apagado usablefor que prefieren interactuar a través del teclado.
 
   Los usuarios con experiencia suelen tener una fuerte preferencia por el teclado, ya que los comandos se pueden introducir más rápidamente y no requieren apartar las manos de las teclas. Para estos usuarios, la eficacia y la coherencia son cruciales; la exhaustividad es importante solo para los comandos usados con más frecuencia.
 
@@ -248,7 +248,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 
 ## <a name="override-default-keyboard-behavior"></a>Invalidar el comportamiento predeterminado del teclado
 
-En algunos casos, es posible que necesitas invalidar el comportamiento predeterminado de teclas específicas, como la tecla retroceso o la tecla ENTRAR. Por ejemplo: 
+En algunos casos, es posible que debes invalidar el comportamiento predeterminado de teclas específicas, como la tecla retroceso o la tecla ENTRAR. Por ejemplo: 
 
 ## <a name="disable-a-keyboard-accelerator"></a>Deshabilitar un acelerador de teclado 
 
@@ -366,7 +366,7 @@ De manera predeterminada, cuando se declaran los aceleradores de teclado, todos 
 
 *Combinación de teclas aceleradoras en la información sobre herramientas*
 
-Para el [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y objetos de [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , el Acelerador de teclado se anexa a información sobre herramientas del control de forma predeterminada. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, el Acelerador de teclado se muestra con el texto de control flotante.
+Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), el Acelerador de teclado se anexa a tooltip de predeterminado del control. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, el Acelerador de teclado se muestra con el texto de control flotante.
 
 > [!NOTE]
 > Especificar información sobre herramientas (consulta Button1 en el siguiente ejemplo) reemplaza este comportamiento.
@@ -438,7 +438,7 @@ Para el [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.but
 
 ![Información sobre herramientas de la tecla aceleradora](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
-*Teclas aceleradoras anexadas al texto del MenuFlyoutItem*
+*Teclas aceleradoras anexadas a texto del MenuFlyoutItem*
 
 Controla el comportamiento de la presentación con la propiedad [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode), que acepta dos valores: [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) o [Hidden](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode).    
 

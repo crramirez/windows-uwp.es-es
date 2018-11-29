@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 87afe086ca28e27a39f5508a2bea5ea9fcb1c6a5
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830359"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989471"
 ---
 # <a name="control-patterns-and-interfaces"></a>Interfaces y patrones de control  
 
@@ -59,7 +59,7 @@ Al implementar un patrón de control, debes consultar también la documentación
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Se usa para los controles cuyo tamaño puede cambiarse, que pueden moverse y girarse. Los usos típicos del patrón de control de transformación son diseñadores, formularios, editores gráficos y aplicaciones de dibujo. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Expone elementos dentro de contenedores que están virtualizados y deben ponerse totalmente a disposición como elementos de automatización de la interfaz de usuario. |
-| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Expone información específica de windows, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son los cuadros de diálogo y las ventanas secundarias. |
+| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Expone información específica en ventanas, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son los cuadros de diálogo y las ventanas secundarias. |
 
 > [!NOTE]
 > No encontrarás necesariamente implementaciones de todos estos patrones en los controles XAML existentes. Algunos de los patrones tienen interfaces únicamente para admitir la paridad con la definición de patrones del marco de trabajo de automatización de la interfaz de usuario y para admitir los escenarios de sistemas de automatización del mismo nivel que requerirán una implementación personalizada para admitir dicho patrón.

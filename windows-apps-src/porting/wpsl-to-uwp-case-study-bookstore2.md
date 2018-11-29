@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b75da7d50135ee8d40f8ed44f0239edb54dcf65
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7848742"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986136"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight a UWP caso práctico: Bookstore2
 
 
-Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación de WindowsPhone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a una aplicación de plataforma de Windows Windows10Universal (UWP).
+En este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación de WindowsPhone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a una aplicación de plataforma de Windows Windows10Universal (UWP).
 
-**Nota**  cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Requiere la actualización de Visual Studio", sigue los pasos para configurar la versión de la plataforma de destino en [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
+**Nota**  cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Requiere la actualización de Visual Studio", sigue los pasos para establecer la versión de la plataforma de destino en [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="downloads"></a>Descargas
 
@@ -28,7 +28,7 @@ Este caso práctico, que se basa en la información proporcionada en [Bookstore1
 
 ##  <a name="the-windowsphone-silverlight-app"></a>La aplicación de Windows Phone Silverlight
 
-En la siguiente ilustración se muestra el aspecto de Bookstore2WPSL8 (la aplicación que portaremos). Es un **LongListSelector** de desplazamiento vertical de libros agrupados por autor. Puedes alejar la lista de accesos directos y desde allí puedes navegar a cualquier grupo. Existen dos elementos principales en esta aplicación: el modelo de vista que proporciona el origen de datos agrupados y la interfaz de usuario que se enlaza a ese modelo de vista. Como se verá, ambas partes se pueden portar fácilmente de tecnología WindowsPhone Silverlight para la plataforma Universal de Windows (UWP).
+En la siguiente ilustración se muestra el aspecto de Bookstore2WPSL8 (la aplicación que portaremos). Es un **LongListSelector** de desplazamiento vertical de libros agrupados por autor. Puedes alejar la lista de accesos directos y desde allí puedes navegar a cualquier grupo. Existen dos elementos principales en esta aplicación: el modelo de vista que proporciona el origen de datos agrupados y la interfaz de usuario que se enlaza a ese modelo de vista. Como se verá, ambas partes se pueden portar fácilmente WindowsPhone tecnología de Silverlight para la plataforma Universal de Windows (UWP).
 
 ![aspecto de booksare2wpsl8](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
 
@@ -120,7 +120,7 @@ Ahora puedes compilar y ejecutar la aplicación. Este es su aspecto en el emulad
 
 ![la aplicación para uwp en versión móvil, con los cambios en el código fuente inicial](images/wpsl-to-uwp-case-studies/c02-02-mob10-initial-source-code-changes.png)
 
-El modelo de vista y las vistas acercada y alejada funcionan juntos correctamente, aunque un problema es que debemos trabajar un poco más en estilos y plantillas. Por ejemplo, los estilos y pinceles correctos no aún se usan, por lo que el texto es invisible en los encabezados de grupo que puede hacer clic para alejar. Si ejecutas la aplicación en un dispositivo de escritorio, verás un segundo problema, que es que la aplicación aún no adapta su interfaz de usuario para ofrecer la mejor experiencia y el uso del espacio en dispositivos más grandes donde las ventanas pueden ser mucho mayores que la pantalla de un dispositivo móvil. En las siguientes secciones ([Aplicación inicial plantillas y estilos](#initial-styling-and-templating), [Interfaz de usuario adaptativa](#adaptive-ui) y [Aplicación de estilo final](#final-styling)) solucionaremos estos problemas.
+El modelo de vista y las vistas acercada y alejada funcionan juntos correctamente, aunque un problema es que debemos trabajar un poco más en estilos y plantillas. Por ejemplo, los estilos y pinceles correctos no aún se usan, por lo que el texto es invisible en los encabezados de grupo que puedes hacer clic para alejar. Si ejecutas la aplicación en un dispositivo de escritorio, verás un segundo problema, que es que la aplicación aún no adapta su interfaz de usuario para ofrecer la mejor experiencia y el uso del espacio en dispositivos más grandes donde las ventanas pueden ser mucho mayores que la pantalla de un dispositivo móvil. En las siguientes secciones ([Aplicación inicial plantillas y estilos](#initial-styling-and-templating), [Interfaz de usuario adaptativa](#adaptive-ui) y [Aplicación de estilo final](#final-styling)) solucionaremos estos problemas.
 
 ## <a name="initial-styling-and-templating"></a>Aplicación inicial de plantillas y estilos
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853194"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983874"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
-Un complemento debe estar asociado con una aplicación que has creado en [El centro de partners](https://partner.microsoft.com/dashboard) (incluso si no la has enviado aún). Puedes encontrar el botón para **Crear un complemento nuevo** en la página **Introducción** de la aplicación o en su página **Complemento**.
+Un complemento deben asociarse con una aplicación que has creado en [El centro de partners](https://partner.microsoft.com/dashboard) (incluso si no la has enviado aún). Puedes encontrar el botón para **Crear un complemento nuevo** en la página **Introducción** de la aplicación o en su página **Complemento**.
 
 Después de seleccionar **Crear un nuevo complemento**, se te pedirá que especifiques un tipo de producto y asignes un id. de producto para el complemento.
 
@@ -40,7 +40,7 @@ Si el complemento se puede comprar, usar (consumir) y después se puede volver a
 
 Hay dos tipos de complementos consumibles:
 - **Consumible administrado por el desarrollador**: el saldo y el suministro deben administrarse dentro de la aplicación. Compatible en todas las versiones de SO.
-- **Consumible administrado por la Tienda:** Microsoft realizará un seguimiento del saldo de todos los dispositivos de clientes que ejecuten la versión 1607 de Windows 10 o posterior. No es compatible con ninguna versión de SO anterior. Para usar esta opción, el producto principal se debe compilar con la versión 14393 del SDK de Windows 10 o posterior. Ten en cuenta que no podrás enviar un complemento consumible administradas por la tienda a la tienda hasta que se publique el producto principal (aunque puedes crear el envío en el centro de partners y empezar a trabajar en cualquier momento). Tendrás que escribir la cantidad del complemento consumible administrado por la Tienda en el paso **Propiedades** del envío.
+- **Consumible administrado por la Tienda:** Microsoft realizará un seguimiento del saldo de todos los dispositivos de clientes que ejecuten la versión 1607 de Windows 10 o posterior. No es compatible con ninguna versión de SO anterior. Para usar esta opción, el producto principal se debe compilar con la versión 14393 del SDK de Windows 10 o posterior. Además, ten en cuenta que no podrás enviar un complemento consumible administradas por la tienda a la tienda hasta que se publique el producto principal (aunque puedes crear el envío en el centro de partners y empezar a trabajar en cualquier momento). Tendrás que escribir la cantidad del complemento consumible administrado por la Tienda en el paso **Propiedades** del envío.
 
 ### <a name="subscription"></a>Suscripción
 

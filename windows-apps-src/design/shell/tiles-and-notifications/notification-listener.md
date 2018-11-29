@@ -8,16 +8,16 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: c0717fb3d1db42483214e8396d436c47c23744ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833695"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983897"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
 
-El agente de escucha de notificación permite acceder a las notificaciones de un usuario. Los relojes inteligentes y otros dispositivos transportables pueden usar el agente de escucha de notificaciones para enviar las notificaciones del teléfono al dispositivo transportable. Las aplicaciones de automatización domésticas pueden usar el agente de escucha de notificaciones para realizar acciones específicas cuando se reciban notificaciones, como hacer que parpadeen las luces cuando se recibe una llamada. 
+El agente de escucha de notificación permite acceder a las notificaciones de un usuario. Los relojes inteligentes y otros dispositivos transportables pueden usar el agente de escucha de notificaciones para enviar las notificaciones del teléfono al dispositivo transportable. Las aplicaciones de automatización domésticas pueden usar el agente de escucha de notificación para realizar acciones específicas cuando se reciben notificaciones, como hacer que parpadeen las luces cuando se recibe una llamada. 
 
 > [!IMPORTANT]
 > **Requiere la Actualización de aniversario**: Debes utilizar el SDK 14393 y estar ejecutando la compilación 14393 o superior para usar el agente de escucha de notificaciones.
@@ -277,7 +277,7 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento en primer plano para una notificación agregada/descartada
 
 > [!IMPORTANT] 
-> Problema conocido: el evento en primer plano provocarán un bucle de CPU en las versiones recientes de Windows y previamente no funcionó antes de que. NO uses el evento en primer plano. En una próxima actualización de Windows, solucionaremos esto.
+> Problema conocido: el evento en primer plano provocará un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. NO uses el evento en primer plano. En una actualización próximas de Windows, solucionaremos esto.
 
 En lugar de usar el evento en primer plano, usa el código que se muestra anteriormente para una tarea en segundo plano de [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . La tarea en segundo plano, también podrás recibir notificaciones evento cambio mientras la aplicación está cerrada o se está ejecutando.
 
@@ -294,4 +294,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>Cómo fixdelays en la tarea en segundo plano
 
-Al probar la aplicación, es posible que tenga en cuenta que la tarea en segundo plano a veces se retrasa y no se desencadena durante varios minutos. Para corregir el retraso, símbolo del sistema la togo de usuario para la configuración del sistema -> sistema -> batería -> uso de batería por aplicación, busca la aplicación en la lista, selecciónalo y establecerlo en "Siempre permitido en segundo plano".Una vez hecho esto, la tarea en segundo plano debe desencadenarse siempre dentro de un segundo de recibirse la notificación.
+Al probar la aplicación, es posible que observes que la tarea en segundo plano a veces se retrasa y no se desencadena durante varios minutos. Para corregir el retraso, símbolo del sistema la togo de usuario para la configuración del sistema -> sistema -> batería -> uso de batería por aplicación, busca la aplicación en la lista, selecciónalo y lo establecerán en "siempre permitido en segundo plano".Una vez hecho esto, la tarea en segundo plano debe desencadenarse siempre dentro de un segundo de recibirse la notificación.
