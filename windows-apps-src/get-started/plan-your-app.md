@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 05a69cfdf96d6c7d3426b8d1ba414a42ff48a117
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851255"
+ms.locfileid: "7975756"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Creación de una aplicación compleja de plataforma Universal de Windows (UWP)
 
@@ -122,9 +122,9 @@ Técnicas comunes:
 -   Diagramas de asociación: conecta los flujos con las funciones.
 -   Prototipo: prueba las funciones para asegurarte de que hacen lo que necesitas.
 
-**Contratos entre aplicaciones**la aplicación puede participar en contratos entre aplicaciones que permiten flujos amplios entre aplicaciones entre las funciones de usuarios.
+**Contratos entre aplicaciones**la aplicación puede participar en contratos entre aplicaciones que permiten flujos amplios entre aplicaciones cross-característica de usuarios.
 
--   **Compartir**permite que los usuarios compartan contenido desde la aplicación con otras personas a través de otras aplicaciones y también permite recibir contenido de otras personas y aplicaciones.
+-   **Compartir**permite que los usuarios compartan contenido desde tu aplicación con otras personas a través de otras aplicaciones y también permite recibir contenido de otras personas y aplicaciones.
 -   **Reproducir en**permite que los usuarios disfruten la transmisión de audio, vídeo o imágenes de la aplicación a otros dispositivos de la red doméstica.
 -   **Selector de archivos y extensiones de selector de archivos** Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, dispositivos de almacenamiento conectados, grupo hogar o incluso otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
 
@@ -133,7 +133,7 @@ Para más información, consulta el tema sobre las [extensiones y los contratos 
 
 **Diferentes vistas, factores de forma y configuraciones de hardware**Windows pone a los usuarios en la aplicación en primer plano y cargos. Seguramente quieres que la interfaz de usuario de la aplicación se destaque en cualquier dispositivo, modo de entrada, orientación, configuración de hardware y en cualquier circunstancia en la que el usuario decida usarla.
 
-**Táctil**Windows ofrece una experiencia táctil única e incomparable que hace mucho más que simplemente emular la funcionalidad del mouse.
+**En primer lugar Touch**Windows ofrece una experiencia táctil única e incomparable que hace mucho más que simplemente emular la funcionalidad del mouse.
 
 Por ejemplo, un zoom semántico es un modo optimizado para funcionalidad táctil que permite navegar por un conjunto extenso de contenido. Los usuarios pueden desplazarse de lado a lado o de arriba a abajo por las categorías del contenido y acercar la vista de las categorías para ver más información y con más detalle. Puedes usarlo para presentar el contenido de una manera más táctil, visual e informativa que con los modelos tradicionales de navegación y diseño, como las pestañas.
 
@@ -151,11 +151,11 @@ Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar 
 -   **Itinerancia**crea una experiencia continua entre dispositivos mediante la itinerancia de datos que permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia de usuario que les interesa más, independientemente del dispositivo que están usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
 -   **Los iconos de usuario**  hacer que la aplicación más personal a los usuarios: carga su imagen de icono de usuario, o permitir que los usuarios establezcan contenido de la aplicación como su icono personal en Windows.
 
-**Funcionalidades de dispositivos**Asegúrate de que la aplicación aproveche al máximo las funcionalidades de dispositivos de hoy en día.
+**Funcionalidades del dispositivo**Asegúrate de que tu aplicación aproveche al máximo las funcionalidades de dispositivos de hoy en día.
 
 -   **Gestos de proximidad**permite que los usuarios conecten sus dispositivos a otros usuarios que son físicamente cercanos tocándolos físicamente a los dispositivos entre sí (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Cámaras y dispositivos de almacenamiento externos**conecta a los usuarios con sus cámaras integradas o conectado para charlando y conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo alrededor de ellos, o cualquier actividad de la aplicación es excelente. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
--   **Acelerómetros y otros sensores**   Los dispositivos vienen con diversos sensores de hoy en día. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
+-   **Cámaras y dispositivos de almacenamiento externos**conecta a los usuarios con sus cámaras integradas o conversar para charlando y conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo que les rodea o para cualquier actividad de la aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Acelerómetros y otros sensores**   Los dispositivos vienen con diversos sensores hoy en día. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
 -   **Ubicación geográfica**usa la información de ubicación geográfica datos web estándar o sensores de ubicación geográfica para ayudar a los usuarios, encontrar su posición en un mapa u obtener avisos sobre personas, actividades y destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una excelente ayuda a un grupo de amigos que quieren crear de forma conjunta los itinerarios de viajes en grupo, podrías usar algunas de estas funciones, por mencionar algunas:
@@ -236,6 +236,6 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 ## <a name="validate-your-design"></a>Valida tu diseño
 
-Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función tiene un conjunto de directrices de experiencia del usuario que te ayudarán a pulir la aplicación y un conjunto de requisitos de la tienda que se deben cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
+Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función tiene un conjunto de directrices de experiencia del usuario que te ayudarán a pulir la aplicación y un conjunto de requisitos de la tienda que debes cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
 Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analizar el rendimiento de cada uno de los escenarios de la aplicación.

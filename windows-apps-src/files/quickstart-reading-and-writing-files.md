@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850926"
+ms.locfileid: "7975597"
 ---
 # <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
 
@@ -150,7 +150,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 
 **Escritura de bytes en un archivo con un búfer (2 pasos)**
 
-1.  En primer lugar, llama a [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obtener un búfer de bytes (basado en una cadena) que quieres escribir en el archivo.
+1.  En primer lugar, llama a [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obtener un búfer de bytes (basado en una cadena) que quieres que se escribe en el archivo.
 
 ```csharp
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -254,7 +254,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  A continuación, obtén un flujo de salida llamando al método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) desde el `stream`. Si estás usando C#, a continuación, encierra esto en una instrucción **using** para administrar la duración de la secuencia de salida. Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, puedes controlar su ciclo de vida incluirlo en un bloque, o si se establece en `nullptr` cuando hayas terminado con él.
+2.  A continuación, obtén un flujo de salida llamando al método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) desde el `stream`. Si estás usando C#, a continuación, escriba esto una instrucción **using** para administrar la duración de la secuencia de salida. Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, puedes controlar su ciclo de vida que lo incluya en un bloque, o si se establece en `nullptr` cuando hayas terminado con él.
 
 ```csharp
 using (var outputStream = stream.GetOutputStreamAt(0))
@@ -306,7 +306,7 @@ Dim dataWriter As New DataWriter(outputStream)
 dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
-4.  Por último, agrega este código (si estás usando C#, dentro de la instrucción interno **utilizando** ) para guardar el texto en el archivo con [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) y cierra el flujo con [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).
+4.  Por último, agrega este código (si estás usando C#, dentro de la instrucción interno **usando** ) para guardar el texto en el archivo con [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) y cierra el flujo con [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).
 
 ```csharp
 await dataWriter.StoreAsync();

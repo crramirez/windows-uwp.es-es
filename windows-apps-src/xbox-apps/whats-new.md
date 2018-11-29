@@ -7,17 +7,17 @@ keywords: Windows 10, UWP
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
 ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847584"
+ms.locfileid: "7973982"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Qué novedades encontrarán los desarrolladores en la última actualización de UWP en Xbox One
 
-La actualización más reciente de la plataforma Universal Windows (UWP) en Xbox One contiene las siguientes nuevas características, las actualizaciones de características existentes y correcciones de errores.
+La actualización más reciente de la plataforma Universal Windows (UWP) en Xbox One contiene las siguientes nuevas características, actualizaciones de características existentes y correcciones de errores.
 
-## <a name="x86-apps-and-games-are-no-longer-supported-on-xbox"></a>x86 aplicaciones y juegos ya no se admite en Xbox  
+## <a name="x86-apps-and-games-are-no-longer-supported-on-xbox"></a>x86 ya no se admiten aplicaciones y juegos en Xbox  
 Xbox ya no admite el desarrollo o envío de aplicaciones x86 a la Store.
 
 ## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>Las aplicaciones ahora pueden admitir la vuelta a la aplicación anterior 
@@ -27,13 +27,13 @@ UWP en Xbox One aplicaciones ahora puede admitir la vuelta a la aplicación ante
 > Por motivos de compatibilidad, esta funcionalidad solo está disponible para las aplicaciones creadas con la versión más reciente de UWP en Xbox One. 
 
 ## <a name="dev-home-is-now-the-default-home-experience-on-development-consoles"></a>Dev Home ahora es la experiencia principal predeterminada en las consolas de desarrollo
-Ahora, consolas de desarrollo inicia Dev Home como la experiencia de inicio predeterminado. Esto te permite obtener hacia la derecha para funcionar sin necesidad de hacer clic a través de la pantalla de inicio de la versión comercial. Dev Home incluye ahora una acción rápida para iniciar la pantalla de inicio de la versión comercial. Además, una nueva configuración te permite realizar Home comercial de la experiencia de forma predeterminada. 
+Ahora, consolas de desarrollo inicia Dev Home como la experiencia principal predeterminada. Esto te permite obtener adecuado para que funcione sin necesidad de hacer clic a través de la pantalla de inicio de la versión comercial. Dev Home incluye ahora una acción rápida para iniciar la pantalla de inicio de la versión comercial. Además, una nueva configuración te permite realizar Home comercial de la experiencia de forma predeterminada. 
 
 ## <a name="new-dev-home-user-interface"></a>Nueva interfaz de usuario de Dev Home
 La interfaz de usuario de Dev Home ahora incluye las siguientes mejoras de productividad:
- - Datos importantes, como la dirección IP y ahora se muestra la versión de recuperación en la parte superior de la pantalla de visibilidad. 
+ - Datos importantes, como dirección IP y ahora se muestra la versión de recuperación en la parte superior de la pantalla de visibilidad. 
  - Dev Home ahora tiene una IU con fichas que agrupa herramientas en grupos lógicos, lo que permite la navegación rápida.
- - Botones de acción rápida en la primera pestaña de Dev Home permiten un acceso rápido a las acciones que se usa con más frecuencia. 
+ - Los botones de acción rápida en la primera pestaña de Dev Home permiten acceso rápido a las acciones más utilizadas. 
 
 ## <a name="wdp-for-xbox-enhancements"></a>WDP para mejoras de Xbox
 Windows Device Portal (WDP) ahora incluye compatibilidad adicional para la configuración de la consola. 

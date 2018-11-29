@@ -8,15 +8,15 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828784"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973529"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conocidos de las aplicaciones de escritorio empaquetadas
 
-En este artículo se describen los problemas conocidos que pueden aparecer al crear un paquete de aplicación de Windows para la aplicación de escritorio.
+En este artículo se describen los problemas conocidos que pueden aparecer al crear un paquete de la aplicación de Windows para la aplicación de escritorio.
 
 <a id="app-converter" />
 
@@ -52,7 +52,7 @@ Esta es una limitación conocida y no existe ninguna solución actualmente. Dich
 
 Esto puede suceder si los archivos ejecutables de la aplicación tienen una extensión **. EXE** escrita en mayúsculas. Aunque las mayúsculas y minúsculas de esta extensión no deberían afectar a la aplicación se ejecuta, esto puede provocar DAC muestre este error.
 
-Para resolver este problema, prueba a especificar la marca **-AppExecutable** cuando realices el empaquetado y usa la extensión ".exe" en minúsculas como extensión principal del archivo ejecutable (por ejemplo: MYAPP.exe).    Como alternativa puedes cambiar las mayúsculas y minúsculas para todos los archivos ejecutables de la aplicación estén en minúsculas en mayúsculas (por ejemplo: desde. EXE para .exe).
+Para resolver este problema, prueba a especificar la marca **-AppExecutable** cuando realices el empaquetado y usa la extensión ".exe" en minúsculas como extensión principal del archivo ejecutable (por ejemplo: MYAPP.exe).    Como alternativa puedes cambiar las mayúsculas y minúsculas para todos los archivos ejecutables de la aplicación estén en minúsculas en mayúsculas (por ejemplo: desde. EXE .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Firmas Authenticode dañadas o con formato incorrecto
 
@@ -135,23 +135,23 @@ Esto puede suceder cuando el paquete contiene un archivo binario que tiene un ce
 
 * El tamaño del certificado no es positivo.
 
-* El inicio de certificado no es después de la `IMAGE_NT_HEADERS32` estructura para un archivo ejecutable de 32 bits o después de la `IMAGE_NT_HEADERS64` estructura de un archivo ejecutable de 64 bits.
+* El inicio de certificado no es después de la `IMAGE_NT_HEADERS32` estructura para un archivo ejecutable de 32 bits o después de la `IMAGE_NT_HEADERS64` estructura para un archivo ejecutable de 64 bits.
 
 * El puntero de certificado no se alinea correctamente para una estructura WIN_CERTIFICATE.
 
-Para buscar archivos que contienen un certificado PE incorrecto, abra un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
+Para buscar archivos que contienen un certificado PE incorrecto, abre un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-Desde el **símbolo del sistema**, inicia sesión en la aplicación de nuevo. Por ejemplo:
+A continuación, desde el **símbolo del sistema**, firma la aplicación de nuevo. Por ejemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Obtener información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
+Información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
 
 ```
 ...

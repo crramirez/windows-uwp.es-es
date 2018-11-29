@@ -1,20 +1,20 @@
 ---
-description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de adquisición agregados del complemento.
+description: Usa este método en la API de análisis de Microsoft Store para obtener datos de adquisición agregados del complemento.
 title: Obtener adquisiciones de complementos de Xbox One
 ms.date: 10/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, adquisiciones de complementos de Xbox One
 ms.localizationpriority: medium
 ms.openlocfilehash: f102d2d692a2307c25dcb95e66d612fc561dec70
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848082"
+ms.locfileid: "7980165"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Obtener adquisiciones de complementos de Xbox One
 
-Usa este método en la Microsoft Store analytics API para obtener datos de adquisición agregados del complemento en formato JSON de una consola Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y está disponible en el panel del centro de partners de análisis de XDP.
+Usa este método en la Microsoft Store analytics API para obtener datos de adquisición agregados del complemento en formato JSON de una consola Xbox One juego integrado mediante el Portal de desarrollador de Xbox (XDP) y disponible en el panel del centro de partners de análisis de XDP.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -42,11 +42,11 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-El parámetro *applicationId* o *addonProductId* es necesario. Para recuperar los datos de compra de todos los complementos registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo complemento, especifica el parámetro *addonProductId* . Si especificas ambos, el parámetro *applicationId* se ignorará.
+El parámetro *applicationId* o *addonProductId* es obligatorio. Para recuperar los datos de compra de todos los complementos registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo complemento, especifica el parámetro *addonProductId* . Si especificas ambos, el parámetro *applicationId* se ignorará.
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  |
 |---------------|--------|---------------|------|
-| applicationId | string | El *valor de productId* del juego de Xbox One para el que estás recuperando los datos de compra. Para obtener el *valor de productId* de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el *valor de productId* desde la dirección URL. Como alternativa, si descargas los datos de adquisición del informe de análisis del centro de partners, el *valor de productId* se incluye en el archivo TSV. |  Sí  |
+| applicationId | string | *ProductId* del juego de Xbox One para el que estás recuperando los datos de compra. Para obtener el *valor de productId* de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el *valor de productId* desde la dirección URL. Como alternativa, si descargas los datos de adquisición del informe de análisis del centro de partners, el *valor de productId* se incluye en el archivo TSV. |  Sí  |
 | addonProductId | string | El *valor de productId* del complemento para el que quieres recuperar los datos de compra.  | Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de compra del complemento que se recuperarán. El valor predeterminado es la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos de compra del complemento que recuperarán. El valor predeterminado es la fecha actual. |  No  |
@@ -60,7 +60,7 @@ El parámetro *applicationId* o *addonProductId* es necesario. Para recuperar lo
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-En los ejemplos siguientes se muestran varias solicitudes para obtener datos de compra de complementos. Reemplaza los valores *addonProductId* y *applicationId* con el Id. de Store adecuado para tu complemento o aplicación.
+En los ejemplos siguientes se muestran varias solicitudes para obtener datos de compra de complementos. Reemplaza los valores de *addonProductId* y *applicationId* con el identificador de la tienda adecuado para tu complemento o aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/addonacquisitions?addonProductId=BRRT4NJ9B3D2&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -95,16 +95,16 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|---------|---------------------|
 | date                | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | addonProductId      | string  | El *valor de productId* del complemento para el que estás recuperando los datos de compra.                                                                                                                                                                 |
-| addonProductName    | cadena  | Nombre del complemento que quieres que se muestre. Este valor solo aparece en los datos de respuesta si se establece el parámetro *aggregationLevel* al **día**, a menos que especifiques el campo **addonProductName** en el parámetro *groupby* .                                                                                                                                                                                                            |
+| addonProductName    | cadena  | Nombre del complemento que quieres que se muestre. Este valor solo aparece en los datos de respuesta si el parámetro *aggregationLevel* se establece en **día**, a menos que especifiques el campo **addonProductName** en el parámetro *groupby* .                                                                                                                                                                                                            |
 | applicationId       | string  | El *valor de productId* de la aplicación para la que quieres recuperar los datos de compra de complementos.                                                                                                                                                           |
 | applicationName     | cadena  | El nombre para mostrar del juego.                                                                                                                                                                                                             |
 | deviceType          | cadena  | <p>Una de las cadenas siguientes que especifica el tipo de dispositivo que ha completado la adquisición:</p> <ul><li>"EQUIPO"</li><li>"Teléfono"</li><li>"Consola de</li><li>"IoT"</li><li>"Servidor"</li><li>"Tableta"</li><li>"Holographic"</li><li>"Desconocido"</li></ul>                                                                                                  |
-| storeClient         | cadena  | <p>Una de las cadenas siguientes que indica la versión de la Store donde se produce la adquisición:</p> <ul><li>"Tienda de Windows Phone (cliente)"</li><li>"Microsoft Store (cliente)" (o "Windows Store (cliente)" si la consulta de datos del 23 de marzo de 2018)</li><li>"Microsoft Store (web)" (o "Windows Store (web)" si la consulta de datos del 23 de marzo de 2018)</li><li>"Compras por volumen de las organizaciones"</li><li>"Other"</li></ul>                                                                                            |
+| storeClient         | cadena  | <p>Una de las cadenas siguientes que indica la versión de la Store donde se produce la adquisición:</p> <ul><li>"Windows Phone Store (cliente)"</li><li>"Microsoft Store (cliente)" (o "Windows Store (cliente)" si la consulta de datos del 23 de marzo de 2018)</li><li>"Microsoft Store (web)" (o "Windows Store (web)" si la consulta de datos del 23 de marzo de 2018)</li><li>"Compras por volumen de las organizaciones"</li><li>"Otros"</li></ul>                                                                                            |
 | osVersion           | cadena  | Versión del sistema operativo en el que se realizó la compra. Este método, este valor es siempre "Windows 10".                                                                                                   |
 | market              | cadena  | Código de país ISO 3166 del mercado donde se realizó la compra.                                                                                                                                                                  |
 | gender              | cadena  | <p>Una de las cadenas siguientes que especifica el sexo del usuario que ha realizado la adquisición:</p> <ul><li>"m"</li><li>"f"</li><li>"Desconocido"</li></ul>                                                                                                    |
-| age            | cadena  | <p>Una de las cadenas siguientes que indica el grupo de edad del usuario que ha realizado la adquisición:</p> <ul><li>"menor que 13"</li><li>"13 17"</li><li>"18 a 24"</li><li>"25 34"</li><li>"35-44"</li><li>"44: 55"</li><li>"mayor que 55"</li><li>"Desconocido"</li></ul>                                                                                                 |
-| acquisitionType     | cadena  | <p>Una de las siguientes cadenas que indica el tipo de adquisición:</p> <ul><li>"Libre"</li><li>"Evaluación"</li><li>"Pagado"</li><li>"Código promocional"</li><li>"Iap"</li><li>"Suscripción Iap"</li><li>"Audiencia privada"</li><li>"Pre pedido"</li><li>"Xbox Game Pass" (o "Game Pass" si la consulta de datos del 23 de marzo de 2018)</li><li>"Disco"</li><li>"Código de prepago"</li><li>"El cargo Pre orden"</li><li>"Cancelado Pre orden"</li><li>"No se pudo Pre orden"</li></ul>                                                                                                    |
+| age            | cadena  | <p>Una de las cadenas siguientes que indica el grupo de edad del usuario que ha realizado la adquisición:</p> <ul><li>"menor que 13"</li><li>"13-17"</li><li>"18 a 24"</li><li>"25-34"</li><li>"35-44"</li><li>"44: 55"</li><li>"mayor que 55"</li><li>"Desconocido"</li></ul>                                                                                                 |
+| acquisitionType     | cadena  | <p>Una de las siguientes cadenas que indica el tipo de adquisición:</p> <ul><li>"Gratuito"</li><li>"Evaluación"</li><li>"Pago"</li><li>"Código promocional"</li><li>"Iap"</li><li>"Suscripción Iap"</li><li>"Audiencia privada"</li><li>"Pre orden"</li><li>"Xbox Game Pass" (o "Game Pass" si la consulta de datos del 23 de marzo de 2018)</li><li>"Disco"</li><li>"Código de prepago"</li><li>"El cargo Pre orden"</li><li>"Cancelado Pre orden"</li><li>"No se pudo Pre orden"</li></ul>                                                                                                    |
 | acquisitionQuantity | entero | Número de compras que se realizaron.                        |
 
 

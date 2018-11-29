@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 811a9b42efe83cf89fd3df89e5c43c72274af36f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7844092"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974981"
 ---
  # <a name="files-folders-and-libraries"></a>Archivos, carpetas y bibliotecas
 
@@ -29,7 +29,7 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 | [Determinar la disponibilidad de los archivos de Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados. |
 | [Realizar un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md) | Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia agregándolos a la lista de elementos usados recientemente (MRU) de la aplicación. La plataforma administra la lista MRU automáticamente ordenando los elementos según la hora del último acceso y eliminando los más antiguos cuando se alcanza el límite de 25 elementos en la lista. Todas las aplicaciones tienen sus propias listas de MRU. |
-| [Realizar un seguimiento de cambios de sistema de archivos en segundo plano](change-tracking-filesystem.md) | Seguimiento de cambios en el sistema de archivos, incluso cuando no se está ejecutando la aplicación.|
+| [Realizar un seguimiento de cambios de sistema de archivos en segundo plano](change-tracking-filesystem.md) | Controla los cambios en el sistema de archivos, incluso cuando no se está ejecutando la aplicación.|
 | [Acceder a la tarjeta SD](access-the-sd-card.md) | Puedes almacenar y tener acceso a datos no esenciales en una tarjeta microSD, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado. |
 | [Permisos de acceso a archivos](file-access-permissions.md) | Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades. |
 | [Acceso rápido a las propiedades de archivo en UWP](fast-file-properties.md) | Recopila de forma eficaz una lista de archivos y sus propiedades de una biblioteca para usarlos en una aplicación para UWP. |

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974176"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática
 
@@ -336,7 +336,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **Nota**el `ShowImages` se agrega el método en el siguiente paso.
+> **Nota**el `ShowImages` método se agrega en el paso siguiente.
 
 ### <a name="step-5-add-code-to-display-device-information"></a>Paso 5: Agregar código para mostrar información de dispositivo
 
@@ -364,7 +364,7 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> **Nota**el `GetImageList` y `GetThumbnail` métodos se agregan en el siguiente paso.
+> **Nota**el `GetImageList` y `GetThumbnail` métodos se agregan en el paso siguiente.
 
 ### <a name="step-6-add-code-to-display-images"></a>Paso 6: Agregar código para mostrar imágenes
 
@@ -475,7 +475,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Nota**el `DisplayFiles` se agrega el método en el siguiente paso.
+> **Nota**el `DisplayFiles` método se agrega en el paso siguiente.
 
  
 

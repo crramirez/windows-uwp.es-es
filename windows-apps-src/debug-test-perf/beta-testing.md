@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831740"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972685"
 ---
 # <a name="beta-testing"></a>Pruebas beta
 
@@ -32,7 +32,7 @@ Con las pruebas beta, puedes:
 -   Probar la aplicación en una variedad de dispositivos.
 -   Identificar problemas de rendimiento y otros errores que de otra forma es posible que no hubiera encontrado.
 -   Obtener información de uso real que se puede usar para mejorar la experiencia del usuario.
--   Recibir comentarios sin que ello afecte a las clasificaciones públicas en Microsoft Store.
+-   Recibir comentarios sin que ello afecte clasificaciones públicas de Microsoft Store.
 
 ## <a name="when-to-beta-test"></a>Cuando hacer las pruebas beta
 
@@ -40,7 +40,7 @@ Es mejor realizar las pruebas beta como la fase final de las pruebas antes de pu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En el [Centro de partners](https://partner.microsoft.com/dashboard), puede limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de qué sistemas operativos de destino de tu aplicación. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto del nombre de la aplicación público.)
+En el [Centro de partners](https://partner.microsoft.com/dashboard), limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de los sistemas operativos destino de tu aplicación. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto del nombre de la aplicación público.)
 
 Consulta [Pruebas beta y distribución dirigida](../publish/beta-testing-and-targeted-distribution.md) para aprender a enviar la aplicación a la Tienda para realizar pruebas beta.
 

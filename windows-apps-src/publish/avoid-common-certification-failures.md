@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b8ef16d9fe789c2c386b27ffe221aa797a3b5ef
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973098"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar errores de certificación comunes
 
@@ -31,7 +31,7 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 -   No te olvides de [proporciona toda la información necesaria](notes-for-certification.md) que se requiere para usar tu aplicación, como el nombre de usuario y contraseña para una cuenta de prueba en el caso de que tu aplicación necesite que los usuarios se registren en un servicio, o todos los pasos necesarios para acceder a funciones ocultas o bloqueadas.
 
--   Incluir una [dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url) , si la aplicación requiere una; Por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier forma o se exige por ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Incluir una [dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url) , si la aplicación requiere una; Por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier forma o trate exige por ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Asegúrate de que la descripción de la aplicación refleja fielmente lo que hace la aplicación. Para obtener ayuda, consulta nuestras directrices sobre cómo [escribir una buena descripción de la aplicación](write-a-great-app-description.md).
 

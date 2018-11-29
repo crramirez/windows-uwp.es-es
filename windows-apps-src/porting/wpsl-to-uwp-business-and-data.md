@@ -1,19 +1,19 @@
 ---
 description: Detrás de la interfaz de usuario se encuentran las capas de negocio y de datos.
-title: Migración de empresas de WindowsPhone Silverlight y capas de datos y UWP
+title: Migración de empresas WindowsPhone Silverlight y las capas de datos a UWP
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cb53295227655e3067dafd5e3a3f1f4631a97455
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849153"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976081"
 ---
-#  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Migración de empresas de WindowsPhone Silverlight y capas de datos y UWP
+#  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Migración de empresas WindowsPhone Silverlight y las capas de datos a UWP
 
 
 El tema anterior era [Migración de modelo de E/S, dispositivos y aplicaciones](wpsl-to-uwp-input-and-sensors.md).
@@ -44,9 +44,9 @@ Pasa los URI absolutos, los URI no relativos, a tipos de Windows en tiempo de ej
 
 ## <a name="launchers-and-choosers"></a>Iniciadores y selectores
 
-Con los iniciadores y selectores (que se encuentra en el espacio de nombres **Microsoft.Phone.Tasks** ), una aplicación WindowsPhone Silverlight puede interactuar con el sistema operativo para realizar operaciones comunes como redactar un correo electrónico, elegir una foto o compartir determinados tipos de datos con otra aplicación. Buscar **Microsoft.Phone.Tasks** en el tema de [Windows Phone Silverlight para asignaciones de espacios de nombres y clases de Windows 10](wpsl-to-uwp-namespace-and-class-mappings.md) para encontrar el tipo equivalente de UWP. Estos van desde mecanismos similares, llamados iniciadores y selectores, hasta la implementación de un contrato para compartir datos entre aplicaciones.
+Con los iniciadores y selectores (que se encuentra en el espacio de nombres **Microsoft.Phone.Tasks** ), una aplicación WindowsPhone Silverlight puede interactuar con el sistema operativo para realizar operaciones comunes como redactar un correo electrónico, elegir una foto o compartir determinados tipos de datos con otra aplicación. Buscar **Microsoft.Phone.Tasks** en el tema de [Windows Phone Silverlight a asignaciones de espacios de nombres y clases de Windows 10](wpsl-to-uwp-namespace-and-class-mappings.md) para encontrar el tipo equivalente de UWP. Estos van desde mecanismos similares, llamados iniciadores y selectores, hasta la implementación de un contrato para compartir datos entre aplicaciones.
 
-Una aplicación WindowsPhone Silverlight se puede colocar en un estado inactivo o marcada para exclusión incluso cuando se usa, por ejemplo, la tarea de selector de fotos. Una aplicación para UWP permanece activa y en ejecución cuando se usa la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847).
+Una aplicación WindowsPhone Silverlight se pueda poner en un estado inactivo o marcada para exclusión incluso cuando se usa, por ejemplo, la tarea de selector de fotos. Una aplicación para UWP permanece activa y en ejecución cuando se usa la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847).
 
 ## <a name="monetization-trial-mode-and-in-app-purchases"></a>Rentabilidad: modo de prueba y compras desde la aplicación
 
@@ -74,7 +74,7 @@ Si tienes código que simula las funciones de compra y de compra desde la aplica
 
 ## <a name="notifications-for-tile-or-toast-updates"></a>Notificaciones de las actualizaciones de iconos o de notificaciones del sistema
 
-Las notificaciones son una extensión del modelo de notificación de inserción para las aplicaciones WindowsPhone Silverlight. Cuando recibas una notificación de los Servicios de notificaciones de inserción de Windows (WNS), puedes exponer la información en la interfaz de usuario con una actualización de icono o con una notificación del sistema. Para portar el lado de la interfaz de usuario correspondiente a las funciones de notificación, consulta [Iconos y notificaciones del sistema](w8x-to-uwp-porting-xaml-and-ui.md).
+Las notificaciones son una extensión del modelo de notificación de inserción para las aplicaciones de WindowsPhone Silverlight. Cuando recibas una notificación de los Servicios de notificaciones de inserción de Windows (WNS), puedes exponer la información en la interfaz de usuario con una actualización de icono o con una notificación del sistema. Para portar el lado de la interfaz de usuario correspondiente a las funciones de notificación, consulta [Iconos y notificaciones del sistema](w8x-to-uwp-porting-xaml-and-ui.md).
 
 Si quieres más información sobre el uso de notificaciones en una aplicación para UWP, consulta [Envío de notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868266).
 
@@ -82,7 +82,7 @@ Si quieres obtener más información y tutoriales sobre el uso de iconos, notifi
 
 ## <a name="storage-file-access"></a>Almacenamiento (acceso a archivos)
 
-Código de WindowsPhone Silverlight que almacena la configuración de la aplicación como pares de clave-valor en el almacenamiento aislado se porta fácilmente. Este es un ejemplo de antes y después, en primer lugar la versión de WindowsPhone Silverlight:
+Código de WindowsPhone Silverlight que almacena la configuración de la aplicación como pares de clave-valor en un almacenamiento aislado se porta fácilmente. Este es un ejemplo de antes y después, en primer lugar la versión WindowsPhone Silverlight:
 
 ```csharp
     var propertySet = IsolatedStorageSettings.ApplicationSettings;
@@ -101,7 +101,7 @@ Y el equivalente de UWP:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-Aunque un subconjunto del espacio de nombres **Windows.Storage** está disponible para ellos, muchas de las aplicaciones de WindowsPhone Silverlight realizan archivo e/s con el **IsolatedStorageFile** clase porque ha sido compatible para ya. Suponiendo que se usa **IsolatedStorageFile** , este es un ejemplo de antes y después de escribir y leer un archivo, primero la versión de WindowsPhone Silverlight:
+Aunque un subconjunto del espacio de nombres **Windows.Storage** está disponible para ellos, muchas de las aplicaciones de WindowsPhone Silverlight realizan archivo e/s con el **IsolatedStorageFile** clase porque ha sido compatible para ya. Suponiendo que se está usando **IsolatedStorageFile** , este es un ejemplo de antes y después de escribir y leer un archivo, primero la versión WindowsPhone Silverlight:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";

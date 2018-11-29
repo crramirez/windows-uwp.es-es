@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, DirectX, port, migración
 ms.localizationpriority: medium
 ms.openlocfilehash: abbcd688df01b779a1cb3ab9e30bd13709926be4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839903"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975487"
 ---
 # <a name="plan-your-directx-port"></a>Planear la migración de DirectX
 
@@ -35,7 +35,7 @@ Actualizar de Direct3D 9 a Direct3D 11 es más que un cambio de buscar y reempla
 
 Debes reemplazar las bibliotecas auxiliares de D3DX y DXUT con tus propias bibliotecas auxiliares o con herramientas de la comunidad. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
-> **Nota**  puede utilizar el [Kit de herramientas de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) o [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para reemplazar algunas funciones que se proporcionaban anteriormente con D3DX y DXUT.
+> **Nota**  puedes usar el [Kit de herramientas de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) o [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para reemplazar algunas funciones que se proporcionaban anteriormente con D3DX y DXUT.
 
  
 

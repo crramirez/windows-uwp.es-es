@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: d3460b61e6a9a7c36be6fd87c4dc7fcc1ab811d1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847637"
+ms.locfileid: "7980204"
 ---
 # <a name="get-daily-app-usage"></a>Obtener el uso diario de la aplicación
 
@@ -87,7 +87,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                              |
 | deviceType                | string  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                         |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                          |
-| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación. |
+| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación. |
 | subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                            |
 | dailySessionCount         | long    | El número de sesiones de usuario en ese día.                                  |
 | engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.             |

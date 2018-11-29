@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: ae8daa6141eadaac699fc49b8ec4796f1dde5c91
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972453"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -26,7 +26,7 @@ ms.locfileid: "7828171"
 
 Publicación de una aplicación a los medios de Microsoft Store puede compartirla (o venderla a!) con millones de personas con muchos dispositivos diferentes.  
 
-Para publicar la aplicación en Microsoft Store debe estar escrita como una aplicación para UWP (plataforma Universal de Windows). Sin embargo, la UWP es muy flexible y admite una amplia variedad de lenguajes y marcos. Para demostrar esto, en este ejemplo se muestra un juego sencillo escrito en JavaScript, haciendo uso de varias bibliotecas CreateJS, y se muestra cómo dibujar sprites, crear un bucle de juego, ofrecer compatibilidad con el teclado y el mouse, y adaptarse a pantallas de diferentes tamaños.
+Para poder publicar la aplicación en Microsoft Store debe estar escrita como una aplicación para UWP (plataforma Universal de Windows). Sin embargo, la UWP es muy flexible y admite una amplia variedad de lenguajes y marcos. Para demostrar esto, en este ejemplo se muestra un juego sencillo escrito en JavaScript, haciendo uso de varias bibliotecas CreateJS, y se muestra cómo dibujar sprites, crear un bucle de juego, ofrecer compatibilidad con el teclado y el mouse, y adaptarse a pantallas de diferentes tamaños.
 
 Este proyecto se crea con JavaScript mediante Visual Studio. Con algunos cambios menores, también puede hospedarse en un sitio web o adaptarse para otras plataformas. 
 
@@ -69,7 +69,7 @@ Presiona **F5** para ejecutar la aplicación. Deberías ver una ventana abierta 
 
 ## <a name="walkthough"></a>Tutorial
 
-Si iniciaste el juego con F5, probablemente te estarás preguntando qué está pasando. Y la respuesta es "no mucho", como una gran parte del código está comentado. Hasta ahora, todo lo verás es el dinosaurio y una solicitud ineficaz pulsar la barra espaciadora. 
+Si iniciaste el juego con F5, probablemente te estarás preguntando qué está pasando. Y la respuesta es "no mucho", como una gran parte del código está comentado. Hasta ahora, todo verás será el dinosaurio y una solicitud ineficaz para presionar espacio. 
 
 ### <a name="1-setting-the-stage"></a>1. Configurar el escenario
 

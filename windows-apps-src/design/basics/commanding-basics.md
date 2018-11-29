@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7840790"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980217"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
 
@@ -23,7 +23,7 @@ En una aplicación de plataforma Universal de Windows (UWP), *los elementos de c
 
 ## <a name="provide-the-best-command-experience"></a>Proporcionar la mejor experiencia de comando
 
-El aspecto más importante de una interfaz de comandos es qué su tratando de permitir al usuario realizar. Al planear la funcionalidad de la aplicación, ten en cuenta los pasos necesarios para realizar esas tareas y las experiencias de usuario que quieras habilitar. Una vez que hayas completado un borrador inicial de estas experiencias, a continuación, puedes tomar decisiones sobre las herramientas y las interacciones para implementarlos.
+Los aspectos más importantes de una interfaz de comando es lo que tu intentando permitir al usuario realizar. Cuando se planea la funcionalidad de la aplicación, considera la posibilidad de los pasos necesarios para realizar esas tareas y las experiencias de usuario que quieras habilitar. Una vez que hayas completado un borrador inicial de estas experiencias, a continuación, puedes tomar decisiones sobre las herramientas y las interacciones para implementarlos.
 
 Estas son algunas experiencias de aplicación comunes:
 
@@ -33,7 +33,7 @@ Estas son algunas experiencias de aplicación comunes:
 - Abrir, guardar y eliminar archivos
 - Editar y crear contenido
 
-Sé creativo con el diseño de sus experiencias de comando. Elige qué dispositivos de entrada es la aplicación admite, y cómo responde la aplicación a cada dispositivo. Al admitir la gama más amplia de capacidades y preferencias que tu aplicación como accesible como sea posible, portátil y utilizable.
+Sé creativo con el diseño de sus experiencias de comando. Elige qué dispositivos de entrada es la aplicación admite, y cómo responde la aplicación a cada dispositivo. Al admitir la gama más amplia de capacidades y preferencias que tu aplicación como accesible como sea posible, portátiles y utilizable.
 
 
 
@@ -103,7 +103,7 @@ Puedes colocar elementos de comandos en un número de superficies de tu aplicaci
 
 Siempre tratar de permitir a los usuarios puedan manipular directamente el contenido en lugar de a través de los comandos que actúan sobre el contenido, como arrastrar y colocar para reorganizar los elementos de lista, en lugar de botones de comando arriba y abajo. 
 
-Sin embargo, esto es posible que no sea posible con determinados dispositivos de entrada, o al acomodar preferencias y habilidades de usuario específico. En estos casos, proporciona prestaciones de comandos tantos como sea posible y colocar estos elementos de comandos en una superficie de comando de la aplicación.
+Sin embargo, esto podría no ser posible con determinados dispositivos de entrada, o al acomodar preferencias y habilidades de usuario específico. En estos casos, proporciona prestaciones de comandos tantos como sea posible y colocar estos elementos de comandos en una superficie de comando de la aplicación.
 
 A continuación se incluye una lista de algunas de las superficies de comandos más habituales.
 

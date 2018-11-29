@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aec7ed4f97a0ce4733cfba450770de86a84d6ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7845804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974236"
 ---
 # <a name="create-and-manage-submissions"></a>Crear y administrar envíos
 
 
-Usar la *API de envío de Microsoft Store* para consultar mediante programación y crear envíos de aplicaciones, complementos y paquetes piloto para la cuenta del centro de partners de tu o tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
+Usar la *API de envío de Microsoft Store* para consultar mediante programación y crear envíos de aplicaciones, complementos y paquetes piloto para la cuenta de centro de partners de tu o tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin del uso de la API de envío de Microsoft Store:
 
@@ -27,10 +27,10 @@ Los siguientes pasos describen el proceso de principio a fin del uso de la API d
 <span id="not_supported" />
 
 > [!IMPORTANT]
-> Si usas esta API para crear un envío de una aplicación, un paquete piloto o un complemento, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el centro de partners. Si usas el centro de partners para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
+> Si usas esta API para crear un envío para una aplicación, un paquete piloto o un complemento, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el centro de partners. Si usas el centro de partners para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
 
 > [!IMPORTANT]
-> No puedes usar esta API para publicar envíos para [compras por volumen a través de Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md) o publicar envíos para [aplicaciones LOB](../publish/distribute-lob-apps-to-enterprises.md) directamente para empresas. Para estos dos escenarios, debes usar publicar el envío del centro de partners.
+> No puedes usar esta API para publicar envíos para [compras por volumen a través de Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md) o publicar envíos para [aplicaciones LOB](../publish/distribute-lob-apps-to-enterprises.md) directamente para empresas. Para estos dos escenarios, debes usar publicar el envío al centro de partners.
 
 > [!NOTE]
 > Esta API no puede usarse con aplicaciones o complementos que utilizan actualizaciones obligatorias de aplicaciones y complementos de consumibles gestionadas en la Store. Si usas la API de envío de Microsoft Store con una aplicación o complemento que usa una de estas funciones, la API devolverá un código de error 409. En este caso, debes usar el centro de partners para administrar los envíos para la aplicación o complemento.
@@ -43,13 +43,13 @@ Antes de empezar a escribir código para llamar a la API de envío de Microsoft 
 
 * Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puedes [crear un nuevo Azure AD en el centro de partners](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin ningún coste adicional.
 
-* Debes [asociar una aplicación de Azure AD con tu cuenta del centro de partners](#associate-an-azure-ad-application-with-your-windows-dev-center-account) y obtener al inquilino, ID, Id. de cliente y la clave. Necesitas estos valores para obtener un token de acceso de Azure AD que usarás en llamadas a la API de envío de Microsoft Store.
+* Debes [asociar una aplicación de Azure AD con tu cuenta del centro de partners](#associate-an-azure-ad-application-with-your-windows-dev-center-account) y obtén al inquilino, ID, Id. de cliente y la clave. Necesitas estos valores para obtener un token de acceso de Azure AD que usarás en llamadas a la API de envío de Microsoft Store.
 
 * Preparación de la aplicación para su uso con la API de envío de Microsoft Store:
 
   * Si la aplicación no existe aún en el centro de partners, debes [crear tu aplicación reservando su nombre en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). No puedes usar la API de envío de Microsoft Store para crear una aplicación en el centro de partners; debe trabajar en el centro de partners para crearla y, a continuación, después de que puedes usar la API para acceder a la aplicación y crear envíos para este mediante programación. Sin embargo, puedes usar la API para crear complementos y paquetes piloto mediante programación antes de crear envíos para estos.
 
-  * Antes de poder crear un envío para una aplicación determinada mediante esta API, primero debe [crear un envío de la aplicación en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), incluyendo responde al cuestionario de [clasificaciones por edades](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) . Después de realizar este paso, podrás crear mediante programación nuevos envíos para esta aplicación con la API. No es necesario crear un envío de complementos o de paquetes piloto antes de usar la API para esos tipos de envíos.
+  * Antes de poder crear un envío para una aplicación determinada mediante esta API, primero debe [crear un envío de la aplicación en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), incluidos responde al cuestionario de [clasificaciones por edades](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) . Después de realizar este paso, podrás crear mediante programación nuevos envíos para esta aplicación con la API. No es necesario crear un envío de complementos o de paquetes piloto antes de usar la API para esos tipos de envíos.
 
   * Si creas o actualizas un envío de aplicaciones y necesitas incluir un paquete de aplicaciones, [prepara el paquete de aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
 
@@ -66,7 +66,7 @@ Antes de poder usar la API de envío de Microsoft Store, debes asociar una aplic
 > [!NOTE]
 > Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, el identificador de cliente y la clave, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.
 
-1.  En el centro de partners, [asociar la cuenta del centro de partners de tu organización con el directorio de Azure AD de tu organización](../publish/associate-azure-ad-with-dev-center.md).
+1.  En el centro de partners, [asociar la cuenta del centro de partners de tu organización con el directorio de Azure AD de la organización](../publish/associate-azure-ad-with-dev-center.md).
 
 2.  A continuación, desde la página de **usuarios** en la sección de **configuración de la cuenta** del centro de partners, [Agregar la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o el servicio que usarás para acceder a los envíos para tu cuenta del centro de partners. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el centro de partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).  
 
@@ -93,7 +93,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-El valor de *tenant\_id* de POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave de la aplicación que recuperaste del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
+El valor de *tenant\_id* en POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave para la aplicación que recuperaste del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
 
 Una vez expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
@@ -110,7 +110,7 @@ Una vez que tengas un token de acceso de Azure AD, podrás llamar a métodos en 
 
 | Escenario       | Descripción                                                                 |
 |---------------|----------------------------------------------------------------------|
-| Aplicaciones |  Recuperar datos de todas las aplicaciones que están registradas en tu cuenta del centro de partners y crear envíos de aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtención de datos de la aplicación](get-app-data.md)</li><li>[Administración de envíos de aplicaciones](manage-app-submissions.md)</li></ul> |
+| Aplicaciones |  Recuperar los datos de todas las aplicaciones que están registradas en tu cuenta del centro de partners y crear envíos de aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtención de datos de la aplicación](get-app-data.md)</li><li>[Administración de envíos de aplicaciones](manage-app-submissions.md)</li></ul> |
 | Complementos | Obtén, crea, elimina complementos para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los complementos. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de complementos](manage-add-ons.md)</li><li>[Administrar envíos de complementos](manage-add-on-submissions.md)</li></ul> |
 | Paquetes piloto | Obtén, crea, elimina paquetes piloto para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los paquetes piloto. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de paquetes piloto](manage-flights.md)</li><li>[Administración de envíos de paquetes piloto](manage-flight-submissions.md)</li></ul> |
 

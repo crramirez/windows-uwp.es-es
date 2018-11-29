@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4eb31ed1f802b8827c124958438ceb6c5902aee1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848656"
+ms.locfileid: "7978597"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -55,7 +55,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará que la navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -185,7 +185,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         Use top navigation when:
 
         - Que quieras mostrar todas las opciones de exploración en la pantalla.
-        - Desean más espacio para el contenido de la aplicación.
+        - Que quieras más espacio para el contenido de la aplicación.
         - Iconos claramente no describen las categorías de navegación.
         
         Usa pestañas cuando:

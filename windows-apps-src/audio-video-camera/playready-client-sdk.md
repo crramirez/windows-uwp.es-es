@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fac02f892c66a1bcf0b08986ae00a3a162b44ca
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979648"
 ---
 # <a name="playready-drm"></a>DRM de PlayReady
 
@@ -407,7 +407,7 @@ Antes de empezar a crear la aplicación para UWP protegida con PlayReady, es nec
 
 Esta sección incluye información sobre cómo migrar las aplicaciones de la tienda de PlayReady Windows 8.x existentes a Windows 10.
 
-El espacio de nombres de aplicaciones para UWP de PlayReady en Windows 10 se cambió de **Microsoft.Media.PlayReadyClient** a [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Esto significa que tendrás que buscar y reemplazar el espacio de nombres antiguo por uno nuevo en el código. Seguirás haciendo referencia a un archivo winmd. Es parte de windows.media.winmd en el sistema operativo de Windows 10. Está en el windows.winmd como parte del Windows SDK de TH. Para UWP, se hace referencia en windows.foundation.univeralappcontract.winmd.
+El espacio de nombres PlayReady para aplicaciones para UWP en Windows 10 se cambió de **Microsoft.Media.PlayReadyClient** a [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Esto significa que tendrás que buscar y reemplazar el espacio de nombres antiguo por uno nuevo en el código. Seguirás haciendo referencia a un archivo winmd. Es parte de windows.media.winmd en el sistema operativo de Windows 10. Está en el windows.winmd como parte del Windows SDK de TH. Para UWP, se hace referencia en windows.foundation.univeralappcontract.winmd.
 
 Para reproducir contenido protegido por PlayReady de alta definición (HD) (1080p) y contenido de altísima definición (UHD), tendrás que implementar DRM de hardware PlayReady. Para obtener información sobre cómo implementar DRM de hardware PlayReady, consulta [DRM de hardware](hardware-drm.md).
 
@@ -514,7 +514,7 @@ Para una implementación de muestra de detención segura, consulta el archivo se
 Para usar DRM de PlayReady en una aplicación para UWP en Xbox One, primero debes registrar tu cuenta del [Centro de partners](https://partner.microsoft.com/dashboard) que estés usando para publicar la aplicación para la autorización de uso de PlayReady. Puedes hacerlo de dos maneras distintas:
 
 * Hacer que tu contacto de Microsoft solicite permiso.
-* Solicitar autorización mediante el envío de tu nombre de empresa y cuenta de centro de partners a [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
+* Solicitar autorización mediante el envío de tu nombre de empresa y cuenta de centro de partners para [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
 
 Una vez que recibas la autorización, tendrás que agregar un elemento `<DeviceCapability>` adicional en el manifiesto de la aplicación. Tendrás que hacerlo de forma manual porque actualmente no hay ninguna opción disponible en el Diseñador de manifiestos de aplicaciones. Sigue estos pasos para configurarlo:
 

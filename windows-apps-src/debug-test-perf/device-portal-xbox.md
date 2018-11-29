@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979237"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -195,7 +195,7 @@ Se trata de un área de trabajo en blanco que puedes personalizar a tu gusto. Pu
 
 ### <a name="game-event-data"></a>Datos del evento de juego
 
-En la página de **datos del evento de juego** , puede ver que las secuencias de un gráfico en tiempo real en el número de eventos del juego de seguimiento de eventos para Windows (ETW) actualmente registradas en tu Xbox One. Si hay eventos del juego grabados en el sistema, también puedes ver detalles (nombre del evento, la repetición del evento y el título de juego) que describe cada evento en la tabla debajo del gráfico de datos. La tabla solo está disponible si hay eventos registrados.
+En la página de **datos del evento de juego** , puedes ver un gráfico en tiempo real ese secuencias en el número de eventos del juego de seguimiento de eventos para Windows (ETW) actualmente registradas en tu Xbox One. Si no hay eventos del juego grabados en el sistema, también puedes ver los detalles (nombre del evento, la repetición del evento y el título de juego) que describe cada evento en la tabla debajo del gráfico de datos. La tabla solo está disponible si no hay eventos registrados.
 
 ![Datos del evento de juego](images/device-portal-xbox-22.PNG)
 

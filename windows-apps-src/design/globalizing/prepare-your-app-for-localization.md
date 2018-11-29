@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7845420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975696"
 ---
 # <a name="make-your-app-localizable"></a>Haz que tu aplicación sea localizable
 
@@ -52,7 +52,7 @@ En resumen, factorizar las cadenas en las partes que funcionan en todos los cont
 
 Ten en cuenta la siguiente cadena: "el {0} no pudo sincronizarse."
 
-Hay varias palabras que podrían reemplazar {0}, como "una cita", "task" o "documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
+Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "tareas" o "un documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
 
 | Inglés                                    | Alemán                                           |
 |:------------------------------------------ |:------------------------------------------------ |

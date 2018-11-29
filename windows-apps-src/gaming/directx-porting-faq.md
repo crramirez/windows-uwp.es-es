@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973323"
 ---
 # <a name="directx-11-porting-faq"></a>Preguntas más frecuentes sobre la migración a DirectX11
 
@@ -44,7 +44,7 @@ Los juegos que todavía usan la instrucción RDTSC deben actualizarse. Consulta 
 
 El proyecto del [kit de herramientas de DirectX (DirectXTK)](http://go.microsoft.com/fwlink/p/?LinkID=248929) para la comunidad ofrece clases auxiliares para usar con Direct3D 11.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>¿Cómo mantengo las rutas de código para el escritorio y Microsoft Store
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>¿Cómo mantengo las rutas de código para el escritorio y Microsoft Store?
 
 
 Serie de artículos de Chuck titulada [Uso Dual de técnicas de codificación para juegos](http://go.microsoft.com/fwlink/p/?LinkID=286210) ofrece instrucciones sobre cómo compartir código entre el escritorio y las rutas de acceso de código de Microsoft Store.

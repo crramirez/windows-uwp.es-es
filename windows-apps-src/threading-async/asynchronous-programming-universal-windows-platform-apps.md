@@ -7,21 +7,21 @@ ms.topic: article
 keywords: Windows 10, UWP, asincrónica
 ms.localizationpriority: medium
 ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847078"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972695"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 En este tema se describe la programación asincrónica en la plataforma Universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic.NET, C++ y JavaScript.
 
 Con la programación asincrónica puedes conseguir que tu aplicación responda con rapidez cuando realice tareas que pueden durar un tiempo prolongado. Por ejemplo, puede que una aplicación que descarga contenido de Internet deba esperar varios segundos a que llegue el contenido. Si usaste un método sincrónico en el subproceso de IU para recuperar el contenido, la aplicación se bloquea hasta que el método regresa. La aplicación no responderá a la interacción del usuario, y como parece que tarda en responder, es posible que esto provoque cierta frustración en el usuario. Un método mucho mejor es usar la programación asincrónica, donde la aplicación continúa ejecutándose y respondiendo a la interfaz de usuario mientras espera que una operación se complete.
 
-Para aquellos métodos que probablemente demanden mucho tiempo en completarse, debe usarse la programación asincrónica y no la excepción en Windows en UWP. JavaScript, C#, Visual Basic y C++ cada proporcionan compatibilidad con idiomas para los métodos asincrónicos.
+Para aquellos métodos que probablemente demanden mucho tiempo en completarse, debe usarse la programación asincrónica y no la excepción en Windows en UWP. JavaScript, C#, Visual Basic y C++ cada proporcionan compatibilidad con el idioma para los métodos asincrónicos.
 
 ## <a name="asynchronous-programming-in-the-uwp"></a>Programación asincrónica en UWP
-Muchas características UWP, como las API de [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) y la API de [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) , se exponen como API asincrónicas. Por convención, los nombres de las API asincrónicas terminan con "Async" para indicar que parte de su ejecución es probable que tienen lugar después de que el control se devuelve al llamador.
+Muchas características UWP, como las API de [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) y las API de [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) , se exponen como API asincrónicas. Por convención, los nombres de las API asincrónicas terminan con "Async" para indicar que parte de su ejecución es probable que llevará a cabo después de que el control se devuelve al llamador.
 
 Cuando uses API asincrónicas en tu aplicación de Plataforma universal de Windows (UWP), el código realizará llamadas de desbloqueo de manera coherente. Cuando implementes estos modelos asincrónicos en tus propias definiciones de API, los autores de las llamadas podrán comprender y usar tu código de manera predecible.
 

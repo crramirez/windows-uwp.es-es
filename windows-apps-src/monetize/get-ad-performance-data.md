@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de la Store Windows, Microsoft Store analytics API, anuncios, ads, rendimiento, performance
 ms.localizationpriority: medium
 ms.openlocfilehash: c6bec86929284e49e4e882597422d316276c0a33
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977840"
 ---
 # <a name="get-ad-performance-data"></a>Obtener los datos de rendimiento de los anuncios
 
 
 Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de rendimiento de los anuncios de tus aplicaciones durante un intervalo de fechas concreto y según otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
-Este método devuelve los mismos datos que proporcionan el [informe de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners.
+Este método devuelve los mismos datos que proporcionan el [informe de rendimiento de publicidad en el](../publish/advertising-performance-report.md) centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -116,7 +116,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | applicationId       | cadena | El identificador de la Store de la aplicación para la que quieres recuperar datos de rendimiento de anuncios.     |
 | applicationName     | cadena | Nombre para mostrar de la aplicación.                         |
 | adUnitId           | cadena | Identificador de la unidad de anuncio.        |
-| adUnitName           | cadena | El nombre de la unidad de anuncio según lo especificado por el desarrollador del centro de partners.              |
+| adUnitName           | cadena | El nombre de la unidad de anuncios, como se especifica el desarrollador del centro de partners.              |
 | adProvider           |  cadena  |  Nombre del proveedor del anuncio.   |
 | deviceType          | cadena | Tipo de dispositivo al que se destinan los anuncios. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).                              |
 | market              | cadena | Código de país ISO 3166 del mercado al que se destinaron los anuncios.             |

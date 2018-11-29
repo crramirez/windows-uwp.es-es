@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855203"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972615"
 ---
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 
@@ -58,7 +58,7 @@ Si la aplicación requiere una interfaz de usuario personalizada que admita la s
 **Contenido modificable y no modificable**
 
 
-Con la entrada táctil, las interacciones de selección se ejecutan básicamente mediante gestos, como pulsar para establecer un cursor de inserción o seleccionar una palabra y deslizar para modificar una selección. Al igual que con otras interacciones Windowstouch, las interacciones temporales están limitadas a la press y mantenga el gesto para mostrar la interfaz de usuario informativa. Para más información, consulta [Directrices para información visual](guidelines-for-visualfeedback.md).
+Con la entrada táctil, las interacciones de selección se ejecutan básicamente mediante gestos, como pulsar para establecer un cursor de inserción o seleccionar una palabra y deslizar para modificar una selección. Al igual que con otras interacciones Windowstouch, las interacciones temporales están limitadas a la presión y mantenga gesto para mostrar la interfaz de usuario informativa. Para más información, consulta [Directrices para información visual](guidelines-for-visualfeedback.md).
 
 Windowsrecognizes dos posibles estados de las interacciones de selección, modificables y no modificables y ajusta la interfaz de usuario, la información y funcionalidad según corresponda.
 

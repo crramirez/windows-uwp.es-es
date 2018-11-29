@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, nombres de aplicación, cambian el nombre de la aplicación, el nombre de la aplicación de actualización, el nombre del juego, nombre del producto
 ms.localizationpriority: medium
 ms.openlocfilehash: a27955f64a36fadde9b0f1781337929ce6871a9c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973439"
 ---
 # <a name="manage-app-names"></a>Administrar nombres de aplicación
 
 Lo **nombres de aplicación de administrar** le permite ver todos los nombres que has reservado para tu aplicación, reservar nombres adicionales (para otros idiomas o para cambiar el nombre de la aplicación) y eliminar nombres no es necesario. Puedes encontrar esta página del [Centro](https://partner.microsoft.com/dashboard) de partners, expande la sección de **administración de aplicaciones** en el menú de navegación izquierdo para cualquiera de las aplicaciones.
 
 > [!IMPORTANT]
-> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva cuando se crea por primera vez la aplicación en el centro de partners. Sin embargo, ten en cuenta que el nombre que reservas para tu producto se usará en la parte de TI de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN)**. Estos valores pueden ser visibles para algunos usuarios y no se ha cambiado, así que asegúrate de que el nombre que reservas en primer lugar es adecuado para este uso.
+> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva cuando se crea por primera vez la aplicación Centro de partners. Sin embargo, ten en cuenta que el nombre que reservas para tu producto se usará en la parte de TI de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN)**. Estos valores pueden ser visibles para algunos usuarios y no se ha cambiado, así que asegúrate de que el nombre que reservas en primer lugar es apropiado para este uso.
 
 
 ## <a name="reserve-additional-names-for-your-app"></a>Reservar más nombres para la aplicación
@@ -44,7 +44,7 @@ Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para q
 
 Si la aplicación ya está en la Tienda y quieres cambiarle el nombre, puedes hacerlo reservando un nombre nuevo (siguiendo los pasos descritos anteriormente) y, a continuación, creando un nuevo envío de la aplicación. 
 
-Debes actualizar los paquetes de la aplicación para reemplazar el nombre antiguo por uno nuevo y cargar los paquetes actualizados para su envío.
+Debes actualizar los paquetes de la aplicación para reemplazar el nombre anterior por el nuevo y cargar los paquetes actualizados para su envío.
 - En primer lugar, actualiza el archivo Package.StoreAssociation.xml para usar el nuevo nombre, ya sea manualmente o mediante el uso de Visual Studio (**proyecto > tienda > asociar aplicación con la tienda …**). Para obtener más información, consulta el [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
 - También tendrás que actualizar el elemento [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) del manifiesto de la aplicación y actualizar todos los gráficos o texto que incluyan el nombre de la aplicación. 
   > [!IMPORTANT]
@@ -58,7 +58,7 @@ Para actualizar una descripción de la tienda para que usa el nuevo nombre, ve a
 Una vez que se ha publicado la aplicación con el nuevo nombre, puedes eliminar cualquier nombre anterior que ya no necesitas usar.
 
 > [!TIP]
-> Cada aplicación aparece en el centro de partners con el nombre que reservaste para ella. Si has seguido los pasos anteriores para cambiar el nombre de una aplicación, y quieres que aparezca en el centro de partners con el nuevo nombre, debe eliminar el nombre original (haciendo clic en **Eliminar** en la página **Administrar nombres de aplicación** ). 
+> Cada aplicación aparece en el centro de partners con el nombre que reservaste para ella. Si has seguido los pasos anteriores para cambiar el nombre de una aplicación y quieres que aparezca en el centro de partners con el nuevo nombre, debe eliminar el nombre original (haciendo clic en **Eliminar** en la página **Administrar nombres de aplicación** ). 
 
  
 

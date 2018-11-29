@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976982"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
@@ -51,7 +51,7 @@ Para seguir este tutorial, debes tener una cuenta del centro de partners y debes
 5. En **Explorador de soluciones**, haz doble clic en MainPage.xaml para abrir el diseñador de la página principal de la aplicación.
 6. Arrastra un **botón** de **Herramientas** a la página.
 7. Haz doble clic en el botón del diseñador para abrir el archivo de código y agregar un controlador de eventos para el evento **Click**.  
-8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asignar el ```projectId``` variable en el valor de [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) que obtuviste en el centro de partners en la sección anterior.
+8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asignar el ```projectId``` variable en el valor de [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) que obtuviste del centro de partners en la sección anterior.
     [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 9. Guarda el archivo de código y crea el proyecto.
@@ -94,7 +94,7 @@ Espera al menos varias horas después de completar la sección anterior y, a con
 2. En la sección **Experimentos activos**, haz clic en **Optimizar clics de botón** y ve a la página de este experimento.
 3. Confirma que los resultados que se muestran en las secciones **Resumen de resultados** y **Detalles de resultados** coinciden con lo que se espera ver. Para obtener más información acerca de estas secciones, consulte [Administrar tu experimento en el centro de partners](manage-your-experiment.md#review-the-results-of-your-experiment).
     > [!NOTE]
-    > Centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
+    > El centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 
 4. Ahora estás listo para finalizar el experimento. En la sección **Resumen de resultados**, en la columna **Variación B**, haz clic en **Cambiar**. Esto cambia todos los usuarios de la aplicación al botón azul.
 5. Haz clic en **Aceptar** para confirmar que deseas finalizar el experimento.

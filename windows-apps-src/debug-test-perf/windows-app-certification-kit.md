@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842805"
+ms.locfileid: "7972526"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
 
 
-Para obtener la [Certificación de Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) de la aplicación o prepararla para su [publicación en la Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), debes validar y probarla localmente en primer lugar. Este tema muestra cómo instalar y ejecutar el [Kit de certificación de aplicaciones de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantizar que la aplicación sea segura y eficaz.
+Para obtener la [Certificación de Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) de la aplicación o prepararla para su [publicación en la Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), debes validar y probarla localmente en primer lugar. En este tema se muestra cómo instalar y ejecutar el [Kit de certificación de aplicaciones de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantizar que la aplicación sea segura y eficaz.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -42,7 +42,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 3.  Después de introducir o seleccionar la aplicación que deseas probar, haz clic en **Siguiente**.
 
-4.  En la siguiente pantalla, verás el flujo de trabajo de prueba que se alinea con el tipo de aplicación que se está probando. Si una prueba aparece atenuada en la lista, significa que no es aplicable a tu entorno. Por ejemplo, si estás probando una aplicación de Windows 10 en Windows 7, solo las pruebas estáticas se aplicarán al flujo de trabajo. Ten en cuenta que Microsoft Store puede aplicar todas las pruebas desde este flujo de trabajo. Selecciona las pruebas que deseas ejecutar y haz clic en **Siguiente**.
+4.  En la siguiente pantalla, verás el flujo de trabajo de prueba que se alinea con el tipo de aplicación que se está probando. Si una prueba aparece atenuada en la lista, significa que no es aplicable a tu entorno. Por ejemplo, si estás probando una aplicación de Windows 10 en Windows 7, solo las pruebas estáticas se aplicarán al flujo de trabajo. Ten en cuenta que Microsoft Store pueden aplicarse todas las pruebas desde este flujo de trabajo. Selecciona las pruebas que deseas ejecutar y haz clic en **Siguiente**.
 
     El Kit para la certificación de aplicaciones de Windows inicia la validación de la aplicación.
 
@@ -86,7 +86,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumpla con las [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos que pruebes la aplicación en un equipo de bajo consumo, por ejemplo, un equipo Intel Atom basados en procesadores con una resolución de pantalla de 1366 x 768 (o superior) y una rotación disco duro unidad (en contraposición a una unidad de disco duro de estado sólida).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumpla con las [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos que pruebes la aplicación en un equipo de bajo consumo, por ejemplo, un equipo Intel Atom basados en procesadores con una resolución de pantalla de 1366 x 768 (o superior) y una rotación disco duro unidad (en lugar de una unidad de disco duro de estado sólida).
 
 A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulta las más recientes de [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) y probar la aplicación con la versión más reciente del Kit de certificación de aplicaciones de Windows para asegurarte de que la aplicación cumpla con los requisitos de rendimiento más recientes.
 

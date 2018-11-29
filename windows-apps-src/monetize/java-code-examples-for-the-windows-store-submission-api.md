@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, java
 ms.localizationpriority: medium
 ms.openlocfilehash: 0466c7dad5ac2f543e6b447a9b2661c2889f7b4e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973039"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de Java: envíos de aplicaciones, complementos y pilotos
 

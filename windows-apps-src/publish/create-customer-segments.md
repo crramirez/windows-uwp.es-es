@@ -7,11 +7,11 @@ keywords: windows 10, uwp, segmento, segmentos, grupo dirigido, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973217"
 ---
 # <a name="create-customer-segments"></a>Crear segmentos de clientes
 
@@ -33,7 +33,7 @@ Cosas que tener en cuenta sobre segmentos de clientes:
 
 ## <a name="to-create-a-customer-segment"></a>Para crear un segmento de clientes
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y, a continuación, selecciona **los grupos de clientes**.
+1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y, a continuación, seleccionar **grupos de clientes**.
 2.  En la página **Grupos de clientes**, sigue uno de estos procedimientos:
  - En la sección **Mis grupos de clientes**, selecciona **Crear nuevo grupo** para definir un segmento desde cero. En la página siguiente, selecciona el botón de opción **Segmento**.
  - En la sección **Segment templates**, selecciona **Copiar** junto a uno de los segmentos predefinidos (que puedes usar tal cual o modificar según tus necesidades).

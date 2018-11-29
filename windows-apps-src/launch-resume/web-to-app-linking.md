@@ -7,23 +7,23 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976724"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permiten que las aplicaciones para sitios Web con los controladores de URI de aplicación
 
-Aplicaciones para sitios Web se asocia tu aplicación a un sitio Web para que cuando un usuario abra un vínculo a tu sitio Web, se inicia la aplicación en lugar de abrir el explorador. Si la aplicación no está instalada, el sitio Web se abre en el explorador como de costumbre. Los usuarios pueden confiar en esta experiencia porque solo los propietarios con contenido comprobado pueden registrarse para obtener un vínculo. Los usuarios podrán comprobar todos sus vínculos web a aplicación registrado, ve a Configuración > aplicaciones > aplicaciones para sitios Web.
+Aplicaciones para sitios Web se asocia tu aplicación con un sitio Web para que cuando un usuario abra un vínculo a tu sitio Web, se inicia la aplicación en lugar de abrir el explorador. Si la aplicación no está instalada, el sitio Web se abre en el explorador como de costumbre. Los usuarios pueden confiar en esta experiencia porque solo los propietarios con contenido comprobado pueden registrarse para obtener un vínculo. Los usuarios podrán buscar todos sus vínculos web a aplicación registrado, ve a Configuración > aplicaciones > aplicaciones para sitios Web.
 
 Para habilitar vínculos web a aplicación deberá:
 - Identificar en el archivo de manifiesto los URI que la aplicación controlará.
-- Un archivo JSON que define la asociación entre la aplicación y el sitio Web. declaración de manifiesto con el nombre de familia de paquete de la aplicación en la misma raíz de host que la aplicación.
+- Un archivo JSON que define la asociación entre tu aplicación y tu sitio Web. declaración de manifiesto con el nombre de familia de paquete de la aplicación en la misma raíz de host que la aplicación.
 - Administrar la activación en la aplicación.
 
 > [!Note]
-> A partir de Windows 10 Creators update, vínculos compatibles ha hecho clic en Microsoft Edge iniciará la aplicación correspondiente. Vínculos compatibles ha hecho clic en otros exploradores (por ejemplo, Internet Explorer, etc.), se mantendrá en la experiencia de exploración.
+> A partir de Windows 10 Creators update, vínculos admitidos ha hecho clic en Microsoft Edge iniciará la aplicación correspondiente. Vínculos admitidos ha hecho clic en otros exploradores (por ejemplo, Internet Explorer, etc.), se conservará en la experiencia de exploración.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registro para controlar los vínculos http y https en el manifiesto de la aplicación.
 
@@ -164,9 +164,9 @@ Prueba la configuración de la aplicación y el sitio web mediante la ejecución
 -   Nombre de familia de paquete (PFN): El PFN de la aplicación
 -   Ruta de acceso del archivo: El archivo JSON para la validación local (por ejemplo, C:\\UnaCarpeta\\windows-app-web-link)
 
-Si la herramienta no devuelve nada, validación funcionarán en ese archivo cuando se cargan. Si hay un código de error, no lo hará.
+Si la herramienta no devuelve nada, validación funcionará en ese archivo cuando cargado. Si hay un código de error, no lo hará.
 
-Puedes habilitar la siguiente clave del registro forzar la ruta de acceso de coincidencia con aplicaciones de prueba como parte de la validación local:
+Puedes habilitar la siguiente clave del registro forzar la ruta de acceso de coincidencia con aplicaciones de prueba como parte de validación local:
 
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
@@ -195,7 +195,7 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 
 ## <a name="see-also"></a>Consulta también
 
-[Proyecto de ejemplo de aplicación de Web](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[Proyecto de ejemplo de Web a aplicación](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [registro de windows.protocol](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 [Controlar la activación de URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 [asociación inicio muestra](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra cómo usar la API LaunchUriAsync().
