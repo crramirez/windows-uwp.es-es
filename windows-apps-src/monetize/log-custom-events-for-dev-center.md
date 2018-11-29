@@ -7,11 +7,11 @@ keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log 
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b338fd3b34d530ad365b0377d6b6c6c65398b7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993411"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191960"
 ---
 # <a name="log-custom-events-for-partner-center"></a>Registrar eventos personalizados para el Centro de partners
 
@@ -20,11 +20,11 @@ El [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
 Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) proporcionado por el Microsoft Store Services SDK. Puedes revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.
 
 > [!NOTE]
-> Eventos personalizados que inicie sesión en el centro de partners que están relacionados con los [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)y no aparecen en **El Visor de eventos**.
+> Eventos personalizados que inicie sesión en el centro de partners no están relacionados con [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)y no aparecen en **El Visor de eventos**.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para revisar los eventos de registro personalizado en el **informe de uso** de la aplicación en el centro de partners, la aplicación debe publicarse en la tienda.
+Para revisar los eventos de registro personalizado en el **informe de uso** de la aplicación en el centro de partners, tu aplicación debe publicarse en la tienda.
 
 ## <a name="how-to-log-custom-events"></a>Cómo registrar eventos personalizados
 

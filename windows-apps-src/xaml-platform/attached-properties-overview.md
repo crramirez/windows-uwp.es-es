@@ -11,11 +11,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 265a99e7abbb9b2f4c3341f90aecc3661ce3ffbf
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969613"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8209523"
 ---
 # <a name="attached-properties-overview"></a>Introducción a las propiedades adjuntas
 
@@ -124,7 +124,7 @@ El punto en el nombre de la propiedad adjunta es una parte fundamental del patr�
 - Para especificar una propiedad adjunta como parte de una ruta de destino de una animación, encierra el nombre de la propiedad adjunta entre paréntesis ("()"), por ejemplo, "(Canvas.Left)". Para obtener más información, consulta [Sintaxis de property-path](property-path-syntax.md).
 
 > [!WARNING]
-> Una limitación de la implementación de XAML de Windows Runtime es que no se puede animar una propiedad adjunta personalizada.
+> Una limitación de la implementación de XAML de Windows Runtime es que no puedes animar una propiedad adjunta personalizada.
 
 - Para especificar una propiedad adjunta como propiedad de destino para una referencia a un recurso desde un archivo de recursos a **x:Uid**, usa una sintaxis especial que inyecte una declaración **using:** completa con estilo de código entre corchetes ("\[\]") para crear un salto de ámbito deliberado. Por ejemplo, si suponemos que existe un elemento `<TextBlock x:Uid="Title" />`, la clave de recurso en el archivo de recursos que tiene como destino el valor **Canvas.Top** en esa instancia es "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obtener más información sobre archivos de recursos y XAML, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 

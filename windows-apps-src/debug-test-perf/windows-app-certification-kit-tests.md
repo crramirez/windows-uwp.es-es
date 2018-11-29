@@ -1,17 +1,17 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Pruebas del Kit para la certificación de aplicaciones en Windows
-description: El Kit de certificación de aplicaciones de Windows contiene diversas pruebas que puede ayudar a garantizar que la aplicación está lista para publicarse en la Microsoft Store.
+description: El Kit de certificación de aplicaciones de Windows contiene diversas pruebas que pueden ayudar a garantizar que la aplicación está lista para publicarse en la Microsoft Store.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965781"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191277"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
@@ -244,7 +244,7 @@ AppContainerCheck comprueba que esté establecido el bit **appcontainer** en el 
 
 Si un archivo ejecutable nativo no pasa la prueba, asegúrate de haber usado los compiladores y enlazadores más recientes para compilarlo y de haber usado la marca */appcontainer* en el enlazador.
 
-Si un archivo ejecutable administrado no pasa la prueba, asegúrate de que usa el compilador más reciente y el enlazador, como Microsoft Visual Studio, para compilar la aplicación para UWP.
+Si un archivo ejecutable administrado no pasa la prueba, asegúrate de que usa el compilador más reciente y enlazador, como Microsoft Visual Studio, para compilar la aplicación para UWP.
 
 **Observaciones**
 
@@ -308,14 +308,14 @@ Las aplicaciones deben usar las API para aplicaciones para UWP (Windows Runtime 
 
 ### <a name="test-details"></a>Detalles de la prueba
 
--   Comprueba que cada archivo binario del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la comprobación de la tabla de direcciones de importación del binario.
+-   Comprueba que cada archivo binario del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la tabla de direcciones de importación del binario.
 -   Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="corrective-actions"></a>Acciones correctivas
 
 Asegúrate de que la aplicación se haya compilado como una versión de lanzamiento y no con una versión de depuración.
 
-> **Nota**la versión de depuración de una aplicación pasará esta prueba, incluso si la aplicación usa solo [las API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Nota**la versión de depuración de una aplicación pasará esta prueba aunque la aplicación use solo [las API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 Revisa los mensajes de error para identificar la API de la aplicación usa que no es una [API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
@@ -481,7 +481,7 @@ Usa esta tabla como guía.
 
 ### <a name="branding-validation"></a>Validación de la personalización de marca
 
-Se espera que las aplicaciones para UWP estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
+Las aplicaciones para UWP se espera que estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -497,7 +497,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración.
 
 ### <a name="background"></a>Antecedentes
 
-Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para certificarse para Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
 
 ### <a name="test-details"></a>Detalles de la prueba
 

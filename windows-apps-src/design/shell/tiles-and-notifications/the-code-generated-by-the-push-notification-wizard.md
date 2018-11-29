@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 957c4cf2e9e9fc4a32327ec29a96019609ebdfe5
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966680"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8193758"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  
@@ -233,7 +233,7 @@ Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) direc
 
 También puedes enviar notificaciones de inserción si ejecutas una tarea programada en tu servicio móvil. Consulta [Programación de trabajos periódicos en Servicios móviles](http://go.microsoft.com/fwlink/p/?linkid=301694).
 
-**Advertencia**una vez que hayas ejecutado el Asistente para notificaciones de inserción una vez, no ejecutar el Asistente una segunda vez para agregar el código de registro para otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, para lograrlo puedes mover el código generado por el asistente en push.register.\* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento OnLaunched, pero los detalles de esto dependerán de la arquitectura de la aplicación.
+**Advertencia**una vez que hayas ejecutado el Asistente para notificaciones de inserción una vez, no ejecuta el Asistente una segunda vez para agregar el código de registro para otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, para lograrlo puedes mover el código generado por el asistente en push.register.\* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento OnLaunched, pero los detalles de esto dependerán de la arquitectura de la aplicación.
 
  
 

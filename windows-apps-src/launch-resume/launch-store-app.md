@@ -1,23 +1,23 @@
 ---
 title: Iniciar la aplicación Microsoft Store
-description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda.
+description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f64a290443ed5e45a5379b13f70dcc1ea2f57fa9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969999"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190143"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
 
 
 
-En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
 
 En este ejemplo se muestra cómo abrir la tienda a la página de juegos:
 
@@ -41,7 +41,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>El Id. de la Tienda se recomienda para los clientes de Windows 10 y funcionará en todas las versiones del sistema operativo, pero aún se admiten las formas anteriores de hacerlo anteriores (por ejemplo, PFN).</p>
-<p>Estos valores se pueden encontrar en [El centro de partners](https://partner.microsoft.com/dashboard) en la página de <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidad de la aplicación</a> en la sección de administración para cada aplicación.</p>
+<p>Estos valores pueden encontrarse en [El centro de partners](https://partner.microsoft.com/dashboard) en la página de <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidad de la aplicación</a> en la sección de administración para cada aplicación.</p>
 </td>
 <td>
 Id. de la Tienda <p>(recomendado)</p>
