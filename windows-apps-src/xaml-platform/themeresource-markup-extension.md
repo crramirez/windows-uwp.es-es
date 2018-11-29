@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847199"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981885"
 ---
 # <a name="themeresource-markup-extension"></a>Extensión de marcado {ThemeResource}
 
@@ -67,7 +67,7 @@ Las definiciones XAML de los estados visuales en una plantilla de control deben 
 
 Los usos de **ThemeResource** se pueden ver en una serie de valores dependientes. Por ejemplo, un valor de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que también es un recurso con clave podría usar una referencia a **ThemeResource**. Sin embargo, las propiedades de la interfaz de usuario que usan el recurso **SolidColorBrush** con clave también usarían una referencia a **ThemeResource**, por lo que es cada propiedad del tipo [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) la que habilita específicamente un cambio de valor dinámico cuando el tema cambia.
 
-**Nota** `{ThemeResource}` y evaluación de recursos de tiempo de ejecución en el cambio de tema se admiten en XAML Windows8.1, pero no en XAML para aplicaciones destinadas a Windows8.
+**Nota** `{ThemeResource}` y evaluación de recursos de tiempo de ejecución en tanto se admiten en Windows8.1 XAML, pero no en XAML para aplicaciones destinadas a Windows8.
 
 ### <a name="system-resources"></a>Recursos del sistema
 
@@ -138,7 +138,7 @@ Aquí, el valor de [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Co
 
 ## <a name="windows8-behavior"></a>Comportamiento de Windows8
 
-Windows8 no era compatible con la extensión de marcado **ThemeResource** , está disponible a partir de Windows8.1. Además, Windows8 no admitía la conmutación dinámica de los recursos relacionados con el tema de una aplicación de Windows Runtime. La aplicación tenía que reiniciarse para elegir el cambio de tema de las plantillas y estilos de XAML. Esto no es una buena experiencia del usuario, por lo que las aplicaciones se recomienda volver a compilar y destino Windows8.1 para que puedan usar estilos con usos **ThemeResource** y puedan conmutar dinámicamente temas cuando lo haga el usuario. Aplicaciones que se compilaron para Windows8 pero que se ejecutan en Windows8.1 seguir usando el comportamiento de Windows8.
+Windows8 no era compatible con la extensión de marcado **ThemeResource** , está disponible a partir de Windows8.1. Además, Windows8 no admitía la conmutación dinámica de los recursos relacionados con el tema de una aplicación de Windows Runtime. La aplicación tenía que reiniciarse para elegir el cambio de tema de las plantillas y estilos de XAML. Esto no es una buena experiencia del usuario, por lo que las aplicaciones se recomienda volver a compilar y destino Windows8.1 para que puedan usar estilos con usos **ThemeResource** y puedan conmutar dinámicamente temas cuando lo haga el usuario. Aplicaciones que se compilaron para Windows8 que se ejecutan en Windows8.1 sigue usando el comportamiento de Windows8.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>Compatibilidad con herramientas en tiempo de diseño para la extensión de marcado **{ThemeResource}**
 

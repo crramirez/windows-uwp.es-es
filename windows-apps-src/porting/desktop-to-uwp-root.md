@@ -9,11 +9,11 @@ ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 99657899615a5d485af788004589c2bc53a0a0e8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980833"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empaquetar aplicaciones de escritorio (puente de escritorio)
 
@@ -21,21 +21,21 @@ Lleva la aplicación de escritorio existente y agrega experiencias modernas para
 
 ![Puente de dispositivo de escritorio](images/desktop-to-uwp/desktop-bridge-4.png)
 
-Al crear un paquete de la aplicación de escritorio, la aplicación obtendrá una identidad y con esa identidad, la aplicación de escritorio tiene acceso a Windows Universal Platform (UWP) API. Puedes usarlas para mejorar las experiencias atractivas y modernas, como iconos dinámicos y notificaciones.  Usa la compilación condicional sencillas y comprobaciones en tiempo de ejecución para ejecutar código UWP solo cuando la aplicación se ejecuta en Windows 10.
+Al crear un paquete de la aplicación de escritorio, la aplicación obtendrá una identidad y con esa identidad, la aplicación de escritorio tiene acceso a Windows Universal plataforma (API de UWP). Puedes usarlas para mejorar las experiencias atractivas y modernas, como iconos dinámicos y notificaciones.  Usa la compilación condicional sencillas y comprobaciones en tiempo de ejecución para ejecutar código UWP solo cuando la aplicación se ejecuta en Windows 10.
 
 Además del código que usas para destacar las experiencias de Windows 10, la aplicación permanece intacta y puedes seguir distribuyéndola a tu existentes de Windows 7, Windows Vista o base de usuarios de Windows XP. En Windows 10, la aplicación continúa ejecutándose en plena confianza al igual que el modo de usuario hace hoy.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo puede usarse en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 > [!NOTE]
-> Consulta <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta serie</a> de vídeos cortos que publicó Microsoft Virtual Academy. Estos vídeos te proporcionarán todo el proceso de incorporación de la aplicación de escritorio para la plataforma Universal de Windows (UWP).
+> Consulta <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta serie</a> de vídeos cortos que publicó Microsoft Virtual Academy. Estos vídeos te proporcionarán todo el proceso de incorporación de la aplicación de escritorio a la plataforma Universal de Windows (UWP).
 
 ## <a name="benefits"></a>Ventajas
 
 Estos son algunos motivos para crear un paquete de aplicación de Windows para tu aplicación de escritorio:
 
-:heavy_check_mark: **Implementación optimizada**. Las aplicaciones y juegos que usan el puente ofrecen una experiencia de implementación excelente. Esta experiencia garantiza que los usuarios puedan instalar una aplicación y actualizarla. Si un usuario decide desinstalar la aplicación, se quita completamente sin dejar rastro. Esto reduce el tiempo necesario para crear experiencias de instalación y mantener a los usuarios actualizados.
+:heavy_check_mark: **Implementación optimizada**. Las aplicaciones y juegos que usan el puente ofrecen una experiencia de implementación excelente. Esta experiencia garantiza que los usuarios puedan instalar una aplicación y actualizarlo. Si un usuario decide desinstalar la aplicación, se quita completamente sin dejar rastro. Esto reduce el tiempo necesario para crear experiencias de instalación y mantener a los usuarios actualizados.
 
 :heavy_check_mark: **Actualizaciones automáticas y licencias**. La aplicación puede participar en licencia integrada de Microsoft Store y las instalaciones de actualización automática. La actualización automática es un mecanismo muy confiable y eficaz, ya que solo se descargan las partes modificadas de los archivos.
 
@@ -49,7 +49,7 @@ Si quieres ver una lista completa de las ventajas que se ofrecen, consulta [Puen
 
 ## <a name="prepare"></a>Preparación
 
-Primero, prepara la aplicación revisando el artículo [Preparar para empaquetar la aplicación de escritorio](desktop-to-uwp-prepare.md), y después solucionando cualquier problema que se aplican a la aplicación antes de crear un paquete de aplicación de Windows para ella. Es posible que no tienes que realizar muchos cambios en la aplicación antes de crear el paquete. Sin embargo, hay algunas situaciones en las que pueden requerir que modificar la aplicación antes de crear un paquete para ella.
+Primero, prepara la aplicación revisando el artículo [Preparar para empaquetar la aplicación de escritorio](desktop-to-uwp-prepare.md), y después solucionando cualquier problema que se aplican a la aplicación antes de crear un paquete de la aplicación de Windows para ella. Es posible que no tienes que realizar muchos cambios en la aplicación antes de crear el paquete. Sin embargo, hay algunas situaciones en las que pueden requerir que modificar la aplicación antes de crear un paquete para ella.
 
 <a id="convert" />
 
@@ -59,7 +59,7 @@ Estas son algunas herramientas que puedes usar para crear un paquete de aplicaci
 
 ### <a name="desktop-app-converter"></a>Desktop App Converter
 
-Aunque el término "Converter" aparece en el nombre de esta herramienta, realmente no convierte la aplicación. La aplicación no cambia. Sin embargo, esta herramienta genera un paquete de aplicación de Windows para ti. Puede ser muy útil en casos donde la aplicación realiza un gran número de modificaciones en el sistema o si tienes alguna duda sobre lo que hace el instalador.
+Aunque el término "Converter" aparece en el nombre de esta herramienta, realmente no convierte la aplicación. La aplicación no se modifica. Sin embargo, esta herramienta genera un paquete de aplicación de Windows para ti. Puede ser muy útil en casos donde la aplicación realiza un gran número de modificaciones en el sistema o si tienes alguna duda sobre lo que hace el instalador.
 
 Desktop App Converter traduce las acciones del instalador para el archivo virtual y el sistema de registro que usará la versión de la aplicación empaquetada. Desktop App Converter también realiza alguna tarea extra por ti. Esta es una lista de algunas de ellas.
 
@@ -75,7 +75,7 @@ Desktop App Converter traduce las acciones del instalador para el archivo virtua
 
 Otro buen motivo para usar Desktop App Converter es si mantienes tu aplicación mediante el uso de un entorno de desarrollo que no sean de Visual Studio. Puedes usar Desktop App Converter incluso si la aplicación no tiene un instalador.
 
-Consulta el [paquete de una aplicación de escritorio con Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)
+Consulta el [paquete de una aplicación de escritorio mediante Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)
 
 ### <a name="visual-studio"></a>Visual Studio
 
@@ -89,7 +89,7 @@ Visual Studio facilita considerablemente la creación de un paquete. Tendrás qu
 
 :heavy_check_mark: Genera tu paquete con un asistente.
 
-: heavy_check_mark: asigna fácilmente una identidad de la aplicación desde un nombre que ya has reservado en [El centro de partners](https://partner.microsoft.com/dashboard).
+: heavy_check_mark: asigna fácilmente una identidad a tu aplicación desde un nombre que ya has reservado en [El centro de partners](https://partner.microsoft.com/dashboard).
 
 Consulta el [paquete de una aplicación de escritorio con Visual Studio](desktop-to-uwp-packaging-dot-net.md)
 
@@ -127,7 +127,7 @@ Obtén más información sobre cómo puedes ofrecer aplicaciones empresariales a
 
 #### <a name="firegiant"></a>FireGiant
 
-La [extensión FireGiant Appx](https://www.firegiant.com/products/wix-expansion-pack/appx) te permite crear paquetes MSI y paquetes de aplicaciones de Windows al mismo tiempo desde el mismo código fuente de WiX. Cada vez que crees, puedes elegir Windows 10 con un paquete de aplicación de Windows y las versiones anteriores de Windows con MSI.
+La [extensión FireGiant Appx](https://www.firegiant.com/products/wix-expansion-pack/appx) te permite crear paquetes MSI y paquetes de aplicaciones de Windows al mismo tiempo desde el mismo código fuente de WiX. Cada vez que compiles, puedes elegir Windows 10 con un paquete de la aplicación de Windows y las versiones anteriores de Windows con MSI.
 
 <img width="20%" src="images/desktop-to-uwp/FG3rdPartyLogo.png">
 
@@ -135,7 +135,7 @@ La extensión FireGiant Appx usa el análisis estático y la emulación intelige
 
 Como la extensión FireGiant Appx no convierte el instalador ejecutándolo, puede mantener el instalador WiX sin necesidad de convertirlo repetidamente a paquetes de aplicación de Windows. Todos los usuarios de diferentes versiones de Windows obtienen las mejoras más recientes y no tienes que preocuparte de que los paquetes de aplicación de MSI y Windows no se sincronicen.
 
-Echa un vistazo a este [vídeo](https://www.youtube.com/watch?v=AFBpdBiAYQE) y ver cómo en un par de líneas de código, Rob Mensching de FireGiant director general crea una versión de Appx (paquete de aplicación de Windows) de la herramienta de compresión de 7-Zip de código abierto populares y, a continuación, cómo mejora la aplicación para Windows y los paquetes MSI con cambios en el mismo código fuente de WiX.
+Echa un vistazo a este [vídeo](https://www.youtube.com/watch?v=AFBpdBiAYQE) y ver cómo en un par de líneas de código FireGiant director general Rob Mensching crea una versión de Appx (paquete de la aplicación de Windows) de la herramienta de compresión de 7-Zip de código abierto populares y, a continuación, cómo mejora la aplicación de Windows y los paquetes MSI con cambios en el mismo código fuente de WiX.
 
 #### <a name="installaware"></a>InstallAware
 
@@ -183,7 +183,7 @@ Consulta [RAD Studio de Embarcadero](https://www.embarcadero.com/products/rad-st
 
 #### <a name="raypack-studio"></a>RayPack Studio
 
-Solución de empaquetado de Raynet, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), admite la creación de paquetes de aplicaciones de escritorio como uno de los posibles resultados de conversión eficiente y fácil de configurar y volver a empaquetar framework.
+Solución de empaquetado de Raynet, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), admite la creación de paquetes de aplicaciones de escritorio como uno de los posibles resultados de conversión eficiente y fácil de configurar y reempaquetado framework.
 
 <img width="20%" src="images/desktop-to-uwp/RaynetLogo_v3.png">
 
@@ -213,7 +213,7 @@ Consulta [empaquetar una aplicación de escritorio de forma manual](desktop-to-u
 
 ## <a name="integrate"></a>Integración
 
-Si la aplicación debe integrar con el sistema (por ejemplo: establecer reglas de firewall), describe estas cuestiones en el manifiesto del paquete de la aplicación y el sistema hará el resto. Para la mayoría de estas tareas, no tendrás que escribir nada de código. Con un poco de XML en el manifiesto, puedes hacer cosas como iniciar un proceso cuando el usuario inicie sesión, integrar la aplicación en el Explorador de archivos y agregar la aplicación una lista de destinos de impresión que aparecen en otras aplicaciones.
+Si la aplicación debe integrar con el sistema (por ejemplo: establecer reglas de firewall), describe estas cuestiones en el manifiesto del paquete de la aplicación y el sistema hará el resto. Para la mayoría de estas tareas, no tendrás que escribir nada de código. Con un poco de XML en el manifiesto, puedes hacer cosas como iniciar un proceso cuando el usuario inicie sesión, integrar la aplicación en el Explorador de archivos y agrega la aplicación una lista de destinos de impresión que aparecen en otras aplicaciones.
 
 Consulta [integrar la aplicación de escritorio empaquetada con Windows 10](desktop-to-uwp-extensions.md).
 
@@ -225,7 +225,7 @@ Consulta [Mejorar tu aplicación de escritorio para Windows 10](desktop-to-uwp-e
 
 ## <a name="extend"></a>Ampliación
 
-Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usuario habilitada para entrada táctil) deben ejecutarse dentro de un contenedor de aplicación moderna. En general, primero debes determinar si puedes agregar tu experiencia [mejorando](desktop-to-uwp-enhance.md) la aplicación de escritorio existente con las API de UWP. Si tienes que usar un componente de UWP para lograr la experiencia, a continuación, puedes agregar un proyecto de UWP a la solución y usar servicios de aplicaciones para la comunicación entre la aplicación de escritorio y el componente UWP.
+Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usuario habilitada para entrada táctil) deben ejecutarse dentro de un contenedor de aplicación moderna. En general, primero debes determinar si puedes agregar tu experiencia [mejorando](desktop-to-uwp-enhance.md) la aplicación de escritorio existente con las API de UWP. Si tienes que usar un componente de UWP para lograr la experiencia, a continuación, puedes agregar un proyecto de UWP a la solución y usar servicios de aplicaciones para la comunicación entre la aplicación de escritorio y el componente de UWP.
 
 Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](desktop-to-uwp-extend.md).
 
@@ -249,7 +249,7 @@ Para probar la aplicación en una configuración realista mientras la preparas p
 
 ## <a name="validate"></a>Validación
 
-Para que la aplicación posibilidades de publicarse en la Microsoft Store o de obtener la [Certificación de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666), debes validarla y probarla localmente antes de enviarla para su certificación.
+Para que la aplicación tenga posibilidades de publicarse en la Microsoft Store u obtener la [Certificación de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666), debes validarla y probarla localmente antes de enviarla para su certificación.
 
 Si estás usando DAC para empaquetar la aplicación, puedes usar el nuevo ``-Verify`` marca para validar el paquete con la aplicación de escritorio empaquetada y requisitos de la tienda. Consulta [Empaquetar una aplicación, firmarla y prepararla para su envío a la Store](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
@@ -289,4 +289,4 @@ Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 | [Ampliar tu aplicación de escritorio con componentes de UWP modernos](desktop-to-uwp-extend.md)| Agrega experiencias avanzadas que deben ejecutarse dentro de un contenedor de aplicación para UWP. Conectar la aplicación de escritorio con el proceso de UWP mediante el uso de servicios de aplicaciones.|
 | [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md) | Explica las opciones para depurar la aplicación empaquetada. |
 | [Distribuir una aplicación de escritorio empaquetada ](desktop-to-uwp-distribute.md) | Consulta cómo distribuir la aplicación convertida a los usuarios.  |
-| [Issues(desktop-to-uwp-known-issues.md) conocidos | Enumera los problemas conocidos con el empaquetado de aplicaciones de escritorio. |
+| [Issues(desktop-to-uwp-known-issues.md) conocidos | Enumera los problemas conocidos con aplicaciones de escritorio de empaquetado. |

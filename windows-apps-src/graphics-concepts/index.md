@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cb6a2466ea201c9b5047f7eb159477a0d584429
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851496"
+ms.locfileid: "7972715"
 ---
 # <a name="direct3d-graphics-glossary"></a>Glosario de gráficos de Direct3D
 
 
-Define los términos de gráficos de Microsoft Direct3D. En este glosario define, en términos de gráficos computerizados 3D generales, de alto nivel que se usan en el desarrollo de juegos y aplicaciones de Direct3D.
+Define los términos de gráficos de Microsoft Direct3D. Este glosario define, en términos de gráficos computerizados 3D generales, de alto nivel que se usan en el desarrollo de juegos y aplicaciones de Direct3D.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>En esta sección
 

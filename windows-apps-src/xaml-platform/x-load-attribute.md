@@ -6,15 +6,15 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976094"
 ---
 # <a name="xload-attribute"></a>Atributo x:Load
 
-Puedes usar **x: Load** para optimizar el inicio, la creación de árbol visual y el uso de memoria de la aplicación XAML. Usar **x: Load** tiene un efecto visual similar a la **visibilidad**, salvo que cuando el elemento no se carga, su memoria se libera e internamente un marcador de posición pequeño se usa para marcar su lugar en el árbol visual.
+Puedes usar **x: Load** para optimizar el inicio, la creación de árbol visual y el uso de memoria de la aplicación XAML. Usar **x: Load** tiene un efecto visual similar a **visibilidad**, salvo que cuando el elemento no se carga, su memoria se libera e internamente un marcador de posición pequeño se usa para marcar su lugar en el árbol visual.
 
 Puede ser el elemento de interfaz de usuario el atributo x: Load cargando y descargado a través de código o con una expresión [x: Bind](x-bind-markup-extension.md) . Esto es útil para reducir los costes de los elementos que no se muestran a menudo o que se muestran de forma condicional. Cuando usas x: Load en un contenedor, como de cuadrícula o StackPanel, el contenedor y todos sus elementos secundarios se carga o descarga como un grupo.
 
@@ -58,15 +58,15 @@ Para descargar un elemento:
 - En una página o un UserControl, llama a **UnloadObject** y pasar la referencia de objeto
 - Llama a **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject** y pasar la referencia de objeto
 
-Cuando se ha descargado un objeto, se reemplazará con un marcador de posición en el árbol. La instancia del objeto permanecerá en la memoria hasta que se han publicado todas las referencias. La API de UnloadObject en un página o UserControl está diseñada para liberar las referencias mantenidas por codegen para x: Name y x: Bind. Si mantienes referencias adicionales en el código de la aplicación también deberás a que se publique.
+Cuando un objeto se descarga, lo que reemplazará en el árbol de un marcador de posición. La instancia del objeto permanecerá en la memoria hasta que se han publicado todas las referencias. La API de UnloadObject en un página o UserControl está diseñada para liberar las referencias mantenidas codegen para x: Name y x: Bind. Si mantienes referencias adicionales en el código de la aplicación también deberás a que se publique.
 
-Cuando un elemento se ha descargado, todos los Estados asociados con el elemento se descartarán, por lo tanto, si con x: Load como una versión optimizada de visibilidad, a continuación, asegúrate de que todas de estado se aplica a través de enlaces o se vuelve a aplicar al código cuando se desencadena el evento Loaded.
+Cuando un elemento se descarga, todos los Estados asociados con el elemento se descartarán, por lo tanto, si usa x: Load como una versión optimizada de visibilidad, a continuación, asegúrate de que todas de estado se aplica a través de enlaces o se vuelve a aplicar al código cuando se desencadene el evento cargado.
 
 ## <a name="restrictions"></a>Restricciones
 
-Las restricciones para usar **x: Load** son:
+Las restricciones para el uso de **x: Load** son:
 
-- Debes definir un [x: Name](x-name-attribute.md)para el elemento, ya que es necesario tener una manera de encontrar el elemento más adelante.
+- Debes definir una [x: Name](x-name-attribute.md)para el elemento, ya que es necesario tener una manera de encontrar el elemento más adelante.
 - Solo puedes usar x: Load en tipos que deriven de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) o [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
 - No puedes usar x: Load en los elementos raíz en una [**página**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), un [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol)o una [**clase DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 - No puedes usar x: Load en los elementos de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
@@ -81,7 +81,7 @@ Por lo general, te recomendamos que aplaces aquellos elementos que no sean visib
 
 Ten cuidado con el aplazamiento de elementos en escenarios [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878), ya que se reducirá el tiempo de inicio; aunque también puede disminuir el rendimiento del movimiento panorámico en función de lo que vayas a crear. Si buscas aumentar el rendimiento del movimiento panorámico, consulta la documentación de la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) y del [atributo x:Phase](x-phase-attribute.md).
 
-Si se usa el [atributo x: Phase](x-phase-attribute.md) junto con **x: Load** a continuación, cuando se crea un elemento o un árbol elementos, los enlaces se aplicarán hasta la fase actual incluida. La fase especificada para **x: Phase** afectará ni controlará el estado de carga del elemento. Cuando un elemento de lista se recicla como parte del movimiento panorámico, realizado los elementos comportarán de la misma manera como otros elementos activos, y enlaces compilados (enlaces **{X: Bind}** ) se procesarán mediante las mismas reglas, incluidos el escalonamiento.
+Si se usa el [atributo x: Phase](x-phase-attribute.md) junto con **x: Load** a continuación, cuando se crea un elemento o un árbol elementos, los enlaces se aplicarán hasta la fase actual incluida. La fase especificada para **x: Phase** afectará ni controlará el estado de carga del elemento. Cuando un elemento de lista se recicla como parte del movimiento panorámico, realizado los elementos comportarán de la misma manera como otros elementos activos, y enlaces compilados (enlaces **{X: Bind}** ) se procesarán mediante las mismas reglas, incluidos el ajuste de fase.
 
 Como regla general, se recomienda evaluar el rendimiento de la aplicación antes y después, para asegurarte de que vas a obtener el rendimiento deseado.
 

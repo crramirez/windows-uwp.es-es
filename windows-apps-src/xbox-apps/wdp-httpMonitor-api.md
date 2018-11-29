@@ -3,11 +3,11 @@ title: Referencia de API del supervisor de HTTP del Portal de dispositivos
 description: Obtén información sobre cómo acceder al tráfico HTTP desde la aplicación centrada en una consola Xbox.
 ms.localizationpriority: medium
 ms.openlocfilehash: 81de2a2a3194384e9c5de1c5c45a827e4d965c91
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982182"
 ---
 # <a name="http-monitor-api-reference"></a>Referencia de API del supervisor de HTTP   
 Puede acceder al tráfico de HTTP en tiempo real para la aplicación centrada mediante esta API si se ha habilitado el supervisor de HTTP en la consola Xbox, activando la casilla en Dev Home.

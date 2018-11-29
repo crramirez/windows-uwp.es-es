@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, prueba beta, distribución limitada, beta, versiones beta, pruebas, evaluadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 1560da53ebcc2b24bc9bc13034431c3a2208dfe5
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974881"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Pruebas beta y distribución dirigida
 
@@ -31,7 +31,7 @@ Sea cual sea el método que elijas, estas son algunas cosas que debes tener en c
 
 Si quieres permitir que los evaluadores usen tu aplicación antes de que esté disponible para otras personas y asegurarte de que nadie más pueda ver su descripción, usa la opción **Audiencia privada** en [visibilidad](choose-visibility-options.md) (en la página **Precios y disponibilidad** de tu envío). Este es el único método que te permite distribuir tu aplicación a los evaluadores mientras que impide por completo que el resto pueda ver una descripción de Store de la aplicación, incluso si pudieran escribirla en su vínculo directo. 
 
-La opción de **audiencia privada** solo puede usarse cuando ya no haya publicado la aplicación a una audiencia pública. Puedes usar esta opción con aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben iniciar sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
+La opción de **audiencia privada** solo puede usarse cuando ya no has publicado la aplicación a una audiencia pública. Puedes usar esta opción con aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben iniciar sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
 
 Para obtener más información, consulta [Audiencia privada](choose-visibility-options.md#audience).
 
@@ -77,4 +77,4 @@ Para usar esta opción:
 > [!IMPORTANT]
 > Esta opción no está disponible para nuevos envíos. Si hubieras seleccionado previamente esta opción para una aplicación destinada a Windows Phone 8.1 o versiones anteriores, podrás seguir usándola para esa aplicación. Puedes realizar cambios en la lista de evaluadores (hasta 10.000) creando un nuevo envío. 
 
-Con esta opción, las personas con las direcciones de correo electrónico que hayas especificado podrán descargar la aplicación (solo en dispositivos que ejecuten Windows Phone 8.1 o versiones anteriores) mediante el uso del vínculo directo a su descripción. Ningún otro cliente podrá descargar la aplicación, aunque disponga del vínculo, y no podrán encontrar la aplicación en Store ni buscando ni explorando. Para que los evaluadores puedan descargar la aplicación, deberás darles su vínculo (la **dirección URL** de la [página de identidad de la aplicación](view-app-identity-details.md)), y deberán iniciar sesión con una cuenta de Microsoft asociada a una dirección de correo electrónico que hayas facilitado. Puedes poner la aplicación a disposición de los evaluadores en dispositivos Windows 10 [generando códigos promocionales](generate-promotional-codes.md); cualquier persona que tenga uno de los códigos de promoción de la aplicación puede descargar en un dispositivo Windows 10, incluso si no hubieras introducido aquí su dirección de correo.
+Con esta opción, las personas con las direcciones de correo electrónico que hayas especificado podrán descargar la aplicación (solo en dispositivos que ejecuten Windows Phone 8.1 o versiones anteriores) mediante el uso del vínculo directo a su descripción. Ningún otro cliente podrá descargar la aplicación, aunque disponga del vínculo, y no podrán encontrar la aplicación en Store ni buscando ni explorando. Para que los evaluadores puedan descargar la aplicación, deberás darles su vínculo (la **dirección URL** de la [página de identidad de la aplicación](view-app-identity-details.md)), y deberán iniciar sesión con una cuenta de Microsoft asociada a una dirección de correo electrónico que hayas facilitado. Puedes poner la aplicación a disposición de los evaluadores en dispositivos de Windows 10 [generando códigos promocionales](generate-promotional-codes.md); cualquier persona que tenga uno de los códigos de promoción de la aplicación puede descargarla en un dispositivo Windows 10, aunque no hubieras introducido aquí su dirección de correo.

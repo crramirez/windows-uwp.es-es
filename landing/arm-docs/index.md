@@ -7,13 +7,13 @@ ms.author: misatran
 ms.date: 05/08/2018
 ms.localizationpriority: medium
 ms.topic: article
-keywords: Windows 10 en ARM, ARM, creación de aplicaciones de ARM64 de win32, compilar controladores de ARM64
+keywords: Windows 10 en ARM, ARM, la compilación de aplicaciones de win32 ARM64, compilar controladores de ARM64
 ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7844309"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978713"
 ---
 # <a name="windows-10-on-arm"></a>Windows10 en ARM
 Windows 10 se ejecuta en equipos equipados con procesadores ARM. Esta página proporciona la información para obtener más información acerca de la plataforma y empezar a desarrollar aplicaciones. También te animamos a proporcionar tus comentarios mediante el uso de los vínculos en la parte inferior de la página.
@@ -24,11 +24,11 @@ Visualiza y Obtén información sobre cómo se ejecuta Windows 10 en ARM.
 <ul class="cols cols3">
     <li>
         <a href="https://youtu.be/OZtVBDeVqCE"><img alt="Building ARM64 Win32 C++ apps video" src="./images/Arm64Scaled.png" /></a>
-        <h3>Creación de aplicaciones de C++ de Win32 ARM64</h3><p>Obtén información sobre cómo instalar las herramientas de ARM64 para Visual Studio. A continuación, te guiaremos por los pasos para crear y compilar un proyecto nuevo de 64 ARM.</p>
+        <h3>Creación de aplicaciones de C++ de Win32 ARM64</h3><p>Obtén información sobre cómo instalar las herramientas de ARM64 para Visual Studio. A continuación, te guiaremos por los pasos de crear y compilar un nuevo proyecto de 64 ARM.</p>
     </li>
     <li>
         <a href="https://channel9.msdn.com/Events/Build/2018/BRK2438"><img alt="Build 2018 Windows 10 on ARM for developers" src="./images/buildVideoStillScaled.png" /></a>
-        <h3>Compilación de 2018 de Windows 10 en ARM para desarrolladores</h3><p>Obtén información sobre Windows 10 en dispositivos ARM, cómo el mágica de x86 funciona la emulación y, finalmente, cómo enviar y crear aplicaciones para Windows 10 en ARM. Mostraremos cómo crear aplicaciones de ARM64 para escritorio y UWP.</p>
+        <h3>Compilación de 2018 de Windows 10 en ARM para desarrolladores</h3><p>Obtén información sobre Windows 10 en dispositivos ARM, cómo el mágica de x86 emulación funciona y, finalmente, cómo enviar y crear aplicaciones para Windows 10 en ARM. Mostraremos cómo crear aplicaciones de ARM64 para escritorio y UWP.</p>
     </li>
     <li>
         <a href="https://channel9.msdn.com/Events/Ch9Live/Windows-Community-Standup/Kevin-Gallo-January-2018"><img alt="Community standup video featuring Kevin Gallo" src="./images/communityStandupStillScaled.png" /></a>
@@ -37,7 +37,7 @@ Visualiza y Obtén información sobre cómo se ejecuta Windows 10 en ARM.
 </ul>
 
 ## <a name="understanding-windows-10-on-arm"></a>Entendimiento de Windows 10 en ARM
-Obtener saber la plataforma echando un vistazo a estos recursos.
+Obtener saber la plataforma, Observemos estos recursos.
 
 <ul class="cardsF panelContent cols cols2">
     <li>
@@ -88,7 +88,7 @@ Obtener saber la plataforma echando un vistazo a estos recursos.
     </li>-->
 </ul>
 
-## <a name="developing-for-windows-10-on-arm"></a>Desarrollo para Windows 10 en ARM
+## <a name="developing-for-windows-10-on-arm"></a>Desarrollar para Windows 10 en ARM
 Inicia la adaptación de las aplicaciones a Windows 10 en ARM y sacar provecho de las características disponibles allí.  
 
 <ul class="cardsF panelContent cols cols3">
@@ -102,7 +102,7 @@ Inicia la adaptación de las aplicaciones a Windows 10 en ARM y sacar provecho d
                     </a>
                 <div class="cardText">
                     <h3>Creación de aplicaciones de ARM64 con el SDK</h3>
-                    <p class="x-hidden-focus">Consulta esta entrada de blog donde te guiamos por compilar las aplicaciones como ARM64 para ejecutar de forma nativa en Windows 10 en ARM.</p>
+                    <p class="x-hidden-focus">Echa un vistazo a esta entrada de blog donde te guiamos por compilar las aplicaciones como ARM64 para ejecutarse de forma nativa en Windows 10 en ARM.</p>
                 </div>
             </div>
         </div>
@@ -192,7 +192,7 @@ Inicia la adaptación de las aplicaciones a Windows 10 en ARM y sacar provecho d
 </ul>-->
 
 ## <a name="let-us-know-if-you-have-feedback"></a>Nos gustaría saber si tienes comentarios
-Estamos mejorando nuestros productos continuamente aprovechando comentarios de usted y nuestros clientes existentes. Si tienes una idea, está bloqueado en un problema o solo quieres compartir perfectamente cómo es la experiencia de estos vínculos te ayudará a.
+Continuamente estamos mejorando nuestros productos mediante los comentarios aprovechando de usted y nuestros clientes existentes. Si tienes una idea, está bloqueado en un problema o solo quieres compartir perfectamente cómo es la experiencia de estos vínculos te ayudará a.
 
 <ul class="cardsM cols cols3">
 <li>
@@ -200,7 +200,7 @@ Estamos mejorando nuestros productos continuamente aprovechando comentarios de u
             <img class="cardImage" role="presentation" alt="Feedback hub icon" src="/media/common/i_feedback.svg" data-linktype="external" />
             <div class="cardText">
                 <h3>Usar el centro de opiniones</h3>
-                <p>¿Se pierde algo? ¿Tienes una buena idea? Nos gustaría saber en el centro de opiniones.</p>
+                <p>¿Te pase por alto algo? ¿Tienes una buena idea? Nos gustaría saber en el centro de opiniones.</p>
             </div>
         </a>
     </li>
@@ -218,7 +218,7 @@ Estamos mejorando nuestros productos continuamente aprovechando comentarios de u
             <img class="cardImage" role="presentation" alt="Give doc feedback icon" src="/media/common/i_form.svg" data-linktype="external" />
             <div class="cardText">
                 <h3>Enviar comentarios de documento</h3>
-                <p>¿Se encontró un problema con nuestros documentos? ¿Quieres hacer algo más clara? Crear un problema en nuestro repositorio de GitHub de documentos.</p>
+                <p>¿Se encontró un problema con nuestros documentos? ¿Quieres para permitirnos ofrecer algo más clara? Crear un problema en nuestro repositorio de GitHub de documentos.</p>
             </div>
         </a>
     </li>

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ddeee438e946dd28a78d59d163f59cb1114aa65
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839540"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981621"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
 
@@ -30,7 +30,7 @@ Dado que la aplicación se puede usar en una amplia gama de dispositivos (cada u
 
 ## <a name="back-button-handling"></a>Control del botón Atrás
 
-Universal 8.1 y las aplicaciones, las aplicaciones de Windows Runtime 8.x Windows Phone tienen diferentes enfoques para mostrar la interfaz de usuario y los eventos que se controlan para el botón Atrás. Sin embargo, para las aplicaciones de Windows 10, puedes usar un enfoque único en la aplicación. En los dispositivos móviles, el botón se proporciona automáticamente como un botón capacitivo en el dispositivo o como un botón en el shell. En un dispositivo de escritorio, se agrega un botón al cromo de la aplicación siempre que la navegación hacia atrás es posible dentro de la aplicación; esto aparece en la barra de título para aplicaciones en ventana o en la barra de tareas para el modo de tableta. El evento de botón Atrás es un concepto universal en todas las familias de dispositivos y los botones implementados en el hardware o el software originan el mismo evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596).
+Universal 8.1 y las aplicaciones, las aplicaciones de Windows Runtime 8.x Windows Phone tienen diferentes enfoques para mostrar la interfaz de usuario y los eventos que se controlan para el botón Atrás. Sin embargo, las aplicaciones de Windows 10, puedes usar un enfoque único en la aplicación. En los dispositivos móviles, el botón se proporciona automáticamente como un botón capacitivo en el dispositivo o como un botón en el shell. En un dispositivo de escritorio, se agrega un botón al cromo de la aplicación siempre que la navegación hacia atrás es posible dentro de la aplicación; esto aparece en la barra de título para aplicaciones en ventana o en la barra de tareas para el modo de tableta. El evento de botón Atrás es un concepto universal en todas las familias de dispositivos y los botones implementados en el hardware o el software originan el mismo evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596).
 
 El siguiente ejemplo funciona para todas las familias de dispositivos y resulta útil para los casos donde el mismo procesamiento se aplica a todas las páginas y cuando no es necesario confirmar la navegación (por ejemplo, para advertir sobre cambios sin guardar).
 
@@ -82,7 +82,7 @@ También es un método único para todas las familias de dispositivos para salir
 
 ## <a name="charms"></a>Accesos
 
-No es necesario cambiar el código que se integra con los accesos, pero es necesario agregar una interfaz de usuario a tu aplicación para que ocupe el lugar de la barra de accesos, que no es una parte del shell de Windows 10. Una aplicación Universal 8.1 que se ejecutan en Windows 10 tiene su propia interfaz de usuario proporcionada por el contenedor visual representado por el sistema en la barra de título de la aplicación de sustitución.
+No es necesario cambiar el código que se integra con los accesos, pero es necesario agregar una interfaz de usuario a tu aplicación para que ocupe el lugar de la barra de accesos, que no forma parte del shell de Windows 10. Una aplicación Universal 8.1 que se ejecutan en Windows 10 tiene su propia interfaz de usuario proporcionado por el contenedor visual representado por el sistema en la barra de título de la aplicación de sustitución.
 
 ## <a name="controls-and-control-styles-and-templates"></a>Controles y estilos y plantillas de control
 
@@ -98,7 +98,7 @@ Estos son algunos ejemplos más específicos de los cambios en los controles.
 | **AppBar**   | Si estás usando el control de **barra de la aplicación** (en su lugar, se recomienda[**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) ), no está oculto de manera predeterminada en una aplicación de Windows 10. Puedes controlarlo con la propiedad [**AppBar.ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/dn633872). |
 | **AppBar**, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de Windows 10, **AppBar** y [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) tienen un botón de **consulta más** (los puntos suspensivos). |
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de Windows Runtime 8.x, los comandos secundarios de un [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) están siempre visibles. En una aplicación de la tienda de Windows Phone y en una aplicación de Windows 10, el no aparecen hasta que se abre la barra de comandos. |
-| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Para una aplicación de la Tienda de Windows Phone, el valor de [**CommandBar.IsSticky**](https://msdn.microsoft.com/library/windows/apps/hh701944) no afecta al hecho de que la barra sea o no descartable por cambio de foco. Para un Windows 10 aplicación, si **IsSticky** se establece en true, a continuación, **CommandBar** descarta un gesto de cierre. |
+| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Para una aplicación de la Tienda de Windows Phone, el valor de [**CommandBar.IsSticky**](https://msdn.microsoft.com/library/windows/apps/hh701944) no afecta al hecho de que la barra sea o no descartable por cambio de foco. Para un Windows 10 aplicación, si **IsSticky** se establece en true, **CommandBar** descarta un gesto de cierre. |
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de Windows 10, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) no controla los eventos [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622) ni [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) . Tampoco responde a una pulsación ni a deslizar rápidamente el dedo hacia arriba. Sigues teniendo la opción de controlar estos eventos y establecer [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939). |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Revisa el aspecto de la aplicación con los cambios visuales de [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) y [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280). Para una aplicación de Windows 10 que se ejecutan en un dispositivo móvil, estos controles ya no navegan a una página de selección, pero en su lugar, usa un ventana emergente. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | En una aplicación de Windows 10, no puedes poner [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) o [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) dentro una elemento emergente. Si quieres que estos controles se muestren en un control de tipo emergente, a continuación, puedes usar [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) y [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313). |
@@ -116,13 +116,13 @@ Estos son algunos ejemplos más específicos de los cambios en los controles.
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | En una aplicación de Windows Runtime 8.x, revisión ortográfica está desactivada de forma predeterminada para un [**cuadro de texto**](https://msdn.microsoft.com/library/windows/apps/br209683). En una aplicación de la tienda de Windows Phone y en una aplicación de Windows 10, es de manera predeterminada. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | El tamaño de fuente predeterminado para [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ha cambiado de 11 a 15. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | El valor predeterminado de [**TextBox.TextReadingOrder**](https://msdn.microsoft.com/library/windows/apps/dn252859) ha cambiado de **Default** a **DetectFromContent**. Si no es lo que quieres, usa **UseFlowDirection**. **Default** está en desuso. |
-| Diversos | Color de énfasis se aplica a las aplicaciones de Windows Phone Store y a las aplicaciones de Windows 10, pero no en aplicaciones de Windows Runtime 8.x.  |
+| Diversos | Color de énfasis se aplica a las aplicaciones Windows Phone Store y a las aplicaciones de Windows 10, pero no en aplicaciones de Windows Runtime 8.x.  |
 
 Para obtener más información sobre los controles de aplicaciones para UWP, consulta [Controles por función](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) y [Directrices sobre controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
 ##  <a name="design-language-in-windows10"></a>Lenguaje de diseño en Windows 10
 
-Existen algunas diferencias pequeñas pero importantes en lenguaje de diseño entre las aplicaciones Universal 8.1 y Windows 10. Para obtener detalles, consulta [Diseño](http://dev.windows.com/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
+Existen algunas diferencias pequeñas pero importantes en lenguaje de diseño entre las aplicaciones Universal 8.1 y las aplicaciones de Windows 10. Para obtener detalles, consulta [Diseño](http://dev.windows.com/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
 
 ## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>Píxeles efectivos, distancia de visualización y factores de escala
 
@@ -140,7 +140,7 @@ Si tienes ilustraciones intrincadas, puede que quieras ofrecer tus recursos en m
 
 No recomendamos que intentes admitir todos los factores de escala, pero la lista completa de factores de escala para las aplicaciones de Windows 10 es 100%, 125%, 150%, 200%, 250%, 300% y 400%. Si los proporcionas, la Tienda elegirá los recursos de tamaño correcto para cada dispositivo y solo se descargarán estos recursos. La Tienda selecciona los recursos para descargar en función de los valores de PPP del dispositivo. Puedes volver a usar activos desde la aplicación de Windows Runtime 8.x con los factores de escala como 140% y 220%, pero la aplicación se ejecutará en uno de los nuevos factores de escala y por lo tanto, cierto escalado del mapa de bits será inevitable. Prueba la aplicación en una variedad de dispositivos para ver si estás satisfecho con los resultados en tu caso.
 
-Se puede volver a usar marcado XAML de una aplicación de Windows Runtime 8.x donde se usan los valores de dimensiones literales en el marcado (quizás para el tamaño de las formas u otros elementos, tal vez para la tipografía). Pero, en algunos casos, se usa un factor de escala mayor en un dispositivo para una aplicación de Windows 10 que para una aplicación Universal 8.1 (por ejemplo, 150% se utiliza en vez del 140% y 200% donde se usaba 180%). Por lo tanto, si encuentras que estos valores literales son demasiado altos en Windows 10, a continuación, prueba a multiplicarlos por 0,8. Para obtener más información, consulta [Diseño con capacidad de respuesta 101 para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958435).
+Se puede volver a usar marcado XAML de una aplicación de Windows Runtime 8.x donde se usan los valores de dimensiones literales en el marcado (quizás para el tamaño de las formas u otros elementos, tal vez para la tipografía). Pero, en algunos casos, se usa un factor de escala mayor en un dispositivo para una aplicación de Windows 10 que para una aplicación Universal 8.1 (por ejemplo, un 150% se usa en vez del 140% y 200% donde se usaba 180%). Por lo tanto, si encuentras que estos valores literales son demasiado altos en Windows 10, prueba a multiplicarlos por 0,8. Para obtener más información, consulta [Diseño con capacidad de respuesta 101 para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
 ## <a name="gridview-and-listview-changes"></a>Cambios de GridView y ListView
 
@@ -243,11 +243,11 @@ Las API en el espacio de nombres [**Windows.Media.PlayTo**](https://msdn.microso
 
 ## <a name="resource-keys-and-textblock-style-sizes"></a>Claves de recursos y tamaños de estilos de TextBlock
 
-El lenguaje de diseño ha evolucionado para Windows 10 y en consecuencia han cambiado ciertos estilos del sistema. En algunos casos podrás volver a visitar los diseños visuales de tus vistas para que estén en consonancia con las propiedades de estilo que han cambiado.
+El lenguaje de diseño ha evolucionado para Windows 10 y consecuencia han cambiado ciertos estilos del sistema. En algunos casos podrás volver a visitar los diseños visuales de tus vistas para que estén en consonancia con las propiedades de estilo que han cambiado.
 
 En otros casos, las claves de recurso ya no son compatibles. El editor de marcado XAML en Visual Studio resalta las referencias a las claves de recursos que no se pueden resolver. Por ejemplo, el editor de marcado XAML subrayará una referencia a la clave de estilo `ListViewItemTextBlockStyle` con una línea ondulada roja. Si no se corrige, la aplicación finalizará inmediatamente cuando intentes implementarla en el emulador o el dispositivo. Por tanto, es importante prestar atención a la corrección del marcado XAML. Encontrarás que Visual Studio es una herramienta excelente para detectar esos problemas.
 
-Para las claves que aún se admiten, los cambios en el lenguaje de diseño significan que han cambiado las propiedades establecidas por algunos estilos. Por ejemplo, `TitleTextBlockStyle` establece **FontSize** en 14,667 px en una aplicación de Windows Runtime 8.x y en 18,14 px en una aplicación de Windows Phone Store. Sin embargo, el mismo estilo establece **FontSize** en un mucho más grande, 24 px en una aplicación de Windows 10. Revisa los diseños y usa los estilos apropiados en los lugares adecuados. Si quieres obtener más información, consulta [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) y [Diseñar aplicaciones para UWP](http://dev.windows.com/design).
+Para las claves que aún se admiten, los cambios en el lenguaje de diseño significan que han cambiado las propiedades establecidas por algunos estilos. Por ejemplo, `TitleTextBlockStyle` establece **FontSize** en 14,667 px en una aplicación de Windows Runtime 8.x y en 18,14 px en una aplicación de la tienda de Windows Phone. Sin embargo, el mismo estilo establece **FontSize** en un mucho más grande, 24 px en una aplicación de Windows 10. Revisa los diseños y usa los estilos apropiados en los lugares adecuados. Si quieres obtener más información, consulta [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) y [Diseñar aplicaciones para UWP](http://dev.windows.com/design).
 
 Se trata de una lista completa de claves que ya no son compatibles.
 
@@ -464,7 +464,7 @@ Si quieres obtener más información, consulta [Directrices para fuentes](https:
 
 ## <a name="theme-changes"></a>Cambios de tema
 
-Para una aplicación Universal 8.1, el tema predeterminado es oscuro de manera predeterminada. Para los dispositivos de Windows 10, ha cambiado el tema predeterminado, pero puedes controlar el tema usado declarando un tema solicitado en App.xaml. Por ejemplo, para usar un tema oscuro en todos los dispositivos, agrega `RequestedTheme="Dark"` al elemento Application de raíz.
+Para una aplicación Universal 8.1, el tema predeterminado es oscuro de manera predeterminada. En el caso de los dispositivos de Windows 10, ha cambiado el tema predeterminado, pero puedes controlar el tema usado declarando un tema solicitado en App.xaml. Por ejemplo, para usar un tema oscuro en todos los dispositivos, agrega `RequestedTheme="Dark"` al elemento Application de raíz.
 
 ## <a name="tiles-and-toasts"></a>Iconos y notificaciones del sistema
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, app installer, instalador de aplicaciones, AppInstaller, sideload, realizar instalación de prueba
 ms.localizationpriority: medium
 ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838322"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981680"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Solucionar problemas de instalación con el archivo del Instalador de aplicación
 
@@ -72,7 +72,7 @@ Si la aplicación del Instalador de aplicación no puede instalar la aplicación
 
 ### <a name="verify-app-package-file-installation"></a>Comprobar la instalación del archivo de paquete de aplicación
 
-- Descargar el archivo de paquete de aplicación en una carpeta local e intenta instalarlo mediante el comando de PowerShell [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) .
+- Descargar el archivo de paquete de la aplicación en una carpeta local e intenta instalarlo mediante el comando de PowerShell [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) .
 
 - Descarga el archivo `.appinstaller` en una carpeta local e intenta instalarlo mediante el comando `Add-AppxPackage -Appinstaller` de PowerShell.
 

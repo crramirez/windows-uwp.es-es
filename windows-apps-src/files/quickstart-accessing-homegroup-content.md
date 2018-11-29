@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 422d02b8797bef8ea4f793ba652e9e4e34421a9b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976962"
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 
@@ -193,7 +193,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abre la selección del usuario archivo para acceso de lectura y establece la secuencia de archivos como el origen de la** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)y, a continuación, reproducir el archivo.
+3.  **Abre la selección del usuario archivo para el acceso de lectura y establece la secuencia de archivos como el origen de la** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)y, a continuación, reproducir el archivo.
     ```cs
     if (file != null)
     {

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, directx 11, dispositivo perdido, device lost
 ms.localizationpriority: medium
 ms.openlocfilehash: c11bbf7657644fbf616590f50d75d93f62ed993e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974143"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar escenarios cuando se quitan dispositivos en Direct3D11
 
@@ -166,4 +166,4 @@ Para obtener más detalles, consulta [**GetDeviceRemovedReason**](https://msdn.m
 
 El símbolo del sistema para desarrolladores de Visual Studio admite una herramienta de línea de comandos, 'dxcap', para la captura y reproducción de eventos de Direct3D relacionados con el diagnóstico de gráficos de Visual Studio. Puedes usar la opción de la línea de comandos "-forcetdr" mientras se ejecuta la aplicación, lo que forzará un evento de detección del tiempo de espera y recuperación de la GPU, que desencadenará DXGI\_ERROR\_DEVICE\_REMOVED y te permitirá probar el código de control de errores.
 
-> **Nota** DXCap y sus DLL de soporte se instalan en system32/syswow64 como parte de las Herramientas de gráficos de Windows 10, que ya no se distribuyen vía Windows SDK. En su lugar, se proporcionan a través de la característica de herramientas de gráficos a petición que es un componente opcional del sistema operativo, y que debe instalarse para poder habilitar y usar las herramientas de gráficos en Windows 10. Para obtener más información sobre cómo instalar las herramientas de gráficos para Windows 10 puede encontrarse aquí: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
+> **Nota** DXCap y sus DLL de soporte se instalan en system32/syswow64 como parte de las Herramientas de gráficos de Windows 10, que ya no se distribuyen vía Windows SDK. En su lugar, se proporcionan a través de la característica de herramientas de gráficos a petición que es un componente opcional del sistema operativo, y que debe instalarse para poder habilitar y usar las herramientas de gráficos en Windows 10. Puede encontrar más información sobre cómo instalar las herramientas de gráficos para Windows 10 aquí: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>

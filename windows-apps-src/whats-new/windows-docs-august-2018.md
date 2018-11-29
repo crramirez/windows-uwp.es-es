@@ -6,11 +6,11 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: da8bc3b441a1b619e086934f277cb14be6bcc37a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852563"
+ms.locfileid: "7980650"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos de Windows de agosto de 2018
 
@@ -32,11 +32,11 @@ Se han agregado las siguientes características de Windows compilaciones de Insi
 
 * NavigationView ahora admite la [navegación superior](../design/controls-and-patterns/navigationview.md), para los casos en los que la aplicación tiene un menor número de opciones de exploración y requieren más espacio para el contenido de la aplicación.
 
-* Se ha mejorado la vista de árbol para admitir [plantillas de elemento de enlace de datos y arrastrar y colocar.](../design/controls-and-patterns/tree-view.md)
+* TreeView se ha mejorado para admitir [enlace de datos, plantillas, de elementos y arrastrar y colocar.](../design/controls-and-patterns/tree-view.md)
 
 ### <a name="package-support-framework"></a>Marco de soporte técnico de paquete
 
-El marco de soporte técnico de paquete es un kit de código abierto que ayuda a aplicar correcciones a la aplicación de win32 cuando no tienes acceso al código fuente, para que se puede ejecutar en un contenedor de MSIX.
+El marco de soporte técnico de paquete es un kit de código abierto que te ayuda a aplicar correcciones a la aplicación de win32 cuando no tienes acceso al código fuente, para que pueda ejecutar en un contenedor de MSIX.
 
 Para obtener más información, consulta [en tiempo de ejecución de aplicar correcciones a un paquete de MSIX con el marco de soporte técnico del paquete](../porting/package-support-framework.md).
 
@@ -44,11 +44,11 @@ Para obtener más información, consulta [en tiempo de ejecución de aplicar cor
 
 ### <a name="web-api-extensions"></a>Extensiones de la API Web
 
-Se ha agregado una lista de [extensiones de Microsoft API heredadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) a la documentación de Mozilla Developer Network de desarrollo y exploradores web. Estas extensiones de API son exclusivas de Internet Explorer o Microsoft Edge y complementan existente información sobre el soporte de compatibilidad y Explorador de los documentos de web MDN. Microsoft heredadas [extensiones CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) y [JavaScript extensiones](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) también están disponibles, y puedes encontrar información sobre las API de MDN de web enriquecidas expone directamente en [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Se ha agregado una lista de [extensiones de Microsoft API heredadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) a la documentación de Mozilla Developer Network de desarrollo y exploradores web. Estas extensiones de API son exclusivas de Internet Explorer o Microsoft Edge y complementan existente información sobre el soporte de compatibilidad y Explorador de los documentos de web MDN. Heredado de Microsoft [extensiones CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) y [JavaScript extensiones](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) también están disponibles, y puedes encontrar web enriquecidas información sobre la API de MDN expone directamente en [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C++ / ejemplos de código de WinRT
 
-Hemos agregado 250 [C++ / WinRT](../cpp-and-winrt-apis/index.md) código descripciones de los temas de nuestros documentos, elementos complementarios existentes C++ / ejemplos de código CX.
+Hemos agregado 250 [C++ / WinRT](../cpp-and-winrt-apis/index.md) código descripciones para los temas de nuestros documentos, elementos complementarios existentes C++ / ejemplos de código CX.
 
 ### <a name="project-rome"></a>Proyecto Roma
 
@@ -62,11 +62,11 @@ El complemento de Xbox Live para Unity contiene compatibilidad para agregar la f
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre abarcan una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
 
 Raymond Chen:
 
-* [¿Cómo sabe el núcleo de cuándo se debe reiniciar un controlador de vídeo?](https://youtu.be/3SNAdyO1l5c)
+* [¿Cómo sabe el kernel de cuándo se debe reiniciar un controlador de vídeo?](https://youtu.be/3SNAdyO1l5c)
 
 Larry Osterman:
 

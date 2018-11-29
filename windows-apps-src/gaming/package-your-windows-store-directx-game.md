@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, package, paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827173"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974678"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 
@@ -79,7 +79,7 @@ Cuando configures tu aplicación para admitir activos localizados para múltiple
 -   Crea un subdirectorio de aplicación (o de la versión del archivo) para cada idioma y configuración regional que admitirás (por ejemplo, en-us, jp-jp, zh-cn, fr-fr, etc.).
 -   Durante el desarrollo, coloca copias de TODOS los activos (como gráficos de menú, texturas y archivos de audio localizado) en el correspondiente subdirectorio de configuración regional e idioma, incluso si no son diferentes en los distintos idiomas y configuraciones regionales. Para que la experiencia del usuario sea la mejor, asegúrate de que este sepa si no obtuvo un paquete de recursos de idioma disponible para su configuración regional si existiera uno (o si accidentalmente lo eliminó después la descarga y la instalación).
 -   Asegúrate de que cada archivo de recursos de cadena o activo (.resw) tenga el mismo nombre en cada directorio. Por ejemplo, el archivo menu\_option1.png debe tener el mismo nombre en ambos directorios \\en-us y \\jp-jp, incluso si el contenido del archivo corresponde a un idioma diferente. En ese caso, los verás como \\en-us\\menu\_option1.png y \\jp-jp\\menu\_option1.png.
-    > **Nota**  , opcionalmente, puedes anexar la configuración regional al nombre de archivo y almacenarlas en el mismo directorio; Por ejemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png.
+    > **Nota**  , opcionalmente, puede anexar la configuración regional al nombre de archivo y almacenarlo en el mismo directorio; Por ejemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png.
 
      
 
@@ -96,7 +96,7 @@ Cuando configures tu aplicación para que admita paquetes de recursos de diferen
 -   Crea un subdirectorio de aplicaciones (o versión de archivo) para cada factor de escalado que admitirás (scale-100, scale-140 y scale-180).
 -   Durante el desarrollo, coloca copias apropiadas para el factor de escalado de TODOS los archivos en cada directorio de recursos de factor de escalado, incluso si no son diferentes entre dichos factores.
 -   Asegúrate de que cada activo tenga el mismo nombre en cada directorio. Por ejemplo, el archivo menu\_option1.png debe tener el mismo nombre en ambos directorios \\scale-100 y \\scale-180, incluso si el contenido del archivo es diferente. En ese caso, los verás como \\scale-100\\menu\_option1.png y \\scale-140\\menu\_option1.png.
-    > **Nota**  de nuevo, se puede, opcionalmente, anexa el sufijo de factor de escalado al nombre de archivo y almacenarlas en el mismo directorio; Por ejemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png.
+    > **Nota**  de nuevo, puedes, opcionalmente, anexa el sufijo de factor de escalado al nombre de archivo y almacenarlo en el mismo directorio; Por ejemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png.
 
      
 
@@ -129,7 +129,7 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
 -   Crea un subdirectorio de aplicaciones (o versión de archivo) para cada nivel de característica de DirectX que admitirás (dxfl-dx9, dxfl-dx10 y dxfl-dx11).
 -   Durante el desarrollo, coloca activos específicos del nivel de característica en cada directorio de recursos de nivel de característica. A diferencia de los factores de escalado y configuraciones regionales, probablemente tengas diferentes ramas de código de representación para cada nivel de característica de tu juego, y si tienes texturas, sombreadores compilados u otros activos que solamente se usan en un nivel de característica admitido o en un subconjunto de estos, coloca los activos correspondientes solamente en los directorios para los niveles de característica que los usan. Para los activos que se cargan en todos los diferentes niveles de característica, asegúrate de que cada directorio de recursos de nivel de característica tenga una versión de estos con el mismo nombre. Por ejemplo, en la textura independiente del nivel de características llamada "coolsign.dds", coloca la versión que comprimió BC3 en el directorio \\dxfl-dx9 y la versión que comprimió BC7 en el directorio \\dxfl-dx11.
 -   Asegúrate de que cada activo (si está disponible para varios niveles de características) tenga el mismo nombre en cada directorio. Por ejemplo, coolsign.dds debe tener el mismo nombre en ambos directorios \\dxfl-dx9 y \\dxfl-dx11, incluso si el contenido del archivo es diferente. En ese caso, los verás como \\dxfl-dx9\\coolsign.dds y \\dxfl-dx11\\coolsign.dds.
-    > **Nota**  de nuevo, se puede, opcionalmente, anexa el sufijo de nivel de característica al nombre de archivo y almacenarlas en el mismo directorio; Por ejemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.dds.
+    > **Nota**  de nuevo, puedes, opcionalmente, anexa el sufijo de nivel de característica al nombre de archivo y almacenarlo en el mismo directorio; Por ejemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.dds.
 
      
 

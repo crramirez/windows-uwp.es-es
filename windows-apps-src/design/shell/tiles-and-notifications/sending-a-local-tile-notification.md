@@ -8,16 +8,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980250"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar una notificación de icono local
  
 
-Iconos de la aplicación principal en Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean y se definen mediante el código de la aplicación mediante programación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
+Iconos de la aplicación principal en Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean y se definen mediante el código de aplicación mediante programación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 

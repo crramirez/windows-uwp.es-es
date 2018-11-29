@@ -7,29 +7,29 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847505"
+ms.locfileid: "7979897"
 ---
 # <a name="composition-brushes"></a>Pinceles de composición
-Todos los elementos visibles en la pantalla de una aplicación para UWP está visible porque se ha pintado por un pincel. Pinceles te permiten pintar los objetos de la interfaz de usuario con el contenido que van desde simples colores sólidos, imágenes o dibujos en la cadena de efectos complejos. En este tema se presenta los conceptos de pintura con CompositionBrush.
+Todo el contenido visible en la pantalla de una aplicación para UWP está visible porque lo ha pintado un pincel. Pinceles te permiten pintar los objetos de la interfaz de usuario con el contenido que van desde simples colores sólidos, imágenes o dibujos a la cadena de efectos complejos. En este tema se presenta los conceptos de pintura con CompositionBrush.
 
-Ten en cuenta al trabajar con la aplicación XAML UWP, puede elegir para pintar un UIElement con un [Pincel en XAML](/windows/uwp/design/style/brushes) o un [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush). Por lo general, es aconsejable elegir un pincel XAML si tu escenario es compatible con un pincel de XAML y más fácil. Por ejemplo, animar el color de un botón, cambiar el relleno de un texto o una forma con una imagen. Por otro lado, si estás intentando hacer algo que no es compatible con un pincel XAML como el dibujo con una máscara con animaciones o un ajustar a la cuadrícula de nueve animado o una cadena de efectos, puedes usar un CompositionBrush para pintar un UIElement mediante el uso de [ XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Ten en cuenta al trabajar con la aplicación XAML UWP, puede elegir para pintar un UIElement con un [Pincel de XAML](/windows/uwp/design/style/brushes) o un [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush). Por lo general, es aconsejable elegir un pincel XAML si tu escenario es compatible con un pincel de XAML y más fácil. Por ejemplo, animar el color de un botón, cambiar el relleno de una forma con una imagen o un texto. Por otro lado, si estás intentando hacer algo que no es compatible con un pincel XAML como pintar con una máscara animada o un stretch de cuadrícula de nueve animada o una cadena de efectos, puedes usar un CompositionBrush para pintar un UIElement mediante el uso de [ XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
 Al trabajar con la capa Visual, debe usarse un CompositionBrush para pintar el área de un [objeto SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual).
 
 -   [Requisitos previos](./composition-brushes.md#prerequisites)
 -   [Paint con CompositionBrush](./composition-brushes.md#paint-with-a-compositionbrush)
-    -   [Dibujar con un color sólido](./composition-brushes.md#paint-with-a-solid-color)
+    -   [Pintar con un color sólido:](./composition-brushes.md#paint-with-a-solid-color)
     -   [Pintar con un degradado lineal](./composition-brushes.md#paint-with-a-linear-gradient)
     -   [Pintar con una imagen](./composition-brushes.md#paint-with-an-image)
     -   [Pintar con un dibujo personalizado](./composition-brushes.md#paint-with-a-custom-drawing)
     -   [Pintar con un vídeo](./composition-brushes.md#paint-with-a-video)
-    -   [Dibujar con un efecto de filtro](./composition-brushes.md#paint-with-a-filter-effect)
-    -   [Dibujar con un CompositionBrush con una máscara de opacidad.](./composition-brushes.md#paint-with-a-compositionbrush-with-opacity-mask-applied)
-    -   [Dibujar con un CompositionBrush con stretch NineGrid](./composition-brushes.md#paint-with-a-compositionbrush-using-ninegrid-stretch)
+    -   [Pintar con un efecto de filtro](./composition-brushes.md#paint-with-a-filter-effect)
+    -   [Pintar con un CompositionBrush con una máscara de opacidad.](./composition-brushes.md#paint-with-a-compositionbrush-with-opacity-mask-applied)
+    -   [Pintar con un CompositionBrush con stretch NineGrid](./composition-brushes.md#paint-with-a-compositionbrush-using-ninegrid-stretch)
     -   [Pintar el uso de píxeles en segundo plano](./composition-brushes.md#paint-using-background-pixels)
 -   [Combinar CompositionBrushes](./composition-brushes.md#combining-compositionbrushes)
 -   [Usar un pincel frente a CompositionBrush XAML](./composition-brushes.md#using-a-xaml-brush-vs-compositionbrush)
@@ -40,7 +40,7 @@ Esta introducción se supone que estás familiarizado con la estructura de una a
 
 ## <a name="paint-with-a-compositionbrush"></a>Paint con un CompositionBrush
 
-Un [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) "pinta" un área con su salida. Distintos pinceles tienen tipos de salida diferentes. Algunos pinceles pintan un área con un color sólido, otros usuarios que tengan un degradado, la imagen, el dibujo personalizado o el efecto. También hay pinceles especializados que modifican el comportamiento de otros pinceles. Por ejemplo, máscara de opacidad puede usarse para controlar el área que se pinta por un CompositionBrush o una cuadrícula de nueve puede usarse para controlar el estiramiento aplicado a un CompositionBrush cuando pintar un área. CompositionBrush puede ser de uno de los siguientes tipos:
+Un [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) "pinta" un área con su salida. Distintos pinceles tienen tipos de salida diferentes. Algunos pinceles pintan un área con un color sólido, otros con un degradado, imagen, dibujo personalizado o efecto. También hay pinceles especializados que modifican el comportamiento de otros pinceles. Por ejemplo, máscara de opacidad puede usarse para controlar qué área se pinta por un CompositionBrush o una cuadrícula de nueve puede usarse para controlar el estiramiento aplicado a un CompositionBrush cuando pintar un área. CompositionBrush puede ser de uno de los siguientes tipos:
 
 |Clase                                   |Detalles                                         |Introducida en|
 |-------------------------------------|---------------------------------------------------------|--------------------------------------|
@@ -50,11 +50,11 @@ Un [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.
 |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Pinta un elemento visual con un CompositionBrush con una máscara de opacidad. |Actualización de aniversario de Windows 10 (SDK 14393)
 |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Pinta un área con un CompositionBrush con un stretch NineGrid |Actualización de aniversario de Windows 10 SDK (14393)
 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Pinta un área con un degradado lineal                    |Windows 10 Fall Creators Update (SDK de Insider Preview)
-|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Pinta un área mediante el muestreo de píxeles en segundo plano de la aplicación o bien, o directamente detrás de la ventana de la aplicación en el escritorio. Se usa como entrada para otro CompositionBrush como un CompositionEffectBrush | Actualización de aniversario de Windows 10 (SDK 14393)
+|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Pinta un área mediante el muestreo de píxeles en segundo plano desde la aplicación o bien, o directamente detrás de la ventana de la aplicación en el escritorio. Se usa como entrada para otra CompositionBrush como un CompositionEffectBrush | Actualización de aniversario de Windows 10 (SDK 14393)
 
-### <a name="paint-with-a-solid-color"></a>Dibujar con un color sólido
+### <a name="paint-with-a-solid-color"></a>Pintar con un color sólido:
 
-Un [CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) pinta un área con un color sólido. Hay varias formas de especificar el color de un SolidColorBrush. Por ejemplo, puede especificar sus alfa, rojo, verdes y azules (ARGB) los canales o usar uno de los colores predefinidos proporcionados por la clase de [colores](https://docs.microsoft.com/uwp/api/windows.ui.colors) .
+Un [CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) pinta un área con un color sólido. Hay varias formas de especificar el color de un SolidColorBrush. Por ejemplo, puedes especificar sus alfa, rojo, verdes y azules (ARGB) los canales o usar uno de los colores predefinidos proporcionados por la clase de [colores](https://docs.microsoft.com/uwp/api/windows.ui.colors) .
 
 En la siguiente ilustración y código se muestra un pequeño árbol visual para crear un rectángulo que se traza en un pincel de color negro y se dibuja con un pincel de color sólido con el valor de color 0x9ACD32.
 
@@ -109,9 +109,9 @@ _gradientVisual.Size = new Vector2(156, 156);
 
 ### <a name="paint-with-an-image"></a>Pintar con una imagen
 
-Un [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) pinta un área con los píxeles que se representa en un ICompositionSurface. Por ejemplo, un CompositionSurfaceBrush puede usarse para pintar un área con una imagen representada en una superficie de ICompositionSurface con [Loadedimagesource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.loadedimagesurface) API.
+Un [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) pinta un área con píxeles que se representa en un ICompositionSurface. Por ejemplo, un CompositionSurfaceBrush puede usarse para pintar un área con una imagen representada en una superficie de ICompositionSurface con [Loadedimagesource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.loadedimagesurface) API.
 
-La siguiente ilustración y código de muestra pinta un objeto SpriteVisual con un mapa de bits de un licorice representada en un ICompositionSurface con Loadedimagesource. Las propiedades de CompositionSurfaceBrush pueden usarse para ampliar y alinear el mapa de bits dentro de los límites del elemento visual.
+La siguiente ilustración y código se muestra una clase SpriteVisual pintada con un mapa de bits de un licorice representada en un ICompositionSurface con Loadedimagesource. Las propiedades de CompositionSurfaceBrush pueden usarse para ampliar y alinear el mapa de bits dentro de los límites del elemento visual.
 
 ![Compositionsurfacebrush.](images/composition-compositionsurfacebrush.png)
 
@@ -136,7 +136,7 @@ _imageVisual.Size = new Vector2(156, 156);
 ### <a name="paint-with-a-custom-drawing"></a>Pintar con un dibujo personalizado
 Un [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) también puede usarse para pintar un área con los píxeles de un ICompositionSurface representada con [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) (o D2D).
 
-El siguiente código muestra que una clase SpriteVisual pintada con una ejecución representado en un ICompositionSurface de texto con Win2D. Ten en cuenta que para poder utilizar Win2D, debes incluir el paquete de [NuGet Win2D](http://www.nuget.org/packages/Win2D.uwp) en el proyecto.
+El siguiente código muestra que una clase SpriteVisual pintada con una ejecución representada en un ICompositionSurface de texto con Win2D. Ten en cuenta que para poder utilizar Win2D, debes incluir el paquete de [NuGet Win2D](http://www.nuget.org/packages/Win2D.uwp) al proyecto.
 
 ```cs
 Compositor _compositor;
@@ -174,10 +174,10 @@ _drawingVisual.Brush = _drawingBrush;
 _drawingVisual.Size = new Vector2(156, 156);
 ```
 
-Del mismo modo, el CompositionSurfaceBrush también puede usarse para pintar un objeto SpriteVisual con un bien mediante la interoperabilidad de Win2D. [Este ejemplo](https://github.com/Microsoft/Win2D-Samples/tree/master/CompositionExample) proporciona un ejemplo de cómo utilizar Win2D para pintar un objeto SpriteVisual con un bien.
+Del mismo modo, el CompositionSurfaceBrush también puede usarse para pintar un objeto SpriteVisual con un bien mediante la interoperabilidad de Win2D. [Esta muestra](https://github.com/Microsoft/Win2D-Samples/tree/master/CompositionExample) proporciona un ejemplo de cómo usar Win2D para pintar un objeto SpriteVisual con un bien.
 
 ### <a name="paint-with-a-video"></a>Pintar con un vídeo
-Un [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) también puede usarse para pintar un área con los píxeles de un ICompositionSurface representada con un vídeo cargado a través de la clase [MediaPlayer](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) .
+Un [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) también puede usarse para pintar un área con los píxeles de un ICompositionSurface que se representan con un vídeo cargado a través de la clase [MediaPlayer](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) .
 
 El siguiente código muestra que una clase SpriteVisual pintada con un vídeo que se cargan en un ICompositionSurface.
 
@@ -205,9 +205,9 @@ _videoVisual.Brush = _videoBrush;
 _videoVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-filter-effect"></a>Dibujar con un efecto de filtro
+### <a name="paint-with-a-filter-effect"></a>Pintar con un efecto de filtro
 
-Un [CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) pinta un área con un CompositionEffect de salida. Efectos de la capa Visual se pueden considerar como aplicado a una colección de contenido de origen, como los colores, degradados, imágenes, vídeos, cadenas de intercambio, regiones de la interfaz de usuario o los árboles de elementos visuales de efectos de filtro que se pueden animar. El contenido de origen normalmente se especifica mediante otro CompositionBrush.
+Un [CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) pinta un área con salida de un CompositionEffect. Efectos de la capa Visual se pueden considerar como aplicado a una colección de contenido de origen, como los colores, degradados, imágenes, vídeos, cadenas de intercambio, regiones de la interfaz de usuario o los árboles de elementos visuales de efectos de filtro que se pueden animar. El contenido de origen por lo general, se especifica con otro CompositionBrush.
 
 La siguiente ilustración y código se muestra una clase SpriteVisual pintado con una imagen de un gato que se ha aplicado el efecto de filtro de Desaturación.
 
@@ -241,11 +241,11 @@ _effectVisual.Size = new Vector2(156, 156);
 
 Para obtener más información sobre cómo crear un efecto con CompositionBrushes ver [los efectos de capa Visual](https://docs.microsoft.com/en-us/windows/uwp/composition/composition-effects)
 
-### <a name="paint-with-a-compositionbrush-with-opacity-mask-applied"></a>Dibujar con un CompositionBrush con la máscara de opacidad aplicada
+### <a name="paint-with-a-compositionbrush-with-opacity-mask-applied"></a>Pintar con un CompositionBrush con la máscara de opacidad aplicada
 
 Un [CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush) pinta un área con un CompositionBrush con una máscara de opacidad aplicada. El origen de la máscara de opacidad puede ser cualquier CompositionBrush de tipo CompositionColorBrush, CompositionLinearGradientBrush, CompositionSurfaceBrush, CompositionEffectBrush o CompositionNineGridBrush. La máscara de opacidad debe especificarse como un CompositionSurfaceBrush.
 
-La siguiente ilustración y código se muestra una clase SpriteVisual pintado con una CompositionMaskBrush. El origen de la máscara es un CompositionLinearGradientBrush que se enmascara aspecto de un círculo con una imagen de círculo como una máscara.
+La siguiente ilustración y código se muestra una clase SpriteVisual pintado con una CompositionMaskBrush. El origen de la máscara es un CompositionLinearGradientBrush que se enmascara el aspecto de un círculo con una imagen de círculo como una máscara.
 
 ![CompositionMaskBrush](images/composition-compositionmaskbrush.png)
 
@@ -271,7 +271,7 @@ _maskVisual.Brush = _maskBrush;
 _maskVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-compositionbrush-using-ninegrid-stretch"></a>Dibujar con un CompositionBrush con stretch NineGrid
+### <a name="paint-with-a-compositionbrush-using-ninegrid-stretch"></a>Pintar con un CompositionBrush con stretch NineGrid
 
 Un [CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush) pinta un área con un CompositionBrush que se amplía con la metáfora de cuadrícula de nueve. La metáfora de cuadrícula de nueve te permite estirar bordes y las esquinas de un CompositionBrush de forma diferente de su centro. El origen de la cuadrícula de nueve de stretch puede por cualquier CompositionBrush de tipo CompositionColorBrush, CompositionSurfaceBrush o CompositionEffectBrush.
 
@@ -306,9 +306,9 @@ _nineGridVisual.Size = new Vector2(100, 75);
 
 ### <a name="paint-using-background-pixels"></a>Pintar el uso de píxeles en segundo plano
 
-Un [CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush) pinta un área con el contenido detrás del área. Un CompositionBackdropBrush nunca se usa en su propio, pero en su lugar, se usa como entrada para otro CompositionBrush como un EffectBrush. Por ejemplo, mediante el uso de un CompositionBackdropBrush como entrada para un efecto de desenfoque, puede lograr un efecto de cristal esmerilado.
+Un [CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush) pinta un área con el contenido detrás del área. Un CompositionBackdropBrush nunca se usa en su propio, pero en su lugar, se usa como entrada para otra CompositionBrush como un EffectBrush. Por ejemplo, mediante el uso de un CompositionBackdropBrush como entrada para un efecto de desenfoque, puede lograr un efecto de cristal esmerilado.
 
-El siguiente código muestra un pequeño árbol visual para crear una imagen con CompositionSurfaceBrush y una superposición de cristal esmerilado encima de la imagen. La superposición de cristal esmerilado se crea mediante la colocación de un objeto SpriteVisual rellenado con un EffectBrush encima de la imagen. El EffectBrush usa un CompositionBackdropBrush como entrada para el efecto de desenfoque.
+El siguiente código muestra un pequeño árbol visual para crear una imagen con CompositionSurfaceBrush y una superposición de cristal esmerilado por encima de la imagen. La superposición de cristal esmerilado se crea mediante la colocación de un objeto SpriteVisual rellenado con un EffectBrush por encima de la imagen. El EffectBrush usa un CompositionBackdropBrush como entrada para el efecto de desenfoque.
 
 ```cs
 Compositor _compositor;
@@ -361,7 +361,7 @@ _containerVisual.Children.InsertAtTop(_backdropVisual);
 ```
 
 ## <a name="combining-compositionbrushes"></a>Combinar CompositionBrushes
-Un número de CompositionBrushes usa otros CompositionBrushes como entradas. Por ejemplo, mediante el método SetSourceParameter puede usarse para establecer otra CompositionBrush como entrada para una CompositionEffectBrush. La siguiente tabla describe las combinaciones de CompositionBrushes compatibles. Tenga en cuenta que el uso de una combinación no admitida iniciará una excepción.
+Un número de CompositionBrushes usa otros CompositionBrushes como entradas. Por ejemplo, mediante el método SetSourceParameter puede usarse para establecer otra CompositionBrush como entrada para una CompositionEffectBrush. La siguiente tabla describe las combinaciones de CompositionBrushes compatibles. Ten en cuenta que el uso de una combinación no admitida iniciará una excepción.
 
 <table>
 <tbody>
@@ -427,7 +427,7 @@ Un número de CompositionBrushes usa otros CompositionBrushes como entradas. Por
 
 ## <a name="using-a-xaml-brush-vs-compositionbrush"></a>Usar un pincel frente a CompositionBrush XAML
 
-La siguiente tabla proporciona una lista de escenarios y si uso de pincel XAML o composición indicado al dibujar un UIElement o una clase SpriteVisual en la aplicación. 
+La siguiente tabla proporciona una lista de escenarios y si uso de pincel XAML o composición indicado al pintar un UIElement o una clase SpriteVisual en la aplicación. 
 
 > [!NOTE]
 > Si un CompositionBrush se sugiere para que un UIElement de XAML, se supone que el CompositionBrush se empaqueta con un objeto XamlCompositionBrushBase.
@@ -446,7 +446,7 @@ La siguiente tabla proporciona una lista de escenarios y si uso de pincel XAML o
 |Pintar un área con un vídeo                                                 |[MediaElement](https://msdn.microsoft.com/library/windows/apps/mt187272.aspx)                                                                                                  |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) con interoperabilidad de multimedia
 |Pintar un área con un dibujo personalizado 2D                                       |[CanvasControl](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm) de Win2D                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) con interoperabilidad de Win2D
 |Pintar un área con la máscara no animado                                       |Usar [formas](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) XAML para definir una máscara   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
-|Pintar un área con una máscara animado.                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
+|Pintar un área con una máscara animada.                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
 |Pintar un área con un efecto de filtro animados                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
 |Pintar un área con un efecto que se aplica a los píxeles en segundo plano        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)                                                                                        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)
 

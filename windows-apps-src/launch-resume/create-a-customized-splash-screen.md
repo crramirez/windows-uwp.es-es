@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975852"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Mostrar una pantalla de presentación durante más tiempo
 
@@ -70,7 +70,7 @@ El siguiente ejemplo muestra una [**cuadrícula**](https://msdn.microsoft.com/li
 ```
 
 > [!NOTE]
-> En este ejemplo se establece el ancho de la [**clase ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) a 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
+> Este ejemplo define el ancho de la [**clase ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
 
 ## <a name="essential-code-for-an-extended-splash-screen-class"></a>Código esencial para una clase de pantalla de presentación extendida
 
@@ -213,7 +213,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     ```
 
     > [!NOTE]
-    > Antes de intentar obtener la ubicación de la imagen Asegúrate de que la variable de clase (`splash`) contiene un objeto de [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
+    > Antes de tratar de obtener la ubicación de la imagen Asegúrate de que la variable de clase (`splash`) contiene un objeto de [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
 
      
 

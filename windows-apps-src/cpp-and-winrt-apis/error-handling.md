@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, error, gestión, excepción
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f7135e85ab63ddfe92bd0de8c656b58fb1a020
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978617"
 ---
 # <a name="error-handling-with-cwinrt"></a>Gestión de errores con C++/WinRT
 
-Este tema describe estrategias para controlar errores al programar con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para obtener información más general y antecedentes, consulta [Gestión de errores y excepciones (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp).
+En este tema describe estrategias para controlar los errores de programación con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para obtener información más general y antecedentes, consulta [Gestión de errores y excepciones (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp).
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>Evitar detección y lanzamiento de excepciones
 Te recomendamos que sigas escribiendo [código seguro para excepciones](/cpp/cpp/how-to-design-for-exception-safety), pero puede que prefieras evitar la detección y el lanzamiento de excepciones en la medida de lo posible. Si no hay ningún controlador para una excepción, Windows genera automáticamente un informe de errores (e incluye un minivolcado del bloqueo), que te ayudará a hacer un seguimiento de dónde está el problema.

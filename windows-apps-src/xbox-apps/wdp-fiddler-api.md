@@ -7,16 +7,16 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981558"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si está habilitado el seguimiento de Fiddler
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si se habilita el seguimiento de Fiddler
 
 **Solicitud**
 
@@ -40,7 +40,7 @@ GET | /ext/fiddler
 
 **Respuesta**   
 
-- Propiedad JSON bool IsProxyEnabled qué especificadores indica si está habilitado el proxy o no.
+- Propiedad JSON bool IsProxyEnabled qué especificadores indica si el proxy está habilitado o no.
 
 **Código de estado**
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, mediación de anuncios
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847670"
+ms.locfileid: "7980922"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Servicio de mediación de anuncios de Microsoft
 
@@ -28,7 +28,7 @@ El servicio de mediación de anuncios se integra con una variedad de redes de an
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>Administrar la complejidad de las relaciones de red de anuncios  
 
-El servicio de mediación de anuncios se integra con una amplia variedad de redes de anuncios para que no tengas que hacer este trabajo. Después de usar el SDK de Microsoft Advertising para mostrar anuncios en la aplicación, puedes modificar la configuración de mediación de anuncios [del centro de partners](../publish/in-app-ads.md#mediation-settings) para mostrar anuncios de varias redes de anuncios. Te beneficias de anuncios de nuevas redes de anuncios sin tener que realizar cambios en el código.
+El servicio de mediación de anuncios se integra con una amplia variedad de redes de anuncios para que no tengas que hacer este trabajo. Después de usar el SDK de Microsoft Advertising para mostrar anuncios en tu aplicación, puedes modificar la configuración de mediación de anuncios [del centro de partners](../publish/in-app-ads.md#mediation-settings) para mostrar anuncios de varias redes de anuncios. Te beneficias de anuncios de nuevas redes de anuncios sin tener que realizar cambios en el código.
 
 Administramos en tu nombre la relación de principio a fin con las redes de anuncios. Se ocupa por nosotros de todo, desde la integración de redes de anuncios hasta el servicio de anuncios, informes y pagos, sin ningún esfuerzo adicional del usuario.
 

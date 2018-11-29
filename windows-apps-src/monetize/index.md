@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980240"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -32,7 +32,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 | [Registrar eventos personalizados para el Centro de partners](log-custom-events-for-dev-center.md)  | Registrar eventos personalizados de tu aplicación para UWP y revisar los eventos en el [informe de uso](../publish/usage-report.md) del centro de partners. Esta característica requiere Microsoft Store Services SDK. |
 | [Solicitar valoraciones y opiniones](request-ratings-and-reviews.md) |  Animar a los clientes a evaluar o revisar la aplicación mediante programación mostrando una interfaz de usuario de clasificación y revisión.  |
 | [Servicios de Microsoft Store](using-windows-store-services.md)    |  Obtén información sobre cómo usar las API de RESTful para automatizar envíos a la Store, obtener acceso a datos de análisis de las aplicaciones y automatizar otras tareas relacionadas con la Store.    |
-| [Agregar características de (RDX) de demostración comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
+| [Agregar características de demostración (RDX) comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980564"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -134,7 +134,7 @@ Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketin
 
 #### <a name="idxbox"></a>ID@Xbox
 
-El programa ID@Xbox ayuda a los desarrolladores de juegos cualificados a publicar por si mismos en Windows y Xbox One. Si quieres desarrollar para Xbox One o agregar funciones de Xbox Live, como puntuaciones de jugador, logros y marcadores, a tu juego para Windows 10, regístrate ahora en ID@Xbox. Conviértete en un desarrollador de ID@Xbox para obtener las herramientas y el soporte técnico necesarios para desarrollar tu creatividad y maximizar tu éxito. Te recomendamos que apliques a ID@Xbox antes de registrarse para una cuenta de desarrollador en el centro de partners.
+El programa ID@Xbox ayuda a los desarrolladores de juegos cualificados a publicar por si mismos en Windows y Xbox One. Si quieres desarrollar para Xbox One o agregar funciones de Xbox Live, como puntuaciones de jugador, logros y marcadores, a tu juego para Windows 10, regístrate ahora en ID@Xbox. Conviértete en un desarrollador de ID@Xbox para obtener las herramientas y el soporte técnico necesarios para desarrollar tu creatividad y maximizar tu éxito. Te recomendamos que apliques a ID@Xbox primera antes de registrarte para una cuenta de desarrollador en el centro de partners.
 
 <table>
     <colgroup>
@@ -590,7 +590,7 @@ Direct3D 11.3 es una API de gráficos de bajo nivel que usa el ya familiar model
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Elegir Direct3D12 o Direct3D11</td>
+        <td>Elección de Direct3D12 o Direct3D11</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">¿Qué es Direct3D12?</a></td>
     </tr>
     <tr>
@@ -1278,7 +1278,7 @@ El kit de herramientas de DirectX, la biblioteca de procesamiento de texturas de
         <td><a href="http://go.microsoft.com/fwlink/?LinkID=615560">DirectXMath</a></td>
     </tr>
     <tr>
-        <td>Compatibilidad con Direct3D12 en DirectXTK (entrada de blog)</td>
+        <td>Soporte técnico de Direct3D12 en DirectXTK (entrada de blog)</td>
         <td><a href="https://github.com/Microsoft/DirectXTK/issues/2">Compatibilidad con DirectX12</a></td>
     </tr>
 </table>
@@ -1358,7 +1358,7 @@ Un icono es una representación de tu juego en el menú Inicio. Los iconos y las
 
 ### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de productos de la aplicación (complemento)
 
-Un complemento (producto de la aplicación) es un elemento complementario que los jugadores pueden comprar en el juego. Pueden ser complementos niveles del juego, artículos o cualquier otra cosa que los jugadores podrían disfrutar. Se usan correctamente, complementos pueden proporcionar ingresos mientras mejora la experiencia de juego. Definir y publicar los complementos de tu juego a través del centro de partners y habilitar las compras desde la aplicación en el código del juego.
+Un complemento (producto de la aplicación) es un elemento complementario que los jugadores pueden comprar en el juego. Pueden ser complementos niveles del juego, artículos o cualquier otra cosa que los jugadores podrían disfrutar. Cuando se usan correctamente, complementos pueden proporcionar ingresos mientras mejora la experiencia de juego. Definir y publicar los complementos de tu juego a través del centro de partners y habilitar las compras desde la aplicación en el código del juego.
 
 <table>
     <colgroup>

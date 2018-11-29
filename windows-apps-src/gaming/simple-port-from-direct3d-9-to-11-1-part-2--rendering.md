@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7855044"
+ms.locfileid: "7976030"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
@@ -97,7 +97,7 @@ En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombre
 
 Después de definir el diseño de entrada, nos aseguramos de que este represente la misma estructura de datos que usamos para almacenar datos de vértice en la memoria del sistema y en la memoria de GPU. De manera similar, la salida de un sombreador de vértices debe coincidir con la estructura que se usó como entrada en el sombreador de píxeles. Las reglas difieren de las de pasar datos de una función a otra en C++. Puedes omitir las variables no usadas al final de la estructura. No obstante, no se puede reorganizar el orden ni omitir contenido en el medio de la estructura de datos.
 
-> **Nota**  las reglas de Direct3D 9 para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
+> **Nota**  las reglas en Direct3D 9 para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
 
  
 
@@ -152,7 +152,7 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 
 Esto es todo lo que necesitamos para nuestro sombreador de píxeles de paso. Aunque lo llamamos de paso, en verdad obtiene datos de color interpolados en correcta perspectiva para cada píxel. Ten en cuenta que nuestro sombreador de píxeles aplica la semántica del valor del sistema SV\_TARGET a la salida del valor de color, como lo requiere la API.
 
-> **Nota**sombreadores de píxeles de sombreador nivel 9\_x no se pueden leer el valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
+> **Nota**sombreadores de píxeles del nivel 9\_x de sombreador no pueden leer el valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
 
  
 
@@ -236,7 +236,7 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
-> **Nota**  Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL: haz clic en el archivo de origen HLSL en Visual Studio, selecciona propiedades y cambiar la configuración del **Modelo de sombreador** en **compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
+> **Nota**  Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL: haz clic en el archivo de origen HLSL en Visual Studio, selecciona propiedades y cambia la configuración de **Modelo de sombreador** en **compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
  
 

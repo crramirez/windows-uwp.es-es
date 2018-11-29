@@ -6,20 +6,20 @@ ms.topic: article
 keywords: awndows 10, uwp, estándar, c++, cpp, winrt, proyección, ágil, objeto, agilidad, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843716"
+ms.locfileid: "7978667"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágiles en C++/WinRT
 
-En la mayoría de los casos, una instancia de una clase en tiempo de ejecución de Windows se puede acceder desde cualquier subproceso (al igual que pueden en la mayoría de los objetos de C++). Dicha clase en tiempo de ejecución de Windows es *ágil*. Solo un número reducido de clases de Windows Runtime que se incluyen con Windows no es ágil, pero cuando las consumas debes tener en cuenta su modelo de subprocesos y el comportamiento de serialización (la serialización transmite datos a través de un límite de contenedor). Es una buena opción predeterminada para cada objeto de Windows Runtime sean ágiles, por lo que tu propio [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos son ágiles de manera predeterminada.
+En la mayoría de los casos, una instancia de una clase en tiempo de ejecución de Windows se puede acceder desde cualquier subproceso (al igual que pueden en la mayoría de los objetos de C++). Dicha clase en tiempo de ejecución de Windows es *ágil*. Solo un número reducido de clases de Windows Runtime enviados con Windows no es ágil, pero cuando las consumas debes tener en cuenta su modelo de subprocesos y el comportamiento de serialización (la serialización transmite datos a través de un límite de contenedor). Es una buena opción predeterminada para cada objeto de Windows Runtime sean ágiles, por lo que tu propio [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos son ágiles de manera predeterminada.
 
 Sin embargo, puedes optar por rechazarlos. Es posible que tengas una buena razón para requerir un objeto de tu tipo para residir, por ejemplo, en un determinado contenedor uniproceso. Por lo general, esto está relacionado con los requisitos de reentrada. Pero cada vez más, incluso las API de interfaces de usuarios ofrecen objetos ágiles. En general, la agilidad es la opción más sencilla y aporta el mayor rendimiento. Además, cuando se implementa una fábrica de activaciones, debe ser ágil aunque tu correspondiente clase en tiempo de ejecución no lo sea.
 
 > [!NOTE]
-> Windows Runtime se basa en COM. En términos COM, se registra una clase ágil con `ThreadingModel` = *both*. Para obtener más información acerca de modelos y apartamentos de subprocesos COM, vea la [Descripción y uso de los modelos de subprocesos COM](https://msdn.microsoft.com/library/ms809971).
+> Windows Runtime se basa en COM. En términos COM, se registra una clase ágil con `ThreadingModel` = *both*. Para obtener más información acerca de modelos y apartamentos de subprocesos COM, consulta la [Descripción y uso de los modelos de subprocesos COM](https://msdn.microsoft.com/library/ms809971).
 
 ## <a name="code-examples"></a>Ejemplos de código
 
@@ -85,7 +85,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
 
 No importa dónde aparezca la estructura del marcador dentro del paquete de parámetro variádicas.
 
-Si no optar por no agilidad, puedes implementar **IMarshal** tú mismo. Por ejemplo, puedes usar el marcador de **winrt:: non_agile** para evitar la implementación de agilidad predeterminada e implementar **IMarshal** tú mismo&mdash;quizás para admitir la semántica de cálculo de referencias por valor.
+Incluso optar por no agilidad, puedes implementar **IMarshal** tú mismo. Por ejemplo, puedes usar el marcador de **winrt:: non_agile** para evitar la implementación de agilidad predeterminada e implementar **IMarshal** tú mismo&mdash;quizás para admitir la semántica de cálculo de referencias por valor.
 
 ## <a name="agile-references-winrtagileref"></a>Referencias ágiles (winrt::agile_ref)
 
