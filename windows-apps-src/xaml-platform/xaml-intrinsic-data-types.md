@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26f4153b59c618a4559549ba7fa9ca0f99c4ab64
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970517"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213548"
 ---
 # <a name="xaml-intrinsic-data-types"></a>Tipos de datos intrínsecos de XAML
 
@@ -31,7 +31,7 @@ El lenguaje XAML para Windows Runtime proporciona compatibilidad en el nivel de 
 
 Estos tipos primitivos de lenguaje XAML generalmente son los únicos casos en los que definirás un elemento de objeto que usa el prefijo **x:** en el código XAML. Todas las otras características del lenguaje XAML se suelen usar en forma de atributo, o como extensión de marcado.
 
-**Nota**por convención, los tipos primitivos del lenguaje XAML y todos los demás elementos del lenguaje XAML se muestran con el prefijo "x:". Así es como suelen usarse los elementos del lenguaje XAML en el marcado en el mundo real. Esta convención se sigue en la documentación de XAML y también en la especificación XAML.
+**Nota**por convención, los tipos primitivos del lenguaje XAML y todos los demás elementos de lenguaje XAML se muestran con el prefijo "x:". Así es como suelen usarse los elementos del lenguaje XAML en el marcado en el mundo real. Esta convención se sigue en la documentación de XAML y también en la especificación XAML.
 
 ## <a name="other-xaml-primitives"></a>Otros tipos primitivos de XAML
 

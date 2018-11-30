@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dc3e9b928c544b8552abc6c289c682694f623c0
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971637"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8216747"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 
-Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva característica, un juego nuevo nivel, o cualquier cosa que creas mantendrá a los usuarios interesados de diversión. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
+Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva función divertida, un juego nuevo nivel, o cualquier cosa que creas puede mantener a los usuarios interesados. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
 
 Complementos se publican a través del [Centro de partners](https://partner.microsoft.com/dashboard)y requieren que tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100)de activa. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
-El primer paso en el proceso de envío de complemento es crear el complemento en el centro de partners mediante la [definición de su tipo de producto y el Id. del producto](set-your-add-on-product-id.md). Después de eso, crearás un envío para que el complemento se puede comprar a través de Microsoft Store. Puedes enviar un complemento al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
+El primer paso en el proceso de envío de complemento es crear el complemento en el centro de partners mediante la [definición de su tipo de producto y el Id. del producto](set-your-add-on-product-id.md). A continuación, crearás un envío para que el complemento se puede comprar a través de Microsoft Store. Puedes enviar un complemento al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
 > [!NOTE]
 > En esta sección de la documentación se describe cómo enviar complementos en el centro de partners. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
@@ -81,7 +81,7 @@ Cuando hayas terminado de introducir esta información, haz clic en **Enviar a l
 
 ## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
-Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que normalmente no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
+Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
 Para enviar actualizaciones, ve a la página del complemento en el centro de partners y haz clic en la **actualización**. Esto creará un nuevo envío del complemento, con la información de tu envío anterior como punto de partida. Realiza los cambios que desees y, a continuación, haz clic en **Enviar a la tienda**.
 

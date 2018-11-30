@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964394"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8215758"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones para UWP
  
@@ -39,7 +39,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 | [Crear iconos](creating-tiles.md) | Personaliza el icono predeterminado de la aplicación y proporciona activos para diferentes tamaños de pantalla. |
 | [Activos de icono de la aplicación](app-assets.md) | Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados. |
 | [API de icono principal](primary-tile-apis.md) | Solicita anclar el icono principal de la aplicación y comprueba si el icono principal está anclado actualmente. |
-| [Contenido de icono](create-adaptive-tiles.md) | Contenido de la notificación de icono se especifica con adaptable, una nueva característica de Windows 10, que te permite diseñar tu propio contenido con un lenguaje de marcado sencillo y flexible que se adapte a diferentes densidades de pantalla de la notificación de icono. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). |
+| [Contenido de icono](create-adaptive-tiles.md) | Contenido de notificación de icono se especifica con adaptable, una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación con un lenguaje de marcado sencillo y flexible que se adapte a diferentes densidades de pantalla de iconos. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). |
 | [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md) | Estos son los elementos y atributos que usas para crear iconos adaptables. |
 | [Plantillas de iconos especiales](special-tile-templates-catalog.md) | Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. |
 | [Enviar notificación de icono local](sending-a-local-tile-notification.md) | Aprende a enviar una notificación de icono local, agregando contenido dinámico enriquecido a tu icono dinámico. |
@@ -51,7 +51,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 | --- | --- |
 | [Notificaciones del sistema](adaptive-interactive-toasts.md) | Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional. |
 | [Enviar una notificación de icono local](send-local-toast.md) | Aprende a enviar una notificación del sistema interactiva. |
-| [Visualizador de notificaciones](notifications-visualizer.md) | Notifications que Visualizer es una nueva aplicación de plataforma Universal de Windows (UWP) de [la tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar adaptable iconos dinámicos para Windows 10. |
+| [Visualizador de notificaciones](notifications-visualizer.md) | Notifications que Visualizer es una nueva aplicación de plataforma Universal de Windows (UWP) en [la tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar adaptable iconos dinámicos para Windows 10. |
 | [Elegir un método de entrega de notificaciones](choosing-a-notification-delivery-method.md) | En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema. |
 | [Introducción a las notificaciones periódicas](periodic-notification-overview.md) | Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido desde un servicio de nube. |
 | [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md) | Con los Servicios de notificaciones de inserción de Windows (WNS), los desarrolladores de terceros pueden enviar actualizaciones de notificaciones del sistema, de icono, de distintivo y sin procesar desde su propio servicio de nube. Esto proporciona un mecanismo para enviar nuevas actualizaciones a los usuarios de una manera segura y de bajo consumo. |
