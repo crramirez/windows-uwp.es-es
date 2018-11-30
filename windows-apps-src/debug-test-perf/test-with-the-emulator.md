@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993301"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207727"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -25,7 +25,7 @@ Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 
 
 El equipo debe cumplir los siguientes requisitos:
 
-CPU (estas opciones de configuración, si está disponible, pueden estar habilitados en el BIOS)
+CPU (estas opciones de configuración, si está disponible, se pueden habilitar en el BIOS)
 
 -   Virtualización asistida por hardware ([comprobar la compatibilidad](https://www.microsoft.com/download/details.aspx?id=592)).
 -   Traducción de direcciones de segundo nivel (SLAT).
@@ -64,7 +64,7 @@ Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador vir
 
 ### <a name="running"></a>Running
 
-Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
+Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado del menú desplegable **de ejecución** en Visual Studio.
 
 ![Emuladores disponibles con resolución, tamaño y memoria](images/em-list.png)
 
@@ -625,7 +625,7 @@ En algunos casos, incluso después de actualizar a un nuevo paquete piloto de Wi
 
 Para recuperar de esta situación, ejecuta "netcfg -d" desde un símbolo del sistema de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Cuando finalice la ejecución del comando, reinicia tu PC para completar el proceso de recuperación.
 
-**Nota**este comando eliminará todos los dispositivos de redes, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
+**Nota**este comando eliminará todos los dispositivos de red, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
  
 ### <a name="unable-to-launch-the-emulators"></a>No se pueden iniciar los emuladores
 

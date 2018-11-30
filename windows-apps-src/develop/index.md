@@ -2,16 +2,16 @@
 description: Obtén información sobre cómo desarrollar una aplicación para UWP.
 title: Desarrollo de aplicaciones para UWP
 layout: LandingPage
-keywords: los desarrolladores de desarrollo de UWP desarrollo subprocesos async plataforma Introducción a portal de la aplicación
+keywords: los desarrolladores de desarrollo de UWP desarrollo subprocesamiento async plataforma Introducción a portal de la aplicación
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964464"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205576"
 ---
 <div> 
 <h1>Desarrollo de aplicaciones para UWP</h1>
@@ -50,7 +50,7 @@ ms.locfileid: "7964464"
                     </div>                
                     <div class="cardText">
                         <h3>Guía de migración</h3>
-                        <p>Llevar tu existente o Windows Forms, WPF, Android, aplicación de iOS a UWP. </p>
+                        <p>Llevar tu existentes de Windows Forms, WPF, Android o aplicación de iOS a UWP. </p>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ ms.locfileid: "7964464"
                 <div class="card">
                     <div class="cardText">
                         <h3>Espacios de nombres UWP de Windows</h3>
-                        <p>Las clases, estructuras, interfaces, métodos, propiedades y eventos que conforman el tiempo de ejecución de Windows organizados por el espacio de nombres.</p>
+                        <p>Las clases, estructuras, interfaces, métodos, propiedades y eventos que conforman el tiempo de ejecución de Windows, organizados por el espacio de nombres.</p>
                     </div>
                 </div>
             </div>

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7991208"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8203169"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 

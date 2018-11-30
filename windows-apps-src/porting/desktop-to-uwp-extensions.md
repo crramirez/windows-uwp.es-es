@@ -8,17 +8,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 19ae09190b916fdaae68a67a2b9c11caa20d30e2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965173"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202846"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación de escritorio empaquetada con Windows 10
 
 Usa extensiones para integrar la aplicación de escritorio empaquetada con Windows 10 mediante formas predefinidas.
 
-Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación sea la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
+Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación sea la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión de la aplicación empaquetada. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
 
 En este tema se describen estas extensiones y las tareas que puedes realizar al usarlas.
 
@@ -120,7 +120,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puedes usar este identificador para administrar los cambios en versiones futuras de la aplicación. |
-|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde el que quieras heredar asociaciones de archivos.|
+|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describa la aplicación, el componente y la versión de la aplicación de escritorio desde el que quieras heredar asociaciones de archivos.|
 
 #### <a name="example"></a>Ejemplo
 
@@ -467,7 +467,7 @@ Esta opción permite que los usuarios organicen tus archivos e interactúen con 
 
 ### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definir el comportamiento de la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo
 
-Especificar cómo se comporta la aplicación cuando un usuario abre varios archivos al mismo tiempo.
+Especificar cómo se comporta la aplicación cuando el usuario abre varios archivos al mismo tiempo.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -856,7 +856,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 * [Iniciar la aplicación mediante un protocolo](#protocol)
 * [Iniciar la aplicación mediante un alias](#alias)
 * [Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows](#executable)
-* [Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC](#autoplay)
+* [Permitir que los usuarios inicien la aplicación cuando conecten un dispositivo a su PC](#autoplay)
 * [Reiniciar automáticamente después de recibir una actualización de Microsoft Store](#updates)
 
 <a id="protocol" />
@@ -913,7 +913,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-your-application-by-using-an-alias"></a>Iniciar la aplicación mediante un alias
 
-Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
+Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -966,7 +966,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-an-executable-file-when-users-log-into-windows"></a>Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows
 
-Las tareas de inicio que la aplicación pueda ejecutar un archivo ejecutable automáticamente cada vez que un usuario inicia sesión.
+Las tareas de inicio que la aplicación pueda ejecutar un archivo ejecutable automáticamente cuando un usuario inicia sesión.
 
 > [!NOTE]
 > El usuario tiene que iniciar la aplicación al menos una vez para registrar esta tarea de inicio.
@@ -1027,9 +1027,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 <a id="autoplay" />
 
-### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC
+### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios inicien la aplicación cuando conecten un dispositivo a su PC
 
-Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecta un dispositivo a su PC.
+Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -1092,9 +1092,9 @@ Si la aplicación está abierta cuando los usuarios instalar una actualización,
 
 Si quieres que esa aplicación se reinicie una vez completada la actualización, llama a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) en cada proceso que quieras reiniciar.
 
-Cada ventana activa en la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
+Cada ventana activa de la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
 
-Cuando cada ventana activa en la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar los datos y se cierra.
+Cuando cada ventana activa de la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar datos y se cierra.
 
 >[!NOTE]
 Las ventanas activas también reciben el mensaje [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) en caso de que la aplicación no controle el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) .
@@ -1139,7 +1139,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
-|Parameters |Los parámetros que necesita la aplicación para controlar correctamente la solicitud. |
+|Parameters |Los parámetros que requiere la aplicación para controlar correctamente la solicitud. |
 
 #### <a name="example"></a>Ejemplo
 
@@ -1264,7 +1264,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Package>
 ```
 
-Esta extensión puede resultar útil si quieres crear una interfaz de usuario de plataforma Universal de Windows que se ejecuta en todos los dispositivos, pero quieres que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
+Esta extensión puede resultar útil si quieres crear una interfaz de usuario de plataforma Universal de Windows que se ejecute en todos los dispositivos, pero quieres que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
 
 Solo tienes que crear un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Este extensiones indica que quieres iniciar un archivo ejecutable en el paquete de aplicación de Windows.  Si quieres comunicarte entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](../launch-resume/app-services.md) para poder hacerlo. Puedes leer más acerca de este ejemplo [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 

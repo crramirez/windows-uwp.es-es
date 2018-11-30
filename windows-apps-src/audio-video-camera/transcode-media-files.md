@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a6eb19ca5954b3ce71ecbaefe3339bee78f8717
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971090"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207750"
 ---
 # <a name="transcode-media-files"></a>Transcodificar archivos multimedia
 
@@ -84,11 +84,11 @@ Puedes registrar eventos para responder cuando el progreso de la transcodificaci
 ## <a name="encode-a-metadata-stream"></a>Codificar una secuencia de metadatos
 A partir de Windows 10, versión 1803, puedes incluir metadatos temporizados cuando archivos multimedia de transcodificación. A diferencia de los ejemplos de transcodificación vídeo anteriores, que usa lo métodos de creación del perfil, como [**MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4), de codificación de multimedia integrado debe crear manualmente el perfil de codificación de metadatos para admitir el tipo de metadatos que se va a codificar .
 
-Este primer paso para crear un perfil de incoding de metadatos es crear un objeto [**TimedMetadataEncodingProperties**] que describe la codificación de los metadatos que pueden transformar. La propiedad Subtype es un GUID que especifica el tipo de los metadatos. Los detalles de codificación para cada tipo de metadatos es propietarios y no se proporciona por Windows. En este ejemplo, se usa el GUID para metadatos GoPro (gprs). A continuación, se llama [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) para establecer un blob binario de datos que describen el formato de secuencia es específico para el formato de metadatos. A continuación, un **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) se crea a partir de las propiedades de codificación, y una etiqueta de pista y un nombre permitir que una aplicación que se lee de la secuencia de endcoded para identificar la secuencia de metadatos y, opcionalmente, mostrar el nombre de la secuencia en la interfaz de usuario. 
+Este primer paso para crear un perfil de incoding de metadatos es crear un objeto [**TimedMetadataEncodingProperties**] que describe la codificación de los metadatos que pueden transformar. La propiedad de subtipo es un GUID que especifica el tipo de los metadatos. Los detalles de codificación para cada tipo de metadatos es propietarios y no se proporciona por Windows. En este ejemplo, se usa el GUID para metadatos GoPro (gprs). A continuación, se llama [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) para establecer un blob binario de datos que describen el formato de secuencia que es específico para el formato de metadatos. A continuación, un **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) se crea a partir de las propiedades de codificación, y una etiqueta de pista y el nombre son para permitir que una aplicación que lee la secuencia de endcoded para identificar la secuencia de metadatos y, opcionalmente, mostrar el nombre de la secuencia en la interfaz de usuario. 
  
 [!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
 
-Después de crear el **TimedMetadataStreamDescriptor**, puedes crear un **MediaEncodingProfile** que describe el vídeo, audio y metadatos codificación en el archivo. El **TimedMetadataStreamDescriptor** creado en el ejemplo anterior se pasa a esta función auxiliar de ejemplo y se agrega a la **MediaEncodingProfile** mediante una llamada a [**SetTimedMetadataTracks**](https://docs.microsoft.com/en-us/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks).
+Después de crear el **TimedMetadataStreamDescriptor**, puedes crear un **MediaEncodingProfile** que describe el vídeo, audio y metadatos de codificación en el archivo. El **TimedMetadataStreamDescriptor** creado en el ejemplo anterior se pasa a esta función auxiliar de ejemplo y se agrega a la **MediaEncodingProfile** mediante una llamada a [**SetTimedMetadataTracks**](https://docs.microsoft.com/en-us/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks).
 
 [!code-cs[GetMediaEncodingProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetMediaEncodingProfile)]
  

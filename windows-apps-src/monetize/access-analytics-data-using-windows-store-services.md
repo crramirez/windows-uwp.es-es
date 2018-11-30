@@ -8,11 +8,11 @@ keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store a
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: c6bd559a630c1299c28ff135692ee15e9443180c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967111"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205042"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -36,11 +36,11 @@ Antes de empezar a escribir código para llamar a la API de análisis de Microso
     > [!NOTE]
     > Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, el identificador de cliente y la clave, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.
 
-Para asociar una aplicación de Azure AD con tu cuenta del centro de partners y recuperar los valores necesarios:
+Para asociar una aplicación de Azure AD con tu cuenta del centro de partners y recuperar los valores requeridos:
 
-1.  En el centro de partners, [asociar la cuenta del centro de partners de tu organización con el directorio de Azure AD de tu organización](../publish/associate-azure-ad-with-dev-center.md).
+1.  En el centro de partners, [asociar la cuenta del centro de partners de tu organización con el directorio de Azure AD de la organización](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  A continuación, desde la página de **usuarios** en la sección de **configuración de la cuenta** del centro de partners, [Agregar la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o el servicio que usarás para acceder a datos de análisis de tu cuenta del centro de partners. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el centro de partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
+2.  A continuación, desde la página de **usuarios** en la sección de **configuración de la cuenta** del centro de partners, [Agregar la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o el servicio que usarás para acceder a datos de análisis de la cuenta del centro de partners. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el centro de partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
 
 3.  Vuelve a la página **Usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
 
@@ -65,7 +65,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-El valor de *tenant\_id* de POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave de la aplicación que recuperaste del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
+El valor de *tenant\_id* en POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave para la aplicación que recuperaste del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
 
 Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 

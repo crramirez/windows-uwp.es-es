@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código
 ms.localizationpriority: medium
 ms.openlocfilehash: f60668ba81bbaefe2c190f7212618684797366bf
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7991089"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206983"
 ---
 # <a name="code-examples-for-the-submission-api"></a>Ejemplos de código para la API de envío
 
