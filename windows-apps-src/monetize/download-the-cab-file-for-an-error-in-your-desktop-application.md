@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab, desktop application, aplicación de escritorio
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7986479"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211770"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>Descargar el archivo .cab para un error en tu aplicación de escritorio
 

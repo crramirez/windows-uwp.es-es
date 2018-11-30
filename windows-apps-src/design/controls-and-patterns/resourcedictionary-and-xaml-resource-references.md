@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 51461df47fe92c296fee198a6f2ed1c34e833cd7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971528"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211000"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referencias a ResourceDictionary y a los recursos XAML
 
@@ -202,7 +202,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) es una clase base de la que heredan los controles y tiene una propiedad [Resources](https://msdn.microsoft.com/library/windows/apps/br208740). Por lo tanto, puedes agregar un diccionario de recursos locales a cualquier objeto **FrameworkElement**.
 
-Aquí, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) como [Border](https://msdn.microsoft.com/library/windows/apps/br209250) tienen diccionarios de recursos, y ambos tienen un recurso denominado "greeting". El [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) denominado 'textBlock2' es dentro del **borde**, por lo que la búsqueda de recursos busca primera del **borde**de los recursos, a continuación, la **página**de recursos y, a continuación, los recursos de la [aplicación](https://msdn.microsoft.com/library/windows/apps/br242324) . En el objeto **TextBlock** se pondrá "Hola mundo".
+Aquí, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) como [Border](https://msdn.microsoft.com/library/windows/apps/br209250) tienen diccionarios de recursos, y ambos tienen un recurso denominado "greeting". El [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) denominado 'textBlock2' es dentro del **borde**, por lo que la búsqueda de recursos busca primera del **borde**de recursos, a continuación, la **página**de recursos y, a continuación, los recursos de la [aplicación](https://msdn.microsoft.com/library/windows/apps/br242324) . En el objeto **TextBlock** se pondrá "Hola mundo".
 
 Para acceder a los recursos de ese elemento desde el código, usa la propiedad [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) de ese elemento. Al acceder a los recursos de un [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) en el código, en lugar de XAML, solo buscará en ese diccionario, no en los diccionarios del elemento primario.
 

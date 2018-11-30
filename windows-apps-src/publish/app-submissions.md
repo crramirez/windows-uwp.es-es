@@ -7,11 +7,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964504"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207484"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -23,7 +23,7 @@ Puedes iniciar el envío cuando la aplicación está completa y lista para publi
 > [!NOTE]
 > Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) de activa en [El centro de partners](https://partner.microsoft.com/dashboard) para poder enviar aplicaciones a la Microsoft Store.
 
-Después de publica la aplicación, puedes publicar una versión actualizada creando otro envío en el centro de partners. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío para una aplicación publicada, haz clic en la **actualización** junto al envío más reciente que se muestra en su página de **información general** . También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
+Después de publica la aplicación, puedes publicar una versión actualizada creando otro envío en el centro de partners. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío para una aplicación publicada, haz clic en **Update** junto al envío más reciente que se muestra en su página de **información general** . También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
 
 > [!NOTE]
 > En esta sección de la documentación se describe cómo crear un envío de aplicación en el centro de partners. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.

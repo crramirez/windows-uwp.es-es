@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, subprocesos, asincrónicos, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7992157"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208377"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programación asincrónica en C++/CX
 > [!NOTE]

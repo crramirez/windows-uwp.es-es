@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e17b9ddd5833899a83e24d24c74f9c620a28f5c8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969138"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206006"
 ---
 # <a name="receive-data"></a>Recibir datos
 

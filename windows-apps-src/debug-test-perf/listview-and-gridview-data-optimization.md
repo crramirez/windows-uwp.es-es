@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 411d19ba26dca1edff91fb7e5b432aa4da3bd120
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993331"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212467"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
 
@@ -27,7 +27,7 @@ Se necesita un método de virtualización de datos para un conjunto de datos que
 -   El origen del conjunto de datos (disco local, red o nube)
 -   El consumo de memoria total de la aplicación
 
-**Nota**Ten en cuenta que una característica está habilitada de manera predeterminada para ListView y GridView que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza movimiento panorámico/desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
+**Nota**Ten en cuenta que una característica habilitada de manera predeterminada para ListView y GridView que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza movimiento panorámico/desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aquí encontrarás más información acerca de las técnicas de virtualización de datos incremental y de acceso aleatorio.
 

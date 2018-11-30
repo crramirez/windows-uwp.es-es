@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Windows 10, UWP, paquetes opcionales, Establece, AWS relacionadas con la instalación de prueba de instalador, AppInstaller, aplicación,
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fe01a1c1a825377e886e042b4eef3868cbf5eb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7979081"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211727"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hospedaje de paquetes de aplicación para UWP en AWS para instalación web
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7983874"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208854"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
