@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7aa0b70aee50c79088a68378fa75664711c3d564
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970818"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212888"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 
@@ -21,18 +21,18 @@ El **ms-screenclip:** y **ms-screensketch:** esquemas de URI te permite iniciar 
 
 El **ms-screenclip:** URI permite que la aplicación automáticamente abrir e iniciar un nuevo recorte. El recorte resultante se copia en el Portapapeles del usuario, pero no se pasa automáticamente a la aplicación de apertura.
 
-**ms-screenclip:** acepta los siguientes parámetros:
+**ms-screenclip:** toma los siguientes parámetros:
 
 | Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso en segundos completas, entre la llamada URI y cuando comienza la recortes. |
+| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso, en segundos completas, entre la llamada URI y cuando comienza la recortes. |
 
-## <a name="launching-the-snip--sketch-app"></a>Iniciar el recorte y la aplicación boceto
+## <a name="launching-the-snip--sketch-app"></a>Iniciar el recorte y aplicaciones de bocetos
 
 El **ms-screensketch:** URI te permite iniciar la aplicación de recorte & boceto mediante programación y abrir una imagen específica en esa aplicación para la anotación.
 
-**ms-screensketch:** acepta los siguientes parámetros:
+**ms-screensketch:** toma los siguientes parámetros:
 
 | Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ El **ms-screensketch:** URI te permite iniciar la aplicación de recorte & bocet
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
 | isTemporary | bool | no | Si se establece en True, bocetos de pantalla intentará eliminar el archivo después de abrirla. |
 
-En el ejemplo siguiente, se llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) para enviar una imagen a recorte & boceto desde la aplicación del usuario.
+En el ejemplo siguiente, se llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) para enviar una imagen a recorte & boceto desde la aplicación de usuario.
 
 ```csharp
 

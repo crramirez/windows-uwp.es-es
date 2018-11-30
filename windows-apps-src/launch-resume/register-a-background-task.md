@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f940b0433c5cf7818102f92c9e61a6fe012bf4b9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972027"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212780"
 ---
 # <a name="register-a-background-task"></a>Registrar una tarea en segundo plano
 
@@ -74,7 +74,7 @@ Comprueba si la tarea ya está registrada. Es importante que compruebes esto por
 
 Puedes comprobar registros existentes consultando la propiedad [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando en el resultado. Comprueba el nombre de cada instancia. Si coincide con el nombre de la tarea que estás registrando, entonces interrumpe el bucle y coloca una variable de marca para que tu código pueda elegir otra ruta en el siguiente paso.
 
-> **Nota**usar nombres de las tareas en segundo plano que sean exclusivos de la aplicación. Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
+> **Nota**usa nombres de tarea en segundo plano que sean exclusivos de la aplicación. Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
 
 El siguiente código registra una tarea en segundo plano usando [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838), que creamos en el último paso:
 

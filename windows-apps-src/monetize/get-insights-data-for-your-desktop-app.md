@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, servicios de la tienda, API de información de análi
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7988711"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210865"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
 

@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: cc8e4d1753333579b016a44adf9429d355d29fb6
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968329"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8216833"
 ---
 # <a name="data-binding-overview"></a>Introducción al enlace de datos
 
@@ -33,9 +33,9 @@ Crea un nuevo proyecto de **Aplicación vacía (Windows Universal)**. Llámale "
 
 Cada enlace consta de un destino de enlace y de un origen de enlace. Normalmente, el destino es una propiedad de un control u otro elemento de interfaz de usuario y el origen es una propiedad de una instancia de clase (un modelo de datos o un modelo de vista). Este ejemplo muestra cómo enlazar un control a un solo elemento. El destino es la propiedad **Text** de un **TextBlock**. El origen es una instancia de una clase simple denominada **Recording** que representa una grabación de audio. Veamos primero la clase.
 
-Si estás usando C# o C++ / CX, a continuación, agrega una nueva clase al proyecto y el nombre de la clase de **grabación**.
+Si estás usando C# o C++ / CX, a continuación, agrega una nueva clase al proyecto y asigna el nombre de la clase de **grabación**.
 
-Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, agregar nuevos elementos de **Midl File (.idl)** para el proyecto, denominado como se muestra en C++ / WinRT listado de ejemplo de código siguiente. Reemplaza el contenido de los nuevos archivos con el código de [MIDL 3.0](/uwp/midl-3/intro) se muestra en la descripción, compila el proyecto para generar `Recording.h` y `.cpp` y `RecordingViewModel.h` y `.cpp`y, a continuación, agrega código a los archivos generados para que coincida con la descripción. Para que obtener más información sobre estos archivos generados y cómo copiarlas en el proyecto, consulta [controles XAML; enlazar a C++ / WinRT propiedad](/windows/uwp/cpp-and-winrt-apis/binding-property).
+Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, agregar nuevos elementos de **Midl File (.idl)** para el proyecto, denominado como se muestra en C++ / WinRT listado de ejemplo de código siguiente. Reemplaza el contenido de esos archivos nuevos con el código de [MIDL 3.0](/uwp/midl-3/intro) se muestra en la descripción, compila el proyecto para generar `Recording.h` y `.cpp` y `RecordingViewModel.h` y `.cpp`y, a continuación, agrega código a los archivos generados para que coincida con la descripción. Para que obtener más información sobre estos archivos generados y cómo copiarlas en el proyecto, consulta [controles XAML; enlazar a C++ / WinRT propiedad](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
 ```csharp
 namespace Quickstart
@@ -316,7 +316,7 @@ La última parte es enlazar un **TextBlock** a la propiedad **ViewModel.DefaultR
 </Page>
 ```
 
-Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, deberás quitar la función de **MainPage:: clickHandler** en orden para generar el proyecto.
+Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), tendrás que quitar la función de **MainPage:: clickHandler** en orden para generar el proyecto.
 
 Este es el resultado.
 
@@ -500,7 +500,7 @@ Esto se puede llevar a cabo de dos maneras. Puedes enlazar la vista de detalles 
 Si estás usando C++ / WinRT o VisualC ++ extensiones de componentes (C++ / CX), para usar la extensión de marcado [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) , tendrás que agregar el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a cualquier clase en tiempo de ejecución que quieres enlazar a. Para usar [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), no necesitas este atributo.
 
 > [!IMPORTANT]
-> Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) está disponible si has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809), o una versión posterior. Sin este atributo, tendrás que implementan las interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) y [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para poder usar la extensión de marcado [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
+> Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) está disponible si has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809), o una versión posterior. Sin este atributo, tendrás que implementar las interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) y [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para poder usar la extensión de marcado [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
 
 Primero, esta es la técnica [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770).
 
@@ -575,7 +575,7 @@ Y luego ajusta los enlaces en la [**ListView**](https://msdn.microsoft.com/libra
 Y este es el resultado idéntico en cada caso.
 
 > [!NOTE]
-> Si estás usando C++, a continuación, la interfaz de usuario no se verá exactamente igual que en la ilustración siguiente: la representación de la propiedad **ReleaseDateTime** es diferente. Consulta la sección siguiente para obtener una explicación de este.
+> Si estás usando C++, a continuación, la interfaz de usuario no se verá exactamente igual que la siguiente ilustración: la representación de la propiedad **ReleaseDateTime** es diferente. Consulta la sección siguiente para obtener una explicación de este.
 
 ![Enlazar una vista de lista](images/xaml-databinding4.png)
 
@@ -721,7 +721,7 @@ Este es el resultado.
 ![visualización de una fecha con formato personalizado](images/xaml-databinding5.png)
 
 > [!NOTE]
-> A partir de Windows 10, versión 1607, el marco XAML proporciona un convertidor de valor booleano a visibilidad integrado. El convertidor asigna **true** para el valor de enumeración **Visibility.Visible** y **false** en **Visibility.Collapsed** por lo que se puede enlazar una propiedad Visibility a un valor booleano sin tener que crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información acerca de las versiones de destino, consulta el [código adaptable para la versión](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de Windows 10, versión 1607, el marco XAML proporciona un convertidor de valor booleano para visibilidad integrado. El convertidor asigna **true** para el valor de enumeración **Visibility.Visible** y **false** en **Visibility.Collapsed** por lo que se puede enlazar una propiedad Visibility a un valor booleano sin tener que crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información acerca de las versiones de destino, consulta el [código adaptable para la versión](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 ## <a name="see-also"></a>Consulta también
 * [Enlace de datos](index.md)

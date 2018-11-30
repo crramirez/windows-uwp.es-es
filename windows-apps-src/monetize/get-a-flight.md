@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight, piloto, package flight, paquete piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: c4ff6c929a7264b5dece0057701c8348fe5d39be
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967892"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213310"
 ---
 # <a name="get-a-package-flight"></a>Obtener un paquete piloto
 
@@ -44,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el paquete piloto que quieres obtener. El Id. de la tienda de la aplicación está disponible en el centro de partners.  |
+| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el paquete piloto que quieres obtener. El identificador de la tienda de la aplicación está disponible en el centro de partners.  |
 | flightId | cadena | Obligatorio. El identificador del paquete piloto que se va a obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.  |
 
 
@@ -116,7 +116,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|---------------------  |
 | 400  | La solicitud no es válida. |
 | 404  | No se pudo encontrar el paquete piloto especificado.   |   
-| 409  | La aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
+| 409  | La aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
 
 
 ## <a name="related-topics"></a>Temas relacionados

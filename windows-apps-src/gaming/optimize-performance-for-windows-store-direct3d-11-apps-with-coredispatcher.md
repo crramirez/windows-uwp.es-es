@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993168"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8214631"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-La plantilla **DirectX 11 and XAML App (Universal Windows)** en Microsoft Visual Studio2015 divide el bucle del juego en varios subprocesos de una forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
+La plantilla **DirectX 11 and XAML App (Universal Windows)** en Microsoft Visual Studio2015 divide el bucle del juego en varios subprocesos de forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Otras formas de reducir la latencia de entrada
 
@@ -246,7 +246,7 @@ Figura 1
 
 ![figura 1: latencia de entrada en directx ](images/input-latency1.png)
 
-Windows8.1, DXGI presenta la marca **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** la cadena de intercambio, que permite a las aplicaciones fácilmente reducir esta latencia sin tener que implementar la heurística para mantener la cola vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
+Windows8.1, DXGI presenta la marca **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** la cadena de intercambio, lo que permite a las aplicaciones fácilmente reducir esta latencia sin tener que implementar la heurística para mantener la cola vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
 
 Figura 2
 
