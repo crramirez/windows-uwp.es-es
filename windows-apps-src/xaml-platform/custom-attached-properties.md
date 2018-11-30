@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: a92e1ad1c5bfb3960950b976da46ca16490d097e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964869"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211139"
 ---
 # <a name="custom-attached-properties"></a>Propiedades adjuntas personalizadas
 
@@ -39,10 +39,10 @@ Si vas a definir la propiedad adjunta para usarla exclusivamente en otros tipos,
 
 Para definir tu propiedad adjunta como una propiedad de dependencia, declara una propiedad **public** **static** **readonly** del tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Esta propiedad se define usando el valor de retorno del método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833). El nombre de la propiedad debe coincidir con el nombre de la propiedad adjunta que especificaste como parámetro *name* de **RegisterAttached**, con la cadena "Property" anexada al final. Esta es la convención establecida para asignar nombre a los identificadores de las propiedades de dependencia en relación con las propiedades que representan.
 
-La principal diferencia entre una propiedad adjunta personalizada y una propiedad de dependencia personalizada es la manera de definir los descriptores de acceso o contenedores. En lugar de usar la técnica de contenedor descrita en [Propiedades de dependencia personalizadas](custom-dependency-properties.md), también debes proporcionar estático **obtener *** PropertyName* y **establecer *** PropertyName* estáticos como descriptores de acceso para la propiedad adjunta. Los descriptores de acceso son usados principalmente por el analizador XAML, aunque algunos otros llamadores pueden usarlos para establecer valores en escenarios que no sean de XAML.
+La principal diferencia entre una propiedad adjunta personalizada y una propiedad de dependencia personalizada es la manera de definir los descriptores de acceso o contenedores. En lugar de usar la técnica de contenedor que se describe en las [Propiedades de dependencia personalizadas](custom-dependency-properties.md), también debes proporcionar estático **obtener *** PropertyName* y **establecer *** PropertyName* estáticos como descriptores de acceso para la propiedad adjunta. Los descriptores de acceso son usados principalmente por el analizador XAML, aunque algunos otros llamadores pueden usarlos para establecer valores en escenarios que no sean de XAML.
 
 > [!IMPORTANT]
-> Si no defines correctamente los descriptores de acceso, el procesador de XAML no puede acceder a la propiedad adjunta y cualquier persona que intente usarla obtendrá un error del analizador XAML. Además, las herramientas de diseño y codificación suelen usar las convenciones "\*Property" para asignar un nombre a los identificadores cuando encuentran una propiedad de dependencia personalizada en un ensamblado al que se hace referencia.
+> Si no defines correctamente los descriptores de acceso, el procesador XAML no puede acceder a la propiedad adjunta y cualquier persona que intente usarla obtendrá un error del analizador XAML. Además, las herramientas de diseño y codificación suelen usar las convenciones "\*Property" para asignar un nombre a los identificadores cuando encuentran una propiedad de dependencia personalizada en un ensamblado al que se hace referencia.
 
 ## <a name="accessors"></a>Descriptores de acceso
 
@@ -73,7 +73,7 @@ El objeto *target* puede ser de un tipo más específico en tu implementación, 
 
 Este ejemplo muestra el registro de la propiedad de dependencia (usando el método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)), así como los descriptores de acceso **Get** y **Set** para una propiedad adjunta personalizada. En el ejemplo, el nombre de la propiedad adjunta es `IsMovable`. Por consiguiente, los descriptores de acceso deben denominarse `GetIsMovable` y `SetIsMovable`. El propietario de la propiedad adjunta es una clase de servicio denominada `GameService` que no tiene una interfaz de usuario propia; su objetivo es solo proporcionar los servicios de la propiedad adjunta cuando se use la propiedad adjunta **GameService.IsMovable**.
 
-Definir la propiedad adjunta en C++ / CX es un poco más complejo. Tienes que decidir cómo repartir entre el archivo de encabezado y de código. Además, debes exponer el identificador como una propiedad con solo un descriptor de acceso **get**, por los motivos tratados en [Propiedades de dependencia personalizadas](custom-dependency-properties.md). En C++ / CX, debes definir esta relación de campo de la propiedad explícitamente en lugar de confiar en las palabras clave de .NET **readonly** e implícita de respaldo de propiedades simples. También tienes que registrar la propiedad adjunta dentro de una función auxiliar que solo se ejecute una vez: cuando se inicie la aplicación por primera vez pero antes de que se cargue cualquier página XAML que necesite la propiedad adjunta. La ubicación típica para llamar a las funciones auxiliares de registro de propiedades para cualquier propiedad de dependencia o adjunta es desde el constructor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) en el código del archivo app.xaml.
+Definir la propiedad adjunta en C++ / CX es un poco más complejo. Tienes que decidir cómo repartir entre el archivo de encabezado y de código. Además, debes exponer el identificador como una propiedad con solo un descriptor de acceso **get**, por los motivos tratados en [Propiedades de dependencia personalizadas](custom-dependency-properties.md). En C++ / CX, debes definir esta relación de campo de la propiedad explícitamente en lugar de confiar en las palabras clave de .NET **readonly** e implícito de respaldo de propiedades simple. También tienes que registrar la propiedad adjunta dentro de una función auxiliar que solo se ejecute una vez: cuando se inicie la aplicación por primera vez pero antes de que se cargue cualquier página XAML que necesite la propiedad adjunta. La ubicación típica para llamar a las funciones auxiliares de registro de propiedades para cualquier propiedad de dependencia o adjunta es desde el constructor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) en el código del archivo app.xaml.
 
 ```csharp
 public class GameService : DependencyObject
@@ -266,7 +266,7 @@ protected override Size ArrangeOverride(Size finalSize)
 ```
 
 > [!NOTE]
-> Para obtener más información acerca de cómo funcionan los paneles, consulta la [Introducción a los paneles personalizados de XAML](https://msdn.microsoft.com/library/windows/apps/mt228351).
+> Para obtener más información sobre el funcionan de los paneles, consulta la [información general de los paneles personalizados de XAML](https://msdn.microsoft.com/library/windows/apps/mt228351).
 
 ## <a name="related-topics"></a>Temas relacionados
 

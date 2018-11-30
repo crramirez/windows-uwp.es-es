@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 690b6b8ee688f62dcae375ed48e07797c921bf43
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7993112"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212941"
 ---
 # <a name="working-with-symbologies"></a>El trabajo con simbologías
 Una [simbología de código de barras](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) es la asignación de datos a un formato específico de código de barras. Algunas Simbologías comunes son UPC, Code 128, código QR y así sucesivamente.  El escáner de códigos de barras de la plataforma Universal de Windows API permiten que una aplicación controlar la forma en que el escáner procesa estas Simbologías sin configurar manualmente el escáner. 

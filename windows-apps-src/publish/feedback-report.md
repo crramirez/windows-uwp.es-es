@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967154"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213207"
 ---
 # <a name="feedback-report"></a>Informe de comentarios
 
@@ -24,7 +24,7 @@ Animar a los clientes a que envíen comentarios sobre la aplicación es una exce
 
 Puedes usar la API de comentarios de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones desde la aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, posible que veas comentarios de los clientes en este informe, incluso si han no solicitado específicamente que te envíen comentarios desde dentro de la aplicación.
 
-Comentarios también pueden ser útil cuando se utiliza la [distribución de paquetes piloto](package-flights.md), ya que el informe de **comentarios** te muestra el paquete específico que cada cliente tenía instalado en su dispositivo cuando los comentarios.
+Comentarios también pueden ser útil cuando se usa la [distribución de paquetes piloto](package-flights.md), ya que el informe de **comentarios** te muestra el paquete específico que cada cliente tenía instalado en su dispositivo cuando los comentarios.
 
 > [!TIP]
 > Para un vistazo rápido a las valoraciones, clasificaciones y comentarios de los usuarios a través de todas las aplicaciones en los últimos 30 días, expande **interactuar** en el menú de navegación izquierdo y selecciona **valoraciones y comentarios.** 
