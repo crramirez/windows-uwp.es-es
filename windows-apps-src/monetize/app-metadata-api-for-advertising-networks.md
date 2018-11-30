@@ -7,11 +7,11 @@ keywords: Windows 10, UWP, red de publicidad, metadatos de la aplicación
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
 ms.openlocfilehash: 2fd0381d9ec8917f381cfeb045d58bfa3436de74
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7974901"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8194172"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadatos de la aplicación para redes de publicidad
 
