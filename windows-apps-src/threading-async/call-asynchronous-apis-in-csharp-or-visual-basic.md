@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, C#, Visual Basic, asincrónica
 ms.localizationpriority: medium
 ms.openlocfilehash: 899af2ffd26419d4c8906d703d6708d202f8c150
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213850"
+ms.locfileid: "8325792"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Llamar a API asincrónicas en C# o Visual Basic
 

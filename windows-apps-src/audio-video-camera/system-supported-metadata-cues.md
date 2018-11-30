@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, metadata, metadatos, cue, indicación, speech, voz, chapter, capítulo
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f461bb70c1319352c66b8d12775dc7fa1db0edf
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8202331"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8329155"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicaciones de metadatos temporizados admitidos por el sistema
 En este artículo se describe cómo sacar provecho de los diversos formatos de metadatos temporizados que pueden estar integrados en archivos o secuencias multimedia. Las aplicaciones para UWP pueden registrarse en los eventos que genera la canalización multimedia durante la reproducción cada vez que se encuentren estas indicaciones de metadatos. Con la clase [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), las aplicaciones pueden implementar sus propias indicaciones de metadatos personalizados, pero en este artículo nos centramos en varios estándares de metadatos que la canalización multimedia detecta automáticamente, por ejemplo:
