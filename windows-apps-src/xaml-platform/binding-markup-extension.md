@@ -8,11 +8,11 @@ keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b197ea668ec73711b7a9c63e516b4ec9a5f54d62
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970335"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206072"
 ---
 # <a name="binding-markup-extension"></a>Extensión de marcado {Binding}
 
@@ -21,7 +21,7 @@ ms.locfileid: "7970335"
 
 **Nota**para obtener información general sobre el uso de datos de enlace en la aplicación con **{Binding}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta el [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-Se usa la extensión de marcado **{Binding}** a las propiedades de enlace de datos en controles con valores procedentes de un origen de datos como el código. En el tiempo de carga de XAML, la extensión de marcado **{Binding}** se convierte en una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Este objeto de enlace obtiene un valor de propiedad en un origen de datos y lo inserta en la propiedad que está en el control. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de dichos cambios. Opcionalmente, también puede configurarse para insertar los cambios en el valor del control de nuevo en la propiedad de origen. La propiedad que es el destino de un enlace de datos debe ser una propiedad de dependencia. Para obtener más información, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
+Se usa la extensión de marcado **{Binding}** a las propiedades de enlace de datos en controles con valores procedentes de un origen de datos, como código. En el tiempo de carga de XAML, la extensión de marcado **{Binding}** se convierte en una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Este objeto de enlace obtiene un valor de propiedad en un origen de datos y lo inserta en la propiedad que está en el control. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de dichos cambios. Opcionalmente, también puede configurarse para insertar los cambios en el valor del control de nuevo en la propiedad de origen. La propiedad que es el destino de un enlace de datos debe ser una propiedad de dependencia. Para obtener más información, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
 
 **{Binding}** tiene la misma prioridad de propiedad de dependencia que un valor local, y definir un valor local en código imperativo quita el efecto de cualquier **{Binding}** definido en el marcado.
 
@@ -89,7 +89,7 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) y [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especifican un origen de enlace, por lo que son mutuamente excluyentes.
 
-**Sugerencia**si es necesario especificar una llave para un valor, como en la [**ruta de acceso**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), a continuación, debe ir precedida por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
+**Sugerencia**si es necesario especificar una llave para un valor, por ejemplo, en la [**ruta de acceso**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), a continuación, debe ir precedida por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
 
 ## <a name="examples"></a>Ejemplos
 

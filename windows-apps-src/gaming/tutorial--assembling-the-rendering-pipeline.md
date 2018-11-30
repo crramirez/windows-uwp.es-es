@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
 ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967531"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202585"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 
@@ -626,7 +626,7 @@ Cada tarjeta de vídeo implementa un cierto nivel de funcionalidad DirectX, en f
 
 Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, el nivel de característica 12\_0 requiere Direct3D 11.3 o Direct3D 12 y el modelo de sombreador 5.1. Para obtener más información, consulta [Niveles de característica de Direct3D: Introducción para cada nivel de características](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Con los niveles de característica, puedes desarrollar una aplicación para Direct3D9, Microsoft Direct3D10 o Direct3D11 y, a continuación, se ejecuta en hardware 9, 10 u 11 (salvo algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Con los niveles de característica, puedes desarrollar una aplicación para Direct3D9, Microsoft Direct3D10 o Direct3D11 y, a continuación, ejecutarlo en hardware 9, 10 u 11 (salvo algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Representación en estéreo
 

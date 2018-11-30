@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, delete, eliminar
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d582f79d57fb8b3648d8c872f700d998a2fec1a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993178"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206628"
 ---
 # <a name="delete-an-app-submission"></a>Eliminar un envío de aplicación
 
@@ -74,7 +74,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido en su estado actual o la aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido en su estado actual o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Temas relacionados

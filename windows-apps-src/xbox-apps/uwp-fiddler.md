@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: c27891b47bb9f7774799c912cc6f4cae3cea92bc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970753"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200431"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Cómo usar Fiddler con Xbox One al desarrollar para la UWP
 

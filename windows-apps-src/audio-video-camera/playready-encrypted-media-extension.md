@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970700"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8201766"
 ---
 # <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
@@ -34,7 +34,7 @@ La siguiente lista describe las nuevas características y los cambios realizados
 -   Proporciona la adquisición proactiva de licencias no persistentes.
 -   Proporciona la adquisición de varias licencias en un mensaje.
 
-    Puede usar un objeto PlayReady con varios identificadores de clave (ID) al igual que en Windows8.1 o usar los [datos de modelo de descifrado de contenido (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) con varios Id.
+    Puede usar un objeto PlayReady con varios identificadores de clave (ID) al igual que en Windows8.1, o usar los [datos de modelo de descifrado de contenido (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) con varios Id.
 
     > [!NOTE]
     > En Windows 10, se admiten varios identificadores de clave en &lt;ID&gt; en CDMData.
@@ -266,7 +266,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Consideraciones de programación para Encrypted Media Extension
 
-En esta sección se enumera las consideraciones de programación que deberías tener en cuenta al crear la aplicación web habilitado de PlayReady para Windows 10.
+En esta sección se enumera las consideraciones de programación que deberías tener en cuenta al crear la aplicación web de PlayReady habilitado para Windows 10.
 
 Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el siguiente ejemplo se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales que, a su vez, se asignan a los objetos **MSMediaKeys** y **MSMediaKeySession** de la función.
 

@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8fd6d2c41cd2f632f22819f452b2f203fd8ac309
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965681"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205141"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Nuevas API en Windows 10 compilación 17763
 
@@ -1127,7 +1127,7 @@ AppUriHandlerRegistration <br> AppUriHandlerRegistration.GetAppAddedHostsAsync <
 
 AppUriHandlerRegistrationManager <br> AppUriHandlerRegistrationManager.GetDefault <br> AppUriHandlerRegistrationManager.GetForUser <br> AppUriHandlerRegistrationManager.TryGetRegistration <br> AppUriHandlerRegistrationManager.User
 
-#### [<a name="launcher"></a>Selector](https://docs.microsoft.com/uwp/api/windows.system.launcher)
+#### [<a name="launcher"></a>Iniciador](https://docs.microsoft.com/uwp/api/windows.system.launcher)
 
 Launcher.LaunchFolderPathAsync <br> Launcher.LaunchFolderPathAsync <br> Launcher.LaunchFolderPathForUserAsync <br> Launcher.LaunchFolderPathForUserAsync
 

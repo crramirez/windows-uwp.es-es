@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flights, pilotos, package flights, paquetes piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969573"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8204598"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obtener paquetes piloto para una aplicación
 
@@ -113,7 +113,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se encontró ningún paquete piloto. |
-| 409  | La aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | La aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Temas relacionados

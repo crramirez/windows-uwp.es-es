@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: e8a2b0125944a8a4db66b41d26fcd4a0aa35b5b2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7988741"
+ms.locfileid: "8202292"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha y hora o número
 

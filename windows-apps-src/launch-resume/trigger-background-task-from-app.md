@@ -6,11 +6,11 @@ ms.topic: article
 keywords: desencadenador de tarea en segundo plano, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 237f342029f8d9bc0bbec1fcef5c7059cbf09840
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972595"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8201246"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Desencadenar una tarea en segundo plano desde dentro de la aplicación
 

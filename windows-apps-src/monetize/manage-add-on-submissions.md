@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submissions, envíos de complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967315"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200666"
 ---
 # <a name="manage-add-on-submissions"></a>Administrar envíos de complementos
 
@@ -24,7 +24,7 @@ La API de envío de Microsoft Store proporciona métodos que puedes usar para ad
 
 ## <a name="methods-for-managing-add-on-submissions"></a>Métodos para administrar envíos de complementos
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de complemento. Antes de poder usar estos métodos, el complemento ya debe existir en tu cuenta del centro de partners. Puedes crear un complemento en el centro de partners mediante la [definición de su tipo de producto y el Id. del producto](../publish/set-your-add-on-product-id.md) o mediante el uso de los métodos de API de envío de Microsoft Store en se describe en [Administrar complementos](manage-add-ons.md).
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de complemento. Antes de poder usar estos métodos, el complemento ya debe existir en tu cuenta del centro de partners. Puedes crear un complemento en el centro de partners mediante la [definición de su tipo de producto y el Id. del producto](../publish/set-your-add-on-product-id.md) o mediante el uso de los métodos de API de envío de Microsoft Store en descritas en [Administrar complementos](manage-add-ons.md).
 
 <table>
 <colgroup>
@@ -290,7 +290,7 @@ Este recurso contiene información de venta de un complemento.
 
 > [!IMPORTANT]
 > El recurso **Sale** ya no se admite y actualmente no se pueden obtener ni modificar los datos de ventas del envío de un complemento mediante la API de envío de Microsoft Store. En el futuro, actualizaremos la API de envío de Microsoft Store para incorporar una nueva forma de acceder mediante programación a la información de ventas de los envíos de complementos.
->    * Después de llamar al [método GET para obtener un envío de complemento](get-an-add-on-submission.md), el valor de *sales* estará vacío. Seguir usando el centro de partners para obtener los datos de ventas para el envío del complemento.
+>    * Después de llamar al [método GET para obtener un envío de complemento](get-an-add-on-submission.md), el valor de *sales* estará vacío. Seguir usando el centro de partners para obtener los datos de ventas de tu envío de complemento.
 >    * Cuando se llama al [método PUT para actualizar un envío de complemento](update-an-add-on-submission.md), la información del valor de *sales* se omite. Puedes seguir utilizando el centro de partners para modificar los datos de ventas para el envío del complemento.
 
 Este recurso tiene los siguientes valores.
@@ -352,7 +352,7 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 |  Base               |   No se establece la franja de precios; usa el precio base para el complemento.      |     
 |  NotAvailable              |   El complemento no está disponible en la región especificada.    |     
 |  Free              |   El complemento es gratuito.    |    
-|  Tier*xxxx*               |   Una cadena que especifica la franja de precios del complemento, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio niveles que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo **Ver la tabla** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).     |
+|  Tier*xxxx*               |   Una cadena que especifica la franja de precios del complemento, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio franjas que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo de **tabla de vista** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).     |
 
 <span id="submission-status-code" />
 

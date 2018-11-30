@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, siempre conectado, emulación x86 en ARM, solución de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 396bb0bf2c5ba5236e0e46e7b474867ffacb8c75
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7980488"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8209139"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solución de problemas de aplicaciones de escritorio x86
 >[!IMPORTANT]

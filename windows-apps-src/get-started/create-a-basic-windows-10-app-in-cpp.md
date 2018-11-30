@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6954f935440f75a728c3f3601ade884bbee7b6bc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969208"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207652"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++ / CX
 
@@ -25,7 +25,7 @@ Con Microsoft Studio2017 Visual, puedes usar C++ / CX para desarrollar una aplic
 
 ## <a name="before-you-start"></a>Antes de empezar
 
--   Para completar este tutorial, debes usar Visual StudioCommunity 2017 o una de las versiones de la Comunidad que no sean de Studio2017 Visual, en un equipo que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
+-   Para completar este tutorial, debes usar Visual StudioCommunity 2017 o una de las versiones que no sea Community de Studio2017 Visual, en un equipo que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
 -   Damos por hecho que tienes un conocimiento básico de C++ / CX, XAML y los conceptos en la [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Se supone que estás usando el diseño de ventana predeterminado en Visual Studio. Para restablecer el diseño predeterminado, en la barra de menús, elige **Ventana** > **Restablecer diseño de la ventana**.
 
@@ -35,7 +35,7 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 ### <a name="whats-the-same"></a>¿Qué es igual?
 
--   Puedes usar la STL, la CRT (salvo algunas excepciones) y cualquier otra biblioteca de C++ siempre que el código solo llama a las funciones de Windows que se puede acceder desde el entorno de Windows Runtime.
+-   Puedes usar la STL, la CRT (salvo algunas excepciones) y cualquier otra biblioteca de C++ siempre que el código solo llama a las funciones de Windows que son accesibles desde el entorno de Windows Runtime.
 
 -   Si estás acostumbrado a los diseñadores visuales, puedes seguir usando el diseñador integrado en Microsoft Visual Studio o puedes usar Blend for Visual Studio, que es una herramienta más completa. Si estás acostumbrado a codificar la interfaz de usuario a mano, puedes codificar a mano tu XAML.
 
@@ -65,7 +65,7 @@ Nuestra primera aplicación es una presentación para el mundo ("Hello World") q
 
 Empezaremos por los conceptos básicos:
 
--   Cómo crear un proyecto Universal de Windows en Studio2017 Visual.
+-   Cómo crear un proyecto de Windows Universal en Studio2017 Visual.
 
 -   Cómo comprender los proyectos y los archivos que se crean.
 
@@ -117,7 +117,7 @@ Si examinas el código de App.xaml.h, App.xaml.cpp en el proyecto compartido, ve
 
 **Clases de referencia**
 
-Prácticamente todas las clases de Windows Runtime, en las que se incluyen todos los tipos de la API de Windows (XAML de Windows, las páginas de tu aplicación, la propia clase App, todos los objetos de red y dispositivo, todos los tipos de contenedor), se declaran como **clase ref**. (Algunos tipos de Windows son **clase de valor** o **estructura de valor**). Una clase de referencia se puede consumir desde cualquier lenguaje. En C++ / CX, la duración de estos tipos está regulada por automático de referencias (no la recolección) para que nunca de forma explícita eliminar estos objetos. También puedes crear tus propias clases de referencia.
+Prácticamente todas las clases de Windows Runtime, en las que se incluyen todos los tipos de la API de Windows (XAML de Windows, las páginas de tu aplicación, la propia clase App, todos los objetos de red y dispositivo, todos los tipos de contenedor), se declaran como **clase ref**. (Algunos tipos de Windows son **clase de valor** o **estructura de valor**). Una clase de referencia se puede consumir desde cualquier lenguaje. En C++ / CX, la duración de estos tipos está regulada por automático de referencias (no la recolección) para que nunca explícitamente eliminar estos objetos. También puedes crear tus propias clases de referencia.
 
 ```cpp
 namespace HelloWorld

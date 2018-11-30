@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, app installer, instalador de aplicaciones, AppInstaller, sideload, realizar instalación de prueba
 ms.localizationpriority: medium
 ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7981680"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202117"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Solucionar problemas de instalación con el archivo del Instalador de aplicación
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, interoperabilidad de xaml, xaml interop
 ms.localizationpriority: medium
 ms.openlocfilehash: 058a1458f8990e5f70e7ed0ea4ef1a2b5f4a4956
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971762"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200856"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidad de DirectX y XAML
 
@@ -21,7 +21,7 @@ Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plat
 
 Si la aplicación se centra principalmente en la representación 2D, es aconsejable usar la biblioteca [Win2D](https://github.com/microsoft/win2d) de Windows Runtime. Esta biblioteca la mantiene Microsoft y se basa en las tecnologías básicas de Direct2D . Simplifica en gran medida el modelo de uso para implementar gráficos 2D e incluye abstracciones útiles para algunas de las técnicas descritas en este documento. Consulta la página del proyecto para obtener más detalles. Este documento ofrece orientación para aquellos desarrolladores de aplicaciones que decidan *no* utilizar Win2D.
 
-> **Nota**APIs DirectX no están definidas como tipos de Windows Runtime, por lo que suele usar extensiones de componentes VisualC ++ (C++ / CX) para desarrollar componentes XAML UWP que interoperen con DirectX. También puedes crear una aplicación para UWP con C# y XAML que use DirectX. Para ello, debes encapsular las llamadas a DirectX en un archivo de metadatos de Windows Runtime independiente.
+> **Nota**APIs DirectX no están definidas como tipos de Windows Runtime, por lo que suele usar extensiones de componentes de VisualC ++ (C++ / CX) para desarrollar componentes XAML UWP que interoperen con DirectX. También puedes crear una aplicación para UWP con C# y XAML que use DirectX. Para ello, debes encapsular las llamadas a DirectX en un archivo de metadatos de Windows Runtime independiente.
 
  
 

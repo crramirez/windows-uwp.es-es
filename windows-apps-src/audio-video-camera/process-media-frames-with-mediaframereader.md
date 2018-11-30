@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971014"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202282"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -44,11 +44,11 @@ En el código de ejemplo de este artículo se usan las API de los siguientes esp
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Seleccionar orígenes de fotogramas y grupos de orígenes de fotogramas
-Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto de [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
+Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-También puedes crear un [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) con [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) y el valor devuelto desde [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para recibir notificaciones cuando el origen de fotogramas disponible se agrupa en el dispositivo cambia, como cuando se conecta una cámara externa de. Para obtener más información, consulta [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+También puedes crear un [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) usando [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) como el valor devuelto de [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para recibir notificaciones cuando el origen de fotogramas disponible se agrupa en el dispositivo cambios, como una cámara externa cuando está enchufada. Para obtener más información, consulta [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Una clase [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tiene una colección de objetos [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que describen los orígenes de fotogramas que se incluyen en el grupo. Después de recuperar los grupos de origen de fotogramas disponibles en el dispositivo, puedes seleccionar el grupo que expone los orígenes de fotogramas que te interesan.
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, directrices, visualización
 ms.localizationpriority: medium
 ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972665"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208579"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>Optimizar la visualización de tus unidades de anuncios
 
