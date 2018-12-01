@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b14e413a5629dfb5447750e32c42c4efafef8fa
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8211063"
+ms.locfileid: "8350330"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Escenario 1: Generar un archivo PRI de los recursos de cadena y los archivos de activos
 En este escenario, usaremos las [API de indexación de recursos de paquetes (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) para que una aplicación nueva represente nuestro sistema de compilación personalizado. Recuerda que el propósito de este sistema de compilación personalizado consiste en crear archivos PRI para una aplicación para UWP de destino. Por lo tanto, como parte de este tutorial, vamos a crear algunos archivos de recursos de muestra (con cadenas y otros tipos de recursos) para representar los recursos de esa aplicación para UWP de destino.
