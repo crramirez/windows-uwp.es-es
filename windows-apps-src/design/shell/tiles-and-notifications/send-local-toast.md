@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, cómo, inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: dd7dfb621d84a3ce1d934c358ab60683caee9238
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8215689"
+ms.locfileid: "8343856"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar una notificación de icono local
 
@@ -361,7 +361,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 Cuando especifiques la activación en segundo plano en la notificación del sistema (o en un botón dentro de la notificación del sistema), se ejecutará la tarea en segundo plano en lugar de activar la aplicación en primer plano.
 
-Para obtener más información sobre las tareas en segundo plano, consulta [Compatibilidad de la aplicación con tareas en segundo plano](/launch-resume/support-your-app-with-background-tasks.md).
+Para obtener más información sobre las tareas en segundo plano, consulta [Compatibilidad de la aplicación con tareas en segundo plano](/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 Si tu aplicación se dirige a una versión de 14393 o posterior, puedes usar tareas en segundo plano en proceso, lo que simplifica las cosas enormemente. Ten en cuenta que las tareas en segundo plano en proceso no podrán ejecutarse en versiones antiguas de Windows. Usaremos una tarea en segundo plano en proceso en este ejemplo de código.
 
