@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 54f5989f0aa2fb5eeed26f16ab9e07671e26832c
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8198758"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8348827"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
@@ -19,44 +19,12 @@ Usa los siguientes métodos en la API de envío de Microsoft Store para obtener 
 
 Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del centro de partners. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
-<table>
-<colgroup>
-<col width="10%" />
-<col width="30%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Método</th>
-<th align="left">URI</th>
-<th align="left">Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications</td>
-<td align="left"><a href="get-all-apps.md">Obtener datos para todas las aplicaciones</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}</td>
-<td align="left"><a href="get-an-app.md">Obtener datos para una aplicación específica</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts</td>
-<td align="left"><a href="get-add-ons-for-an-app.md">Obtener complementos para una aplicación</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights</td>
-<td align="left"><a href="get-flights-for-an-app.md">Obtener paquetes piloto para una aplicación</a></td>
-</tr>
-</tbody>
-</table>
-
-<span/>
+| Método | URI                                                                                             | Descripción                                                 |
+|------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obtener datos para todas las aplicaciones](get-all-apps.md)               |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obtener datos para una aplicación específica](get-an-app.md)                |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md) |
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -180,13 +148,12 @@ Este recurso proporciona información acerca de un envío. En el siguiente ejemp
 
 Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                 |
-|-----------------|---------|------------------------------|
-| id            | string  | Identificador del envío.    |
-| resourceLocation   | cadena  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.            |
- 
-<span/>
+| Valor              | Tipo   | Descripción               |
+|--------------------|--------|---------------------------|
+| id                 | string | Identificador del envío. |
+| resourceLocation   | cadena | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío. |
 
+ 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, Administrador de aplicaciones, implementación, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 928c07bd23228f0fefd78be6019a0d116b2e6e4b
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8194603"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8349988"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación a través del registro de archivos dinámico 
 
@@ -77,7 +77,7 @@ Para registrar el diseño de archivos sueltos, iniciar PowerShell y escribe lo s
 Add-AppxPackage -Register <path to manifest file>
 ```
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="mapped-network-drives"></a>Unidades de red asignadas
 Actualmente, no se admiten las unidades de red asignadas registros de archivos sueltos. Hacer referencia a la unidad asignada con completa la ruta de acceso de recurso compartido de red.
