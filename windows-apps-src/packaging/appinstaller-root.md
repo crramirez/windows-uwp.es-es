@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: ca72f9570c5ecef4a93b03f297ecb1d5064c5bef
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8191499"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8333503"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>Instalar aplicaciones para UWP con el Instalador de aplicación
 

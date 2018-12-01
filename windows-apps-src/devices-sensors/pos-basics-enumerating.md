@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7759186d45d3488336a1b793d173d6d1f21aa601
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8194701"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8343687"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Enumeración de dispositivos de punto de servicio
 En esta sección aprenderás cómo [definir un selector de dispositivos](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector) que se usa para consultar los dispositivos disponibles para el sistema y cómo usar este selector para enumerar los dispositivos de punto de servicio mediante uno de los métodos siguientes:

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ampliar, separar por componentes, servicio de aplicaciones, paquete, ampliación
 ms.localizationpriority: medium
 ms.openlocfilehash: 110fa8ec9feba1f54155d41b4c726ffb28f71630
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213680"
+ms.locfileid: "8336003"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Ampliar tu aplicación con servicios de aplicaciones, extensiones y paquetes
 

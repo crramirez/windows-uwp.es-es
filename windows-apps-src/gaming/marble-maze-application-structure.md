@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, muestra, directx, estructura, games, sample, structure
 ms.localizationpriority: medium
 ms.openlocfilehash: d19fe1a81a193baf7fe6b7b86865dfb7ea65c00b
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8196409"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8339202"
 ---
 # <a name="marble-maze-application-structure"></a>Estructura de la aplicación Marble Maze
 

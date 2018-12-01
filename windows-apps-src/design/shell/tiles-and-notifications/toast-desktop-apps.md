@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, win32, escritorio, notificaciones del sistema, puente de dispositivo de escritorio, opciones para enviar notificaciones del sistema, servidor com, activador com, com, falso com, no com, sin com, enviar notificaciones del sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: bab89962bdc7986f7653e39c7e5967a493421f05
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8209195"
+ms.locfileid: "8336552"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema desde aplicaciones de escritorio
 
