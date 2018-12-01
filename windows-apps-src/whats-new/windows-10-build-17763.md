@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc18577015db5384c2a1f13e8a48758634a053a5
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213528"
+ms.locfileid: "8338963"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novedades de Windows 10 para los desarrolladores, compilación 17763
 
@@ -45,7 +45,7 @@ C++/WinRT | [C++ / WinRT](https://aka.ms/cppwinrt) contiene muchas característi
 C++ / WinRT ejemplos de código | Hemos agregado 250 C++ / WinRT descripciones de código temas en nuestra documentación, que acompaña C++ existente / ejemplos de código CX.
 Instrucciones que contribuyen | Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación de UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para las contribuciones externas a nuestros documentos.
 Garantizarse de gráficos de DirectX (DXGI) | Se ha agregado nueva documentación para los que faltan las API de DXGI y hemos proporcionado un artículo sobre los procedimientos recomendados cuando se le presenten en Windows 10. </br> * [Para un rendimiento óptimo, usa el modelo de volteo de DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/for-best-performance--use-dxgi-flip-model): proporciona instrucciones sobre cómo maximizar el rendimiento y la eficiencia de la pila de presentación de las versiones de Windows modernas. </br> * [Método IDXGIOutput6::CheckHardwareCompositionSupport](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport): notifica a las aplicaciones que se admite la expansión de hardware. </br> * [Enumeración de DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags): describe qué niveles de composición de hardware son compatibles.
-Comenzar | Se ha revitalizado nuestro contenido [Empezar a trabajar](../get-started/index.md) con temas nuevos, que proporciona información e instrucciones sobre cómo los desarrolladores nuevos a Windows 10 pueden realizar las siguientes tareas comunes: </br> * [Construir un formulario](../get-started/construct-form-learning-track.md) </br> * [Mostrar clientes en una lista](../get-started/display-customers-in-list-learning-track.md) </br> * [Guardar y cargar la configuración](../get-started/settings-learning-track.md) </br> * [Trabajar con archivos](../get-started/fileio-learning-track.md)
+Introducción | Se ha revitalizado nuestro contenido [Empezar a trabajar](../get-started/index.md) con temas nuevos, que proporciona información e instrucciones sobre cómo los desarrolladores nuevos a Windows 10 pueden realizar las siguientes tareas comunes: </br> * [Construir un formulario](../get-started/construct-form-learning-track.md) </br> * [Mostrar clientes en una lista](../get-started/display-customers-in-list-learning-track.md) </br> * [Guardar y cargar la configuración](../get-started/settings-learning-track.md) </br> * [Trabajar con archivos](../get-started/fileio-learning-track.md)
 Editor de hoja de estilo de mapas | Usar la nueva aplicación de [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) para personalizar la apariencia de mapas que agregas a tu aplicación de forma interactiva.
 Obtén información sobre Microsoft | El nuevo [sitio de aprendizaje de Microsoft](https://www.microsoft.com/learning/default.aspx) ofrece oportunidades de formación y nuevas práctica de aprendizaje a los desarrolladores de Microsoft. Actualmente, Microsoft Learn proporciona formación y certificación de Microsoft 365, Microsoft Azure, Office 365 y Windows Server.
 Bloc de notas | [Que se ha actualizado el Bloc de notas](http://aka.ms/ant-man), agregar zoom, ajuste automático buscar y reemplazar y soporte técnico para finales de línea de Unix/Linux (LF) y Mac (CR).
