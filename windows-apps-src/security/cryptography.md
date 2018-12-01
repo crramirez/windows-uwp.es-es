@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 156c4cc62e1997f5d647c06c87e226fe519de168
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8206341"
+ms.locfileid: "8341595"
 ---
 # <a name="cryptography"></a>Criptografía
 
