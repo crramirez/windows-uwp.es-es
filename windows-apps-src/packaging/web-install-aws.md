@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Windows 10, UWP, paquetes opcionales, Establece, AWS relacionadas con la instalación de prueba de instalador, AppInstaller, aplicación,
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fe01a1c1a825377e886e042b4eef3868cbf5eb
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8211727"
+ms.locfileid: "8346694"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hospedaje de paquetes de aplicación para UWP en AWS para instalación web
 
@@ -94,7 +94,7 @@ Una vez que se carga la página web en la clasificación de Amazon S3, Obtén el
 
 Usa el vínculo para abrir la página web. Dado que establecemos permisos para conceder acceso público para el paquete de la aplicación y la página web, cualquier persona que tenga el vínculo a la página web podrán acceder a ella e instalar los paquetes de aplicación para UWP mediante el instalador de aplicación. Ten en cuenta que el instalador de aplicación forme parte de la plataforma de Windows 10. Como desarrollador, no es necesario agregar código adicional o características a tu aplicación para habilitar el uso del instalador de aplicación. 
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="app-installer-fails-to-install"></a>No se puede instalar el instalador de aplicación 
 
