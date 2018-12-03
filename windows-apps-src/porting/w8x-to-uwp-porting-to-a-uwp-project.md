@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 428f6787dfeb18d7ebf02f96acea2a6ab55c7fe7
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8211651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8331046"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP
 
