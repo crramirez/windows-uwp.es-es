@@ -6,15 +6,15 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472199"
 ---
 # <a name="xload-attribute"></a>Atributo x:Load
 
-Puedes usar **x: Load** para optimizar el inicio, la creación de árbol visual y el uso de memoria de la aplicación XAML. Usar **x: Load** tiene un efecto visual similar a **visibilidad**, salvo que cuando el elemento no se carga, su memoria se libera e internamente un marcador de posición pequeño se usa para marcar su lugar en el árbol visual.
+Puedes usar **x: Load** para optimizar el inicio, la creación de árbol visual y el uso de memoria de la aplicación XAML. Usar **x: Load** tiene un efecto visual similar a la **visibilidad**, salvo que cuando el elemento no se carga, su memoria se libera e internamente un marcador de posición pequeño se usa para marcar su lugar en el árbol visual.
 
 Puede ser el elemento de interfaz de usuario el atributo x: Load cargando y descargado a través de código o con una expresión [x: Bind](x-bind-markup-extension.md) . Esto es útil para reducir los costes de los elementos que no se muestran a menudo o que se muestran de forma condicional. Cuando usas x: Load en un contenedor, como de cuadrícula o StackPanel, el contenedor y todos sus elementos secundarios se carga o descarga como un grupo.
 
@@ -38,7 +38,7 @@ Hay varias formas diferentes para cargar los elementos:
 - Usa una expresión [x: Bind](x-bind-markup-extension.md) para especificar el estado de carga. La expresión debería devolver **true** para cargar y **false** para descargar el elemento.
 - Llama al método [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) con el nombre definido en el elemento.
 - Llama al método [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416) con el nombre definido en el elemento.
-- En un [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), usa una animación [**establecedor**](https://msdn.microsoft.com/library/windows/apps/br208817) o el **guión gráfico** que esté orientado al elemento x: Load.
+- En un [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), usa una animación [**establecedor**](https://msdn.microsoft.com/library/windows/apps/br208817) o el **guión gráfico** que tiene como destino el elemento de x: Load.
 - Como destino el elemento descargado en cualquier **guión gráfico**.
 
 > NOTA: una vez iniciada la creación de instancias de un elemento, se crea en el subproceso de la interfaz de usuario, lo que podría provocar problemas de estabilidad en la interfaz de usuario si se crean demasiados al mismo tiempo.
@@ -46,7 +46,7 @@ Hay varias formas diferentes para cargar los elementos:
 Una vez creado el elemento diferido con cualquiera de los métodos enumerados anteriormente, sucederán varias cosas:
 
 - Se generará el evento [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) en el elemento.
-- Se establece el campo para x: Name.
+- Se establece el campo de x: Name.
 - Todos los enlaces de x: Bind en el elemento se evaluarán.
 - Si la aplicación se ha registrado para recibir notificaciones de cambios de propiedad en la propiedad que contiene los elementos diferidos, se mostrará una notificación.
 
@@ -58,7 +58,7 @@ Para descargar un elemento:
 - En una página o un UserControl, llama a **UnloadObject** y pasar la referencia de objeto
 - Llama a **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject** y pasar la referencia de objeto
 
-Cuando un objeto se descarga, lo que reemplazará en el árbol de un marcador de posición. La instancia del objeto permanecerá en la memoria hasta que se han publicado todas las referencias. La API de UnloadObject en un página o UserControl está diseñada para liberar las referencias mantenidas codegen para x: Name y x: Bind. Si mantienes referencias adicionales en el código de la aplicación también deberás a que se publique.
+Cuando un objeto se descarga, se reemplazará en el árbol con un marcador de posición. La instancia del objeto permanecerá en la memoria hasta que se han publicado todas las referencias. La API de UnloadObject en un página o UserControl está diseñada para liberar las referencias mantenidas codegen para x: Name y x: Bind. Si mantienes referencias adicionales en el código de aplicación que se necesitan también a que se publique.
 
 Cuando un elemento se descarga, todos los Estados asociados con el elemento se descartarán, por lo tanto, si usa x: Load como una versión optimizada de visibilidad, a continuación, asegúrate de que todas de estado se aplica a través de enlaces o se vuelve a aplicar al código cuando se desencadene el evento cargado.
 
@@ -66,7 +66,7 @@ Cuando un elemento se descarga, todos los Estados asociados con el elemento se d
 
 Las restricciones para el uso de **x: Load** son:
 
-- Debes definir una [x: Name](x-name-attribute.md)para el elemento, ya que es necesario tener una manera de encontrar el elemento más adelante.
+- Debe definir un [x: Name](x-name-attribute.md)para el elemento, ya que es necesario tener una manera de encontrar el elemento más adelante.
 - Solo puedes usar x: Load en tipos que deriven de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) o [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
 - No puedes usar x: Load en los elementos raíz en una [**página**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), un [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol)o una [**clase DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 - No puedes usar x: Load en los elementos de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).

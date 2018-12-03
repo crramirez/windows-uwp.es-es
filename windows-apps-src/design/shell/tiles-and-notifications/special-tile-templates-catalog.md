@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472189"
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
  
@@ -22,7 +22,7 @@ Las plantillas de iconos especiales son plantillas únicas que, o bien están an
 ## <a name="iconic-tile-template"></a>Plantillas de iconos icónicas
 
 
-La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 es compatible con la plantilla en el teléfono y el escritorio o tableta.
+La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 admite la plantilla en el teléfono y tableta y escritorio.
 
 ![iconos de correo pequeños y medianos](images/iconic-template-mail-2sizes.png)
 

@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp, archivo, propiedades
 ms.localizationpriority: medium
 ms.openlocfilehash: 772abd3696850be202593c582e6338a04de38537
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350882"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472462"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>Acceso rápido a las propiedades de archivo en UWP 
 
 Aprende rápidamente a recopilar una lista de archivos y sus propiedades de una biblioteca y usa esas propiedades en una aplicación.  
 
 Prerrequisitos 
-- **Programación asincrónica para aplicaciones de la plataforma Universal de Windows (UWP)**  puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic, consulta [llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
+- **Programación asincrónica para aplicaciones de la plataforma Universal de Windows (UWP)**  puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic, vea [llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
 - **Permisos de acceso a bibliotecas**  El código de estos ejemplos requiere la funcionalidad de **picturesLibrary** , pero la ubicación del archivo no puede requerir una funcionalidad distinta o ninguna en absoluto. Para más información, consulta [Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
 - **Enumeración sencilla de archivos**  Este ejemplo usa [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) para establecer unas cuantas propiedades avanzadas de enumeración. Para obtener más información sobre cómo obtener solo una simple lista de archivos para un directorio más pequeño, consulta [Enumerar y consultar archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 

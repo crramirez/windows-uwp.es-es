@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, educación
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472402"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que representa el bloqueo de evaluaciones en línea para las pruebas determinantes, lo que permite educadores centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
+[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que representa evaluaciones en línea de bloqueo para las pruebas determinantes, lo que permite a educadores centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
 
 Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 

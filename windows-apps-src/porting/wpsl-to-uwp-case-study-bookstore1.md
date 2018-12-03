@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 19045e84f1ca3396321dd4f8c4e76da24dc9a588
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472039"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>WindowsPhone Silverlight a UWP caso práctico: Bookstore1
 
@@ -22,7 +22,7 @@ La aplicación que portaremos consta de un enlace **ListBox** enlazado con un mo
 
 En los temas anteriores de esta sección se describen las diferencias entre las plataformas y se proporcionan detalles y pautas sobre el proceso de migración de diversos aspectos de una aplicación, entre ellos el marcado XAML, el enlace a un modelo de vista y el acceso a los datos. El objetivo de un caso práctico consiste en complementar esa orientación mostrando un ejemplo real en la práctica. En el caso práctico se supone que has leído las directrices, ya que no se repiten.
 
-**Nota**  cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Requiere la actualización de Visual Studio", sigue los pasos para seleccionar una versión de la plataforma de destino en [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md).
+**Nota**  cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Requiere la actualización de Visual Studio", sigue los pasos para seleccionar una versión de la plataforma de destino de [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md).
 
 ## <a name="downloads"></a>Descargas
 
@@ -76,7 +76,7 @@ La vista y el modelo de vista funcionan juntos correctamente y **ListBox** está
 
 ## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Saldar la deuda de elementos y algunos estilos iniciales
 
-De forma predeterminada, se admiten todas las orientaciones. La aplicación WindowsPhone Silverlight se restringe explícitamente sí a la orientación vertical solo, sin embargo, por lo tanto, deuda elementos \#1 1 y \#2 se pagan al entrar en el manifiesto del paquete de aplicación en el nuevo proyecto y consultar **vertical** en **Supported orientaciones**.
+De forma predeterminada, se admiten todas las orientaciones. La aplicación WindowsPhone Silverlight se restringe explícitamente sí a la orientación vertical solo, sin embargo, por lo tanto, deuda elementos \#1 1 y \#2 se pagan en el manifiesto del paquete de aplicación en el nuevo proyecto y comprobar **vertical** en **Supported orientaciones**.
 
 En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la barra de estado (anteriormente denominada bandeja del sistema) se muestra de forma predeterminada. Para los elementos \#4 y \#5, tenemos que encontrar cuatro estilos de **TextBlock** de plataforma Universal de Windows (UWP) que corresponden a los estilos WindowsPhone Silverlight que estábamos usando. Puedes ejecutar la aplicación WindowsPhone Silverlight en el emulador y compararla en paralelo con la ilustración en la sección de [texto](wpsl-to-uwp-porting-xaml-and-ui.md) . Si hacemos esto y echamos una mirada a las propiedades de los estilos de sistema WindowsPhone Silverlight, podemos generar esta tabla.
 
