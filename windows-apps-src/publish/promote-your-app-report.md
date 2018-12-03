@@ -1,21 +1,21 @@
 ---
 title: Informe Campaña publicitaria
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: El informe campaña publicitaria en el centro de partners te permite ver el rendimiento de tus campañas de anuncios de promoción de aplicación.
+description: El informe de campaña de anuncios en el centro de partners te permite ver el rendimiento de tus campañas de anuncios de promoción de aplicación.
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: f99c9af9fd3f8c9a94b79b3324fea6ebbd710c5b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340802"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470825"
 ---
 # <a name="ad-campaign-report"></a>Informe Campaña publicitaria
 
-El informe **campaña publicitaria** en [El centro de partners](https://partner.microsoft.com/dashboard) te permite ver el rendimiento de tu de promoción de la aplicación [las campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
+El informe **campaña publicitaria** en [El centro de partners](https://partner.microsoft.com/dashboard) te permite ver el rendimiento de la promoción de aplicación [campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
 
 ## <a name="definitions"></a>Definiciones
 
@@ -67,7 +67,7 @@ Una instalación se sigue en la Tienda por teléfono, tableta, PC y otros dispos
 2.  El cliente ha iniciado sesión con una cuenta Microsoft.
 3.  El cliente cumple los requisitos [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (no se puede hacer un seguimiento de los clientes que no los cumplen).
 
-En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones para una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) del centro de partners.
+En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones de una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) del centro de partners.
 
 
 ## <a name="account-billing-history"></a>Historial de facturación de la cuenta

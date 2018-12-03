@@ -2,16 +2,16 @@
 title: Captura de pantalla
 description: El espacio de nombres Windows.Graphics.Capture proporciona API para adquirir fotogramas desde una pantalla o ventana de aplicación, para crear secuencias de vídeo o instantáneas para crear experiencias interactivas y de colaboración.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
-ms.date: 10/09/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470769"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente para una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
+Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente de una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -383,6 +383,10 @@ namespace WindowsGraphicsCapture
     }
 }
 ```
+
+## <a name="record-a-video"></a>Grabar un vídeo
+
+Si quieres registrar un vídeo de la aplicación, puede hacerlo más fácilmente con el [espacio de nombres Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Esto forma parte del escritorio del SDK de extensión, por lo que solo funciona en el escritorio y requiere que se agrega una referencia a ella desde el proyecto. Para más información, consulta la [información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
 
 ## <a name="see-also"></a>Ver también
 
