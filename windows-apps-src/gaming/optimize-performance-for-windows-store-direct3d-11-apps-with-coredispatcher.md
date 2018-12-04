@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346412"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476913"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-La plantilla **DirectX 11 and XAML App (Universal Windows)** en Microsoft Visual Studio2015 divide el bucle del juego en varios subprocesos de forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
+La plantilla **DirectX 11 and XAML App (Universal Windows)** en Microsoft Visual Studio2015 divide el bucle del juego en varios subprocesos de una forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Otras formas de reducir la latencia de entrada
 

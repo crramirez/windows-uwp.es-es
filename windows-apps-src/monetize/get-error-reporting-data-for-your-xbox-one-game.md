@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Windows Store analytics API, API de análisis de Microsoft Store, errors, errores
 ms.localizationpriority: medium
 ms.openlocfilehash: f9ae7c75fb332e910aa1b63712cf0d230172afd3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326878"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476377"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Obtener los datos del informe de la Xbox One de errores de juego
 
@@ -95,8 +95,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | failureHash     | cadena  | Identificador único del error.   |
 | symbol          | cadena  | Símbolo que se asigna al error. |
 | osVersion       | cadena  | Versión del sistema operativo en el que sucedió el error. Este es siempre el valor **de Windows 10**.  |
-| osRelease       | cadena  |  Una de las cadenas siguientes que especifica la versión de sistema operativo Windows 10 o (como una subpoblación dentro de la versión del sistema operativo) en el que se produjo el error.<p/><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Versión 1803</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
-| eventType       | cadena  | Una de las cadenas siguientes:<ul><li>**bloquear**</li><li>**colgar**</li><li>**Error en la memoria**</li></ul>      |
+| osRelease       | cadena  |  Una de las siguientes cadenas que especifica la versión del sistema operativo de Windows 10 o (como una subpoblación dentro de la versión de sistema operativo) en el que se produjo el error.<p/><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Versión 1803</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
+| eventType       | cadena  | Una de las cadenas siguientes:<ul><li>**bloquear**</li><li>**colgar**</li><li>**Error de memoria**</li></ul>      |
 | market          | cadena  | El código de país ISO 3166 del mercado del dispositivo.   |
 | deviceType      | cadena  | El tipo de dispositivo en el que se produjo el error. Este es siempre el valor de la **consola**.    |
 | packageName     | cadena  | El paquete único nombre del juego que está asociado al error.      |

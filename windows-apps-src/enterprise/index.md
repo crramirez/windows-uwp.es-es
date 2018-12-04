@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cce98591cdaa78a887d7a5fb495e999a4ffc453
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477743"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -76,13 +76,13 @@ Consulta la [Biblioteca de la interfaz de usuario de Windows (versión prelimina
 
 Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta característica se denomina Islas XAML.
 
-Consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
+Ver [los controles UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
 <a id="standard" />
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones de .NET incluida la aplicación para UWP.
+.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones. NET, incluida la aplicación para UWP.
 
 ![NET estándar](images/dot-net-standard-project-template.png)
 
@@ -100,9 +100,9 @@ Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](http
 
 ### <a name="msix-deployment"></a>Implementación de MSIX
 
-MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia de empaquetado modernos a todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de habilitación de características de empaquetado e implementación nuevas, modernas a las aplicaciones de Win32, WPF y Windows Forms.
+MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia moderna de empaquetado para todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de habilitación de características de empaquetado e implementación nuevas, modernas a las aplicaciones de Win32, WPF y Windows Forms.
 
-MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, tecnologías de instalación de App-V y ClickOnce.
+MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, las tecnologías de instalación de App-V y ClickOnce.
 
 ![Icono MSIX](images/MSIX-App-Package.ico)
 
@@ -112,7 +112,7 @@ Consulta la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
 
 ## <a name="security"></a>Seguridad
 
-Windows 10 proporciona un conjunto de características de seguridad para los desarrolladores de aplicaciones proteger la identidad de sus usuarios, la seguridad de las redes corporativas y todos los datos empresariales almacenados en dispositivos. Para Windows 10 es una característica nueva Microsoft Passport, una alternativa de contraseña de dos factores fácil de implementar que es accesible mediante el uso de un PIN o Windows Hello, que proporciona seguridad de nivel de empresa y es compatible con huella digital, rostro y reconocimiento de iris en función.
+Windows 10 proporciona un conjunto de características de seguridad para los desarrolladores de aplicaciones proteger la identidad de sus usuarios, la seguridad de las redes corporativas y todos los datos empresariales almacenados en dispositivos. Para Windows 10 es una característica nueva Microsoft Passport, una alternativa de contraseña de dos factores fácil de implementar que es accesible mediante el uso de un PIN o Windows Hello, que proporciona seguridad de nivel de empresa y admite la huella digital, rostro y reconocimiento de iris en función.
 
 | Tema | Descripción |
 |-------|-------------|

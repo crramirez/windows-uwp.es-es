@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, actualización, tarea en segundo plano, updatetask, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cd7d4494340d1c5e617361f2e3d750b35ebabb9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327268"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477508"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Ejecutar una tarea en segundo plano cuando se actualice la aplicación para UWP
 
@@ -18,7 +18,7 @@ Obtén información sobre cómo escribir una tarea en segundo plano que se ejecu
 
 La tarea en segundo plano de tarea de actualización se invoca el sistema operativo después de que el usuario instala una actualización a una aplicación que está instalada en el dispositivo. Esto permite que la aplicación realizar tareas de inicialización, como la inicialización de un nuevo canal de notificación de inserción, la actualización de esquema de base de datos y así sucesivamente, antes de que el usuario inicia la aplicación actualizada.
 
-La tarea de actualización difiere de iniciar una tarea en segundo plano con el desencadenador [ServicingComplete](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) porque en ese caso la aplicación debe ejecutar al menos una vez antes de que se actualiza con el fin de registrar la tarea en segundo plano que se activarán por el ** ServicingComplete** desencadenador.  La tarea de actualización no está registrada y por lo tanto, una aplicación que nunca se ha ejecutado, pero que se ha actualizado, seguirán teniendo su tarea de actualización desencadenada.
+La tarea de actualización difiere de iniciar una tarea en segundo plano con el desencadenador de [ServicingComplete](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) porque en ese caso la aplicación debe ejecutar al menos una vez antes de que se actualiza con el fin de registrar la tarea en segundo plano que se activará la ** ServicingComplete** desencadenador.  La tarea de actualización no está registrada y por lo tanto, una aplicación que nunca se ha ejecutado, pero que se ha actualizado, seguirán teniendo su tarea de actualización que se desencadena.
 
 ## <a name="step-1-create-the-background-task-class"></a>Paso 1: Crear la clase de tarea en segundo plano
 
@@ -27,9 +27,9 @@ Como con otros tipos de tareas en segundo plano, implementas la tarea en segundo
 - Agregar un proyecto de componente de Windows Runtime a la solución.
 - Creación de una referencia al componente desde la aplicación.
 - Crear una clase pública, sealed en el componente que implementa [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
-- Implementar el método [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) , que es el punto de entrada necesario al que se llama cuando se ejecuta la tarea de actualización. Si vas a hacer llamadas asincrónicas desde la tarea en segundo plano, [crear y registrar una tarea en segundo plano fuera de proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) se explica cómo usar un aplazamiento en el método **Run** .
+- Implementar el método [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) , que es el punto de entrada necesario al que se llama cuando se ejecuta la tarea de actualización. Si vas a hacer llamadas asincrónicas de la tarea en segundo plano, [crear y registrar una tarea en segundo plano fuera de proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) se explica cómo usar un aplazamiento en el método **Run** .
 
-No es necesario registrar esta tarea en segundo plano (la sección "Registrar la tarea en segundo plano para ejecutar" en el tema **crear y registrar una tarea en segundo plano fuera de proceso** ) para usar la tarea de actualización. Esto es la razón principal para usar una tarea de actualización, ya que no es necesario agregar código a tu aplicación para registrar la tarea y la aplicación no tiene que ejecutar al menos una vez antes de que se actualiza para registrar la tarea en segundo plano.
+No es necesario registrar esta tarea en segundo plano (la sección "Registrar la tarea en segundo plano para ejecutar" en el tema **crear y registrar una tarea en segundo plano fuera de proceso** ) para usar la tarea de actualización. Esta es la razón principal para usar una tarea de actualización, ya que no es necesario agregar código a la aplicación para registrar la tarea y la aplicación no tiene que ejecutar al menos una vez antes de que se actualiza para registrar la tarea en segundo plano.
 
 El código de ejemplo siguiente muestra un punto de partida básico para una clase de tarea en segundo plano de tarea de actualización en C#. La propia clase de tarea en segundo plano (y todas las demás clases en el proyecto de tarea en segundo plano) deben ser **públicos** y **sealed**. La clase de tarea en segundo plano debe derivar de **IBackgroundTask** y tener un método **Run()** público con la firma que se muestra a continuación:
 
@@ -72,26 +72,26 @@ En el XML anterior, asegúrate de que el `EntryPoint` atributo se establece en e
 
 ## <a name="step-3-debugtest-your-update-task"></a>Paso 3: Depuración y prueba la tarea de actualización
 
-Asegúrate de que ha implementado la aplicación en el equipo para que no hay algo para actualizar.
+Asegúrate de que ha implementado la aplicación en el equipo para que sea algo a actualizar.
 
 Establece un punto de interrupción en el método Run() de la tarea en segundo plano.
 
 ![punto de interrupción del conjunto](images/run-func-breakpoint.png)
 
-A continuación, en el Explorador de soluciones, haz clic en el proyecto de la aplicación (no el proyecto de tarea en segundo plano) y, a continuación, haz clic en **Propiedades**. En la ventana de propiedades de la aplicación, haz clic en **Depurar** de la izquierda y luego selecciona **no iniciar, pero depurar mi código al empezar**:
+A continuación, en el Explorador de soluciones, haz clic en el proyecto de la aplicación (no el proyecto de tarea en segundo plano) y, a continuación, haga clic en **Propiedades**. En la ventana de propiedades de la aplicación, haz clic en **Depurar** de la izquierda y luego selecciona **no iniciar, pero depurar mi código al empezar**:
 
 ![establecer la configuración de depuración](images/do-not-launch-but-debug.png)
 
-A continuación, para garantizar que se activará la UpdateTask, aumentar el número de versión del paquete. En el Explorador de soluciones, haz doble clic en el archivo **Package.appxmanifest** de la aplicación para abrir el Diseñador de paquetes y, a continuación, actualiza el número **de compilación** :
+A continuación, para garantizar que los UpdateTask se desencadena, aumentar el número de versión del paquete. En el Explorador de soluciones, haz doble clic en el archivo **Package.appxmanifest** de la aplicación para abrir el Diseñador de paquetes y, a continuación, actualiza el número **de compilación** :
 
 ![la versión de actualización](images/bump-version.png)
 
-Ahora, en Visual Studio 2017 al presionar F5, se actualizará la aplicación y el sistema activará el componente UpdateTask en segundo plano. El depurador se conectará automáticamente al proceso en segundo plano. Obtener alcanzará el punto de interrupción y puede pasar la lógica de código de la actualización.
+Ahora, en Visual Studio 2017 al presionar F5, se actualizará la aplicación y el sistema activará el componente UpdateTask en segundo plano. El depurador se conectará automáticamente para el proceso en segundo plano. Obtener alcanzará el punto de interrupción y puede pasar la lógica de código de la actualización.
 
 Cuando se completa la tarea en segundo plano, puedes iniciar la aplicación en primer plano en el menú de inicio de Windows en la misma sesión de depuración. El depurador se conectará automáticamente nuevo, en este momento de su proceso en primer plano, y puede pasar lógica de la aplicación.
 
 > [!NOTE]
-> Los usuarios de Visual Studio 2015: los pasos anteriores se aplican a Visual Studio 2017. Si estás usando Visual Studio 2015, puedes usar las mismas técnicas para el desencadenador y prueba el UpdateTask, excepto que Visual Studio no se adjuntará a ella. Un procedimiento alternativo en VS 2015 es un [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) que establece el UpdateTask como su punto de entrada de configuración y desencadenar la ejecución directamente desde la aplicación en primer plano.
+> Los usuarios de Visual Studio 2015: los pasos anteriores se aplican a Visual Studio 2017. Si estás usando Visual Studio 2015, puedes usar las mismas técnicas desencadenador y prueba lo UpdateTask, excepto que Visual Studio no se adjuntará a ella. Un procedimiento alternativo en VS 2015 es un [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) que establece lo UpdateTask como su punto de entrada de configuración y desencadenar la ejecución directamente desde la aplicación en primer plano.
 
 ## <a name="see-also"></a>Ver también
 

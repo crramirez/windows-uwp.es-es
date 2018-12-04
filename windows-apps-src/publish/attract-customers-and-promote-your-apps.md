@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9941c18936291b3dad6de9b47ef1299d986bef68
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476530"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Atraer a clientes y promocionar las aplicaciones
 
-Una vez que la aplicación está en la Microsoft Store, es el momento de mostrarla clientes tantos como sea posible. [El centro de partners](https://partner.microsoft.com/dashboard) ofrece muchas características que te ayudarán a promoción tus productos y aumentar a tu cliente base, incluidas las campañas publicitarias, códigos de promoción, precios de oferta y mucho más.
+Una vez que la aplicación está en la Microsoft Store, es el momento de mostrarla clientes tantos como sea posible. [El centro de partners](https://partner.microsoft.com/dashboard) ofrece muchas características que te ayudarán a promoción tus productos y aumentar a tu cliente base, incluidas las campañas publicitarias, códigos de promoción, precios de venta y mucho más.
 
 -   [Generar códigos promocionales](generate-promotional-codes.md)
 -   [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
