@@ -7,19 +7,19 @@ ms.topic: article
 keywords: Windows 10, UWP, datos, base de datos, relacional, tablas, data, database, relational, tables, sqlite
 ms.localizationpriority: medium
 ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466784"
 ---
 # <a name="data-access"></a>Acceso a datos
 
-Puedes almacenar datos en el dispositivo del usuario mediante el uso de una base de datos de SQLite. También puede conectar la aplicación directamente a una base de datos de SQL Server sin tener que usar a cualquier tipo de capa de servicio.
+Puedes almacenar datos en el dispositivo del usuario mediante el uso de una base de datos de SQLite. Para conectar la aplicación directamente a una base de datos de SQL Server sin tener que usar a cualquier tipo de capa de servicio.
 
 | Tema | Descripción|
 |-------|------------|
-| [Usar una base de datos de SQLite en una aplicación para UWP](sqlite-databases.md) | Muestra cómo usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. SQLite es un motor de bases de datos incrustado sin servidor. |
+| [Usar una base de datos de SQLite en una aplicación para UWP](sqlite-databases.md) | Se muestra cómo usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. SQLite es un motor de bases de datos incrustado sin servidor. |
 | [Usar una base de datos SQL server en una aplicación para UWP](sql-server-databases.md) | Muestra cómo conectar directamente a una base de datos de SQL Server y, a continuación, almacenar y recuperar datos mediante las clases del espacio de nombres [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) . Sin capa de servicio necesaria. |
 
 ## <a name="related-topics"></a>Temas relacionados

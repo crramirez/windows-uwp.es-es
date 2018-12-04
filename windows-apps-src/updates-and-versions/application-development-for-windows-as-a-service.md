@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: e0a0bef4496e9b6aa327a8da404e88bcbd791e70
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324178"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468949"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desarrollo de aplicaciones para Windows como servicio
 
@@ -28,11 +28,11 @@ Las compilaciones que se distribuyen como Programa Windows Insider proporcionan 
 
 Aunque Microsoft lanza compilaciones piloto para usuarios de Windows Insider, Microsoft publicará continuamente dos tipos de versiones de Windows10 de manera amplia destinadas al público en general:
 
-**Actualizaciones de características** instalar las características nuevas más recientes, experiencias y funcionalidades en dispositivos que ya ejecutan Windows 10. Dado que las actualizaciones de funciones contienen una copia completa de Windows, también son lo que los clientes usan para instalar Windows 10 en dispositivos existentes que ejecutan Windows 7 o Windows8.1 y en dispositivos nuevos que no tienen instalado ningún sistema operativo. Microsoft espera publicar actualizaciones cada seis meses. 
+**Actualizaciones de características de** instalar la última nuevas características, experiencias y capacidades en dispositivos que ya ejecutan Windows 10. Dado que las actualizaciones de funciones contienen una copia completa de Windows, también son lo que los clientes usan para instalar Windows 10 en dispositivos existentes que ejecutan Windows 7 o Windows8.1 y en los nuevos dispositivos que no tienen instalado ningún sistema operativo. Microsoft espera publicar actualizaciones cada seis meses. 
 
 **Actualizaciones de calidad** que proporcionan resoluciones de problemas de seguridad y otras correcciones de errores importantes. Se proporcionarán actualizaciones de calidad para mejorar cada característica compatible actualmente, a un ritmo de una o más veces al mes. Microsoft seguirá publicando actualizaciones de calidad los martes de actualización (conocidos a veces como martes de revisiones). Además, Microsoft puede publicar actualizaciones de calidad adicionales para Windows 10 fuera del proceso de martes de actualización cuando sea necesario para satisfacer las necesidades de cliente.
 
-Durante el desarrollo de Windows 10, Microsoft perfeccionó el ciclo de ingeniería y lanzamiento de productos de Windows, por lo que se puedan ofrecer las características, experiencias y funcionalidades que los clientes que desean más rápidamente que nunca. También creó nuevas formas de entregar e instalar actualizaciones de características y actualizaciones de calidad que simplifican las implementaciones y la administración continua, amplían la base de empleados que se puede mantener actualizada con las capacidades y experiencias de Windows más recientes y reducen el coste total de propiedad. Por lo tanto, hemos implementado nuevas opciones de mantenimiento, conocidas como canal semianual y canal de mantenimiento de a largo plazo (LTSC), que ofrecen soluciones prácticas para mantener los dispositivos más actual en los entornos empresariales que era posible anteriormente.
+Durante el desarrollo de Windows 10, Microsoft perfeccionó el ciclo de ingeniería y lanzamiento de productos de Windows, por lo que se puedan ofrecer las características, experiencias y funcionalidad que los clientes que desean más rápidamente que nunca. También creó nuevas formas de entregar e instalar actualizaciones de características y actualizaciones de calidad que simplifican las implementaciones y la administración continua, amplían la base de empleados que se puede mantener actualizada con las capacidades y experiencias de Windows más recientes y reducen el coste total de propiedad. Por lo tanto, hemos implementado nuevas opciones de mantenimiento, conocidas como canal semianual y canal de mantenimiento de a largo plazo (LTSC), que ofrecen soluciones prácticas para mantener los dispositivos más actual en los entornos empresariales que era posible anteriormente.
 
 La siguiente tabla describe las diversas ramas de mantenimiento y sus atributos principales.
 
@@ -40,7 +40,7 @@ La siguiente tabla describe las diversas ramas de mantenimiento y sus atributos 
 | --- | --- | --- | --- | --- |
 | Canal semianual (dirigido) | Inmediatamente después de la publicación inicial de parte de Microsoft | 18 meses | Pone las nuevas características a disposición de los usuarios tan pronto como es posible. | Home, Pro, Education, Enterprise, Mobile, IoT Core, Windows 10 IoT Core Pro (IoT Core Pro) |
 | Canal semianual | 4 meses, aproximadamente, después de la publicación inicial de parte de Microsoft | 18 meses a partir de cuándo se publicó por primera vez | Proporciona tiempo adicional para probar las actualizaciones de nuevas funciones antes de la implementación. | Pro, Education, Enterprise, Mobile Enterprise, IoT Core Pro |
-| Canal de mantenimiento a largo plazo (LTSC) | Inmediatamente después de la publicación de parte de Microsoft | 10 años | Permite la implementación a largo plazo de versiones de Windows 10 seleccionadas en el cambio de baja configuraciones | Enterprise LTSB |
+| Canal de mantenimiento a largo plazo (LTSC) | Inmediatamente después de la publicación de parte de Microsoft | 10 años | Permite la implementación a largo plazo de las versiones de Windows 10 seleccionadas en configuraciones de cambio de baja | Enterprise LTSB |
 
 Para obtener más información, consulta [Opciones de actualizaciones y mantenimiento de Windows10](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
 
@@ -100,7 +100,7 @@ Las aplicaciones no deben llamar a API de Windows sin documentar ni depender de 
 
 ### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>Desarrollo de aplicaciones para la plataforma universal de Windows (UWP) y Centennial
 
-Animamos a todos los ISV de aplicaciones de Win32 a que en el futuro desarrollen aplicaciones para la [plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/?LinkID=780560) y, específicamente, para [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562). Desarrollar estos paquetes de aplicación en lugar de utilizar los instaladores de Win32 tradicionales supone unas enormes ventajas. Las aplicaciones para UWP también se admiten en la [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563), por lo que es más fácil actualizar automáticamente, los usuarios a una versión coherente reduce los costos de soporte técnico.
+Animamos a todos los ISV de aplicaciones de Win32 a que en el futuro desarrollen aplicaciones para la [plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/?LinkID=780560) y, específicamente, para [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562). Desarrollar estos paquetes de aplicación en lugar de utilizar los instaladores de Win32 tradicionales supone unas enormes ventajas. Las aplicaciones para UWP también se admiten en la [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563), por lo que es más fácil actualizar automáticamente, los usuarios a una versión coherente reducir los costes de soporte técnico.
 
 Si los tipos de aplicaciones de Win32 no funcionan con el modelo Centennial, es muy recomendable utilizar el instalador correcto y asegurarse de que este se prueba de forma exhaustiva. Un instalador es la primera experiencia del usuario o el cliente con la aplicación, por lo que deberías asegurarte de que funciona bien. Con demasiada frecuencia, el instalador no funciona correctamente o no se ha probado de forma completa en todos los escenarios. El [Kit para la certificación de aplicaciones en Windows](http://go.microsoft.com/fwlink/?LinkID=780565) puede ayudarte a probar la instalación y la desinstalación de la aplicación de Win32, así como a identificar el uso de API sin documentar y otros problemas básicos de procedimientos recomendados relativos al rendimiento, antes de que lo hagan los usuarios.
 
@@ -138,7 +138,7 @@ Cuando hayas actualizado a una compilación piloto, a continuación hay algunos 
 
 **Prueba de actualización:** Comprueba que la aplicación funciona tras actualizar desde una versión de nivel inferior de Windows (es decir, Windows 7 o Windows8.1) a Windows 10. La aplicación no debe provocar reversiones durante la actualización y, tras esta, debe seguir funcionando del modo esperado; esto es crucial para lograr una experiencia de actualización óptima.
 
-**Prueba de reinstalación:** Asegúrate de que la funcionalidad de la aplicación puede restaurarse si se reinstala la aplicación después de actualizar el equipo a Windows 10 desde un sistema operativo de nivel inferior. Si la aplicación no supera la prueba de actualización y no has podido averiguar la causa de estos problemas, es posible que una reinstalación sea capaz de restaurar la funcionalidad perdida. Un pase la prueba de reinstalación indica que partes de la aplicación no se hayan migrado a Windows 10.
+**Prueba de reinstalación:** Asegúrate de que la funcionalidad de la aplicación puede restaurarse si se reinstala la aplicación después de actualizar el equipo a Windows 10 desde un sistema operativo de nivel inferior. Si la aplicación no supera la prueba de actualización y no has podido averiguar la causa de estos problemas, es posible que una reinstalación sea capaz de restaurar la funcionalidad perdida. Un paso de la prueba de reinstalación indica que partes de la aplicación no se hayan migrado a Windows 10.
 
 **Prueba de características del sistema operativo o el dispositivo:** Asegúrate de que la aplicación funciona según lo esperado si se basa en alguna funcionalidad específica del sistema operativo. Las áreas comunes de las pruebas incluyen las que se muestran a continuación, a menudo respecto un conjunto de los modelos de equipo más utilizados para garantizar la cobertura:
 -   Audio

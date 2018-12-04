@@ -1,17 +1,17 @@
 ---
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Usa este método en la API de envío de Microsoft Store para crear un complemento para una aplicación que está registrada en tu cuenta PartnerCenter.
+description: Usa este método en la API de envío de Microsoft Store para crear un complemento para una aplicación que está registrada en tu cuenta de PartnerCenter.
 title: Crear un complemento
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8465dc7a42961a20fcd33ba8d43c71e2d73727ff
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328134"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470194"
 ---
 # <a name="create-an-add-on"></a>Crear un complemento
 
@@ -97,7 +97,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción                                                                                                                                                                           |
 |--------|------------------|
 | 400  | La solicitud no es válida. |
-| 409  | No se pudo crear el complemento debido a su estado actual o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo crear el complemento debido a su estado actual o el complemento usa una característica de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

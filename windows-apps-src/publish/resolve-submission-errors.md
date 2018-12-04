@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9911323010f691d1fa59c35306a7173cd08a0faa
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469943"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
@@ -19,7 +19,7 @@ Si se producen errores después de enviar la aplicación a la Tienda, tienes que
 
 ## <a name="uwp-apps"></a>Aplicaciones para UWP
 
-Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .msixupload o .appxupload generado por Visual Studio para la tienda. Asegúrate de que seguir los pasos de [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y solo carga el archivo .msixupload o .appxupload en la página [paquetes](upload-app-packages.md) del envío, no un appx/.msix o .msixbundle/appxbundle .
+Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .msixupload o .appxupload generado por Visual Studio para la tienda. Asegúrate de que sigue los pasos de [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y solo carga el archivo .msixupload o .appxupload en la página de [los paquetes](upload-app-packages.md) del envío, no un appx/.msix o .msixbundle/appxbundle .
 
 Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
@@ -52,7 +52,7 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
 - Si la aplicación ya tiene una identidad, puede significar que aún tienes que reservar el nombre que quieras usar en el paquete. En **Administración de aplicaciones**, haz clic en [Administrar nombres de la aplicación](manage-app-names.md). Escribe el nombre que te gustaría usar y haz clic en **Reservar nombre de aplicación**.
 
 > [!IMPORTANT]
->  Si el nombre que quieres usar no está disponible, otra aplicación es posible que ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre, o si crees que tienes derecho a usarla, [Ponte en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
+>  Si el nombre que quieres usar no está disponible, otra aplicación es posible que ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre, o si crees que tienes derecho a utilizar, [Ponte en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 

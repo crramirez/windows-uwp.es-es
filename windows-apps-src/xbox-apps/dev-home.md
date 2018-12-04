@@ -8,11 +8,11 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 4113df37446d93883cf395e7c1e86b1de6c1b328
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323359"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468659"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>Inicio del desarrollador en la consola (Dev Home)
    
@@ -20,19 +20,19 @@ ms.locfileid: "8323359"
 Dev Home es una experiencia de herramientas en el kit de desarrollo de Xbox One diseñada para ayudar a la productividad del desarrollador. Ofrece funcionalidad para administrar y configurar el kit de desarrollo, administrar usuarios, iniciar títulos instalados y realizar la captura y realiza un seguimiento. En futuras versiones que seguiremos para ampliar la funcionalidad para habilitar características adicionales en función de tus comentarios y también para habilitar la extensibilidad y la adición de sus propias herramientas.   
    
   
-Estamos muy interesados en tus comentarios sobre Dev Home y los escenarios que te interesa más lo vean admitir. Proporcione sus comentarios a través de los métodos descritos en **Enviar comentarios** en el menú principal de la aplicación o a través de su administrador de cuenta de desarrollador (DAM).   
+Estamos muy interesados en tus comentarios sobre Dev Home y los escenarios que te interesa más ver lo admite. Proporcione sus comentarios a través de los métodos descritos en **Enviar comentarios** en el menú principal de la aplicación o a través de su administrador de cuenta de desarrollador (DAM).   
    
   
-Para iniciar la página principal para desarrolladores en el noviembre de 2015 o posterior recuperación:  
+Para iniciar la recuperación posterior o Dev Home en noviembre de 2015:  
  
-   1. Abre a la guía moviendo izquierdo en Home o hacer doble clic en el botón de nexo  
+   1. Abre a la guía moviendo izquierda en Home o hacer doble clic en el botón de nexo  
    1. Desplazar hacia abajo para la **configuración** (el icono de engranaje)   
-   1. Seleccionar **todas las configuraciones**  
-   1. En la página de **desarrollador** de forma predeterminada, selecciona **Inicio del desarrollador** (el icono de inicio)   
+   1. Selecciona **toda la configuración**  
+   1. En la página de **desarrollador** de forma predeterminada, selecciona el **Inicio del desarrollador** (el icono de inicio)   
 
  ![](images/dev_home_icons.png)   
   
-En versiones anteriores recuperaciones selecciona la ventana de Dev Home en el lado derecho de la pantalla principal de **contenido destacado** o ver la lista de aplicaciones en el Administrador de Xbox One e inicie **Dev Home**.   
+En versiones anteriores recuperaciones selecciona la ventana de Dev Home en el lado derecho de la pantalla principal de **contenido destacado** o ver la lista de aplicaciones en el Administrador de Xbox One e iniciar **Dev Home**.   
  ![](images/dev_home_1.png) 
 <a id="ID4EBC"></a>
 
@@ -41,7 +41,7 @@ En versiones anteriores recuperaciones selecciona la ventana de Dev Home en el l
 ## <a name="user-interface"></a>Interfaz de usuario  
    
   
-El encabezado de la interfaz de usuario de Dev Home contiene las siguientes importantes "un vistazo" información acerca de la consola de desarrollo:   
+El encabezado de la interfaz de usuario de Dev Home contiene los siguientes importantes "un vistazo" información acerca de la consola de desarrollo:   
  
    *  **IP de consola:** La dirección IP actual de la consola.   
    *  **Nombre de la consola:** El nombre de host actual de la consola.  
@@ -101,7 +101,7 @@ Dev Home se diseñó para ser personalizable y cercana. Puedes configurar la apl
 ### <a name="resizing-and-reordering-tools"></a>Cambiar el tamaño y orden de las herramientas  
    
   
-Para cambiar el tamaño o la posición de una herramienta, usa el botón de menú contextual (botón de vista desde el controlador) mientras el título tiene el foco. En el menú contextual, selecciona **mover** o **cambiar el tamaño**.   
+Para cambiar el tamaño o la posición de una herramienta, usa el botón de menú contextual (botón de vista en el controlador) mientras el título tiene el foco. En el menú contextual, selecciona **mover** o **cambiar el tamaño**.   
  ![](images/dev_home_6.png)  
 <a id="ID4EEG"></a>
 
@@ -131,10 +131,10 @@ Si un paquete contiene varias aplicaciones, Dev Home te permitirá establecer la
 Desde el selector, en la parte inferior de las aplicaciones instaladas y la lista de juegos, puedes seleccionar la opción de **registrar un juego desde un recurso compartido de red** para ejecutar una versión de archivos sueltos de un título de forma remota.   
  ![](images/dev_home_8.png)   
   
-A continuación, puedes escribir la ruta de acceso de red en el archivo appxmanifest.xml del título que quieras registrar. Dev Home intentará registrar el título con todas las credenciales existentes para ese recurso compartido y si necesita pedirá las credenciales de red de nuevo. Si es necesario acceder a recursos compartidos adicionales (por ejemplo a los recursos de acceso vinculado medio de símbolos en un servidor independiente), a continuación, tendrás que agregar aquellos a través de la opción a continuación.   
+A continuación, puedes escribir la ruta de acceso de red en el archivo appxmanifest.xml del título que quieres registrar. Dev Home intentará registrar el título con las credenciales existentes para ese recurso compartido y si necesita pedirá las credenciales de red de nuevo. Si es necesario acceder a recursos compartidos adicionales (por ejemplo a los recursos de acceso vinculado medio de símbolos en un servidor independiente), a continuación, debes agregarlos a través de la opción a continuación.   
    
   
-Puedes administrar estas credenciales almacenadas (y agregar otras adicionales) en la consola mediante la opción de **administrar las credenciales de red** del menú principal.   
+Puedes administrar estas credenciales almacenadas (y agregar los demás) en la consola mediante la opción de **administrar las credenciales de red** del menú principal.   
  ![](images/dev_home_9.png)   
   
 Puedes ver las credenciales actualmente en la consola, editar credenciales seleccionando la ruta de acceso de la credencial y hacer clic en **un** botón y quitar una credencial seleccionando el vínculo quitar y hacer clic en **un** botón.   
@@ -154,7 +154,7 @@ Puedes ver las credenciales actualmente en la consola, editar credenciales selec
 [Xbox Live página (Dev Home)](devhome-live.md)  
 
 
-&nbsp;&nbsp;Captura información de varios jugadores y muestra el estado actual del servicio Xbox Live. 
+&nbsp;&nbsp;Captura información de varios jugadores y muestra el estado actual del servicio de Xbox Live. 
   
   
 [Página de configuración (Dev Home)](devhome-settings.md)  

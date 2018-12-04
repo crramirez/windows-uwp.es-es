@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466794"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows Runtime 8.x a UWP caso práctico: QuizGame aplicación de muestra
 
@@ -20,7 +20,7 @@ ms.locfileid: "8336509"
 
 Este tema presenta un caso práctico de migración de una cuestionario de punto a punto juego WinRT 8.1 aplicación de muestra funcional a una aplicación de plataforma de Windows Windows10Universal (UWP).
 
-Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: paquete de una aplicación para Windows8.1 y un paquete de la aplicación diferente para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación Windows8.1 actúa como el host de una sesión de juego de preguntas, mientras que el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
+Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de aplicación para Windows8.1 y un paquete de la aplicación diferente para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación Windows8.1 actúa como el host de una sesión de juego de preguntas, mientras que el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
 
 La adaptación de las dos partes al equipo y al teléfono, respectivamente, tiene sentido. Pero, ¿no sería aún mejor si se pudieran ejecutar el host y el cliente en prácticamente cualquier dispositivo que quisieras? En este caso práctico, se portarán las dos aplicaciones a Windows 10 donde se compilarán en un paquete de aplicación única que los usuarios pueden instalar en una amplia gama de dispositivos.
 
@@ -94,7 +94,7 @@ En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyec
 
 **P2PHelper**
 
--   En la solución, crea un nuevo proyecto de biblioteca de clases de Windows 10 (**Nuevo proyecto** &gt; **Windows Universal** &gt; **Biblioteca de clases (Windows Universal)**) y asígnale el nombre P2PHelper.
+-   En la solución, crea un nuevo proyecto de biblioteca de clases de Windows 10 (**Nuevo proyecto** &gt; **Windows Universal** &gt; **Biblioteca de clases (Windows Universal)**) y el nombre P2PHelper.
 -   Elimina Class1.cs del nuevo proyecto.
 -   Copia P2PSession.cs, P2PSessionClient.cs y P2PSessionHost.cs en la carpeta del nuevo proyecto e incluye los archivos copiados en el nuevo proyecto.
 -   El proyecto se compila sin necesidad de realizar más cambios.
@@ -106,7 +106,7 @@ En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyec
 
 **QuizGameHost**
 
--   Crea un nuevo proyecto de aplicación de Windows 10 (**Agregar** &gt; **Nuevo proyecto** &gt; **Windows Universal** &gt; **Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameHost.
+-   Crear un nuevo proyecto de aplicación de Windows 10 (**Agregar** &gt; **Nuevo proyecto** &gt; **Windows Universal** &gt; **Aplicación vacía (Windows Universal)**) y el nombre QuizGameHost.
 -   Agrega una referencia a P2PHelper (**Agregar referencia** &gt; **Proyectos** &gt; **Solución** &gt; **P2PHelper**).
 -   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A continuación, haz clic con el botón derecho en cada carpeta creada y pulsa **Agregar** &gt; **Elemento existente** para obtener acceso a una de esas carpetas. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copia MainPage.xaml de \\QuizGame.Windows\\ a \\QuizGameHost\\ y cambia el espacio de nombres a QuizGameHost.
@@ -133,7 +133,7 @@ por esta:
 
 **QuizGameClient**
 
--   Crea un nuevo proyecto de aplicación de Windows 10 (**Agregar** &gt; **Nuevo proyecto** &gt; **Windows Universal** &gt; **Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameClient.
+-   Crear un nuevo proyecto de aplicación de Windows 10 (**Agregar** &gt; **Nuevo proyecto** &gt; **Windows Universal** &gt; **Aplicación vacía (Windows Universal)**) y el nombre QuizGameClient.
 -   Agrega una referencia a P2PHelper (**Agregar referencia** &gt; **Proyectos** &gt; **Solución** &gt; **P2PHelper**).
 -   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A continuación, haz clic con el botón derecho en cada carpeta creada y pulsa **Agregar** &gt; **Elemento existente** para obtener acceso a una de esas carpetas. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copia MainPage.xaml de \\QuizGame.WindowsPhone\\ a \\QuizGameClient\\ y cambia el espacio de nombres a QuizGameClient.

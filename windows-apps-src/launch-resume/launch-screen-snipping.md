@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7aa0b70aee50c79088a68378fa75664711c3d564
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467682"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 
@@ -26,7 +26,7 @@ El **ms-screenclip:** URI permite que la aplicación automáticamente abrir e in
 | Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso, en segundos completas, entre la llamada URI y cuando comienza la recortes. |
+| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso en segundos completas, entre la llamada URI y cuando comienza la recortes. |
 
 ## <a name="launching-the-snip--sketch-app"></a>Iniciar el recorte y aplicaciones de bocetos
 

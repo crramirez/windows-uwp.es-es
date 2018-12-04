@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467910"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
 En este tutorial, podrás:
 * Crear un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación en el centro de partners que defina varias variables remotas que representen el texto y el color de un botón de la aplicación.
-* Crear una aplicación con código que recupere los valores de variables remotas, use estos datos para cambiar el color de fondo de un botón y registra la vista y datos de evento de conversión en el centro de partners.
+* Crear una aplicación con código que recupere los valores de variables remotas, use estos datos para cambiar el color de fondo de un botón y registra la vista y los datos de evento de conversión en el centro de partners.
 * Crear un experimento en el proyecto para comprobar si al cambiar el color de fondo de un botón de una aplicación aumenta satisfactoriamente el número de clics.
 * Ejecutar la aplicación para recopilar datos del experimento.
 * Revisar los resultados del experimento en el centro de partners, elige una variación para habilitar para todos los usuarios de la aplicación y completar el experimento.
@@ -58,7 +58,7 @@ Para seguir este tutorial, debes tener una cuenta del centro de partners y debes
 
 ## <a name="create-the-experiment-in-partner-center"></a>Crear el experimento en el centro de partners
 
-1. Vuelve a la página del proyecto de **Experimentos de clics de botón** en el centro de partners.
+1. Volver a la página de proyecto de **Experimentos de clics de botón** en el centro de partners.
 2. En la sección **Experimentos**, haz clic en el botón **Nuevo experimento**.
 3. En la sección **Datos del experimento**, escribe el nombre **Optimizar clics de botón** en el campo **Nombre del experimento**.
 4. En la sección **Evento de visualización** , escribe **userViewedButton** en el campo de **Nombre del evento de visualización**. Ten en cuenta que este nombre coincida con la cadena de evento de visualización en la que has iniciado sesión en el código que agregaste en la sección anterior.

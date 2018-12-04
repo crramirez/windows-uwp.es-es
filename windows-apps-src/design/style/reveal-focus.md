@@ -10,11 +10,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351183"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470851"
 ---
 # <a name="reveal-focus"></a>Reveal Focus
 
@@ -72,11 +72,11 @@ Como puedes ver, es bastante sencillo activar Reveal Focus cuando la aplicación
 
 Puedes personalizar el efecto Reveal Focus modificando las propiedades visuales de foco para cada control: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)y [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Estas propiedades te permiten personalizar el color y el grosor del rectángulo del foco. (Son las mismas propiedades que usas para crear [Elementos visuales de foco de alta visibilidad](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals).) 
 
-Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que componen Reveal Focus.
+Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que conforman el foco Reveal.
 
 Hay tres partes en los elementos visuales de foco Reveal de predeterminados: el borde principal, el borde secundario y el resplandor de Reveal. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario. El resplandor de Reveal Focus tiene un grosor proporcional al grosor del borde principal y se ejecuta alrededor del *fuera* del borde principal.
 
-Además de los elementos estáticos, elementos visuales de foco Reveal presentan una luz animada que late cuando está en reposo y se mueve en la dirección del foco al moverlo.
+Además de los elementos estáticos, elementos visuales de foco Reveal presentan una luz animada que late cuando está en reposo y se mueve en la dirección del foco al mover el foco.
 
 ![Capas de foco Reveal](images/reveal-breakdown.svg)
 
