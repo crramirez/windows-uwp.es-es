@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, notas para los evaluadores
 ms.localizationpriority: medium
 ms.openlocfilehash: d47933ac3482f610fb8fe28b7fb52238ac7ca294
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330851"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478460"
 ---
 # <a name="notes-for-certification"></a>Notas para la certificación
 
@@ -20,7 +20,7 @@ Cuando envías tu aplicación, tienes la opción de usar la página **Notas para
 
 Asegúrate de incluir lo siguiente (si corresponde para tu aplicación);
 
--   **Nombres de usuario y contraseñas para las cuentas de prueba**: si la aplicación requiere que los usuarios inicien sesión en un servicio o la cuenta de medios sociales, facilita el nombre de usuario y contraseña de una cuenta de prueba. Los evaluadores de certificación usarán esta cuenta cuando revisen tu aplicación.
+-   **Nombres de usuario y contraseñas para las cuentas de prueba**: si la aplicación requiere que los usuarios inicien sesión en un servicio o cuenta de medios sociales, proporcionar el nombre de usuario y contraseña para una cuenta de prueba. Los evaluadores de certificación usarán esta cuenta cuando revisen tu aplicación.
 
 -   **Pasos para acceder a funciones ocultas o bloqueadas**: brevemente cómo los evaluadores pueden acceder a las características, los modos o contenido que puedan no resultar obvia. Las aplicaciones que parezcan estar incompletas pueden no superar la certificación.
 
@@ -28,9 +28,9 @@ Asegúrate de incluir lo siguiente (si corresponde para tu aplicación);
 
 -  **Diferencias de esperado en el comportamiento en función de la región u otras opciones de configuración**: por ejemplo, si los clientes en diferentes regiones verán contenido diferente, asegúrate de indicar esto claramente para que los evaluadores comprendan las diferencias y revisen de forma adecuada.
 
--   **Información sobre qué ha cambiado en una actualización de la aplicación**: para las actualizaciones de aplicaciones publicadas anteriormente, es aconsejable que los evaluadores sepan qué ha cambiado, especialmente si los paquetes son los mismos y solo estás realizando cambios a la descripción (por ejemplo, la adición de más de la aplicación capturas de pantalla, cambias la categoría de la aplicación o modificas la descripción).
+-   **Información sobre qué ha cambiado en una actualización de la aplicación**: para las actualizaciones de aplicaciones publicadas anteriormente, es aconsejable que los evaluadores sepan qué ha cambiado, especialmente si los paquetes son los mismos y solo estás realizando cambios en la descripción (por ejemplo, la adición de más de la aplicación capturas de pantalla, cambias la categoría de la aplicación o modificas la descripción).
 
--   **La fecha en la que introduces las notas**: Esto es particularmente importante si estás usando un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), ya que las notas que escribas al publicar en un espacio aislado te permanecer cuando solicites la certificación. Ver la fecha ayuda a los evaluadores a comprobar si había problemas temporales que puede que ya no se presenten.
+-   **La fecha en la que introduces las notas**: Esto es especialmente importante si estás usando un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), ya que las notas que escribas al publicar en un espacio aislado te permanecer cuando solicites la certificación. Ver la fecha ayuda a los evaluadores a comprobar si había problemas temporales que puede que ya no se presenten.
 
 -  **Todo lo que consideres que evaluadores necesitarán conocer acerca de tu envío**
 

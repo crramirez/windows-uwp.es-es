@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ff9510b65bd635b5b10e0cbea551c12b29ef8f37
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8341335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478625"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 
@@ -93,11 +93,11 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Permisos e historial | ms-settings:cortana-permissions |
 | Más detalles | ms-settings:cortana-moredetails |
-| Cortana en todos mis dispositivos | ms-settings:cortana-notifications |
+| Cortana en Mis dispositivos | ms-settings:cortana-notifications |
 | Hablar con Cortana | ms-settings:cortana-language |
 
 > [!NOTE] 
-> En esta sección de configuración en el escritorio se llamará búsqueda cuando el equipo se establece en las regiones donde Cortana no está disponible actualmente o se ha deshabilitado Cortana. En este caso no se mostrarán las páginas de Cortana específicas (Cortana a través de Mis dispositivos) y hablar con Cortana. 
+> En esta sección de configuración en el escritorio se llamará búsqueda cuando el equipo se establece en las regiones donde Cortana no está disponible actualmente o se ha deshabilitado Cortana. En este caso no se mostrarán las páginas específicas de Cortana (Cortana a través de Mis dispositivos) y hablar con Cortana. 
 
 ## <a name="devices"></a>Dispositivos
 

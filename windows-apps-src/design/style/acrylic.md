@@ -11,11 +11,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 336e4e64cc0b1819081a7e42b6e3e2d099355248
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342133"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478537"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -73,9 +73,9 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 ## <a name="when-to-use-acrylic"></a>Cuándo usar Acrylic
 
 * Usar acrílico en la aplicación para la compatibilidad con la interfaz de usuario, por ejemplo, NavigationView o los elementos de comandos en línea. 
-* Usar acrílico en segundo plano para elementos transitorios de la interfaz de usuario, como los menús contextuales, los controles flotantes y la interfaz de usuario de la luz dimsissable.<br />Usar acrílico en escenarios transitorios ayuda a mantener una relación visual con el contenido que desencadenó la interfaz de usuario transitoria.
+* Usar acrílico en segundo plano para los elementos transitorios de la interfaz de usuario, como los menús contextuales, los controles flotantes y la interfaz de usuario de la luz dimsissable.<br />Usar acrílico en escenarios transitorios ayuda a mantener una relación visual con el contenido que desencadenó la interfaz de usuario transitoria.
 
-Si estás usando acrílico en la aplicación en las superficies de navegación, considera la posibilidad de extender contenido debajo del panel acrílico para mejorar el flujo de la aplicación. Uso de NavigationView se hace esto automáticamente. Sin embargo, para evitar la creación de un efecto fragmentado, intenta no colocar varias partes del acrílico de extremo a extremo - Esto puede crear una indeseable no deseada entre las dos superficies borrosas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero cuando se usa de forma incorrecta, puede provocar ruido visual.
+Si estás usando acrílico en la aplicación en las superficies de navegación, considera la posibilidad de extender contenido debajo del panel acrílico para mejorar el flujo de la aplicación. Uso de NavigationView se hace esto automáticamente. Sin embargo, para evitar crear un efecto fragmentado y, a continuación, intenta no colocar varias partes del acrílico de extremo a extremo - Esto puede crear una indeseable no deseada entre las dos superficies borrosas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero cuando se usa de forma incorrecta, puede provocar ruido visual.
 
 Ten en cuenta los siguientes patrones de uso para decidir la mejor manera de incorporar el acrílico en la aplicación:
 
@@ -86,11 +86,11 @@ Si la aplicación no es capaz de aprovechar NavigationView y piensas en Agregar 
 
 ![Aplicación de mapas con comandos horizontal de aplicación](images/Maps_In_App_Acrylic_1.png)
 
-Además, tener la extensión de contenido o desplazamiento bajo el acrílico en la parte superior, la aplicación proporcionará una experiencia más envolvente y sin interrupciones.
+Además, tener la extensión de contenido o desplazamiento en el acrílico en la parte superior, la aplicación proporcionará una experiencia más envolvente y sin interrupciones.
 
 ### <a name="vertical-panes"></a>Paneles verticales
 
-Para superficies que ayudan a la sección de contenido de la aplicación o verticales, te recomendamos que uses un fondo opaco en lugar de acrílico. Si tus verticales abren encima del contenido, como en de NavigationView **compacto** o modos **mínima** , se recomienda que usar acrílico en la aplicación para ayudar a mantener el contexto de la página cuando el usuario tiene este panel abierto.
+Para paneles verticales o superficies que ayudan a la sección de contenido de la aplicación, te recomendamos que uses un fondo opaco en lugar de acrílico. Si tus verticales abren encima del contenido, como en de NavigationView **compacto** o modos **mínima** , se recomienda que usar acrílico en la aplicación para ayudar a mantener el contexto de la página cuando el usuario tiene este panel abierto.
 
 ### <a name="transient-surfaces"></a>Superficies transitorias
 
@@ -313,7 +313,7 @@ Además, deberás dibujar el título de la aplicación, que normalmente aparece 
 ## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
 * Usa el acrílico como material de fondo de superficies no principales de la aplicación, como los paneles de navegación.
 * Extiende el acrílico al menos a uno de los bordes de la aplicación para proporcionar una experiencia uniforme al mezclarlo de manera sutil con lo que rodea a la aplicación.
-* No coloques arylic escritorio en las superficies de gran tamaño en segundo plano de la aplicación, esto interrumpe el modelo mental del acrílico que se usa principalmente para las superficies transitorias.
+* No coloques arylic escritorio en las superficies de gran tamaño en segundo plano de la aplicación, esto interrumpe el modelo mental del acrílico que se usa principalmente para superficies transitorias.
 * No coloques acrílicos en la aplicación y en el fondo adyacentes directamente, para evitar tensión visual en las costuras.
 * No coloques varios paneles acrílicos con el mismo tono y opacidad uno junto a otro, ya que esto genera una costura visible indeseable.
 * No coloques texto de color de énfasis sobre superficies acrílicas.

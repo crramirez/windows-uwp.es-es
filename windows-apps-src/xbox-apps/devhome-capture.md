@@ -1,18 +1,18 @@
 ---
 ms.assetid: 67934477-337a-5235-b0de-8ac038177267
 title: Captura de multimedia página (Dev Home)
-description: Proporciona información sobre la página de captura multimedia de la aplicación Dev Home para Xbox One.
+description: Proporciona información acerca de la página de captura multimedia de la aplicación Dev Home para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 348b937b7967cbde80c0bc25a502e727a04e8af0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478498"
 ---
 # <a name="media-capture-page-dev-home"></a>Captura de multimedia página (Dev Home)
    

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, unidades de anuncios, pruebas
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d01434e508d4a5067ffd66bdf86b3083b43016
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347761"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478891"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anuncios en la aplicación
 
@@ -50,7 +50,7 @@ Mientras desarrollas la aplicación, usa los valores de identificador de aplicac
 
 ## <a name="live-ad-units"></a>Unidades de anuncios dinámicos
 
-Para obtener una unidad de anuncios dinámicos desde el centro de partners y usarla en tu aplicación:
+Para obtener una unidad de anuncios dinámicos del centro de partners y usarla en tu aplicación:
 
 1.  [Crear una unidad de anuncio](../publish/in-app-ads.md#create-ad-unit) en la página de **anuncios en la aplicación** en el centro de partners. Asegúrate de especificar el tipo correcto de la unidad de anuncio para el control de anuncios que usas en tu aplicación.
     > [!NOTE]

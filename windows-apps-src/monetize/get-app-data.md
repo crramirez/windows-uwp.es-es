@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478733"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
@@ -68,7 +68,7 @@ Este recurso tiene los siguientes valores.
 | primaryName   | cadena  | Nombre principal de la aplicación.      |
 | packageFamilyName | cadena  | El nombre de familia de paquete de la aplicación.      |
 | packageIdentityName          | cadena  | El nombre de identidad de paquete de la aplicación.                       |
-| publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor **Paquete/identidad/Editor** que aparece en la página de [identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para la aplicación en el centro de partners.       |
+| publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor de **Paquete/identidad/Editor** que aparece en la página de [identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para la aplicación en el centro de partners.       |
 | firstPublishedDate      | cadena  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
 | pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   

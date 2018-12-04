@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, iconos rastreables, iconos dinámicos, notificaciones de iconos rastreables
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344930"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478164"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificaciones de iconos rastreables
 
@@ -111,7 +111,7 @@ El objeto LaunchActivatedEventArgs tiene una propiedad que habilita las notifica
 
 El [objeto TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo) contiene una propiedad llamada [RecentlyShownNotifications](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications), que contiene una lista de las notificaciones que se han mostrado en el icono durante de los últimos 15minutos. El primer elemento de la lista de representa la notificación que hay actualmente en el icono, y los elementos siguientes representan las notificaciones que el usuario ha visto antes de la actual. Si el icono se ha borrado, la lista está vacía.
 
-Cada una Argumentsproperty ShownTileNotificationhas. El Argumentsproperty será inicializado con el argumentsstring de la carga de notificaciones de icono o "null" si la carga no incluía la argumentsstring.
+Cada una Argumentsproperty ShownTileNotificationhas. El Argumentsproperty será inicializado con el argumentsstring de la carga de notificaciones de icono o null si la carga no incluía la argumentsstring.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)
