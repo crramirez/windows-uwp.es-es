@@ -6,11 +6,11 @@ ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470736"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en los documentos de Windows de septiembre de 2018
 
@@ -22,7 +22,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ### <a name="windows-machine-learning"></a>Aprendizaje automático de Windows
 
-Ahora [el aprendizaje automático de Windows documentos](https://docs.microsoft.com/windows/ai/) residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
+[El aprendizaje automático de Windows documentos](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
 
 [Referencia de la API de Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) se ha actualizado para el SDK más reciente de Insider de Windows.
 
@@ -46,21 +46,21 @@ Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado 
 
 ### <a name="contributing-guidance"></a>Instrucciones que contribuyen
 
-Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación de UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para las contribuciones externas a nuestros documentos.
+Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación de UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre abarcan una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el más recientes preguntas que hemos respondido a!
 
 Aaron Gustafson:
 
-* [6 vídeos en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [vídeos de 6 en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 Chris Heilmann
 
-* [4 vídeos en la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [vídeos de 4 en la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

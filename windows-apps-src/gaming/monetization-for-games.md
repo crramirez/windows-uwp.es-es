@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
 ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467642"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -27,7 +27,7 @@ Puedes promocionar y monetizar un juego para UWP de una o varias de las siguient
 
 ## <a name="worldwide-distribution-channel"></a>Canal de distribución en todo el mundo
 
-Microsoft Store pueden hacer que tu juego disponibles para su descarga en más de 200 países y regiones en todo el mundo, con compatibilidad para la facturación a través de diversas formas de pago, como Visa, Mastercard y PayPal. Para obtener una lista completa de los países y regiones, consulta [definir la selección de mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+Microsoft Store pueden hacer que tu juego disponibles para su descarga en más de 200 países y regiones en todo el mundo, con compatibilidad para la facturación a través de diversas formas de pago, como Visa, Mastercard y PayPal. Para obtener una lista completa de los países y regiones, consulte [definir la selección de mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Establecer un precio para el juego
 
@@ -47,13 +47,13 @@ Puedes programar campañas de oferta de antemano al definir la fecha de inicial 
 
 ## <a name="in-game-purchases"></a>Compras desde el juego
 
-Las compras desde el juego son productos que se compran dentro de un juego. También se conocen de forma genérica como _compras desde la aplicación_. En la Microsoft Store, estos productos se denominan _complementos_. [Los complementos se publican](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) a través del centro de partners. También tendrás que habilitar los complementos en el código del juego.
+Las compras desde el juego son productos que se compran dentro de un juego. También se conocen de forma genérica como _compras desde la aplicación_. En la Microsoft Store, estos productos se denominan _complementos_. [Los complementos se publican](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) a través de centro de partners. También tendrás que habilitar los complementos en el código del juego.
 
 ### <a name="types-of-add-ons"></a>Tipos de complementos
 
 Puedes crear dos tipos de complementos en la Tienda: _duraderos_ o _consumibles_. Los complementos duraderos son artículos que persisten durante un período de tiempo especificado y se pueden comprar una sola vez hasta que expiran. Los complementos consumibles son artículos que se puedan comprar y usar una y otra vez.
 
-Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un consumible administrado por el desarrollador, eres responsable de realizar un seguimiento del saldo del artículo para el jugador; con un consumible administradas por la tienda, Microsoft Store realiza un seguimiento de saldo del artículo por TI. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un consumible administrado por el desarrollador, eres responsable de realizar un seguimiento del saldo del artículo para el jugador; con un consumible administrado por la tienda, Microsoft Store realiza un seguimiento de saldo del artículo por TI. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Crear compras desde el juego
 

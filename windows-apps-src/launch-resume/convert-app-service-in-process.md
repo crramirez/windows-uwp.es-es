@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, servicio de aplicaciones
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a976ac69d289a5582c2f3546227adba707ac5297
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336942"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465986"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host
 
@@ -44,7 +44,7 @@ El segundo cambio consiste en mover la lógica de servicio de su proyecto de tar
 
 Ahora, tu aplicación puede ejecutar directamente el Servicio de aplicaciones. Por ejemplo, en App.xaml.cs:
 
-[!NOTE] El siguiente código es diferente del que proporcionan por ejemplo 1 (servicio fuera de proceso). El siguiente código se proporciona solo con fines de ilustración y no debe usarse como parte del ejemplo 2 (servicio dentro del proceso).  Para continuar con la transición del artículo del ejemplo 1 (servicio fuera de proceso) en el ejemplo 2 (servicio dentro del proceso) seguir usando el código proporcionado por ejemplo 1 en lugar del siguiente código ilustrativo.
+[!NOTE] El siguiente código es diferente del que proporcionan por ejemplo 1 (servicio fuera de proceso). El siguiente código se proporciona solo con fines de ilustración y no debe usarse como parte de ejemplo 2 (servicio dentro del proceso).  Para continuar con la transición del artículo del ejemplo 1 (servicio fuera de proceso) en el ejemplo 2 (servicio dentro del proceso) seguir usando el código proporcionado por ejemplo 1 en lugar del siguiente código ilustrativo.
 
 ``` cs
 using Windows.ApplicationModel.AppService;

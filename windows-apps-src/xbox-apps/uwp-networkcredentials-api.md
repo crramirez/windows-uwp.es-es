@@ -3,14 +3,14 @@ title: Referencia de API de credenciales de red de Device Portal
 description: Obtén información sobre cómo agregar, quitar o actualizar las credenciales de red mediante programación.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346538"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469071"
 ---
-# <a name="network-credentials-api-reference"></a>Referencia de API de las credenciales de red
-Puedes agregar, quitar o actualizar las credenciales de red almacenada en el Kit de desarrollo con esta API de REST.
+# <a name="network-credentials-api-reference"></a>Referencia de API de credenciales de red
+Puedes agregar, quitar o actualizar las credenciales de red almacenado en el Kit de desarrollo con esta API de REST.
 
 ## <a name="get-existing-credentials"></a>Obtener las credenciales existentes
 
@@ -39,7 +39,7 @@ GET | /ext/networkcredential
 - Matriz JSON en el siguiente formato:
 * Credenciales
   * NetworkPath - la ruta de acceso al recurso compartido de red.
-  * Nombre de usuario: el nombre de usuario que ha almacena las credenciales.
+  * Nombre de usuario: el nombre de usuario que se almacena las credenciales.
 
 **Código de estado**
 
@@ -65,7 +65,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
-| NetworkPath        | Estás agregando las credenciales para acceder a la ruta de acceso de red al recurso compartido. |
+| NetworkPath        | Estás agregando credenciales para acceder a la ruta de acceso de red al recurso compartido. |
 <br>
 
 **Encabezados de solicitud**
@@ -76,7 +76,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 - Los siguientes elementos JSON:
 * NetworkPath - la ruta de acceso al recurso compartido de red.
-* Nombre de usuario: el nombre de usuario para almacenar las credenciales bajo.
+* Nombre de usuario: el nombre de usuario para almacenar las credenciales en.
 * Contraseña: la contraseña nueva o actualizada para este usuario.
 
 **Respuesta**   
@@ -128,7 +128,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
-204 | La solicitud para las credenciales fue correcta.
+204 | La solicitud de las credenciales fue correcta.
 4XX | Códigos de error
 5XX | Códigos de error
 

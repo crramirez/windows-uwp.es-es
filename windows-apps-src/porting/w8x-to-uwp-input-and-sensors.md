@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5847553bed563b724bb142f7abe62403fa8ec097
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330681"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469355"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 
@@ -32,7 +32,7 @@ Para obtener más información, consulta [Ciclo de vida de la aplicación](https
 ## <a name="background-audio"></a>Audio en segundo plano
 
 
-Para la propiedad [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) , **ForegroundOnlyMedia** y **BackgroundCapableMedia** están en desuso para aplicaciones de Windows 10. En su lugar, usa el modelo de aplicaciones de la Tienda de Windows Phone. Para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
+Para la propiedad [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) , **ForegroundOnlyMedia** y **BackgroundCapableMedia** están en desuso para las aplicaciones de Windows 10. En su lugar, usa el modelo de aplicaciones de la Tienda de Windows Phone. Para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>Detección de la plataforma en la que se está ejecutando la aplicación
 

@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, servicios de la tienda, API de información de análi
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325950"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474716"
 ---
 # <a name="get-insights-data"></a>Obtener datos de información
 
@@ -66,7 +66,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
+| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de Insight](#insight-values) a continuación.                                                                                                                      |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                 |
 
 
@@ -76,10 +76,10 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | El identificador de la aplicación para la que quieres recuperar datos de información de la tienda.     |
+| applicationId       | string | El identificador de la aplicación para la que estás recuperando los datos de información de la tienda.     |
 | insightDate                | string | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
-| tipo de datos     | string | Una de las siguientes cadenas que especifica el área de análisis general que describe esta información:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
-| insightDetail          | array | Uno o más [valores InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
+| tipo de datos     | string | Una de las siguientes cadenas que especifica el área de análisis general que se describe en esta información:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
+| insightDetail          | array | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de la información actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail

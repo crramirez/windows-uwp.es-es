@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465779"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
@@ -22,7 +22,7 @@ ms.locfileid: "8324713"
 
 ## <a name="getting-help-from-the-command-line"></a>Obtener ayuda de la línea de comandos
 
-Puedes ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que se pueden usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en casos muy raros, incluso `MakePri.exe <command> <option>` para obtener información específica sobre una opción de consulta.
+Puedes ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que se pueden usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en casos muy raros, incluso `MakePri.exe <command> <option>` para ver detalles acerca de una opción.
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 
@@ -418,7 +418,7 @@ Para `resourcepack` y `versioned`, en lugar de proporcionar un archivo PRI como 
 
 ## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) opción
 
-Debes usar la opción de opciones de índice (/ io) con `new`, `resourcepack`, y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de indizadores de recursos. Opciones de índices se deshabilitan de manera predeterminada.
+Debes usar la opción de opciones de índice (/ io) con `new`, `resourcepack`, y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de indizadores de recursos. Opciones de índice se deshabilitan de manera predeterminada.
 
 ```console
 /IndexOptions(io) <OPTIONS>

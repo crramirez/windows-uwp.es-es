@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466804"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x: Bind
 
@@ -173,7 +173,7 @@ Se pueden especificar varios argumentos de función separados por comas (,)
 
 ### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
 
-En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se realiza mediante la propiedad de enlace de **restablecimiento de enlace** . En el ejemplo siguiente, la función debe tomar un argumento que es el valor que debe insertarse volver al modelo.
+En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se realiza mediante la propiedad de enlace de **restablecimiento de enlace** . En el ejemplo siguiente, la función debe tomar un argumento que es el valor que debe se envíen al modelo.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

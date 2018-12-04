@@ -1,17 +1,17 @@
 ---
 title: Conceptos básicos sobre la muestra de Marble Maze
-description: En este documento se describe las características fundamentales del proyecto Marble Maze; Por ejemplo, cómo usa Visual C++ en el entorno de Windows Runtime, cómo se crea y estructura, y cómo se compila.
+description: Este documento describe las características fundamentales del proyecto Marble Maze; Por ejemplo, cómo usa Visual C++ en el entorno de Windows Runtime, cómo se crea y estructura, y cómo se compila.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473407"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -44,7 +44,7 @@ Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un p
 
 3. En la lista central, selecciona **DirectX 11 App (Universal Windows)**. Si no ves esta opción, puede que no tenga instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando los componentes y las cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
 
-4. Da a tu proyecto un **nombre**, una **ubicación** para los archivos se almacenen y un **nombre de la solución**y haz clic en **Aceptar**.
+4. Dar al proyecto un **nombre**, una **ubicación** para los archivos se almacenen y un **nombre de la solución**y haz clic en **Aceptar**.
 
 ![Nuevo proyecto](images/marble-maze-sample-fundamentals-1.png)
 
@@ -54,7 +54,7 @@ Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows unive
 
  
 
-Cada aplicación para UWP que adquieras de Microsoft Store viene en forma de un paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Cada aplicación para UWP que compres en la Microsoft Store viene en forma de un paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
 ##  <a name="building-deploying-and-running-the-game"></a>Compilar, implementar y ejecutar el juego
 
@@ -70,7 +70,7 @@ Puedes usar táctil, el acelerómetro, el controlador de Xbox One o el mouse par
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para seleccionar un elemento de menú.
 -   Usa la entrada táctil, el acelerómetro, el stick analógico izquierdo o el mouse para inclinar el laberinto.
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para cerrar menús, como por ejemplo la tabla de puntuaciones máximas.
--   Usa el botón de inicio en el controlador o la tecla P para pausar o reanudar el juego.
+-   Usa el botón de inicio en el controlador o la tecla P del teclado para pausar o reanudar el juego.
 -   Usa el botón Back del mando o la tecla Inicio del teclado para reiniciar el juego.
 -   Cuando la tabla de puntuaciones máximas esté visible, usa el botón Atrás en el controlador o la tecla inicio del teclado para borrar las puntuaciones.
 

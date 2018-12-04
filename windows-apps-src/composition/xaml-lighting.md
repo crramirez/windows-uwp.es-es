@@ -11,11 +11,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 7d66eaa77f86deffd59ebc81360ccb8183afd7d6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466741"
 ---
 # <a name="xaml-lighting"></a>Iluminación de XAML
 
@@ -25,7 +25,7 @@ Puedes aplicar luces a [**elementos visuales**](https://msdn.microsoft.com/libra
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Aplicar luces a elementos de interfaz de usuario de XAML
 
-Los objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) se usan para aplicar objetos [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinámicamente los elementos de interfaz de usuario de XAML. XamlLight proporciona métodos para dirigirse a UIElements o pinceles de XAML, aplicar luces a los árboles de UIElements, y lo que ayuda a administrar la duración de CompositionLight usan recursos en función de si actualmente.
+Los objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) se usan para aplicar objetos [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinámicamente los elementos de interfaz de usuario de XAML. XamlLight proporciona métodos para dirigirse a UIElements o pinceles de XAML, aplicar luces a los árboles de UIElements, y lo que ayuda a administrar la duración de CompositionLight en función de si están actualmente en los recursos usan.
 
 - Si seleccionas un objeto **Brush** con un objeto XamlLight, la luz iluminará todas las partes de cualesquiera UIElements que usen dicho pincel.
 - Si seleccionas un **UIElement** con un objeto XamlLight, en ese caso la luz iluminará todo el UIElement y sus UIElement secundarios.

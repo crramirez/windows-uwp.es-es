@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470997"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>Administrar tu experimento en el Centro de partners
 
-Después de [definir el experimento en el centro de partners](define-your-experiment-in-the-dev-center-dashboard.md) y [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), estás listo para activar el experimento y usar el centro de partners para revisar los resultados del experimento. Después de haber obtenido todos los datos que necesitas, puedes terminar el experimento y elegir si quieres seguir usando los valores de variables del control de variación para todas tus aplicaciones o cambiar a los valores de variables de otra de tus variaciones.
+Después de [definir el experimento en el centro de partners](define-your-experiment-in-the-dev-center-dashboard.md) y [el código de la aplicación para los experimentos](code-your-experiment-in-your-app.md), estás listo para activar el experimento y usar el centro de partners para revisar los resultados del experimento. Después de haber obtenido todos los datos que necesitas, puedes terminar el experimento y elegir si quieres seguir usando los valores de variables del control de variación para todas tus aplicaciones o cambiar a los valores de variables de otra de tus variaciones.
 
 > [!NOTE]
 > Cuando activas un experimento, el centro de partners inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, puede tardar varias horas para datos del experimento aparezcan en el centro de partners.
@@ -24,7 +24,7 @@ Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecut
 
 ## <a name="activate-your-experiment"></a>Activar el experimento
 
-Cuando estés satisfecho con los parámetros del experimento en el centro de partners y hayas actualizado tu código de la aplicación, estás listo para activar el experimento para que puedas iniciar la recopilación de datos del experimento de tu aplicación. Cuando el experimento está activo, la aplicación puede recuperar los valores de variación y notificar los eventos de vista y conversión al centro de partners.
+Cuando estés satisfecho con los parámetros del experimento en el centro de partners y hayas actualizado tu código de la aplicación, estás listo para activar el experimento para que puedas iniciar la recopilación de datos del experimento de la aplicación. Cuando el experimento está activo, la aplicación puede recuperar los valores de variación y notificar los eventos de vista y conversión al centro de partners.
 
 1. Inicia sesión en el [Centro de partners](https://partner.microsoft.com/dashboard).
 2. En **Tus aplicaciones**, selecciona la aplicación con el experimento que quieras activar.

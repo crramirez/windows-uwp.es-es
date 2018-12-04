@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323751"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465516"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 
@@ -33,7 +33,7 @@ Para obtener información sobre la Normativa de la Administración de Exportacio
 
 En primer lugar, determina si tu aplicación usa un tipo de criptografía que esté regulada por la Normativa de la Administración de Exportaciones. La pregunta incluye los ejemplos que se muestran en esta lista, pero recuerda que esta lista no incluye cada aplicación de criptografía posible.
 
-> **Importante**considera la posibilidad de no solo el código que has escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que la aplicación incluye artículos o vínculos a.
+> **Importante**considera la posibilidad de no solo el código que has escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que incluye la aplicación o vínculos a.
 
 -   Todo uso de firmas digitales, como autenticaciones o controles de integridad
 -   Cifrado de cualquier dato o archivos que la aplicación usa o a los que accede

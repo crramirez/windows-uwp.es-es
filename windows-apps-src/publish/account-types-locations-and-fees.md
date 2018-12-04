@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470214"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
-Las ventanas de programas en [El centro de partners](https://partner.microsoft.com/dashboard) ofertas ambos persona y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
+Las ventanas de programas en [El centro de partners](https://partner.microsoft.com/dashboard) ofrece ambos persona y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
 
 > [!NOTE]
 > Al abrir la cuenta de desarrollador, asegúrate de iniciar sesión en [El centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
@@ -37,7 +37,7 @@ Las cuentas de empresa son un poco más caras, principalmente porque es necesari
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que esté comprobada pero, mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en conseguir que los envíos listo.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en la preparación de los envíos.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
 

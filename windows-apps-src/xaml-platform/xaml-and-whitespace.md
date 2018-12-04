@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 521e794680df6449ebc49745319c4aeec74405d1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471374"
 ---
 # <a name="xaml-and-whitespace"></a>XAML y espacio en blanco
 
@@ -20,14 +20,14 @@ Obtén información sobre las reglas de procesamiento de espacios en blanco que 
 
 ## <a name="whitespace-processing"></a>Procesamiento de espacios en blanco
 
-Coherente con XML, espacios en blanco en XAML son espacios, saltos de línea y tabulaciones. Estos corresponden a los valores Unicode 0020, 000A y 0009 respectivamente. De manera predeterminada, se produce la siguiente normalización de los espacios en blanco cuando un procesador XAML procesa el texto interno que se encuentra entre los elementos de un archivo XAML:
+De forma coherente con XML, espacios en blanco en XAML son espacios, saltos de línea y tabulaciones. Estos corresponden a los valores Unicode 0020, 000A y 0009 respectivamente. De manera predeterminada, se produce la siguiente normalización de los espacios en blanco cuando un procesador XAML procesa el texto interno que se encuentra entre los elementos de un archivo XAML:
 
 -   Se eliminan los saltos de línea entre los caracteres de Asia oriental.
 -   Todos los espacios en blanco (espacio, salto de línea, tabulación) se convierten en espacios.
 -   Se eliminan todos los espacios consecutivos y se reemplazan por un espacio.
 -   Se elimina el espacio que sigue inmediatamente a la etiqueta de inicio.
 -   Se elimina el espacio que precede a la etiqueta de cierre.
--   Los *caracteres de Asia Oriental* se definen como un conjunto de intervalos de caracteres Unicode: de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. Este subconjunto también se denomina *ideogramas CJK* Para obtener más información, consulta http://www.unicode.org.
+-   Los *caracteres de Asia Oriental* se definen como un conjunto de intervalos de caracteres Unicode: de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. Este subconjunto también se denomina *ideogramas CJK* Para obtener más información, consulte http://www.unicode.org.
 
 "Predeterminado" corresponde al estado que indica el valor predeterminado del atributo **xml:space**.
 

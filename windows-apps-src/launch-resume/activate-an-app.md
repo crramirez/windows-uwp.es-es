@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342276"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474013"
 ---
 # <a name="handle-app-activation"></a>Controlar la activación de aplicaciones
 
@@ -40,7 +40,7 @@ Define la clase de la aplicación.
 Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Este método se llama cada vez que el usuario inicia la aplicación. El parámetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contiene el estado anterior de la aplicación y los argumentos de activación.
 
 > [!NOTE]
-> En Windows, al iniciar una aplicación suspendida desde el inicio de la lista de icono o la aplicación no se llama a este método.
+> En Windows, iniciar una aplicación suspendida desde la lista de ventana o aplicación de inicio no se llama a este método.
 
 ```csharp
 using System;

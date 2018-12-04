@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: b0a052d08c6b0816d977d3e86881540194075818
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348955"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467008"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -175,7 +175,7 @@ En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito 
 * Para ámbitos de OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
 
 > [!TIP]
-> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminado) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, aparezca en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para omitir la propiedad al almacenar en caché de la cuenta web, lo que impide que las diferencias de la cuenta en la memoria caché.
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminado) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, se se enumeran en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para omitir la propiedad al almacenar en caché de la cuenta web, lo que impide que las diferencias de la cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 
@@ -335,7 +335,7 @@ Dado que es muy sencillo obtener un token de forma silenciosa, debes usar este p
 
 ## <a name="remove-a-stored-account"></a>Quitar una cuenta almacenada
 
-Si conservas una cuenta web, es recomendable que los usuarios tengan la capacidad de desasociar su cuenta con tu aplicación. De esta forma, puede eficazmente "cerrar sesión" de la aplicación: su información de cuenta ya no se cargará automáticamente al iniciarse. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor del almacenamiento. A continuación, llama a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
+Si conservas una cuenta web, es recomendable que los usuarios tengan la capacidad de desasociar su cuenta con tu aplicación. De esta forma, puede eficazmente "cerrar sesión" de la aplicación: información de su cuenta ya no se cargará automáticamente al iniciarse. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor del almacenamiento. A continuación, llama a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

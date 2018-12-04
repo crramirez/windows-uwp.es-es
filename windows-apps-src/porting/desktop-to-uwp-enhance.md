@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465727"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -45,7 +45,7 @@ En la ventana **Propiedades**, establece el campo **Copia local** de cada archiv
 
 ### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Modificar un proyecto de C++ para usar Windows Runtime APIs
 
-Uso [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir Windows Runtime APIs. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
+Usa [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir Windows Runtime APIs. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
 
 Configurar el proyecto para C++ / WinRT, consulta [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / WinRT soporte](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
@@ -201,7 +201,7 @@ El compilador compila ese código solo si esa constante se define en la configur
 
 ### <a name="runtime-checks"></a>Comprobaciones en tiempo de ejecución
 
-Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama Windows Runtime APIs solo si el usuario se ejecuta como una aplicación empaquetada en Windows 10.
+Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama a Windows Runtime APIs solo si el usuario se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
 La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el ``IsRunningAsUWP()`` método para desactivar todo el código que llama Windows Runtime APIs. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465927"
 ---
 # <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
@@ -266,7 +266,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Consideraciones de programación para Encrypted Media Extension
 
-En esta sección se enumera las consideraciones de programación que deberías tener en cuenta al crear la aplicación web de PlayReady habilitado para Windows 10.
+En esta sección se enumera las consideraciones de programación que deberías tener en cuenta al crear la aplicación web habilitado de PlayReady para Windows 10.
 
 Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el siguiente ejemplo se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales que, a su vez, se asignan a los objetos **MSMediaKeys** y **MSMediaKeySession** de la función.
 
