@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481427"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
@@ -29,7 +29,7 @@ En esta página encontrarás información sobre:
 
 Los controladores para juegos como el Mando inalámbrico Xbox y el Mando inalámbrico Xbox S son dispositivos de entrada para juegos de propósito general. Son el dispositivo de entrada estándar en Xbox One y una opción habitual para los jugadores de Windows que no prefieran el teclado y el mouse. Los controladores para juegos son compatibles con aplicaciones para UWP de Xbox y Windows 10 en el espacio de nombres [Windows.Gaming.Input][].
 
-Controladores para juegos de Xbox One están equipados con un pad direccional (o cruceta); **A**, **B**, **X**, **Y**, **vista**y los botones de **menú** ; sticks analógicos izquierdo y derecho, reboteadores y los desencadenadores; y un total de cuatro motores de vibración. Ambos sticks analógicos proporcionan lecturas analógicas duales en los ejes X e Y y, además, actúan como botón cuando se presionan. Cada gatillo proporciona una lectura analógica que representa cuánto se extraen atrás.
+Controladores para juegos de Xbox One están equipados con un pad direccional (o cruceta); **A**, **B**, **X**, **Y**, **vista**y los botones de **menú** ; sticks analógicos izquierdo y derecho, reboteadores y los desencadenadores; y un total de cuatro motores de vibración. Ambos sticks analógicos proporcionan lecturas analógicas duales en los ejes X e Y y, además, actúan como botón cuando se presionan. Cada desencadenador proporciona una lectura analógica que representa cuánto se extraen atrás.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
@@ -96,7 +96,7 @@ El sistema administra los controladores para juegos, por lo tanto, no tendrás q
 
 La clase [Gamepad][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Dado que probablemente solo te interesen algunos de los controladores para juegos conectados, se recomienda mantener tu propia colección en lugar de acceder a ellos a través de la `Gamepads` propiedad.
 
-El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Ten en cuenta que porque otros subprocesos en segundo plano tendrán acceso a esta colección (en los eventos [GamepadAdded][] y [GamepadRemoved][] ), debes colocar un bloqueo alrededor de cualquier código que lee o actualiza la colección.
+El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Ten en cuenta que dado que otros subprocesos en segundo plano tendrán acceso a esta colección (en los eventos [GamepadAdded][] y [GamepadRemoved][] ), debes colocar un bloqueo alrededor de cualquier código que lee o actualiza la colección.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -179,7 +179,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quiten; Por ejemplo, este código solo realiza un seguimiento de la entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilación entrada desde cuando están conectados y desconecta los controladores de actualización.
+El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quitan; Por ejemplo, este código solo realiza un seguimiento de entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilación entrada desde cuando están conectados y desconecta los controladores de actualización.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -331,7 +331,7 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>Lectura de los botones
 
-Cada uno de los botones del controlador para juegos&mdash;las cuatro direcciones de la cruceta, reboteadores izquierdo y derecho, presión del stick analógico izquierdo y derecho, **A**, **B**, **X**, **Y**, **vista**y **menú**&mdash;proporciona un digital leerla indica si está presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración [GamepadButtons][] .
+Cada uno de los botones del controlador para juegos&mdash;las cuatro direcciones del PAD-d, reboteadores izquierdo y derecho, presión del stick analógico izquierdo y derecho, **A**, **B**, **X**, **Y**, **vista**y **menú**&mdash;proporciona un digital leerla indica si está presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración de [GamepadButtons][] .
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
@@ -380,7 +380,7 @@ La [muestra de GamepadUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samp
 
 Los motores de vibración dentro de un controlador para juegos se usan para proporcionar información táctil al usuario. Los juegos usan esta capacidad para crear una mayor sensación de inmersión, para ayudar a comunicar información de estado (por ejemplo, sufrir daños), para indicar la proximidad de objetos importantes o para otros usos creativos.
 
-Los controladores para juegos de Xbox One están equipados con un total de cuatro motores de vibración independientes. Dos son motores grandes ubicados en el cuerpo del controlador para juegos; el motor izquierdo proporciona una vibración brusca alto, mientras que el motor derecho proporciona una vibración suave, más sutil. Los otros dos son motores pequeños, dentro de cada gatillo, que proporcionan nítidas ráfagas de vibración directamente a los dedos del usuario del gatillo; esta capacidad única de los controladores para juegos de Xbox One es la razón por la que se hace referencia a sus gatillos como _gatillos de impulso_. Al orquestar estos motores, se puede producir una amplia gama de sensaciones táctiles.
+Los controladores para juegos de Xbox One están equipados con un total de cuatro motores de vibración independientes. Dos son motores grandes ubicados en el cuerpo del controlador para juegos; el motor izquierdo proporciona una vibración, gran amplitud, mientras que el motor derecho proporciona una vibración suave, más sutil. Los otros dos son motores pequeños, dentro de cada gatillo, que proporcionan nítidas ráfagas de vibración directamente a los dedos del usuario del gatillo; esta capacidad única de los controladores para juegos de Xbox One es la razón por la que se hace referencia a sus gatillos como _gatillos de impulso_. Al orquestar estos motores, se puede producir una amplia gama de sensaciones táctiles.
 
 ## <a name="using-vibration-and-impulse"></a>Uso de vibración e impulso
 

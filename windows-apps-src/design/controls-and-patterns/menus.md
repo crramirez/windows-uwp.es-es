@@ -14,11 +14,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329615"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484352"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -50,7 +50,7 @@ Para mostrar un conjunto de varios menús de nivel superior en una fila horizont
 
 Barra de menús y CommandBar ambos representan las superficies que puedes usar para exponer comandos a los usuarios. La barra de menús proporciona una forma rápida y sencilla para exponer un conjunto de comandos para las aplicaciones que puede que tengas más de organización o agrupamiento que permite un control CommandBar.
 
-También puedes usar una barra de menús junto con un control CommandBar. Usar la barra de menús para proporcionar la mayor parte de los comandos y el control CommandBar para resaltar los comandos usados con más.
+También puedes usar una barra de menús junto con un control CommandBar. Usar la barra de menús para proporcionar la mayor parte de los comandos y el control CommandBar para resaltar los comandos más usados.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -130,7 +130,7 @@ No te sientas obligado a proporcionar iconos para comandos que no tienen una vis
 
 ## <a name="create-a-menu-flyout-or-a-context-menu"></a>Crear un control flotante de menú o un menú contextual
 
-Para crear un control flotante de menú o un menú contextual, usa la [clase MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030). Debes definir el contenido del menú mediante la adición de los objetos [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) y [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) a la clase MenuFlyout.
+Para crear un control flotante de menú o un menú contextual, puedes usar la [clase MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030). Debes definir el contenido del menú mediante la adición de los objetos [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) y [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) a la clase MenuFlyout.
 
 Estos objetos permiten:
 
@@ -216,9 +216,9 @@ Los controles de cierre del elemento por cambio de foco, tales como menús, men�
 
 ## <a name="create-a-menu-bar"></a>Crear una barra de menús
 
-> **Vista previa**: barra de menús requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: barra de menús requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Usa los mismos elementos para crear menús en una barra de menús, como se muestra en un control flotante de menú. Sin embargo, en lugar de agrupar los objetos MenuFlyoutItem en un MenuFlyout, agrupan en un elemento MenuBarItem. Cada MenuBarItem se agrega a la barra de menús como un menú de nivel superior.
+Usa los mismos elementos para crear menús en una barra de menús, como se muestra en un control flotante de menú. Sin embargo, en lugar de agrupar los objetos de MenuFlyoutItem en un MenuFlyout, agrupan en un elemento MenuBarItem. Cada MenuBarItem se agrega a la barra de menús como un menú de nivel superior.
 
 ![Ejemplo de una barra de menús](images/menu-bar-submenu.png)
 

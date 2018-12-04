@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a576add7a080874fb0f042748bef7472e04ac817
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347092"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484559"
 ---
 # <a name="draw-shapes"></a>Dibujar formas
 
@@ -169,7 +169,7 @@ layoutRoot.Children.Add(line1);
 
 Una [**Polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) es similar a un [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) ya que el límite de la forma está definido por un conjunto de puntos, pero hay que tener en cuenta que el último punto de la **polilínea** no está conectado al primero.
 
-**Nota**  explícitamente podrías tener un punto de inicio idénticos y establece el punto final en los [**puntos**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) para la [**polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), pero en ese caso probablemente podría haber usado un [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) en su lugar.
+**Nota**  explícitamente podrías tener un punto de inicio idénticos y punto final en los [**puntos**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) de la [**polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), pero en ese caso probablemente podría haber usado un [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) en su lugar.
 
 Si especificas la propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) de una [**polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), la propiedad **Fill** pintará el espacio interior de la forma, incluso si el punto inicial y el punto final de la propiedad [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecidos en la **polilínea** no se cruzan. Si no especificas la propiedad **Fill**, la **polilínea** será similar a lo que se habría representado si hubieras especificado varios elementos [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) individuales en los que se cruzan los puntos iniciales y finales de líneas consecutivas.
 

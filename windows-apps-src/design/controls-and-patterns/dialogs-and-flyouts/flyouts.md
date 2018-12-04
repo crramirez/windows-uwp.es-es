@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce3222ed13cf82a9f235a592b5830ab96384664
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332233"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480796"
 ---
 # <a name="flyouts"></a>Controles flotantes
 
@@ -30,7 +30,7 @@ Un control flotante es un control de cierre del elemento por cambio de foco que 
 
 * No uses un control flotante en lugar de una [información sobre herramientas](../tooltips.md) o un [menú contextual](../menus.md). Usa una información sobre herramientas para mostrar una descripción breve que se oculta tras un tiempo determinado. Usa un menú contextual para acciones contextuales relacionadas con un elemento de la interfaz de usuario, como copiar y pegar.
 
-Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo se debe usar un cuadro de diálogo (un control similar), consulta [los cuadros de diálogo y controles flotantes](index.md). 
+Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo usar un cuadro de diálogo (un control similar), consulta [los cuadros de diálogo y controles flotantes](index.md). 
 
 ## <a name="examples"></a>Ejemplos
 

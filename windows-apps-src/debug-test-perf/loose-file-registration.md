@@ -6,15 +6,15 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, Administrador de aplicaciones, implementación, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 928c07bd23228f0fefd78be6019a0d116b2e6e4b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481145"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación a través del registro de archivos dinámico 
 
-Esta guía muestra cómo usar el diseño de archivos sueltos para validar y compartir aplicaciones de Windows 10 sin necesidad de empaquetarlos. Registro de diseños de archivos sueltos permite a los desarrolladores validar rápidamente sus aplicaciones sin necesidad de empaquetar e instalar las aplicaciones. 
+Esta guía muestra cómo usar el diseño de archivos sueltos para validar y compartir aplicaciones de Windows 10 sin necesidad de empaquetarlos. Registro de diseños de archivos sueltos, permite a los desarrolladores validar rápidamente sus aplicaciones sin necesidad de empaquetar e instalar las aplicaciones. 
 
 ## <a name="what-is-a-loose-file-layout"></a>¿Qué es un diseño de archivos sueltos?
 
@@ -55,14 +55,14 @@ WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Addres
 
 ### <a name="windows-device-portal"></a>Windows Device Portal
 
-Windows Device Portal está disponible en todos los dispositivos de Windows 10 y los desarrolladores lo usan para probar y validar su trabajo. Encarga a todas las audiencias de la Comunidad de desarrolladores con su experiencia de usuario del explorador y los puntos de conexión REST. Para obtener más información sobre Device Portal, consulta la [Introducción a Windows Device Portal](device-portal.md).
+Windows Device Portal está disponible en todos los dispositivos de Windows 10 y los desarrolladores lo usan para probar y validar su trabajo. Encarga de todas las audiencias de la Comunidad de desarrolladores con su experiencia de usuario del explorador y los puntos de conexión REST. Para obtener más información sobre Device Portal, consulta la [Introducción a Windows Device Portal](device-portal.md).
 
 Para registrar el diseño de archivos sueltos en Device Portal, sigue estos pasos.
 
 1. Conectarte a Device Portal siguiendo los pasos descritos en la sección de **configuración** de la [Introducción a Windows Device Portal](device-portal.md).
-1. En la pestaña del Administrador de aplicaciones, selecciona **Registrar desde el recurso compartido de red**.
+1. En la pestaña de administrador de aplicaciones, seleccione **Registrar desde el recurso compartido de red**.
 1. Escribe la ruta de acceso de recurso compartido de red para el diseño de archivos sueltos. 
-1. Si el dispositivo host no tiene acceso al recurso compartido de red, habrá un símbolo del sistema que escribir las credenciales necesarias.
+1. Si el dispositivo host no tiene acceso al recurso compartido de red, habrá un símbolo del sistema para escribir las credenciales necesarias.
 1. Una vez completado el registro, puedes iniciar la aplicación.
 
 En la página de administrador de aplicaciones del Portal de dispositivos, también puede registrar los diseños de archivos sueltos opcional para la aplicación principal seleccionando la casilla de verificación **que quiero especificar los paquetes opcionales** y, a continuación, especificar las rutas de acceso de recurso compartido de red de las aplicaciones opcionales. 
@@ -80,10 +80,10 @@ Add-AppxPackage -Register <path to manifest file>
 ## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="mapped-network-drives"></a>Unidades de red asignadas
-Actualmente, no se admiten las unidades de red asignadas registros de archivos sueltos. Hacer referencia a la unidad asignada con completa la ruta de acceso de recurso compartido de red.
+Actualmente, las unidades de red asignadas no se admiten los registros de archivos sueltos. Hacer referencia a la unidad asignada con completa la ruta de acceso de recurso compartido de red.
 
 ### <a name="registration-failure"></a>Error de registro
 El dispositivo en el que está realizando el registro que tienen acceso para el diseño del archivo. Si el diseño del archivo está alojado en un recurso compartido de red, asegúrate de que el dispositivo tiene acceso. 
 
-### <a name="modifications-to-visual-assets-arent-being-loaded-in-the-app"></a>Las modificaciones en los activos visuales no se está cargando en la aplicación 
+### <a name="modifications-to-visual-assets-arent-being-loaded-in-the-app"></a>Las modificaciones en activos visuales no se está cargando en la aplicación 
 La aplicación cargará sus activos visuales en tiempo de inicio. Si las modificaciones se realizaron en los activos visuales después de iniciar la aplicación, debes volver a iniciar la aplicación para ver los cambios más recientes.

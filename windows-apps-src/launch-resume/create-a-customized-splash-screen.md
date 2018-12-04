@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338432"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482832"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Mostrar una pantalla de presentación durante más tiempo
 
@@ -70,7 +70,7 @@ El siguiente ejemplo muestra una [**cuadrícula**](https://msdn.microsoft.com/li
 ```
 
 > [!NOTE]
-> Este ejemplo define el ancho de la [**clase ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
+> En este ejemplo se establece el ancho de la [**clase ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
 
 ## <a name="essential-code-for-an-extended-splash-screen-class"></a>Código esencial para una clase de pantalla de presentación extendida
 
@@ -219,7 +219,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
 
 8.  **(Opcional) Agregar un método de clase para restaurar un estado de sesión guardado**
 
-    El código que agregaste al método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) en el paso 4: [Modificar el controlador de activación de inicio](#modify-the-launch-activation-handler) hace que la aplicación muestre una pantalla de presentación extendida cuando se inicia. Para consolidar todos los métodos relacionados al inicio de la aplicación en la clase de pantalla de presentación extendida, puede considerar la posibilidad de agregar un método al archivo ExtendedSplash.xaml.cs para restaurar el estado de la aplicación.
+    El código que agregaste al método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) en el paso 4: [Modificar el controlador de activación de inicio](#modify-the-launch-activation-handler) hace que la aplicación muestre una pantalla de presentación extendida cuando se inicia. Para consolidar todos los métodos relacionados con el inicio de la aplicación en la clase de pantalla de presentación extendida, puede considerar la posibilidad de agregar un método al archivo ExtendedSplash.xaml.cs para restaurar el estado de la aplicación.
 
     ```cs
     void RestoreState(bool loadState)

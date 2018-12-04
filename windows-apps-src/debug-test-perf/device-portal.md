@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bffdb31e9001bd0b2abe873780ef507c2073b46
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332512"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480552"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
-Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB. También proporciona herramientas de diagnóstico para ayudarte a solucionar problemas y ver el rendimiento en tiempo real de tu dispositivo Windows.
+Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB. También proporciona las herramientas de diagnóstico para ayudarte a solucionar problemas y ver el rendimiento en tiempo real de tu dispositivo Windows.
 
 Windows Device Portal es un servidor web en el dispositivo que se puede conectar a desde un explorador web en un equipo. Si el dispositivo tiene un explorador web, también puedes conectarte localmente con el explorador en ese dispositivo.
 
@@ -28,7 +28,7 @@ La funcionalidad de Windows Device Portal se implementa con [Las API de REST](de
 Cada dispositivo tiene instrucciones específicas para la conexión a Device Portal, pero todos requieren estos pasos generales:
 1. Habilitar el modo de desarrollador y Device Portal en el dispositivo (configurado en la aplicación configuración).
 2. Conecta el dispositivo y el equipo a través de una red local o con USB.
-3. Navega a la página Device Portal en tu explorador. Esta tabla muestran los puertos y protocolos utilizados por cada familia de dispositivos.
+3. Navega a la página Device Portal en tu explorador. Esta tabla muestra los puertos y protocolos utilizados por cada familia de dispositivos.
 
 Familia de dispositivos | ¿De forma predeterminada? | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
@@ -67,15 +67,15 @@ El Administrador de aplicaciones proporciona la instalación o desinstalación y
 
 ![Página de administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
 
-- **Aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde recursos compartidos de red.
+- **Aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos de recursos compartidos de red.
 - **Aplicaciones en ejecución**: obtener información acerca de las aplicaciones que se está ejecutando y ciérralos según sea necesario.
 
 #### <a name="install-an-app"></a>Instalar una aplicación
 
 1.  Cuando hayas creado un paquete de la aplicación, podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
   ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
-2.  En la sección de administrador de aplicaciones de Device Portal, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
-3.  Haz clic en **Examinar** y busca el paquete de aplicación.
+2.  En la sección de administrador de aplicaciones del Portal de dispositivos, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
+3.  Haga clic en **Examinar** y busca el paquete de aplicación.
 3.  Haz clic en **Examinar** y busca el archivo de certificado (_.cer_) (no es necesario en todos los dispositivos.)
 4.  Casillas de verificación los respectivos si quieres instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
 5.  Haz clic en **siguiente** para mover el paso siguiente e **instalar** iniciar la instalación. 
@@ -95,7 +95,7 @@ Esta página muestra detalles acerca de los procesos que se está ejecutando en 
 
 Esta página te permite ver y manipular los archivos almacenados por las aplicaciones transferidas localmente. Consulta la entrada de blog [usando el Explorador de archivos de la aplicación](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) para obtener más información sobre el Explorador de archivos y cómo usarla. 
 
-![Página del explorador de archivo del Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
+![Página de explorador de archivos de Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>Rendimiento
 
@@ -106,7 +106,7 @@ Estas son las métricas disponibles:
 - **Memoria**: Total, en uso, disponible, confirmada, paginada y no paginada
 - **E/S**: cantidades de datos de lectura y escritura
 - **Red**: envíos y recepciones datos
-- **GPU**: utilización del motor por ciento de GPU disponible total
+- **GPU**: uso del motor de porcentaje del total GPU disponible
 
 
 ![Página de rendimiento de Portal de dispositivos](images/device-portal/mob-device-portal-perf.png)
@@ -137,7 +137,7 @@ Para obtener más información sobre el uso de registro de ETW, consulta el [Por
 
 La página de seguimiento del rendimiento permite ver los seguimientos de [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) desde el dispositivo host.
 
-![Página de seguimiento de rendimiento de Device Portal](images/device-portal/mob-device-portal-perf-tracing.png)
+![Página de seguimiento de rendimiento de Portal de dispositivos](images/device-portal/mob-device-portal-perf-tracing.png)
 
 - **Available profiles**: selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en **Inicio** para iniciar el seguimiento.
 - **Custom profiles**: haz clic o pulsa en **Examinar** para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en **Cargar e iniciar** para iniciar el seguimiento.
@@ -148,9 +148,9 @@ Captura. Para realizar análisis en el [Windows Performance Analyzer](https://ms
 
 ### <a name="device-manager"></a>Administrador de dispositivos
 
-La página del Administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
+La página de administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
 
-![Página de administrador de Device Portal de dispositivos](images/device-portal/mob-device-portal-devices.png)
+![Página de administrador de dispositivo de Portal de dispositivos](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>Redes
 

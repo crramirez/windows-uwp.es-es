@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e64feb8938be3e7338c87acdf8fd18fb13e525b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479276"
 ---
 # <a name="xbox-best-practices"></a>Procedimientos recomendados de Xbox
 
@@ -43,7 +43,7 @@ Muchos televisores cortan los bordes de la pantalla, por lo que todo el contenid
 
 ### <a name="consider-use-tv-safe-colors"></a>*A tener en cuenta:* usa colores seguros para el televisor
 
-Los televisores no administran las intensidades extremas de color tan bien como los monitores. Evita los colores de gran intensidad en la aplicación para que así los usuarios no vean franjas extrañas o imágenes difuminadas. Asimismo, ten en cuenta las diferencias existentes entre televisores: es posible que aquellos colores que se vean perfectamente en *tu* televisión, no se vean tan bien en las de los usuarios. ¡Leer [los colores](../design/devices/designing-for-tv.md#colors) para comprender cómo hacer que la aplicación un aspecto estupendo para todo el mundo!
+Los televisores no administran las intensidades extremas de color tan bien como los monitores. Evita los colores de gran intensidad en la aplicación para que así los usuarios no vean franjas extrañas o imágenes difuminadas. Asimismo, ten en cuenta las diferencias existentes entre televisores: es posible que aquellos colores que se vean perfectamente en *tu* televisión, no se vean tan bien en las de los usuarios. Leer [los colores](../design/devices/designing-for-tv.md#colors) para comprender cómo hacer que la aplicación un aspecto estupendo para todo el mundo.
 
 ### <a name="remember-you-can-disable-scaling"></a>*Recuerda:* puedes deshabilitar el escalado
 

@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481845"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conocidos de las aplicaciones de escritorio empaquetadas
 
@@ -34,7 +34,7 @@ Es posible que se produzca este error al configurar una nueva imagen base. Esto 
 
 Para resolver este problema, prueba a ejecutar el comando `Netsh int ipv4 reset` desde un símbolo del sistema con privilegios elevados y, a continuación, reinicia el equipo.
 
-### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Una aplicación .NET está compilada con la opción de compilación "AnyCPU" y no se puede instalar
+### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>La aplicación .NET está compilada con la opción de compilación "AnyCPU" y no se puede instalar
 
 Esto puede suceder si el archivo ejecutable principal (o cualquiera de las dependencias) está colocado en cualquier lugar de la jerarquía de carpetas **Archivos de programa** o **Windows\System32**.
 
@@ -91,7 +91,7 @@ Se publicó una [actualización de Windows (versión 14393.351 - KB3197954)](htt
 
 Si la actualización no soluciona el problema o no estás seguro de cómo recuperar tu equipo, ponte en contacto con el [Soporte técnico de Microsoft](https://support.microsoft.com/contactus/).
 
-Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml como sigue:
+Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación para los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml de la siguiente manera:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -145,7 +145,7 @@ Para buscar archivos que contienen un certificado PE incorrecto, abre un **símb
 set APPXSIP_LOG=1
 ```
 
-A continuación, desde el **símbolo del sistema**, firma la aplicación de nuevo. Por ejemplo:
+Desde el **símbolo del sistema**, inicia sesión en la aplicación de nuevo. Por ejemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx

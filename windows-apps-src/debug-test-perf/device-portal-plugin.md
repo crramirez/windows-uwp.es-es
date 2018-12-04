@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480920"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Device Portal
 
@@ -108,7 +108,7 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-Hay dos eventos que deben controlarse mediante la aplicación para completar la solicitud de control de bucle: **Closed**, para cada vez que el servicio Device Portal se apaga y [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), lo que expone HTTP entrante solicita y proporciona la principal funcionalidad del proveedor de Device Portal. 
+Hay dos eventos que deben controlarse con la aplicación para completar la solicitud de control de bucle: **cerrado**, para cada vez que el servicio Device Portal se apaga y [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), lo que expone HTTP entrante solicita y proporciona la principal funcionalidad del proveedor de Device Portal. 
 
 ## <a name="handle-the-requestreceived-event"></a>Controlar el evento RequestReceived
 El evento **RequestReceived** se lanzará una vez para cada HTTP solicitud que se realice en la ruta de controlador especificado del complemento. El bucle de control de la solicitud para los proveedores de Device Portal es similar al de NodeJS Express: los objetos de solicitud y respuesta se proporcionan juntos con el evento y el controlador responde rellenando el objeto de respuesta. En los proveedores de Device Portal, el evento **RequestReceived** y sus controladores usan objetos [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) y [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage).   

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ed6d9e21f3fed4a5f1d02a3b45fa08917a96117f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480770"
 ---
 # <a name="create-an-nfc-smart-card-app"></a>Crear una aplicación de tarjeta NFC inteligente
 
@@ -25,7 +25,7 @@ Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un 
 
 Para desarrollar una aplicación de emulación de tarjeta basada en HCE para Windows 10 Mobile, tendrás que obtener la configuración del entorno de desarrollo. Puedes obtener configurar instalando Studio2015 Visual de Microsoft, que incluye las herramientas de desarrollo de Windows y el emulador de Windows 10 Mobile con compatibilidad con la emulación de NFC. Para más información sobre cómo obtener la configuración, consulta [Preparación](https://msdn.microsoft.com/library/windows/apps/Dn726766)
 
-Opcionalmente, si quieres probar con un dispositivo real de Windows 10 Mobile en lugar de en el emulador de Windows 10 Mobile incluido, también deberás los siguientes elementos.
+Opcionalmente, si quieres probar con un dispositivo real de Windows 10 Mobile en lugar de en el emulador de Windows 10 Mobile incluido, también debes los siguientes elementos.
 
 -   Un dispositivo de Windows 10 Mobile con compatibilidad con HCE NFC. Actualmente, los modelos Lumia 730, 830, 640 y 640 XL tienen el hardware para admitir aplicaciones HCE NFC.
 -   Un terminal de lector que admita protocolos ISO/IEC 14443-4 y ISO/IEC 7816-4
@@ -82,7 +82,7 @@ Cuando un lector externo envía un comando "SELECT AID", el controlador de NFC c
 
 Windows 10 Mobile proporciona una opción de menú "Tarjeta SIM" en la página de configuración de NFC para seguir usando aplicaciones de basadas en SIM de Windows Phone 8.1 heredadas, que no registran sus Aid con el sistema. Si el usuario selecciona "Tarjeta SIM" como su tarjeta de pago predeterminada, la ruta de ISO-DEP se establece en UICC; para todas las demás opciones del menú desplegable, la ruta de ISO-DEP es al host.
 
-La ruta de ISO-DEP se establece en "Tarjeta SIM" para dispositivos que un SE habilitó la tarjeta SIM cuando el dispositivo se arranca por primera vez con Windows 10 Mobile. Cuando el usuario instala una aplicación habilitada para HCE y esa aplicación permite registros de grupo AID de HCE, la ruta de ISO-DEP apuntará al host. Las nuevas aplicaciones basadas en SIM necesitan registrar los AID en la tarjeta SIM para que las rutas AID específicas se rellenen en la tabla de enrutamiento del controlador.
+La ruta de ISO-DEP se establece en "Tarjeta SIM" para dispositivos que un SE habilitado la tarjeta SIM cuando el dispositivo se arranca por primera vez con Windows 10 Mobile. Cuando el usuario instala una aplicación habilitada para HCE y esa aplicación permite registros de grupo AID de HCE, la ruta de ISO-DEP apuntará al host. Las nuevas aplicaciones basadas en SIM necesitan registrar los AID en la tarjeta SIM para que las rutas AID específicas se rellenen en la tabla de enrutamiento del controlador.
 
 ## <a name="creating-an-hce-based-app"></a>Crear una aplicación basada en HCE
 
@@ -382,4 +382,4 @@ var appletIdGroup = new SmartCardAppletIdGroup(
                                 SmartCardEmulationType.Uicc);
 ```
 
-** Importantes ** se ha quitado la compatibilidad de interceptar SMS binaria heredada en Windows Phone 8.1 y se ha reemplazado con una nueva compatibilidad más amplia de SMS en Windows 10 Mobile, pero las aplicaciones de Windows Phone 8.1 heredadas en la que deben actualizarse para usar Windows 10 Mobile SMS nueva API.
+** Importantes ** se ha quitado la compatibilidad de interceptar SMS binaria heredada de Windows Phone 8.1 y se ha reemplazado con una nueva compatibilidad más amplia de SMS en Windows 10 Mobile, pero las aplicaciones de Windows Phone 8.1 heredadas en la que deben actualizarse para usar Windows 10 Mobile SMS nueva API.

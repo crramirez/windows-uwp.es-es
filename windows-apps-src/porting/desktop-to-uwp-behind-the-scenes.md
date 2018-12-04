@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: f5320d4d6a4f43ee8d94a55e46333821656adb20
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479955"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>En segundo plano de la aplicación de escritorio empaquetada
 
@@ -19,11 +19,11 @@ En este artículo se proporciona un análisis más profundo sobre lo que sucede 
 
 Un objetivo clave de un paquete moderna es separar el estado de la aplicación del estado del sistema tanto como sea posible mientras mantienes la compatibilidad con otras aplicaciones. Para ello, el puente coloca la aplicación dentro de un paquete de Plataforma universal de Windows (UWP) y, después, detecta y redirige algunos cambios que realiza en el sistema de archivos y en el Registro en tiempo de ejecución.
 
-Los paquetes que creas para tu aplicación de escritorio son solo de escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
+Los paquetes que se crea para la aplicación de escritorio son solo de escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
 
 ## <a name="installation"></a>Instalación
 
-Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de aplicación, pero en su lugar, se ejecuta como el usuario lo harías normalmente.
+Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de aplicación, pero en su lugar, se ejecuta como el usuario normalidad.
 
 Después de la implementación, el sistema operativo marca los archivos del paquete como de solo lectura y los bloquea completamente. Windows evita que las aplicaciones se inicien en caso de que se manipulen estos archivos.
 

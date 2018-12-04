@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482530"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -114,7 +114,7 @@ VSTS usa la carpeta `$(Build.ArtifactStagingDirectory)\AppxPackages` que hemos d
 
 ![artefactos](images/building-screen6.png)
 
-Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puede enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
+Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puedes enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
 
 >[!NOTE]
 > De manera predeterminada, el agente VSTS mantiene los paquetes de aplicación generados más recientes. Si deseas almacenar solo los artefactos de la compilación actual, configura la compilación para limpiar el directorio de archivos binarios. Para ello, agrega una variable llamada `Build.Clean` y, a continuación, establécela en el valor `all`. Para obtener más información, consulta [Especificar el repositorio](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
@@ -280,7 +280,7 @@ Para establecer este parámetro, combina el nombre de aplicación, la variable A
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es un procedimiento recomendado para incluir los símbolos con el paquete.
+Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es recomendable incluir los símbolos con la recopilación.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar una compilación de implementación continua que envía un paquete a la Store
 

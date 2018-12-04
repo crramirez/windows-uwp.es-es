@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a1fe8c1fcb641c3bc79f1f058befe6f4b44044a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352389"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481097"
 ---
 # <a name="time-based-animations"></a>Animaciones basadas en tiempo
 
-Cuando cambian un componente de la experiencia de usuario o esta en su totalidad, los usuarios finales a menudo lo ven de dos formas: con el tiempo o de forma instantánea. En la plataforma de Windows, el primero es preferible a lo segundo: experiencias de usuario que cambian al instante a menudo confunden y sorprenden a los usuarios finales porque no pueden seguir qué ha ocurrido. Por ello, el usuario final percibe la experiencia como molesta y poco natural.
+Cuando cambian un componente de la experiencia de usuario o esta en su totalidad, los usuarios finales a menudo lo ven de dos formas: con el tiempo o de forma instantánea. En la plataforma de Windows, el primero se prefiere el último - experiencias de usuario que cambian al instante a menudo confunden y sorprenden a los usuarios finales porque no pueden seguir qué ha ocurrido. Por ello, el usuario final percibe la experiencia como molesta y poco natural.
 
 En su lugar, puedes cambiar la interfaz de usuario con el tiempo para guiar al usuario final a través de los cambios en la experiencia o notificárselos. En la plataforma de Windows esto se realiza mediante el uso de animaciones basadas en tiempo, también conocidas como KeyFrameAnimations. Las KeyFrameAnimations te permiten cambiar una interfaz de usuario con el tiempo y controlar todos los aspectos de la animación, incluido cómo y cuándo se inicia y cómo llega a su estado final. Por ejemplo, animar un objeto a una nueva posición en 300milisegundos es más agradable que "teletransportarlo" allí de forma instantánea. Cuando se usan animaciones en lugar de cambios instantáneos, el resultado final es una experiencia más agradable y atractiva.
 

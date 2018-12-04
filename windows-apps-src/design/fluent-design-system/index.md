@@ -7,13 +7,13 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337311"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479359"
 ---
-# <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de aplicación de Fluent Design System para Windows
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de la aplicación de Fluent Design System para Windows
 
 ![Encabezado de diseño Fluent](images/fluentdesign-app-header.jpg)
 

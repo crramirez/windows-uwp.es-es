@@ -7,11 +7,11 @@ keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Micr
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
 ms.openlocfilehash: 08450b7aa9608e610a31d114059dd49e3ef3e10c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345235"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483065"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a>Detener el lanzamiento de un envío de aplicación
 
@@ -28,7 +28,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un envío para una de las aplicaciones. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método [crea un envío de aplicación](create-an-app-submission.md) .
+* Crear un envío de una de las aplicaciones. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método [crea un envío de aplicación](create-an-app-submission.md) .
 * Habilita un lanzamiento de paquete gradual para el envío. Puedes hacer este [en el centro de partners](../publish/gradual-package-rollout.md), o puedes hacerlo mediante [la API de envío de Microsoft Store](manage-app-submissions.md#manage-gradual-package-rollout).
 
 ## <a name="request"></a>Solicitud

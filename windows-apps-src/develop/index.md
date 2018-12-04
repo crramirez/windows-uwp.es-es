@@ -2,16 +2,16 @@
 description: Obtén información sobre cómo desarrollar una aplicación para UWP.
 title: Desarrollo de aplicaciones para UWP
 layout: LandingPage
-keywords: los desarrolladores de desarrollo de UWP desarrollo subprocesamiento async plataforma Introducción a portal de la aplicación
+keywords: los desarrolladores de desarrollo de UWP desarrollo subprocesos async plataforma Introducción a portal de la aplicación
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342093"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482134"
 ---
 <div> 
 <h1>Desarrollo de aplicaciones para UWP</h1>
@@ -31,7 +31,7 @@ ms.locfileid: "8342093"
                     </div>
                     <div class="cardText">
                         <h3>Información general de la plataforma Universal de Windows</h3>
-                        <p>Es una explicación de para qué UWP, cómo funciona, y las características que proporciona.</p>
+                        <p>Una explicación de qué UWP es, cómo funciona, y las características que proporciona.</p>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ ms.locfileid: "8342093"
                     </div>                
                     <div class="cardText">
                         <h3>Guía de migración</h3>
-                        <p>Llevar tu existentes de Windows Forms, WPF, Android o aplicación de iOS a UWP. </p>
+                        <p>Llevar tu existente o Windows Forms, WPF, Android, aplicación de iOS a UWP. </p>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ ms.locfileid: "8342093"
                 <div class="card">
                     <div class="cardText">
                         <h3>Esquemas para UWP</h3>
-                        <p>Especificaciones del esquema de archivo y XML para las aplicaciones de la plataforma Universal de Windows (UWP). </p>
+                        <p>Especificaciones de esquema de archivo y XML para las aplicaciones de la plataforma Universal de Windows (UWP). </p>
                     </div>
                 </div>
             </div>
@@ -269,7 +269,7 @@ ms.locfileid: "8342093"
                     </div>
                     <div class="cardText">
                         <h3>Ejemplos</h3>
-                        <p> Obtén información sobre cómo compilar aplicaciones increíbles para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo las características funcionan y ayudar a impulsar tus propias aplicaciones para UWP.</p>
+                        <p> Obtén información sobre cómo compilar aplicaciones increíbles para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo características funcionan y ayudar a rápidamente tus propias aplicaciones para UWP.</p>
                     </div>
                 </div>
             </div>

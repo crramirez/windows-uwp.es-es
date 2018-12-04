@@ -8,11 +8,11 @@ ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480340"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
  
@@ -106,15 +106,15 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 
 ![Imagen de Editor de tema XAML Fluent](images/XamlThemeEditor_screenshot.png)
 **Fluent Editor de tema XAML**<br>
-El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestra marco ResourceDictionary usada en las aplicaciones de la plataforma Universal de Windows (UWP).
+El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestra framework ResourceDictionary usada en las aplicaciones de la plataforma Universal de Windows (UWP).
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Descargar la muestra de la herramienta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Echa un vistazo a la herramienta en GitHub</a>
 
 ![Imagen de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la próxima serie de Fluent Design System de Microsoft. Hace un uso considerable de los controles nuevas y mejorada densidad en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
+La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la siguiente oleada de Fluent Design System de Microsoft. Hace un uso considerable de la densidad de mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Descargar la muestra de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Echa un vistazo a la muestra de VanArsdel en GitHub</a>
 
-![imagen de la conversión de tipos de compilación](images/buildcast.png)
+![crear la imagen de conversión](images/buildcast.png)
 **BuildCast**<br>
 BuildCast es una muestra de principio a fin integrada para presentar el sistema Fluent Design y UWP. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar la muestra de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo a la muestra de BuildCast en GitHub</a>
@@ -124,7 +124,7 @@ BuildCast es una muestra de principio a fin integrada para presentar el sistema 
 Muestra de UWP que programa comidas con amigos y compañeros de trabajo. Crea una quedada para comer, invita a amigos a un restaurante de interés y la aplicación se encarga de la administración de la comida para todas las partes implicadas. Esta aplicación incorpora elementos del sistema Fluent Design en una aplicación para UWP, incluyendo animaciones acrílicas, de revelación y conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Descargar la muestra Programador de comidas</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Echa un vistazo a la muestra Programador de comidas en GitHub</a></p>  
 
 ![Galería de controles XAML](images/xaml-controls-gallery.png)
-**Galería de controles XAML**<br>
+**Galería de controles de XAML**<br>
 Esta muestra proporciona una demostración interactiva de todos los controles XAML. Muestra una variedad de diseños, de básico a adaptable, y muestra el marcado que se puede copiar en tu propio proyecto. Nota: El archivo de descarga y el repositorio de GitHub actualmente hacen referencia a esta aplicación de muestra como "Conceptos básicos de la interfaz de usuario de XAML". <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">Descarga la muestra Galería de controles de XAML</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Echa un vistazo a la muestra Galería de controles XAML en GitHub</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Descargar la aplicación Galería de controles XAML de Store</a></p>
 
 ## <a name="want-more-code"></a>¿Quieres ver más código?

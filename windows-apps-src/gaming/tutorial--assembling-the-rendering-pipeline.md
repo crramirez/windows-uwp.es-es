@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
 ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338522"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482706"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 
@@ -616,7 +616,7 @@ Para obtener más información consulta [Introducción a los búferes en Direct3
 
 ### <a name="dxgi"></a>DXGI
 
-Infraestructura de gráficos de DirectX (DXGI) de Microsoft es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que se necesitan Direct3D 10, 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Infraestructura de gráficos de Microsoft DirectX (DXGI) es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que se necesitan Direct3D 10, 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
 
 ### <a name="feature-level"></a>Nivel de características
 
@@ -626,7 +626,7 @@ Cada tarjeta de vídeo implementa un cierto nivel de funcionalidad DirectX, en f
 
 Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, el nivel de característica 12\_0 requiere Direct3D 11.3 o Direct3D 12 y el modelo de sombreador 5.1. Para obtener más información, consulta [Niveles de característica de Direct3D: Introducción para cada nivel de características](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Con los niveles de característica, puedes desarrollar una aplicación para Direct3D9, Microsoft Direct3D10 o Direct3D11 y, a continuación, ejecutarlo en hardware 9, 10 u 11 (salvo algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Con los niveles de característica, puedes desarrollar una aplicación para Direct3D9, Microsoft Direct3D10 o Direct3D11 y, a continuación, se ejecuta en hardware 9, 10 u 11 (salvo algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Representación en estéreo
 

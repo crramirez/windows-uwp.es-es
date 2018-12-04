@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c04ac5aa12fc67cf911d575540b05f96753519b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348515"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483191"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -37,7 +37,7 @@ No es necesario que los paquetes de la aplicación estén firmados con un certif
 
 ### <a name="app-bundles"></a>Paquetes de aplicaciones
 
-Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
+Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que los usuarios descargar. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > [!NOTE]
 > Un paquete de aplicaciones puede contener tus paquetes para todas las arquitecturas.
@@ -57,7 +57,7 @@ El manifiesto debe incluir información específica sobre tu cuenta y tu aplicac
 > Los valores del manifiesto distinguen mayúsculas de minúsculas. También deben coincidir los espacios y otras puntuaciones. Escribe los valores cuidadosamente y revísalos para asegurarte de que son correctos.
 
 
-Los lotes de aplicaciones (.msixbundle o .appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de la aplicación. Ten en cuenta que, en un .msixbundle o .appxbundle, debes usar el manifiesto de cada paquete incluido los mismos elementos y atributos, excepto el atributo **ProcessorArchitecture** del elemento de [identidad](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Los lotes de aplicaciones (.msixbundle o .appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de la aplicación. Ten en cuenta que, en un .msixbundle o .appxbundle, debes usar el manifiesto de cada paquete incluye los mismos elementos y atributos, excepto el atributo **ProcessorArchitecture** del elemento de [identidad](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Asegúrate de ejecutar el [Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar tus paquetes. Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.

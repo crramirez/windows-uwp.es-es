@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 4527cface4681bf4866249c6398d43e6af782725
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483412"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -90,7 +90,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 
 2.  Cambia la lista del atributo Task Type para indicar el tipo de registro de tareas usado con esta tarea en segundo plano. Si la tarea en segundo plano se registra con varios tipos de desencadenadores, agrega elementos Task y atributos Type adicionales para cada uno.
 
-    **Nota**Asegúrate para mostrar cada uno de los tipos de desencadenadores que uses, la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método de [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) un error y lanzará una excepción).
+    **Nota**Asegúrate para mostrar cada uno de los tipos de desencadenadores que uses, la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) un error y lanzará una excepción).
 
     Este ejemplo de fragmento de código indica el uso de desencadenadores de eventos del sistema y de notificaciones de inserción:
 
@@ -209,7 +209,7 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Ejecutar en un nuevo proceso cada vez que un desencadenador se activa con el atributo SupportsMultipleInstances
 
-Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debe destinarse versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
+Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debes elegir versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
 
 ```xml
 <Package
