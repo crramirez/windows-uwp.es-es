@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 9c362cfde71ef3bb75840216c787403846d3da95
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468308"
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 
@@ -247,7 +247,7 @@ En los anteriores ejemplos de llamada a [**DependencyProperty.Register**](https:
 Normalmente deberás proporcionar [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) como instancia creada en línea, dentro de los parámetros de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
 > [!NOTE]
-> Si vas a definir una implementación de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , debes usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia **PropertyMetadata** .
+> Si vas a definir una implementación de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , debes usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia de **PropertyMetadata** .
 
 El siguiente ejemplo modifica los ejemplos mostrados anteriormente [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) al hacer referencia a una instancia de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) con un valor de [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770). La implementación de la devolución de llamada "OnLabelChanged" se mostrará más adelante en esta sección.
 
@@ -312,7 +312,7 @@ Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
 ```
 
 > [!NOTE]
-> No se registran con un valor predeterminado de [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Esto confundirá a los usuarios de la propiedad y tendrá consecuencias imprevistas en el sistema de propiedades.
+> No se registra con un valor predeterminado de [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Esto confundirá a los usuarios de la propiedad y tendrá consecuencias imprevistas en el sistema de propiedades.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 

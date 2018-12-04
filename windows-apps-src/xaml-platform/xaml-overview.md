@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336721"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475310"
 ---
 # <a name="xaml-overview"></a>Introducción a XAML
 
@@ -88,7 +88,7 @@ El prefijo define el token de marcado que se usa para hacer referencia a ese esp
 
 Por ejemplo, la sintaxis de atributo para asignar un prefijo `myTypes` al espacio de nombres `myCompany.myTypes` es: `    xmlns:myTypes="using:myCompany.myTypes"` y un uso representativo del elemento es: `<myTypes:CustomButton/>`
 
-Para obtener más información sobre espacios de nombres de asignación XAML para tipos personalizados, incluidas consideraciones especiales para las extensiones de componentes de VisualC ++ (C++ / CX), consulta los [espacios de nombres XAML y asignación de espacio de nombres](xaml-namespaces-and-namespace-mapping.md).
+Para obtener más información sobre espacios de nombres XAML de asignación de tipos personalizados, incluidas consideraciones especiales para las extensiones de componentes de VisualC ++ (C++ / CX), consulta los [espacios de nombres XAML y asignación de espacio de nombres](xaml-namespaces-and-namespace-mapping.md).
 
 ## <a name="other-xaml-namespaces"></a>Otros espacios de nombres XAML
 

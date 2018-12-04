@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476130"
 ---
 # <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
@@ -58,7 +58,7 @@ El informe **Rendimiento de publicidad** incluye los datos de las siguientes mé
 | Velocidad de relleno  | El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.  |
 | Clics  |  El número de veces que alguien ha hecho clic en un anuncio en la aplicación. |
 | CTR  |  La tasa de clics, es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones. |
-| Visualización | El porcentaje de las impresiones de anuncios que sean visibles en la aplicación. Para obtener más información sobre cómo se calcula este valor, consulte [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
+| Visualización | El porcentaje de las impresiones de anuncios que sean visibles en la aplicación. Para obtener más información acerca de cómo se calcula este valor, consulte [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
 | Créditos ganados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has ganado por el espacio de anuncios promocionales al mostrar anuncios de la comunidad en tu aplicación.  |
 | Créditos gastados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has gastado en los anuncios para tu aplicación.  |
 

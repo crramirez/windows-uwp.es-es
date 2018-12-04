@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 19ae09190b916fdaae68a67a2b9c11caa20d30e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473622"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación de escritorio empaquetada con Windows 10
 
@@ -120,7 +120,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puedes usar este identificador para administrar los cambios en versiones futuras de la aplicación. |
-|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describa la aplicación, el componente y la versión de la aplicación de escritorio desde el que quieras heredar asociaciones de archivos.|
+|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde el que quieras heredar asociaciones de archivos.|
 
 #### <a name="example"></a>Ejemplo
 
@@ -913,7 +913,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-your-application-by-using-an-alias"></a>Iniciar la aplicación mediante un alias
 
-Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
+Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -1029,7 +1029,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 ### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios inicien la aplicación cuando conecten un dispositivo a su PC
 
-Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC.
+Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecta un dispositivo a su PC.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -1094,7 +1094,7 @@ Si quieres que esa aplicación se reinicie una vez completada la actualización,
 
 Cada ventana activa de la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
 
-Cuando cada ventana activa de la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar datos y se cierra.
+Cuando cada ventana activa de la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar los datos y se cierra.
 
 >[!NOTE]
 Las ventanas activas también reciben el mensaje [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) en caso de que la aplicación no controle el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) .
@@ -1264,7 +1264,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Package>
 ```
 
-Esta extensión puede resultar útil si quieres crear una interfaz de usuario de plataforma Universal de Windows que se ejecute en todos los dispositivos, pero quieres que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
+Esta extensión puede resultar útil si quieres crear una interfaz de usuario de plataforma Universal de Windows que se ejecuta en todos los dispositivos, pero quieres que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
 
 Solo tienes que crear un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Este extensiones indica que quieres iniciar un archivo ejecutable en el paquete de aplicación de Windows.  Si quieres comunicarte entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](../launch-resume/app-services.md) para poder hacerlo. Puedes leer más acerca de este ejemplo [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 

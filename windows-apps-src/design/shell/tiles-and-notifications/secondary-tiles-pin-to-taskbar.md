@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, anclar a la barra de tareas, iconos secundarios, anclar iconos secundarios a la barra de tareas, acceso directo
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ad322fe371b0e1f3605ffb4c29108a15bb28e0c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8331764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474927"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>Anclar iconos secundarios a la barra de tareas
 
@@ -28,7 +28,7 @@ Al igual que el anclaje de iconos secundarios a Inicio, puedes anclar iconos sec
 
 ## <a name="guidance"></a>Guía
 
-Un icono secundario proporciona una manera coherente y eficaz para que los usuarios acceder directamente a áreas específicas de una aplicación. Aunque el usuario elige si quiere "anclar" una ventana secundaria a la barra de tareas o no, las áreas puede anclables en una aplicación se determinan por el desarrollador. Para obtener más información, consulta las [instrucciones sobre los iconos secundarios](secondary-tiles-guidance.md).
+Un icono secundario proporciona una manera coherente y eficaz para que los usuarios acceder directamente a áreas específicas de una aplicación. Aunque el usuario elige si quiere "anclar" una ventana secundaria de la barra de tareas o no, las áreas puede anclables en una aplicación se determinan por el desarrollador. Para obtener más información, consulta [las instrucciones de icono secundario](secondary-tiles-guidance.md).
 
 
 ## <a name="1-determine-if-api-exists-and-unlock-limited-access"></a>1. determinar si existe API y desbloquear acceso limitado
@@ -70,9 +70,9 @@ else
 
 ## <a name="2-get-the-taskbarmanager-instance"></a>2. obtener la instancia de TaskbarManager
 
-Las aplicaciones para UWP pueden ejecutarse en una amplia variedad de dispositivos; no todos ellos admiten la barra de tareas. Por ahora, solo los dispositivos de escritorio admiten la barra de tareas. Además, es posible que vienen presencia de la barra de tareas y se ve. Para comprobar si la barra de tareas está actualmente presente, llama al método **[TaskbarManager.GetDefault](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.getdefault)** y comprobar que la instancia devuelta no es "null". No muestres un botón de pin si no está presente la barra de tareas.
+Las aplicaciones para UWP pueden ejecutarse en una amplia variedad de dispositivos; no todos ellos admiten la barra de tareas. Por ahora, solo los dispositivos de escritorio admiten la barra de tareas. Además, es posible que vienen presencia de la barra de tareas y se ve. Para comprobar si la barra de tareas está actualmente presente, llama al método **[TaskbarManager.GetDefault](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.getdefault)** y comprobar que la instancia devuelta no es null. No muestres un botón de pin si la barra de tareas no está presente.
 
-Te recomendamos que sujeta la instancia de la duración de una sola operación, como anclaje y, a continuación, captura una nueva instancia de la próxima vez que debes hacer otra operación.
+Te recomendamos presionado a la instancia de la duración de una sola operación, como la asignación y, a continuación, captura una nueva instancia de la próxima vez que debes hacer otra operación.
 
 ```csharp
 TaskbarManager taskbarManager = TaskbarManager.GetDefault();
@@ -90,7 +90,7 @@ else
 
 ## <a name="3-check-whether-your-tile-is-currently-pinned-to-the-taskbar"></a>3. comprueba si el icono está anclado actualmente a la barra de tareas
 
-Si ya está anclado el icono, se debe mostrar un botón Desanclar en su lugar. Puedes usar el método **[IsSecondaryTilePinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.issecondarytilepinnedasync)** para comprobar si tu icono está anclado actualmente (los usuarios pueden sueltes en cualquier momento). En este método, se pasa el **TileId** de la ventana quieres saber está anclado.
+Si ya está anclado el icono, se debe mostrar un botón Desanclar en su lugar. Puedes usar el método **[IsSecondaryTilePinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.issecondarytilepinnedasync)** para comprobar si tu icono está anclado actualmente (los usuarios pueden sueltes en cualquier momento). En este método, se pasa el **TileId** del icono quieres saber está anclado.
 
 ```csharp
 if (await taskbarManager.IsSecondaryTilePinnedAsync("myTileId"))
@@ -107,7 +107,7 @@ else
 
 ## <a name="4-check-whether-pinning-is-allowed"></a>4. comprueba si se permite la opción de asignación
 
-Puede deshabilitar el anclaje a la barra de tareas mediante la directiva de grupo. La propiedad [TaskbarManager.IsPinningAllowed](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.ispinningallowed) le permite comprobar si se permite el anclaje.
+Anclar a la barra de tareas se puede deshabilitar mediante la directiva de grupo. La propiedad [TaskbarManager.IsPinningAllowed](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.ispinningallowed) le permite comprobar si se permite el anclaje.
 
 Cuando el usuario hace clic en el botón de pin, debes comprobar esta propiedad y si es false, debe mostrar un cuadro de diálogo de mensaje que informa al usuario que no se permite la asignación en esta máquina.
 
@@ -132,11 +132,11 @@ else
 
 ## <a name="5-construct-and-pin-your-tile"></a>5. construir y anclar tu icono
 
-El usuario ha hecho clic en el botón de pin y que hayas determinado que las API que están presentes, la barra de tareas está presente y anclaje puede … tiempo para anclar!
+El usuario ha hecho clic en el botón de pin y que hayas determinado que las API están presentes, la barra de tareas está presente y anclaje puede … tiempo para anclar!
 
-En primer lugar, construir tu icono secundario tal como lo harías al anclar a inicio. Puedes obtener más información sobre las propiedades del icono secundario mediante la lectura [Anclar iconos secundarios a inicio](secondary-tiles-pinning.md). Sin embargo, al anclar a la barra de tareas, además de las propiedades necesarias anteriormente, también es necesario Square44x44Logo (este es el logotipo de la barra de tareas). De lo contrario, se producirá una excepción.
+En primer lugar, construir tu icono secundario, tal como lo harías al anclar a inicio. Para obtener más información sobre las propiedades del icono secundario mediante la lectura [Anclar iconos secundarios a inicio](secondary-tiles-pinning.md). Sin embargo, al anclar a la barra de tareas, además de las propiedades necesarias anteriormente, también es necesario Square44x44Logo (es decir, el logotipo de la barra de tareas). De lo contrario, se producirá una excepción.
 
-A continuación, pasa el icono al método **[RequestPinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.requestpinsecondarytileasync)** . Dado que esto es bajo acceso limitado, esto no mostrará un cuadro de diálogo de confirmación y no requiere un subproceso de interfaz de usuario. Pero, en el futuro cuando esto se abre más allá de acceso limitado, los autores de llamadas acceso limitado, no utiliza recibirá un cuadro de diálogo y sea necesaria para usar el subproceso de interfaz de usuario.
+A continuación, pasa el icono al método **[RequestPinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.requestpinsecondarytileasync)** . Dado que se trata en acceso limitado, esto no mostrará un cuadro de diálogo de confirmación y no requiere un subproceso de interfaz de usuario. Pero en el futuro cuando este se abre más allá de acceso limitado, los llamadores acceso limitado, no utiliza recibirá un cuadro de diálogo y sea necesaria para usar el subproceso de interfaz de usuario.
 
 ```csharp
 // Initialize the tile (all properties below are required)
@@ -155,7 +155,7 @@ Este método devuelve un valor booleano que indica si el icono está ahora ancla
 
 ## <a name="enumerate-tiles"></a>Enumerar los iconos
 
-Para ver todas las ventanas que has creado y aún se anclan en algún lugar (inicio, la barra de tareas o ambos), usan **[FindAllAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.findallasync)**. Posteriormente, se puede comprobar si estos iconos están anclados a la barra de tareas o el inicio. Si no se admite la superficie, estos métodos devuelven falsos.
+Para ver todas las ventanas que se ha creado y aún se anclan en algún lugar (inicio, la barra de tareas o ambos), usan **[FindAllAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.findallasync)**. Posteriormente, se puede comprobar si estos iconos están anclados a la barra de tareas o el inicio. Si no se admite la superficie, estos métodos devuelven falsos.
 
 ```csharp
 var taskbarManager = TaskbarManager.GetDefault();
@@ -217,9 +217,9 @@ await toBeDeleted.RequestDeleteAsync();
 
 ## <a name="unpin-only-from-start"></a>Desanclar solo desde el inicio
 
-Si solo quieres desanclar un icono secundario desde Inicio dejando en la barra de tareas, llamar al método **[StartScreenManager.TryRemoveSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager.tryremovesecondarytileasync)** . Del mismo modo se eliminará el icono si ya no está anclado a otras superficies.
+Si solo quieres Desanclar una ventana secundaria de inicio y dejar en la barra de tareas, llamar al método **[StartScreenManager.TryRemoveSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager.tryremovesecondarytileasync)** . Del mismo modo se eliminará el icono si ya no está anclado a otras superficies.
 
-Este método devuelve un valor booleano que indica si el icono ya no está anclado a inicio. Si no se ha anclado tu icono en primer lugar, esto también devuelve true. Si desanclen no estaba habilitado o no se admite el inicio, esto devuelve false.
+Este método devuelve un valor booleano que indica si el icono ya no está anclado a inicio. Si no se ha anclado tu icono en primer lugar, esto también devuelve true. Si desanclen no se ha permitido o no se admite el inicio, esto devuelve false.
 
 ```csharp
 await StartScreenManager.GetDefault().TryRemoveSecondaryTileAsync("myTileId");

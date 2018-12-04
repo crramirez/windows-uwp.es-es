@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, orientación de pantalla, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475232"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Compatibilidad con la orientación de pantalla (DirectX y C++)
 
@@ -19,13 +19,13 @@ ms.locfileid: "8335177"
 
 Su aplicación de la Plataforma universal de Windows (UWP) puede admitir varias orientaciones de pantalla cuando controles el evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en la aplicación DirectX para UWP, para que el hardware de gráficos del dispositivo Windows 10 se usan de manera eficaz y eficiente.
 
-Antes de comenzar, recuerda que el hardware gráfico siempre reproduce los datos en píxeles del mismo modo, independientemente de la orientación del dispositivo. Dispositivos de Windows 10 pueden determinar su orientación de pantalla actual (mediante algún tipo de sensor, o con un botón de alternancia de software) y permitir que los usuarios cambien la configuración de pantalla. Debido a esto, Windows 10 propio controla la rotación de las imágenes para asegurarse de que estén "verticales" en función de la orientación del dispositivo. De manera predeterminada, tu aplicación recibe la notificación de que algo cambió de orientación, como por ejemplo, el tamaño de una ventana. Cuando esto ocurre, Windows 10 gira inmediatamente la imagen para la presentación final. Para tres de las cuatro orientaciones de pantalla específicas (se explica más adelante), Windows 10 usa otros recursos gráficos y cálculos para mostrar la imagen final.
+Antes de comenzar, recuerda que el hardware gráfico siempre reproduce los datos en píxeles del mismo modo, independientemente de la orientación del dispositivo. Dispositivos de Windows 10 pueden determinar su orientación de pantalla actual (mediante algún tipo de sensor, o con un botón de alternancia de software) y permitir que los usuarios cambiar la configuración de pantalla. Debido a esto, Windows 10 propio controla la rotación de las imágenes para garantizar que son "verticales" en función de la orientación del dispositivo. De manera predeterminada, tu aplicación recibe la notificación de que algo cambió de orientación, como por ejemplo, el tamaño de una ventana. Cuando esto ocurre, Windows 10 gira inmediatamente la imagen para la presentación final. Para tres de las cuatro orientaciones de pantalla específicas (se explica más adelante), Windows 10 usa otros recursos gráficos y cálculos para mostrar la imagen final.
 
 Para aplicaciones DirectX de UWP, el objeto [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) proporciona datos de orientación de pantalla básicos que tu aplicación puede consultar. La orientación predeterminada es *horizontal*, donde el ancho de píxeles de la pantalla es mayor que el alto; la orientación alternativa es *vertical*, donde la pantalla se gira 90 grados en cualquier dirección y el ancho se vuelve menor que el alto.
 
 Windows 10 define cuatro modos de orientación de pantalla específicos:
 
--   Horizontal: orientación para Windows 10 de la pantalla el valor predeterminado y se considera el ángulo de base o identidad para la rotación (0 grados).
+-   Horizontal: el valor predeterminado orientación para Windows 10 de la pantalla y se considera el ángulo de base o identidad para la rotación (0 grados).
 -   Vertical: la pantalla se giró 90 grados en el sentido de las agujas del reloj (o 270 grados en el sentido contrario de las agujas del reloj).
 -   Horizontal, volteada: la pantalla se giró 180 grados (se dio la vuelta).
 -   Vertical, volteada: la pantalla se giró 270 grados en el sentido de las agujas del reloj (o 90 grados en el sentido contrario de las agujas del reloj).
@@ -366,7 +366,7 @@ A continuación, presenta la cadena de cambio.
 ## <a name="reduce-the-rotation-delay-by-using-corewindowresizemanager"></a>Reduce el retraso de rotación mediante CoreWindowResizeManager.
 
 
-De manera predeterminada, Windows 10 proporciona un período corto pero apreciable de tiempo para cualquier aplicación, independientemente del modelo de aplicación o el idioma, para completar la rotación de la imagen. Sin embargo, lo más probable es que cuando la aplicación realice el cálculo de rotación mediante una de las técnicas que hemos descrito, lo realice mucho antes de que finalice este período de tiempo. Te gustaría aprovechar ese tiempo y completar la animación de la rotación, ¿verdad? Aquí es donde entra en juego [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603).
+De manera predeterminada, Windows 10 proporciona un período corto pero apreciable de tiempo para cualquier aplicación, independientemente del modelo de aplicación o de lenguaje, para completar la rotación de la imagen. Sin embargo, lo más probable es que cuando la aplicación realice el cálculo de rotación mediante una de las técnicas que hemos descrito, lo realice mucho antes de que finalice este período de tiempo. Te gustaría aprovechar ese tiempo y completar la animación de la rotación, ¿verdad? Aquí es donde entra en juego [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603).
 
 Así es como se usa [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603): cuando se desencadene un evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268), llama a [**CoreWindowResizeManager::GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh404170) dentro del controlador para que el evento obtenga una instancia de **CoreWindowResizeManager** y, cuando se complete y presente el diseño de la nueva orientación, llama a [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605) para que Windows sepa que puede completar la animación de rotación y mostrar la pantalla de la aplicación.
 

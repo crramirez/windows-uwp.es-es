@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 2413a27c12a9b36f0fd57482492414e7b5a379b6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339999"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470537"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
@@ -167,7 +167,7 @@ Las tareas en segundo plano pueden notificar progreso, finalización o cancelaci
 [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)  
 [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 
-Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que las tareas de segundo plano no agrupada de la aplicación estén presentes en BackgroundTaskBuilder.AllTasks. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicie la aplicación.
+Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que las tareas de segundo plano no agrupada de la aplicación estén presentes en BackgroundTaskBuilder.AllTasks. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicia la aplicación.
 
 ## <a name="related-topics"></a>Temas relacionados
 

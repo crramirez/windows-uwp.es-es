@@ -11,11 +11,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 48aff6bd0b5f6ce955168bdc5faef67b7f43925e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334265"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475680"
 ---
 # <a name="pivot"></a>Dinámica
 
@@ -83,7 +83,7 @@ Este código XAML crea un NavigationView con 3 secciones de contenido, como en e
 </Page>
 ```
 
-NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el código XAML anterior, usa el siguiente código subyacente:
+NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el XAML anterior, utilice el siguiente código subyacente:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -112,7 +112,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia táctil-pasar el dedo entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y funcionalidades de la pila.
+Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia de deslizar rápidamente táctil entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y funcionalidades de la pila.
 
 ## <a name="create-a-pivot-control"></a>Crear un control dinámico
 

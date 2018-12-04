@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 8394a1a44173541e8982a660591e84b25b985205
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325452"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475415"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
@@ -31,7 +31,7 @@ En este momento, Microsoft Store Services SDK es compatible con los siguientes e
 |  [Ejecutar experimentos con pruebas A/B en tu aplicación para UWP](run-app-experiments-with-a-b-testing.md)    |  Ejecuta pruebas A/B en la aplicación para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el centro de partners, usa la clase [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obtener las variaciones del experimento en tu aplicación, usa estos datos para modificar el comportamiento de la característica que estás probando y, a continuación, usar el [LogForVariation ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)método para enviar eventos de vista y conversión al centro de partners. Por último, usa el centro de partners para ver los resultados y administrar el experimento.  |
 |  [Iniciar el Centro de opiniones desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra esta información en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners. |
 |  [Configurar la aplicación para UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Usa la clase [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) en tu aplicación para UWP para registrar la aplicación para recibir notificaciones push dirigidas que envíes a tus clientes mediante el centro de partners.  |
-|   [Registrar eventos personalizados en la aplicación para UWP para el informe de uso del centro de partners](log-custom-events-for-dev-center.md)   |  Usa la clase [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) en tu aplicación para UWP para registrar eventos personalizados que están asociados con tu aplicación en el centro de partners. A continuación, revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.  |
+|   [Registrar eventos personalizados en la aplicación para UWP para el informe de uso del centro de partners](log-custom-events-for-dev-center.md)   |  Usa la clase [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) en tu aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.  |
 
 <span id="prerequisites" />
 

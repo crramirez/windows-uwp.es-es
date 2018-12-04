@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326065"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476067"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Descargar e instalar actualizaciones de paquete desde la Store.
 
@@ -193,7 +193,7 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Actualizaciones de paquete obligatorias
 
-Al crear un envío de paquete en el centro de partners para una aplicación que está destinada a Windows 10, versión 1607 o posterior, puedes [Marcar el paquete como obligatorio](../publish/upload-app-packages.md#mandatory-update) y la fecha y hora en que es obligatoria. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
+Cuando se crea un envío de paquete en el centro de partners para una aplicación destinada a Windows 10, versión 1607 o posterior, puedes [Marcar el paquete como obligatorio](../publish/upload-app-packages.md#mandatory-update) y la fecha y hora en que es obligatoria. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
 
 > [!NOTE]
 > El estado obligatorio de una actualización de paquete no lo exige Microsoft, y el sistema operativo no proporciona ninguna interfaz de usuario para indicar a los usuarios que deben instalar una actualización de la aplicación obligatoria. Se pretende que los desarrolladores usen la opción "mandatory" para aplicar las actualizaciones de la aplicación obligatorias en su propio código.  

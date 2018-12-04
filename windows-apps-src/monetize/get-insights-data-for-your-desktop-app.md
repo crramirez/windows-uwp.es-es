@@ -7,15 +7,15 @@ keywords: Windows 10, uwp, servicios de la tienda, API de información de análi
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328886"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475974"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para obtener detalles datos relacionados con las métricas de estado de una aplicación de escritorio que agregaste al [programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de estado](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener información datos relacionados con las métricas de estado de una aplicación de escritorio que agregaste en el [programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de estado](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -65,7 +65,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
+| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de Insight](#insight-values) a continuación.                                                                                                                      |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                 |
 
 
@@ -78,7 +78,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | applicationId       | string | El identificador de producto de la aplicación de escritorio para la que has recuperado los datos de información.     |
 | insightDate                | string | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
 | tipo de datos     | string | Una cadena que especifica el área de análisis general que informa esta información. Actualmente, este método solo admite el **estado**.    |
-| insightDetail          | array | Uno o más [valores InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
+| insightDetail          | array | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de la información actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail

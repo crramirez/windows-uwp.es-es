@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 81f4232d038b89f2c49cf584346d632911fb70e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476238"
 ---
 # <a name="get-battery-information"></a>Obtener información sobre la batería
 
@@ -28,7 +28,7 @@ Aprende a obtener información detallada sobre la batería mediante las API del 
 
 Algunos dispositivos tienen más de una batería y no siempre resulta obvio saber cómo contribuye cada una de ellas a la capacidad de energía global del dispositivo. Aquí es donde entra en acción la clase [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011). El *agregado de baterías* representa todos los controladores de la batería conectados al dispositivo y puede proporcionar un único objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) general.
 
-**Nota**una clase de [**batería**](https://msdn.microsoft.com/library/windows/apps/Dn895004) realidad, corresponde a un controlador de batería. Según el dispositivo, unas veces se adjunta el controlador a la batería física y otras a la carcasa del dispositivo. Por tanto, es posible crear un objeto de batería, incluso cuando no hay baterías presentes. Otras veces, el objeto de batería puede ser **null**.
+**Nota**una clase de [**batería**](https://msdn.microsoft.com/library/windows/apps/Dn895004) realmente corresponde a un controlador de batería. Según el dispositivo, unas veces se adjunta el controlador a la batería física y otras a la carcasa del dispositivo. Por tanto, es posible crear un objeto de batería, incluso cuando no hay baterías presentes. Otras veces, el objeto de batería puede ser **null**.
 
 Una vez tengas un objeto del agregado de batería, llama a [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) para obtener la clase [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) correspondiente.
 

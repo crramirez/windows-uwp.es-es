@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 355c760e173bd101b2865c300824de44b6434ee4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474531"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -80,7 +80,7 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 ## <a name="implicit-animations"></a>Animaciones implícitas
 
-> Animaciones implícitas requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior.
+> Animaciones implícitas requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior.
 
 
 Animaciones implícitas son una forma sencilla de lograr el movimiento de Fluent mediante la interpolación automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
@@ -98,7 +98,7 @@ Implícitamente se pueden animar los cambios en las siguientes propiedades:
 
 Cada propiedad que puede tener cambios implícitamente animados tiene una propiedad de _transición_ correspondiente. Para animar la propiedad, asigna un tipo de transición a la propiedad correspondiente de la _transición_ . Esta tabla muestran las propiedades de _transición_ y el tipo de transición que se usará para cada uno de ellos.
 
-| Propiedad animada | Propiedad de transición | Tipo de transición implícito |
+| Propiedad animada | Propiedad de transición | Tipo de transición implícita |
 | -- | -- | -- |
 | [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |

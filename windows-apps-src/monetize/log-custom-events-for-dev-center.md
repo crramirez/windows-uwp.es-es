@@ -7,11 +7,11 @@ keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log 
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b338fd3b34d530ad365b0377d6b6c6c65398b7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476218"
 ---
 # <a name="log-custom-events-for-partner-center"></a>Registrar eventos personalizados para el Centro de partners
 
@@ -24,7 +24,7 @@ Para registrar un evento personalizado de tu aplicación, pasa la cadena de even
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para revisar los eventos de registro personalizado en el **informe de uso** de la aplicación en el centro de partners, tu aplicación debe publicarse en la tienda.
+Para revisar los eventos de registro personalizado en el **informe de uso** de la aplicación en el centro de partners, la aplicación debe publicarse en la tienda.
 
 ## <a name="how-to-log-custom-events"></a>Cómo registrar eventos personalizados
 

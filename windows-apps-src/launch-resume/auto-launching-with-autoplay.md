@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350945"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473351"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática
 
@@ -218,7 +218,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, inserta una tarjeta de memoria de una cámara u otro dispositivo de almacenamiento de una cámara en el equipo. A continuación, selecciona una de las opciones de evento de contenido que especificaste en el archivo package.appxmanifest de la lista de opciones de Reproducción automática. Este código de muestra solo muestra o copia imágenes de la carpeta DCIM de una tarjeta de memoria de una cámara. Si la tarjeta de memoria de tu cámara almacena imágenes en una carpeta AVCHD o PRIVATE\\ACHD, tendrás que actualizar el código como corresponda.
-    **Nota**si no tienes una tarjeta de memoria de cámara, puedes usar una unidad flash si tiene una carpeta denominada **carpeta DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contenga imágenes.
+    **Nota**si no tienes una tarjeta de memoria de cámara, puedes usar una unidad flash si tiene una carpeta denominada **DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contiene las imágenes.
 
 ## <a name="register-for-an-autoplay-device"></a>Registro para el dispositivo de reproducción automática
 
@@ -364,7 +364,7 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> **Nota**el `GetImageList` y `GetThumbnail` métodos se agregan en el paso siguiente.
+> **Nota**el `GetImageList` y `GetThumbnail` métodos se agregan en el siguiente paso.
 
 ### <a name="step-6-add-code-to-display-images"></a>Paso 6: Agregar código para mostrar imágenes
 
@@ -407,7 +407,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, conecta una cámara al equipo. Después, selecciona la aplicación en la lista de opciones de Reproducción automática.
-    **Nota**no todas las cámaras se anuncian para el evento de dispositivo de reproducción automática **WPD\\ImageSource** .
+    **Nota**no todas las cámaras se anuncian para el evento de dispositivo de reproducción automática de **WPD\\ImageSource** .
 
 ## <a name="configure-removable-storage"></a>Configurar el almacenamiento extraíble
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, UWP, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, valoraciones, ratings
 ms.localizationpriority: medium
 ms.openlocfilehash: 32f32d3389a340c25d99ec0f0a68e0c20af89c2b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327620"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473725"
 ---
 # <a name="get-app-ratings"></a>Obtener las valoraciones de la aplicación
 
-Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de críticas](../publish/reviews-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de opiniones](../publish/reviews-report.md) en el centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

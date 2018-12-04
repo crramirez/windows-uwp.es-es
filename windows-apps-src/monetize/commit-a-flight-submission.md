@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de envío de MicrosoftStore, confirmar envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 820e10695cce2d6242a51b0017d2fe3981cf77b1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473642"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar un envío de paquete piloto
 
-Usa este método en la API de envío de Microsoft Store para confirmar un envío de piloto del paquete nuevo o actualizado al centro de partners. El centro de partners alertas de confirmación acción se que los datos de envío se han cargado (incluidos los paquetes relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío para su ingesta y publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
+Usa este método en la API de envío de Microsoft Store para confirmar un envío de piloto del paquete nuevo o actualizado al centro de partners. El centro de partners alertas de confirmación acción se que los datos de envío se han cargado (incluidos los paquetes relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío de la recopilación y la publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de creación de un envío de paquete piloto mediante la API de envío de Microsoft Store, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
 

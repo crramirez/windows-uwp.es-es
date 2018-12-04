@@ -7,23 +7,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a24e038dc2645b0aea7b1e7e516886af9a9e6f09
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329235"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474907"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
 
 Para poder recibir dinero ventas de aplicaciones en Microsoft Store, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios en [El centro de partners](https://partner.microsoft.com/dashboard).
 
-Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que quieres vender aplicaciones (o complementos), puedes configurar tu cuenta de pago y rellenar formularios fiscales en ese momento. No podrás enviar aplicaciones ni complementos de pago hasta que no hayas completado tu cuenta de pago y tu perfil fiscal.
+Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (o complementos), puedes configurar tu cuenta de pago y rellenar formularios fiscales en ese momento. No podrás enviar aplicaciones ni complementos de pago hasta que no hayas completado tu cuenta de pago y tu perfil fiscal.
 
 > [!NOTE]
 > En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores solo pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
 
-Una vez que tengas que [configurar tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer antes de que puedes vender aplicaciones (o complementos) en Microsoft Store:
+Después de que tienes que [configurar tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer antes de que puedes vender aplicaciones (o complementos) en Microsoft Store:
 
 -   [Configurar tu cuenta de pago](#payout-account)
 -   [Completar los formularios fiscales](#tax-forms)
@@ -144,7 +144,7 @@ Puedes completar y enviar los formularios fiscales vía en el centro de partners
 4.  Responde a las preguntas sobre residencia y nacionalidad estadounidense y haz clic en **Siguiente**.
 5.  Si se muestra la información de tu nombre y dirección, confirma dicha información para la declaración de impuestos.
 
-A continuación verás versiones electrónicas de los formularios fiscales que debes completar. Independientemente de tu país o región de residencia o nacionalidad, debes rellenar formularios fiscales de los Estados Unidos para vender cualquier aplicación o complementos a través de Microsoft Store. Los desarrolladores que cumplan con ciertos requisitos de residencia de los Estados Unidos deben completar un formulario IRS W-9. Otros desarrolladores que se encuentran fuera de los Estados Unidos deben completar un formulario IRS W-8. Puedes completar estos formularios en línea mientras completas tu perfil fiscal.
+A continuación verás versiones electrónicas de los formularios fiscales que debes completar. Independientemente de su país o región de residencia o nacionalidad, debes rellenar formularios fiscales de los Estados Unidos para vender cualquier aplicación o complementos a través de Microsoft Store. Los desarrolladores que cumplan con ciertos requisitos de residencia de los Estados Unidos deben completar un formulario IRS W-9. Otros desarrolladores que se encuentran fuera de los Estados Unidos deben completar un formulario IRS W-8. Puedes completar estos formularios en línea mientras completas tu perfil fiscal.
 
 No es necesario contar con un Número de Identificación del contribuyente individual (o ITIN) de los Estados Unidos para recibir pagos de Microsoft ni para reclamar beneficios por tratado fiscal.
 

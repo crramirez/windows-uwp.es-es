@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, paquetes, carga, disponibilidad de familia de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 217a6ab9f25ee533a754138db5cf83c2ac81e3e9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473905"
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
@@ -51,9 +51,9 @@ Si vas a enviar una aplicación para UWP para Windows 10 IoT Core, no debes real
 Si tu envío para una aplicación publicada anteriormente incluye paquetes que se pueden ejecutar en **Windows 8/8.1** y **de Windows Phone 8.x y versiones anteriores**, dichos paquetes estarán disponibles para los clientes con esas versiones de sistema operativo. Si quieres dejar de ofrecer la aplicación a estos clientes, quita los paquetes correspondientes del envío.
 
 > [!IMPORTANT]
-> Para impedir totalmente que una determinada familia de dispositivos de Windows 10 obtenga el envío, actualiza el elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) en el manifiesto de destino solo la familia de dispositivos que quieres admitir (es decir, Windows.Mobile o Windows.Desktop), en su lugar que dejarlo como el valor Windows.Universal (correspondiente a la familia de dispositivos universal) Microsoft Visual Studio incluye en el manifiesto de manera predeterminada.
+> Para impedir totalmente que una determinada familia de dispositivos de Windows 10 obtenga el envío, actualiza el elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) en el manifiesto como destino la familia de dispositivos que quieres admitir (es decir, Windows.Mobile o Windows.Desktop), en su lugar que dejarlo como el valor Windows.Universal (correspondiente a la familia de dispositivos universal) Microsoft Visual Studio incluye en el manifiesto de manera predeterminada.
 
-Es importante tener en cuenta que las selecciones que realices en la sección **Disponibilidad de familia de dispositivos** solo se aplican a las nuevas adquisiciones. Cualquiera que ya tenga la aplicación puede seguir usándola y obtener cualquier actualización que envíes, aunque quites aquí su familia de dispositivos. Esto se aplica incluso a los clientes que adquieren la aplicación antes de actualizar a Windows 10. Por ejemplo, si tienes una aplicación publicada con los paquetes de Windows Phone 8.1, y agregar un paquete de Windows 10 (UWP) destinadas a la familia de dispositivos Windows.Universal, los clientes móviles de Windows 10 que tenían el paquete de Windows Phone 8.1 se ofrecerá una actualización a esta Windows Empaquetar 10 (UWP), incluso si has sin marcar la casilla para **Windows 10 Mobile**.
+Es importante tener en cuenta que las selecciones que realices en la sección **Disponibilidad de familia de dispositivos** solo se aplican a las nuevas adquisiciones. Cualquiera que ya tenga la aplicación puede seguir usándola y obtener cualquier actualización que envíes, aunque quites aquí su familia de dispositivos. Esto se aplica incluso a los clientes que adquieren la aplicación antes de actualizar a Windows 10. Por ejemplo, si tienes una aplicación publicada con los paquetes de Windows Phone 8.1 y agregar un paquete de Windows 10 (UWP) destinadas a la familia de dispositivos Windows.Universal, Windows 10 mobile a los clientes que tenían el paquete de Windows Phone 8.1 se ofrecerá una actualización a esta Windows Paquete de 10 (UWP), incluso si has sin marcar la casilla de **Windows 10 Mobile**.
 
 Para obtener más información sobre las familias de dispositivos, consulta [**Información general sobre las familias de dispositivos**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 
@@ -62,7 +62,7 @@ Para obtener más información sobre las familias de dispositivos, consulta [**I
 
 Además de permitirte indicar qué familias de dispositivos de Windows 10 pueden descargar el envío, la sección de la **disponibilidad de familias de dispositivo** muestra los paquetes específicos que estarán disponibles para distintas familias de dispositivo. Si tienes más de un paquete que se pueda ejecutar en una determinada familia de dispositivos, la tabla indicará el orden en el que se ofrecerán los paquetes, en función de los números de versión de los mismos. Para obtener más información acerca de la manera en que la Store clasifica los paquetes según sus números de versión, consulta [Numeración de la versión del paquete](package-version-numbering.md). 
 
-Como ejemplo, supongamos que tienes dos paquetes: Package_A.appxupload y Package_B.appxupload. En una familia de dispositivos determinada si Package_A.appxupload está clasificado en el puesto número 1 y Package_B.appxupload está en el puesto número 2, en el momento en que un cliente que usa un dispositivo de esta familia compra la aplicación, la Store intentará entregar el paquete Package_A.appxupload. Si el dispositivo del cliente no puede ejecutar el paquete Package_A.appxupload, la Tienda le ofrecerá el paquete Package_B.appxupload. Si el dispositivo del cliente no puede ejecutar ninguno de los paquetes para esa familia (por ejemplo, si admite la **MinVersion** tu aplicación es mayor que la versión en el dispositivo del cliente), a continuación, el cliente no podrá descargar la aplicación en ese dispositivo.
+Como ejemplo, supongamos que tienes dos paquetes: Package_A.appxupload y Package_B.appxupload. En una familia de dispositivos determinada si Package_A.appxupload está clasificado en el puesto número 1 y Package_B.appxupload está en el puesto número 2, en el momento en que un cliente que usa un dispositivo de esta familia compra la aplicación, la Store intentará entregar el paquete Package_A.appxupload. Si el dispositivo del cliente no puede ejecutar el paquete Package_A.appxupload, la Tienda le ofrecerá el paquete Package_B.appxupload. Si el dispositivo del cliente no puede ejecutar ninguno de los paquetes para esa familia (por ejemplo, si admite la **MinVersion** la aplicación es mayor que la versión en el dispositivo del cliente), a continuación, el cliente no podrá descargar la aplicación en ese dispositivo.
 
 > [!NOTE]
 > Los números de versión en los paquetes .xap (para aplicaciones publicadas anteriormente) no se consideran al determinar qué paquete proporcionar a un cliente determinado. Por este motivo, si tienes más de un paquete .xap con la misma clasificación, verás un asterisco en lugar de un número y los clientes recibirán cualquiera de los paquetes. Para proporcionar a un cliente un paquete .xap más reciente, asegúrate de quitar el antiguo paquete .xap del nuevo envío.

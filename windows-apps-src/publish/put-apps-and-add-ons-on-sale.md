@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c844c37bab8a135468d74558e8dc053b18d48cc
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352229"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473805"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Poner a la venta aplicaciones y complementos
 
@@ -25,7 +25,7 @@ Cuando usas la sección **Precio de oferta** de la página **Precios y disponibi
 Durante el período de tiempo que tu producto esté rebajado, los clientes podrán comprarlo a un precio inferior durante el período de tiempo seleccionado. Si reduces el precio a **Gratis**, podrán descargarlo sin pagar nada durante el periodo de oferta.
 
 > [!IMPORTANT]
-> Precio de oferta solo se muestra a los clientes en los dispositivos Windows 10, incluida la Xbox One. Las ventas que ofrece solo a los propietarios de uno de tus otros productos solo se muestran a los clientes de Windows 10, versión 1607 o posterior.
+> Precio de oferta solo se muestra a los clientes en los dispositivos de Windows 10, incluida la Xbox One. Las ventas que puedes ofrecer únicamente a los propietarios de uno de tus otros productos solo se muestran a los clientes de Windows 10, versión 1607 o posterior.
 > 
 > En otros sistemas operativos, los clientes verán el precio normal de la aplicación o el complemento y no podrán adquirirlos al precio de oferta. Siempre puedes cambiar un precio eligiendo una franja de precios diferente en un nuevo envío, pero no se mostrará como una oferta por tiempo limitado.
 
