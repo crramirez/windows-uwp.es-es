@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485547"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapas en un grupo de iconos
 
@@ -31,7 +31,7 @@ Nos gustaría explorar qué almacenamiento podría necesitar la tabla de página
 
 Supongamos que cada entrada de la tabla de página es de 64 bits.
 
-La tabla de página peor para una sola superficie, dada la recursos en Direct3D11, supongamos que un recurso de streaming se crea con un formato de 128 bits por elemento (por ejemplo, un flotante RGBA), por lo tanto, un icono de 64KB contiene solo 4096 píxeles. El tamaño máximo admitido de [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (pero con solo un mapa MIP único) necesitaría aproximadamente 1GB de almacenamiento en la tabla de página si se llena del todo (sin incluir los mapas MIP) con entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3GB.
+La tabla de página peor para una sola superficie, dada los límites de recursos en Direct3D11, supongamos que un recurso de streaming se crea con un formato de 128 bits por elemento (por ejemplo, un flotante RGBA), por lo tanto, un icono de 64KB contiene solo 4096 píxeles. El tamaño máximo admitido de [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (pero con solo un mapa MIP único) necesitaría aproximadamente 1GB de almacenamiento en la tabla de página si se llena del todo (sin incluir los mapas MIP) con entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3GB.
 
 Este caso daría acceso a aproximadamente 10,6 terabytes de memoria direccionable. Puede haber un límite en la cantidad de memoria direccionable, pero podría reducir estas cantidades, quizás alrededor del rango de terabytes.
 

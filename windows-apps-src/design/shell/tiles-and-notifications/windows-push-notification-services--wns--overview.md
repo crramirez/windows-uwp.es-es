@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f131ad229b4ba22f7fa4652aa302e3596819f206
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8331890"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485417"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
  
@@ -72,7 +72,7 @@ En un nivel alto, la cadena de información es la siguiente:
 
 En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Indica tu SID de paquete en el campo "client\_id" y tu clave secreta en el campo "client\_secret". Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
 
-**Nota**esto es solo un ejemplo, no copiar y pegar el código que puedes usar correctamente en su propio código.
+**Nota**esto es solo un ejemplo, el código de no copiar y pegar que puedes usar correctamente en su propio código.
 
  
 
@@ -169,7 +169,7 @@ No hay ninguna forma de comprobar el estado de estos dos valores, pero puedes co
 
 Si la aplicación depende en gran medida de las notificaciones de inserción, te recomendamos que notifiques a los usuarios que no pueden recibir notificaciones mientras esté activado el ahorro de batería y para que les resulte más fácil ajustar la **configuración de ahorro de batería**. Con el esquema URI de configuración de ahorro de batería en Windows 10, `ms-settings:batterysaver-settings`, puedes proporcionar un vínculo práctico a la aplicación configuración.
 
-**Sugerencia**  al notificar al usuario sobre la configuración de ahorro de batería, te recomendamos que proporciones una forma de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
+**Sugerencia**  al notificar al usuario acerca de la configuración de ahorro de batería, te recomendamos que proporciones una forma de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
 
  
 

@@ -6,13 +6,13 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340733"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485101"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio reclamar y habilitar el modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio de notificación y habilitar el modelo
 
 ## <a name="claiming-for-exclusive-use"></a>Reclamar para uso exclusivo
 
@@ -21,7 +21,7 @@ Después de haber creado un objeto de dispositivo PointOfService correctamente, 
 > [!Note]
 > La acción de notificación establece un bloqueo exclusivo para un dispositivo, pero no se coloca en un estado operativo.  Para obtener más información, consulta [Habilitar el dispositivo para las operaciones de E/S](#Enable-device-for-I/O-operations) .
 
-### <a name="apis-used-to-claim--release"></a>Las API que se usan para reclamar / versión
+### <a name="apis-used-to-claim--release"></a>Las API que se usan para reclamar / liberar
 
 |Dispositivo|Notificación | Lanzamiento | 
 |-|:-|:-|
@@ -34,7 +34,7 @@ Después de haber creado un objeto de dispositivo PointOfService correctamente, 
 
 ## <a name="enable-device-for-io-operations"></a>Habilitar el dispositivo para las operaciones de E/S
 
-La acción de notificación simplemente establece una derechos exclusivos en el dispositivo, pero no se coloca en un estado operativo.  Para poder recibir eventos o realizar operaciones salida debes habilitar el dispositivo mediante **EnableAsync**.  Por el contrario, puedes llamar a **DisableAsync** para dejar de escuchar eventos desde el dispositivo o la realización de salida.  También puedes usar **IsEnabled** para determinar el estado del dispositivo.
+La acción de notificación simplemente establece un derechos exclusivos en el dispositivo, pero no se coloca en un estado operativo.  Para poder recibir eventos o realizar operaciones salida debes habilitar el dispositivo mediante **EnableAsync**.  Por el contrario, puedes llamar a **DisableAsync** para dejar de escuchar eventos desde el dispositivo o la realización de salida.  También puedes usar **IsEnabled** para determinar el estado del dispositivo.
 
 ### <a name="apis-used-enable--disable"></a>API que se usan habilitan / deshabilitar
 

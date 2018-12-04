@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, EGL, DXGI, Direct3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 1279d5100aa00e1b94d7d56b472a0574d22c3416
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486302"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL con DXGI y Direct3D
 
@@ -28,7 +28,7 @@ DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol 
 
 DXGI y Direct3D, al igual que EGL, proporcionan métodos para configurar recursos gráficos, obtener un contexto de representación en el que tus sombreadores puedan dibujar y para mostrar los resultados en una ventana. No obstante, DXGI y Direct3D tienen algunas opciones más y demandan más esfuerzo para configurarse correctamente cuando se portan desde EGL.
 
-> **Nota**  esta guía se basa en especificación abierta del grupo Khronos para EGL 1.4, que se encuentran aquí: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - 6 de April de 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Las diferencias en la sintaxis específica de otras plataformas y lenguajes de desarrollo no se analizan en esta guía.
+> **Nota**  esta guía se basa en especificación abierta del grupo Khronos para EGL 1.4, se encuentra aquí: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - 6 de April de 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Las diferencias en la sintaxis específica de otras plataformas y lenguajes de desarrollo no se analizan en esta guía.
 
  
 
@@ -72,7 +72,7 @@ A continuación, te describimos el modo más básico de configurar una pantalla 
 6.  Cuando la canalización se haya ejecutado y se haya dibujado un fotograma en el búfer de reserva, muéstralo en pantalla con [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
 
 Echa un vistazo a [Getting Started with DirectX Graphics (Introducción a los gráficos DirectX)](https://msdn.microsoft.com/library/windows/desktop/hh309467) para estudiar este proceso con mayor detenimiento. En lo que queda de artículo se abordarán muchos de los pasos básicos habituales para configurar y administrar la canalización de gráficos.
-> **Nota**  las aplicaciones de escritorio de Windows tienen diferentes API para obtener una cadena de intercambio de Direct3D, como [**d3d11device:: createdeviceandswapchain**](https://msdn.microsoft.com/library/windows/desktop/ff476083)y no uses un objeto de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) .
+> **Nota**  aplicaciones de escritorio de Windows tienen diferentes API para obtener una cadena de intercambio de Direct3D, como [**d3d11device:: createdeviceandswapchain**](https://msdn.microsoft.com/library/windows/desktop/ff476083)y no se usa un objeto de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) .
 
  
 

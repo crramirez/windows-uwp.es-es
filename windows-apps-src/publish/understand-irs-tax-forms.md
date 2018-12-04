@@ -7,11 +7,11 @@ keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impue
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485805"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -29,22 +29,22 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
 > [!NOTE]
 > La dirección que se usa en los formularios fiscales del IRS proviene de la dirección en tu [perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Si ha cambiado tu dirección, asegúrate de actualizarla en tu **Perfil fiscal**.
 
-Los formularios fiscales se enviará a usted desde las siguientes direcciones:
+Enviará los formularios fiscales de las siguientes direcciones:
 
 **Ciudadanos de Estados Unidos:**
 <table>
-<tr><th>Grupo de empresas</th><th>Entidad jurídica</th><th>Dirección</th></tr>
+<tr><th>Grupo de negocio</th><th>Entidad jurídica</th><th>Dirección</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 EE.</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE</td></tr>
+<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil carretera<br>Reno, NV 89511 EE</td></tr>
 <table> 
 
 **Ciudadanos EE:**
 <table>
-<tr><th>Grupo de empresas</th><th>Entidad jurídica</th><th>Dirección</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Corporation a través de Microsoft Irlanda actúa como intermediario calificado de Microsoft Corporation)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
-<tr><td>La publicidad *</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Online Inc. a través de Microsoft Irlanda actúa como agente de pago de Microsoft Online Inc.)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE</td></tr>
-<tr><td colspan="3">* Se te pagará ciudadanos de los siguientes países ganancias ingresos publicitarios a través de Microsoft Irlanda Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, Isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, países bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza, Reino Unido</td></tr>
+<tr><th>Grupo de negocio</th><th>Entidad jurídica</th><th>Dirección</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Corporation a través de Microsoft Irlanda actúa como intermediario completo de Microsoft Corporation)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
+<tr><td>Publicidad *</td><td>Microsoft Irlanda Operations Limited (pago se realiza por Microsoft Online Inc. a través de Microsoft Irlanda actúa como agente de pago de Microsoft Online Inc.)</td><td>Un solo lugar de Microsoft<br>Sur&nbsp;provincia&nbsp;empresas&nbsp;Park<br>Leopardstown, Irlanda Dublin 18</td></tr>
+<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil carretera<br>Reno, NV 89511 EE</td></tr>
+<tr><td colspan="3">* Ciudadanos de los siguientes países ganancias ingresos publicitarios se pagarán a través del límite de operaciones de Microsoft Irlanda: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, Isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, países bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza, Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para los desarrolladores que se encuentran en los Estados Unidos

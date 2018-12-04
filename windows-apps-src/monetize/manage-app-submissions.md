@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482210"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -637,7 +637,7 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 | fallbackSubmissionId    |  cadena   |  El id. del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
 > [!NOTE]
-> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no están destinados a ser establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
+> Los valores *packageRolloutStatus* y *fallbackSubmissionId* centro de partners y no está previstos que los establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
 
 <span id="trailer-object" />
 
@@ -724,7 +724,7 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 |  Base               |   No se establece la franja de precios; usa el precio base para la aplicación.      |     
 |  NotAvailable              |   La aplicación no está disponible en la región especificada.    |     
 |  Free              |   La aplicación es gratuita.    |    
-|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio franjas que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo de **tabla de vista** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).    |
+|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio niveles que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo **Ver la tabla** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).    |
 
 
 <span id="enterprise-licensing" />

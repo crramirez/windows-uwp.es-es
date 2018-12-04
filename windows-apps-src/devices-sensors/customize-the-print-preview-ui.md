@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
 ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485281"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de vista previa de impresión
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Importante**llamar a () [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)quita todas las opciones de impresión de la interfaz de usuario, incluido el vínculo de **opciones más** de vista previa de impresión. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
+**Importante**llamar a () [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453), todas las opciones de impresión quita de la interfaz de usuario, incluido el vínculo de **configuración más** de vista previa de impresión. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
 
 ### <a name="specify-default-options"></a>Especificar las opciones predeterminadas
 

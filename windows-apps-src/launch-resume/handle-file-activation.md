@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324816"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482054"
 ---
 # <a name="handle-file-activation"></a>Administrar la activación de archivos
 
@@ -123,9 +123,9 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 > [!NOTE]
 > Cuando se inicia mediante un contrato de archivo, asegúrate de que el botón Atrás lleve al usuario volver a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
 
-Te recomendamos que crees un nuevo XAML **fotograma** para cada evento de activación que abra una nueva página. De este modo, el objeto backstack de navegación del nuevo marco de XAML no contiene ningún contenido anterior que la aplicación en la ventana actual al pasar a suspensión. Si decides usar un único **fotograma** de XAML para el inicio y para los contratos de archivo, se deben borrar las páginas en el **marco**del diario de navegación antes de ir a una página nueva.
+Te recomendamos que crees un nuevo XAML **marco** para cada evento de activación que abra una nueva página. De este modo, el objeto backstack de navegación para el nuevo marco de XAML no contiene ningún contenido anterior que la aplicación en la ventana actual al pasar a suspensión. Si decides usar un único **fotograma** de XAML para el inicio y para los contratos de archivo, debe borrar las páginas en el **marco**del diario de navegación antes de ir a una página nueva.
 
-Cuando se inicia la aplicación a través de la activación de archivos, considera la posibilidad de una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
+Cuando se inicia la aplicación a través de la activación de archivos, considera la posibilidad de interfaz de usuario que permite al usuario volver a la página superior de la aplicación.
 
 ## <a name="remarks"></a>Observaciones
 

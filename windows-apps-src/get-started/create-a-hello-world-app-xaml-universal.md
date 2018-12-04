@@ -1,25 +1,25 @@
 ---
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Aprender a crear una aplicación "Hola mundo" (XAML)
-description: Usar el lenguaje de marcado de aplicaciones Extensible (XAML) con C# para crear una sencilla aplicación Hello world destinada a la plataforma Universal de Windows (UWP) en Windows 10.
+description: Usar el lenguaje de marcado de aplicaciones Extensible (XAML) con C# para crear una sencilla aplicación Hello world la plataforma Universal de Windows (UWP) de Windows 10.
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, hola mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326545"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484751"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
-Este tutorial te enseña a usar XAML y C# para crear una sencilla "Hello, world" aplicación para la plataforma Universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes crear una aplicación que se ejecute en cualquier dispositivo Windows 10.
+Este tutorial te enseña a usar XAML y C# para crear una sencilla "Hello, world" aplicación para la plataforma Universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes crear una aplicación que se ejecuta en cualquier dispositivo Windows 10.
 
 Aquí aprenderás a:
 
--   Crea un nuevo proyecto de **Visual Studio 2017** que está destinada a **Windows 10** y la **UWP**.
+-   Crear un nuevo proyecto de **Visual Studio 2017** destinado a **Windows 10** y la **UWP**.
 -   Escribir XAML para cambiar la interfaz de usuario en la página de inicio.
 -   Ejecutar el proyecto en el escritorio local de Visual Studio.
 -   Usar un SpeechSynthesizer para que la aplicación hable al presionar un botón.
@@ -46,7 +46,7 @@ Aquí aprenderás a:
 
 2.  En el menú **archivo** , selecciona **Nuevo > proyecto** para abrir el cuadro de diálogo *Nuevo proyecto* .
 
-3.  En la lista de plantillas del lado de la izquierda, elige **instalado > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
+3.  En la lista de plantillas de la izquierda, elige **instalado > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
 
     (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulta [Prepárate](get-set-up.md)).
 
@@ -96,11 +96,11 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 -   Incluye una lista de dependencias, recursos y los archivos que contiene la aplicación.
 
 *Conjunto de imágenes de logotipo*
--   Assets/Square150x150Logo.scale-200.png y Wide310x150Logo.scale 200.png representan la aplicación (medio o todo el tamaño) en el menú Inicio.
+-   Assets/Square150x150Logo.scale-200.png y Wide310x150Logo.scale 200.png representan la aplicación (tamaño medio o todo) en el menú Inicio.
 -   Assets/Square44x44Logo.png representa la aplicación en la lista de aplicaciones del menú Inicio, barra de tareas y el Administrador de tareas.
 -   Assets/StoreLogo.png representa tu aplicación en Microsoft Store.
 -   Assets/SplashScreen.scale-200.png es la pantalla de presentación que se muestra cuando se inicia la aplicación.
--   Assets/LockScreenLogo.scale-200.png puede usarse para representar la aplicación en la pantalla de bloqueo, si el sistema está bloqueado.
+-   Assets/LockScreenLogo.scale-200.png puede usarse para representar la aplicación en la pantalla de bloqueo cuando el sistema está bloqueado.
 
 ## <a name="step-2-adding-a-button"></a>Paso 2: Adición de un botón
 

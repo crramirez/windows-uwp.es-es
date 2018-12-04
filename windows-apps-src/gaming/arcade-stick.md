@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, stick arcade, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486150"
 ---
 # <a name="arcade-stick"></a>Stick arcade
 
@@ -53,7 +53,7 @@ Los sticks arcade no se asignan a ninguno de los comandos del [conjunto opcional
 
 ## <a name="detect-and-track-arcade-sticks"></a>Detección y seguimiento de los sticks arcade
 
-Arcade de detección y seguimiento vuelo funciona exactamente del mismo modo que para los controladores para juegos, excepto con la clase [ArcadeStick][] en lugar de la clase del [controlador para juegos](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) . Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
+Detección y seguimiento sticks arcade funciona exactamente del mismo modo que lo hace para los controladores para juegos, excepto con la clase [ArcadeStick][] en lugar de la clase del [controlador para juegos](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) . Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
 
 <!-- Arcade sticks are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected arcades sticks and events to notify you when an arcade stick is added or removed.
 
@@ -141,14 +141,14 @@ Además del estado del stick arcade, cada lectura incluye una marca de tiempo qu
 
 ### <a name="reading-the-buttons"></a>Lectura de los botones
 
-Cada uno de los botones del stick arcade&mdash;las cuatro direcciones del joystick, seis botones de **acción** y dos botones **especiales** &mdash;proporciona una lectura digital que indica si está presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración [ArcadeStickButtons][] .
+Cada uno de los botones del stick arcade&mdash;las cuatro direcciones del joystick, seis botones de **acción** y dos botones **especiales** &mdash;proporciona una lectura digital que indica si está presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración de [ArcadeStickButtons][] .
 
 > [!NOTE]
 > Los sticks Arcade están equipados con botones adicionales que se usan para la navegación de la interfaz de usuario, como los botones de **vista** y de **menú** . Estos botones no forman parte de la enumeración `ArcadeStickButtons` y solo se pueden leer accediendo al stick arcade como dispositivo de navegación de la interfaz de usuario. Para obtener más información, consulta [UI Navigation Device (Dispositivo de navegación de la interfaz de usuario)](ui-navigation-controller.md).
 
 Los valores de los botones se leen en la propiedad `Buttons` de la estructura [ArcadeStickReading][]. Dado que esta propiedad es un campo de bits, se usa el enmascaramiento bit a bit para aislar el valor del botón que te interesa. El botón está presionado (abajo) cuando se establece el bit correspondiente; de lo contrario no lo está (arriba).
 
-En el ejemplo siguiente se determina si el botón de **acción 1** está presionado.
+En el ejemplo siguiente se determina si se presiona el botón de **acción 1** .
 
 ```cpp
 if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action1))

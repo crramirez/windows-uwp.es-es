@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, sonidos
 ms.localizationpriority: medium
 ms.openlocfilehash: 94044e3d10df15cb1cb256d86ced798395e6af6f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340934"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485587"
 ---
 # <a name="add-sound"></a>Agregar sonido
 
-En este tema, creamos un sencillo motor de sonido con [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) API. Si estás familiarizado con __XAudio2__, hemos incluido una breve introducción en [los conceptos de Audio](#audio-concepts).
+En este tema, se crea un motor de sonido simple con [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) API. Si estás familiarizado con __XAudio2__, hemos incluido una breve introducción en [los conceptos de Audio](#audio-concepts).
 
 >[!Note]
 >Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Ten en cuenta que este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -42,7 +42,7 @@ Hay tres partes principales en preparación para la reproducción de audio en un
 
 Todas se definen en el método [simple3dgame:: Initialize](#simple3dgameinitialize-method) . Así que vamos a examinar en primer lugar este método y, a continuación, entrar en más detalles en cada una de las secciones.
 
-Tras configurar, aprender cómo desencadenar los efectos de sonido para reproducir. Para obtener más información, ve a [reproducir el sonido](#play-the-sound).
+Después de configurar, aprender cómo desencadenar los efectos de sonido para reproducir. Para obtener más información, ve a [reproducir el sonido](#play-the-sound).
 
 ### <a name="simple3dgameinitialize-method"></a>Método simple3dgame:: Initialize
 
@@ -50,17 +50,17 @@ En __simple3dgame:: Initialize__, donde también se inicializan __m\_controller_
 
  * Crear __m\_audioController__, que es una instancia de la clase de [Audio](#audioh) .
  * Crear los recursos de audio necesarios, mediante el método [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) . Aquí, dos objetos de __XAudio2__ &mdash; un objeto de motor de música y un objeto de motor de sonido y una voz de procesamiento para cada uno de ellos se crearon. El objeto de motor de música puede usarse para reproducir música de fondo para tu juego. El motor de sonido puede usarse para reproducir efectos de sonido en el juego. Para obtener más información, consulta [crear e inicializar los recursos de audio](#create-and-initialize-the-audio-resources).
- * Crear __mediaReader__, que es una instancia de clase de [MediaReader](#mediareaderh) . [MediaReader](#mediareaderh), que es una clase auxiliar para la clase [SoundEffect](#soundeffecth) , lee pequeños archivos de audio de forma sincrónica de ubicación del archivo y devuelve los datos de sonido como una matriz de bytes.
+ * Crear __mediaReader__, que es una instancia de clase de [MediaReader](#mediareaderh) . [MediaReader](#mediareaderh), que es una clase auxiliar para la clase [SoundEffect](#soundeffecth) , lee pequeños archivos de audio de manera sincrónica de ubicación del archivo y devuelve los datos de sonido como una matriz de bytes.
  * Usar [mediareader:: Loadmedia](#mediareaderloadmedia-method) para cargar archivos de sonido desde su ubicación y crea una variable de __targetHitSound__ para contener los datos de sonido .wav cargado. Para obtener más información, consulta el [archivo de audio de carga](#load-audio). 
 
-Efectos de sonido se asocian con el objeto del juego. Por lo tanto, cuando se produce una colisión con ese objeto del juego, activa el efecto de sonido que se reproduzca. En esta muestra de juego tenemos efectos de sonido para la munición (lo que usamos para disparar a objetivos con) y para el destino. 
+Efectos de sonido se asocian con el objeto del juego. Por lo tanto, cuando se produce una colisión con ese objeto de juego, activa el efecto de sonido que se reproduzca. En esta muestra de juego tenemos efectos de sonido para la munición (lo que usamos para disparar a objetivos con) y el destino. 
     
 * En la clase __GameObject__ , hay una propiedad __HitSound__ que se usa para asociar el efecto de sonido en el objeto.
 * Crea una nueva instancia de la clase [SoundEffect](#soundeffecth) e inicializarlo. Durante la inicialización, se crea una voz de origen para el efecto de sonido. 
-* Esta clase emite un sonido con una voz de procesamiento proporcionada por la clase de [Audio](#audioh) . Datos de sonido se leen en la ubicación del archivo mediante la clase [MediaReader](#mediareaderh) . Para obtener más información, consulta [asociar sonido al objeto](#associate-sound-to-object).
+* Esta clase reproduce un sonido con una voz de procesamiento proporcionada por la clase de [Audio](#audioh) . Datos de sonido se leen en la ubicación del archivo mediante la clase [MediaReader](#mediareaderh) . Para obtener más información, vea [asociar el sonido de objeto](#associate-sound-to-object).
 
 >[!Note]
->El desencadenador real para reproducir el sonido viene determinado por el movimiento y la colisión de estos objetos del juego. Por lo tanto, la llamada a estos realmente sonidos se definen en el método [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) . Para obtener más información, ve a [reproducir el sonido](#play-the-sound).
+>El desencadenador real para reproducir el sonido viene determinado por el movimiento y la colisión de estos objetos del juego. Por lo tanto, la llamada a realmente estos sonidos se definen en el método [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) . Para obtener más información, ve a [reproducir el sonido](#play-the-sound).
 
 ```cpp
 void Simple3DGame::Initialize(
@@ -177,11 +177,11 @@ Este método usa las API de [Media Foundation](https://msdn.microsoft.com/librar
 #### <a name="set-up-the-source-reader"></a>Configurar el lector de origen
 
 1. Usar [MFCreateSourceReaderFromURL](https://msdn.microsoft.com/library/windows/desktop/dd388110) para crear un medio de lector de origen ([IMFSourceReader](https://msdn.microsoft.com/library/windows/desktop/dd374655)).
-2. Usa [MFCreateMediaType](https://msdn.microsoft.com/library/windows/desktop/ms693861) para crear un objeto de tipo ([IMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms704850)) de media (_mediaType_). Representa una descripción de un formato de medio. 
-3. Especifica que la _mediaType_de salida descodificada es audio PCM, que es un tipo de audio que puede usar __XAudio2__ .
-4. Conjuntos de tipo de los medios de salida descodificado para el lector de origen mediante la llamada [imfsourcereader:: Setcurrentmediatype](https://msdn.microsoft.com/library/windows/desktop/dd374667.aspx).
+2. Usar [MFCreateMediaType](https://msdn.microsoft.com/library/windows/desktop/ms693861) para crear un objeto de tipo ([IMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms704850)) de media (_mediaType_). Representa una descripción de un formato de medio. 
+3. Especificar que del _mediaType_de de salida descodificada es audio PCM, que es un tipo de audio que puede usar __XAudio2__ .
+4. Establece el medio de salida descodificado tipo para el lector de origen mediante la llamada [imfsourcereader:: Setcurrentmediatype](https://msdn.microsoft.com/library/windows/desktop/dd374667.aspx).
 
-Para obtener más información sobre por qué usamos el lector de origen, vaya a [Lector de orígenes](https://msdn.microsoft.com/library/windows/desktop/dd940436.aspx).
+Para obtener más información sobre por qué usamos el lector de origen, vaya a [Lector de origen](https://msdn.microsoft.com/library/windows/desktop/dd940436.aspx).
 
 #### <a name="describe-the-data-format-of-the-audio-stream"></a>Describir el formato de datos de la secuencia de audio
 
@@ -295,13 +295,13 @@ Platform::Array<byte>^ MediaReader::LoadMedia(_In_ Platform::String^ filename)
 ```
 ## <a name="associate-sound-to-object"></a>Asociar el sonido al objeto
 
-Asociar los sonidos para el objeto tiene lugar cuando el juego se inicializa en el método [simple3dgame:: Initialize](#simple3dgameinitialize-method) .
+Asociación de sonidos para el objeto tiene lugar cuando el juego se inicializa en el método [simple3dgame:: Initialize](#simple3dgameinitialize-method) .
 
 Resumen:
 * En la clase __GameObject__ , hay una propiedad __HitSound__ que se usa para asociar el efecto de sonido en el objeto.
 * Crea una nueva instancia del objeto de clase [SoundEffect](#soundeffecth) y asociarlo con el objeto del juego. Esta clase reproducirá un sonido con __XAudio2__ API.  Usa una voz de procesamiento proporcionada por la clase de [Audio](#audioh) . Los datos de sonido se pueden leer desde la ubicación del archivo mediante la clase [MediaReader](#mediareaderh) .
 
-[SoundEffect:: Initialize](#soundeffectinitialize-method) se usa para inicializar la __SoundEffect__ instancia con los siguientes parámetros de entrada: puntero al objeto de motor de sonido (IXAudio2 objetos creados en el método [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) ), puntero para dar formato a de la .wav con __mediareader:: Getoutputwaveformatex__y los datos de sonido del archivo cargado mediante el método [mediareader:: Loadmedia](#mediareaderloadmedia-method) . Durante la inicialización, también se crea la voz de origen para el efecto de sonido.
+[SoundEffect:: Initialize](#soundeffectinitialize-method) se usa para inicializar la __SoundEffect__ instancia con los siguientes parámetros de entrada: puntero al objeto de motor de sonido (IXAudio2 objetos creados en el método [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) ), puntero al formato de la .wav archivo utilizando __mediareader:: Getoutputwaveformatex__y los datos de sonido cargado mediante el método [mediareader:: Loadmedia](#mediareaderloadmedia-method) . Durante la inicialización, también se crea la voz de origen para el efecto de sonido.
 
 ### <a name="soundeffectinitialize-method"></a>Método SoundEffect:: Initialize
 
@@ -337,7 +337,7 @@ Desencadenadores para reproducir efectos de sonido se definen en [Simple3DGame::
 
 Dado que la interacción de entre objetos en gran medida, varía en función del juego, no vamos a explicar la dinámica de los objetos de juego. Si estás interesado comprender su implementación, ve al método [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) .
 
-En principio, cuando se produce una colisión, desencadena el efecto de sonido para reproducir mediante una llamada a [SoundEffect::PlaySound]((soundeffectplaysound-method). Este método detiene a los efectos de sonido que se está reproduciendo actualmente y coloca el búfer de memoria con los datos de sonido deseados. Usa voz de origen para establecer el volumen, enviar datos de sonido e iniciar la reproducción.
+En principio, cuando se produce una colisión, desencadena el efecto de sonido para reproducir mediante una llamada a [SoundEffect::PlaySound]((soundeffectplaysound-method). Este método detiene los efectos de sonido que se está reproduciendo actualmente y coloca el búfer de memoria con los datos de sonido deseados. Usa voz de origen para establecer el volumen, enviar datos de sonido e iniciar la reproducción.
 
 ### <a name="soundeffectplaysound-method"></a>Método SoundEffect:: PlaySound
 
@@ -382,7 +382,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 ### <a name="simple3dgameupdatedynamics-method"></a>Método Simple3DGame::UpdateDynamics
 
-El método __Simple3DGame::UpdateDynamics__ encarga de la interacción y las colisiones entre objetos del juego. Cuando los objetos colisionan (o se cruzan), desencadena el efecto de sonido asociado a reproducir.
+El método __Simple3DGame::UpdateDynamics__ encarga de la interacción y las colisiones entre objetos del juego. Cuando los objetos entran en conflicto (o se cruzan), que desencadene el efecto de sonido asociado a reproducir.
 
 ```cpp
 void Simple3DGame::UpdateDynamics()
@@ -463,7 +463,7 @@ __AudioX2__ es una API de bajo nivel que proporciona procesamiento de señal y m
 
 ### <a name="xaudio2-voices"></a>Voces de XAudio2
 
-Hay tres tipos de objetos de voz XAudio2: origen, submezcla y las voces de procesamiento. Las voces son que los objetos XAudio2 se usan para procesar y manipular y reproducir datos de audio. 
+Hay tres tipos de objetos de voz XAudio2: origen, submezcla y las voces de procesamiento. Las voces son los objetos XAudio2 que se usan para procesar y manipular y reproducir datos de audio. 
 * Las voces de origen operan en datos de audio proporcionados por el cliente. 
 * Las voces de origen y de submezcla envían su resultado a una o más voces de submezcla o de procesamiento. 
 * Las voces de submezcla y de procesamiento mezclan el audio de todas las voces que les alimentan y trabajan con el resultado. 

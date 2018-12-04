@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: d3460b61e6a9a7c36be6fd87c4dc7fcc1ab811d1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347708"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485241"
 ---
 # <a name="get-daily-app-usage"></a>Obtener el uso diario de la aplicación
 
@@ -83,12 +83,12 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor                     | Tipo    | Descripción                                                               |
 |---------------------------|---------|---------------------------------------------------------------------------|
 | date                      | string  | La primera fecha del intervalo de fechas de los datos de uso. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.        |
-| applicationId             | string  | El identificador de la aplicación para la que estás recuperando los datos de uso de la tienda.          |
+| applicationId             | string  | El identificador de la aplicación para la que quieres recuperar datos de uso de la tienda.          |
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                              |
 | deviceType                | string  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                         |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                          |
-| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación. |
-| subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                            |
+| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación. |
+| subscriptionName          | cadena  | Indica si se uso a través de Xbox Game Pass.                            |
 | dailySessionCount         | long    | El número de sesiones de usuario en ese día.                                  |
 | engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.             |
 | dailyActiveUsers          | long    | El número de clientes que usen la aplicación ese día.                           |

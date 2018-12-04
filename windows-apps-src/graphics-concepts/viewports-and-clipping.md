@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d2a8953d202cc22729f99a096b5fb62cf1131d9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486666"
 ---
 # <a name="viewports-and-clipping"></a>Ventanillas y recortes
 
@@ -57,7 +57,7 @@ Direct3D usa la ubicación de la ventanilla y las dimensiones para escalar los v
 
 Esta matriz escala vértices según las dimensiones de la ventanilla y el intervalo de profundidad deseado y los traslada a la ubicación adecuada en la superficie de destino de representación. La matriz también cambia la coordenada -y para reflejar el origen de la pantalla en la esquina superior izquierda con el aumento de y hacia abajo. Después de aplicar esta matriz, los vértices siguen siendo homogéneos, es decir, siguen existiendo como vértices \[x,y,z,w\], y se deben convertir en coordenadas no homogéneas antes de ser enviadas al rasterizador.
 
-**Nota**  las aplicaciones establecen normalmente MinZ y MaxZ a 0.0 y 1.0 respectivamente para hacer que el sistema representar en el intervalo de profundidad completa. Sin embargo, puedes usar otros valores para lograr algunos efectos. Por ejemplo, puedes establecer ambos valores en 0.0 para forzar a todos los objetos en primer plano, o establecer ambos en 1.0 para representar todos los objetos en segundo plano.
+**Nota**  las aplicaciones establecen normalmente MinZ y MaxZ a 0.0 y 1.0 respectivamente para que represente el rango de profundidad todo el sistema. Sin embargo, puedes usar otros valores para lograr algunos efectos. Por ejemplo, puedes establecer ambos valores en 0.0 para forzar a todos los objetos en primer plano, o establecer ambos en 1.0 para representar todos los objetos en segundo plano.
 
  
 

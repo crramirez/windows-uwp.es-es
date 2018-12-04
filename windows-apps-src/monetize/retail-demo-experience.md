@@ -1,17 +1,17 @@
 ---
 title: Agregar características de demostración (RDX) comercial a la aplicación
-description: Preparar la aplicación para el modo de demostración comercial, lo que ayuda a presentar la aplicación en la tienda comercial.
+description: Preparar la aplicación para el modo de demostración comercial, lo que ayuda a presentar la aplicación en la superficie de ventas comercial.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, aplicación de demostración comercial
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d6baaff5ca2af781e72c9b4643fa1ea0624e0eb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485745"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de demostración (RDX) comercial a la aplicación
 
@@ -19,7 +19,7 @@ Incluir un modo de demostración comercial en la aplicación de Windows, para qu
 
 Cuando los clientes están en un establecimiento comercial, esperan poder probar demostraciones de equipos y dispositivos. A menudo, al gastar una divertirse de su tiempo con aplicaciones a través de la [experiencia de demostración comercial (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
 
-Puedes configurar la aplicación para proporcionar experiencias diferentes mientras se encuentra en los modos _normal_ o _comercial_ . Por ejemplo, si la aplicación se inicia un proceso de instalación, es posible que omita en modo comercial y rellenar previamente la aplicación con la configuración predeterminada y los datos de muestra, por lo que pueden ir directamente.
+Puedes configurar la aplicación para proporcionar experiencias diferentes en los modos _normal_ o _comercial_ . Por ejemplo, si la aplicación se inicia un proceso de instalación, es posible que omita en modo comercial y rellenar previamente la aplicación con la configuración predeterminada y los datos de muestra, por lo que pueden ir directamente.
 
 Desde la perspectiva de nuestros clientes, hay solo una aplicación. Para ayudar a los clientes a distinguir entre los dos modos, te recomendamos que mientras la aplicación está en modo comercial, muestra la palabra "Comercial" un lugar destacado en la barra de título o en una ubicación adecuada.
 
@@ -45,9 +45,9 @@ Esto puede usarse como una lista de comprobación que te ayudarán a prepararse 
 
 Las aplicaciones con reconocimiento de RDX que no cumplan con estos requisitos críticos se quitará todos los dispositivos de demostración comercial tan pronto como sea posible.
 
-* **No solicites la información de identificación personal (PII)**. Esto incluye información de inicio de sesión, la información de cuenta de Microsoft o contacto detalles.
+* **No pedir la información de identificación personal (PII)**. Esto incluye información de inicio de sesión, la información de cuenta de Microsoft o de contacto detalles.
 
-* **Libres de errores de la experiencia**. La aplicación debe ejecutarse sin errores. Además, no deben mostrarse mensajes emergentes o notificaciones de error a los clientes que usan los dispositivos de demostración comercial. Errores negativo en la aplicación propia, tu marca, marca del dispositivo, del fabricante del dispositivo y marca de Microsoft.
+* **Experiencia sin errores**. La aplicación debe ejecutarse sin errores. Además, no deben mostrarse mensajes emergentes o notificaciones de error a los clientes que usan los dispositivos de demostración comercial. Errores de impacto negativo en la aplicación propia, tu marca, marca del dispositivo, del fabricante del dispositivo y marca de Microsoft.
 
 * **Las aplicaciones de pago deben tener un modo de prueba**. La aplicación debe ser gratuita o incluir un [modo de prueba](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
 
@@ -55,13 +55,13 @@ Las aplicaciones con reconocimiento de RDX que no cumplan con estos requisitos c
 
 Las aplicaciones con reconocimiento de RDX que no cumplan con estos requisitos de prioridad alta que se investigar para encontrar una corrección inmediata. Si no se encuentra ninguna corrección inmediata, es posible que la aplicación se quite de todos los dispositivos de demostración comercial.
 
-* **Memorable experiencia sin conexión**. La aplicación debe mostrar una estupenda experiencia sin conexión ya aproximadamente el 50% de los dispositivos están sin conexión en los establecimientos minoristas. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
+* **Memorable experiencia sin conexión**. La aplicación debe mostrar una gran experiencia sin conexión ya que aproximadamente el 50% de los dispositivos están sin conexión en los establecimientos minoristas. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
 
 * **Experiencia de contenido actualizado**. La aplicación nunca debe solicitar actualizaciones cuando en línea. Si se necesitan actualizaciones, se deben realizar de forma silenciosa.
 
 * **Sin comunicaciones anónimas**. Dado que un cliente que usa un dispositivo de demostración comercial es un usuario anónimo, no debe ser capaz de mensaje o recurso compartido de contenido desde el dispositivo.
 
-* **Proporcionar experiencias coherentes con el proceso de limpieza**. Todos los clientes deben tener la misma experiencia cuando usan un dispositivo de demostración comercial. La aplicación debe usar el [proceso de limpieza](#clean-up-process) para regresar al mismo estado predeterminado después de cada uso. No queremos que el cliente siguiente vea la actividad del último cliente. Esto incluye marcadores, logros y desbloqueos.
+* **Proporcionar experiencias coherentes con el proceso de limpieza**. Todos los clientes deben tener la misma experiencia cuando usan un dispositivo de demostración comercial. La aplicación debe usar el [proceso de limpieza](#clean-up-process) para volver al mismo estado predeterminado después de cada uso. No queremos que el cliente siguiente vea la actividad del último cliente. Esto incluye marcadores, logros y desbloqueos.
 
 * **Contenido adecuado según la edad**. Todo el contenido de aplicación debe ser un apto para adolescentes o clasificación inferior. Para obtener más información, vea [obtener la aplicación clasificación de IARC](https://www.globalratings.com/for-developers.aspx) y [clasificaciones de ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
 
@@ -229,7 +229,7 @@ namespace Windows.System.Profile
 
 ## <a name="cleanup-process"></a>Proceso de limpieza
 
-Limpieza comienza dos minutos después de que un comprador deja de interactuar con el dispositivo. Se reproduce la demostración comercial, y Windows comienza el restablecimiento de los datos de ejemplo en los contactos, fotos y otras aplicaciones. Según el dispositivo, esto puede tardar entre 1-5 minutos totalmente Restablecer todo lo normal. Esto garantiza que todos los clientes de la tienda minorista pueden usar un dispositivo y tener la misma experiencia cuando se interactúa con el dispositivo.
+Limpieza comienza dos minutos después de que un comprador deja de interactuar con el dispositivo. Se reproduce la demostración comercial, y Windows comienza el restablecimiento de los datos de muestra en los contactos, fotos y otras aplicaciones. Según el dispositivo, esto puede tardar entre 1-5 minutos totalmente Restablecer todo lo normal. Esto garantiza que todos los clientes de la tienda minorista pueden usar un dispositivo y tener la misma experiencia cuando se interactúa con el dispositivo.
 
 Paso 1: limpiar
 * Se cierran todas las aplicaciones de Win32 y de la Store.
@@ -243,13 +243,13 @@ Paso 2: instalación
 
 ### <a name="store-data-across-user-sessions"></a>Almacenar datos de sesiones de usuario
 
-Para almacenar datos de sesiones de usuario, puedes almacenar información en __ApplicationData.Current.TemporaryFolder__ ya que el proceso de limpieza predeterminado no elimina automáticamente los datos de esta carpeta. Ten en cuenta que la información almacenada mediante *LocalState* se elimina durante el proceso de limpieza.
+Para almacenar datos de sesiones de usuario, puedes almacenar información en __ApplicationData.Current.TemporaryFolder__ como el proceso de limpieza predeterminado no elimina automáticamente los datos de esta carpeta. Ten en cuenta que la información almacenada mediante *LocalState* se elimina durante el proceso de limpieza.
 
 ### <a name="customize-the-cleanup-process"></a>Personalizar el proceso de limpieza
 
 Para personalizar el proceso de limpieza, implementar la `Microsoft-RetailDemo-Cleanup` servicio de aplicaciones en la aplicación.
 
-Los escenarios donde se necesita una lógica de limpieza personalizada incluyen la ejecución de una configuración amplia, descarga y almacenamiento en caché de datos o que no se *LocalState* los datos se eliminarán.
+Los escenarios donde se necesita una lógica de limpieza personalizada incluyen la ejecución de una configuración amplia, descarga y almacenamiento en caché de datos o no se *LocalState* los datos se eliminarán.
 
 Paso 1: Declarar el servicio de _Microsoft-RetailDemo-Cleanup_ en el manifiesto de la aplicación.
 ``` CSharp
@@ -264,7 +264,7 @@ Paso 1: Declarar el servicio de _Microsoft-RetailDemo-Cleanup_ en el manifiesto 
 
 ```
 
-Paso 2: Implementar la lógica de limpieza personalizada en la función case _AppdataCleanup_ usando la plantilla de ejemplo siguiente.
+Paso 2: Implementar la lógica de limpieza personalizada en la función case _AppdataCleanup_ con la plantilla de ejemplo siguiente.
 ``` CSharp
 using System;
 using System.IO;

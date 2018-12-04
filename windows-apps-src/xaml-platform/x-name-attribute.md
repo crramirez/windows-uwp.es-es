@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1a6047a7c462961f40ae8913881125e2331bb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480258"
 ---
 # <a name="xname-attribute"></a>atributo x:Name
 
@@ -57,7 +57,7 @@ Las herramientas de diseño suelen generar valores **x:Name** automáticamente p
 
 **x:Name** no se puede establecer en la sintaxis de elementos de propiedad de XAML ni en el código mediante [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). **x:Name** solo se puede establecer con la sintaxis de atributo XAML en los elementos.
 
-**Nota**específicamente para C++ / CX aplicaciones, no se crea un campo de respaldo de una referencia de **x: Name** para el elemento raíz de una página o archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Nota**específicamente para C++ / CX aplicaciones, no se crea un campo de respaldo de una referencia de **x: Name** para el elemento raíz de una página o un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ### <a name="xname-and-other-name-properties"></a>x:Name y otras propiedades de Name
 

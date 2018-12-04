@@ -11,11 +11,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334065"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479975"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -26,7 +26,7 @@ Mostrar que resaltado es un efecto de iluminación que resalta los elementos int
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Así es cómo funciona
-Mostrar resaltado llama la atención respecto a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
+Mostrar resaltado llama la atención a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
 
 ![Elemento visual de Reveal](images/Nav_Reveal_Animation.gif)
 
@@ -65,7 +65,7 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustraciones muestran resaltar Reveal en varios controles diferentes:
+Estas ilustraciones muestran Mostrar resaltado en varios controles diferentes:
 
 ![Ejemplos de Reveal](images/RevealExamples_Collage.png)
 

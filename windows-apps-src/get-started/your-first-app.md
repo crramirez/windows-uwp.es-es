@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cd4d60e6eb3eee7253997938882e6fbdf9fba69
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485507"
 ---
 # <a name="create-your-first-app"></a>Crear tu primera aplicación
 
@@ -40,7 +40,7 @@ Si estás listo para probar algo un poco más divertido que "¡Hello, World!", p
 
 ## <a name="visualc-component-extensions-ccx-and-xaml"></a>Las extensiones de componentes de VisualC ++ (C++ / CX) y XAML
 
-Aprovecha tu experiencia en programación con c++ para compilar aplicaciones mediante extensiones de componentes de VisualC ++ (C++ / CX) con XAML.
+Sacar provecho de su experiencia de programación de C++ para compilar aplicaciones mediante extensiones de componentes de VisualC ++ (C++ / CX) con XAML.
 
 * [Crear una aplicación "Hello, world" mediante XAML con C++/CX](create-a-basic-windows-10-app-in-cpp.md)
 

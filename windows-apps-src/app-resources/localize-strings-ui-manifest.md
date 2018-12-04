@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 6740e6ce35277fa7f7f088c312f8b9ee1f5281c3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327600"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479775"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -88,13 +88,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Puedes usar este mismo código desde dentro de una biblioteca de clases (Windows Universal) o un proyecto [Biblioteca de Windows Runtime (Windows Universal)](../winrt-components/index.md). En el momento de ejecución, se cargan los recursos de la aplicación que aloja la biblioteca. Te recomendamos que las bibliotecas carguen recursos de la aplicación que alojan, dado que es probable que la aplicación tenga un mayor grado de localización. Cuando una biblioteca tiene que proporcionar recursos, debería proporcionar a su aplicación alojada la opción de sustituir esos recursos como si fueran una entrada.
 
-Si un nombre de recurso se segmenta (que contiene "." caracteres), a continuación, reemplazar puntos con barra diagonal ("/") caracteres en el nombre de recurso. Por ejemplo, los identificadores de propiedad, contener puntos; por lo tanto, sería necesario hacer esta sustitución para cargar uno de ellos desde el código.
+Si un nombre de recurso se segmenta (que contiene "." caracteres), a continuación, reemplazar puntos con barra diagonal ("/") caracteres en el nombre del recurso. Por ejemplo, los identificadores de propiedad, contener puntos; por lo tanto, sería necesario hacer esta sustitución para cargar uno de ellos desde el código.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para Volcaremos archivo PRI de la aplicación. Cada recurso `uri` se muestra en el archivo de volcado.
+En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivos PRI de la aplicación. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -177,7 +177,7 @@ Si un nombre de archivo de recursos se segmenta (que contiene "." caracteres), a
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para Volcaremos archivo PRI de la aplicación. Cada recurso `uri` se muestra en el archivo de volcado.
+En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivos PRI de la aplicación. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
