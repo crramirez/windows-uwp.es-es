@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Windows Store analytics API, adquisiciones de juegos de Xbox One, Xbox One game acquisitions
 ms.localizationpriority: medium
 ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471723"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obtener adquisiciones de juegos de Xbox One
 
@@ -45,7 +45,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | cadena | Identificador de producto del juego para Xbox One para el que recuperas los datos de adquisición. Para obtener el identificador de producto de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el identificador de producto de la dirección URL. Como alternativa, si descargas los datos de adquisición del informe de análisis del centro de partners, el identificador de producto se incluye en el archivo TSV.  |  Sí  |
+| applicationId | cadena | Identificador de producto del juego para Xbox One para el que recuperas los datos de adquisición. Para obtener el identificador de producto de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el identificador de producto de la dirección URL. Como alternativa, si descargas los datos de adquisiciones del informe de análisis del centro de partners, el identificador de producto se incluye en el archivo TSV.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de compra que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de compra que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | int | Número de filas de datos que se van a devolver. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |

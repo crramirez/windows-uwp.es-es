@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c45ad71643b0d75efcb130c1175952822197a161
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336592"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471623"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) que se usa para recuperar si hay algún digitalizador táctil conectado. Solo es necesario crear un nuevo objeto **TouchCapabilities** y obtener las propiedades que te interesan.
 
-**Nota**los valores que devuelven las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven distinto de cero si hay al menos un digitalizador admite una funcionalidad específica, las propiedades numéricas devuelven el valor máximo expuesto por cualquier digitalizadores.
+**Nota**los valores que devuelven las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven distinto de cero si hay al menos un digitalizador admite una funcionalidad específica, las propiedades numéricas devuelven el valor máximo expuesto por los digitalizadores.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
 
-**Nota**los valores que devuelven las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven distinto de cero si al menos un dispositivo es compatible con una funcionalidad específica, las propiedades numéricas devuelven el valor máximo expuesto cualquier dispositivo de un puntero.
+**Nota**los valores que devuelven las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven distinto de cero si al menos un dispositivo que admite una funcionalidad específica, las propiedades numéricas devuelven el valor máximo expuesto cualquier dispositivo de un puntero.
 
 En el código siguiente se usa una tabla para mostrar las propiedades y los valores correspondientes a cada dispositivo señalador.
 

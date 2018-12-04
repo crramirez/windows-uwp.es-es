@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333423"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471763"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
-Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de anuncio que pueden integrarse sin problemas en tu aplicaciones y admite mediación con muchas redes de anuncios populares. Nuestra plataforma compatible con la OpenRTB, gran 2.x, MRAID 2 y 3 VPAID estándares y es compatible con MOAT y IAS. 
+Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de anuncio que pueden integrarse sin problemas en tu aplicaciones y admite mediación con muchas redes de anuncios populares. Nuestra plataforma es compatible con OpenRTB, gran 2.x, MRAID 2 y 3 VPAID estándares y es compatible con MOAT y IAS. 
 
 <br/>
 

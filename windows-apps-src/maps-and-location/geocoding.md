@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, geocodificación, geocoding, mapa, map, ubicación, location
 ms.localizationpriority: medium
 ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471543"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Realizar geocodificación y geocodificación inversa
 
@@ -25,7 +25,7 @@ Las clases implicados en geocodificación y geocodificación inversa se organiza
 -   La clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) contiene métodos que controlen la geocodificación ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) y ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)) de geocodificación inversa.
 -   Estos métodos devuelven una instancia de [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) .
 -   La propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) expone una colección de objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . 
--   [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objetos tienen una propiedad de [**dirección**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expone un objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa una dirección y una propiedad de [**punto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expone un objeto de [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que represente una ubicación geográfica.
+-   Objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) tienen una propiedad de [**dirección**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expone un objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa una dirección y una propiedad de [**punto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expone un objeto de [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que represente una ubicación geográfica.
 
 > [!IMPORTANT]
 > Debes especificar una clave de autenticación de mapas antes de poder usar servicios de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
@@ -34,7 +34,7 @@ Las clases implicados en geocodificación y geocodificación inversa se organiza
 
 En esta sección se muestra cómo convertir una dirección o nombre de un lugar en una ubicación geográfica (geocodificación).
 
-1.  Llamar a una de las sobrecargas del método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) con un nombre de lugar o direcciones de calles.
+1.  Llamar a una de las sobrecargas del método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) con un nombre de contexto o la dirección de la calle.
 2.  El método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) devuelve un objeto de [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) .
 3.  Usa la propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) para exponer los objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) de una colección. Puede haber varios objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) porque el sistema puede encontrar varias ubicaciones que corresponden a la entrada especificada.
 

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b5c95b59c1542df743ecc1f53bf3c3fc90aa1b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473265"
 ---
 # <a name="bluetooth"></a>Bluetooth
 Esta sección contiene artículos sobre cómo integrar Bluetooth en aplicaciones de la plataforma Universal de Windows (UWP). Hay dos tecnologías de bluetooth diferentes que puedes elegir implementar en tu aplicación.
 
 ## <a name="classic-bluetooth-rfcomm"></a>Bluetooth clásico (RFCOMM)
-Antes de Bluetooth LE, dispositivos suele utilizan este protocolo para comunicarte a través de Bluetooth. Este protocolo es simple y útiles para la comunicación sin necesidad de ahorro de energía del dispositivo a otro. Para obtener más información acerca de este protocolo, incluidos los ejemplos de código, consulta el tema de [RFCOMM de Bluetooth](send-or-receive-files-with-rfcomm.md) .
+Antes de Bluetooth LE, dispositivos suele utilizan este protocolo para comunicarte a través de Bluetooth. Este protocolo es simple y útiles para la comunicación de dispositivo a otro sin necesidad de ahorro de energía. Para obtener más información acerca de este protocolo, incluidos los ejemplos de código, consulta el tema de [RFCOMM de Bluetooth](send-or-receive-files-with-rfcomm.md) .
 
 ## <a name="bluetooth-low-energy-le"></a>Bluetooth de bajo consumo (LE)
 Bluetooth de bajo consumo (LE) es una especificación que define los protocolos de detección y la comunicación entre los dispositivos que tienen un requisito de uso de ahorro de energía. Para obtener más información, incluidos los ejemplos de código, consulta el tema de [Bluetooth de bajo consumo](bluetooth-low-energy-overview.md) .

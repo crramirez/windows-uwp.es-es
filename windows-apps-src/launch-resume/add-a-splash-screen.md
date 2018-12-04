@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345275"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471813"
 ---
 # <a name="add-a-splash-screen"></a>Agregar una pantalla de presentación
 
@@ -41,7 +41,7 @@ Cuando usas una plantilla de Visual Studio para crear tu aplicación, se agrega 
 
 5. Si quieres seleccionar una nueva imagen para la pantalla de presentación de una aplicación para Tienda de Windows Phone, presiona el botón que muestra unos puntos suspensivos, situado junto a la etiqueta **1152 x 1920 px** debajo de **Activos a escala**. Elige la imagen de 1152 x 1920 píxeles (.png, .jpg o .jpeg) que quieres usar como imagen de la pantalla de presentación.
 
-    **Importante**la imagen de pantalla de presentación que elijas debe ser de 1152 x 1920 píxeles que es el tamaño correcto para un 2,4 factor de escala. Si este es el único activo que proporcionas, se reducirá para los factores de escala de 1.4x y 1x.
+    **Importante**la imagen de pantalla de presentación que elijas debe ser de 1152 x 1920 píxeles que es el tamaño correcto para un 2,4 de factor de escala. Si este es el único activo que proporcionas, se reducirá para los factores de escala de 1.4x y 1x.
 
 6. En el campo **Color de fondo** de la sección **Pantalla de presentación**, establece el color de fondo que se mostrará con la imagen de la pantalla de presentación. Puedes escribir el nombre de un color o "\#" y el valor hexadecimal de un color. Para obtener una lista de los nombres de colores disponibles, consulta el elemento [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467). El establecimiento de un color de fondo para tu pantalla de presentación es opcional. Si no especificas un color para la aplicación para UWP, se establecerá el gris claro (valor hexadecimal \#464646) como color de fondo predeterminado de la pantalla de presentación. Se trata del mismo color que el color de fondo del **Icono** (consulta el campo **Color de fondo** en la sección **Imágenes y logotipos en mosaico** de la pestaña **Activos visuales**). Si no especificas un color para un Windows Phone, o lo estableces en "transparente", el color de fondo de pantalla de presentación será transparente.
 

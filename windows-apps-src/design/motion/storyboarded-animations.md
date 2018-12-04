@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 920ff8e295959ad6ea66cdb3b673217ff19b89e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471613"
 ---
 # <a name="storyboarded-animations"></a>Animaciones con guion gráfico
 
@@ -149,7 +149,7 @@ Para más información sobre los valores [**Duración**](https://msdn.microsoft.
 
 ### <a name="fromtoby-are-nullable"></a>From/To/By pueden tener valores null
 
-Antes mencionamos que puedes omitir **De origen**, **De destino** o **Por** y, por ende, usar los valores actuales no aminados como sustitutos para un valor que falta. Las propiedades **From**, **To** o **By** de una animación no son del tipo que puedas adivinar. Por ejemplo, el tipo de la propiedad [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) no es [**Doble**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). En cambio, es un [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Y su valor predeterminado es **null**, no 0. Este valor **null** es la forma en la que el sistema de animación distingue que no has establecido específicamente un valor para una propiedad **From**, **To** o **By**. Las extensiones de componentes de VisualC ++ (C++ / CX) no tiene un tipo **Nullable** , por lo que usan [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) en su lugar.
+Antes mencionamos que puedes omitir **De origen**, **De destino** o **Por** y, por ende, usar los valores actuales no aminados como sustitutos para un valor que falta. Las propiedades **From**, **To** o **By** de una animación no son del tipo que puedas adivinar. Por ejemplo, el tipo de la propiedad [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) no es [**Doble**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). En cambio, es un [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Y su valor predeterminado es **null**, no 0. Este valor **null** es la forma en la que el sistema de animación distingue que no has establecido específicamente un valor para una propiedad **From**, **To** o **By**. Las extensiones de componentes de VisualC ++ (C++ / CX) no tiene un tipo **null** , por lo que usan [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) en su lugar.
 
 ### <a name="other-properties-of-an-animation"></a>Otras propiedades de una animación
 

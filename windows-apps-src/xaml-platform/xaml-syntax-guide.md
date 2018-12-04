@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473450"
 ---
 # <a name="xaml-syntax-guide"></a>Guía de sintaxis XAML
 
@@ -238,7 +238,7 @@ En primer lugar, la presencia del elemento de objeto indica que se debe crear un
 
 Otra regla de XAML es que los atributos de un elemento deben poder establecerse en cualquier orden. Por ejemplo, no existe ninguna diferencia entre `<Rectangle Height="50" Width="100" />` y `<Rectangle Width="100"  Height="50" />`. El orden utilizado es una cuestión de estilo.
 
-**Nota**los diseñadores XAML suelen promoción para ordenar cuando se usan superficies de diseño que no sean el editor XML, pero puedes editar libremente ese código XAML más adelante, para reordenar los atributos e introducir otros nuevos.
+**Nota**diseñadores XAML suelen promoción para ordenar cuando se usan superficies de diseño que no sean el editor XML, pero puedes editar libremente ese código XAML más adelante, para reordenar los atributos e introducir otros nuevos.
 
 ## <a name="attached-properties"></a>Propiedades adjuntas
 

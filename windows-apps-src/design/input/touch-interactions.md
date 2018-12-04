@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471663"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -151,7 +151,7 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer el aprendizaje y la exploración (por ejemplo, pulsar y sostener).
+    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer aprendizaje y la exploración (por ejemplo, pulsar y sostener).
 
      
 
@@ -436,7 +436,7 @@ Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia
 
 A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946). Por ejemplo, si tocas la pantalla y luego arrastras el dedo por la pantalla. Por último, cuando termina la interacción, tiene lugar un evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).
 
-**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y la interfaz de rueda del mouse.
+**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y la interfaz de rueda de mouse.
 
  
 

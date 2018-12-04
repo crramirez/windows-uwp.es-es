@@ -8,16 +8,16 @@ keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330389"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473572"
 ---
 # <a name="settings-page-dev-home"></a>Página de configuración (Dev Home)
    
   
-La página de **configuración** de Dev Home proporciona acceso a diversas opciones de configuración para la consola de desarrollo.   
+La página de **configuración** de la página principal de desarrollo proporciona acceso a diversas opciones de configuración para la consola de desarrollo.   
  ![Página de configuración de Dev Home](images/devhome_settings.png)   
   
 La página de **configuración** contiene los paneles siguientes:   
@@ -73,7 +73,7 @@ Se usa el panel de **configuración de depuración** para ver y alternar comunes
 ## <a name="unattended-script-configuration"></a>Configuración de script de instalación desatendida  
    
   
-El panel de **configuración desatendida la secuencia de comandos** administra los scripts de instalación para consolas Xbox One.   
+El panel de **configuración desatendida la secuencia de comandos** administra los scripts de instalación de consolas Xbox One.   
   
 <a id="ID4E3C"></a>
 
@@ -82,7 +82,7 @@ El panel de **configuración desatendida la secuencia de comandos** administra l
 ## <a name="default-home-experience"></a>Experiencia principal predeterminada  
    
   
-El panel **Predeterminado experiencia Home** determina si la pantalla de inicio de la versión comercial o de la pantalla de [Inicio del desarrollador en la consola (Dev Home)](dev-home.md) se muestra cuando se inicia la consola.   
+El panel **Predeterminado experiencia Home** determina si se muestra la pantalla de inicio de la versión comercial o de la pantalla de [Inicio del desarrollador en la consola (Dev Home)](dev-home.md) cuando se inicia la consola.   
   
 <a id="ID4EJD"></a>
 

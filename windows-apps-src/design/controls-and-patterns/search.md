@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: caf0e8e63716f6ba140ef9346257687f0e7293bb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471583"
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -58,7 +58,7 @@ Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
 **Global** y **contextual o refinado.** Búsqueda en varias fuentes de contenido local y en la nube. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
-**Web.** Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
+**Web.** Buscar un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
 **Mis cosas.** Búsqueda en todos los dispositivos, en la nube, gráficos sociales y mucho más. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
 
