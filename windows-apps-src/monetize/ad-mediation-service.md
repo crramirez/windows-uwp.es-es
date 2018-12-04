@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, mediación de anuncios
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475584"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Servicio de mediación de anuncios de Microsoft
 
@@ -28,7 +28,7 @@ El servicio de mediación de anuncios se integra con una variedad de redes de an
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>Administrar la complejidad de las relaciones de red de anuncios  
 
-El servicio de mediación de anuncios se integra con una amplia variedad de redes de anuncios para que no tengas que hacer este trabajo. Después de usar el SDK de Microsoft Advertising para mostrar anuncios en tu aplicación, puedes modificar la configuración de mediación de anuncios [del centro de partners](../publish/in-app-ads.md#mediation-settings) para mostrar anuncios de varias redes de anuncios. Te beneficias de anuncios de nuevas redes de anuncios sin tener que realizar cambios en el código.
+El servicio de mediación de anuncios se integra con una amplia variedad de redes de anuncios para que no tengas que hacer este trabajo. Después de usar el SDK de Microsoft Advertising para mostrar anuncios en la aplicación, puedes modificar la configuración de mediación de anuncios [del centro de partners](../publish/in-app-ads.md#mediation-settings) para mostrar anuncios de varias redes de anuncios. Te beneficias de anuncios de nuevas redes de anuncios sin tener que realizar cambios en el código.
 
 Administramos en tu nombre la relación de principio a fin con las redes de anuncios. Se ocupa por nosotros de todo, desde la integración de redes de anuncios hasta el servicio de anuncios, informes y pagos, sin ningún esfuerzo adicional del usuario.
 

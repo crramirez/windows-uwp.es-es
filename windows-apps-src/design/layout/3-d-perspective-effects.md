@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c1858938d04a024799224daf74ade4df3629a854
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475199"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>Efectos de perspectiva 3D para interfaces de usuario XAML
 

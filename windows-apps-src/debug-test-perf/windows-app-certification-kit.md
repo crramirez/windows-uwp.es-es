@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473705"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
@@ -42,7 +42,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 3.  Después de introducir o seleccionar la aplicación que deseas probar, haz clic en **Siguiente**.
 
-4.  En la siguiente pantalla, verás el flujo de trabajo de prueba que se alinea con el tipo de aplicación que se está probando. Si una prueba aparece atenuada en la lista, significa que no es aplicable a tu entorno. Por ejemplo, si estás probando una aplicación de Windows 10 en Windows 7, solo las pruebas estáticas se aplicarán al flujo de trabajo. Ten en cuenta que Microsoft Store pueden aplicarse todas las pruebas desde este flujo de trabajo. Selecciona las pruebas que deseas ejecutar y haz clic en **Siguiente**.
+4.  En la siguiente pantalla, verás el flujo de trabajo de prueba que se alinea con el tipo de aplicación que se está probando. Si una prueba aparece atenuada en la lista, significa que no es aplicable a tu entorno. Por ejemplo, si estás probando una aplicación de Windows 10 en Windows 7, solo las pruebas estáticas se aplicarán al flujo de trabajo. Ten en cuenta que Microsoft Store puede aplicar todas las pruebas desde este flujo de trabajo. Selecciona las pruebas que deseas ejecutar y haz clic en **Siguiente**.
 
     El Kit para la certificación de aplicaciones de Windows inicia la validación de la aplicación.
 

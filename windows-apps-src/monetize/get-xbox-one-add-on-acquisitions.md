@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, adquisiciones de complementos de Xbox One
 ms.localizationpriority: medium
 ms.openlocfilehash: f102d2d692a2307c25dcb95e66d612fc561dec70
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475359"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Obtener adquisiciones de complementos de Xbox One
 
@@ -42,11 +42,11 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-El parámetro *applicationId* o *addonProductId* es obligatorio. Para recuperar los datos de compra de todos los complementos registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo complemento, especifica el parámetro *addonProductId* . Si especificas ambos, el parámetro *applicationId* se ignorará.
+El parámetro *applicationId* o *addonProductId* es necesario. Para recuperar los datos de compra de todos los complementos registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo complemento, especifica el parámetro *addonProductId* . Si especificas ambos, el parámetro *applicationId* se ignorará.
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  |
 |---------------|--------|---------------|------|
-| applicationId | string | *ProductId* del juego de Xbox One para el que estás recuperando los datos de compra. Para obtener el *valor de productId* de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el *valor de productId* desde la dirección URL. Como alternativa, si descargas los datos de adquisición del informe de análisis del centro de partners, el *valor de productId* se incluye en el archivo TSV. |  Sí  |
+| applicationId | string | *ProductId* del juego de Xbox One para el que estás recuperando los datos de compra. Para obtener el *valor de productId* de tu juego, ve a tu juego en el programa de análisis de XDP y recuperar el *valor de productId* desde la dirección URL. Como alternativa, si descargas los datos de adquisiciones del informe de análisis del centro de partners, el *valor de productId* se incluye en el archivo TSV. |  Sí  |
 | addonProductId | string | El *valor de productId* del complemento para el que quieres recuperar los datos de compra.  | Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de compra del complemento que se recuperarán. El valor predeterminado es la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos de compra del complemento que recuperarán. El valor predeterminado es la fecha actual. |  No  |
@@ -98,7 +98,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | addonProductName    | cadena  | Nombre del complemento que quieres que se muestre. Este valor solo aparece en los datos de respuesta si el parámetro *aggregationLevel* se establece en **día**, a menos que especifiques el campo **addonProductName** en el parámetro *groupby* .                                                                                                                                                                                                            |
 | applicationId       | string  | El *valor de productId* de la aplicación para la que quieres recuperar los datos de compra de complementos.                                                                                                                                                           |
 | applicationName     | cadena  | El nombre para mostrar del juego.                                                                                                                                                                                                             |
-| deviceType          | cadena  | <p>Una de las cadenas siguientes que especifica el tipo de dispositivo que ha completado la adquisición:</p> <ul><li>"EQUIPO"</li><li>"Teléfono"</li><li>"Consola de</li><li>"IoT"</li><li>"Servidor"</li><li>"Tableta"</li><li>"Holographic"</li><li>"Desconocido"</li></ul>                                                                                                  |
+| deviceType          | cadena  | <p>Una de las cadenas siguientes que especifica el tipo de dispositivo que ha completado la adquisición:</p> <ul><li>"EQUIPO"</li><li>"Teléfono"</li><li>"Consola"</li><li>"IoT"</li><li>"Servidor"</li><li>"Tableta"</li><li>"Holográfica"</li><li>"Desconocido"</li></ul>                                                                                                  |
 | storeClient         | cadena  | <p>Una de las cadenas siguientes que indica la versión de la Store donde se produce la adquisición:</p> <ul><li>"Windows Phone Store (cliente)"</li><li>"Microsoft Store (cliente)" (o "Windows Store (cliente)" si la consulta de datos del 23 de marzo de 2018)</li><li>"Microsoft Store (web)" (o "Windows Store (web)" si la consulta de datos del 23 de marzo de 2018)</li><li>"Compras por volumen de las organizaciones"</li><li>"Otros"</li></ul>                                                                                            |
 | osVersion           | cadena  | Versión del sistema operativo en el que se realizó la compra. Este método, este valor es siempre "Windows 10".                                                                                                   |
 | market              | cadena  | Código de país ISO 3166 del mercado donde se realizó la compra.                                                                                                                                                                  |

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on, complemento, delete, eliminar, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 837cbc19268a88be986068f4a5e60002a1eb55e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474824"
 ---
 # <a name="delete-an-add-on"></a>Eliminar un complemento
 
@@ -73,7 +73,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | La solicitud no es válida. |
 | 404  | No se pudo encontrar el complemento especificado.  |
-| 409  | Se encontró el complemento especificado, pero no se ha podido en su estado actual o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Se encontró el complemento especificado, pero no se ha podido en su estado actual o el complemento usa una característica de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

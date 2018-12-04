@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473815"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
@@ -43,7 +43,7 @@ Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y
 Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
 ## <a name="using-the-icons"></a>Usar los iconos
-Si estás desarrollando una aplicación en C# / VB/C++ y XAML, puedes usar glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Si vas a desarrollar una aplicación en C# / VB/C++ y XAML, puedes usar los glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -62,7 +62,7 @@ También puedes usar el recurso estático `SymbolThemeFontFamily` para acceder a
 
 
 ## <a name="how-do-i-get-this-font"></a>¿Cómo se puede obtener esta fuente?
-* En Windows 10: No hay nada que necesitas hacer, la fuente viene con Windows.
+* En Windows 10: No hay nada que necesitas hacer, la fuente se incluye con Windows.
 * En un equipo Mac, debes descargar e instalar la fuente: <a href="https://aka.ms/SegoeFonts">obtener el Segoe UI y MDL2 fuentes de icono</a>
 
 ## <a name="icon-list"></a>Lista de iconos

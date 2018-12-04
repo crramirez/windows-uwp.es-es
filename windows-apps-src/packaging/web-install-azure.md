@@ -1,24 +1,22 @@
 ---
 title: Instalación de aplicación para UWP desde un Azure Web Server
 description: Este tutorial muestra cómo configurar un servidor web de Azure, cómo comprobar que la aplicación web puede hospedar los paquetes de la aplicación, e invocar y utilizar el Instalador de aplicación de forma eficaz.
-ms.date: 09/30/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales, servidor web de Azure
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f0e4fe6cd2b05c2de4648a410ba43ce27e48922
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325637"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469216"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar una aplicación para UWP desde una aplicación Web de Azure
 
 La aplicación del Instalador de aplicación permite a los desarrolladores y profesionales de TI distribuir aplicaciones de Windows 10 hospedándolas en su propia red de entrega de contenido (CDN). Estos es útil para empresas que no desean o necesitan publicar sus aplicaciones en Microsoft Store, pero quieres sacar provecho de la plataforma de implementación y el paquete de Windows 10.
 
 En este tema se describen los pasos para configurar un Azure Web Server para que hospede paquetes de la aplicación para UWP y cómo usar la aplicación del Instalador de aplicación para instalar los paquetes de aplicación.
-
-En este tutorial, analizaremos la configuración de un servidor IIS para comprobar localmente que tu aplicación web puede hospedar correctamente los paquetes de aplicaciones e invocar y usar de manera eficaz la aplicación del Instalador de aplicación. También ofreceremos tutoriales para hospedar tus aplicaciones web de manera adecuadas en los servicios web de nube populares en el campo (Azure y AWS) para garantizar que cumplen los requisitos de instalación web del Instalador de aplicación. Este tutorial paso a paso no requiere experiencia y es muy sencillo de seguir. 
 
 ## <a name="setup"></a>Instalación
 

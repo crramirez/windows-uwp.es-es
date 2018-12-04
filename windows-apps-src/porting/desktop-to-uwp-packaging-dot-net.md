@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: e867377c5961277d140173ab0de86d9f89197086
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471272"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio con Visual Studio
 
@@ -21,11 +21,11 @@ Puedes usar Visual Studio para generar un paquete para tu aplicación de escrito
 La versión más reciente de Visual Studio proporciona una nueva versión del proyecto de empaquetado que elimina todos los pasos manuales se solían ser necesarios para empaquetar tu aplicación. Tan solo tienes que agregar un proyecto de empaquetado, hacer referencia al proyecto de escritorio y luego presionar F5 para depurar la aplicación. No es necesario realizar ajustes manuales. Esta nueva experiencia optimizada es una gran mejora de la experiencia que estaba disponible en la versión anterior de Visual Studio.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo puede usarse en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Revisar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
+Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 

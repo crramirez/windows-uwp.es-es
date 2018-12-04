@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, ofertas dirigidas
 ms.localizationpriority: medium
 ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470706"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Administrar ofertas dirigidas usando los servicios de la Store
 
-Si creas una *oferta dirigida* en el **interactuar > ofertas dirigidas** página de la aplicación en el centro de partners, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayudará a implementar la experiencia de aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Si creas una *oferta dirigida* en el **interactuar > ofertas dirigidas** página de la aplicación Centro de partners, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayudará a implementar la experiencia de aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 La API de ofertas dirigidas es una API REST simple que puedes utilizar para obtener las ofertas dirigidas que están disponibles para el usuario actual, en función de si el usuario es parte del segmento de cliente para la oferta dirigida o no. Para usar esta API en el código de tu aplicación, sigue estos pasos:
 

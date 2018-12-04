@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0f7f8c0f682eaa129f44eaa421fabd63dbfce4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340283"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468134"
 ---
 # <a name="query-for-products"></a>Consultar productos
 
@@ -59,7 +59,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.        | No       |
 | parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.      | No       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados. Para obtener más información, consulta la tabla siguiente.      | No       |
-| productTypes      | lista&lt;cadena&gt;       | Especifica qué tipos de productos que se devolverán en los resultados. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
+| productTypes      | lista&lt;cadena&gt;       | Especifica qué tipos de productos que se devolverán en los resultados de la consulta. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
 | validityType      | string       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | No       |
 
 
