@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f8acf83e2b39ece5fcd46c3d89d921e4f3013b67
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334954"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478111"
 ---
 # <a name="about-community-ads"></a>Acerca de los anuncios de la comunidad
 
@@ -28,12 +28,12 @@ Así es cómo funciona este programa:
 
 ### <a name="opt-in-to-community-ads"></a>Participar en anuncios de la comunidad
 
-Antes de que puedes crear una campaña de anuncios de la Comunidad para una de las aplicaciones, debes participar en el **monetizar** &gt; página de **anuncios en la aplicación** en [El centro de partners](https://partner.microsoft.com/dashboard).
+Antes de que puede crear una campaña de anuncios de la Comunidad para una de las aplicaciones, debes participar en el **monetizar** &gt; página de **anuncios en la aplicación** en [El centro de partners](https://partner.microsoft.com/dashboard).
 
 Para participar en anuncios de la Comunidad para una aplicación para UWP:
 
-1. Selecciona una unidad de anuncios que usas en la aplicación y Desplázate hacia abajo para **la configuración de mediación**.
-2. Si se selecciona **Permitir a Microsoft Optimizar mi configuración** , los anuncios de la Comunidad están habilitados para tu unidad de anuncio automáticamente. De lo contrario, selecciona la configuración de base de referencia o una configuración específicas del mercado en la lista desplegable de **destino** y, a continuación, activa la casilla de **anuncios de la Comunidad de Microsoft** en la lista de **otras redes de anuncios** .
+1. Selecciona una unidad de anuncios que usas en la aplicación y Desplázate hacia abajo a la **configuración de mediación**.
+2. Si se selecciona la opción **Permitir a Microsoft Optimizar mi configuración** , los anuncios de la Comunidad están habilitados para tu unidad de anuncio automáticamente. De lo contrario, selecciona la configuración de base de referencia o una configuración específicas del mercado en la lista desplegable de **destino** y, a continuación, activa la casilla de **anuncios de la Comunidad de Microsoft** en la lista de **otras redes de anuncios** .
 
     > [!NOTE]
     > Puedes usar los campos de **peso** para especificar la relación de anuncios que quieres mostrar de redes de pago y otras redes de anuncios, incluidos los anuncios de la Comunidad.
