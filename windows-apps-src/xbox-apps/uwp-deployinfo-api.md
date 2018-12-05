@@ -3,11 +3,11 @@ title: Referencia de API de información de implementación de Device Portal
 description: Obtén información sobre cómo acceder a la API de información de implementación mediante programación.
 ms.localizationpriority: medium
 ms.openlocfilehash: c44089313b100880b419e9b55a26101e877496f3
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487257"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712181"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Solicita la información de implementación para uno o más paquetes instalados.
 

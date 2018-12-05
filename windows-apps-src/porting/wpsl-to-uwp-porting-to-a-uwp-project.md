@@ -1,5 +1,5 @@
 ---
-description: Para iniciar el proceso de migración, creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
+description: Comenzar el proceso de migración al crear un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
 title: Migración de proyectos de WindowsPhone Silverlight a proyectos de UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 ms.date: 02/08/2017
@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 55c4347b85d94d183d44599f7d34bc750d34d181
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464827"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709237"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Migración de proyectos de WindowsPhone Silverlight a proyectos de UWP
 
 
 El tema anterior era [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md).
 
-Para iniciar el proceso de migración, creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
+Comenzar el proceso de migración al crear un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Crear el proyecto y copiar archivos en él
 
-1.  Inicia Microsoft Visual Studio2015 y crea un nuevo proyecto de aplicación vacía (Windows Universal). Para obtener más información, consulta [rápidamente la aplicación de Windows Runtime 8.x mediante plantillas (C#, en C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivos.
+1.  Inicia Microsoft Visual Studio2015 y crea un nuevo proyecto de aplicación vacía (Windows Universal). Para obtener más información, consulta [rápidamente la aplicación de Windows Runtime 8.x con plantillas (C#, en C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivos.
 2.  En el proyecto de aplicación WindowsPhone Silverlight, identifica todos los archivos de código fuente y los archivos de activos visuales que quieres reutilizar. Con el Explorador de archivos, copia los modelos de datos, los modelos de vista, los recursos visuales, los diccionarios de recursos, la estructura de carpetas y cualquier otro elemento que quieras reutilizar en tu nuevo proyecto. Copia o crea subcarpetas en el disco según sea necesario.
 3.  Copia vistas (por ejemplo, MainPage.xaml y MainPage.xaml.cs) en el nodo del proyecto nuevo, también. De nuevo, crea nuevas subcarpetas según sea necesario y quita las vistas existentes del proyecto. Pero antes de sobrescribir o quitar una vista que Visual Studio ha generado, conserva una copia ya que puede resultar útil consultarla más adelante. La primera fase de migración de una aplicación WindowsPhone Silverlight se centra en que se parezca buena y funcionan bien en una familia de dispositivos. Más adelante, desviarás tu atención a asegurarte de que las vistas de adaptan correctamente a todos los factores de forma y, opcionalmente, a agregar código adaptable para obtener el máximo partido de una familia de dispositivos en particular.
 4.  En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Selecciona los archivos que has copiado, haz clic con el botón secundario en ellos y haz clic en **Incluir en el proyecto**. Esto incluirá automáticamente sus carpetas contenedoras. Entonces puedes desactivar **Mostrar todos los archivos** si quieres. Un flujo de trabajo alternativo, si lo prefieres, es usar el comando **Agregar elemento existente**, después de crear las subcarpetas necesarias en el **Explorador de soluciones** de Visual Studio. Vuelve a comprobar que los recursos visuales tienen la opción **Acción de compilación** establecida en **Contenido** y la opción **Copiar en el directorio de resultados** establecida en **No copiar**.
@@ -87,7 +87,7 @@ Si tienes código que compartes entre una aplicación WindowsPhone Silverlight y
 #endif // NETFX_CORE
 ```
 
-Si es así, y ahora quieres además compatibilidad con Windows 10, a continuación, puedes hacerlo, demasiado.
+Si es así y ahora quieres además compatibilidad con Windows 10, a continuación, puedes hacerlo, demasiado.
 
 ```csharp
 #if WINDOWS_UAP

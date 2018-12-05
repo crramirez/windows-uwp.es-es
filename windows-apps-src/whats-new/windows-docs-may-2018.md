@@ -6,11 +6,11 @@ ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 20bb514a15963befb5b96a1b01a6c057e8f27482
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8485022"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8701127"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos de Windows de mayo de 2018
 
@@ -89,7 +89,7 @@ Paquetes opcionales en la aplicación ahora pueden contener código ejecutable d
 
 [Las transiciones de página](../design/motion/page-transitions.md) navegar a los usuarios entre las páginas de una aplicación. Ayudan a los usuarios comprender dónde se encuentran en la jerarquía de navegación y proporcionar comentarios sobre la relación entre las páginas.
 
-### <a name="project-rome"></a>Proyecto Roma
+### <a name="project-rome"></a>Project Rome
 
 El equipo de Project Rome ha renovado su iOS y Android SDK, agregando nuevas características como las actividades del usuario y la refactorización de gran parte de su código para proporcionar una experiencia coherente de programación en el SDK de diferentes. [Todos los nueva referencia de API y documentos de procedimientos](https://docs.microsoft.com/windows/project-rome/) pasará dinámicos durante la conferencia de desarrolladores de compilación de 2018.
 

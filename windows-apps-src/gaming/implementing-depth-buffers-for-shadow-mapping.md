@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, volúmenes de sombra, shadow volumes, búferes de profundidad, depth buffers, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 2feecb3080efefb2f9625fd8b66c5b722ad02a45
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8469137"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708137"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11
 

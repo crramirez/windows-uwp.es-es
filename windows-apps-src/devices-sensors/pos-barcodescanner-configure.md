@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f88b376dca80043f88260700bb7ef4168b3a445
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458091"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709777"
 ---
 # <a name="configure-a-barcode-scanner"></a>Configurar un escáner de códigos de barras
 
@@ -21,7 +21,7 @@ Muchos de los escáneres de códigos de barra se pueden configurar en modo **cu�
 ## <a name="usb-barcode-scanner"></a>Escáner de código de barras USB
 Un escáner de código de barras conectado por USB debe configurarse en modo **HID POS Scanner** para que funcione con el controlador del escáner de código de barras que se incluye en Windows. Este controlador es una implementación de la especificación de **Punto de venta tablas de uso HID** publicada en [USB HID](http://www.usb.org/developers/hidpage/).  Consulta la documentación del escáner o ponte en contacto con el fabricante para obtener instrucciones sobre cómo habilitar el modo **HID POS Scanner**.  Una vez configurado como **HID POS Scanner**, el escáner de código de barras aparecerá en el Administrador de dispositivos, bajo el nodo **POS Barcode Scanner** como **escáner de código de barras POS HID**.
 
-El fabricante del escáner de código de barras también puede tener un controlador específico del proveedor que sea compatible con las API de escáner de código de barras de UWP que usen un modo distinto al de **HID POS Scanner**.  Si ya has instalado a un controlador proporcionado por el fabricante compatible con la API de escáner de códigos de barras de UWP, es posible que veas un dispositivo específico del proveedor de **POS Barcode Scanner** en el Administrador de dispositivos.
+El fabricante del escáner de código de barras también puede tener un controlador específico del proveedor que sea compatible con las API de escáner de código de barras de UWP que usen un modo distinto al de **HID POS Scanner**.  Si ya tiene instalado a un controlador proporcionado por el fabricante compatible con la API de escáner de códigos de barras de UWP, es posible que veas un dispositivo específico del proveedor que aparece en **POS Barcode Scanner** en el Administrador de dispositivos.
 
 ## <a name="bluetooth-barcode-scanner"></a>Escáner de código de barras con Bluetooth
 Un escáner de código de barras conectado por Bluetooth debe configurarse en modo **protocolo de puerto serie - interfaz serie sencilla (SPP-SSI)** para funcionar con las API de escáner de código de barras de UWP.  Consulta la documentación del escáner o ponte en contacto con el fabricante para obtener instrucciones sobre cómo habilitar el modo **modo SPP-SSI**.

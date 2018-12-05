@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
 ms.openlocfilehash: b0f793dfb1c261ed967e79ab2a64e09306a57917
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462564"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8711672"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>UWP en muestras de Xbox One
 
@@ -27,7 +27,7 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 
 ## <a name="the-news-experience"></a>La experiencia de noticias
 
-[La experiencia de noticias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café cuarta, es una aplicación de noticias de muestra que funciona entre el escritorio, teléfono y Xbox One y ofrece una experiencia de premium que aprovecha las ventajas de las ventajas de cada dispositivo. En Xbox, que está optimizado para el controlador para juegos, la interfaz de usuario se ha adaptado para la experiencia de 10 pies y mantiene contenido en el área segura del Televisor, entre otras optimizaciones. Consulta [la entrada de blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obtener más información.
+[La experiencia de noticias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café cuarto, es una aplicación de noticias de muestra que funciona entre el escritorio, teléfono y Xbox One y ofrece una experiencia de premium que aprovecha las ventajas de las ventajas de cada dispositivo. En Xbox, que está optimizado para el controlador para juegos, la interfaz de usuario se adapte a la experiencia de 10 pies y mantiene contenido en el área segura del Televisor, entre otras optimizaciones. Consulta [la entrada de blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obtener más información.
 
 ![La experiencia de noticias](images/samples-1.png)
 

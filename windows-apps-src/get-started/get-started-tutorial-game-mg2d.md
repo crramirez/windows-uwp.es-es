@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459854"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709155"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -26,12 +26,12 @@ MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te ense
 
 ## <a name="prerequisites"></a>Requisitos previos
 +   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener se vuelve a ejecutar al instalador de Visual Studio y modificando la instalación de Visual Studio 2017.
++ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar al instalador de Visual Studio y modificando la instalación de Visual Studio 2017.
 +   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
 ## <a name="why-monogame"></a>¿Por qué MonoGame?
-No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store u otras plataformas similares de distribución.
+No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store o de otras plataformas similares de distribución.
 
 ## <a name="get-the-code"></a>Obtener el código
 Si no te apetece seguir el tutorial paso a paso y solo quieres ver MonoGame en acción, [haz clic aquí para obtener la aplicación acabada](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
@@ -428,7 +428,7 @@ La primera cierra el juego si se pulsa la tecla **Escape**.
 
 La segunda, inicia el juego si se presiona la **barra espaciadora** y el juego todavía no comenzó.
 
-La tercera hace que el avatar del dinosaurio salte si se pulsa la **barra espaciadora**, al modificar su propiedad **dY**. Ten en cuenta que el jugador no puede saltar a menos que estén en el "suelo" (dino.y = screenHeight * SKYRATIO) y tampoco saltará si la barra espaciadora se está sosteniendo hacia abajo en lugar de una vez está presionada. Esto impide que el dinosaurio salte tan pronto como comienza el juego, aprovechándose del mismo toque que inicia el juego.
+La tercera hace que el avatar del dinosaurio salte si se pulsa la **barra espaciadora**, al modificar su propiedad **dY**. Ten en cuenta que el jugador no puede saltar a menos que estén en el "suelo" (dino.y = screenHeight * SKYRATIO) y tampoco saltará si la barra espaciadora se está sosteniendo hacia abajo en lugar de una vez presionada. Esto impide que el dinosaurio salte tan pronto como comienza el juego, aprovechándose del mismo toque que inicia el juego.
 
 Por último, la cláusula if/else permite comprobar si las flechas izquierda y derecha se están presionando y, si es el caso, cambia la propiedad **dX** del dinosaurio consecuentemente.
 

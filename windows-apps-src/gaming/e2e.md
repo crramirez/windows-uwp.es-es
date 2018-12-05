@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459151"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707897"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -590,7 +590,7 @@ Direct3D 11.3 es una API de gráficos de bajo nivel que usa el ya familiar model
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Elección de Direct3D12 o Direct3D11</td>
+        <td>Elegir Direct3D12 o Direct3D11</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">¿Qué es Direct3D12?</a></td>
     </tr>
     <tr>
@@ -1358,7 +1358,7 @@ Un icono es una representación de tu juego en el menú Inicio. Los iconos y las
 
 ### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de productos de la aplicación (complemento)
 
-Un complemento (producto de la aplicación) es un elemento complementario que los jugadores pueden comprar en el juego. Pueden ser complementos niveles del juego, artículos o cualquier otra cosa que los jugadores podrían disfrutar. Cuando se usan correctamente, complementos pueden proporcionar ingresos mientras mejora la experiencia de juego. Definir y publicar los complementos de tu juego a través del centro de partners y habilitar las compras desde la aplicación en el código del juego.
+Un complemento (producto de la aplicación) es un elemento complementario que los jugadores pueden comprar en el juego. Complementos puede niveles del juego, artículos o cualquier otra cosa que los jugadores podrían disfrutar. Cuando se usan correctamente, complementos pueden proporcionar ingresos mientras mejora la experiencia de juego. Definir y publicar los complementos de tu juego a través del centro de partners y habilitar las compras desde la aplicación en el código del juego.
 
 <table>
     <colgroup>
@@ -1549,7 +1549,7 @@ Usarás [El centro de partners](https://partner.microsoft.com/dashboard) para pu
     </tr>
     <tr>
         <td>El centro de partners publicación avanzada (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Guía de publicación avanzada el centro de partners</a></td>
+        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Guía de publicación avanzada de centro de partners</a></td>
     </tr>
     <tr>
         <td>Usar Azure Active Directory (AAD) para agregar usuarios a tu cuenta del centro de partners</td>

@@ -9,15 +9,15 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465424"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707267"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
-En este tema muestra cómo empaquetar la aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
+En este tema se muestra cómo empaquetar la aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
 
 Para empaquetar la aplicación de forma manual, tienes que crear un archivo de manifiesto de paquete y ejecutar una herramienta de línea de comandos para generar un paquete de la aplicación de Windows.
 
@@ -26,11 +26,11 @@ Considera la posibilidad de empaquetado manual si instala la aplicación mediant
 Si no estás seguro de qué cambios realiza el instalador en el sistema o si prefieres usar herramientas automáticas para crear el manifiesto de paquete, puedes tener en cuenta alguna de estas [opciones](desktop-to-uwp-root.md#convert).
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo puede usarse en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Revisar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
+Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Crear un manifiesto de paquete
 
@@ -118,7 +118,7 @@ Para aplicaciones de escritorio que crear un paquete, establece siempre el ``Nam
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Para las aplicaciones de escritorio que se crea un paquete para, tendrás que agregar la ``runFullTrust`` funcionalidad.
+Las aplicaciones de escritorio que se crea un paquete para, tendrás que agregar la ``runFullTrust`` funcionalidad.
 
 ```XML
 <Capabilities>
@@ -131,7 +131,7 @@ Rellena esta plantilla con la información que describe la aplicación.
 
 ### <a name="application-element"></a>Elemento de la aplicación
 
-Para las aplicaciones de escritorio que se crea un paquete, el ``EntryPoint`` atributo del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
+Las aplicaciones de escritorio que se crea un paquete, el ``EntryPoint`` atributo del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -205,7 +205,7 @@ Puedes ejecutar la aplicación para probarla de forma local sin tener que obtene
 Para actualizar los archivos .exe o .dll de la aplicación, reemplaza los archivos existentes en el paquete con los nuevos, aumenta el número de versión en AppxManifest.xml y, a continuación, vuelve a ejecutar el comando anterior.
 
 > [!NOTE]
-> Una aplicación empaquetada siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en a debe tener el formato al formato NTFS.
+> Un paquete de la aplicación siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en debe tener el formato al formato NTFS.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

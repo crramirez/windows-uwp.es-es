@@ -6,12 +6,12 @@ ms.date: 11/20/2018
 ms.topic: article
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bf36e8e5e07c73e8c59088be167e9dfb584c60
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 2065fb2a1cfeb2a895757e1aedc86cd421ff826c
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8480037"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709873"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
 
@@ -19,7 +19,7 @@ ms.locfileid: "8480037"
 Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes.
 
 > [!NOTE]
-> Puede que el ajuste de expansión comercial tenga implicaciones en el pago en un conjunto limitado de países/regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y la lista de [países/regiones afectados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> Puede que el ajuste de expansión comercial tenga implicaciones en el pago en un conjunto limitado de países/regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y la lista de [países/regiones afectados](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!IMPORTANT]
 > El tipo impositivo está sujeto a cambios en cualquier momento. Microsoft no puede garantizar que los tipos indicados en las tablas siguientes sean precisos en todo momento.

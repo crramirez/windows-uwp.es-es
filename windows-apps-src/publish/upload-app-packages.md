@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460620"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706455"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 
@@ -28,11 +28,11 @@ Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md)
 Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **paquetes** te permite cargar archivos .msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle.
 
 > [!IMPORTANT]
-> Para Windows 10, se recomienda cargar el archivo de .msixupload o .appxupload aquí en lugar de .msix, .appx, .msixbundle o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
+> Para Windows 10, se recomienda cargar el archivo .msixupload o .appxupload en lugar de .msix, .appx, .msixbundle o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-Si se detectan errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber cuál es el problema. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
+Si se detectan los errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber qué es incorrecto. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
 
 
 ## <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos

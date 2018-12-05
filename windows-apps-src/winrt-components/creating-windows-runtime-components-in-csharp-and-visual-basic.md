@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 52745a4fcd6b5a6b33982595f8c7c65c0bee3c32
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458602"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712033"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Crear componentes de Windows Runtime en C# y Visual Basic
-A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime. Puedes usar tu componente en aplicaciones de la Plataforma universal de Windows (UWP) con C++, JavaScript, Visual Basic o C#. En este tema se describe las reglas para crear un componente y se describe algunos aspectos de soporte técnico de .NET Framework para Windows Runtime. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET Framework. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime.
+A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime. Puedes usar tu componente en aplicaciones de la Plataforma universal de Windows (UWP) con C++, JavaScript, Visual Basic o C#. En este tema se describe las reglas para crear un componente y se describe algunos aspectos de la compatibilidad de .NET Framework para el tiempo de ejecución de Windows. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET Framework. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime.
 
 Si vas a crear un componente para el uso solo en aplicaciones UWP con C# o Visual Basic, y el componente no contiene controles UWP, considera el uso de la plantilla **Biblioteca de clase** en lugar de la plantilla  **Componente de Windows Runtime**. Hay menos restricciones en una biblioteca de clase simple.
 
-En este tema contiene las siguientes secciones:
+Este tema contiene las siguientes secciones:
 
 ## <a name="declaring-types-in-windows-runtime-components"></a>Declarar tipos en componentes de Windows Runtime
 Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquier funcionalidad de .NET Framework que esté autorizada en una aplicación universal de Windows. (Consulta la introducción de [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) para obtener más información.) De manera externa, los miembros de los tipos pueden exponer solo los tipos de Windows Runtime para sus parámetros y valores devueltos. En la siguiente lista se describen las limitaciones de los tipos de .NET Framework expuestos de componentes de Windows Runtime.
@@ -34,7 +34,7 @@ Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquie
     -   Derivar de tipos que no están en Windows Runtime, como System.Exception y System.EventArgs.
 -   Todos los tipos públicos deben tener un espacio de nombres raíz que coincida con el nombre del ensamblado y el nombre del ensamblado no puede empezar por "Windows".
 
-    > **Sugerencia**de forma predeterminada, los proyectos de Visual Studio tienen nombres de espacio de nombres que coinciden con el nombre del ensamblado. En Visual Basic, la declaración de espacio de nombres para este espacio de nombres predeterminado no se muestra en tu código.
+    > **Sugerencia**de manera predeterminada, los proyectos de Visual Studio tienen nombres de espacio de nombres que coinciden con el nombre del ensamblado. En Visual Basic, la declaración de espacio de nombres para este espacio de nombres predeterminado no se muestra en tu código.
 
 -   Las estructuras públicas no pueden tener miembros que no sean campos públicos y los campos deben ser tipos de valor o cadenas.
 -   Las clases públicas deben ser **sealed** (**NotInheritable** en Visual Basic). Si el modelo de programación requiere polimorfismo, puedes crear una interfaz pública e implementarla en las clases que deben ser polimórficas.
@@ -264,6 +264,6 @@ Una vez que hayas creado un componente de Windows Runtime para tu propio uso, es
 Para obtener más información acerca de las características de los lenguajes C# y Visual Basic, así como de la compatibilidad de .NET Framework con Windows Runtime, consulta [Referencia de los lenguajes Visual Basic y C#](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).
 
 ## <a name="related-topics"></a>Temas relacionados
-* [.NET para Introducción a las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para introducción de las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

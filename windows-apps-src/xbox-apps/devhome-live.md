@@ -1,23 +1,23 @@
 ---
 ms.assetid: 4c03e06b-c12c-f64f-c53f-b38716101822
 title: Xbox Live página (Dev Home)
-description: Proporciona información sobre la página de Xbox Live de la aplicación Dev Home para Xbox One.
+description: Proporciona información acerca de la página de Xbox Live de la aplicación Dev Home para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: c72137b8419526b65dc3c6cb75a511a7a6f50a82
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464135"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8711853"
 ---
 # <a name="xbox-live-page-dev-home"></a>Xbox Live página (Dev Home)
    
   
-La página de **Xbox Live** de Dev Home captura información de varios jugadores y muestra el estado actual del servicio Xbox Live.   
+La página de **Xbox Live** de Dev Home captura información de varios jugadores y muestra el estado actual del servicio de Xbox Live.   
  ![Página Xbox Live de Dev Home](images/devhome_live.png)   
   
 La página de **Xbox Live** contiene los paneles siguientes:   
@@ -33,7 +33,7 @@ La página de **Xbox Live** contiene los paneles siguientes:
 ## <a name="xbtrace-advancedmp"></a>XBTrace (advancedmp)  
    
   
-La página de **XBTrace (advancedmp)** se inicia o detiene la captura de un seguimiento de multijugador. También puede capturar una instantánea del estado actual de multijugador.   
+La página de **XBTrace (advancedmp)** se inicia o detiene la captura de un seguimiento de varios jugadores. También puede capturar una instantánea del estado actual de multijugador.   
   
 <a id="ID4E3B"></a>
 

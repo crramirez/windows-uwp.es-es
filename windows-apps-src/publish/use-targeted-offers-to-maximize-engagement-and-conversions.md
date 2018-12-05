@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ofertas de destino, ofertas, notificaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: e894e81b560f071cf42198f09aad0b2b82eae2cd
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465562"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712384"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Usar ofertas dirigidas para maximizar la interacción y las conversiones
 
@@ -24,7 +24,7 @@ Segmentos específicos de destino de los clientes con contenido personalizado y 
 En un nivel elevado, deberás seguir tres pasos para usar las ofertas dirigidas:
 
 1. **Crear la oferta en [El centro de partners](https://partner.microsoft.com/dashboard).** Navegar hasta la página para **Interactuar > Ofertas dirigidas** para crear ofertas. A continuación, se describe más información sobre este proceso.
-2. **Implementar la experiencia de la oferta desde la aplicación.** Usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar las ofertas disponibles para un usuario determinado. También tendrás que crear la experiencia en la aplicación para la oferta de destino. Para obtener más información, consulta [Administrar ofertas dirigidas usando los servicios de la Tienda](../monetize/manage-targeted-offers-using-windows-store-services.md).
+2. **Implementar la experiencia de la oferta desde la aplicación.** Usar la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar las ofertas disponibles para un usuario determinado. También tendrás que crear la experiencia en la aplicación para la oferta de destino. Para obtener más información, consulta [Administrar ofertas dirigidas usando los servicios de la Tienda](../monetize/manage-targeted-offers-using-windows-store-services.md).
 3. **Envía tu aplicación a la Tienda.** La aplicación debe publicarse con la experiencia de oferta en la aplicación para que las ofertas estén disponibles para los clientes.
 
 Después de completar estos pasos, los clientes que usen la aplicación verán las ofertas que están disponibles en ese momento, en función de su pertenencia a los segmentos asociados a dichas ofertas. Ten en cuenta que aunque nos esforzamos todo lo que podemos para mostrar todas las ofertas disponibles a tus clientes, pueden producirse errores ocasionales que afectan a la disponibilidad de ofertas.

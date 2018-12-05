@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463115"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712394"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 Esto crea un formateador basado en el valor de región e idioma del contexto actual. No importa el orden de los componentes de la plantilla de formato; el formateador los muestra en el orden correcto del idioma actual. Por ejemplo, muestra "January 1" para inglés (Estados Unidos), pero "1 janvier" para francés (Francia) y "1月1日" para japonés.
 
-Por otro lado, los patrones de formato son específicos de cada cultura. Vamos a obtener acceso a los patrones de formato de nuestra plantilla de formato.
+Por otro lado, los patrones de formato son específicos de cada cultura. Vamos a obtener acceso al patrón de formato de nuestra plantilla de formato.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;

@@ -7,11 +7,11 @@ keywords: windows 10, uwp, segmento, segmentos, grupo dirigido, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464105"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708867"
 ---
 # <a name="create-customer-segments"></a>Crear segmentos de clientes
 
@@ -33,7 +33,7 @@ Cosas que tener en cuenta sobre segmentos de clientes:
 
 ## <a name="to-create-a-customer-segment"></a>Para crear un segmento de clientes
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y, a continuación, seleccionar **grupos de clientes**.
+1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y, a continuación, selecciona **los grupos de clientes**.
 2.  En la página **Grupos de clientes**, sigue uno de estos procedimientos:
  - En la sección **Mis grupos de clientes**, selecciona **Crear nuevo grupo** para definir un segmento desde cero. En la página siguiente, selecciona el botón de opción **Segmento**.
  - En la sección **Segment templates**, selecciona **Copiar** junto a uno de los segmentos predefinidos (que puedes usar tal cual o modificar según tus necesidades).
@@ -41,7 +41,7 @@ Cosas que tener en cuenta sobre segmentos de clientes:
 4.  En la lista **Include customers from this app**, selecciona una de las aplicaciones de destino.
 5.  En la sección **Definir condiciones de inclusión**, especifica los criterios de filtro para el segmento.
 
-    Puedes elegir entre una variedad de criterios de filtro, incluidos **adquisiciones**, **origen de adquisición**, **datos demográficos**, **clasificación**, **predicción de las renovaciones**, **compras desde la tienda**, **adquisiciones de la tienda**y **Store gastar**.
+    Puedes elegir entre una variedad de criterios de filtro, incluidos **adquisiciones**, **adquisición**, **datos demográficos**, **clasificación**, **predicción de las**, **compras desde la tienda**, **adquisiciones de la tienda**y **Store gastar**.
 
     Por ejemplo, si quieres crear un segmento que solo incluya a los clientes de la aplicación que tengan de 18 a 24 años, selecciona los criterios de filtro [**Datos demográficos**] [**Grupo de edad**] [**es**] [**18 a 24**] en las listas desplegables.
 
