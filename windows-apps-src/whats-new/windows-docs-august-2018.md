@@ -6,11 +6,11 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: da8bc3b441a1b619e086934f277cb14be6bcc37a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8473685"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712943"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos de Windows de agosto de 2018
 
@@ -28,7 +28,7 @@ Se han agregado las siguientes características de Windows compilaciones de Insi
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [botón de división](../design/controls-and-patterns/buttons.md#create-a-split-button)y [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) proporcionan controles de botón con características especializadas para mejorar la interfaz de usuario de la aplicación.
 
-![Un botón en dos paneles para seleccionar el color de primer plano](../design/controls-and-patterns/images/split-button-rtb.png)
+![Un botón de división para seleccionar el color de primer plano](../design/controls-and-patterns/images/split-button-rtb.png)
 
 * NavigationView ahora admite la [navegación superior](../design/controls-and-patterns/navigationview.md), para los casos en los que la aplicación tiene un menor número de opciones de exploración y requieren más espacio para el contenido de la aplicación.
 
@@ -50,7 +50,7 @@ Se ha agregado una lista de [extensiones de API de Microsoft heredadas](https://
 
 Hemos agregado 250 [C++ / WinRT](../cpp-and-winrt-apis/index.md) código descripciones para los temas de nuestros documentos, elementos complementarios existentes C++ / ejemplos de código CX.
 
-### <a name="project-rome"></a>Proyecto Roma
+### <a name="project-rome"></a>Project Rome
 
 Se ha reorganizado el sitio de [documentos de proyecto Rome](https://docs.microsoft.com/windows/project-rome/) en un enfoque de la característica en primer lugar. Esto hará que sea más fácil para los desarrolladores para encontrar lo que buscan y la implementación de las características de su elección en varias plataformas.
 

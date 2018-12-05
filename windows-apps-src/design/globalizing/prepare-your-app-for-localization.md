@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463323"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713267"
 ---
 # <a name="make-your-app-localizable"></a>Haz que tu aplicación sea localizable
 
@@ -60,7 +60,7 @@ Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "tarea
 | No pudo sincronizarse la tarea.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | No pudo sincronizarse el documento.    | Das Dokument konnte nicht synchronisiert werden. |
 
-Como otro ejemplo, considera la posibilidad de la frase "Remind me en {0} Minute (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
+Otro ejemplo, considera la posibilidad de la frase "Remind me en {0} Minute (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
 
 Para resolver este problema, localiza toda la oración en lugar de una única palabra. Aunque hacer esto parezca demandar trabajo extra y que no sea una solución elegante, es la mejor solución porque:
 

@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462808"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706885"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
 
@@ -23,7 +23,7 @@ En una aplicación de plataforma Universal de Windows (UWP), *los elementos de c
 
 ## <a name="provide-the-best-command-experience"></a>Proporcionar la mejor experiencia de comando
 
-Los aspectos más importantes de una interfaz de comando es lo que tu intentando permitir al usuario realizar. Cuando se planea la funcionalidad de la aplicación, considera la posibilidad de los pasos necesarios para realizar esas tareas y las experiencias de usuario que quieras habilitar. Una vez que hayas completado un borrador inicial de estas experiencias, a continuación, puedes tomar decisiones sobre las herramientas y las interacciones para implementarlos.
+El aspecto más importante de una interfaz de comandos es qué su tratando de permitir al usuario realizar. Al planear la funcionalidad de la aplicación, ten en cuenta los pasos necesarios para realizar esas tareas y las experiencias de usuario que quieras habilitar. Una vez que hayas completado un borrador inicial de estas experiencias, a continuación, puedes tomar decisiones sobre las herramientas y las interacciones para implementarlos.
 
 Estas son algunas experiencias de aplicación comunes:
 
@@ -33,7 +33,7 @@ Estas son algunas experiencias de aplicación comunes:
 - Abrir, guardar y eliminar archivos
 - Editar y crear contenido
 
-Sé creativo con el diseño de sus experiencias de comando. Elige qué dispositivos de entrada es la aplicación admite, y cómo responde la aplicación a cada dispositivo. Al admitir la gama más amplia de capacidades y preferencias que tu aplicación como accesible como sea posible, portátiles y utilizable.
+Sé creativo con el diseño de sus experiencias de comando. Elige qué dispositivos de entrada es la aplicación admite, y cómo responde la aplicación a cada dispositivo. Al admitir la gama más amplia de capacidades y preferencias que tu aplicación como accesible como sea posible, portátil y utilizable.
 
 
 
@@ -101,7 +101,7 @@ Para obtener una lista completa, consulta [Controles y elementos de la interfaz 
 
 Puedes colocar elementos de comandos en un número de superficies de tu aplicación, como el lienzo de la aplicación o contenedores de comandos especiales, como una barra de comandos, el control flotante de barra de comandos, la barra de menús o el cuadro de diálogo.
 
-Siempre tratar de permitir a los usuarios puedan manipular directamente el contenido en lugar de a través de los comandos que actúan sobre el contenido, como arrastrar y colocar para reorganizar los elementos de lista, en lugar de botones de comando arriba y abajo. 
+Siempre intenta que los usuarios puedan manipular directamente el contenido en lugar de a través de los comandos que actúan sobre el contenido, como arrastrar y colocar para reorganizar los elementos de lista, en lugar de botones de comando arriba y abajo. 
 
 Sin embargo, esto podría no ser posible con determinados dispositivos de entrada, o al acomodar preferencias y habilidades de usuario específico. En estos casos, proporciona prestaciones de comandos tantos como sea posible y colocar estos elementos de comandos en una superficie de comando de la aplicación.
 
@@ -167,7 +167,7 @@ Estas son algunas maneras de proporcionar comentarios en tu aplicación.
     :::column span="2":::
         <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Los controles flotantes</a> son elementos emergentes contextuales ligeros que se puedan descartar tocando o haciendo clic en algún lugar fuera del control flotante.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Los controles flotantes</a> son elementos emergentes contextuales ligeros que se pueden cerrar tocando o haciendo clic en algún lugar fuera del control flotante.
 :::row-end:::
 
 :::row:::

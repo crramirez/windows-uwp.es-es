@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464778"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708543"
 ---
 # <a name="getting-started-what-next"></a>Introducción: ¿y después?
 
@@ -29,7 +29,7 @@ Con esta información básica, ya puedes empezar a crear aplicaciones para la Pl
 
 Además, asegúrate de visitar nuestros [recursos de la comunidad](https://developer.microsoft.com/en-us/windows/support) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
 
-Creemos que te ofrecerá nuevas oportunidades de creación de aplicaciones de Windows 10. Esperamos ver pronto las excelentes aplicaciones que crearás.
+Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de la aplicación. Esperamos ver pronto las excelentes aplicaciones que crearás.
 
 ## <a name="related-topics"></a>Temas relacionados
 
