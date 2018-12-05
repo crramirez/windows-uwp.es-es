@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: d4f5271d70cefea99a9caff04e7203e05043440c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464427"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694593"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Ejecuta experimentos para aplicaciones con pruebas A/B
 
 Puedes usar el centro de partners para definir variables remotas que se pueden recuperar en tiempo de ejecución de aplicaciones en la plataforma Universal de Windows (UWP) y puedes probar las variaciones de estos valores con los usuarios para identificar los valores más eficaces para manejar el comportamiento de usuario deseado. Tu aplicación puede usar variables remotas para configurar las experiencias de aplicación, como las compras desde la aplicación, el flujo de registros, subtítulos y colocación de anuncios.
 
-El objetivo de la prueba A/B debe ser identificar una variación de los valores de variables remotos que probablemente obtenga mejores tasas de conversión (por ejemplo, más compras desde la aplicación) al mismo tiempo que se te proporciona una experiencia de aplicación más atractiva. Después de que se ha identificado una variación correcta, puedes inmediatamente finalizar el experimento y habilitar esa variación para todos los usuarios del centro de partners, sin tener que volver a publicar la aplicación.
+El objetivo de la prueba A/B debe ser identificar una variación de los valores de variables remotos que probablemente obtenga mejores tasas de conversión (por ejemplo, más compras desde la aplicación) al mismo tiempo que se te proporciona una experiencia de aplicación más atractiva. Después de que se ha identificado una variación correcta, puede finalizar el experimento inmediatamente y habilitar esa variación para todos los usuarios del centro de partners, sin tener que volver a publicar la aplicación.
 
 ## <a name="create-and-run-an-ab-test"></a>Crear y ejecutar una prueba A/B
 

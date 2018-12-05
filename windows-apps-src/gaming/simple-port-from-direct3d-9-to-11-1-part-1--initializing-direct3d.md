@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, direct3d 11, inicialización, migrar, direct3d 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460775"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696334"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar Direct3D11
 
@@ -73,7 +73,7 @@ Primero, creamos el dispositivo. Obtenemos una lista de los niveles de caracter�
 
 Después de crear el dispositivo Direct3D 11 y su contexto, podemos aprovechar la funcionalidad del puntero COM para obtener la versión más reciente de las interfaces, lo cual incluye capacidad adicional, siempre recomendable.
 
-> **Nota**  D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde al modelo de sombreador 2.0) es el nivel mínimo de tu juego de Microsoft Store es necesarias para admitir. (Los paquetes ARM de tu juego no obtendrán la certificación si no son compatibles con el nivel 9\_1.) Si el juego también incluye una ruta de acceso de representación para las 3 funcionalidades del modelo de sombreador, debes incluir D3D\_FEATURE\_LEVEL\_9\_3 en la matriz
+> **Nota**  D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde al modelo de sombreador 2.0) es el nivel mínimo de tu juego de Microsoft Store es necesaria para admitir. (Los paquetes ARM de tu juego no obtendrán la certificación si no son compatibles con el nivel 9\_1.) Si el juego también incluye una ruta de acceso de representación para las 3 funcionalidades del modelo de sombreador, debes incluir D3D\_FEATURE\_LEVEL\_9\_3 en la matriz
 
  
 

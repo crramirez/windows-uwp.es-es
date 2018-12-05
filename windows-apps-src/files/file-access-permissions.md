@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461652"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694054"
 ---
 # <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
@@ -92,7 +92,7 @@ El directorio de instalación de la aplicación es una ubicación de solo lectur
 ### <a name="application-data-locations"></a>Ubicaciones de datos de aplicación
 Son las carpetas en las que la aplicación puede almacenar datos. Estas carpetas (locales, móviles o temporales) se crean al instalar la aplicación.
 
-Hay dos formas principales para acceder a archivos y carpetas desde ubicaciones de datos de la aplicación:
+Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaciones de datos de la aplicación:
 
 1.  Usa las propiedades de [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar una carpeta de datos de la aplicación.
 
