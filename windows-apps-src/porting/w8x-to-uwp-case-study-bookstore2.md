@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 156f780e5637852d554488adfeeb9d688fa4a4d7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462310"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696831"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore2
 
@@ -51,7 +51,7 @@ Bookstore2\_81 en Windows Phone, vista alejada
 
 La solución Bookstore2\_81 es un proyecto de aplicación universal 8.1. El proyecto bookstore2\_81 el paquete de la aplicación para Windows8.1 y el proyecto bookstore2\_81. windowsphone genera el paquete de la aplicación para Windows Phone 8.1. Bookstore2\_81.Shared es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
 
-Al igual que con el caso práctico anterior, la opción que elegiremos (de los que se describe en [Si tienes una aplicación Universal 8.1](w8x-to-uwp-root.md)) es puerto el contenido de la Shared del proyecto a un Windows 10 que tenga como destino la familia de dispositivos universales.
+Al igual que con el caso práctico anterior, la opción que elegiremos (de los que se describe en [Si tienes una aplicación Universal 8.1](w8x-to-uwp-root.md)) es portar el contenido de la compartido del proyecto a un Windows 10 destinada a la familia de dispositivos universales.
 
 Comienza creando un proyecto nuevo de Aplicación vacía (Windows Universal). Asígnale el nombre Bookstore2Universal\_10. Estos son los archivos que hay que copiar de Bookstore2\_81 a Bookstore2Universal\_10.
 
@@ -78,7 +78,7 @@ La aplicación de Windows 10 con cambios del código fuente inicial ejecutándos
 
 La aplicación de Windows 10 con cambios del código fuente inicial ejecutándose en un dispositivo de escritorio, vista alejada
 
-El modelo de vista y las vistas acercada y alejada funcionan juntos correctamente, aunque hay problemas que hacen que sea un poco difícil de ver. Un problema es que [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) no se desplaza. Esto es porque, en Windows 10, el estilo predeterminado de un [**control GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) provoca la disposición sea vertical (y las directrices de diseño de Windows 10 se recomiendan que se use de esta manera en aplicaciones migradas nuevas y). No obstante, desplazamiento horizontal opciones de configuración de la plantilla del panel de elementos personalizados que copiamos del proyecto Bookstore2\_81 (que se diseñó para la 8.1 app) entra en conflicto con la configuración de desplazamiento vertical en el estilo predeterminado de Windows 10 que se está aplicando como resultado de haber portado a una aplicación de Windows 10. Una segunda cuestión es que la aplicación aún no adapta su interfaz de usuario para que ofrezca la mejor experiencia en distintos tamaños de ventanas y en dispositivos pequeños. Y en tercer lugar, los estilos y pinceles correctos aún no se usan, lo que provoca que gran parte del texto sea invisible (incluidos los encabezados de grupo en los que puede hacer clic para alejar). Por tanto, en las siguientes tres secciones ([Cambios de diseño de SemanticZoom y GridView](#semanticzoom-and-gridview-design-changes), [Interfaz de usuario adaptativa](#adaptive-ui) y [Estilos universales](#universal-styling)) se solucionarán los tres problemas.
+El modelo de vista y las vistas acercada y alejada funcionan juntos correctamente, aunque hay problemas que hacen que sea un poco difícil de ver. Un problema es que [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) no se desplaza. Esto es porque, en Windows 10, el estilo predeterminado de un [**control GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) hace que se dispuestas verticalmente (y las directrices de diseño de Windows 10 se recomiendan que se use de esta manera en nuevas aplicaciones y portadas). No obstante, desplazamiento horizontal opciones de configuración de la plantilla del panel de elementos personalizados que copiamos del proyecto Bookstore2\_81 (que se ha diseñado para el 8.1 app) entra en conflicto con la configuración de desplazamiento vertical en el estilo predeterminado de Windows 10 que se está aplicando como resultado de haber portado a una aplicación de Windows 10. Una segunda cuestión es que la aplicación aún no adapta su interfaz de usuario para que ofrezca la mejor experiencia en distintos tamaños de ventanas y en dispositivos pequeños. Y en tercer lugar, los estilos y pinceles correctos aún no se usan, lo que provoca que gran parte del texto sea invisible (incluidos los encabezados de grupo en los que puede hacer clic para alejar). Por tanto, en las siguientes tres secciones ([Cambios de diseño de SemanticZoom y GridView](#semanticzoom-and-gridview-design-changes), [Interfaz de usuario adaptativa](#adaptive-ui) y [Estilos universales](#universal-styling)) se solucionarán los tres problemas.
 
 ## <a name="semanticzoom-and-gridview-design-changes"></a>Cambios de diseño de SemanticZoom y GridView
 

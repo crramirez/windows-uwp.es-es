@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
 ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458486"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689720"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -67,7 +67,7 @@ Inicia la Página principal para desarrolladores y selecciona el botón **Leave 
 
 ### <a name="can-i-publish-my-app"></a>¿Puedo publicar mi aplicación?
 
-Puedes [publicar aplicaciones](../publish/index.md) a través del centro de partners si tienes una [cuenta de desarrollador](https://developer.microsoft.com/store/register). Las aplicaciones para UWP creadas y probadas en una consola XboxOne comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de XboxOne.
+Si tienes una [cuenta de desarrollador](https://developer.microsoft.com/store/register), puede [publicar aplicaciones](../publish/index.md) a través del centro de partners. Las aplicaciones para UWP creadas y probadas en una consola XboxOne comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de XboxOne.
 
 ### <a name="can-i-publish-my-game"></a>¿Puedo publicar mi juego?
 

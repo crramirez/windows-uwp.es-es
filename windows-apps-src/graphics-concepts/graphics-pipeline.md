@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55621cec768e0aac680c3a84fd803e591459a97d
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465444"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713845"
 ---
 # <a name="graphics-pipeline"></a>Canalización de gráficos
 
@@ -52,11 +52,11 @@ La más utilizadas son la fase del sombreador de vértices (VS) y la fase del so
 
 ## <a name="stream-output-stage"></a>Fase de salida de flujo
 
-|-|-| | Propósito | La [fase de salida de flujo (SO)](stream-output-stage--so-.md) continuamente salidas (o transmite) los datos de vértices de la fase activa anterior a uno o más búferes de memoria. Los datos trasmitidos a la memoria pueden regresar regresar a la canalización como datos de entrada o volver de la CPU. | | Entrada | Datos de vértices de una fase de canalización anterior. | | Salida | La fase de salida de flujo (SO) continuamente salidas (o transmite) los datos de vértices de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o más búferes de memoria. Si la fase del sombreador de geometría (GS) está inactiva y la fase de salida de flujo (SO) está activa, devuelve continuamente datos de vértices de la fase de sombreador de dominios (DS) en los búferes de memoria (o si DS también está inactivo, desde la fase del sombreador de vértices (VS)). |
+|-|-| | Propósito | Continuamente la [fase de salida de flujo (SO)](stream-output-stage--so-.md) devuelve (o transmite) datos de vértices de la fase activa anterior a uno o más búferes de memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver de la CPU. | | Entrada | Datos de vértices de una fase de canalización anterior. | | Salida | La fase de salida de flujo (SO) continuamente salidas (o transmite) los datos de vértices de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o más búferes de memoria. Si la fase del sombreador de geometría (GS) está inactiva y la fase de salida de flujo (SO) está activa, devuelve continuamente datos de vértices de la fase de sombreador de dominios (DS) en los búferes de memoria (o si DS también está inactivo, desde la fase de sombreador de vértices (VS)). |
 
 ## <a name="rasterizer-stage"></a>Fase del rasterizador
 
-|-|-| | Propósito | La [fase del rasterizador (RS)](rasterizer-stage--rs-.md) recorta primitivos que no están en la vista, los prepara para la fase del sombreador de píxeles (PS) y determina cómo invocar a sombreadores de píxeles. Convierte vector información (que se compone de formas o primitivos) en una imagen de trama (que se compone de píxeles) con el fin de mostrar gráficos 3D en tiempo real. | | Entrada | Los vértices (x, y, z, w) entra en el rasterizador fase se supone que en el espacio de recorte homogéneo. En este espacio de coordenadas del eje X apunta a la derecha, Y apunta hacia arriba y Z puntos fuera de la cámara. | | Salida | Píxeles reales que se deben representar. Incluye algunos atributos de vértice para su uso en la interpolación el sombreador de píxeles. |
+|-|-| | Propósito | La [fase del rasterizador (RS)](rasterizer-stage--rs-.md) recorta primitivos que no están en la vista, los prepara para la fase de sombreador de píxeles (PS) y determina cómo invocar a sombreadores de píxeles. Convierte vector información (que se compone de formas o primitivos) en una imagen de trama (que se compone de píxeles) con el fin de mostrar gráficos 3D en tiempo real. | | Entrada | Los vértices (x, y, z, w) entra en el rasterizador fase se supone que en el espacio de recorte homogéneo. En este espacio de coordenadas del eje X apunta a la derecha, Y apunta arriba y Z puntos fuera de la cámara. | | Salida | Píxeles reales que se deben representar. Incluye algunos atributos de vértice para su uso en la interpolación el sombreador de píxeles. |
 
 ## <a name="pixel-shader-stage"></a>Fase del sombreador de píxeles
  

@@ -14,11 +14,11 @@ dev_langs:
 - vb
 ms.custom: RS5
 ms.openlocfilehash: 753d0cd808daef96aa16c34c3962201ca73e5be9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464910"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689479"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -28,7 +28,7 @@ Las API TreeView admiten las siguientes características:
 
 - Anidamiento de n niveles
 - Selección de uno o varios nodos
-- (Versión preliminar) Enlace de datos a la propiedad ItemsSource en la vista de árbol y TreeViewItem
+- (Versión preliminar) Enlace de datos a la propiedad ItemsSource de la vista de árbol y TreeViewItem
 - (Versión preliminar) TreeViewItem como raíz de la plantilla de elemento de vista de árbol
 - (Versión preliminar) Arbitrarios tipos de contenido en un elemento TreeViewItem
 - (Versión preliminar) Arrastrar y colocar entre las vistas de árbol
@@ -82,7 +82,7 @@ Para crear una vista de árbol, usa un control [TreeView](/uwp/api/windows.ui.xa
 A partir de Windows Insider Preview, puedes enlazar un origen de datos jerárquicos a la propiedad [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para proporcionar el contenido de la vista de árbol, al igual que con ItemsSource de ListView. Del mismo modo, se usa [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (y la opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para proporcionar una clase DataTemplate que representa el elemento.
 
 > [!IMPORTANT]
-> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control de vista de árbol. No puedes establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, nodos crean para TI y puede acceder a ellos desde la propiedad TreeView.RootNodes.
+> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control de vista de árbol. No puedes establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, nodos crean y puede tener acceso a ellos desde la propiedad TreeView.RootNodes.
 
 Este es un ejemplo de una vista de árbol sencilla que se ha declarado en XAML. Normalmente se agregan los nodos en el código, pero te mostramos aquí la jerarquía XAML, porque puede resultar útil para visualizar cómo se crea la jerarquía de nodos.
 
@@ -104,7 +104,7 @@ En la mayoría de los casos, la vista de árbol muestra datos desde un origen de
 
 ### <a name="bind-to-a-hierarchical-data-source"></a>Enlazar a un origen de datos jerárquicos
 
-Para crear una vista de árbol con enlace de datos, Establece la propiedad de TreeView.ItemsSource una colección jerárquica. A continuación, en la clase ItemTemplate, establece al elemento secundario colección items a la propiedad TreeViewItem.ItemsSource.
+Para crear una vista de árbol con enlace de datos, Establece la propiedad de TreeView.ItemsSource una colección jerárquica. A continuación, en ItemTemplate, establece al elemento secundario colección de elementos en la propiedad TreeViewItem.ItemsSource.
 
 ```xaml
 <TreeView ItemsSource="{x:Bind DataSource}">
@@ -126,7 +126,7 @@ Si usas TreeView.ItemsSource, estas API están disponibles para obtener el eleme
 | **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtiene el elemento de datos para el contenedor TreeViewItem especificado. |
-| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtiene el contenedor TreeViewItem para el elemento de datos especificadas. |
+| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtiene el contenedor TreeViewItem para el elemento de datos especificado. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
@@ -206,7 +206,7 @@ Puedes proporcionar una clase [DataTemplate](/uwp/api/windows.ui.xaml.datatempla
 
 ### <a name="item-container-style"></a>Estilo del contenedor de elementos
 
-Si usas ItemsSource o RootNodes, los elementos reales usados para mostrar cada nodo denominada "contenedor": es un objeto [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) . Puedes aplicar estilo del contenedor con la vista de árbol ItemContainerStyle o ItemContainerStyleSelector propiedades.
+Si usas ItemsSource o RootNodes, los elementos reales usados para mostrar cada nodo denominada el contenedor de"": es un objeto [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) . Puedes aplicar estilo del contenedor con la vista de árbol ItemContainerStyle o ItemContainerStyleSelector propiedades.
 
 ### <a name="item-template-selectors"></a>Selectores de plantilla de elemento
 
@@ -288,7 +288,7 @@ Existen 2 formas de expandir o contraer un nodo de vista de árbol en el código
 
 Es posible que debas mostrar un gran número de nodos en la vista de árbol, o que no sepas con antelación cuántos nodos tendrá. El control TreeView no se virtualiza, para que puedas administrar recursos rellenado cada nodo mientras se expande y quitando los nodos secundarios cuando se contrae.
 
-Manipula el evento [Expanding](/uwp/api/windows.ui.xaml.controls.treeview.expand) y usa la propiedad [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) para agregar elementos secundarios a un nodo cuando se expande. La propiedad HasUnrealizedChildren indica si el nodo debe rellenarse, o si ya se ha rellenado su colección de elementos secundarios. Es importante recordar que el TreeViewNode no establece este valor, debes realizar la administración en el código de la aplicación.
+Manipula el evento [Expanding](/uwp/api/windows.ui.xaml.controls.treeview.expand) y usa la propiedad [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) para agregar elementos secundarios a un nodo cuando se expande. La propiedad HasUnrealizedChildren indica si el nodo debe rellenarse, o si ya se ha rellenado su colección de elementos secundarios. Es importante recordar que el TreeViewNode no establece este valor, tienes que administrar en el código de la aplicación.
 
 Este es un ejemplo de estos API en uso. Consulte el código de ejemplo completo al final de este artículo para buscar contexto, incluyendo la implementación de 'FillTreeNode'.
 
@@ -383,11 +383,11 @@ El control TreeView admite tanto la selección única como la múltiple. De mane
 
 Cuando se habilita la selección múltiple, se muestra una casilla junto a cada nodo de vista de árbol, y se resaltan los elementos seleccionados. Un usuario puede seleccionar o anular la selección de un elemento usando la casilla; al hacer clic en el elemento se le sigue invocando.
 
-Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no todos, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
+Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no todas, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
 
 ![Selección múltiple en una vista de árbol](images/treeview-selection.png)
 
-Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no todos, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
+Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no todas, de los elementos secundarios en un nodo primario se seleccionan, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
 
 ![Selección múltiple en una vista de árbol](images/treeview-selection.png)
 
