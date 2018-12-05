@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
 ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463083"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694997"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Qué novedades encontrarán los desarrolladores en la última actualización de UWP en Xbox One
 
@@ -27,7 +27,7 @@ UWP en Xbox One aplicaciones ahora puede admitir la vuelta a la aplicación ante
 > Por motivos de compatibilidad, esta funcionalidad solo está disponible para las aplicaciones creadas con la versión más reciente de UWP en Xbox One. 
 
 ## <a name="dev-home-is-now-the-default-home-experience-on-development-consoles"></a>Dev Home ahora es la experiencia principal predeterminada en las consolas de desarrollo
-Ahora, consolas de desarrollo inicia Dev Home como la experiencia principal predeterminada. Esto te permite obtener adecuado para que funcione sin necesidad de hacer clic a través de la pantalla de inicio de la versión comercial. Dev Home incluye ahora una acción rápida para iniciar la pantalla de inicio de la versión comercial. Además, una nueva configuración te permite realizar Home comercial de la experiencia de forma predeterminada. 
+Ahora, consolas de desarrollo inicia Dev Home como la experiencia de inicio predeterminado. Esto te permite obtener derecho para que funcione sin necesidad de hacer clic a través de la pantalla de inicio de la versión comercial. Dev Home incluye ahora una acción rápida para iniciar la pantalla de inicio de la versión comercial. Además, una nueva configuración te permite realizar Home comercial de la experiencia de forma predeterminada. 
 
 ## <a name="new-dev-home-user-interface"></a>Nueva interfaz de usuario de Dev Home
 La interfaz de usuario de Dev Home ahora incluye las siguientes mejoras de productividad:

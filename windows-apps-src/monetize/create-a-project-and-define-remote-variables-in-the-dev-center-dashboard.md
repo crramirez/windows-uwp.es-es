@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: acfd654f02cb7fb727d35271175e59966e2abdc4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459473"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693628"
 ---
 # <a name="create-an-experiment-project-in-partner-center"></a>Crear un proyecto de experimento en el Centro de partners
 
@@ -30,7 +30,7 @@ Las siguientes instrucciones describen los pasos básicos para crear un proyecto
   1. Si la sección **Variables remotas** está contraída, haz clic en **Mostrar** en el encabezado de la sección.
   2. Haz clic en **Agregar variable** para crear cada nueva variable que quieras que esté disponible para cualquier experimento en este proyecto y escribe el nombre de la variable y el valor predeterminado de la variable.
   3. Cuando hayas terminado de agregar variables, haz clic en **Guardar**.
-3. En la sección **Integración de SDK**, asegúrate de anotar el valor del [id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando escribas el [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debe hacer referencia a este Id. de proyecto en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al centro de partners.
+3. En la sección **Integración de SDK**, asegúrate de anotar el valor del [id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando el [código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debe hacer referencia a este Id. de proyecto en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al centro de partners.
 
 > [!NOTE]
 > No puedes editar, agregar o quitar variables remotas mientras haya un experimento activo en el proyecto. Esta limitación ayuda a proteger la integridad de los datos para el grupo de control del experimento activo.

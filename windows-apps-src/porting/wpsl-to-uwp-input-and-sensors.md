@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464814"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696172"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Migración WindowsPhone Silverlight a UWP para E/S, dispositivo y modelo de aplicaciones
 
@@ -22,7 +22,7 @@ El código que se integra con el dispositivo y sus sensores implica la entrada d
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>Ciclo de vida de la aplicación (administración de la duración de los procesos)
 
-La aplicación WindowsPhone Silverlight contiene código para guardar y restaurar el estado de la aplicación y su estado de vista con el fin de admitir su exclusión y posterior reactivación. El ciclo de vida de las aplicaciones de la plataforma Universal de Windows (UWP) presenta grandes paralelismos con el que las aplicaciones de WindowsPhone Silverlight, ya que están diseñadas con el mismo objetivo de maximizar los recursos disponibles para las aplicaciones que el usuario ha elegido tener en el en primer plano en cualquier momento. Verás que tu código se adaptará al nuevo sistema con razonable facilidad.
+La aplicación WindowsPhone Silverlight contiene código para guardar y restaurar el estado de la aplicación y su estado de vista con el fin de admitir su exclusión y posterior reactivación. El ciclo de vida de las aplicaciones de la plataforma Universal de Windows (UWP) presenta grandes paralelismos con la de las aplicaciones de WindowsPhone Silverlight, ya que están diseñadas con el mismo objetivo de maximizar los recursos disponibles para las aplicaciones que el usuario ha elegido que en el en primer plano en cualquier momento. Verás que tu código se adaptará al nuevo sistema con razonable facilidad.
 
 **Nota**  al presionar el botón **Atrás** de hardware automáticamente finaliza una aplicación WindowsPhone Silverlight. Al presionar el botón **Atrás** del hardware en un dispositivo móvil *no* finaliza automáticamente una aplicación para UWP. En su lugar, se suspende y, después, se puede finalizar. Pero esos detalles son transparentes para una aplicación que responde adecuadamente a los eventos de ciclo de vida de la aplicación.
 
