@@ -6,17 +6,17 @@ ms.topic: article
 keywords: Windows 10, uwp, punto de servicio, pos, lector de bandas magnéticas
 ms.localizationpriority: medium
 ms.openlocfilehash: 1805213c7c30ccbc67fb96098f11480703589bb4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459620"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8733937"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obtener y comprender los datos de bandas magnéticas
 
-Una vez que hayas configurado el lector de bandas magnéticas en tu aplicación mediante los pasos descritos en la [Introducción de punto de servicio](pos-basics.md), estás listo para comenzar a obtener datos de él.
+Una vez que hayas configurado el lector de bandas magnéticas de la aplicación mediante los pasos descritos en la [Introducción de punto de servicio](pos-basics.md), estás listo para comenzar a obtener datos de él.
 
-## <a name="subscribe-to-datareceived-events"></a>Suscríbete a * DataReceived eventos
+## <a name="subscribe-to-datareceived-events"></a>Suscribirse a * DataReceived eventos
 
 Siempre que el lector reconoce una tarjeta deslizada, se genera uno de los tres eventos:
 
@@ -58,7 +58,7 @@ El controlador de eventos se pasarán la [ClaimedMagneticStripeReader](https://d
 
 ## <a name="get-the-data"></a>Obtener los datos
 
-Para los eventos **AamvaCardDataReceived** y **BankCardDataReceived** , puedes obtener algunos de los datos directamente desde el objeto de *argumentos* . El siguiente ejemplo muestra la obtención de unas cuantas propiedades y asignarlas a variables de miembro:
+Para los eventos **AamvaCardDataReceived** y **BankCardDataReceived** , puedes obtener algunos de los datos directamente desde el objeto de *argumentos* . El siguiente ejemplo muestra obtener unas cuantas propiedades y asignarlas a variables de miembro:
 
 ```cs
 private string _accountNumber;
@@ -78,7 +78,7 @@ private void Reader_BankCardDataReceived(
 
 Sin embargo, algunos datos, incluidos todos los datos del evento **VendorSpecificDataReceived** , se deben recuperar mediante el objeto de **informe** , que es una propiedad del parámetro de *argumentos* . Esto es de tipo [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport).
 
-Puedes usar la propiedad [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) para averiguar qué tipo de tarjeta ha sido deslizó y, a continuación, usaremos para informar a cómo interpretan los datos de [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)y [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4).
+Puedes usar la propiedad [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) para averiguar qué tipo de tarjeta ha sido Deslizar y, a continuación, usarlos para informar a cómo interpretan los datos de [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)y [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4).
 
 Los datos de cada una de las pistas se representan como objetos [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) . De esta clase, puedes obtener los siguientes tipos de datos:
 

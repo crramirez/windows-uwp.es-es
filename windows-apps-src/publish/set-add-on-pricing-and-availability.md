@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, iap, precio
 ms.localizationpriority: medium
 ms.openlocfilehash: 062337c82d2567d15b0eff1767ab157618da257e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687168"
+ms.locfileid: "8740113"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 

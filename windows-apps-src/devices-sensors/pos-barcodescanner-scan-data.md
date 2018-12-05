@@ -7,11 +7,11 @@ keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ece246ffd369ee21c089598f07b2566424757f55
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8701298"
+ms.locfileid: "8734729"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>Obtener y conocer los datos de código de barras
 

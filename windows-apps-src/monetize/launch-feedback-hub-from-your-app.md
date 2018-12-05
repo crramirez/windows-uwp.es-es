@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
 ms.localizationpriority: medium
 ms.openlocfilehash: b4e11b8dfffd7e749a31f052545bfbdfc4449126
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8712844"
+ms.locfileid: "8737348"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 

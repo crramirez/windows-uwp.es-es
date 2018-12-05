@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, precio, disponible, descubrible, prueba gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5fa6c3e23516a5255f8bd3252f6ded233101625
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690974"
+ms.locfileid: "8737302"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, barra de progreso, barra de progreso de notificación del sistema, notificación, enlace de datos de notificación del sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694268"
+ms.locfileid: "8734640"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Enlace de datos y barra de progreso de notificación del sistema
 

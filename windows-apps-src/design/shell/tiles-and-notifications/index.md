@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8478954"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8739453"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones para UWP
  
