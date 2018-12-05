@@ -6,11 +6,11 @@ ms.topic: article
 keywords: awndows 10, uwp, estándar, c++, cpp, winrt, proyección, ágil, objeto, agilidad, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463534"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700998"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágiles en C++/WinRT
 
@@ -19,7 +19,7 @@ En la mayoría de los casos, una instancia de una clase en tiempo de ejecución 
 Sin embargo, puedes optar por rechazarlos. Es posible que tengas una buena razón para requerir un objeto de tu tipo para residir, por ejemplo, en un determinado contenedor uniproceso. Por lo general, esto está relacionado con los requisitos de reentrada. Pero cada vez más, incluso las API de interfaces de usuarios ofrecen objetos ágiles. En general, la agilidad es la opción más sencilla y aporta el mayor rendimiento. Además, cuando se implementa una fábrica de activaciones, debe ser ágil aunque tu correspondiente clase en tiempo de ejecución no lo sea.
 
 > [!NOTE]
-> Windows Runtime se basa en COM. En términos COM, se registra una clase ágil con `ThreadingModel` = *both*. Para obtener más información acerca de modelos y apartamentos de subprocesos COM, consulta la [Descripción y uso de los modelos de subprocesos COM](https://msdn.microsoft.com/library/ms809971).
+> Windows Runtime se basa en COM. En términos COM, se registra una clase ágil con `ThreadingModel` = *both*. Para obtener más información acerca de modelos de subprocesos y apartamentos de COM, vea la [Descripción y uso de los modelos de subprocesos COM](https://msdn.microsoft.com/library/ms809971).
 
 ## <a name="code-examples"></a>Ejemplos de código
 
@@ -85,7 +85,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
 
 No importa dónde aparezca la estructura del marcador dentro del paquete de parámetro variádicas.
 
-Incluso optar por no agilidad, puedes implementar **IMarshal** tú mismo. Por ejemplo, puedes usar el marcador de **winrt:: non_agile** para evitar la implementación de agilidad predeterminada e implementar **IMarshal** tú mismo&mdash;quizás para admitir la semántica de cálculo de referencias por valor.
+Independientemente de si optar por no agilidad, puedes implementar **IMarshal** tú mismo. Por ejemplo, puedes usar el marcador de **winrt:: non_agile** para evitar la implementación de agilidad predeterminada e implementar **IMarshal** tú mismo&mdash;quizás para admitir la semántica de cálculo de referencias por valor.
 
 ## <a name="agile-references-winrtagileref"></a>Referencias ágiles (winrt::agile_ref)
 

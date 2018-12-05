@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b4ff9443c40cf44e171bf898b627de3e2819034
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464361"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8699280"
 ---
 # <a name="getting-started-with-point-of-service"></a>Tareas iniciales con punto de servicio
 
@@ -36,8 +36,8 @@ Esta sección contiene temas que son comunes a todas las categorías de disposit
 | [Ciclo de vida de aplicación](../launch-resume/app-lifecycle.md) | Obtén información sobre el ciclo de vida de una aplicación para UWP y lo que sucede cuando Windows inicia, suspende y reanuda la aplicación. |
 | [Recursos de la aplicación](../app-resources/index.md) | Obtén información sobre cómo crear, empaquetar y consumir los recursos de archivo, imagen y cadena de la aplicación. |
 | [Enlace de datos](../data-binding/index.md) | Aprende a usar el enlace de datos para mostrar los datos en la interfaz de usuario de la aplicación. |
-| [Enumeración de dispositivos](enumerate-devices.md) | Obtén información sobre técnicas de enumeración de uso avanzado para encontrar los periféricos.|
-| [Aplicaciones adaptables de versión](../debug-test-perf/version-adaptive-apps.md) | Obtenga información sobre cómo diseñar la aplicación para que se ejecute en varias versiones de Windows 10.|
+| [Enumeración de dispositivos](enumerate-devices.md) | Obtén información sobre técnicas de enumeración de uso avanzado para buscar los periféricos.|
+| [Aplicaciones adaptables de versión](../debug-test-perf/version-adaptive-apps.md) | Obtenga información sobre cómo diseñar la aplicación para que se ejecuta en varias versiones de Windows 10.|
 |
 
 

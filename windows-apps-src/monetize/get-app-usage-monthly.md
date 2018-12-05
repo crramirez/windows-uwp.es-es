@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8457795"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8701480"
 ---
 # <a name="get-monthly-app-usage"></a>Obtener el uso mensual de la aplicación
 
@@ -82,12 +82,12 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor                     | Tipo    | Descripción                                                                                 |
 |---------------------------|---------|---------------------------------------------------------------------------------------------|
 | date                      | string  | La primera fecha del intervalo de fechas de los datos de uso. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.                          |
-| applicationId             | string  | El identificador de la aplicación para la que estás recuperando los datos de uso de la tienda.                            |
+| applicationId             | string  | El identificador de la aplicación para la que quieres recuperar datos de uso de la tienda.                            |
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                                                |
-| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación.                   |
+| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación.                   |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                                            |
 | deviceType                | string  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
-| subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                                              |
+| subscriptionName          | cadena  | Indica si se uso a través de Xbox Game Pass.                                              |
 | monthlySessionCount       | long    | El número de sesiones de usuario durante el mes.                                              |
 | engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                               |
 | monthlyActiveUsers        | long    | El número de clientes que usen ese mes de la aplicación.                                           |
