@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ffb8ea583aade51ae1cc5049a423d734359722c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459589"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713975"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos con puntos de servicio compatibles
 
@@ -46,7 +46,7 @@ ms.locfileid: "8459589"
 | Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Honeywell     | Xenon 1900h                    | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Honeywell     | Xenon 1902h                    | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
-| HP            | Valor Barcode Scanner (HR2150) | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
+| HP            | Escáner de códigos de barras de valor (HR2150) | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Intermec      | SG20                           | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Socket Mobile | CHS 7Ci                        | 1D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
 | Socket Mobile | CHS 7Di                        | 1D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
@@ -75,7 +75,7 @@ Firmware mínimo de ² 016 (2018.01.18) necesarios. Actualizable con Zebra [123S
 ### <a name="windows-devices-with-built-in-barcode-scanner"></a>Dispositivos de Windows con el escáner de códigos de barras integrado
 | Fabricante   | Modelo | Sistema operativo |
 |----------------|-------|------------------|
-| Innowi         | ChecOut M | Windows 10   |
+| Innowi         | M ChecOut | Windows 10   |
 
 ### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>Dispositivos Windows Mobile con el escáner de códigos de barras integrado
 | Fabricante   | Modelo | Sistema operativo |

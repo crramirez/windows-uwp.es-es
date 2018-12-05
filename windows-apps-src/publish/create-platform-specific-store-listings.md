@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, personalizar, enumerar, descripción, anteriormente
 ms.localizationpriority: medium
 ms.openlocfilehash: bfb21d56df357640734e9e5026783cc398468f0a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460905"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696801"
 ---
 # <a name="create-platform-specific-store-listings"></a>Crear descripciones de Store específicas de la plataforma
 
@@ -33,7 +33,7 @@ Descripciones de la tienda específicas de la plataforma pueden ser útiles si q
 
 Cerca de la parte superior de la página de **Descripción de Store** , si la aplicación publicada anteriormente incluye paquetes que admitan versiones anteriores del sistema operativo ((Windows 8.x o versiones anteriores o Windows Phone 8.x o versiones anteriores), puedes seleccionar **crear una descripción de la tienda de aplicaciones específicas de la plataforma **. Después de seleccionar esta opción, se te pedirá que elijas las versiones de SO de destino que admiten el envío. Una vez que ya has creado descripciones de la tienda específicas de la plataforma para todas las versiones anteriores del sistema operativo de destino de tu aplicación, no podrás realizar otra selección.
 
-Puedes usar tu descripción de la tienda predeterminada (Windows 10) como punto de partida, lo que mostrará todo el texto aplicable y las imágenes que hayas introducido para la tienda predeterminada Descripción; a continuación, podrás realizar las modificaciones que quieras antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
+Puedes usar tu descripción de la tienda predeterminada (Windows 10) como punto de partida, lo que mostrará todo el texto aplicable y las imágenes que hayas introducido para la tienda predeterminada Descripción; a continuación, podrás realizar cambios que quieras antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
 
 Después de hacer clic en **Continuar**, la página **Descripción de Store** ahora incluirá una sección para la descripción de Microsoft Store específica de la plataforma que acabas de crear. Esta sección incluirá su propio conjunto de campos de **Descripción** (obligatorio), **Novedades de la versión**, **Capturas de pantalla**, **Icono de ventana de aplicación**, **Funciones de la aplicación** y **Requisitos adicionales del sistema**. Asegúrate de escribir en todos los campos de la descripción de la Tienda personalizada que quieres que muestren información, aunque sea la misma que la de la descripción de la Tienda predeterminada. Si dejas en blanco alguno de estos campos, no se mostrará información sobre ellos en la descripción de la Tienda personalizada.
 

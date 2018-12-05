@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, commit add-on submission, confirmar envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458273"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687965"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar un envío de complemento
 
-Usa este método en la API de envío de Microsoft Store para confirmar un envío de complemento nuevo o actualizado (también conocido como producto la aplicación o IAP) al centro de partners. El centro de partners alertas de confirmación acción se que los datos de envío se han cargado (incluidos los iconos relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío para su ingesta y publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
+Usa este método en la API de envío de Microsoft Store para confirmar un envío de complemento nuevo o actualizado (también conocido como producto la aplicación o IAP) al centro de partners. El centro de partners alertas de confirmación acción se que los datos de envío se han cargado (incluidos los iconos relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío de la recopilación y la publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de envío de un complemento mediante la API de envío de Microsoft Store, consulta [Administrar envíos de complementos](manage-add-on-submissions.md).
 
@@ -89,7 +89,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o el complemento usa una característica de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Temas relacionados

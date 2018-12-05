@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv
 ms.localizationpriority: medium
 ms.openlocfilehash: 5630a9019aa11b87f06744e03ae74ec38c792d41
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458324"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8692943"
 ---
 # <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de Store
 
-En lugar de [escribir la información de las descripciones de Store directamente en el centro de partners](create-app-store-listings.md), tienes la opción de añadir o actualizar información exportando descripciones en un archivo .csv, introduciendo la información y activos y luego importando el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado.
+En lugar de [escribir la información de las descripciones de Store directamente en el centro de partners](create-app-store-listings.md), tienes la opción de agregar o actualizar información exportando descripciones en un archivo .csv, introduciendo la información y los activos y luego importando el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado.
 
-Esta opción es especialmente útil si quieres crear o actualizar descripciones de Store para el producto en varios idiomas, ya que puedes copiar y pegar la misma información en varios campos y realizar cualquier cambio fácilmente que se deben aplicar a un idioma concreto. Sin embargo, no puedes usar este método para crear o actualizar [descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para publicado anteriormente aplicaciones que admitan las versiones anteriores del sistema operativo. 
+Esta opción es especialmente útil si quieres crear o actualizar descripciones de Store para el producto en varios idiomas, ya que puedes copiar y pegar la misma información en varios campos y realizar cualquier cambio fácilmente que se deben aplicar a un idioma concreto. Sin embargo, no puedes usar este método para crear o actualizar [descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para las aplicaciones publicado anteriormente compatibles con versiones anteriores de sistema operativo. 
 
 > [!TIP]
 > También puedes usar esta característica para importar y exportar descripciones de la Tienda de un complemento. En el caso de los complementos, el proceso funciona igual, salvo que se incluyen [únicamente los campos relevantes de los complementos](#add-ons).
@@ -70,9 +70,9 @@ Indicar información para los campos que corresponden a los activos, como por ej
 Si ya has cargado activos para tus descripciones de la Tienda, estos activos se representarán mediante una dirección URL. Estas direcciones URL pueden reutilizarse en varias descripciones de un producto, o incluso en diferentes productos de la misma cuenta de desarrollador, de modo que puedes copiarlas para volver a utilizarlas en un campo diferente si lo deseas.
 
 > [!TIP]
-> Para confirmar el activo que corresponde a una dirección URL, puedes escribir la dirección URL en un navegador para ver la imagen (o descargar el tráiler).  Debe iniciar sesión tu cuenta de centro de partners en orden para esta dirección URL funcione.
+> Para confirmar el activo que corresponde a una dirección URL, puedes escribir la dirección URL en un navegador para ver la imagen (o descargar el tráiler).  Debe iniciar sesión en tu cuenta del centro de partners en orden para esta dirección URL funcione.
 
-Si quieres usar un nuevo activo que no hayas agregado anteriormente al centro de partners, hacerlo mediante la importación de tus descripciones como una carpeta, en lugar de un archivo .csv único. Tendrás que crear una carpeta que incluya el archivo .csv. Después agrega las imágenes de esa misma carpeta a la carpeta raíz o a una subcarpeta. Tendrás que especificar la ruta de acceso completa, incluido el nombre de carpeta raíz, en el campo.
+Si quieres usar un nuevo activo que no hayas agregado anteriormente al centro de partners, hacerlo mediante la importación de las descripciones como una carpeta, en lugar de un archivo .csv único. Tendrás que crear una carpeta que incluya el archivo .csv. Después agrega las imágenes de esa misma carpeta a la carpeta raíz o a una subcarpeta. Tendrás que especificar la ruta de acceso completa, incluido el nombre de carpeta raíz, en el campo.
 
 > [!TIP]
 > Para obtener mejores resultados al importar tus descripciones como una carpeta, asegúrate de usar la versión más reciente de Microsoft Edge, Chrome o Firefox.
@@ -101,7 +101,7 @@ Puedes seguir realizar actualizaciones en tus descripciones importando otro arch
 
 ## <a name="add-ons"></a>Complementos
 
-Para los complementos, importar y exportar descripciones de la tienda usa el mismo proceso que se ha descrito anteriormente, salvo que solo verás los tres campos relevantes para las [descripciones de la tienda de complementos](create-add-on-store-listings.md): () **StoreLogo300x300** , **título**y **Descripción** conoce como **icono** en la página de descripción de la tienda en el centro de partners). El campo **Título** es necesario y los otros dos campos son opcionales.
+Para los complementos, importar y exportar descripciones de la tienda usa el mismo proceso que se ha descrito anteriormente, salvo que solo verás los tres campos relevantes para las [descripciones de la tienda de complementos](create-add-on-store-listings.md): ( **StoreLogo300x300** , **título**y **Descripción** conoce como **icono** en la página de descripción de la tienda en el centro de partners). El campo **Título** es necesario y los otros dos campos son opcionales.
 
 Ten en cuenta que debes importar y exportar descripciones de la Tienda por separado para cada complemento de tu aplicación navegando a la página de información general de envíos del complemento.
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, suspensión de publicación, fecha de publicación, realizar un envío para publicar, aprobación de funcionalidad restringida
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fb075a4d8766f4f9bfc352160c6a1f5d99d9a0e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487037"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696957"
 ---
 # <a name="manage-submission-options"></a>Administrar las opciones de envío
 
@@ -31,7 +31,7 @@ Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de s
 
 ### <a name="publish-your-submission-manually"></a>Publicar el envío manualmente
 
-Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Después de la certificación de pases de envío, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica de la misma manera, como se describe a continuación.
+Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Después de la certificación de pasadas envío, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica de la misma manera, como se describe a continuación.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Empezar a publicar el envío en una fecha determinada

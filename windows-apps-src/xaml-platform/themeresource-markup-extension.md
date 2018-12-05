@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464752"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688365"
 ---
 # <a name="themeresource-markup-extension"></a>Extensión de marcado {ThemeResource}
 
@@ -138,7 +138,7 @@ Aquí, el valor de [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Co
 
 ## <a name="windows8-behavior"></a>Comportamiento de Windows8
 
-Windows8 no era compatible con la extensión de marcado **ThemeResource** , está disponible a partir de Windows8.1. Además, Windows8 no admitía la conmutación dinámica de los recursos relacionados con el tema de una aplicación de Windows Runtime. La aplicación tenía que reiniciarse para elegir el cambio de tema de las plantillas y estilos de XAML. Esto no es una buena experiencia del usuario, por lo que las aplicaciones se recomienda volver a compilar y destino Windows8.1 para que puedan usar estilos con usos **ThemeResource** y puedan conmutar dinámicamente temas cuando lo haga el usuario. Aplicaciones que se compilaron para Windows8 que se ejecutan en Windows8.1 sigue usando el comportamiento de Windows8.
+Windows8 no era compatible con la extensión de marcado **ThemeResource** , está disponible a partir de Windows8.1. Además, Windows8 no admitía la conmutación dinámica de los recursos relacionados con el tema de una aplicación de Windows Runtime. La aplicación tenía que reiniciarse para elegir el cambio de tema de las plantillas y estilos de XAML. Esto no es una buena experiencia del usuario, por lo que las aplicaciones se recomienda volver a compilar y Windows8.1 de destino para que puedan usar estilos con usos de **ThemeResource** y puedan conmutar dinámicamente temas cuando lo haga el usuario. Aplicaciones que se compilaron para Windows8 que se ejecutan en Windows8.1 sigue usando el comportamiento de Windows8.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>Compatibilidad con herramientas en tiempo de diseño para la extensión de marcado **{ThemeResource}**
 

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c0eb1eb798cceb5c7a534c3aed1b8988bd1a42b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461923"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687803"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
 **Nota**para obtener información general sobre el uso de datos de enlace en la aplicación con **{X: Bind}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta el [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-La extensión de marcado **{X: Bind}** : nuevo para Windows 10: es una alternativa a **{Binding}**. **{X: Bind}** se ejecuta en menos tiempo y usa menos memoria que **{Binding}** y una mejor depuración.
+La extensión de marcado **{X: Bind}** , nuevo para Windows 10, es una alternativa a **{Binding}**. **{X: Bind}** se ejecuta en menos tiempo y usa menos memoria que **{Binding}** y una mejor depuración.
 
 Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un código que obtendrá un valor de la propiedad del origen de datos y lo establecerá en la propiedad especificada en el marcado. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad del origen de datos y se actualiza en función de los cambios (`Mode="OneWay"`). Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen (`Mode="TwoWay"`).
 
@@ -85,7 +85,7 @@ Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un 
 
 En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. El atributo **\[Bindable\]** no debería ser necesario.
 
-Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace porque los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen del enlace raíz. 
+Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace porque los elementos con nombre se convierten en campos de la página o control de usuario que representa el origen del enlace raíz. 
 
 
 ### <a name="collections"></a>Colecciones
@@ -154,7 +154,7 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 
 Dado que **{x:Bind}** usa código generado para lograr sus ventajas, necesita la información de tipo en el momento de compilación. Esto significa que no puedes enlazar a propiedades de las que no conoces el tipo antes de tiempo. Por este motivo, no puedes usar **{x:Bind}** con la propiedad **DataContext**, que es de tipo **Object** y también está sujeta a cambios en el tiempo de ejecución.
 
-Al usar **{X: Bind}** con plantillas de datos, debes indicar el tipo enlazado a estableciendo un valor **x: DataType** , como se muestra en la sección [ejemplos](#examples) . También puedes establecer el tipo de una interfaz o de una clase base y luego usar conversiones si es necesario para formular una expresión completa.
+Al usar **{X: Bind}** con plantillas de datos, debes indicar el tipo enlazado a estableciendo un valor de **x: DataType** , como se muestra en la sección [ejemplos](#examples) . También puedes establecer el tipo de una interfaz o de una clase base y luego usar conversiones si es necesario para formular una expresión completa.
 
 Los enlaces compilados dependen de la generación de código. Por tanto, si usas **{x:Bind}** en un diccionario de recursos, entonces el diccionario de recursos debe tener una clase de código subyacente. Consulta [Diccionarios de recursos con {x:Bind}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind) para ver un ejemplo de código.
 

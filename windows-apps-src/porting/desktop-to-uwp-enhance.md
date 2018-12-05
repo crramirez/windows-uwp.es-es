@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465727"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713895"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -203,7 +203,7 @@ El compilador compila ese código solo si esa constante se define en la configur
 
 Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama a Windows Runtime APIs solo si el usuario se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
-La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el ``IsRunningAsUWP()`` método para desactivar todo el código que llama Windows Runtime APIs. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de puente de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el ``IsRunningAsUWP()`` método para desactivar todo el código que llama Windows Runtime APIs. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Vídeo relacionado
 

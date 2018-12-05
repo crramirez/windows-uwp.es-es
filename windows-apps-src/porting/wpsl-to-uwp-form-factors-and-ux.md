@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465189"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696851"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migración WindowsPhone Silverlight a UWP para factor de forma y experiencia del usuario
 
@@ -52,11 +52,11 @@ Si se hace zoom óptico de la aplicación para que se parezca a la versión móv
 
 Además de los controles nuevos, como la vista de lista y vista de cuadrícula, la mayoría de los tipos de diseño establecidos de WindowsPhone Silverlight tiene equivalentes en la plataforma Universal de Windows (UWP). Por ejemplo, [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). La migración de gran parte de la interfaz de usuario que usa estos tipos debe ser un proceso sencillo, pero busca siempre formas de sacar provecho de las funcionalidades de diseño dinámico de estos paneles para que automáticamente se cambie el tamaño y se vuelva a diseñar en dispositivos de diferentes tamaños.
 
-Intenta ir más allá del diseño dinámico integrado en los controles del sistema y paneles de diseño, podemos usar una nueva característica de Windows 10 denominada [Visual State Manager adaptativo](wpsl-to-uwp-porting-xaml-and-ui.md).
+Ir más allá del diseño dinámico integrado en los controles del sistema y paneles de diseño, podemos usar una nueva característica de Windows 10 denominada [Visual State Manager adaptativo](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 ## <a name="input-modalities"></a>Modalidades de entrada
 
-Una interfaz WindowsPhone Silverlight es táctil. Y, por supuesto, la interfaz de la aplicación portada debe admitir la entrada táctil, pero puedes elegir admitir también otras modalidades de entrada, como el mouse y el teclado. En UWP, se unifican mouse, lápiz y entrada táctil como *entrada del puntero*. Para obtener más información, consulta [Controlar la entrada de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610) e [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607).
+Una interfaz de WindowsPhone Silverlight es táctil. Y, por supuesto, la interfaz de la aplicación portada debe admitir la entrada táctil, pero puedes elegir admitir también otras modalidades de entrada, como el mouse y el teclado. En UWP, se unifican mouse, lápiz y entrada táctil como *entrada del puntero*. Para obtener más información, consulta [Controlar la entrada de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610) e [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607).
 
 ## <a name="maximizing-markup-and-code-re-use"></a>Maximización de la reutilización de código y marcado
 

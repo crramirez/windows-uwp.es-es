@@ -7,11 +7,11 @@ keywords: windows 10, uwp, versión, compilación, versiones, windows, elegir, a
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: 3461170110a4ca4391c41bee815a83b6d45cee75
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462261"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8686832"
 ---
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 
@@ -32,7 +32,7 @@ En la tabla siguiente se describen las versiones disponibles de Windows10. Ten e
 | Compilación 10586 (actualización de noviembre, versión 1511) | Esta versión de Windows10 se publicó en noviembre de 2015. Las características destacadas incluyen la introducción de las API ORTC (Comunicaciones en tiempo real mediante objetos) para la comunicación de vídeo en Microsoft Edge y las API de proveedores para permitir a las aplicaciones usar la autenticación de rostro de Windows Hello. [Más información sobre las funciones introducidas en esta compilación.](../whats-new/windows-10-build-10586.md) |
 | Compilación 10240 (Windows 10, versión 1507) | Esta es la versión inicial de Windows 10, publicada en julio de 2015. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-build-10240.md) |
 
-Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general siempre usen la compilación más reciente de Windows (17763). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
+Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general siempre usan la compilación más reciente de Windows (17763). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
 
 ## <a name="whats-different-in-each-uwp-version"></a>¿Qué es diferente en cada versión de UWP?
 
@@ -44,7 +44,7 @@ Para ver los temas de consulta que enumeran todas las familias de dispositivos y
 
 UWP admite un subconjunto limitado de las API de .NET que están disponibles, independientemente de la **Versión de destino** o la **Versión mínima** del proyecto. [Esta página proporciona más información sobre los tipos disponibles](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
-Si quieres crear bibliotecas multiplataforma reutilizables, .NET Standard es compatible con UWP. La [documentación de .NET estándar](https://docs.microsoft.com/dotnet/standard/net-standard) proporciona información sobre las estándar de .NET se admiten en las versiones UWP.
+Si quieres crear bibliotecas multiplataforma reutilizables, .NET Standard es compatible con UWP. La [documentación de .NET estándar](https://docs.microsoft.com/dotnet/standard/net-standard) proporciona información en el que .NET Standard es compatible con las versiones UWP.
 
 Si estás desarrollando una aplicación de escritorio, consulte en su lugar, [las dependencias y las versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obtener información detallada sobre la disponibilidad de .NET framework.
 

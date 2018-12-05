@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
 ms.openlocfilehash: 91289948f2f4745456b9cebe587cf75366a4877b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465255"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8714065"
 ---
 # <a name="getting-paid"></a>Recibir pagos
 Es aquí encontrarás información importante sobre cómo recibir el pago de tus aplicaciones, complementos y las ganancias de publicidad.
 
 > [!IMPORTANT]
-> Para poder recibir dinero ventas de aplicaciones en Microsoft Store, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
+> Antes de que recibas dinero ventas de aplicaciones en Microsoft Store, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463916"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687546"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -25,7 +25,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 |--------------------|-----------------------------|
 | [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)      | Obtén información sobre cómo usar las API de Windows SDK para agregar la funcionalidad de pruebas y compras desde la aplicación a tus aplicaciones.  |
 | [Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising](display-ads-in-your-app.md)      |   Para aumentar tus ingresos, muestra anuncios de banner o intersticiales en tu aplicación. Esta característica requiere el SDK de Microsoft Advertising. |
-| [Conectar con clientes con Microsoft Store Services SDK](microsoft-store-services-sdk.md)      | El Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a las aplicaciones que te ayudarán a atraer a los clientes. Estas características incluyen las notificaciones dirigidas, / pruebas A/b e inicio de centro de opiniones desde la aplicación. |
+| [Conectar con clientes con Microsoft Store Services SDK](microsoft-store-services-sdk.md)      | El Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a las aplicaciones que te ayudarán a atraer a los clientes. Estas características incluyen las notificaciones dirigidas, o pruebas A/b e inicio de centro de opiniones desde la aplicación. |
 | [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md)      |   Ejecuta pruebas A/B en las aplicaciones para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Esta característica requiere Microsoft Store Services SDK.  |
 | [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md)      |   Agrega código a tus aplicaciones para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas y sugerencias, así como votar. A continuación, administra esta información en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners. Esta característica requiere Microsoft Store Services SDK.   |
 | [Configurar la aplicación para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)  |  Registra un canal de notificación para tu aplicación para UWP para que pueda recibir [notificaciones de inserción del centro de partners](../publish/send-push-notifications-to-your-apps-customers.md)y supervisar la tasa de inicios de la aplicación que se derivan de las notificaciones de inserción. Esta característica requiere Microsoft Store Services SDK.  |

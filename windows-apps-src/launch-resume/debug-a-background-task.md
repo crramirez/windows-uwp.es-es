@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: e0ae12bbb2bad1fbcd663f5be8f26656d640afc8
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463873"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687007"
 ---
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
@@ -30,7 +30,7 @@ En este tema se supone que tienes una aplicación existente con una tarea en seg
 
 -   En C# y C++, asegúrate de que el proyecto principal hace referencia al proyecto de tarea en segundo plano. Si esta referencia no se realiza, la tarea en segundo plano no se incluirá en el paquete de la aplicación.
 -   En C# y C++, asegúrate de que el **Tipo de resultado** del proyecto de tarea en segundo plano sea "Componente de Windows Runtime".
--   La clase en segundo plano debe declararse en el atributo de punto de entrada en el manifiesto del paquete.
+-   La clase de segundo plano debe declararse en el atributo de punto de entrada en el manifiesto del paquete.
 
 ## <a name="trigger-background-tasks-manually-to-debug-background-task-code"></a>Desencadenar manualmente tareas en segundo plano para depurar el código de la tarea en segundo plano
 
@@ -101,7 +101,7 @@ Si una aplicación que usa tareas en segundo plano se implementa con Visual Stud
 -   Si la tarea en segundo plano requiere acceso a la pantalla de bloqueo, asegúrate de poner la aplicación en la pantalla de bloqueo antes de intentar depurar la tarea en segundo plano. Para obtener información acerca de cómo especificar opciones para bloquear aplicaciones compatibles con la pantalla de bloqueo, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 -   Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
-Para obtener más información sobre cómo usar VS para depurar una tarea en segundo plano consulta [cómo desencadenar suspender, reanudar y eventos en aplicaciones para UWP en segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Para obtener más información sobre el uso de VS para depurar una tarea en segundo plano consulta [cómo desencadenar suspender, reanudar y eventos en aplicaciones para UWP en segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>Temas relacionados
 

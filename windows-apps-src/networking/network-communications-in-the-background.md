@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464837"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685789"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicaciones de red en segundo plano
 Para continuar la comunicación de red mientras no esté en primer plano, la aplicación puede usar tareas en segundo plano y una de estas dos opciones.
-- Agente de socket. Si la aplicación usa sockets para conexiones a largo plazo a continuación, cuando deja el primer plano, puede delegar la propiedad de un socket a un agente de sockets del sistema. A continuación, el agente: la aplicación se activa cuando llegue el tráfico en el socket; transfiere la titularidad a la aplicación; y la aplicación, a continuación, procesa el tráfico que llega.
+- Agente de socket. Si la aplicación usa sockets para conexiones a largo plazo a continuación, cuando deja el primer plano, puede delegar la propiedad de un socket a un agente de sockets del sistema. A continuación, el agente: la aplicación se activa cuando llegue el tráfico en el socket; propiedad a la aplicación; y la aplicación, a continuación, procesa el tráfico que llega.
 - Desencadenadores de canal de control. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>Realizar operaciones de red en tareas en segundo plano
@@ -26,7 +26,7 @@ Para continuar la comunicación de red mientras no esté en primer plano, la apl
 
 - Agrega la condición **InternetAvailable** a tu tarea en segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para retrasar la activación de la tarea en segundo plano hasta que la pila de red se ejecute. Esta condición ahorra energía porque la tarea en segundo plano no se ejecutará hasta que al red esté conectada. Esta condición no proporciona una activación en tiempo real.
 
-Independientemente del desencadenador que uses, establece [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) en la tarea en segundo plano para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener conectada la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si la tarea en segundo plano no usa **IsNetworkRequested**, la tarea en segundo plano no podrá acceder a la red cuando esté en modo de espera conectado (por ejemplo, cuando se apague la pantalla del teléfono).
+Independientemente del desencadenador que uses, establece [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) en la tarea en segundo plano para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener conectada la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si la tarea en segundo plano no usa **IsNetworkRequested**, a continuación, la tarea en segundo plano no podrá acceder a la red cuando esté en modo de espera conectado (por ejemplo, cuando se apague la pantalla del teléfono).
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>El agente de sockets y SocketActivityTrigger
 Si la aplicación usa las conexiones [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) o [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), debes usar [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) y el agente de sockets para recibir una notificación cuando llegue el tráfico de la aplicación mientras no esté en primer plano.

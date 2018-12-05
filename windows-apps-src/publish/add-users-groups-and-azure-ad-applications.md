@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, aplicación de azure ad, aad, usuario, grupo, varios usuarios, multiusuario
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dd300aa6a37c205e01c6f73d95ef1818d516fc0
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 0ecdcf2b148f53fefb5edc7e1f2df0d6bab58475
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461404"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685809"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Agregar usuarios, grupos y aplicaciones de Azure AD a tu cuenta del centro de partners
 
@@ -19,11 +19,11 @@ La sección de **los usuarios** del [Centro de partners](https://partner.microso
 Después de que los usuarios se hayan agregado a la cuenta, puedes [editar detalles de la cuenta](#edit), cambiar [roles y permisos](set-custom-permissions-for-account-users.md) o [eliminar usuarios](#remove).
 
 > [!IMPORTANT]
-> Con el fin de agregar usuarios a tu cuenta, primero debe primera [asociar tu cuenta del centro de partners con el inquilino de Azure Active Directory de la organización](associate-azure-ad-with-dev-center.md). 
+> Para agregar usuarios a tu cuenta, debes primera [asociar tu cuenta del centro de partners con el inquilino de Azure Active Directory de la organización](associate-azure-ad-with-partner-center.md). 
 
 Al agregar usuarios, tendrás que especificar su acceso a tu cuenta del centro de partners, asignándoles un [rol o conjunto de permisos personalizados](set-custom-permissions-for-account-users.md). 
 
-Ten en cuenta que todos los usuarios del centro de partners (incluyendo grupos y aplicaciones de Azure AD) deben tener una cuenta activa en [un inquilino de Azure AD que está asociado con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md). La administración de usuarios se realiza en un inquilino cada vez; debes iniciar sesión con una cuenta de administrador para el inquilino en el que quieres agregar o editar usuarios. Crear un nuevo usuario en el centro de partners, también se creará una cuenta para dicho usuario en el inquilino de Azure AD en la que se inicia sesión y realizar cambios en un nombre de usuario en el centro de partners se reflejarán en el inquilino de Azure AD de la organización.
+Ten en cuenta que todos los usuarios del centro de partners (incluyendo grupos y aplicaciones de Azure AD) deben tener una cuenta activa en [un inquilino de Azure AD que está asociado con tu cuenta del centro de partners](associate-azure-ad-with-partner-center.md). La administración de usuarios se realiza en un inquilino cada vez; debes iniciar sesión con una cuenta de administrador para el inquilino en el que quieres agregar o editar usuarios. Crear un nuevo usuario en el centro de partners, también se creará una cuenta para dicho usuario en el inquilino de Azure AD en la que se inicia sesión y realizar cambios en un nombre de usuario en el centro de partners se reflejarán en el inquilino de Azure AD de tu organización.
 
 > [!NOTE]
 > Si tu organización usa la [integración de directorios](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar el servicio de directorio local con Azure AD, no podrás crear nuevos usuarios, grupos ni aplicaciones de Azure AD en el centro de partners. Tu (u otro administrador en el directorio local) deberá crearlos directamente en el directorio local podrás ver y agregarlos en el centro de partners.
@@ -37,7 +37,7 @@ Para agregar usuarios a tu cuenta del centro de partners, ve a la página de **u
 
 ### <a name="add-existing-users"></a>Agregar usuarios existentes 
 
-Puedes seleccionar los usuarios que ya existen en el inquilino de tu organización y darles acceso a tu cuenta del centro de partners. 
+Puedes seleccionar los usuarios que ya existen en el inquilino de su organización y darles acceso a tu cuenta del centro de partners. 
 
 <span id="from-directory" />
 
@@ -65,9 +65,9 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 > [!IMPORTANT]
 > Debes iniciar sesión con una cuenta de administrador global en el inquilino de AzureAD para crear nuevos usuarios.
 
-1.  Desde la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **crear nuevos usuarios**.
+1.  En la página de **los usuarios** (en la **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **crear nuevos usuarios**.
 2.  Escribe el nombre, el apellido y el nombre de usuario del nuevo usuario.
-3.  Si quieres que el usuario nuevo tenga una [cuenta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) en el directorio de la organización, activa la casilla con la etiqueta **Make this user a Global administrator in your Azure AD, with full control over all directory resources**. De esta forma, el usuario podrá obtener acceso a todas las características administrativas en el Azure AD de tu empresa. Podrán agregar y administrar usuarios en el directorio de la organización (aunque el centro de partners no en, a menos que conceda a la cuenta los [permisos de rol](set-custom-permissions-for-account-users.md)de adecuados). Si activas esta casilla, deberás proporcionar un **correo electrónico de recuperación de contraseña** para el usuario.
+3.  Si quieres que el usuario nuevo tenga una [cuenta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) en el directorio de la organización, activa la casilla con la etiqueta **Make this user a Global administrator in your Azure AD, with full control over all directory resources**. De esta forma, el usuario podrá obtener acceso a todas las características administrativas en el Azure AD de tu empresa. Podrán agregar y administrar usuarios en el directorio de la organización (aunque el centro de partners no, a menos que conceda a la cuenta los [permisos de rol](set-custom-permissions-for-account-users.md)de adecuados). Si activas esta casilla, deberás proporcionar un **correo electrónico de recuperación de contraseña** para el usuario.
 4.  Si has activado la casilla **Make this user a Global administrator in your Azure AD**, escribe un correo electrónico que el usuario pueda usar si necesita recuperar su contraseña.
 5.  En la sección **Pertenencia al grupo**, selecciona cualquier grupo al que quieres que pertenezca el nuevo usuario.
 6.  En la sección **Roles**, especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para el usuario.
@@ -82,7 +82,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 > [!IMPORTANT]
 > Debes iniciar sesión con una cuenta de administrador global en el inquilino de AzureAD para invitar usuarios externos.
 
-1.  Desde la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **Invitar a usuarios por correo electrónico**.
+1.  En la página de **los usuarios** (en la **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **Invitar a usuarios por correo electrónico**.
 1.  Escribe una o varias direcciones de correo electrónico (hasta diez), separadas por coma o punto y coma.
 2.  En la sección **Roles**, especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para el usuario.
 3.  Haz clic en **Guardar**.
@@ -92,15 +92,15 @@ Los usuarios que has invitado recibirán una invitación por correo electrónico
 Si tienes que reenviar una invitación, busca al usuario en tu página **Usuarios** y selecciona su dirección de correo electrónico (o el texto que dice **Invitación pendiente**). Luego, en la parte inferior de la página, haz clic en **Volver a enviar invitación**.
 
 > [!IMPORTANT]
-> Los usuarios externos que invites a unirse a tu cuenta del centro de partners se puede asignar los mismos roles y permisos que otros usuarios. Sin embargo, los usuarios externos no podrán realizar determinadas tareas en Visual Studio, como asociar una aplicación a Store o crear paquetes para cargar a Store. Si un usuario necesita realizar esas tareas, elige **Crear nuevos usuarios** en lugar de **Invitar a usuarios externos**. (Si no quieres agregar estos usuarios a tu inquilino de Azure AD existente, puedes [crear un nuevo inquilino](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) y, a continuación, crear nuevas cuentas de usuario para ellos en ese inquilino). 
+> Los usuarios externos que invites a unirse a tu cuenta del centro de partners se puede asignar los mismos roles y permisos que otros usuarios. Sin embargo, los usuarios externos no podrán realizar determinadas tareas en Visual Studio, como asociar una aplicación a Store o crear paquetes para cargar a Store. Si un usuario necesita realizar esas tareas, elige **Crear nuevos usuarios** en lugar de **Invitar a usuarios externos**. (Si no quieres agregar estos usuarios a tu inquilino de Azure AD existente, puedes [crear un nuevo inquilino](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) y, a continuación, crear nuevas cuentas de usuario para ellos en ese inquilino). 
 
 
 ### <a name="changing-a-users-directory-password"></a>Cambiar la contraseña del directorio de un usuario
 
 Si uno de los usuarios necesita cambiar su contraseña, puede hacerlo él mismo si has proporcionado un **correo electrónico de recuperación de contraseña** al crear la cuenta de usuario. También puedes actualizar la contraseña de un usuario siguiendo los pasos siguientes (si has iniciado sesión con una cuenta de administrador global en tu inquilino de Azure AD para cambiar la contraseña de un usuario). Ten en cuenta que esto cambiará la contraseña del usuario en el inquilino de Azure AD, junto con la contraseña que utiliza para tener acceso al centro de partners. 
 
-1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona el nombre de la cuenta de usuario que quieres editar.
-2.  Selecciona el botón **Restablecer contraseña** en la parte inferior de la página.
+1.  En la página de **usuarios** (en la **configuración de la cuenta**), selecciona el nombre de la cuenta de usuario que quieres editar.
+2.  Selecciona el botón de **Restablecer la contraseña** en la parte inferior de la página.
 3.  Aparecerá una página de confirmación con la información de inicio de sesión del usuario, incluida una contraseña temporal.
 
     > [!IMPORTANT]
@@ -163,9 +163,9 @@ Para permitir que las aplicaciones o servicios que forman parte de Azure la orga
 Si quieres conceder acceso al centro de partners a una nuevo Azure AD cuenta de aplicación, puedes crear una en la sección de **los usuarios** . Ten en cuenta que esto creará una nueva cuenta en el directorio de la organización, no solo en tu cuenta del centro de partners.
 
 > [!TIP]
-> Si usas principalmente esta aplicación de Azure AD para la autenticación del centro de partners y no necesitan los usuarios accedan a ella directamente, puedes escribir cualquier dirección válida para la **Dirección URL de respuesta** y **URI de identificador de aplicación**, siempre y cuando esos valores no se usan en cualquier otro tipo de Azure Aplicación de AD en el directorio.
+> Si usas principalmente esta aplicación de Azure AD para la autenticación del centro de partners y no necesitas que los usuarios accedan a ella directamente, puedes escribir cualquier dirección válida para la **Dirección URL de respuesta** y **URI de identificador de aplicación**, siempre y cuando esos valores no se usan en cualquier otro tipo de Azure Aplicación de AD en el directorio.
 
-1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar aplicaciones de Azure AD**.
+1.  En la página de **usuarios** (en la **configuración de la cuenta**), selecciona **Agregar aplicaciones de Azure AD**.
 2.  En la página siguiente, selecciona la **aplicación de nuevo Azure AD**.
 3.  Escribe la **dirección URL de respuesta** para la nueva aplicación de Azure AD. Esta es la dirección URL donde los usuarios pueden iniciar sesión y usar la aplicación de Azure AD (a veces, también conocida como dirección URL de la aplicación o dirección URL de inicio de sesión). La **dirección URL de respuesta** no puede superar los 256 caracteres y debe ser única en tu directorio.
 4.  Introduce el **URI de id. de la aplicación** de la nueva aplicación de Azure AD. Se trata de un identificador lógico para la aplicación de Azure AD que se muestra cuando envía una solicitud de inicio de sesión único a Azure AD. Ten en cuenta que el **URI de identificador de aplicación** debe ser único para cada aplicación de Azure AD del directorio y no puede superar los 256 caracteres. Para obtener más información sobre el **URI de id. de aplicación**, consulta [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant).
@@ -183,7 +183,7 @@ Después de agregar o crear una aplicación de Azure AD, puedes volver a la secc
 
 Si la aplicación de AzureAD lee y escribe datos en MicrosoftAzureAD, necesitará una clave. Puedes crear claves para una aplicación de Azure AD modificando su información en el centro de partners. También puedes quitar las claves que ya no sean necesarias.
 
-1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona el nombre de la aplicación de Azure AD.
+1.  En la página de **usuarios** (en la **configuración de la cuenta**), selecciona el nombre de la aplicación de Azure AD.
     > [!TIP]
     > Al hacer clic en el nombre de la aplicación de Azure AD, verás todas las claves activas de la aplicación de Azure AD, incluida la fecha en la que se creó la clave y en la que expirará. Para quitar una clave que ya no sea necesaria, haz clic en **Quitar**.
 
@@ -201,15 +201,15 @@ Si la aplicación de AzureAD lee y escribe datos en MicrosoftAzureAD, necesitar�
 Después de agregar usuarios, grupos o aplicaciones de Azure AD a tu cuenta del centro de partners, puedes realizar cambios en la información de su cuenta. 
 
 > [!IMPORTANT]
-> Los cambios realizados en los [roles o permisos](set-custom-permissions-for-account-users.md) solo afectarán el acceso al centro de partners. Todos los demás cambios (por ejemplo, cambiar el nombre de un usuario o la pertenencia a grupos, o la dirección URL de respuesta y URI de identificador de aplicación para una aplicación de Azure AD) se reflejarán en el inquilino, así como de la organización Azure AD al igual que en tu cuenta del centro de partners. 
+> Los cambios realizados en los [roles o permisos](set-custom-permissions-for-account-users.md) solo afectarán el acceso al centro de partners. Todos los demás cambios (por ejemplo, cambiar el nombre de un usuario o la pertenencia a grupos, o la dirección URL de respuesta y URI de identificador de aplicación para una aplicación de Azure AD) se reflejarán en tu inquilino de organización Azure AD, así como en tu cuenta del centro de partners. 
 
-1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona el nombre de usuario, grupo o cuenta de aplicación de Azure AD que quieres editar.
+1.  En la página de **usuarios** (en la **configuración de la cuenta**), selecciona el nombre de usuario, grupo o cuenta de aplicación de Azure AD que quieres editar.
 2.  Realiza los cambios que desees. A continuación se indican los elementos que puedes editar:
     -   En un **usuario**, puedes editar el nombre, apellido o nombre de usuario. También puedes seleccionar grupos, o anular su selección, en la sección **Pertenencia a grupos** para actualizar su pertenencia a los grupos.
     -   En un **grupo**, puedes editar el nombre del grupo. (Para actualizar la pertenencia al grupo, edita los usuarios que quieras agregar o quitar del grupo y realiza cambios en la sección **Pertenencia a grupos**).
     -   En una **Aplicación de Azure AD**, puedes especificar nuevos valores para las opciones **Dirección URL de respuesta** o **URI de identificador de aplicación**.
     Recuerda que estos cambios se realizarán en el directorio de la organización, así como en tu cuenta del centro de partners.
-3.  Para realizar cambios relacionados con el acceso al centro de partners, selecciona o anula la selección de los roles que quieres aplicar, o selecciona **Personalizar los permisos** y realiza los cambios deseados. Estos cambios solo afectan el centro de partners acceder y no modificarán los permisos en el inquilino de Azure AD de la organización.
+3.  Para realizar cambios relacionados con el acceso al centro de partners, selecciona o anula la selección de los roles que quieres aplicar, o selecciona **Personalizar los permisos** y realiza los cambios deseados. Estos cambios solo afectan el centro de partners acceder y no modificarán los permisos en el inquilino de Azure AD de tu organización.
 3.  Haz clic en **Guardar**.
 
 
@@ -217,7 +217,7 @@ Después de agregar usuarios, grupos o aplicaciones de Azure AD a tu cuenta del 
 
 Como propietario de la cuenta, puedes ver el historial de exploración detallado de los usuarios adicionales que hayas agregado a la cuenta.
 
-En la página de **usuarios** (en **configuración de la cuenta**), selecciona el vínculo que se muestra en la **última actividad** del usuario cuyo historial de exploración quieres revisar. Podrás ver las direcciones URL de todas las páginas que el usuario ha visitado en los últimos 30 días.
+En la página de **usuarios** (en la **configuración de la cuenta**), selecciona el vínculo que se muestra en la **última actividad** del usuario cuyo historial de exploración quieres revisar. Podrás ver las direcciones URL de todas las páginas que el usuario ha visitado en los últimos 30 días.
 
 <span id="remove" />
 
@@ -226,7 +226,7 @@ En la página de **usuarios** (en **configuración de la cuenta**), selecciona e
 Para quitar un usuario, grupo o aplicación de Azure AD de tu cuenta del centro de partners, selecciona el vínculo **Quitar** que aparece junto al nombre en la página de **los usuarios** . Después de confirmar que quieres quitarla, ese usuario, grupo o aplicación de Azure AD ya no podrá tener acceso a tu cuenta del centro de partners (a menos que agregar de nuevo más adelante).
 
 > [!IMPORTANT]
-> Quitar un usuario, grupo o aplicación de Azure AD significa que ya no tendrán acceso a tu cuenta del centro de partners. Esto **no** elimina el usuario, grupo o aplicación de AzureAD del directorio de la organización.
+> Quitar un usuario, grupo o aplicación de Azure AD significa que ya no tendrá acceso a tu cuenta del centro de partners. Esto **no** elimina el usuario, grupo o aplicación de AzureAD del directorio de la organización.
 
  
 

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a8ce14094733ef5598c510198f4268744cb581e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459251"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693052"
 ---
 # <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
 Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en el manifiesto de la aplicación). Microsoft Store aplica ciertas reglas relacionadas con los números de versión que dependen de las diferentes versiones del sistema operativo.
 
 > [!NOTE]
-> En este tema hace referencia a "paquetes" pero, a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión para los archivos.msix/.appx y.msixbundle/.appxbundle.
+> Este tema hace referencia a "paquetes" pero, a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión para los archivos.msix/.appx y.msixbundle/.appxbundle.
 
 
 ## <a name="version-numbering-for-windows10-packages"></a>Números de versión para paquetes de Windows 10
@@ -54,7 +54,7 @@ Puedes usar las reglas de control de versiones del paquete para llevar gradualme
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Usar el número de versión para revertir a un paquete distribuido anteriormente para las nuevas adquisiciones
 
-Si guardas copias de los paquetes, tendrás la opción de revertir el paquete de la aplicación en la tienda a un paquete de Windows 10 anterior si debe detectar problemas con alguna versión. Se trata de una manera temporal de limitar la molestia para tus clientes mientras te tomas tiempo para solucionar el problema.
+Si guardas copias de los paquetes, tendrás la opción de revertir el paquete de la aplicación en el almacén de un paquete de Windows 10 anterior si debe detectar problemas con alguna versión. Se trata de una manera temporal de limitar la molestia para tus clientes mientras te tomas tiempo para solucionar el problema.
 
 Para ello, crea un nuevo [envío](app-submissions.md). Quita el paquete problemático y carga el paquete anterior que quieras proporcionar en la Tienda. Los clientes que ya hayan recibido el paquete al que estás revirtiendo seguirán teniendo el paquete problemático (ya que el antiguo tiene un número de versión anterior). Sin embargo, así se evita que nadie pueda comprar el paquete problemático y mantiene la aplicación disponible en la Tienda.
 
@@ -73,9 +73,9 @@ Para los paquetes .appx destinados a Windows8 y Windows8.1, se aplica la misma r
 Además, el número de versión de los paquetes de Windows8.1 siempre debe ser mayor que los números de versión de cualquiera de los paquetes de Windows8 para la misma aplicación. En otras palabras, el número de versión de los paquetes de Windows8 que envías debe ser menor que el número de versión de los paquetes de Windows8.1 que hayas enviado para la misma aplicación.
 
 > [!NOTE]
-> Si la aplicación también tiene los paquetes de Windows 10, el número de versión de los paquetes de Windows 10 debe ser mayor que los de cualquiera de los paquetes Windows8, Windows8.1 o Windows Phone 8.1. Para obtener más información, consulta [Agregar paquetes para Windows 10 a una aplicación publicada anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).
+> Si la aplicación también tiene los paquetes de Windows 10, el número de versión de los paquetes de Windows 10 debe ser mayor que los de cualquiera de los paquetes Windows8, Windows8.1, o Windows Phone 8.1. Para obtener más información, consulta [Agregar paquetes para Windows 10 a una aplicación publicada anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).
 
-Estos son algunos ejemplos de lo que sucede en los escenarios de actualización de número de versión diferente para los paquetes destinados a Windows8 y Windows8.1.
+Estos son algunos ejemplos de lo que sucede en los escenarios de actualización de número de versión diferente para paquetes destinados a Windows8 y Windows8.1.
 
 | Con esta versión de tu aplicación en la Tienda  | Después de cargar esta versión | Una vez que la nueva versión esté en Store, se instalará como nueva adquisición | Una vez que la nueva versión esté en Store, se actualizará si algún cliente ya tiene la aplicación |
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|
