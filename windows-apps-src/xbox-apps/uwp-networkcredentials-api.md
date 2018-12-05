@@ -3,11 +3,11 @@ title: Referencia de API de credenciales de red de Device Portal
 description: Obtén información sobre cómo agregar, quitar o actualizar las credenciales de red mediante programación.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8699117"
+ms.locfileid: "8730976"
 ---
 # <a name="network-credentials-api-reference"></a>Referencia de API de credenciales de red
 Puedes agregar, quitar o actualizar las credenciales de red almacenado en el Kit de desarrollo con esta API de REST.
