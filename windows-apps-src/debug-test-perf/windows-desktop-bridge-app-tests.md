@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460825"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8755151"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
-[Las aplicaciones de puente de dispositivo de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas a las aplicaciones de la plataforma Universal de Windows (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
+[Las aplicaciones de puente de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas a las aplicaciones de la plataforma Universal de Windows (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
 
 ## <a name="required-versus-optional-tests"></a>Pruebas obligatorias vs. pruebas opcionales
 Pruebas opcionales para las aplicaciones de puente de escritorio de Windows solo son informativas y no se usará para evaluar la aplicación durante la incorporación de Microsoft Store. Es recomendable investigar estos resultados para crear aplicaciones de mejor calidad de la prueba. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
@@ -46,7 +46,7 @@ Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación]
 Esta prueba verifica que la appx no es una versión de depuración.
  
 **Antecedentes**  
-Para certificarse para Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
  
 **Detalles de la prueba**  
 Prueba la aplicación para asegurarte de que no sea una versión de depuración y no esté vinculada con ningún marco de depuración.

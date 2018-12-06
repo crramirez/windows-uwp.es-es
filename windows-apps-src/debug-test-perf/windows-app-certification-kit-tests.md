@@ -1,17 +1,17 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Pruebas del Kit para la certificación de aplicaciones en Windows
-description: El Kit de certificación de aplicaciones de Windows contiene diversas pruebas que pueden ayudar a garantizar que la aplicación está lista para publicarse en la Microsoft Store.
+description: El Kit de certificación de aplicaciones de Windows contiene diversas pruebas que puede ayudar a garantizar que la aplicación está lista para publicarse en la Microsoft Store.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463617"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8757978"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
@@ -244,7 +244,7 @@ AppContainerCheck comprueba que esté establecido el bit **appcontainer** en el 
 
 Si un archivo ejecutable nativo no pasa la prueba, asegúrate de haber usado los compiladores y enlazadores más recientes para compilarlo y de haber usado la marca */appcontainer* en el enlazador.
 
-Si un archivo ejecutable administrado no pasa la prueba, asegúrate de que usa el compilador más reciente y enlazador, como Microsoft Visual Studio, para compilar la aplicación para UWP.
+Si un archivo ejecutable administrado no pasa la prueba, asegúrate de que usa el compilador más reciente y el enlazador, como Microsoft Visual Studio para compilar la aplicación para UWP.
 
 **Observaciones**
 
@@ -304,7 +304,7 @@ Prueba la aplicación para detectar el uso de cualquier API no compatible.
 
 ### <a name="background"></a>Antecedentes
 
-Las aplicaciones deben usar las API para aplicaciones para UWP (Windows Runtime o API de Win32 compatibles) para lograr la certificación de Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
+Las aplicaciones deben usar las API para aplicaciones para UWP (en tiempo de ejecución de Windows o API de Win32 compatibles) para lograr la certificación de Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -315,7 +315,7 @@ Las aplicaciones deben usar las API para aplicaciones para UWP (Windows Runtime 
 
 Asegúrate de que la aplicación se haya compilado como una versión de lanzamiento y no con una versión de depuración.
 
-> **Nota**la versión de depuración de una aplicación pasará esta prueba aunque la aplicación use solo [las API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Nota**la versión de depuración de una aplicación pasará esta prueba, incluso si la aplicación usa solo [las API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 Revisa los mensajes de error para identificar la API de la aplicación usa que no es una [API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
@@ -497,7 +497,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración.
 
 ### <a name="background"></a>Antecedentes
 
-Para certificarse para Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
 
 ### <a name="test-details"></a>Detalles de la prueba
 

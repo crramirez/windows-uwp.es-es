@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, licencias, licenses, aplicaciones, apps, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8708553"
+ms.locfileid: "8750716"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Obtener información sobre licencias de las aplicaciones y los complementos
 
