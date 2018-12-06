@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, UWP, personalizada, aplicación, promoción, campaña
 ms.localizationpriority: medium
 ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458289"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8743043"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Crear una campaña de promoción de la aplicación personalizada
 
 Además de crear una [campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md) que se ejecutará en aplicaciones de Windows, también puedes promocionar tu aplicación en otros canales. Por ejemplo, puedes promocionarla mediante proveedores de marketing para aplicaciones, o publicar vínculos a la aplicación en sitios de redes sociales. Estas actividades se denominan *campañas personalizadas*.
 
-Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic a la campaña personalizada correspondiente y tendrás los datos disponibles para TI del [Centro](https://partner.microsoft.com/dashboard)de partners.
+Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic a la campaña personalizada correspondiente y tendrás estos datos disponibles en [El centro de partners](https://partner.microsoft.com/dashboard).
 
 > [!IMPORTANT]
 > Estos datos se solo realiza un seguimiento de los clientes en Windows 10. Los clientes que usen otros sistemas operativos pueden seguir el vínculo a la descripción de la aplicación, pero no se incluirán los datos acerca de sus actividades.
@@ -26,7 +26,7 @@ Hay dos tipos principales de datos asociados a las campañas personalizadas: las
 
 Puedes recuperar los datos de rendimiento de una campaña personalizada para tu aplicación de las siguientes maneras:
 
-* Puedes ver los datos sobre las vistas de página y conversiones de la aplicación o complemento desde los gráficos de **vistas de página y conversiones por identificador de campaña** y **conversiones de campaña Total** en el [informe de adquisiciones](acquisitions-report.md).
+* Para ver los datos sobre las vistas de página y conversiones de la aplicación o complemento desde los gráficos de **vistas de página y conversiones por identificador de campaña** y **conversiones de campaña Total** en el [informe de adquisiciones](acquisitions-report.md).
 * Si es una aplicación de la Plataforma universal de Windows (UWP), puedes usar las API del WindowsSDK para recuperar mediante programación el identificador de campaña personalizada que resultó en una conversión.
 
 ## <a name="example-custom-campaign-scenario"></a>Ejemplo de escenario de campaña personalizada
