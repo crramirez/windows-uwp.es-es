@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755281"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807467"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-El usuario puede revocar el acceso en cualquier momento a través de la Configuración de Windows. Por lo tanto, la aplicación siempre debe comprobar el estado del acceso a través d método [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) antes de ejecutar cualquier código que use el agente de escucha de notificaciones. Si el usuario revoca el acceso, las API tendrán un error de forma silenciosa en lugar de generar una excepción (por ejemplo, la API para obtener todas las notificaciones simplemente devolverá una lista vacía).
+El usuario puede revocar el acceso en cualquier momento a través de la Configuración de Windows. Por lo tanto, la aplicación siempre debe comprobar el estado del acceso a través del método [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) antes de ejecutar código que use el agente de escucha de notificación. Si el usuario revoca el acceso, las API tendrán un error de forma silenciosa en lugar de generar una excepción (por ejemplo, la API para obtener todas las notificaciones simplemente devolverá una lista vacía).
 
 
 ## <a name="access-the-users-notifications"></a>Acceder a las notificaciones del usuario
