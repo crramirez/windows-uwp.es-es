@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d 11, port, portar
 ms.localizationpriority: medium
 ms.openlocfilehash: 78bcf3c2cae53fba4e67ecd4b3bcc44adddde1bf
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729726"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797509"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 

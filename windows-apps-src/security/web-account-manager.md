@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: b0a052d08c6b0816d977d3e86881540194075818
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744970"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801792"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08612e48eec7989f3b56fba41a17e1c149b2058
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8704329"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800135"
 ---
 # <a name="import-media-from-a-device"></a>Importar contenido multimedia desde un dispositivo
 

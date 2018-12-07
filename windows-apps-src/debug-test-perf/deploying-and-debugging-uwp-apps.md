@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739433"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798534"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 

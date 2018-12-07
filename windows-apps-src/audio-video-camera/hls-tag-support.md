@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c6664d13e76a5774172094d632de9db25109fdc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758625"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799849"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Compatibilidad con etiquetas HTTP Live Streaming (HLS)
 En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplicaciones para UWP.
