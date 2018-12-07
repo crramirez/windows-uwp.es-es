@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: b58ba8122d5db6cb898c5e6258794960cdc1c1f9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: c85624cec36d3e782b0c97ad810062e9b817eb98
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754253"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790192"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>Preparar para empaquetar una aplicación de escritorio
 
@@ -71,7 +71,7 @@ En este artículo se enumeran los aspectos que debes tener en cuenta antes de em
     <tr><td>2015 y 2017 (VC 14)</td><td>Se admite</td><td>Se admite</td>
     </table>
 
-    Nota: En todos los casos, debes realizar la vinculación a la última versión de CRT disponible públicamente.
+    Nota: En todos los casos, debe vincular a la última CRT disponible públicamente.
 
 + __La aplicación se instala y carga los ensamblados desde la carpeta de Windows en paralelo__. Por ejemplo, la aplicación usa las bibliotecas de tiempo de ejecución de C VC8 o VC9 y dinámicamente vincula desde la carpeta de Windows en paralelo, lo que significa que el código usa los archivos DLL comunes de una carpeta compartida. Esto no se admite. Deberás vincularlas de forma estática mediante la vinculación a los archivos de biblioteca redistribuibles directamente en el código.
 

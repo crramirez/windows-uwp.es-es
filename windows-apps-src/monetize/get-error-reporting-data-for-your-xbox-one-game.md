@@ -5,12 +5,12 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Windows Store analytics API, API de análisis de Microsoft Store, errors, errores
 ms.localizationpriority: medium
-ms.openlocfilehash: f9ae7c75fb332e910aa1b63712cf0d230172afd3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 22dff391e787e1763cb730272ba9cea029758c99
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750030"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791286"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Obtener los datos del informe de la Xbox One de errores de juego
 
@@ -47,7 +47,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto del juego de Xbox One para el que estás recuperando los datos de informes de errores. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado desde el informe de análisis del centro de partners de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
+| applicationId | string | El **Id. de Store** del juego de Xbox One para el que estás recuperando los datos de informes de errores. El **Identificador de la tienda** está disponible en la página de identidad de aplicación en el centro de partners. Un ejemplo de **Identificador de la tienda** sería 9wzdncrfj3q8. |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. Si *aggregationLevel* es **day**, **week** o **month**, este parámetro debe especificar una fecha con el formato ```mm/dd/yyyy```. Si *aggregationLevel* es **hour**, este parámetro puede especificar una fecha con el formato ```mm/dd/yyyy``` o una fecha y hora con el formato ```yyyy-mm-dd hh:mm:ss```.  |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. Si *aggregationLevel* es **day**, **week** o **month**, este parámetro debe especificar una fecha con el formato ```mm/dd/yyyy```. Si *aggregationLevel* es **hour**, este parámetro puede especificar una fecha con el formato ```mm/dd/yyyy``` o una fecha y hora con el formato ```yyyy-mm-dd hh:mm:ss```. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
@@ -60,7 +60,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-Los ejemplos siguientes muestran varias solicitudes para obtener datos de informes de error en el juego Xbox One. Reemplaza el valor de *applicationId* con el identificador de producto para tu juego.
+Los ejemplos siguientes muestran varias solicitudes para obtener datos de informes de error en el juego Xbox One. Reemplaza el valor de *applicationId* por el **Id. de Store** de tu juego.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failurehits?applicationId=BRRT4NJ9B3D1&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -89,7 +89,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|---------------------|
 | date            | cadena  | La primera fecha del intervalo de fechas de los datos del error con el formato ```yyyy-mm-dd```. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica un intervalo de fechas más largo, este valor será la primera fecha de ese intervalo de fechas. Para las solicitudes que especifican un valor de *aggregationLevel* de **hora**, este valor también incluye un valor de hora en el formato ```hh:mm:ss``` en la zona horaria local en el que se produjo el error.  |
-| applicationId   | string  | El identificador de producto del juego de Xbox One para el que quieres recuperar los datos de errores.   |
+| applicationId   | string  | El **Id. de Store** del juego de Xbox One para el que quieres recuperar los datos de errores.   |
 | applicationName | cadena  | El nombre para mostrar del juego.   |
 | failureName     | cadena  | El nombre del error, que se compone de cuatro partes: una o varias clases de problemas, un código de comprobación de errores o excepciones, el nombre de la imagen donde se produjo el error y el nombre de función asociada.  |
 | failureHash     | cadena  | Identificador único del error.   |

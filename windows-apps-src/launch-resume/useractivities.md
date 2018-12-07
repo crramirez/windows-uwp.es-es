@@ -5,12 +5,12 @@ keywords: actividad del usuario, actividades del usuario, línea de tiempo, cort
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 98a7697715b456498db3ee5642e2743ae228b3cb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: f35882af5ed7f66f59eb4e7fc4410223c4424e92
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749980"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790834"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continuar la actividad del usuario, incluso en diferentes dispositivos
 
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Lo que hace este código es detectar si la aplicación se ha activado mediante un protocolo. Si es así, comprueba qué debe hacer la aplicación para reanudar la tarea para la que se está activando. Si es una aplicación sencilla, la única actividad que reanuda esta aplicación es llevarte a la página secundaria cuando aparece la aplicación.
+Lo que hace este código es detectar si la aplicación se ha activado mediante un protocolo. Si es así, comprueba qué debe hacer la aplicación para reanudar la tarea para la que se está activando. Si es una aplicación sencilla, la única actividad que reanuda esta aplicación es colocar en la página secundaria cuando aparece la aplicación.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Usar tarjetas adaptables para mejorar la experiencia de la línea de tiempo
 

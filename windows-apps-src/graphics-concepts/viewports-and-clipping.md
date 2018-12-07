@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d2a8953d202cc22729f99a096b5fb62cf1131d9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486666"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792585"
 ---
 # <a name="viewports-and-clipping"></a>Ventanillas y recortes
 

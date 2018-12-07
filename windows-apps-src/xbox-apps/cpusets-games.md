@@ -1,13 +1,15 @@
 ---
 title: CPUSets para el desarrollo de juegos
 description: En este artículo se incluye una descripción general de la API de CPUSets, nueva para la Plataforma universal de Windows (UWP) y con información esencial relevante para el desarrollo de juegos y aplicaciones.
+ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 942c6b79d3b26e620ebb6e1318e1f7ffd75f929c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.date: 02/08/2017
+ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753512"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792169"
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets para el desarrollo de juegos
 

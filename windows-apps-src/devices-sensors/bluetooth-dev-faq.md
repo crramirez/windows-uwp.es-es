@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 03b72b5722a3ece0165fc63e7ce4abc1238bc135
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 4cc1bafb90b20083d55a622873dea7be5efbf5b7
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739057"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789516"
 ---
 # <a name="bluetooth-developer-faq"></a>Preguntas más frecuentes de los desarrolladores de Bluetooth
 
@@ -68,7 +68,7 @@ En el caso de los dispositivos Bluetooth RFCOMM (los clásicos), no es necesario
 **(15030 y anterior)** Ya no se necesita el emparejamiento de dispositivos Bluetooth. El nuevo APIs Async, como GetGattServicesAsync y GetCharacteristicsAsync para consultar el estado actual del dispositivo remoto. Ver los [documentos de cliente](gatt-client.md) para obtener más detalles. 
 
 ## <a name="when-should-i-pair-with-a-device-before-communicating-with-it"></a>¿Cuándo debo emparejar con un dispositivo antes de comunicarse con él?
-Por lo general, si se requiere una garantía de confianza, a largo plazo con un dispositivo, emparejarlo (dirigir al usuario a la página de configuración o mediante las API de emparejamiento y la enumeración de dispositivos). Si tienes que leer la información de desactivar el dispositivo que expone públicamente (un sensor de temperatura o balizas), conectar o escuchar anuncios sin necesidad de que ningún esfuerzo emparejar el dispositivo. Esto evitará problemas de interoperabilidad a largo plazo como un host de dispositivos no admiten el emparejamiento. 
+Por lo general, si se requiere una garantía de confianza, a largo plazo con un dispositivo, emparejarlo (dirigir al usuario a la página de configuración o mediante las API de emparejamiento y la enumeración de dispositivos). Si tienes que leer la información de desactivar el dispositivo que expone públicamente (un sensor de temperatura o balizas), a continuación, conectar o escuchar anuncios sin necesidad de que ningún esfuerzo emparejar el dispositivo. Esto evitará problemas de interoperabilidad a largo plazo como un host de dispositivos no admiten el emparejamiento. 
 
 ## <a name="do-all-windows-devices-support-peripheral-role"></a>¿Todos los dispositivos de Windows admiten la función periférica?
 
