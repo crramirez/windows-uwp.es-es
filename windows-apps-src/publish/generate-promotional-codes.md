@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744071"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795082"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos de promoción
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462891"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797274"
 ---
 # <a name="handle-app-prelaunch"></a>Administrar el inicio previo de aplicaciones
 
@@ -110,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-Ten en cuenta el `TryEnablePrelaunch()` funcionar, anteriormente. La razón por la llamada a `CoreApplication.EnablePrelaunch()` es tenerse en cuenta esta función es porque cuando se llama a un método, intentará JIT (solo en la compilación) compilar todo el método. Si la aplicación se ejecuta en una versión de Windows 10 que no es compatible con `CoreApplication.EnablePrelaunch()`, a continuación, se producirá un error JIT. Mediante la factorización de la llamada a un método que solo se llama cuando la aplicación determina que es compatible con la plataforma `CoreApplication.EnablePrelaunch()`, hemos evitar este problema.
+Ten en cuenta el `TryEnablePrelaunch()` funcionar, anteriormente. La razón por la llamada a `CoreApplication.EnablePrelaunch()` se incluyen en esta función es porque cuando se llama a un método, intentará JIT (solo en la compilación) compilar todo el método. Si la aplicación se ejecuta en una versión de Windows 10 que no es compatible con `CoreApplication.EnablePrelaunch()`, a continuación, se producirá un error JIT. Mediante la factorización de la llamada a un método que solo se llama cuando la aplicación determina que es compatible con la plataforma `CoreApplication.EnablePrelaunch()`, te evitar este problema.
 
-Hay también código en el ejemplo anterior que se pueden quites los comentarios si la aplicación debe rechazar el inicio previo cuando se ejecuta en Windows 10, versión 1511. En la versión 1511, todas las aplicaciones UWP se han optado por automáticamente por en el inicio previo, que puede no ser adecuado para tu aplicación.
+Hay también código en el ejemplo anterior que se puede quites los comentarios si la aplicación debe rechazar el inicio previo cuando se ejecuta en Windows 10, versión 1511. En la versión 1511, todas las aplicaciones UWP se han optado por automáticamente por en el inicio previo, que puede no ser adecuados para la aplicación.
 
 ## <a name="use-the-visibilitychanged-event"></a>Usar el evento VisibilityChanged
 

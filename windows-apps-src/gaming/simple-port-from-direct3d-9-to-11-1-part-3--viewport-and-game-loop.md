@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, migración, bucle del juego, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732980"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793806"
 ---
 # <a name="port-the-game-loop"></a>Migrar el bucle del juego
 
@@ -131,7 +131,7 @@ Usa un marcador para las [preguntas más frecuentes sobre la migración a Direct
 
 Las plantillas de DirectX de UWP incluyen una sólida infraestructura de dispositivo de Direct3D lista para usar en tu juego. Si quieres obtener directrices para elegir la plantilla correcta, consulta [Crear un proyecto de juego DirectX con una plantilla](user-interface.md).
 
-Para obtener información detallada sobre el desarrollo de juegos de Microsoft Store, consulta estos artículos:
+Visitar los siguientes artículos de desarrollo de juegos de Microsoft Store para obtener:
 
 -   [Tutorial: un juego simple para UWP con DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Audio para juegos](working-with-audio-in-your-directx-game.md)
