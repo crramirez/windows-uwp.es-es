@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb40528ee0104a2e25b5e95499c4404057eba1f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735685"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786051"
 ---
 # <a name="symbologies"></a>Simbologías
 Este tema proporciona códigos de barras de muestra para cada una de las simbologías admitidas por el descodificador de código de barras de software de Windows 10, incluidos: UPC/EAN, Code 39, Code 128, Interleaved 2 of 5, Databar Omnidirectional, Databar Stacked, Código QR y GS1DWCode.

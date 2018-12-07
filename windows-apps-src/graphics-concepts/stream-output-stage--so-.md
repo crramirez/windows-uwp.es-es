@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 12a0c59942eefd2ab9625b1b442043a1868230a1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 87eb6562c6ee66ca1d409d3748e688861d5f3920
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755904"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783513"
 ---
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
@@ -41,7 +41,7 @@ Los datos de vértices procedentes de una fase anterior del sombreador.
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Resultados
 
 
-La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior, como la fase del sombreador de geometría (GS). Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de flujo (SO) transmite continuamente los datos de vértices procedentes de la fase del sombreador de dominio (DS) a los búferes de la memoria (o si la fase DS también está inactiva, desde la fase del sombreador de vértices [VS]).
+La fase de salida de flujo (SO) devuelve (o transmite) continuamente datos de vértices de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o más búferes de la memoria. Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de flujo (SO) transmite continuamente datos de vértices de la fase de sombreador de dominios (DS) en los búferes de memoria (o si DS también está inactiva, desde la fase de sombreador de vértices (VS)).
 
 Cuando una franja de triángulos o líneas está enlazada a la fase de ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices a la vez de triángulos); los primitivos incompletos nunca se transmiten. Los tipos primitivos con proximidad descartan los datos de adyacencia antes de transmitir los datos.
 

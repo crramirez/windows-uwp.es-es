@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, ejecución extendida, minimizada, ExtendedExecutionSe
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cc67a7593a340ada8f807fc0fb0c1b846c6f05b
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8696821"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783760"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a>Aplazar la suspensión de la aplicación con ejecución ampliada
 

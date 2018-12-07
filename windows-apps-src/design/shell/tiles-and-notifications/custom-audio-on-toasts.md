@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, audio personalizado, notificación, audio, sonido
 ms.localizationpriority: medium
 ms.openlocfilehash: 982340901d13f17945c1e7ffa11099f52732f619
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738714"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780742"
 ---
 # <a name="custom-audio-on-toasts"></a>Audio personalizado en notificaciones del sistema
 

@@ -6,12 +6,12 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, control de mapa, map control, vistas de mapa, map views
 ms.localizationpriority: medium
-ms.openlocfilehash: 7242bdcedd4380c5593dba2788706ed0fbbc94a4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750796"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780119"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Mostrar mapas con vistas 2D, 3D y Streetside
 
@@ -421,7 +421,7 @@ private async void display3DLocation()
 
 Para obtener información sobre las ubicaciones en el mapa, llama a los siguientes métodos de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
--   [**GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016): gracias a este método, puedes obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control del mapa.
+-   Método de [**TryGetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) : obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control de mapa.
 -   [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018): gracias a este método, puedes obtener el punto especificado en la ventanilla del control de mapa correspondiente a la ubicación geográfica especificada.
 -   [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022): gracias a este método, puedes determinar si la ubicación geográfica especificada está actualmente visible en la ventanilla del control de mapa.
 -   [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014): gracias a este método, puedes obtener los elementos del mapa ubicados en el punto que se especificó en la ventanilla del control de mapa.

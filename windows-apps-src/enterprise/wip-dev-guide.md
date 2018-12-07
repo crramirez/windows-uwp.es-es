@@ -9,11 +9,11 @@ keywords: windows 10, uwp, trabajo en curso, Windows Information Protection, dat
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
 ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753479"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784714"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Guía para desarrolladores sobre Windows Information Protection (WIP)
 

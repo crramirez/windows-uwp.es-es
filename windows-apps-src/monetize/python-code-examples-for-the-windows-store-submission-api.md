@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 157c11484de150d363157e5b6e5de00a35bafd5f
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690080"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779221"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de Python: envíos de aplicaciones, complementos y pilotos
 
