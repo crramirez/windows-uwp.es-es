@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 8a87fe2bbff1768da43d6cb366b173077555270f
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739453"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789629"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones para UWP
  
@@ -42,7 +42,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 | [Contenido de icono](create-adaptive-tiles.md) | Contenido de la notificación de icono se especifica con adaptable, una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación con un lenguaje de marcado sencillo y flexible que se adapte a diferentes densidades de pantalla de iconos. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). |
 | [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md) | Estos son los elementos y atributos que usas para crear iconos adaptables. |
 | [Plantillas de iconos especiales](special-tile-templates-catalog.md) | Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. |
-| [Enviar notificación de icono local](sending-a-local-tile-notification.md) | Aprende a enviar una notificación de icono local, agregando contenido dinámico enriquecido a tu icono dinámico. |
+| [Enviar una notificación de icono local](sending-a-local-tile-notification.md) | Aprende a enviar una notificación de icono local, agregando contenido dinámico enriquecido a tu icono dinámico. |
 
 
 ## <a name="notifications"></a>Notificaciones

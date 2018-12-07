@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, ejemplo, DirectX, gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 60dd12c3e18b82118053d72d0983e13008dd8a0e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755071"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784794"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Agregar contenido visual a la muestra de Marble Maze
 

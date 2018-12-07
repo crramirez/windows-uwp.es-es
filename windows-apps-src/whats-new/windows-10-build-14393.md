@@ -7,11 +7,11 @@ ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aff0812da6b7c3d8e55bc31ed196211f54252e3
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8693408"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786199"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>Novedades para desarrolladores en Windows 10, compilación 14393
 

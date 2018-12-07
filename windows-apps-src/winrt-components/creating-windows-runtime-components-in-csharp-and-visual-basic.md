@@ -4,17 +4,17 @@ description: A partir de .NET Framework 4.5, puedes usar código administrado pa
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ms.date: 12/04/2018
 ms.topic: article
-keywords: Windows 10, UWP
-ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7dde2fb0411686294ebb8abc17192b2e45c61d7a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+keywords: Windows 10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: b4f5a2de5c3fa5564b4e4389cfc0806fd5d2844f
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736500"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807087"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Crear componentes de Windows Runtime en C# y Visual Basic
 A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime y empaquetarlos en un componente de Windows Runtime. Puedes usar tu componente en las aplicaciones de la plataforma Universal de Windows (UWP) que se escriben en C++, JavaScript, Visual Basic o C#. En este tema se describe las reglas para crear un componente y se describe algunos aspectos de la compatibilidad de .NET Framework para el tiempo de ejecución de Windows. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET Framework. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime.
