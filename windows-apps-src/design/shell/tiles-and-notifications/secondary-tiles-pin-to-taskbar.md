@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, anclar a la barra de tareas, iconos secundarios, anclar iconos secundarios a la barra de tareas, acceso directo
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ad322fe371b0e1f3605ffb4c29108a15bb28e0c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8779512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886729"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>Anclar iconos secundarios a la barra de tareas
 
