@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8829988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896638"
 ---
 # <a name="composition-brushes"></a>Pinceles de composición
 Todo el contenido visible en la pantalla de una aplicación para UWP está visible porque se ha pintado por un pincel. Pinceles permiten pintar los objetos de la interfaz de usuario con el contenido que van desde simples colores sólidos, imágenes o dibujos a la cadena de efectos complejos. Este tema explica los conceptos de pintura con CompositionBrush.
