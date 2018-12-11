@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, localizabilidad, localización, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793482"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872931"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar el diseño y las fuentes, y admitir RTL
 Diseña tu aplicación para admitir los diseños y fuentes de varios idiomas, incluida la dirección de flujo de derecha a izquierda (RTL). La dirección del flujo es la dirección en la que el script está escrito y se muestra y en la que los elementos de la interfaz de usuario se analizan por el ojo.

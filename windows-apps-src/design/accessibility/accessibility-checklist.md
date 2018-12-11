@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d63c7465234b6aebe876259ee095a183571946b2
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8713217"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8900485"
 ---
 # <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad
 

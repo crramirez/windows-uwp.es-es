@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 617812415d3dcd00ec24d5f55971ae311265b61d
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8689898"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8874858"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>API de indexación de recursos de paquetes (PRI) y sistemas de compilación personalizados
 Con las [API de indexación de recursos de paquetes (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear, versionar y volcar (como XML) archivos de índice de recursos del paquete (PRI) en cualquier nivel de complejidad que necesite tu aplicación para UWP. Si tienes un sistema de compilación personalizado que actualmente utiliza la herramienta de línea de comandos MakePri.exe (consulta [Compile resources manually with MakePri.exe](makepri-exe-command-options.md)), para un aumento del control y del rendimiento, es recomendable llamar a las API de PRI en su lugar en lugar de a MakePri.exe.

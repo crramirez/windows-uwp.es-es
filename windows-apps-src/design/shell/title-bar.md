@@ -8,11 +8,11 @@ keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793816"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8829685"
 ---
 # <a name="title-bar-customization"></a>Personalización de la barra de título
 

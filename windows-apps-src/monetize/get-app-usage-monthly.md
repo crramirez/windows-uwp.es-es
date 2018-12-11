@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798192"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872140"
 ---
 # <a name="get-monthly-app-usage"></a>Obtener el uso mensual de la aplicación
 

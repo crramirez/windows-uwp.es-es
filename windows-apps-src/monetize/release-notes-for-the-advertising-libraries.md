@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bab822c81cdd5af1e6b00ca8d33ed7f7ea3838f
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8806733"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873445"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 

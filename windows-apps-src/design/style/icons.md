@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f881c470d92ea1eafb08f24e6cf1fd06f4fc75e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873498"
 ---
 # <a name="icons-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
@@ -81,7 +81,7 @@ Los iconos pueden ahorrar espacio, pero ¿cuándo deberías usarlos?
 
 ## <a name="using-the-right-type-of-icon"></a>Usar el tipo correcto de icono
 
-Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos como Segoe MDL2 Assets. Podrías crear tu propia imagen basada en vectores. Incluso puedes usar una imagen de mapa de bits, aunque no lo recomendamos. Este es un resumen de las distintas formas en que puedes agregar un icono a la aplicación. 
+Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos como Segoe MDL2 Assets. Podrías crear tu propia imagen basado en vectores. Incluso puedes usar una imagen de mapa de bits, aunque no lo recomendamos. Este es un resumen de las distintas formas en que puedes agregar un icono a la aplicación. 
 
 ### <a name="use-a-predefined-icon"></a>Usa un icono predefinido.
 :::row:::

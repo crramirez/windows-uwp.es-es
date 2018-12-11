@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envío de MicrosoftStore, confirmar envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 820e10695cce2d6242a51b0017d2fe3981cf77b1
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "8828803"
+ms.locfileid: "8900545"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar un envío de paquete piloto
 
