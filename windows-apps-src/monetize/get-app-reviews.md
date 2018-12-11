@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, servicios de Microsoft Store, API de análisis de Microsoft Store, opiniones
 ms.localizationpriority: medium
 ms.openlocfilehash: 084158c0eb20f1d2a03c0e178064ac168c689872
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8879867"
+ms.locfileid: "8919241"
 ---
 # <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
