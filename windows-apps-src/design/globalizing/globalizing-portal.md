@@ -5,16 +5,16 @@ title: Globalización y localización
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
-ms.date: 10/18/2017
+ms.date: 12/7/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 49ee09374db54678dbe0152b996537771fd1bfd1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738849"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892358"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
 
@@ -64,4 +64,5 @@ La mayoría de los equipos de localización usa herramientas especiales para fac
 | [Fuentes internacionales](loc-international-fonts.md) | En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU. |
 | [Diseña tu aplicación para el texto bidireccional](design-for-bidi-text.md) | Diseña tu aplicación para proporcionar compatibilidad con texto bidireccional (BiDi) de manera que puedas combinar script desde sistemas de escritura de izquierda a derecha y de derecha a izquierda. |
 | [Usa el Kit de herramientas para aplicaciones multilingües 4.0](use-mat.md) | El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con Microsoft Visual Studio 2017 para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas de editor. |
-| [Solución de problemas y preguntas más frecuentes sobre el Kit de herramientas para aplicaciones multilingües 4.0](mat-faq-troubleshooting.md) | Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0. |
+| [Solución de problemas y preguntas más frecuentes sobre el Kit de herramientas para aplicaciones multilingües 4.0](mat-faq-troubleshooting.md) | Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el kit de herramientas para aplicaciones multilingües (MAT) 4.0. |
+| [Preparar la aplicación para que el cambio de japonesa](japanese-era-change.md) | Obtén información sobre el cambio de mayo de 2019 japonesa y cómo preparar la aplicación. |
