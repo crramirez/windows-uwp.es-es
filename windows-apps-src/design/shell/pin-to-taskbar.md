@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, barra de tareas, administrador de barra de tareas, anclar a la barra de tareas, icono principal
 ms.localizationpriority: medium
 ms.openlocfilehash: 640dc637a1c50718210d87af87cb8b8e706a5ab7
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8799136"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8898243"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>Anclar tu aplicación a la barra de tareas
 
