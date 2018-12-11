@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b177a7741cae0fe786d095c26a6be08ec598bcbb
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458865"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885508"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Tutorial: Creación de un componente simple de Windows Runtime y llamarlo desde JavaScript
 
@@ -20,7 +20,7 @@ ms.locfileid: "8458865"
 
 En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente desde tu aplicación universal de Windows creada para Windows mediante JavaScript.
 
-Visual Studio facilita el proceso de agregar un componente de Windows Runtime escrito con C# o Visual Basic a tu aplicación y crear tipos de Windows Runtime que puedas llamar desde JavaScript. Internamente, los tipos de Windows Runtime pueden usar cualquier funcionalidad de .NET Framework permitida en una aplicación universal de Windows. (Para obtener más información, consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) y [.NET para Introducción a las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). Externamente, los miembros de tu tipo pueden exponer solo los tipos de Windows Runtime para sus parámetros y valores devueltos. Al compilar la solución, Visual Studio crea un proyecto de componente de Windows Runtime en .NET Framework y, a continuación, ejecuta un paso de compilación que crea un archivo de metadatos (.winmd) de Windows. Este es el componente de Windows Runtime que Visual Studio incluye en tu aplicación.
+Visual Studio facilita el proceso de agregar un componente de Windows Runtime escrito con C# o Visual Basic a tu aplicación y crear tipos de Windows Runtime que puedas llamar desde JavaScript. Internamente, los tipos de Windows Runtime pueden usar cualquier funcionalidad de .NET Framework permitida en una aplicación universal de Windows. (Para obtener más información, consulta [Crear componentes de Windows en tiempo de ejecución en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) y [.NET para Introducción a las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). Externamente, los miembros de tu tipo pueden exponer solo los tipos de Windows Runtime para sus parámetros y valores devueltos. Al compilar la solución, Visual Studio crea un proyecto de componente de Windows Runtime en .NET Framework y, a continuación, ejecuta un paso de compilación que crea un archivo de metadatos (.winmd) de Windows. Este es el componente de Windows Runtime que Visual Studio incluye en tu aplicación.
 
 > **Nota**.NET Framework asigna automáticamente algunos tipos de .NET Framework usados frecuentemente, como los tipos de datos primitivos y tipos de colección, a sus equivalentes de Windows Runtime. Estos tipos de .NET Framework pueden usarse en la interfaz pública de un componente de Windows Runtime y se mostrarán a los usuarios del componente como los tipos correspondientes de Windows Runtime. Consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
@@ -104,7 +104,7 @@ De forma similar, .NET Framework proporciona compatibilidad para habilitar el us
 
 En el proyecto de JavaScript, abre el archivo default.html y actualiza el cuerpo tal como se muestra en el código siguiente. Este código incluye el conjunto completo de controles de la aplicación de ejemplo y especifica los nombres de función de los eventos de clic.
 
-> **Nota**al ejecutar la aplicación en primer lugar, solo el botón Basics1 y Basics 2 son compatibles.
+> **Nota**cuando se ejecute la aplicación por primera vez, solo el botón Basics1 y Basics 2 son compatibles.
 
 ```html
 <body>
@@ -268,7 +268,7 @@ En el proyecto SampleComponent, agrega una nueva clase **public sealed** (clase 
 > End Class
 > ```
 
-El controlador de eventos sigue el patrón de eventos de .NET Framework familiar, salvo que el remitente del evento (en este caso, el objeto PropertySet) se convierte en el IObservableMap&lt;de cadena, el objeto&gt; interfaz (IObservableMap (Of String, Object) en Visual Basic), que es una instancia de la interfaz de Windows Runtime [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Se puede convertir el remitente a su tipo si es necesario). Además, los argumentos del evento se presentan como una interfaz en lugar de un objeto.
+El controlador de eventos sigue el patrón de eventos de .NET Framework familiar, salvo que el remitente del evento (en este caso, el objeto PropertySet) se convierte en el IObservableMap&lt;de cadena, el objeto&gt; interfaz (IObservableMap (Of String, Object) en Visual Basic), que es una creación de instancias de la interfaz de Windows Runtime [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Se puede convertir el remitente a su tipo si es necesario). Además, los argumentos del evento se presentan como una interfaz en lugar de un objeto.
 
 En el archivo default.js, agrega la función Runtime1 tal como se muestra. Este código crea un objeto PropertySetStats, obtiene su colección PropertySet y agrega su propio controlador de eventos, la función onMapChanged, para controlar el evento MapChanged. Después de realizar cambios en la colección, runtime1 llama al método DisplayStats para mostrar un resumen de los tipos de cambio.
 
@@ -470,7 +470,7 @@ Por supuesto, JavaScript no es un lenguaje fuertemente tipado, por lo que el uso
 
 Otro comportamiento inesperado: si pasas una variable sin asignar de JavaScript como un argumento de cadena, lo que obtienes es la cadena "undefined". En resumen, ten cuidado cuando pases tipos de la colección de .NET Framework a código JavaScript.
 
-> **Nota**si tienes grandes cantidades de texto para concatenar, puedes hacerlo más eficacia si mueves el código a un método de .NET Framework y usa la clase StringBuilder, tal como se muestra en la función showMap.
+> **Nota**si tienes grandes cantidades de texto para concatenar, puedes hacerlo más eficacia si mueves el código a un método de .NET Framework y mediante la clase StringBuilder, tal como se muestra en la función showMap.
 
 Aunque no puedas exponer tus propios tipos genéricos desde un componente de Windows Runtime, puedes devolver colecciones genéricas de .NET Framework para las clases de Windows Runtime usando código como el siguiente:
 
@@ -735,6 +735,6 @@ Para ejecutar la aplicación, presiona la tecla F5. Para iniciar la operación a
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [.NET para Introducción a las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para introducción de las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

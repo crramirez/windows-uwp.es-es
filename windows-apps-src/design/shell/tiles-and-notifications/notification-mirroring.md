@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, reflejo de notificaciones, notificación, en todos los dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: dc870601159a80bc6d03a287fd19f082e968e09e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783279"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8884564"
 ---
 # <a name="notification-mirroring"></a>Reflejo de notificaciones
 

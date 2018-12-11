@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 4527cface4681bf4866249c6398d43e6af782725
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8779875"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8882673"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 

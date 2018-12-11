@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e537e40d5224f2522cb5ecebd92664d1794dd06
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798264"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888261"
 ---
 # <a name="getting-started-with-point-of-service"></a>Tareas iniciales con punto de servicio
 

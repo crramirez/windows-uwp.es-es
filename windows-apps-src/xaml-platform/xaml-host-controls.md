@@ -7,11 +7,11 @@ keywords: windows 10, uwp, windows forms, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bd22aa761d4a9a79c95c7bc424ab1d2a31ca6cdf
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8808680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880864"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>Controles UWP en aplicaciones de escritorio
 

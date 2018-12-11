@@ -5,12 +5,12 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de la Store Windows, errors, errores, details, detalles
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: da3252c42a0c2e2bd02465985737125cc053a616
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741170"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880884"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Obtener los detalles de un error en tu Xbox One juego
 
@@ -48,7 +48,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto del juego de Xbox One para el que quieres recuperar los detalles de errores. Para obtener el id. del producto de tu juego, ve a tu juego en el Portal de desarrollador de Xbox (XDP) y recupera el id. del producto desde la dirección URL. Como alternativa, si descargas los datos de estado desde el informe de análisis del centro de partners de Windows, el identificador de producto se incluye en el archivo TSV. |  Sí  |
+| applicationId | string | El **Id. de Store** del juego de Xbox One para el que quieres recuperar los detalles de errores. El **Identificador de la tienda** está disponible en la página de identidad de aplicación en el centro de partners. Un ejemplo de **Identificador de la tienda** sería 9wzdncrfj3q8. |  Sí  |
 | failureHash | cadena | El id. exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor para el error que te interesa, usa el método [obtener datos informes de errores de la Xbox One en juegos](get-error-reporting-data-for-your-xbox-one-game.md) y usa el valor de **failureHash** en el cuerpo de respuesta de ese método. |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es la fecha actual. |  No  |
@@ -60,7 +60,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-Los ejemplos siguientes muestran varias solicitudes para obtener datos detallados del error para una consola Xbox One juego. Reemplaza el valor de *applicationId* con el identificador de producto para tu juego.
+Los ejemplos siguientes muestran varias solicitudes para obtener datos detallados del error para una consola Xbox One juego. Reemplaza el valor de *applicationId* por el **Id. de Store** de tu juego.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails?applicationId=BRRT4NJ9B3D1&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0 HTTP/1.1
@@ -90,7 +90,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor           | Tipo    | Descripción     |
 |-----------------|---------|----------------------------|
-| applicationId   | string  | El identificador de producto del juego de Xbox One cual recuperaste los datos detallados del error.      |
+| applicationId   | string  | El **Id. de Store** del juego de Xbox One cual recuperaste los datos detallados del error.      |
 | failureHash     | cadena  | El identificador único del error.     |
 | failureName     | cadena  | El nombre del error, que se compone de cuatro partes: una o varias clases de problemas, un código de comprobación de errores o excepciones, el nombre de la imagen donde se produjo el error y el nombre de función asociada.           |
 | date            | cadena  | La primera fecha del intervalo de fechas de los datos del error. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |

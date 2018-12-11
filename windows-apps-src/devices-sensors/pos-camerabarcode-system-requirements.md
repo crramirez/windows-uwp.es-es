@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: aea2a339c450f50ca3ae6f6250d056b4a1e70aa1
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798918"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881252"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a>Requisitos del sistema para el escáner de código de barras basado en cámara
 A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a través del objetivo de una cámara estándar desde una aplicación Universal de Windows.
