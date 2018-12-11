@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, iconos secundarios, anclar, anclado, inicio rápido, ejemplo de código, ejemplo, secondarytile
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bebee86c824242cf031503617d4a880ebbb74df
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8789688"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8897875"
 ---
 # <a name="pin-secondary-tiles-to-start"></a>Anclar iconos secundarios a inicio
 
