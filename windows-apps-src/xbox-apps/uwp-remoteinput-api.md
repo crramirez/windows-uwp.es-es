@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 882e84c5126e4f67e246dd479008133c979c06b1
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793077"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825308"
 ---
 # <a name="remote-input-api-reference"></a>Referencia de API de entrada remota   
 Puedes enviar la entrada de mouse, teclado y controlador en tiempo real de manera remota mediante esta API.
