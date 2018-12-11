@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, punto de servicio, pos, lector de bandas magnéticas
 ms.localizationpriority: medium
 ms.openlocfilehash: ed1fb5b393f96a793ff90ec0df354e04de270ccf
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8785191"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888650"
 ---
 # <a name="magnetic-stripe-reader"></a>Lector de bandas magnéticas
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, interfaz de usuario, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 09005eb12997126a9cad68c388beb0473b19fda3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743798"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8890173"
 ---
 # <a name="add-a-user-interface"></a>Agregar una interfaz de usuario
 
