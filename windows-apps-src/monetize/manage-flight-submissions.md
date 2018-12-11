@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 19ddd43d4e61480764882f1b10e6240aa2afeb8c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8791919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8875497"
 ---
 # <a name="manage-package-flight-submissions"></a>Administrar envíos de paquetes piloto
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8800656"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8876184"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 

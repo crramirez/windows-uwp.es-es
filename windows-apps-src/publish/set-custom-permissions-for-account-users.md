@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8878163"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 

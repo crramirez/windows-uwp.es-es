@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, delete flight, eliminar piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: fa3fa78c695538ec13dbd20d38a24224c560463e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784327"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8876766"
 ---
 # <a name="delete-a-package-flight"></a>Eliminar un paquete piloto
 
