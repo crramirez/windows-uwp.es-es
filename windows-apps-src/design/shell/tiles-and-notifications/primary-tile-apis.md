@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, anclar icono principal, api de icono principal, comprobar si el icono está anclado, icono dinámico
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d7c66b358a3a465522ad3b56d8ae926358ae57
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8891557"
+ms.locfileid: "8922940"
 ---
 # <a name="primary-tile-apis"></a>API de icono principal
  

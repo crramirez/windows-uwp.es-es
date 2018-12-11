@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, walkthroughs, tutoriales
 ms.localizationpriority: medium
 ms.openlocfilehash: 423b005028ca7796dbab81d2c26a68c3d74fc922
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8873488"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8919709"
 ---
 # <a name="implement-ads-in-your-app"></a>Implementar anuncios en tu aplicación
 

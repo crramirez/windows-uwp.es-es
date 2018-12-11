@@ -6,11 +6,11 @@ ms.topic: article
 keywords: wndows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 59b056e160a1d7782e054ad4dbf1b63e91be42e9
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8900356"
+ms.locfileid: "8919958"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir API con C++/WinRT
 

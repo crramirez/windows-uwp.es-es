@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, add-ons, complementos, catalog, catálogo, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8899440"
+ms.locfileid: "8922577"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Administrar un catálogo extenso de productos desde la aplicación
 
