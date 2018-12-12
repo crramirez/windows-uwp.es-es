@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 4914a448432206e2418fe110c0b49517a7145e0b
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8881728"
+ms.locfileid: "8937982"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Cómo el sistema de administración de recursos compara etiquetas de idioma
 

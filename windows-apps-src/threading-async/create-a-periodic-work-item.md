@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 92142bcf084b6504e4c694ca33d2dc8532f1acca
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8880367"
+ms.locfileid: "8941036"
 ---
 # <a name="create-a-periodic-work-item"></a>Crear un elemento de trabajo periódico
 
