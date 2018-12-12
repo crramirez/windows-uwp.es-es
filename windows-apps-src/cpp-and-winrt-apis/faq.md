@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, preguntas más frecuentes, P+F
 ms.localizationpriority: medium
 ms.openlocfilehash: b162fbaaeda8e1ded1f0d3e1d75c840dfa543f4c
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8900372"
+ms.locfileid: "8934810"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de Windows en tiempo de ejecución APIs con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).

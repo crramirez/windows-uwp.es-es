@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8889209"
+ms.locfileid: "8937816"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
