@@ -6,16 +6,16 @@ ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b00ace982bb39b99816013a8491b5b75be765833
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 122be597bbf772d891b7e9839dfc4d9039754b00
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933589"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968589"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
-El primer paso para crear una nueva aplicación en el [Centro de partners](https://partner.microsoft.com/dashboard) es reservar un nombre de la aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
+El primer paso para crear una nueva aplicación [Centro](https://partner.microsoft.com/dashboard) de partners es reservar un nombre de la aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
 
 Puedes reservar un nombre para tu aplicación incluso si aún no has empezado a crearla. Te recomendamos hacerlo tan pronto como sea posible, para que nadie más pueda usar el nombre. Ten en cuenta que necesitarás enviar la aplicación en un plazo de tres meses para poder mantener ese nombre reservado para tu uso.
 

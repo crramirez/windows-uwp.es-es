@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e1c2567393e6d6bfab75b2db068f0b61f7fb6893
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9b65dd07a89b1617f805c17bf43a3ce3f5f3282f
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946788"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968599"
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
 
@@ -61,7 +61,7 @@ Si debes tener acceso a las personas varios la cuenta de empresa al iniciar sesi
 
 -   Crear la cuenta de Microsoft con una dirección de correo electrónico que ya no pertenece a TI ni a otra persona, como MyCompany_PartnerCenter@outlook.com. No uses una dirección de correo electrónico en el dominio de tu empresa, especialmente si tu empresa ya usa Azure AD. (Como se indicó anteriormente, puedes agregar usuarios adicionales de Azure tu empresa AD más adelante.)
 -   Limita el acceso a esta cuenta Microsoft al menor número posible de usuarios.
--   Configurar una lista de distribución de correo electrónico corporativa que incluya todos los que necesita tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a la [información de seguridad asociada con la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados de la lista reciban códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puedes agregar la dirección de correo electrónico de la persona a la información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad para t la cuenta o cuando se accede desde un nuevo dispositivo).
+-   Configurar una lista de distribución de correo electrónico corporativa que incluya todos los que necesita tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a la [información de seguridad asociada con la cuenta de Microsoft](https://account.microsoft.com/security). Esto permite que todos los empleados de la lista reciban códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puedes agregar la dirección de correo electrónico de la persona a la información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad para t la cuenta o cuando se accede desde un nuevo dispositivo).
 -   Agrega un número de teléfono de la empresa a la información de seguridad de la cuenta de Microsoft. Intenta usar un número que no requiere una extensión y que puedan acceder los integrantes principales del equipo.
 -   En general, haz que los desarrolladores usen [dispositivos de confianza](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para iniciar sesión en la cuenta de desarrollador de tu empresa. Todos los integrantes principales del equipo deben tener acceso a estos dispositivos de confianza. Así se reducirá la necesidad de enviar códigos de seguridad cuando se acceda a la cuenta. Existe un límite en cuanto al número de códigos que pueden generarse por cuenta, por semana.
 -   Si tienes que permitir el acceso a la cuenta desde un equipo que no es de confianza, limita ese acceso a un máximo de cinco desarrolladores. Lo ideal es que estos desarrolladores accedan a la cuenta desde equipos que compartan la misma ubicación de red y geográfica.

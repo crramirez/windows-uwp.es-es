@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, apps, aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c909e707d25e4add534ce89319abe71c2557b59
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 267e1d4de3917ae332cdfe15309f3871ef7b6647
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919085"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968569"
 ---
 # <a name="get-all-apps"></a>Obtener todas las aplicaciones
 
 
-Usa este método en la API de envío de Microsoft Store para recuperar los datos de todas las aplicaciones que están registradas en tu cuenta del centro de partners.
+Usa este método en la API de envío de Microsoft Store para recuperar datos de las aplicaciones que están registradas en tu cuenta del centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -31,7 +31,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
@@ -43,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-Todos los parámetros de solicitud son opcionales para este método. Si llamas a este método sin parámetros, la respuesta contiene datos de todas las aplicaciones registradas en tu cuenta.
+Todos los parámetros de solicitud son opcionales para este método. Si llamas a este método sin parámetros, la respuesta contiene datos de las 10 primeras aplicaciones registradas en tu cuenta.
 
 |  Parámetro  |  Tipo  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
@@ -57,19 +57,44 @@ No incluyas un cuerpo de la solicitud para este método.
 
 ### <a name="request-examples"></a>Ejemplos de solicitud
 
-En el siguiente ejemplo se muestra cómo recuperar información sobre todas las aplicaciones registradas en tu cuenta.
+En el siguiente ejemplo se muestra cómo recuperar las 10 primeras aplicaciones registradas en tu cuenta.
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-En el siguiente ejemplo se muestra cómo recuperar las 10 primeras aplicaciones registradas en tu cuenta.
+En el siguiente ejemplo se muestra cómo recuperar información sobre todas las aplicaciones registradas en tu cuenta. En primer lugar, obtener las aplicaciones de la parte superior 10:
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
+
+A continuación, llamar de forma recursiva `GET https://manage.devcenter.microsoft.com/v1.0/my/{@nextLink}` hasta `{@nextlink}` es nulo o no existe en la respuesta. Por ejemplo:
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+  
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=20&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=30&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+Si ya sabes el número total de las aplicaciones que tienes en tu cuenta, simplemente puedes pasar ese número en el parámetro de la **parte superior** para obtener información sobre todas las aplicaciones.
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=23 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
 
 ## <a name="response"></a>Respuesta
 
@@ -114,7 +139,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | value      | matriz  | Una matriz de objetos que contienen información acerca de cada aplicación registrada en tu cuenta. Para más información sobre los datos de cada objeto, consulta [Recurso de aplicación](get-app-data.md#application_object).                                                                                                                           |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 20 aplicaciones registradas en la cuenta, el cuerpo de la respuesta incluirá un valor @nextLink de ```applications?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar las 10 aplicaciones siguientes. |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 20 aplicaciones registradas en la cuenta, el cuerpo de la respuesta incluirá un valor @nextLink de `applications?skip=10&top=10`, lo que indica que puedes llamar a `https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10` para solicitar las 10 aplicaciones siguientes. |
 | totalCount | entero    | El número total de filas del resultado de datos de la consulta (es decir, el número total de aplicaciones registradas en tu cuenta).                                                |
 
 
