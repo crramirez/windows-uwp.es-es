@@ -7,12 +7,12 @@ ms.date: 12/7/2017
 ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, barra de progreso, barra de progreso de notificación del sistema, notificación, enlace de datos de notificación del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
+ms.sourcegitcommit: 88265a8c9f6a77a0508a0c9d89b6ab0a6238a1da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921320"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8969062"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Enlace de datos y barra de progreso de notificación del sistema
 
@@ -21,7 +21,7 @@ El uso de una barra de progreso dentro de la notificación del sistema te permit
 > [!IMPORTANT]
 > **Requiere Creators Update y 1.4.0 de la biblioteca de notificaciones**: debes utilizar SDK 15063 y estar ejecutando la compilación 15063 o superior para usar las barras de progreso en las notificaciones del sistema. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para construir la barra de progreso en el contenido de tu notificación del sistema.
 
-Una barra de progreso dentro de una notificación del sistema puede ser "indeterminada" (ningún valor específico, los puntos animados indican que se está produciendo una operación) o "determinada" (se rellena un porcentaje específico de la barra, como el 60%).
+Una barra de progreso dentro de una notificación del sistema puede ser "indeterminada" (ningún valor específico, puntos animados indican se está produciendo una operación) o "determinada" (un porcentaje específico de la barra se rellena, como el 60%).
 
 > **API importantes**: [clase NotificationData](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [método ToastNotifier.Update](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [clase ToastNotification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
