@@ -6,12 +6,12 @@ ms.date: 06/28/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 05ff8dd78f58910512291b819d59d68f682cc93c
+ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940026"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970940"
 ---
 # <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
@@ -22,9 +22,9 @@ Las aplicaciones universales de Windows pueden obtener acceso a determinadas ubi
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
 ### <a name="application-install-directory"></a>Directorio de instalación de aplicación
-La carpeta donde está instalada la aplicación en el sistema del usuario.
+La carpeta donde la aplicación está instalada en el sistema del usuario.
 
-Hay dos formas principales para acceder a los archivos y carpetas en la aplicación el directorio de instalación:
+Hay dos formas principales para acceder a los archivos y carpetas en tu aplicación directorio de instalación:
 
 1. Puedes recuperar una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente el directorio de instalación de la aplicación como, por ejemplo:
 
@@ -92,7 +92,7 @@ El directorio de instalación de la aplicación es una ubicación de solo lectur
 ### <a name="application-data-locations"></a>Ubicaciones de datos de aplicación
 Son las carpetas en las que la aplicación puede almacenar datos. Estas carpetas (locales, móviles o temporales) se crean al instalar la aplicación.
 
-Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaciones de datos de la aplicación:
+Hay dos formas principales para acceder a archivos y carpetas desde ubicaciones de datos de la aplicación:
 
 1.  Usa las propiedades de [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar una carpeta de datos de la aplicación.
 
@@ -254,7 +254,7 @@ En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acces
 
 | Ubicación | Funcionalidad | API de Windows.Storage |
 |----------|------------|---------------------|
-| Todos los archivos a los que tiene acceso el usuario. Por ejemplo: documentos, imágenes, fotos, descargas, escritorio, OneDrive, etc. | broadFileSystemAccess<br><br>Es una funcionalidad restringida. La primera vez que la utilices, el sistema solicitará al usuario que permita el acceso. Se puede configurar el acceso en Configuración > Privacidad > Sistema de archivos. Si envías una aplicación a la Store que declare esta funcionalidad, deberás proporcionar descripciones adicionales sobre por qué tu aplicación necesita esta funcionalidad y cómo pretende usarla.<br>Esta funcionalidad funciona para las API del espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) | n/d |
+| Todos los archivos a los que tiene acceso el usuario. Por ejemplo: documentos, imágenes, fotos, descargas, escritorio, OneDrive, etc. | broadFileSystemAccess<br><br>Es una funcionalidad restringida. Es configurable en la **configuración de**acceso > **privacidad** > **sistema de archivos**. Dado que los usuarios pueden conceder o denegar el permiso cualquier momento en la **configuración**, debes asegurarte de que tu aplicación sea resistente a esos cambios. Si te encuentras con que la aplicación no tiene acceso, puedes pedir al usuario cambiar la configuración, ya que ofrece un vínculo al artículo de [acceso al sistema de archivos de Windows 10 y privacidad](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Ten en cuenta que el usuario debe cerrar la aplicación, alterna la configuración y reinicia la aplicación. Si alterna la configuración mientras se ejecuta la aplicación, la plataforma suspenderá la aplicación para que puedes guardar el estado y luego forzosamente finalizar la aplicación con el fin de aplicar la nueva configuración. En la actualización de abril de 2018, el valor predeterminado para el permiso está activada. En la actualización de octubre de 2018, el valor predeterminado es desactivado.<br /><br />Si envías una aplicación a la Store que declare esta funcionalidad, deberás proporcionar descripciones adicionales sobre por qué tu aplicación necesita esta funcionalidad y cómo pretende usarla.<br>Esta funcionalidad opera para las API del espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) . Consulta la sección de **ejemplo** al final de este artículo para obtener un ejemplo de cómo habilitar esta funcionalidad en la aplicación. | n/d |
 | Documentos | DocumentsLibrary <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. <br><br>Usa esta funcionalidad si tu aplicación:<br>- Facilita el acceso sin conexión entre plataformas al contenido específico de OneDrive mediante direcciones URL o id. de recursos de OneDrive válidos.<br>-Guarda los archivos abiertos en el OneDrive del usuario automáticamente y sin conexión | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Música     | MusicLibrary <br>Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Imágenes  | PicturesLibrary<br> Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
