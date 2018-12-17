@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 1443730e343bc00563142e937d534282b9b34524
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 43aeccecee5b4b2d7a2d5fa1082fb619e87e7268
+ms.sourcegitcommit: 51ea7eae59684400e7813a9dd3376d5e7bfb3635
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924073"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "8972049"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil de usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede utilizar **Configuración** > **Hora e idioma** > **Región e idioma** para configurar una lista ordenada de idiomas de visualización preferidos o simplemente un único idioma de visualización preferido. Un idioma puede tener una variante regional. Por ejemplo, puedes seleccionar el español de España, el español de México o el español que se habla en Estados Unidos, entre otros.
@@ -93,21 +93,23 @@ La lista de idiomas de la aplicación en tiempo de ejecución determina los recu
 **Nota** Si el idioma del perfil de usuario y el idioma del manifiesto de la aplicación son variantes regionales de cada uno, se usa la variante regional del usuario como el idioma de la aplicación en tiempo de ejecución. Por ejemplo, si el usuario prefiere en-GB, pero la aplicación admite en-US, el idioma de la aplicación en tiempo de ejecución es en-GB. Esto garantiza que las fechas, las horas y los números tengan un formato más cercano a las expectativas del usuario (en-GB), pero los recursos localizados siguen cargándose (debido a la coincidencia de idiomas) en el idioma admitido por la aplicación (en-US).
 
 ## <a name="qualify-resource-files-with-their-language"></a>Calificar los archivos de recursos con sus idiomas
-Nombra los archivos de recursos o sus carpetas con calificadores de recursos de idiomas. Para saber más sobre los calificadores de recursos, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Un archivo de recursos puede ser una sola imagen u otro archivo de activos, o puede ser un archivo de recursos de contenedor, como un Archivo de recursos (.resw), que contiene recursos de cadena.
+Nombra los archivos de recursos o sus carpetas con calificadores de recursos de idiomas. Para saber más sobre los calificadores de recursos, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Un archivo de recursos puede ser una imagen (u otro activo) o puede ser un archivo de contenedor de recursos, como un *.resw* que contiene las cadenas de texto.
 
-**Nota** Incluso los recursos en el idioma predeterminado de la aplicación deben calificarse con su idioma. Por ejemplo, el idioma predeterminado de tu aplicación es el inglés (Estados Unidos), por lo que califica incluso tus recursos en-US similares a `\Assets\Images\en-US\logo.png`. 
+**Nota** Incluso los recursos en el idioma predeterminado de la aplicación deben especificar el calificador de idioma. Por ejemplo, si el idioma predeterminado de la aplicación es el inglés (Estados Unidos), luego califica los activos como `\Assets\Images\en-US\logo.png`.
 
-- Windows lleva a cabo la coincidencia compleja, como por ejemplo entre variantes regionales como en-US y en-GB. Por lo tanto, incluye u omite la subetiqueta de región según corresponda. Consulta [Cómo el sistema de gestión de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
-- Incluye un script cuando no se haya definido ningún valor de script de supresión para el idioma. Consulta el [Registro de subetiquetas de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303) para obtener más información sobre las etiquetas de idioma. Por ejemplo, usa zh-Hant, zh-Hant-TW o zh-Hans, y no zh-CN o zh-TW.
-- En el caso de los idiomas con un solo dialecto estándar, no es necesario agregar la región. En algunas situaciones resulta razonable usar una etiqueta general, por ejemplo, marcar los activos con ja en lugar de ja-JP.
+- Windows lleva a cabo tareas complejas de coincidencia incluso entre variantes regionales como en-US y en-GB. Por lo tanto, incluir la etiqueta de región secundarias según corresponda. Consulta [Cómo el sistema de gestión de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
+- Especifica una etiqueta secundarias de script de idioma en el calificador cuando no hay ningún valor de Script de supresión definido para el idioma. Por ejemplo, en lugar de zh-CN o zh-TW, usa zh-Hant, zh-Hant-TW o zh-Hans (para obtener más información, consulta el [registro de subetiquetas de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303)).
+- Para los idiomas que tienen un solo dialecto estándar, no es necesario para incluir el calificador de región. Por ejemplo, usa ja en lugar de ja-JP.
 - Algunas herramientas y otros componentes como los traductores automáticos pueden buscar etiquetas de idioma específicas, como información de dialectos, que son útiles para comprender los datos.
 
-A veces no es necesario localizar todos los recursos.
+### <a name="not-all-resources-need-to-be-localized"></a>No todos los recursos es necesario localizar
 
-- Para recursos como las cadenas de interfaz de usuario que se ofrecen en todos los idiomas, márcalos con su idioma. Asegúrate de que todas estas cadenas existen en el idioma predeterminado.
-- En los recursos incluidos en un subconjunto del conjunto completo de idiomas de la aplicación (localización parcial), especifica el conjunto de los idiomas de los activos y asegúrate de que todos estos recursos están en el idioma predeterminado. Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. Para los usuarios que hayan establecido como idioma de preferencia el catalán y después el español, los recursos que no estén disponibles en catalán aparecerán en español.
-- En el caso de los recursos que tengan excepciones específicas en algunos idiomas pero que en el resto de idiomas se asignen a un recurso común, marca el recurso destinado para todos los idiomas con la etiqueta de idioma predeterminado 'und'. Windows interpreta la etiqueta de idioma 'und' como carácter comodín (de manera similar a '\*'), en el sentido de que establece la correspondencia con el idioma de la aplicación principal después de cualquier otra coincidencia específica. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
-- En el caso de los recursos que se basan en el script de un idioma y no en el idioma, como la fuente o el alto del texto, usa la etiqueta de idioma indeterminado con un script especificado: 'und-&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
+Localización no sea necesaria para todos los recursos.
+
+- Como mínimo, asegúrate de que todos los recursos existen en el idioma predeterminado.
+- Un subconjunto de algunos recursos puede ser suficiente para un idioma estrechamente relacionado (localización parcial). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. Para los usuarios que hablan Catalán y después el español, los recursos que no están disponibles en Catalán aparecerán en español.
+- Algunos recursos pueden requerir excepciones para un idioma concreto, mientras que la mayoría de otro recursos se asigna a un recurso común. En este caso, marca el recurso destinado para usarse para todos los idiomas con la etiqueta de idioma sin determinar 'und'. Windows interpreta la etiqueta de idioma 'und' como carácter comodín (de manera similar a '\*'), en el sentido de que establece la correspondencia con el idioma de la aplicación principal después de cualquier otra coincidencia específica. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
+- Los recursos que se basan en un script de idioma, como una fuente o el alto del texto, usa la etiqueta de idioma indeterminado con un script especificado: ' und -&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
 
 ## <a name="set-the-http-accept-language-request-header"></a>Establecer el encabezado de solicitud Accept Language HTTP
 Considera si los servicios web a los que llamas tienen el mismo grado de localización que tu aplicación. Las solicitudes HTTP realizadas desde aplicaciones UWP y aplicaciones de escritorio en solicitudes web típicas y XMLHttpRequest (XHR) usan el encabezado estándar de solicitud Accept-Language HTTP. De manera predeterminada, el encabezado HTTP se establece en la lista de idiomas del perfil de usuario. Cada idioma de la lista se expande aún más para incluir valores independientes del idioma y una ponderación (q). Por ejemplo, la lista de idiomas de un usuario de fr-FR y en-US da como resultado un encabezado de solicitud Accept-Language HTTP de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3"). Pero si tu aplicación del tiempo (por ejemplo) muestra una interfaz de usuario en francés (Francia), pero el idioma que está en primer lugar de la lista de preferencias del usuario es el alemán, a continuación, deberás solicitar explícitamente francés (Francia) desde el servicio para que siga siendo coherente dentro de la aplicación.
