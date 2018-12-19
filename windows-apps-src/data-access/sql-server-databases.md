@@ -5,12 +5,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cb4b16cea3368660ffcb1bc4b252391a73ab13e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940816"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976932"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar una base de datos de SQL Server en una aplicación para UWP
 Tu aplicación puede conectarse directamente a una base de datos de SQL Server y a continuación almacenar y recuperar datos mediante las clases del espacio de nombres [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
@@ -29,7 +29,7 @@ Para conectar tu aplicación directamente a una base de datos de SQL Server, ase
 
 Abre el archivo **Package.appxmanifest** de tu proyecto para la UWP en el diseñador de manifiestos.
 
-En la pestaña **Funcionalidades**, selecciona la casilla de verificación **Autenticación empresarial**.
+En la pestaña **funcionalidades** , selecciona la casilla de verificación de **Autenticación de empresa** si estás usando la autenticación de Windows para la autenticación de SQL Server.
 
 ![Funcionalidad Autenticación empresarial](images/enterprise-authentication.png)
 
@@ -61,8 +61,13 @@ Nuestra cadena de conexión apunta a la base de datos Northwind en una instancia
 ```csharp
 sealed partial class App : Application
 {
+    // Connection string for using Windows Authentication.
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+
+    // This is an example connection string for using SQL Server Authentication.
+    // private string connectionString =
+    //     @"Data Source=YourServerName\YourInstanceName;Initial Catalog=DatabaseName; User Id=XXXXX; Password=XXXXX";
 
     public string ConnectionString { get => connectionString; set => connectionString = value; }
 
