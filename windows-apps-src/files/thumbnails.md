@@ -3,22 +3,24 @@ Description: How to use thumbnail images to help users preview files in UWP apps
 title: Directrices para las imágenes en miniatura en aplicaciones para UWP
 label: Thumbnail images
 template: detail.hbs
-ms.date: 01/08/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92899333f0bc787fc6538e0bb22c148ac9f5c56f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939403"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980353"
 ---
 # <a name="thumbnail-images"></a>Imágenes en miniatura
 
 En estas directrices, se describe cómo usar las imágenes en miniatura para ayudar a los usuarios a mostrar vistas previas de los archivos mientras navegan por tu aplicación para UWP. 
 
-> **API importantes**: [ThumbnailMode enum](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
+**API importantes**
+
+-   [**ThumbnailMode**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 
 ## <a name="should-my-app-include-thumbnails"></a>¿Debo incluir miniaturas en la aplicación?
 

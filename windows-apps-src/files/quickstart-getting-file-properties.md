@@ -2,20 +2,18 @@
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obtener las propiedades de archivos
 description: Obtén las propiedades (de nivel superior, básicas y extendidas) de un archivo representado mediante un objeto StorageFile.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f69c86ac8f7d13970eca8d1bbb50d4859b95f6a6
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932987"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980363"
 ---
 # <a name="get-file-properties"></a>Obtener las propiedades de archivos
-
-
 
 **API importantes**
 
@@ -26,10 +24,7 @@ ms.locfileid: "8932987"
 Obtiene las propiedades —de nivel superior, básicas y extendidas— de un archivo representado mediante un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 > [!NOTE]
-> Consulta también la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
-
+> Para obtener una muestra completa, consulta la [muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -45,9 +40,8 @@ Obtiene las propiedades —de nivel superior, básicas y extendidas— de un arc
 
 Muchas de las propiedades de archivo de nivel superior son accesibles como miembros de la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Estas propiedades incluyen los atributos del archivo, el tipo de contenido, la fecha de creación, el nombre para mostrar, el tipo de archivo, etc.
 
-**Nota**recuerda declarar la funcionalidad de **picturesLibrary** .
-
- 
+> [!NOTE]
+> Recuerda declarar la funcionalidad **picturesLibrary**.
 
 Este ejemplo enumera todos los archivos de la biblioteca Imágenes al tener acceso a unas cuantas propiedades de nivel superior de cada archivo.
 

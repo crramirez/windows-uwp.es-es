@@ -2,7 +2,7 @@
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar y consultar archivos y carpetas
 description: Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
-ms.date: 06/28/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 47680b97bacaa34570daf2a14dc9bb6a551d4443
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e964650e90870ef09d8d1b142917f96b61002544
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931588"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980283"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar y consultar archivos y carpetas
 
@@ -25,7 +25,7 @@ Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, 
 Para obtener información sobre cómo almacenar los datos de la aplicación para la Plataforma universal de Windows, consulta la clase [ApplicationData](/uwp/api/windows.storage.applicationdata).
 
 > [!NOTE]
-> Consulta también [Muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+> Para obtener una muestra completa, consulta la [muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

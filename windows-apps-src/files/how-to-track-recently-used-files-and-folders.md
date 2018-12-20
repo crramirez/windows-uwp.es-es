@@ -2,16 +2,16 @@
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Seguimiento de los archivos y carpetas usados recientemente
 description: Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia; para ello, agrégalos a la lista de elementos más usados recientemente (MRU) de la aplicación.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a810c097b4f162395106e74b68d5e9cdb2f8538
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 21e0516e3de4085e9ad2f3b67cb5ed497d907f5c
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930057"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980373"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Seguimiento de los archivos y carpetas usados recientemente
 
@@ -25,9 +25,7 @@ Realiza un seguimiento de los archivos a los que el usuario accede con mayor fre
 La lista de MRU de una aplicación se representa mediante la clase [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475), que se obtiene a partir de la propiedad estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Los elementos MRU se almacenan como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), lo que significa que los objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representan archivos) y los objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representan carpetas) pueden agregarse a la lista de MRU.
 
 > [!NOTE]
-> Consulta también la [Muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994) y la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
+> Para ver ejemplos completos, consulta la [muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994) y la [muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

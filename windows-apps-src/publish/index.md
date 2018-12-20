@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, publicación, publicar, venta, vender, distribuir, distribución, store, dashboard, panel
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f18c7f20673b7875c60c8797bb1e92410cda8fe
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941565"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980313"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicaciones y juegos de Windows  
  
@@ -213,7 +213,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
 <div class="container">
     <ul class="cardsY panelContent featuredContent">
        <li>
-            <a href="dev-center-insider-program.md">
+            <a href="account-types-locations-and-fees.md">
                 <div class="cardSize">
                     <div class="cardPadding">
                         <div class="card">
@@ -223,7 +223,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Programa Insider del Centro de desarrollo</h3>
+                                <h3>Tipos de cuenta, ubicaciones y precios</h3>
                             </div>
                         </div>
                     </div>

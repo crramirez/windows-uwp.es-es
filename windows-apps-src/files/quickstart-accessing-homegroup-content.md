@@ -2,16 +2,16 @@
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
 description: Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 422d02b8797bef8ea4f793ba652e9e4e34421a9b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 06c42cff51852f7d0456d533af60455d7d1b9caf
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932232"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980303"
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 
@@ -34,7 +34,7 @@ Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye im�
     Para acceder al contenido del Grupo Hogar, el equipo del usuario debe tener un Grupo Hogar configurado y la aplicación debe contar con al menos una de las siguientes funcionalidades: **picturesLibrary**, **musicLibrary** o **videosLibrary**. Cuando la aplicación obtiene acceso a la carpeta Grupo Hogar, podrá ver solamente las bibliotecas que corresponden a las funcionalidades declaradas en el manifiesto de la aplicación. Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
     > [!NOTE]
-    >  El contenido de la biblioteca de documentos de un Grupo Hogar no está visible para la aplicación independientemente de las funcionalidades declaradas en el manifiesto de la aplicación y de la configuración de uso compartido del usuario.     
+    > El contenido de la biblioteca de documentos de un Grupo Hogar no está visible para la aplicación independientemente de las funcionalidades declaradas en el manifiesto de la aplicación y de la configuración de uso compartido del usuario.     
 
 -   **Comprender cómo usar los selectores de archivos**
 
