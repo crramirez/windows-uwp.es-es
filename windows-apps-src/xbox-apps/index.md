@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: 776eae9bbfa31d840964ca4622258eff0a2acfdc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1bcffedfea6903c5e62222529b5e7fb8f6f8366e
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945319"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981469"
 ---
 # <a name="uwp-on-xbox-one"></a>UWP en Xbox One
 
@@ -55,3 +55,4 @@ Las siguientes conversaciones que encontrarás en Channel 9 te serán de gran ay
 
 - [Automatizar el inicio de aplicaciones de Windows 10 para UWP](automate-launching-uwp-apps.md)
 - [CPUSets para el desarrollo de juegos](cpusets-games.md)
+- [Aplicaciones Web progresivas para Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)

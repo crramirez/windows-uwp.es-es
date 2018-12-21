@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 287c22cbd50f1b69f505bbddd445740fe9422c31
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927958"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981459"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
@@ -158,7 +158,7 @@ Para más información sobre el diseño del archivo y paquete `AppXManifest.xml`
 
 Por último, si usas Visual Studio para crear un nuevo proyecto y migrar el código existente, consulta [la documentación de MSDN para crear un nuevo proyecto de UWP](https://msdn.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal). Puedes incluir el código existente en el nuevo proyecto, pero probablemente tendrás que realizar cambios significativos en el código (en especial en la interfaz de usuario) para la ejecución como una aplicación para UWP "pura". Estos cambios están fuera del ámbito de este documento.
 
-***
+---
 
 ## <a name="phase-1-localize-the-application-manifest"></a>Fase 1: localizar el manifiesto de la aplicación
 
@@ -178,7 +178,7 @@ Si quieres crear los recursos manualmente:
  * Usa el código BCP-47 adecuado si el idioma predeterminado no es inglés de Estados Unidos. 
 0. En el archivo XML, agrega el contenido siguiente, donde el <span style="background-color: yellow">texto resaltado</span> se reemplaza por el texto adecuado para la aplicación, en el idioma predeterminado.
 
-**Nota** Existen restricciones sobre las longitudes de algunas de estas cadenas. Consulta [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live) para obtener más información.
+[!Note] Existen restricciones sobre las longitudes de algunas de estas cadenas. Consulta [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live) para obtener más información.
 
 <blockquote>
 <pre>
@@ -303,7 +303,7 @@ Ahora que se ha compilado el archivo PRI, puedes compilar y firmar el paquete:
  * `/f` establece el archivo de asignación que se va a usar (creado en el paso anterior). 
  * `/p` establece el nombre del paquete de salida.
  * `/o` lo establece en sobrescribir el archivo de salida, si existe.
-0. Una vez creado el paquete, se tiene que firmar. La forma más sencilla de obtener un certificado de firma es crear un proyecto Universal de Windows en Visual Studio y copiando el `.pfx` crea el archivo, pero puedes crear uno manualmente con el `MakeCert` y `Pvk2Pfx` utilidades como se describe en [el **cómo crear un certificado de firma del paquete de aplicación** tema en MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Una vez creado el paquete, se tiene que firmar. La forma más sencilla de obtener un certificado de firma es crear un proyecto Universal de Windows en Visual Studio y copiando el `.pfx` crea el archivo, pero puedes crear uno manualmente con el `MakeCert` y `Pvk2Pfx` utilidades tal como se describe en <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832.aspx">cómo crear un certificado de firma el paquete de aplicación</a>, un tema de MSDN. 
  * **Importante:** Si creas manualmente un certificado de firma, asegúrate de colocar los archivos en un directorio diferente del proyecto de origen o el origen del paquete, de lo contrario, podría incluirse como parte del paquete, incluida la clave privada.
 0. Para firmar el paquete, usa el comando siguiente. Ten en cuenta que el elemento `Publisher` especificado en el elemento `Identity` de `AppxManifest.xml` debe coincidir con el elemento `Subject` del certificado (**no** es el elemento `<PublisherDisplayName>`, que es el nombre localizado que se muestra a los usuarios). Como es habitual, reemplaza los nombres de archivo `contoso_demo...` por los nombres adecuados para el proyecto y (**muy importante**) asegúrate de que el archivo `.pfx` no está en el directorio actual (de lo contrario se habría ha creado como parte del paquete, incluida la clave privada de firma):
 

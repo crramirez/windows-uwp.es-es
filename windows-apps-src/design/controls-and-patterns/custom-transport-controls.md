@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4878ce99d449674243c8a3f7360a9e9b0dd6db19
-ms.sourcegitcommit: 1cf04b0b1bd7623cd7f6067b8392dce4372f2c69
+ms.openlocfilehash: 26f47f3175802191a866bcd77e4cc7a95ffdbbe4
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970998"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981479"
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
@@ -216,9 +216,10 @@ Una razón por la que quizás quieras personalizar MediaTransportControls es par
               VerticalAlignment="Center" />
 ```
 
-    You must add it to the CommandBar in the appropriate location. (For more info, see the Working with the overflow menu section.) How it's positioned in the UI is determined by where the button is in the markup. For example, if you want this button to appear as the last element in the primary commands, add it at the very end of the primary commands list.
+Debe agregarla a CommandBar de la ubicación adecuada. (Para obtener más información, consulta el trabajo con la sección de menú de desbordamiento). Cómo se coloca en la interfaz de usuario se determina por dónde está el botón en el marcado. Por ejemplo, si quieres que este botón debe aparecer como el último elemento de los comandos principales, agregarla al final de la lista de los comandos principales.
 
-    You can also customize the icon for the button. For more info, see the [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) reference.
+También puedes personalizar el icono para el botón. Para obtener más información, consulta la referencia <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx"><b>AppBarButton</b></a> .
+    
 
 2. En la invalidación de [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx), obtén el botón a partir de la plantilla y registra un controlador para su evento [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Este código se coloca en la clase `CustomMediaTransportControls`.
 

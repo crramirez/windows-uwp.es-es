@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: a0865480cf65495465470e72fb4f14baa9619a9a
-ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
+ms.openlocfilehash: 08608bc5715031f9ddf5b6bec05e7c86737f7e10
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970930"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981379"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+<b>API importantes</b>
 
 -   [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)
 -   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)

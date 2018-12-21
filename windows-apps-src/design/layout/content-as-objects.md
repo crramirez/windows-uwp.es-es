@@ -3,12 +3,12 @@ description: ''
 title: Contenido como objetos
 template: detail.hbs
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ba5093f2d7cfe268be40413b889801daf00967
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942406"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981449"
 ---
 # <a name="content-as-objects"></a>Contenido como objetos
 
@@ -35,7 +35,7 @@ Una jerarquía visual clara indica al usuario qué elementos son los más import
   <p>Así que, ¿cómo puedes crear una jerarquía visual clara? Con las versiones anteriores de Windows 10, podías usar espacio en blanco, posición y tipografía para definir una jerarquía visual. </p>
   </div>
   <div class="side-by-side-content-right">
-    ![Una distribución plana](images/content-as-objects/flat-layout.png)
+    <a href="images/content-as-objects/flat-layout.png">Una distribución plana</a>
     
   </div>
 </div>
@@ -43,7 +43,7 @@ Una jerarquía visual clara indica al usuario qué elementos son los más import
 
 Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad. 
 
-![Profundidad en la distribución](images/content-as-objects/depth-in-layout2.png)
+<a href="images/content-as-objects/depth-in-layout2.png">Profundidad en la distribución</a>
 
 
 ## <a name="use-depth-to-establish-a-hierarchy"></a>Usar profundidad para establecer una jerarquía 
@@ -59,7 +59,7 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
     </p>
   </div>
   <div class="side-by-side-content-right">
-    ![Profundidad en la distribución](images/content-as-objects/elements-forward-backward.png) 
+    <a href="images/content-as-objects/elements-forward-backward.png">Profundidad en la distribución</a> 
     
   </div>
 </div>
@@ -76,13 +76,12 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Fondo posterior** <br/>
-Este nivel se encuentra detrás de la aplicación.  Cuando los elementos se muevan a este nivel, te recomendamos que los hagas no interactivos. Los elementos en este nivel tienen el efecto parallax más lento y se recortan en la ventana de la aplicación. TAREA: ¿escala este nivel? 
+<b>Fondo posterior</b> Este nivel se encuentra detrás de la aplicación.  Cuando los elementos se muevan a este nivel, te recomendamos que los hagas no interactivos. Los elementos en este nivel tienen el efecto parallax más lento y se recortan en la ventana de la aplicación. TAREA: ¿escala este nivel? 
 
 <p>Los elementos de fondo del ejemplo incluyen la imagen detrás del contenido, TAREA: ejemplo, TAREA: ejemplo.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![El nivel de fondo posterior de una aplicación](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">El nivel de fondo posterior de una aplicación</a>
     
   </div>
 </div>
@@ -93,13 +92,12 @@ Este nivel se encuentra detrás de la aplicación.  Cuando los elementos se muev
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Nivel pasivo** <br/>
-Este es el nivel de base de la aplicación, donde se encuentran los elementos de la interfaz de usuario de manera predeterminada.  Los elementos se mueven en tiempo real a este nivel (sin parallax), se recortan en la ventana de la aplicación y se procesan al 100% de la escala. 
+<b>Nivel pasivo</b> Este es el nivel de base de la aplicación, donde se encuentran los elementos de la interfaz de usuario de manera predeterminada.  Los elementos se mueven en tiempo real a este nivel (sin parallax), se recortan en la ventana de la aplicación y se procesan al 100% de la escala. 
 
 <p>Elementos de ejemplo: fondo de la aplicación, texto, interfaz de usuario secundaria, como la interfaz de usuario para navegar por la aplicación.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![El nivel pasivo de una aplicación](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">El nivel pasivo de una aplicación</a>
     
   </div>
 </div>
@@ -110,13 +108,12 @@ Este es el nivel de base de la aplicación, donde se encuentran los elementos de
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Llama a la acción** <br/>
-Este nivel es para elementos interactivos a los que des prioridad por encima de los elementos del nivel pasivo. Los elementos en este nivel tienen el efecto parallax medio y se recortan en la ventana de la aplicación. TAREA: ¿los elementos en este nivel escalan o tienen una sombra paralela?
+<b>Llama a la acción</b> Este nivel es para los elementos interactivos que DES prioridad por encima de los elementos de nivel pasivo. Los elementos en este nivel tienen el efecto parallax medio y se recortan en la ventana de la aplicación. TAREA: ¿los elementos en este nivel escalan o tienen una sombra paralela?
 
 <p>Elementos de ejemplo: listas, cuadrículas, comandos principales (TAREA: como...).</p> 
   </div>
   <div class="side-by-side-content-right">
-    ![El nivel de llamada a la acción de una aplicación](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">El nivel de llamada a la acción de una aplicación</a>
     
   </div>
 </div>
@@ -126,13 +123,12 @@ Este nivel es para elementos interactivos a los que des prioridad por encima de 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Nivel principal** <br/>
-Este nivel es para el elemento de mayor prioridad en la pantalla en el momento.  Los elementos de este nivel pueden interrumpir los límites de la ventana de la aplicación, pueden escalar y pueden obtener automáticamente una sombra paralela.
+<b>Nivel principal</b> Este nivel es para el elemento de mayor prioridad en la pantalla en el momento.  Los elementos de este nivel pueden interrumpir los límites de la ventana de la aplicación, pueden escalar y pueden obtener automáticamente una sombra paralela.
 
 <p>Elementos de ejemplo: elementos fotográficos, el elemento seleccionado actualmente.</p>  
   </div>
   <div class="side-by-side-content-right">
-    ![El nivel principal de una aplicación](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">El nivel principal de una aplicación</a>
     
   </div>
 </div>

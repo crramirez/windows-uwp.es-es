@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d1581757cb16cf2ed5d0082a6a0e4a4e09299361
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947987"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981509"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -33,7 +33,7 @@ Al determinar los roles o los permisos que desees aplicar, ten en cuenta:
 
 ## <a name="assign-roles-to-account-users"></a>Asignar roles a usuarios de la cuenta
 
-De manera predeterminada, se presenta un conjunto de roles estándar para que elijas entre al agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
+De manera predeterminada, se presenta un conjunto de roles estándar para que elijas entre agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
 
 A menos que decidas definir [permisos personalizados](#custom) seleccionando **Permisos personalizados**, a cada usuario, grupo o aplicación de AzureAD que agregas a una cuenta debes asignarle al menos uno de los siguientes roles. 
 
@@ -115,7 +115,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
 <tr><td align="left">    <b>Anuncios de la comunidad</b>                       </td><td align="left">  Permite ver de forma gratuita la utilización del <a href="about-community-ads.md">anuncio de la comunidad</a> de todos los productos de la cuenta.          </td><td align="left">  Permite crear, administrar y ver la utilización del <a href="about-community-ads.md">anuncio de la comunidad</a> gratuito de todos los productos de la cuenta.               </td></tr>
 <tr><td align="left">    <b>Información de contacto</b>                        </td><td align="left">  Permite ver la <a href="managing-your-profile.md">información de contacto</a> en la sección de configuración de la cuenta.        </td><td align="left">  Permite ver y editar la <a href="managing-your-profile.md">información de contacto</a> en la sección de configuración de la cuenta.            </td></tr>
 <tr><td align="left">    <b>Cumplimiento de COPPA</b>                    </td><td align="left">  Permite ver selecciones del <a href="in-app-ads.md#coppa-compliance">cumplimiento de COPPA</a> (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.                                            </td><td align="left">  Permite ver y editar selecciones del <a href="in-app-ads.md#coppa-compliance">cumplimiento de COPPA</a> (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.         </td></tr>
-<tr><td align="left">    <b>Grupos de clientes</b>                     </td><td align="left">  Puede ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).      </td><td align="left">  Puede crear, editar y ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).       </td></tr>
+<tr><td align="left">    <b>Grupos de clientes</b>                     </td><td align="left">  Ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).      </td><td align="left">  Puede crear, editar y ver <a href="create-customer-groups.md">grupos de clientes</a> (segmentos y grupos de usuarios conocidos).       </td></tr>
 <tr><td align="left">    <b>Administrar grupos de productos</b>&nbsp;*                            </td><td align="left">  Permite ver la nueva página de creación de grupos de productos, pero en realidad no permite crear nuevos grupos de productos.    </td><td align="left">  Permite crear y editar grupos de productos.     </td></tr>
 <tr><td align="left">    <b>Nuevas aplicaciones</b>                            </td><td align="left">  Permite ver la nueva página de creación de aplicaciones, pero en realidad no permite crear nuevas aplicaciones en la cuenta.    </td><td align="left">  Permite <a href="create-your-app-by-reserving-a-name.md">crear nuevas aplicaciones</a> en la cuenta mediante la reserva de nuevos nombres de aplicación, y crear envíos y enviar aplicaciones a la Tienda.     </td></tr>
 <tr><td align="left">    <b>Nuevos conjuntos</b>&nbsp;*                       </td><td align="left">  Permite ver la nueva página de creación de conjuntos, pero en realidad no permite crear nuevos conjuntos en la cuenta.     </td><td align="left">  Permite crear nuevos conjuntos de productos.          </td></tr>
@@ -170,7 +170,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     <tr><td align="left">    <b>Utilización</b> </td><td>    Permite ver el <a href="usage-report.md">informe de utilización</a> del producto.     </td><td>    N/D       </td><td>    N/A     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Mantenimiento</b> </td><td>    Permite ver el <a href="health-report.md">informe Mantenimiento</a> del producto.    </td><td>    N/D     </td><td>    N/A     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentarios del cliente</b>    </td><td>    Permite ver los informes <a href="reviews-report.md">Valoraciones</a> y <a href="feedback-report.md">Comentarios</a> del producto.       </td><td>    N/D (para responder a los comentarios o a las valoraciones, se debe conceder el permiso correspondiente para <b>ponerse en contacto con los clientes</b>)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Ver el [informe de análisis de Xbox](xbox-analytics-report.md) del producto.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Ver el <a href="xbox-analytics-report.md">informe de análisis de Xbox</a> del producto.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/D          </td></tr>
     </tbody>
     </table>
 

@@ -1,23 +1,23 @@
 ---
 title: Iniciar la aplicación Microsoft Store
-description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda.
+description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f64a290443ed5e45a5379b13f70dcc1ea2f57fa9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cda37ee9964a3e7e02f4e4ce3829a8b55e823692
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930146"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981539"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
 
 
 
-En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
 
 En este ejemplo se muestra cómo abrir la tienda a la página de juegos:
 
@@ -41,7 +41,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>El Id. de la Tienda se recomienda para los clientes de Windows 10 y funcionará en todas las versiones del sistema operativo, pero aún se admiten las formas anteriores de hacerlo anteriores (por ejemplo, PFN).</p>
-<p>Estos valores se pueden encontrar en [El centro de partners](https://partner.microsoft.com/dashboard) en la página de <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidad de la aplicación</a> en la sección de administración de cada aplicación.</p>
+<p>Estos valores pueden encontrarse en <a href="https://partner.microsoft.com/dashboard">El centro de partners</a> en la página de <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidad de la aplicación</a> en la sección de administración de cada aplicación.</p>
 </td>
 <td>
 Id. de la Tienda <p>(recomendado)</p>
@@ -57,7 +57,7 @@ Id. de la Tienda <p>(recomendado)</p>
 </tr>
 <tr>
 <td>Id. de producto (Windows Phone 7.x/8.x)</td>
-<td>ms-windows-store://pdp/?PhoneAppId=ca05b3ab-f157-450c-8c49-a1f127f5e71d </td>
+<td>ms-windows-store://pdp/?PhoneAppId=ca05b3ab-f157-450c-8c49-a1f127f5e71d</td>
 </tr>
 <tr>
 <td>Id. de producto (Windows 8.x)</td>

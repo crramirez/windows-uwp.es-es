@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, audio, audio, input, entrada, networking, redes
 ms.localizationpriority: medium
-ms.openlocfilehash: c3e2a03b1302fcf5690e653cbf07efad8ef14fe8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a7cbe5cfbc2146feaefb40cee8ca96ddfa11705c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924597"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981409"
 ---
 # <a name="uwp-programming"></a>Programación para UWP
 
@@ -40,7 +40,7 @@ En esta sección se proporciona información sobre cómo desarrollar juegos para
 </tr>
 <tr class="odd">
     <td align="left">
-        <p>[API de .NET que no están en Unity y UWP](missing-dot-net-apis-in-unity-and-uwp.md)</p>
+        <p><a href="missing-dot-net-apis-in-unity-and-uwp.md">API de .NET que no están en Unity y UWP</a></p>
     </td>
     <td align="left">
         <p>Obtén información sobre las API de .NET que faltan al compilar juegos de UWP en Unity y las soluciones de problemas comunes.</p>

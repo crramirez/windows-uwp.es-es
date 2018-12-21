@@ -9,12 +9,12 @@ ms.date: 12/1/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 56586e3c26c2adc07bad58e3ee072b4dc57db2ba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fc27a2c24128553b7c1449bd8e724e2097213b80
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946413"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981419"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
 
@@ -106,7 +106,7 @@ Para crear estos patrones de página, debes usar una combinación de elementos d
 <td align="left"><p><a href="../controls-and-patterns/text-block.md">Bloque de texto</a>, <a href="../controls-and-patterns/text-box.md">cuadro de texto</a>, <a href="../controls-and-patterns/rich-edit-box.md">cuadro de edición enriquecido</a></p>
 </td>
 <td align="left">Muestra texto. Algunos elementos permiten al usuario editar texto. Para obtener más información, consulta <a href="../controls-and-patterns/text-controls.md">Controles de texto</a>.
-<p>Para obtener instrucciones sobre cómo mostrar texto, consulta [Tipografía](../style/typography.md).</p>
+<p>Para obtener instrucciones sobre cómo mostrar texto, consulta <a href="../style/typography.md">Tipografía</a>.</p>
 </td>
 </tr>
 <tr class="odd">
