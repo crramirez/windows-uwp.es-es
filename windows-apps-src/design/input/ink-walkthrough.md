@@ -6,12 +6,12 @@ keywords: entrada de lápiz, entrada manuscrita, tutorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cc650c1f81fbcac5b62b090a6dc58b5f8709cd7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8affb83195e1e9048e0a363a34893ae04561dd14
+ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921158"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "8981894"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: compatibilidad con la entrada de lápiz en tu aplicación para UWP
 
@@ -38,7 +38,7 @@ Con Windows Ink, puedes proporcionar a tus clientes el equivalente digital de ca
 * Un equipo (o máquina virtual) que ejecute la versión actual de Windows 10.
 * [Visual Studio 2017 y RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Según la configuración, es posible que tienes que instalar el paquete de NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.1.9) y habilitar **el modo de desarrollador** en la configuración del sistema (configuración -> actualización y seguridad -> para desarrolladores -> Usar las funciones de desarrollo).
+* Según la configuración, es posible que tienes que instalar el paquete de NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) y habilitar **el modo de desarrollador** en la configuración del sistema (configuración -> actualización y seguridad -> para desarrolladores -> Usar las funciones de desarrollo).
 * Si no estás familiarizado con el desarrollo de aplicaciones para la Plataforma universal de Windows (UWP) con Visual Studio, echa un vistazo a estos temas antes de empezar este tutorial:  
     * [Preparación](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * [Crear una aplicación "Hola mundo" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
@@ -67,9 +67,9 @@ Estos objetos proporcionan la mayor parte de la experiencia de la entrada de lá
 | Componente | Descripción |
 | --- | --- |
 | [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Un control de plataforma XAMLUI que, de manera predeterminada, recibe y muestra todas las entradas de lápiz como trazos de lápiz o trazos de borrado. |
-| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Un objeto de código subyacente, cuya instancia se creó con un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)). Este objeto proporciona todas las funcionalidades de entrada de lápiz predeterminadas expuestas por [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), junto con un completo conjunto de API para la personalización adicional. |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Un control de plataforma XAMLUI que contiene una colección personalizable y extensible de botones que activan características relacionadas con la entrada de lápiz en un asociado [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas). |
-| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)<br/>Esta funcionalidad no se explica aquí, para más información, consulta [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314). | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) predeterminado. |
+| [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | Un objeto de código subyacente, cuya instancia se creó con un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)). Este objeto proporciona todas las funcionalidades de entrada de lápiz predeterminadas expuestas por [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), junto con un completo conjunto de API para la personalización adicional. |
+| [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) | Un control de plataforma XAMLUI que contiene una colección personalizable y extensible de botones que activan características relacionadas con la entrada de lápiz en un [**control InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)asociado. |
+| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>Esta funcionalidad no se explica aquí, para más información, consulta [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314). | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) predeterminado. |
 
 ## <a name="step-1-run-the-sample"></a>Paso 1: ejecutar la muestra
 
@@ -94,7 +94,7 @@ Probablemente ya hayas observado que la aplicación, en su forma inicial, no te 
 
 Vamos a corregir esta pequeña limitación en este paso.
 
-Para agregar la funcionalidad de entrada de lápiz básica, solo debes colocar un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) de plataforma UWP en la página adecuada de la aplicación.
+Para agregar la funcionalidad de entrada de lápiz básica, solo debes colocar un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) de plataforma UWP en la página adecuada de la aplicación.
 
 > [!NOTE]
 > Un control InkCanvas tiene el valor predeterminado cero para las propiedades [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width), a menos que se trate de un elemento secundario de un elemento que, de manera automática, cambie el tamaño de sus elementos secundarios. 
