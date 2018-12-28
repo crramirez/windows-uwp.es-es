@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ab894a9ba9c51b091e593503be2db57ba3b1a913
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c00b406f77758266c68a16b078192517caaa14bf
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936489"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990221"
 ---
 # <a name="optimize-your-xaml-layout"></a>Optimiza tu diseño XAML
 
@@ -75,7 +75,7 @@ Opción 2: una clase [**Grid**](https://msdn.microsoft.com/library/windows/apps/
 La clase [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) agrega cierta complejidad, pero solo usa un elemento de panel simple.
 
 ```xml
-  <Grid>
+<Grid>
   <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
@@ -134,7 +134,7 @@ Tal como se muestra en estos ejemplos, existen muchas formas de lograr la misma 
 
 Un requisito común de la interfaz de usuario es tener un diseño en el que los elementos se superpongan entre sí. Por lo general el espaciado interno, los márgenes, las alineaciones y las transformaciones se usan para ubicar los elementos de esta forma. El control [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de XAML está optimizado para mejorar el rendimiento de diseño de los elementos que se superponen.
 
-**Importante**para ver la mejora, usa una sola celda [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/BR242704). No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**para ver la mejora, usa una [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/BR242704)de una sola celda. No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### <a name="examples"></a>Ejemplos
 

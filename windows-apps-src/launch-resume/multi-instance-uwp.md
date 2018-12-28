@@ -5,12 +5,12 @@ keywords: uwp de instancias múltiples
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89ffa2f3480664131af6664988bd9fb31687fe32
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940886"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990211"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 
@@ -25,7 +25,7 @@ Desde Windows 10, versión 1803 (10.0; Compilación 17134) en adelante, la aplic
 
 Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar el **proyecto de aplicación de instancias múltiples Templates.VSIX**, disponible en [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Después de instalar las plantillas, estarán disponibles en el cuadro de diálogo **Nuevo proyecto** en **Visual C# > Windows Universal** (o **Otros lenguajes > Visual C++ > Windows Universal**).
 
-Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo deseas que un mismo documento solo pueda editarlo una instancia al mismo tiempo, por lo que llevas al primer plano la instancia que tiene abierto el archivo en lugar de iniciar una nueva instancia.
+Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo deseas una instancia a la vez el mismo documento de edición, por lo que llevas la instancia que tiene ese archivo abrirse en primer plano, en lugar de iniciar una nueva instancia.
 
 Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: solo proyectos destinados al escritorio o los proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
 
@@ -128,7 +128,7 @@ Si se encuentra una instancia registrada con la clave, esa instancia se activa. 
 - Para evitar problemas de condiciones de carrera y contención, la aplicación de instancias múltiples debe tomar medidas para sincronizar o particionar el acceso a la configuración, el almacenamiento local de la aplicación y cualquier otro recurso (por ejemplo, archivos de usuario, un almacén de datos etc.) que puede compartirse entre varias instancias. Mecanismos de sincronización estándar, como exclusiones mutuas, semáforos, eventos y así sucesivamente, están disponibles.
 - Si la aplicación tiene `SupportsMultipleInstances` en su archivo Package.appxmanifest, sus extensiones no tienen que declarar `SupportsMultipleInstances`. 
 - Si agregas `SupportsMultipleInstances` a cualquier otra extensión, aparte de las tareas en segundo plano tareas o los servicios de la aplicación, y la aplicación que hospeda la extensión no declara también `SupportsMultipleInstances` en su archivo Package.appxmanifest, se genera un error del esquema.
-- Las aplicaciones pueden usar la declaración de [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) en su manifiesto para agrupar varias tareas en segundo plano en el mismo host. Esto entra en conflicto con las instancias múltiples, dónde cada activación va a un host independiente. Por lo tanto, una aplicación no puede declarar `SupportsMultipleInstances` y `ResourceGroup` en su manifiesto.
+- Las aplicaciones pueden usar la declaración [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) en su manifiesto para agrupar varias tareas en segundo plano en el mismo host. Esto entra en conflicto con las instancias múltiples, dónde cada activación va a un host independiente. Por lo tanto, una aplicación no puede declarar `SupportsMultipleInstances` y `ResourceGroup` en su manifiesto.
 
 ## <a name="sample"></a>Muestra
 
