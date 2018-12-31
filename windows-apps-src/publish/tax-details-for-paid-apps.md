@@ -2,16 +2,16 @@
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
 title: Detalles de impuestos para aplicaciones de pago
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
-ms.date: 11/20/2018
+ms.date: 01/02/2019
 ms.topic: article
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2065fb2a1cfeb2a895757e1aedc86cd421ff826c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 896a92e009b7d9c33554f77d8da56730625f1f85
+ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924125"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "8990343"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
 
@@ -46,7 +46,7 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Austria                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.       | 70% del precio seleccionado menos el 21% de impuestos     | Microsoft          |
 | Azerbaiyán                       | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Bahamas                      | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
-| Baréin                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
+| Baréin                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado menos el 5% de impuestos                 | Microsoft          |
 | Bangladesh                       | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Barbados                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Belarús                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                  | 70% del precio seleccionado menos el 20% de impuestos         | Microsoft          |

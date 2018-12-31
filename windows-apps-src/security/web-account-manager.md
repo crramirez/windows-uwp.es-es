@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: b0a052d08c6b0816d977d3e86881540194075818
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 14f5139f5fe2c3d5d1f97040ee3bec33ea48d6ac
+ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941283"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "8990333"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -74,6 +74,9 @@ Si ejecutas la aplicación y haces clic en el botón "Iniciar sesión", debería
 ![Panel de configuración de la cuenta](images/tb-1.png)
 
 El panel está vacío porque el sistema solo proporciona un shell de interfaz de usuario. El desarrollador es quien rellena mediante programación el panel con los proveedores de identidades. 
+
+> [!TIP]
+> Opcionalmente, puedes usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** en lugar de **[Mostrar](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, que devolverá un **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)**, para consultar el estado de la operación. 
 
 ## <a name="register-for-accountcommandsrequested"></a>Registrarse para AccountCommandsRequested
 
@@ -175,7 +178,7 @@ En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito 
 * Para ámbitos de OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
 
 > [!TIP]
-> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminado) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, se se enumeran en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para omitir la propiedad al almacenar en caché de la cuenta web, lo que impide que las diferencias de la cuenta en la memoria caché.
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, se se enumeran en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para omitir la propiedad al almacenar en caché de la cuenta web, lo que impide que las diferencias de la cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 
