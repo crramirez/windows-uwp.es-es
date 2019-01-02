@@ -5,16 +5,16 @@ ms.date: 04/26/2018
 ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 90d9bf524cda8d3ceed921d3bc19b73648f7581e
+ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927260"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "8990498"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x: Bind
 
-**Nota**para obtener información general sobre el uso de datos de enlace en la aplicación con **{X: Bind}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta el [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Nota**para obtener información general sobre el uso de datos de enlace en la aplicación con **{X: Bind}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta [el enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto permite:
 
@@ -68,19 +68,17 @@ Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:
 <Page 
      xmlns:local="using:MyPage">
      ...
-     <Grid x:Name="myGrid" Background="Black" >
-        <TextBlock Foreground="{x:Bind local:GenerateAppropriateForeground(myGrid.Background)}" Text="Hello World!" />
-    </Grid>
+    <StackPanel>
+        <TextBlock x:Name="BigTextBlock" FontSize="20" Text="Big text" />
+        <TextBlock FontSize="{x:Bind local:MyHelpers.Half(BigTextBlock.FontSize)}" 
+                   Text="Small text" />
+    </StackPanel>
 </Page>
 ```
 ```csharp
-public class MyPage : Page
+static public class MyHelpers
 {
-    public static GenerateAppropriateForeground(SolidColorBrush background)
-    {
-        //Implement static function
-        ...
-    }
+    public static double Half(double value) => value / 2.0;
 }
 ```
 
@@ -159,7 +157,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Puedes usar las funciones de x: Bind para lograr los mismos escenarios que lo que se ha admitido a través de convertidores y MultiBinding en WPF.
+> Puedes usar las funciones de x: Bind para lograr los mismos escenarios que lo que era compatible a través de convertidores y MultiBinding en WPF.
 
 ## <a name="function-arguments"></a>Argumentos de función
 
@@ -173,7 +171,7 @@ Se pueden especificar varios argumentos de función separados por comas (,)
 
 ### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
 
-En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se realiza mediante la propiedad de enlace de **restablecimiento de enlace** . En el ejemplo siguiente, la función debe tomar un argumento que es el valor que debe se envíen al modelo.
+En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se realiza mediante la propiedad de enlace de **restablecimiento de enlace** . En el ejemplo siguiente, la función debe tomar un argumento que es el valor que debe retrocede al modelo.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

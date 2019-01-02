@@ -8,22 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d63c7465234b6aebe876259ee095a183571946b2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c9ff9760b3ae9b852fe1ae1b86d1cc48e49c5dd4
+ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928936"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "8990488"
 ---
 # <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad
-
-
 
 Proporciona una lista de comprobación que te ayudará a garantizar que tu aplicación para Plataforma universal de Windows (UWP) sea accesible.
 
 Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que la aplicación sea accesible.
 
-1.  Establece el nombre accesible (obligatorio) y la descripción accesible (opcional) para los elementos de la interfaz de usuario interactivos y de contenido de la aplicación.
+1. Establece el nombre accesible (obligatorio) y la descripción accesible (opcional) para los elementos de la interfaz de usuario interactivos y de contenido de la aplicación.
 
     Un nombre accesible es una cadena de texto descriptiva y corta que un lector de pantalla usa para anunciar un elemento de la interfaz de usuario. Algunos de los elementos de la interfaz de usuario, como [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) y [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), promueven su contenido de texto como el nombre accesible predeterminado. Consulta [Información básica de accesibilidad](basic-accessibility-information.md#name_from_inner_text).
 
@@ -31,7 +29,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
     Para obtener más información, consulta [Nombre accesible](basic-accessibility-information.md#accessible_name) y [Descripción accesible](basic-accessibility-information.md).
 
-2.  Implementar accesibilidad de teclado:
+2. Implementar accesibilidad de teclado:
 
     * Prueba el orden de los índices de tabulación para una interfaz de usuario. Si es necesario, ajusta el orden de los índices de texto, lo que puede requerir la activación o desactivación de determinados controles o la modificación de los valores predeterminados de [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) en algunos de los elementos de la interfaz de usuario.
     * Usa controles que admitan la navegación por teclas de dirección para elementos compuestos. En los controles predeterminados, la navegación por teclas de dirección suele venir implementada.
@@ -41,32 +39,41 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
     Si quieres obtener más información, consulta las [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
-3.  Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se representen correctamente en los temas de contraste alto y que los colores se usen correctamente.
+3. Asegúrate de texto sea un tamaño legible
 
-    * Usa las opciones de pantalla del sistema para ajustar el valor de puntos por pulgada (ppp) de la pantalla y asegúrate de que la interfaz de usuario de la aplicación se escala correctamente cuando cambie el valor de ppp. (Algunos usuarios cambian los valores de ppp como una opción de accesibilidad que encontrarás en **Accesibilidad**).
+    * Windows incluye varias herramientas de accesibilidad y opciones de configuración que los usuarios pueden sacar provecho de y ajustar a sus propias necesidades y preferencias para leer texto. Estos son:
+        * La herramienta Lupa, lo que aumenta el tamaño de un área seleccionada de la interfaz de usuario. Debes asegurarte del que diseño del texto en la aplicación no lo hace difícil de usar lupa para la lectura.
+        * Configuración global de escala y la resolución en **Configuración -> sistema -> pantalla -> escala y diseño**. Las opciones de tamaño que están disponibles pueden variar, esto depende de las capacidades del dispositivo de pantalla.
+        * Configuración de tamaño de texto en **Configuración -> Accesibilidad -> pantalla**. Ajustar la configuración de **texto más grande** para especificar únicamente el tamaño del texto para admitir controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el texto escala experiencia sin necesidad de personalización o plantillas).
+        > [!NOTE]
+        > La configuración de **hacer todo más grande** permite al usuario especificar su tamaño preferido para el texto y las aplicaciones en general en solo su pantalla principal.
+
+4. Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se representen correctamente en los temas de contraste alto y que los colores se usen correctamente.
+
     * Usa una herramienta de análisis de color para comprobar que la relación de contraste del texto visual sea de al menos 4.5:1.
     * Cambia a un tema de contraste alto y comprueba que la interfaz de usuario de la aplicación pueda leerse y usarse.
     * Asegúrate de que tu interfaz de usuario no use el color como el único modo de transmitir información.
 
     Para más información, consulta [Temas de contraste alto](high-contrast-themes.md) y [Requisitos de texto accesible](accessible-text-requirements.md).
 
-4.  Ejecuta herramientas de accesibilidad, soluciona problemas notificados y comprueba la experiencia de lectura de pantalla.
+5. Ejecuta herramientas de accesibilidad, soluciona problemas notificados y comprueba la experiencia de lectura de pantalla.
 
     Usa herramientas como [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) para comprobar el acceso mediante programación, ejecuta herramientas como [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) para descubrir errores comunes y comprueba la experiencia de lectura en pantalla con la característica Narrador.
 
     Para más información, consulta [Pruebas de accesibilidad](accessibility-testing.md).
 
-5.  Asegúrate de que la configuración del manifiesto de la aplicación siga las instrucciones de accesibilidad.
+6. Asegúrate de que la configuración del manifiesto de la aplicación siga las instrucciones de accesibilidad.
 
-6.  Declara que tu aplicación es accesible en Microsoft Store.
+7. Declara que tu aplicación es accesible en Microsoft Store.
 
     Si implementaste la compatibilidad de accesibilidad de línea base, declarar que aplicación es accesible en Microsoft Store puede ayudarte a llegar a más clientes y obtener más cantidad de buenas clasificaciones.
 
     Para obtener más información, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
-<span id="related_topics"/>
-
 ## <a name="related-topics"></a>Temas relacionados  
+
+* [Requisitos de texto accesible](accessible-text-requirements.md)
+* [Ajuste de escala de texto](../input/text-scaling.md)
 * [Accesibilidad](accessibility.md)
 * [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [Procedimientos que deben evitarse](practices-to-avoid.md) 
+* [Procedimientos que deben evitarse](practices-to-avoid.md)
