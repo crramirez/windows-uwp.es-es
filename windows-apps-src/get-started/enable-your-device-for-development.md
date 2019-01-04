@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1338373226b30c3126782a62f3b5260a47e86d63
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 802555f6b1e6f928edf43806226ac497a437b4ff
+ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943475"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "8991763"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -44,23 +44,19 @@ Esta es la página de configuración de la familia de dispositivos de escritorio
 
 ![Ve a Configuración, elige Actualización y seguridad y, luego, elige Para desarrolladores para ver las opciones.](images/devmode-pc-options.png)
 
-Esta es la página de configuración de la familia de dispositivos móviles:
-
-![En la sección Configuración del teléfono, elige Actualización y seguridad.](images/devmode-mob.png)
-
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>¿Qué opción de configuración debo elegir? ¿Transferencia local de aplicaciones o modo de desarrollador?
 
  Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
 
 -   *Aplicaciones de Microsoft Store* es el valor predeterminado. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
 -   *Instalación de prueba* consiste en instalar y después ejecutar o probar una aplicación que no ha certificado Microsoft Store. Por ejemplo, una aplicación interna de tu empresa solamente.
--   El *Modo de desarrollador* permite transferir localmente aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración. 
+-   El *Modo de desarrollador* permite transferir localmente aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración.
 
 De forma predeterminada, solo puedes instalar aplicaciones para Plataforma universal de Windows (UWP) desde Microsoft Store. Si modificas esta configuración para usar las funciones de desarrollador, puede cambiar el nivel de seguridad de tu dispositivo. No debes instalar aplicaciones proveniente de orígenes sin comprobar.
 
 ### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
 
-Por lo general, la configuración de la aplicaciones de instalación de prueba la usan generalmente las empresas y los centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store. En este caso, es habitual que la organización aplique una directiva que deshabilite el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+La configuración de instalar aplicaciones normalmente se usa por las empresas o centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store o cualquier otra persona debe ejecutar aplicaciones de fuentes que no sean de Microsoft. En este caso, es habitual que la organización aplique una directiva que deshabilite el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 Información específica de la familia de dispositivos
 
@@ -90,7 +86,7 @@ Para cada familia de dispositivos, es posible que haya funciones para desarrolla
 
 Esta imagen muestra las funciones de desarrollo para Windows 10:
 
-![Opciones del modo de desarrollador](images/devmode-mob-options.png) 
+![Opciones del modo de desarrollador](images/devmode-mob-options.png)
 
 ### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Portal de dispositivos
 
@@ -103,7 +99,7 @@ Para obtener instrucciones de configuración para dispositivos específicos, con
 - [Device Portal para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
 - [Device Portal para Xbox](../debug-test-perf/device-portal-xbox.md)
 
-Si se producen problemas al habilitar el modo de desarrollador o Device Portal, consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos problemas, o visita [Error al instalar el paquete de modo de desarrollador](#failure-to-install-developer-mode-package) para obtener más detalles y cuáles KB de WSUS deberían habilitarse para desbloquear el paquete de modo de desarrollador. 
+Si se producen problemas al habilitar el modo de desarrollador o Device Portal, consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos problemas, o visita [Error al instalar el paquete de modo de desarrollador](#failure-to-install-developer-mode-package) para obtener más detalles y cuáles KB de WSUS deberían habilitarse para desbloquear el paquete de modo de desarrollador.
 
 ### <a name="ssh"></a>SSH
 
@@ -114,7 +110,7 @@ Los servicios SSH se habilitan al habilitar Detección de dispositivos en el dis
 
 Para aprovechar las ventajas de los servicios SSH, puedes habilitar la detección de dispositivos para permitir el emparejamiento de PIN. Si tienes previsto ejecutar otro servicio SSH, puedes configurar esto en un puerto diferente o desactivar los servicios SSH del modo de desarrollador. Para desactivar los servicios SSH, desactiva Detección de dispositivos.  
 
-El inicio de sesión SSH se realiza a través de la cuenta "DevToolsUser", que acepta una contraseña para autenticación.  Esta contraseña es el PIN que se muestra en el dispositivo después de presionar el botón "Emparejar" de detección de dispositivos y solo es válida mientras se muestra el PIN.  También se habilita un subsistema SFTP, para administración manual de la carpeta DevelopmentFiles, donde se instalan las implementaciones de archivos sueltos desde Visual Studio. 
+El inicio de sesión SSH se realiza a través de la cuenta "DevToolsUser", que acepta una contraseña para autenticación.  Esta contraseña es el PIN que se muestra en el dispositivo después de presionar el botón "Emparejar" de detección de dispositivos y solo es válida mientras se muestra el PIN.  También se habilita un subsistema SFTP, para administración manual de la carpeta DevelopmentFiles, donde se instalan las implementaciones de archivos sueltos desde Visual Studio.
 
 #### <a name="caveats-for-ssh-usage"></a>Advertencias para el uso de SSH
 El servidor SSH existente que se usa en Windows aún no cumple con el protocolo, por lo que el uso de un cliente SFTP o SSH puede requerir una configuración especial.  En particular, el subsistema SFTP se ejecuta en la versión 3 o menos, por lo que cualquier cliente que se conecte debe configurarse para esperar un servidor antiguo.  El servidor SSH en dispositivos más antiguos usa `ssh-dss` para autenticación de clave pública, lo que está desusado para OpenSSH.  Para conectarse a dichos dispositivos, el cliente SSH debe estar configurado manualmente para aceptar `ssh-dss`.  
@@ -129,7 +125,7 @@ Debes habilitar la detección de dispositivos solo si tienes previsto que el dis
 
 ### <a name="optimizations-for-windows-explorer-remote-desktop-and-powershell-desktop-only"></a>Optimizaciones para Explorador de Windows, Escritorio remoto y PowerShell (solo equipos de escritorio)
 
- En la familia de dispositivos de escritorio, la página de configuración **Para desarrolladores** tiene accesos directos a la configuración que puedes usar para optimizar tu PC para realizar tareas de desarrollo. Para cada opción de configuración, puedes activar la casilla y hacer clic en **Aplicar** o hacer clic en el vínculo **Mostrar configuración** para abrir la página de configuración para esta opción. 
+ En la familia de dispositivos de escritorio, la página de configuración **Para desarrolladores** tiene accesos directos a la configuración que puedes usar para optimizar tu PC para realizar tareas de desarrollo. Para cada opción de configuración, puedes activar la casilla y hacer clic en **Aplicar** o hacer clic en el vínculo **Mostrar configuración** para abrir la página de configuración para esta opción.
 
 
 ## <a name="notes"></a>Notas
@@ -141,34 +137,35 @@ Hay varias herramientas que puedes usar para implementar una aplicación desde u
 -   Puedes usar [Device Portal](../debug-test-perf/device-portal.md) para realizar implementaciones desde el navegador a un dispositivo móvil con Windows 10, versión 1511 o posterior. Usa la página **[Aplicaciones](../debug-test-perf/device-portal.md#apps-manager)** de Device Portal para cargar un paquete de la aplicación (.appx) e instalarlo en el dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Error al instalar el paquete de modo de desarrollador
-En ocasiones, debido a problemas de red o administrativos, el modo de desarrollador no se instalará correctamente. Es necesario el paquete de modo de desarrollador para la implementación **remota** en este PC, con Device Portal desde un navegador o la detección de dispositivos para habilitar SSH, pero no para el desarrollo local.  Incluso si te encuentras estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio, o desde este dispositivo a otro. 
+En ocasiones, debido a problemas de red o administrativos, el modo de desarrollador no se instalará correctamente. Es necesario el paquete de modo de desarrollador para la implementación **remota** en este PC, con Device Portal desde un navegador o la detección de dispositivos para habilitar SSH, pero no para el desarrollo local.  Incluso si te encuentras estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio, o desde este dispositivo a otro.
 
-Consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas. 
+Consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas.
 
 > [!NOTE]
-> Si el modo de desarrollador no se instala correctamente, te animamos a una solicitud de comentarios de archivos. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
+> Si el modo de desarrollador no se instala correctamente, te animamos a presentar una solicitud de comentarios. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
 
 ### <a name="failed-to-locate-the-package"></a>No se pudo ubicar el paquete
 
 "No se ha podido ubicar el paquete del modo de desarrollador en Windows Update. Código de error 0x80004005 Más información"   
 
-Este error puede producirse debido a un problema de conectividad de red, configuración de empresa o que falte el paquete. 
+Este error puede producirse debido a un problema de conectividad de red, configuración de empresa o que falte el paquete.
 
 Corregir este problema:
 
-1. Asegúrate de que el equipo esté conectado a Internet. 
-2. Si estás en un equipo unido a un dominio, habla con el administrador de red. El paquete de modo de desarrollador, al igual que todas las funciones bajo demanda, está bloqueado de forma predeterminada en WSUS. 2.1. Para desbloquear el paquete de modo de desarrollador en las versiones actuales y anteriores, deben permitirse las siguientes KB en WSUS: 4016509, 3180030, 3197985  
+1. Asegúrate de que el equipo esté conectado a Internet.
+2. Si estás en un equipo unido a un dominio, habla con el administrador de red. El paquete de modo de desarrollador, al igual que todas las funciones bajo demanda, está bloqueado de forma predeterminada en WSUS.
+2.1. Para desbloquear el paquete de modo de desarrollador en las versiones actuales y anteriores, deben permitirse las siguientes KB en WSUS: 4016509, 3180030, 3197985  
 3. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > Actualizaciones de Windows.
-4. Comprueba que el paquete de modo de desarrollador de Windows esté presente en Configuración > Sistema > Aplicaciones y características > Administrar características opcionales > Agregar una característica. Si no aparece, Windows no puede encontrar el paquete correcto para el equipo. 
+4. Comprueba que el paquete de modo de desarrollador de Windows esté presente en Configuración > Sistema > Aplicaciones y características > Administrar características opcionales > Agregar una característica. Si no aparece, Windows no puede encontrar el paquete correcto para el equipo.
 
-Después de llevar a cabo cualquiera de los pasos anteriores, deshabilita y vuelve a habilitar el modo de desarrollador para comprobar la corrección. 
+Después de llevar a cabo cualquiera de los pasos anteriores, deshabilita y vuelve a habilitar el modo de desarrollador para comprobar la corrección.
 
 
 ### <a name="failed-to-install-the-package"></a>No se pudo instalar el paquete
 
 "No se ha podido instalar el paquete de modo de desarrollador. Código de error 0x80004005  Más información"
 
-Este error puede producirse debido a incompatibilidades entre la compilación de Windows y el paquete de modo de desarrollador. 
+Este error puede producirse debido a incompatibilidades entre la compilación de Windows y el paquete de modo de desarrollador.
 
 Corregir este problema:
 
@@ -178,7 +175,7 @@ Corregir este problema:
 
 ## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a>Usar directivas de grupo o claves del registro para habilitar un dispositivo
 
-Para la mayoría de los desarrolladores, es recomendable usar la aplicación de configuración para habilitar el dispositivo para la depuración. En determinados escenarios, como las pruebas automatizadas, puedes usar otras formas de habilitar el dispositivo de escritorio con Windows 10 para el desarrollo.  Ten en cuenta que estos pasos no habilitarán el servidor SSH ni permitirán que el dispositivo sea destino para la implementación y depuración remota. 
+Para la mayoría de los desarrolladores, es recomendable usar la aplicación de configuración para habilitar el dispositivo para la depuración. En determinados escenarios, como las pruebas automatizadas, puedes usar otras formas de habilitar el dispositivo de escritorio con Windows 10 para el desarrollo.  Ten en cuenta que estos pasos no habilitarán el servidor SSH ni permitirán que el dispositivo sea destino para la implementación y depuración remota.
 
 Puedes usar gpedit.msc para definir las directivas de grupo para habilitar el dispositivo, a menos que tengas Windows 10 Home. Si tienes Windows 10 Home, tienes que usar regedit o los comandos de PowerShell para establecer directamente las claves del Registro para habilitar el dispositivo.
 
