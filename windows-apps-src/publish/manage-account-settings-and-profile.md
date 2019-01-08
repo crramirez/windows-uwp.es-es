@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: medium
-ms.openlocfilehash: b3a95e4e9eddbe47feb513f66856949baecdab8b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931330"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992609"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
@@ -45,7 +45,6 @@ Al cambiar el nombre para mostrar del editor, tendremos que volver a comprobar t
 A continuación se muestran algunos de los otros elementos que encontrarás en la sección **Configuración de la cuenta**.
 
 - **Estado de verificación**: cuando la cuenta se someta la comprobación de proceso (por ejemplo, cuando se registre o después de actualizar significativamente la información de contacto), puedes revisar el estado de verificación aquí.
-- **Programa de Insider del centro de desarrollo**: puedes optar por dentro o fuera del [Programa de Insider del centro de desarrollo](dev-center-insider-program.md) en la página principal página de **configuración de la cuenta** .
 - **Cuenta de pago** y **Perfil fiscal**: en esta sección puedes [configurar la cuenta de pago y los formularios fiscales](setting-up-your-payout-account-and-tax-forms.md). Deberás hacer esto para poder cobrar dinero por las aplicaciones o los complementos.
 - **Asociaciones de empresa**: puedes aceptar invitaciones de empresas que quieren que publiques aplicaciones para su uso exclusivo. Para obtener más información, consulta [Distribuir aplicaciones de LOB en las empresas](distribute-lob-apps-to-enterprises.md).
 - **Los usuarios**: agregar usuarios a tu cuenta y asignarles roles y permisos. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).

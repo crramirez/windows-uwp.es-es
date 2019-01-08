@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, directrices para los desa
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b4c834c646aed7953dc2b0f992dea579d8b9fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 52a60189d7fba39709aa679dbff79551b151e5a4
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937224"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992619"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novedades de la documentación de los desarrolladores de Windows de diciembre de 2017
 
@@ -58,7 +58,7 @@ Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Los complementos de suscripción ahora están disponibles para los desarrolladores en el Programa Insider del Centro de desarrollo de Windows
 
-Todos los desarrolladores que han participado en el [Programa Insider del Centro de desarrollo](../publish/dev-center-insider-program.md) ahora pueden usar complementos de suscripción para vender productos digitales en sus aplicaciones (por ejemplo, características de la aplicación o contenido digital) con períodos de facturación periódicos. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
+Todos los desarrolladores que han participado en el Programa Insider del Centro de desarrollo ahora pueden usar complementos de suscripción para vender productos digitales en sus aplicaciones (por ejemplo, características de la aplicación o contenido digital) con períodos de facturación periódicos. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
