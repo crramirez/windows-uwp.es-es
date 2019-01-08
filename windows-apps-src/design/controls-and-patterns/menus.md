@@ -13,12 +13,12 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 038bb15029a3d9893c5b32558546ecf07066043b
+ms.sourcegitcommit: 43149cd43e8169edfbd241428ba49e56b64bfd0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930646"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "8995056"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -30,7 +30,7 @@ Los menús y los menús contextuales muestran una lista de opciones o comandos c
 | - |
 | Este control se incluye como parte de la biblioteca de la interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y funciones de la interfaz de usuario para aplicaciones para UWP. Para obtener más información, incluidas las instrucciones de instalación, vea la [información general de la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **API de plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
+| **API de la plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
 | - | - |
 | [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), la [clase de la barra de menús](/uwp/api/windows.ui.xaml.controls.menubar), [propiedad ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propiedad FlyoutBase.AttachedFlyout](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Clase de la barra de menús](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
@@ -42,15 +42,15 @@ Menús y menús contextuales sirven para organizar los comandos; para mostrar co
 
 ### <a name="menubar-vs-menuflyout"></a>Barra de menús frente a MenuFlyout
 
-Para mostrar un menú en un control flotante adjunto a un elemento de interfaz de usuario en el lienzo, usa el control de MenuFlyout para hospedar los elementos de menú. Se puede invocar un menú flotante como un menú normal o como un menú contextual. Un control flotante de menú hospeda un menú de nivel superior único (y submenús opcionales).
+Para mostrar un menú en un control flotante adjunto a un elemento de interfaz de usuario en el lienzo, usa el control de MenuFlyout para hospedar los elementos de menú. Se puede invocar un menú flotante como un menú normal o como un menú contextual. Un control flotante de menú hospeda un único menú de nivel superior (y submenús opcionales).
 
-Para mostrar un conjunto de varios menús de nivel superior en una fila horizontal, usa una barra de menús. Por lo general, posición de la barra de menús en la parte superior de la ventana de la aplicación.
+Para mostrar un conjunto de varios menús de nivel superior en una fila horizontal, usa una barra de menús. Por lo general, se coloca la barra de menús en la parte superior de la ventana de aplicación.
 
 ### <a name="menubar-vs-commandbar"></a>Barra de menús frente a CommandBar
 
 Barra de menús y CommandBar ambos representan las superficies que puedes usar para exponer comandos a los usuarios. La barra de menús proporciona una forma rápida y sencilla para exponer un conjunto de comandos para las aplicaciones que puede que tengas más de organización o agrupamiento que permite un control CommandBar.
 
-También puedes usar una barra de menús junto con un control CommandBar. Usar la barra de menús para proporcionar la mayor parte de los comandos y el control CommandBar para resaltar los comandos más usados.
+También puedes usar una barra de menús junto con un control CommandBar. Usar la barra de menús para proporcionar la mayor parte de los comandos y el control CommandBar para resaltar los comandos usados con más.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -70,7 +70,7 @@ También puedes usar una barra de menús junto con un control CommandBar. Usar l
 
 ## <a name="menus-vs-context-menus"></a>Menús frente a menús contextuales
 
-Menús y menús contextuales son similares en su apariencia y lo que pueden contener. De hecho, puedes usar el mismo control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para crearlos. La diferencia es cómo se permite al usuario acceder a ella.
+Menús y menús contextuales son similares en su apariencia y lo que pueden contener. De hecho, puedes usar el mismo control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para crearlos. La diferencia es cómo se permite al usuario tener acceso a él.
 
 ¿Cuándo debes usar un menú o un menú contextual?
 
@@ -216,7 +216,7 @@ Los controles de cierre del elemento por cambio de foco, tales como menús, men�
 
 ## <a name="create-a-menu-bar"></a>Crear una barra de menús
 
-> **Vista previa**: barra de menús requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: barra de menús requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o en la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Usa los mismos elementos para crear menús en una barra de menús, como se muestra en un control flotante de menú. Sin embargo, en lugar de agrupar los objetos de MenuFlyoutItem en un MenuFlyout, agrupan en un elemento MenuBarItem. Cada MenuBarItem se agrega a la barra de menús como un menú de nivel superior.
 
@@ -234,8 +234,8 @@ Usa los mismos elementos para crear menús en una barra de menús, como se muest
             <MenuFlyoutItem Text="Other Formats..."/>
         </MenuFlyoutSubItem>
         <MenuFlyoutItem Text="Open..."/>
-        <MenuFlyoutItem Text="Save">
-        <MenuFlyoutSeparator />
+        <MenuFlyoutItem Text="Save"/>
+        <MenuFlyoutSeparator/>
         <MenuFlyoutItem Text="Exit"/>
     </MenuBarItem>
 
