@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cd6f6a6fb638069dba58c62eca91b74868816d2a
+ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937969"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "8997400"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
-Puedes administrar y ver los detalles relacionados con cada una de las aplicaciones en [centro de partners y configurar servicios como notificaciones, pruebas A/b y mapas.
+Puedes administrar y ver los detalles relacionados con cada una de las aplicaciones en [El centro de partners](https://partner.microsoft.com/dashboard/)y configurar servicios como notificaciones, pruebas A/b y mapas.
 
 Al trabajar con una aplicación en el centro de partners, verás secciones en el menú de navegación izquierdo para **administración de aplicaciones**y **Servicios** . Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
 
@@ -37,19 +37,19 @@ Para obtener más información, consulta [Ejecutar experimentos en la aplicació
 
 ## <a name="maps"></a>Mapas
 
-Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obtener información sobre cómo solicitar una clave de autenticación de mapas de Bing Maps Developer Center y agregarla a la aplicación, consulta [una clave de autenticación de mapas de la solicitud](../maps-and-location/authentication-key.md) para obtener más información. 
+Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obtener información sobre cómo solicitar una clave de autenticación de mapas de Bing Maps Developer Center y agregarlo a la aplicación, consulta [una clave de autenticación de mapas de la solicitud](../maps-and-location/authentication-key.md) para obtener más información. 
 
-Usar la página **mapas** solo para las aplicaciones publicado anteriormente para Windows Phone 8.1 y versiones anteriores. Para usar los servicios de mapa en estas aplicaciones, tendrás que solicitar un identificador de aplicación de servicio de mapas y un token para incluirlo en el código de la aplicación. Al hacer clic en **obtener token**, generaremos un servicio de mapa Id. de aplicación (**ApplicationID**) y servicio de Token de autenticación (**AuthenticationToken**) para la aplicación de mapa. Asegúrate de agregar estos valores en el código antes de paquete y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+Usar la página **mapas** solo para las aplicaciones publicado anteriormente para Windows Phone 8.1 y versiones anteriores. Para usar los servicios de mapa en estas aplicaciones, tendrás que solicitar un identificador de aplicación de servicio de mapas y un token para incluirlo en el código de la aplicación. Al hacer clic en **obtener token**, generaremos un servicio de mapas Id. de aplicación (**ApplicationID**) y asignar el servicio de Token de autenticación (**AuthenticationToken**) para la aplicación. Asegúrate de agregar estos valores en el código antes de paquete y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
 ## <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
-Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado Azure AD identificadores de cliente aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Consentimiento del administrador
 
-f tu producto se integra con Azure AD y llama a las API que solicitan [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para el producto actuar en nombre de todos los usuarios del inquilino.
+Si tu producto se integra con Azure AD y llama a las API que solicitan [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
 
 Para obtener más información, consulta [solicitar consentimiento para un inquilino de todo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
