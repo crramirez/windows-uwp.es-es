@@ -1,24 +1,24 @@
 ---
 description: Esta guía te ayuda a crear interfaces de usuario de UWP basadas en Fluent directamente en tus aplicaciones de WPF y Windows Forms
 title: Controles UWP en aplicaciones de escritorio
-ms.date: 09/21/2018
+ms.date: 01/11/2019
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 43cdb19e791726732f564ffea1b03af53a4a1ffe
-ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
+ms.openlocfilehash: bf25fea6ca6e8809c12324ae57a42cc712ded2a5
+ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001561"
+ms.locfileid: "9001789"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>Controles UWP en aplicaciones de escritorio
 
 > [!NOTE]
 > Islas XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.
 >
-> Si tienes comentarios sobre Islas XAML, enviar tus comentarios a XamlIslandsFeedback@microsoft.com. La información y escenarios son muy importantes para nosotros.
+> Si tienes comentarios sobre Islas XAML, crear un nuevo problema en el [repositorio de WindowsCommunityToolkit](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) y dejar sus comentarios allí. Si prefieres enviar tus comentarios de forma privada, puedes enviar a XamlIslandsFeedback@microsoft.com. La información y escenarios son muy importantes para nosotros.
 
 Windows 10 ahora te permite usar los controles de UWP en aplicaciones de escritorio no UWP para que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles de UWP. Esto significa que puedes usar características UWP como [Entrada de lápiz de Windows](../design/input/pen-and-stylus-interactions.md) y los controles que admiten el [Sistema Fluent Design](../design/fluent-design-system/index.md) en tu existente WPF, Windows Forms y las aplicaciones Win32 de C++. Este escenario de desarrollador se conoce como *Islas XAML*.
 
