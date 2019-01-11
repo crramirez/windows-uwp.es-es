@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a24e038dc2645b0aea7b1e7e516886af9a9e6f09
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 81aa15892bf39209c31238878e0ca19a996d0b3e
+ms.sourcegitcommit: 322e1ae259ba0480b816a004d7a52bb0d1618b90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930265"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "9000280"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
@@ -23,7 +23,7 @@ Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer com
 > [!NOTE]
 > En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores solo pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
 
-Después de que tienes que [configurar tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer antes de que puedes vender aplicaciones (o complementos) en Microsoft Store:
+Una vez que tengas que [configurar tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer antes de que puedes vender aplicaciones (o complementos) en Microsoft Store:
 
 -   [Configurar tu cuenta de pago](#payout-account)
 -   [Completar los formularios fiscales](#tax-forms)
@@ -42,8 +42,8 @@ Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por 
  
 **Para configurar tu cuenta de pago**
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de **configuración de la cuenta** en la esquina superior derecha y luego selecciona la **Configuración del desarrollador**.
-2.  En el menú de navegación izquierdo, selecciona la **cuenta de pago**.
+1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje de **configuración** en la esquina superior derecha y luego selecciona la **Configuración del desarrollador**.
+2.  En el menú de navegación izquierdo de la página de configuración, selecciona la **cuenta de pago**.
 
    > [!NOTE]
    > Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
