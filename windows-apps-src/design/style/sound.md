@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 74d1d5b04b13795a075e7111ed898243ed59e7b7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5060012c90ec9cfef093021f44b39321f452e01c
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935779"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004601"
 ---
 # <a name="sound"></a>Sonido
 
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>Navegación dentro de una página
 
-Cuando se navega entre paneles o vistas en la página de una aplicación (consulta [Hub](../controls-and-patterns/hub.md) o [Pestañas y tablas dinámicas](../controls-and-patterns/tabs-pivot.md)), normalmente hay un movimiento bidireccional. Esto significa que puedes pasar al siguiente panel o vista, o bien al anterior, sin salir de la página actual de la aplicación en la que te encuentras.
+Cuando se navega entre paneles o vistas en la página de la aplicación (consulta [pestañas y tablas dinámicas](../controls-and-patterns/tabs-pivot.md)), por lo general, hay un movimiento bidireccional. Esto significa que puedes pasar al siguiente panel o vista, o bien al anterior, sin salir de la página actual de la aplicación en la que te encuentras.
 
 La experiencia de sonido con relación a este concepto de navegación está incluida en los sonidos **MovePrevious** y **MoveNext**.
 

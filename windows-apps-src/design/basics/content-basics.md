@@ -9,12 +9,12 @@ ms.date: 12/1/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: fc27a2c24128553b7c1449bd8e724e2097213b80
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981419"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004611"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
 
@@ -38,11 +38,6 @@ Las páginas de aterrizaje, también conocida como pantallas prominentes, suele 
 
 Las colecciones permiten a los usuarios examinar grupos de contenido o datos. La [vista de cuadrícula](../controls-and-patterns/item-templates-gridview.md) es una buena opción para las fotos o el contenido centrado en multimedia, y la [vista de lista](../controls-and-patterns/item-templates-listview.md) es una buena opción para el contenido con mucho texto o datos.
 
-### <a name="hub"></a>Concentrador
-
-![concentrador](images/content-basics/hub.png)
-
-Los [concentradores](../controls-and-patterns/hub.md) están diseñados para la compra en ventanas. Los usuarios pueden ver un buen anticipo del contenido que se ofrece; lo más importante es mostrar una gran diversidad de contenido pero en una cantidad breve. Por ejemplo, la sección 1 de un concentrador podría contener una pantalla prominente, la sección 2 podría contener una colección, la sección 3 podría contener otra colección, etc.
 
 ### <a name="masterdetail"></a>Maestro y detalles
 
