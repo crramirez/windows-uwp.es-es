@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5e3a29a252b091b1e52dbea5fa7af5058488ed5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c4f8de32be13f9de776a1c2d0ba0f6af2797329
+ms.sourcegitcommit: be52da74f0b3f24973286792afa4f5e80799161b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946601"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "9009522"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Almacenar y recuperar la configuración y otros datos de la aplicación
 
@@ -172,7 +172,7 @@ Los datos móviles de una aplicación están disponibles en la nube siempre que 
 
 ### <a name="roaming-pre-requisites"></a>Requisitos previos para el uso de los datos móviles
 
-Todos los usuarios pueden beneficiarse de los datos de las aplicaciones de itinerancia si usan una cuenta Microsoft para iniciar sesión en su dispositivo. Sin embargo, tanto los usuarios como los administradores de directivas de grupo pueden desactivar los datos móviles de aplicaciones de un dispositivo en cualquier momento. Si un usuario decide no usar una cuenta Microsoft o deshabilita la funcionalidad de datos de itinerancia, seguirá pudiendo usar la aplicación, pero los datos de la aplicación serán locales para cada dispositivo.
+Todos los usuarios pueden beneficiarse de los datos de las aplicaciones de itinerancia si usan una cuenta Microsoft para iniciar sesión en su dispositivo. Sin embargo, tanto los usuarios como los administradores de directivas de grupo pueden desactivar los datos móviles de aplicaciones de un dispositivo en cualquier momento. Si un usuario decide no usar una cuenta de Microsoft o deshabilita la funcionalidad de datos de itinerancia, aún podrá usar la aplicación, pero los datos de aplicación serán locales para cada dispositivo.
 
 Los datos almacenados en [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) solo se transferirán si un usuario ha marcado el dispositivo como "de confianza". Si un dispositivo no es de confianza, los datos guardados en este almacén no se transferirán.
 
