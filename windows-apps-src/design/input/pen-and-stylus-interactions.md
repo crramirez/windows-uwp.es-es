@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows Inking, entrada manuscrita de Windows, DirectInk,
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22477ab0facfcb67d44057a91c7c3a49df57f8b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2451606ccb9dfb604dd9f8aaffe245016776c1e7
+ms.sourcegitcommit: 906b494aa190e6e5b46e7b73d4a900b2cc7d53ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937995"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "9010999"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones para UWP
 
@@ -64,7 +64,7 @@ De manera predeterminada, el control [**InkCanvas**](https://msdn.microsoft.com/
 En este ejemplo, un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) se superpone a una imagen en segundo plano.
 
 > [!NOTE]
-> Un control InkCanvas tiene el valor predeterminado cero para las propiedades [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width), a menos que se trate de un elemento secundario de un elemento que, de manera automática, cambie el tamaño de sus elementos secundarios. 
+> Un control InkCanvas tiene propiedades de [**alto**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**ancho**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) predeterminadas de cero, a menos que sea el elemento secundario de un elemento que cambia automáticamente el tamaño de sus elementos secundarios, como los controles de [StackPanel](stackpanel.md) o [cuadrícula](grid.md) .
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
