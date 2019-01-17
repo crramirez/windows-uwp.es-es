@@ -6,12 +6,12 @@ keywords: comunicación de la aplicación a otra, comunicación entre procesos, 
 ms.date: 1/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9029c8ee3a930e66ebdbd0c4d0681d87486a8393
-ms.sourcegitcommit: 6e2027f8ebc1d891d27ea6b2e4676d592871bcc7
+ms.openlocfilehash: 5239bff53bb0e5383bce28b4d781a0ab6a41c3af
+ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "9011265"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9013964"
 ---
 # <a name="create-and-consume-an-app-service"></a>Crear y usar un servicio de aplicaciones
 
@@ -214,17 +214,9 @@ La llamada a [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps
 
 ## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>Implementar el servicio de aplicaciones y obtener el nombre de familia de paquete
 
-El proveedor de servicios de la aplicación debe implementarse antes de llamarla desde un cliente. También tendrás que el nombre de familia de paquete de servicio de aplicaciones para poder llamarlo.
+El proveedor de servicios de la aplicación debe implementarse antes de llamarla desde un cliente. Se puede implementar seleccionando **Generar > implementar solución** en Visual Studio.
 
-Una forma de obtener el nombre de familia de paquete de la aplicación de servicio de aplicación es llamar a [Windows.ApplicationModel.Package.Current.Id.FamilyName](https://msdn.microsoft.com/library/windows/apps/br224670) desde dentro del proyecto **AppServiceProvider** (por ejemplo, desde el constructor de la **aplicación** en ** App.Xaml.cs**) y ten en cuenta el resultado. Para ejecutar **AppServiceProvider** en Visual Studio, establecer como proyecto de inicio en la ventana **Explorador de soluciones** y ejecuta el proyecto.
-
-Otra forma de obtener el nombre de familia de paquete consiste en implementar la solución (**compilación &gt; implementar solución**) y anotar el nombre completo del paquete en la ventana de **salida** (**vista &gt; salida**). Debes quitar la información de la plataforma de la cadena en la ventana de **salida** para derivar el nombre del paquete. Por ejemplo, si el nombre completo del paquete indicado en la ventana de **salida** son:
-
-`Microsoft.SDKSamples.AppServicesProvider.CPP_1.0.0.0_x86__8wekyb3d8bbwe`
-
-A continuación, deberías extraer `1.0.0.0\_x86\_\_`, dejando los siguientes como el nombre de familia de paquete:
-
-`Microsoft.SDKSamples.AppServicesProvider.CPP_8wekyb3d8bbwe`
+También tendrás que el nombre de familia de paquete del proveedor de servicios de aplicación para poder llamarlo. Puedes obtener abriendo el archivo **Package.appxmanifest** del proyecto **AppServiceProvider** en la vista de diseñador (haga doble clic en el **Explorador de soluciones**). Selecciona la pestaña **empaquetado** , copia el valor junto al **nombre de familia de paquete**y pégala en algún lugar, como el Bloc de notas por ahora.
 
 ## <a name="write-a-client-to-call-the-app-service"></a>Escribir a un cliente para llamar al servicio de aplicaciones
 
