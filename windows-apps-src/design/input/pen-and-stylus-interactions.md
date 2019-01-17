@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows Inking, entrada manuscrita de Windows, DirectInk,
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2451606ccb9dfb604dd9f8aaffe245016776c1e7
-ms.sourcegitcommit: 906b494aa190e6e5b46e7b73d4a900b2cc7d53ef
+ms.openlocfilehash: 0a548c7311042be52d90cad8594c3085614a8cda
+ms.sourcegitcommit: 575fb85387ade0e1ddfc50efdf613938f37f4037
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "9010999"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014554"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones para UWP
 
@@ -64,7 +64,8 @@ De manera predeterminada, el control [**InkCanvas**](https://msdn.microsoft.com/
 En este ejemplo, un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) se superpone a una imagen en segundo plano.
 
 > [!NOTE]
-> Un control InkCanvas tiene propiedades de [**alto**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**ancho**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) predeterminadas de cero, a menos que sea el elemento secundario de un elemento que cambia automáticamente el tamaño de sus elementos secundarios, como los controles de [StackPanel](stackpanel.md) o [cuadrícula](grid.md) .
+> Un control InkCanvas tiene propiedades de [**alto**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**ancho**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) predeterminadas de cero, a menos que sea el elemento secundario de un elemento que cambia automáticamente el tamaño de sus elementos secundarios, como los controles de [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel
+) o [cuadrícula](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) .
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
