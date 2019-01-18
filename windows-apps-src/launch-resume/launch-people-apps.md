@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 46a297c3a611882724b18242d1c6272c3345ffc2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935620"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014710"
 ---
 # <a name="launch-the-people-app"></a>Iniciar la aplicación Contactos
 
@@ -58,7 +58,7 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 </div>
 <div> 
 </div></td>
-<td align="left">ms-people:viewcontact:?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
+<td align="left">MS-people: viewcontact?ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;correo electrónico =&lt;correo electrónico&gt;&amp;ContactName =&lt;nombre&gt;&amp;Contact =&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Se inicia en una página de guardado de contactos en la aplicación Contactos para guardar el contacto determinado con la dirección de correo electrónico o el número de teléfono proporcionados.

@@ -1,27 +1,27 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Empaquetar una aplicación de escritorio con Visual Studio
+title: Empaquetar una aplicación de escritorio mediante Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: e867377c5961277d140173ab0de86d9f89197086
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e4d39690223d01a6ac553d33357c7714b2f0dca
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944155"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014730"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio con Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio mediante Visual Studio
 
 Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. A continuación, puedes publicar que el paquete a la Microsoft Store o la instalación de prueba en uno o más equipos.
 
 La versión más reciente de Visual Studio proporciona una nueva versión del proyecto de empaquetado que elimina todos los pasos manuales se solían ser necesarios para empaquetar tu aplicación. Tan solo tienes que agregar un proyecto de empaquetado, hacer referencia al proyecto de escritorio y luego presionar F5 para depurar la aplicación. No es necesario realizar ajustes manuales. Esta nueva experiencia optimizada es una gran mejora de la experiencia que estaba disponible en la versión anterior de Visual Studio.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
@@ -69,7 +69,7 @@ Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Prepa
 **Vídeo**
 
 &nbsp;
-> [!VIDEO https://www.youtube.com/embed/fJkbYPyd08w]
+> [!VIDEO https://www.youtube-nocookie.com/embed/fJkbYPyd08w]
 
 ## <a name="next-steps"></a>Pasos siguientes
 
