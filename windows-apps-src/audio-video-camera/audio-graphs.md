@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0211e451c3e700da34d24e39a5045f9e046020a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0b360425755a7dc2249a284d9f68761ce3c783ef
+ms.sourcegitcommit: 92ce837841ae8f16d203e919dbf5c4436bee56e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933618"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015260"
 ---
 # <a name="audio-graphs"></a>Gráficos de audio
 
@@ -80,7 +80,7 @@ Un nodo de entrada de dispositivo envía audio al gráfico desde un dispositivo 
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Si quieres especificar un dispositivo de captura de audio específico para el nodo de entrada de dispositivo, puedes usar la clase [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obtener una lista de los dispositivos de captura de audio disponibles del sistema mediante una llamada a [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) y pasando el selector de dispositivo de representación de audio devuelto por [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817). Puedes elegir uno de los objetos **DeviceInformation** devueltos mediante programación o mostrar la interfaz de usuario para que el usuario pueda seleccionar un dispositivo y luego pasarlo a [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
+Si quieres especificar un dispositivo de captura de audio específico para el nodo de entrada de dispositivo, puedes usar la clase [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obtener una lista de dispositivos de captura de audio disponibles del sistema mediante una llamada a [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) y pasar el audio devuelto por [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)el selector de dispositivos de representación. Puedes elegir uno de los objetos **DeviceInformation** devueltos mediante programación o mostrar la interfaz de usuario para que el usuario pueda seleccionar un dispositivo y luego pasarlo a [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
