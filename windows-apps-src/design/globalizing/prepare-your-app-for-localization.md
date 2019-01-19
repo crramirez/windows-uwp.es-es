@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 23343ea88b0347ac3e8cb5d41812a24d619be986
+ms.sourcegitcommit: 28fa37c2106ceb0ebe2c06ec74198b7ee97a9b88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938302"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015426"
 ---
 # <a name="make-your-app-localizable"></a>Haz que tu aplicación sea localizable
 
@@ -52,7 +52,7 @@ En resumen, factorizar las cadenas en las partes que funcionan en todos los cont
 
 Ten en cuenta la siguiente cadena: "el {0} no pudo sincronizarse."
 
-Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "tareas" o "un documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
+Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "task" o "documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
 
 | Inglés                                    | Alemán                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -60,7 +60,7 @@ Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "tarea
 | No pudo sincronizarse la tarea.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | No pudo sincronizarse el documento.    | Das Dokument konnte nicht synchronisiert werden. |
 
-Otro ejemplo, considera la posibilidad de la frase "Remind me en {0} Minute (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
+Como otro ejemplo, considera la posibilidad de la frase "Remind me en {0} Minute (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
 
 Para resolver este problema, localiza toda la oración en lugar de una única palabra. Aunque hacer esto parezca demandar trabajo extra y que no sea una solución elegante, es la mejor solución porque:
 
@@ -79,6 +79,16 @@ Usar una voz o tono informal en las cadenas es una opción válida. Puedes usar 
 ## <a name="pseudo-localization"></a>Pseudolocalización
 
 Pseudolocaliza tu aplicación para descubrir los problemas de localización. Pseudolocalización es un tipo de localización de ejecución en seco o prueba de divulgación. Se produce un conjunto de recursos que no están traducidos realmente, solo lo parecen. Por ejemplo, las cadenas son aproximadamente un 40% más largas que en el idioma predeterminado y tienen delimitadores para que puedas ver de un solo vistazo si se han truncado en la interfaz de usuario.
+
+## <a name="deployment-considerations"></a>Consideraciones de implementación
+
+Cuando se instala la aplicación que contiene datos de idioma localizado, es posible que solo el idioma predeterminado está disponible para la aplicación, aunque se incluyen inicialmente recursos para varios idiomas. Esto se produce debido a la manera en que se optimiza el proceso de instalación para instalar solo los recursos de idioma que coincidan con el idioma actual y la referencia cultural del dispositivo. Esto significa que si el dispositivo está configurado para en-us cuando se instala la aplicación solo el en-los recursos de idioma se instalará. Si cambias el idioma predeterminado del sistema operativo de la aplicación aún solo mostrará en-us recursos porque es el único lenguaje que instalaron la aplicación. En este momento no hay ninguna manera de instalar la compatibilidad de idioma adicional para la aplicación tras la instalación inicial. 
+
+Si quieres asegurarte de que todos los recursos de idioma están disponibles tras la instalación puede cerate un archivo de configuración de la aplicación que especifica que ciertos recursos no sean necesarios durante la instalación. En este archivo de configuración puede requerir que los recursos se instalen incluidas los recursos de idioma. Para obtener más información sobre los recursos garante se instalan, consulta este documento: [Asegúrate de que los recursos estén instalados en un dispositivo, independientemente de si les requerirá un dispositivo](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))
+ 
+Esta característica de instalación optimizado se habilita automáticamente cuando se genera un appxbundle de la aplicación durante el empaquetado. Opcionalmente, para garantizar que se instalan todos los recursos puede deshabilitar la generación de appxbundle al empaquetar la aplicación. Sin embargo no se recomienda porque puede aumentar el tiempo de instalación de la aplicación. En su lugar, debes crear un archivo de configuración de empaquetado según el párrafo anterior y solo requiere los recursos necesarios, lo que permite el programa de instalación continuar optimizar los recursos innecesarios ubicación. 
+ 
+Puede deshabilitar la generación de appxbundle e incluir todos los recursos empaquetados estableciendo el atributo "Generar la recopilación de aplicación" en "nunca". 
 
 ## <a name="geopolitical-awareness"></a>Reconocimiento geopolítico
 
