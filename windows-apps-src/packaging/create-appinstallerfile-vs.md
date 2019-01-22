@@ -5,16 +5,16 @@ ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, instalador de aplicaciones, AppInstaller, sideload, realizar instalación de prueba
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b547394657fc992474ac0ef9e79719e3ab8f31e1
+ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929672"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024232"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Crear un archivo de Instalador de aplicación con Visual Studio
 
-A partir de Windows 10, versión 1804 y Visual Studio 2017, Update 15.7, las aplicaciones con instalación de prueba pueden configurarse para recibir actualizaciones automáticas con un archivo `.appinstaller`. Visual Studio admite la habilitación de estas actualizaciones.
+A partir de Windows 10, versión 1803 y Visual Studio 2017, Update 15.7, las aplicaciones pueden configurarse para recibir actualizaciones automáticas con una `.appinstaller` archivo. Visual Studio admite la habilitación de estas actualizaciones.
 
 ## <a name="app-installer-file-location"></a>Ubicación del archivo del Instalador de aplicación
 El archivo `.appinstaller` puede estar alojado en una ubicación compartida como un extremo HTTP o una carpeta UNC compartida e incluye la ruta de acceso para buscar los paquetes de aplicaciones que se van a instalar. Los usuarios instalan la aplicación desde la ubicación compartida y habilitan comprobaciones periódicas de nuevas actualizaciones. 
@@ -25,7 +25,7 @@ El archivo `.appinstaller` puede estar alojado en una ubicación compartida como
 Puedes configurar la propiedad `TargetPlatformMinVersion` al crear el proyecto o cambiarla más adelante desde las propiedades del proyecto. 
 
 >[!IMPORTANT]
-> El archivo del instalador de la aplicación solo se genera cuando la `TargetPlatformMinVersion` es Windows 10, versión 1804 o superior.
+> El archivo de instalador de aplicación es solo genera cuando el `TargetPlatformMinVersion` es Windows 10, versión 1803 o posterior.
 
 
 ### <a name="create-packages"></a>Crear paquetes
