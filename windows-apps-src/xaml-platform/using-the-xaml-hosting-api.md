@@ -5,12 +5,12 @@ ms.date: 01/11/2019
 ms.topic: article
 keywords: Windows 10, uwp, formularios windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: ff5df91c860ab0e063f9a4ff5ed8beb64409e876
-ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
+ms.openlocfilehash: 999a990dbbc98f4f1224ce55f48d99889afbb89a
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001799"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024634"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usar la API de hospedaje en una aplicación de escritorio de XAML de UWP
 
@@ -57,7 +57,7 @@ La API de hospedaje de XAML de UWP tiene estos requisitos previos.
 
 * Para usar la API de hospedaje en la aplicación de escritorio de XAML de UWP, tendrás que configurar el proyecto por lo que puedes llamar a las API de UWP:
 
-    * **Win32 de C++:** Te recomendamos que configures el proyecto para usar [C++ / WinRT](../cpp-and-winrt-apis/index.md). Descargar e instalar la [C++ / extensión de Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix) desde Visual Studio Marketplace y, a continuación, agrega el ```<CppWinRTEnabled>true</CppWinRTEnabled>``` propiedad en el archivo .vcxproj como se describe [aquí](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+    * **Win32 de C++:** Te recomendamos que configures el proyecto para usar [C++ / WinRT](../cpp-and-winrt-apis/index.md). Descargar e instalar la [C++ / extensión de Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix) desde Visual Studio Marketplace y, a continuación, agrega el ```<CppWinRTEnabled>true</CppWinRTEnabled>``` propiedad en el archivo .vcxproj como se describe [aquí](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
 
     * **Windows Forms y WPF:** Sigue [estas instrucciones](../porting/desktop-to-uwp-enhance.md).
 

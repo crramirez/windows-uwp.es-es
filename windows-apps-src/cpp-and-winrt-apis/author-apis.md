@@ -5,12 +5,12 @@ ms.date: 01/10/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b0f2c5a9941e8f82e77cbaaf2d38badb41ce7c0
-ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
+ms.openlocfilehash: 3c79c51c355a2d3ccf1d7f3604a5f89c7a4f8fa2
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001571"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024604"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -28,7 +28,7 @@ En ambos casos, el tipo que implementa tus API C++/WinRT se denomina *tipo de im
 El escenario más sencillo es aquel en el que implementas una interfaz de Windows Runtime para consumo local. No necesitas una clase en tiempo de ejecución, solo una clase C++ normal. Por ejemplo, podrías estar escribiendo una aplicación basada en [**CoreApplication **](/uwp/api/windows.applicationmodel.core.coreapplication).
 
 > [!NOTE]
-> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
 
 En Visual Studio, **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** plantilla de proyecto muestra el patrón de **CoreApplication** . El patrón empieza pasando una implementación de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) a [**CoreApplication: Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 

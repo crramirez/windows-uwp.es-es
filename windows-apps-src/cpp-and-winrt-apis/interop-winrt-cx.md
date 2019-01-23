@@ -5,12 +5,12 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, interoperabilidad, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 71cc7a24be7afd7a6221e8e474161b453b5ee19a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e1e4570320e9d48351ccb01052fc77d35ae03642
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943541"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024574"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilidad entre C++/WinRT y C++/CX
 
@@ -47,13 +47,13 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="example-project-showing-the-two-helper-functions-in-use"></a>Proyecto de ejemplo que muestra las dos funciones auxiliares en uso
 
-Para reproducir, de forma simple, el escenario de migración gradualmente el código de C++ / proyecto CX a C++ / WinRT, puede comenzar creando un nuevo proyecto en Visual Studio usando uno de C++ / WinRT plantillas de proyecto (consulta [soporte de Visual Studio para C++ / WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).
+Para reproducir, de una manera sencilla, el escenario de migración gradualmente el código de C++ / proyecto CX a C++ / WinRT, puede comenzar creando un nuevo proyecto en Visual Studio usando uno de C++ / WinRT plantillas de proyecto (consulta [soporte de Visual Studio para C++ / WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)).
 
 Este proyecto de ejemplo también muestra cómo puedes usar los alias de espacio de nombres para las diferentes islas de código, con el fin de abordar las posibles colisiones de espacio de nombres entre la C++ / WinRT de proyección y C++ / proyección CX.
 
 - Crear un **Visual C++** \> **Windows Universal** > **Core App (C++ / WinRT)** proyecto.
 - En las propiedades del proyecto, **C/c ++** \> **General** \> **Usar extensión de Windows en tiempo de ejecución** \> **Sí (/ZW)**. Esto activa de soporte de proyecto para C++ / CX.
-- Reemplaza el contenido de `App.cpp` con la siguiente lista de códigos.
+- Reemplaza el contenido del `App.cpp` con la siguiente lista de códigos.
 
 ```cppwinrt
 // App.cpp

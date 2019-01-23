@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, colección
 ms.localizationpriority: medium
-ms.openlocfilehash: 9df7c96549254ab8318fd9a7c8224c6e87701747
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5b87a21b8676eb810e8910e81ce560c3916dd53d
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934840"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024504"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>Controles de elementos XAML; enlazar a una colección C++/WinRT
 
@@ -25,14 +25,14 @@ Este tutorial se basa en el proyecto creado en [Controles XAML; enlazar a una pr
 Si una clase en tiempo de ejecución que representa una colección elige generar el evento [**IObservableVector&lt;T&gt;:: VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) cada vez que un elemento se agregue a ella o se quite de ella, la clase en tiempo de ejecución es una colección observable. El control de elementos XAML puede enlazarse a estos eventos y controlarlos mediante la recuperación de la colección actualizada y luego actualizarse automáticamente para mostrar los elementos actuales.
 
 > [!NOTE]
-> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
 
 ## <a name="add-a-bookskus-collection-to-bookstoreviewmodel"></a>Agregar una colección **BookSkus** a **BookstoreViewModel**
 
-En [Controles XAML; enlaza a una propiedad C++/WinRT](binding-property.md), hemos agregado una propiedad de tipo **BookSku** a nuestro modelo de vista principal. En este paso, vamos a utilizar la plantilla de función de fábrica de [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) para ayudarnos a implementar una colección observable de **BookSku** en el mismo modelo de vista.
+En [Controles XAML; enlaza a una propiedad C++/WinRT](binding-property.md), hemos agregado una propiedad de tipo **BookSku** a nuestro modelo de vista principal. En este paso, vamos a utilizar la plantilla de función de fábrica [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) que nos ayudarán a implementar una colección observable de **BookSku** en el mismo modelo de vista.
 
 > [!NOTE]
-> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o una versión posterior, consulta [Si tienes una versión anterior del SDK de Windows](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) para obtener una lista de una plantilla de vector observable que puedes usar en lugar de **winrt::single_ threaded_observable_vector**.
+> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o posterior, a continuación, vea [Si tienes una versión anterior del SDK de Windows](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) para obtener una lista de una plantilla de vector observable que puedes usar en lugar de **winrt::single_ threaded_observable_vector**.
 
 Declara una nueva propiedad en `BookstoreViewModel.idl`.
 

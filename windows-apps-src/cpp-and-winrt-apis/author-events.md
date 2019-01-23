@@ -5,19 +5,19 @@ ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, autor, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: bbc9fcd2b29183352fd06a7d7403aad2d0f011d9
-ms.sourcegitcommit: 557257fb792f0b04b013d3507b3ebe5b0f6aa6c4
+ms.openlocfilehash: fc4047344daa19888912f3a93175b36cd0dfa96b
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "8992258"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024564"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
 Este tema muestra cómo crear un componente de Windows Runtime con una clase en tiempo de ejecución que representa una cuenta bancaria, lo cual genera un evento cuando su saldo pasa a estar en débito. También muestra una aplicación principal que consume la clase en tiempo de ejecución de la cuenta bancaria, llama a una función para ajustar el saldo y controla cualquier evento que surja.
 
 > [!NOTE]
-> Para obtener información sobre cómo instalar y usar el [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) extensión de Visual Studio (VSIX) (que proporciona soporte para plantillas de proyecto, así como C++ / WinRT MSBuild propiedades y destinos) consulta [soporte de Visual Studio para C++ / WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obtener información sobre cómo instalar y usar el [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) extensión de Visual Studio (VSIX) (que proporciona soporte para plantillas de proyecto, así como C++ / WinRT MSBuild propiedades y destinos) consulta [soporte de Visual Studio para C++ / WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
@@ -146,7 +146,7 @@ Cada vez que hagas clic en la ventana, restarás 1 del saldo de la cuenta bancar
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Delegados con parámetros y señales simple, a través de una ABI
 
-Si el evento debe ser accesible a través de una interfaz binaria de aplicaciones (ABI)&mdash;como entre un componente y su aplicación consumo&mdash;, a continuación, el evento debe usar un tipo de delegado en tiempo de ejecución de Windows. En el ejemplo anterior usa la [**Windows::Foundation::EventHandler\<T\ >**](/uwp/api/windows.foundation.eventhandler) el tipo de delegado en tiempo de ejecución de Windows. [**TypedEventHandler\<TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) es otro ejemplo de un tipo de delegado en tiempo de ejecución de Windows.
+Si el evento debe ser accesible a través de una interfaz binaria de aplicaciones (ABI)&mdash;como entre un componente y su aplicación consumo&mdash;, a continuación, el evento debe usar un tipo de delegado en tiempo de ejecución de Windows. El ejemplo anterior, usa el tipo de delegado [**Windows::Foundation::EventHandler\<T\>**](/uwp/api/windows.foundation.eventhandler) Windows Runtime. [**TypedEventHandler\<TSender, TResult\>**](/uwp/api/windows.foundation.eventhandler) es otro ejemplo de un tipo de delegado en tiempo de ejecución de Windows.
 
 Los parámetros de tipo para esos tipos de dos delegado tienen cruzar la ABI, por lo que los parámetros de tipo deben ser tipos de Windows Runtime, demasiado. Que incluye las clases en tiempo de ejecución de primer y terceros, así como los tipos primitivos como cadenas y números. El compilador te ayuda a con un error de "*debe ser de tipo WinRT*" Si olvida esa restricción.
 

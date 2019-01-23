@@ -5,19 +5,19 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: f30ff39b0dcb54cd50808381bcb30e58e7dfe07d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 93a6a11a84b6b5131d0cf9a524c11116d21b2ecd
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940856"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024494"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Controlar eventos usando delegados en C ++/WinRT
 
 En este tema se muestra cómo registrar y revocar delegados de control de eventos con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Puedes controlar un evento usando cualquier objeto tipo función de C++ estándar.
 
 > [!NOTE]
-> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT, y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT, y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>Registrar un delegado para controlar un evento
 
@@ -49,7 +49,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Al registrar al delegado, el ejemplo de código anterior pasa un sin procesar *este* puntero (que señala al objeto actual). Para obtener información sobre cómo establecer una referencia fuerte o débil al objeto actual, consulta la sección de secundarias **Si usas una función miembro como un delegado** en la sección de [forma segura acceso a *este* puntero con un delegado de controlador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Al registrar al delegado, el ejemplo de código anterior pasa un sin procesar *este* puntero (que señala al objeto actual). Para obtener información sobre cómo establecer una referencia fuerte o débil al objeto actual, consulta la sección secundarias **Si usas una función miembro como un delegado** en la sección de [forma segura acceso a *este* puntero con un delegado de controlador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 Hay otras formas de construir un **RoutedEventHandler**. A continuación te mostramos el bloque de sintaxis extraído del tema de documentación relativo al [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (elige *C++/WinRT* en la lista desplegable **Language** de la página). Ten en cuenta los diversos constructores: uno toma un lambda, otro una función libre y otro (el que hemos usado anteriormente) toma un objeto y un puntero a una función miembro.
 
@@ -230,10 +230,10 @@ winrt::hstring f(ListView listview)
 
 ## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acceso con seguridad a *este* puntero con un delegado de controlador de eventos
 
-Si controlas un evento con la función de miembro de un objeto o desde dentro de una función lambda dentro de la función de miembro de un objeto, a continuación, debes considerar las duraciones relativas del destinatario del evento (el objeto en el que se controla el evento) y el origen del evento (el objeto genera el evento). Para obtener más información y ejemplos de código, consulta [referencias fuertes y débiles en C++ / WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+Si controlas un evento con la función de miembro de un objeto o desde dentro de una función lambda dentro de la función de miembro de un objeto, a continuación, debes pensar en las duraciones relativas del destinatario del evento (el objeto que controla el evento) y el origen del evento (el objeto genera el evento). Para obtener más información y ejemplos de código, consulta [referencias fuertes y débiles en C++ / WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 ## <a name="important-apis"></a>API importantes
-* [estructura del marcador de winrt:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [estructura del marcador winrt:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [winrt::implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [winrt::implements::get_strong function](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
 
