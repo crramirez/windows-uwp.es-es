@@ -7,12 +7,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 192c5f4be7496b3fe47238c4965d6854f06d21b4
-ms.sourcegitcommit: 2e47a0d047e6ca8d3f473434a2b07b6216b55d17
+ms.openlocfilehash: c74d4ebd08dfeddfb4a0149cffcd7bb845ceff11
+ms.sourcegitcommit: 4ee300bfa6a238d3ce7674036ec1c574bb025210
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004508"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "9029948"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -296,8 +296,6 @@ Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.micros
 Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
 
 La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando el botón Atrás está visible, Atrás del sistema se inserta la barra, desplazando el contenido de la aplicación por 32 píxeles por debajo de la banda de la pestaña. Cuando se oculta el botón Atrás, Atrás del sistema barra se quita dinámicamente, desplazando el contenido de aplicación 32 píxeles para satisfacer la banda de la pestaña. Para evitar tener que de la aplicación la interfaz de usuario hacia arriba o hacia abajo, te recomendamos dibujar un [botón Atrás en la aplicación](#back-button).
-
-[Personalizaciones de la barra de título](../shell/title-bar.md) se realizan en la pestaña de la aplicación y el sistema vuelve barra. Si la aplicación especifica propiedades de color de primer plano y en segundo plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), a continuación, los colores se aplicará a la parte posterior del sistema y la pestaña barra.
 
 [Personalizaciones de la barra de título](../shell/title-bar.md) se realizan en la pestaña de la aplicación y el sistema vuelve barra. Si la aplicación especifica propiedades de color de primer plano y en segundo plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), a continuación, los colores se aplicará a la parte posterior del sistema y la pestaña barra.
 
