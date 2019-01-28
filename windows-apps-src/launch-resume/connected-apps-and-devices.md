@@ -6,18 +6,18 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: 79decdcb420e7d1b5cb732a354ccddb1ce5b7404
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c785e6d2a8021148f572df88a6d9e6ba07c4a457
+ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929257"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "9031371"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Aplicaciones y dispositivos conectados (Project Rome)
 
-En esta sección se explica cómo conectar aplicaciones entre dispositivos y plataformas con Project Rome. Obtén información sobre cómo detectar dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
+En esta sección se explica cómo conectar aplicaciones entre dispositivos y plataformas con [Project Rome](https://developer.microsoft.com/en-us/windows/project-rome). Para obtener información sobre cómo implementar el proyecto Rome en un escenario de plataformas, visita la [página principal de documentos de Project Rome](https://docs.microsoft.com/en-us/windows/project-rome/).
 
-La mayoría de los usuarios tiene varios dispositivos y con frecuencia comienzan una actividad en un dispositivo y la finalizan en otro. Para ello, las aplicaciones necesitan abarcar dispositivos y plataformas.
+La mayoría de los usuarios tiene varios dispositivos y con frecuencia comienzan una actividad en un dispositivo y la finalizan en otro. Para ello, las aplicaciones necesitan abarcar dispositivos y plataformas. Proyecto Rome te permite detectar dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
 
 Las [API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems) introducidas en Windows 10, versión 1607 te permiten crear aplicaciones que permiten a los usuarios iniciar una tarea en un dispositivo y finalizarla en otro. La tarea sigue siendo el punto central y los usuarios pueden hacer su trabajo en el dispositivo que resulte más cómodo. Por ejemplo, un usuario escuchar la radio del teléfono en el coche, pero, cuando llegue a casa, querrá transferir la reproducción a tu Xbox One, que está conectada a su equipo de música doméstico.
 
