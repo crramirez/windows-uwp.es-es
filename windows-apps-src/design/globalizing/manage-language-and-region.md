@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 43aeccecee5b4b2d7a2d5fa1082fb619e87e7268
-ms.sourcegitcommit: 51ea7eae59684400e7813a9dd3376d5e7bfb3635
+ms.openlocfilehash: d70dbc0dffc3763855924b8f7faca61ca2fb18f2
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "8972049"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035406"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil de usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede utilizar **Configuración** > **Hora e idioma** > **Región e idioma** para configurar una lista ordenada de idiomas de visualización preferidos o simplemente un único idioma de visualización preferido. Un idioma puede tener una variante regional. Por ejemplo, puedes seleccionar el español de España, el español de México o el español que se habla en Estados Unidos, entre otros.
@@ -107,9 +107,9 @@ Nombra los archivos de recursos o sus carpetas con calificadores de recursos de 
 Localización no sea necesaria para todos los recursos.
 
 - Como mínimo, asegúrate de que todos los recursos existen en el idioma predeterminado.
-- Un subconjunto de algunos recursos puede ser suficiente para un idioma estrechamente relacionado (localización parcial). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. Para los usuarios que hablan Catalán y después el español, los recursos que no están disponibles en Catalán aparecerán en español.
+- Un subconjunto de algunos recursos puede ser suficiente para un idioma estrechamente relacionados entre sí (localización parcial). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. Para los usuarios que hablan Catalán y después el español, los recursos que no están disponibles en Catalán aparecerán en español.
 - Algunos recursos pueden requerir excepciones para un idioma concreto, mientras que la mayoría de otro recursos se asigna a un recurso común. En este caso, marca el recurso destinado para usarse para todos los idiomas con la etiqueta de idioma sin determinar 'und'. Windows interpreta la etiqueta de idioma 'und' como carácter comodín (de manera similar a '\*'), en el sentido de que establece la correspondencia con el idioma de la aplicación principal después de cualquier otra coincidencia específica. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
-- Los recursos que se basan en un script de idioma, como una fuente o el alto del texto, usa la etiqueta de idioma indeterminado con un script especificado: ' und -&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
+- Los recursos que se basan en un script de lenguaje, como una fuente o el alto del texto, usa la etiqueta de idioma indeterminado con un script especificado: ' und -&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
 
 ## <a name="set-the-http-accept-language-request-header"></a>Establecer el encabezado de solicitud Accept Language HTTP
 Considera si los servicios web a los que llamas tienen el mismo grado de localización que tu aplicación. Las solicitudes HTTP realizadas desde aplicaciones UWP y aplicaciones de escritorio en solicitudes web típicas y XMLHttpRequest (XHR) usan el encabezado estándar de solicitud Accept-Language HTTP. De manera predeterminada, el encabezado HTTP se establece en la lista de idiomas del perfil de usuario. Cada idioma de la lista se expande aún más para incluir valores independientes del idioma y una ponderación (q). Por ejemplo, la lista de idiomas de un usuario de fr-FR y en-US da como resultado un encabezado de solicitud Accept-Language HTTP de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3"). Pero si tu aplicación del tiempo (por ejemplo) muestra una interfaz de usuario en francés (Francia), pero el idioma que está en primer lugar de la lista de preferencias del usuario es el alemán, a continuación, deberás solicitar explícitamente francés (Francia) desde el servicio para que siga siendo coherente dentro de la aplicación.
@@ -191,6 +191,9 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 </tr>
 </tbody>
 </table>
+
+>[!NOTE]
+> Para obtener una lista de códigos de país/región estándar usados por Microsoft, consulta la [Lista oficial de país o región](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
 
 ## <a name="important-apis"></a>API importantes
 * [GlobalizationPreferences.Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)

@@ -9,12 +9,12 @@ ms.date: 12/7/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6e9e0f6305a99b6e3ab83cb3b560754f2e4d310f
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944346"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035426"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
 
@@ -36,6 +36,10 @@ El código debe funcionar igual de bien en cualquiera de las referencias cultura
 - Formato de fecha y hora
 - Normas numéricas, de moneda, peso y medida
 - Reglas de ordenación
+
+>[!NOTE]
+> Para obtener una lista de códigos de país/región estándar usados por Microsoft, consulta la [Lista oficial de país o región](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+
 
 **Localizabilidad** es el proceso de preparación de una aplicación globalizada para la localización y/o la comprobación de que la aplicación está lista para la localización. Hacer que una aplicación sea localizable significa que el proceso de localización siguiente no descubrirá ningún defecto funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de los recursos localizables de la aplicación.
 
@@ -65,4 +69,4 @@ La mayoría de los equipos de localización usa herramientas especiales para fac
 | [Diseña tu aplicación para el texto bidireccional](design-for-bidi-text.md) | Diseña tu aplicación para proporcionar compatibilidad con texto bidireccional (BiDi) de manera que puedas combinar script desde sistemas de escritura de izquierda a derecha y de derecha a izquierda. |
 | [Usa el Kit de herramientas para aplicaciones multilingües 4.0](use-mat.md) | El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con Microsoft Visual Studio 2017 para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas de editor. |
 | [Solución de problemas y preguntas más frecuentes sobre el Kit de herramientas para aplicaciones multilingües 4.0](mat-faq-troubleshooting.md) | Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el kit de herramientas para aplicaciones multilingües (MAT) 4.0. |
-| [Preparar la aplicación para que el cambio de japonesa](japanese-era-change.md) | Obtén información sobre el cambio de mayo de 2019 japonesa y cómo preparar la aplicación. |
+| [Preparar la aplicación para el cambio de la era japonesa](japanese-era-change.md) | Obtén información sobre el cambio de mayo de 2019 japonesa y cómo preparar la aplicación. |
