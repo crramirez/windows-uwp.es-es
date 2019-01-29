@@ -6,15 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-dev_langs:
-- csharp
-- cppwinrt
-ms.openlocfilehash: 9cd5d9d275241ab107a3b1b06044ba0109d4bb3d
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: fd921782571082ee696c26480f1c55c96c30d7c2
+ms.sourcegitcommit: 7bea35c5a35c78e65f822313962c4b1579b163b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035396"
+ms.locfileid: "9035449"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -105,14 +102,12 @@ catch (Exception ex)
 ```cppwinrt
 // pch.h
 #pragma once
-
-#include "winrt/Windows.Foundation.h"
+#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Web.Http.Headers.h>
 
 // main.cpp : Defines the entry point for the console application.
 #include "pch.h"
 #include <iostream>
-
 using namespace winrt;
 using namespace Windows::Foundation;
 
@@ -160,6 +155,66 @@ int main()
     std::wcout << httpResponseBody;
 }
 ```
+
+## <a name="post-binary-data-over-http"></a>Datos binarios POST a través de HTTP
+
+El [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) siguiente ejemplo de código ilustra enviando una pequeña cantidad de datos binarios con una solicitud POST, mediante la clase [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) .
+
+```cppwinrt
+// pch.h
+#pragma once
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Windows.Web.Http.Headers.h>
+
+// main.cpp : Defines the entry point for the console application.
+#include "pch.h"
+#include <iostream>
+#include <sstream>
+#include <winrt/Windows.Security.Cryptography.h>
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Storage::Streams;
+
+int main()
+{
+    init_apartment();
+
+    // Create an HttpClient object.
+    Windows::Web::Http::HttpClient httpClient;
+
+    Uri requestUri{ L"http://www.contoso.com/post" };
+
+    auto buffer{
+    Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(
+        L"A sentence of text by way of sample data",
+        Windows::Security::Cryptography::BinaryStringEncoding::Utf8)
+    };
+    Windows::Web::Http::HttpBufferContent postContent{ buffer };
+    postContent.Headers().Append(L"Content-Type", L"image/jpeg");
+
+    // Send the POST request asynchronously, and retrieve the response as a string.
+    Windows::Web::Http::HttpResponseMessage httpResponseMessage;
+    std::wstring httpResponseBody;
+
+    try
+    {
+        // Send the POST request.
+        httpResponseMessage = httpClient.PostAsync(requestUri, postContent).get();
+        httpResponseMessage.EnsureSuccessStatusCode();
+        httpResponseBody = httpResponseMessage.Content().ReadAsStringAsync().get();
+    }
+    catch (winrt::hresult_error const& ex)
+    {
+        httpResponseBody = ex.message();
+    }
+    std::wcout << httpResponseBody;
+}
+```
+
+Para registrar el contenido de un archivo binario, le resultará más fácil de usar un objeto [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) . Construye uno y, como el argumento de su constructor, pasa el valor devuelto desde una llamada a [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync). Este método devuelve una secuencia de los datos en el archivo binario.
+
+Además, si cargar un archivos grandes (más de aproximadamente 10MB), a continuación, te recomendamos que uses la [Transferencia en segundo plano](/uwp/api/windows.networking.backgroundtransfer) de API de Windows Runtime.
 
 ## <a name="exceptions-in-windowswebhttp"></a>Excepciones en Windows.Web.Http
 
