@@ -7,12 +7,12 @@ keywords: Windows 10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7e6547267a1d0b478fdda8698bd1dcf89523442b
-ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
+ms.openlocfilehash: cbe2a62d52d546e06d3da3250dcd0f7394ba39c5
+ms.sourcegitcommit: 1391190e27907f0c7cd40e4bb56cdead387a53cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976902"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035545"
 ---
 # <a name="color"></a>Color
 
@@ -255,13 +255,13 @@ Para obtener más información acerca de cómo usar pinceles, consulta [Pinceles
 
 ## <a name="scoping-system-colors"></a>Establecimiento del ámbito de los colores del sistema
 
-Además de definir sus propios colores en la aplicación, también puede limitarse nuestros colores systematized a regiones deseadas en toda la aplicación mediante el uso de la etiqueta **ColorSchemeResources** . Esta API permite no sólo colorear y normalmente no Obtén grandes grupos de controles a la vez, establece algunas propiedades, pero también proporciona muchos otro sistema que beneficia de tema con definir tus propios colores personalizados manualmente:
+Además de definir sus propios colores en la aplicación, también puede limitarse nuestros colores systematized a regiones deseadas en toda la aplicación mediante la etiqueta **ColorSchemeResources** . Esta API permite no sólo colorear y normalmente no Obtén grandes grupos de controles a la vez estableciendo algunas propiedades, sino que también proporciona muchos otro sistema que beneficia de tema con la definición de sus propios colores personalizados manualmente:
 
 - Cualquier color establecido mediante **ColorSchemeResources** no tendrá efecto contraste alto
   * Lo que significa que la aplicación serán accesible a más personas sin tener que adicionales para el diseño ni el costo de desarrollo
 - Fácilmente establecer colores claro, oscuro o generalice en ambos temas estableciendo una propiedad en la API
 - Establecer en **ColorSchemeResources** de colores se organiza en cascada hacia abajo en todos los controles similares que también usan ese color del sistema
-  * Esto garantiza que tendrá una historia de color coherente en toda la aplicación mientras se mantiene el aspecto de tu marca
+  * Esto garantiza que tendrá un artículo de color coherente en toda la aplicación mientras se mantiene el aspecto de tu marca
 - Afecta a todos los estados visuales, animaciones y variaciones de opacidad sin necesidad de crear una nueva plantilla
 
 ### <a name="how-to-use-colorschemeresources"></a>Cómo usar ColorSchemeResources
@@ -272,15 +272,15 @@ ColorSchemeResources es una API que indica al sistema qué recursos se están do
 - Luz
   * Se mostrarán los cambios de color solo en [el tema claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 
 - Dark
-  * Se mostrarán los cambios de color solo en [el tema oscuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
+  * Se mostrarán los cambios de color solo en [tema oscuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
 
-Establecer x: Key garantiza que los colores correctamente cambian el tema del sistema o la aplicación, si desea una apariencia personalizada diferente cuando en el tema.
+Configuración de ese atributo x: Key garantiza que los colores correctamente cambian el tema del sistema o la aplicación, si desea una apariencia personalizada diferente cuando en el tema.
 
 ### <a name="how-to-apply-scoped-colors"></a>Cómo aplicar colores con ámbito
 
-Establecimiento del ámbito de los recursos a través de la **ColorSchemeResources** API en XAML te permite realizar cualquier color del sistema o un pincel que está en nuestra biblioteca de [recursos de temas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) y definirlos dentro del ámbito de una página o el contenedor.
+Establecimiento del ámbito de los recursos a través de la **ColorSchemeResources** API en XAML te permite realizar cualquier color del sistema o un pincel que se encuentra en nuestra biblioteca de [recursos de temas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) y definirlos dentro del ámbito de una página o el contenedor.
 
-Por ejemplo, si se definen dos colores del sistema - **SystemBaseLowColor** y **SystemBaseMediumLowColor** dentro de una cuadrícula y, a continuación, se colocan dos botones en la página: uno dentro de esa cuadrícula y una parte exterior:
+Por ejemplo, si se definen dos colores del sistema - **SystemBaseLowColor** y **SystemBaseMediumLowColor** dentro de una cuadrícula y, a continuación, se colocan dos botones en la página: uno dentro de esa cuadrícula y uno exterior:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -318,7 +318,7 @@ Básicamente tienes exactamente lo mismo que antes, pero ahora cualquier otros c
 
 ### <a name="nesting-scoped-resources"></a>Recursos de anidamiento con ámbito
 
-Anidamiento los colores del sistema también es posible y se realiza mediante la colocación **ColorSchemeResources** en los recursos de los elementos anidados dentro del marcado de tu diseño de la aplicación:
+Los colores del sistema se anida también es posible y se realiza mediante la colocación **ColorSchemeResources** en recursos de los elementos anidados dentro del marcado de su diseño de la aplicación:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -341,17 +341,17 @@ Anidamiento los colores del sistema también es posible y se realiza mediante la
 </Grid>
 ```
 
-En este ejemplo, se hereda **Button_A** definen los colores en los recursos del **Grid_A**y **Botón anidado** hereda los colores de los recursos del **Grid_B**. Por extensión, se comprueba o aplicar los recursos del **Grid_B**en primer lugar, antes de comprobar o aplicar los recursos del **Grid_A**, esto significa que todos los demás controles se colocan dentro de **Grid_B** y finalmente la aplicación de nuestro colores predeterminado si no hay nada se define en el nivel de página o aplicación.
+En este ejemplo, se hereda **Button_A** definen los colores en los recursos del **Grid_A**y **Botón anidado** hereda los colores de los recursos del **Grid_B**. Por extensión, se comprueba o aplicar los recursos del **Grid_B**en primer lugar, antes de comprobar o aplicar los recursos del **Grid_A**, esto significa que todos los demás controles se colocan dentro de **Grid_B** y finalmente la aplicación de nuestros colores predeterminado si no hay nada se define en el nivel de página o aplicación.
 
 Esto funciona para cualquier número de elementos anidados cuyos recursos tienen las definiciones de color.
 
 ### <a name="scoping-with-a-resourcedictionary"></a>Ámbito con un ResourceDictionary
 
-No se limitan a un contenedor o recursos de la página y también se puede definir estos colores del sistema en un ResourceDictionary que, a continuación, se puede combinar en cualquier ámbito de la manera en que normalmente sería combina un diccionario.
+No se limitan a un contenedor o recursos de la página y también se puede definir estos colores del sistema en un ResourceDictionary que, a continuación, se puede combinar en cualquier ámbito la manera en que normalmente sería combina un diccionario.
 
 #### <a name="mycustomthemexaml"></a>MyCustomTheme.xaml
 
-En primer lugar, crearía un ResourceDictionary. A continuación, coloca el **ColorSchemeResources** dentro de la ThemeDictionaries e invalidar los colores del sistema deseado:
+En primer lugar, crearía un ResourceDictionary. A continuación, coloca el **ColorPaletteResources** dentro de la ThemeDictionaries e invalide los colores del sistema deseado:
 
 ```xaml
 <ResourceDictionary
@@ -360,11 +360,16 @@ En primer lugar, crearía un ResourceDictionary. A continuación, coloca el **Co
     xmlns:local="using:TestApp">
 
     <ResourceDictionary.ThemeDictionaries>
-
-        <ColorSchemeResources x:Key="Default"
-            SystemBaseLowColor="LightGreen"
-            SystemBaseMediumLowColor="DarkCyan"/>
-        
+        <ResourceDictionary x:Key="Default">
+            <ResourceDictionary.MergedDictionaries>
+            
+                <ColorPaletteResources x:Key="Default"
+                    Accent="#FF0073CF" 
+                    AltHigh="#FF000000" 
+                    AltLow="#FF000000"/>
+                    
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>        
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
 ```
@@ -387,7 +392,7 @@ En la página que contiene el diseño, simplemente combinar ese diccionario en e
 </Grid>
 ```
 
-Ahora, todos los recursos de temas y colores personalizados pueden colocarse en un diccionario de recursos **MyCustomTheme** único y ámbito donde se necesita sin tener que preocuparse de desorden adicional en el marcado de diseño.
+Ahora, todos los recursos de temas y colores personalizados pueden colocados en un diccionario de recursos **MyCustomTheme** único y el ámbito cuando sea necesario sin tener que preocuparse por desorden adicional en el marcado de diseño.
 
 ### <a name="other-ways-to-define-color-resources"></a>Otras maneras de definir recursos de color
 

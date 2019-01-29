@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 92c08971ee498e93e5a974ef8bd63d00dd27fc7d
-ms.sourcegitcommit: 1cf04b0b1bd7623cd7f6067b8392dce4372f2c69
+ms.openlocfilehash: b47991add56868fe534b0460ec65336e94f433e9
+ms.sourcegitcommit: 1391190e27907f0c7cd40e4bb56cdead387a53cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970988"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035535"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -68,14 +68,14 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 
  ![Acrílico en la aplicación](images/AppAcrylic_DarkTheme.png)
 
- DISPÓN varias superficies acrílicas con precaución: crear una distracción ilusiones óptico varias capas de acrílico en segundo plano.
+ DISPÓN varias superficies acrílicas con precaución: varias capas de acrílico en segundo plano pueden crear una distracción ilusiones óptico.
 
 ## <a name="when-to-use-acrylic"></a>Cuándo usar Acrylic
 
-* Usar acrílico en la aplicación para la compatibilidad con la interfaz de usuario, por ejemplo, NavigationView o los elementos de línea de comandos.
+* Usar acrílico en la aplicación para la compatibilidad con la interfaz de usuario, como en las superficies que pueden solaparse contenido cuando se desplaza o interactuado con.
 * Usar acrílico en segundo plano para elementos transitorios de la interfaz de usuario, como los menús contextuales, los controles flotantes y la interfaz de usuario de la luz dimsissable.<br />Usar acrílico en escenarios transitorios ayuda a mantener una relación visual con el contenido que desencadenó la interfaz de usuario transitoria.
 
-Si estás usando acrílico en la aplicación en las superficies de navegación, considera la posibilidad de extender contenido debajo del panel acrílico para mejorar el flujo de la aplicación. Uso de NavigationView se hace esto automáticamente. Sin embargo, para evitar la creación de un efecto fragmentado, no intente colocar varias partes del acrílico de extremo a extremo - Esto puede crear una indeseable no deseada entre las dos superficies borrosas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero cuando se usa de forma incorrecta, puede provocar ruido visual.
+Si estás usando acrílico en la aplicación en las superficies de navegación, considere la posibilidad de extender contenido debajo del panel acrílico para mejorar el flujo de la aplicación. Uso de NavigationView se hace esto automáticamente. Sin embargo, para evitar la creación de un efecto fragmentado, no intente colocar varias partes del acrílico de extremo a extremo - Esto puede crear una indeseable no deseada entre las dos superficies borrosas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero cuando se usa de forma incorrecta, puede provocar ruido visual.
 
 Ten en cuenta los siguientes patrones de uso para decidir la mejor manera de incorporar el acrílico en la aplicación:
 
@@ -84,7 +84,7 @@ Ten en cuenta los siguientes patrones de uso para decidir la mejor manera de inc
 Si la aplicación no es capaz de aprovechar NavigationView y piensas en Agregar acrílico por tu cuenta, te recomendamos usar acrílico relativamente translúcido con opacidad de tono del 60%.
  - Cuando el panel se abre como una superposición sobre otro contenido de la aplicación, este debe ser [acrílico en la aplicación al 60%](#acrylic-theme-resources).
 
-![Aplicación de mapas con el comando horizontal en la aplicación](images/Maps_In_App_Acrylic_1.png)
+![Aplicación de mapas con comandos horizontal de aplicación](images/Maps_In_App_Acrylic_1.png)
 
 Además, tener la extensión de contenido o desplazamiento en el acrílico en la parte superior, la aplicación proporcionará una experiencia más envolvente y sin interrupciones.
 
@@ -96,7 +96,7 @@ Para superficies que ayudan a la sección de contenido de la aplicación o verti
 
 Para las aplicaciones con controles flotantes de menú, elementos emergentes no modal, o cierre paneles, se recomienda usar acrílico en segundo plano.
 
-![Patrón de la aplicación de correo con un control flotante informativo](images/Mail_TransientContextMenu.png)
+![Patrón de la aplicación de correo electrónico con un control flotante informativo](images/Mail_TransientContextMenu.png)
 
 Muchos de nuestros controles usará acrílico de manera predeterminada. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) y controles similares con elementos emergentes de luz dimiss todos usará el acrílico transitorio cuando se invocan.
 
@@ -106,12 +106,12 @@ Muchos de nuestros controles usará acrílico de manera predeterminada. [MenuFly
 ## <a name="usability-and-adaptability"></a>Facilidad de uso y adaptabilidad
 Acrylic adapta automáticamente su apariencia a una amplia variedad de dispositivos y contextos.
 
-En el modo de contraste alto, los usuarios siguen viendo el color de fondo conocido de su elección en lugar del acrílico. Además, acrílico en segundo plano y acrílico en la aplicación aparezcan como un color sólido:
- - Cuando el usuario desactiva la transparencia en Configuración > personalización > colores
+En el modo de contraste alto, los usuarios siguen viendo el color de fondo conocido de su elección en lugar del acrílico. Además tanto el acrílico en el fondo como el acrílico en la aplicación aparezcan como un color sólido:
+ - Cuando el usuario desactiva la transparencia en configuración > personalización > Color
  - Cuando se activa el modo de ahorro de batería
  - Cuando la aplicación se ejecuta en hardware de gama baja
 
-Además, solo acrílico en el fondo reemplazará su transparencia y textura con un color sólido:
+Además, solo el acrílico en segundo plano reemplazará su transparencia y textura con un color sólido:
  - Cuando se desactiva una ventana de la aplicación en el escritorio
  - Cuando la aplicación para UWP se ejecuta en modo de teléfono, Xbox, HoloLens o tableta
 
@@ -192,7 +192,7 @@ Para pintar una superficie específica, aplica uno de los recursos de temas ante
 Puedes elegir agregar un tono de color al acrílico de tu aplicación para mostrar una personalización de marca o para aportar equilibrio visual con los otros elementos de la página. Para mostrar color en lugar de escala de grises, debes definir tus propios pinceles de acrílico mediante las siguientes propiedades.
  - **TintColor**: La capa de superposición de color o tono. Considera la posibilidad de especificar tanto el valor de color RGB como la opacidad del canal alfa.
  - **TintOpacity**: La opacidad de la capa de tono. Se recomienda opacidad del 80% como punto de partida, aunque los distintos colores pueden tener una apariencia más atractiva en otras translucencies.
- - **TintLuminosityOpacity**: controla la cantidad de saturación que se permite a través de la superficie de acrílico en segundo plano.
+ - **TintLuminosityOpacity**: controla la cantidad de saturación permitido a través de la superficie del fondo acrílico.
  - **BackgroundSource**: El indicador para especificar si quieres acrílico en el fondo o en la aplicación.
  - **FallbackColor**: el color sólido que reemplaza al acrílico en el ahorro de batería. Para el acrílico en el fondo, el color de reversión también reemplaza al acrílico cuando la aplicación no está en la ventana activa del escritorio o cuando la aplicación se ejecuta en un teléfono o Xbox.
 
@@ -319,7 +319,7 @@ Además, deberás dibujar el título de la aplicación, que normalmente aparece 
 ## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
 * Usa el acrílico como material de fondo de superficies no principales de la aplicación, como los paneles de navegación.
 * Extiende el acrílico al menos a uno de los bordes de la aplicación para proporcionar una experiencia uniforme al mezclarlo de manera sutil con lo que rodea a la aplicación.
-* No coloques arylic escritorio en las superficies de gran tamaño en segundo plano de la aplicación, esto interrumpe el modelo mental del acrílico que se usa principalmente para las superficies transitorias.
+* No coloques arylic escritorio en las superficies de gran tamaño en segundo plano de la aplicación, esto interrumpe el modelo mental del acrílico que se usa principalmente para superficies transitorias.
 * No coloques acrílicos en la aplicación y en el fondo adyacentes directamente, para evitar tensión visual en las costuras.
 * No coloques varios paneles acrílicos con el mismo tono y opacidad uno junto a otro, ya que esto genera una costura visible indeseable.
 * No coloques texto de color de énfasis sobre superficies acrílicas.
