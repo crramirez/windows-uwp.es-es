@@ -10,18 +10,18 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e5647d60cc043e167f8e2962680a88c750cc2eb1
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942609"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037267"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
 ![imagen principal](images/header-reveal-highlight.svg)
 
-Mostrar que resaltado es un efecto de iluminación que resalta los elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
+Mostrar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
@@ -42,7 +42,7 @@ Al exponer los bordes ocultos alrededor de los objetos, Reveal permite a los usu
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Reveal">abrir la aplicación y ver Reveal en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -278,7 +278,7 @@ Al habilitar Reveal en un control personalizado o nuevamente modelo o una superf
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics): ve todos los controles XAML en un formato interactivo.
+- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
 
 ## <a name="reveal-and-the-fluent-design-system"></a>Reveal y Fluent Design System
 

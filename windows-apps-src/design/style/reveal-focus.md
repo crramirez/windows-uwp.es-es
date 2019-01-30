@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 88dc22a11f88bbf0945340729722ea434345b205
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938143"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037357"
 ---
 # <a name="reveal-focus"></a>Reveal Focus
 
@@ -44,7 +44,7 @@ Esto es especialmente útil en escenarios de 10 pies, donde el usuario podría n
     <p>Si tienes instalada la aplicación de la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> , haz clic aquí para <a href="xamlcontrolsgallery:/item/RevealFocus">Abrir la aplicación y ver Reveal Focus en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -52,7 +52,7 @@ Esto es especialmente útil en escenarios de 10 pies, donde el usuario podría n
 
 ## <a name="how-to-use-it"></a>Cómo se usa
 
-Reveal que Focus está desactivada de manera predeterminada. Para habilitarla:
+Reveal que Focus está desactivada de forma predeterminada. Para habilitarla:
 1. En el constructor de tu aplicación, llama a la propiedad [AnalyticsInfo.VersionInfo.DeviceFamily](/uwp/api/windows.system.profile.analyticsversioninfo.DeviceFamily) y comprueba si la familia de dispositivos actual es `Windows.Xbox`.
 2. Si la familia de dispositivos es `Windows.Xbox`, establece la propiedad [Application.FocusVisualKind](/uwp/api/windows.ui.xaml.application.FocusVisualKind) en `FocusVisualKind.Reveal`. 
 
@@ -66,7 +66,7 @@ Reveal que Focus está desactivada de manera predeterminada. Para habilitarla:
 Después de establecer la propiedad **FocusVisualKind** , el sistema aplica automáticamente el efecto Reveal Focus a todos los controles cuya propiedad [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) se establece en **True** (el valor predeterminado para la mayoría de los controles). 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>¿Por qué no se encuentra Reveal Focus en de manera predeterminada? 
-Como puedes ver, es bastante sencillo activar Reveal Focus cuando la aplicación detecte que se está ejecutando en una consola Xbox. Por lo tanto, ¿por qué no el sistema no lo activa por ti? Porque Reveal Focus aumenta el tamaño del foco visual, que podría causar problemas con el diseño de la interfaz de usuario. En algunos casos, querrás personalizar el efecto de Reveal Focus para optimizarlo para tu aplicación.
+Como puedes ver, es bastante sencillo activar Reveal Focus cuando la aplicación detecta que se está ejecutando en una consola Xbox. Por lo tanto, ¿por qué no el sistema no lo activa por ti? Porque Reveal Focus aumenta el tamaño del foco visual, que podría causar problemas con el diseño de la interfaz de usuario. En algunos casos, querrás personalizar el efecto de Reveal Focus para optimizarlo para tu aplicación.
 
 ## <a name="customizing-reveal-focus"></a>Personalización de Reveal Focus
 

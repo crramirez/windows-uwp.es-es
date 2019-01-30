@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: af6dff9c0cf8aad1f9d7df7f94cc2af099a2ca1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fd6accd3082c141d9288dba5c6156132188c214b
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944439"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037247"
 ---
 # <a name="images-and-image-brushes"></a>Imágenes y pinceles de imagen
 
@@ -36,7 +36,7 @@ Usa un elemento **ImageBrush** para aplicar una imagen a otro objeto. Entre los 
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Image">abrir la aplicación y ver la imagen en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -56,7 +56,7 @@ Este es el objeto Image representado.
 
 ![Ejemplo de un elemento de imagen](images/Image_Licorice.jpg)
 
-En este ejemplo, la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica la ubicación de la imagen que quieres mostrar. Puedes establecer el origen especificando una dirección URL absoluta (por ejemplo, http://contoso.com/myPicture.jpg) o especificando una dirección URL relativa a la estructura de empaquetado de la aplicación. En nuestro ejemplo, el archivo de imagen "licorice.jpg" se ubica en la carpeta raíz del proyecto y se declara la configuración del proyecto que incluye el archivo de imagen como contenido.
+En este ejemplo, la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica la ubicación de la imagen que quieres mostrar. Puedes establecer el origen especificando una dirección URL absoluta (por ejemplo, http://contoso.com/myPicture.jpg) o especificando una dirección URL que es relativa a la estructura de empaquetado de la aplicación. En nuestro ejemplo, el archivo de imagen "licorice.jpg" se ubica en la carpeta raíz del proyecto y se declara la configuración del proyecto que incluye el archivo de imagen como contenido.
 
 ### <a name="imagebrush"></a>ImageBrush
 
@@ -162,7 +162,7 @@ Si defines un elemento Image o ImageBrush mediante código, usa los constructore
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics): ve todos los controles XAML en un formato interactivo.
+- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

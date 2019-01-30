@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 651914cfb2abd4326c6ac6295f10ad359925d465
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 80591abb1e3130540ea94bc1f8d2602b90edc590
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939817"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037067"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 
@@ -64,7 +64,7 @@ Usa información sobre herramientas para ofrecer más información sobre un cont
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ToolTip">abrir la aplicación y ver ToolTip en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -112,7 +112,7 @@ Puedes usar cualquier objeto como el [Contenido](/uwp/api/windows.ui.xaml.contro
 
 De manera predeterminada, una información sobre herramientas aparece centrada encima del puntero. La ubicación no está restringida por la ventana de la aplicación, por lo que es posible que la información sobre herramientas se muestre parcialmente o completamente fuera de los límites de la ventana de la aplicación.
 
-Ajustes de amplia, usa la propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) o **ToolTipService.Placement** conectados para especificar si debe dibujar la información sobre herramientas arriba, debajo, a la izquierda o derecha del puntero. Puedes establecer las propiedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) o [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para cambiar la distancia entre el puntero y la información sobre herramientas. Solo uno de los dos valores de desplazamiento, influirá en la posición final - VerticalOffset cuando colocación es superior o inferior, HorizontalOffset cuando se deja la colocación o la derecha.
+Ajustes de amplia, usa la propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) o **ToolTipService.Placement** conectados para especificar si debe dibujar la información sobre herramientas arriba, debajo, a la izquierda o derecha del puntero. Puedes establecer las propiedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) o [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para cambiar la distancia entre el puntero y la información sobre herramientas. Solo uno de los dos valores de desplazamiento, influirá en la posición final - VerticalOffset cuando colocación es superior o inferior, HorizontalOffset cuando se deja la colocación o hacia la derecha.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -125,7 +125,7 @@ Ajustes de amplia, usa la propiedad de [colocación](/uwp/api/windows.ui.xaml.co
 </Image>
 ```
 
-Si una información sobre herramientas oculta el contenido que hace referencia a, puedes ajustar su ubicación con precisión con la nueva propiedad **PlacementRect** . PlacementRect ancla la posición de la información sobre herramientas y también actúa como un área que no se tapar la información sobre herramientas, siempre que haya suficiente espacio en pantalla para dibujar la información sobre herramientas fuera del área. Puedes especificar el origen del rectángulo en relación con el propietario de la información sobre herramientas y el alto y ancho del área de exclusión. La propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) se define si se debe dibujar información sobre herramientas arriba, debajo, a la izquierda o derecha de la PlacementRect. 
+Si una información sobre herramientas oculta el contenido se refiere a, puedes ajustar su ubicación precisa con la nueva propiedad **PlacementRect** . PlacementRect ancla la posición de la información sobre herramientas y también actúa como un área que no se tapar la información sobre herramientas, siempre que haya suficiente espacio en pantalla para dibujar la información sobre herramientas fuera del área. Puedes especificar el origen del rectángulo en relación con el propietario de la información sobre herramientas y el alto y ancho del área de exclusión. La propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá si se debe dibujar información sobre herramientas arriba, debajo, a la izquierda o derecha de la PlacementRect. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->
@@ -149,7 +149,7 @@ Si una información sobre herramientas oculta el contenido que hace referencia a
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics): ve todos los controles XAML en un formato interactivo.
+- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
