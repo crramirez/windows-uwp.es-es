@@ -1,6 +1,6 @@
 ---
 title: Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad
-Description: ''
+Description: Learn how to use focus navigation to provide comprehensive and consistent interaction experiences in your UWP apps and custom controls for keyboard power users, those with disabilities and other accessibility requirements, as well as the 10-foot experience of television screens and the Xbox One.
 label: ''
 template: detail.hbs
 keywords: teclado, dispositivo de juego, control remoto, navegación, navegación interna direccional, área direccional, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c76e62a4fcccec91fc6b3a083671ff68af2202e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7dd7ca5ed7694ba5f114d913580e7e3a233537ae
+ms.sourcegitcommit: 8e0fa6e2cdd5d7456a4c8a10fd9f2501b346294f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934042"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "9041053"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad
 
@@ -28,7 +28,7 @@ Usa la navegación con foco para ofrecer experiencias de interacción completas 
 
 La navegación con foco hace referencia al mecanismo subyacente que permite a los usuarios ir a la interfaz de usuario de una aplicación para UWP e interactuar con ella mediante un teclado, controlador para juegos o control remoto.
 
-> [!NOTE] 
+> [!NOTE]
 > Los dispositivos de entrada suelen clasificarse como dispositivos señaladores tales como función táctil, panel táctil, lápiz y mouse, y dispositivos no señaladores tales como teclado, controlador para juegos y control remoto.
 
 En este tema se describe cómo optimizar una aplicación para UWP y crear experiencias de interacción personalizadas para usuarios que utilizan tipos de entrada no señaladores. 
@@ -40,14 +40,16 @@ Consulta [Controlar la entrada de puntero](handle-pointer-input.md) para obtener
 Para obtener más información general sobre la creación de aplicaciones y experiencias para teclado, consulta [Interacción de teclado](keyboard-interactions.md).
 
 ## <a name="general-guidance"></a>Instrucciones generales
+
 Solo los elementos de la interfaz de usuario que requieran interacción con el usuario deberán admitir la navegación con foco. Los elementos que no requieran una acción, como imágenes estáticas, no necesitarán el foco de teclado. Los lectores de pantalla y herramientas de accesibilidad similares aún anuncian estos elementos estáticos, incluso cuando no se incluyen en la navegación con foco. 
 
 Es importante recordar que, a diferencia de la navegación con un dispositivo señalador como un mouse o entrada táctil, la navegación con foco es lineal. Al implementar la navegación con foco, ten en cuenta cómo interactuará un usuario con tu aplicación y cuál debe ser la navegación lógica. En la mayoría de los casos, recomendamos que el comportamiento de la navegación con foco personalizado siga el patrón de lectura preferido de la referencia cultural del usuario.
 
 Otras consideraciones de la navegación con foco incluyen:
+
 - ¿Se agrupan los controles de forma lógica?
-- ¿Hay grupos de controles de mayor importancia? 
-   - En caso afirmativo, ¿contienen esos grupos subgrupos?
+- ¿Hay grupos de controles de mayor importancia?
+  - En caso afirmativo, ¿contienen esos grupos subgrupos?
 - ¿Requiere el diseño navegación direccional personalizada (teclas de dirección) y orden de tabulación?
 
 El libro electrónico sobre [diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262) tiene un excelente capítulo sobre *Designing the Logical Hierarchy* (Diseño de la jerarquía lógica).
@@ -57,13 +59,12 @@ El libro electrónico sobre [diseño de software para accesibilidad](https://www
 La región de navegación interna 2D de un control o un grupo de controles se conoce como su "área direccional". Cuando el foco cambia a este objeto, las teclas de dirección del teclado (izquierda, derecha, arriba y abajo) se pueden usar para navegar entre elementos secundarios dentro del área direccional.
 
 ![área direccional](images/keyboard/directional-area-small.png)
-
-*Región de navegación interna 2D o área direccional de un grupo de controles*
+*región de navegación interna 2D, o área direccional de un grupo de controles*
 
 Puedes usar la propiedad [XYFocusKeyboardNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_XYFocusKeyboardNavigation) (que tiene valores posibles de [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode), [Enabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) o [Disabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)) para administrar la navegación interna 2D con las teclas de dirección del teclado.
 
-> [!NOTE]  
-> El orden de tabulación no se ve afectado por esta propiedad. Para evitar una experiencia de navegación confusa, recomendamos que los elementos secundarios de un área direccional *no* se especifiquen de forma explícita en el orden de navegación mediante tabulación de tu aplicación. Consulta las propiedades [UIElement.TabFocusNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_TabFocusNavigation) y [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex) para obtener más detalles sobre el comportamiento de desplazamiento para un elemento.  
+> [!NOTE]
+> El orden de tabulación no se ve afectado por esta propiedad. Para evitar una experiencia de navegación confusa, recomendamos que los elementos secundarios de un área direccional *no* se especifiquen de forma explícita en el orden de navegación mediante tabulación de tu aplicación. Consulta las propiedades [UIElement.TabFocusNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_TabFocusNavigation) y [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex) para obtener más detalles sobre el comportamiento de desplazamiento para un elemento.
 
 ### <a name="autohttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode-default-behavior"></a>[Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) (comportamiento predeterminado)
 
@@ -74,8 +75,7 @@ Al establecerse en Auto, el comportamiento de navegación direccional viene dete
 Establece **XYFocusKeyboardNavigation** en **Disabled** para bloquear la navegación direccional al control y sus elementos secundarios.
 
 ![Comportamiento deshabilitado de XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-disabled.gif)
-
-*Comportamiento deshabilitado de XYFocusKeyboardNavigation*
+*comportamiento deshabilitado de XYFocusKeyboardNavigation*
 
 En este ejemplo, el [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerPrimary) principal tiene **XYFocusKeyboardNavigation** establecido en **Enabled**. Todos los elementos secundarios heredan esta configuración, a la que se puede ir con las teclas de dirección. Sin embargo, los elementos B3 y B4 están en un [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary) secundario con **XYFocusKeyboardNavigation** establecido en **Disabled**, lo que invalida el contenedor principal y deshabilita la navegación con teclas de dirección a sí mismo y entre sus elementos secundarios.
 
@@ -131,9 +131,8 @@ Establece **XYFocusKeyboardNavigation** en **Enabled** para admitir la navegaci�
 
 Al establecerse, la navegación con las teclas de dirección se restringe a elementos dentro del área direccional. La navegación mediante tabulación no se ve afectada, pues todos los controles permanecen accesibles a través de su jerarquía de orden de tabulación.
 
-![Comportamiento habilitado de XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled.gif)
-
-*Comportamiento habilitado de XYFocusKeyboardNavigation*
+![Comportamiento de habilitado de XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled.gif)
+*comportamiento de habilitado de XYFocusKeyboardNavigation*
 
 En este ejemplo, el [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerPrimary) principal tiene **XYFocusKeyboardNavigation** establecido en **Enabled**. Todos los elementos secundarios heredan esta configuración, a la que se puede ir con las teclas de dirección. Los elementos B3 y B4 están en un [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary) secundario en el que **XYFocusKeyboardNavigation** no está establecido, que luego hereda la configuración del contenedor principal. El elemento B5 no está en un área direccional declarada y no admite la navegación con teclas de dirección, pero admite el comportamiento de navegación mediante tabulación estándar.
 
@@ -195,9 +194,8 @@ Puedes tener varios niveles de áreas direccionales anidadas. Si todos los eleme
 
 A continuación se muestra un ejemplo de dos áreas direccionales anidadas dentro de un elemento que no admiten de forma explícita la navegación direccional 2D. En este caso, la navegación direccional no se admite entre las dos áreas anidadas.
 
-![Comportamiento habilitado y anidado de XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
-
-*Comportamiento habilitado y anidado de XYFocusKeyboardNavigation*
+![XYFocusKeyboardNavigation comportamiento habilitado y anidado](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
+*XYFocusKeyboardNavigation comportamiento habilitado y anidado*
 
 Este es un ejemplo más complejo de tres áreas direccionales anidadas donde:
 
