@@ -4,9 +4,11 @@ items:
   items:
   - name: Adiciones de API en Windows10, compilación 17763
     href: ../whats-new/windows-10-build-17763-api-diff.md
-- name: Novedades de los documentos de Windows, septiembre de 2018
-  href: ../whats-new/windows-docs-september-2018.md
+- name: Novedades de los documentos de Windows, enero de 2019
+  href: ../whats-new/windows-docs-january-2019.md
   items:
+  - name: Novedades de los documentos de Windows, septiembre de 2018
+    href: ../whats-new/windows-docs-september-2018.md
   - name: Novedades de los documentos de Windows, agosto de 2018
     href: ../whats-new/windows-docs-august-2018.md
   - name: Novedades de los documentos de Windows, julio de 2018
@@ -51,9 +53,9 @@ items:
     href: ../whats-new/windows-10-build-10240.md
 - name: API experimentales
   href: ../whats-new/experimental-apis.md
-ms.openlocfilehash: 167336081b680deecb9781c36e51da1559d1f91f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 136c6bd34dd3358d3f089aa06a664029a446b368
+ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962567"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9013944"
