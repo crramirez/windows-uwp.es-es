@@ -1,30 +1,31 @@
 ---
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
-title: Detalles de impuestos para aplicaciones de pago
+title: Detalles de impuestos
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
-ms.date: 01/02/2019
+ms.date: 01/31/2019
 ms.topic: article
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 896a92e009b7d9c33554f77d8da56730625f1f85
-ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
+ms.openlocfilehash: cf57fa923297b8e4a57d7c5ca4668868bfae7038
+ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "8990343"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042495"
 ---
-# <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
+# <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para los desarrolladores de juego o aplicación de Windows y los editores de Azure Marketplace
 
 
-Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes.
+Para comprender su impuesto consideraciones para la selección de precios y la responsabilidad fiscal en el acuerdo para desarrolladores o el acuerdo de editor modernos, consulta tus países/regiones de distribución en las tablas siguientes.
 
 > [!NOTE]
 > Puede que el ajuste de expansión comercial tenga implicaciones en el pago en un conjunto limitado de países/regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y la lista de [países/regiones afectados](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!IMPORTANT]
-> El tipo impositivo está sujeto a cambios en cualquier momento. Microsoft no puede garantizar que los tipos indicados en las tablas siguientes sean precisos en todo momento.
-> 
-> La responsabilidad fiscal y las circunstancias de países o regiones de revendedores (tal y como se describe [a continuación](#reseller-countriesregions)) se tratan en el Documento C del [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), sin perjuicio de la información incluida en la siguiente tabla.
+> Responsabilidad fiscal para países o regiones de revendedores y las circunstancias (como se describe [a continuación](#reseller-countriesregions)) se explica en el documento C del [Acuerdo para desarrolladores](https://docs.microsoft.com/en-us/legal/windows/agreements/app-developer-agreement), sin perjuicio de la información en la siguiente tabla.
+> Ten en cuenta que la columna de **implicación en el pago** se aplica únicamente a los desarrolladores de juego o aplicación de Windows. El tipo impositivo se explicó en esta columna está sujetos a cambios en cualquier momento y Microsoft no puede garantizar que los tipos indicados en las tablas siguientes siempre será precisos.
+
+
 
  
 
@@ -262,9 +263,16 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Zambia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Zimbabue                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 
- 
+Lo siguiente se aplica solo a Azure Marketplace editores, sin perjuicio de lo contrario anteriormente: 
 
-## <a name="mixed-remittance-countriesregions"></a>Países/regiones con ingreso combinado
+| País o región                   | Consideración fiscal sobre la selección de precios                                                                                                             | Administración de impuestos                    | 
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| Australia (para las compras realizadas a través de todos los escenarios de compra del cliente, excepto el contrato Enterprise) | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. | Microsoft |
+| Australia (solo para las compras realizadas a través del escenario de compra del cliente de contrato Enterprise) | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. | Publisher |
+| Brasil | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. | Publisher **(países o regiones de revendedores de consulta)** |
+| México | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. | Publisher **(países o regiones de revendedores de consulta)** |
+
+## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Países/regiones con ingreso para desarrolladores de la aplicación o juego de Windows
 
 
 Determinados socios de facturación de Microsoft pueden cobrar y remitir los impuestos por ventas, uso, bienes y servicios, valor añadido o similares, si los hubiera, aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda en los países o regiones que se indican a continuación. Los [informes](payout-summary.md#downloading-payment-transactions) que Microsoft pone a tu disposición identificarán las transacciones para las que un socio de facturación ha recaudado impuestos de ventas, uso, bienes y servicios, valor añadido u otros impuestos similares aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda. Excepto en el caso de las transacciones que se describen en el informe, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto sobre las ventas, uso, bienes y servicios, valor añadido o similares en relación con la adquisición, por parte del cliente, de tus aplicaciones o productos desde la aplicación en estos países o regiones. Es tu responsabilidad revisar el informe que se te ha proporcionado, así como determinar y cumplir con tus obligaciones, si corresponde, de registrar, recaudar e ingresar impuestos con respecto a las transacciones relacionadas con tus aplicaciones o productos desde la aplicación.
@@ -274,20 +282,23 @@ Determinados socios de facturación de Microsoft pueden cobrar y remitir los imp
 | Sudáfrica                       |
 | Vietnam                            |
 
- 
-
 ## <a name="reseller-countriesregions"></a>Países o regiones de revendedores
 
-
 En determinados países o regiones, Microsoft actúa como revendedor, en vez de como su agente, a la hora de ofrecer sus aplicaciones y productos desde la aplicación en la Tienda. Para obtener más información acerca de los términos y condiciones para países o regiones de revendedores, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+
+A continuación se aplica solo a los desarrolladores de juegos y aplicaciones de Windows:   
 
 |                    Países o regiones de revendedores                                                                          |
 |------------------------------------------------------------------------------------------------------------------------|
 | China (excepto en los dispositivos de comunicación móvil con Windows Phone 7.x y en equipos con Windows 8.x) |
 | Brasil (solo para las compras realizadas a través de dispositivos con Windows 10)     |
 
- 
+A continuación se aplica solo a los editores de Azure Marketplace: 
 
+|                    Países o regiones de revendedores                                                                          |
+|------------------------------------------------------------------------------------------------------------------------|
+| Brasil (para las compras realizadas a través de todos los escenarios de compra de cliente, excepto CSP) |
+| México (solo para las compras realizadas a través del escenario de compra del cliente de contrato Enterprise) |
 
 
  
