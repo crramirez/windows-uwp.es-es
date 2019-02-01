@@ -5,12 +5,12 @@ ms.date: 01/11/2019
 ms.topic: article
 keywords: Windows 10, uwp, formularios windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 999a990dbbc98f4f1224ce55f48d99889afbb89a
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: efd7dc687b9aba2e3c07b0afefa2e4fa49b882b1
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024634"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042317"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usar la API de hospedaje en una aplicación de escritorio de XAML de UWP
 
@@ -55,9 +55,9 @@ La API de hospedaje de XAML de UWP tiene estos requisitos previos.
 
 * Windows 10 Insider Preview build 17709 (o una compilación posterior) y la compilación de Insider Preview correspondiente del SDK de Windows. Dado que es una característica en constante evolución, para una mejor experiencia se recomienda usar la compilación más reciente disponible.
 
-* Para usar la API de hospedaje en la aplicación de escritorio de XAML de UWP, tendrás que configurar el proyecto por lo que puedes llamar a las API de UWP:
+* Para usar la API de hospedaje en la aplicación de escritorio de XAML de UWP, tendrás que configurar el proyecto para que puedes llamar a las API de UWP.
 
-    * **Win32 de C++:** Te recomendamos que configures el proyecto para usar [C++ / WinRT](../cpp-and-winrt-apis/index.md). Descargar e instalar la [C++ / extensión de Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix) desde Visual Studio Marketplace y, a continuación, agrega el ```<CppWinRTEnabled>true</CppWinRTEnabled>``` propiedad en el archivo .vcxproj como se describe [aquí](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+    * **Win32 de C++:** Te recomendamos que configures el proyecto para usar [C++ / WinRT](../cpp-and-winrt-apis/index.md). Para obtener instrucciones, consulta [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / WinRT soporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
     * **Windows Forms y WPF:** Sigue [estas instrucciones](../porting/desktop-to-uwp-enhance.md).
 
@@ -313,6 +313,6 @@ La API de hospedaje de XAML comparte las mismas limitaciones que todos los demá
 |-------|------------|
 | La aplicación recibe una **COMException** con el siguiente mensaje: "AttachToWindow método error porque el HWND especificado desciende desde una ventana de nivel superior diferente que el HWND que anteriormente se pasó a AttachToWindow en el mismo subproceso". | Este error indica que la aplicación llama al método **IDesktopWindowXamlSourceNative.AttachToWindow** y pasa el HWND de una ventana que desciende desde una ventana de nivel superior diferentes que una ventana que especificaste en una llamada a este método anterior en el mismo subproceso.</p></p>Después de la aplicación llama a **IDesktopWindowXamlSourceNative.AttachToWindow** en un subproceso en particular, todos los demás objetos de [**DesktopWindowXamlSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) en el mismo subproceso solo pueden adjuntar a windows que son descendientes de la misma ventana de nivel superior la primera llamada a **IDesktopWindowXamlSourceNative.AttachToWindow**que se pasó. Cuando se cierran todos los objetos de **DesktopWindowXamlSource** para un subproceso en particular, el siguiente **DesktopWindowXamlSource** , a continuación, es gratuito adjuntar a cualquier ventana de nuevo.</p></p>Para resolver este problema, cierre todos los objetos de **DesktopWindowXamlSource** que están enlazadas a otras ventanas de nivel superior en este subproceso, o crean un nuevo subproceso para este **DesktopWindowXamlSource**. |
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Controles UWP en aplicaciones de escritorio](xaml-host-controls.md)

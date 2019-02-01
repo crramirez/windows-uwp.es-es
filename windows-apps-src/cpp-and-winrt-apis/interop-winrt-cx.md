@@ -5,12 +5,12 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, interoperabilidad, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: e1e4570320e9d48351ccb01052fc77d35ae03642
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: 558f3fa75e7dd599927a9d2ace256bf1feb98e77
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024574"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042307"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilidad entre C++/WinRT y C++/CX
 
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="example-project-showing-the-two-helper-functions-in-use"></a>Proyecto de ejemplo que muestra las dos funciones auxiliares en uso
 
-Para reproducir, de una manera sencilla, el escenario de migración gradualmente el código de C++ / proyecto CX a C++ / WinRT, puede comenzar creando un nuevo proyecto en Visual Studio usando uno de C++ / WinRT plantillas de proyecto (consulta [soporte de Visual Studio para C++ / WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)).
+Para reproducir, de una manera sencilla, el escenario de migración gradualmente el código de C++ / proyecto CX a C++ / WinRT, puede comenzar creando un nuevo proyecto en Visual Studio usando uno de C++ / WinRT plantillas de proyecto (consulta [soporte de Visual Studio para C++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
 
 Este proyecto de ejemplo también muestra cómo puedes usar los alias de espacio de nombres para las diferentes islas de código, con el fin de abordar las posibles colisiones de espacio de nombres entre la C++ / WinRT de proyección y C++ / proyección CX.
 

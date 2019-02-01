@@ -5,12 +5,12 @@ ms.date: 10/19/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, obtener, obteniendo, iniciado
 ms.localizationpriority: medium
-ms.openlocfilehash: 069212fd9a6e0bcf3fb024d7f28738dd3049f5e1
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: c0d11a8718f61666d6285d8a1c91b48992044b22
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024484"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042357"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
@@ -22,7 +22,7 @@ Para obtener acelerar con el uso de [C++ / WinRT](/windows/uwp/cpp-and-winrt-api
 ## <a name="a-cwinrt-quick-start"></a>Inicio rápido C++/WinRT
 
 > [!NOTE]
-> Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT, y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+> Para obtener información sobre cómo instalar y usar C++ / WinRT extensión de Visual Studio (VSIX) (que proporciona soporte para plantillas de proyecto) consulta [soporte de Visual Studio para C++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 Crea un nuevo proyecto **Aplicación de consola de Windows (C++/WinRT)**.
 
@@ -120,6 +120,8 @@ Tampoco es necesario controlar códigos de retorno HRESULT. C++/WinRT convierte 
 
 Esta sección muestra cómo se puede agregar C++ / WinRT soporte a un proyecto de aplicación de escritorio de Windows que es posible que tengas. Si no tienes un proyecto de aplicación de escritorio de Windows existente, puede seguir junto con estos pasos, una primera de crear. Por ejemplo, abre Visual Studio y crear un **Visual C++** \> **Escritorio de Windows** \> proyecto de**Aplicación de escritorio de Windows** .
 
+Opcionalmente, puede instalar la [C++ / extensión de Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix). Para obtener más información, consulta [soporte de Visual Studio para C++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+
 ### <a name="set-project-properties"></a>Establecer las propiedades de proyecto
 
 Ve a la propiedad **General**del proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Asegúrate de que la **Versión del SDK de Windows** está establecida en 10.0.17134.0 (Windows 10, versión 1803) o superior.
@@ -146,11 +148,9 @@ En `pch.h`, incluyen `winrt/base.h`.
 
 C++ / WinRT proyección de lenguaje depende de determinadas funciones de Windows Runtime libres (no miembro) y puntos de entrada, que requieren un vínculo a la biblioteca de paraguas [WindowsApp.lib](/uwp/win32-and-com/win32-apis) . Esta sección describen tres maneras de satisfacer al enlazador.
 
-La primera opción es agregar a tu Visual Studio proyecto todos C++ / WinRT MSBuild propiedades y destinos. Editar la `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
+La primera opción es agregar a tu Visual Studio proyecto todos C++ / WinRT MSBuild propiedades y destinos. Para ello, instale el [paquete de Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) en el proyecto. Abre el proyecto en Visual Studio, haz clic en **proyecto** \> **Administrar paquetes de NuGet …**  \>  **Examinar**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de búsqueda y, a continuación, haz clic en **instalar** para instalar el paquete para el proyecto.
 
-Como alternativa, puedes usar la configuración de vínculo de proyecto para vincular explícitamente `WindowsApp.lib`.
-
-O bien, puedes hacerlo en el código fuente (en `pch.h`, por ejemplo) de la siguiente manera.
+También puedes usar la configuración de enlace del proyecto para vincular explícitamente `WindowsApp.lib`. O bien, puedes hacerlo en el código fuente (en `pch.h`, por ejemplo) de la siguiente manera.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
@@ -164,7 +164,7 @@ Ahora puede compilar y vincular y agregar C++ / WinRT código al proyecto (por e
 * [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
 * [estructura de HRESULT-error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
 * [Gestión de errores con C++/WinRT](error-handling.md)
 * [Interoperabilidad entre C++/WinRT y C++/CX](interop-winrt-cx.md)
