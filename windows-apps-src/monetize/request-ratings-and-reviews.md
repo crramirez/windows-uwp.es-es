@@ -1,16 +1,16 @@
 ---
 Description: Learn about several ways you can programmatically enable customers to rate and review your app.
 title: Solicitar calificaciones y opiniones de tu aplicación
-ms.date: 06/15/2018
+ms.date: 01/22/2019
 ms.topic: article
 keywords: windows 10, uwp, calificaciones, opiniones
 ms.localizationpriority: medium
-ms.openlocfilehash: 377b71dba2fb62dfc562b56d40e65e43b0bd49c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b167f4cc40ee72e6405436bacee28f2f20b4623c
+ms.sourcegitcommit: 7a1899358cd5ce9d2f9fa1bd174a123740f98e7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946866"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042641"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y opiniones de tu aplicación
 
@@ -18,45 +18,94 @@ Puedes agregar código a la aplicación Plataforma universal de Windows (UWP) pa
 * Puedes mostrar un diálogo de calificaciones y opiniones directamente en el contexto de la aplicación.
 * Puedes abrir mediante programación la página de calificaciones y opiniones para tu aplicación en Microsoft Store.
 
-Cuando estés listo para analizar las clasificaciones y los datos de opiniones, puedes ver los datos en el centro de partners o usar la API de análisis de Microsoft Store para recuperar estos datos mediante programación.
+Cuando estés listo para analizar las clasificaciones y los datos de opiniones, puedes ver los datos en el centro de partners o usar la API de análisis de Microsoft Store para recuperar mediante programación estos datos.
 
 > [!IMPORTANT]
-> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas de la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador de código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas en la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador de código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
-## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un diálogo de calificaciones y opiniones en la aplicación
+## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un diálogo de clasificación y reseña en la aplicación
 
-Para mostrar mediante programación un cuadro de diálogo de la aplicación que pida al cliente que califique tu aplicación y envíe una opinión , llama al método [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Pasa el entero 16al parámetro *requestKind* y una cadena vacía al parámetro *parametersAsJson*, como se muestra en este ejemplo de código. Este ejemplo requiere la biblioteca [Json.NET](http://www.newtonsoft.com/json) de Newtonsoft y requiere el uso de instrucciones para los espacios de nombres **Windows.Services.Store**, **System.Threading.Tasks** y **Newtonsoft.Json.Linq**.
+Para mostrar mediante programación un cuadro de diálogo de la aplicación que pida al cliente que califique tu aplicación y envíe una opinión, llama al método de [RequestRateAndReviewAppAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestrateandreviewappasync) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) . 
 
 > [!IMPORTANT]
 > La solicitud para mostrar el diálogo de clasificación y opiniones se debe llamar en el subproceso de la interfaz de usuario en tu aplicación.
 
 ```csharp
-public async Task<bool> ShowRatingReviewDialog()
-{
-    StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
-        StoreContext.GetDefault(), 16, String.Empty);
+using Windows.ApplicationModel.Store;
 
-    if (result.ExtendedError == null)
+private StoreContext _storeContext;
+
+public async Task Initialize()
+{
+    if (App.IsMultiUserApp) // pseudo-code
     {
-        JObject jsonObject = JObject.Parse(result.Response);
-        if (jsonObject.SelectToken("status").ToString() == "success")
-        {
-            // The customer rated or reviewed the app.
-            return true;
-        }
+        IReadOnlyList<User> users = await User.FindAllAsync();
+        User firstUser = users[0];
+        _storeContext = StoreContext.GetForUser(firstUser);
+    }
+    else
+    {
+        _storeContext = StoreContext.GetDefault();
+    }
+}
+
+private async Task PromptUserToRateApp()
+{
+    // Check if we’ve recently prompted user to review, we don’t want to bother user too often and only between version changes
+    if (HaveWePromptedUserInPastThreeMonths())  // pseudo-code
+    {
+        return;
     }
 
-    // There was an error with the request, or the customer chose not to
-    // rate or review the app.
-    return false;
+    StoreRateAndReviewResult result = await 
+        _storeContext.RequestRateAndReviewAppAsync();
+
+    // Check status
+    switch (result.Status)
+    { 
+        case StoreRateAndReviewStatus.Succeeded:
+            // Was this an updated review or a new review, if Updated is false it means it was a users first time reviewing
+            if (result.UpdatedExistingRatingOrReview)
+            {
+                // This was an updated review thank user
+                ThankUserForReview(); // pseudo-code
+            }
+            else
+            {
+                // This was a new review, thank user for reviewing and give some free in app tokens
+                ThankUserForReviewAndGrantTokens(); // pseudo-code
+            }
+            // Keep track that we prompted user and don’t do it again for a while
+            SetUserHasBeenPrompted(); // pseudo-code
+            break;
+
+        case StoreRateAndReviewStatus.CanceledByUser:
+            // Keep track that we prompted user and don’t prompt again for a while
+            SetUserHasBeenPrompted(); // pseudo-code
+
+            break;
+
+        case StoreRateAndReviewStatus.NetworkError:
+            // User is probably not connected, so we’ll try again, but keep track so we don’t try too often
+            SetUserHasBeenPromptedButHadNetworkError(); // pseudo-code
+
+            break;
+
+        // Something else went wrong
+        case StoreRateAndReviewStatus.OtherError:
+        default:
+            // Log error, passing in ExtendedJsonData however it will be empty for now
+            LogError(result.ExtendedError, result.ExtendedJsonData); // pseudo-code
+            break;
+    }
 }
 ```
 
-El método **SendRequestAsync** usa un sistema sencillo de solicitud basado en números enteros y parámetros de datos basados en JSON para exponer varias operaciones de la Store para las aplicaciones. Al pasar el entero 16al parámetro *requestKind*, se emite una solicitud para mostrar el diálogo de calificaciones y opiniones y enviar los datos relacionados a la Store. Este método se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener una visión general de este método, consulta [Enviar solicitudes a Store](send-requests-to-the-store.md).
+El método **RequestRateAndReviewAppAsync** se introdujo en Windows 10, versión 1809, y solo se puede usar en proyectos destinados a Windows **10 de octubre de 2018 Update (10.0; Compilación 17763)** o una versión posterior de Visual Studio.
 
 ### <a name="response-data-for-the-rating-and-review-request"></a>Datos de respuesta para la solicitud de calificaciones y opiniones
 
-Una vez que envíes la solicitud para mostrar el diálogo de calificaciones y opiniones, la propiedad [Response](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.Response) del valor devuelto [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene una cadena con formato JSON que indica si la solicitud se realizó correctamente.
+Después de enviar la solicitud para mostrar la clasificación y revisar el cuadro de diálogo, la propiedad [ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult.extendedjsondata) de la clase [StoreRateAndReviewResult](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult) contiene una cadena con formato JSON que indica si la solicitud se realizó correctamente.
 
 El siguiente ejemplo muestra el valor devuelto para esta solicitud después de que el cliente envíe correctamente una calificación o reseña.
 
@@ -81,11 +130,11 @@ El siguiente ejemplo muestra el valor devuelto para esta solicitud después de q
 
 En la siguiente tabla se describen los campos en la cadena de datos con formato JSON.
 
-|  Campo  |  Descripción  |
-|----------------------|---------------|
-|  *status*                   |  Una cadena que indica si el cliente envió correctamente una calificación o reseña. Los valores admitidos son **success** y **aborted**.   |
-|  *data*                   |  Un objeto que contiene un valor booleano único denominado *updated*. Este valor indica si el cliente ha actualizado una calificación o reseña existente. El objeto *data* objeto solo se incluye en respuestas realizadas correctamente.   |
-|  *errorDetails*                   |  Una cadena que contiene la información de errores de la solicitud. |
+| Campo          | Descripción                                                                                                                                   |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| *status*       | Una cadena que indica si el cliente envió correctamente una calificación o reseña. Los valores admitidos son **success** y **aborted**. |
+| *data*         | Un objeto que contiene un valor booleano único denominado *updated*. Este valor indica si el cliente ha actualizado una calificación o reseña existente. El objeto *data* objeto solo se incluye en respuestas realizadas correctamente. |
+| *errorDetails* | Una cadena que contiene la información de errores de la solicitud.                                                                                     |
 
 ## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Iniciar la página de calificaciones y opiniones de la aplicación en la Store
 
