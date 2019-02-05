@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: ad0d342d773723981138619a07ea6ee37ecdc8dd
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f11207a774b1ffcebde95e316634592020e6ed49
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044978"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058506"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usar objetos de Windows Runtime en un entorno multiproceso
 En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime.
@@ -161,6 +161,6 @@ De manera predeterminada, las clases en el componente que pueden activarse son �
 Para los objetos que se ejecutan en el subproceso de la interfaz de usuario e inician excepciones cuando se las llama desde un subproceso distinto del subproceso de la interfaz de usuario, puedes usar el objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) del subproceso de la interfaz de usuario para enviar la llamada.
 
 ## <a name="see-also"></a>Consulta también
-[Guía de C#](/dotnet/articles/csharp/)
+[Guía de C#](/dotnet/csharp/)
 
-[Guía de Visual Basic](/dotnet/articles/visual-basic/)
+[Guía de Visual Basic](/dotnet/visual-basic/)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formulario
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c316ac97211e85b782bdbf8f5642889a7726a95
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 45c4acda953808a85363d1cec7c623dd79cc08f1
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037057"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058536"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -135,7 +135,7 @@ Cuando vayas a crear diseños más complejos con más elementos visuales, puedes
 
 Aunque hayas creado un formulario, los conceptos de diseños y controles son aplicables en todas las interfaces de usuario de XAML que puedas crear. No dudes en volver a través de los documentos te hemos vinculado y experimenta con el formulario que tienes, agregando nuevas funcionalidades de la interfaz de usuario y refinando la experiencia del usuario. Si quieres obtener instrucciones paso a paso a través de las características de diseño más detalladas, consulta nuestro [tutorial de diseño adaptativo](../design/basics/xaml-basics-adaptive-layout.md)
 
-Los formularios tampoco tienen que existir en vacío: podrías ir un paso más allá e incrustar los tuyos dentro de un [patrón principal/de detalles](../design/controls-and-patterns/master-details.md) o un [control dinámico](../design/controls-and-patterns/tabs-pivot.md). O si quieres ponerte a trabajar en el código subyacente de tu formulario, es posible que quieras empezar con nuestra [introducción a eventos](../xaml-platform/events-and-routed-events-overview.md).
+Los formularios tampoco tienen que existir en vacío: podrías ir un paso más allá e incrustar los tuyos dentro de un [patrón principal/de detalles](../design/controls-and-patterns/master-details.md) o un [control dinámico](../design/controls-and-patterns/pivot.md). O si quieres ponerte a trabajar en el código subyacente de tu formulario, es posible que quieras empezar con nuestra [introducción a eventos](../xaml-platform/events-and-routed-events-overview.md).
 
 ## <a name="useful-apis-and-docs"></a>API y documentos de utilidad
 
@@ -161,7 +161,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | [Formularios](../design/controls-and-patterns/forms.md) | Instrucciones generales para crear formularios. |
 | [Paneles de diseño](../design/layout/layout-panels.md) | Proporciona una descripción general de los tipos de paneles de diseño y dónde usarlos. |
 | [Patrón de maestro y detalles](../design/controls-and-patterns/master-details.md) | Un modelo de diseño que se puede implementar alrededor de uno o varios formularios. |
-| [Control dinámico](../design/controls-and-patterns/tabs-pivot.md) | Un control que puede contener uno o varios formularios. |
+| [Control dinámico](../design/controls-and-patterns/pivot.md) | Un control que puede contener uno o varios formularios. |
 | [Diseño adaptativo](../design/layout/responsive-design.md) | Una descripción general de los principios de diseño adaptativo a gran escala. | 
 | [Diseños adaptativos con XAML](../design/layout/layouts-with-xaml.md) | Información específica sobre los estados visuales y otras implementaciones de diseño adaptativo. |
 | [Tamaños de pantalla para diseño adaptativo](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | Instrucciones sobre qué ámbitos deben cubrirse para los tamaños de pantalla para diseños adaptativos. |

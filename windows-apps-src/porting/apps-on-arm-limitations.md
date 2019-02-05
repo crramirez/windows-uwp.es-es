@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10 s, always connected, siempre conectado, limitations, limitaciones, windows 10 on ARM, windows 10 en ARM
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42a2866642d11d1d97cc7b0b663486723499a5cf
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919281"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058676"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Limitaciones de aplicaciones y experiencias en ARM
 Windows 10 en ARM tiene las siguientes limitaciones necesarias:
 
-- **Solo se admiten controladores ARM64**. Al igual que con todas las arquitecturas, los controladores modo kernel, los controladores [Marco de controlador de modo usuario (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión deben compilarse para que coincidan con la arquitectura del sistema operativo. Mientras el sistema operativo de ARM tiene las funcionalidades para emular aplicaciones de modo usuario x86, los controladores implementados para otras arquitecturas (como x64 o x86) actualmente no se emulan y, por consiguiente, no se admiten en esta plataforma. Cualquier aplicación que funcione con su propio controlador personalizado debe migrarse a ARM64. En escenarios limitados, la aplicación se puede ejecutar como x86 en emulación, pero la parte del controlador de la aplicación debe migrarse a ARM64. Para obtener más información sobre la compilación del controlador para ARM64, consulta [Compilar controladores de ARM64 con el WDK](https://review.docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers?branch=rs4-arm64).
+- **Solo se admiten controladores ARM64**. Al igual que con todas las arquitecturas, los controladores modo kernel, los controladores [Marco de controlador de modo usuario (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión deben compilarse para que coincidan con la arquitectura del sistema operativo. Mientras el sistema operativo de ARM tiene las funcionalidades para emular aplicaciones de modo usuario x86, los controladores implementados para otras arquitecturas (como x64 o x86) actualmente no se emulan y, por consiguiente, no se admiten en esta plataforma. Cualquier aplicación que funcione con su propio controlador personalizado debe migrarse a ARM64. En escenarios limitados, la aplicación se puede ejecutar como x86 en emulación, pero la parte del controlador de la aplicación debe migrarse a ARM64. Para obtener más información sobre la compilación del controlador para ARM64, consulta [Compilar controladores de ARM64 con el WDK](/windows-hardware/drivers/develop/building-arm64-drivers).
 
 - **Las aplicaciones x64 no se admiten**. Windows 10 en ARM no admite la emulación de aplicaciones x64.
 

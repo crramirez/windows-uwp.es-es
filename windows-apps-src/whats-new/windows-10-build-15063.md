@@ -6,18 +6,18 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
-ms.openlocfilehash: 3791887baaefeca0052a10c60d4650d5623ba3fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3d0a17bbb46cf2b855749f7349f86268b915ec6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947260"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050558"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>Novedades para desarrolladores en Windows 10, compilación 15063
 
-La compilación 15063 de Windows 10 (también conocida como Creators Update o versión 1703), en combinación con Visual Studio 2017 y el SDK actualizado, proporciona las herramientas, características y experiencias necesarias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+La compilación 15063 de Windows 10 (también conocida como Creators Update o versión 1703), en combinación con Visual Studio 2017 y el SDK actualizado, proporciona las herramientas, características y experiencias necesarias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
-A continuación te ofrecemos una colección de características nuevas y mejoradas de interés para los desarrolladores. Para obtener una lista completa de los nuevos espacios de nombres agregado a Windows SDK, consulta [Cambios en las API de la compilación 15063 de Windows 10](windows-10-build-15063-api-diff.md). Para obtener más información sobre las características destacadas de Windows 10, consulta [Lo bueno de Windows 10](http://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Funcionalidades de la plataforma de desarrolladores de Windows](https://developer.microsoft.com/windows/platform/features) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
+A continuación te ofrecemos una colección de características nuevas y mejoradas de interés para los desarrolladores. Para obtener una lista completa de los nuevos espacios de nombres agregado a Windows SDK, consulta [Cambios en las API de la compilación 15063 de Windows 10](windows-10-build-15063-api-diff.md). Para obtener más información sobre las características destacadas de Windows 10, consulta [Lo bueno de Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Funcionalidades de la plataforma de desarrolladores de Windows](https://developer.microsoft.com/windows/platform/features) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
 
 ## <a name="windows-10-build-15063---march-2017"></a>Windows 10, compilación 15063: marzo de 2017
 

@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db25954b7fc6541ac5f5900236e61cb8da488be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922386"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058726"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -52,7 +52,7 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 + **src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local.
 + **spritesheet-src**
-    + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesaria para animaciones de spritesheet.
+    + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesario para animaciones de spritesheet.
 + **spritesheet-height**
     + Altura del fotograma (en píxeles). Solo es necesaria para animaciones de spritesheet.
 + **spritesheet-fps**
@@ -78,7 +78,7 @@ Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint
 > Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
 > Si no se garantiza que los identificadores remotos utilizados por tu aplicación sean únicos y estables, puedes utilizar la [clase RemoteIdHelper](https://msdn.microsoft.com/en-us/library/windows/apps/jj207024(v=vs.105).aspx#BKMK_UsingtheRemoteIdHelperclass) para agregar una etiqueta única a todos tus identificadores remotos antes de agregarlos al sistema. O puedes decidir no utilizar en absoluto la propiedad RemoteId y en su lugar crear una propiedad personalizada extendida en la que almacenar los identificadores remotos de tus contactos.
 
-Además del segundo enlace y la carga, debes incluir otra carga en el primer enlace para la notificación del sistema reserva. La notificación usará esto si se fuerza a revertir a una notificación del sistema normal (explicado detalladamente al [final de este artículo](https://review.docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
+Además del segundo enlace y la carga, debes incluir otra carga en el primer enlace para la notificación del sistema reserva. La notificación usará esto si se fuerza a revertir a una notificación del sistema normal (explicado detalladamente al [final de este artículo](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
 
 ## <a name="creating-the-notification"></a>Creación de la notificación
 Puedes crear una plantilla de notificación de Mis allegados tal como lo harías para una [notificación del sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).

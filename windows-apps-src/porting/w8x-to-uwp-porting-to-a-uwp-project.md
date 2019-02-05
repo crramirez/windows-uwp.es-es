@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 428f6787dfeb18d7ebf02f96acea2a6ab55c7fe7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c7a40d81171113656a39dda2fe02e0701fdd8ba4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938596"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050365"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP
 
 
 
-Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. En la primera sección de este tema se describe esa segunda opción, pero el resto del tema contiene información adicional aplicable a ambas opciones. También puedes mantener el nuevo proyecto de Windows 10 en la misma solución que tus proyectos existentes y compartir archivos de código fuente mediante un proyecto compartido. También puedes mantener el nuevo proyecto en una solución específica y compartir archivos de código fuente mediante la característica de archivos vinculados de Visual Studio.
+Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. En la primera sección de este tema se describe esa segunda opción, pero el resto del tema contiene información adicional aplicable a ambas opciones. También puedes mantener tu nuevo proyecto de Windows 10 en la misma solución que tus proyectos existentes y compartir archivos de código fuente mediante un proyecto compartido. También puedes mantener el nuevo proyecto en una solución específica y compartir archivos de código fuente mediante la característica de archivos vinculados de Visual Studio.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Crear el proyecto y copiar archivos en él
 
 Estos pasos se centran en la opción de crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. Algunos de los aspectos específicos relacionados con el número de proyectos que creas y qué archivos copias, dependerán de los factores y decisiones descritos en [Si tienes una aplicación Universal 8.1](w8x-to-uwp-root.md) y las secciones siguientes. Estos pasos suponen el caso más simple.
 
-1.  Inicia Microsoft Visual Studio2015 y crea un nuevo proyecto de aplicación vacía (Windows Universal). Para obtener más información, consulta [rápidamente la aplicación de Windows Runtime 8.x con plantillas (C#, en C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivo.
+1.  Inicia Microsoft Visual Studio2015 y crea un nuevo proyecto de aplicación vacía (Windows Universal). Para obtener más información, consulta [rápidamente la aplicación de Windows Runtime 8.x mediante plantillas (C#, en C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivo.
 2.  En tu proyecto de aplicación Universal 8.1, identifica todos los archivos de código fuente y los archivos de activos visuales que quieres reutilizar. Con el Explorador de archivos, copia los modelos de datos, los modelos de vista, los recursos visuales, los diccionarios de recursos, la estructura de carpetas y cualquier otro elemento que quieras reutilizar en tu nuevo proyecto. Copia o crea subcarpetas en el disco según sea necesario.
 3.  Copia vistas (por ejemplo, MainPage.xaml y MainPage.xaml.cs) en el nuevo proyecto también. De nuevo, crea nuevas subcarpetas según sea necesario y quita las vistas existentes del proyecto. Pero antes de sobrescribir o quitar una vista que Visual Studio ha generado, conserva una copia, ya que puede resultar útil consultarla más adelante. La primera fase de migración de una aplicación Universal 8.1 se centra en que tenga un buen aspecto y funcione correctamente en una familia de dispositivos. Más adelante, desviarás tu atención a asegurarte de que las vistas de adaptan correctamente a todos los factores de forma y, opcionalmente, a agregar código adaptable para obtener el máximo partido de una familia de dispositivos en particular.
 4.  En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Selecciona los archivos que has copiado, haz clic con el botón secundario en ellos y haz clic en **Incluir en el proyecto**. Esto incluirá automáticamente sus carpetas contenedoras. Entonces puedes desactivar **Mostrar todos los archivos** si quieres. Un flujo de trabajo alternativo, si lo prefieres, es usar el comando **Agregar elemento existente**, después de crear las subcarpetas necesarias en el **Explorador de soluciones** de Visual Studio. Vuelve a comprobar que los recursos visuales tienen la opción **Acción de compilación** establecida en **Contenido** y la opción **Copiar en el directorio de resultados** establecida en **No copiar**.
@@ -39,7 +39,7 @@ Encontrarás que refactorizar un poco o agregar código adaptable (lo cual se ex
 -   Debe poder eliminar muchas de las directivas de compilación condicional en el código fuente de la aplicación Universal 8.1 si solo necesitas admitir Windows 10. Consulta [Compilación condicional y código adaptable](#conditional-compilation-and-adaptive-code) en este tema.
 -   Para usar características que no están disponibles en todas las familias de dispositivos (por ejemplo, impresoras, escáneres o el botón de la cámara) puedes escribir código adaptable. Consulta el tercer ejemplo en [Compilación condicional y código adaptable](#conditional-compilation-and-adaptive-code) en este tema.
 -   Si quieres admitir Windows 8.1, Windows Phone 8.1 y Windows 10, a continuación, puedes mantener tres proyectos en la misma solución y compartir código con un proyecto compartido. Como alternativa, puedes compartir archivos de código fuente entre proyectos. Pasos a seguir: en Visual Studio, haz clic con el botón derecho en el proyecto en **Explorador de soluciones**, selecciona **Agregar elemento existente**, selecciona los archivos para compartir y haz clic en **Agregar como vínculo**. Almacena tus archivos de código fuente en una carpeta común en el sistema de archivos donde puedan verlos los proyectos vinculados a ellos. Y no te olvides de agregarlos al control de origen.
--   Para la reutilización en el nivel binario, en lugar del nivel de código fuente, consulta [Crear componentes de Windows en tiempo de ejecución en C# y Visual Basic](http://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx). También hay bibliotecas de clases portables que admiten el subconjunto de las API de .NET que están disponibles en .NET Framework para Windows 8.1, Windows Phone 8.1 y aplicaciones de Windows 10 (núcleo. NET) y el conjunto completo de .NET Framework. Los conjuntos de bibliotecas de clases portables tienen compatibilidad binaria con estas plataformas. Usa Visual Studio para crear un proyecto destinado a una biblioteca de clases portable. Consulta [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx).
+-   Para la reutilización en el nivel binario, en lugar del nivel de código fuente, consulta [Crear componentes de Windows en tiempo de ejecución en C# y Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx). También hay bibliotecas de clases portables que admiten el subconjunto de las API de .NET que están disponibles en .NET Framework para Windows 8.1, Windows Phone 8.1 y aplicaciones de Windows 10 (núcleo. NET) y el conjunto completo de .NET Framework. Los conjuntos de bibliotecas de clases portables tienen compatibilidad binaria con estas plataformas. Usa Visual Studio para crear un proyecto destinado a una biblioteca de clases portable. Consulta [Desarrollo multiplataforma con la biblioteca de clases portable](https://msdn.microsoft.com/library/gg597391.aspx).
 
 ## <a name="extension-sdks"></a>SDK de extensiones
 
@@ -172,8 +172,8 @@ El siguiente tema es [Solución de problemas](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Desarrollar aplicaciones para la Plataforma universal de Windows.](http://msdn.microsoft.com/library/dn975273.aspx)
-* [Rápidamente su tiempo de ejecución de Windows app 8.x con plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
+* [Desarrollar aplicaciones para la Plataforma universal de Windows.](https://msdn.microsoft.com/library/dn975273.aspx)
+* [Rápidamente su tiempo de ejecución de Windows app 8.x mediante plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Creación de componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx)
+* [Desarrollo multiplataforma con la biblioteca de clases portable](https://msdn.microsoft.com/library/gg597391.aspx)
 

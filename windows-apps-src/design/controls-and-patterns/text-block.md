@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b109dff2896d2db01892d2b62a511d392f8054b3
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 692b8837f3bd74dfc5f74bee02786213c9a898f2
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037167"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058526"
 ---
 # <a name="text-block"></a>Bloque de texto
 
@@ -80,7 +80,7 @@ También puedes agregar contenido mediante la colocación de elementos de conten
     <Italic>italic</Italic>, or a <Bold><Italic>combination</Italic></Bold>.</TextBlock>
 ```
 
-Los elementos que se derivan de la clase Inline, como Bold, Italic, Run, Span y LineBreak, habilitan un formato diferente para las distintas partes del texto. Para obtener más información, consulta la sección [Formato de texto](). El elemento Hyperlink en línea te permite agregar un hipervínculo al texto. Sin embargo, al usar Inlines también se deshabilita la representación de texto de la ruta de acceso rápido, lo que se describe en la siguiente sección.
+Los elementos que se derivan de la clase Inline, como Bold, Italic, Run, Span y LineBreak, habilitan un formato diferente para las distintas partes del texto. Para obtener más información, consulta la sección [Formato de texto](#formatting-text). El elemento Hyperlink en línea te permite agregar un hipervínculo al texto. Sin embargo, al usar Inlines también se deshabilita la representación de texto de la ruta de acceso rápido, lo que se describe en la siguiente sección.
 
 
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento

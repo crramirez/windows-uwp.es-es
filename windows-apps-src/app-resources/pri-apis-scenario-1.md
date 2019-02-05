@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b14e413a5629dfb5447750e32c42c4efafef8fa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0ccb9447e9594f71907f0da5d0e15f9c6c65bb6b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931452"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058846"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Escenario 1: Generar un archivo PRI de los recursos de cadena y los archivos de activos
 En este escenario, usaremos las [API de indexación de recursos de paquetes (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) para que una aplicación nueva represente nuestro sistema de compilación personalizado. Recuerda que el propósito de este sistema de compilación personalizado consiste en crear archivos PRI para una aplicación para UWP de destino. Por lo tanto, como parte de este tutorial, vamos a crear algunos archivos de recursos de muestra (con cadenas y otros tipos de recursos) para representar los recursos de esa aplicación para UWP de destino.
@@ -119,7 +119,7 @@ std::wstring filePathPRIDumpBasic{ generatedPRIsFolder + L"\\resources-pri-dump-
 ::CreateDirectory(generatedPRIsFolder.c_str(), nullptr);
 ```
 
-Inmediatamente después de llamar a Inicializar COM, declara un manipulador de indizador de recursos y después llama a [**MrmCreateResourceIndexer**]() para crear un indizador de recursos.
+Inmediatamente después de llamar a Inicializar COM, declara un manipulador de indizador de recursos y después llama a [**MrmCreateResourceIndexer**](/windows/desktop/menurc/mrmcreateresourceindexer) para crear un indizador de recursos.
 
 ```cppwinrt
 MrmResourceIndexerHandle indexer;
@@ -139,7 +139,7 @@ Esta es una explicación de los argumentos que se pasan a **MrmCreateResourceInd
 - Lista de calificadores de recursos predeterminados.
 - Puntero a nuestro manipulador de indizador de recursos para que la función puede establecerlo.
 
-El siguiente paso es agregar nuestros recursos al indizador de recursos que acabamos de crear. `resources.resw` es un archivo de recursos (.resw) que contiene las cadenas neutrales para nuestra aplicación para UWP de destino. Desplázate hacia arriba (en este tema) si quieres ver su contenido. `de-DE\resources.resw` contiene nuestras cadenas de alemán y `en-US\resources.resw`, nuestras cadenas en inglés. Para agregar los recursos de cadena dentro de un archivo de recursos a un indizador de recursos, llama a [**MrmIndexResourceContainerAutoQualifiers**](). En tercer lugar, llama a la función [**MrmIndexFile**]() en un archivo que contenga un recurso de imagen independiente para el indizador de recursos.
+El siguiente paso es agregar nuestros recursos al indizador de recursos que acabamos de crear. `resources.resw` es un archivo de recursos (.resw) que contiene las cadenas neutrales para nuestra aplicación para UWP de destino. Desplázate hacia arriba (en este tema) si quieres ver su contenido. `de-DE\resources.resw` contiene nuestras cadenas de alemán y `en-US\resources.resw`, nuestras cadenas en inglés. Para agregar los recursos de cadena dentro de un archivo de recursos a un indizador de recursos, llama a [**MrmIndexResourceContainerAutoQualifiers**](/windows/desktop/menurc/mrmindexresourcecontainerautoqualifiers). En tercer lugar, llama a la función [**MrmIndexFile**](/windows/desktop/menurc/mrmindexfile) en un archivo que contenga un recurso de imagen independiente para el indizador de recursos.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"resources.resw"));
@@ -150,19 +150,19 @@ El siguiente paso es agregar nuestros recursos al indizador de recursos que acab
 
 En la llamada a **MrmIndexFile**, el valor L L"ms-resource:///Files/sample-image.png" es el URI del recurso. El primer segmento de ruta de acceso es "Archivos" y eso es lo que se usará como el nombre del subárbol del mapa de recursos cuando más adelante generamos un archivo PRI de este indizador de recursos.
 
-Habiendo informado del indizador de recursos acerca de nuestros archivos de recursos, es hora de que nos genere un archivo PRI en disco mediante una llamada a la función [**MrmCreateResourceFile**]().
+Habiendo informado del indizador de recursos acerca de nuestros archivos de recursos, es hora de que nos genere un archivo PRI en disco mediante una llamada a la función [**MrmCreateResourceFile**](/windows/desktop/menurc/mrmcreateresourcefile).
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmCreateResourceFile(indexer, MrmPackagingModeStandaloneFile, MrmPackagingOptionsNone, generatedPRIsFolder.c_str()));
 ```
 
-En este punto, se ha creado un archivo PRI llamado `resources.pri` dentro de una carpeta denominada `Generated PRIs`. Ahora que hemos terminado con el indizador de recursos, llamamos a [**MrmDestroyIndexerAndMessages**]() para destruir su manipulador y liberar los recursos de máquina que asignó.
+En este punto, se ha creado un archivo PRI llamado `resources.pri` dentro de una carpeta denominada `Generated PRIs`. Ahora que hemos terminado con el indizador de recursos, llamamos a [**MrmDestroyIndexerAndMessages**](/windows/desktop/menurc/mrmdestroyindexerandmessages) para destruir su manipulador y liberar los recursos de máquina que asignó.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDestroyIndexerAndMessages(indexer));
 ```
 
-Dado que un archivo PRI es binario, va a ser más fácil ver lo que acabamos de generar si volcamos el archivo PRI binario en su XML equivalente. Una llamada a [**MrmDumpPriFile**]() hace precisamente eso.
+Dado que un archivo PRI es binario, va a ser más fácil ver lo que acabamos de generar si volcamos el archivo PRI binario en su XML equivalente. Una llamada a [**MrmDumpPriFile**](/windows/desktop/menurc/mrmdumpprifile) hace precisamente eso.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));

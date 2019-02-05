@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, mediación de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9197dd4b62df26ff63e469063573789da948c767
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945757"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049822"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Servicio de mediación de anuncios de Microsoft
 
-Cuando usas el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) para [mostrar anuncios en tus aplicaciones](display-ads-in-your-app.md), también puede usar opcionalmente el servicio de mediación de anuncios de Microsoft para maximizar los ingresos por anuncios. Este artículo proporciona información general sobre el servicio de mediación de anuncios y sus objetivos.
+Cuando usas el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) para [mostrar anuncios en tus aplicaciones](display-ads-in-your-app.md), también puede usar opcionalmente el servicio de mediación de anuncios de Microsoft para maximizar los ingresos por anuncios. Este artículo proporciona información general sobre el servicio de mediación de anuncios y sus objetivos.
 
 El servicio de mediación de anuncios es una parte de la [plataforma de monetización de anuncios de Microsoft](https://developer.microsoft.com/windows/ad-monetization-platform). La plataforma se compone de las siguientes partes.
 
@@ -55,6 +55,6 @@ El servicio de mediación de anuncios funciona con varias redes de anuncios para
 
 ## <a name="related-topics"></a>Artículos relacionados
 
-* [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp)
+* [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp)
 * [Configuración de la mediación](../publish/in-app-ads.md#mediation-settings)
 * [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)

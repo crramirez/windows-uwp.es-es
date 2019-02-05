@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b0ed1c7f01e8cb06f6950f2ad23a42605e97c1a0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 80f9c8bad9445bd9cfef9b09c00f99929fda37aa
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050738"
+ms.locfileid: "9058666"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correcciones de tiempo de ejecución a un paquete MSIX con el marco de soporte técnico de paquete
 
@@ -86,7 +86,7 @@ Vamos a través de cada tarea.
 
 ### <a name="create-the-package-layout-folder"></a>Crear la carpeta de diseño de paquete
 
-Si ya tienes un archivo .msix (o .appx), puede desempaquetar su contenido en una carpeta de diseño que se usará como el área de ensayo para el paquete. Puedes hacerlo desde un símbolo del sistema con la herramienta makemsix, en función de la ruta de acceso de instalación del SDK, esto es donde encontrarás la herramienta makeappx.exe en tu equipo Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makeappx.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makeappx.exe
+Si ya tienes un archivo .msix (o .appx), puede desempaquetar su contenido en una carpeta de diseño que se usará como el área de ensayo para el paquete. Puedes hacerlo desde un símbolo del sistema con la herramienta MakeAppx, en función de la ruta de acceso de instalación del SDK, esto es donde encontrarás la herramienta makeappx.exe en tu equipo Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makeappx.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makeappx.exe
 
 ```ps
 makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
@@ -514,7 +514,7 @@ Mientras que Visual Studio permite el desarrollo más simple y la experiencia de
 
 En primer lugar, F5 debugging ejecuta la aplicación mediante la implementación de archivos sueltos de la ruta de acceso de carpeta de diseño de paquete, en lugar de la instalación desde un .msix / paquete .appx.  Por lo general, la carpeta de diseño no tiene las mismas restricciones de seguridad como una carpeta de paquete instalado. Como resultado, puede no ser posible reproducir errores de denegación de acceso de ruta de acceso de paquete antes de aplicar una corrección de tiempo de ejecución.
 
-Para solucionar este problema, utilice .msix / la implementación del paquete .appx en lugar de F5 sueltos implementación de archivo.  Para crear un .msix / archivo de paquete .appx usar la utilidad [MakeMSIX](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) desde el SDK de Windows, como se describió anteriormente. O bien, desde dentro de Visual Studio, haz clic en el nodo del proyecto de aplicación y seleccionar **almacén**->**Crear paquetes de aplicaciones**.
+Para solucionar este problema, utilice .msix / la implementación del paquete .appx en lugar de F5 sueltos implementación de archivo.  Para crear un .msix / .appx paquete archivo, usa la herramienta [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) desde el SDK de Windows, como se describió anteriormente. O bien, desde dentro de Visual Studio, haz clic en el nodo del proyecto de aplicación y seleccionar **almacén**->**Crear paquetes de aplicaciones**.
 
 Otro problema con Visual Studio es que no tiene compatibilidad integrada para adjuntar a los procesos secundarios que se inicia el depurador.   Esto dificulta la lógica en la ruta de acceso de inicio de la aplicación de destino, que debe estar conectada manualmente por Visual Studio después de iniciarse de depuración.
 

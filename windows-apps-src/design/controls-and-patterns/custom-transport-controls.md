@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2101eba9c78c87339af5f1bd46e6afc81eacf6af
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: d4b9e82b0ab5e798bb0b29c4d5127cfe773db5f7
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047430"
+ms.locfileid: "9058656"
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
@@ -57,7 +57,7 @@ Puedes personalizar el aspecto del control al modificar la plantilla predetermin
 - En la tercera sección se incluye [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), que contiene los distintos elementos MediaTransportControls juntos y define la distribución de los componentes.
 
 > [!NOTE]
-> Para más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
+> Para más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
 
 En las siguientes secciones se muestra cómo personalizar muchos de los elementos principales de los controles de transporte:
 - [
@@ -92,7 +92,7 @@ Si solo quieres modificar la apariencia de MediaTransportControls, también pued
 </MediaPlayerElement>
 ```
 
-Para obtener más información sobre cómo modificar estilos y plantillas, consulta [Controles de estilos]() y [Plantillas de control]().
+Para obtener más información sobre cómo modificar estilos y plantillas, consulta [Controles de estilos](/windows/uwp/design/controls-and-patterns/xaml-styles) y [Plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates).
 
 ### <a name="create-a-derived-control"></a>Crear un control derivado
 

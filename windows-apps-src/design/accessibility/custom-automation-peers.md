@@ -1,19 +1,19 @@
 ---
 Description: Describes the concept of automation peers for Microsoft UI Automation, and how you can provide automation support for your own custom UI class.
 ms.assetid: AA8DA53B-FE6E-40AC-9F0A-CB09637C87B4
-title: Automatización del mismo nivel personalizada
+title: Personalizar sistemas de automatización del mismo nivel
 label: Custom automation peers
 template: detail.hbs
 ms.date: 07/13/2018
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18d3affe5f142c56314d132ba488d87c6f285723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 13bf5d60b547f71d0cd83e5790236534d05d2544
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920139"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050538"
 ---
 # <a name="custom-automation-peers"></a>Automatización del mismo nivel personalizada  
 
@@ -318,7 +318,7 @@ Para obtener una lista de los modelos de proveedores que están disponibles en l
 
 Un sistema del mismo nivel puede informar que admite más de un patrón. En ese caso, la invalidación debería incluir lógica de ruta de acceso devuelta para cada valor [**PatternInterface**](https://msdn.microsoft.com/library/windows/apps/BR242496) admitido y devolver el sistema del mismo nivel en cada caso coincidente. Se espera que el autor de la llamada solicite solo una interfaz por vez, y depende de él realizar la conversión a la interfaz esperada.
 
-Este es un ejemplo de una invalidación [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para un sistema del mismo nivel personalizado. Notifica la compatibilidad de dos patrones: [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) y [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653). Este control es un control de visualización de medios que se puede mostrar en pantalla completa (modo de conmutación) y que tiene una barra de progreso en la que los usuarios pueden seleccionar una posición (el control de intervalo). Este código procedía de la [muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570).
+Este es un ejemplo de una invalidación [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para un sistema del mismo nivel personalizado. Notifica la compatibilidad de dos patrones: [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) y [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653). Este control es un control de visualización de medios que se puede mostrar en pantalla completa (modo de conmutación) y que tiene una barra de progreso en la que los usuarios pueden seleccionar una posición (el control de intervalo). Este código procedía de la [muestra de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570).
 
 
 ```csharp
@@ -538,7 +538,7 @@ Más allá de esto, los sistemas del mismo nivel deberían ser relativamente con
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
-* [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Muestra de accesibilidad en XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)
 * [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185)
 * [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer)

@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 88b35c4ebc7e3b3f5c047ed5e1cef9d46a011909
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 6578ddfd077e121e0eca5a5fcc8c06cdec26aa42
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037027"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058616"
 ---
 # <a name="scroll-viewer-controls"></a>Controles de visor de desplazamiento
 
@@ -143,7 +143,7 @@ En los casos donde un ScrollViewer es explícito en el XAML, como se muestra en 
 - Si quieres que el usuario pueda generar una vista panorámica en ambas direcciones sobre un área mayor, y quizá también aplicar zoom también, por ejemplo, si quieres que el usuario pueda generar una vista panorámica y aplicar zoom sobre una imagen a tamaño completo (en lugar de una imagen con tamaño ajustado a la pantalla), coloca la imagen dentro de un visor de desplazamiento.
 - Si el usuario va a desplazarse sobre un fragmento de texto largo, configura el visor para un desplazamiento solamente vertical.
 - El visor de desplazamiento que uses debe contener un solo objeto. Ten en cuenta que ese objeto puede ser un panel de diseño que contenga a su vez cualquier número de objetos.
-- No coloques un control [dinámico](tabs-pivot.md) dentro de un visor de desplazamiento para evitar conflictos con la lógica de desplazamiento del control dinámico.
+- No coloques un control [dinámico](pivot.md) dentro de un visor de desplazamiento para evitar conflictos con la lógica de desplazamiento del control dinámico.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a29f58ff8dc842fd985a44f94ff44baea51dc2e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7af61b7d442fee7eff6399a7a5d143adb53fb560
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941007"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058556"
 ---
 # <a name="web-view"></a>Vista web
  
@@ -73,7 +73,7 @@ webView1.Navigate("http://www.contoso.com");
 
 Para navegar a un URI con una solicitud POST y encabezados HTTP, usa el método [NavigateWithHttpRequestMessage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage.aspx). Este método solo admite [HttpMethod.Post](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.post.aspx) y [HttpMethod.Get](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.get.aspx) como valores de la propiedad [HttpRequestMessage.Method](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httprequestmessage.method.aspx). 
 
-Para cargar contenido sin comprimir y sin cifrar desde los almacenes de datos [LocalFolder]() o [TemporaryFolder]() de la aplicación, usa el método **Navigate** con un **URI** que utilice el [esquema ms-appdata](). La compatibilidad de la vista web con este esquema requiere que coloques el contenido en una subcarpeta de la carpeta local o temporal. Esto permite la navegación a los elementos URI como ms-appdata:///local/*folder*/*file*.html and ms-appdata:///temp/*folder*/*file*.html. (Para cargar archivos comprimidos o cifrados, consulta [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx).) 
+Para cargar contenido sin comprimir y sin cifrar desde los almacenes de datos [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) o [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) de la aplicación, usa el método **Navigate** con un **URI** que utilice el [esquema ms-appdata](/windows/uwp/app-resources/uri-schemes). La compatibilidad de la vista web con este esquema requiere que coloques el contenido en una subcarpeta de la carpeta local o temporal. Esto permite la navegación a los elementos URI como ms-appdata:///local/*folder*/*file*.html and ms-appdata:///temp/*folder*/*file*.html. (Para cargar archivos comprimidos o cifrados, consulta [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx).) 
 
 Cada una de estas subcarpetas de primer nivel está aislada del contenido de otras subcarpetas de primer nivel. Por ejemplo, puedes navegar a ms-appdata:///temp/folder1/file.html, pero no puedes tener en este archivo un vínculo a ms-appdata:///temp/folder2/file.html. Sin embargo, sí puedes vincular al contenido HTML en el paquete de la aplicación mediante el **esquema ms-appx-web**, y al contenido web mediante los esquemas de URI **http** y **https**.
 

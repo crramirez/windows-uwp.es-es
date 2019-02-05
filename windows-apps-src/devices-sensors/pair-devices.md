@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ccff9d892fbedc62cf1b54e374a0071877805731
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921006"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050438"
 ---
 # <a name="pair-devices"></a>Emparejar dispositivos
 
@@ -27,7 +27,7 @@ Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio 
 -   Emparejamiento básico
 -   Emparejamiento personalizado
 
-**Sugerencia**algunos dispositivos no necesitan emparejarse con el fin de usarse. Esto se explica en la sección de emparejamiento automático.
+**Sugerencia**algunos dispositivos no necesitan emparejarse para poder usarlos. Esto se explica en la sección de emparejamiento automático.
 
  
 
@@ -68,7 +68,7 @@ El primer paso para desemparejar un dispositivo es obtener el objeto [**DeviceIn
 ## <a name="sample"></a>Muestra
 
 
-Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), haz clic [aquí](http://go.microsoft.com/fwlink/?LinkID=620536).
+Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), haz clic [aquí](https://go.microsoft.com/fwlink/?LinkID=620536).
 
  
 

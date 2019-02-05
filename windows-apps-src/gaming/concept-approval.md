@@ -6,12 +6,12 @@ ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, aprobación del concepto
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4ecdbb77e1e3df10963a59dff38d4ecf215126
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 289da691766e0f2f78bd40aff2ac294ac6852463
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927250"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050458"
 ---
 # <a name="concept-approval"></a>Aprobación del concepto
 
@@ -19,13 +19,13 @@ La aprobación del concepto es el proceso de envío a Microsoft de una propuesta
 
 ## <a name="who-needs-concept-approval"></a>¿Quién necesita la aprobación de concepto?
 
-Este proceso solo es necesario si vas a publicar un juego de Xbox a través de [ID@Xbox](http://www.xbox.com/Developers/id) o como asociado administrado. No es necesario seguir este proceso si te unes al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) y creas un juego para la Plataforma universal de Windows (UWP), que luego podrás publicar automáticamente en Xbox. Sin embargo, los juegos realizadas a través de este programa se mostrarán en una sección independiente de la Tienda. Si quieres que tu juego aparezca con los juegos de AAA grandes, o si quieres crear un juego más intenso con el Kit de desarrollo de Xbox (XDK), debes pasar por la aprobación de concepto.
+Este proceso solo es necesario si vas a publicar un juego de Xbox a través de [ID@Xbox](https://www.xbox.com/Developers/id) o como asociado administrado. No es necesario seguir este proceso si te unes al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) y creas un juego para la Plataforma universal de Windows (UWP), que luego podrás publicar automáticamente en Xbox. Sin embargo, los juegos realizadas a través de este programa se mostrarán en una sección independiente de la Tienda. Si quieres que tu juego aparezca con los juegos de AAA grandes, o si quieres crear un juego más intenso con el Kit de desarrollo de Xbox (XDK), debes pasar por la aprobación de concepto.
 
 Tampoco necesitas aprobación de concepto si vas a desarrollar un juego UWP para escritorio de Windows o dispositivos móviles (o si vas a publicar una aplicación para UWP que *no* un juego, destinada a cualquier dispositivo). Todo lo que necesitas es una [cuenta de desarrollador](https://go.microsoft.com/fwlink/?LinkId=817223), y puedes configurar y enviar la aplicación a la tienda a través del centro de partners libremente.
 
 ## <a name="submit-your-concept-for-approval"></a>Envío de tu concepto para la aprobación
 
-Si eres un desarrollador de juegos independiente o un editor, puedes enviar tu concepto para que sea aprobado a través del programa ID@Xbox. Consigue más información sobre ID@Xbox y haz tu solicitud [aquí](http://www.xbox.com/Developers/id).
+Si eres un desarrollador de juegos independiente o un editor, puedes enviar tu concepto para que sea aprobado a través del programa ID@Xbox. Consigue más información sobre ID@Xbox y haz tu solicitud [aquí](https://www.xbox.com/Developers/id).
 
 Si ya eres desarrollador de ID@Xbox, habrás recibido un enlace al Formulario de información del juego (GIF), donde puedes presentar tu concepto de juego. Si tienes alguna pregunta, ponte en contacto con [id@xbox.com](mailto:id@xbox.com).
 

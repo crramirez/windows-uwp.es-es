@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0760805128f8f11b4598a5c8b0d19d8e9f20d04d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 90c86e071b0e1d2a07d7755ba23cb6418ca0022a
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050958"
+ms.locfileid: "9058576"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de barra de comandos
 
@@ -165,7 +165,7 @@ Los controles de botón de la barra de la aplicación se caracterizan por un ico
 
 ### <a name="other-content"></a>Otro contenido
 
-Puedes agregar otros controles a un control flotante de barra de comandos por encapsularlos en un AppBarElementContainer. Esto te permite agregar controles como [DropDownButton]() o el [botón de división]()o agregar contenedores como [StackPanel]() para crear la interfaz de usuario más compleja.
+Puedes agregar otros controles a un control flotante de barra de comandos por encapsularlos en un AppBarElementContainer. Esto te permite agregar controles como [DropDownButton](buttons.md) o el [botón de división](buttons.md)o agregar contenedores como [StackPanel](buttons.md) para crear la interfaz de usuario más compleja.
 
 Con el fin de agregarse a las colecciones de comando principal o secundario de un control flotante de barra de comandos, un elemento debe implementar la interfaz de [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer es un contenedor que implementa esta interfaz para que pueda agregar un elemento a una barra de comandos incluso si no implementa la interfaz.
 
@@ -174,7 +174,7 @@ Aquí, un AppBarElementContainer se usa para agregar elementos adicionales a un 
 > [!TIP]
 > De manera predeterminada, elementos diseñados para el lienzo de la aplicación podrían no tener el aspecto adecuados en una barra de comandos. Cuando agregas un elemento mediante AppBarElementContainer, hay algunos pasos que debe seguir para hacer que el elemento que coincida con otros elementos de la barra de comandos:
 >
-> - Reemplazar los pinceles de forma predeterminada con el [estilo ligero](/design/controls-and-patterns/xaml-styles#lightweight-styling) para hacer que el elemento en segundo plano y border coinciden con los botones de barra de la aplicación.
+> - Reemplazar los pinceles de forma predeterminada con el [estilo ligero](/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling) para hacer que el elemento en segundo plano y border coinciden con los botones de barra de la aplicación.
 > - Ajustar el tamaño y la posición del elemento.
 > - Ajustar los iconos en un cuadro de vídeo con un ancho y alto de 16 píxeles.
 

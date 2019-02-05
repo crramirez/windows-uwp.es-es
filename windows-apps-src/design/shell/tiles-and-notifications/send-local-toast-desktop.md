@@ -8,12 +8,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificación del sistema de win32, escritorio, notificaciones, enviar una notificación del sistema, enviar notificación del sistema local, puente de escritorio, C#, c sharp, notificación del sistema, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 3436433c8086c2801f1ee2174a51525e48c2f7c9
-ms.sourcegitcommit: fae67a53ab1468a31120293653ade9541085bdd7
+ms.openlocfilehash: 907ba19812c9a34a7a91f42fefac4c190bfd394b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992316"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058706"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 
@@ -386,7 +386,7 @@ DesktopNotificationManagerCompat.History.Clear();
 
 ## <a name="step-10-deploying-and-debugging"></a>Paso 10: Implementación y depuración
 
-Para implementar y depurar tu aplicación del Puente de dispositivo de escritorio, consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](/porting/desktop-to-uwp-debug.md).
+Para implementar y depurar tu aplicación del Puente de dispositivo de escritorio, consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](/windows/uwp/porting/desktop-to-uwp-debug).
 
 Para implementar y depurar tu aplicación de Win32 clásica, debes instalar tu aplicación mediante el instalador una vez antes de la depuración normalmente para que el acceso directo de Inicio con tus AUMID y CLSID estén presentes. Después de que el acceso directo de Inicio esté presente, puedes depurar con F5 desde Visual Studio.
 

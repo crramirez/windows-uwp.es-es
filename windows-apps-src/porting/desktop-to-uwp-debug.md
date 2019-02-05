@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
-ms.openlocfilehash: 2180551f48a728a9b426bc7e35b2dac388ff56ef
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 8b2350c8164548121baec231335e747166f1c082
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981579"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050052"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Ejecutar, depurar y probar una aplicación de escritorio empaquetada
 
-Ejecuta la aplicación empaquetada y ver su aspecto sin tener que iniciar sesión. A continuación, establece los puntos de interrupción y revisa el código. Cuando estés listo para probar la aplicación en un entorno de producción, firmar la aplicación e instalarla. En este tema se explica cómo realizar cada uno de estos pasos.
+Ejecutar la aplicación empaquetada y ver su aspecto sin tener que iniciar sesión. A continuación, establece los puntos de interrupción y revisa el código. Cuando estés listo para probar la aplicación en un entorno de producción, firmar la aplicación e instalarla. En este tema se explica cómo realizar cada uno de estos pasos.
 
 <a id="run-app" />
 
 ## <a name="run-your-application"></a>Ejecutar la aplicación
 
-Puedes ejecutar la aplicación para probarla de forma local sin tener que obtener un certificado y firmarlo. Cómo ejecutar la aplicación dependerá de la herramienta utilizada para crear el paquete.
+Puedes ejecutar la aplicación para probarla de forma local sin tener que obtener un certificado y firmarlo. ¿Cómo se ejecuta la aplicación dependerá de la herramienta utilizada para crear el paquete.
 
 ### <a name="you-created-the-package-by-using-visual-studio"></a>Has creado el paquete con Visual Studio
 
@@ -40,7 +40,7 @@ Para iniciar la aplicación, búscala en el menú Inicio de Windows.
 ![Paquete de la aplicación en el menú Inicio](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Una aplicación empaquetada siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en que debe tener el formato al formato NTFS.
+> Una aplicación empaquetada siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en debe tener el formato al formato NTFS.
 
 ## <a name="debug-your-app"></a>Depurar la aplicación
 
@@ -68,7 +68,7 @@ Si realizas los cambios en la aplicación para corregir errores, vuelve a empaqu
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Depurar el ciclo de vida de toda la aplicación
 
-En algunos casos, es posible que quieras precisa control sobre el proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que se inicie.
+En algunos casos, podrías precisa control sobre el proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que empiece.
 
 Puedes usar [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obtener el control total sobre el ciclo de vida de aplicación incluyendo suspender, reanudar y finalización.
 
@@ -95,7 +95,7 @@ También puedes firmar la aplicación manualmente. A continuación te indicamos 
 
 2. Instala el certificado en el almacén de certificados **Raíz de confianza** o **Personas de confianza** del sistema.
 
-3. Firmar la aplicación con ese certificado, consulta [firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+3. Firmar la aplicación con ese certificado, consulta el [signo de un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
@@ -109,7 +109,7 @@ También puedes firmar la aplicación manualmente. A continuación te indicamos 
 
 Antes de publicar la aplicación, asegúrate de que funcionará correctamente en dispositivos que ejecutan Windows 10 S. De hecho, si vas a publicar la aplicación en la Microsoft Store, debes hacerlo porque es un requisito de store. Las aplicaciones que no funcionan correctamente en dispositivos que ejecutan Windows 10S no estarán certificadas.
 
-Consulta [tu aplicación de Windows para Windows 10 S de prueba](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s).
+Consulte la [prueba de la aplicación de Windows para Windows 10 S](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s).
 
 ### <a name="run-another-process-inside-the-full-trust-container"></a>Ejecutar otro proceso dentro del contenedor de plena confianza
 
@@ -124,7 +124,7 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

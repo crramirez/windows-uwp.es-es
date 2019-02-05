@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability
 ms.localizationpriority: medium
-ms.openlocfilehash: fae533e0ce42e14e3c53f5083b746a9aae221adf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b3582aa8ed406a25eb704f2f86f8ed272bea2c63
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941362"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050225"
 ---
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
@@ -20,9 +20,9 @@ ms.locfileid: "8941362"
 
 Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
 
-**Sugerencia** Para obtener más información sobre cómo obtener acceso a la ubicación del usuario desde la aplicación, descarga la muestra siguiente del [repositorio Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) de GitHub.
+**Sugerencia** Para obtener más información sobre cómo obtener acceso a la ubicación del usuario desde la aplicación, descarga la muestra siguiente del [repositorio Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) de GitHub.
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar la funcionalidad de ubicación
 
@@ -267,6 +267,6 @@ Para que la aplicación pueda acceder a la ubicación del usuario, la opción **
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de ubicación geográfica para UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Muestra de ubicación geográfica para UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)

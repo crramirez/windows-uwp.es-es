@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050838"
+ms.locfileid: "9058776"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 
@@ -49,7 +49,7 @@ Si la consulta devuelve uno o más orígenes de marco, puedes comprobar la propi
 
 Obtén una nueva instancia de **MediaFrameReader** llamando a [**MediaCapture.CreateFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_), pasando el objeto **MediaFrameSource** que has seleccionado en el paso anterior. De manera predeterminada, los tramas de audio se obtienen en el modo de almacenamiento en búfer, haciendo que sea menos probable que se descarten los fotogramas, aunque esto puede producirse igualmente si no se están procesando fotogramas de audio lo suficientemente rápido y se llena el búfer de memoria asignado del sistema.
 
-Registra un controlador para el evento [**MediaFrameReader.FrameArrived**](*https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived), que se genera por el sistema cuando hay un nuevo fotograma de datos de audio disponible. Llama a [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync) para comenzar la adquisición de fotogramas de audio. Si el lector de fotogramas no se puede iniciar, el valor del estado devuelto desde la llamada tendrá un valor distinto de [**Success**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus).
+Registra un controlador para el evento [**MediaFrameReader.FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived), que se genera por el sistema cuando hay un nuevo fotograma de datos de audio disponible. Llama a [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync) para comenzar la adquisición de fotogramas de audio. Si el lector de fotogramas no se puede iniciar, el valor del estado devuelto desde la llamada tendrá un valor distinto de [**Success**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus).
 
 [!code-cs[CreateAudioFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateAudioFrameReader)]
 

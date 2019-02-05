@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 13a22c33f3c975e5c1e797f52d7c4e81ea008b61
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036987"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058606"
 ---
 # <a name="hyperlinks"></a>Hipervínculos
 
@@ -158,7 +158,7 @@ Como un elemento Hyperlink no es un [UIElement](https://msdn.microsoft.com/libra
 
 **Contenido**
 
-El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span]() que no sean otro elemento Hyperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
+El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que no sean otro elemento Hyperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
 
 **Comportamiento de Hyperlink y el tema y estilo**
 

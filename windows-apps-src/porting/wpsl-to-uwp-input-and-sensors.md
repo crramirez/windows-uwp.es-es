@@ -6,14 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2235e8781d8a795145c7080bfd846c58b6253629
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947927"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049229"
 ---
-#  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Migración WindowsPhone Silverlight a UWP para E/S, dispositivo y modelo de aplicaciones
+#  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Migrar de WindowsPhone Silverlight a UWP para E/S, dispositivo y modelo de aplicaciones
 
 
 El tema anterior era [Migración de XAML y la interfaz de usuario](wpsl-to-uwp-porting-xaml-and-ui.md).
@@ -22,9 +22,9 @@ El código que se integra con el dispositivo y sus sensores implica la entrada d
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>Ciclo de vida de la aplicación (administración de la duración de los procesos)
 
-La aplicación WindowsPhone Silverlight contiene código para guardar y restaurar el estado de la aplicación y su estado de vista con el fin de admitir su exclusión y posterior reactivación. El ciclo de vida de las aplicaciones de la plataforma Universal de Windows (UWP) presenta grandes paralelismos con la de las aplicaciones de WindowsPhone Silverlight, ya que están diseñadas con el mismo objetivo de maximizar los recursos disponibles para las aplicaciones que el usuario ha elegido que en el en primer plano en cualquier momento. Verás que tu código se adaptará al nuevo sistema con razonable facilidad.
+La aplicación de WindowsPhone Silverlight contiene código para guardar y restaurar el estado de la aplicación y su estado de vista para poder admitir su exclusión y posterior reactivación. El ciclo de vida de las aplicaciones de la plataforma Universal de Windows (UWP) presenta grandes paralelismos con el que las aplicaciones de WindowsPhone Silverlight, ya que están diseñadas con el mismo objetivo de maximizar los recursos disponibles para las aplicaciones que el usuario ha elegido tener en el en primer plano en cualquier momento. Verás que tu código se adaptará al nuevo sistema con razonable facilidad.
 
-**Nota**  al presionar el botón **Atrás** de hardware automáticamente finaliza una aplicación WindowsPhone Silverlight. Al presionar el botón **Atrás** del hardware en un dispositivo móvil *no* finaliza automáticamente una aplicación para UWP. En su lugar, se suspende y, después, se puede finalizar. Pero esos detalles son transparentes para una aplicación que responde adecuadamente a los eventos de ciclo de vida de la aplicación.
+**Nota**  al presionar el botón **Atrás** de hardware automáticamente finaliza una aplicación de WindowsPhone Silverlight. Al presionar el botón **Atrás** del hardware en un dispositivo móvil *no* finaliza automáticamente una aplicación para UWP. En su lugar, se suspende y, después, se puede finalizar. Pero esos detalles son transparentes para una aplicación que responde adecuadamente a los eventos de ciclo de vida de la aplicación.
 
 Una "ventana de espera" es el período de tiempo entre que la aplicación se queda inactiva y que el sistema genera el evento de suspensión. Para una aplicación para UWP no hay ninguna ventana de espera; el evento de suspensión se genera en cuanto una aplicación pasa a estar inactiva.
 
@@ -32,9 +32,9 @@ Para obtener más información, consulta [Ciclo de vida de la aplicación](https
 
 ## <a name="camera"></a>Cámara
 
-Código de captura de cámara WindowsPhone Silverlight usa las clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**o **Microsoft.Phone.Tasks.CameraCaptureTask** . Para migrar el código a la Plataforma universal de Windows (UWP), puedes usar la clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). En el tema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) se ofrece un ejemplo de código. Ese método permite capturar una foto en un archivo de almacenamiento y requiere el **micrófono** y **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) esté establecido en el manifiesto del paquete de aplicación.
+Código de captura de cámara de WindowsPhone Silverlight usa las clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**o **Microsoft.Phone.Tasks.CameraCaptureTask** . Para migrar el código a la Plataforma universal de Windows (UWP), puedes usar la clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). En el tema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) se ofrece un ejemplo de código. Ese método permite capturar una foto en un archivo de almacenamiento y requiere el **micrófono** y la **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) esté establecido en el manifiesto del paquete de aplicación.
 
-Otra opción es la clase [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) , que también requiere el **micrófono** y **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747).
+Otra opción es la clase [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) , que también requiere el **micrófono** y la **cámara Web**[**funcionalidades del dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747).
 
 No se admiten las aplicaciones de modos para las aplicaciones para UWP.
 
@@ -67,12 +67,12 @@ Consulta también [Compilación condicional y código adaptable](wpsl-to-uwp-por
 
 ## <a name="device-status"></a>Estado del dispositivo
 
-Una aplicación WindowsPhone Silverlight usar la clase **Microsoft.Phone.Info.DeviceStatus** para obtener información sobre el dispositivo en el que se ejecuta la aplicación. Si bien no hay ningún equivalente de UWP para el espacio de nombres **Microsoft.Phone.Info**, a continuación detallamos algunas de las propiedades y los eventos que puedes usar en una aplicación para UWP en vez de llamadas a los miembros de la clase **DeviceStatus**.
+Una aplicación de WindowsPhone Silverlight puede usar la clase **Microsoft.Phone.Info.DeviceStatus** para obtener información sobre el dispositivo en el que se ejecuta la aplicación. Si bien no hay ningún equivalente de UWP para el espacio de nombres **Microsoft.Phone.Info**, a continuación detallamos algunas de las propiedades y los eventos que puedes usar en una aplicación para UWP en vez de llamadas a los miembros de la clase **DeviceStatus**.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Propiedades **ApplicationCurrentMemoryUsage** y **ApplicationCurrentMemoryUsageLimit** | Propiedades [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/dn633832) y [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
-| Propiedad **ApplicationPeakMemoryUsage**                                                 | Usa las herramientas de generación de perfiles de memoria en Visual Studio. Para obtener información, consulta [Analizar el uso de memoria](http://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
+| Propiedad **ApplicationPeakMemoryUsage**                                                 | Usa las herramientas de generación de perfiles de memoria en Visual Studio. Para obtener información, consulta [Analizar el uso de memoria](https://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
 | Propiedad **DeviceFirmwareVersion**                                                      | Propiedad [**EasClientDeviceInformation.SystemFirmwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608144) (solo familia de dispositivos de escritorio)                                                                                                                                                                             |
 | Propiedad **DeviceHardwareVersion**                                                      | Propiedad [**EasClientDeviceInformation.SystemHardwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608145) (solo familia de dispositivos de escritorio)                                                                                                                                                                             |
 | Propiedad **DeviceManufacturer**                                                         | Propiedad [**EasClientDeviceInformation.SystemManufacturer**](https://msdn.microsoft.com/library/windows/apps/hh701398) (solo familia de dispositivos de escritorio)                                                                                                                                                                                |
@@ -86,7 +86,7 @@ Una aplicación WindowsPhone Silverlight usar la clase **Microsoft.Phone.Info.De
 
 ## <a name="location"></a>Ubicación
 
-Cuando una aplicación que declara la funcionalidad de ubicación en su manifiesto del paquete de aplicación se ejecuta en Windows 10, el sistema pedirá al usuario final su consentimiento. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado, o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
+Cuando una aplicación que declara la funcionalidad de ubicación en su manifiesto del paquete de aplicación se ejecuta en Windows 10, el sistema solicitará al usuario final su consentimiento. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado, o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
 
 ## <a name="orientation"></a>Orientación
 

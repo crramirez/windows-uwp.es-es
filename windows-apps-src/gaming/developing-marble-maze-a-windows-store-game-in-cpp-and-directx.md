@@ -1,17 +1,17 @@
 ---
-title: Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
+title: Desarrollar Marble Maze, un juego para UWP en C++ y DirectX
 description: Esta sección de la documentación describe cómo usar DirectX y Visual C++ para crear un juego 3D de la Plataforma universal de Windows (UWP).
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
 ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, ejemplo, sample, DirectX, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: e61c96a1b4deb7dd1beb0233814f86ce1b5fb42c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 39f915ad9cf200a5c2c762976ab3c39c2ef85410
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936032"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050092"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
 
@@ -21,7 +21,7 @@ ms.locfileid: "8936032"
 Este tema describe cómo usar DirectX y Visual C++ para crear un juego 3D de la Plataforma universal de Windows (UWP). El juego, llamado Marble Maze, comprende múltiples factores de forma, como tabletas, así como los tradicionales PC de escritorio y portátiles.
 
 > [!NOTE]
-> Para descargar el código fuente de Marble Maze, consulta la [muestra en GitHub](http://go.microsoft.com/fwlink/?LinkId=624011).
+> Para descargar el código fuente de Marble Maze, consulta la [muestra en GitHub](https://go.microsoft.com/fwlink/?LinkId=624011).
 
 > [!IMPORTANT]
 > Los patrones de diseño de Marble Maze son un ejemplo de lo que consideramos procedimientos recomendados para crear juegos para UWP. Puedes modificar muchos de los detalles de implementación para que se adapten a tus procedimientos y a los requisitos únicos del juego que desarrolles. No dudes en usar diferentes técnicas o bibliotecas si se adaptan mejor a lo que necesitas. (Sin embargo, asegúrate siempre de que el código pase el [Kit para la certificación de aplicaciones en Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)). Cuando consideramos que una implementación usada aquí es esencial para el desarrollo correcto de juegos, lo resaltamos en esta documentación.

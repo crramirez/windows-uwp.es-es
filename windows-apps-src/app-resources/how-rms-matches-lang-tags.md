@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 4914a448432206e2418fe110c0b49517a7145e0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ccbfa5f06d336604160f98dd44c27cc0cf1b0aed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937982"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050588"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Cómo el sistema de administración de recursos compara etiquetas de idioma
 
@@ -21,7 +21,7 @@ El tema anterior (Cómo compara y elige recursos el sistema de administración d
 
 Los recursos con calificadores de etiqueta de idioma se comparan y califican según la lista de idiomas del tiempo de ejecución de la aplicación. Para ver definiciones de las listas de idiomas diferentes, consulta [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](../design/globalizing/manage-language-and-region.md). La coincidencia con el primer idioma de la lista se produce antes de la coincidencia con el segundo, incluso para otras variantes regionales. Por ejemplo, se prefiere un recurso para en-GB sobre fr-CA si el idioma del tiempo de ejecución de la aplicación es en-US. Solo si no hay recursos para un formato de en, se elige un recurso para fr-CA (ten en cuenta que, en ese caso, no se pudo establecer el idioma predeterminado de la aplicación en ningún formato de en).
 
-El mecanismo de puntuación usa los datos incluidos en el registro de subetiquetas de [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), así como otros orígenes de datos. Permite establecer un gradiente de puntuación con distintas calidades de coincidencia y, cuando hay varios candidatos disponibles, selecciona el candidato con la mejor puntuación de coincidencia.
+El mecanismo de puntuación usa los datos incluidos en el registro de subetiquetas de [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), así como otros orígenes de datos. Permite establecer un gradiente de puntuación con distintas calidades de coincidencia y, cuando hay varios candidatos disponibles, selecciona el candidato con la mejor puntuación de coincidencia.
 
 Por ello, puedes etiquetar el contenido de idioma en términos genéricos, pero sigues pudiendo especificar contenido específico cuando sea necesario. Por ejemplo, tu aplicación puede tener muchas cadenas en inglés comunes para las versiones de Estados Unidos, Gran Bretaña y de otras regiones. El etiquetado de estas cadenas simplemente como "en" (inglés) ahorra espacio y reduce la carga de localización. Cuando se deban realizar distinciones, como en una cadena que contenga la palabra "color/colour", las versiones de Estados Unidos y de Gran Bretaña se pueden etiquetar por separado usando las subetiquetas de idioma y región, como "en-US" y "en-GB", respectivamente.
 
@@ -74,7 +74,7 @@ Las etiquetas coinciden en las subetiquetas de idioma y de script, pero difieren
 
 #### <a name="macro-region-match"></a>Coincidencia de macrorregión
 
-Las etiquetas coinciden en las subetiquetas de idioma y script; ambas etiquetas tienen subetiquetas de región, siendo una de ellas una macrorregión que engloba a la otra región. Las etiquetas de macrorregión son siempre numéricas y se derivan de los códigos de país y zona M.49 de la División de Estadística de las Naciones Unidas. Para obtener más información sobre las relaciones englobadoras, consulta [Composición de regiones macrogeográficas (continentales), subregiones geográficas, grupos económicos seleccionados y otras agrupaciones](http://go.microsoft.com/fwlink/p/?LinkId=247929).
+Las etiquetas coinciden en las subetiquetas de idioma y script; ambas etiquetas tienen subetiquetas de región, siendo una de ellas una macrorregión que engloba a la otra región. Las etiquetas de macrorregión son siempre numéricas y se derivan de los códigos de país y zona M.49 de la División de Estadística de las Naciones Unidas. Para obtener más información sobre las relaciones englobadoras, consulta [Composición de regiones macrogeográficas (continentales), subregiones geográficas, grupos económicos seleccionados y otras agrupaciones](https://go.microsoft.com/fwlink/p/?LinkId=247929).
 
 **Nota** Los códigos de Naciones Unidas para "grupos económicos" u "otras agrupaciones" no se admiten en BCP-47.
  
@@ -126,7 +126,7 @@ Cuando una subetiqueta de idioma tiene un valor de script de supresión definido
 
 En ocasiones, la coincidencia se produce como parte de un proceso más grande de coincidencia de un solo idioma con una lista de idiomas; por ejemplo, puede que surja una coincidencia entre un recurso basado en un solo idioma y la lista de idiomas de una aplicación. La puntuación de la coincidencia se mide conforme a la posición del primer idioma que coincide en la lista. Cuanto más abajo está el idioma en la lista, más baja será la puntuación.
 
-Cuando la lista de idiomas contiene dos o más variantes regionales con las mismas etiquetas de idioma y de script, la puntuación de las comparaciones de la primera etiqueta de idioma solo se establece para las coincidencias exactas, de variante y de región. La puntuación de las coincidencias parciales se pospone para la última variante regional. Esto permite a los usuarios controlar con precisión el comportamiento de coincidencia de su lista de idiomas El comportamiento de las coincidencias puede incluir que se prefiera una coincidencia exacta para un elemento secundario de la lista antes que una coincidencia parcial para el primer elemento de la lista, de haber un tercer elemento que coincida con el idioma y el script del primero. Aquí tienes un ejemplo.
+Cuando la lista de idiomas contiene dos o más variantes regionales con las mismas etiquetas de idioma y de script, la puntuación de las comparaciones de la primera etiqueta de idioma solo se establece para las coincidencias exactas, de variante y de región. La puntuación de las coincidencias parciales se pospone para la última variante regional. Esto permite a los usuarios controlar con precisión el comportamiento de coincidencia de su lista de idiomas El comportamiento de las coincidencias puede incluir que se prefiera una coincidencia exacta para un elemento secundario de la lista antes que una coincidencia parcial para el primer elemento de la lista, de haber un tercer elemento que coincida con el idioma y el script del primero. A continuación te mostramos un ejemplo.
 
 - Lista de idiomas (en orden): "pt-PT" (portugués de Portugal), "en-US" (inglés de Estados Unidos), pt-BR (portugués de Brasil).
 - Recursos: "en-US", "pt-BR".
@@ -189,6 +189,6 @@ El inglés es un caso aparte. Si una aplicación agrega localización para dos v
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cómo compara y elige recursos el sistema de administración](how-rms-matches-and-chooses-resources.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](../design/globalizing/manage-language-and-region.md)
-* [Composición de regiones macrogeográficas (continentales), subregiones geográficas, grupos económicos seleccionados y otras agrupaciones.](http://go.microsoft.com/fwlink/p/?LinkId=247929)
+* [Composición de regiones macrogeográficas (continentales), subregiones geográficas, grupos económicos seleccionados y otras agrupaciones.](https://go.microsoft.com/fwlink/p/?LinkId=247929)
