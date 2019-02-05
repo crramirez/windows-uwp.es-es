@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a0c36430c6dd993c86ae1833631e55e1a8bdca4c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7075df3d5c3de0dd7d756432400dfe934651c5b4
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050325"
+ms.locfileid: "9058769"
 ---
 # <a name="text-box"></a>Cuadro de texto
 
@@ -146,7 +146,7 @@ Este es el aspecto del cuadro de texto después de agregarse texto.
 
 ### <a name="format-the-text-display"></a>Dar formato a la visualización del texto
 
-Usa la propiedad [TextAlignment]() para alinear el texto dentro de un cuadro de texto. Para alinear el cuadro de texto en el diseño de la página, usa las propiedades [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) y [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
+Usa la propiedad [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment) para alinear el texto dentro de un cuadro de texto. Para alinear el cuadro de texto en el diseño de la página, usa las propiedades [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) y [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
 
 Aunque el cuadro texto solo admite texto sin formato, puedes personalizar la manera en que se muestra el texto en el cuadro de texto para que así coincida con tu personalización de marca. Puedes establecer las propiedades [Control](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx), como [FontFamily](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontfamily.aspx), [FontSize](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontsize.aspx), [FontStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontstyle.aspx), [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx), [Foreground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) y [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.characterspacing.aspx) para cambiar el aspecto del texto. Estas propiedades solo afectan al modo en que el cuadro de texto muestra el texto de forma local, por lo que, por ejemplo, si copias y pegas el texto en un control de texto enriquecido no se aplica ningún formato.
 
