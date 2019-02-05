@@ -6,16 +6,16 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: Windows 10, uwp, educación
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933133"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049372"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que representa evaluaciones en línea de bloqueo para las pruebas determinantes, lo que permite a educadores centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
+[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que representa el bloqueo de evaluaciones en línea para las pruebas determinantes, lo que permite educadores centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
 
 Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 
@@ -205,7 +205,7 @@ Obtiene la lista de direcciones MAC del dispositivo. L aplicación de prueba deb
 **Parámetros**  
 * `callback` - La función para invocar cuando esta llamada finalice. Debe tener el formato: `Function(String addressArray)` donde `addressArray` tiene el formato: `"['00:11:22:33:44:55','etc']"`.
 
-**Comentarios**  
+**Observaciones**  
 Es difícil depender de las direcciones IP de origen para distinguir entre los equipos de usuario final dentro de los servidores de pruebas porque los firewalls/NAT/servidores proxy se usan habitualmente en las escuelas. Las direcciones MAC permiten que la aplicación distinga entre equipos de cliente final detrás de un firewall común para fines de diagnóstico.
 
 **Requisitos**  

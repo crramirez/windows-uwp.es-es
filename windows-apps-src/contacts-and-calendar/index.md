@@ -6,12 +6,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, contactos, calendario, citas, mensajes de correo
 ms.localizationpriority: medium
-ms.openlocfilehash: a2ccf75796140723270e49a7b967ce234d41baf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 239dbaa7799d9991a63223d1cd8706d34445a16b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945684"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048242"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contactos, Mis allegados y calendario
 
@@ -35,8 +35,8 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplo de API de citas](http://go.microsoft.com/fwlink/p/?linkid=309836)
-* [Ejemplo de API del administrador de contactos](http://go.microsoft.com/fwlink/p/?LinkID=310079)
-* [Muestra de una aplicación de selector de contactos](http://go.microsoft.com/fwlink/p/?linkid=231575)
-* [Ejemplo de control de las acciones de contacto](http://go.microsoft.com/fwlink/p/?LinkID=320151)
+* [Ejemplo de API de citas](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Ejemplo de API del administrador de contactos](https://go.microsoft.com/fwlink/p/?LinkID=310079)
+* [Muestra de una aplicación de selector de contactos](https://go.microsoft.com/fwlink/p/?linkid=231575)
+* [Ejemplo de control de las acciones de contacto](https://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [Ejemplo de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)

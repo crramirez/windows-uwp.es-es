@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, sample code, código de muestra, code samples, muestras de código
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 64eb0d13db1fbcf49d9da28e57eb85ff84823bf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946300"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049722"
 ---
 # <a name="get-uwp-app-samples"></a>Obtener muestras de aplicaciones para UWP
 
@@ -28,7 +28,7 @@ El archivo ZIP siempre incluirá las muestras más recientes. No necesitas una c
 
 
 > [!NOTE]
-> Las muestras de la UWP requieren Visual Studio 2015 o posterior y Windows SDK para abrirlas, compilarlas y ejecutarlas. Puedes obtener una copia gratuita de Visual Studio Community con compatibilidad para crear aplicaciones para UWP [aquí](http://go.microsoft.com/fwlink/p/?LinkID=280676 "Descargas de herramientas de desarrollo de Windows").  
+> Las muestras de la UWP requieren Visual Studio 2015 o posterior y Windows SDK para abrirlas, compilarlas y ejecutarlas. Puedes obtener una copia gratuita de Visual Studio Community con compatibilidad para crear aplicaciones para UWP [aquí](https://go.microsoft.com/fwlink/p/?LinkID=280676 "Descargas de herramientas de desarrollo de Windows").  
 >
 > Asegúrate también de descomprimir todo el archivo y no solo algunos ejemplos. Todas las muestras dependen de la carpeta SharedContent del archivo. Los ejemplos de características de UWP usan archivos vinculados de Visual Studio para reducir la duplicación de archivos comunes, incluidos los archivos de plantillas de muestra y activos de imagen. Estos archivos comunes se almacenan en la carpeta SharedContent de la raíz del repositorio y se hace referencia a ellos en los archivos de proyecto que incluyen vínculos.
 

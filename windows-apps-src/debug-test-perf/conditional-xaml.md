@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c75a6c487fe4a7f7cb56deff869b36309a4b9c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921768"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050848"
 ---
 # <a name="conditional-xaml"></a>XAML condicional
 
@@ -59,7 +59,7 @@ Comentaremos estos métodos en más profundidad en secciones posteriores de este
 
 En este ejemplo, se mostrará "Hello, Conditional XAML" como el contenido de un bloque de texto si la aplicación se ejecuta en Fall Creators Update o una versión posterior, y de forma predeterminada no se mostrará ningún contenido si se trata de una versión anterior.
 
-En primer lugar, define un espacio de nombres personalizado con el prefijo 'contract5Present' y usar el espacio de nombres XAML predeterminado (http://schemas.microsoft.com/winfx/2006/xaml/presentation) como el esquema que contiene la propiedad [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text). Para hacer que sea un espacio de nombres condicional, agrega '?'. Delimitador después del esquema.
+En primer lugar, define un espacio de nombres personalizado con el prefijo 'contract5Present' y usar el espacio de nombres XAML predeterminado (https://schemas.microsoft.com/winfx/2006/xaml/presentation) como el esquema que contiene la propiedad [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text). Para hacer que sea un espacio de nombres condicional, agrega '?'. Delimitador después del esquema.
 
 A continuación define una instrucción condicional que devuelva **true** (verdadero) en dispositivos que ejecuten Fall Creators Update o una versión posterior. Usa el método ApiInformation **IsApiContractPresent** para probar la versión 5 de UniversalApiContract. La versión 5 de UniversalApiContract se publicó con Fall Creators Update (SDK 16299).
 

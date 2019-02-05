@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942599"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050132"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -25,7 +25,7 @@ Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 
 
 El equipo debe cumplir los siguientes requisitos:
 
-CPU (estas opciones de configuración, si está disponible, se pueden habilitar en el BIOS)
+CPU (estas opciones de configuración, si está disponible, pueden estar habilitados en el BIOS)
 
 -   Virtualización asistida por hardware ([comprobar la compatibilidad](https://www.microsoft.com/download/details.aspx?id=592)).
 -   Traducción de direcciones de segundo nivel (SLAT).
@@ -49,7 +49,7 @@ Microsoft Emulator para Windows 10 Mobile requiere Visual Studio 2015 o posterio
 
 Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones orientadas a versiones del Windows Phone OS anteriores a Windows Phone OS 7.1.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalación, desinstalación y ejecuta el emulador
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalación, desinstalación y ejecutar el emulador
 
 ### <a name="installing"></a>Instalar
 El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
@@ -64,7 +64,7 @@ Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador vir
 
 ### <a name="running"></a>Running
 
-Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado del menú desplegable **de ejecución** en Visual Studio.
+Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
 
 ![Emuladores disponibles con resolución, tamaño y memoria](images/em-list.png)
 
@@ -237,7 +237,7 @@ También puedes usar la herramienta del simulador del terminal de MasterCard ([h
 -   Marca la casilla del agente de escucha **Habilitar MasterCard** debajo de las ventanas del editor de scripts e inicia el simulador desde MasterCard.
 -   Mediante la herramienta, puedes generar comandos que se transmiten a la aplicación que se está ejecutando en el emulador a través de la herramienta de NFC.
 
-Para más información sobre el soporte técnico de HCE y sobre cómo desarrollar aplicaciones HCE en Windows 10 Mobile, consulta el [Blog del equipo de Microsoft NFC](http://go.microsoft.com/fwlink/?LinkId=534749).
+Para más información sobre el soporte técnico de HCE y sobre cómo desarrollar aplicaciones HCE en Windows 10 Mobile, consulta el [Blog del equipo de Microsoft NFC](https://go.microsoft.com/fwlink/?LinkId=534749).
 
 ### <a name="how-to-create-scripts-for-hce-testing"></a>Cómo crear scripts para las pruebas de HCE
 
@@ -452,7 +452,7 @@ La pestaña **SD Card** usa una carpeta en el equipo de desarrollo para simular 
         -   Al hacer clic en **Cancel sync** mientras la operación de sincronización está en curso, la tarjeta se expulsa y los resultados de la operación de sincronización quedan incompletos.
     -   El botón **Eject SD card** cambia de nuevo a **Insert SD card**.
 
-> **Nota**tarjeta SD desde que se usa en el teléfono está formateada con el sistema de archivos FAT32, el tamaño máximo es de 32GB.
+> **Nota**la tarjeta SD desde que se usa en el teléfono está formateada con el sistema de archivos FAT32, el tamaño máximo es de 32GB.
 
 La velocidad de lectura y escritura en relación con la tarjeta SD simulada está limitada, para imitar las velocidades del mundo real. La obtención de acceso una tarjeta SD es más lenta que la obtención de acceso a la unidad de disco duro del equipo.
 
@@ -656,7 +656,7 @@ Para deshabilitar la aceleración de hardware:
 
 ## <a name="support-resources"></a>Recursos de soporte técnico
 
-Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows10, visita el [Foro de herramientas de Windows10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows10, visita [este vínculo](http://go.microsoft.com/fwlink/?LinkId=535000).
+Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows10, visita el [Foro de herramientas de Windows10](https://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows10, visita [este vínculo](https://go.microsoft.com/fwlink/?LinkId=535000).
 
 ## <a name="related-topics"></a>Temas relacionados
 

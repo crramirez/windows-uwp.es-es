@@ -1,24 +1,24 @@
 ---
 title: Introducción al desarrollo seguro de aplicaciones de Windows
-description: Este artículo de introducción ayuda a los arquitectos y desarrolladores a comprendan las distintas funcionalidades de plataforma de Windows 10 que aceleran la creación de aplicaciones de plataforma Universal de Windows (UWP) seguras.
+description: Este artículo de introducción ayuda a los arquitectos y desarrolladores a comprenden las distintas funcionalidades de plataforma de Windows 10 que aceleran la creación de aplicaciones de plataforma Universal de Windows (UWP) seguras.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: 38318e7f97c8eba7d0137a865f5025fb9a77fa55
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930696"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049872"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introducción al desarrollo seguro de aplicaciones de Windows
 
 
 
 
-Este artículo de introducción ayuda a los arquitectos y desarrolladores a comprendan las distintas funcionalidades de plataforma de Windows 10 que aceleran la creación de aplicaciones de plataforma Universal de Windows (UWP) seguras. En él, se ofrecen detalles sobre cómo usar las funciones de seguridad de Windows disponibles en cada una de las siguientes fases: autenticación, datos en desarrollo y datos en reposo. Encontrarás información más detallada sobre cada tema revisando los recursos adicionales que se incluyen en cada capítulo.
+Este artículo de introducción ayuda a los arquitectos y desarrolladores a comprenden las distintas funcionalidades de plataforma de Windows 10 que aceleran la creación de aplicaciones de plataforma Universal de Windows (UWP) seguras. En él, se ofrecen detalles sobre cómo usar las funciones de seguridad de Windows disponibles en cada una de las siguientes fases: autenticación, datos en desarrollo y datos en reposo. Encontrarás información más detallada sobre cada tema revisando los recursos adicionales que se incluyen en cada capítulo.
 
 ## <a name="1-introduction"></a>1 Introducción
 
@@ -96,7 +96,7 @@ Este es el flujo de trabajo general para llamar a la API de [**WebAuthentication
 
 Si la comunicación es correcta, procesa la cadena de respuesta que ha devuelto el proveedor de identidad. Si no lo es, procesa el error.
 
-Código C# de muestra que, para este proceso, se incluye a continuación. Para obtener información y un tutorial detallado, consulta [WebAuthenticationBroker](web-authentication-broker.md). Para obtener una muestra de código completa, echa un vistazo a la [muestra de WebAuthenticationBroker en GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+Código C# de muestra que, para este proceso, se incluye a continuación. Para obtener información y un tutorial detallado, consulta [WebAuthenticationBroker](web-authentication-broker.md). Para obtener una muestra de código completa, echa un vistazo a la [muestra de WebAuthenticationBroker en GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
 
 ```cs
 string startURL = "https://<providerendpoint>?client_id=<clientid>";

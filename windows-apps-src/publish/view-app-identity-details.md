@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 114524294a5b77165167601c1479b6c3894bb29b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e108d603a623e3b9e41d7ced3c0fafc80f006b8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937826"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050012"
 ---
 # <a name="view-app-identity-details"></a>Ver detalles de identidad de las aplicaciones
 
@@ -46,7 +46,7 @@ Los siguientes valores son valores adicionales que hacen referencia a la familia
 
 El vínculo directo a la página de la aplicación se puede compartir para que los clientes encuentren la aplicación en la Tienda. Este vínculo tiene el formato **`https://www.microsoft.com/store/apps/<your app's Store ID>`**. Cuando un cliente hace clic en este vínculo, se abre la página de descripción basada en web de la aplicación. En los dispositivos Windows, la aplicación Tienda también se iniciará y mostrará la descripción de tu aplicación.
 
-El **Id. de la Tienda** de la aplicación también se muestra en esta sección. Este id. de la Tienda se puede usar para [generar distintivos de la Tienda](http://go.microsoft.com/fwlink/p/?LinkId=534236) o para identificar de otro modo la aplicación.
+El **Id. de la Tienda** de la aplicación también se muestra en esta sección. Este id. de la Tienda se puede usar para [generar distintivos de la Tienda](https://go.microsoft.com/fwlink/p/?LinkId=534236) o para identificar de otro modo la aplicación.
 
 El **vínculo al protocolo de la Tienda** puede usarse para vincular directamente a tu aplicación en la Tienda sin tener que abrir un navegador, como cuando se vincula desde dentro de una aplicación. Para obtener más información, consulta [Vincular a la aplicación](link-to-your-app.md).
 

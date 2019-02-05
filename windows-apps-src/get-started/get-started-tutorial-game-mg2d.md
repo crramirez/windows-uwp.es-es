@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e6d36c368672675f503359735de8717df1be8b57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939330"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050658"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -26,12 +26,12 @@ MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te ense
 
 ## <a name="prerequisites"></a>Requisitos previos
 +   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar al instalador de Visual Studio y modificando la instalación de Visual Studio 2017.
++ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar el programa de instalación de Visual Studio y modificando la instalación de Visual Studio 2017.
 +   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
 ## <a name="why-monogame"></a>¿Por qué MonoGame?
-No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store o de otras plataformas similares de distribución.
+No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store u otras plataformas similares de distribución.
 
 ## <a name="get-the-code"></a>Obtener el código
 Si no te apetece seguir el tutorial paso a paso y solo quieres ver MonoGame en acción, [haz clic aquí para obtener la aplicación acabada](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
@@ -43,7 +43,7 @@ Si ya lo hiciste, omite la sección siguiente acerca de cómo configurar MonoGam
 **Nota:** El juego creado en este ejemplo no tiene porque estar completo (ni ser divertido). Su único propósito es demostrar todos los conceptos básicos del desarrollo en MonoGame 2D. Siéntete libre para usar este código y hacer algo mucho mejor, o bien para empezar desde cero una vez que domines los conceptos básicos.
 
 ## <a name="set-up-monogame-project"></a>Configurar un proyecto de MonoGame
-1. Instala **MonoGame 3.6** para Visual Studio desde [MonoGame.net](http://www.monogame.net/)
+1. Instala **MonoGame 3.6** para Visual Studio desde [MonoGame.net](https://www.monogame.net/)
 
 2. Inicia Visual Studio 2017.
 
@@ -379,7 +379,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. controlar la entrada de teclado
-A continuación, necesitamos un nuevo método para controlar la entrada de usuario mediante el teclado. Agrega este método a **Game1.cs**:
+A continuación, necesitamos un nuevo método para controlar la entrada de usuario a través del teclado. Agrega este método a **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -484,7 +484,7 @@ dino.Draw(spriteBatch);
 
 En MonoGame, las llamadas nuevas de **spriteBatch.Draw** prevalecerán sobre cualquier llamada anterior. Esto significa que tanto el sprite brécol como el dinosaurio prevalecerán sobre el sprite del césped existente, por lo que no pueden nunca puedan esconderse independientemente de su posición.
 
-Intenta ejecutar el juego ahora, y mover el dinosaurio con las teclas de dirección y la barra espaciadora. Si has seguido los pasos anteriores, debe ser capaz de realizar el avatar mover dentro de la ventana del juego y el brécol debería se genere a una velocidad creciente.
+Intenta ejecutar el juego ahora, y mover el dinosaurio con las teclas de dirección y la barra espaciadora. Si has seguido los pasos anteriores, debe ser capaz de realizar su avatar mover dentro de la ventana del juego y el brécol debería generar a una velocidad creciente.
 
 ![Avatar del jugador y obstáculo](images/monogame-tutorial-2.png)
 
@@ -692,4 +692,4 @@ Debes usar la [lista de comprobación de envío de aplicación](https://docs.mic
 
 La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process).
 
-Para obtener más información, consulta la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obtener más información, consulte la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).

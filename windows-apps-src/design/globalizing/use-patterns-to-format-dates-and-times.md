@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: a8e68242647204dfbf8ba23c45d881066c88900b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3849ccf0f129b65dc44f549a37859fe38ac71562
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918900"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048692"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
 
@@ -25,7 +25,7 @@ La clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 Sin embargo, cuando quieras tener aún más control sobre el orden y el formato de los componentes del objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que quieres mostrar, puedes pasar el patrón de formato al argumento *formatTemplate* del constructor. Un patrón de formato usa una sintaxis especial que te permite obtener los componentes individuales de un objeto **DateTime**&mdash;solo el nombre del mes o el valor del año, por ejemplo&mdash; para mostrarlos en el formato personalizado que desees. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota**esto es solo una descripción general de los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Nota**esto es solo una introducción de patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>La diferencia entre los patrones y plantillas de formato
 
@@ -98,7 +98,7 @@ Supongamos que quieres mostrar el mes y el día actuales junto con la hora actua
 June 25 | 1:38 PM
 ```
 
-La parte de fecha corresponde a la plantilla de formato "month day" y la parte de hora corresponde a la plantilla de formato "hour minute". Por lo tanto, puedes construir a formateadores pertinentes para la fecha y plantillas de formato de hora y, a continuación, concatenar su salida conjunta con una cadena de formato localizable.
+La parte de fecha corresponde a la plantilla de formato "month day" y la parte de hora corresponde a la plantilla de formato "hour minute". Por lo tanto, puedes crear los formateadores pertinentes para las plantillas de formato de tiempo y fecha pertinente y concatenar su salida conjunta con una cadena de formato localizable.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;
@@ -141,4 +141,4 @@ string output = patternFormatter.Format(System.DateTime.Now);
 
 ## <a name="related-topics"></a>Artículos relacionados
 
-* [Ejemplo de formato de fecha y hora](http://go.microsoft.com/fwlink/p/?LinkId=231618)
+* [Ejemplo de formato de fecha y hora](https://go.microsoft.com/fwlink/p/?LinkId=231618)

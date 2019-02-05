@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939383"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049183"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
@@ -48,7 +48,7 @@ Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entr
 
 Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://developer.microsoft.com/en-us/windows/support). En esa página, elige **en contacto con nosotros**.
 
-También puedes publicar una pregunta en el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
+También puedes publicar una pregunta en el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>En la aplicación se muestran anuncios de prueba, en lugar de anuncios dinámicos
 
@@ -91,7 +91,7 @@ Establecer las propiedades relacionadas con los bordes heredados por **AdControl
 
 ## <a name="more-information"></a>Más información
 
-Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con el SDK de Microsoft Advertising, visita el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
+Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con el SDK de Microsoft Advertising, visita el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).
 
  
 

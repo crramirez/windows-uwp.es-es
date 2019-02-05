@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, tecnología, technology, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: c6d2ebad640849cd81d6a2704f89ca1f05cc1b27
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 53616e572be6051d096c095f9587c498b769a6af
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942970"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048532"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologías de juego de aplicaciones para la UWP
 
@@ -22,7 +22,7 @@ En esta guía, encontrarás información sobre las tecnologías disponibles para
 ##  <a name="benefits-of-windows10-for-game-development"></a>Ventajas de Windows 10 para el desarrollo de juegos
 
 
-Con la introducción de UWP en Windows 10, tus títulos de Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de versiones anteriores de Windows, hay un constante aumento en el número de clientes de Windows 10. La combinación de estas dos cosas significa que tus títulos de Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
+Con la introducción de UWP en Windows 10, tus títulos de Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de versiones anteriores de Windows, hay un constante aumento del número de clientes de Windows 10. La combinación de estas dos cosas significa que tus títulos de Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
 
 Además, Windows 10 ofrece muchas características nuevas que son particularmente beneficiosas para juegos:
 
@@ -37,7 +37,7 @@ Los juegos en tiempo real que requieren un alto rendimiento deben usar las API d
 ## <a name="development-environment"></a>Entorno de desarrollo
 
 
-Para crear juegos para UWP, tendrás que configurar el entorno de desarrollo instalando Visual Studio 2015 o posterior. Te recomendamos que instalar la versión más reciente de Visual Studio, lo que da acceso a las últimas actualizaciones de seguridad y desarrollo. Visual Studio te permite crear aplicaciones para UWP y proporciona herramientas de desarrollo de juegos:
+Para crear juegos para UWP, tendrás que configurar el entorno de desarrollo instalando Visual Studio 2015 o posterior. Te recomendamos que instalar la versión más reciente de Visual Studio, lo que da acceso a las últimas actualizaciones de seguridad y desarrollo. Visual Studio te permite crear aplicaciones para UWP y proporciona herramientas para el desarrollo de juegos:
 
 -   Herramientas de Visual Studio para programación de juegos DX: Visual Studio proporciona herramientas para crear, editar, obtener una vista previa y exportar una imagen, modelo y recursos de sombreador. También puedes usar herramientas para convertir recursos durante la compilación y depurar el código de elementos gráficos de DirectX. Para obtener más información, consulta [Herramientas de Visual Studio para programación de juegos](set-up-visual-studio-for-game-development.md).
 -   Características de diagnóstico de elementos gráficos de Visual Studio: las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Las herramientas de diagnóstico te permiten depurar elementos gráficos, analizar fotogramas de elementos gráficos y supervisar el uso de la GPU en tiempo real. Para obtener más información, consulta [Usar DirectX en tiempo de ejecución y las características de diagnóstico de elementos gráficos de Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).
@@ -323,7 +323,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
 
 El [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite a cualquier desarrollador integrar Xbox Live en su juego de UWP y publicarlo en Xbox One y Windows 10. Integra experiencias de redes sociales de Xbox Live, como el inicio de sesión, la presencia, los marcadores y mucho más en tu juego, con un tiempo de desarrollo mínimo. Las funciones de redes sociales de Xbox Live están diseñadas para hacer crecer tu audiencia de forma orgánica, difundiendo el conocimiento a más de 55 millones de jugadores activos.
 
-Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketing dedicado y soporte técnico de desarrollo, así como la posibilidad de aparecer destacado en la Tienda principal de Xbox One, presenta la solicitud para el programa [ID@Xbox](http://www.xbox.com/developers/id). Para ver qué funciones están disponibles para el Programa de creadores de Xbox Live y el programa ID@Xbox, consulta la [Tabla de funciones](../xbox-live/developer-program-overview.md#feature-table).
+Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketing dedicado y soporte técnico de desarrollo, así como la posibilidad de aparecer destacado en la Tienda principal de Xbox One, presenta la solicitud para el programa [ID@Xbox](https://www.xbox.com/developers/id). Para ver qué funciones están disponibles para el Programa de creadores de Xbox Live y el programa ID@Xbox, consulta la [Tabla de funciones](../xbox-live/developer-program-overview.md#feature-table).
 
 Para obtener más información, consulta [Agregar Xbox Live a tu juego](e2e.md#adding-xbox-live-to-your-game).
 
@@ -332,7 +332,7 @@ Para obtener más información, consulta [Agregar Xbox Live a tu juego](e2e.md#a
 
 ### <a name="uwp-games-without-directx"></a>Juegos para UWP sin DirectX
 
-Es posible escribir juegos más sencillos con requisitos mínimos de rendimiento, como juegos de cartas o juegos de mesa, sin DirectX y no es necesario escribirlos en C++. Este tipo de juegos puede usar cualquiera de los idiomas admitidos por UWP, como C#, Visual Basic, C++ y HTML/JavaScript. Si el rendimiento y los elementos gráficos intensos no son un requisito de tu juego, consulta [JavaScript and HTML5 touch game sample (Muestra de juego táctil de JavaScript y HTML5)](http://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031) como ejemplo.
+Es posible escribir juegos más sencillos con requisitos mínimos de rendimiento, como juegos de cartas o juegos de mesa, sin DirectX y no es necesario escribirlos en C++. Este tipo de juegos puede usar cualquiera de los idiomas admitidos por UWP, como C#, Visual Basic, C++ y HTML/JavaScript. Si el rendimiento y los elementos gráficos intensos no son un requisito de tu juego, consulta [JavaScript and HTML5 touch game sample (Muestra de juego táctil de JavaScript y HTML5)](https://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031) como ejemplo.
 
 ### <a name="game-engines"></a>Motores de juegos
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, AdControl, AdControl, AdMediatorControl, AdMediatorControl, migrate, migrar
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: adac5cfdb1b4a10674fb7173e5b84a86b509f130
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff0ea54f55803e652964203899f429faf196805e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920172"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048682"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Actualizar la aplicación a las bibliotecas de publicidad más recientes de anuncios de banner
 
@@ -19,7 +19,7 @@ A partir del 1 de abril de 2017, ya no se proporcionan anuncios de banner a apli
 
 ## <a name="overview"></a>Información general
 
-Las aplicaciones para UWP que muestran anuncios de banner deben usar **AdControl** desde las bibliotecas de publicidad que se distribuyen en el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Este SDK admite un conjunto mínimo de capacidades de publicidad, incluida la posibilidad de ofrecer contenido multimedia enriquecido de HTML5 a través de la [especificación Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) de Interactive Advertising Bureau (IAB). Muchos de nuestros anunciantes buscan estas capacidades, y exigimos que los desarrolladores de aplicaciones usen una de estas versiones del SDK con el fin de ayudar a que nuestro ecosistema de aplicaciones sea más atractivo para los anunciantes y, en última instancia, generar más ingresos para ti.
+Las aplicaciones para UWP que muestran anuncios de banner deben usar **AdControl** desde las bibliotecas de publicidad que se distribuyen en el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Este SDK admite un conjunto mínimo de capacidades de publicidad, incluida la posibilidad de ofrecer contenido multimedia enriquecido de HTML5 a través de la [especificación Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) de Interactive Advertising Bureau (IAB). Muchos de nuestros anunciantes buscan estas capacidades, y exigimos que los desarrolladores de aplicaciones usen una de estas versiones del SDK con el fin de ayudar a que nuestro ecosistema de aplicaciones sea más atractivo para los anunciantes y, en última instancia, generar más ingresos para ti.
 
 Antes de que este SDK se lanzara, proporcionamos anteriormente la clase **AdControl** en varias versiones antiguas del SDK de publicidad. Ya no se admiten estas versiones anteriores del SDK de publicidad porque no son compatibles con las capacidades mínimas de publicidad descritas anteriormente. A partir del 1 de abril de 2017, ya no se proporcionan anuncios de banner a aplicaciones que usan una versión no compatible del SDK de publicidad. Si tienes una aplicación que aún usa una versión no compatible del SDK de publicidad, verás el siguiente comportamiento:
 
@@ -27,14 +27,14 @@ Antes de que este SDK se lanzara, proporcionamos anteriormente la clase **AdCont
 
 * Cuando el control **AdControl** de tu aplicación solicite un nuevo anuncio, se generará el evento **ErrorOccurred** del control y la propiedad **ErrorCode** de los argumentos del evento tendrá el valor **NoAdAvailable**.
 
-* Se desactivarán las unidades de anuncios que están asociadas a tu aplicación. No puedes quitar estas unidades de anuncios desactivadas desde tu cuenta del centro de DePartnerv. Si actualizas la aplicación para usar el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp), pasa por alto estas unidades de anuncios y crea otras nuevas.
+* Se desactivarán las unidades de anuncios que están asociadas a tu aplicación. No puedes quitar estas unidades de anuncios desactivadas desde tu cuenta del centro de DePartnerv. Si actualizas la aplicación para usar el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp), pasa por alto estas unidades de anuncios y crea otras nuevas.
 
 * Los anuncios de banner también dejarán de proporcionarse para las unidades de anuncios que se usan en más de una aplicación. Asegúrate de que las unidades de anuncios se usen cada una solo en una aplicación.
 
-Si tienes una aplicación (que ya está en la Store o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** y no estás seguro de que SDK de publicidad usa la aplicación, sigue las instrucciones de este artículo para determinar si tienes que actualizar la aplicación a un SDK compatible. Si se produce algún problema o necesitas ayuda, [ponte en contacto con el soporte técnico](http://go.microsoft.com/fwlink/?LinkId=393643).
+Si tienes una aplicación (que ya está en la Store o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** y no estás seguro de que SDK de publicidad usa la aplicación, sigue las instrucciones de este artículo para determinar si tienes que actualizar la aplicación a un SDK compatible. Si se produce algún problema o necesitas ayuda, [ponte en contacto con el soporte técnico](https://go.microsoft.com/fwlink/?LinkId=393643).
 
 > [!NOTE]
-> Si la aplicación ya usa el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicaciones para UWP), no necesitas realizar más cambios en tu aplicación.
+> Si la aplicación ya usa el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) (para aplicaciones para UWP), no necesitas realizar más cambios en tu aplicación.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -76,7 +76,7 @@ Si la aplicación usa una versión anterior del SDK, sigue estas instrucciones p
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  Instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
+3.  Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp).
 
 ## <a name="part-3-update-your-project"></a>Parte 3: actualizar el proyecto
 
@@ -86,4 +86,4 @@ Elimina todas las referencias existentes a las bibliotecas de publicidad de Micr
 
 Prueba la aplicación para asegurarte de que muestra anuncios de banner según lo previsto.
 
-Si la versión anterior de la aplicación ya está disponible en la tienda, [crea un nuevo envío](../publish/app-submissions.md) de la aplicación actualizada en el centro de partners para publicar la aplicación.
+Si la versión anterior de la aplicación ya está disponible en la tienda, [crea un nuevo envío](../publish/app-submissions.md) para la aplicación actualizada en el centro de partners para publicar la aplicación.

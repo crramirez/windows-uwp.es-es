@@ -1,34 +1,34 @@
 ---
-description: En este tema se ofrece una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de la plataforma Universal de Windows (UWP).
-title: WindowsPhone Silverlight a asignaciones de espacios de nombres y clases UWP
+description: Este tema proporciona una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de la plataforma Universal de Windows (UWP).
+title: WindowsPhone Silverlight para asignaciones de espacios de nombres y clases UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9acd42f57117fb01eef4ba8f87d35664be21cf32
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926215"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048825"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight a las asignaciones de API de UWP
 
 
-En este tema se ofrece una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de la plataforma Universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
+Este tema proporciona una asignación completa de Windows Phone Silverlight APIs a sus equivalentes de la plataforma Universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
 
 La tabla de asignaciones te ayudará cuando trabajes en un proyecto de UWP y volver a estás usando código fuente de un proyecto de WindowsPhone Silverlight. Existen diferencias en los nombres de los espacios de nombres y las clases (incluidos los controles de la interfaz de usuario) entre ambas plataformas. En muchos casos, basta con cambiar el nombre de un espacio de nombres y, después, el código se compilará. A veces, una clase o el nombre la API han cambiado, así como el nombre del espacio de nombres. En otros casos, la asignación requiere un poco más de trabajo y, en raras ocasiones, requiere un cambio de enfoque.
 
 **Cómo usar la tabla:** En primer lugar, busca el nombre de la clase que estás usando. Las clases se muestran siempre que la asignación es más complicada que simplemente cambiar el nombre del espacio de nombres. Si la clase no aparece en la lista, significa que la asignación es simplemente un cambio de espacio de nombres. Por lo tanto, busca el nombre del espacio de nombres de la clase y encontrarás el nombre del espacio de nombres de UWP equivalente. La clase estará en ese espacio de nombres. Si el espacio de nombres no figura en la lista, su nombre no ha cambiado.
 
-**Nota**Windows 10 admite mucho más de .NET Framework que una aplicación de la tienda de Windows Phone. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets.
-Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que una tecnología de compilación anticipada que convierte MSIL en código de máquina ejecutable de forma nativa. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
+**Nota**Windows 10 admite mucho más de .NET Framework que una aplicación de Windows Phone Store. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets.
+Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que una tecnología de compilación anticipada que convierte MSIL en código máquina ejecutable de forma nativa. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
 
 | Windows Phone Silverlight | Windows Runtime |
 | ------------------------- | --------------- |
 | Publicidad | |
-| Clase **Microsoft.Advertising.Mobile.UI.AdControl** | Clase [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) |
+| Clase **Microsoft.Advertising.Mobile.UI.AdControl** | Clase [AdControl](https://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) |
 | Alarmas, avisos y agentes en segundo plano | |
 | Clase **Microsoft.Phone.BackgroundAgent** | Clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) |
 | Espacio de nombres **Microsoft.Phone.Scheduler** | Espacio de nombre [ 
@@ -53,11 +53,11 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | (SWT = **System.Windows.Threading**) <br/> Clase **SWT.DispatcherTimer** | Clase[**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) |
 | Blend para Visual Studio | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> Clase **MEDC.GeometryHelper** | No hay equivalente directo. |
-| Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres [Microsoft.Xaml.Interactivity](http://go.microsoft.com/fwlink/p/?LinkId=328776) |
-| Espacio de nombres **Microsoft.Expression.Interactivity.Core** | Espacio de nombres [Microsoft.Xaml.Interactions.Core](http://go.microsoft.com/fwlink/p/?LinkId=328773) |
+| Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres [Microsoft.Xaml.Interactivity](https://go.microsoft.com/fwlink/p/?LinkId=328776) |
+| Espacio de nombres **Microsoft.Expression.Interactivity.Core** | Espacio de nombres [Microsoft.Xaml.Interactions.Core](https://go.microsoft.com/fwlink/p/?LinkId=328773) |
 | (MEIC = **Microsoft.Expression.Interactivity.Core**) <br/> Clase **MEIC.ExtendedVisualStateManager** | No hay equivalente directo. |
 | Espacio de nombres **Microsoft.Expression.Interactivity.Input** | No hay equivalente directo. |
-| Espacio de nombres **Microsoft.Expression.Interactivity.Media** | Espacio de nombres [Microsoft.Xaml.Interactions.Media](http://go.microsoft.com/fwlink/p/?LinkId=328775) |
+| Espacio de nombres **Microsoft.Expression.Interactivity.Media** | Espacio de nombres [Microsoft.Xaml.Interactions.Media](https://go.microsoft.com/fwlink/p/?LinkId=328775) |
 | Espacio de nombres **Microsoft.Expression.Shapes** | No hay equivalente directo. |
 | (MI = **Microsoft.Internal**) <br/> Interfaz **MI.IManagedFrameworkInternalHelper** | No hay equivalente directo. |
 | Datos de contactos y calendarios | |
@@ -110,7 +110,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** | Clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). También la clase [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) (solo Windows). |
 | Clase **Microsoft.Devices.CameraButtons** | Clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) |
 | Clase **Microsoft.Devices.CameraVideoBrushExtensions** | Clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) |
-| Clase **Microsoft.Devices.Environment** | No hay equivalente directo. Como solución alternativa, usa la compilación condicional y define un símbolo personalizado. O bien, puedes diseñar una solución alternativa mediante la propiedad [IsAttached](http://msdn.microsoft.com/library/e299w87h.aspx) . |
+| Clase **Microsoft.Devices.Environment** | No hay equivalente directo. Como solución alternativa, usa la compilación condicional y define un símbolo personalizado. O bien, puedes diseñar una solución alternativa mediante la propiedad [IsAttached](https://msdn.microsoft.com/library/e299w87h.aspx) . |
 | Clase **Microsoft.Devices.MediaHistory** | No hay equivalente directo. |
 | Clase **Microsoft.Devices.VibrateController** | Clase [**VibrationDevice**](https://msdn.microsoft.com/library/windows/apps/jj207230) |
 | Clase **Microsoft.Devices.Radio.FMRadio** | No hay equivalente directo. |
@@ -122,7 +122,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | (ST = **System.Threading**) <br/> Propiedad **ST.Thread.CurrentCulture** | (SG = **System.Globalization**) <br/> Propiedad **S.CultureInfo.CurrentCulture** |
 | (ST = **System.Threading**) <br/> Propiedad **ST.Thread.CurrentUICulture** | (SG = **System.Globalization**) <br/> Propiedad **S.CultureInfo.CurrentUICulture** |
 | Elementos gráficos y animación | |
-| Espacios de nombres **Microsoft.Xna.Framework.\***, [Biblioteca de clases de XNA Framework](http://go.microsoft.com/fwlink/p/?LinkId=263769), [Biblioteca de clases de canalización de contenido](http://go.microsoft.com/fwlink/p/?LinkId=263770) | No hay equivalente directo. En general, se usa [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) con C++. Consulta [Desarrollo de juegos](https://msdn.microsoft.com/library/windows/apps/hh452744) e [Interoperabilidad de DirectX y XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). |
+| Espacios de nombres **Microsoft.Xna.Framework.\***, [Biblioteca de clases de XNA Framework](https://go.microsoft.com/fwlink/p/?LinkId=263769), [Biblioteca de clases de canalización de contenido](https://go.microsoft.com/fwlink/p/?LinkId=263770) | No hay equivalente directo. En general, se usa [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) con C++. Consulta [Desarrollo de juegos](https://msdn.microsoft.com/library/windows/apps/hh452744) e [Interoperabilidad de DirectX y XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). |
 | Clase **Microsoft.Xna.Framework.Audio.Microphone** | Clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) |
 | Clase **Microsoft.Xna.Framework.Audio.SoundEffect** | Clase [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) |
 | Espacio de nombres **Microsoft.Xna.Framework.GamerServices** | (WPS = **Windows.Phone.System**) <br/> Espacio de nombres [**WPS.UserProfile.GameServices.Core**](https://msdn.microsoft.com/library/windows/apps/jj207609) |

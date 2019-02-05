@@ -8,12 +8,12 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 07ed74af3ebe558c6a82cd799cb6aa1efa035e46
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 9bdd122f438cc9584b5e1eff2236c625adea9c2b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980383"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048988"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconocer trazos de Windows Ink como texto y formas
 
@@ -381,9 +381,9 @@ En este ejemplo, el reconocimiento se inicia cuando el usuario hace clic en un b
                 InkRecognitionTarget.All);
     ```
 
-    Cada objeto [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) contiene un conjunto de candidatos de texto. El elemento de nivel superior en esta lista se considera el motor de reconocimiento para que sea la mejor coincidencia, seguida de los candidatos restantes en orden de mayor a menor confianza.
+    Cada objeto [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) contiene un conjunto de candidatos de texto. El elemento de nivel superior en esta lista se considera el motor de reconocimiento para que sea la mejor coincidencia, seguida del resto de candidatos en orden de mayor a menor confianza.
 
-    Se recorre cada [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) y compilar la lista de candidatos. A continuación, se muestran los candidatos y la [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) está desactivada (que también se borra el [**control InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
+    Se recorre cada [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) y compilar la lista de candidatos. A continuación, se muestran los candidatos y la [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) está desactivada (que también se borra el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
 
     ```csharp
     string str = "Recognition result\n";
@@ -475,7 +475,7 @@ Para obtener una lista de idiomas compatibles con [**InkRecognizer**](https://ms
 
 Tu aplicación puede consultar el conjunto de los motores de reconocimiento de escritura a mano instalados y usar uno de ellos, o permitir que los usuarios seleccionen su idioma preferido.
 
-**Nota**  los usuarios pueden ver una lista de idiomas instalados yendo a **configuración -&gt; hora e idioma**. Los idiomas instalados se enumeran en **Idiomas**.
+**Nota**  los usuarios pueden ver una lista de idiomas instalados yendo a **configuración -&gt; tiempo & idioma**. Los idiomas instalados se enumeran en **Idiomas**.
 
 Para instalar nuevos paquetes de idioma y habilitar el reconocimiento de escritura a mano para ese idioma:
 
@@ -862,9 +862,9 @@ Para este ejemplo, usaremos la misma interfaz de usuario y la misma configuraci�
 * [Ejemplo de reconocimiento de escritura a mano de la entrada de lápiz (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
 **Otras muestras**
-* [Muestra de entrada de lápiz simple (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Muestra de entrada de lápiz compleja (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Muestra de entrada de lápiz (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Muestra de entrada de lápiz simple (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Muestra de entrada de lápiz compleja (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Muestra de entrada de lápiz (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Tutorial de introducción: Admitir la entrada de lápiz en tu aplicación para UWP](https://aka.ms/appsample-ink)
 * [Muestra de libro para colorear](https://aka.ms/cpubsample-coloringbook)
 * [Muestra de notas familiares](https://aka.ms/cpubsample-familynotessample)

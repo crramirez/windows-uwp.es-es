@@ -8,28 +8,28 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 99657899615a5d485af788004589c2bc53a0a0e8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5442dacb5c01bc6e22460e9d772ad73ba06b54e2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924420"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049942"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empaquetar aplicaciones de escritorio (puente de escritorio)
 
-Realizar la aplicación de escritorio existente y agrega experiencias modernas para los usuarios de Windows 10. A continuación, logra mayor alcance en los mercados internacionales distribuyéndola a través de Microsoft Store. Puedes monetizar tu aplicación de maneras mucho más sencillas aprovechando las características integradas directamente en la tienda. Por supuesto, no tienes que usar la tienda. Puedes usar tus canales existentes.
+Lleva la aplicación de escritorio existente y agrega experiencias modernas para los usuarios de Windows 10. A continuación, logra mayor alcance en los mercados internacionales distribuyéndola a través de Microsoft Store. Puedes monetizar tu aplicación de maneras mucho más sencillas aprovechando las características integradas directamente en la tienda. Por supuesto, no tienes que usar la tienda. Puedes usar tus canales existentes.
 
 ![Puente de dispositivo de escritorio](images/desktop-to-uwp/desktop-bridge-4.png)
 
-Al crear un paquete de la aplicación de escritorio, la aplicación obtendrá una identidad y con esa identidad, la aplicación de escritorio tiene acceso a Windows Universal plataforma (API de UWP). Puedes usarlas para mejorar las experiencias atractivas y modernas, como iconos dinámicos y notificaciones.  Usa la compilación condicional sencillas y comprobaciones en tiempo de ejecución para ejecutar código UWP solo cuando la aplicación se ejecuta en Windows 10.
+Al crear un paquete de la aplicación de escritorio, la aplicación obtendrá una identidad y con esa identidad, la aplicación de escritorio tiene acceso a Windows Universal Platform (UWP) API. Puedes usarlas para mejorar las experiencias atractivas y modernas, como iconos dinámicos y notificaciones.  Usa la compilación condicional sencillas y comprobaciones en tiempo de ejecución para ejecutar código UWP solo cuando la aplicación se ejecuta en Windows 10.
 
 Además del código que usas para destacar las experiencias de Windows 10, la aplicación permanece intacta y puedes seguir distribuyéndola a tu existentes de Windows 7, Windows Vista o base de usuarios de Windows XP. En Windows 10, la aplicación continúa ejecutándose en plena confianza al igual que el modo de usuario hace hoy.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 > [!NOTE]
-> Consulta <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta serie</a> de vídeos cortos que publicó Microsoft Virtual Academy. Estos vídeos te proporcionarán todo el proceso de incorporación de la aplicación de escritorio a la plataforma Universal de Windows (UWP).
+> Consulta <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta serie</a> de vídeos cortos que publicó Microsoft Virtual Academy. Estos vídeos te proporcionarán todo el proceso de incorporación de la aplicación de escritorio para la plataforma Universal de Windows (UWP).
 
 ## <a name="benefits"></a>Ventajas
 
@@ -49,7 +49,7 @@ Si quieres ver una lista completa de las ventajas que se ofrecen, consulta [Puen
 
 ## <a name="prepare"></a>Preparación
 
-Primero, prepara la aplicación revisando el artículo [Preparar para empaquetar la aplicación de escritorio](desktop-to-uwp-prepare.md), y después solucionando cualquier problema que se aplican a la aplicación antes de crear un paquete de la aplicación de Windows para ella. Es posible que no tienes que realizar muchos cambios en la aplicación antes de crear el paquete. Sin embargo, hay algunas situaciones en las que pueden requerir que modificar la aplicación antes de crear un paquete para ella.
+Primero, prepara la aplicación revisando el artículo [Preparar para empaquetar la aplicación de escritorio](desktop-to-uwp-prepare.md), y después solucionando cualquier problema que se aplican a la aplicación antes de crear un paquete de aplicación de Windows para ella. Es posible que no tienes que realizar muchos cambios en la aplicación antes de crear el paquete. Sin embargo, hay algunas situaciones en las que pueden requerir que modificar la aplicación antes de crear un paquete para ella.
 
 <a id="convert" />
 
@@ -59,7 +59,7 @@ Estas son algunas herramientas que puedes usar para crear un paquete de aplicaci
 
 ### <a name="desktop-app-converter"></a>Desktop App Converter
 
-Aunque el término "Converter" aparece en el nombre de esta herramienta, realmente no convierte la aplicación. La aplicación no cambia. Sin embargo, esta herramienta genera un paquete de aplicación de Windows para ti. Puede ser muy útil en casos donde la aplicación realiza un gran número de modificaciones en el sistema o si tienes alguna duda sobre lo que hace el instalador.
+Aunque el término "Converter" aparece en el nombre de esta herramienta, realmente no convierte la aplicación. La aplicación no se modifica. Sin embargo, esta herramienta genera un paquete de aplicación de Windows para ti. Puede ser muy útil en casos donde la aplicación realiza un gran número de modificaciones en el sistema o si tienes alguna duda sobre lo que hace el instalador.
 
 Desktop App Converter traduce las acciones del instalador para el archivo virtual y el sistema de registro que usará la versión de la aplicación empaquetada. Desktop App Converter también realiza alguna tarea extra por ti. Esta es una lista de algunas de ellas.
 
@@ -73,7 +73,7 @@ Desktop App Converter traduce las acciones del instalador para el archivo virtua
 
 : heavy_check_mark: valida la aplicación frente a la aplicación de escritorio empaquetada y requisitos de Microsoft Store.
 
-Otro buen motivo para usar Desktop App Converter es si mantienes tu aplicación mediante el uso de un entorno de desarrollo que no sean de Visual Studio. Puedes usar Desktop App Converter incluso si la aplicación no tiene un instalador.
+Otro buen motivo para usar Desktop App Converter es si mantienes tu aplicación mediante el uso de un entorno de desarrollo diferentes distinto a Visual Studio. Puedes usar Desktop App Converter incluso si la aplicación no tiene un instalador.
 
 Consulta el [paquete de una aplicación de escritorio con Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)
 
@@ -99,14 +99,14 @@ Consulta el [paquete de una aplicación de escritorio con Visual Studio](desktop
 
 #### <a name="advanced-installer"></a>Instalador avanzado
 
-Caphyon proporciona una herramienta gratuita de empaquetado de aplicaciones de escritorio basada en una interfaz gráfica de usuario (GUI) que te permitirá crear un paquete de aplicación de Windows para tu aplicación en unos pocos clics. Puede usar a cualquier instalador; incluso aquellos que se ejecutan en modo silencioso y realiza una validación de comprobación para determinar si la aplicación es adecuada para empaquetado.
-La extensión Desktop App Converter está integrada con Hyper-V y [VMware](http://www.vmware.com/). Esto significa que puedes usar tus propias máquinas virtuales sin tener que descargar una imagen [Docker](https://docs.docker.com/) coincidente que puede llegar a tener más de 3 GB de tamaño.
+Caphyon proporciona una herramienta gratuita de empaquetado de aplicaciones de escritorio basada en una interfaz gráfica de usuario (GUI) que te permitirá crear un paquete de aplicación de Windows para tu aplicación en unos pocos clics. Puede usar a cualquier instalador; incluso aquellos que se ejecute en modo silencioso y realiza una validación de comprobación para determinar si la aplicación es adecuada para empaquetado.
+La extensión Desktop App Converter está integrada con Hyper-V y [VMware](https://www.vmware.com/). Esto significa que puedes usar tus propias máquinas virtuales sin tener que descargar una imagen [Docker](https://docs.docker.com/) coincidente que puede llegar a tener más de 3 GB de tamaño.
 
 <img width="20%" src="images/desktop-to-uwp/Advanced_Installer_Vertical.png">
 
-Puedes usar el [Instalador avanzado](http://www.advancedinstaller.com/) para generar MSI y [paquetes de aplicación de Windows](http://www.advancedinstaller.com/uwp-app-package.html) a partir de proyectos existentes. De igual manera, también puedes usar el Instalador avanzado para importar los paquetes de aplicación de Windows que hayas creado mediante Microsoft Desktop App Converter. Una vez importados, puedes mantenerlos mediante herramientas visuales diseñadas específicamente para aplicaciones para UWP.
+Puedes usar el [Instalador avanzado](https://www.advancedinstaller.com/) para generar MSI y [paquetes de aplicación de Windows](https://www.advancedinstaller.com/uwp-app-package.html) a partir de proyectos existentes. De igual manera, también puedes usar el Instalador avanzado para importar los paquetes de aplicación de Windows que hayas creado mediante Microsoft Desktop App Converter. Una vez importados, puedes mantenerlos mediante herramientas visuales diseñadas específicamente para aplicaciones para UWP.
 
-Del mismo modo, el Instalador avanzado también te proporciona una extensión de Visual Studio 2017 y 2015 que puedes usar para [compilar y depurar aplicaciones de Puente de dispositivo de escritorio](http://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
+Del mismo modo, el Instalador avanzado también te proporciona una extensión de Visual Studio 2017 y 2015 que puedes usar para [compilar y depurar aplicaciones de Puente de dispositivo de escritorio](https://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
 
 Consulta este [vídeo](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) para ver una introducción rápida.
 
@@ -115,7 +115,7 @@ Consulta este [vídeo](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu
 
 #### <a name="cloudhouse-compatibility-containers"></a>Contenedores de compatibilidad con Cloudhouse
 
-Para los clientes empresariales que tienen aplicaciones de línea de negocio que son incompatibles con Windows 10 y Windows 10S, los contenedores de compatibilidad de Cloudhouse permiten que las aplicaciones de Windows XP y Windows 7 se ejecuten en Windows 10 y los conviertan para ejecutarse en la Plataforma universal de Windows (UWP) para entregarse a través de Microsoft Store para Empresas o Microsoft Intune sin cambiar el código fuente. Regístrate para obtener una [Evaluación gratuita](http://www.cloudhouse.com/free-trial).
+Para los clientes empresariales que tienen aplicaciones de línea de negocio que son incompatibles con Windows 10 y Windows 10S, los contenedores de compatibilidad de Cloudhouse permiten que las aplicaciones de Windows XP y Windows 7 se ejecuten en Windows 10 y los conviertan para ejecutarse en la Plataforma universal de Windows (UWP) para entregarse a través de Microsoft Store para Empresas o Microsoft Intune sin cambiar el código fuente. Regístrate para obtener una [Evaluación gratuita](https://www.cloudhouse.com/free-trial).
 
 <img width="20%" src="images/desktop-to-uwp/cloudhouse-container-logo.png">
 
@@ -123,11 +123,11 @@ Cloudhouse proporciona un empaquetador automático de línea de empaquetado de a
 
 El empaquetador automático usa instalar y capturar y el análisis en tiempo de ejecución para crear un contenedor para la aplicación que incluye los archivos, el registro, los tiempos de ejecución y las dependencias de la aplicación, así como el motor de redireccionamiento y compatibilidad que permite que la aplicación se ejecute en Windows 10. El contenedor proporciona el aislamiento de la aplicación y su tiempos de ejecución, para que no afecten ni entren en conflicto con otras aplicaciones que se ejecutan en el dispositivo del usuario.
 
-Obtén más información sobre cómo puedes ofrecer aplicaciones empresariales a través de Microsoft Store para Empresas en nuestro [blog de lanzamientos](http://www.cloudhouse.com/resources/release-solution-to-get-any-line-of-business-app-to-uwp).
+Obtén más información sobre cómo puedes ofrecer aplicaciones empresariales a través de Microsoft Store para Empresas en nuestro [blog de lanzamientos](https://www.cloudhouse.com/resources/release-solution-to-get-any-line-of-business-app-to-uwp).
 
 #### <a name="firegiant"></a>FireGiant
 
-La [extensión FireGiant Appx](https://www.firegiant.com/products/wix-expansion-pack/appx) te permite crear paquetes MSI y paquetes de aplicaciones de Windows al mismo tiempo desde el mismo código fuente de WiX. Cada vez que crees, puedes elegir Windows 10 con un paquete de la aplicación de Windows y las versiones anteriores de Windows con MSI.
+La [extensión FireGiant Appx](https://www.firegiant.com/products/wix-expansion-pack/appx) te permite crear paquetes MSI y paquetes de aplicaciones de Windows al mismo tiempo desde el mismo código fuente de WiX. Cada vez que crees, puedes elegir Windows 10 con un paquete de aplicación de Windows y las versiones anteriores de Windows con MSI.
 
 <img width="20%" src="images/desktop-to-uwp/FG3rdPartyLogo.png">
 
@@ -135,7 +135,7 @@ La extensión FireGiant Appx usa el análisis estático y la emulación intelige
 
 Como la extensión FireGiant Appx no convierte el instalador ejecutándolo, puede mantener el instalador WiX sin necesidad de convertirlo repetidamente a paquetes de aplicación de Windows. Todos los usuarios de diferentes versiones de Windows obtienen las mejoras más recientes y no tienes que preocuparte de que los paquetes de aplicación de MSI y Windows no se sincronicen.
 
-Echa un vistazo a este [vídeo](https://www.youtube.com/watch?v=AFBpdBiAYQE) y ver cómo en un par de líneas de código FireGiant director general Rob Mensching crea una versión de Appx (paquete de la aplicación de Windows) de la herramienta de compresión de 7-Zip de código abierto populares y, a continuación, cómo mejora la aplicación de Windows y los paquetes MSI con cambios en el mismo código fuente de WiX.
+Echa un vistazo a este [vídeo](https://www.youtube.com/watch?v=AFBpdBiAYQE) y ver cómo en un par de líneas de código FireGiant director general Rob Mensching crea una versión de Appx (paquete de aplicación de Windows) de la herramienta de compresión de 7-Zip de código abierto populares y, a continuación, cómo mejora la aplicación para Windows y los paquetes MSI con cambios en el mismo código fuente de WiX.
 
 #### <a name="installaware"></a>InstallAware
 
@@ -183,7 +183,7 @@ Consulta [RAD Studio de Embarcadero](https://www.embarcadero.com/products/rad-st
 
 #### <a name="raypack-studio"></a>RayPack Studio
 
-Solución de empaquetado de Raynet, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), admite la creación de paquetes de aplicaciones de escritorio como uno de los posibles resultados de conversión eficiente y fácil de configurar y reempaquetado framework.
+Solución de empaquetado de Raynet, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), admite la creación de paquetes de aplicaciones de escritorio como uno de los posibles resultados de conversión eficiente y fácil de configurar y volver a empaquetar framework.
 
 <img width="20%" src="images/desktop-to-uwp/RaynetLogo_v3.png">
 
@@ -213,7 +213,7 @@ Consulta [empaquetar una aplicación de escritorio de forma manual](desktop-to-u
 
 ## <a name="integrate"></a>Integración
 
-Si la aplicación debe integrar con el sistema (por ejemplo: establecer reglas de firewall), describe estas cuestiones en el manifiesto del paquete de la aplicación y el sistema hará el resto. Para la mayoría de estas tareas, no tendrás que escribir nada de código. Con un poco de XML en el manifiesto, puedes hacer cosas como iniciar un proceso cuando el usuario inicie sesión, integrar la aplicación en el Explorador de archivos y agregar la aplicación de una lista de destinos de impresión que aparecen en otras aplicaciones.
+Si la aplicación debe integrar con el sistema (por ejemplo: establecer reglas de firewall), describe estas cuestiones en el manifiesto del paquete de la aplicación y el sistema hará el resto. Para la mayoría de estas tareas, no tendrás que escribir nada de código. Con un poco de XML en el manifiesto, puedes hacer cosas como iniciar un proceso cuando el usuario inicie sesión, integrar la aplicación en el Explorador de archivos y agregar la aplicación una lista de destinos de impresión que aparecen en otras aplicaciones.
 
 Consulta [integrar la aplicación de escritorio empaquetada con Windows 10](desktop-to-uwp-extensions.md).
 
@@ -225,7 +225,7 @@ Consulta [Mejorar tu aplicación de escritorio para Windows 10](desktop-to-uwp-e
 
 ## <a name="extend"></a>Ampliación
 
-Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usuario habilitada para entrada táctil) deben ejecutarse dentro de un contenedor de aplicación moderna. En general, primero debes determinar si puedes agregar tu experiencia [mejorando](desktop-to-uwp-enhance.md) la aplicación de escritorio existente con las API de UWP. Si tienes que usar un componente de UWP para lograr la experiencia, puede agregar un proyecto de UWP a la solución y usar los servicios de aplicaciones para la comunicación entre la aplicación de escritorio y el componente UWP.
+Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usuario habilitada para entrada táctil) deben ejecutarse dentro de un contenedor de aplicación moderna. En general, primero debes determinar si puedes agregar tu experiencia [mejorando](desktop-to-uwp-enhance.md) la aplicación de escritorio existente con las API de UWP. Si tienes que usar un componente de UWP para lograr la experiencia, a continuación, puedes agregar un proyecto de UWP a la solución y usar servicios de aplicaciones para la comunicación entre la aplicación de escritorio y el componente UWP.
 
 Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](desktop-to-uwp-extend.md).
 
@@ -249,7 +249,7 @@ Para probar la aplicación en una configuración realista mientras la preparas p
 
 ## <a name="validate"></a>Validación
 
-Para que la aplicación tenga posibilidades de publicarse en la Microsoft Store u obtener la [Certificación de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666), debes validarla y probarla localmente antes de enviarla para su certificación.
+Para que la aplicación tenga posibilidades de publicarse en Microsoft Store u obtener la [Certificación de Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666), debes validarla y probarla localmente antes de enviarla para su certificación.
 
 Si estás usando DAC para empaquetar la aplicación, puedes usar el nuevo ``-Verify`` marca para validar el paquete con la aplicación de escritorio empaquetada y requisitos de la tienda. Consulta [Empaquetar una aplicación, firmarla y prepararla para su envío a la Store](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
@@ -269,7 +269,7 @@ Consulta [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-d
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

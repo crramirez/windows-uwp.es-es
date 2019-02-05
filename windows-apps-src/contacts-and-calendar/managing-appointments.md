@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, citas, calendario, appointments, calendar
 ms.localizationpriority: medium
-ms.openlocfilehash: 805383d243008f839b04c98906edd3beb52d581a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ece137fafc2fdcca7ce41839aa4614456973cf40
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938785"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049522"
 ---
 # <a name="manage-appointments"></a>Administrar citas
 
@@ -565,11 +565,11 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Con esto deberías tener nociones básicas sobre cómo administrar citas. Descarga las [muestras de aplicaciones universales de Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos sobre la administración de citas.
+Con esto deberías tener nociones básicas sobre cómo administrar citas. Descarga las [muestras de aplicaciones universales de Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos sobre la administración de citas.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de API de citas](http://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Muestra de API de citas](https://go.microsoft.com/fwlink/p/?linkid=309836)
  
 
  

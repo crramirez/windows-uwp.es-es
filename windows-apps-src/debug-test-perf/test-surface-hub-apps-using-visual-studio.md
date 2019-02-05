@@ -6,15 +6,15 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b40fd56a85be6dce441324a427790cda28f9d7ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: db481fac1bdcb9e79762f52aee48574e987c4cbb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929537"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048888"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Probar aplicaciones de Surface Hub con Visual Studio
-El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no usa la misma interfaz de usuario que Surface Hub, pero es útil para probar el aspecto y el se comporta con el tamaño de la pantalla de Surface Hub y la resolución de la aplicación.
+El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no usa la misma interfaz de usuario que Surface Hub, pero es útil para probar el aspecto y el comportamiento con el tamaño de la pantalla de Surface Hub y la resolución de la aplicación.
 
 Para obtener más información sobre la herramienta del simulador en general, vea [ejecutar aplicaciones para UWP en el simulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
 
@@ -69,23 +69,23 @@ Para agregar resoluciones de Surface Hub al simulador:
     ![Resoluciones del simulador de Visual Studio](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [Activar el modo de tableta](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) mejor simular la experiencia de un dispositivo Surface Hub.
+   > [Activar el modo de tableta](https://windows.microsoft.com/windows-10/getstarted-like-a-tablet) mejor simular la experiencia de un dispositivo Surface Hub.
 
-## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Implementar aplicaciones en un dispositivo de Surface Hub desde Visual Studio
+## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Implementar aplicaciones en un dispositivo Surface Hub desde Visual Studio
 Implementar manualmente una aplicación para un dispositivo Surface Hub es un proceso sencillo.
 
 ### <a name="enable-developer-mode"></a>Habilitar el modo de desarrollador
 De manera predeterminada, Surface Hub solo instala aplicaciones de Microsoft Store. Para instalar aplicaciones firmadas por otros orígenes, debes habilitar el modo de desarrollador.
 
 > [!NOTE]
-> Una vez habilitado el modo de desarrollador, tendrás que restablecer el Surface Hub si deseas volver a deshabilitarlo. Al restablecer el dispositivo se eliminan todas las configuraciones y los archivos de usuario locales y luego se vuelve a instalar Windows.
+> Después de que se ha habilitado el modo de desarrollador, tendrás que restablecer el Surface Hub si deseas volver a deshabilitarlo. Al restablecer el dispositivo se eliminan todas las configuraciones y los archivos de usuario locales y luego se vuelve a instalar Windows.
 
 1. En el menú **Inicio** de Surface Hub, abre la aplicación Configuración.
 
    > [!NOTE]
-   > Se requieren privilegios administrativos para tener acceso a la aplicación de configuración en Surface Hub.
+   > Se requieren privilegios administrativos para tener acceso a la aplicación configuración en Surface Hub.
 
-2. Ve a **actualización y seguridad \ > para desarrolladores**.
+2. Ve a **Actualizar & seguridad \> para desarrolladores**.
 
 3. Elige el **Modo de desarrollador** y acepta la advertencia.
 
@@ -104,7 +104,7 @@ Para obtener más información sobre el proceso de implementación en general, v
 2. Escribe la dirección IP del Surface Hub. Asegúrate de que el modo de autenticación **Universal** está seleccionado.
 
    > [!TIP] 
-   > Una vez habilitado el modo de desarrollador, encontrarás dirección IP del Surface Hub en la pantalla de bienvenida.
+   > Una vez habilitado el modo de desarrollador, encontrarás dirección IP de Surface Hub en la pantalla de bienvenida.
 
 3. Selecciona **Iniciar depuración (F5)** para implementar y depurar la aplicación en el Surface Hub o presiona CTRL+F5 para implementar únicamente la aplicación.
 

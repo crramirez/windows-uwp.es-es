@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: cd6f6a6fb638069dba58c62eca91b74868816d2a
-ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
+ms.openlocfilehash: d6261a7cce86c82b4865d7ca1d68c082cba9ccca
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "8997400"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049482"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
@@ -25,7 +25,7 @@ La sección **Servicios** te permite administrar varios servicios diferentes par
 
 ## <a name="xbox-live"></a>XboxLive
 
-Si vas a publicar un juego, puedes habilitar el [Programa de creadores de Xbox Live](http://xbox.com/developers/creators-program) en esta página. Esto te permite empezar a configurar y probar características de Xbox Live y, finalmente publicar un juego de programa de creadores de Xbox Live.
+Si vas a publicar un juego, puedes habilitar el [Programa de creadores de Xbox Live](https://xbox.com/developers/creators-program) en esta página. Esto te permite empezar a configurar y probar características de Xbox Live y, finalmente publicar un juego de programa de creadores de Xbox Live.
 
 Para obtener más información, consulta [empezar a trabajar con el programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) y [crear un nuevo título de Xbox Live Creators Program y publicar en el entorno de prueba](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
@@ -37,9 +37,9 @@ Para obtener más información, consulta [Ejecutar experimentos en la aplicació
 
 ## <a name="maps"></a>Mapas
 
-Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obtener información sobre cómo solicitar una clave de autenticación de mapas de Bing Maps Developer Center y agregarlo a la aplicación, consulta [una clave de autenticación de mapas de la solicitud](../maps-and-location/authentication-key.md) para obtener más información. 
+Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](https://go.microsoft.com/fwlink/p/?LinkId=614880). Para obtener información sobre cómo solicitar una clave de autenticación de mapas de Bing Maps Developer Center y agregarlo a la aplicación, consulta [una clave de autenticación de mapas de la solicitud](../maps-and-location/authentication-key.md) para obtener más información. 
 
-Usar la página **mapas** solo para las aplicaciones publicado anteriormente para Windows Phone 8.1 y versiones anteriores. Para usar los servicios de mapa en estas aplicaciones, tendrás que solicitar un identificador de aplicación de servicio de mapas y un token para incluirlo en el código de la aplicación. Al hacer clic en **obtener token**, generaremos un servicio de mapas Id. de aplicación (**ApplicationID**) y asignar el servicio de Token de autenticación (**AuthenticationToken**) para la aplicación. Asegúrate de agregar estos valores en el código antes de paquete y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+Usar la página **mapas** solo para las aplicaciones publicado anteriormente para Windows Phone 8.1 y versiones anteriores. Para usar los servicios de mapa en estas aplicaciones, tendrás que solicitar un identificador de aplicación de servicio de mapas y un token para incluirlo en el código de la aplicación. Al hacer clic en **obtener token**, generaremos un servicio de mapas Id. de aplicación (**ApplicationID**) y asignar el servicio de Token de autenticación (**AuthenticationToken**) para la aplicación. Asegúrate de agregar estos valores en el código antes de paquete y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](https://go.microsoft.com/fwlink/p/?LinkId=614882).
 
 ## <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
@@ -91,9 +91,9 @@ Según el tipo de paquete de la aplicación y sus requisitos específicos, tambi
 
 -   **Servicios de notificaciones de inserción de Windows (WNS)** te permite enviar notificaciones del sistema, iconos, distintivos y actualizaciones sin procesar desde tu propio servicio en la nube. Para obtener más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
--   **Aplicaciones móviles de Microsoft Azure** te permite enviar notificaciones push, autenticar y administrar los usuarios de la aplicación y almacenar datos de la aplicación en la nube. Para obtener más información, consulta la [documentación de Aplicaciones móviles](http://go.microsoft.com/fwlink/p/?LinkId=221116).
+-   **Aplicaciones móviles de Microsoft Azure** te permite enviar notificaciones push, autenticar y administrar los usuarios de la aplicación y almacenar datos de la aplicación en la nube. Para obtener más información, consulta la [documentación de Aplicaciones móviles](https://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   **Servicio de notificaciones de inserción de Microsoft (MPNS)** puede usarse con paquetes .xap publicadas anteriormente para Windows Phone. Puedes enviar un número limitado de notificaciones no autenticadas sin realizar ninguna configuración, aunque recomendamos usar notificaciones autenticadas para evitar limitaciones. Si estás usando MPNS, tendrás que cargar un certificado en el campo proporcionado en la página **WNS/MPNS** . Para obtener más información, consulta [Configurar un servicio web autenticado para enviar notificaciones de inserción para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   **Servicio de notificaciones de inserción de Microsoft (MPNS)** puede usarse con paquetes .xap publicadas anteriormente para Windows Phone. Puedes enviar un número limitado de notificaciones no autenticadas sin realizar ninguna configuración, aunque recomendamos usar notificaciones autenticadas para evitar limitaciones. Si estás usando MPNS, tendrás que cargar un certificado en el campo proporcionado en la página **WNS/MPNS** . Para obtener más información, consulta [Configurar un servicio web autenticado para enviar notificaciones de inserción para Windows Phone 8](https://go.microsoft.com/fwlink/p/?LinkId=528736).
  
 
  

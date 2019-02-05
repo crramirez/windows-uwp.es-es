@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 6740e6ce35277fa7f7f088c312f8b9ee1f5281c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 321f8efc1475bc153102f3f8157cd2d094b37077
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923974"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049057"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -116,7 +116,7 @@ En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para 
 ## <a name="localize-the-string-resources"></a>Localizar los recursos de cadena
 1. Realiza una copia de tu archivo de recursos (.resw) para otro idioma.
     1. En "Strings", crea una nueva subcarpeta y asígnale el nombre "de-DE", de alemán (Alemania).
-   <br>**Nota**para el nombre de carpeta, puedes usar cualquier [etiqueta de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Consulta [Adaptar los recursos al idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md) para obtener detalles sobre el calificador de idioma y ver una lista de etiquetas de idioma comunes.
+   <br>**Nota**para el nombre de carpeta, puedes usar cualquier [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302). Consulta [Adaptar los recursos al idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md) para obtener detalles sobre el calificador de idioma y ver una lista de etiquetas de idioma comunes.
    2. Haz una copia de `Strings/en-US/Resources.resw` en la carpeta `Strings/de-DE`.
 2. Traduce las cadenas.
     1. Abre `Strings/de-DE/Resources.resw` y traduce los valores de la columna Valor. No es necesario que traduzcas los comentarios.
@@ -171,7 +171,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Si fueras a mover el recurso "AppDisplayName" fuera de `Resources.resw` y adentro de `ManifestResources.resw`, en ese caso, en el manifiesto del paquete de aplicación cambiarías `ms-resource:AppDisplayName` a `ms-resource:/ManifestResources/AppDisplayName`.
 
-Si un nombre de archivo de recursos se segmenta (que contiene "." caracteres), a continuación, salir los puntos en el nombre al hacer referencia a él. **No** reemplaza los puntos con caracteres de barra diagonal ("/"), como lo harías para un nombre de recurso.
+Si un nombre de archivo de recursos se segmenta (que contiene "." caracteres), a continuación, salir los puntos en el nombre al hacer referencia a él. **No** reemplaza los puntos con caracteres de barra diagonal ("/"), igual que harías para un nombre de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
@@ -277,7 +277,7 @@ No es necesario hacerlo para una biblioteca de clases (Windows Universal). En ca
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Cargar cadenas desde otros paquetes
-Los recursos para un paquete de la aplicación se administran y se accede a través del paquete propietario de nivel superior[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que es accesible desde el actual[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). Dentro de cada paquete, diversos componentes pueden tener sus ownResourceMapsubtrees, que puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
+Los recursos de un paquete de la aplicación se administran y se accede a través del paquete propietario de nivel superior[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que es accesible desde el actual[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). Dentro de cada paquete, diversos componentes pueden tener sus ownResourceMapsubtrees, que puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
 
 Un paquete de marcos puede tener acceso a sus propios recursos con un URI de identificador de recursos absoluto. Consulta también [esquemas URI](uri-schemes.md).
 
@@ -291,6 +291,6 @@ Un paquete de marcos puede tener acceso a sus propios recursos con un URI de ide
 * [Directiva x:Uid](../xaml-platform/x-uid-directive.md)
 * [propiedades asociadas](../xaml-platform/attached-properties-overview.md)
 * [Elementos de manifiesto localizables](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
-* [Etiqueta de idioma de BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Etiqueta de idioma de BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Adaptar los recursos al idioma, escala y otros calificadores](tailor-resources-lang-scale-contrast.md)
 * [Cómo cargar recursos de cadenas](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)

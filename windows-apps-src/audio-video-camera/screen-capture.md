@@ -6,12 +6,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dfed365e097b6f0d3816477513202b2693127ade
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946506"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049982"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -28,7 +28,7 @@ Las API que se encuentran en el espacio de nombres **Windows.Graphics.Capture** 
     
 1. Abre **Package.appxmanifest** en el **Explorador de soluciones**.
 2. Selecciona la pestaña **Funcionalidades**.
-3. Comprobar la **captura de gráficos**.
+3. Comprueba la **captura de gráficos**.
 
 ![Captura de gráficos](images/screen-capture-1.png)
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente de una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
+Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente de una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no es así, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -166,7 +166,7 @@ Cuando se llama a **Recreate**, se descartan todos los marcos existentes. Esto e
 El siguiente fragmento de código es un ejemplo de principio a fin de cómo implementar la captura de pantalla en una aplicación para UWP. En este ejemplo, tenemos un botón en el front-end que, al hacer clic, llama al método **Button_ClickAsync** .
 
 > [!NOTE]
-> Este fragmento de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), una biblioteca para la representación de gráficos 2D. Consulta su documentación para obtener información acerca de cómo se configura para el proyecto.
+> Este fragmento de código usa [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), una biblioteca para la representación de gráficos 2D. Consulta su documentación para obtener información acerca de cómo se configura para el proyecto.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -386,7 +386,7 @@ namespace WindowsGraphicsCapture
 
 ## <a name="record-a-video"></a>Grabar un vídeo
 
-Si quieres registrar un vídeo de la aplicación, puede hacerlo más fácilmente con el [espacio de nombres Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Esto forma parte del escritorio del SDK de extensión, por lo que solo funciona en el escritorio y requiere que se agrega una referencia a ella desde el proyecto. Para más información, consulta la [información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
+Si quieres registrar un vídeo de la aplicación, puede hacerlo más fácilmente con el [espacio de nombres Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Esto forma parte de la extensión Desktop SDK, por lo que solo funciona en el escritorio y requiere que se agrega una referencia a ella desde el proyecto. Para más información, consulta la [información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
 
 ## <a name="see-also"></a>Ver también
 

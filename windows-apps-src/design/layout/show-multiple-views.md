@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 107c904dc4b89941c0f453efd830504d2d032534
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7ed69dc912e916f7964c125550621c22dfcd9555
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929128"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049067"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar varias vistas de una aplicación
 
@@ -75,7 +75,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  Realiza un seguimiento del [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120) de la nueva vista. Úsalo para mostrar la vista más adelante.
 
-    Es posible que desees considerar la posibilidad de crear infraestructura en tu aplicación para facilitar el seguimiento de las vistas que crees. Consulta la clase `ViewLifetimeControl` en la [muestra de varias vistas](http://go.microsoft.com/fwlink/p/?LinkId=620574) para ver un ejemplo.
+    Es posible que desees considerar la posibilidad de crear infraestructura en tu aplicación para facilitar el seguimiento de las vistas que crees. Consulta la clase `ViewLifetimeControl` en la [muestra de varias vistas](https://go.microsoft.com/fwlink/p/?LinkId=620574) para ver un ejemplo.
 
     ```csharp
     int newViewId = 0;
@@ -83,7 +83,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  En el nuevo subproceso, rellena la ventana.
 
-    Debes usar el método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](http://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
+    Debes usar el método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
 
     En XAML, lo normal es agregar un [**Marco**](https://msdn.microsoft.com/library/windows/apps/br242682) a la propiedad [**Contenido**](https://msdn.microsoft.com/library/windows/apps/br209051) de la [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) y luego desplazar al **Marco** a una [**Página**](https://msdn.microsoft.com/library/windows/apps/br227503) XAML donde has definido el contenido de la aplicación. Para obtener más información, consulta [Navegación de punto a punto entre dos páginas](../basics/navigate-between-two-pages.md).
 

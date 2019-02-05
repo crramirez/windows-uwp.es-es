@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae9bc0f6d53181a88b02ecda19b3aed745febe40
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 66b61b9db88392c7ca7370f06fb2150deba7c8c3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921712"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047540"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Uso de la capa visual con XAML
 
@@ -283,7 +283,7 @@ void MainPage::InitializeDropShadow(Windows::UI::Xaml::UIElement^ shadowHost, Wi
 
 ### <a name="frosted-glass"></a>Cristal esmerilado
 
-Crea un efecto que desenfoque y aporte tonos al contenido en segundo plano. Ten en cuenta que los desarrolladores tienen que instalar el paquete de Win2D NuGet para usar efectos. Consulta la [página principal de Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) para obtener instrucciones de instalación.
+Crea un efecto que desenfoque y aporte tonos al contenido en segundo plano. Ten en cuenta que los desarrolladores tienen que instalar el paquete de Win2D NuGet para usar efectos. Consulta la [página principal de Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm) para obtener instrucciones de instalación.
 
 #### <a name="implementation-overview"></a>Información general sobre la implementación
 

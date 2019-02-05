@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f707e72e73398ae21cd391da16a0f2b40dcd7ee
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942792"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047779"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -28,14 +28,14 @@ Para esta muestra, vamos a aprovechar la biblioteca de **three.js**. Esta biblio
 </iframe>
 
 > [!NOTE] 
-> Esto no es un juego completo; está diseñada para mostrar como usar JavaScript y una biblioteca de terceros para preparar una aplicación lista para publicar en Microsoft Store.
+> Esto no es un juego completo; está diseñada para mostrar como usar JavaScript y una biblioteca de terceros para preparar una aplicación lista para publicarse en la Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
 
 Para jugar con este proyecto, necesitarás lo siguiente:
 -   Un equipo de Windows (o una máquina virtual) que ejecute la versión actual de Windows 10.
--   Una copia de Visual Studio. Puedes descargar la copia gratuita de Visual Studio Community Edition desde la [página principal de Visual Studio](http://visualstudio.com/).
+-   Una copia de Visual Studio. Puedes descargar la copia gratuita de Visual Studio Community Edition desde la [página principal de Visual Studio](https://visualstudio.com/).
 Este proyecto hace uso de la biblioteca de JavaScript **three.js**. **three.js** se lanza bajo la licencia MIT. Esta biblioteca ya está presente en el proyecto (busca `js/libs` en la vista del explorador de soluciones). Para obtener más información acerca de esta biblioteca consulta la página principal de [**three.js**](https://threejs.org/).
 
 ## <a name="getting-started"></a>Introducción
@@ -256,7 +256,7 @@ Este fue un fragmento de código considerable, pero ahora tenemos un hermoso cub
 
 Puedes copiar y pegar todo el JavaScript de este CodePen para saber si hay algún problema, o modificarlo para ajustar algunas luces y cambiar algunos colores. 
 
-<iframe height='300' scrolling='no' title='Las luces, la cámara, el cubo!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>luces, cámara, cubo!</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Las luces, cámara, cubo!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>luces, cámara, cubo!</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -1086,5 +1086,5 @@ Ahora que tienes una aplicación para UWP, es posible publicar en Microsoft Stor
 1.  Tienes que estar [registrado](https://developer.microsoft.com/store/register) como desarrollador de Windows.
 2.  Debes usar la [lista de comprobación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
 3.  La aplicación debe enviarse para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
-Para obtener más información, consulta la [publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
+Para obtener más información, consulte la [publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3940f519706fba6d795d60344cbd83337ae482
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f22b893d0c55cb9220e0894527836a0bb5e750b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931100"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049862"
 ---
 # <a name="improve-garbage-collection-performance"></a>Mejorar el rendimiento de la recolección de elementos no usados
 
 
 La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática mediante el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-**Nota**necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no utilizados es una clara señal de problemas de memoria general con la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
+**Nota**necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no utilizados es una clara señal de problemas de memoria general con la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio2015](https://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
 
  
 

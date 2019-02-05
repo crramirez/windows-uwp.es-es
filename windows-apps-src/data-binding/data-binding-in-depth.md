@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: dcaad17df5c036069dcdd729e662e5418db7646e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fe86656756eab9d9286d68c2a37357a9b824561e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923515"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048948"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -40,14 +40,14 @@ Independientemente del modo, hay dos tipos de enlace, y ambos normalmente se dec
 
 **Aplicaciones de ejemplo que muestran {x:Bind}**
 
--   [Ejemplo de {x:Bind}](http://go.microsoft.com/fwlink/p/?linkid=619989).
+-   [Ejemplo de {x:Bind}](https://go.microsoft.com/fwlink/p/?linkid=619989).
 -   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
--   [Ejemplo de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=619992).
+-   [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=619992).
 
 **Aplicaciones de ejemplo que muestran {Binding}**
 
--   Descarga la aplicación [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
--   Descarga la aplicación [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
+-   Descarga la aplicación [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950).
+-   Descarga la aplicación [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952).
 
 ## <a name="every-binding-involves-these-pieces"></a>Cada enlace implica estas piezas
 
@@ -61,7 +61,7 @@ En las siguientes secciones, se echaremos un vistazo al origen de enlace, el des
 
 Esta es una implementación muy rudimentaria de una clase que podríamos usar como origen de enlace.
 
-Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, agregar nuevos elementos de **Midl File (.idl)** para el proyecto, denominado como se muestra en C++ / WinRT listado de ejemplo de código siguiente. Reemplaza el contenido de los nuevos archivos con el código de [MIDL 3.0](/uwp/midl-3/intro) se muestra en la descripción, compila el proyecto para generar `HostViewModel.h` y `.cpp`y, a continuación, agrega código a los archivos generados para que coincida con la descripción. Para que obtener más información acerca de los archivos generados y cómo copiarlas en el proyecto, consulta [controles XAML; enlazar a C++ / WinRT propiedad](/windows/uwp/cpp-and-winrt-apis/binding-property).
+Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, agregar nuevos elementos de **Midl File (.idl)** en el proyecto, denominado como se muestra en C++ / WinRT listado de ejemplo de código siguiente. Reemplaza el contenido de los nuevos archivos con el código de [MIDL 3.0](/uwp/midl-3/intro) se muestra en la descripción, compila el proyecto para generar `HostViewModel.h` y `.cpp`y, a continuación, agrega código a los archivos generados para que coincida con la descripción. Para que obtener más información sobre estos archivos generados y cómo copiarlas en el proyecto, consulta [controles XAML; enlazar a C++ / WinRT propiedad](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
 ```csharp
 public class HostViewModel
@@ -222,7 +222,7 @@ public class HostViewModel : BindableBase
 ```
 
 > [!NOTE]
-> Para C++ / WinRT, cualquier clase en tiempo de ejecución que se declara en la aplicación que se deriva de una clase base se conoce como un *las* clases. Y hay restricciones alrededor de las clases. Para una aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (y, por tanto, para que la aplicación se añada correctamente en Microsoft Store), una clase puede componer debe en última instancia, derivar de una clase base de Windows. Lo que significa que la clase en la raíz muy la jerarquía de herencia debe ser un tipo que se origine en un espacio de nombres Windows *. Si es necesario derivar una clase en tiempo de ejecución de una clase base&mdash;por ejemplo, para implementar una clase **BindableBase** para todos los modelos de vista derivar de&mdash;, a continuación, puedes derivar de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
+> Para C++ / WinRT, cualquier clase en tiempo de ejecución que se declara en la aplicación que se deriva de una clase base se conoce como un *las* clases. Y hay restricciones de las clases. Para una aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (y, por tanto, para que la aplicación se añada correctamente en Microsoft Store), una clase puede componer debe en última instancia, derivar de una clase base de Windows. Esto significa que la clase en la raíz de la parte de la jerarquía de herencia debe ser un tipo que se origine en un espacio de nombres Windows *. Si es necesario derivar una clase en tiempo de ejecución de una clase base&mdash;por ejemplo, para implementar una clase **BindableBase** para todos los modelos de vista derivar de&mdash;, a continuación, puedes derivar de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 
 Generar el evento **PropertyChanged** con un argumento de [**String.Empty**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.empty.aspx) o **null** indica que se deben volver a leer todas las propiedades no indexadoras del objeto. Puedes generar el evento para indica que las propiedades de indizador del objeto han cambiado mediante un argumento de "Item\[*indexer*\]" para indexadores específicos (donde *indexer* es el valor de índice) o el valor de "Item\[\]" para todos los indexadores.
 
@@ -238,7 +238,7 @@ Un objeto de enlace puede tratarse como un solo objeto cuyas propiedades contien
 | Implementar una colección compatible con las notificaciones de cambios de colección. | Extiende [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) o implementa [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) e [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (no genéricos).|Implementar [**IObservableVector**](/uwp/api/windows.foundation.collections.iobservablevector_t_) de [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)o [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).|Implementa [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979) e [**IBindableObservableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701974).|
 |Implementar una colección compatible con la carga incremental.|Extiende [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) o implementa [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) e [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (no genéricos). Además, implementa [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916).|Implementar [**IObservableVector**](/uwp/api/windows.foundation.collections.iobservablevector_t_) de [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)o [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector). Además, implementa [ **ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)|Implementa [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979), [**IBindableObservableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701974) e [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916).|
 
-Con la carga incremental, puedes enlazar controles de lista a orígenes de datos que son arbitrariamente de gran tamaño y aun así lograr un alto rendimiento. Por ejemplo, puedes enlazar controles de lista a resultados de consulta de imágenes de Bing sin tener que cargarlos a todos de una vez. Solo cargas algunos resultados inmediatamente y después cargas otros, según sea necesario. Para admitir la carga incremental, debes implementar [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916) en un origen de datos que es compatible con las notificaciones de cambios de colección. Cuando el motor de enlace de datos solicite más datos, tu origen de datos debe realizar las solicitudes apropiadas, integrar los resultados y después enviar las debidas notificaciones para actualizar la interfaz de usuario.
+Con la carga incremental, puedes enlazar controles de lista a orígenes de datos que son arbitrariamente de gran tamaño y aun así lograr un alto rendimiento. Por ejemplo, puedes enlazar controles de lista a resultados de consulta de imágenes de Bing sin tener que cargarlos a todos de una vez. Solo cargas algunos resultados inmediatamente y después cargas otros, según sea necesario. Para admitir la carga incremental, debes implementar [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916) en un origen de datos que admite notificaciones de cambios de colección. Cuando el motor de enlace de datos solicite más datos, tu origen de datos debe realizar las solicitudes apropiadas, integrar los resultados y después enviar las debidas notificaciones para actualizar la interfaz de usuario.
 
 ### <a name="binding-target"></a>Destino de enlace
 
@@ -330,7 +330,7 @@ Observa el valor que especificamos para **Path**. Este valor se interpreta en el
 
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). Para otras opciones de configuración, consulta [Extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
-Para ilustrar que la propiedad de **HostViewModel.NextButtonText** es observable de hecho, agrega un controlador de eventos **Click** para el botón y actualiza el valor de **HostViewModel.NextButtonText**. Compilar, ejecutar y haz clic en el botón para ver el valor del **contenido** del botón Actualizar.
+Para ilustrar que la propiedad de **HostViewModel.NextButtonText** es realmente observable, agrega un controlador de eventos **Click** para el botón y actualiza el valor de **HostViewModel.NextButtonText**. Compilar, ejecutar y haz clic en el botón para ver el valor del **contenido** del botón Actualizar.
 
 ```csharp
 // MainPage.xaml.cs
@@ -349,7 +349,7 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 ```
 
 > [!NOTE]
-> Los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando el [**cuadro de texto**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco y no después de cada presión de tecla de usuario.
+> Los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco y no después de cada presión de tecla de usuario.
 
 **DataTemplate y x:DataType**
 
@@ -366,14 +366,14 @@ Dentro de [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 **Objetos poco tipificados en la ruta de acceso**
 
-Consideremos, por ejemplo, que tienes un tipo denominado SampleDataGroup, que implementa una propiedad de cadena denominada Título. Y tiene una propiedad MainPage.SampleDataGroupAsObject, que es de objeto de tipo, pero que devuelve realmente una instancia de SampleDataGroup. El enlace `<TextBlock Text="{x:Bind SampleDataGroupAsObject.Title}"/>` generará un error de compilación porque la propiedad Título no se encuentra en el objeto de tipo. La solución para esto es agregar una conversión a la sintaxis de la ruta de acceso, como esta: `<TextBlock Text="{x:Bind ((data:SampleDataGroup)SampleDataGroupAsObject).Title}"/>`. Este es otro ejemplo donde se declara el elemento como objeto, pero que realmente es TextBlock: `<TextBlock Text="{x:Bind Element.Text}"/>`. Y una conversión soluciona el problema: `<TextBlock Text="{x:Bind ((TextBlock)Element).Text}"/>`.
+Consideremos, por ejemplo, que tienes un tipo denominado SampleDataGroup, que implementa una propiedad de cadena denominada Título. Y tiene una propiedad MainPage.SampleDataGroupAsObject, que es de tipo object, pero que devuelve realmente una instancia de SampleDataGroup. El enlace `<TextBlock Text="{x:Bind SampleDataGroupAsObject.Title}"/>` generará un error de compilación porque la propiedad Título no se encuentra en el objeto de tipo. La solución para esto es agregar una conversión a la sintaxis de la ruta de acceso, como esta: `<TextBlock Text="{x:Bind ((data:SampleDataGroup)SampleDataGroupAsObject).Title}"/>`. Este es otro ejemplo donde se declara el elemento como objeto, pero que realmente es TextBlock: `<TextBlock Text="{x:Bind Element.Text}"/>`. Y una conversión soluciona el problema: `<TextBlock Text="{x:Bind ((TextBlock)Element).Text}"/>`.
 
 **Si los datos se cargan de forma asincrónica**
 
 El código para admitir **{x:Bind}** se genera en tiempo de compilación en las clases parciales para tus páginas. Estos archivos pueden encontrarse en la carpeta `obj`, con nombres como (para C#) `<view name>.g.cs`. El código generado incluye un controlador para el evento [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) de tu página y ese controlador llama al método **Initialize** en una clase generada que representa los enlaces de la página. **Initialize** llama a su vez a **Update** para empezar a mover datos entre el origen de enlace y el destino. **Loading** se genera justo antes del primer paso de medida de la página o del control de usuario. Por lo que si los datos se cargan de forma asincrónica puede que no esté listo en el momento en que se llama a **Initialize**. Por lo tanto, después de cargar los datos, puedes forzar la inicialización de enlaces de un solo uso llamando a `this.Bindings.Update();`. Si solo necesitas enlaces de una vez para datos cargados de forma asincrónica es mucho más barato inicializarlos así que es tener enlaces unidireccionales y escuchar los cambios. Si los datos no sufren cambios específicos y es probable que se actualicen como parte de una acción específica, puedes hacer que tus enlaces sean de un solo uso y forzar una actualización manual en cualquier momento con una llamada a **Update**.
 
 > [!NOTE]
-> **{X: Bind}** no es adecuado para escenarios de tiempo de ejecución, como la navegación de la estructura del diccionario de un objeto JSON, ni la escritura de pato. "Duck typing" es una forma poco segura de escribir basada en coincidencias léxicas en los nombres de propiedad (una sesión, "Si, camina, nada y grazna como un pato, a continuación, es un pato"). Con duck typing, un enlace a la propiedad **edad** se cumpliría por igual con una **persona** o un **vino** objeto (suponiendo que esos tipos tenían una propiedad **Age** ). Para estos escenarios, usa la extensión de marcado **{Binding}** .
+> **{X: Bind}** no es adecuado para escenarios de tiempo de ejecución, como la navegación de la estructura del diccionario de un objeto JSON, ni para duck escribiendo. "Duck typing" es una forma poco segura de escribir basada en coincidencias léxicas en los nombres de propiedad (una sesión, "Si, camina, nada y grazna como un pato, a continuación, es un pato"). Con duck typing, un enlace a la propiedad **edad** se cumpliría por igual con una **persona** o un **vino** objeto (suponiendo que esos tipos tenían una propiedad **Age** ). Para estos escenarios, usa la extensión de marcado **{Binding}** .
 
 ### <a name="binding-object-declared-using-binding"></a>Objeto de enlace que se declara usando {Binding}
 
@@ -424,7 +424,7 @@ El valor predeterminado de [**DataContext**](https://msdn.microsoft.com/library/
 
 Un objeto de enlace tiene una propiedad **Source**, que el valor predeterminado es el [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) del elemento de interfaz de usuario en el que se declara el enlace. Puedes invalidar este valor predeterminado estableciendo **Source**, **RelativeSource**, o **ElementName** explícitamente en el enlace (consulte [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) para obtener más información).
 
-Dentro de una [**clase DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) automáticamente se establece en el objeto de datos con plantilla. El ejemplo siguiente puede usarse como la propiedad **ItemTemplate** de un control de elementos enlazado a una colección de cualquier tipo que tiene propiedades de cadena denominadas **Title** y **Description**.
+Dentro de una [**clase DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), el [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) se establece automáticamente en el objeto de datos con plantilla. El ejemplo siguiente puede usarse como la propiedad **ItemTemplate** de un control de elementos enlazado a una colección de cualquier tipo que tiene propiedades de cadena denominadas **Title** y **Description**.
 
 ```xaml
 <DataTemplate x:Key="SimpleItemTemplate">
@@ -436,7 +436,7 @@ Dentro de una [**clase DataTemplate**](https://msdn.microsoft.com/library/window
 ```
 
 > [!NOTE]
-> De manera predeterminada, los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando el [**cuadro de texto**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco. Para hacer que los cambios se envíen después de cada presión de tecla de usuario, establece **UpdateSourceTrigger** en **PropertyChanged** en el enlace en el marcado. También puede tomar el control completo de cuándo se envían los datos al origen estableciendo **UpdateSourceTrigger** en **Explicit**. Luego puedes controlar eventos en el cuadro de texto (normalmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), llamar a [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) en el destino para obtener un [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) y finalmente llamar a [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para actualizar mediante programación el origen de datos.
+> De manera predeterminada, los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco. Para hacer que los cambios se envíen después de cada presión de tecla de usuario, establece **UpdateSourceTrigger** en **PropertyChanged** en el enlace en el marcado. También puede tomar el control completo de cuándo se envían los datos al origen estableciendo **UpdateSourceTrigger** en **Explicit**. Luego puedes controlar eventos en el cuadro de texto (normalmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), llamar a [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) en el destino para obtener un [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) y finalmente llamar a [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para actualizar mediante programación el origen de datos.
 
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). La propiedad [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) es útil para el enlace de elemento a elemento. La propiedad [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) tiene varios usos, uno de los cuales es como una alternativa más eficaz para el enlace de plantilla dentro de un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). Para otras opciones de configuración, consulta [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) y la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820).
 
@@ -521,7 +521,7 @@ Si enlazas un control de texto con un valor que no es una cadena, el motor de en
 
 ## <a name="function-binding-in-xbind"></a>Enlace de función en {x: Bind}
 
-{x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [ **las funciones de x: Bind**](function-bindings.md)
+{x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [ **funciones de x: Bind**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
 
@@ -606,7 +606,7 @@ La técnica de enlace de eventos es similar a implementar y consumir comandos (u
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>Enlace a una colección de carpetas o archivos
 
-Para recuperar datos de archivos y carpetas, puedes usar las API en el espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). No obstante, los distintos métodos **GetFilesAsync**, **GetFoldersAsync** y **GetItemsAsync** no devuelven valores adecuados para enlaces a controles de lista. En cambio, debes enlazar a los valores devueltos de los métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) y [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) de la clase [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). En el siguiente ejemplo de código de la [muestra de StorageDataSource y GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621) encontrarás el patrón de uso más común. No olvides que declarar el manifiesto **picturesLibrary** del paquete de funcionalidad de la aplicación y confirmar que hay imágenes en la carpeta de la biblioteca de imágenes.
+Para recuperar datos de archivos y carpetas, puedes usar las API en el espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). No obstante, los distintos métodos **GetFilesAsync**, **GetFoldersAsync** y **GetItemsAsync** no devuelven valores adecuados para enlaces a controles de lista. En cambio, debes enlazar a los valores devueltos de los métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) y [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) de la clase [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). En el siguiente ejemplo de código de la [muestra de StorageDataSource y GetVirtualizedFilesVector](https://go.microsoft.com/fwlink/p/?linkid=228621) encontrarás el patrón de uso más común. No olvides que declarar el manifiesto **picturesLibrary** del paquete de funcionalidad de la aplicación y confirmar que hay imágenes en la carpeta de la biblioteca de imágenes.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -639,7 +639,7 @@ Ten en cuenta también que un vector virtualizado puede devolver **null** para a
 
 ## <a name="binding-to-data-grouped-by-a-key"></a>Enlace de datos agrupados por una clave
 
-Si tomas una colección plana de elementos (libros, por ejemplo, representados por una clase **BookSku** ) y agrupas los elementos mediante el uso de una propiedad común como clave (por ejemplo, la propiedad **BookSku.AuthorName** ), a continuación, el resultado se denomina datos agrupados. Al agrupar los datos, ya no es una colección plana. Los datos agrupados son una colección de objetos de grupo, donde cada objeto de grupo tiene
+Si tomas una colección plana de elementos (libros, por ejemplo, representados por una clase **BookSku** ) y agrupar los elementos mediante el uso de una propiedad común como clave (por ejemplo, la propiedad **BookSku.AuthorName** ), a continuación, el resultado se denomina datos agrupados. Al agrupar los datos, ya no es una colección plana. Los datos agrupados son una colección de objetos de grupo, donde cada objeto de grupo tiene
 
 - una clave, y
 - una colección de elementos cuya propiedad coincide con dicha clave.
@@ -647,7 +647,7 @@ Si tomas una colección plana de elementos (libros, por ejemplo, representados p
 Para realizar el ejemplo de libros de nuevo, el resultado de agrupar los libros por nombre del autor genera una colección de grupos de nombre del autor donde cada grupo tiene
 
 - una clave, que es un nombre de autor, y
-- una colección de la s **BookSku**cuya propiedad **AuthorName** coincide con la clave del grupo.
+- una colección de s. **BookSku**cuya propiedad **AuthorName** coincide con la clave del grupo.
 
 En general, para mostrar una colección, enlazas el [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) de un control de elementos (como [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) o [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)) directamente a una propiedad que devuelve una colección. Si es una colección de elementos plana no necesitas hacer nada especial. Pero si es una colección de objetos de grupo (como al enlazar a datos agrupados), a continuación, necesitas los servicios de un objeto intermediario llamado [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), que se encuentra entre el control de elementos y el origen del enlace. Enlaza el **CollectionViewSource** a la propiedad que devuelve datos agrupados y enlaza el control de elementos a **CollectionViewSource**. Un valor agregado adicional de un **CollectionViewSource** es que realiza el seguimiento del elemento actual, para poder mantener más de un control de elementos sincronizados al enlazarlos todos al mismo **CollectionViewSource**. Puedes acceder también al elemento actual mediante programación a través de la propiedad [**ICollectionView.CurrentItem**](https://msdn.microsoft.com/library/windows/apps/BR209857) del objeto devuelto por la propiedad [**CollectionViewSource.View**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.view).
 
@@ -673,9 +673,9 @@ ItemsSource="{x:Bind AuthorHasACollectionOfBookSku}" ...>
 </GridView>
 ```
 
-Para implementar el patrón de "es un grupo" en uno de dos maneras. Es una forma crear tu propia clase de grupo. Deriva la clase de **List&lt;T&gt;** (donde *T* es el tipo de los elementos). Por ejemplo: `public class Author : List<BookSku>`. La segunda manera es usar una expresión [LINK](http://msdn.microsoft.com/library/bb397926.aspx) para crear dinámicamente objetos de grupo (y una clase de grupo) desde valores de propiedad similares de los elementos **BookSku**. Este enfoque, mantener solo una lista de elementos y agrupar sobre la marcha, es típico de una aplicación que accede a los datos de un servicio de nube. Obtienes la flexibilidad de agrupar libros según el autor o el género (por ejemplo), sin necesidad de disponer de clases de grupo especiales, como **Author** y **Genre**.
+Para implementar el patrón de "es un grupo" en uno de dos maneras. Es una forma crear tu propia clase de grupo. Deriva la clase de **List&lt;T&gt;** (donde *T* es el tipo de los elementos). Por ejemplo: `public class Author : List<BookSku>`. La segunda manera es usar una expresión [LINK](https://msdn.microsoft.com/library/bb397926.aspx) para crear dinámicamente objetos de grupo (y una clase de grupo) desde valores de propiedad similares de los elementos **BookSku**. Este enfoque, mantener solo una lista de elementos y agrupar sobre la marcha, es típico de una aplicación que accede a los datos de un servicio de nube. Obtienes la flexibilidad de agrupar libros según el autor o el género (por ejemplo), sin necesidad de disponer de clases de grupo especiales, como **Author** y **Genre**.
 
-El siguiente ejemplo muestra el uso del patrón "es un grupo" [LINQ](http://msdn.microsoft.com/library/bb397926.aspx). Esta vez agrupamos libros por género, mostrados con el nombre de género en los encabezados de grupo. Esto se indica en la ruta de acceso de la propiedad "Key" en referencia al valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) del grupo.
+El siguiente ejemplo muestra el uso del patrón "es un grupo" [LINQ](https://msdn.microsoft.com/library/bb397926.aspx). Esta vez agrupamos libros por género, mostrados con el nombre de género en los encabezados de grupo. Esto se indica en la ruta de acceso de la propiedad "Key" en referencia al valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) del grupo.
 
 ```csharp
 using System.Linq;
@@ -724,7 +724,7 @@ Recuerda que, al usar [{x:Bind}](https://msdn.microsoft.com/library/windows/apps
     </GridView>
 ```
 
-Un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh702601) es una manera ideal para que los usuarios vean y naveguen por los datos agrupados. La aplicación de muestra [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) ilustra cómo usar **SemanticZoom**. En esa aplicación, puedes ver una lista de libros agrupados por autor (la vista ampliada) o alejar para ver una lista de accesos directos de autores (la vista alejada). La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Las vistas acercada y alejada en realidad son controles **ListView** o **GridView** enlazados a la misma clase **CollectionViewSource**.
+Un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh702601) es una manera ideal para que los usuarios vean y naveguen por los datos agrupados. La aplicación de muestra [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952) ilustra cómo usar **SemanticZoom**. En esa aplicación, puedes ver una lista de libros agrupados por autor (la vista ampliada) o alejar para ver una lista de accesos directos de autores (la vista alejada). La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Las vistas acercada y alejada en realidad son controles **ListView** o **GridView** enlazados a la misma clase **CollectionViewSource**.
 
 ![Ilustración de SemanticZoom](images/sezo.png)
 

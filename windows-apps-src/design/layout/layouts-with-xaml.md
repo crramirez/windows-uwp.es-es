@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 691ce1cc0c49154142a52f329af6f2a1df4ae027
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919990"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049402"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños adaptativos con XAML
 
@@ -95,7 +95,7 @@ Puedes mostrar u ocultar un elemento si estableces su propiedad [**Visibility**]
 Puedes cambiar la propiedad Visibility de un elemento en código o en un estado visual. Cuando el objeto Visibility de un elemento cambia, también cambian todos sus elementos secundarios. Puedes reemplazar secciones de la interfaz de usuario al mostrar un panel mientras contraes otro.
 
 > [!Tip]
-> Cuando tengas los elementos de la interfaz de usuario que son **Collapsed** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Cuando tengas los elementos de la interfaz de usuario que están **contraído** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 
@@ -117,7 +117,7 @@ Control de panel | Descripción
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<li>Los elementos se apilan en una única línea vertical u horizontal.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se respetan en la dirección opuesta a la propiedad Orientation. Si el tamaño de un elemento no se establece explícitamente, se amplía para rellenar el ancho disponible (o el alto si la Orientation es Horizontal). En la dirección especificada por la propiedad Orientation, el tamaño de un elemento se ajusta a su contenido.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido no está restringido por los límites del panel en la dirección especificada por la propiedad Orientation, por lo que el contenido desplazable se amplía más allá de los límites del panel y no se muestran barras de desplazamiento. Tienes que restringir explícitamente el alto (o el ancho) del contenido secundario para mostrar sus barras de desplazamiento.</li>
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<li>Los elementos se organizan en filas o en columnas que se ajustan automáticamente a una nueva fila o columna cuando se alcanza el valor MaximumRowsOrColumns.</li><li>La organización de los elementos en filas o en columnas se especifica mediante la propiedad Orientation.</li><li>Los elementos pueden abarcar varias filas y columnas mediante las propiedades adjuntas VariableSizedWrapGrid.RowSpan y VariableSizedWrapGrid.ColumnSpan.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se omiten. El tamaño de los elementos se ajusta según se especifica en las propiedades ItemHeight y ItemWidth. Si no se establecen estas propiedades, el tamaño del elemento de la primera se ajusta a su contenido y todas las demás celdas heredan este tamaño.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido se ve restringido por los límites del panel, por lo que el contenido desplazable muestra barras de desplazamiento si fuera necesario.</li>
 
-Para obtener información detallada y ejemplos de estos paneles, consulta [Paneles de diseño](layout-panels.md). Consulta también la [Muestra de técnicas de capacidad de respuesta](http://go.microsoft.com/fwlink/p/?LinkId=620024).
+Para obtener información detallada y ejemplos de estos paneles, consulta [Paneles de diseño](layout-panels.md). Consulta también la [Muestra de técnicas de capacidad de respuesta](https://go.microsoft.com/fwlink/p/?LinkId=620024).
 
 Los paneles de diseño permiten organizar la interfaz de usuario en grupos lógicos de controles. Cuando los usas con valores de propiedad adecuados, obtienes algo de compatibilidad con la variación de tamaño automática, el cambio de posición y la redistribución de elementos de interfaz de usuario. Sin embargo, la mayoría de los diseños de interfaz de usuario requiere más modificaciones cuando hay cambios significativos en el tamaño de ventana. Para ello, puedes usar estados visuales.
 
@@ -254,13 +254,13 @@ En este ejemplo se muestra cómo establecer la propiedad adjunta [**RelativePane
 
 ### <a name="custom-state-triggers"></a>Desencadenadores de estado personalizados
 
-Puedes ampliar la clase [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) y crear desencadenadores personalizados para una amplia variedad de escenarios. Por ejemplo, puedes crear un StateTrigger para desencadenar estados diferentes según el tipo de entrada y luego aumentar los márgenes alrededor de un control cuando el tipo de entrada es la entrada táctil. O bien, puedes crear un objeto StateTrigger para aplicar distintos estados en función de la familia de dispositivos en la que se ejecuta la aplicación. Para obtener ejemplos de cómo crear desencadenadores personalizados y usarlos para crear experiencias de interfaz de usuario optimizadas desde dentro de una única vista XAML, consulta la [Muestra de desencadenadores de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Puedes ampliar la clase [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) y crear desencadenadores personalizados para una amplia variedad de escenarios. Por ejemplo, puedes crear un StateTrigger para desencadenar estados diferentes según el tipo de entrada y luego aumentar los márgenes alrededor de un control cuando el tipo de entrada es la entrada táctil. O bien, puedes crear un objeto StateTrigger para aplicar distintos estados en función de la familia de dispositivos en la que se ejecuta la aplicación. Para obtener ejemplos de cómo crear desencadenadores personalizados y usarlos para crear experiencias de interfaz de usuario optimizadas desde dentro de una única vista XAML, consulta la [Muestra de desencadenadores de estado](https://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ### <a name="visual-states-and-styles"></a>Estados visuales y estilos
 
 Puedes usar los recursos Style en los estados visuales para aplicar un conjunto de cambios de propiedades a varios controles. Para obtener más información sobre los estilos, consulta [Controles de estilo](../controls-and-patterns/xaml-styles.md).
 
-En este código XAML simplificado de la Muestra de desencadenadores de estado, un recurso Style se aplica a un objeto Button para ajustar el tamaño y los márgenes de la entrada de mouse o entrada táctil. Para obtener el código completo y la definición del desencadenador de estado personalizado, consulta [Muestra de desencadenadores de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+En este código XAML simplificado de la Muestra de desencadenadores de estado, un recurso Style se aplica a un objeto Button para ajustar el tamaño y los márgenes de la entrada de mouse o entrada táctil. Para obtener el código completo y la definición del desencadenador de estado personalizado, consulta [Muestra de desencadenadores de estado](https://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ```xaml
 <Page ... >
@@ -389,7 +389,7 @@ else
 }
 ```
 
-También puedes usar distintos criterios para determinar a qué página navegar. Para obtener más ejemplos, consulta la muestra [Varias vistas adaptadas](http://go.microsoft.com/fwlink/p/?LinkId=620636) en la que se usa la función [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) para comprobar el tamaño físico de una pantalla integrada.
+También puedes usar distintos criterios para determinar a qué página navegar. Para obtener más ejemplos, consulta la muestra [Varias vistas adaptadas](https://go.microsoft.com/fwlink/p/?LinkId=620636) en la que se usa la función [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) para comprobar el tamaño físico de una pantalla integrada.
 
 ## <a name="related-topics"></a>Artículos relacionados
 - [Tutorial: Creación de diseños adaptativos](../basics/xaml-basics-adaptive-layout.md)

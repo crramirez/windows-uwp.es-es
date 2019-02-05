@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e7526ec4f32f641f152709e6968f3dc442c2a06
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8320b2b4abb5e49bbf589b360cc9cc2e0e033f79
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934560"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050335"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -141,7 +141,7 @@ Una de las herramientas que puedes usar para probar la accesibilidad se llama **
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>Nombres accesibles de datos dinámicos  
-Windows admite muchos controles que se pueden usar para mostrar valores que provienen de un origen de datos asociado, a través de una función conocida como *enlace de datos*. Cuando rellenas listas con elementos de datos, puedes tener que usar una técnica que establezca nombres accesibles para elementos de lista enlazados a datos después de que se haya rellenado la lista inicial. Para más información, consulta el "Escenario 4" en la [muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570).
+Windows admite muchos controles que se pueden usar para mostrar valores que provienen de un origen de datos asociado, a través de una función conocida como *enlace de datos*. Cuando rellenas listas con elementos de datos, puedes tener que usar una técnica que establezca nombres accesibles para elementos de lista enlazados a datos después de que se haya rellenado la lista inicial. Para más información, consulta el "Escenario 4" en la [muestra de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570).
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -157,5 +157,5 @@ Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationPr
 ## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
-* [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Muestra de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Pruebas de accesibilidad](accessibility-testing.md)

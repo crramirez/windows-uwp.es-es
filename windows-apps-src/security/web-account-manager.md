@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5139f5fe2c3d5d1f97040ee3bec33ea48d6ac
-ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
+ms.openlocfilehash: e2c1be80ada3e337a4bf7353b854ae4cbe5bd99a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "8990333"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050988"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
 En este artículo, se describe cómo usar **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las API de Administrador de cuentas web de Windows 10. Aprenderás a solicitar permiso al usuario para usar su cuenta de Microsoft, obtener un token de acceso y usarlo para realizar operaciones básicas (como obtener datos de perfil o cargar archivos en su cuenta de OneDrive). Los pasos son similares para obtener permiso del usuario y acceso con cualquier proveedor de identidades que admita el Administrador de cuentas web.
 
 > [!NOTE]
-> Para obtener un ejemplo de código completo, consulta [WebAccountManagement sample en GitHub (Muestra de administración de cuentas web en GitHub)](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+> Para obtener un ejemplo de código completo, consulta [WebAccountManagement sample en GitHub (Muestra de administración de cuentas web en GitHub)](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 ## <a name="get-set-up"></a>Preparación
 
@@ -178,7 +178,7 @@ En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito 
 * Para ámbitos de OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
 
 > [!TIP]
-> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, se se enumeran en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para omitir la propiedad al almacenar en caché de la cuenta web, lo que impide que las diferencias de la cuenta en la memoria caché.
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, aparezca en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para omitir la propiedad al almacenar en caché de la cuenta web, lo que impide que las diferencias de la cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 
@@ -430,6 +430,6 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 
 [Agente de autenticación web](web-authentication-broker.md)
 
-[Muestra de administración de cuentas web](http://go.microsoft.com/fwlink/p/?LinkId=620621)
+[Muestra de administración de cuentas web](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 [Aplicación de programador de inicio](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
