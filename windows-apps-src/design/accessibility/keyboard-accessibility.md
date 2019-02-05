@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 938b5b3cdd2e23995a1031875a28f178e0c97a26
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931136"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045524"
 ---
 # <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
@@ -148,7 +148,7 @@ XAML
 
 Por cuestiones de simplicidad, el ejemplo anterior omite el uso de recursos para cadenas como Ctrl+A. No obstante, también debes tener en cuenta las teclas de método abreviado durante la localización. La localización de las teclas de método abreviado es relevante porque la elección de la tecla que se usa como método abreviado suele depender de la etiqueta de texto visible del elemento.
 
-Para obtener más información sobre la implementación de las teclas de método abreviado, consulta [Teclas de método abreviado](http://go.microsoft.com/fwlink/p/?linkid=221825) en las Directrices para la interacción de la experiencia de usuarios de Windows.
+Para obtener más información sobre la implementación de las teclas de método abreviado, consulta [Teclas de método abreviado](https://go.microsoft.com/fwlink/p/?linkid=221825) en las Directrices para la interacción de la experiencia de usuarios de Windows.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
@@ -249,5 +249,5 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 * [Accesibilidad](accessibility.md)
 * [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [Muestra de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Muestra de accesibilidad en XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

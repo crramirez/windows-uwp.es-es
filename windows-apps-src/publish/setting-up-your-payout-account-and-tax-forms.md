@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 81aa15892bf39209c31238878e0ca19a996d0b3e
-ms.sourcegitcommit: 322e1ae259ba0480b816a004d7a52bb0d1618b90
+ms.openlocfilehash: 1dff4e3b37be14729abdc3262d484745a0245776
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "9000280"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048052"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
@@ -70,7 +70,7 @@ En ciertos países y regiones, puedes crear una cuenta de pago con tu informaci�
 
 Preguntas comunes acerca del uso de PayPal como método de pago:
 
--   **¿Qué configuración de PayPal se necesita para recibir pagos?** Debes asegurarte de que tu cuenta de PayPal no bloquea los pagos con cheque electrónico (eCheck). Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal. Consulta la [página de configuración de la cuenta de PayPal](http://go.microsoft.com/fwlink/p/?linkid=513139) para obtener más información.
+-   **¿Qué configuración de PayPal se necesita para recibir pagos?** Debes asegurarte de que tu cuenta de PayPal no bloquea los pagos con cheque electrónico (eCheck). Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal. Consulta la [página de configuración de la cuenta de PayPal](https://go.microsoft.com/fwlink/p/?linkid=513139) para obtener más información.
 -   **¿Se puede usar en mi país o región?** Consulta [Tipos de cuenta, ubicaciones y precios](account-types-locations-and-fees.md) para averiguar dónde se admite PayPal como método de pago.
 -   **¿Mi cuenta de PayPal tiene que estar registrado en el mismo país o región que mi cuenta del centro de partners?** No. Cuando configuras una cuenta de PayPal, puedes aceptar la configuración predeterminada. No deberías tener ningún problema con otros países o regiones y divisas, a menos que hayas bloqueado el pago con ciertas divisas. Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal.
 -   **¿Tengo que aceptar los pagos de PayPal manualmente?** No. Las cuentas de PayPal están configuradas de forma predeterminada para requerir que los usuarios acepten los pagos manualmente, lo que significa que si no se acepta el pago antes de 30 días, se devuelve. Puedes cambiar esta configuración si desactivas “Preguntarme” en la página Más opciones de PayPal.

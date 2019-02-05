@@ -6,12 +6,12 @@ ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
-ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d41a9fe2363e5d5c462fb0646fbcc2479c756119
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946383"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049392"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -21,7 +21,7 @@ ms.locfileid: "8946383"
 En este tema se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno Windows Runtime, cómo se crea y estructura, y cómo se compila. El tema también describe varias de las convenciones que se usan en el código.
 
 > [!NOTE]
-> El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
 
 Estos son algunos de los puntos principales que se tratan en este documento para cuando se planea y se desarrolla un juego para la Plataforma universal de Windows (UWP).
 
@@ -38,9 +38,9 @@ Si has descargado y extraído la muestra, puedes abrir el archivo **MarbleMaze_V
 
 Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un proyecto existente. Sin embargo, si aún no tienes un proyecto existente que proporcione la funcionalidad básica que requiere tu juego para UWP con DirectX, recomendamos que crees un proyecto basado en la plantilla **DirectX 11 (Windows universal)** de Visual Studio, porque proporciona una aplicación 3D de trabajo básica. Para ello, sigue estos pasos:
 
-1. En Visual Studio 2017, selecciona **archivo > Nuevo > proyecto …**
+1. En Visual Studio 2017, selecciona el **archivo > nuevo > proyecto …**
 
-2. En la ventana **Nuevo proyecto** , en la barra lateral izquierda, selecciona **instalado > Plantillas > Visual C++**.
+2. En la ventana **Nuevo proyecto** , en la barra lateral izquierda, selecciona **instalado > plantillas > Visual C++**.
 
 3. En la lista central, selecciona **DirectX 11 App (Universal Windows)**. Si no ves esta opción, puede que no tenga instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando los componentes y las cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
 
@@ -70,7 +70,7 @@ Puedes usar táctil, el acelerómetro, el controlador de Xbox One o el mouse par
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para seleccionar un elemento de menú.
 -   Usa la entrada táctil, el acelerómetro, el stick analógico izquierdo o el mouse para inclinar el laberinto.
 -   Usar la función táctil, el A o inicio botón en el controlador o el mouse para cerrar menús, como por ejemplo la tabla de puntuaciones máximas.
--   Usa el botón de inicio en el controlador o la tecla P del teclado para pausar o reanudar el juego.
+-   Usa el botón de inicio en el controlador o la tecla P para pausar o reanudar el juego.
 -   Usa el botón Back del mando o la tecla Inicio del teclado para reiniciar el juego.
 -   Cuando la tabla de puntuaciones máximas esté visible, usa el botón Atrás en el controlador o la tecla inicio del teclado para borrar las puntuaciones.
 
@@ -99,7 +99,7 @@ Recomendamos que uses las siguientes convenciones en tu modelo de administració
 -   Usa excepciones para comunicar errores inesperados.
 -   No uses excepciones para controlar el flujo de código.
 -   Captura solo las excepciones que puedas administrar y de las que te puedas recuperar de forma segura. De lo contrario, no captures la excepción y deja que la aplicación termine.
--   Cuando llames a una rutina de DirectX que devuelva **HRESULT**, usa la función **DX::ThrowIfFailed**. Esta función se define en [DirectXHelper.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** inicia una excepción si el proporcionado **HRESULT** es un código de error. Por ejemplo, **E\_POINTER** hace que **ThrowIfFailed** inicie [Platform::NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
+-   Cuando llames a una rutina de DirectX que devuelva **HRESULT**, usa la función **DX::ThrowIfFailed**. Esta función se define en [DirectXHelper.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** inicia una excepción si el **valor HRESULT** de proporcionado es un código de error. Por ejemplo, **E\_POINTER** hace que **ThrowIfFailed** inicie [Platform::NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
 
     Cuando uses **ThrowIfFailed**, pon la llamada de DirectX en una línea aparte para mejorar la lectura del código, tal como se muestra en el siguiente ejemplo.
 
@@ -131,7 +131,7 @@ void LoadMesh(
     );
 ```
 
-Para realizar análisis de código en la aplicación, en la barra de menús, elige **compilación > Ejecutar análisis de código en la solución**. Para más información sobre el análisis de código, consulta [Analizar la calidad del código C/C++ mediante el análisis de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Para realizar un análisis de código en la aplicación, en la barra de menús, elige **Generar > ejecutar análisis de código en la solución**. Para más información sobre el análisis de código, consulta [Analizar la calidad del código C/C++ mediante el análisis de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 La lista completa de anotaciones disponibles está definida en sal.h. Para obtener más información, consulta [Anotaciones de SAL](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

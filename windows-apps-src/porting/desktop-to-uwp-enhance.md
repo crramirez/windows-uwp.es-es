@@ -6,12 +6,12 @@ ms.date: 10/15/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e06de7d33604981e0055d9d57f774d280753db2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941872"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051058"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -164,7 +164,7 @@ En primer lugar, agrega una nueva configuración de compilación al proyecto.
 
 ![Configuración de compilación](images/desktop-to-uwp/build-config.png)
 
-Para esa configuración de compilación, crea una constante para identificar el código que llama Windows Runtime APIs.  
+Para esta configuración de compilación, crea una constante para identificar el código que llama Windows Runtime APIs.  
 
 Para los proyectos basados en .NET, la constante se llama **constante de compilación condicional**.
 
@@ -201,9 +201,9 @@ El compilador compila ese código solo si esa constante se define en la configur
 
 ### <a name="runtime-checks"></a>Comprobaciones en tiempo de ejecución
 
-Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama a Windows Runtime APIs solo si el usuario se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
+Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama Windows Runtime APIs solo si el usuario se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
-La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de puente de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el ``IsRunningAsUWP()`` método para desactivar todo el código que llama Windows Runtime APIs. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el ``IsRunningAsUWP()`` método para desactivar todo el código que llama Windows Runtime APIs. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Vídeo relacionado
 
@@ -222,7 +222,7 @@ La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el c
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

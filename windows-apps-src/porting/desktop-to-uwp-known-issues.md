@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9c437e30db7007a6889a822d7d2219f1647bb3d8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932641"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051038"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conocidos de las aplicaciones de escritorio empaquetadas
 
-En este artículo se describen los problemas conocidos que pueden aparecer al crear un paquete de la aplicación de Windows para la aplicación de escritorio.
+En este artículo se describen los problemas conocidos que pueden aparecer al crear un paquete de aplicación de Windows para la aplicación de escritorio.
 
 <a id="app-converter" />
 
@@ -34,7 +34,7 @@ Es posible que se produzca este error al configurar una nueva imagen base. Esto 
 
 Para resolver este problema, prueba a ejecutar el comando `Netsh int ipv4 reset` desde un símbolo del sistema con privilegios elevados y, a continuación, reinicia el equipo.
 
-### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>La aplicación .NET está compilada con la opción de compilación "AnyCPU" y no se puede instalar
+### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Una aplicación .NET está compilada con la opción de compilación "AnyCPU" y no se puede instalar
 
 Esto puede suceder si el archivo ejecutable principal (o cualquiera de las dependencias) está colocado en cualquier lugar de la jerarquía de carpetas **Archivos de programa** o **Windows\System32**.
 
@@ -67,7 +67,7 @@ Para que la firma Authenticode sea correcta, debe cumplirse lo siguiente en la f
 - El tamaño de la entrada **WIN_CERTIFICATE** debe ser positivo.
 - La entrada **WIN_CERTIFICATE** debe comenzar después de la estructura **IMAGE_NT_HEADERS32** en los archivos ejecutables de 32bits y la estructura IMAGE_NT_HEADERS64 en los archivos ejecutables de 64bits.
 
-Para obtener más información, consulta la [especificación del ejecutable del portal Authenticode](http://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) y la [especificación del formato de archivo PE](https://msdn.microsoft.com/windows/hardware/gg463119.aspx) (en inglés).
+Para obtener más información, consulta la [especificación del ejecutable del portal Authenticode](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) y la [especificación del formato de archivo PE](https://msdn.microsoft.com/windows/hardware/gg463119.aspx) (en inglés).
 
 Ten en cuenta que SignTool.exe puede generar una lista de los archivos binarios dañados o con formato incorrecto al intentar firmar un paquete de la aplicación de Windows. Para ello, establece la variable de entorno APPXSIP_LOG en 1 (por ejemplo, ```set APPXSIP_LOG=1```) para habilitar el registro detallado y vuelve a ejecutar SignTool.exe.
 
@@ -91,7 +91,7 @@ Se publicó una [actualización de Windows (versión 14393.351 - KB3197954)](htt
 
 Si la actualización no soluciona el problema o no estás seguro de cómo recuperar tu equipo, ponte en contacto con el [Soporte técnico de Microsoft](https://support.microsoft.com/contactus/).
 
-Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación para los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml de la siguiente manera:
+Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml como sigue:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -135,11 +135,11 @@ Esto puede suceder cuando el paquete contiene un archivo binario que tiene un ce
 
 * El tamaño del certificado no es positivo.
 
-* El inicio de certificado no es después de la `IMAGE_NT_HEADERS32` estructura para un archivo ejecutable de 32 bits o después de la `IMAGE_NT_HEADERS64` estructura para un archivo ejecutable de 64 bits.
+* El inicio de certificado no es después de la `IMAGE_NT_HEADERS32` estructura para un archivo ejecutable de 32 bits o después de la `IMAGE_NT_HEADERS64` estructura de un archivo ejecutable de 64 bits.
 
 * El puntero de certificado no se alinea correctamente para una estructura WIN_CERTIFICATE.
 
-Para buscar archivos que contienen un certificado PE incorrecto, abre un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
+Para buscar archivos que contienen un certificado PE incorrecto, abra un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
 
 ```
 set APPXSIP_LOG=1
@@ -151,7 +151,7 @@ Desde el **símbolo del sistema**, inicia sesión en la aplicación de nuevo. Po
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
+Obtener información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
 
 ```
 ...
@@ -164,7 +164,7 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

@@ -1,23 +1,23 @@
 ---
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de VisualC ++ (C++ / CX) mediante la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h.
+description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes VisualC ++ (C++ / CX) mediante el uso de la clase de tarea definida en el espacio de nombres concurrency en ppltasks.h.
 title: Programación asincrónica en C++
 ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP, subprocesos, asincrónicos, C++
 ms.localizationpriority: medium
-ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: beab78415ab36fc7bc0659af1b3466b2c3601d88
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920514"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045969"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programación asincrónica en C++/CX
 > [!NOTE]
 > Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime, implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
 
-Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de VisualC ++ (C++ / CX) usando la `task` clase que se define en el `concurrency` espacio de nombres en ppltasks.h.
+Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes VisualC ++ (C++ / CX) usando la `task` clase que se define en el `concurrency` espacio de nombres en ppltasks.h.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Tipos asincrónicos de Plataforma universal de Windows (UWP)
 La Plataforma universal de Windows (UWP) cuenta con un modelo bien definido para llamar a métodos asincrónicos y proporciona los tipos que necesitas para consumirlos. Si no estás familiarizado con el modelo asincrónico de UWP, lee [Programación asincrónica][AsyncProgramming] antes de leer el resto de este artículo.
@@ -289,7 +289,7 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Creación de operaciones asincrónicas en C++/CX aplicaciones de UWP](https://msdn.microsoft.com/library/hh750082)
-* [Referencia del lenguaje Visual C++](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
+* [Referencia del lenguaje Visual C++](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
 * [Programación asincrónica][AsyncProgramming]
 * [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism]
 * [concurrency::task](/cpp/parallel/concrt/reference/task-class)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26b665f68932f7a90127ee99414f984f5d9f2005
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918996"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046784"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Acceder a sensores y dispositivos desde una tarea en segundo plano
 
@@ -20,7 +20,7 @@ ms.locfileid: "8918996"
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, aunque la aplicación en primer plano esté suspendida. Por ejemplo, en función de dónde se ejecute la aplicación, podrías usar una tarea en segundo plano para sincronizar datos con dispositivos o sensores de monitores. Para ahorrar batería y garantizar el consentimiento apropiado por parte del usuario, el uso de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeto a las directivas descritas en este tema.
 
-Para acceder a dispositivos periféricos o sensores en segundo plano, crea una tarea en segundo plano que use [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+Para acceder a dispositivos periféricos o sensores en segundo plano, crea una tarea en segundo plano que use [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](https://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=393307).
 
 > [!Important]
 > **DeviceUseTrigger** no se puede usar con tareas en segundo plano dentro del proceso. La información de este tema solo se aplica a las tareas en segundo plano que se ejecutan fuera del proceso.
@@ -33,7 +33,7 @@ Cuando la aplicación deje de ser visible para el usuario, Windows la suspender�
 
 ### <a name="limitation-critical-device-operations"></a>Limitación: operaciones críticas del dispositivo
 
-Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta [Device sync and update for Microsoft Store device apps](http://go.microsoft.com/fwlink/p/?LinkId=306619) (Sincronización y actualización de dispositivos para aplicaciones para dispositivo de Microsoft Store).
+Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta [Device sync and update for Microsoft Store device apps](https://go.microsoft.com/fwlink/p/?LinkId=306619) (Sincronización y actualización de dispositivos para aplicaciones para dispositivo de Microsoft Store).
 
 ## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>Protocolos o API admitidos en una tarea en segundo plano DeviceUseTrigger
 
@@ -91,7 +91,7 @@ Para usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps
 
 -   Windows podría cancelar las tareas en segundo plano que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) cuando ya no se cumplan ciertos requisitos de directivas, incluida una cantidad máxima de tiempo en segundo plano (tiempo de reloj). Es importante tener en cuenta dichos requisitos de directivas al usar estas tareas en segundo plano para interactuar con el dispositivo periférico.
 
-**Sugerencia**para ver cómo funcionan estas tareas en segundo plano, descargar una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+**Sugerencia**para ver cómo funcionan estas tareas en segundo plano, descargar una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](https://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=393307).
  
 ## <a name="frequency-and-foreground-restrictions"></a>Restricciones de frecuencia y primer plano
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923132"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047164"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
@@ -22,7 +22,7 @@ El [Kit de certificación de aplicaciones de Windows](windows-app-certification-
 
 Supervisa la aplicación durante la prueba de certificación para registrar cuándo se bloquea o se cuelga.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Las aplicaciones que dejan de responder o se bloquean pueden originar pérdidas de datos al usuario y que su experiencia no sea buena.
 
@@ -54,7 +54,7 @@ Soluciona los problemas del archivo mediante identificación y corrección. Reco
 
 Comprueba que la aplicación de Windows puede ejecutarse en una versión futura del sistema operativo. Esta prueba históricamente solo se ha aplicado al flujo de trabajo de la aplicación de escritorio, pero ahora también es compatible con flujos de trabajo de la Plataforma universal de Windows (UWP).
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Información de versión del sistema operativo limitaba el uso de Microsoft Store. A menudo, las aplicaciones usaban esta restricción de forma incorrecta para comprobar la versión del SO para que la aplicación pudiera proporcionar a los usuarios una funcionalidad específica de una versión del sistema operativo.
 
@@ -70,7 +70,7 @@ Las aplicaciones deben usar las funciones auxiliares de la API de la versión pa
 
 Comprueba que la aplicación tiene un controlador de cancelación de tareas en segundo plano declarado. Es necesario que haya una función específica a la que se llamará cuando se cancele la tarea. Esta prueba se aplica solo a aplicaciones implementadas.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Las aplicaciones de la Tienda pueden registrar un proceso que se ejecuta en segundo plano. Por ejemplo, una aplicación de correo electrónico puede hacer ping a un servidor ocasionalmente. Sin embargo, si el sistema operativo necesita estos recursos, cancelará la tarea en segundo plano y las aplicaciones deben controlar correctamente esta cancelación. Es posible que las aplicaciones que no tengan un controlador de cancelación se bloqueen o no se cierren cuando el usuario intente cerrar la aplicación.
 
@@ -86,7 +86,7 @@ Agrega el controlador de cancelación a la aplicación. Para más información, 
 
 Comprueba que el paquete de la aplicación (APPX, lote de aplicaciones) contiene una aplicación. Esto se ha cambiado en el kit para ser una prueba independiente.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Esta prueba se ha implementado según la directiva de la Tienda.
 
@@ -104,7 +104,7 @@ Asegúrese de que el paquete de la aplicación y el lote cumplen con requisitos 
 
 Prueba el contenido del manifiesto de la aplicación para asegurarte de que su contenido es correcto.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Las aplicaciones deben tener un manifiesto de la aplicación con el formato correcto.
 
@@ -304,11 +304,11 @@ Prueba la aplicación para detectar el uso de cualquier API no compatible.
 
 ### <a name="background"></a>Antecedentes
 
-Las aplicaciones deben usar las API para aplicaciones para UWP (en tiempo de ejecución de Windows o API de Win32 compatibles) para lograr la certificación de Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
+Las aplicaciones deben usar las API para aplicaciones para UWP (Windows Runtime o API de Win32 compatibles) para lograr la certificación de Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
--   Comprueba que cada archivo binario del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la tabla de direcciones de importación del binario.
+-   Comprueba que cada archivo binario del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la comprobación de la tabla de direcciones de importación del binario.
 -   Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="corrective-actions"></a>Acciones correctivas
@@ -319,7 +319,7 @@ Asegúrate de que la aplicación se haya compilado como una versión de lanzamie
 
 Revisa los mensajes de error para identificar la API de la aplicación usa que no es una [API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Nota**las aplicaciones C++ creadas en una configuración de depuración pasará esta prueba aunque la configuración use solo las API de Windows SDK para aplicaciones para UWP. Ver, [alternativas a las API de Windows en aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
+> **Nota**las aplicaciones C++ creadas en una configuración de depuración pasará esta prueba aunque la configuración use solo las API de Windows SDK para aplicaciones para UWP. Ver, [alternativas a las API de Windows en aplicaciones para UWP](https://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
 
 ## <a name="performance-tests"></a>Pruebas de rendimiento
 
@@ -481,7 +481,7 @@ Usa esta tabla como guía.
 
 ### <a name="branding-validation"></a>Validación de la personalización de marca
 
-Las aplicaciones para UWP se espera que estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
+Se espera que las aplicaciones para UWP estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -495,7 +495,7 @@ Reemplaza las imágenes predeterminadas con otras más distintivas y representat
 
 Prueba la aplicación para asegurarte de que no sea una versión de depuración.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
 
@@ -513,7 +513,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración 
 
 ### <a name="utf-8-file-encoding"></a>Codificación de archivos UTF-8
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Los archivos HTML, CSS y JavaScript deben codificarse en formato UTF-8 con una correspondiente marca de orden de bytes (BOM), para que se puedan obtener los beneficios del almacenamiento en caché del código de bytes y se eviten ciertas condiciones de error en tiempo de ejecución.
 
@@ -531,7 +531,7 @@ Abre el archivo afectado y selecciona **Guardar como** en el menú **Archivo** d
 
 Prueba las aplicaciones de Microsoft Direct3D para garantizar que no se bloquearán en los dispositivos con hardware gráfico más antiguo.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Microsoft Store requiere todas las aplicaciones con Direct3D se representen correctamente o finalicen correctamente en tarjetas de gráficos de 9\-1 de nivel de característica.
 
@@ -543,13 +543,13 @@ La prueba examina si las aplicaciones se representan correctamente en el nivel d
 
 ### <a name="corrective-action"></a>Acción correctiva
 
-Asegúrate de que la aplicación se represente correctamente en el nivel de función 9\-1 de Direct3D, aun cuando tengas pensado ejecutarla en un nivel más alto. Consulta [Desarrollar para distintos niveles de funciones de Direct3D](http://go.microsoft.com/fwlink/p/?LinkID=253575) para obtener más información.
+Asegúrate de que la aplicación se represente correctamente en el nivel de función 9\-1 de Direct3D, aun cuando tengas pensado ejecutarla en un nivel más alto. Consulta [Desarrollar para distintos niveles de funciones de Direct3D](https://go.microsoft.com/fwlink/p/?LinkID=253575) para obtener más información.
 
 ### <a name="direct3d-trim-after-suspend"></a>Recorte Direct3D tras suspensión
 
 > **Nota**esta prueba solo se aplica a las aplicaciones para UWP se ha diseñado para Windows8.1 y versiones posteriores.
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Si la aplicación no llama a [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) en su dispositivo Direct3D, no podrá liberar la memoria asignada a trabajos 3D anteriores. Esto aumenta el riesgo de que la aplicación finalice debido a la presión de memoria del sistema.
 
@@ -565,7 +565,7 @@ La aplicación debe llamar a la API [**Trim**](https://msdn.microsoft.com/librar
 
 ### <a name="special-use-capabilities"></a>Funcionalidades de uso especial
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Las funcionalidades de uso especial están indicadas para escenarios muy específicos. Estas funcionalidades solo pueden usarse en cuentas de empresa.
 
@@ -585,7 +585,7 @@ Piensa en la posibilidad de quitar la función de uso especial si la aplicación
 
 ## <a name="windows-runtime-metadata-validation"></a>Validación de metadatos de Windows Runtime
 
-### <a name="background"></a>Antecedentes
+### <a name="background"></a>Segundo plano
 
 Comprueba que los componentes suministrados en una aplicación corresponden al sistema de tipo de UWP.
 

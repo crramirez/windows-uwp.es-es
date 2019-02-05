@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc4adf5002858b394c6908b91f14557c3e1eed7b
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 0760805128f8f11b4598a5c8b0d19d8e9f20d04d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037347"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050958"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de barra de comandos
 
@@ -406,7 +406,7 @@ TextCommandBarFlyout no se puede personalizar y se administra automáticamente p
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 - [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
-- [Muestra de comandos XAML](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [Muestra de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>Artículos relacionados
 

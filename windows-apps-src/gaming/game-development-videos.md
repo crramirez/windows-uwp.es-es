@@ -6,12 +6,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, videos, vídeos, GDC, GDC, build, build
 ms.localizationpriority: medium
-ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2360af867fdc708f49cf5ba804a204ae497705b3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929959"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050978"
 ---
 # <a name="game-development-videos"></a>Vídeos sobre el desarrollo de juegos
 
@@ -23,10 +23,10 @@ Esta es una lista de vídeos sobre el desarrollo de juegos de las conferencias m
 
 ¿Qué es LiveOps? Obtén información sobre por qué a los desarrolladores crear juegos dinámicos: [tu juego para todos los usuarios con PlayFab (entrevista)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-with-PlayFab) - James Gwertzman, David Holladay
 
-* [Que enfoque de Lean del esponjosas al escenario hada al desarrollo de juegos: cómo un independientes studio aumentó una disminución del juego después de solo 8 semanas](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler desde hada esponjosas al escenario
+* [Que del esponjosas al escenario hada Lean enfoque al desarrollo de juegos: cómo un independientes studio aumentó un impacto en el juego después de solo 8 semanas](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler desde hada esponjosas al escenario
 * [Día 1: tu juego, en cualquier dispositivo](https://channel9.msdn.com/Shows/Level-Up/Your-game-everywhere-PlayFab) -Brendan Vanous
 * [Día 2: tu juego para todos los usuarios con PlayFab (presentación)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-With-PlayFab-Theater-Presentation) -Brendan Vanous
-* [Día 3: tu juego, cada forma que se reproduzca](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
+* [Día 3: tu juego, todos los aspectos que se reproduzca](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
 
 ### <a name="azure-cloud-services"></a>Servicios de nube de Azure
 
@@ -42,16 +42,16 @@ Esta es una lista de vídeos sobre el desarrollo de juegos de las conferencias m
 
 ### <a name="mixer"></a>Mixer
 
-* [Obtener gran promoción para el mínimo esfuerzo con Mixer](https://channel9.msdn.com/Shows/Level-Up/Get-massive-promotion-for-minimal-effort-with-Mixer-Theater-presentation) - Gersh Payzer
+* [Obtener promoción masivo para un esfuerzo mínimo con Mixer](https://channel9.msdn.com/Shows/Level-Up/Get-massive-promotion-for-minimal-effort-with-Mixer-Theater-presentation) - Gersh Payzer
 
 ### <a name="visual-studio-team-services-vsts-and-app-center"></a>Visual Studio Team Services (VSTS) y el centro de la aplicación
 
 ¿Qué es VSTS? Aprende a implementar DevOps en el proceso de compilación: [Introducción a Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
 
-* [Planear y crear juegos con toda la potencia de VSTS: demostración de principio a fin de CI & CD ágiles,](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
-* [Crear tu juego siguiente ofrece la tecnología de compilación en la nube de Visual Studio Team Services y equipos de Unity](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
-* [Probar continuamente, distribuir y supervisar el juego con el centro de la aplicación](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - James White
-* [El programa de instalación el CD de CI la canalización de Node.js, Python,. NET, ir, Ruby o Java - en minutos](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) , Wang de etiqueta
+* [Planear y crear juegos con toda la potencia de VSTS: demostración de principio a fin de CD de & de CI ágiles,](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
+* [Crear tu juego siguiente con la tecnología de compilación en la nube de equipos de Unity y Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
+* [Continuamente probar, distribuir y supervisar el juego con el centro de App](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - James White
+* [El programa de instalación el CD de CI la canalización de Node.js, Python,. NET, ir, Ruby o Java - en minutos](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) , etiqueta Wang
 * [Agile herramientas conjunto con VSTS](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) - Rogan Ferguson, James Montemagno
 
 ### <a name="git"></a>Git
@@ -67,7 +67,7 @@ Esta es una lista de vídeos sobre el desarrollo de juegos de las conferencias m
 
 ### <a name="game-development-experiences"></a>Experiencias de desarrollo de juegos
 
-* [Photogrammetry y láser el examen en Forza Motorsport 7](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) - Travis Gosnell
+* [Photogrammetry y láser digitalización en Forza Motorsport 7](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) - Travis Gosnell
 * [Building Astroneer: gráficos de nuevo y estimulante cursos](https://channel9.msdn.com/Shows/Level-Up/Building-Astroneer-Charting-new-and-challenging-courses) -Brendan Wilson
 
 ### <a name="microsoft-store"></a>Microsoft Store
@@ -78,20 +78,20 @@ Esta es una lista de vídeos sobre el desarrollo de juegos de las conferencias m
 ### <a name="mixed-reality"></a>Realidad mixta
 
 * [Creación de aplicaciones de Windows MR con Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Rodríguez
-* [La nube AR: por qué el futuro de MR no es un dispositivo, todos ellos es](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
+* [El Cloud AR: por qué el futuro de MR no es un dispositivo, todos ellos es](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
 
 ## <a name="game-accessibility-conference-2018"></a>Conferencia de accesibilidad a juegos de 2018
 
 * [Mira brillante. 2017 del juego accesibilidad avanza](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) - Ian Hamilton, experto de la industria de accesibilidad
-* [El CVAA y lo que significa que para el acceso de juegos](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -Karen Petlz Strauss desde la Comisión Federal de comunicaciones
+* [La CVAA y lo que significa que para el acceso de juegos](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -Karen Petlz Strauss desde la Comisión Federal de comunicaciones
 * [Se ha realizado mi juego Blind accesible: no se considera qué ha ocurrido a continuación …](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -Michelle Martín MetalPop de los juegos
 * [Opciones de diseño de accesibilidad cognitiva y la educación de música para autismo](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) - Landay Elena desde el colegio Berklee de música
 * [Ramping accesibilidad](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Ramping-Up-Accessibility) - Karen Stevens de EA deportes
 * [Accesibilidad a juegos moderno. Cambiar pésame a solución](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Keeker Vicente desde Playstation y Sam Thompson desde Sony World Wide Studios
-* Protector de accesibilidad de [Reproducción de vídeo de juegos estándar sin vista](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat,
+* Protector de [Reproducción estándar videojuegos sin bloqueo](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat, accesibilidad
 * [Cómo mejora la colaboración de la comunidad Desarrollo](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) - Jason Canam hogares de los juegos
-* [Cómo Streaming dinámico aporta inclusión de nivel siguiente](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) - Tara Voelker de mezclador
-* [Todos los jugadores de personas con quieres hacer es tienen algunos divertida](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) - altavoces de Panel: Chris Robinson y Kristen Piersa, sirve de accesibilidad. Michael Anthony de Microsoft
+* [Cómo Streaming dinámico aporta inclusión nivel siguiente](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) - Tara Voelker de mezclador
+* [Todos los jugadores de personas con quieres hacer es tienen algunos divertido](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) - altavoces Panel: Chris Robinson y Kristen Piersa, sirve de accesibilidad. Michael Anthony de Microsoft
 * [Cerdito lleno de A la industria de juegos](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-A-Fraught-Love-Letter-to-the-Games-Industry) - Cherry Thompson, protector de accesibilidad
 * [Historial de juegos accesibles](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) - Barrie Ellis desde OneSwitch y Special Effect
 
@@ -102,30 +102,30 @@ Esta es una lista de vídeos sobre el desarrollo de juegos de las conferencias m
 ## <a name="gdc-2017-game-dev-session-videos"></a>Vídeos de las sesiones de GDC 2017 sobre el desarrollo de juegos
 
 * [Unveiling New Game Developer Opportunities with Xbox and Windows](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-001) (Desvelar las nuevas oportunidades para desarrolladores de juegos con Xbox y Windows, por Chris Charla
-* [Presentación de funcionalidades de Audio espacial para Xbox de red](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002) - Scott Selfon
+* [Introducción de funcionalidades de Audio espacial para Xbox de red](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002) - Scott Selfon
 * [Ajuste del rendimiento D3D12 y depuración con PIX y GPUValidation](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003) -, por Shawn Hargreaves y Max McMullen
-* [Modo de juego y la evolución de plataformas UWP GameDevelopment](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-004) - Eric Walston
+* [El modo de juego y la evolución de plataformas UWP GameDevelopment](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-004) - Eric Walston
 * [Xbox Live para AllGame](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005) - Brian Tyler
-* [Cumplir convergido Microsoft Store para Windows andXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - krupa poobala Krupa de presentación Chandran
-* [Representación holográfica de Windows: un SDK para Target VR y AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) -Alex Pfaffe, Alex Turner
+* [Cumplir convergido Microsoft Store para Windows andXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - krupa poobala para Krupa presentación-Chandran
+* [Representación holográfica de Windows: One SDK para Target VR y AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) -Alex Pfaffe, Alex Turner
 * [Llegar a más jugadores a través de accesibilidad características de Xbox en Xbox One andPC](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-009) - Evelyn Thomas
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos de las sesiones de GDC 2015 sobre el desarrollo de juegos
 
--   [The Future of Gaming Across the Microsoft Ecosystem](http://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) (El futuro de los juegos en el ecosistema de Microsoft), por Phil Spencer
--   [Developing Games for Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) (Desarrollo de juegos para Windows10, por Chris Tector y Don Box
--   [Advanced DirectX 12 Graphics and Performance](http://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) (Rendimiento y gráficos avanzados de DirectX 12), por Max McMullen
--   [Gaming Consumer Experience on Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) (Experiencia del consumidor de juegos en Windows10): Bill Schiefelbein
--   [New Opportunities for Independent Developers](http://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) (Nuevas oportunidades para los desarrolladores independientes): Chris Charla
--   [Developing with Xbox Live for Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) (Desarrollo con Xbox Live para Windows 10): Vijay Gajjala, Brian Tyler
--   [Xbox Live Multiplayer: Introducing services for cross-platform matchmaking and gameplay](http://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) (Modo multijugador de Xbox Live: Introducción a los servicios de matchmaking y juego entre plataformas): Ferdinand Schober
--   [Fable Legends: Cross-device Gameplay with Xbox Live](http://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) (Fable Legends: Juego entre dispositivos con Xbox Live): Raymond Arifianto, Julian Davis
--   [Best Practices for Leveraging Cloud-Based User Stats and Achievements in Xbox Live](http://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) (Prácticas recomendadas para aprovechar las estadísticas y los logros del usuario basados en la nube en Xbox Live): Cierra McDonald
--   [Solve the Tough Graphics Problems with Your Game Using DirectX Tools](http://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools) (Soluciona los problemas de gráficos rígidos de los juegos mediante el uso de herramientas de DirectX): Rudolph Balaz, Rong Lu, Jason Strayer
--   [Better Power, Better Performance: Your Game on DirectX 12](http://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) (Más eficacia, mayor rendimiento: Tu juego en DirectX 12): Bennett Sorbo
--   [Sustained Gaming Performance in multi-core mobile devices](http://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices) (Rendimiento de los juegos mantenido en dispositivos móviles de varios núcleos): Julian Calinov
--   [Designing Games for a Windows Core World](http://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) (Diseño de juegos para un mundo de Windows Core): Todd Williams, Shai Hinitz
--   [PC Games for Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) (Juegos de PC para Windows10): Chuck Walbourn
+-   [The Future of Gaming Across the Microsoft Ecosystem](https://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) (El futuro de los juegos en el ecosistema de Microsoft), por Phil Spencer
+-   [Developing Games for Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) (Desarrollo de juegos para Windows10, por Chris Tector y Don Box
+-   [Advanced DirectX 12 Graphics and Performance](https://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) (Rendimiento y gráficos avanzados de DirectX 12), por Max McMullen
+-   [Gaming Consumer Experience on Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) (Experiencia del consumidor de juegos en Windows10): Bill Schiefelbein
+-   [New Opportunities for Independent Developers](https://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) (Nuevas oportunidades para los desarrolladores independientes): Chris Charla
+-   [Developing with Xbox Live for Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) (Desarrollo con Xbox Live para Windows 10): Vijay Gajjala, Brian Tyler
+-   [Xbox Live Multiplayer: Introducing services for cross-platform matchmaking and gameplay](https://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) (Modo multijugador de Xbox Live: Introducción a los servicios de matchmaking y juego entre plataformas): Ferdinand Schober
+-   [Fable Legends: Cross-device Gameplay with Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) (Fable Legends: Juego entre dispositivos con Xbox Live): Raymond Arifianto, Julian Davis
+-   [Best Practices for Leveraging Cloud-Based User Stats and Achievements in Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) (Prácticas recomendadas para aprovechar las estadísticas y los logros del usuario basados en la nube en Xbox Live): Cierra McDonald
+-   [Solve the Tough Graphics Problems with Your Game Using DirectX Tools](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools) (Soluciona los problemas de gráficos rígidos de los juegos mediante el uso de herramientas de DirectX): Rudolph Balaz, Rong Lu, Jason Strayer
+-   [Better Power, Better Performance: Your Game on DirectX 12](https://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) (Más eficacia, mayor rendimiento: Tu juego en DirectX 12): Bennett Sorbo
+-   [Sustained Gaming Performance in multi-core mobile devices](https://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices) (Rendimiento de los juegos mantenido en dispositivos móviles de varios núcleos): Julian Calinov
+-   [Designing Games for a Windows Core World](https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) (Diseño de juegos para un mundo de Windows Core): Todd Williams, Shai Hinitz
+-   [PC Games for Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) (Juegos de PC para Windows10): Chuck Walbourn
 
 ## <a name="build-2015-session-videos"></a>//vídeos de sesiones de build 2015
 

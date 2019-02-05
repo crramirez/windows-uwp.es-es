@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 027ad255feaffa25450b1c490d1697410e91f431
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 5689fd967756025872fd45bf242076e854e700aa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037187"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048102"
 ---
 # <a name="semantic-zoom"></a>Zoom semántico
 
@@ -98,7 +98,7 @@ Antes de usar el zoom semántico, debes saber cómo usar una vista de lista con 
 </SemanticZoom>
  ```
  
-Estos ejemplos se han tomado de la página SemanticZoom del [Ejemplo de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992). Puedes descargar el ejemplo para ver el código completo, incluyendo el origen de datos. El zoom semántico usa un control GridView para proporcionar la vista ampliada y un control ListView para la vista alejada.
+Estos ejemplos se han tomado de la página SemanticZoom del [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?LinkId=619992). Puedes descargar el ejemplo para ver el código completo, incluyendo el origen de datos. El zoom semántico usa un control GridView para proporcionar la vista ampliada y un control ListView para la vista alejada.
   
 **Definición de la vista ampliada**
 

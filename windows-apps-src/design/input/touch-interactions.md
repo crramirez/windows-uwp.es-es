@@ -8,12 +8,12 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b889fede67c7e32ff48c0e48a516f389afda820a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940499"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048647"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -151,7 +151,7 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer aprendizaje y la exploración (por ejemplo, pulsar y sostener).
+    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer el aprendizaje y la exploración (por ejemplo, pulsar y sostener).
 
      
 
@@ -436,7 +436,7 @@ Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia
 
 A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946). Por ejemplo, si tocas la pantalla y luego arrastras el dedo por la pantalla. Por último, cuando termina la interacción, tiene lugar un evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).
 
-**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y la interfaz de rueda de mouse.
+**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y una interfaz de rueda del mouse.
 
  
 
@@ -591,17 +591,17 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 **Muestras**
 
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
 
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  

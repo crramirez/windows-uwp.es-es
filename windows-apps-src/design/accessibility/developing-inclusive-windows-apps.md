@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e38b57deb7101dcf0476bd3d952fc01ffd605db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 58e9ab90115566059fb79220b7b8c0b9c5ce677e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942217"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047972"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desarrollo de aplicaciones inclusivas de Windows  
 
@@ -82,7 +82,7 @@ Para obtener más información, consulta el tema completo [Lista de comprobació
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [Diseño de software inclusivo](designing-inclusive-software.md)  
-* [Diseño inclusivo](http://design.microsoft.com/inclusive)
+* [Diseño inclusivo](https://design.microsoft.com/inclusive)
 * [Procedimientos de accesibilidad que deben evitarse](practices-to-avoid.md)
 * [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Centro de Microsoft para desarrolladores de accesibilidad](https://msdn.microsoft.com/enable)

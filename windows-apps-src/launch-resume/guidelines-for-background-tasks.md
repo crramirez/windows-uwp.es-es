@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: bd851b6deab0f7a2772720fac83bb2bfa3175071
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: af8e45e13eb89185e346c3c8e8cd5303da399471
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923102"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047490"
 ---
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
@@ -103,7 +103,7 @@ Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejec
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 

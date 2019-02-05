@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a1d5a15bd88b7adc23ccc835001c384a91e65a31
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921791"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050708"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -23,7 +23,7 @@ Si, simplemente, estás interesado en capturar vídeo o fotos, como una aplicaci
 > Las características descritas en este artículo solo están disponibles a partir de Windows 10, versión 1607.
 
 > [!NOTE] 
-> Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](https://go.microsoft.com/fwlink/?LinkId=823230).
 
 > [!NOTE] 
 > En Windows 10, versión 1803, se introdujo un nuevo conjunto de API para usar **MediaFrameReader** con datos de audio. Para obtener más información, consulta [Procesar tramas de audio con MediaFrameReader](process-audio-frames-with-mediaframereader.md).
@@ -44,11 +44,11 @@ En el código de ejemplo de este artículo se usan las API de los siguientes esp
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Seleccionar orígenes de fotogramas y grupos de orígenes de fotogramas
-Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto de [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
+Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-También puedes crear un [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) con [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) y el valor devuelto de [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para recibir notificaciones cuando el origen de fotogramas disponible se agrupa en el dispositivo cambios, como una cámara externa cuando está enchufada. Para obtener más información, consulta [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+También puedes crear un [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) con [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) y el valor devuelto desde [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para recibir notificaciones cuando el origen de fotogramas disponible se agrupa en el dispositivo cambios, como cuando se conecta una cámara externa de. Para obtener más información, consulta [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Una clase [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tiene una colección de objetos [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que describen los orígenes de fotogramas que se incluyen en el grupo. Después de recuperar los grupos de origen de fotogramas disponibles en el dispositivo, puedes seleccionar el grupo que expone los orígenes de fotogramas que te interesan.
 
@@ -151,7 +151,7 @@ Cuando hayas terminado de leer fotogramas, asegúrate de detener el lector de fo
 Para obtener más información sobre cómo limpiar los objetos de captura multimedia cuando se suspende la aplicación, consulta [**Acceso fácil a la vista previa de cámara**](simple-camera-preview-access.md).
 
 ## <a name="the-framerenderer-helper-class"></a>La clase auxiliar FrameRenderer
-[Camera frames sample (Muestra de fotogramas de cámara)](http://go.microsoft.com/fwlink/?LinkId=823230) universal de Windows proporciona una clase auxiliar que facilita mostrar los fotogramas de orígenes a color, de infrarrojos y en profundidad en la aplicación. Normalmente, querrás hacer más cosas con los datos en profundidad y de infrarrojos que solo mostrarlos en la pantalla, pero esta clase auxiliar es una herramienta útil para demostrar la característica de lector de fotogramas y para depurar tu propia implementación del lector de fotogramas.
+[Camera frames sample (Muestra de fotogramas de cámara)](https://go.microsoft.com/fwlink/?LinkId=823230) universal de Windows proporciona una clase auxiliar que facilita mostrar los fotogramas de orígenes a color, de infrarrojos y en profundidad en la aplicación. Normalmente, querrás hacer más cosas con los datos en profundidad y de infrarrojos que solo mostrarlos en la pantalla, pero esta clase auxiliar es una herramienta útil para demostrar la característica de lector de fotogramas y para depurar tu propia implementación del lector de fotogramas.
 
 La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 
@@ -253,7 +253,7 @@ Para obtener más información sobre el uso de perfiles de cámara, consulta [Pe
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Muestra de fotogramas de cámara](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [Muestra de fotogramas de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 
  

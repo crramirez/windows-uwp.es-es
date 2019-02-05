@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: f2aad1b4d6abf9a05af9b9a938188c69d9cae7c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941326"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048372"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
 
@@ -44,7 +44,7 @@ Superar estas limitaciones provocará fallos en la asignación de memoria. Para 
 
 Para **desarrollo de aplicaciones**, los recursos disponibles pueden ser limitados en comparación con un PC estándar y puede variar según el número de aplicaciones y juegos que se ejecuten en el sistema.
 
-Para el **desarrollo de juegos**, Xbox One, al igual que otras videoconsolas, es una parte especializada de hardware que requiere un kit de desarrollo específico basado en hardware para tener acceso al potencial completo. Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware Xbox One, considere registrar con el programa [ID@Xbox](http://www.xbox.com/Developers/id) para acceder a los kits de desarrollo de Xbox One.
+Para el **desarrollo de juegos**, Xbox One, al igual que otras videoconsolas, es una parte especializada de hardware que requiere un kit de desarrollo específico basado en hardware para tener acceso al potencial completo. Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware Xbox One, considere registrar con el programa [ID@Xbox](https://www.xbox.com/Developers/id) para acceder a los kits de desarrollo de Xbox One.
 
 
 Para obtener más información acerca de los recursos del sistema para aplicaciones para UWP en Xbox One, consulta la primera parte de este vídeo.

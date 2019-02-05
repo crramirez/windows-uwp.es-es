@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e4d39690223d01a6ac553d33357c7714b2f0dca
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.openlocfilehash: 04a16b5e824621b0e7f32c8cb012db326f591d48
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014730"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048262"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio mediante Visual Studio
 
@@ -75,7 +75,7 @@ Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Prepa
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

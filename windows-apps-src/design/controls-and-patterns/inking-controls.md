@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a969c0dfbfd08b5cc29651e2ad295c2bdd60ee0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037017"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047899"
 ---
 # <a name="inking-controls"></a>Controles de entrada manuscrita
 
@@ -84,7 +84,7 @@ Para agregar un control InkCanvas a tu aplicación se requiere una sola línea d
 ```
 
 > [!NOTE]
-> Para la personalización detallada de InkCanvas mediante InkPresenter, consulta el artículo ["Interacciones de pluma y lápiz en aplicaciones para UWP"](http://windowsstyleguide/input/pen-and-stylus-interactions/).
+> Para la personalización detallada de InkCanvas mediante InkPresenter, consulta el artículo ["Interacciones de pluma y lápiz en aplicaciones para UWP"](https://windowsstyleguide/input/pen-and-stylus-interactions/).
 
 El control InkToolbar debe usarse junto con un control InkCanvas. La incorporación de un control InkToolbar (con todas las herramientas integradas) en la aplicación requiere una línea de marcado adicional:
 
@@ -170,6 +170,6 @@ El borrador también tiene un control flotante que proporciona el comando **Borr
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Interacciones de pluma y lápiz en aplicaciones para UWP](http://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [Reconocer trazos de lápiz](http://windowsstyleguide/input/convert-ink-to-text/)
-- [Almacenar y recuperar trazos de lápiz](http://windowsstyleguide/input/save-and-load-ink/)
+- [Interacciones de pluma y lápiz en aplicaciones para UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [Reconocer trazos de lápiz](https://windowsstyleguide/input/convert-ink-to-text/)
+- [Almacenar y recuperar trazos de lápiz](https://windowsstyleguide/input/save-and-load-ink/)

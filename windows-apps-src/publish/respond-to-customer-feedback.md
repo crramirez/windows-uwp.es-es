@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: 626b2ce36d8abc4798d39a89af540c61b26b5ed1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938524"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047570"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 
 Puedes usar el [informe de comentarios](feedback-report.md) para revisar los comentarios que los clientes de Windows 10 dejaron sobre tu aplicación en el Centro de opiniones y luego responder directamente a los comentarios. Puedes publicar tus respuestas en el Centro de opiniones para que todos lo vean (como comentarios individuales o al actualizar el estado de un comentario y agregar una descripción), para indicar a los clientes sobre nuevas funciones o correcciones de errores o para pedir comentarios más específicos sobre cómo mejorar la aplicación. También puedes enviar tu respuesta por correo electrónico directamente al cliente que envió el comentario.
 
 > [!TIP]
-> Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
+> Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
 
 Para proporcionar una respuesta a cualquier comentario, haz clic en el vínculo **Responder a los comentarios** que aparece junto al comentario en tu **informe de comentarios**.
 
@@ -66,4 +66,4 @@ Independientemente del método que uses para responder a los comentarios de un c
 > [!NOTE]
 > Los clientes pueden notificar a Microsoft sobre la recepción de una respuesta inapropiada de un desarrollador a un comentario. Pueden también optar por no recibir las respuestas de los comentarios por correo electrónico.
 
-La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](https://go.microsoft.com/fwlink/p/?LinkID=401178).

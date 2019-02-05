@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: eb6cde0c3c31f0116c65e5d5dc4a0d8ae4a1b540
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9df6eef44d45db37e17610d6a5333f3a387b5cf6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920380"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045814"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Crear y registrar una tarea en segundo plano fuera de proceso
 
@@ -36,7 +36,7 @@ Puedes ejecutar código en segundo plano escribiendo clases que implementen la i
 
 En estos pasos te mostramos cómo escribir una nueva clase que implemente la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
-1.  Crea un nuevo proyecto para tareas en segundo plano y agrégalo a tu solución. Para ello, haz clic en el nodo solución en el **Explorador de soluciones** y selecciona **Agregar** \> **Nuevo proyecto**. A continuación, selecciona el tipo de proyecto de **Componente de Windows en tiempo de ejecución** , el nombre del proyecto y haz clic en Aceptar.
+1.  Crea un nuevo proyecto para tareas en segundo plano y agrégalo a tu solución. Para ello, haz clic en el nodo solución en el **Explorador de soluciones** y selecciona **Agregar** \> **Nuevo proyecto**. A continuación, selecciona el tipo de proyecto de **Componente de Windows Runtime** , el nombre del proyecto y haz clic en Aceptar.
 2.  Haz referencia al proyecto de tareas en segundo plano desde tu proyecto de aplicación de la Plataforma universal de Windows (UWP). Para un C# o aplicación de C++, en el proyecto de aplicación, haz clic en **las referencias** y selecciona **Agregar nueva referencia**. En **Solución**, selecciona **Proyectos**, selecciona el nombre de tu proyecto de tarea en segundo plano y haz clic en **Aceptar**.
 3.  En el proyecto de tareas en segundo plano, agrega una nueva clase que implementa la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . El método [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) es un punto de entrada necesario al que se llamará cuando se desencadene el evento especificado; Este método es necesario en todas las tareas en segundo plano.
 
@@ -140,9 +140,9 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 }
 ```
 
-4.  Si ejecutas algún código asincrónico en tu tarea en segundo plano, entonces esta necesita usar un aplazamiento. Si no usas un aplazamiento, el proceso de la tarea en segundo plano puede finalizar inesperadamente si el método **Run** devuelve antes de que cualquier trabajo asincrónico se ha ejecutado finalización.
+4.  Si ejecutas algún código asincrónico en tu tarea en segundo plano, entonces esta necesita usar un aplazamiento. A continuación, si no usas un aplazamiento, el proceso de la tarea en segundo plano puede terminar de forma inesperada si el método **Run** devuelve antes de cualquier trabajo asincrónico se ha ejecutado finalización.
 
-Solicita el aplazamiento en el método **Run** antes de llamar al método asincrónico. Guarda el aplazamiento a un miembro de datos de clase para que se puede tener acceso desde el método asincrónico. Declara el aplazamiento completo después de que se complete el código asincrónico.
+Solicita el aplazamiento en el método **Run** antes de llamar al método asincrónico. Guarda el aplazamiento a un miembro de datos de clase para que se pueda acceder desde el método asincrónico. Declara el aplazamiento completo después de que se complete el código asincrónico.
 
 El siguiente código de ejemplo obtiene el aplazamiento, lo guarda y lo libera cuando se completa el código asincrónico.
 
@@ -202,12 +202,12 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 > [!NOTE]
 > En C#, se llama a los métodos asincrónicos de la tarea en segundo plano mediante las palabras clave **async/await**. En C++ / CX, un resultado similar se consigue mediante el uso de una cadena de tareas.
 
-Para más información acerca de los modelos asincrónicos, consulta el tema sobre la [Programación asincrónica](https://msdn.microsoft.com/library/windows/apps/mt187335). Para obtener más ejemplos sobre cómo usar aplazamientos para evitar que una tarea en segundo plano termine antes de tiempo, consulta la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Para más información acerca de los modelos asincrónicos, consulta el tema sobre la [Programación asincrónica](https://msdn.microsoft.com/library/windows/apps/mt187335). Para obtener más ejemplos sobre cómo usar aplazamientos para evitar que una tarea en segundo plano termine antes de tiempo, consulta la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 Los siguientes pasos se completan en una de tus clases de aplicaciones (por ejemplo, MainPage.xaml.cs).
 
 > [!NOTE]
-> También puedes crear una función dedicada al registro de tareas en segundo plano&mdash;consulta [registrar una tarea en segundo plano](register-a-background-task.md). En ese caso, en lugar de usar los siguientes tres pasos, puedes simplemente construir el desencadenador y proporcionar la función de registro junto con el nombre de la tarea, punto de entrada de tarea y (opcionalmente) una condición.
+> También puedes crear una función dedicada al registro de tareas en segundo plano&mdash;consulta [registrar una tarea en segundo plano](register-a-background-task.md). En ese caso, en lugar de usar los tres pasos siguientes, puedes simplemente construir el desencadenador y proporcionar la función de registro junto con el nombre de la tarea, punto de entrada de tarea y (opcionalmente) una condición.
 
 ## <a name="register-the-background-task-to-run"></a>Registrar la tarea en segundo plano por ejecutar
 
@@ -272,7 +272,7 @@ while (hascur)
 
 El desencadenador de tarea en segundo plano controla cuándo se ejecutará la tarea en segundo plano. Para obtener una lista de posibles desencadenadores del sistema, consulta [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Por ejemplo, este código crea una nueva tarea en segundo plano y establece que se ejecute cuando se produce el desencadenador de **TimeZoneChanged** :
+Por ejemplo, este código crea una nueva tarea en segundo plano y establece que se ejecute cuando se produce el desencadenador **TimeZoneChanged** :
 
 ```csharp
 var builder = new BackgroundTaskBuilder();
@@ -393,7 +393,7 @@ void MainPage::OnCompleted(BackgroundTaskRegistration^ task, BackgroundTaskCompl
 ```
 
 > [!NOTE]
-> Las actualizaciones de la interfaz de usuario se deberían realizar de forma asincrónica, para evitar retener el subproceso de interfaz de usuario. Para ver un ejemplo, consulta el método UpdateUI en la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+> Las actualizaciones de la interfaz de usuario se deberían realizar de forma asincrónica, para evitar retener el subproceso de interfaz de usuario. Para ver un ejemplo, consulta el método UpdateUI en la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 2.  Vuelve al punto en el que registraste la tarea en segundo plano. Después de la línea de código, agrega un nuevo objeto [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Proporciona tu método OnCompleted como parámetro para el constructor **BackgroundTaskCompletedEventHandler**.
 
@@ -439,7 +439,7 @@ Se añadirá el siguiente elemento Extensions al archivo Package.appxmanifest pa
 Ahora deberías conocer los conceptos básicos de cómo escribir una clase de tareas en segundo plano, cómo registrar la tarea en segundo plano desde dentro de tu aplicación y cómo hacer que tu aplicación reconozca cuándo se ha completado la tarea en segundo plano. También deberías comprender cómo actualizar el manifiesto de la aplicación para que la aplicación pueda registrar correctamente la tarea en segundo plano.
 
 > [!NOTE]
-> Descarga la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver ejemplos de código similares en el contexto de una aplicación para UWP completa y robusta que usa tareas en segundo plano.
+> Descarga la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) para ver ejemplos de código similares en el contexto de una aplicación para UWP completa y robusta que usa tareas en segundo plano.
 
 Consulta los siguientes temas relacionados para obtener referencia de las API, una guía conceptual sobre tareas en segundo plano e instrucciones más detalladas para escribir aplicaciones que usan tareas en segundo plano.
 
@@ -461,7 +461,7 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Referencia de API de tareas en segundo plano**
 

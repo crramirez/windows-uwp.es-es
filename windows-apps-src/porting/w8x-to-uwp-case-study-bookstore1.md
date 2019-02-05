@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 88a5492116eaf48f72d512a093001a5c3835f0d2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5e0b8ffbebdca920bc6cc584dd735062a364d1d9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920069"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048122"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
 
 
-Este tema presenta un caso práctico de migración de una aplicación Universal 8.1 muy simple a una aplicación de plataforma de Windows Windows10Universal (UWP). Una aplicación Universal 8.1 es aquella que crea un paquete de aplicación para Windows8.1 y un paquete de la aplicación diferente para Windows Phone 8.1. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia gama de dispositivos, y eso es lo que haremos en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tema presenta un caso práctico de migración de una aplicación Universal 8.1 muy simple a una aplicación de plataforma de Windows Windows10Universal (UWP). Una aplicación Universal 8.1 es aquella que crea un paquete de aplicación para Windows8.1 y un paquete de aplicación diferentes para Windows Phone 8.1. Con Windows 10, puedes crear un paquete de aplicación única que los clientes pueden instalar en una amplia gama de dispositivos, y eso es lo que haremos en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 La aplicación que portaremos consta de un enlace **ListBox** enlazado con un modelo de vista. El modelo de vista tiene una lista de libros que muestra el título, el autor y la portada de libro. Las imágenes de portada de libro tienen el valor de **Acción de compilación** establecido en **Contenido** y de **Copiar en el directorio de salida** establecido en **No copiar**.
 
@@ -26,9 +26,9 @@ En los temas anteriores de esta sección se describen las diferencias entre las 
 
 ## <a name="downloads"></a>Descargas
 
-[Descarga la aplicación Bookstore1\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
+[Descarga la aplicación Bookstore1\_81 Universal 8.1](https://go.microsoft.com/fwlink/?linkid=532946).
 
-[Descargar el Bookstore1Universal\_10 de aplicación de Windows 10](http://go.microsoft.com/fwlink/?linkid=532950).
+[Descargar el Bookstore1Universal\_10 de aplicación de Windows 10](https://go.microsoft.com/fwlink/?linkid=532950).
 
 ## <a name="the-universal-81-app"></a>Aplicación Universal 8.1
 
@@ -62,7 +62,7 @@ Es una tarea muy rápida crear un nuevo proyecto en Visual Studio, copiar archiv
 
 **Del proyecto de Windows**
 
--   Copia BookstoreStyles.xaml. Vamos a utilizar este una como un punto de partida adecuado porque todas las claves de recurso de este archivo se resolverán en una aplicación de Windows 10; algunos de ellos en el archivo equivalente de Windows Phone no lo hará.
+-   Copia BookstoreStyles.xaml. Vamos a utilizar esta una como un punto de partida adecuado porque todas las claves de recurso de este archivo se resolverán en una aplicación de Windows 10; algunos de ellos en el archivo equivalente de Windows Phone no lo hará.
 
 Edita el código fuente y los archivos de marcado que acabas de copiar y cambia las referencias al espacio de nombres Bookstore1\_81 a Bookstore1Universal\_10. Una forma rápida de hacerlo es usar la función **Reemplazar en archivos**. No es necesario hacer cambios de código en el modelo de vista ni en ningún otro código imperativo. Pero solo para que sea más fácil averiguar la versión de la aplicación que se está ejecutando, cambia el valor devuelto por la propiedad **Bookstore1Universal\_10.BookstoreViewModel.AppName** de "BOOKSTORE1\_81" a "BOOKSTORE1UNIVERSAL\_10".
 

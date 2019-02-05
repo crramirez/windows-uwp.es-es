@@ -6,12 +6,12 @@ ms.date: 05/11/2017
 ms.topic: article
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a8b17697612d50d10ecfbb07388207527a4cb39b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cf442da9344f37525bf3c17e4a62a319b9c04044
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937836"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048462"
 ---
 # <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Consulta Probar la aplicación de Windows 10 en modo S
 
@@ -87,7 +87,7 @@ A continuación, reinicia el sistema.
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: acd8b06c98c95750b6d047cda96b8c2884a9d7a9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9e23cb9c01178640bfa1519d8df369ec76ed2a6c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937919"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046558"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
 
@@ -56,7 +56,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Los idiomas instalados pueden variar entre dispositivos. Debes comprobar la existencia de un idioma si dependes de él para una restricción concreta.
 
-**Nota**es necesario un reinicio después de instala un nuevo paquete de idioma. Si el idioma especificado no es compatible o la instalación no ha finalizado, se genera una excepción con código de error SPERR\_NOT\_FOUND (0x8004503a).
+**Nota**se requiere un reinicio después de instala un nuevo paquete de idioma. Si el idioma especificado no es compatible o la instalación no ha finalizado, se genera una excepción con código de error SPERR\_NOT\_FOUND (0x8004503a).
 
  
 
@@ -100,7 +100,7 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 **Muestras**
 
-* [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

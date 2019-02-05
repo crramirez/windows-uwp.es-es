@@ -5,18 +5,18 @@ keywords: novedades, actualización, características, directrices para los desa
 ms.date: 2/5/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e42401000d6333c2309933f0bd8244690aac3fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 22ff57fb32d9c65c675ca63ae0c644b146226795
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937314"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044226"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novedades de la documentación de los desarrolladores de Windows de febrero de 2018
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre las características, directrices para los desarrolladores y los vídeos están a tu disposición en el mes de enero y contienen información nueva y actualizada para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
 
 ## <a name="features"></a>Características

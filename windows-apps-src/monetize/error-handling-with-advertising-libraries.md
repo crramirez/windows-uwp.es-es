@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, javascript, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: a6c14ecf8e8909ab6cd95a54ca8144fbf8a8d912
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d0e2e1c019497fc22e8d922ba5f0a02a30034b65
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947682"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050668"
 ---
 # <a name="handle-ad-errors"></a>Controlar errores de anuncios
 
@@ -67,9 +67,9 @@ Este es un ejemplo que asigna un controlador de eventos denominado **errorLogger
 </div>
 ```
 
-La función de control de errores es declarativo y deben ir en la [markSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) función.
+La función de control de errores es declarativo y deben ir en la [markSupportedForProcessing](https://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) función.
 
-El controlador de errores detecta el objeto de error de JavaScript cuando se produce un error. El objeto de error proporciona dos argumentos al controlador de errores. Para obtener más información, consulta [propiedades especiales de error en métodos asincrónicos de Windows Runtime](http://msdn.microsoft.com/library/windows/apps/hh994690.aspx).
+El controlador de errores detecta el objeto de error de JavaScript cuando se produce un error. El objeto de error proporciona dos argumentos al controlador de errores. Para obtener más información, consulta [propiedades especiales de error en métodos asincrónicos de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/hh994690.aspx).
 
 Este es un ejemplo de una función de control de errores denominada **errorLogger**, que controla el evento **onErrorOccurred**.
 

@@ -6,19 +6,19 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP, asincrónica
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a8349b9a96dd67d64abb368f0fdadd822af2fe84
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924745"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048082"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 En este tema se describe la programación asincrónica en la plataforma Universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic.NET, C++ y JavaScript.
 
 Con la programación asincrónica puedes conseguir que tu aplicación responda con rapidez cuando realice tareas que pueden durar un tiempo prolongado. Por ejemplo, puede que una aplicación que descarga contenido de Internet deba esperar varios segundos a que llegue el contenido. Si usaste un método sincrónico en el subproceso de IU para recuperar el contenido, la aplicación se bloquea hasta que el método regresa. La aplicación no responderá a la interacción del usuario, y como parece que tarda en responder, es posible que esto provoque cierta frustración en el usuario. Un método mucho mejor es usar la programación asincrónica, donde la aplicación continúa ejecutándose y respondiendo a la interfaz de usuario mientras espera que una operación se complete.
 
-Para aquellos métodos que probablemente demanden mucho tiempo en completarse, debe usarse la programación asincrónica y no la excepción en Windows en UWP. JavaScript, C#, Visual Basic y C++ cada proporcionan compatibilidad con el idioma para los métodos asincrónicos.
+Para aquellos métodos que probablemente demanden mucho tiempo en completarse, debe usarse la programación asincrónica y no la excepción en Windows en UWP. JavaScript, C#, Visual Basic y C++ cada proporcionan compatibilidad con idiomas para los métodos asincrónicos.
 
 ## <a name="asynchronous-programming-in-the-uwp"></a>Programación asincrónica en UWP
 Muchas características UWP, como las API de [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) y la API de [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) , se exponen como API asincrónicas. Por convención, los nombres de las API asincrónicas terminan con "Async" para indicar que parte de su ejecución es probable que tienen lugar después de que el control se devuelve al llamador.
@@ -47,7 +47,7 @@ Con el patrón asincrónico de UWP, es posible que puedas evitar explícitamente
 |----------------------|---------------------------------------|
 | C#                   | palabra clave **async**, operador **await** |
 | Visual Basic         | palabra clave **Async**, operador **Await** |
-| C++/WinRT            | corrutina y el operador de **co_await**  |
+| C++/WinRT            | corrutina y los operadores de **co_await**  |
 | C++/CX               | clase **task**, método **.then**      |
 | JavaScript           | 
 objeto de promesa, función **then**     |
@@ -64,7 +64,7 @@ En C++ / CX, la programación asincrónica se basa en la [**clase task**](https:
 La [**create\_async function**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750102.aspx) proporciona compatibilidad para producir API asincrónicas que pueden usarse desde JavaScript o cualquier otro lenguaje que admita UWP. Para obtener más información, consulta [crear operaciones asincrónicas en C++ / CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx).
 
 ## <a name="asynchronous-patterns-in-uwp-using-javascript"></a>Modelos asincrónicos en UWP con JavaScript
-En JavaScript, la programación asincrónica sigue el estándar propuesto de [Common JS Promises/A](http://wiki.commonjs.org/wiki/Promises/A) haciendo que los métodos asincrónicos devuelvan objetos de promesa. Las promesas se usan tanto en UWP como en la biblioteca de Windows para JavaScript.
+En JavaScript, la programación asincrónica sigue el estándar propuesto de [Common JS Promises/A](https://wiki.commonjs.org/wiki/Promises/A) haciendo que los métodos asincrónicos devuelvan objetos de promesa. Las promesas se usan tanto en UWP como en la biblioteca de Windows para JavaScript.
 
 Un objeto de promesa representa un valor que se entregará en el futuro. En UWP, obtienes un objeto de promesa de una función de fábrica que, convencionalmente, tiene un nombre que termina en "Async".
 
@@ -72,5 +72,5 @@ En muchos casos, llamar a una función asincrónica es casi tan sencillo como ll
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Llamar a API asincrónicas en C# o Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)
-* [Programación asincrónica con Async y Await (C# y Visual Basic)](http://msdn.microsoft.com/library/hh191443(vs.110).aspx)
+* [Programación asincrónica con Async y Await (C# y Visual Basic)](https://msdn.microsoft.com/library/hh191443(vs.110).aspx)
 * [Escenarios de la característica de muestra Reversi: código asincrónico](https://msdn.microsoft.com/library/windows/apps/xaml/jj712233.aspx#async)

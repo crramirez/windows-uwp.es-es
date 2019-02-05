@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e6c68841440120b783713ef0a591e39a7c7eec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942828"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046578"
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad  
 
@@ -188,11 +188,11 @@ Cuando crees un control personalizado, te recomendamos que también implementes 
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX  
-No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) o [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](http://go.microsoft.com/fwlink/p/?LinkID=309155) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
+No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) o [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://go.microsoft.com/fwlink/p/?LinkID=309155) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [Ejemplo de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Accesibilidad](accessibility.md)
 * [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

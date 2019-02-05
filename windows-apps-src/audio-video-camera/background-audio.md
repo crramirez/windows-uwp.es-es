@@ -1,17 +1,17 @@
 ---
 ms.assetid: b7333924-d641-4ba5-92a2-65925b44ccaa
 description: En este artículo se muestra cómo reproducir elementos multimedia mientras la aplicación se está ejecutando en segundo plano.
-title: Reproducción de contenidos multimedia en segundo plano
+title: Reproducir elementos multimedia en segundo plano
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a859f27ff24dba15f7e4fde66a8d54a84a8bf4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f5fe7cad12193b409c4923f876b47cae0852aa9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925789"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045564"
 ---
 # <a name="play-media-in-the-background"></a>Reproducción de contenidos multimedia en segundo plano
 En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que incluso después de que el usuario haya minimizado la aplicación, haya regresado a la pantalla principal o haya salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
@@ -25,7 +25,7 @@ Entre los escenarios para reproducir audio en segundo plano encontramos:
 La implementación de audio en segundo plano que se describe en este artículo te permitirá que la aplicación se ejecute universalmente en todos los dispositivos Windows, incluidos los dispositivos móviles, los dispositivos de escritorio y Xbox.
 
 > [!NOTE]
-> El código de este artículo es una adaptación de la [Background Audio sample](http://go.microsoft.com/fwlink/p/?LinkId=800141) (Muestra de audio en segundo plano) para la UWP.
+> El código de este artículo es una adaptación de la [Background Audio sample](https://go.microsoft.com/fwlink/p/?LinkId=800141) (Muestra de audio en segundo plano) para la UWP.
 
 ## <a name="explanation-of-one-process-model"></a>Explicación del modelo de proceso único
 Con Windows 10, versión 1607, se ha introducido un nuevo modelo de proceso único que simplifica enormemente el proceso de habilitar el audio en segundo plano. Anteriormente, la aplicación debía administrar un proceso en segundo plano además de la aplicación en primer plano y, a continuación, comunicar manualmente los cambios de estado entre los dos procesos. En el nuevo modelo, simplemente debe agregarse la funcionalidad de audio en segundo plano al manifiesto de la aplicación y dicha aplicación continuará reproduciendo audio automáticamente cuando se mueva a segundo plano. Dos nuevos eventos de ciclo de vida de la aplicación, [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) permiten a tu aplicación saber cuándo entra y sale del segundo plano. Cuando la aplicación se mueve a las transiciones al segundo plano o desde este, las restricciones de memoria que impone el sistema pueden cambiar, así que puedes usar estos eventos para comprobar el consumo de memoria actual y liberar recursos para que permanezcan por debajo del límite.

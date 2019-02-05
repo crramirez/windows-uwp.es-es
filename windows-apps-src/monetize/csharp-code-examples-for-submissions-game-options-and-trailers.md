@@ -5,12 +5,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 041f07fd6b24af3658bc9cfffe07117e4b353831
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 277d455fe3387452a4afe91fd74e5c2099f76ce4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939641"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044266"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>Muestra de C\#: envío de aplicación con opciones de juego y tráileres
 
@@ -29,7 +29,7 @@ Puedes revisar cada ejemplo para conocer más detalles sobre la tarea que muestr
 Estos ejemplos cumplen los siguientes requisitos:
 
 * Agrega una referencia al ensamblado System.Web en el proyecto.
-* Instala el paquete NuGet [v4.5.11](http://www.newtonsoft.com/json) de Newtonsoft en el proyecto.
+* Instala el paquete NuGet [v4.5.11](https://www.newtonsoft.com/json) de Newtonsoft en el proyecto.
 
 <span id="create-app-submission" />
 
@@ -61,6 +61,6 @@ La clase ```DevCenterClient``` define métodos auxiliares que invocan una varied
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/cs/DevCenterClient.cs#DevCenterClient)]
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

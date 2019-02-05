@@ -5,18 +5,18 @@ keywords: novedad, novedades, actualización, actualizaciones, características,
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 72319e7d97bfaaff4595c56a09fb7d3a874faa50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923220"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046285"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades de Windows 10 para desarrolladores, compilación 17134
 
-La compilación 17134 de Windows 10 (también conocida como Actualización de abril o versión 1803), en combinación con Visual Studio 2017 y el SDK actualizado, te proporciona las herramientas, las características y las experiencias que necesitas para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+La compilación 17134 de Windows 10 (también conocida como Actualización de abril o versión 1803), en combinación con Visual Studio 2017 y el SDK actualizado, te proporciona las herramientas, las características y las experiencias que necesitas para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
-A continuación te ofrecemos una colección de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregado a Windows SDK, consulta [Cambios en las API de la compilación 17134 de Windows 10](windows-10-build-17134-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulta [Lo bueno de Windows 10](http://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Funcionalidades de la plataforma de desarrolladores de Windows](https://developer.microsoft.com/windows/platform/features) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
+A continuación te ofrecemos una colección de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregado a Windows SDK, consulta [Cambios en las API de la compilación 17134 de Windows 10](windows-10-build-17134-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulta [Lo bueno de Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Funcionalidades de la plataforma de desarrolladores de Windows](https://developer.microsoft.com/windows/platform/features) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
 
 ## <a name="design--ui"></a>Diseño e interfaz de usuario
 
@@ -69,7 +69,7 @@ Captura de pantalla | El [espacio de nombres Windows.Graphics.Capture](https://d
 Desencadenadores del sistema | La clase [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) te permite definir un desencadenador del sistema cuando el sistema operativo no proporciona un desencadenador del sistema que necesitas. Por ejemplo, cuando tanto un controlador de hardware como la aplicación para UWP pertenecen a terceros y el controlador de hardware debe generar un evento personalizado que su aplicación controla. Por ejemplo, una tarjeta de audio que debe notificar a un usuario cuando un conector de audio está conectado.
 Actividades del usuario | La nueva [documentación de UserActivity](../launch-resume/useractivities.md) explica cómo ayudar a los usuarios a reanudar lo que estaban haciendo en tu aplicación, incluso en varios dispositivos.</br>La clase **UserActivitySessionHistoryItem** tiene nuevos métodos que recuperan actividades recientes del usuario. Consulta [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) y su sobrecarga para obtener más información.
 API de Windows Mixed Reality | Para admitir la creciente plataforma Windows Mixed Reality, se han agregado API nuevas a los espacios de nombres [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) y [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial).
-Documentos de Windows Mixed Reality | Es la Guía del desarrollador de Windows Mixed Reality [ahora está hospedada en docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Al igual que en estos documentos sobre UWP, ahora puede comentarios sobre problemas de GitHub o enviar tus propias contribuciones a través de una solicitud de extracción.
+Documentos de Windows Mixed Reality | Es la guía para desarrolladores de Windows Mixed Reality [ahora está hospedada en docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Al igual que en estos documentos sobre UWP, ahora puede comentarios sobre problemas de GitHub o enviar tus propias contribuciones a través de una solicitud de extracción.
 
 ## <a name="publish--monetize-windows-apps"></a>Publicar y monetizar aplicaciones de Windows
 

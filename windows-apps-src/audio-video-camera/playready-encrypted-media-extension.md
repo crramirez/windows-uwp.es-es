@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945079"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047297"
 ---
 # <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
@@ -61,7 +61,7 @@ La siguiente lista describe las nuevas características y los cambios realizados
 
 En esta sección se describe la versión de Encrypted Media Extension de W3C compatible con PlayReady.
 
-PlayReady para aplicaciones web está actualmente enlazado al [borrador de la extensión multimedia cifrada (EME) de W3C del 10 de mayo de 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/). En versiones futuras de Windows se cambiará esta compatibilidad de acuerdo con la especificación de EME actualizada.
+PlayReady para aplicaciones web está actualmente enlazado al [borrador de la extensión multimedia cifrada (EME) de W3C del 10 de mayo de 2013](https://www.w3.org/TR/2013/WD-encrypted-media-20130510/). En versiones futuras de Windows se cambiará esta compatibilidad de acuerdo con la especificación de EME actualizada.
 
 ## <a name="use-hardware-drm"></a>Usar el DRM de hardware
 
@@ -266,7 +266,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Consideraciones de programación para Encrypted Media Extension
 
-En esta sección se enumera las consideraciones de programación que deberías tener en cuenta al crear la aplicación web habilitado de PlayReady para Windows 10.
+En esta sección se enumera las consideraciones de programación que se deben tener en cuenta al crear la aplicación web habilitado de PlayReady para Windows 10.
 
 Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el siguiente ejemplo se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales que, a su vez, se asignan a los objetos **MSMediaKeys** y **MSMediaKeySession** de la función.
 

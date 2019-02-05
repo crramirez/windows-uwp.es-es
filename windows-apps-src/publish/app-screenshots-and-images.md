@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 0019ded3b409acf0e6530bffa4ad73f85bfa8855
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942649"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051008"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -52,7 +52,7 @@ También puedes proporcionar un título corto que describa cada captura de panta
 > [!TIP]
 > Las capturas de pantalla se muestran en orden en tu lista. Después de cargar las capturas de pantalla, puedes arrastrar y colocarlas para reordenarlas. 
 
-Ten en cuenta que si creas descripciones de Store para [varios idiomas](supported-languages.md), tendrás una página de **Descripción de Store** para cada uno de ellos. Tendrás que subir imágenes para cada idioma por separado (incluso si vas a utilizar las mismas imágenes) y proporcionar títulos para cada uno de ellos. (Si tienes descripciones de la tienda en una gran cantidad de idiomas, es posible sea más fácil actualizarlas [exportar los datos de la descripción](import-and-export-store-listings.md)y trabajar sin conexión.)
+Ten en cuenta que si creas descripciones de Store para [varios idiomas](supported-languages.md), tendrás una página de **Descripción de Store** para cada uno de ellos. Tendrás que subir imágenes para cada idioma por separado (incluso si vas a utilizar las mismas imágenes) y proporcionar títulos para cada uno de ellos. (Si tienes descripciones de la tienda en una gran cantidad de idiomas, le resultará más fácil actualizar ellos [exportar los datos de la descripción](import-and-export-store-listings.md)y trabajar sin conexión.)
 
 
 ## <a name="store-logos"></a>Logotipos de Store
@@ -81,7 +81,7 @@ Esta imagen puede aparecer en varias páginas de Store para Windows 10 (incluida
 
 Esta imagen es necesaria para la visualización correcta en Windows Phone 8.1 y versiones anteriores. Si la aplicación publicada anteriormente es compatible con Windows Phone 8.1 o versiones anterior y no proporcionas esta imagen, los clientes verán un icono en blanco con la descripción de la aplicación. (Esto también se aplica a los clientes de Windows 10 si la aplicación solo tiene paquetes destinados a Windows Phone 8.1 o versiones anterior).
 
-Si tu envío *solo* incluye paquetes para UWP, no necesitas proporcionar esta imagen (a menos que la casilla para **para los clientes de Windows 10 y Xbox, mostrar imágenes de logotipo cargado en lugar de las imágenes de Mis paquetes**, como se describe en la siguiente sección).
+Si tu envío *solo* incluye paquetes para UWP, no tienes que proporcionar esta imagen (a menos que la casilla para **para los clientes de Windows 10 y Xbox, mostrar imágenes de logotipo cargado en lugar de las imágenes de Mis paquetes**, como se describe en la siguiente sección).
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>Mostrar solo carga las imágenes del logotipo de la tienda
 
@@ -106,7 +106,7 @@ Esta sección te permite suministrar ilustraciones para mostrar tu producto de m
 
 Los tráileres son vídeos cortos que proporcionan a los clientes una manera de ver tu producto en acción, para que puedan comprender mejor de qué se trata. Se muestran en la parte superior de la descripción de Store de la aplicación (siempre que incluir una imagen [principal súper 16:9](#windows-10-and-xbox-image-169-super-hero-art) ). 
 
-Los tráileres se codifican con [Smooth Streaming](http://www.iis.net/downloads/microsoft/smooth-streaming), que adapta la calidad de una secuencia de vídeo y llega a los clientes en tiempo real en función del ancho de banda disponible y de los recursos de CPU.
+Los tráileres se codifican con [Smooth Streaming](https://www.iis.net/downloads/microsoft/smooth-streaming), que adapta la calidad de una secuencia de vídeo y llega a los clientes en tiempo real en función del ancho de banda disponible y de los recursos de CPU.
 
 > [!NOTE]
 > Los tráileres solo se muestran a los clientes en Windows 10, versión 1607 o posterior (que incluye Xbox).
@@ -118,7 +118,7 @@ Puedes agregar hasta 15 tráileres a la descripción de Store. Asegúrate de que
 En cada tráiler que proporciones, debes cargar un archivo de vídeo (.mp4 o .mov), una imagen en miniatura y un título.
 
 > [!IMPORTANT]
-> Al utilizar tráileres, también debes proporcionar una sección de imagen de [gráficos de principal súper 16:9](#windows-10-and-xbox-image-169-super-hero-art) en orden de los tráileres aparezcan en la parte superior de la descripción de Store. Esta imagen aparecerá después de finalizar la reproducción de los tráileres.
+> Al utilizar tráileres, también debes proporcionar una sección de imagen de [gráficos de principal súper 16:9](#windows-10-and-xbox-image-169-super-hero-art) en el orden de los tráileres aparezcan en la parte superior de la descripción de Store. Esta imagen aparecerá después de finalizar la reproducción de los tráileres.
 
 Sigue estas recomendaciones para facilitar tus tráileres de manera eficaz:
 - Los tráileres deben ser de buena calidad y con una longitud mínima (se recomienda 60 segundos o menos y menos de 2GB). 
@@ -221,7 +221,7 @@ Para los archivos de Mezzanine H.264, se recomienda lo siguiente:
 
 ### <a name="windows-10-and-xbox-image-169-super-hero-art"></a>Imagen de Windows 10 y Xbox (imagen principal súper 16:9)
 
-En la sección **de Windows 10 y Xbox imagen** , la imagen de **portada de principal súper 16:9 (1920 x 1080 o 3840 x 2160 píxeles)** se usa en varios diseños en Microsoft Store en todos los tipos de dispositivo de Windows 10 (incluyendo Xbox). Recomendamos proporcionar esta imagen, independientemente de las versiones del sistema operativo o de los tipos de dispositivo al que tu aplicación esté destinada.
+En la sección **Windows 10 y Xbox imagen** , la imagen de **portada de principal súper 16:9 (1920 x 1080 o 3840 x 2160 píxeles)** se usa en varios diseños en Microsoft Store en todos los tipos de dispositivo de Windows 10 (incluyendo Xbox). Recomendamos proporcionar esta imagen, independientemente de las versiones del sistema operativo o de los tipos de dispositivo al que tu aplicación esté destinada.
 
 Esta imagen es *obligatoria* para la visualización correcta si tu descripción incluye [tráileres de vídeo](#trailers). En el caso de clientes de Windows10, versión 1607 o posterior (que incluye Xbox), se usa como imagen principal en la parte superior de la descripción de Store (o aparece después de finalizar la reproducción de los tráileres). También puede usarse para presentar tu aplicación en diseños promocionales por todo Store. Ten en cuenta que esta imagen no debe incluir el título del producto ni otros textos.
 
@@ -263,7 +263,7 @@ El formato de imagen **2:1 (2400 x 1200)** solo se usa si la aplicación es comp
 
 ### <a name="images-only-for-windows-8x-andor-windows-phone-8x"></a>Imágenes solo para Windows 8.x y/o Windows Phone 8.x 
 
-Si la aplicación anteriormente enviado admite versiones anteriores del sistema operativo (Windows 8.x o Windows Phone 8.x), estas imágenes deben proporcionarse para que podamos tener en cuenta la aplicación en diseños promocionales (aunque no garantizan que se seleccione la aplicación). Si la aplicación no admite estas versiones anteriores del sistema operativo, omite esta sección. (Esta sección se llamaba anteriormente **Imágenes promocionales opcionales**).
+Si la aplicación enviado anteriormente admite versiones anteriores del sistema operativo (Windows 8.x o Windows Phone 8.x), estas imágenes deben proporcionarse para que podamos tener en cuenta tu aplicación en diseños promocionales (aunque no garantizan que se seleccione la aplicación). Si la aplicación no admite estas versiones anteriores del sistema operativo, omite esta sección. (Esta sección se llamaba anteriormente **Imágenes promocionales opcionales**).
 
 **En el caso de WindowsPhone8.1 y versiones anteriores**, se pueden usar dos tamaños de imagen en los diseños promocionales: **1000 x 800 píxeles (5:4)** y **358 x 358 píxeles (1:1)**. Si la aplicación se ejecuta en Windows Phone 8.1 o versiones anteriores, te recomendamos que proporciones imágenes en estos dos tamaños.  
 

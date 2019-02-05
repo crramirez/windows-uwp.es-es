@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d75afd17d5aa7edf64fda36b3a35b3a101c1d89
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cdad8f3405420e0548974c734ad23bfd44f2c6b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924828"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046761"
 ---
 # <a name="sockets"></a>Sockets
 Los sockets son una tecnología de transferencia de datos de bajo nivel en cuya parte superior se implementan muchas protocolos de red. UWP ofrece las clases de socket TCP y UDP de cliente-servidor o aplicaciones de punto a punto, si las conexiones son de larga duración o una conexión establecida no es necesaria.
@@ -521,7 +521,7 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-Desde la perspectiva de la **StreamSocket**, el controlador de finalización se realiza en ejecución (y el socket es apto para su eliminación) antes de que se ejecuta el cuerpo de la continuación. Por lo tanto, para evitar que el socket se deseche si quieres usarlo dentro de esa continuación, necesitas hacer referencia al socket directamente (a través de captura de la expresión lambda) y usarla, o indirectamente (continuando accediendo a `args->Socket` dentro de continuaciones), o forzar tareas de continuación para que estén en línea. Puedes ver la primera técnica (captura de la expresión lambda) en acción en la [muestra de StreamSocket ](http://go.microsoft.com/fwlink/p/?LinkId=620609). El código C++/CX de la sección [Crear un servidor y cliente básico de socket TCP](#build-a-basic-tcp-socket-client-and-server) anterior usa la segunda técnica: refleja la solicitud como una respuesta y accede a `args->Socket` desde dentro de una de las continuaciones más internas.
+Desde la perspectiva de la **StreamSocket**, el controlador de finalización se realiza en ejecución (y el socket es apto para su eliminación) antes de que se ejecuta el cuerpo de la continuación. Por lo tanto, para evitar que el socket se deseche si quieres usarlo dentro de esa continuación, necesitas hacer referencia al socket directamente (a través de captura de la expresión lambda) y usarla, o indirectamente (continuando accediendo a `args->Socket` dentro de continuaciones), o forzar tareas de continuación para que estén en línea. Puedes ver la primera técnica (captura de la expresión lambda) en acción en la [muestra de StreamSocket ](https://go.microsoft.com/fwlink/p/?LinkId=620609). El código C++/CX de la sección [Crear un servidor y cliente básico de socket TCP](#build-a-basic-tcp-socket-client-and-server) anterior usa la segunda técnica: refleja la solicitud como una respuesta y accede a `args->Socket` desde dentro de una de las continuaciones más internas.
 
 La tercera técnica es apropiada cuando no estás reproduciendo una respuesta. Usa la opción `task_continuation_context::use_synchronous_execution()` para forzar PPL para ejecutar el cuerpo de continuación en línea. Este es un ejemplo de código que muestra cómo hacerlo.
 
@@ -1384,4 +1384,4 @@ El constructor [**HostName**](/uwp/api/Windows.Networking.HostName) puede arroja
 * [Windows Sockets 2 (Winsock)](https://msdn.microsoft.com/library/windows/desktop/ms740673)
 
 ## <a name="samples"></a>Muestras
-* [Muestra de StreamSocket](http://go.microsoft.com/fwlink/p/?LinkId=620609)
+* [Muestra de StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)

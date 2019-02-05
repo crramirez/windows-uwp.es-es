@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ffc2f31b52e7913905c7d64ab797b2939cfb313d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927461"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045228"
 ---
 # <a name="networking-basics"></a>Conceptos básicos de redes
 Cosas que debes hacer para cualquier aplicación habilitada para la red
@@ -36,7 +36,7 @@ En determinadas circunstancias, existen otras funcionalidades que pueden ser nec
 | **sharedUserCertificates** | Esta funcionalidad permite que la aplicación obtenga acceso a los certificados de software y hardware como, por ejemplo, los certificados de una tarjeta inteligente. Cuando se invoca esta funcionalidad en tiempo de ejecución, el usuario debe realizar ciertas acciones, como insertar una tarjeta o seleccionar un certificado. <br/> Con esta funcionalidad, se usan los certificados de software y hardware o una tarjeta inteligente para la identificación en la aplicación. Esta funcionalidad la pueden usar para la identificación el empleador, el banco o los servicios gubernamentales. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicación cuando la aplicación no está en primer plano
-El artículo [Dar soporte a tu aplicación mediante tareas en segundo plano)](https://msdn.microsoft.com/library/windows/apps/mt299103) contiene información general sobre el uso de tareas en segundo plano para que realicen trabajos cuando la aplicación no esté en primer plano. Más concretamente, tu código debe realizar unos pasos especiales para recibir notificaciones cuando no es la aplicación en primer plano actual y llegan datos a través de la red para esta. Usar desencadenadores de canal de Control para este propósito en Windows8 y aún se admiten en Windows 10. Encontrarás información completa acerca del uso de desencadenadores de canal de control [**aquí**](https://msdn.microsoft.com/library/windows/apps/hh701032). Nueva tecnología de Windows 10 proporciona una mejor funcionalidad con menos sobrecarga en algunos escenarios, como los sockets de secuencia habilitados para la inserción: el agente de sockets y los desencadenadores de actividad de socket.
+El artículo [Dar soporte a tu aplicación mediante tareas en segundo plano)](https://msdn.microsoft.com/library/windows/apps/mt299103) contiene información general sobre el uso de tareas en segundo plano para que realicen trabajos cuando la aplicación no esté en primer plano. Más concretamente, tu código debe realizar unos pasos especiales para recibir notificaciones cuando no es la aplicación en primer plano actual y llegan datos a través de la red para esta. Usar desencadenadores de canal de Control para este propósito en Windows8 y aún se admiten en Windows 10. Encontrarás información completa acerca del uso de desencadenadores de canal de control [**aquí**](https://msdn.microsoft.com/library/windows/apps/hh701032). Una nueva tecnología en Windows 10 proporciona una mejor funcionalidad con menos sobrecarga en algunos escenarios, como los sockets de secuencia habilitados para la inserción: el agente de sockets y los desencadenadores de actividad de socket.
 
 Si la aplicación usa [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) o [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), podrá transferir la propiedad de un socket abierto a un agente de sockets proporcionado por el sistema y, a continuación, salir del primer plano o incluso cerrarse. Cuando se establece una conexión en el socket transferido o si llega tráfico a ese socket, se activa la aplicación o su tarea en segundo plano designada. Si la aplicación no se está ejecutando, se iniciará. A continuación, el agente de sockets notifica a la aplicación mediante la clase [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), que hay tráfico nuevo. Es entonces cuando la aplicación recupera el socket desde el agente de sockets y procesa el tráfico en el mismo socket. Esto significa que la aplicación consume menos recursos del sistema cuando no se está procesando activamente el tráfico de red.
 
@@ -45,7 +45,7 @@ El agente de socket está pensado para reemplazar los desencadenadores de canal 
 ### <a name="choosing-a-network-trigger"></a>Elección de un desencadenador de red
 Hay algunos escenarios donde cualquier tipo de desencadenador sería adecuado. Cuando elijas qué tipo de desencadenador usar en tu aplicación, ten en cuenta lo siguiente.
 
--   SI estás usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) o [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), debes usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
+-   SI estás usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) o [System.Net.Http.HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638), debes usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 -   Si estás usando elementos **StreamSockets** habilitados para la inserción, puedes usar desencadenadores de canal de control, pero deberías tener como preferencia [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). La última opción permite que el sistema tenga más espacio en la memoria y reduzca los requisitos de energía cuando la conexión no se use activamente.
 -   Si deseas minimizar la superficie de memoria de la aplicación cuando no está dando servicio activamente a las solicitudes de red, ten como preferencia [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), cuando te sea posible.
 -   Si quieres que tu aplicación pueda recibir datos mientras el sistema está en modo de espera conectado, usa [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
@@ -464,7 +464,7 @@ Si la solicitud inicial del cliente no contiene este valor o proporciona un valo
 Cómo proporcionar credenciales de autenticación al conectarse a través de la red.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Proporcionar un certificado de cliente con la clase StreamSocket
-La clase [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) admite el uso de SSL/TLS para autenticar el servidor con el que se comunica la aplicación. En algunos casos, la aplicación también debe autenticarse en el servidor mediante un certificado de cliente TLS. En Windows 10, puedes proporcionar un certificado de cliente en el objeto de [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (se debe establecer antes de que se inicia el protocolo de enlace TLS). Si el servidor solicita el certificado de cliente, Windows responderá con el certificado proporcionado.
+La clase [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) admite el uso de SSL/TLS para autenticar el servidor con el que se comunica la aplicación. En algunos casos, la aplicación también debe autenticarse en el servidor mediante un certificado de cliente TLS. En Windows 10, puedes proporcionar un certificado de cliente en el objeto [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (se debe establecer antes de inicia el protocolo de enlace TLS). Si el servidor solicita el certificado de cliente, Windows responderá con el certificado proporcionado.
 
 Este es un fragmento de código que muestra cómo puedes implementar esto:
 
@@ -507,4 +507,4 @@ Las API para redes admiten distintos métodos para recuperar la información que
 -   Otras API proporcionan un método para recuperar el valor **HRESULT** real.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Networking API Improvements in Windows 10 (Mejoras de la API para redes en Windows 10)](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
+* [Networking API Improvements in Windows 10 (Mejoras de la API para redes en Windows 10)](https://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)

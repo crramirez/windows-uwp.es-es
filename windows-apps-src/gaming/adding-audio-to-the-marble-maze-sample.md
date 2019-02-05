@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, audio, juegos, muestra
 ms.localizationpriority: medium
-ms.openlocfilehash: 666ea75f1d4f18121b7ae9fa3def3b455ae3e7a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 40fa8b1c23d591453308c3ad066967ed65902917
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924715"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050898"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Agregar audio al ejemplo de Marble Maze
 
@@ -20,7 +20,7 @@ En este documento se describen las prácticas clave que se deben tener en cuenta
 Marble Maze reproduce música en segundo plano, y también utiliza sonidos de juego para indicar los eventos del juego, como el momento en que una canica toca la pared. Una parte importante de la implementación es que Marble Maze utiliza un efecto de reverberación, o eco, para simular el sonido de una canica al rebotar. La implementación del efecto de reverberación provoca ecos para que te lleguen con mayor rapidez y más volumen en espacios pequeños; los ecos son más silenciosos y te llegan más lentamente en espacios más grandes.
 
 > [!NOTE]
-> El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
 
 A continuación se indican algunos de los puntos principales que se tratan en este documento para trabajar con audio en el juego:
 

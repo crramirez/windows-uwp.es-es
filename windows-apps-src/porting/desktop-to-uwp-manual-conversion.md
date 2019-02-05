@@ -8,25 +8,25 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1dd159b7cd04a7641bf3f89605e054a00a0bad58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945817"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051118"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
-En este tema se muestra cómo empaquetar la aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
+En este tema muestra cómo empaquetar la aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
 
 Para empaquetar la aplicación de forma manual, tienes que crear un archivo de manifiesto de paquete y ejecutar una herramienta de línea de comandos para generar un paquete de la aplicación de Windows.
 
-Considera la posibilidad de empaquetado manual si instala la aplicación mediante el comando xcopy o estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema y quieres un control más detallado del proceso.
+Considera la posibilidad de empaquetado manual si instala la aplicación mediante el comando xcopy o estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema y quieres un control más detallado sobre el proceso.
 
 Si no estás seguro de qué cambios realiza el instalador en el sistema o si prefieres usar herramientas automáticas para crear el manifiesto de paquete, puedes tener en cuenta alguna de estas [opciones](desktop-to-uwp-root.md#convert).
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
@@ -84,7 +84,7 @@ Este es un ejemplo del elemento **Identity** con texto del marcador de posición
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Si has reservado el nombre de la aplicación en Microsoft Store, puedes obtener el nombre y el publicador mediante [El centro de partners](https://partner.microsoft.com/dashboard). Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos siempre que el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
+> Si has reservado el nombre de la aplicación en Microsoft Store, puedes obtener el nombre y el publicador mediante el [Centro de partners](https://partner.microsoft.com/dashboard). Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos como el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
 
 ### <a name="properties"></a>Propiedades
 
@@ -118,7 +118,7 @@ Para aplicaciones de escritorio que crear un paquete, establece siempre el ``Nam
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Las aplicaciones de escritorio que se crea un paquete para, tendrás que agregar la ``runFullTrust`` funcionalidad.
+Para aplicaciones de escritorio que se crea un paquete para, tendrás que agregar la ``runFullTrust`` funcionalidad.
 
 ```XML
 <Capabilities>
@@ -131,7 +131,7 @@ Rellena esta plantilla con la información que describe la aplicación.
 
 ### <a name="application-element"></a>Elemento de la aplicación
 
-Las aplicaciones de escritorio que se crea un paquete, el ``EntryPoint`` atributo del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
+Para aplicaciones de escritorio que se crea un paquete, el ``EntryPoint`` atributo del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -174,7 +174,7 @@ Los recursos basados en el destino se usan para los iconos y las ventanas que se
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>Generar un archivo de índice de recursos del paquete (PRI)
 
-Si creas activos basados en destino como se describe en la sección anterior, o modificas cualquiera de los activos visuales de la aplicación después de crear el paquete, tendrás que generar un nuevo archivo PRI.
+Si creas activos basados en destino como se describe en la sección anterior, o modificas cualquiera de los activos visuales de la aplicación una vez que hayas creado el paquete, tendrás que generar un nuevo archivo PRI.
 
 1.  Abre un **Símbolo del sistema para desarrolladores para VS 2017**.
 
@@ -205,13 +205,13 @@ Puedes ejecutar la aplicación para probarla de forma local sin tener que obtene
 Para actualizar los archivos .exe o .dll de la aplicación, reemplaza los archivos existentes en el paquete con los nuevos, aumenta el número de versión en AppxManifest.xml y, a continuación, vuelve a ejecutar el comando anterior.
 
 > [!NOTE]
-> Un paquete de la aplicación siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en debe tener el formato al formato NTFS.
+> Una aplicación empaquetada siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en debe tener el formato al formato NTFS.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También nos puede preguntar [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También nos puede preguntar [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 
@@ -221,6 +221,6 @@ Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md)
 
-**Firmar la aplicación y, a continuación, distribúyelo**
+**Firmar la aplicación y, a continuación, distribuirlo**
 
 Consulta [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-distribute.md)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e5b273df8120d982f263c4411012baa715b2820c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921267"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044246"
 ---
 # <a name="getting-started-what-next"></a>Introducción: ¿y después?
 
@@ -24,12 +24,12 @@ Con esta información básica, ya puedes empezar a crear aplicaciones para la Pl
 -   [Trabajar con iconos, distintivos y notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259): cómo crear iconos, actualizar iconos y sus notificaciones, y enviar notificaciones del sistema, así como mostrar y actualizar actualizaciones de iconos y notificaciones en la pantalla de bloqueo.
 -   [Inicio, reanudación y multitarea](https://msdn.microsoft.com/library/windows/apps/hh770837): cómo iniciar automáticamente, activar, suspender y reanudar aplicaciones, y cómo trabajar con tareas en segundo plano.
 -   [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094): cómo ofrecer una excelente experiencia de usuario final para las aplicaciones que el usuario usa en más de un dispositivo, como un equipo en el trabajo y una tableta en casa.
--   [Creación de tu primera aplicación de Windows en tiempo de ejecución con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=394138): un tema centrado en el desarrollo para Windows Phone.
+-   [Creación de tu primera aplicación de Windows en tiempo de ejecución con C# o Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=394138): un tema centrado en el desarrollo para Windows Phone.
 -   [Vídeos para desarrolladores de iOS y Android](https://msdn.microsoft.com/library/windows/apps/dn393982): ayuda adicional; en este caso, en formato visual.
 
 Además, asegúrate de visitar nuestros [recursos de la comunidad](https://developer.microsoft.com/en-us/windows/support) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
 
-Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de la aplicación. Esperamos ver pronto las excelentes aplicaciones que crearás.
+Creemos que te ofrecerá nuevas oportunidades de creación de aplicaciones de Windows 10. Esperamos ver pronto las excelentes aplicaciones que crearás.
 
 ## <a name="related-topics"></a>Temas relacionados
 

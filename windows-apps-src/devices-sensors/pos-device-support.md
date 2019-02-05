@@ -5,19 +5,19 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ffb8ea583aade51ae1cc5049a423d734359722c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 74753c2c91912969342d2989ed76900e8386f292
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946906"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050938"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos con puntos de servicio compatibles
 
 ## <a name="barcode-scanner"></a>Escáner de código de barras
 | Conectividad | Compatibilidad |
 | -------------|-------------|
-| USB          | <p>Windows contiene un controlador de clases integrado para escáneres de códigos de barras conectados por USB que se basa en la especificación la tabla de uso de escáneres HID POS (8c) definida por [USB.org](http://www.usb.org/developers/hidpage/). Consulta la tabla siguiente para ver una lista de los dispositivos compatibles conocidos.  Consulta el manual del escáner de códigos de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **USB.HID.POS Scanner**. </p><p>Windows también admite la implementación de controladores específicos del proveedor para admitir escáneres de códigos de barras adicionales que no admiten el estándar de escáner USB.HID.POS. Ponte en contacto con el fabricante del escáner de códigos de barras para información sobre la disponibilidad de controladores específicos del proveedor.</p><p>Los fabricantes de escáneres de códigos de barras pueden consultar la [Guía de diseño de controladores de escáner de códigos de barras](https://aka.ms/pointofservice-drv) para obtener información sobre cómo crear un controlador de escáner de códigos de barras personalizado</p> |
+| USB          | <p>Windows contiene un controlador de clases integrado para escáneres de códigos de barras conectados por USB que se basa en la especificación la tabla de uso de escáneres HID POS (8c) definida por [USB.org](https://www.usb.org/developers/hidpage/). Consulta la tabla siguiente para ver una lista de los dispositivos compatibles conocidos.  Consulta el manual del escáner de códigos de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **USB.HID.POS Scanner**. </p><p>Windows también admite la implementación de controladores específicos del proveedor para admitir escáneres de códigos de barras adicionales que no admiten el estándar de escáner USB.HID.POS. Ponte en contacto con el fabricante del escáner de códigos de barras para información sobre la disponibilidad de controladores específicos del proveedor.</p><p>Los fabricantes de escáneres de códigos de barras pueden consultar la [Guía de diseño de controladores de escáner de códigos de barras](https://aka.ms/pointofservice-drv) para obtener información sobre cómo crear un controlador de escáner de códigos de barras personalizado</p> |
 | Bluetooth    | <p>Windows admite el protocolo de puerto serie: escáneres de códigos de barras de Bluetooth con interfaz serie única (SPP SSI). Consulta la siguiente tabla para obtener una lista de los dispositivos compatibles conocidos. Consulta el manual del escáner de código de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **SPP-SSI**.</p> |
 | Cámara web       | <p>A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a través del objetivo de una cámara estándar desde una aplicación Universal de Windows. Se recomienda que uses una cámara con enfoque automático y una resolución mínima de 1920 x 1440.  Algunas cámaras de resolución más baja pueden leer códigos de barras estándar si la impresión es lo suficientemente grande.  Los códigos de barras con elementos más estrechos pueden requerir cámaras de mayor resolución.</p>| 
 |
@@ -46,7 +46,7 @@ ms.locfileid: "8946906"
 | Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Honeywell     | Xenon 1900h                    | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Honeywell     | Xenon 1902h                    | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
-| HP            | Escáner de códigos de barras de valor (HR2150) | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
+| HP            | Valor Barcode Scanner (HR2150) | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Intermec      | SG20                           | 2D         | USB          | Dispositivo de mano     | HID POS Scanner           |
 | Socket Mobile | CHS 7Ci                        | 1D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
 | Socket Mobile | CHS 7Di                        | 1D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
@@ -67,7 +67,7 @@ ms.locfileid: "8946906"
 
 
 ¹ Upgradable para admitir los códigos de barras 2D a través de Honeywell <br/>
-Firmware mínimo de ² 016 (2018.01.18) necesarios. Actualizable con Zebra [123Scan](http://www.zebra.com/123Scan). 
+Firmware mínimo de ² 016 (2018.01.18) necesarios. Actualizable con Zebra [123Scan](https://www.zebra.com/123Scan). 
 
 
 <hr>
@@ -75,7 +75,7 @@ Firmware mínimo de ² 016 (2018.01.18) necesarios. Actualizable con Zebra [123S
 ### <a name="windows-devices-with-built-in-barcode-scanner"></a>Dispositivos de Windows con el escáner de códigos de barras integrado
 | Fabricante   | Modelo | Sistema operativo |
 |----------------|-------|------------------|
-| Innowi         | M ChecOut | Windows 10   |
+| Innowi         | ChecOut M | Windows 10   |
 
 ### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>Dispositivos Windows Mobile con el escáner de códigos de barras integrado
 | Fabricante   | Modelo | Sistema operativo |

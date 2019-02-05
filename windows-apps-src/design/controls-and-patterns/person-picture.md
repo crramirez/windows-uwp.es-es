@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e03da83d4045c570490a26cb2e111d12f709ee0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 1897eded4d18a00a3c11cf1926adb1ebec6ae69a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037157"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044652"
 ---
 # <a name="person-picture-control"></a>Control de imagen de persona
 
@@ -190,4 +190,4 @@ Si no hay una imagen, el control muestra el nombre o las iniciales del contacto;
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Contactos y calendario](../../contacts-and-calendar/index.md)
-* [Muestra de tarjetas de contacto](http://go.microsoft.com/fwlink/p/?LinkId=624040)
+* [Muestra de tarjetas de contacto](https://go.microsoft.com/fwlink/p/?LinkId=624040)

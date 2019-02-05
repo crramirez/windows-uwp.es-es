@@ -5,12 +5,12 @@ keywords: actividad del usuario, actividades del usuario, línea de tiempo, cort
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f35882af5ed7f66f59eb4e7fc4410223c4424e92
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2e1c2a3da3711bbc5335a9c44a4b280e3934adac
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941799"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046205"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continuar la actividad del usuario, incluso en diferentes dispositivos
 
@@ -34,7 +34,7 @@ Una [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.u
 
 1. La [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri) se usa para reanudar la aplicación con un contexto específico. Por lo general, este vínculo adopta la forma de un controlador de protocolo de un esquema (por ejemplo, "my-app://page2?action=edit") o de un AppUriHandler (por ejemplo, http://constoso.com/page2?action=edit).
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements) expone una clase que permite al usuario identificar visualmente una actividad con un título, una descripción o elementos de la tarjeta adaptable.
-3. Por último, [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) es donde puedes almacenar metadatos para la actividad que se pueden usar para agrupar y recuperar las actividades en un contexto específico. A menudo, esto adopta la forma de datos de [http://schema.org](http://schema.org).
+3. Por último, [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) es donde puedes almacenar metadatos para la actividad que se pueden usar para agrupar y recuperar las actividades en un contexto específico. A menudo, esto adopta la forma de datos de [http://schema.org](https://schema.org).
 
 Para agregar una **UserActivity** a la aplicación:
 
@@ -103,7 +103,7 @@ Lo que hace este código es detectar si la aplicación se ha activado mediante u
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Usar tarjetas adaptables para mejorar la experiencia de la línea de tiempo
 
-Las actividades del usuario aparecen en Cortana y la línea de tiempo. Cuando las actividades aparecen en la línea de tiempo, las mostramos mediante el marco [Tarjeta adaptable](http://adaptivecards.io/). Si no proporcionas una tarjeta adaptable para cada actividad, la línea de tiempo crea automáticamente una tarjeta de actividad sencilla basada en el nombre y el icono de la aplicación, el campo de título y el campo de descripción opcional. A continuación se incluye un ejemplo de carga de tarjeta adaptable y la tarjeta que produce.
+Las actividades del usuario aparecen en Cortana y la línea de tiempo. Cuando las actividades aparecen en la línea de tiempo, las mostramos mediante el marco [Tarjeta adaptable](https://adaptivecards.io/). Si no proporcionas una tarjeta adaptable para cada actividad, la línea de tiempo crea automáticamente una tarjeta de actividad sencilla basada en el nombre y el icono de la aplicación, el campo de título y el campo de descripción opcional. A continuación se incluye un ejemplo de carga de tarjeta adaptable y la tarjeta que produce.
 
 ![Una tarjeta adaptable](images/adaptivecard.png)]
 
@@ -157,7 +157,7 @@ Una vez que la aplicación o el servicio se autentica con una cuenta de Microsof
 Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) para que tu aplicación aparezca en la línea de tiempo y Cortana.
 * Obtener más información sobre la [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Echa un vistazo al [código de ejemplo](https://github.com/Microsoft/project-rome).
-* Consulta [tarjetas adaptables más sofisticadas](http://adaptivecards.io/).
+* Consulta [tarjetas adaptables más sofisticadas](https://adaptivecards.io/).
 * Publicar una **UserActivity** de iOS, Android o el servicio web a través de [Microsoft Graph](https://developer.microsoft.com/graph/).
 * Más información sobre el [proyecto Rome en GitHub](https://github.com/Microsoft/project-rome).
 
@@ -165,11 +165,11 @@ Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.app
 
 * [Espacio de nombres UserActivities](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Actividades del usuario (documentos de Project Rome)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/)
-* [Visualizador de tarjetas adaptables, muestras](http://adaptivecards.io/)
+* [Visualizador de tarjetas adaptables, muestras](https://adaptivecards.io/)
 * [Administración de la activación de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Interactuar con los clientes en cualquier plataforma con Microsoft Graph, fuentes de actividades y tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

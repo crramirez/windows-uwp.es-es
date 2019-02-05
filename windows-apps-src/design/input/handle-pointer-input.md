@@ -8,12 +8,12 @@ keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, inte
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c8f670a5139d4969489bede3b0b4bbf72de2d55
-ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
+ms.openlocfilehash: 596e9221fac686964b4faaa8a75f112dbb8ddf5a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "8981874"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048402"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
@@ -196,7 +196,7 @@ Este es el lenguaje de marcado de aplicaciones extensible (XAML) para la interfa
 
 En la mayoría de los casos, es recomendable que obtengas la información del puntero mediante el elemento [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) del controlador de eventos.
 
-Si el argumento de evento no expone los detalles del puntero necesarios, puedes obtener acceso a información extendida de [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) expuesto a través de la [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [** PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
+Si el argumento de evento no expone los detalles del puntero necesarios, puedes obtener acceso a información extendida de [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) expuesto a través del [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [** PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 El siguiente código configura el objeto de diccionario global para hacer un seguimiento de cada puntero activo e identifica los diversas escuchas de eventos de puntero para el objeto de destino.
 
@@ -572,7 +572,7 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>Obtener las propiedades del puntero
 
-Como se indicó anteriormente, debes obtener información más extendida del puntero desde un objeto [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) obtenido a través de la [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Los siguientes fragmentos de código muestran cómo.
+Como se indicó anteriormente, debes obtener información más extendida del puntero desde un objeto de [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) obtenido a través del [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Los siguientes fragmentos de código muestran cómo.
 
 -   Primero, se crea un nuevo elemento [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para cada puntero.
 
@@ -954,15 +954,15 @@ Por último, definimos nuestros controladores de eventos de puntero básicos en 
 * [Ejemplo de entrada (UserControl con animación) de puntero](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
 **Otras muestras**
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: ejemplo de entrada de lápiz simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de manipulaciones y gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Entrada: muestra de prueba de acceso táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: ejemplo de entrada de lápiz simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)

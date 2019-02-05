@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3bfe034ed697661c81b2f01b67fafeee1941832d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921569"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050768"
 ---
 # <a name="planning-for-performance"></a>Planeación del rendimiento
 
@@ -104,7 +104,7 @@ Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usa
 
 **Iniciar y reanudar aplicaciones**
 
--   Aplaza la página de presentación de la aplicación y no la extiendas a menos que sea necesario. Para más información, consulta [Crear una experiencia de inicio de la aplicación rápida y fluida](http://go.microsoft.com/fwlink/p/?LinkId=317595) y [Mostrar una pantalla de presentación durante más tiempo](https://msdn.microsoft.com/library/windows/apps/Mt187309).
+-   Aplaza la página de presentación de la aplicación y no la extiendas a menos que sea necesario. Para más información, consulta [Crear una experiencia de inicio de la aplicación rápida y fluida](https://go.microsoft.com/fwlink/p/?LinkId=317595) y [Mostrar una pantalla de presentación durante más tiempo](https://msdn.microsoft.com/library/windows/apps/Mt187309).
 -   Deshabilita las animaciones que se produzcan inmediatamente después de descartarse la página de presentación, ya que estas solo causan una sensación de demora en el inicio de la aplicación.
 
 **Interfaz de usuario adaptable y orientación**
@@ -152,7 +152,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 // ...
 ```
 
-Consulta también la [muestra de registro](http://go.microsoft.com/fwlink/p/?LinkId=529576).
+Consulta también la [muestra de registro](https://go.microsoft.com/fwlink/p/?LinkId=529576).
 
 Con la aplicación instrumentada, ya puedes probar y medir su rendimiento.
 
@@ -171,7 +171,7 @@ Usa estas técnicas y herramientas para probar la aplicación con respecto a los
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
 -   Prueba si se ha reducido la disponibilidad de consumo de energía. El dispositivo de tus usuarios podría tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de bajo consumo funciona, aproximadamente, a un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
 -   Combina herramientas, como Microsoft Visual Studio y el Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan captura y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
--   Antes de enviar la aplicación a la tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos de prueba relacionados con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de [pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"de [los casos de prueba de aplicación para UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Antes de enviar la aplicación a la tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos de prueba relacionada con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de [pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"de [los casos de prueba de aplicación para UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Para más información, consulta estos recursos y herramientas de generación de perfiles.
 

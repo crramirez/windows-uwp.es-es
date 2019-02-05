@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, ubicación, geovalla, notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: adcce5716a2982cf2c08e98ee337dbad20bddf28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e00a3db8890183f50efad6caa31bd573707c6a6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924672"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045694"
 ---
 # <a name="set-up-a-geofence"></a>Configurar una geovalla
 
@@ -20,9 +20,9 @@ ms.locfileid: "8924672"
 
 Configura una [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn263587) en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
 
-**Sugerencia** Para obtener más información sobre el acceso a la ubicación en tu aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
+**Sugerencia** Para obtener más información sobre el acceso a la ubicación en tu aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar la funcionalidad de ubicación
 
@@ -456,7 +456,7 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 
 1.  Compila tu aplicación en Visual Studio.
 2.  Inicia la aplicación en el emulador de Visual Studio.
-3.  Usa estas herramientas para simular varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el tiempo que especifica la propiedad [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación. Para obtener más información sobre la simulación de ubicaciones, consulta el tema sobre cómo [Establecer la geolocalización simulada del dispositivo](http://go.microsoft.com/fwlink/p/?LinkID=325245).
+3.  Usa estas herramientas para simular varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el tiempo que especifica la propiedad [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación. Para obtener más información sobre la simulación de ubicaciones, consulta el tema sobre cómo [Establecer la geolocalización simulada del dispositivo](https://go.microsoft.com/fwlink/p/?LinkID=325245).
 4.  También puedes usar el emulador para calcular el tamaño de las vallas y los tiempos de permanencia aproximados que deben detectarse a velocidades diferentes.
 
 ### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-background"></a>Probar y depurar una aplicación de geovalla que se ejecuta en segundo plano
@@ -468,7 +468,7 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 3.  Cierra la aplicación que se está ejecutando localmente.
 4.  Inicia la aplicación en el emulador de Visual Studio. Ten en cuenta que la simulación de geovallas en segundo plano solo puede hacerse en una aplicación a la vez en el emulador. No inicies varias aplicaciones de geovalla en el emulador.
 5.  En el emulador, simula varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación.
-6.  Usa Visual Studio para desencadenar la tarea de ubicación en segundo plano. Para obtener más información sobre cómo desencadenar tareas en segundo plano en Visual Studio, consulta [Cómo desencadenar tareas en segundo plano](http://go.microsoft.com/fwlink/p/?LinkID=325378).
+6.  Usa Visual Studio para desencadenar la tarea de ubicación en segundo plano. Para obtener más información sobre cómo desencadenar tareas en segundo plano en Visual Studio, consulta [Cómo desencadenar tareas en segundo plano](https://go.microsoft.com/fwlink/p/?LinkID=325378).
 
 ## <a name="troubleshoot-your-app"></a>Solucionar problemas de tu aplicación
 
@@ -481,6 +481,6 @@ Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicaci�
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de ubicación geográfica para UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Muestra de ubicación geográfica para UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)

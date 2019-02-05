@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5f033737e36bd5a891543fbad6b3eba933f052
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991631"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045959"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
@@ -46,7 +46,7 @@ Después de completar los pasos anteriores, estás listo para distribuir tu apli
 
 1.  **Prueba la aplicación.** Antes de empaquetar la aplicación para el envío al centro de partners, asegúrate de que funciona según lo previsto en todas las familias de dispositivos que Planeas admitir. Estas familias de dispositivos pueden incluir los equipos de escritorio, móviles, Surface Hub, Xbox, dispositivos de IoT, etc. Para obtener más información sobre cómo implementar y probar la aplicación con Visual Studio, consulta la [implementación y depuración de aplicaciones para UWP](../debug-test-perf/deploying-and-debugging-uwp-apps.md).
 2.  **Optimiza la aplicación.** Puedes usar las herramientas de generación de perfiles y depuración de Visual Studio para optimizar el rendimiento de tu aplicación para UWP. Por ejemplo, la herramienta Línea de tiempo para la capacidad de respuesta de la interfaz de usuario, la herramienta Uso de memoria, la herramienta Uso de CPU, etc. Para obtener más información acerca de estas herramientas de línea de comandos, consulta el tema [Recorrido por las funciones de perfiles](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour):
-3.  **Comprueba la compatibilidad de .NET nativo (para aplicaciones de VB y C#).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
+3.  **Comprueba la compatibilidad de .NET nativo (para aplicaciones de VB y C#).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
 
 ## <a name="configure-an-app-package"></a>Configurar un paquete de la aplicación
 
@@ -131,7 +131,7 @@ Valida la aplicación antes de enviarla al centro de partners para la certificac
     >[!IMPORTANT]
     > No puedes validar el paquete de la aplicación en un dispositivo remoto de ARM para Windows 10.
 2.  Descarga e instala las herramientas remotas para Visual Studio. Estas herramientas se usan para ejecutar el Kit para la certificación de aplicaciones en Windows de forma remota. Para obtener más información acerca de estas herramientas, incluida la ubicación para descargarlas, visita [Ejecutar aplicaciones para UWP en un equipo remoto](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
-3.  Descargar el [Kit de certificación de aplicaciones de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) necesarios y, a continuación, instalarlo en el dispositivo remoto de Windows 10.
+3.  Descargar el [Kit de certificación de aplicaciones de Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) necesarios y, a continuación, instalarlo en el dispositivo remoto de Windows 10.
 4.  En la página **Creación del paquete completada** del asistente, elige el botón de opción **Máquina remota** y, a continuación, el botón de puntos suspensivos que se encuentra junto al botón **Probar conexión**.
     >[!NOTE]
     > El botón de opción **Máquina remota** está disponible únicamente si seleccionaste al menos una configuración de solución que admita la validación. Para obtener más información sobre la prueba de la aplicación con el WACK, consulta [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).

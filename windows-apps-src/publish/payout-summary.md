@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
-ms.openlocfilehash: fa35ac4961b64379ee8a50ec192f5cebad5720d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e9ab2d2d096c6c0a639a831bb7d09f6d1d044a0c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919885"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046245"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
@@ -20,7 +20,7 @@ En el apartado **Resumen de pago** se muestran los detalles sobre el dinero que 
 
 Si usas publicidad para ganar dinero, también podrás ver la información de pago acerca de las ganancias de publicidad en **Resumen de pago**. Se te mostrará la aplicación que ha generado estas ganancias, o bien "sin asignar" para las unidades de anuncio que se usan en varias aplicaciones o que no se pueden asignar a una aplicación específica. 
 
-Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Puedes encontrar más información sobre cómo generar informes de pagos de Azure Marketplace [aquí](http://go.microsoft.com/fwlink/p/?LinkID=722439).
+Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/p/?LinkID=699560 ). Puedes encontrar más información sobre cómo generar informes de pagos de Azure Marketplace [aquí](https://go.microsoft.com/fwlink/p/?LinkID=722439).
 
 > [!NOTE]
 > Para ser apto para el pago, las ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría **Reservado** hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para las ganancias de publicidad, el umbral de pago es de 50USD (o su equivalente en moneda local). 

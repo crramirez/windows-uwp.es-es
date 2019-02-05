@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 345a41a45e28843161e65ecb04f0083f1a71269a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942851"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048352"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -19,9 +19,9 @@ Existen varios esquemas de URI (identificador uniforme de recursos) que puedes u
 
 ## <a name="common-features-of-the-uri-schemes"></a>Características comunes de los esquemas de URI
 
-Todos los esquemas descritos en este tema siguen las reglas de esquema URI típicas para la normalización y la recuperación de recursos. Consulta [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) para conocer la sintaxis genérica de un URI.
+Todos los esquemas descritos en este tema siguen las reglas de esquema URI típicas para la normalización y la recuperación de recursos. Consulta [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) para conocer la sintaxis genérica de un URI.
 
-Todos los esquemas de URI definen la parte jerárquica conforme a [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444), como los componentes de ruta y de autoridad del URI.
+Todos los esquemas de URI definen la parte jerárquica conforme a [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444), como los componentes de ruta y de autoridad del URI.
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -77,7 +77,7 @@ ms-appx-web:///
 
 ### <a name="user-info-and-port-ms-appx-and-ms-appx-web"></a>Información del usuario y puerto (ms-appx y ms-appx-web)
 
-El esquema `ms-appx`, a diferencia de otros esquemas populares, no define un componente de información del usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error:
+El esquema `ms-appx`, a diferencia de otros esquemas populares, no define un componente de información del usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error.
 
 ```xml
 ms-appx://john@contoso.myapp/default.html
@@ -267,7 +267,7 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Identificador uniforme de recursos (URI): Sintaxis genérica](http://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [Identificador uniforme de recursos (URI): Sintaxis genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empaquetado de aplicaciones](../packaging/index.md)
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)

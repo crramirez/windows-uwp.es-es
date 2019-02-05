@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c812cea510865da68760788a723830fe0940c21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920185"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046009"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar el entorno de desarrollo de UWP en Xbox
 
@@ -123,6 +123,6 @@ Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox c
 ## <a name="see-also"></a>Consulta también
 - [Activación del modo de desarrollador de Xbox One](devkit-activation.md)  
 - [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads)  
-- [Programa Windows Insider](http://go.microsoft.com/fwlink/?LinkId=780552)  
+- [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md) 
 - [UWP en Xbox One](index.md)

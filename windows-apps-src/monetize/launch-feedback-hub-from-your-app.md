@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
 ms.localizationpriority: medium
-ms.openlocfilehash: b4e11b8dfffd7e749a31f052545bfbdfc4449126
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9f5d5c12deed9fffc3d2515529aa5bba5fbffc47
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947877"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045278"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 
 Puedes animar a los clientes a dejar comentarios agregando un control (como un botón) a la aplicación de la Plataforma universal de Windows (UWP) que inicia el Centro de opiniones. El Centro de opiniones es una aplicación preinstalada que proporciona un único lugar para recopilar comentarios sobre Windows y las aplicaciones instaladas. Todos los comentarios de los clientes que se ha enviado para tu aplicación a través del centro de opiniones se recopilan y presentan en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners, para que puedas ver los problemas, sugerencias y votos a favor que los clientes han enviado en un informe.
 
-Para iniciar el Centro de opiniones desde la aplicación, usa una API que se incluya con el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Se recomienda usar esta API para iniciar el Centro de opiniones desde un elemento de la interfaz de usuario de tu aplicación que siga nuestras directrices para el diseño.
+Para iniciar el Centro de opiniones desde la aplicación, usa una API que se incluya con el [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Se recomienda usar esta API para iniciar el Centro de opiniones desde un elemento de la interfaz de usuario de tu aplicación que siga nuestras directrices para el diseño.
 
 > [!NOTE]
 > El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) móviles o de escritorio. Te recomendamos que muestres un control de comentarios en la aplicación solo si el Centro de opiniones está disponible en el dispositivo del usuario. El código de este tema muestra cómo hacerlo.

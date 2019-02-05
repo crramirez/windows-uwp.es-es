@@ -5,18 +5,18 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, AdControl, anuncios de banner
 ms.localizationpriority: medium
-ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938237"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045883"
 ---
 # <a name="banner-ads"></a>Anuncios de banner
 
 Los artículos de esta sección muestra cómo usar la clase [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) en el SDK de Microsoft Advertising para agregar anuncios de banner a tu aplicación para UWP.
 
-Anuncios de banner son los anuncios de visualización estática que usan una parte rectangular de una página en la aplicación para mostrar contenido promocional. Estos anuncios se pueden actualizar automáticamente a intervalos regulares. Este es un buen punto de partida si estás empezando a usar la publicidad en tu aplicación.
+Anuncios de banner son anuncios de visualización estática que usan una parte rectangular de una página en la aplicación para mostrar contenido promocional. Estos anuncios se pueden actualizar automáticamente a intervalos regulares. Este es un buen punto de partida si estás empezando a usar la publicidad en tu aplicación.
 
 ![addreferences](images/banner-ad.png)
 
@@ -29,7 +29,7 @@ Anuncios de banner son los anuncios de visualización estática que usan una par
 | [Tamaños admitidos de anuncios de banner](supported-ad-sizes-for-banner-ads.md)    |  Revisa los tamaños admitidos para anuncios de banner en aplicaciones para UWP.        |
 
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
-* [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
+* [Ejemplos de publicidad de GitHub](https://aka.ms/githubads)
 * [Configurar unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)

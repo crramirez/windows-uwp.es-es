@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7fa5b4c432cec3d0f628de3b52e814f9c211f79
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a31464d208e8d9abe68703560552c99e5d957463
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936158"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049140"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
@@ -98,7 +98,7 @@ También te recomendamos que agregues un hipervínculo a la página Colores de l
 
 <!--
 <div class="microsoft-internal-note">
-Detailed redlines showing preferred text strings for the "Choose a mode" section are available on [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
+Detailed redlines showing preferred text strings for the "Choose a mode" section are available on [UNI](https://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
 </div>
 -->
 

@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1b7eec51044a70b0738e246d3aa516c37643cf68
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927349"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048552"
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
@@ -28,15 +28,15 @@ El reconocimiento de voz incluye un tiempo de ejecución de voz, varias API de r
 
 Para admitir el reconocimiento de voz con la aplicación, el usuario debe conectarse y habilitar un micrófono en su dispositivo y aceptar la directiva de privacidad de Microsoft conceder permiso para tu aplicación para usarla.
 
-Automáticamente pedir al usuario un cuadro de diálogo del sistema que se pide permiso para acceder y usar el micrófono de audio de fuente acaba de configurar (ejemplo de la [muestra de síntesis de voz y de reconocimiento de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897) se muestra a continuación), el **micrófono** [dispositivo funcionalidad](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) en el [manifiesto del paquete de la aplicación](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obtener más información, consulta [declaraciones de funcionalidades](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Automáticamente pedir al usuario un cuadro de diálogo del sistema que se pide permiso para acceder y usar el micrófono de audio de fuente acaba de configurar (ejemplo de la [muestra de síntesis de voz y de reconocimiento de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897) se muestra a continuación), el **micrófono** [dispositivo funcionalidad](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) en el [manifiesto del paquete de la aplicación](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obtener más información, consulta [declaraciones de funcionalidades](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ![Directiva de privacidad para el acceso al micrófono](images/speech/privacy.png)
 
-Si el usuario hace clic en Sí para conceder acceso al micrófono, la aplicación se agrega a la lista de aplicaciones aprobadas en la configuración -> privacidad -> página del micrófono. Sin embargo, como el usuario puede optar por desactivar esta configuración en cualquier momento, debe confirmar que la aplicación tiene acceso al micrófono antes de intentar usarla.
+Si el usuario hace clic en Sí para conceder acceso al micrófono, la aplicación se agrega a la lista de aplicaciones aprobadas en la configuración-> privacidad-> página de micrófono. Sin embargo, como el usuario puede optar por desactivar esta configuración en cualquier momento, debe confirmar que la aplicación tiene acceso al micrófono antes de intentar usarla.
 
-Si también quieres admitir dictado, Cortana, o el reconocimiento de voz otros servicios (por ejemplo, una [gramática predefinida](#predefined-grammars) definidos en una restricción de tema), también debe confirmar que **el reconocimiento de voz en línea** (configuración -> privacidad -> voz) es habilitado.
+Si también quieres admitir dictado, Cortana, o el reconocimiento de voz otros servicios (por ejemplo, una [gramática predefinida](#predefined-grammars) definidos en una restricción de tema), también debe confirmar que **el reconocimiento de voz en línea** (configuración-> privacidad-> voz) es habilitado.
 
-Este fragmento de código muestra cómo la aplicación puede comprobar si está presente un micrófono y si tiene permiso para usarlo.
+Este fragmento de código muestra cómo la aplicación puede comprobar si está presente un micrófono y tiene permiso para usarlo.
 
 ```csharp
 public class AudioCapturePermissions
@@ -220,7 +220,7 @@ La gramática predeterminada de dictado de texto libre tiene la capacidad de rec
 
 La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
-**Nota**dado gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y que están en línea (no en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.     
+**Nota**dado gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y que estén en línea (no en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.     
 
 Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 
@@ -269,7 +269,7 @@ Consulta [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/librar
 
 ### <a name="srgs-grammars"></a>Gramáticas SRGS
 
-Una gramáticaSRGS (Especificación de gramática de reconocimiento de voz) es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formatoXML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
+Una gramáticaSRGS (Especificación de gramática de reconocimiento de voz) es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formatoXML definido por [SRGS versión 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
 
  Consulta [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
 
@@ -373,7 +373,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 **Diseñadores**
 * [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Ejemplos**
-* [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

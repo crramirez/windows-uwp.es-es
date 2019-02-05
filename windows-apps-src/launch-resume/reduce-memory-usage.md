@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c9716483d7df51c2c02d2f9c88e5a4cec05437cc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 28c21b3d3b3e53def2181e96a58b53998ee0f04a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942990"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046608"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
@@ -103,5 +103,5 @@ Cuando una aplicación pasa de segundo plano a primer plano, primero obtiene un 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de reproducción de contenido multimedia en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=800141): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
+* [Muestra de reproducción de contenido multimedia en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=800141): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
 * [Herramientas de diagnóstico](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/): usa las herramientas de diagnóstico para observar los eventos de recolección de elementos no utilizados y validar que la aplicación esté liberando memoria según lo previsto.

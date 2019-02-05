@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
-ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926268"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046388"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de vista previa de impresión
 
@@ -25,7 +25,7 @@ ms.locfileid: "8926268"
 
 En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de vista previa de impresión. Para obtener más información sobre la impresión, consulta [Imprimir desde tu aplicación](print-from-your-app.md).
 
-**Sugerencia**la mayoría de los ejemplos de este tema se basa en la muestra de impresión. Para ver el código completo, descarga la [muestra de impresión de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619984) desde el [Repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
+**Sugerencia**la mayoría de los ejemplos de este tema se basa en la muestra de impresión. Para ver el código completo, descarga la [muestra de impresión de la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619984) desde el [Repositorio de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
  
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Importante**llamar a () [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453), todas las opciones de impresión quita de la interfaz de usuario, incluido el vínculo de **configuración más** de vista previa de impresión. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
+**Importante**llamar a () [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)quita todas las opciones de impresión de la interfaz de usuario, incluido el vínculo de **configuración más** de vista previa de impresión. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
 
 ### <a name="specify-default-options"></a>Especificar las opciones predeterminadas
 
@@ -187,4 +187,4 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 * [Directrices de diseño de impresión](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Vídeo de compilación 2015: Developing apps that print in Windows 10 (Desarrollar aplicaciones que imprimen en Windows 10)](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [Muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [Muestra de impresión para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)

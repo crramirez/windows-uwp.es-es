@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f85570d5c66db1641ec6352526d4db6213e199b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944900"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050838"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 
@@ -21,7 +21,7 @@ En este artículo se muestra cómo usar un [**MediaFrameReader**](https://msdn.m
 > Las características descritas en este artículo solo están disponibles a partir de Windows 10, versión 1803.
 
 > [!NOTE] 
-> Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](https://go.microsoft.com/fwlink/?LinkId=823230).
 
 ## <a name="setting-up-your-project"></a>Configurar tu proyecto
 El proceso para adquirir fotogramas de audio es prácticamente igual al de adquirir otros tipos de fotogramas multimedia. Al igual que con cualquier aplicación que use **MediaCapture**, debes declarar que tu aplicación usa la funcionalidad *cámara web* antes de intentar acceder a cualquier dispositivo de cámara. Si la aplicación captura desde un dispositivo de audio, también debes declarar la funcionalidad *micrófono* del dispositivo. 
@@ -79,7 +79,7 @@ Puedes usar un objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/window
 * [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Muestra de fotogramas de cámara](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [Muestra de fotogramas de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de audio](audio-graphs.md)
  
 

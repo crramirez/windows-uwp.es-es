@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
 ms.localizationpriority: medium
-ms.openlocfilehash: e5150188c99bfc448bf85df6a6dabbbb4c60bd49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d7004f579bb8bb60b1f9585e49319e278770700a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921108"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048162"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 
@@ -165,7 +165,7 @@ La ubicación geográfica de un usuario es información de identificación perso
 * [Obtener la ubicación actual](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [Mostrar mapas con vistas 2D, 3D y Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [Ejemplo de ubicación de UWP (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Ejemplo de ubicación de UWP (geolocation)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

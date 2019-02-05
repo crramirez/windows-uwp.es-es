@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6954f935440f75a728c3f3601ade884bbee7b6bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7acf2715ff4b6328beaae017722fc58d5788fe1d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919046"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047869"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++ / CX
 
@@ -25,7 +25,7 @@ Con Microsoft Studio2017 Visual, puedes usar C++ / CX para desarrollar una aplic
 
 ## <a name="before-you-start"></a>Antes de empezar
 
--   Para completar este tutorial, debes usar Visual StudioCommunity 2017 o una de las versiones de la Comunidad que no sean de Studio2017 Visual, en un equipo que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
+-   Para completar este tutorial, debes usar Visual StudioCommunity 2017 o una de las versiones de la Comunidad que no sean de Studio2017 Visual, en un equipo que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](https://go.microsoft.com/fwlink/p/?LinkId=532666)
 -   Damos por hecho que tienes un conocimiento básico de C++ / CX, XAML y los conceptos en la [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Se supone que estás usando el diseño de ventana predeterminado en Visual Studio. Para restablecer el diseño predeterminado, en la barra de menús, elige **Ventana** > **Restablecer diseño de la ventana**.
 
@@ -35,7 +35,7 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 ### <a name="whats-the-same"></a>¿Qué es igual?
 
--   Puedes usar la STL, la CRT (salvo algunas excepciones) y cualquier otra biblioteca de C++ siempre que el código solo llama a las funciones de Windows que se puede acceder desde el entorno de Windows Runtime.
+-   Puedes usar la STL, la CRT (salvo algunas excepciones) y cualquier otra biblioteca de C++ siempre que el código solo llama a las funciones de Windows que son accesibles desde el entorno de Windows Runtime.
 
 -   Si estás acostumbrado a los diseñadores visuales, puedes seguir usando el diseñador integrado en Microsoft Visual Studio o puedes usar Blend for Visual Studio, que es una herramienta más completa. Si estás acostumbrado a codificar la interfaz de usuario a mano, puedes codificar a mano tu XAML.
 
@@ -59,17 +59,17 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 -   En Microsoft Store y la Store de Windows Phone, se comprueba que la aplicación sea segura mediante un proceso de certificación y se hace que millones de clientes potenciales puedan detectarla.
 
-## <a name="hello-world-store-app-in-ccx"></a>Aplicación de la tienda de Hello World en C++ / CX
+## <a name="hello-world-store-app-in-ccx"></a>Aplicación Hello World de la tienda en C++ / CX
 
-Nuestra primera aplicación es una presentación para el mundo ("Hello World") que demuestra algunas características básicas de interactividad, diseño y estilos. Vamos a crear una aplicación desde la plantilla de proyecto de aplicación universal de Windows. Si has desarrollado aplicaciones para Windows8.1 y Windows Phone 8.1 antes, es posible que recuerda que debía tener tres proyectos en Visual Studio, uno para la aplicación de Windows, uno para la aplicación de teléfono y otro con código compartido. La plataforma Universal de Windows (UWP) de Windows 10 hace posible tener solo un proyecto, que se ejecute en todos los dispositivos, incluidos los equipos de escritorio y portátiles que ejecutan Windows 10, dispositivos como tabletas, teléfonos móviles, dispositivos de realidad virtual y así sucesivamente.
+Nuestra primera aplicación es una presentación para el mundo ("Hello World") que demuestra algunas características básicas de interactividad, diseño y estilos. Vamos a crear una aplicación desde la plantilla de proyecto de aplicación universal de Windows. Si las aplicaciones que ha desarrollado para Windows8.1 y Windows Phone 8.1 antes, es posible que recuerda que debía tener tres proyectos en Visual Studio, uno para la aplicación de Windows, uno para la aplicación de teléfono y otro con código compartido. La plataforma Universal de Windows (UWP) de Windows 10 hace posible tener solo un proyecto, que se ejecute en todos los dispositivos, incluidos los equipos de escritorio y portátiles que ejecutan Windows 10, dispositivos como tabletas, teléfonos móviles, dispositivos de realidad virtual y así sucesivamente.
 
 Empezaremos por los conceptos básicos:
 
--   Cómo crear un proyecto de Windows Universal en Studio2017 Visual.
+-   Cómo crear un proyecto de Universal de Windows en Studio2017 Visual.
 
 -   Cómo comprender los proyectos y los archivos que se crean.
 
--   Cómo comprender las extensiones en extensiones de componentes de VisualC ++ (C++ / CX) y cuándo usarlas.
+-   Cómo comprender las extensiones en extensiones de componentes VisualC ++ (C++ / CX) y cuándo usarlas.
 
 **Lo primero: crear una solución en Visual Studio**
 
@@ -117,7 +117,7 @@ Si examinas el código de App.xaml.h, App.xaml.cpp en el proyecto compartido, ve
 
 **Clases de referencia**
 
-Prácticamente todas las clases de Windows Runtime, en las que se incluyen todos los tipos de la API de Windows (XAML de Windows, las páginas de tu aplicación, la propia clase App, todos los objetos de red y dispositivo, todos los tipos de contenedor), se declaran como **clase ref**. (Algunos tipos de Windows son **clase de valor** o **estructura de valor**). Una clase de referencia se puede consumir desde cualquier lenguaje. En C++ / CX, la duración de estos tipos está regulada por automático de referencias (no la recolección) para que nunca explícitamente eliminar estos objetos. También puedes crear tus propias clases de referencia.
+Prácticamente todas las clases de Windows Runtime, en las que se incluyen todos los tipos de la API de Windows (XAML de Windows, las páginas de tu aplicación, la propia clase App, todos los objetos de red y dispositivo, todos los tipos de contenedor), se declaran como **clase ref**. (Algunos tipos de Windows son **clase de valor** o **estructura de valor**). Una clase de referencia se puede consumir desde cualquier lenguaje. En C++ / CX, la duración de estos tipos está regulada por automático de referencias (no la recolección) para que nunca de forma explícita eliminar estos objetos. También puedes crear tus propias clases de referencia.
 
 ```cpp
 namespace HelloWorld
@@ -238,7 +238,7 @@ Aunque todavía no hace muchas cosas, te felicitamos por haber compilado tu prim
 
 Para detener la depuración y cerrar la aplicación, vuelve a Visual Studio y presiona Mayús+F5.
 
-Si quieres más información, consulta el tema sobre cómo [ejecutar una aplicación de la Tienda en Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=619619).
+Si quieres más información, consulta el tema sobre cómo [ejecutar una aplicación de la Tienda en Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=619619).
 
 En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), pero si haces clic en el [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265), no se realiza ninguna acción. En los pasos posteriores, crearás un controlador de eventos para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del botón que muestra un saludo personalizado.
 
@@ -404,7 +404,7 @@ Felicidades, has completado el primer tutorial. En él aprendiste cómo se agreg
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si tienes un proyecto de aplicación Universal de Windows que está destinado a Windows8.1 o Windows Phone 8.1, portarlo a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525).
+Si tienes un proyecto de aplicación Universal de Windows que está destinada a Windows8.1 o Windows Phone 8.1, portarlo a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](https://go.microsoft.com/fwlink/p/?LinkId=619525).
 
-Si tienes código C++ que desees integrar con una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: usar código C++ existente en una aplicación universal de la plataforma Windows](http://go.microsoft.com/fwlink/p/?LinkId=619623).
+Si tienes código C++ que desees integrar con una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: usar código C++ existente en una aplicación universal de la plataforma Windows](https://go.microsoft.com/fwlink/p/?LinkId=619623).
 

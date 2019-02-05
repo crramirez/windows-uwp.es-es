@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 19b76966cf4909af460575882e2d2be7c82743a0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8146e5f85887feb1bfa64b04de91b1cf875ccc27
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925389"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050948"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Directrices para aplicaciones de marketing de Microsoft Store
 
@@ -21,35 +21,35 @@ Descubre cómo promocionar tus aplicaciones y contenido en la Microsoft Store. E
 
 Hemos creado distintivos promocionales especiales para ayudarte a que lleguen a más clientes a la descripción de la aplicación en Microsoft Store. Estos distintivos están disponibles en 44 idiomas. Ten en cuenta que existen ciertos requisitos que debes cumplir al usar estas imágenes. Dichos requisitos, junto con los ejemplos de uso y las directrices, están disponibles en un archivo PDF.
 
-[ ![Botón Descargar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Directrices de distintivo de Microsoft Store (PDF, inglés)**
+[ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=529769) **Directrices de distintivo de Microsoft Store (PDF, inglés)**
 
 
 ## <a name="badge-generator-and-images"></a>Generador de distintivos e imágenes
 
-Puedes usar nuestro [generador de distintivos](http://go.microsoft.com/fwlink/p/?LinkID=534236) para generar el código HTML que muestra el distintivo de la Tienda (en el idioma que prefieras) y que vincula directamente con la descripción de la aplicación en la Tienda.
+Puedes usar nuestro [generador de distintivos](https://go.microsoft.com/fwlink/p/?LinkID=534236) para generar el código HTML que muestra el distintivo de la Tienda (en el idioma que prefieras) y que vincula directamente con la descripción de la aplicación en la Tienda.
 
 También puedes descargar el conjunto completo de imágenes de distintivos (en formato PNG y PDF) desde el vínculo siguiente.
 
-[![Botón Descargar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) **Todas las imágenes de distintivo**
+[![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=529771) **Todas las imágenes de distintivo**
 
 
 ## <a name="device-images"></a>Imágenes de dispositivo
 
-Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes pueden encontrarse en las [Directrices de Marketing de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
+Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes pueden encontrarse en las [Directrices de Marketing de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=529769).
 
 [ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivo de Windows**
 
 ## <a name="license-to-microsoft-marks"></a>Licencia para las marcas Microsoft
 
-*Las marcas Microsoft* significa el *distintivo de Microsoft* que se describen en la página de [Generador de distintivos](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Para usar estos distintivos, debes:
+*Las marcas Microsoft* significa el *distintivo de Microsoft* que se describen en la página de [Generador de distintivos](https://go.microsoft.com/fwlink/p/?LinkID=534236) . Para usar estos distintivos, debes:
 
--   Tener la aplicación u otro contenido disponible en Microsoft Store o formar parte del [Programa de afiliados de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
+-   Tener la aplicación u otro contenido disponible en Microsoft Store o formar parte del [Programa de afiliados de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Si estás registrado como desarrollador de aplicaciones en el centro de partners, cumplir con la sección de ["licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del acuerdo para desarrolladores.
+-   Si estás registrado como desarrollador de aplicaciones en el centro de partners, cumplir con la sección ["licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del acuerdo para desarrolladores.
 
 -   Si no estás registrado como desarrollador de aplicaciones en el centro de partners, Microsoft te concede una licencia mundial, no exclusiva, has, libre de regalías para usar los distintivos únicamente como se describe en las directrices de distintivo de Microsoft Store. Microsoft podría cambiar estas directrices, pero en el caso de que lo haga, usará los medios razonables para redirigirte a cualquier URL nueva donde se publiquen estas especificaciones. Microsoft se reserva todos los derechos no concedidos expresamente en el presente documento.
 
--   Sigue las especificaciones de uso de logotipos descritas en las [Directrices de distintivo de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
+-   Sigue las especificaciones de uso de logotipos descritas en las [Directrices de distintivo de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=529769).
 
 Microsoft es el único propietario de las marcas de Microsoft y del fondo de comercio asociado, y el único beneficiario del fondo de comercio asociado con tu uso de las marcas de Microsoft. Microsoft puede revocar esta licencia en cualquier momento y a su entera discreción.
 

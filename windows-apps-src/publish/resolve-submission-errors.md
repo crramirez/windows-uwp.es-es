@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9911323010f691d1fa59c35306a7173cd08a0faa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df7c1bbbc77374b8afb4272e1d9618c8294a4b6e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920715"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047992"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
@@ -19,9 +19,9 @@ Si se producen errores después de enviar la aplicación a la Tienda, tienes que
 
 ## <a name="uwp-apps"></a>Aplicaciones para UWP
 
-Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .msixupload o .appxupload generado por Visual Studio para la tienda. Asegúrate de que sigue los pasos de [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y solo carga el archivo .msixupload o .appxupload en la página de [los paquetes](upload-app-packages.md) del envío, no un appx/.msix o .msixbundle/appxbundle .
+Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .msixupload o .appxupload generado por Visual Studio para la tienda. Asegúrate de que sigue los pasos de [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y solo carga el archivo .msixupload o .appxupload en la página [paquetes](upload-app-packages.md) del envío, no un appx/.msix o .msixbundle/appxbundle .
 
-Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
+Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](https://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## <a name="desktop-application"></a>Aplicación de escritorio
 

@@ -6,12 +6,12 @@ ms.date: 1/25/2017
 ms.topic: article
 keywords: Windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cd4d60e6eb3eee7253997938882e6fbdf9fba69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ef6e364f8c6c88400d2d47a0591d4b7432c33215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923746"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048022"
 ---
 # <a name="create-your-first-app"></a>Crear tu primera aplicación
 
@@ -30,7 +30,7 @@ Si quieres aprender los aspectos básicos o simplemente refrescar tu memoria, co
 * [Conceptos básicos de C# para principiantes](https://go.microsoft.com/fwlink/?linkid=850801)
 * [Conceptos básicos de VB para principiantes](https://go.microsoft.com/fwlink/?linkid=850802)
 * [Guía del desarrollador de Windows 10](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
+* [Microsoft Virtual Academy](https://www.microsoftvirtualacademy.com/)
 
 Si estás listo para probar algo un poco más divertido que "¡Hello, World!", prueba estos tutoriales:
 
@@ -38,16 +38,16 @@ Si estás listo para probar algo un poco más divertido que "¡Hello, World!", p
 * [Un sencillo juego 2D de UWP para Microsoft Store, escrito en C# y MonoGame](get-started-tutorial-game-mg2d.md)
 
 
-## <a name="visualc-component-extensions-ccx-and-xaml"></a>Las extensiones de componentes de VisualC ++ (C++ / CX) y XAML
+## <a name="visualc-component-extensions-ccx-and-xaml"></a>Las extensiones de componentes VisualC ++ (C++ / CX) y XAML
 
-Sacar provecho de su experiencia de programación de C++ para compilar aplicaciones mediante extensiones de componentes de VisualC ++ (C++ / CX) con XAML.
+Aprovecha tu experiencia en programación con c++ para compilar aplicaciones mediante extensiones de componentes VisualC ++ (C++ / CX) con XAML.
 
 * [Crear una aplicación "Hello, world" mediante XAML con C++/CX](create-a-basic-windows-10-app-in-cpp.md)
 
 Obtén más información sobre C++ aquí:
 
-* [C++: lenguaje general e iniciación al uso de bibliotecas](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [C++: lenguaje general e iniciación al uso de bibliotecas](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 Si estás listo para probar algo un poco más divertido que "¡Hello, World!", prueba estos tutoriales:
 
@@ -71,9 +71,9 @@ Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como las a
 
 ¿Necesitas repasar tus conocimientos web?
 
-* [Conceptos básicos de JavaScript para principiantes](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
-* [Conceptos básicos de HTML5 y CSS3 para principiantes](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [Conceptos básicos de JavaScript para principiantes](https://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
+* [Conceptos básicos de HTML5 y CSS3 para principiantes](https://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 ## <a name="see-also"></a>Consulta también
 

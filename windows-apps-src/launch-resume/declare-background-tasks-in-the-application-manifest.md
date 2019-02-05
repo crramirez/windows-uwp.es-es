@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 4527cface4681bf4866249c6398d43e6af782725
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d987eac76c13b8ceb34a8779903a8067ed6a607
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947727"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048702"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -37,7 +37,7 @@ Este tema supone que has creado una o más clases de tareas en segundo plano y q
 
 Abre el manifiesto de la aplicación (Package.appxmanifest) y ve al elemento Application. Crea un elemento Extensions (si no existe uno ya).
 
-El siguiente fragmento de código está tomado de la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666):
+El siguiente fragmento de código está tomado de la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666):
 
 ```xml
 <Application Id="App"
@@ -90,7 +90,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 
 2.  Cambia la lista del atributo Task Type para indicar el tipo de registro de tareas usado con esta tarea en segundo plano. Si la tarea en segundo plano se registra con varios tipos de desencadenadores, agrega elementos Task y atributos Type adicionales para cada uno.
 
-    **Nota**Asegúrate para mostrar cada uno de los tipos de desencadenadores que uses, la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) un error y lanzará una excepción).
+    **Nota**asegurarse de que la lista de cada uno de los tipos de desencadenadores que uses o la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) generará un error y generar una excepción).
 
     Este ejemplo de fragmento de código indica el uso de desencadenadores de eventos del sistema y de notificaciones de inserción:
 
@@ -209,7 +209,7 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Ejecutar en un nuevo proceso cada vez que un desencadenador se activa con el atributo SupportsMultipleInstances
 
-Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debes elegir versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
+Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debe establecer el destino de versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
 
 ```xml
 <Package

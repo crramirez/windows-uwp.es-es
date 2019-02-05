@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5060012c90ec9cfef093021f44b39321f452e01c
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.openlocfilehash: 9dd47ce2acf78a76ad413d70ce8c3e7f39a793ea
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004601"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048202"
 ---
 # <a name="sound"></a>Sonido
 
@@ -53,7 +53,7 @@ Para obtener más información acerca del audio espacial y de cómo XAML lo cont
 ### <a name="sound-for-tv-and-xbox"></a>Sonido para televisión y Xbox
 
 El sonido es una parte fundamental de la experiencia de 10 pies y, de manera predeterminada, el estado de **ElementSoundPlayer** es **Automático**, lo que significa que solo obtendrás sonido cuando la aplicación se ejecute en Xbox.
-Para obtener más información sobre el diseño para televisión o Xbox, consulta el artículo [Diseño para Xbox y televisión](http://go.microsoft.com/fwlink/?LinkId=760736).
+Para obtener más información sobre el diseño para televisión o Xbox, consulta el artículo [Diseño para Xbox y televisión](https://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## <a name="sound-volume-override"></a>Reemplazo del volumen del sonido
 
@@ -166,5 +166,5 @@ La finalidad de esta característica de recorrido consiste en evitar que los son
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Diseño para Xbox y televisión](http://go.microsoft.com/fwlink/?LinkId=760736)
+* [Diseño para Xbox y televisión](https://go.microsoft.com/fwlink/?LinkId=760736)
 * [Documentación de la clase ElementSoundPlayer](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)

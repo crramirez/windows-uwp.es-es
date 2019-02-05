@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 888de987d507f0a1a21458c299605ebcc7b1bc70
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.openlocfilehash: 3f474ec0c3017c3834d3eadb6f1caa989fc188a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990478"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050748"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto accesible  
 
@@ -28,13 +28,13 @@ En este tema se describen los procedimientos recomendados sobre accesibilidad de
 ## <a name="contrast-ratios"></a>Relaciones de contraste  
 Aunque los usuarios siempre tienen la opción de cambiar a un modo de contraste alto, el diseño de la aplicación para el texto debe considerar esa opción como último recurso. Un procedimiento mucho más recomendable es asegurarse de que el texto de la aplicación cumpla con ciertos criterios establecidos para el nivel de contraste entre el texto y su fondo. La evaluación del nivel de contraste se basa en técnicas deterministas que no tienen en cuenta el matiz del color. Por ejemplo, si hay texto rojo sobre un fondo verde, es posible que un usuario daltónico no pueda leer el texto. Si se comprueba y corrige la relación de contraste, se puede evitar este tipo de problemas de accesibilidad.
 
-Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](http://go.microsoft.com/fwlink/p/?linkid=221823). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
+Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](https://go.microsoft.com/fwlink/p/?linkid=221823). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
 
 Para considerarse accesible, el texto visible debe tener una relación de contraste de luminosidad mínima de 4.5:1 si se lo compara con el fondo. Algunas excepciones son los logotipos y el texto ocasional, como el texto que forma parte de un componente inactivo de la interfaz de usuario.
 
 Se excluye el texto que es decorativo y no transmite ninguna información. Por ejemplo, si se usan palabras aleatorias para crear un fondo, y las palabras pueden reordenarse o substituirse sin cambiar el significado, se consideran decorativas y no necesitan cumplir con este criterio.
 
-Usa herramientas de contraste de color para comprobar que la relación de contraste del texto visible sea aceptable. Consulta [Técnicas de WCAG 2.0 G18 (Sección recursos)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) para ver las herramientas que pueden probar las relaciones de contraste.
+Usa herramientas de contraste de color para comprobar que la relación de contraste del texto visible sea aceptable. Consulta [Técnicas de WCAG 2.0 G18 (Sección recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) para ver las herramientas que pueden probar las relaciones de contraste.
 
 > [!NOTE]
 > Algunas de las herramientas indicadas en el tema sobre las técnicas de WCAG 2.0 G18 no se pueden usar de manera interactiva con una aplicación para UWP. Es posible que tengas que especificar valores de colores para el primer plano y el fondo manualmente en la herramienta, o realizar capturas de pantalla de la interfaz de usuario de la aplicación y después ejecutar la herramienta de relación de contraste en la imagen capturada.
@@ -129,8 +129,8 @@ Los usuarios pueden tener dificultades para leer el texto de una aplicación cua
 Una vez que hayas hecho lo obvio, Windows incluye varias herramientas de accesibilidad y opciones de configuración que los usuarios pueden sacar provecho de y ajustar a sus propias necesidades y preferencias para leer texto. Estos son:
 
 * La herramienta Lupa, lo que aumenta el tamaño de un área seleccionada de la interfaz de usuario. Debes asegurarte del que diseño del texto en la aplicación no lo hace difícil de usar lupa para la lectura.
-* Configuración global de escala y la resolución en **Configuración -> sistema -> pantalla -> escala y diseño**. Las opciones de tamaño que están disponibles pueden variar, esto depende de las capacidades del dispositivo de pantalla.
-* Configuración de tamaño de texto en **Configuración -> Accesibilidad -> pantalla**. Ajustar la configuración de **texto más grande** para especificar únicamente el tamaño del texto para admitir controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el texto escala experiencia sin necesidad de personalización o plantillas). 
+* Configuración global de escala y la resolución en **configuración->System->Display->Scale y el diseño**. Las opciones de tamaño que están disponibles pueden variar, esto depende de las capacidades del dispositivo de pantalla.
+* Configuración de tamaño de texto en **configuración->Ease de acceso >Display**. Ajustar la configuración de **texto más grande** para especificar únicamente el tamaño del texto para admitir controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el texto escala experiencia sin necesidad de personalización o plantillas). 
 > [!NOTE]
 > La configuración de **hacer todo más grande** permite al usuario especificar su tamaño preferido para el texto y las aplicaciones en general en solo su pantalla principal.
 
@@ -186,6 +186,6 @@ Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:
 * [Ajuste de escala de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Accesibilidad](accessibility.md)
 * [Información básica de accesibilidad](basic-accessibility-information.md)
-* [Muestra de visualización de texto en XAML](http://go.microsoft.com/fwlink/p/?linkid=238579)
-* [Muestra de edición de texto en XAML](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [Muestra de visualización de texto en XAML](https://go.microsoft.com/fwlink/p/?linkid=238579)
+* [Muestra de edición de texto en XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
+* [Muestra de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 

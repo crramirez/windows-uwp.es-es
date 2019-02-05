@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78d825adf023b3c27ba6535f4cfdcc3a99be2d6c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cfdc4bd81a96d3bbdb2dd369cbdd0444ca22ea4c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947797"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048482"
 ---
-# <a name="in-app-ads"></a>Anuncios desde la aplicación
+# <a name="in-app-ads"></a>Anuncios en aplicaciones
 
 Usa la **monetizar** &gt; página de **anuncios en la aplicación** en el [Centro de partners](https://partner.microsoft.com/dashboard) para crear y administrar unidades de anuncios para:
 
-* Aplicaciones de la Plataforma universal de Windows (UWP) que usan el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
-* Publicado Windows 8.x y Windows Phone 8.x aplicaciones que usan el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk).
+* Aplicaciones de la Plataforma universal de Windows (UWP) que usan el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp).
+* Publicado Windows 8.x y Windows Phone 8.x aplicaciones que usan el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](https://aka.ms/store-8-sdk).
 
 > [!IMPORTANT]
 > A partir del 31 de octubre de 2018, recién creado productos no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog publicar](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
@@ -36,7 +36,7 @@ Para crear una unidad de anuncios para un [anuncio de banner](../monetize/banner
 3.  En el campo **Nombre de la unidad de anuncios**, escribe un nombre para esta. Esto puede ser cualquier cadena descriptiva que quieras usar para identificar la unidad de anuncios para fines informativos.
 4.  En la lista desplegable **Tipo de unidad de anuncio**, selecciona el tipo de anuncio.
 
-    * Si se muestran un anuncio de banner en la aplicación, selecciona **Banner**.
+    * Si se muestran un anuncio de banner en la aplicación, selecciona el **Banner**.
     * Si se muestran un anuncio de vídeo intersticial o anuncio de banner intersticial en la aplicación, seleccione **vídeo intersticial** o **Banner intersticial** (Asegúrate de seleccionar la opción adecuada para el tipo de anuncio intersticial que quieras mostrar).
     * Si un anuncio nativo que muestra en la aplicación, selecciona **nativo**.
 
@@ -70,7 +70,7 @@ Después de crear unidades de anuncios para una o más aplicaciones en tu cuenta
 Para editar la [configuración de mediación](#mediation) para una unidad de anuncios para UWP o el [Cumplimiento de COPPA](#coppa) para la aplicación en la que se usa la unidad de anuncio, haz clic en el nombre de la unidad de anuncios.
 
 > [!NOTE]
-> Si una unidad de anuncios no tiene ninguna actividad durante los últimos seis meses, se etiqueta como **inactivo**y finalmente la quitaremos del centro de partners. Puedes usar filtros para mostrar solo unidades de anuncios que sean de tipo **Activo** o **Inactivo**. Si ves unidades de anuncios que crees que se han marcado erróneamente como **Inactivo**, [ponte en contacto con soporte técnico](http://aka.ms/storesupport).
+> Si una unidad de anuncios no tiene ninguna actividad durante los últimos seis meses, se designa como **inactivo**y finalmente la quitaremos del centro de partners. Puedes usar filtros para mostrar solo unidades de anuncios que sean de tipo **Activo** o **Inactivo**. Si ves unidades de anuncios que crees que se han marcado erróneamente como **Inactivo**, [ponte en contacto con soporte técnico](https://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -86,7 +86,7 @@ Configurar la configuración de mediación de anuncios para UWP en tu aplicació
 1. [Crear una unidad de anuncio](#create-ad-unit) o [seleccionar una unidad de anuncio existente](#available-ad-units).
 2. En la página de **anuncios en la aplicación** , ve a la sección de **configuración de mediación** y configuración de la configuración.
 
-    * De manera predeterminada, se selecciona la casilla **Permitir que Microsoft Optimizar mi configuración** . Te recomendamos que uses esta opción. Esta opción usa algoritmos de aprendizaje automático para elegir automáticamente la configuración de mediación de anuncios para tu aplicación que te ayudará a maximizar los ingresos por anuncios en todos los mercados admitidos por la aplicación. Al usar esta opción, también puedes elegir las redes de anuncios que quieras usar en la configuración. Desactiva las redes de anuncios que no quieres que forman parte de la configuración y nuestro algoritmo garantiza que la aplicación recibe solo anuncios de las redes de anuncios seleccionado.
+    * De manera predeterminada, se selecciona la casilla **Permitir que Microsoft Optimizar mi configuración** . Te recomendamos que uses esta opción. Esta opción usa algoritmos de aprendizaje automático para elegir automáticamente la configuración de mediación de anuncios para tu aplicación que te ayudará a maximizar los ingresos por anuncios en todos los mercados admitidos por la aplicación. Al usar esta opción, también puedes elegir las redes de anuncios que quieras usar en la configuración. Desactiva las redes de anuncios que no quieres que forman parte de la configuración y nuestro algoritmo garantizará que la aplicación recibe solo anuncios de las redes de anuncios seleccionado.
     * Si quieres elegir tu propia ad configuración de mediación, elige **modificar la configuración de forma predeterminada**.
 
     > [!NOTE]
@@ -113,11 +113,11 @@ En la tabla siguiente se muestran las redes de pago que admitimos actualmente pa
 | Juramento y AppNexus |  Se trata de una red de anuncios de administrados por Microsoft que proporciona anuncios a través de nuestro socio de redes, juramento y AppNexus.<p/>**Nota**: juramento y AppNexus siempre están clasificadas en primer lugar en la lista de **redes de anuncios de pago** para unidades de anuncios de banner y no se puede cambiar a una clasificación menor para estos tipos de anuncios. | Banner, Vídeo intersticial |
 | AppNexus (directo) | Selecciona esta opción para proporcionar anuncios desde [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anuncios para instalación de aplicaciones de Microsoft | Selecciona esta opción para proporcionar anuncios para instalación de aplicaciones o anuncios para volver a interactuar con la aplicación que han sido creados por otros desarrolladores del ecosistema de Windows que [crean campañas de anuncios promocionales para sus aplicaciones](create-an-ad-campaign-for-your-app.md).  |  Banner, Banner intersticial, Nativo  |
-| Recomendaciones de contenido de MSN |  Selecciona esta opción para proporcionar anuncios desde las recomendaciones de contenido de MSN. |  Banner, Banner intersticial  |
+| Recomendaciones de contenido de MSN |  Selecciona esta opción para proporcionar anuncios desde MSN contenido recomendaciones. |  Banner, Banner intersticial  |
 | Outbrain |  Selecciona esta opción para proporcionar anuncios desde [Outbrain](https://www.outbrain.com/). |  Banner, Banner intersticial  |
-| Revcontent |  Selecciona esta opción para proporcionar anuncios desde [Revcontent](http://www.revcontent.com/). |  Banner, nativo  |
+| Revcontent |  Selecciona esta opción para proporcionar anuncios desde [Revcontent](https://www.revcontent.com/). |  Banner, nativo  |
 | Smaato |  Selecciona esta opción para proporcionar anuncios desde [Smaato](https://www.smaato.com/). |  Pancarta  |
-| smartclip |  Selecciona esta opción para proporcionar anuncios desde [smartclip](http://www.smartclip.com/). |  Vídeo intersticial  |
+| smartclip |  Selecciona esta opción para proporcionar anuncios desde [smartclip](https://www.smartclip.com/). |  Vídeo intersticial  |
 | SpotX |  Selecciona esta opción para proporcionar anuncios desde [SpotX](https://www.spotx.tv/). |  Vídeo intersticial  |
 | Taboola |  Selecciona esta opción para proporcionar anuncios desde [Taboola](https://www.taboola.com/). |  Pancarta  |
 | Undertone | Selecciona esta opción para proporcionar anuncios desde [Undertone](https://www.undertone.com/). | Banner intersticial |
@@ -152,11 +152,11 @@ Las redes de anuncios disponibles proporcionan anuncios en todos los [mercados a
 
 ## <a name="coppa-compliance"></a>Cumplimiento de COPPA
 
-Cuando se [crea una unidad de anuncio](#create-ad-unit) o [Seleccionar una unidad de anuncio existente](#available-ad-units), la sección de **cumplimiento de COPPA** aparece en la parte inferior de la página si la aplicación seleccionada de la unidad de anuncios tiene al menos un envío que ha llegado [en la tienda](../publish/the-app-certification-process.md#in-the-store) el paso de la aplicación proceso de certificación.
+Cuando se [crea una unidad de anuncios](#create-ad-unit) o [Seleccionar una unidad de anuncio existente](#available-ad-units), la sección de **cumplimiento de COPPA** aparece en la parte inferior de la página si la aplicación seleccionada de la unidad de anuncios tiene al menos un envío que ha llegado [en la tienda](../publish/the-app-certification-process.md#in-the-store) el paso de la aplicación proceso de certificación.
 
 Para cumplir con la Ley de protección de la privacidad infantil en línea ("COPPA"), debes seleccionar **This application is directed at children under the age of 13** de esta sección si tu aplicación está destinada a niños menores de 13 años. Si seleccionas esta opción, Microsoft tomará medidas para deshabilitar sus servicios de publicidad conductual al ofrecer publicidad en tu aplicación.
 
 La configuración **Cumplimiento de COPPA** que elijas se aplica automáticamente a todas las unidades de anuncios de la aplicación seleccionada.
 
 > [!IMPORTANT]
-> Si la aplicación se dirige a niños menores de 13 años, tienes determinadas obligaciones en virtud de la COPPA. Para obtener más información sobre tus obligaciones, consulta [esta página](http://go.microsoft.com/fwlink/p/?linkid=536558).
+> Si la aplicación se dirige a niños menores de 13 años, tienes determinadas obligaciones en virtud de la COPPA. Para obtener más información sobre tus obligaciones, consulta [esta página](https://go.microsoft.com/fwlink/p/?linkid=536558).

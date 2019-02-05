@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 26f47f3175802191a866bcd77e4cc7a95ffdbbe4
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 2101eba9c78c87339af5f1bd46e6afc81eacf6af
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981479"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047430"
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
@@ -26,7 +26,7 @@ La clase MediaPlayerElement tiene controles de transporte de XAML personalizable
 Antes de empezar, debes estar familiarizado con las clases MediaPlayerElement y MediaTransportControls. Para obtener más información, consulta la guía de control de MediaPlayerElement.
 
 > [!TIP]
-> Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
+> Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](https://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
 
 > [!NOTE]
 > **MediaPlayerElement** solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, tendrás que usar [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en su lugar. Todos los ejemplos de esta página también funcionan con **MediaElement**.
@@ -96,7 +96,7 @@ Para obtener más información sobre cómo modificar estilos y plantillas, consu
 
 ### <a name="create-a-derived-control"></a>Crear un control derivado
 
-Para agregar o modificar la funcionalidad de los controles de transporte, debes crear una nueva clase derivada de MediaTransportControls. Una clase derivada llamada `CustomMediaTransportControls` se muestra en la [muestra de controles de transporte multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023) y los ejemplos restantes en esta página.
+Para agregar o modificar la funcionalidad de los controles de transporte, debes crear una nueva clase derivada de MediaTransportControls. Una clase derivada llamada `CustomMediaTransportControls` se muestra en la [muestra de controles de transporte multimedia](https://go.microsoft.com/fwlink/p/?LinkId=620023) y los ejemplos restantes en esta página.
 
 **Crear una nueva clase derivada de MediaTransportControls**
 1. Agrega un nuevo archivo de clase al proyecto.
@@ -203,7 +203,7 @@ Dado que el menú de desbordamiento se compone de botones de texto, tienes que a
 
 ### <a name="adding-a-custom-button"></a>Agregar un botón personalizado
 
-Una razón por la que quizás quieras personalizar MediaTransportControls es para agregar un comando personalizado al control. Ya sea para agregarlo como un comando principal o secundario, el procedimiento para crear el botón de comando y modificar su comportamiento es el mismo. En la [muestra de controles de transporte multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023), se agrega un botón "rating" a los comandos principales.
+Una razón por la que quizás quieras personalizar MediaTransportControls es para agregar un comando personalizado al control. Ya sea para agregarlo como un comando principal o secundario, el procedimiento para crear el botón de comando y modificar su comportamiento es el mismo. En la [muestra de controles de transporte multimedia](https://go.microsoft.com/fwlink/p/?LinkId=620023), se agrega un botón "rating" a los comandos principales.
 
 **Agregar un botón de comando personalizado**
 1. Crea un objeto AppBarButton y agrégalo a CommandBar de la plantilla de control.
@@ -216,7 +216,7 @@ Una razón por la que quizás quieras personalizar MediaTransportControls es par
               VerticalAlignment="Center" />
 ```
 
-Debe agregarla a CommandBar de la ubicación adecuada. (Para obtener más información, consulta el trabajo con la sección de menú de desbordamiento). Cómo se coloca en la interfaz de usuario se determina por dónde está el botón en el marcado. Por ejemplo, si quieres que este botón debe aparecer como el último elemento de los comandos principales, agregarla al final de la lista de los comandos principales.
+Debe agregarla a CommandBar de la ubicación adecuada. (Para obtener más información, consulta el espacio de trabajo con la sección de menú de desbordamiento). ¿Cómo se coloca en la interfaz de usuario viene determinada por el botón se encuentra en el marcado. Por ejemplo, si quieres que este botón debe aparecer como el último elemento de los comandos principales, agregarla al final de la lista de comandos principales.
 
 También puedes personalizar el icono para el botón. Para obtener más información, consulta la referencia <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx"><b>AppBarButton</b></a> .
     

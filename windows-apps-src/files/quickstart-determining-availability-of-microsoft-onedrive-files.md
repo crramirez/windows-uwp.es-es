@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e431694f3f0effb6fd5e7688b146109dfc1f5dc7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26eb371e767f0c1e7f3d5855cf68728958c0cda3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946027"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044998"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinar la disponibilidad de los archivos de Microsoft OneDrive
 
@@ -42,8 +42,8 @@ Los usuarios pueden marcar los archivos de OneDrive como disponibles sin conexi�
 
 | Tipo de archivo                              | Con conexión | Red de uso medido        | Sin conexión |
 |-------------------------------------------|--------|------------------------|---------|
-| Archivo local                                | True   | True                   | True    |
-| Archivo de OneDrive marcado como disponible sin conexión | True   | True                   | True    |
+| Archivo local                                | Verdadero   | Verdadero                   | Verdadero    |
+| Archivo de OneDrive marcado como disponible sin conexión | Verdadero   | Verdadero                   | Verdadero    |
 | Archivo de OneDrive marcado como disponible solo en línea       | True   | Según la configuración del usuario | False   |
 | Archivo de red                              | True   | Según la configuración del usuario | False   |
 
@@ -53,7 +53,7 @@ Los pasos siguientes ilustran cómo determinar si un archivo está disponible ac
 
 1.  Declara una funcionalidad adecuada para la biblioteca a la que deseas obtener acceso.
 2.  Incluye el espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). Este espacio de nombres incluye los tipos para administrar archivos, carpetas y opciones de configuración de la aplicación. También incluye el tipo [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) necesario.
-3.  Adquiere un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para los archivos deseados. Si deseas enumerar una biblioteca, este paso suele completarse mediante una llamada al método [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252), seguida de una llamada al método [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) del objeto [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046) resultante. El método **GetFilesAsync** devuelve una colección [IReadOnlyList](http://go.microsoft.com/fwlink/p/?LinkId=324970) de objetos **StorageFile**.
+3.  Adquiere un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para los archivos deseados. Si deseas enumerar una biblioteca, este paso suele completarse mediante una llamada al método [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252), seguida de una llamada al método [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) del objeto [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046) resultante. El método **GetFilesAsync** devuelve una colección [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970) de objetos **StorageFile**.
 4.  Cuando ya tengas acceso a un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) que represente los archivos deseados, el valor de la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) reflejará si el archivo está disponible o no.
 
 El siguiente método genérico muestra cómo enumerar cualquier carpeta y devolver la colección de objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para dicha carpeta. El método que llama itera en la colección devuelta haciendo referencia a la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) en cada archivo.

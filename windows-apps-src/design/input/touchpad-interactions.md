@@ -8,12 +8,12 @@ keywords: panel táctil,PTP,táctil,función táctil,puntero,entrada,interacció
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dfc98127133790deba9274ddba7801bea34f9cd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935899"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046711"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
@@ -155,15 +155,15 @@ Si necesitas personalizar el cursor del mouse:
 * [Controlar la entrada de puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 **Muestras**
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Focus visuals sample (Muestra de elementos visuales de foco)](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Focus visuals sample (Muestra de elementos visuales de foco)](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Muestras de archivo**
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 

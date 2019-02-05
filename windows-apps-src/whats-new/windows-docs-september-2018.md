@@ -1,28 +1,28 @@
 ---
 title: 'Novedades en los documentos de Windows de septiembre de 2018: desarrollar aplicaciones para UWP'
-description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de septiembre de 2018.
+description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrolladores de Windows 10 de septiembre de 2018.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, septiembre
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0876b2d9b65143cde2387a42e221460cc617cf0b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931864"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046741"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en los documentos de Windows de septiembre de 2018
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, directrices para los desarrolladores y vídeos que se han puesto a disposición en el mes de septiembre.
 
-[Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
 ### <a name="windows-machine-learning"></a>Aprendizaje automático de Windows
 
-[El aprendizaje automático de Windows documentos](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
+[Documentos el aprendizaje automático de Windows](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales de UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
 
 [Referencia de la API de Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) se ha actualizado para el SDK más reciente de Insider de Windows.
 
@@ -30,7 +30,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ![Gráfico de aprendizaje automático de Windows](images/winml-graphic.png)
 
-### <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
+### <a name="windows-ui-library"></a>Biblioteca de la interfaz de usuario de Windows
 
 [La biblioteca de la interfaz de usuario de Windows](https://aka.ms/winui-docs) es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tengan la versión del sistema operativo más reciente.
 
@@ -38,29 +38,29 @@ Para obtener más información sobre la biblioteca de la interfaz de usuario de 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="how-blur-effects-work"></a>Cómo desenfoque trabajo de efectos
+### <a name="how-blur-effects-work"></a>Efectos de desenfoque cómo
 
-Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo primera de visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo de visión y la fotografía primera](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Desenfoque en acción](images/blur-example.jpg)
 
-### <a name="contributing-guidance"></a>Instrucciones que contribuyen
+### <a name="contributing-guidance"></a>Instrucciones de contribución
 
-Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación de UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
+Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación para UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el más recientes preguntas que hemos respondido a!
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
 
 Aaron Gustafson:
 
-* [vídeos de 6 en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [6 vídeos en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 Chris Heilmann
 
-* [vídeos de 4 en la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [4 vídeos sobre la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 08608bc5715031f9ddf5b6bec05e7c86737f7e10
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981379"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048622"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 <b>API importantes</b>
 
@@ -350,7 +350,7 @@ Ten en cuenta que el controlador de finalización comprueba si el elemento de tr
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Puedes obtener más información, descarga el código de este inicio rápido en la [creación de un grupo de subprocesos funcionan elemento muestra](http://go.microsoft.com/fwlink/p/?LinkID=328569) escrita para Windows8.1 y vuelve a usar el código fuente en una aplicación Windows 10 win\_unap.
+Puedes obtener más información, descarga el código de este inicio rápido en la [creación de un grupo de subprocesos funcionan elemento muestra](https://go.microsoft.com/fwlink/p/?LinkID=328569) escrita para Windows8.1 y vuelve a usar el código fuente en una aplicación Windows 10 win\_unap.
 
 ## <a name="related-topics"></a>Temas relacionados
 

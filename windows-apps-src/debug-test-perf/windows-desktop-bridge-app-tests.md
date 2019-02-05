@@ -1,21 +1,21 @@
 ---
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Usa las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
+description: Usar pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para la conversión a una aplicación para UWP.
 ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42ec5c1e91fbeebcaad68f346f317893fdfb2e1c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932881"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046814"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
-[Las aplicaciones de puente de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas a las aplicaciones de la plataforma Universal de Windows (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
+[Las aplicaciones de puente de dispositivo de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas a las aplicaciones de la plataforma Universal de Windows (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
 
 ## <a name="required-versus-optional-tests"></a>Pruebas obligatorias vs. pruebas opcionales
 Pruebas opcionales para las aplicaciones de puente de escritorio de Windows solo son informativas y no se usará para evaluar la aplicación durante la incorporación de Microsoft Store. Es recomendable investigar estos resultados para crear aplicaciones de mejor calidad de la prueba. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
@@ -23,7 +23,7 @@ Pruebas opcionales para las aplicaciones de puente de escritorio de Windows solo
 ## <a name="current-optional-tests"></a>Pruebas opcionales actuales
 
 ### <a name="1-digitally-signed-file-test"></a>1. Prueba de archivo firmado digitalmente 
-**Antecedentes**  
+**Segundo plano**  
 Esta prueba verifica que todos los archivos portables ejecutables (PE) contienen una firma válida. La presencia de archivos firmados digitalmente permite a los usuarios saber que el software es original.
 
 **Detalles de la prueba**  
@@ -33,7 +33,7 @@ La prueba examina todos los archivos portables ejecutables en el paquete y compr
 Siempre se recomienda tener archivos firmados digitalmente. Para más información, consulta [Introducción a la firma de código](https://msdn.microsoft.com/en-us/library/ms537361(v=vs.85).aspx).
 
 ### <a name="2-file-association-verbs"></a>2. Verbos de asociación de archivos 
-**Antecedentes**  
+**Segundo plano**  
 Esta prueba examina el Registro de paquete para comprobar si los verbos de asociación de archivo están registrados. 
 
 **Detalles de la prueba**  
@@ -45,7 +45,7 @@ Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación]
 ### <a name="3-debug-configuration-test"></a>3. Prueba de configuración de depuración
 Esta prueba verifica que la appx no es una versión de depuración.
  
-**Antecedentes**  
+**Segundo plano**  
 Para lograr la certificación de Microsoft Store, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
  
 **Detalles de la prueba**  
@@ -59,7 +59,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración 
 ### <a name="4-package-sanity-test"></a>4. Pruebas de integridad del paquete
 #### <a name="41-archive-files-usage"></a>4.1 Uso de los archivos de almacenamiento
 
-**Antecedentes**  
+**Segundo plano**  
 Esta prueba te ayuda a crear aplicaciones mejoradas del Puente de dispositivo de escritorio para ejecutarse en equipos con [Windows 10 S](https://www.microsoft.com/windows/windows-10-s).
 
 **Detalles de la prueba**  
@@ -71,7 +71,7 @@ Esta prueba busca todos los archivos ejecutables dentro de los archivos almacena
 
 #### <a name="42-blocked-executables"></a>4.2 Ejecutables bloqueados
 
-**Antecedentes**  
+**Segundo plano**  
 Esta prueba te ayuda a crear aplicaciones mejoradas del Puente de dispositivo de escritorio para ejecutarse en equipos con [Windows 10 S](https://www.microsoft.com/windows/windows-10-s). 
 
 **Detalles de la prueba**  
@@ -133,7 +133,7 @@ El archivo {filename} no debe contener una sección de mapa inverso.  | Aunque e
 
 
 #### <a name="22-branding-validation"></a>2.2 Validación de la personalización de marca
-**Antecedentes**  
+**Segundo plano**  
 Se espera que las aplicaciones Puente de dispositivo de escritorio estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
 
 **Detalles de la prueba**  
@@ -165,7 +165,7 @@ Compara el manifiesto de la aplicación con los requisitos descritos en la pági
 #### <a name="32-application-count"></a>3.2 Recuento de aplicaciones
 Esta prueba verifica que el paquete de aplicaciones (.appx, lote de aplicaciones) contiene una aplicación. 
 
-**Antecedentes**  
+**Segundo plano**  
 Esta prueba se implementa según la directiva de la Tienda. 
 
 **Detalles de la prueba**  
@@ -176,7 +176,7 @@ Asegúrese de que el paquete de la aplicación y el lote cumplen con requisitos 
 
 
 #### <a name="33-registry-checks"></a>3.3 Comprobaciones del Registro
-**Antecedentes**  
+**Segundo plano**  
 Esta prueba verifica si la aplicación instala o actualiza nuevos servicios o controladores.
 
 **Detalles de la prueba**  
@@ -205,12 +205,12 @@ Sigue estas directrices para que el paquete de la aplicación contenga únicamen
 ### <a name="5-supported-api-test"></a>5. Prueba de API admitidas
 Comprueba la aplicación para detectar el uso de cualquier API no compatible. 
 
-**Antecedentes**  
+**Segundo plano**  
 Las aplicaciones Puente de dispositivo de escritorio pueden aprovechar algunas API de Win32 heredadas junto con API modernas (componentes para UWP). Esta prueba identifica los archivos binarios administrados que usan API no compatibles.
  
 **Detalles de la prueba**  
 Esta prueba verifica todos los componentes para UWP en la aplicación:
-* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la tabla de direcciones de importación del binario.
+* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la comprobación de la tabla de direcciones de importación del binario.
 * Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado. 
 
 **Acciones correctivas**  
@@ -224,7 +224,7 @@ Esto puede corregirse al asegurarte de que la aplicación se haya compilado como
 
 ### <a name="6-user-account-control-uac-test"></a>6. Prueba de control de cuentas de usuario (UAC)  
 
-**Antecedentes**  
+**Segundo plano**  
 Asegura que la aplicación no solicita el control de cuentas de usuario en tiempo de ejecución.
 
 **Detalles de la prueba**  
@@ -260,7 +260,7 @@ Comprueba que no hay tipos de UWP en el espacio de nombres global ni en el espac
 Cambiar las protecciones de seguridad de Windows predeterminadas puede causar grandes riesgos a los clientes. 
 
 #### <a name="81-banned-file-analyzer"></a>8.1 Analizador de archivos prohibidos
-**Antecedentes**  
+**Segundo plano**  
 Algunos archivos se actualizaron con importantes mejoras de seguridad, confiabilidad y otras. Las aplicaciones Puente de dispositivo de escritorio de Windows deben contener las versiones más recientes estos archivos, dado que las versiones obsoletas presentan un riesgo. El Kit para la certificación de aplicaciones en Windows bloquea estos archivos con el fin de garantizar que todas las aplicaciones usen una versión actual.
 
 **Detalles de la prueba**  
@@ -269,7 +269,7 @@ La comprobación de archivos prohibidos del Kit para la certificación de aplica
 Esta comprobación suele producir un error cuando una aplicación usa una versión preliminar del archivo en lugar de la versión oficial más reciente. 
 
 **Acciones correctivas**  
-Para corregir este problema, usa la versión más reciente del [SDK de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones para UWP.
+Para corregir este problema, usa la versión más reciente del [SDK de mapas de Bing](https://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones para UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Firma de código privado
 Prueba la existencia de archivos binarios de firma de código privado en el paquete de la aplicación. 

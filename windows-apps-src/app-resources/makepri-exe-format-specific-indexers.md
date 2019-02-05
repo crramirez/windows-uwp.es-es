@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: e6938807a589337489f07f5865e02a580a72dae2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925862"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044632"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indizadores específicos de formato de MakePri.exe
 
@@ -311,7 +311,7 @@ El indizador ResJSON se identifica por un atributo `type` de RESJSON. Indexa el 
 </xs:schema>\
 ```
 
-Un archivo `.resjson` contiene el texto JSON (consulta [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](http://www.ietf.org/rfc/rfc4627.txt). El archivo debe contener un único objeto JSON con propiedades jerárquicas. Cada propiedad debe ser otro objeto JSON o un valor de cadena.
+Un archivo `.resjson` contiene el texto JSON (consulta [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt). El archivo debe contener un único objeto JSON con propiedades jerárquicas. Cada propiedad debe ser otro objeto JSON o un valor de cadena.
 
 Las propiedades de JSON con nombres que comiencen por guión bajo ("_") no se compilan en el archivo PRI final, sino que se mantienen en el archivo de registro.
 
@@ -400,4 +400,4 @@ El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md)
 * [Archivo de configuración de MakePri.exe](makepri-exe-configuration.md)
-* [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](http://www.ietf.org/rfc/rfc4627.txt)
+* [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

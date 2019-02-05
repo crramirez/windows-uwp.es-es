@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925657"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048142"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
@@ -90,7 +90,7 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Usa hasta dos columnas o regiones.
 - Muestra el cuadro de búsqueda.
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo de franja para que siempre se muestre en una tira estrecha de iconos.
-- Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](http://go.microsoft.com/fwlink/?LinkId=760736).
+- Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](https://go.microsoft.com/fwlink/?LinkId=760736).
 
 ### <a name="large"></a>Grande
 - Establece los márgenes izquierdo y derecho de la ventana en 24 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.
@@ -100,6 +100,6 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo acoplado para que siempre se muestre.
 
 >[!TIP] 
-> Con [**Continuum para teléfonos**](http://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectar dispositivos móviles de compatibles con Windows 10 a un monitor, mouse y teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
+> Con [**Continuum para teléfonos**](https://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectar dispositivos móviles compatibles con Windows 10 a un monitor, mouse y teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
 
 

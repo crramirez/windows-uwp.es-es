@@ -6,16 +6,16 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 84ed7f5f1eb65f06a47e92de962777ca9d3c50c7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941432"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044859"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
-Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de anuncio que pueden integrarse sin problemas en tu aplicaciones y admite mediación con muchas redes de anuncios populares. Nuestra plataforma es compatible con OpenRTB, gran 2.x, MRAID 2 y 3 VPAID estándares y es compatible con MOAT y IAS. 
+Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de anuncio que se pueden integrar sin problemas en su aplicaciones y admite mediación con muchas redes de anuncios populares. Nuestra plataforma compatible con la OpenRTB, gran 2.x, MRAID 2 y 3 VPAID estándares y es compatible con MOAT e IAS. 
 
 <br/>
 
@@ -32,7 +32,7 @@ Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para l
 <tr>
 <td align="left"><img src="images/install-sdk.png" alt="Install SDK icon" /></td>
 <td align="left"><b>Comenzar</b><br/><br/>
-    <a href="http://aka.ms/ads-sdk-uwp">Instalar el SDK de Microsoft Advertising</a>
+    <a href="https://aka.ms/ads-sdk-uwp">Instalar el SDK de Microsoft Advertising</a>
 </td>
 <td align="left"><img src="images/write-code.png" alt="Develop icon" /></td>
 <td align="left"><b>Guías para desarrolladores</b><br/><br/>
@@ -56,7 +56,7 @@ Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para l
 
 ## <a name="step-1-install-the-microsoft-advertising-sdk"></a>Paso 1: Instalar el SDK de Microsoft Advertising
 
-Para empezar, instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) en el equipo de desarrollo que usar para crear la aplicación. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
+Para empezar, instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) en el equipo de desarrollo que usar para crear la aplicación. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="step-2-implement-ads-in-your-app"></a>Paso 2: Implementar anuncios en tu aplicación
 
@@ -90,7 +90,7 @@ Para obtener instrucciones y ejemplos de código, consulta [este artículo](nati
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Paso 3: Crear una unidad de anuncios y configurar la mediación
 
-Cuando termines de probar la aplicación y ya estás listo para enviarla a la tienda, crea una unidad de anuncio en la página de [anuncios en la aplicación](../publish/in-app-ads.md) en el centro de partners. Luego actualiza el código de tu aplicación para usar esta unidad de anuncios de modo que tu aplicación recibirá anuncios dinámicos. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+Una vez que termines de probar la aplicación y ya estás listo para enviarla a la tienda, crea una unidad de anuncio en la página de [anuncios en la aplicación](../publish/in-app-ads.md) en el centro de partners. Luego actualiza el código de tu aplicación para usar esta unidad de anuncios de modo que tu aplicación recibirá anuncios dinámicos. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
 De manera predeterminada, la aplicación mostrará anuncios de la red de Microsoft, por lo relativo a anuncios de pago. Para maximizar tus ingresos por anuncios, puedes habilitar la [mediación de anuncios](ad-mediation-service.md) para tu unidad de anuncios, para mostrar anuncios de redes de anuncios de pago adicionales, como Taboola y Smaato. También puedes aumentar tus capacidades de promoción de la aplicación ofreciendo anuncios de las campañas de promoción de aplicaciones de Microsoft.
 
@@ -100,7 +100,7 @@ Para empezar a usar la mediación de anuncios en tu aplicación para UWP, [defin
 
 Después de finalizar el desarrollo de la aplicación con anuncios, puedes [enviar la aplicación actualizada](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners que esté disponible en la tienda. Las aplicaciones que muestran anuncios deben cumplir los requisitos adicionales que se especifican en la [sección 10.10 de las Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) y en el [anexo E del Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-Después de que la aplicación está publicada y disponible en la tienda, puedes revisar los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners y seguir realizando cambios a la configuración de mediación para optimizar el rendimiento de tus anuncios. Tus ingresos publicitarios se incluyen en tu [resumen de pago](../publish/payout-summary.md).
+Después de la aplicación está publicada y disponible en la tienda, puedes revisar los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners y seguir realizando cambios a la configuración de mediación para optimizar el rendimiento de tus anuncios. Tus ingresos publicitarios se incluyen en tu [resumen de pago](../publish/payout-summary.md).
 
 <span id="additional-help" />
 
@@ -111,16 +111,16 @@ Para obtener más ayuda con el SDK de Microsoft Advertising, usa los siguientes 
 |  Tarea    | Recurso |               
 |----------|-------|
 | Informar de un error u obtener soporte técnico asistido para la publicidad     | Visita la [página de soporte técnico](https://developer.microsoft.com/en-us/windows/support) y elige **Anuncios en aplicaciones**.        |
-| Obtener soporte técnico de la comunidad     | Visita el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).       |
-| Descarga proyectos de ejemplo que muestran cómo agregar anuncios intersticiales y de banner a las aplicaciones.     | Consulta los [ejemplos de publicidad de GitHub](http://aka.ms/githubads).       |
+| Obtener soporte técnico de la comunidad     | Visita el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).       |
+| Descarga proyectos de ejemplo que muestran cómo agregar anuncios intersticiales y de banner a las aplicaciones.     | Consulta los [ejemplos de publicidad de GitHub](https://aka.ms/githubads).       |
 | Obtener información sobre las oportunidades de monetización más recientes para aplicaciones de Windows     | Visita [Monetizar las aplicaciones](https://developer.microsoft.com/store/monetize).        |
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Aplicaciones de Windows 8.1 y Windows Phone 8.x
 
-Para aplicaciones de Windows 8.1 y Windows Phone 8.x, ofrecemos el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk). Para obtener más información sobre el uso de este SDK para mostrar anuncios en aplicaciones de Windows8.1 o Windows Phone8.x, consulta [este artículo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
+Para aplicaciones de Windows 8.1 y Windows Phone 8.x, ofrecemos el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](https://aka.ms/store-8-sdk). Para obtener más información sobre el uso de este SDK para mostrar anuncios en aplicaciones de Windows8.1 o Windows Phone8.x, consulta [este artículo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp)
+* [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp)
 * [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)
 * [Programa de editores de anuncios de Windows Premium](windows-premium-ads-publishers-program.md)

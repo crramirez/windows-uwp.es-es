@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6178e2072721ad8514ba7ddfc0ae8f99ab59d34c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4332bd0b19d381937e477efc472634d6d81afd58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920587"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046498"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
@@ -61,11 +61,11 @@ El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, 
 
 -   **Atributos d:DesignHeight y d:DesignWidth:** a veces, estos atributos se aplican a la raíz de un archivo XAML que Visual Studio u otra superficie de diseñador XAML crean automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
 
-   **Nota**si migras el XAML desde Microsoft Silverlight estos atributos podrían encontrarse en los elementos raíz que representan la página interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
+   **Nota**si migras el XAML desde Microsoft Silverlight estos atributos podrían encontrarse en los elementos raíz que representan una página de la interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
 
 -   **Atributo d:DataContext:** puedes establecer este atributo en una raíz de página o en un control para invalidar cualquier elemento [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito o heredado que tenga el objeto.
 -   **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un elemento [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), lo que invalida la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
--   **Extensiones de marcado d:DesignInstance y d:DesignData:** estas extensiones de marcado se usan para proporcionar recursos de datos en tiempo de diseño para **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://msdn.microsoft.com/library/windows/apps/mt517866).
+-   **Extensiones de marcado d:DesignInstance y d:DesignData:** estas extensiones de marcado se usan para proporcionar recursos de datos en tiempo de diseño para **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](https://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
 ### **<a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 

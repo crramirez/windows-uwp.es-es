@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, notificaciones dirigidas, push dirigidas, notificaciones push, notificación del sistema, ventana
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 902a8d84c2a0cfa1549c4c3926e838e9bb8ed9c4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9858665eaf36f5cd261dd1098b23aeecccf9179c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923142"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045784"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificaciones a los clientes de la aplicación
 
@@ -42,14 +42,14 @@ En un nivel elevado, deberás seguir tres pasos para usar las notificaciones con
 
 ## <a name="to-create-and-send-a-notification"></a>Para crear y enviar una notificación
 
-Sigue estos pasos para crear una notificación del centro de partners y enviarla a un segmento de cliente en particular.
+Sigue estos pasos para crear una notificación del centro de partners y enviarlo a un segmento de cliente en particular.
 
 > [!NOTE]
-> Antes de que una aplicación pueda recibir notificaciones del centro de partners, primero debes llamar al método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) en tu aplicación para registrar la aplicación para recibir notificaciones. Este método está disponible en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obtener más información sobre cómo llamar a este método, con un ejemplo de código, consulta [Configurar la aplicación para recibir notificaciones push dirigidas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Antes de que una aplicación pueda recibir notificaciones del centro de partners, primero debes llamar al método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) en tu aplicación para registrar la aplicación para recibir notificaciones. Este método está disponible en el [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Para obtener más información sobre cómo llamar a este método, con un ejemplo de código, consulta [Configurar la aplicación para recibir notificaciones push dirigidas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 1. En el [Centro de partners](https://partner.microsoft.com/dashboard), expande la sección de **interactuar** y, a continuación, selecciona **las notificaciones**.
 2. En la página **Notificaciones**, selecciona **Nueva notificación**.
-3. En la sección **Seleccionar una plantilla** , elegir el [tipo de notificación](#notification-template-types) que quieras enviar y, a continuación, haz clic en **Aceptar**.
+3. En la sección **Seleccione una plantilla** , elegir el [tipo de notificación](#notification-template-types) que quieras enviar y, a continuación, haz clic en **Aceptar**.
 4. En la siguiente página, usa el menú desplegable para elegir una **Aplicación única** o **Varias aplicaciones** para las que se va a generar una notificación. Solo puede seleccionar las aplicaciones que se han [configurado para recibir las notificaciones mediante el Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 5. En la sección **Configuración de notificaciones**, elige un **Nombre** para la notificación y, si es aplicable, elige el **grupo de clientes** al que quieres enviar la notificación. (Las notificaciones enviadas a varias aplicaciones solo se pueden enviar a todos los clientes de dichas aplicaciones.) Si deseas usar un segmento que aún no hayas creado, selecciona **Crear nuevo grupo de clientes**. Ten en cuenta que deben transcurrir 24 horas para poder usar un nuevo segmento para notificaciones. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
 6. Si quieres especificar cuándo enviar la notificación, desactiva la casilla **Send notification immediately** y elige una fecha y hora específicas (en UTC para todos los clientes, a menos que especifiques usar la zona horaria local de cada cliente).
@@ -109,17 +109,17 @@ Puedes medir cuál es el rendimiento de tu interacción con los clientes mediant
 ### <a name="to-measure-notification-performance"></a>Medir el rendimiento de las notificaciones
 
 1.  Cuando crees una notificación, en la sección **Notification content (Contenido de la notificación)**, selecciona la casilla **Track app launch rate (Seguir tasa de inicio de la aplicación)**.
-2.  En la aplicación, llama al método de [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) para notificar al centro de partners a que la aplicación se ha iniciado en respuesta a una notificación dirigida. Este método lo proporciona el Microsoft Store Services SDK. Para obtener más información acerca de cómo llamar a este método, consulta [Configurar la aplicación para recibir notificaciones del centro de partners](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2.  En la aplicación, llama al método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) para notificar al centro de partners que la aplicación se ha iniciado en respuesta a una notificación dirigida. Este método lo proporciona el Microsoft Store Services SDK. Para obtener más información acerca de cómo llamar a este método, consulta [Configurar la aplicación para recibir notificaciones del centro de partners](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
 ### <a name="to-view-notification-performance"></a>Ver el rendimiento de una notificación
 
-Cuando hayas configurado la notificación y la aplicación para medir el rendimiento de las notificaciones como se describió anteriormente, puedes ver cómo de bien rendimiento de tus notificaciones.
+Cuando hayas configurado la notificación y la aplicación para medir el rendimiento de las notificaciones como se describió anteriormente, puedes ver cómo se están comportando las notificaciones.
 
 Para revisar los datos detallados para cada notificación:
 
 1.  En el centro de partners, expande la sección de **interactuar** y selecciona **las notificaciones**.
-2.  En la tabla de las notificaciones existentes, seleccione **en curso** o **completado**y luego mira las columnas **tasa de entrega** y la **velocidad de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
+2.  En la tabla de las notificaciones existentes, seleccione **en curso** o **completado**y luego mira las columnas **Delivery rate** y la **velocidad de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
 3.  Para ver datos de rendimiento más detallados, selecciona el nombre de una notificación. En la sección **Delivery statistics**, puedes ver **recuento** y **porcentaje** de los siguientes tipos de **estados** de las notificaciones:
     * **Failed (Erróneo)**: la notificación no se ha entregado por algún motivo. Esto puede suceder, por ejemplo, si se produce algún problema en el servicio de notificaciones de Windows.
     * **Error de expiración del canal**: la notificación no se pudo entregar porque ha expirado el canal entre la aplicación y el centro de partners. Por ejemplo, esto puede suceder si el cliente no abre la aplicación en mucho tiempo.
@@ -138,7 +138,7 @@ Para analizar los datos de la actividad de usuario para todas las notificaciones
 
 ## <a name="translate-your-notifications"></a>Traducir las notificaciones
 
-Para maximizar el efecto de las notificaciones, plantéate la posibilidad de traducirlas a los idiomas que tus clientes prefieren. El centro de partners facilita la aprovechando las notificaciones de la potencia del servicio [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) .
+Para maximizar el efecto de las notificaciones, plantéate la posibilidad de traducirlas a los idiomas que tus clientes prefieren. El centro de partners facilita la traducir las notificaciones automáticamente aprovechando la potencia del servicio [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) .
 
 1.  Cuando hayas escrito la notificación en tu idioma predeterminado, selecciona **Add languages (Agregar idiomas)** (debajo del menú **Languages [Idiomas]** de la sección **Notification content [Contenido de la notificación]**).
 2.  En la ventana **Add languages (Agregar idiomas)**, selecciona los idiomas adicionales en los que quieres que se muestren tus notificaciones y luego selecciona **Update (Actualizar)**.

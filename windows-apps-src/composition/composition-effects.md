@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 75af433d80364485b0c12a9540c0d7bb471c4e28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947897"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045318"
 ---
 # <a name="composition-effects"></a>Efectos de composición
 
 Las API [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permiten aplicar efectos a las imágenes en tiempo real y a la interfaz de usuario, con propiedades de efectos que se pueden animar. En esta introducción, veremos las funciones disponibles que permiten aplicar efectos a una composición visual.
 
-Para respaldar la coherencia de la [Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para los desarrolladores que describen efectos en sus aplicaciones, los efectos de composición aprovechan la interfaz IGraphicsEffect de Win2D para usar las descripciones de efectos a través del espacio de nombre [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm).
+Para respaldar la coherencia de la [Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para los desarrolladores que describen efectos en sus aplicaciones, los efectos de composición aprovechan la interfaz IGraphicsEffect de Win2D para usar las descripciones de efectos a través del espacio de nombre [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm).
 
 Los efectos de pincel se usan para pintar áreas de una aplicación mediante efectos en un conjunto de imágenes existentes. Las API de efectos de composición de Windows 10 se centran en las clases SpriteVisual. La clase SpriteVisual permite la flexibilidad e interacción en cuanto a la creación de colores, imágenes y efectos. La clase SpriteVisual es un tipo visual de composición que puede rellenar un rectángulo 2D con un pincel. El objeto visual define los límites del rectángulo y el pincel define los píxeles usados para pintar el rectángulo.
 
@@ -39,11 +39,11 @@ La composición admite actualmente los siguientes efectos:
 
 | Efecto               | Descripción                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Transformación afín 2D  | Aplica una matriz de transformación afín 2D a una imagen. Este efecto se usa para animar la máscara alfa en las [muestras](http://go.microsoft.com/fwlink/?LinkId=785341) de efectos.       |
-| Compuesta aritmética | Combina dos imágenes mediante una ecuación flexible. La compuesta aritmética se usa para crear un efecto de encadenado en las [muestras](http://go.microsoft.com/fwlink/?LinkId=785341). |
-| Efecto de fusión         | Crea un efecto de fusión que combina dos imágenes. La composición proporciona 21 de los 26 [modos de fusión](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) que se admiten en Win2D.        |
+| Transformación afín 2D  | Aplica una matriz de transformación afín 2D a una imagen. Este efecto se usa para animar la máscara alfa en las [muestras](https://go.microsoft.com/fwlink/?LinkId=785341) de efectos.       |
+| Compuesta aritmética | Combina dos imágenes mediante una ecuación flexible. La compuesta aritmética se usa para crear un efecto de encadenado en las [muestras](https://go.microsoft.com/fwlink/?LinkId=785341). |
+| Efecto de fusión         | Crea un efecto de fusión que combina dos imágenes. La composición proporciona 21 de los 26 [modos de fusión](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) que se admiten en Win2D.        |
 | Fuente de color         | Genera una imagen con un color sólido.                                                                                                                                                                               |
-| Compuesta            | Combina dos imágenes. La composición proporciona los 13 [modos compuestos](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) que se admiten en Win2D.                                              |
+| Compuesta            | Combina dos imágenes. La composición proporciona los 13 [modos compuestos](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) que se admiten en Win2D.                                              |
 | Contraste             | Aumenta o disminuye el contraste de una imagen.                                                                                                                                                                           |
 | Exposición             | Aumenta o disminuye la exposición de una imagen.                                                                                                                                                                           |
 | Escala de grises            | Convierte una imagen a gris monocromático.                                                                                                                                                                                   |
@@ -54,7 +54,7 @@ La composición admite actualmente los siguientes efectos:
 | Sepia                | Convierte una imagen a tonos sepia.                                                                                                                                                                                          |
 | Temperatura y tono | Ajusta la temperatura y/o el tono de una imagen.                                                                                                                                                                           |
 
-Consulta el espacio de nombres [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) de Win2D para obtener información más detallada. Los efectos que no se admiten en la composición se indican como \[NoComposition\].
+Consulta el espacio de nombres [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) de Win2D para obtener información más detallada. Los efectos que no se admiten en la composición se indican como \[NoComposition\].
 
 ### <a name="chaining-effects"></a>Encadenamiento de efectos
 
@@ -123,11 +123,11 @@ Inicia la animación en la propiedad de saturación del efecto como este:
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-Consulta la [Muestra Desaturación - Animación](http://go.microsoft.com/fwlink/?LinkId=785342) para las propiedades de efectos animados con fotogramas clave y la [muestra AlphaMask](http://go.microsoft.com/fwlink/?LinkId=785343) para el uso de efectos y expresiones.
+Consulta la [Muestra Desaturación - Animación](https://go.microsoft.com/fwlink/?LinkId=785342) para las propiedades de efectos animados con fotogramas clave y la [muestra AlphaMask](https://go.microsoft.com/fwlink/?LinkId=785343) para el uso de efectos y expresiones.
 
 ### <a name="multiple-effect-instances-with-independent-properties"></a>Varias instancias de efecto con propiedades independientes
 
-Al especificar que un parámetro debe ser dinámico durante la compilación del efecto, el parámetro se puede cambiar para cada instancia del efecto. Esto permite que dos objetos visuales usen el mismo efecto, pero se representen con propiedades de efecto diferentes. Consulta la [muestra](http://go.microsoft.com/fwlink/?LinkId=785344) ColorSource and Blend para obtener más información.
+Al especificar que un parámetro debe ser dinámico durante la compilación del efecto, el parámetro se puede cambiar para cada instancia del efecto. Esto permite que dos objetos visuales usen el mismo efecto, pero se representen con propiedades de efecto diferentes. Consulta la [muestra](https://go.microsoft.com/fwlink/?LinkId=785344) ColorSource and Blend para obtener más información.
 
 ## <a name="getting-started-with-composition-effects"></a>Introducción a los efectos de composición
 
@@ -168,7 +168,7 @@ En los siguientes pasos usaremos las API de composición para aplicar un efecto 
 ![Imagen de origen](images/composition-cat-source.png)
 ### <a name="setting-your-composition-basics"></a>Configuración de los conceptos básicos de la composición
 
-Consulta la [muestra del árbol de objetos visuales de composición](http://go.microsoft.com/fwlink/?LinkId=785345) en GitHub para ver un ejemplo de cómo configurar el compositor Windows.UI.Composition, del elemento raíz ContainerVisual y de cómo asociarlo a la ventana principal.
+Consulta la [muestra del árbol de objetos visuales de composición](https://go.microsoft.com/fwlink/?LinkId=785345) en GitHub para ver un ejemplo de cómo configurar el compositor Windows.UI.Composition, del elemento raíz ContainerVisual y de cómo asociarlo a la ventana principal.
 
 ```cs
 _compositor = new Compositor();

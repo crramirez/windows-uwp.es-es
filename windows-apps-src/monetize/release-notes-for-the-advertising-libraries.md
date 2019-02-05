@@ -6,12 +6,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bab822c81cdd5af1e6b00ca8d33ed7f7ea3838f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923862"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050868"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 
@@ -23,7 +23,7 @@ En esta sección se proporcionan las notas de la versión para la versión actua
 ## <a name="installation"></a>Instalación
 
 
-Las bibliotecas de publicidad de Microsoft están disponibles como parte del [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Para más información sobre cómo instalar el SDK, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
+Las bibliotecas de publicidad de Microsoft están disponibles como parte del [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Para más información sobre cómo instalar el SDK, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="uninstall-previous-versions"></a>Desinstalar versiones anteriores
 
@@ -39,7 +39,7 @@ Las bibliotecas de Microsoft Advertising (que incluyen las clases **AdControl** 
 
 ## <a name="no-toolbox-control"></a>Ningún control de cuadro de herramientas
 
-En la versión actual de las bibliotecas de publicidad de Microsoft en el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp), no hay ningún control de cuadro de herramientas para arrastrar una clase **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
+En la versión actual de las bibliotecas de publicidad de Microsoft en el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp), no hay ningún control de cuadro de herramientas para arrastrar una clase **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>Las propiedades de latitud y longitud ya no está disponibles
 

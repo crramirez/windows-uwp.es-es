@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
-ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 92d85f81be25eed5f0a43cafb4bb34d9f879c827
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929761"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050928"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -22,7 +22,7 @@ En el pasado, simplemente hubieses puesto un precio a tu juego y luego hubieses 
 Puedes promocionar y monetizar un juego para UWP de una o varias de las siguientes maneras:
 * Coloca el juego en Microsoft Store, que es una oferta de tienda en línea, protegido [distribución en todo el mundo](#worldwide-distribution-channel). Los jugadores de todo el mundo pueden comprar un juego en línea al [precio que determines](#set-a-price-for-your-game).
 * Usa las API de Windows SDK para crear [compras dentro del juego](#in-game-purchases). Los jugadores pueden comprar artículos desde el juego o comprar contenido adicional, por ejemplo, equipo adicional, máscaras, mapas o niveles de juego.
-* Usa las API de [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) para mostrar anuncios procedentes de redes de anuncios. Puedes [mostrar anuncios en el juego](#display-ads-in-your-game) y ofrecer a los jugadores la opción de ver anuncios en vídeo a cambio de recompensas dentro del juego.
+* Usa las API de [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) para mostrar anuncios procedentes de redes de anuncios. Puedes [mostrar anuncios en el juego](#display-ads-in-your-game) y ofrecer a los jugadores la opción de ver anuncios en vídeo a cambio de recompensas dentro del juego.
 * [Maximiza el potencial del juego a través de campañas publicitarias](#maximize-your-games-potential-through-ad-campaigns). Promociona tu juego mediante campañas de anuncios de pago, comunitarias (gratuitas) o internas (gratuitas) para aumentar la base de usuarios del juego.
 
 ## <a name="worldwide-distribution-channel"></a>Canal de distribución en todo el mundo
@@ -37,7 +37,7 @@ A continuación se detallan algunos conceptos importantes en relación con el pr
 
 ### <a name="base-price"></a>Precio base
 
-El precio base del juego es lo que determina si el juego se clasifica como _de pago_ o _gratuito_. Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) para configurar el precio base en función de país y región.
+El precio base del juego es lo que determina si el juego se clasifica como _de pago_ o _gratuito_. Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) para configurar el precio base en función de los países y regiones.
 Es posible que el proceso de determinación del precio incluya tus [responsabilidades fiscales si vendes en diferentes países](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) y las [consideraciones relativas a los precios para mercados concretos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). También puedes [establecer precios personalizados para mercados específicos](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets).
 
 ### <a name="sale-price"></a>Precio de venta
@@ -53,7 +53,7 @@ Las compras desde el juego son productos que se compran dentro de un juego. Tamb
 
 Puedes crear dos tipos de complementos en la Tienda: _duraderos_ o _consumibles_. Los complementos duraderos son artículos que persisten durante un período de tiempo especificado y se pueden comprar una sola vez hasta que expiran. Los complementos consumibles son artículos que se puedan comprar y usar una y otra vez.
 
-Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un consumible administrado por el desarrollador, eres responsable de realizar un seguimiento del saldo del artículo para el jugador; con un consumible administrado por la tienda, Microsoft Store realiza un seguimiento de saldo del artículo por TI. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un consumible administrado por el desarrollador, eres responsable de realizar un seguimiento del saldo del artículo para el jugador; con un consumible administradas por la tienda, Microsoft Store realiza un seguimiento de saldo del artículo por TI. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Crear compras desde el juego
 
@@ -165,7 +165,7 @@ Para obtener la lista completa de los países y las regiones que admiten anuncio
 
 Las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) del SDK de Microsoft Advertising se usan para mostrar anuncios en pantalla en juegos.
 
-Para comenzar, descarga e instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) con VisualStudio2015 u otra versión posterior. Para más información, consulta [Instalar el SDK de Microsoft Advertising](../monetize/install-the-microsoft-advertising-libraries.md).
+Para comenzar, descarga e instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con VisualStudio2015 u otra versión posterior. Para más información, consulta [Instalar el SDK de Microsoft Advertising](../monetize/install-the-microsoft-advertising-libraries.md).
 
 #### <a name="implementation-guides"></a>Guías de implementación
 

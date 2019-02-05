@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
 ms.localizationpriority: medium
-ms.openlocfilehash: 47b9c4335a99e7b0f17da0fb9ddb520cc917e398
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942307"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046438"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 
-**Sugerencia** Para más información sobre el uso de mapas en tu aplicación, descarga el ejemplo de mapa para la [Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) en GitHub.
+**Sugerencia** Para más información sobre el uso de mapas en tu aplicación, descarga el ejemplo de mapa para la [Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) en GitHub.
 
 <a id="tileintro" />
 
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 (Las coordenadas X e Y representan la ubicación del icono individual en el mapa del mundo con el nivel de detalle especificado. El sistema de numeración del icono empieza desde {0, 0} en la esquina superior izquierda del mapa. Por ejemplo, el icono en {1, 2} es la segunda columna de la tercera fila de la cuadrícula de iconos).
 
-Para obtener más información acerca del sistema de iconos que usan los servicios de asignación, consulta [Bing Maps Tile System (Sistema de iconos de Mapas de Bing)](http://go.microsoft.com/fwlink/p/?LinkId=626692).
+Para obtener más información acerca del sistema de iconos que usan los servicios de asignación, consulta [Bing Maps Tile System (Sistema de iconos de Mapas de Bing)](https://go.microsoft.com/fwlink/p/?LinkId=626692).
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>Superponer los iconos de un origen de iconos
 
@@ -421,7 +421,7 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Ejemplo de aplicación de tráfico de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

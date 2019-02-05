@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 12772d81742815b8d739f61aee9461e64f970ef2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935715"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050828"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Supervisar el progreso y la finalización de tareas en segundo plano
 
@@ -64,7 +64,7 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 ### <a name="step-2"></a>Paso 2
 Agrega código al controlador de eventos que se encarga de la finalización de la tarea en segundo plano.
 
-Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario.
+Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -122,7 +122,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-2"></a>Paso 2
 Agrega código al controlador de eventos que se encarga de la finalización de la tarea en segundo plano.
 
-Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario con el estado de progreso pasado a través del parámetro *args*:
+Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario con el estado de progreso pasado a través del parámetro *args*:
 
 ```csharp
 private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
@@ -158,7 +158,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-1"></a>Paso 1
 Cuando la aplicación registra una tarea en segundo plano por primera vez, debería registrarla para recibir actualizaciones de progreso y finalización referentes a ella, en caso de que la tarea se ejecute mientras la aplicación sigue activa en primer plano.
 
-Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) llama a la siguiente función en todas las tareas en segundo plano que registra:
+Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) llama a la siguiente función en todas las tareas en segundo plano que registra:
 
 ```csharp
 private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
@@ -217,7 +217,7 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 ### <a name="step-2"></a>Paso 2
 Cuando la aplicación se ejecuta o navega a una página nueva en la que es relevante el estado de la tarea en segundo plano, debería obtener una lista de las tareas en segundo plano registradas actualmente y asociarlas con las funciones del controlador de eventos de progreso y finalización. La lista de tareas en segundo plano actualmente registradas por la aplicación se conserva en la propiedad [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787).
 
-Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) usa el siguiente código para adjuntar controladores de eventos cuando se navega por la página SampleBackgroundTask para:
+Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) usa el siguiente código para adjuntar controladores de eventos cuando se navega por la página SampleBackgroundTask para:
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -299,4 +299,4 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)

@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 194bbeefbd3ca5f8237bb3449ec935211056aea3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923687"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049100"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 
 
 
-> **Nota**consulta también la [muestra de maestro y detalles](http://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Nota**consulta también la [muestra de maestro y detalles](https://go.microsoft.com/fwlink/p/?linkid=619991).
 
 Puedes hacer una vista de tipo maestro-detalles (también conocida como list-details) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) cuando es necesario.
 

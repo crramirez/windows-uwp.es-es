@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, análisis, informes, panel, aplicaciones, datos, las métricas
 ms.localizationpriority: medium
-ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f76b1f897c345fb71beec8e37e592165922b2ed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945737"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047716"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de las aplicaciones
 
@@ -47,7 +47,7 @@ En esta sección encontrarás detalles sobre la información presentada en cada 
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>Acceder a los datos de análisis fuera del centro de partners
 
-Además de ver los informes en el centro de partners, puedes acceder de análisis de la aplicación de otras maneras.
+Además de ver los informes en el centro de partners, puedes acceder de otras maneras de análisis de la aplicación.
 
 ### <a name="microsoft-store-analytics-api"></a>API de análisis de Microsoft Store
 
@@ -64,4 +64,4 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 * [Aprender a usar el paquete de contenido del Centro de desarrollo de Windows para Power BI para conectar con los datos de análisis](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Para conectar con el paquete de contenido del centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD que está asociado con tu cuenta del centro de partners. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información sobre cómo configurar la asociación, consulta [Asociar Azure Active Directory con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md).
+> Para conectar con el paquete de contenido del centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD que está asociado con tu cuenta del centro de partners. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](https://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información sobre cómo configurar la asociación, consulta [Asociar Azure Active Directory con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md).

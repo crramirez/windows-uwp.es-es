@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b360425755a7dc2249a284d9f68761ce3c783ef
-ms.sourcegitcommit: 92ce837841ae8f16d203e919dbf5c4436bee56e5
+ms.openlocfilehash: da1dc2ab7444bf65074d9c7ccc615aaee07fdcff
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015260"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046358"
 ---
 # <a name="audio-graphs"></a>Gráficos de audio
 
@@ -32,7 +32,7 @@ Después de que se hayan creado todos los nodos y se hayan configurado las conex
 Se habilitan escenarios adicionales con la incorporación de efectos de audio al gráfico de audio. Todos los nodos de un gráfico de audio se pueden rellenar con cero o más efectos de audio que realizan el procesamiento de audio en el audio que pasa a través del nodo. Existen varios efectos integrados como eco, ecualizador, limitación y reverberación que se pueden anexar a un nodo de audio con unas pocas líneas de código. También puedes crear tus propios efectos de audio personalizados que funcionan exactamente igual que los efectos integrados.
 
 > [!NOTE]
-> La [muestra de AudioGraph para UWP](http://go.microsoft.com/fwlink/?LinkId=619481) implementa el código analizado en esta introducción. Puedes descargar la muestra para ver el código en contexto o para usarla como punto de partida para tu propia aplicación.
+> La [muestra de AudioGraph para UWP](https://go.microsoft.com/fwlink/?LinkId=619481) implementa el código analizado en esta introducción. Puedes descargar la muestra para ver el código en contexto o para usarla como punto de partida para tu propia aplicación.
 
 ## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Selección de AudioGraph o XAudio2 de Windows Runtime
 

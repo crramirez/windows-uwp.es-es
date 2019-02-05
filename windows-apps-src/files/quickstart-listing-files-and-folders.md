@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: e964650e90870ef09d8d1b142917f96b61002544
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980283"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045101"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar y consultar archivos y carpetas
 
@@ -25,13 +25,13 @@ Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, 
 Para obtener información sobre cómo almacenar los datos de la aplicación para la Plataforma universal de Windows, consulta la clase [ApplicationData](/uwp/api/windows.storage.applicationdata).
 
 > [!NOTE]
-> Para obtener una muestra completa, consulta la [muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+> Para obtener una muestra completa, consulta la [muestra de enumeración de carpetas](https://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
-    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para obtener información sobre cómo escribir aplicaciones asincrónicas en C++ / WinRT, consulta [operaciones simultáneas y asincrónicas con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para obtener información sobre cómo escribir aplicaciones asincrónicas en C++ / CX, consulta [programación asincrónica en C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++ / WinRT, consulta [operaciones simultáneas y asincrónicas con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para aprender a escribir aplicaciones asincrónicas en C++ / CX, consulta [programación asincrónica en C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Permisos de acceso a la ubicación**
 
@@ -42,7 +42,7 @@ Para obtener información sobre cómo almacenar los datos de la aplicación para
 > [!NOTE]
 > Recuerda declarar la funcionalidad **picturesLibrary**.
 
-En este ejemplo se usa en primer lugar el método [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para obtener todos los archivos en la carpeta raíz de la [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (no en las subcarpetas) y el nombre de cada archivo. A continuación, usamos el método [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) para obtener todas las subcarpetas en el **PicturesLibrary** y el nombre de cada subcarpeta.
+En este ejemplo usamos primero el método [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para obtener todos los archivos en la carpeta raíz de la [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (no en las subcarpetas) y el nombre de cada archivo. A continuación, usamos el método [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) para obtener todas las subcarpetas en el **PicturesLibrary** y el nombre de cada subcarpeta.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;

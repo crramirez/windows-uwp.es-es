@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ece97d2e2cf96d2905902fd563f1de9027aa64a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6c198bf9ebb8eb6f409277bfe09af6881530d5a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920000"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047094"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 
@@ -46,11 +46,11 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
         El presupuesto mensual se prorratea el mes en el que se crea la campaña publicitaria. En otras palabras, si creas una campaña publicitaria a mitad de un mes natural, se te cobrará la mitad del presupuesto mensual para ese mes.
 
-    * Especifica un método de pago para la campaña publicitaria haciendo clic en **Agregar nuevo método de pago** y rellena los detalles de la cuenta. Si ya dispones de un instrumento de pago, puedes seleccionar **Elige otro método de pago** si necesitas actualizarlo. El país o región de la dirección de facturación del método de pago debe coincidir con el país o región asociado a tu cuenta de desarrollador.
+    * Especifica un método de pago para la campaña publicitaria haciendo clic en **Agregar nuevo método de pago** y rellena los detalles de la cuenta. Si ya dispones de un instrumento de pago, puedes seleccionar **Elige otro método de pago** si necesitas actualizarlo. El país o región de la dirección de facturación de la forma de pago debe coincidir con el país o región asociado a tu cuenta de desarrollador.
 
     * Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
 
-    Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus aplicaciones.
+    Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus propias aplicaciones.
 
 9.  En la página **Audiencia**, mostraremos la configuración de audiencia que recomendamos para la campaña. También puedes ajustar esta información:
     * **Países/regiones**: elige hasta 5 países o regiones en los que quieras que aparezca tu anuncio. Para obtener una lista de los países o regiones admitidos, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#where-will-my-ad-appear).
@@ -67,14 +67,14 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     Esta sección también muestra un gráfico de **Alcance estimado**. Este gráfico muestra la audiencia a la que puedes esperar llegar con tus selecciones actuales de destinatarios como un porcentaje de todos los usuarios de aplicaciones habilitadas para anuncios de Windows en los mercados seleccionados.
 
-10.  Si elegiste el objetivo de campaña **Incrementar el compromiso con la aplicación**, puedes seleccionar uno de los segmentos de clientes como destino. Los anuncios creados con esta campaña solo se mostrarán a los clientes que estén incluidos en el segmento. Solo se puede seleccionar un segmento por campaña publicitaria. Para información sobre los segmentos, consulta [Crear segmentos de clientes](create-customer-segments.md). Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Diseño de anuncios**. Este paso no está disponible para las campañas de anuncios internos, porque se ejecutan solo en tus propias aplicaciones.
+10.  Si elegiste el objetivo de campaña **Incrementar el compromiso con la aplicación**, puedes seleccionar uno de los segmentos de clientes como destino. Los anuncios creados con esta campaña solo se mostrarán a los clientes que estén incluidos en el segmento. Solo se puede seleccionar un segmento por campaña publicitaria. Para información sobre los segmentos, consulta [Crear segmentos de clientes](create-customer-segments.md). Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Diseño de anuncios**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus propias aplicaciones.
 
 11.  En la página **Diseño de anuncios**, elige una de estas opciones:
     * **Anuncio generado automáticamente**. Esta es la opción predeterminada y permite crear un anuncio de nuestras plantillas predeterminadas. Puedes realizar selecciones para personalizar el contenido de tu anuncio y obtendremos una vista previa del aspecto de tu anuncio según tus elecciones (se actualiza automáticamente a medida que realizas las selecciones).
         * En el menú desplegable **Idioma**, selecciona el idioma para el anuncio. El texto del distintivo de Microsoft Store aparecerá en el idioma que selecciones.
         * Para agregar una línea de texto adicional al anuncio, escribe texto en el campo **Lema personalizado**.
             > [!NOTE]
-            > El texto que escribas aquí debe estar localizado en el idioma seleccionado. El lema personalizado se rechazará si el texto no cumple las [Directivas de Bing Ads](http://go.microsoft.com/fwlink?LinkId=398341). Consulta esta página para obtener instrucciones sobre el estilo y sobre el contenido no permitido.
+            > El texto que escribas aquí debe estar localizado en el idioma seleccionado. El lema personalizado se rechazará si el texto no cumple las [Directivas de Bing Ads](https://go.microsoft.com/fwlink?LinkId=398341). Consulta esta página para obtener instrucciones sobre el estilo y sobre el contenido no permitido.
         * Para personalizar aún más el anuncio, expande **Personalizar el diseño del anuncio/ver los tamaños de los anuncios** y elige una de estas opciones:
             * **Color de fondo**. Elige entre las opciones disponibles.
             * **Imágenes**. Elige una de las imágenes disponibles (tomadas de la descripción de la Tienda de la aplicación).
@@ -84,13 +84,13 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     * **Personalizado**. Elige esta opción para usar tus propios diseños de anuncio. Ten en cuenta que si has seleccionado un segmento de clientes de versiones anteriores, debes usar a creativos personalizados. Puedes cargar distintos archivos para cada uno de los tamaños de anuncio disponibles. Los archivos deben cumplir los siguientes requisitos y directrices:
         * Cada archivo debe ser un .png o .jpg de 40 KB o menos.
-        * Los diseños de tus anuncios deben cumplir los requisitos especificados en la [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595).
+        * Los diseños de tus anuncios deben cumplir los requisitos especificados en la [Microsoft Creative Acceptance Policy](https://go.microsoft.com/fwlink?LinkId=532595).
         * El contenido de los diseños de anuncio debe ser pertinente para la aplicación que promueves. Los diseños de anuncios que no están relacionados con la aplicación no se distribuirán a los anuncios de otras aplicaciones.
         * Todo el contenido de los diseños de anuncio debe ser legible. Por ejemplo, el contenido no debe aparecer borroso, pixelado ni estirado.
 
 12.  Si tienes una [cuenta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), puedes usar la casilla **Dirección URL de destino** para controlar lo que sucede cuando un cliente hace clic en el anuncio.
     * Si dejas la casilla vacía, cuando un cliente haga clic en el anuncio, se mostrará la descripción de la Tienda de la aplicación.
-    * Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, escribe la dirección URL de seguimiento de instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](http://support.kochava.com/) y [Tune](https://help.tune.com/).
+    * Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, escribe la dirección URL de seguimiento de instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](https://support.kochava.com/) y [Tune](https://help.tune.com/).
     * Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes especificar un [vínculo profundo de URI](../launch-resume/handle-uri-activation.md) para redirigir a los clientes del segmento seleccionado a una página específica dentro de la aplicación.
     * Si especificas cualquier destino que no sea la página de descripción de la aplicación o una página dentro de la aplicación, la campaña se pondrá en pausa automáticamente.
 

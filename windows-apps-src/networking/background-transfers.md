@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d67bb7c7fd2173e1406669367935efdb09967ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2535818d5362b1ffe4b7b35c7b4079bee73a511f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932528"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046059"
 ---
 # <a name="background-transfers"></a>Transferencias en segundo plano
 Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red. La API de transferencia en segundo plano proporciona funciones de carga y descarga avanzadas que se ejecutan en segundo plano durante la suspensión de la aplicación y que persisten tras la finalización de esta. La API supervisa el estado de red, y suspende y reanuda automáticamente las transferencias cuando se pierde la conexión. Además, las transferencias son compatibles con el sensor de datos y el de batería, lo que significa que la actividad de descarga se ajusta según la conectividad y el estado de la batería actuales del dispositivo. La API es ideal para cargar y descargar archivos grandes mediante HTTP(S). También se admite FTP, pero solo para descargas.
@@ -28,7 +28,7 @@ Cuando una aplicación usa una transferencia en segundo plano para iniciar una t
 > [!NOTE]
 > Debido a restricciones de recursos por aplicación, una aplicación no debe tener más de 200 transferencias (DownloadOperations + UploadOperations) en cualquier momento. La superación de ese límite puede dejar la cola de transferencia de la aplicación en un estado irrecuperable.
 
-Cuando se inicia una aplicación, debe llamar [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos existentes de [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) y [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) . No hacer esto hará que la pérdida de transferencias ya completado y finalmente representará el uso de la característica de transferencia en segundo plano sea inútil.
+Cuando se inicia una aplicación, debe llamar a [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos existentes de [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) y [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) . No hacer esto hará que la pérdida de transferencias ya completado y finalmente representará el uso de la característica de transferencia en segundo plano sea inútil.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Realización de solicitudes de archivos autenticadas con la transferencia en segundo plano
 La transferencia en segundo plano proporciona métodos que admiten credenciales básicas de proxy y servidor, así como el uso de encabezados HTTP personalizados (mediante [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) para cada operación de transferencia.
@@ -40,7 +40,7 @@ Por ejemplo, la directiva de coste definida para una operación puede indicar qu
 
 Aunque la característica de transferencia en segundo plano tiene sus propios mecanismos para controlar los cambios de estado de la red, hay otras consideraciones generales sobre conectividad que debes tener en cuenta en relación con las aplicaciones conectadas a la red. Si quieres obtener más información, lee el tema [Aprovechamiento de la información de conexión de red disponible](https://msdn.microsoft.com/library/windows/apps/hh452983).
 
-> **Nota**para las aplicaciones que se ejecutan en dispositivos móviles, existen características que permiten al usuario supervisar y restringir la cantidad de datos que se transfieren en función del tipo de conexión, el estado de itinerancia y plan de datos del usuario. Por este motivo, las transferencias en segundo plano se pueden pausar en el teléfono, incluso cuando la [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que la transferencia debe proseguir.
+> **Nota**para las aplicaciones que se ejecutan en dispositivos móviles, existen características que permiten al usuario supervisar y restringir la cantidad de datos que se transfieren en función del tipo de conexión, el estado de itinerancia y plan los datos del usuario. Por este motivo, las transferencias en segundo plano se pueden pausar en el teléfono, incluso cuando la [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que la transferencia debe proseguir.
 
 En esta tabla puedes ver cuándo se permiten transferencias en segundo plano en el teléfono para cada valor de [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) según el estado actual del teléfono. Puedes usar la clase [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) para determinar el estado actual del teléfono.
 
@@ -82,7 +82,7 @@ Observa las llamadas de método asincrónico definidas con promesas de JavaScrip
 promise = upload.startAsync().then(complete, error, progress);
 ```
 
-La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta el tema [Programación asincrónica en JavaScript con promesas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta el tema [Programación asincrónica en JavaScript con promesas](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="uploading-multiple-files"></a>Carga de varios archivos
 **Identificar los archivos y el destino de la carga**
@@ -178,7 +178,7 @@ Observa las llamadas de método asincrónico definidas con promesas de JavaScrip
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta el tema [Programación asincrónica en JavaScript con promesas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta el tema [Programación asincrónica en JavaScript con promesas](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="adding-additional-operation-control-methods"></a>Agregar métodos adicionales de control de operaciones
 Se puede aumentar el nivel de control implementando métodos [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) adicionales. Por ejemplo, si se agrega el siguiente código al ejemplo anterior, se introduce la capacidad de cancelar la descarga.

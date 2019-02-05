@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6d445e5164d542a7e10f136a5fb238c575f35c2d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942496"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048815"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 
@@ -21,19 +21,19 @@ Usa esta información para determinar si la aplicación usa algún tipo de cript
 
 La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Microsoft Store deben cumplir estas leyes y reglamentos, porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Microsoft Store, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
 
-> **Nota**la información que se ofrece aquí orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en Microsoft Store para asegurarte de que la aplicación cumple con todas las leyes y normativas aplicables.
+> **Nota**la información proporcionada aquí orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en Microsoft Store para asegurarte de que la aplicación cumple con todas las leyes y normativas aplicables.
 
  
 
-Para obtener más información sobre la Oficina de Industria y Seguridad y el Departamento de Comercio de Estados Unidos, consulta la página [acerca de la Oficina de Industria y Seguridad](http://go.microsoft.com/fwlink/p/?LinkID=245644).
+Para obtener más información sobre la Oficina de Industria y Seguridad y el Departamento de Comercio de Estados Unidos, consulta la página [acerca de la Oficina de Industria y Seguridad](https://go.microsoft.com/fwlink/p/?LinkID=245644).
 
-Para obtener información sobre la Normativa de la Administración de Exportaciones (EAR) que regula la exportación de tecnología que incluya cifrado, consulta la página [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Para obtener información sobre la Normativa de la Administración de Exportaciones (EAR) que regula la exportación de tecnología que incluya cifrado, consulta la página [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
 ## <a name="governed-uses"></a>Usos regulados
 
 En primer lugar, determina si tu aplicación usa un tipo de criptografía que esté regulada por la Normativa de la Administración de Exportaciones. La pregunta incluye los ejemplos que se muestran en esta lista, pero recuerda que esta lista no incluye cada aplicación de criptografía posible.
 
-> **Importante**considera la posibilidad de no solo el código que has escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que incluye la aplicación o vínculos a.
+> **Importante**considera la posibilidad de no solo el código que ha escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que incluye la aplicación o vincula a.
 
 -   Todo uso de firmas digitales, como autenticaciones o controles de integridad
 -   Cifrado de cualquier dato o archivos que la aplicación usa o a los que accede
@@ -43,7 +43,7 @@ En primer lugar, determina si tu aplicación usa un tipo de criptografía que es
 -   Protección de copias o administración de derechos digitales (DRM)
 -   Protección antivirus
 
-Para obtener una lista completa y actualizada de las aplicaciones criptográficas, consulta [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Para obtener una lista completa y actualizada de las aplicaciones criptográficas, consulta [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
 ## <a name="non-restricted-uses"></a>Usos no restringidos
 
@@ -55,8 +55,8 @@ Ten en cuenta que algunas de las aplicaciones de criptografía no están restrin
 -   Administración de derechos digitales
 -   Uso de firmas digitales
 
-Para obtener una lista completa y actualizada de las aplicaciones criptográficas, consulta [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Para obtener una lista completa y actualizada de las aplicaciones criptográficas, consulta [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
 Si la aplicación llama, admite, tiene o usa criptografía o cifrado para cualquier tarea que no esté en esta lista, necesita un Número de clasificación de control de exportación (ECCN).
 
-Si no tienes un número ECCN, consulta el tema sobre [ECCN Questions and Answers (Preguntas y respuestas sobre ECCN)](http://go.microsoft.com/fwlink/p/?LinkID=245646).
+Si no tienes un número ECCN, consulta el tema sobre [ECCN Questions and Answers (Preguntas y respuestas sobre ECCN)](https://go.microsoft.com/fwlink/p/?LinkID=245646).

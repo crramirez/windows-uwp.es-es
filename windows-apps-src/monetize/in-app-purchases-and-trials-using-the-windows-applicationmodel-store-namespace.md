@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 72f5875721d17bda79842989c1ac22475a06e938
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 96260b0fb2aa0818dd6df52f88bd0c63d56c35b7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946130"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046984"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
@@ -20,7 +20,7 @@ Puedes usar los miembros del espacio de nombres [Windows.ApplicationModel.Store]
 En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos básicos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md). Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
 > [!IMPORTANT]
-> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en las aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso para cualquier juego que se integra con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
+> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso para cualquier juego que se integra con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introducción a las clases CurrentApp y CurrentAppSimulator
 
@@ -155,7 +155,7 @@ Esta sección muestra el archivo XSD que define la estructura del archivo Window
 5. Cambia a tu archivo WindowsStoreProxy.xml en Visual Studio.
 6. En el menú **XML**, haz clic en **Esquemas** y busca la fila en la lista del archivo WindowsStoreProxy.xsd. Si la ubicación del archivo es no la que deseas (por ejemplo, si todavía se muestra el archivo temporal), haz clic en **Agregar**. Navega al archivo derecho y haz clic en **Aceptar**. Ahora deberías ver ese archivo en la lista. Asegúrate de que aparece una marca de verificación en la columna **Uso** para ese esquema.
 
-Una vez hayas hecho esto, las modificaciones que realices en WindowsStoreProxy.xml estarán sujetas al esquema. Para obtener más información, consulta [Cómo: Seleccionar los esquemas XML que se van a usar](http://go.microsoft.com/fwlink/p/?LinkId=403014).
+Una vez hayas hecho esto, las modificaciones que realices en WindowsStoreProxy.xml estarán sujetas al esquema. Para obtener más información, consulta [Cómo: Seleccionar los esquemas XML que se van a usar](https://go.microsoft.com/fwlink/p/?LinkId=403014).
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -409,7 +409,7 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 
 **MarketData** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Obligatorio  |  Description   |
 |-------------|------------|----------------|
 |  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
@@ -448,7 +448,7 @@ Este elemento, proporciona información acerca del complemento para un país o u
 
 **MarketData** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Obligatorio  |  Description   |
 |-------------|------------|----------------|
 |  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
@@ -503,7 +503,7 @@ Este elemento describe el estado de la licencia de un complemento duradero en la
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Obligatorio  |  Description   |
 |-------------|------------|----------------|
 |  **ProductId**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento.            |
 |  **OfferId**  |     No       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
@@ -516,7 +516,7 @@ Este elemento describe cómo las llamadas a diversos métodos [CurrentAppSimulat
 
 **Simulation** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Obligatorio  |  Description   |
 |-------------|------------|----------------|
 |  **SimulationMode**  |    No        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
 
@@ -547,7 +547,7 @@ Este elemento describe un complemento consumible. **Product** es un elemento sec
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Obligatorio  |  Description   |
 |-------------|------------|----------------|
 |  **ProductId**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento consumible.            |
 |  **TransactionId**  |     Sí       |   Contiene un GUID (en forma de cadena) usado por la aplicación para realizar un seguimiento de la transacción de compra de un consumible por el proceso de suministro. Consulta [Habilita compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)            |

@@ -6,16 +6,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, ofertas dirigidas
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937543"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045028"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Administrar ofertas dirigidas usando los servicios de la Store
 
-Si creas una *oferta dirigida* en el **interactuar > ofertas dirigidas** página de la aplicación Centro de partners, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayudará a implementar la experiencia de aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Si creas una *oferta de destino* en la página **incurrir > ofertas de destino** de la aplicación en el centro de partners, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayudará a implementar la experiencia de aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 La API de ofertas dirigidas es una API REST simple que puedes utilizar para obtener las ofertas dirigidas que están disponibles para el usuario actual, en función de si el usuario es parte del segmento de cliente para la oferta dirigida o no. Para usar esta API en el código de tu aplicación, sigue estos pasos:
 
@@ -45,7 +45,7 @@ Una vez que tengas un token de MSA para el usuario actual, llama el método GET 
 
 Este método devuelve los identificadores de producto de los complementos que están asociados con las ofertas dirigidas que están disponibles para el usuario actual. Con esta información, puedes ofrecer al usuario una o varias de las ofertas dirigidas como una compra desde la aplicación.
 
-El siguiente ejemplo muestra cómo obtener las ofertas dirigidas para el usuario actual. Este ejemplo es un fragmento del [ejemplo completo](#code-example). Requiere la biblioteca de [Json.NET](http://www.newtonsoft.com/json) de Newtonsoft y clases adicionales e instrucciones **using** que se proporcionan en el ejemplo completo.
+El siguiente ejemplo muestra cómo obtener las ofertas dirigidas para el usuario actual. Este ejemplo es un fragmento del [ejemplo completo](#code-example). Requiere la biblioteca de [Json.NET](https://www.newtonsoft.com/json) de Newtonsoft y clases adicionales e instrucciones **using** que se proporcionan en el ejemplo completo.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
@@ -59,7 +59,7 @@ En el siguiente ejemplo de código se demuestran las siguientes tareas:
 * Obtener todas las ofertas dirigidas para el usuario actual mediante el método [Obtener ofertas dirigidas](get-targeted-offers.md).
 * Compra el complemento que está asociado con una oferta dirigida.
 
-Este ejemplo requiere la biblioteca [Json.NET](http://www.newtonsoft.com/json) de Newtonsoft. El ejemplo usa esta biblioteca para serializar y deserializar los datos con formato JSON.
+Este ejemplo requiere la biblioteca [Json.NET](https://www.newtonsoft.com/json) de Newtonsoft. El ejemplo usa esta biblioteca para serializar y deserializar los datos con formato JSON.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 

@@ -5,18 +5,18 @@ keywords: novedades, actualización, características, directrices para los desa
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 52a60189d7fba39709aa679dbff79551b151e5a4
-ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
+ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992619"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050638"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novedades de la documentación de los desarrolladores de Windows de diciembre de 2017
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre directrices para los desarrolladores y muestras que están a tu disposición después del lanzamiento de Fall Creators Update y contienen información nueva y actualizada para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 

@@ -6,19 +6,19 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: c0c283f9edd33b8c39ebccd0a71019741a0d1448
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921016"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044306"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
 Microsoft Store Services SDK proporciona características que te ayudarán a atraer a clientes en las aplicaciones de la plataforma Universal de Windows (UWP), por ejemplo, enviar notificaciones dirigidas a las aplicaciones y ejecutar experimentos A/b en tus aplicaciones. Este SDK es una extensión de Visual Studio 2015 y versiones posteriores de Visual Studio.
 
 > [!NOTE]
-> Para mostrar anuncios en tus aplicaciones para UWP, usa el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) en lugar del Microsoft Store Services SDK. Se han movido las bibliotecas de publicidad desde el Microsoft Store Services SDK al SDK de Microsoft Advertising. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md).
+> Para mostrar anuncios en tus aplicaciones para UWP, usa el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) en lugar del Microsoft Store Services SDK. Se han movido las bibliotecas de publicidad desde el Microsoft Store Services SDK al SDK de Microsoft Advertising. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md).
 
 
 
@@ -48,7 +48,7 @@ El Microsoft Store Services SDK requiere lo siguiente:
 
 Hay dos opciones para instalar el Microsoft Store Services SDK en el equipo de desarrollo:
 
-* **Instalador MSI**&nbsp;&nbsp;Puedes instalar el SDK mediante el programa de instalación MSI disponible [aquí](http://aka.ms/store-em-sdk).
+* **Instalador MSI**&nbsp;&nbsp;Puedes instalar el SDK mediante el programa de instalación MSI disponible [aquí](https://aka.ms/store-em-sdk).
 * **Paquete NuGet**&nbsp;&nbsp;Puedes instalar el SDK como un paquete NuGet.
 
 Microsoft publica periódicamente nuevas versiones de Microsoft Store Services SDK con nuevas características y mejoras de rendimiento. Si tienes proyectos existentes que usan el SDK y quieres usar la versión más reciente, simplemente descarga e instala la versión más reciente del SDK en el equipo de desarrollo.
@@ -68,7 +68,7 @@ Para instalar el Microsoft Store Services SDK mediante el instalador MSI:
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  Descarga e instala el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
+3.  Descarga e instala el [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
 
 4.  Reinicia Visual Studio.
 
@@ -99,7 +99,7 @@ Para instalar las bibliotecas de Microsoft Store Services SDK mediante NuGet:
 
 5. En el cuadro de búsqueda, escribe **Microsoft.Services.Store.Engagement** e instala el paquete Microsoft.Services.Store.Engagement. Cuando el paquete se haya instalado, guarda la solución.
     > [!NOTE]
-    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor ```repositoryPath``` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta. El problema también podría deberse a la ruta de acceso de paquetes global que se está demasiado larga. En este caso, se agrega el ```globalPackagesFolder``` valor en el archivo nuget.config.
+    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor ```repositoryPath``` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta. El problema también podría deberse a la ruta de acceso de paquetes global demasiado larga. En este caso, agrega el ```globalPackagesFolder``` valor en el archivo nuget.config.
 
 6. Cierra la solución de Visual Studio que contiene el proyecto y, a continuación, volver a abrir la solución.
 

@@ -6,16 +6,16 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: 75c5c34f3dec48bbee2feccde5b60cde45a241f9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9a1f3c95169842f7c9bc00a662b4498ed12df32c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941730"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045734"
 ---
 # <a name="whats-new-in-windows10-for-developers-build-10240"></a>Novedades de Windows 10 para desarrolladores, compilación 10240
 
-Tanto la compilación 10240 de Windows 10 como el SDK actualizado proporcionan las herramientas, características y experiencias necesarias para crear aplicaciones excepcionales de la Plataforma universal de Windows. Después de [instalar las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10, estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+Tanto la compilación 10240 de Windows 10 como el SDK actualizado proporcionan las herramientas, características y experiencias necesarias para crear aplicaciones excepcionales de la Plataforma universal de Windows. Después de [instalar las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10, estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 Este es un vistazo función por función de lo que es nuevo para TI en la compilación 10240 de Windows 10 (también conocida como Windows 10 versión 1507).
 

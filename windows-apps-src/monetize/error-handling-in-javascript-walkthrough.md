@@ -6,18 +6,18 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, control de errores, error handling, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f49cd97e8b4e2ef5e20502909a7dc8cb4ab676
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df33dc84823d5bcdc02d892820967b74ff0e5f65
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943813"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049008"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
 
 En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación JavaScript. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
 
-En estos ejemplos se da por hecho que tienes una aplicación JavaScript que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para un proyecto de muestra completo que muestra cómo agregar anuncios en banners a una aplicación JavaScript o HTML, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
+En estos ejemplos se da por hecho que tienes una aplicación JavaScript que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para un proyecto de muestra completo que muestra cómo agregar anuncios en banners a una aplicación JavaScript o HTML, consulta las [muestras de publicidad en GitHub](https://aka.ms/githubads).
 
 1.  En el archivo default.html, agrega un valor para el evento **onErrorOccurred** en el que definas la propiedad **data-win-options** en el elemento **div** para el objeto **AdControl**. Encuentra el siguiente código en el archivo default.html.
     ``` HTML
@@ -66,4 +66,4 @@ En estos ejemplos se da por hecho que tienes una aplicación JavaScript que cont
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
+* [Ejemplos de publicidad de GitHub](https://aka.ms/githubads)

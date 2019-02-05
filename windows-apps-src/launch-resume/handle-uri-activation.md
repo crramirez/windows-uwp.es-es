@@ -6,12 +6,12 @@ ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aaaf7e6b13a3ce05bd30dd0ebf3e1d7d98915d6e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d8cbb3d7e245b747a7637726df9559f5fa87a6d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946067"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046418"
 ---
 # <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
@@ -155,7 +155,7 @@ Si las aplicaciones se inician a través de la activación de protocolo, sería 
 Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, incluidos los malintencionados. Por este motivo, los datos que incluyes en el URI podrían provenir de un origen que no es de confianza. Te desaconsejamos que realices una acción permanente en función de los parámetros que recibes en el URI. Puedes usar parámetros de URI, por ejemplo, para que la aplicación se inicie en una página de la cuenta del usuario, pero no te recomendamos que los uses para modificar directamente la cuenta del usuario.
 
 > [!NOTE]
-> Si vas a crear un nuevo nombre de esquema URI de la aplicación, asegúrate de seguir las directrices de [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
+> Si vas a crear un nuevo nombre de esquema URI de la aplicación, asegúrate de seguir las directrices de [RFC 4395](https://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
 
 > [!NOTE]
 > Cuando se inicia mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario volver a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.

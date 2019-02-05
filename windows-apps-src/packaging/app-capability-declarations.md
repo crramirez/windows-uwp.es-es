@@ -6,12 +6,12 @@ ms.date: 11/26/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 51d671ef4542598322ec79d9cc3b16abd8105731
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.openlocfilehash: 69e73d020738e0bad5404f164417bbce35e5e60c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990508"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047879"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
@@ -66,7 +66,7 @@ Las funcionalidades de dispositivo permiten a tu aplicación acceder a los perif
 | **Micrófono** | La funcionalidad **microphone** proporciona acceso a la alimentación de audio del micrófono, que permite a la aplicación grabar desde micrófonos conectados. Las aplicaciones deben administrar el caso en el que el usuario haya deshabilitado el micrófono desde el acceso a **Configuración**. |
 | **Proximidad** | La funcionalidad **proximity** permite la comunicación entre varios dispositivos que se encuentran cerca unos de otros. Esta funcionalidad se utiliza normalmente en juegos esporádicos de varios jugadores y en aplicaciones que intercambian información. Los dispositivos intentan usar la tecnología de comunicación que proporcione la mejor conexión posible, lo que incluye Bluetooth, Wi-Fi e Internet. Esta funcionalidad se usa solo para iniciar la comunicación entre los dispositivos. |
 | **Cámara web** | La funcionalidad **webcam** proporciona acceso a la fuente de vídeo de una cámara integrada o a una cámara web externa, que permite a la aplicación capturar fotos y vídeos. En Windows, las aplicaciones deben controlar el caso en el que el usuario haya deshabilitado la cámara desde el acceso a **Configuración**.<br/>La funcionalidad **webcam** solo concede acceso a la secuencia de vídeo. Para conceder acceso también a la secuencia de audio, debe agregarse la funcionalidad **microphone**. |
-| **USB** | La funcionalidad del dispositivo **usb** permite acceder a las API que se indican en [How to add USB device capabilities to the app manifest](http://go.microsoft.com/fwlink/p/?LinkId=302259) (Cómo agregar capacidades de dispositivo USB al manifiesto de la aplicación). |
+| **USB** | La funcionalidad del dispositivo **usb** permite acceder a las API que se indican en [How to add USB device capabilities to the app manifest](https://go.microsoft.com/fwlink/p/?LinkId=302259) (Cómo agregar capacidades de dispositivo USB al manifiesto de la aplicación). |
 | **Dispositivo de interfaz de usuario (HID)** | La funcionalidad del dispositivo **humaninterfacedevice** permite acceder a las API que se indican en [Cómo especificar funcionalidades de dispositivo para HID](https://msdn.microsoft.com/library/windows/apps/Dn263091). |
 | **Punto de servicio (POS)** | La funcionalidad del dispositivo **pointOfService** permite acceder a las API del espacio de nombres [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071). Este espacio de nombres permite a tu aplicación acceder a lectores de códigos de barras POS y lectores de bandas magnéticas. El espacio de nombres ofrece una interfaz independiente del proveedor para acceder a dispositivos POS de diferentes fabricantes desde una aplicación para UWP. |
 | **Bluetooth** | La funcionalidad de dispositivos **Bluetooth** permite a las aplicaciones comunicarse con dispositivos Bluetooth ya emparejados sobre el protocolo de atributo genérico (GATT) o de velocidad básica clásico (RFCOMM).<br/>Esta funcionalidad es necesaria para usar algunas API del espacio de nombres [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413). |

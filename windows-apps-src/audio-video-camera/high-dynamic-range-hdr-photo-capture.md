@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c5005885d150fdd4f6a41b3fb2586e2728bbd5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dde7f966e47aa6c35e3bc4e508eddabf13e313ee
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921889"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045916"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>Captura de fotos con poca luz y alto rango dinámico (HDR)
 
@@ -39,7 +39,7 @@ Otros artículos relacionados con la captura HDR incluyen:
 > [!NOTE] 
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
-Existe una muestra universal de Windows que demuestra el uso de la clase **AdvancedPhotoCapture**, que puedes usar para ver la API usada en contexto o como un punto de partida para tu propia aplicación. Para obtener más información, consulta [Camera Advanced Capture sample](http://go.microsoft.com/fwlink/?LinkID=620517) (Muestra de captura de cámara avanzada).
+Existe una muestra universal de Windows que demuestra el uso de la clase **AdvancedPhotoCapture**, que puedes usar para ver la API usada en contexto o como un punto de partida para tu propia aplicación. Para obtener más información, consulta [Camera Advanced Capture sample](https://go.microsoft.com/fwlink/?LinkID=620517) (Muestra de captura de cámara avanzada).
 
 ## <a name="advanced-photo-capture-namespaces"></a>Espacios nombres de captura de fotos avanzada
 

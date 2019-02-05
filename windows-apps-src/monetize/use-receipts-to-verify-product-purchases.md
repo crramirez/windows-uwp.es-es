@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: b71d55d71a63060a66265051fafc8bdf7313e77b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923306"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047257"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar compras de productos
 
@@ -108,7 +108,7 @@ El elemento raíz de este archivo es el elemento **Recibo** que contiene informa
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    No        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
 |  [ProductReceipt](#productreceipt)  |     No       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
-|  Signature  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](http://go.microsoft.com/fwlink/p/?linkid=251093). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
+|  Signature  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://go.microsoft.com/fwlink/p/?linkid=251093). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
 
 **Receipt** tiene los atributos siguientes.
 

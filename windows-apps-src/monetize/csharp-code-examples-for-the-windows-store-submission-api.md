@@ -6,12 +6,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 19cfec890d6a434a392ce08257cad6bbeee4cda1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924241"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044988"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de C\#: envíos de aplicaciones, complementos y pilotos
 
@@ -19,7 +19,7 @@ En este artículo se proporcionan ejemplos de código C# que muestran cómo usar
 
 * [Crear un envío de aplicación](#create-app-submission)
 * [Crear un envío de complemento](#create-add-on-submission)
-* [Actualizar un envío de complemento](#update-add-on-submission)
+* [Actualización de un envío de complemento](#update-add-on-submission)
 * [Crear un envío de paquete piloto](#create-flight-submission)
 
 Puedes revisar cada ejemplo para conocer más detalles sobre la tarea que muestra, o bien puedes compilar todos los ejemplos de código de este artículo en una aplicación de consola. Para compilar los ejemplos, crear una aplicación de consola de C# denominada **DeveloperApiCSharpSample** en Visual Studio, copia cada ejemplo en un archivo de código independiente en el proyecto y compila el proyecto.
@@ -29,7 +29,7 @@ Puedes revisar cada ejemplo para conocer más detalles sobre la tarea que muestr
 En estos ejemplos se usan las bibliotecas siguientes:
 
 * Microsoft.WindowsAzure.Storage.dll. Esta biblioteca está disponible en el [SDK de Azure para .NET](https://azure.microsoft.com/downloads/) o puedes obtenerla instalando el [paquete de NuGet WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage).
-* [Newtonsoft.Json](http://www.newtonsoft.com/json) Paquete NuGet de Newtonsoft.
+* [Newtonsoft.Json](https://www.newtonsoft.com/json) Paquete NuGet de Newtonsoft.
 
 ## <a name="main-program"></a>Programa principal
 

@@ -1,22 +1,22 @@
 ---
 title: 'Novedades en los documentos de Windows de agosto de 2018: desarrollar aplicaciones para UWP'
-description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de agosto de 2018.
+description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrolladores de Windows 10 de agosto de 2018.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, agosto
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: da8bc3b441a1b619e086934f277cb14be6bcc37a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9922aa1ad2442153dcc2c13d05520c05c3b56d31
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937158"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046914"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos de Windows de agosto de 2018
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, directrices para los desarrolladores y vídeos que se han puesto a disposición en el mes de agosto.
 
-[Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -32,7 +32,7 @@ Se han agregado las siguientes características de Windows compilaciones de Insi
 
 * NavigationView ahora admite la [navegación superior](../design/controls-and-patterns/navigationview.md), para los casos en los que la aplicación tiene un menor número de opciones de exploración y requieren más espacio para el contenido de la aplicación.
 
-* Vista de árbol se ha mejorado para admitir [plantillas de elemento de enlace de datos y arrastrar y colocar.](../design/controls-and-patterns/tree-view.md)
+* TreeView se ha mejorado para admitir [plantillas de elemento de enlace de datos y arrastrar y colocar.](../design/controls-and-patterns/tree-view.md)
 
 ### <a name="package-support-framework"></a>Marco de soporte técnico de paquete
 
@@ -42,17 +42,17 @@ Para obtener más información, consulta [en tiempo de ejecución de aplicar cor
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="web-api-extensions"></a>Extensiones de la API Web
+### <a name="web-api-extensions"></a>Extensiones de API Web
 
-Se ha agregado una lista de [extensiones de API de Microsoft heredadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) a la documentación de Mozilla Developer Network de desarrollo y exploradores web. Estas extensiones de API son exclusivas de Internet Explorer o Microsoft Edge y complementan existente información sobre la compatibilidad de explorador y compatibilidad de los documentos de web MDN. Microsoft heredadas [extensiones CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) y [JavaScript extensiones](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) también están disponibles, y puedes encontrar información sobre la API de MDN de web enriquecidas expone directamente en [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Se ha agregado una lista de [extensiones de API de Microsoft heredadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) a la documentación de Mozilla Developer Network de desarrollo y exploradores web. Estas extensiones de API son exclusivas de Internet Explorer o Microsoft Edge y complementan existente información sobre el soporte de compatibilidad y Explorador de los documentos de web MDN. Microsoft heredadas [extensiones CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) y [JavaScript extensiones](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) también están disponibles, y puedes encontrar información sobre las API de MDN de web enriquecidas expone directamente en [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C++ / ejemplos de código de WinRT
 
-Hemos agregado 250 [C++ / WinRT](../cpp-and-winrt-apis/index.md) código descripciones para los temas de nuestros documentos, elementos complementarios existentes C++ / ejemplos de código CX.
+Hemos agregado 250 [C++ / WinRT](../cpp-and-winrt-apis/index.md) código descripciones de temas en nuestros documentos, elementos complementarios existentes C++ / ejemplos de código CX.
 
 ### <a name="project-rome"></a>Project Rome
 
-Se ha reorganizado el sitio de [documentos de proyecto Rome](https://docs.microsoft.com/windows/project-rome/) en un enfoque de la característica en primer lugar. Esto hará que sea más fácil para los desarrolladores para encontrar lo que buscan y la implementación de las características de su elección en varias plataformas.
+Se ha reorganizado el sitio de [documentos de proyecto Rome](https://docs.microsoft.com/windows/project-rome/) en un enfoque de la característica en primer lugar. Esto hará que sea más fácil para los desarrolladores para encontrar lo que están buscando y la implementación de las características de su elección en varias plataformas.
 
 ## <a name="videos"></a>Vídeos
 
@@ -62,7 +62,7 @@ El complemento de Xbox Live para Unity contiene compatibilidad para agregar la f
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el más recientes preguntas que hemos respondido a!
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
 
 Raymond Chen:
 

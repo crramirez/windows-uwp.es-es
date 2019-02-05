@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 606ab4489b86b1fbba7346b4a503339c4c19f7d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940677"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048322"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -30,7 +30,7 @@ Para elegir un destino, ve a la lista desplegable de destino de depuración junt
 -   **Máquina local** implementa la aplicación en la máquina de desarrollo actual. Esta opción solo está disponible si la **Versión mínima de la plataforma de destino** de la aplicación es inferior o igual al sistema operativo de la máquina de desarrollo.
 -   **Máquina remota** te permitirá especificar un destino remoto para implementar la aplicación. Puedes encontrar más información acerca de la implementación en una máquina remota en [Especificación de un dispositivo remoto](#specifying-a-remote-device).
 -   **Dispositivo** implementará la aplicación en un dispositivo conectado mediante USB. El dispositivo no debe estar bloqueado por el desarrollador y debe tener la pantalla desbloqueada.
--   Un destino de tipo **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Emuladores solo están disponibles en Hyper-V había habilitado equipos que ejecuten Windows8.1 o posterior.
+-   Un destino de tipo **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Emuladores solo están disponibles en Hyper-V había habilitado máquinas que se ejecutan Windows8.1 o posterior.
 
 
 ## <a name="debugging-deployed-apps"></a>Depuración de aplicaciones implementadas
@@ -65,7 +65,7 @@ Para especificar una máquina remota para aplicaciones de C# o Microsoft Visual 
 
 ![Cuadro de diálogo Conexiones remotas](images/debug-remote-connections.png)
 
-Para volver a este cuadro de diálogo, puede abrir las propiedades del proyecto y ve a la pestaña **Depurar** . Desde allí, selecciona **encontrar** junto a **máquina remota:**
+Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto y ve a la pestaña **Depurar** . Desde allí, selecciona **encontrar** junto a **máquina remota:**
 
 ![Pestaña Depurar](images/debug-remote-machine-config.png)
 
@@ -182,9 +182,9 @@ En el dispositivo remoto, el diseño se registrará en la siguiente ubicación p
 
 ## <a name="debugging-options"></a>Opciones de depuración
 
-En Windows 10, se mejora el rendimiento de inicio de aplicaciones para UWP al inicio de forma proactiva y, a continuación, suspender las aplicaciones en una técnica llamada [el inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
+En Windows 10, se mejora el rendimiento de inicio de las aplicaciones para UWP al inicio de forma proactiva y, a continuación, suspender las aplicaciones de una técnica llamada [el inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
 
-La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en la máquina (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=717245).
+La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en la máquina (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](https://go.microsoft.com/fwlink/p/?LinkId=717245).
 
 Puedes establecer las siguientes opciones de implementación en la página de propiedades de **Depurar** del proyecto de inicio:
 
@@ -206,7 +206,7 @@ Puedes establecer las siguientes opciones de implementación en la página de pr
 
 ## <a name="symbols"></a>Símbolos
 
-Los archivos de símbolos contienen una variedad de datos muy útiles al depurar el código, como variables, nombres de función y direcciones de punto de entrada, lo que te permite comprender mejor las excepciones y el orden de ejecución de la pila de llamadas. Los símbolos de la mayoría de variantes de Windows están disponibles a través del [Servidor de símbolos de Microsoft](http://msdl.microsoft.com/download/symbols) o se pueden descargar para búsquedas más rápidas y sin conexión en [Descargar paquetes de símbolos de Windows](http://aka.ms/winsymbols).
+Los archivos de símbolos contienen una variedad de datos muy útiles al depurar el código, como variables, nombres de función y direcciones de punto de entrada, lo que te permite comprender mejor las excepciones y el orden de ejecución de la pila de llamadas. Los símbolos de la mayoría de variantes de Windows están disponibles a través del [Servidor de símbolos de Microsoft](https://msdl.microsoft.com/download/symbols) o se pueden descargar para búsquedas más rápidas y sin conexión en [Descargar paquetes de símbolos de Windows](https://aka.ms/winsymbols).
 
 Para establecer opciones de símbolo de Visual Studio, selecciona **Herramientas > Opciones** y después ve a **Depuración > Símbolos** en la ventana del cuadro de diálogo.
 
@@ -223,7 +223,7 @@ Puedes agregar más rutas de acceso mediante el delimitador `‘;’` o puedes u
 
 ## <a name="windbg"></a>WinDbg
 
-WinDbg es un depurador eficaz que se suministra como parte del conjunto de herramientas de depuración para Windows, que se incluye con [Windows SDK](http://go.microsoft.com/fwlink/p/?LinkID=271979). La instalación de Windows SDK te permite instalar las herramientas de depuración para Windows como un producto independiente. Aunque es muy útil para depurar código nativo, WinDbg no se recomienda para aplicaciones escritas en código administrado o HTML5.
+WinDbg es un depurador eficaz que se suministra como parte del conjunto de herramientas de depuración para Windows, que se incluye con [Windows SDK](https://go.microsoft.com/fwlink/p/?LinkID=271979). La instalación de Windows SDK te permite instalar las herramientas de depuración para Windows como un producto independiente. Aunque es muy útil para depurar código nativo, WinDbg no se recomienda para aplicaciones escritas en código administrado o HTML5.
 
 Para usar WinDbg con aplicaciones para UWP, tendrás que deshabilitar primero la administración del ciclo de vida de los procesos (PLM) para el paquete de la aplicación mediante PLMDebug, tal como se describe en [Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)](testing-debugging-plm.md).
 

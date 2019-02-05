@@ -5,12 +5,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio nativo
 ms.localizationpriority: medium
-ms.openlocfilehash: c978a07ceb30aaf9c2d0df3d38ff7ee9abbb5b2a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939549"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045248"
 ---
 # <a name="native-ads"></a>Anuncios nativos
 
@@ -23,7 +23,7 @@ Para los anunciantes, los anuncios nativos proporcionan ubicaciones de alto rend
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior de VisualStudio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
+* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior de VisualStudio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-a-native-ad-into-your-app"></a>Integrar un anuncio nativo en la aplicación
 

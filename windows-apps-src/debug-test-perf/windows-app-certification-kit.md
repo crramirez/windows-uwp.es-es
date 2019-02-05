@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3c8729a6d2ac828f3d7b257681d64f4c7834587
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930776"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048875"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
 
 
-Para obtener la [Certificación de Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) de la aplicación o prepararla para su [publicación en la Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), debes validar y probarla localmente en primer lugar. En este tema se muestra cómo instalar y ejecutar el [Kit de certificación de aplicaciones de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantizar que la aplicación sea segura y eficaz.
+Para obtener la [Certificación de Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) de la aplicación o prepararla para su [publicación en la Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), debes validar y probarla localmente en primer lugar. En este tema se muestra cómo instalar y ejecutar el [Kit de certificación de aplicaciones de Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantizar que la aplicación sea segura y eficaz.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -86,7 +86,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumpla con las [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos que pruebes la aplicación en un equipo de bajo consumo, por ejemplo, un equipo Intel Atom basados en procesadores con una resolución de pantalla de 1366 x 768 (o superior) y una rotación disco duro unidad (en lugar de una unidad de disco duro de estado sólida).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple con las [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos que pruebes la aplicación en un equipo de bajo consumo, por ejemplo, un equipo Intel Atom basados en procesadores con una resolución de pantalla de 1366 x 768 (o superior) y una rotación disco duro unidad (en contraposición a una unidad de disco duro de estado sólida).
 
 A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulta las más recientes de [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) y probar la aplicación con la versión más reciente del Kit de certificación de aplicaciones de Windows para asegurarte de que la aplicación cumpla con los requisitos de rendimiento más recientes.
 

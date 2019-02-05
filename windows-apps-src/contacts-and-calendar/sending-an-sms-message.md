@@ -6,18 +6,18 @@ keywords: contactos, SMS, enviar
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 427eb1b895269727d82e42d5abc3ae1f1da1a35d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: abc9ca7d6c3d6e7120cfc5ede4f10a4dfd5a7c1f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944996"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050698"
 ---
 # <a name="send-an-sms-message"></a>Enviar un mensaje SMS
 
 En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario presiona el botón de enviar.
 
-Para llamar a este código, declarar las funcionalidades de **chat**, **smsSend**y **chatSystem** en el manifiesto del paquete. Estas son [las funcionalidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , pero se pueden usar en la aplicación. Necesitas aprobación solo si vas a publicar la aplicación en la tienda. Ver los [tipos de cuenta, ubicaciones y tarifas](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
+Para llamar a este código, declarar las funcionalidades de **chat**, **smsSend**y **chatSystem** en el manifiesto del paquete. Estas son [las funcionalidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , pero se puede usar en la aplicación. Debes aprobación solo si vas a publicar la aplicación en la tienda. Ver los [tipos de cuenta, ubicaciones y tarifas](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
 
 ## <a name="launch-the-compose-sms-dialog"></a>Iniciar el cuadro de diálogo de redacción de SMS
 
@@ -63,7 +63,7 @@ if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Applicatio
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. Para información sobre cómo seleccionar contactos y usarlos como destinatarios de un mensaje SMS, consulta [Seleccionar contactos](selecting-contacts.md). Descarga las [muestras de aplicaciones universales de Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos de cómo enviar y recibir mensajes SMS mediante una tarea en segundo plano.
+Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. Para información sobre cómo seleccionar contactos y usarlos como destinatarios de un mensaje SMS, consulta [Seleccionar contactos](selecting-contacts.md). Descarga las [muestras de aplicaciones universales de Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos de cómo enviar y recibir mensajes SMS mediante una tarea en segundo plano.
 
 ## <a name="related-topics"></a>Temas relacionados
 

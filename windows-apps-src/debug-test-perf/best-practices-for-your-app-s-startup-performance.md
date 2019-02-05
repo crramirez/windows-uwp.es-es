@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e9d0fdee4ba9f44f15c461e5a53dad28700023a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947045"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051108"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
@@ -103,7 +103,7 @@ El rendimiento de inicio de una aplicación XAML está relacionada directamente 
 -   Los objetos UserControl y las plantillas de controles se ampliarán, por lo que también deberían tenerse en cuenta.
 -   Si creas código XAML que no aparece en la pantalla, deberías justificar si dichos fragmentos del código XAML deben crearse durante el inicio.
 
-En la ventana [Visual Studio Live Visual Tree](http://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) (Árbol visual activo de Visual Studio) se muestra el número de elementos secundarios para cada nodo del árbol.
+En la ventana [Visual Studio Live Visual Tree](https://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) (Árbol visual activo de Visual Studio) se muestra el número de elementos secundarios para cada nodo del árbol.
 
 ![Árbol visual activo.](images/live-visual-tree.png)
 
@@ -323,7 +323,7 @@ Es fundamental que una aplicación con un período de inicialización extendido 
 > End Class
 > ```
 
-Para ver un ejemplo del uso de pantallas de presentación extendidas, consulta el tema sobre la [muestra de pantalla de presentación](http://go.microsoft.com/fwlink/p/?linkid=234889).
+Para ver un ejemplo del uso de pantallas de presentación extendidas, consulta el tema sobre la [muestra de pantalla de presentación](https://go.microsoft.com/fwlink/p/?linkid=234889).
 
 ### <a name="phase-3"></a>Fase 3
 
@@ -339,7 +339,7 @@ El modo exacto en que una aplicación responde a cada fase del inicio depende de
 
 El código reutilizable por lo general consiste en incluir módulos (DLL) en un proyecto. Para cargar estos módulos, es necesario tener acceso al disco y, como puedes imaginar, esto puede consumir una gran cantidad de recursos. Esto provoca un mayor impacto en el inicio en frío, pero también puede tenerlo en el inicio en caliente. En el caso de C# y Visual Basic, CLR trata de retrasar este alto consumo la mayor cantidad de tiempo posible mediante la carga de ensamblados a petición. Es decir, CLR no carga un módulo hasta que un método ejecutado hace referencia a él. Por este motivo, solo debes hacer referencia a los ensamblados que sean necesarios para el arranque de tu aplicación en el código de inicio, para que CLR no cargue módulos innecesarios. Si en tu ruta de acceso de inicio hay rutas de código sin usar que tienen referencias innecesarias, puedes moverlas a otros métodos para evitar las cargas innecesarias.
 
-Otro modo de reducir las cargas de módulos consiste en combinar los módulos de las aplicaciones. Por lo general, lleva menos tiempo cargar un ensamblado grande que dos pequeños. No siempre es posible hacerlo y solo debes combinar los módulos si esto no supone una diferencia material para la productividad del desarrollador o la reusabilidad del código. Puedes usar herramientas, como [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) o el [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para averiguar qué módulos se cargan en el inicio.
+Otro modo de reducir las cargas de módulos consiste en combinar los módulos de las aplicaciones. Por lo general, lleva menos tiempo cargar un ensamblado grande que dos pequeños. No siempre es posible hacerlo y solo debes combinar los módulos si esto no supone una diferencia material para la productividad del desarrollador o la reusabilidad del código. Puedes usar herramientas, como [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) o el [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para averiguar qué módulos se cargan en el inicio.
 
 ### <a name="make-smart-web-requests"></a>Realizar solicitudes web inteligentes
 

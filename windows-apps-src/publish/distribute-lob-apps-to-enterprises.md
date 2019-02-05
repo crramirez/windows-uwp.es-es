@@ -1,17 +1,17 @@
 ---
 Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
-title: Distribuir aplicaciones de LOB a empresas
+title: Distribuir aplicaciones de línea de negocio a empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: eecd7a3ff86de5db9693bf6ce597e2b1e00bb4ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c6e1eafbce5eca1570161da1656c0242228ff7de
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947609"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044592"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de LOB a empresas
 
@@ -30,7 +30,7 @@ Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que la
 El primer paso para publicar aplicaciones LOB exclusivamente para una empresa es establecer la asociación entre tu cuenta y la tienda privada de la empresa.
 
 > [!IMPORTANT]
-> Este proceso de asociación debe comenzarlo la empresa y debe usarse la dirección de correo electrónico asociada a la cuenta de Microsoft que se usó para crear la cuenta de desarrollador. Para obtener más información, consulta el artículo [Trabajar con aplicaciones de línea de negocio](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> Este proceso de asociación debe comenzarlo la empresa y debe usarse la dirección de correo electrónico asociada a la cuenta de Microsoft que se usó para crear la cuenta de desarrollador. Para obtener más información, consulta el artículo [Trabajar con aplicaciones de línea de negocio](https://go.microsoft.com/fwlink/p/?LinkId=698846).
 
 Si una empresa decide invitarte para que publiques aplicaciones para su uso exclusivo, recibirás un correo electrónico con un vínculo para confirmar la asociación. También puedes confirmar estas asociaciones si te diriges a la sección **Asociaciones de empresa** de la **Configuración de la cuenta** (siempre que hayas iniciado sesión con la cuenta de Microsoft que usaste para abrir la cuenta de desarrollador).
 
@@ -73,7 +73,7 @@ Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el pro
 > [!NOTE]
 > Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets), y no debes haber [excluido ese mercado](define-pricing-and-market-selection.md) al enviar la aplicación. 
 
-Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](http://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](http://go.microsoft.com/fwlink/p/?LinkId=698847).
+Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](https://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](https://go.microsoft.com/fwlink/p/?LinkId=698847).
 
 
 ## <a name="update-lob-apps"></a>Actualizar aplicaciones de LOB
@@ -94,7 +94,7 @@ La creación de aplicaciones para una empresa a través de la Tienda Microsoft p
 
 En algunos casos, es podrán que las empresas no quieran sus aplicaciones de línea de negocio para ser enviado a través del centro de partners (por ejemplo, cuestiones de cumplimiento o para las aplicaciones que necesitan funciones adicionales). En este caso, la empresa puede implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación.
 
-Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
+Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows10](https://go.microsoft.com/fwlink/p/?LinkId=623433).
 
  
 

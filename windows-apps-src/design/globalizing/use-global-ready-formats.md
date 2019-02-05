@@ -1,18 +1,18 @@
 ---
 Description: Design your app to be global-ready by appropriately formatting dates, times, numbers, phone numbers, and currencies. You'll then be able later to adapt your app for additional cultures, regions, and languages in the global market.
-title: Globalizar los formatos de fecha y hora o número
+title: Globalizar los formatos de fecha/hora/número
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: e8a2b0125944a8a4db66b41d26fcd4a0aa35b5b2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d641bcff48b830c56a1d03ee861ec2a4c5f433b6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933755"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048612"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha y hora o número
 
@@ -173,7 +173,7 @@ En los escenarios en los que quieras ofrecer funcionalidades diferentes solo seg
 
 ## <a name="samples"></a>Muestras
 
-* [Detalles del calendario y ejemplo matemático](http://go.microsoft.com/fwlink/p/?linkid=231636)
-* [Ejemplo de formato de fecha y hora](http://go.microsoft.com/fwlink/p/?linkid=231618)
-* [Ejemplo de preferencias de globalización](http://go.microsoft.com/fwlink/p/?linkid=231608)
-* [Ejemplo de análisis y formato de números](http://go.microsoft.com/fwlink/p/?linkid=231620)
+* [Detalles del calendario y ejemplo matemático](https://go.microsoft.com/fwlink/p/?linkid=231636)
+* [Ejemplo de formato de fecha y hora](https://go.microsoft.com/fwlink/p/?linkid=231618)
+* [Ejemplo de preferencias de globalización](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Ejemplo de análisis y formato de números](https://go.microsoft.com/fwlink/p/?linkid=231620)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9714488473bf4bdc118fd56129ea67e00019dcb1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3359c3e7d7841e68dd00dc318eb1de9f1418df06
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934770"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047347"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efectos para analizar fotogramas de cámara
 
@@ -97,7 +97,7 @@ Si quieres realizar alguna acción cuando se detectan rostros, como dibujar un c
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-En el controlador para el evento, puedes obtener una lista de todos los rostros detectados en un marco si accedes a la propiedad [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) de la clase [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774). La propiedad [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) es una estructura [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) que describe el rectángulo que contiene el rostro detectado en unidades con respecto a las dimensiones de la secuencia de vista previa. Para ver código de ejemplo que transforma las coordenadas de la secuencia de vista previa en coordenadas de pantalla, consulta [face detection UWP sample](http://go.microsoft.com/fwlink/?LinkId=619486) (Muestra de UWP de detección de rostro).
+En el controlador para el evento, puedes obtener una lista de todos los rostros detectados en un marco si accedes a la propiedad [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) de la clase [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774). La propiedad [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) es una estructura [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) que describe el rectángulo que contiene el rostro detectado en unidades con respecto a las dimensiones de la secuencia de vista previa. Para ver código de ejemplo que transforma las coordenadas de la secuencia de vista previa en coordenadas de pantalla, consulta [face detection UWP sample](https://go.microsoft.com/fwlink/?LinkId=619486) (Muestra de UWP de detección de rostro).
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
@@ -113,7 +113,7 @@ No todos los dispositivos tienen un dispositivo de captura que puede ajustar el 
 
 [!code-cs[AreFaceFocusAndExposureSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAreFaceFocusAndExposureSupported)]
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

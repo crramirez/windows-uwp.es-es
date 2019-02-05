@@ -1,24 +1,24 @@
 ---
-description: Si tienes una aplicación Universal 8.1 \#8212;whether como destino Windows8.1, Windows Phone 8.1 o ambos & \#8212;then que encontrarás que el código fuente y las habilidades se portarán a Windows 10.
+description: 'Si tienes un app&\ Universal 8.1 #8212; si tiene como destino Windows8.1, Windows Phone 8.1 o both&\ #8212; a continuación, encontrarás que el código fuente y las habilidades se portarán a Windows 10.'
 title: Portar de Windows Runtime 8.x a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7d0a75ae4306535d37c5c2d776fda2cbdc3a0634
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938626"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047693"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Mover de Windows Runtime8.x a UWP
 
 
-Si tienes una aplicación Universal 8.1: si tiene como destino Windows8.1, Windows Phone 8.1 o ambos, a continuación, encontrarás que el código fuente y las habilidades se portarán a Windows 10. Con Windows 10, puedes crear una aplicación de plataforma Universal de Windows (UWP), que es un paquete de aplicación única que los clientes pueden instalar en todos los tipos de dispositivo. Para obtener más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que mencionaremos en esta guía de migración, consulta la [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Si tienes una aplicación Universal 8.1, si tiene como destino Windows8.1, Windows Phone 8.1 o ambos —, a continuación, encontrarás que el código fuente y las habilidades se portarán a Windows 10. Con Windows 10, puedes crear una aplicación de plataforma Universal de Windows (UWP), que es un paquete de aplicación única que los clientes pueden instalar en todos los tipos de dispositivo. Para obtener más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que mencionaremos en esta guía de migración, consulta la [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-Durante la migración, verás que Windows 10 comparte la mayoría de las API con las plataformas anteriores, como marcado XAML, el marco de trabajo de la interfaz de usuario y las herramientas, lo que te resultará muy familiar. Al igual que antes, aún puedes elegir entre C++, C# y Visual Basic para el lenguaje de programación a fin de usarlo junto con el marco de trabajo de la interfaz de usuario de XAML. Los primeros pasos de la planificación de qué hacer exactamente con la aplicación o las aplicaciones actuales dependerá de los tipos de aplicaciones y proyectos que tengas. Esto se explica en las siguientes secciones.
+Durante la migración, encontrarás que Windows 10 comparte la mayoría de las API con las plataformas anteriores, así como marcado XAML, marco de la interfaz de usuario y las herramientas, por lo que te resultará muy familiar. Al igual que antes, aún puedes elegir entre C++, C# y Visual Basic para el lenguaje de programación a fin de usarlo junto con el marco de trabajo de la interfaz de usuario de XAML. Los primeros pasos de la planificación de qué hacer exactamente con la aplicación o las aplicaciones actuales dependerá de los tipos de aplicaciones y proyectos que tengas. Esto se explica en las siguientes secciones.
 
 ## <a name="if-you-have-a-universal-81-app"></a>Si ya tienes una aplicación Universal 8.1
 
@@ -28,7 +28,7 @@ Una aplicación Universal 8.1 se compila a partir de un proyecto de aplicación 
 -   AppName\_81.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para Windows Phone 8.1.
 -   AppName\_81.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
 
-A menudo, una aplicación Universal de Windows 8.1 ofrece las mismas funciones y lo hace usando el mismo código y marcado: en las versiones Windows8.1 y Windows Phone 8.1. Una aplicación como esta es ideal para migrar a una sola aplicación de Windows 10 que tiene como objetivo la familia de dispositivos universales (y que se puede instalar en la gama más amplia de dispositivos). Básicamente, migrarás el contenido del proyecto compartido y tendrás que usar poco o nada de los otros dos proyectos porque están vacíos o no contienen gran cosa.
+A menudo, una aplicación Universal de Windows 8.1 ofrece las mismas características y lo hace usando el mismo código y marcado: en las versiones Windows8.1 y Windows Phone 8.1. Una aplicación como esta es un candidato ideal para la migración a una sola aplicación de Windows 10 que tiene como objetivo la familia de dispositivos universales (y que se puede instalar en la gama más amplia de dispositivos). Básicamente, migrarás el contenido del proyecto compartido y tendrás que usar poco o nada de los otros dos proyectos porque están vacíos o no contienen gran cosa.
 
 Otras veces, el Windows8.1 o el formulario de Windows Phone 8.1 de la aplicación contiene funciones únicas. O bien contienen las mismas características pero las implementan con diferentes técnicas o distinta tecnología. Con una aplicación de este tipo, puedes optar por migrarla a una sola aplicación que tenga como objetivo la familia de dispositivos universales (en cuyo caso, querrás que la aplicación se adapte a diferentes dispositivos) o puedes optar por migrarla como más de una aplicación, quizás una que tenga como destino la familia de dispositivos de escritorio y otra que tenga como destino la familia de dispositivos móviles. La naturaleza de la aplicación Universal 8.1 determinará cuál de estas opciones es mejor en tu caso.
 
@@ -55,9 +55,9 @@ Al migrar una aplicación Universal 8.1 al modelo de las aplicaciones para UWP, 
 
 -   **Vista**. La vista (junto con el modelo de vista) conforma la interfaz de usuario de la aplicación. Lo ideal es que la vista conste de marcado enlazado a propiedades observables de un modelo de vista. Otro patrón (común y conveniente, pero solo a corto plazo) es para el código imperativo en un archivo de código subyacente para manipular directamente elementos de la interfaz de usuario. En cualquier caso, el marcado y diseño de la interfaz de usuario (incluso el código imperativo que manipula los elementos de la interfaz de usuario) se podrán portar fácilmente.
 -   **Modelos de vista y de datos**. Aunque no adoptes formalmente patrones de separación de cuestiones (por ejemplo, MVVM), inevitablemente hay código presente en la aplicación que realiza la función de modelo de vista y modelo de datos. El código del modelo de vista usa tipos en los espacios de nombres del marco de trabajo de la interfaz de usuario. Tanto el modelo de vista como el modelo de datos usan además un sistema operativo no visual y las API de .NET Framework (incluidas las API para el acceso a datos). Y estas API también están [disponibles para aplicaciones para UWP, también](https://msdn.microsoft.com/library/windows/apps/br211369), de modo que la mayoría del código, si no todo, se migrará sin cambios.
--   **Servicios en la nube**. Es probable que parte de la aplicación (quizás una gran parte) se ejecute en la nube en forma de servicios. La parte de la aplicación que se ejecuta en el dispositivo cliente se conecta a ellos. Esta es la parte de una aplicación distribuida que probablemente no se modificará al migrar la parte del cliente. Si aún no tienes uno, una buena opción de servicios en la nube para tu aplicación para UWP es [Servicios móviles de Microsoft Azure](http://azure.microsoft.com/services/mobile-services/), que proporciona componentes back-end eficaces a los que puede llamar tu aplicación para servicios que van desde sencillas notificaciones de actualizaciones de iconos dinámicos hasta la clase de escalabilidad de tareas difíciles que puede proporcionar una granja de servidores.
+-   **Servicios en la nube**. Es probable que parte de la aplicación (quizás una gran parte) se ejecute en la nube en forma de servicios. La parte de la aplicación que se ejecuta en el dispositivo cliente se conecta a ellos. Esta es la parte de una aplicación distribuida que probablemente no se modificará al migrar la parte del cliente. Si aún no tienes uno, una buena opción de servicios en la nube para tu aplicación para UWP es [Servicios móviles de Microsoft Azure](https://azure.microsoft.com/services/mobile-services/), que proporciona componentes back-end eficaces a los que puede llamar tu aplicación para servicios que van desde sencillas notificaciones de actualizaciones de iconos dinámicos hasta la clase de escalabilidad de tareas difíciles que puede proporcionar una granja de servidores.
 
-Antes o durante la migración, considera la posibilidad de si la aplicación podría mejorarse mediante la refactorización de modo que el código con un propósito similar se agrupe en capas y no se disperse arbitrariamente. La factorización de la aplicación en capas, como las descritas anteriormente, facilita corregir la aplicación, probarla y posteriormente leerla y mantenerla. Puedes hacer que la funcionalidad sea más reutilizable siguiendo el patrón Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Este patrón mantiene separadas entre sí las partes de la aplicación correspondientes a los datos, al negocio y a la interfaz de usuario. Incluso dentro de la interfaz de usuario, puede mantener separados el estado y el comportamiento, además de poderse probar por separado, desde los elementos visuales. Con MVVM, puedes escribir una vez la lógica de datos y de negocio, y usarla en todos los dispositivos, independientemente de la interfaz de usuario. Es probable que también puedas volver a usar la mayor parte del modelo de vista y los elementos de vista entre dispositivos.
+Antes o durante la migración, considera la posibilidad de si la aplicación podría mejorarse mediante la refactorización de modo que el código con un propósito similar se agrupe en capas y no se disperse arbitrariamente. La factorización de la aplicación en capas, como las descritas anteriormente, facilita corregir la aplicación, probarla y posteriormente leerla y mantenerla. Puedes hacer que la funcionalidad sea más reutilizable siguiendo el patrón Model-View-ViewModel ([MVVM](https://msdn.microsoft.com/magazine/dd419663.aspx)). Este patrón mantiene separadas entre sí las partes de la aplicación correspondientes a los datos, al negocio y a la interfaz de usuario. Incluso dentro de la interfaz de usuario, puede mantener separados el estado y el comportamiento, además de poderse probar por separado, desde los elementos visuales. Con MVVM, puedes escribir una vez la lógica de datos y de negocio, y usarla en todos los dispositivos, independientemente de la interfaz de usuario. Es probable que también puedas volver a usar la mayor parte del modelo de vista y los elementos de vista entre dispositivos.
 
 | Tema | Description |
 |-------|-------------|
@@ -73,5 +73,5 @@ Antes o durante la migración, considera la posibilidad de si la aplicación pod
 
 **Documentación**
 * [Referencia de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377)
-* [Compilar aplicaciones universales de Windows para todos los dispositivos Windows](http://go.microsoft.com/fwlink/p/?LinkID=397871)
+* [Compilar aplicaciones universales de Windows para todos los dispositivos Windows](https://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Diseño de la experiencia de usuario para aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh767284)

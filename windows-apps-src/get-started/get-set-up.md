@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a92b8d0f921bc747108b802d285b783e7f2bcaa8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920639"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047942"
 ---
 # <a name="get-set-up"></a>Prepárate
 
@@ -64,7 +64,7 @@ Si quieres personalizar el dispositivo e instalar otras características o paque
 
 ## <a name="want-more-tools-and-downloads"></a>¿Qué otras herramientas y descargas necesitas?
 
-Para obtener la lista completa de herramientas y descargas, consulta [Descargas](http://go.microsoft.com/fwlink/p/?linkid=285935).
+Para obtener la lista completa de herramientas y descargas, consulta [Descargas](https://go.microsoft.com/fwlink/p/?linkid=285935).
 
 ## <a name="see-also"></a>Ver también
 

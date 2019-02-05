@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932674"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047277"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -43,7 +43,7 @@ Los siguientes pasos muestran cómo habilitar el Portal de dispositivos para Xbo
 
 El Portal de dispositivos para Xbox proporciona un conjunto de páginas estándar similares a las que están disponibles en el Portal de dispositivos Windows, así como varias páginas exclusivas. Para obtener descripciones detalladas de las primeras, consulta [Introducción al Portal de dispositivos Windows](device-portal.md). Las siguientes secciones describen las páginas que son exclusivas para el Portal de dispositivos para Xbox.
 
-### <a name="home"></a>Inicio
+### <a name="home"></a>Casa
 
 Similar a la página **Administrador de aplicaciones** del Portal de dispositivos Windows, la página **Inicio** del Portal de dispositivos para Xbox muestra una lista de juegos y aplicaciones instalados en **Mis juegos y aplicaciones**. Puedes hacer clic en el nombre de un juego o una aplicación para ver más detalles sobre este, como el **Nombre de familia de paquete**. En la lista desplegable **Acciones**, puedes realizar acciones respecto al juego o la aplicación, como **Iniciar**.
 
@@ -165,7 +165,7 @@ Para cambiar estos ajustes, es necesario que haya un sensor Kinect conectado a l
 
 * **Cuando está inactivo, desconectar después de**: El dispositivo se apagará después de que el dispositivo haya estado inactivo durante este período de tiempo.
 
-* **Modo de energía**: El modo de energía del dispositivo. Consulta [Acerca de los modos de energía Inicio inmediato y de ahorro de energía](http://support.xbox.com/xbox-one/console/learn-about-power-modes) para obtener más información.
+* **Modo de energía**: El modo de energía del dispositivo. Consulta [Acerca de los modos de energía Inicio inmediato y de ahorro de energía](https://support.xbox.com/xbox-one/console/learn-about-power-modes) para obtener más información.
 
 * **Arrancar automáticamente la consola cuando esté conectada a alimentación**: El dispositivo se activará automáticamente cuando esté conectado a una fuente de alimentación.
 
@@ -195,7 +195,7 @@ Se trata de un área de trabajo en blanco que puedes personalizar a tu gusto. Pu
 
 ### <a name="game-event-data"></a>Datos del evento de juego
 
-En la página de **datos del evento de juego** , puedes ver un gráfico en tiempo real que secuencias en el número de eventos del juego de seguimiento de eventos para Windows (ETW) actualmente registradas en tu Xbox One. Si hay eventos del juego grabados en el sistema, también puedes ver los detalles (nombre del evento, la repetición del evento y el título de juego) que describe cada evento en la tabla debajo del gráfico de datos. La tabla solo está disponible si no hay eventos registrados.
+En la página de **datos del evento de juego** , puede ver que las secuencias de un gráfico en tiempo real en el número de eventos del juego de seguimiento de eventos para Windows (ETW) actualmente registradas en tu Xbox One. Si hay eventos del juego grabados en el sistema, también puedes ver los detalles (nombre del evento, la repetición del evento y el título de juego) que describe cada evento en la tabla debajo del gráfico de datos. La tabla solo está disponible si hay eventos registrados.
 
 ![Datos del evento de juego](images/device-portal-xbox-22.PNG)
 

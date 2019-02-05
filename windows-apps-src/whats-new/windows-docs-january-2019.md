@@ -5,18 +5,18 @@ keywords: Novedades, actualización, características, directrices para los desa
 ms.date: 1/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f224663506cbb60f6c1476caccb5ecffefeaf7b
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.openlocfilehash: cc5323ba12fa72fb5350e62f74206ea72fe96497
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014417"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046135"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>Novedades en los documentos de Windows de enero de 2019
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, directrices para los desarrolladores y vídeos que se han puesto a disposición en el mes de enero.
 
-[Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -70,7 +70,7 @@ Nuestra [preguntas más frecuentes](https://docs.microsoft.com/windows/community
 
 ### <a name="progressive-web-apps"></a>Aplicaciones web progresivas
 
-Aplicaciones Web progresivas son sitios web que funcionan como las aplicaciones nativas en diferentes exploradores y una amplia variedad de dispositivos Windows 10. [Ve el vídeo](https://youtu.be/ugAewC3308Y) para obtener más información y, a continuación, [echa un vistazo a los documentos](http://aka.ms/Windows-PWA) para empezar a trabajar.
+Aplicaciones Web progresivas son sitios web que funcionan como las aplicaciones nativas en diferentes exploradores y una amplia variedad de dispositivos Windows 10. [Ve el vídeo](https://youtu.be/ugAewC3308Y) para obtener más información y, a continuación, [echa un vistazo a los documentos](https://aka.ms/Windows-PWA) para empezar a trabajar.
 
 ### <a name="vs-code-series"></a>Serie de código de VS
 

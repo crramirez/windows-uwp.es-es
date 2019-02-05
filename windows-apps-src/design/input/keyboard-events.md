@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e7453d3973cef31ae8143f3ecff31fffeb763a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9ff4e7d01d907112558993f52c8a214c91f7d499
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942556"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047074"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -391,16 +391,16 @@ Es posible conseguir que los usuarios escriban datos en la aplicación de forma 
 
 **Muestras**
 * [Muestra de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
-* [Muestra de entrada](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de teclado táctil](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Muestra de respuesta a la apariencia del teclado en pantalla](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Muestra de edición de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Muestra de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de teclado táctil](https://go.microsoft.com/fwlink/p/?linkid=246019)
+* [Muestra de respuesta a la apariencia del teclado en pantalla](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [Muestra de edición de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  

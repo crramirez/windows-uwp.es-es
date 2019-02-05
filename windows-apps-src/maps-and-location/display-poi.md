@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins
 ms.localizationpriority: medium
-ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bfb307093889c5a40a452d2d406f02224ab5eab1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930255"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050648"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Mostrar puntos de interés en un mapa
 
 Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML. Un punto de interés es un punto concreto del mapa que representa algo de interés. Por ejemplo, la ubicación de un negocio, ciudad o amigo.
 
-Para obtener más información sobre la presentación de puntos de interés en tu aplicación, descarga la muestra siguiente desde el [repo de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub: [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
+Para obtener más información sobre la presentación de puntos de interés en tu aplicación, descarga la muestra siguiente desde el [repo de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub: [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 Para mostrar marcadores, imágenes y formas en el mapa añadiendo objetos [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) y [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) a una colección **MapElements** de un objeto [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer). A continuación, agrega ducho nivel a la colección **Layers** de un control de mapa.
 
@@ -92,7 +92,7 @@ Ten en cuenta lo siguiente si quieres trabajar con la clase [**MapIcon**](https:
 
 ## <a name="add-a-3d-pushpin"></a>Agregar un marcador 3D
 
-Puedes agregar objetos tridimensionales a un mapa. Utiliza la clase [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) para importar un objeto 3D desde un archivo con [formato de fabricación 3D (3MF)](http://3mf.io/specification/).
+Puedes agregar objetos tridimensionales a un mapa. Utiliza la clase [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) para importar un objeto 3D desde un archivo con [formato de fabricación 3D (3MF)](https://3mf.io/specification/).
 
 Esta imagen utiliza tazas de café 3D para marcar las ubicaciones de cafeterías en un barrio.
 
@@ -186,7 +186,7 @@ El [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xam
 
 ## <a name="add-a-shape"></a>Agregar una forma
 
-Usa la clase [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) para mostrar una forma multipunto en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra en el mapa un cuadro rojo con el borde azul.
+Usa la clase [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) para mostrar una forma multipunto en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra en el mapa un cuadro rojo con el borde azul.
 
 ```csharp
 public void HighlightArea()
@@ -229,7 +229,7 @@ public void HighlightArea()
 ## <a name="add-a-line"></a>Agregar una línea
 
 
-Usa la clase [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) para mostrar una línea en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra una línea discontinua en el mapa.
+Usa la clase [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) para mostrar una línea en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra una línea discontinua en el mapa.
 
 ```csharp
 public void DrawLineOnMap()
@@ -474,10 +474,10 @@ En la página XAML, enlaza a la propiedad en la clase de modelo de vista que dev
 ## <a name="related-topics"></a>Artículos relacionados
 
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)

@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f69c86ac8f7d13970eca8d1bbb50d4859b95f6a6
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 6cde9d8753248614603ee49fb1415ec18ec4669b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980363"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044193"
 ---
 # <a name="get-file-properties"></a>Obtener las propiedades de archivos
 
@@ -24,7 +24,7 @@ ms.locfileid: "8980363"
 Obtiene las propiedades —de nivel superior, básicas y extendidas— de un archivo representado mediante un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 > [!NOTE]
-> Para obtener una muestra completa, consulta la [muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+> Para obtener una muestra completa, consulta la [muestra de acceso de archivos](https://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -88,9 +88,9 @@ foreach (Windows.Storage.StorageFile file in files)
 
 ## <a name="getting-a-files-extended-properties"></a>Obtener las propiedades extendidas de un archivo
 
-Además de las propiedades de archivo de nivel superior y básicas, hay muchas propiedades asociadas al contenido del archivo. Para acceder a estas propiedades extendidas hay que llamar al método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Un objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) se obtiene mediante una llamada a la propiedad [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)). Si bien se puede acceder a las propiedades de archivo de nivel superior y básico como propiedades de una clase, [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) y **BasicProperties**, respectivamente, las propiedades extendidas se obtienen al pasar una colección [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](http://go.microsoft.com/fwlink/p/?LinkID=325032) que representan los nombres de las propiedades que deben recuperarse en el método **BasicProperties.RetrievePropertiesAsync**. A continuación, este método devuelve una colección [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propiedad extendida se recupera entonces de la colección por el nombre o índice.
+Además de las propiedades de archivo de nivel superior y básicas, hay muchas propiedades asociadas al contenido del archivo. Para acceder a estas propiedades extendidas hay que llamar al método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Un objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) se obtiene mediante una llamada a la propiedad [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)). Si bien se puede acceder a las propiedades de archivo de nivel superior y básico como propiedades de una clase, [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) y **BasicProperties**, respectivamente, las propiedades extendidas se obtienen al pasar una colección [IEnumerable](https://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](https://go.microsoft.com/fwlink/p/?LinkID=325032) que representan los nombres de las propiedades que deben recuperarse en el método **BasicProperties.RetrievePropertiesAsync**. A continuación, este método devuelve una colección [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propiedad extendida se recupera entonces de la colección por el nombre o índice.
 
-En este ejemplo se enumeran todos los archivos de la biblioteca de imágenes, se especifican los nombres de las propiedades deseadas (**DataAccessed** y **FileOwner**) en un objeto [List](http://go.microsoft.com/fwlink/p/?LinkID=325246), se pasa ese objeto [List](http://go.microsoft.com/fwlink/p/?LinkID=325246) a [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) para recuperar esas propiedades y luego se recuperan por el nombre dichas propiedades del objeto [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238) devuelto.
+En este ejemplo se enumeran todos los archivos de la biblioteca de imágenes, se especifican los nombres de las propiedades deseadas (**DataAccessed** y **FileOwner**) en un objeto [List](https://go.microsoft.com/fwlink/p/?LinkID=325246), se pasa ese objeto [List](https://go.microsoft.com/fwlink/p/?LinkID=325246) a [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) para recuperar esas propiedades y luego se recuperan por el nombre dichas propiedades del objeto [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) devuelto.
 
 Consulta las [Propiedades básicas de Windows](https://msdn.microsoft.com/library/windows/desktop/mt805470) para obtener una lista completa de las propiedades extendidas de un archivo.
 

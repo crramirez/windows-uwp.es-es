@@ -6,12 +6,12 @@ keywords: lista de comprobación, windows, uwp, envío, enviar, juego, aplicaci�
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b98ea7f1d28c4fcd63cd2d4706905578b240e126
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944376"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044918"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -21,7 +21,7 @@ Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-b
 Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realice el envío se guardan, para que puedas volver y trabajar en él cuando estés listo.
 
 > [!NOTE]
-> Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) de activa en [El centro de partners](https://partner.microsoft.com/dashboard) para poder enviar aplicaciones a la Microsoft Store.
+> Debes tener una [cuenta de desarrollador](https://go.microsoft.com/fwlink/p/?LinkId=615100) de activa en [El centro de partners](https://partner.microsoft.com/dashboard) para poder enviar aplicaciones a la Microsoft Store.
 
 Después de publica la aplicación, puedes publicar una versión actualizada creando otro envío en el centro de partners. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío para una aplicación publicada, haz clic en **Update** junto al envío más reciente que se muestra en su página de **información general** . También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
 
@@ -38,7 +38,7 @@ A continuación se incluyen los detalles que puedes proporcionar al crear el env
 Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No tienes que funcionan en estas secciones en el orden en que se muestran aquí.
 
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
-| Nombre del campo                    | Notas                                       | Más información                                                             |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Mercados**                   | Opción predeterminada: Todos los mercados posibles  | [Definir los precios y la selección del mercado](define-pricing-and-market-selection.md)         |
 | **Audiencia**                | Valor predeterminado: Audiencia pública | [Audiencia](choose-visibility-options.md#audience) |
@@ -53,7 +53,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 ### <a name="properties-page"></a>Página Propiedades
 
-| Nombre del campo                    | Notas                                       | Más información                                                             |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Categoría y subcategoría**  | Obligatorio                                    | [Tabla de categorías y subcategorías](category-and-subcategory-table.md)       |
 | **Dirección URL de la directiva de privacidad**            | Obligatorio para muchas aplicaciones. Consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/en-us/legal/windows/agreements/store-policies#105-personal-information) | [Dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url)        |
@@ -115,7 +115,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opciones de suspensión de publicación**     | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options)    
 | **Notas para la certificación**     | Recomendado          | [Notas para la certificación](notes-for-certification.md)             |
-| **Funcionalidades restringidas**     | Necesario si tu producto declara las [funcionalidades restringidas](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
+| **Funcionalidades restringidas**     | Necesario si tu producto declara [funcionalidades restringidas](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

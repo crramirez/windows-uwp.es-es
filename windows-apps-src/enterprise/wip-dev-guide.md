@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, trabajo en curso, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
-ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f022045787512f6baea679633d5327b6ba4caf8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932548"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048362"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Guía para desarrolladores sobre Windows Information Protection (WIP)
 
@@ -21,7 +21,7 @@ Una aplicación *habilitada* diferencia los datos corporativos y personales y sa
 
 En esta guía te mostraremos cómo crear una. Una vez finalizada, los administradores de las directivas confiarán en tu aplicación para que pueda consumir datos de su organización. Y los empleados estarán encantados de que sus datos personales se mantengan intactos en sus dispositivos, incluso si dejan de formar parte de la administración de dispositivos móviles (MDM) de la organización o si ellos mismos la abandonan.
 
-__Nota__ Esta guía te ayuda a optimizar una aplicación para UWP. Si quieres optimizar una aplicación de escritorio de Windows en C++, consulta [Guía para desarrolladores sobre Windows Information Protection (WIP)](http://go.microsoft.com/fwlink/?LinkId=822192).
+__Nota__ Esta guía te ayuda a optimizar una aplicación para UWP. Si quieres optimizar una aplicación de escritorio de Windows en C++, consulta [Guía para desarrolladores sobre Windows Information Protection (WIP)](https://go.microsoft.com/fwlink/?LinkId=822192).
 
 Puedes leer más sobre WIP y las aplicaciones habilitadas aquí: [Windows Information Protection (WIP)](wip-hub.md).
 
@@ -1163,4 +1163,4 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Muestra de Windows Information Protection (WIP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
+[Muestra de Windows Information Protection (WIP)](https://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)

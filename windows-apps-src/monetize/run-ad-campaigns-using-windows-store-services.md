@@ -1,21 +1,21 @@
 ---
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
-description: Usar la API de promociones de Microsoft Store para administrar mediante programación campañas de anuncios promocionales para las aplicaciones que están registradas en la cuenta de centro de partners de tu o tu organización.
+description: Usar la API de promociones de Microsoft Store para administrar mediante programación campañas de anuncios promocionales para las aplicaciones que están registradas en la cuenta del centro de partners tuya o de tu organización.
 title: Ejecutar campañas de anuncios con los servicios de la Store
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 35b2df09bcac553eeb939f516e950150cf2ee40d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 58325074a2f59dcd146a9534054b302b3ce9956b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929415"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044682"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de anuncios con los servicios de la Store
 
-Usar la *API de promociones de Microsoft Store* para administrar mediante programación campañas de anuncios promocionales para las aplicaciones que están registradas en la cuenta de centro de partners de tu o tu organización. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados, como la selección de destino y los creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieran hacerlo sin usar el centro de partners. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
+Usar la *API de promociones de Microsoft Store* para administrar mediante programación campañas de anuncios promocionales para las aplicaciones que están registradas en la cuenta del centro de partners tuya o de tu organización. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados, como la selección de destino y los creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieran hacerlo sin usar el centro de partners. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin:
 
@@ -23,7 +23,7 @@ Los siguientes pasos describen el proceso de principio a fin:
 2.  Antes de llamar a un método en la API de promociones de Microsoft Store, [consigue un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Tras obtener un token, tienes 60minutos para utilizar dicho token en llamadas a la API de promociones de Microsoft Store antes de que expire. Una vez que el token expire, puedes generar uno nuevo.
 3.  [Llama a la API de promociones de Microsoft Store](#call-the-windows-store-promotions-api).
 
-Como alternativa, puede crear y administrar las campañas publicitarias mediante el centro de partners y las campañas publicitarias que crees mediante programación a través de la API también se puede acceder al centro de partners de promociones de Microsoft Store. Para obtener más información acerca de cómo administrar las campañas de anuncios del centro de partners, consulta [crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
+Como alternativa, puede crear y administrar las campañas publicitarias mediante el centro de partners y las campañas publicitarias que crees mediante programación a través de la API también puede tener acceso en el centro de partners de promociones de Microsoft Store. Para obtener más información acerca de cómo administrar las campañas de anuncios del centro de partners, consulta [crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
 
 > [!NOTE]
 > Cualquier desarrollador con una cuenta del centro de partners puede usar la API de promociones de Microsoft Store para administrar las campañas publicitarias para sus aplicaciones. Las agencias de medios también pueden solicitar acceso a esta API para ejecutar campañas publicitarias en nombre de sus anunciantes. Si tienes una agencia de medios y quieres saber más sobre esta API o solicitar acceso a ella, envía tu solicitud a storepromotionsapi@microsoft.com.
@@ -36,7 +36,7 @@ Antes de empezar a escribir código para llamar a la API de promociones de Micro
 
 * Antes de correctamente puede crear e iniciar una campaña de anuncios con esta API, primero debe [crear una campaña de anuncios de pago con la página de **las campañas de anuncios** del centro de partners](../publish/create-an-ad-campaign-for-your-app.md)y tienes que agregar al menos un instrumento de pago en esta página. Después de hacer esto, podrás crear correctamente líneas de entrega facturables para campañas de anuncios con esta API. Las líneas de entrega para campañas de anuncios que creas con esta API facturarán siempre automáticamente al instrumento de pago elegido en la página de **las campañas de anuncios** en el centro de partners.
 
-* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puede [crear un nuevo Azure AD en el centro de partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin ningún coste adicional.
+* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puede [crear un nuevo Azure AD en el centro de partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin ningún coste adicional.
 
 * Debes asociar una aplicación de Azure AD con tu cuenta del centro de partners, recuperar el identificador de inquilino y el identificador de cliente para la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde el que quieres llamar a la API de promociones de Microsoft Store. Necesitas el identificador de inquilino, el de cliente y la clave para obtener un token de acceso de Azure AD que se pasará a la API.
     > [!NOTE]
@@ -71,7 +71,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-El valor de *tenant\_id* en POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave de la aplicación que recuperó del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
+El valor de *tenant\_id* de POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave de la aplicación que recuperó del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
 
 Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
@@ -100,7 +100,7 @@ El siguiente diagrama muestra la relación entre las campañas, las líneas de e
 
 ## <a name="code-example"></a>Ejemplo de código
 
-El siguiente ejemplo de código muestra cómo obtener un token de acceso de Azure AD y llamar a la API de promociones de Microsoft Store desde una aplicación de consola C#. Para usar este ejemplo de código, asigna las variables *tenantId*, *clientId*, *clientSecret* y *appID* a los valores adecuados para tu escenario. En este ejemplo se necesita el [paquete Json.NET](http://www.newtonsoft.com/json) de Newtonsoft para deserializar los datos de JSON devueltos por la API de promociones de Microsoft Store.
+El siguiente ejemplo de código muestra cómo obtener un token de acceso de Azure AD y llamar a la API de promociones de Microsoft Store desde una aplicación de consola C#. Para usar este ejemplo de código, asigna las variables *tenantId*, *clientId*, *clientSecret* y *appID* a los valores adecuados para tu escenario. En este ejemplo se necesita el [paquete Json.NET](https://www.newtonsoft.com/json) de Newtonsoft para deserializar los datos de JSON devueltos por la API de promociones de Microsoft Store.
 
 [!code-cs[PromotionsApi](./code/StoreServicesExamples_Promotions/cs/Program.cs#PromotionsApiExample)]
 

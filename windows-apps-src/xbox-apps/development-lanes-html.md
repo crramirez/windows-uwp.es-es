@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 60642016e5924c554534775a6576b61e935eaf1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932508"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048582"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Llevar los juegos HTML a UWP en Xbox
 Xbox One es una excelente plataforma para juegos HTML 5. Los juegos HTML 5 se ejecutan en el motor del explorador [Edge](https://developer.microsoft.com/microsoft-edge/). Edge es rápido y totalmente compatible con las características de HTML 5 y CSS 3, como WebGL y Canvas.
@@ -20,7 +20,7 @@ Los motores de juegos más populares, como [Construct 2](https://www.scirra.com/
 
 Los juegos HTML se encuentran en igualdad de condiciones respecto de cualquier otro tipo de juego. Los desarrolladores pueden obtener acceso completo a las API nativas, como la entrada del mando, Kinect, etc.
 
-Xbox One se ejecuta en la Plataforma universal de Windows, lo que significa que, al igual que otros dispositivos de Microsoft, admite aplicaciones web hospedadas, que son aplicaciones que provienen completamente de un servidor. Para obtener más información, consulta [Aplicaciones web hospedadas](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
+Xbox One se ejecuta en la Plataforma universal de Windows, lo que significa que, al igual que otros dispositivos de Microsoft, admite aplicaciones web hospedadas, que son aplicaciones que provienen completamente de un servidor. Para obtener más información, consulta [Aplicaciones web hospedadas](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
 
 
 Este vídeo profundiza más sobre las aplicaciones web empaquetadas y las aplicaciones web hospedadas en Xbox, incluyendo cómo crearlas.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08fab2b312fa4ea79d03f350d62070e205d535f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 021e3142a4e94f762cc48dbc86905dcf0b658772
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920735"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045704"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 
@@ -20,7 +20,7 @@ ms.locfileid: "8920735"
 
 Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:, *ms-drive-to:, ms-walk-to:** y **ms-settings:**. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
 
-**Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
+**Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) del [repositorio de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
 ## <a name="introducing-uris"></a>Introducción a los URI
 

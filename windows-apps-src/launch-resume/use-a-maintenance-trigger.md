@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 87df67c480c18ef2c75a9c63d538f0107908ca10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 53107ca6add4193737ab0d00497bbe6324bee44f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943360"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047014"
 ---
 # <a name="use-a-maintenance-trigger"></a>Usar un desencadenador de mantenimiento
 
@@ -108,14 +108,14 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 > Para todas las familias de dispositivos excepto la de equipos de escritorio, si el dispositivo dispone de poca memoria, las tareas en segundo plano podrían finalizarse. Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
 
 > [!NOTE]
-> Aplicaciones de la plataforma de Windows universales deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquiera de los tipos de desencadenadores en segundo plano.
+> Aplicaciones universales de la plataforma de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquiera de los tipos de desencadenadores en segundo plano.
 
 Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización de la aplicación, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y a continuación a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) una vez iniciada la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
 > [!NOTE]
 > Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
 * [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-a-background-task.md)
@@ -129,4 +129,4 @@ Para garantizar que la aplicación universal de Windows continúe funcionando co
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)

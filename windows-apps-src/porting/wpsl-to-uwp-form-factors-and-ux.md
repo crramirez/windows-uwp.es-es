@@ -1,19 +1,19 @@
 ---
 description: Las aplicaciones de Windows comparten una apariencia común entre PC, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar.
-title: Migración WindowsPhone Silverlight a UWP para factor de forma y experiencia del usuario
+title: Migrar de WindowsPhone Silverlight a UWP para factor de forma y experiencia del usuario
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dbba9dbdf6bc3df02657cc03b9264e74664318b4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936469"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045168"
 ---
-#  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migración WindowsPhone Silverlight a UWP para factor de forma y experiencia del usuario
+#  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migrar de WindowsPhone Silverlight a UWP para factor de forma y experiencia del usuario
 
 
 El tema anterior era [Migración de capas empresariales y de datos](wpsl-to-uwp-business-and-data.md).
@@ -30,7 +30,7 @@ La respuesta corta es que es subjetivo, dado que no solo depende del tamaño de 
 
 Objetivamente, una pantalla se mide en unidades de pulgadas y píxeles físicos (sin procesar). Conocer estas dos métricas te permite saber cuántos píxeles caben en una pulgada. Esa es la densidad de píxeles, también conocida como puntos por pulgada y píxeles por pulgada. Y el valor recíproco de los DPI es el tamaño físico de los píxeles como una fracción de una pulgada. Densidad de píxeles también se conoce como *resolución*, aunque ese término a menudo se usa libremente para referirse al número de píxeles.
 
-Cuando la distancia de visión aumenta, todas esas métricas objetivo *parecen* más pequeñas y se resuelven en el *tamaño eficaz* de la pantalla y su *resolución eficaz*. El teléfono normalmente se mantiene más cercano a los ojos; después la tableta, a continuación el monitor del equipo y los más alejados son los dispositivos [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) y los televisores. Para compensarlo, los dispositivos tienden a ser objetivamente más grandes con la distancia de visualización. Cuando configuras los tamaños de los elementos de interfaz de usuario, estableces esos tamaños en unidades denominadas píxeles efectivos (epx). Y Windows 10 tendrá en cuenta PPP y la distancia típica desde un dispositivo, para calcular el mejor tamaño de los elementos de la interfaz de usuario en píxeles físicos para ofrecer la mejor experiencia de visualización. Consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
+Cuando la distancia de visión aumenta, todas esas métricas objetivo *parecen* más pequeñas y se resuelven en el *tamaño eficaz* de la pantalla y su *resolución eficaz*. El teléfono normalmente se mantiene más cercano a los ojos; después la tableta, a continuación el monitor del equipo y los más alejados son los dispositivos [Surface Hub](https://www.microsoft.com/microsoft-surface-hub) y los televisores. Para compensarlo, los dispositivos tienden a ser objetivamente más grandes con la distancia de visualización. Cuando configuras los tamaños de los elementos de interfaz de usuario, estableces esos tamaños en unidades denominadas píxeles efectivos (epx). Y Windows 10 tendrá en cuenta los PPP y la distancia típica desde un dispositivo, para calcular el mejor tamaño de los elementos de la interfaz de usuario en píxeles físicos para ofrecer la mejor experiencia de visualización. Consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 Aun así, te recomendamos probar la aplicación con muchos dispositivos distintos, para poder confirmar cada experiencia por ti mismo.
 
@@ -52,7 +52,7 @@ Si se hace zoom óptico de la aplicación para que se parezca a la versión móv
 
 Además de los controles nuevos, como la vista de lista y vista de cuadrícula, la mayoría de los tipos de diseño establecidos de WindowsPhone Silverlight tiene equivalentes en la plataforma Universal de Windows (UWP). Por ejemplo, [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). La migración de gran parte de la interfaz de usuario que usa estos tipos debe ser un proceso sencillo, pero busca siempre formas de sacar provecho de las funcionalidades de diseño dinámico de estos paneles para que automáticamente se cambie el tamaño y se vuelva a diseñar en dispositivos de diferentes tamaños.
 
-Ir más allá del diseño dinámico integrado en los controles del sistema y paneles de diseño, podemos usar una nueva característica de Windows 10 denominada [Visual State Manager adaptativo](wpsl-to-uwp-porting-xaml-and-ui.md).
+Intenta ir más allá del diseño dinámico integrado en los controles del sistema y paneles de diseño, podemos usar una nueva característica de Windows 10 denominada [Visual State Manager adaptativo](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 ## <a name="input-modalities"></a>Modalidades de entrada
 
@@ -64,7 +64,7 @@ Vuelve a consultar la lista [Maximización de la reutilización de código y mar
 
 ## <a name="more-info-and-design-guidelines"></a>Más información y pautas de diseño
 
--   [Diseñar aplicaciones para UWP](http://dev.windows.com/design)
+-   [Diseñar aplicaciones para UWP](https://dev.windows.com/design)
 -   [Directrices sobre fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394)
 -   [Programación de diferentes factores de forma](https://msdn.microsoft.com/library/windows/apps/dn958435)
 

@@ -6,16 +6,16 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: c1860fe51035699aaa55d014c2f76a95c7622061
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9abf761aa141ef3d0c19d6d5401b6815542d4172
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943272"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047736"
 ---
 # <a name="interstitial-ads"></a>Anuncios intersticiales
 
-En este tutorial se muestra cómo incluir anuncios intersticiales en juegos y aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10. Para obtener proyectos de muestra completos que muestran cómo agregar anuncios intersticiales a aplicaciones de JavaScript y HTML y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
+En este tutorial se muestra cómo incluir anuncios intersticiales en juegos y aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10. Para obtener proyectos de muestra completos que muestran cómo agregar anuncios intersticiales a aplicaciones de JavaScript y HTML y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](https://aka.ms/githubads).
 
 <span id="whatareinterstitialads10"/>
 
@@ -36,7 +36,7 @@ Ofrecemos dos tipos de anuncios intersticiales para usar en tus aplicaciones y j
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior de VisualStudio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
+* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior de VisualStudio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-an-interstitial-ad-into-your-app"></a>Integrar un anuncio intersticial en la aplicación
 
@@ -239,5 +239,5 @@ Puedes usar varios controles **InterstitialAd** en una sola aplicación. En este
 * [Directrices para anuncios intersticiales](ui-and-user-experience-guidelines.md#interstitialbestpractices10)
 * [Código de ejemplo de anuncios intersticiales en C#](interstitial-ad-sample-code-in-c.md)
 * [Código de ejemplo de anuncios intersticiales en JavaScript](interstitial-ad-sample-code-in-javascript.md)
-* [Muestras de publicidad en GitHub](http://aka.ms/githubads)
+* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
 * [Configurar unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)

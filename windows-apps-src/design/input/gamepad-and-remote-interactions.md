@@ -1,8 +1,22 @@
 ---
-autor de la cabeza de <<<<<<<: descripción Karl de puente de dispositivo de Microsoft: optimizar tu aplicación para la entrada del controlador para juegos de Xbox y el control remoto.
-=== Descripción: TODO
->>>>>>> maestro de título: ms.assetid las interacciones del controlador para juegos y control remoto: 784a08dc-2736-4bd3-bea0-08da16b1bd47 etiqueta: controlador para juegos y la plantilla de interacciones remoto: isNew detail.hbs: true <<<<<<< HEAD ms.author: kbridge =======
-principal MS.Date: 08/02/2017 ms.topic: artículo palabras clave: windows 10, uwp ms.localizationpriority: medio
+author: Karl-Bridge-Microsoft
+Description: Optimize your app for input from Xbox gamepad and remote control.
+title: Interacciones con el controlador para juegos y el control remoto
+ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
+label: Gamepad and remote interactions
+template: detail.hbs
+isNew: true
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 022724064ad1e7f5551b6676bf256ca5cf6e4b8e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048562"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con el controlador para juegos y el control remoto
 

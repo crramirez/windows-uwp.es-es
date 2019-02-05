@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d9b2a894746cc9f26a0ebb3df90c967a73914c3c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947807"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051098"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -234,7 +234,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
 
-Con [Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y teclado para que los teléfonos funcionen como un portátil.
+Con [Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y teclado para que los teléfonos funcionen como un portátil.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 

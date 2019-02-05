@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadores de telefonía móviles, facturación móvil, facturación de operador de telefonía móvil
 ms.localizationpriority: medium
-ms.openlocfilehash: f9f751735c2387ab5009e2e6f19f68db304916ec
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 3f23e40abfb269e2b52e9dc5b66c2486da071c9b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980393"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045684"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -19,7 +19,7 @@ ms.locfileid: "8980393"
 La Microsoft Store ofrece la facturación de operador de móvil como método de pago para los dispositivos que ejecutan Windows 10, teléfonos que ejecutan Windows 10 Mobile y consolas Xbox One. Si el operador de telefonía móvil de un cliente admite esta capacidad, el cliente puede agregar la facturación de operadores de telefonía móvil para usarla para hacer compras en la Store mediante su cuenta móvil.
 
 > [!TIP]
->  Si el operador de telefonía móvil de un cliente ofrece facturación de operadores de telefonía móvil, pero el cliente no encuentra esta opción en su dispositivo, consulta estos [pasos](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+>  Si el operador de telefonía móvil de un cliente ofrece facturación de operadores de telefonía móvil, pero el cliente no encuentra esta opción en su dispositivo, consulta estos [pasos](https://go.microsoft.com/fwlink/p/?LinkId=523993).
 
 Estamos trabajando con los operadores de telefonía móvil para ampliar la disponibilidad de este método de pago. Si quieres sugerir un operador de telefonía móvil que no aparece a continuación, ponte en contacto con el operador de telefonía móvil y solicítale que añada este método de pago.
 

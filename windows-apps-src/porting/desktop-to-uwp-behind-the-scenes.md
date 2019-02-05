@@ -6,24 +6,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
-ms.openlocfilehash: f5320d4d6a4f43ee8d94a55e46333821656adb20
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 644139f800caa2ead61ce19d63d4408c01575025
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941188"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044908"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>En segundo plano de la aplicación de escritorio empaquetada
 
-En este artículo se proporciona un análisis más profundo sobre lo que sucede con los archivos y las entradas del registro cuando se crea un paquete de la aplicación de Windows para la aplicación de escritorio.
+En este artículo se proporciona un análisis más profundo sobre lo que sucede con los archivos y las entradas del registro cuando se crea un paquete de aplicación de Windows para la aplicación de escritorio.
 
 Un objetivo clave de un paquete moderna es separar el estado de la aplicación del estado del sistema tanto como sea posible mientras mantienes la compatibilidad con otras aplicaciones. Para ello, el puente coloca la aplicación dentro de un paquete de Plataforma universal de Windows (UWP) y, después, detecta y redirige algunos cambios que realiza en el sistema de archivos y en el Registro en tiempo de ejecución.
 
-Los paquetes que se crea para la aplicación de escritorio son solo de escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
+Los paquetes que se crea para la aplicación de escritorio son solo escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
 
 ## <a name="installation"></a>Instalación
 
-Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de aplicación, pero en su lugar, se ejecuta como el usuario normalidad.
+Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de aplicación, pero en su lugar, se ejecuta como el usuario lo harías normalmente.
 
 Después de la implementación, el sistema operativo marca los archivos del paquete como de solo lectura y los bloquea completamente. Windows evita que las aplicaciones se inicien en caso de que se manipulen estos archivos.
 
@@ -96,7 +96,7 @@ Cuando se desinstala un paquete por el usuario, se quitan todos los archivos y c
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 

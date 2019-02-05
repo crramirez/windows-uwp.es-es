@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: bdde349c09b08efcbc18857f67444bb990b25421
-ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
+ms.openlocfilehash: 59da5dd5866fe79f4420e1e895af74f976526f27
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "8997410"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046265"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Activación del modo de desarrollador de Xbox One
 
@@ -46,7 +46,7 @@ El modo de desarrollador se puede habilitar en cualquier consola Xbox One comerc
 
     ![Paso de activación 8](images/activation-step-8-rs2.png)    
     
-8.  Haz clic en **Agree and activate**. De esta manera, volverá a cargarse la página y verás que el dispositivo completa datos en la tabla. Los términos del acuerdo del Programa de activación del modo de desarrollador de Xbox One están disponibles en [Programa de activación del modo de desarrollador de Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=760399).
+8.  Haz clic en **Agree and activate**. De esta manera, volverá a cargarse la página y verás que el dispositivo completa datos en la tabla. Los términos del acuerdo del Programa de activación del modo de desarrollador de Xbox One están disponibles en [Programa de activación del modo de desarrollador de Xbox One](https://go.microsoft.com/fwlink/p/?LinkId=760399).
 
 9.  Después de escribir el código de activación, la consola mostrará una pantalla de progreso para el proceso de activación.  
     

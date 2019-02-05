@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: eaf6118720ab77931decf93113a13341ab4f51d0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925902"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046518"
 ---
 # <a name="handle-file-activation"></a>Administrar la activación de archivos
 
@@ -123,19 +123,19 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 > [!NOTE]
 > Cuando se inicia mediante un contrato de archivo, asegúrate de que el botón Atrás lleve al usuario volver a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
 
-Te recomendamos que crees un nuevo XAML **marco** para cada evento de activación que abra una nueva página. De este modo, el objeto backstack de navegación para el nuevo marco de XAML no contiene ningún contenido anterior que la aplicación en la ventana actual al pasar a suspensión. Si decides usar un único **fotograma** de XAML para el inicio y para los contratos de archivo, debe borrar las páginas en el **marco**del diario de navegación antes de ir a una página nueva.
+Te recomendamos que crees un nuevo XAML **marco** para cada evento de activación que abra una nueva página. De este modo, el objeto backstack de navegación para el nuevo marco de XAML no contiene ningún contenido anterior que la aplicación en la ventana actual al pasar a suspensión. Si decides usar un solo **fotograma** de XAML para el inicio y para los contratos de archivo, debe borrar las páginas en el **marco**del diario de navegación antes de ir a una página nueva.
 
-Cuando se inicia la aplicación a través de la activación de archivos, considera la posibilidad de interfaz de usuario que permite al usuario volver a la página superior de la aplicación.
+Cuando se inicia la aplicación a través de la activación de archivos, debes tener una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
 
 ## <a name="remarks"></a>Observaciones
 
-Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él. Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053).
+Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él. Para más información, consulta [Escribir código seguro](https://go.microsoft.com/fwlink/p/?LinkID=142053).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 ### <a name="complete-example"></a>Ejemplo completo
 
-* [Ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [Ejemplo de inicio por asociación](https://go.microsoft.com/fwlink/p/?LinkID=231484)
 
 ### <a name="concepts"></a>Conceptos
 

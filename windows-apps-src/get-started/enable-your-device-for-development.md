@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 802555f6b1e6f928edf43806226ac497a437b4ff
-ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
+ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991763"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044948"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -68,7 +68,7 @@ Información específica de la familia de dispositivos
 **Transferir localmente aplicaciones** es una opción más segura que el modo de desarrollador porque no permite instalar en el dispositivo aplicaciones que no tengan un certificado de confianza.
 
 > [!NOTE]
-> Aunque transfieras aplicaciones localmente, solo deberías instalar aplicaciones procedentes de orígenes de confianza. Cuando realizas la instalación de prueba de una aplicación que no ha certificado Microsoft Store, admites que has obtenido todos los derechos necesarios para realizar una instalación de prueba de la aplicación y que eres el único responsable de los perjuicios que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Microsoft Store de esta [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=521839).
+> Aunque transfieras aplicaciones localmente, solo deberías instalar aplicaciones procedentes de orígenes de confianza. Cuando realizas la instalación de prueba de una aplicación que no ha certificado Microsoft Store, admites que has obtenido todos los derechos necesarios para realizar una instalación de prueba de la aplicación y que eres el único responsable de los perjuicios que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Microsoft Store de esta [declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 
 ### <a name="developer-mode"></a>Modo de desarrollador
@@ -133,7 +133,7 @@ En versiones anteriores de Windows 10 Mobile, estaba presente una opción de vol
 
 Hay varias herramientas que puedes usar para implementar una aplicación desde un PC con Windows 10 a un dispositivo con Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB. Ambas formas enumeradas solo instalan el paquete de aplicación (.appx/.appxbundle); no instalan certificados.
 
--   Usa la herramienta de implementación de aplicaciones de Windows10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
+-   Usa la herramienta de implementación de aplicaciones de Windows10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
 -   Puedes usar [Device Portal](../debug-test-perf/device-portal.md) para realizar implementaciones desde el navegador a un dispositivo móvil con Windows 10, versión 1511 o posterior. Usa la página **[Aplicaciones](../debug-test-perf/device-portal.md#apps-manager)** de Device Portal para cargar un paquete de la aplicación (.appx) e instalarlo en el dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Error al instalar el paquete de modo de desarrollador

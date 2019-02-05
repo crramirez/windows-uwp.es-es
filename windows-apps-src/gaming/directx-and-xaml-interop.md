@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, interoperabilidad de xaml, xaml interop
 ms.localizationpriority: medium
-ms.openlocfilehash: 058a1458f8990e5f70e7ed0ea4ef1a2b5f4a4956
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 34fb65ec53f6addccf8723b451d333d602c17908
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944530"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046215"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidad de DirectX y XAML
 
@@ -21,7 +21,7 @@ Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plat
 
 Si la aplicación se centra principalmente en la representación 2D, es aconsejable usar la biblioteca [Win2D](https://github.com/microsoft/win2d) de Windows Runtime. Esta biblioteca la mantiene Microsoft y se basa en las tecnologías básicas de Direct2D . Simplifica en gran medida el modelo de uso para implementar gráficos 2D e incluye abstracciones útiles para algunas de las técnicas descritas en este documento. Consulta la página del proyecto para obtener más detalles. Este documento ofrece orientación para aquellos desarrolladores de aplicaciones que decidan *no* utilizar Win2D.
 
-> **Nota**APIs DirectX no están definidas como tipos de Windows Runtime, por lo que suele usar extensiones de componentes de VisualC ++ (C++ / CX) para desarrollar componentes XAML UWP que interoperen con DirectX. También puedes crear una aplicación para UWP con C# y XAML que use DirectX. Para ello, debes encapsular las llamadas a DirectX en un archivo de metadatos de Windows Runtime independiente.
+> **Nota**APIs DirectX no están definidas como tipos de Windows Runtime, por lo que suele usar extensiones de componentes VisualC ++ (C++ / CX) para desarrollar componentes XAML UWP que interoperen con DirectX. También puedes crear una aplicación para UWP con C# y XAML que use DirectX. Para ello, debes encapsular las llamadas a DirectX en un archivo de metadatos de Windows Runtime independiente.
 
  
 
@@ -460,7 +460,7 @@ El procedimiento básico para crear y actualizar un objeto [SwapChainPanel](http
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm)
+* [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041)
 * [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)
 * [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)

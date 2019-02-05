@@ -1,21 +1,21 @@
 ---
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: Aprende a iniciar un anuncio intersticial con JavaScript/HTML.
-title: Código de ejemplo de anuncios intersticiales en JavaScript
+title: Código de ejemplo de anuncio intersticial en JavaScript
 ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, javascript, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
-ms.openlocfilehash: 98ba09b88c96b0f0afb4ba5a786d31442fd9da05
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 641a3bfc2c2869cab6f3bbf480aa599cadd955a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928124"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047114"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de ejemplo de anuncios intersticiales en JavaScript
 
-En este tema se proporciona el código de ejemplo completo para una aplicación básica para la Plataforma universal de Windows (UWP) en JavaScript y HTML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
+En este tema se proporciona el código de ejemplo completo para una aplicación básica para la Plataforma universal de Windows (UWP) en JavaScript y HTML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://aka.ms/githubads).
 
 ## <a name="code-example"></a>Ejemplo de código
 
@@ -45,6 +45,6 @@ Reemplaza los valores de la ```applicationId``` y ```adUnitId``` variables por v
 
 ## <a name="related-topics"></a>Artículos relacionados
 
-* [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
+* [Ejemplos de publicidad de GitHub](https://aka.ms/githubads)
 
  

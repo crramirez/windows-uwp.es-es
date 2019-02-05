@@ -6,12 +6,12 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f70d768ad6589e210826f94f73249ed1ea272e1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944102"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045614"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) de Windows10
 
@@ -64,7 +64,7 @@ Debido al inicio previo, el sistema puede iniciar el método **OnLaunched()** de
 
 Cuando se inicia una aplicación, Windows muestra una pantalla de presentación. Para configurar dicha pantalla de presentación, consulta [Agregar una pantalla de presentación](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
 
-Mientras se muestra la pantalla de presentación, la aplicación debe registrar controladores de eventos y configurar cualquier interfaz de usuario personalizada que necesite para la página inicial. Comprueba que las tareas que se estén ejecutando en el constructor de la aplicación y **OnLaunched()** se completen en pocos segundos o el sistema podría pensar que la aplicación no responde y finalizarla. Si la aplicación necesita pedir datos de la red o recuperar grandes cantidades de datos del disco, estas actividades se deberán llevar a cabo fuera del inicio. Una aplicación puede usar su propia interfaz de usuario de carga personalizada o una pantalla de presentación ampliada mientras espera a que finalicen las operaciones cuya ejecución requiere mucho tiempo. Consulta [Mostrar una pantalla de presentación durante más tiempo](create-a-customized-splash-screen.md) y [Splash screen sample](http://go.microsoft.com/fwlink/p/?linkid=234889) (Muestra de pantalla de presentación) para obtener más información.
+Mientras se muestra la pantalla de presentación, la aplicación debe registrar controladores de eventos y configurar cualquier interfaz de usuario personalizada que necesite para la página inicial. Comprueba que las tareas que se estén ejecutando en el constructor de la aplicación y **OnLaunched()** se completen en pocos segundos o el sistema podría pensar que la aplicación no responde y finalizarla. Si la aplicación necesita pedir datos de la red o recuperar grandes cantidades de datos del disco, estas actividades se deberán llevar a cabo fuera del inicio. Una aplicación puede usar su propia interfaz de usuario de carga personalizada o una pantalla de presentación ampliada mientras espera a que finalicen las operaciones cuya ejecución requiere mucho tiempo. Consulta [Mostrar una pantalla de presentación durante más tiempo](create-a-customized-splash-screen.md) y [Splash screen sample](https://go.microsoft.com/fwlink/p/?linkid=234889) (Muestra de pantalla de presentación) para obtener más información.
 
 Cuando la aplicación completa el inicio, entra en el estado **Running**, la pantalla de presentación desaparece y se desactivan todos los recursos y objetos de dicha pantalla de presentación.
 
@@ -83,7 +83,7 @@ La clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 Los datos de evento de estos métodos incluyen la misma propiedad [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) que se ha tratado anteriormente, que indica el estado en el que se encontraba la aplicación antes de activarla. Interpreta el estado y lo que debes hacer del mismo modo que se describe anteriormente en la sección [Inicio de la aplicación](#app-launch).
 
-**Nota**Si inicias sesión en con la cuenta de administrador del equipo, no puede activar las aplicaciones para UWP.
+**Nota**si inicia sesión con la cuenta de administrador del equipo, no se puede activar las aplicaciones para UWP.
 
 ## <a name="running-in-the-background"></a>Ejecución en segundo plano ##
 
@@ -129,7 +129,7 @@ Ten en cuenta si la aplicación tiene actividad en segundo plano en curso que pu
 
 ### <a name="asynchronous-work-and-deferrals"></a>Trabajo asincrónico y aplazamientos
 
-Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](http://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) en el objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) devuelto.
+Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](https://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) en el objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) devuelto.
 
 Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete*del  aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*.
 
@@ -181,9 +181,9 @@ Para obtener instrucciones generales, consulta [Directrices para suspender y rea
 
 Por lo general, no es necesario que los usuarios cierren las aplicaciones, sino que pueden dejar que Windows se encargue de ello. No obstante, los usuarios pueden decidir cerrar una aplicación mediante el gesto de cerrar, presionando Alt y F4 o mediante el conmutador de tareas en Windows Phone.
 
-No hay ningún evento que indique que el usuario ha cerrado dicha aplicación. Cuando el usuario cierra una aplicación, primero se suspende para que tengas la oportunidad de guardar su estado. En Windows8.1 y versiones posteriores, después de que el usuario ha cerrado una aplicación, la aplicación se quita de la pantalla y cambiar la lista, pero no finaliza explícitamente.
+No hay ningún evento que indique que el usuario ha cerrado dicha aplicación. Cuando el usuario cierra una aplicación, primero se suspende para que tengas la oportunidad de guardar su estado. En Windows8.1 y versiones posteriores, después de una aplicación se ha cerrado por el usuario, la aplicación se quita de la pantalla y cambiar la lista, pero no finaliza explícitamente.
 
-**Comportamiento de cierre por parte del usuario:** si la aplicación debe hacer algo distinto cuando la cierra el usuario que cuando la cierra Windows, puedes usar el controlador de eventos de activación para determinar si la aplicación finalizó Windows o el usuario. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
+**Comportamiento de cierre por parte del usuario:** si la aplicación debe hacer algo distinto cuando la cierra el usuario que cuando la cierra Windows, puedes usar el controlador de eventos de activación para determinar si la aplicación ha finalizado Windows o el usuario. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
 
 Te recomendamos que las aplicaciones no se cierren automáticamente mediante programación a menos que sea absolutamente necesario. Por ejemplo, si una aplicación detecta una fuga de memoria, se puede cerrar para preservar la seguridad de los datos personales del usuario.
 
@@ -191,7 +191,7 @@ Te recomendamos que las aplicaciones no se cierren automáticamente mediante pro
 
 La experiencia de bloqueo del sistema está diseñada para que los usuarios puedan volver a lo que estaban haciendo lo antes posible. No se debe proporcionar ningún cuadro de diálogo de advertencia o notificación, ya que retrasaría más al usuario.
 
-Si la aplicación se bloquea, deja de responder o genera una excepción, se enviará un informe del problema a Microsoft según la [configuración de comentarios y diagnósticos](http://go.microsoft.com/fwlink/p/?LinkID=614828) del usuario. Microsoft te proporciona un subconjunto de datos de error en el informe del problema, para que puedas usarlo para mejorar la aplicación. Puedes consultar estos datos en la página Calidad de la aplicación en el panel.
+Si la aplicación se bloquea, deja de responder o genera una excepción, se enviará un informe del problema a Microsoft según la [configuración de comentarios y diagnósticos](https://go.microsoft.com/fwlink/p/?LinkID=614828) del usuario. Microsoft te proporciona un subconjunto de datos de error en el informe del problema, para que puedas usarlo para mejorar la aplicación. Puedes consultar estos datos en la página Calidad de la aplicación en el panel.
 
 Cuando el usuario activa una aplicación tras un bloqueo, su controlador de eventos de activación recibe un valor [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) de **NotRunning** y debe mostrar simplemente su interfaz de usuario y datos iniciales. Después de un bloqueo, no uses de forma habitual la aplicación que usarías para **Resuming** con **Suspended** porque los datos pueden estar dañados; consulta [Directrices para suspender y reanudar una aplicación (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh465088).
 

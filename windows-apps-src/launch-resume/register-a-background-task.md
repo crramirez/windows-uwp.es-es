@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: f940b0433c5cf7818102f92c9e61a6fe012bf4b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e586e85e15202e0186afe481ec18b32c2f480712
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947907"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048722"
 ---
 # <a name="register-a-background-task"></a>Registrar una tarea en segundo plano
 
@@ -74,7 +74,7 @@ Comprueba si la tarea ya está registrada. Es importante que compruebes esto por
 
 Puedes comprobar registros existentes consultando la propiedad [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando en el resultado. Comprueba el nombre de cada instancia. Si coincide con el nombre de la tarea que estás registrando, entonces interrumpe el bucle y coloca una variable de marca para que tu código pueda elegir otra ruta en el siguiente paso.
 
-> **Nota**usa nombres de tarea en segundo plano que sean exclusivos de la aplicación. Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
+> **Nota**usar nombres de las tareas en segundo plano que sean exclusivos de la aplicación. Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
 
 El siguiente código registra una tarea en segundo plano usando [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838), que creamos en el último paso:
 
@@ -387,4 +387,4 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)

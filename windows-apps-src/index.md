@@ -9,12 +9,12 @@ ms.date: 08/4/2017
 keywords: windows uwp, plataforma universal de windows, API de windows runtime, api de windows, referencia de api de windows, api de winrt, referencia de api de windows, api de uwp, referencia de api de uwp, desarrollar uwp, diseñar uwp, publicar uwp
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: 419f1e87d2cb0ff87b210e9f746e3617f51d6776
-ms.sourcegitcommit: f433f926ddd94fe1d0fdd0057cb39b74e83b4f8a
+ms.openlocfilehash: ce1923fa071344a848b4b0c4fab1ed6da6da48f7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "9029051"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047154"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentación de la Plataforma universal de Windows
 La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows (equipos, teléfonos, Xbox One, HoloLens y mucho más) y publicarlas en la Microsoft Store.
@@ -274,10 +274,10 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                             <a href="https://twitter.com/WindowsDocs">@WindowsDocsen Twitter</a>
                         </p>
                         <p>
-                            <a href="http://aka.ms/OneDevMinute">OneDevMinute en YouTube</a>
+                            <a href="https://aka.ms/OneDevMinute">OneDevMinute en YouTube</a>
                         </p>
                         <p>
-                            <a href="https://developer.microsoft.com/windows/support">Soporte técnico para desarrolladores de Windows</a>
+                            <a href="https://developer.microsoft.com/windows/support">Soporte técnico de desarrolladores de Windows</a>
                         </p>
                     </div>
                 </div>

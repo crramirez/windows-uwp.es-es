@@ -6,12 +6,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: f18a1db19c3a8c6632a8cbc3104dc1328f97fdb4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919741"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048908"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar los recursos predeterminados que la aplicación usa
 
@@ -44,7 +44,7 @@ Puedes configurar qué son estos valores predeterminados de una de dos maneras d
    </default>
    ```
    
-   **Note** El valor `LANGUAGE-TAG(S)` debe estar sincronizado con el idioma predeterminado de la aplicación. Si es una única [etiqueta de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), el idioma predeterminado de la aplicación debe ser la misma etiqueta. Si es una lista separada por comas de etiquetas de idioma, el idioma predeterminado de la aplicación debe ser la primera etiqueta de la lista. Establece el idioma predeterminado de la aplicación en el campo **Idioma predeterminado** de la pestaña **Aplicación** del archivo de origen del manifiesto del paquete de la aplicación (`Package.appxmanifest`).
+   **Note** El valor `LANGUAGE-TAG(S)` debe estar sincronizado con el idioma predeterminado de la aplicación. Si es una única [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), el idioma predeterminado de la aplicación debe ser la misma etiqueta. Si es una lista separada por comas de etiquetas de idioma, el idioma predeterminado de la aplicación debe ser la primera etiqueta de la lista. Establece el idioma predeterminado de la aplicación en el campo **Idioma predeterminado** de la pestaña **Aplicación** del archivo de origen del manifiesto del paquete de la aplicación (`Package.appxmanifest`).
 
 4. Cada elemento `<qualifier>` indica a Visual Studio qué valor usar como el valor predeterminado para cada nombre de calificador. Con el contenido del archivo que tiene hasta el momento, realmente no ha cambiado el comportamiento de Visual Studio. Es decir, Visual Studio *ya se comportó como si* este archivo estuviera presentes con este contenido, ya que estos son los valores predeterminados. Por lo tanto, para invalidar un valor predeterminado con tu propio valor predeterminado, tendrás que cambiar un valor en el archivo. Este es un ejemplo de qué aspecto podría tener el archivo si editara los tres primeros valores.
    ```xml
@@ -103,5 +103,5 @@ Guarda, cierra y recompila el proyecto.
 ## <a name="related-topics"></a>Artículos relacionados
 
 * [Adaptar los recursos al idioma, escala, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [Etiqueta de idioma de BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Etiqueta de idioma de BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

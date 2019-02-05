@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2ab7385d4c61c52b71c74fb61797be306bcc9851
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928370"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044346"
 ---
 # <a name="feedback-report"></a>Informe de comentarios
 
@@ -22,9 +22,9 @@ El **informe de comentarios** en el centro de partners te permite ver los proble
 
 Animar a los clientes a que envíen comentarios sobre la aplicación es una excelente manera de obtener información sobre los problemas y las características que más les importan. Cuando los clientes saben que pueden enviar comentarios directamente, es menos probable que dejen comentarios con una revisión negativa en la Tienda.
 
-Puedes usar la API de comentarios de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones desde la aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, posible que veas comentarios de los clientes en este informe, incluso si han no solicitado específicamente que te envíen comentarios desde dentro de la aplicación.
+Puedes usar la API de comentarios de [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones desde la aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, posible que veas comentarios de los clientes en este informe, incluso si han no solicitado específicamente que te envíen comentarios desde dentro de la aplicación.
 
-Comentarios también pueden ser útil cuando se usa la [distribución de paquetes piloto](package-flights.md), ya que el informe de **comentarios** te muestra el paquete específico que cada cliente tenía instalado en su dispositivo cuando los comentarios.
+Comentarios también pueden ser útil cuando se utiliza la [distribución de paquetes piloto](package-flights.md), ya que el informe de **comentarios** te muestra el paquete específico que cada cliente tenía instalado en su dispositivo cuando los comentarios.
 
 > [!TIP]
 > Para un vistazo rápido a las valoraciones, clasificaciones y comentarios de los usuarios a través de todas las aplicaciones en los últimos 30 días, expande **interactuar** en el menú de navegación izquierdo y selecciona **valoraciones y comentarios.** 
@@ -40,7 +40,7 @@ También puedes expandir la opción **Filtros** para filtrar todos los datos de 
 - **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre comentarios aportados por clientes que usen ese tipo de dispositivo.
 - **Versión del paquete**: el valor predeterminado es **Todos los paquetes**. Puedes seleccionar uno de los paquetes para que solo se muestren los comentarios enviados por clientes que usaban este paquete concreto en el momento de enviar los comentarios.
 - **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir uno determinado para mostrar solo los comentarios de los clientes de ese mercado.
-- **Grupo**: el valor predeterminado es **Todos**. Puedes optar por ver solo los comentarios enviados por [usuarios de WindowsInsider](http://insider.windows.com).
+- **Grupo**: el valor predeterminado es **Todos**. Puedes optar por ver solo los comentarios enviados por [usuarios de WindowsInsider](https://insider.windows.com).
 
 > [!TIP]
 > Si no ves los comentarios en la página, comprueba que los filtros no hayan excluido todos los comentarios. Por ejemplo, si filtras por un **Tipo de dispositivo** que no es compatible con la aplicación, no verás ningún comentario.

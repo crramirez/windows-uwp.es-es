@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, accesibilidad, juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 489804c4645c8e6d1c4926e362f81926c8b2f3c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937603"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046338"
 ---
 #  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
@@ -33,7 +33,7 @@ En su nivel más básico, la justificación comercial de la accesibilidad es sen
 
 Número de usuarios que pueden jugar al juego x Genialidad del juego = Ventas de juegos
 
-Si hicieras un juego increíble que es muy complicado o complejo y al que solo un puñado de personas pudiera jugar, limitarías tus ventas. De forma parecida, si crearas un juego al que no pudieran jugar los usuarios con impedimentos cognitivos, sensoriales o físicos, perderías ventas potenciales. Por ejemplo, el [19% de las personas en los Estados Unidos tiene algún tipo de discapacidad](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [un 14% de los adultos en los Estados Unidos tienen dificultades para leer](https://nces.ed.gov/naal/estimates/overview.aspx) y [un 10% de los hombres tiene alguna forma de discapacidad para distinguir colores](https://www.aao.org/eye-health/diseases/color-blindness-risk). Todo esto puede tener un gran impacto en los ingresos de tu título. 
+Si hicieras un juego increíble que es muy complicado o complejo y al que solo un puñado de personas pudiera jugar, limitarías tus ventas. De forma parecida, si crearas un juego al que no pudieran jugar los usuarios con impedimentos cognitivos, sensoriales o físicos, perderías ventas potenciales. Por ejemplo, el [19% de las personas en los Estados Unidos tiene algún tipo de discapacidad](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [un 14% de los adultos en los Estados Unidos tienen dificultades para leer](https://nces.ed.gov/naal/estimates/overview.aspx) y [un 10% de los hombres tiene alguna forma de discapacidad para distinguir colores](https://www.aao.org/eye-health/diseases/color-blindness-risk). Todo esto puede tener un gran impacto en los ingresos de tu título. 
 
 Para más justificaciones empresariales, consulta [Hacer que los videojuegos sean accesibles](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -158,7 +158,7 @@ Los usuarios querrán saber si los jugadores con discapacidades podrán jugar a 
 
 ## <a name="game-accessibility-features"></a>Características de accesibilidad a juegos
 
-En esta sección se describen algunas características que pueden hacer que el juego sea más accesible. Estas características se derivan de instrucciones que se tomaron de las [Directrices de accesibilidad a juegos](http://gameaccessibilityguidelines.com/), que representan los resultados de un grupo de colaboración de estudios, especialistas y academias. Para obtener más información, consulta las [Directrices de accesibilidad a juegos](http://gameaccessibilityguidelines.com/). 
+En esta sección se describen algunas características que pueden hacer que el juego sea más accesible. Estas características se derivan de instrucciones que se tomaron de las [Directrices de accesibilidad a juegos](https://gameaccessibilityguidelines.com/), que representan los resultados de un grupo de colaboración de estudios, especialistas y academias. Para obtener más información, consulta las [Directrices de accesibilidad a juegos](https://gameaccessibilityguidelines.com/). 
 
 ### <a name="colorblind-friendly-graphics-and-user-interface"></a>Gráficos e interfaz de usuario fáciles de usar para daltónicos
 
@@ -175,7 +175,7 @@ Dado que es menos común tener sensibilidad reducida a la luz azul, al diseñar 
     
   + No confíes únicamente en el color para comunicar o distinguir los objetos del juego. Usa también formas y patrones.
   + Si tienes que depender solo de colores, combina los preestablecidos con una selección libre de colores, de modo que se pueda personalizar por completo por los jugadores que lo necesiten y que no suponga trabajo adicional para los que no lo necesitan.
-  + Usa un simulador de daltonismo a fin de probar los diseños y poder verlos a través de los ojos de un daltónico. Esto puede ayudarte a evitar problemas comunes de contraste. [Color Oracle](http://www.colororacle.org) es un simulador de daltonismo gratuito que puede emular los tres tipos más comunes de deficiencia en la visión del color: deuteranopía, protanopia y tritanopia.
+  + Usa un simulador de daltonismo a fin de probar los diseños y poder verlos a través de los ojos de un daltónico. Esto puede ayudarte a evitar problemas comunes de contraste. [Color Oracle](https://www.colororacle.org) es un simulador de daltonismo gratuito que puede emular los tres tipos más comunes de deficiencia en la visión del color: deuteranopía, protanopia y tritanopia.
   
 ### <a name="closed-captioning-and-subtitles"></a>Subtítulos
 
@@ -209,13 +209,13 @@ El sonido proporciona información al jugador, aparte de la información visual.
 
 ### <a name="fully-mappable-controls"></a>Controles completamente asignables
 
-Hay empresas y organizaciones, como [Special Effect](http://www.specialeffect.org.uk/), que diseña mandos de juego personalizados que pueden usarse con distintos sistemas de juego como Windows y Xbox One. Esta personalización permite a los usuarios con distintas formas de discapacidad jugar a juegos a los que, de lo contrario, no podrían jugar. Para obtener más información sobre personas que pueden jugar a juegos de forma independiente gracias a los mandos personalizados, consulta [a quién ayudaron](http://www.specialeffect.org.uk/who-we-helped).
+Hay empresas y organizaciones, como [Special Effect](https://www.specialeffect.org.uk/), que diseña mandos de juego personalizados que pueden usarse con distintos sistemas de juego como Windows y Xbox One. Esta personalización permite a los usuarios con distintas formas de discapacidad jugar a juegos a los que, de lo contrario, no podrían jugar. Para obtener más información sobre personas que pueden jugar a juegos de forma independiente gracias a los mandos personalizados, consulta [a quién ayudaron](https://www.specialeffect.org.uk/who-we-helped).
 
 Como desarrollador de juegos, puedes hacer que tu juego sea más accesible permitiendo que los controles se puedan asignar por completo para que los jugadores tengan la opción de conectar sus mandos personalizados y asignar las teclas según sus necesidades.
 
 Tener controles completamente asignables también beneficia a las personas que usan controladores estándar. Los jugadores pueden crear un diseño que se adapte a sus necesidades individuales.
 
-Los mandos estándar de Xbox One y Xbox Elite ofrecen la personalización de los mandos para jugar con precisión. Para utilizar al máximo sus funcionalidades de asignación, __se recomienda que los desarrolladores incluyan la reasignación directamente en el juego__. Para obtener más información, consulta [Xbox One](http://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) y [Xbox Elite](http://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller).
+Los mandos estándar de Xbox One y Xbox Elite ofrecen la personalización de los mandos para jugar con precisión. Para utilizar al máximo sus funcionalidades de asignación, __se recomienda que los desarrolladores incluyan la reasignación directamente en el juego__. Para obtener más información, consulta [Xbox One](https://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) y [Xbox Elite](https://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller).
 
 ### <a name="wider-selection-of-difficulty-levels"></a>Selección más amplia de niveles de dificultad
 
@@ -225,7 +225,7 @@ Retocar el nivel de dificultad del juego es un proceso delicado. Si está muy f�
 
 ### <a name="photosensitivity-epilepsy-testing"></a>Pruebas de epilepsia fotosensible
 
-La epilepsia fotosensible es una enfermedad en la que se producen ataques a causa de estímulos visuales, incluyendo las exposiciones a luces parpadeantes o a determinadas formas y patrones visuales en movimiento. Esto ocurre en aproximadamente el tres por ciento de la población y es más común en niños y adolescentes. En números absolutos, esto supone [1 de cada 4000 personas con edades entre los 5 y los 24 años](http://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3).
+La epilepsia fotosensible es una enfermedad en la que se producen ataques a causa de estímulos visuales, incluyendo las exposiciones a luces parpadeantes o a determinadas formas y patrones visuales en movimiento. Esto ocurre en aproximadamente el tres por ciento de la población y es más común en niños y adolescentes. En números absolutos, esto supone [1 de cada 4000 personas con edades entre los 5 y los 24 años](https://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3).
 
 Hay muchos factores que pueden causar una reacción fotosensible al jugar a videojuegos, incluida la duración del juego, la frecuencia del parpadeo, la intensidad de la luz, el contraste del fondo y la luz, la distancia entre la pantalla y el jugador y la longitud de onda de la luz.
 
@@ -241,7 +241,7 @@ Evita lo siguiente:
 * Más de cinco bandas repetidas de contraste alto separadas uniformemente (filas o columnas como cuadrículas y dameros) que puedan estar compuestos de elementos normales más pequeños como polkadots
 * Más de cinco líneas de texto con formato de solo mayúsculas, sin demasiado espacio entre las letras y con un interlineado de la misma altura que las propias líneas, ya que esto es, en efecto, una imagen de columnas de contraste alto que se alternan de forma regular.
 
-Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [The Harding Test](http://www.hardingtest.com/index.php?page=test) y [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research System Ltd y el Profesor Graham Harding). 
+Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [The Harding Test](https://www.hardingtest.com/index.php?page=test) y [Harding Flash and Pattern Analyzer (FPA) G2](https://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research System Ltd y el Profesor Graham Harding). 
 
 Incluir la opción **Parpadeo On/Off** como una opción de configuración y establecer el **Parpadeo** en **Off** de manera predeterminada. Al hacer esto, protegerá a los jugadores que todavía no saben que pueden sufrir ataques.
 
@@ -252,21 +252,21 @@ Diseña pausas entre los niveles del juego y anima a los jugadores a tomar un de
 Estos son algunos sitios externos que proporcionan información adicional sobre accesibilidad a juegos.
 
 ### <a name="game-accessibility-guidelines"></a>Directrices sobre accesibilidad a juegos
-* [Directrices sobre accesibilidad a juegos](http://gameaccessibilityguidelines.com/)
-* [Directrices de la Fundación AbleGamers](http://www.includification.com/)
-* [Diseñar juegos universalmente accesibles (UA)](http://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
+* [Directrices sobre accesibilidad a juegos](https://gameaccessibilityguidelines.com/)
+* [Directrices de la Fundación AbleGamers](https://www.includification.com/)
+* [Diseñar juegos universalmente accesibles (UA)](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>Mandos de entrada personalizados
-* [Special effect](http://www.specialeffect.org.uk/)
-* [War fighter engaged](http://www.warfighterengaged.org/)
+* [Special effect](https://www.specialeffect.org.uk/)
+* [War fighter engaged](https://www.warfighterengaged.org/)
 
 ## <a name="references-used"></a>Referencias usadas
-* [Directrices sobre accesibilidad a juegos](http://gameaccessibilityguidelines.com/)
-* [Directrices de la Fundación AbleGamers](http://www.includification.com/)
-* [Color Blind Awareness, una compañía de interés social](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
-* [How to do subtitles well: un artículo en el blog Gamasutra, de Ian Hamilton](http://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
-* [Programa Innovation for All](http://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
-* [Epilepsy foundation](http://www.epilepsy.com/)
+* [Directrices sobre accesibilidad a juegos](https://gameaccessibilityguidelines.com/)
+* [Directrices de la Fundación AbleGamers](https://www.includification.com/)
+* [Color Blind Awareness, una compañía de interés social](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+* [How to do subtitles well: un artículo en el blog Gamasutra, de Ian Hamilton](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
+* [Programa Innovation for All](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
+* [Epilepsy foundation](https://www.epilepsy.com/)
 
 ## <a name="related-links"></a>Vínculos relacionados
 * [Inclusive Design](https://www.microsoft.com/design/inclusive)

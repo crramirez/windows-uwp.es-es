@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 05a69cfdf96d6c7d3426b8d1ba414a42ff48a117
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4f4c80ca1d031c69f5f70cdf85e90ea1d5887830
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926964"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047204"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Creación de una aplicación compleja de plataforma Universal de Windows (UWP)
 
@@ -65,7 +65,7 @@ El término "embudo" se debe a su forma. En la parte ancha del embudo entran muc
 
 Cuando estés contento con tu concepto, estarás preparado para la siguiente etapa: crear el plano de la aplicación. La arquitectura de información (AI) proporciona al contenido la integridad estructural que necesita. Te ayudará a definir el modelo de navegación de la aplicación y, en última instancia, la identidad de la aplicación. Si planeas la organización de tu contenido y cómo descubrirán los usuarios dicho contenido, podrás hacerte una idea más aproximada del modo en que los usuarios usarán tu aplicación.
 
-Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](http://go.microsoft.com/fwlink/p/?LinkID=268089) , por ejemplo, se inicia directamente en un concentrador que proporciona acceso a la biblioteca, tienda, noticias y estadísticas del usuario. La experiencia se centra, por lo que los usuarios pueden obtener y disfrutar concretado rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
+Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](https://go.microsoft.com/fwlink/p/?LinkID=268089) , por ejemplo, se inicia directamente en un concentrador que proporciona acceso a la biblioteca, tienda, noticias y estadísticas del usuario. La experiencia se centra, por lo que los usuarios pueden obtener y disfrutar concretado rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
 
 Para obtener directrices relacionadas, consulta [Patrones de diseño básicos](../design/basics/navigation-basics.md).
 
@@ -122,7 +122,7 @@ Técnicas comunes:
 -   Diagramas de asociación: conecta los flujos con las funciones.
 -   Prototipo: prueba las funciones para asegurarte de que hacen lo que necesitas.
 
-**Contratos entre aplicaciones**la aplicación puede participar en contratos entre aplicaciones que permiten flujos amplios entre aplicaciones entre las funciones de usuarios.
+**Contratos entre aplicaciones**la aplicación puede participar en contratos entre aplicaciones que permiten tener flujos amplios entre aplicaciones y características de usuarios.
 
 -   **Compartir**permite que los usuarios compartan contenido desde la aplicación con otras personas a través de otras aplicaciones y también permite recibir contenido de otras personas y aplicaciones.
 -   **Reproducir en**permite que los usuarios disfruten la transmisión de audio, vídeo o imágenes de la aplicación a otros dispositivos de la red doméstica.
@@ -142,20 +142,20 @@ Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar 
 **Atractiva y original**Asegúrate de que la aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
 
 -   **Las animaciones**usa nuestra biblioteca de animaciones para que la aplicación rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
--   **Notificaciones del sistema**informa a los usuarios sobre contenido sujeto a limitación temporal personalmente importante o a través de las notificaciones del sistema, atraerlos a la aplicación incluso cuando se cierra la aplicación. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
+-   **Notificaciones del sistema**informa a los usuarios saber sobre sujeto a limitación temporal contenido personalmente importante o a través de las notificaciones del sistema, atraerlos a la aplicación incluso cuando se cierra la aplicación. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
 -   **Iconos de la aplicación**ofrece actualizaciones renovadas y relevantes para atraer a los usuarios volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalización**
 
--   **Configuración de**permite que los usuarios crean la experiencia que quieran guardar la configuración de la aplicación. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/app-settings-and-data.md).
--   **Itinerancia**crea una experiencia continua entre dispositivos mediante la itinerancia de datos que permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia de usuario que les interesa más, independientemente del dispositivo que están usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Configuración**permite que los usuarios puedan crear la experiencia que quieran guardar la configuración de la aplicación. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/app-settings-and-data.md).
+-   **Itinerancia**crea una experiencia continua entre dispositivos mediante la itinerancia de datos que permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia de usuario que les interesa más, con independencia del dispositivo que están usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
 -   **Los iconos de usuario**  hacer que la aplicación más personal a los usuarios: carga su imagen de icono de usuario, o permitir que los usuarios establezcan contenido de la aplicación como su icono personal en Windows.
 
-**Funcionalidades del dispositivo**Asegúrate de que la aplicación aproveche al máximo las funcionalidades de los dispositivos actuales.
+**Funcionalidades del dispositivo**Asegúrate de que la aplicación aproveche al máximo las funcionalidades de dispositivos de hoy en día.
 
--   **Gestos de proximidad**permite que los usuarios conecten sus dispositivos a otros usuarios que estén físicamente cercanos tocándolos físicamente a los dispositivos entre sí (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Cámaras y dispositivos de almacenamiento externos**conecta a los usuarios con sus cámaras integradas o conectado para charlando y conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo alrededor de ellos, o para cualquier actividad de la aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
--   **Acelerómetros y otros sensores**   Los dispositivos vienen con diversos sensores de hoy en día. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
+-   **Gestos de proximidad**permite que los usuarios conecten sus dispositivos a otros usuarios que son físicamente cercanos tocándolos físicamente a los dispositivos entre sí (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   **Cámaras y dispositivos de almacenamiento externos**conecta a los usuarios con sus cámaras integradas o conectado para charlando y conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo alrededor de ellos, o cualquier actividad de la aplicación es excelente. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Acelerómetros y otros sensores**   Los dispositivos vienen con diversos sensores hoy en día. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
 -   **Ubicación geográfica**usa la información de ubicación geográfica datos web estándar o sensores de ubicación geográfica para ayudar a los usuarios, encontrar su posición en un mapa u obtener avisos sobre personas, actividades y destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una excelente ayuda a un grupo de amigos que quieren crear de forma conjunta los itinerarios de viajes en grupo, podrías usar algunas de estas funciones, por mencionar algunas:
@@ -236,6 +236,6 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 ## <a name="validate-your-design"></a>Valida tu diseño
 
-Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función tiene un conjunto de directrices de experiencia del usuario que te ayudarán a pulir la aplicación y un conjunto de requisitos de la tienda que debes cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
+Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función tiene un conjunto de directrices de experiencia del usuario que te ayudarán a pulir la aplicación y un conjunto de requisitos de la tienda que se deben cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
 Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analizar el rendimiento de cada uno de los escenarios de la aplicación.

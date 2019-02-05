@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 79b1889167f3c13aea78c31ec189cfeb7a6f17bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bf89810f67e16bcfabfc80de48d2dee82c9e0f92
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925690"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048928"
 ---
 # <a name="toast-content-schema"></a>Esquema de contenido de las notificaciones del sistema
 
@@ -40,7 +40,7 @@ ToastContent es el objeto de nivel superior que describe el contenido de una not
 
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
-| **Launch**| cadena | false | Una cadena que se pasa a la aplicación cuando la notificación del sistema la activa. El formato y el contenido de esta cadena los define la aplicación para su propio uso. Cuando el usuario pulse o haga clic en la notificación del sistema para iniciar la aplicación asociada, la cadena de inicio proporciona el contexto de la aplicación que le permite mostrar al usuario una vista relevante para el contenido de la notificación del sistema, en lugar de iniciarse de forma predeterminada. |
+| **Launch**| cadena | falso | Una cadena que se pasa a la aplicación cuando la notificación del sistema la activa. El formato y el contenido de esta cadena los define la aplicación para su propio uso. Cuando el usuario pulse o haga clic en la notificación del sistema para iniciar la aplicación asociada, la cadena de inicio proporciona el contexto de la aplicación que le permite mostrar al usuario una vista relevante para el contenido de la notificación del sistema, en lugar de iniciarse de forma predeterminada. |
 | **Visual** | [ToastVisual](#toastvisual) | true | Describe la parte visual de la notificación del sistema. |
 | **Actions** | [IToastActions](#itoastactions) | false | De manera opcional, crea acciones personalizadas con botones y entradas. |
 | **Audio** | [ToastAudio](#toastaudio) | false | Describe la parte de audio de la notificación del sistema. |
@@ -106,8 +106,8 @@ Elemento de texto adaptable. Si se coloca en el ToastBindingGeneric.Children de 
 | **Text** | cadena o [BindableString](#bindablestring) | false | El texto que se va a mostrar. Se ha agregado la compatibilidad de enlace de datos en la actualización Creators Update, pero solo funciona para los elementos de texto de nivel superior. |
 | **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | El estilo controla el tamaño, el espesor y la opacidad de la fuente del texto. Solo funciona para elementos de texto dentro de un grupo o subgrupo. |
 | **HintWrap** | bool? | false | Establece esto en true para habilitar el ajuste de texto. Los elementos de texto de nivel superior omiten esta propiedad y siempre ajustan (puedes usar HintMaxLines = 1 para deshabilitar el ajuste para elementos de texto de nivel superior). El valor predeterminado de los elementos de texto dentro de grupos o subgrupos es false para el ajuste. |
-| **HintMaxLines** | int? | false | El número máximo de líneas que se permite que mostrar al elemento de texto. |
-| **HintMinLines** | int? | false | El número mínimo de líneas que debe mostrar el elemento de texto. Solo funciona para elementos de texto dentro de un grupo o subgrupo. |
+| **HintMaxLines** | int? | falso | El número máximo de líneas que se permite que mostrar al elemento de texto. |
+| **HintMinLines** | int? | falso | El número mínimo de líneas que debe mostrar el elemento de texto. Solo funciona para elementos de texto dentro de un grupo o subgrupo. |
 | **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | false | Alineación horizontal del texto. Solo funciona para elementos de texto dentro de un grupo o subgrupo. |
 | **Language** | cadena | false | La configuración regional de destino de la carga XML, especificada como una etiqueta de idioma BCP-47, como "en-US" o "fr-FR". La configuración regional especificada aquí reemplaza cualquier otra configuración regional especificada, como las de enlace o visual. Si este valor es una cadena literal, el valor predeterminado de este atributo es el idioma de la interfaz de usuario del usuario. Si este valor es una referencia de cadena, el valor predeterminado de este atributo será la configuración regional elegida por Windows Runtime en tiempo de ejecución en la resolución de la cadena. |
 
@@ -163,17 +163,17 @@ Imagen alineada.
 | Propiedad | Tipo | Obligatorio |Descripción |
 |---|---|---|---|
 | **Source** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. A partir de la actualización de Fall Creators Update, las imágenes web pueden tener un tamaño de hasta 3MB, en conexiones normales y de 1MB en conexiones de uso medido. En dispositivos que no ejecutan aún la actualización de Fall Creators Update, el tamaño de las imágenes web no debe ser superior a los 200KB. |
-| **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | false | Novedad en la Actualización de aniversario: controlar el recorte deseado de la imagen. |
+| **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | falso | Novedad en la Actualización de aniversario: controlar el recorte deseado de la imagen. |
 | **HintRemoveMargin** | bool? | false | De manera predeterminada, las imágenes dentro de grupos o subgrupos tienen un margen de 8 píxeles alrededor de ellas. Puedes quitar este margen estableciendo esta propiedad en true. |
 | **HintAlign** | [AdaptiveImageAlign](#adaptiveimagealign) | false | Alineación horizontal de la imagen. Solo funciona para las imágenes que se encuentran dentro de un grupo o subgrupo. |
-| **AlternateText** | cadena | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AlternateText** | string | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
 | **AddImageQuery** | bool? | false | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
 
 
 ### <a name="adaptiveimagecrop"></a>AdaptiveImageCrop
 Especifica el recorte deseado de la imagen.
 
-| Valor | Significado |
+| Value | Significado |
 |---|---|
 | **Default** | Valor predeterminado. Comportamiento de recorte determinado por el representador. |
 | **None** | No se recorta la imagen. |
@@ -206,7 +206,7 @@ Novedad en la Actualización de aniversario: los subgrupos son columnas vertical
 | Propiedad | Tipo | Obligatorio |Descripción |
 |---|---|---|---|
 | **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) y [AdaptiveImage](#adaptiveimage) son elementos secundarios válidos de subgrupos. |
-| **HintWeight** | int? | false | Controla el ancho de esta columna de subgrupo especificando el grosor, en relación con los demás subgrupos. |
+| **HintWeight** | int? | falso | Controla el ancho de esta columna de subgrupo especificando el grosor, en relación con los demás subgrupos. |
 | **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | false | Controla la alineación vertical del contenido de este subgrupo. |
 
 
@@ -222,7 +222,7 @@ Interfaz de marcador para elementos secundarios de subgrupo.
 ### <a name="adaptivesubgrouptextstacking"></a>AdaptiveSubgroupTextStacking
 TextStacking especifica la alineación vertical del contenido.
 
-| Valor | Significado |
+| Value | Significado |
 |---|---|
 | **Default** | Valor predeterminado. El representador selecciona automáticamente la alineación vertical predeterminada. |
 | **Top** | Alineación vertical a la parte superior. |
@@ -235,8 +235,8 @@ Novedad en Creators Update: una barra de progreso. Solo se admite en las notific
 
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
-| **Título** | cadena o [BindableString](#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
-| **Valor** | doble o [AdaptiveProgressBarValue](#adaptiveprogressbarvalue) o [BindableProgressBarValue](#bindableprogressbarvalue) | falso | Obtiene o establece el valor de la barra de progreso. Admite el enlace de datos. El valor predeterminado es 0. |
+| **Título** | cadena o [BindableString](#bindablestring) | false | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
+| **Valor** | doble o [AdaptiveProgressBarValue](#adaptiveprogressbarvalue) o [BindableProgressBarValue](#bindableprogressbarvalue) | false | Obtiene o establece el valor de la barra de progreso. Admite el enlace de datos. El valor predeterminado es 0. |
 | **ValueStringOverride** | cadena o [BindableString](#bindablestring) | falso | Obtiene o establece una cadena opcional que se mostrará en lugar de la cadena de porcentaje predeterminada. Si no se proporciona, se mostrará algo similar a "70%". |
 | **Estado** | cadena o [BindableString](#bindablestring) | true | Obtiene o establece una cadena de estado (obligatoria), que se muestra debajo de la barra de progreso a la izquierda. Esta cadena debe reflejar el estado de la operación, como "Descargando…" o "Instalando..." |
 
@@ -246,7 +246,7 @@ Clase que representa el valor de la barra de progreso.
 
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
-| **Valor** | double | falso | Obtiene o establece el valor (0,0 - 1,0) que representa el porcentaje completado. |
+| **Valor** | double | false | Obtiene o establece el valor (0,0 - 1,0) que representa el porcentaje completado. |
 | **IsIndeterminate** | bool | falso | Obtiene o establece un valor que indica si la barra de progreso es indeterminada. Si es así, **Valor** se ignorará. |
 
 
@@ -265,14 +265,14 @@ Un logotipo que se mostrará en lugar del logotipo de la aplicación.
 |---|---|---|---|
 | **Source** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. Las imágenes HTTP deben tener un tamaño de 200KB o inferior. |
 | **HintCrop** | [ToastGenericAppLogoCrop](#toastgenericapplogocrop) | false | Especifica cómo quieres que se recorte la imagen. |
-| **AlternateText** | cadena | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AlternateText** | string | falso | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
 | **AddImageQuery** | bool? | false | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
 
 
 ### <a name="toastgenericapplogocrop"></a>ToastGenericAppLogoCrop
 Controla el recorte de la imagen de logotipo de la aplicación.
 
-| Valor | Significado |
+| Value | Significado |
 |---|---|
 | **Default** | El recorte usa el comportamiento predeterminado del representador. |
 | **None** | No se recorta la imagen, se muestra cuadrada. |
@@ -285,7 +285,7 @@ Imagen principal destacada que se muestra en la notificación del sistema y en e
 | Propiedad | Tipo | Obligatorio |Descripción |
 |---|---|---|---|
 | **Source** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. Las imágenes HTTP deben tener un tamaño de 200KB o inferior. |
-| **AlternateText** | cadena | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AlternateText** | string | falso | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
 | **AddImageQuery** | bool? | false | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
 
 
@@ -295,7 +295,7 @@ Texto de atribución que se muestra en la parte inferior de la notificación del
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
 | **Text** | cadena | true | El texto que se va a mostrar. |
-| **Language** | cadena | false | La configuración regional de destino de la carga visual al usar recursos localizados, especificados como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
+| **Language** | string | falso | La configuración regional de destino de la carga visual al usar recursos localizados, especificados como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
 
 
 ## <a name="itoastactions"></a>IToastActions
@@ -336,9 +336,9 @@ Control de cuadro de texto en el que puede escribir el usuario.
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
 | **Id** | cadena | true | El identificador es necesario y se usa para asignar el texto introducido por el usuario en un par clave-valor de Id./valor que la aplicación consume posteriormente. |
-| **Title** | cadena | false | Texto del título que se mostrará encima del cuadro de texto. |
-| **PlaceholderContent** | cadena | false | Texto de marcador de posición que se mostrará en el cuadro de texto cuando el usuario no haya escrito ningún texto todavía. |
-| **DefaultInput** | cadena | false | El texto inicial que se colocará en el cuadro de texto. Deja esto como null para un cuadro de texto en blanco. |
+| **Title** | cadena | falso | Texto del título que se mostrará encima del cuadro de texto. |
+| **PlaceholderContent** | string | falso | Texto de marcador de posición que se mostrará en el cuadro de texto cuando el usuario no haya escrito ningún texto todavía. |
+| **DefaultInput** | string | falso | El texto inicial que se colocará en el cuadro de texto. Deja esto como null para un cuadro de texto en blanco. |
 
 
 ## <a name="toastselectionbox"></a>ToastSelectionBox
@@ -358,8 +358,8 @@ Elemento del cuadro de selección (un elemento que el usuario puede seleccionar 
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
 | **Id** | cadena | true | El identificador es necesario y se usa para asignar el texto introducido por el usuario en un par clave-valor de Id./valor que la aplicación consume posteriormente. |
-| **Title** | cadena | false | Texto del título que se mostrará encima del cuadro de selección. |
-| **DefaultSelectionBoxItemId** | cadena | false | Controla qué elemento está seleccionado de forma predeterminada y hace referencia a la propiedad del identificador del [ToastSelectionBoxItem ](#toastselectionboxitem). Si no proporcionas esto, la selección predeterminada estará vacía (el usuario no ve nada). |
+| **Title** | cadena | falso | Texto del título que se mostrará encima del cuadro de selección. |
+| **DefaultSelectionBoxItemId** | cadena | falso | Controla qué elemento está seleccionado de forma predeterminada y hace referencia a la propiedad del identificador del [ToastSelectionBoxItem ](#toastselectionboxitem). Si no proporcionas esto, la selección predeterminada estará vacía (el usuario no ve nada). |
 | **Items** | IList<[ToastSelectionBoxItem](#toastselectionboxitem)> | false | Los elementos de la selección que el usuario puede seleccionar en este SelectionBox. Solo se pueden agregar 5 elementos. |
 
 
@@ -383,7 +383,7 @@ Botón en el que el usuario puede hacer clic.
 | **Contenido** | cadena | true | Obligatorio. Texto que se va a mostrar en el botón. |
 | **Arguments** | cadena | true | Obligatorio. Cadena definida por la aplicación de argumentos que la aplicación recibirá más adelante si el usuario hace clic en este botón. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Controla qué tipo de activación se usará por este botón cuando se haga clic en él. El valor predeterminado es Primer plano. |
-| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | falso | Novedad de la actualización Creators Update: obtiene o establece opciones adicionales relacionadas con la activación del botón de la notificación del sistema. |
+| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Novedad de la actualización Creators Update: obtiene o establece opciones adicionales relacionadas con la activación del botón de la notificación del sistema. |
 
 
 ### <a name="toastactivationtype"></a>ToastActivationType
@@ -402,7 +402,7 @@ Novedad de la actualización Creators Update: opciones adicionales relacionadas 
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
 | **AfterActivationBehavior** | [ToastAfterActivationBehavior](#toastafteractivationbehavior) | falso | Novedad en la actualización de Fall Creators Update: obtiene o establece el comportamiento que debe usar la notificación del sistema cuando el usuario invoca esta acción. Esto funciona únicamente en Escritorio, para [ToastButton](#toastbutton) y [ToastContextMenuItem](#toastcontextmenuitem). |
-| **ProtocolActivationTargetApplicationPfn** | cadena | false | Si estás usando *ToastActivationType.Protocol*, puedes especificar opcionalmente el PFN destino, por lo que, con independencia de si se registran varias aplicaciones para controlar el mismo URI de protocolo, se iniciará siempre la aplicación que quieras. |
+| **ProtocolActivationTargetApplicationPfn** | string | falso | Si estás usando *ToastActivationType.Protocol*, puedes especificar opcionalmente el PFN destino, por lo que, con independencia de si se registran varias aplicaciones para controlar el mismo URI de protocolo, se iniciará siempre la aplicación que quieras. |
 
 
 ### <a name="toastafteractivationbehavior"></a>ToastAfterActivationBehavior
@@ -421,7 +421,7 @@ Botón de posponer controlado por el sistema que controla automáticamente el ap
 
 | Propiedad | Tipo | Obligatorio | Descripción |
 |---|---|---|---|
-| **CustomContent** | cadena | false | Texto personalizado opcional que se muestra en el botón que invalida el texto de "Posponer" localizado predeterminado. |
+| **CustomContent** | cadena | falso | Texto personalizado opcional que se muestra en el botón que invalida el texto de "Posponer" localizado predeterminado. |
 
 
 ## <a name="toastbuttondismiss"></a>ToastButtonDismiss
@@ -451,7 +451,7 @@ Entrada de elemento de menú contextual.
 |---|---|---|---|
 | **Contenido** | cadena | true | Obligatorio. El texto que se va a mostrar. |
 | **Arguments** | cadena | true | Obligatorio. Cadena definida por la aplicación de argumentos que la aplicación puede recuperar más adelante una vez se activa cuando el usuario hace clic en el elemento de menú. |
-| **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Controla qué tipo de activación se usará por este elemento de menú cuando se haga clic en él. El valor predeterminado es Primer plano. |
+| **ActivationType** | [ToastActivationType](#toastactivationtype) | falso | Controla qué tipo de activación se usará por este elemento de menú cuando se haga clic en él. El valor predeterminado es Primer plano. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Novedad de la actualización Creators Updates: opciones adicionales relacionadas con la activación del elemento de menú contextual de notificación del sistema. |
 
 
@@ -479,5 +479,5 @@ Novedad de la actualización Creators Update: encabezado personalizado que agrup
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Inicio rápido: Enviar una notificación del sistema local y administrar la aplicación](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
+* [Inicio rápido: Enviar una notificación del sistema local y administrar la aplicación](https://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
 * [Biblioteca de notificaciones en GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: e9eafde0596ad3156f52a7a2f0a1566444a9836a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b1c8271c8066304dce355cf50afd4509173eed3e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918963"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046794"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anuncios de Bluetooth de bajo consumo (LE)
 
@@ -29,7 +29,7 @@ Hay dos funciones principales que un desarrollador puede realizar mediante las A
 -   [Advertisement Watcher](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx) (Monitor de anuncios): Escuchar balizas cercanas y filtrarlas en función de la carga o la proximidad.  
 -   [Anunciante](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): Definir una carga de Windows para anunciarse en nombre de un desarrollador.  
 
-Hay un completo código de ejemplo en [Bluetooth Advertisement Sample](http://go.microsoft.com/fwlink/p/?LinkId=619990) (Muestra de publicidad de Bluetooth) en Github
+Hay un completo código de ejemplo en [Bluetooth Advertisement Sample](https://go.microsoft.com/fwlink/p/?LinkId=619990) (Muestra de publicidad de Bluetooth) en Github
 
 ## <a name="basic-setup"></a>Configuración básica
 
@@ -43,7 +43,7 @@ Para usar la funcionalidad básica de Bluetooth LE en una aplicación para la Pl
 
 Los anuncios de Bluetooth LE permiten que tu dispositivo señalice constantemente una carga específica, denominada anuncio. Este anuncio puede verse en cualquier otro dispositivo cercano compatible con Bluetooth LE, si está configurado para escuchar este anuncio específico.
 
-> **Nota**: para la privacidad del usuario, la vida útil de tu anuncio está vinculada a la de la aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Nota**: para privacidad del usuario, la vida útil de tu anuncio está vinculada a la de la aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicación básica
 

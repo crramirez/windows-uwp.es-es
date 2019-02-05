@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp, geocodificación, geocoding, mapa, map, ubicación, location
 ms.localizationpriority: medium
-ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a30ca89242b15866019fffc6972bdae7086f3f7e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920320"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046448"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Realizar geocodificación y geocodificación inversa
 
@@ -20,23 +20,23 @@ Esta guía muestra cómo puedes convertir direcciones en ubicaciones geográfica
 > [!TIP]
 > Para obtener más información sobre el uso de mapas en tu aplicación, descarga la muestra de [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) desde el [repositorio de muestras universales de Windows](hhttps://github.com/Microsoft/Windows-universal-samples) en GitHub.
 
-Las clases implicados en geocodificación y geocodificación inversa se organizan como sigue.
+Las clases implicados en la geocodificación y geocodificación inversa se organizan como sigue.
 
 -   La clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) contiene métodos que controlen la geocodificación ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) y ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)) de geocodificación inversa.
 -   Estos métodos devuelven una instancia de [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) .
--   La propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) expone una colección de objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . 
--   Objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) tienen una propiedad de [**dirección**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expone un objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa una dirección y una propiedad de [**punto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expone un objeto de [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que represente una ubicación geográfica.
+-   La propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) expone una colección de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . 
+-   Objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) tienen una propiedad de [**dirección**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expone un objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa una dirección y una propiedad de [**punto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expone un objeto [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que represente una ubicación geográfica.
 
 > [!IMPORTANT]
 > Debes especificar una clave de autenticación de mapas antes de poder usar servicios de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
 ## <a name="get-a-location-geocode"></a>Obtener una ubicación (geocodificación)
 
-En esta sección se muestra cómo convertir una dirección o nombre de un lugar en una ubicación geográfica (geocodificación).
+En esta sección se muestra cómo convertir una dirección o nombre de un lugar a una ubicación geográfica (geocodificación).
 
-1.  Llamar a una de las sobrecargas del método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) con un nombre de contexto o la dirección de la calle.
+1.  Llamar a una de las sobrecargas del método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) con un nombre de sitio o dirección.
 2.  El método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) devuelve un objeto de [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) .
-3.  Usa la propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) para exponer los objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) de una colección. Puede haber varios objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) porque el sistema puede encontrar varias ubicaciones que corresponden a la entrada especificada.
+3.  Usa la propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) para exponer los objetos de una colección [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . Puede haber varios objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) porque el sistema puede encontrar varias ubicaciones que corresponden a la entrada especificada.
 
 ```csharp
 using Windows.Services.Maps;
@@ -84,7 +84,7 @@ En esta sección se muestra cómo convertir una ubicación geográfica en una di
 
 1.  Llama al método [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550).
 2.  El método [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) devuelve un objeto [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) que contiene una colección de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) coincidentes.
-3.  Usa la propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) para exponer los objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) de una colección. Puede haber varios objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) porque el sistema puede encontrar varias ubicaciones que corresponden a la entrada especificada.
+3.  Usa la propiedad de [**ubicaciones**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) para exponer los objetos de una colección [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . Puede haber varios objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) porque el sistema puede encontrar varias ubicaciones que corresponden a la entrada especificada.
 4.  Acceso a objetos de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) a través de la propiedad de [**dirección**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549).
 
 ```csharp
@@ -121,8 +121,8 @@ town = Redmond
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Ejemplo de aplicación de tráfico de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo: Aprovechar los mapas y ubicación por teléfono, tableta o PC en las aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)

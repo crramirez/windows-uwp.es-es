@@ -8,12 +8,12 @@ keywords: teclado, texto, texto principal, texto personalizado, Text Services Fr
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 161278dc5fe0bb8c7d4c790def6a9f7ba88b83d2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dfb2a5203d2a8e5c497fa427c6a2a7ed5fe2302d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946581"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046185"
 ---
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
@@ -154,8 +154,8 @@ Habrá veces que [**Range**](https://msdn.microsoft.com/library/windows/apps/dn9
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Ejemplos**
-* [Muestra de Control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
+* [Ejemplo de Control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
  **Muestras de archivo**
-* [Muestra de edición de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Muestra de edición de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
 
 

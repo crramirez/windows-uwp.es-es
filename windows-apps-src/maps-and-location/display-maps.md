@@ -6,18 +6,18 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, control de mapa, map control, vistas de mapa, map views
 ms.localizationpriority: medium
-ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 03c864a6e8bc6191f63a2b6fd55d8eb23ad965e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924367"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046994"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Mostrar mapas con vistas 2D, 3D y Streetside
 
 Puedes mostrar un mapa en una ventana de cierre del elemento por cambio de foco llamada *colocar tarjeta* o en un control de mapa completo.
 
-Descarga la [muestra de mapa](http://go.microsoft.com/fwlink/p/?LinkId=619977) para probar algunas de las características descritas en esta guía.
+Descarga la [muestra de mapa](https://go.microsoft.com/fwlink/p/?LinkId=619977) para probar algunas de las características descritas en esta guía.
 
 <a id="placecard" />
 
@@ -455,10 +455,10 @@ Puedes controlar los siguientes eventos de la clase [**MapControl**](https://msd
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Obtener la ubicación actual](get-location.md)
 * [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
