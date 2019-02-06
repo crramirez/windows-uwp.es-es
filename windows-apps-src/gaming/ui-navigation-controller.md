@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, interfaz de usuario, navegación
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc879ba89dc3c70ebc08d948b25f31bc30a3c6e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926460"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059716"
 ---
 # <a name="ui-navigation-controller"></a>Controlador de navegación de la interfaz de usuario
 
@@ -35,7 +35,7 @@ Dado que el número y la diversidad de controles compatibles con cada tipo de di
 
 Los dispositivos de navegación deben admitir todos los comandos de navegación del _conjunto necesario_. Se trata de los comandos direccionales (arriba, abajo, izquierda y derecha) y los comandos ver, menú, aceptar y cancelar.
 
-Los comandos direccionales están destinados a la [navegación con foco XY](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction) principal entre elementos únicos de la interfaz de usuario. Los comandos "ver" y "menú" están pensados para mostrar información de juego (suelen ser momentáneos, a veces de forma modal) y para cambiar entre los contextos de juego y menú, respectivamente. Los comandos "aceptar" y "cancelar" están destinados a las respuestas afirmativa (sí) y negativa (no), respectivamente.
+Los comandos direccionales están destinados a la [navegación con foco XY](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) principal entre elementos únicos de la interfaz de usuario. Los comandos "ver" y "menú" están pensados para mostrar información de juego (suelen ser momentáneos, a veces de forma modal) y para cambiar entre los contextos de juego y menú, respectivamente. Los comandos "aceptar" y "cancelar" están destinados a las respuestas afirmativa (sí) y negativa (no), respectivamente.
 
 En la siguiente tabla se muestra un resumen de estos comandos y sus usos previstos, con ejemplos.
 | Comando | Uso previsto

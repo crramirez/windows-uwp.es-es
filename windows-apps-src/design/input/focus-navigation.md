@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dd7ca5ed7694ba5f114d913580e7e3a233537ae
-ms.sourcegitcommit: 8e0fa6e2cdd5d7456a4c8a10fd9f2501b346294f
+ms.openlocfilehash: a699ef00b3f377656940e66e6d35bfcba1cc5762
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "9041053"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059706"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad
 
@@ -425,7 +425,7 @@ Tipos de entrada que no son de puntero tales como teclado, controlador para jueg
 
 En esta sección, describimos cómo especificar una estrategia de navegación preferida y ajustar la navegación con foco dentro de tu aplicación a través de un conjunto de propiedades de estrategias de navegación que admiten todos los tipos de entrada que no son de puntero basados en el foco.
 
-Para obtener más información general sobre la creación de aplicaciones y experiencias para Xbox y televisión, consulta [Interacción de teclado](keyboard-interactions.md) y [Diseño para Xbox y televisión](../devices/designing-for-tv.md#xy-focus-navigation-and-interaction).
+Para obtener información general sobre la creación de aplicaciones y experiencias para Xbox y televisión, consulta la [Interacción de teclado](keyboard-interactions.md), [diseño para Xbox y televisión](../devices/designing-for-tv.md)y [controlador para juegos y las interacciones de control remoto](gamepad-and-remote-interactions.md).
 
 ### <a name="navigation-strategies"></a>Estrategias de navegación
 

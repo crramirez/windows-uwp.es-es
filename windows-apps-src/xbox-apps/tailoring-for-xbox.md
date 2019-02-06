@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 400d80018201c8ae048cb4a5d326fa560b9cdd5c
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: e273b1b3bb84929005cfbe4a205397fa298ea1c8
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981399"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059736"
 ---
 # <a name="xbox-best-practices"></a>Procedimientos recomendados de Xbox
 
@@ -22,11 +22,11 @@ Todas las aplicaciones para UWP se ejecutarán en Xbox One de manera predetermin
 
 ### <a name="do-turn-off-mouse-mode"></a>*Cómo:* desactivar el modo de mouse
 
-Los usuarios de Xbox les encanta sus controladores. Para optimizar la entrada del mando, [deshabilita el modo de mouse](how-to-disable-mouse-mode.md) y habilita la navegación direccional (también conocida como [foco X-Y](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)). Tenga cuidado para capturas de foco y la interfaz de usuario inaccesible.
+Los usuarios de Xbox les encanta sus controladores. Para optimizar la entrada, el controlador [Deshabilitar el modo de mouse](how-to-disable-mouse-mode.md) y habilitar la navegación direccional (también conocida como [interacción y navegación con foco XY](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)). Tenga cuidado para capturas de foco y la interfaz de usuario inaccesible.
 
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Cómo:* crear un rectángulo de foco que sea adecuado para una experiencia de 10 pies
 
-La mayoría de usuarios de Xbox tienen la consola conectada a la televisión del salón, así que recuerda que el rectángulo de foco estándar resulta difícil de distinguir a una distancia de 10 pies. Para garantizar que el usuario pueda ver claramente y en todo momento el elemento de interfaz de usuario que tiene el foco de entrada, sigue las instrucciones del [foco visual](../design/devices/designing-for-tv.md#focus-visual). En XAML obtendrás este comportamiento de forma gratuita cuando la aplicación se ejecute en Xbox, pero ten en cuenta que para las aplicaciones HTML deberás usar un estilo CSS personalizado.
+La mayoría de usuarios de Xbox tienen la consola conectada a la televisión del salón, así que recuerda que el rectángulo de foco estándar resulta difícil de distinguir a una distancia de 10 pies. Para garantizar que el usuario pueda ver claramente y en todo momento el elemento de interfaz de usuario que tiene el foco de entrada, sigue las instrucciones del [foco visual](../design/input/gamepad-and-remote-interactions.md#focus-visual). En XAML obtendrás este comportamiento de forma gratuita cuando la aplicación se ejecute en Xbox, pero ten en cuenta que para las aplicaciones HTML deberás usar un estilo CSS personalizado.
 
 ### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Cómo:* integrar con la clase SystemMediaTransportControls
 
@@ -43,7 +43,7 @@ Muchos televisores cortan los bordes de la pantalla, por lo que todo el contenid
 
 ### <a name="consider-use-tv-safe-colors"></a>*A tener en cuenta:* usa colores seguros para el televisor
 
-Los televisores no administran las intensidades extremas de color tan bien como los monitores. Evita los colores de gran intensidad en la aplicación para que así los usuarios no vean franjas extrañas o imágenes difuminadas. Asimismo, ten en cuenta las diferencias existentes entre televisores: es posible que aquellos colores que se vean perfectamente en *tu* televisión, no se vean tan bien en las de los usuarios. Leer [los colores](../design/devices/designing-for-tv.md#colors) para comprender cómo hacer que la aplicación un aspecto estupendo para todo el mundo.
+Los televisores no administran las intensidades extremas de color tan bien como los monitores. Evita los colores de gran intensidad en la aplicación para que así los usuarios no vean franjas extrañas o imágenes difuminadas. Asimismo, ten en cuenta las diferencias existentes entre televisores: es posible que aquellos colores que se vean perfectamente en *tu* televisión, no se vean tan bien en las de los usuarios. Leer [los colores](../design/devices/designing-for-tv.md#colors) para comprender cómo hacer que la aplicación tengan un aspecto estupendo para todo el mundo.
 
 ### <a name="remember-you-can-disable-scaling"></a>*Recuerda:* puedes deshabilitar el escalado
 
