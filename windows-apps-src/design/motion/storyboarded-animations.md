@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 920ff8e295959ad6ea66cdb3b673217ff19b89e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 212ef252e7d123ebf457a6584f77addb04fdfb2c
+ms.sourcegitcommit: a5f5bd724e65ce4a62d28dfd9080afb127886d6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943156"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059996"
 ---
 # <a name="storyboarded-animations"></a>Animaciones con guion gráfico
 
@@ -149,7 +149,7 @@ Para más información sobre los valores [**Duración**](https://msdn.microsoft.
 
 ### <a name="fromtoby-are-nullable"></a>From/To/By pueden tener valores null
 
-Antes mencionamos que puedes omitir **De origen**, **De destino** o **Por** y, por ende, usar los valores actuales no aminados como sustitutos para un valor que falta. Las propiedades **From**, **To** o **By** de una animación no son del tipo que puedas adivinar. Por ejemplo, el tipo de la propiedad [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) no es [**Doble**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). En cambio, es un [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Y su valor predeterminado es **null**, no 0. Este valor **null** es la forma en la que el sistema de animación distingue que no has establecido específicamente un valor para una propiedad **From**, **To** o **By**. Las extensiones de componentes de VisualC ++ (C++ / CX) no tiene un tipo **null** , por lo que usan [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) en su lugar.
+Antes mencionamos que puedes omitir **De origen**, **De destino** o **Por** y, por ende, usar los valores actuales no aminados como sustitutos para un valor que falta. Las propiedades **From**, **To** o **By** de una animación no son del tipo que puedas adivinar. Por ejemplo, el tipo de la propiedad [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) no es [**Doble**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). En cambio, es un [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Y su valor predeterminado es **null**, no 0. Este valor **null** es la forma en la que el sistema de animación distingue que no has establecido específicamente un valor para una propiedad **From**, **To** o **By**. Las extensiones de componentes VisualC ++ (C++ / CX) no tiene un tipo **null** , por lo que usan [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) en su lugar.
 
 ### <a name="other-properties-of-an-animation"></a>Otras propiedades de una animación
 
@@ -265,7 +265,8 @@ El requisito de habilitar animaciones dependientes que recae sobre el desarrolla
 Como desarrollador de una aplicación, también puedes optar por aplicar una configuración en toda la aplicación que siempre deshabilite las animaciones dependientes, incluso aquellas que tienen la opción **EnableDependentAnimation** establecida como **true**. Consulta [**Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations).
 
 > [!TIP]
-> Si estás componiendo estados visuales para un control con Visual Studio, el diseñador producirá advertencias cada vez que intentes aplicar una animación dependiente a una propiedad de estado visual.
+> Si estás usando el panel de animación en Blend para Visual Studio 2017, cada vez que intentes aplicar una animación dependiente a una propiedad de estado visual, se mostrarán advertencias en el diseñador. Advertencias no se mostrarán en la lista de Error o la salida de compilación. Si editas XAML manualmente, el diseñador no mostrará una advertencia. En tiempo de ejecución al depurar resultado de depuración del panel de resultados mostrará una advertencia que no es independiente de la animación y se omitirá.
+
 
 ## <a name="starting-and-controlling-an-animation"></a>Iniciar y controlar una animación
 
