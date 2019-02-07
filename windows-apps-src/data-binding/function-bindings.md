@@ -1,20 +1,21 @@
 ---
 description: La extensión de marcado xBind permite a las funciones que se usará en el marcado.
 title: 'Funciones de x: Bind'
-ms.date: 04/26/2018
+ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 38573bf4602c88d2e04d4bf29b39191045eddec8
-ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
+ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024222"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060039"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x: Bind
 
-**Nota**para obtener información general sobre el uso de datos de enlace en la aplicación con **{X: Bind}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta [el enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+> [!NOTE]
+> Para obtener información general sobre el uso de enlace de datos en la aplicación con **{X: Bind}** (y para realizar una comparación total entre **{X: Bind}** y **{Binding}**), consulta [el enlace de datos en profundidad](data-binding-in-depth.md).
 
 A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto permite:
 
@@ -54,7 +55,7 @@ class ColorEntry
 
 ## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
-``` syntax
+```xaml
 <object property="{x:Bind pathToFunction.FunctionName(functionParameter1, functionParameter2, ...), bindingProperties}" ... />
 ```
 
@@ -75,6 +76,7 @@ Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:
     </StackPanel>
 </Page>
 ```
+
 ```csharp
 namespace MyNamespace
 {
@@ -86,6 +88,7 @@ namespace MyNamespace
 ```
 
 También puedes usar las funciones del sistema directamente en el marcado para llevar a cabo escenarios sencillos como formato de fecha, el formato de texto, concatenaciones de texto, etc., por ejemplo:
+
 ```xaml
 <Page 
      xmlns:sys="using:System"
@@ -105,9 +108,9 @@ La función a enlazar debe tener en cuenta lo siguiente:
 - Los tipos de argumento deben coincidir con los datos que se pasan; no se realizan conversiones de restricción.
 - El tipo de devolución de la función debe coincidir con el tipo de propiedad que está usando el enlace.
 
-A partir de la siguiente actualización importante a Windows 10, el motor de enlace se reaccionar a las notificaciones de cambio de propiedad que se desencadena con el nombre de función y volver a evaluar los enlaces según sea necesario. Por ejemplo: 
+El motor de enlace reacciona a cambio de propiedad, las notificaciones que se desencadenan con el nombre de función y volver a evaluarán los enlaces según sea necesario. Por ejemplo:
 
-```XAML
+```xaml
 <DataTemplate x:DataType="local:Person">
    <StackPanel>
       <TextBlock Text="{x:Bind FullName}" />
@@ -115,6 +118,7 @@ A partir de la siguiente actualización importante a Windows 10, el motor de enl
    </StackPanel>
 </DataTemplate>
 ```
+
 ```csharp
 public class Person:INotifyPropertyChanged
 {
@@ -148,7 +152,7 @@ public class Person:INotifyPropertyChanged
     public string FullName
     {
         get { return this.fullName; }
-        set 
+        set
         {
             this.fullName = value;
             this.OnPropertyChanged ();
@@ -175,6 +179,7 @@ Se pueden especificar varios argumentos de función separados por comas (,)
 ### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
 
 En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se realiza mediante la propiedad de enlace de **restablecimiento de enlace** . En el ejemplo siguiente, la función debe tomar un argumento que es el valor que debe retrocede al modelo.
+
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```
