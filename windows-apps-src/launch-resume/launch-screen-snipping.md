@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 07c095e661327ba1b64c4ba897937c8e3e905140
-ms.sourcegitcommit: d705a79d037baa764790d3d8daa9321ed0ac9ebc
+ms.openlocfilehash: 2bddea1dd2b5f21a145bde789f1ad760bb5e556a
+ms.sourcegitcommit: b126940932935ebd2965ea68078798fb6e876b23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "8992195"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "9065992"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 
@@ -27,8 +27,9 @@ El **ms-screenclip:** URI permite que la aplicación automáticamente abrir e in
 | --- | --- | --- | --- |
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
 | delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso en segundos completas, entre la llamada URI y cuando comienza la recortes. |
+| callbackformat | string | no | Este parámetro no está disponible. |
 
-## <a name="launching-the-snip--sketch-app"></a>Iniciar el recorte y aplicaciones de bocetos
+## <a name="launching-the-snip--sketch-app"></a>Iniciar la aplicación de recorte & boceto
 
 El **ms-screensketch:** URI te permite iniciar la aplicación de recorte & boceto mediante programación y abrir una imagen específica en esa aplicación para la anotación.
 
@@ -36,7 +37,7 @@ El **ms-screensketch:** URI te permite iniciar la aplicación de recorte & bocet
 
 | Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
-| sharedAccessToken | string | no | Un token que identifica el archivo para abrirlo en la aplicación de recorte & boceto. Recupera [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, se iniciará la aplicación sin abrir un archivo. |
+| sharedAccessToken | string | no | Un token que identifica el archivo para abrirlo en la aplicación de bocetos & de recorte. Recupera [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, se iniciará la aplicación sin abrir un archivo. |
 | secondarySharedAccessToken | string | no | Una cadena que identifica un archivo JSON con metadatos sobre el recorte. Los metadatos pueden incluir un campo de **clipPoints** con una matriz de coordenadas x e y o un [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity). |
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
 | isTemporary | bool | no | Si se establece en True, bocetos de pantalla intentará eliminar el archivo después de abrirla. |
