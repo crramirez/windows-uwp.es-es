@@ -11,23 +11,20 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7075df3d5c3de0dd7d756432400dfe934651c5b4
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 212b5843a302c8210cd01dd0ab4017eda016098a
+ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058769"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "9075128"
 ---
 # <a name="text-box"></a>Cuadro de texto
-
- 
 
 El control TextBox permite a un usuario escribir texto en una aplicación. Se usa normalmente para capturar una sola línea de texto, pero se puede configurar para capturar varias líneas de texto. El texto se muestra en la pantalla en un formato simple, uniforme y no cifrado.
 
 TextBox tiene varias características que pueden simplificar la entrada de texto. Incluye un menú contextual integrado y familiar con compatibilidad para copiar y pegar texto. El botón "Borrar todo" permite al usuario eliminar rápidamente todo el texto que se ha escrito. También cuenta con funcionalidades de revisión ortográfica integradas y habilitadas de manera predeterminada.
 
 > **API importantes**: [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Propiedad Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
-
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -86,6 +83,18 @@ Este es el cuadro de texto que se obtiene de este XAML.
 
 Es habitual usar un cuadro de texto para aceptar la entrada de datos en un formulario y usar la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obtener la cadena de texto completa del cuadro de texto. Normalmente usas un evento como un clic del botón Enviar para tener acceso a la propiedad Text, pero puedes controlar el evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) o [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) eventos si necesitas hacer algo cuando cambia el texto.
 
+Este ejemplo muestra cómo obtener y establecer el contenido actual de un cuadro de texto.
+
+```xaml
+<TextBox name="SampleTextBox" Text="Sample Text"/>
+```
+
+```csharp
+string sampleText = SampleTextBox.Text;
+...
+SampleTextBox.Text = "Sample text retrieved";
+```
+
 Puedes agregar un [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx) (o etiqueta) y [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx) (o marca de agua) al cuadro de texto para dar al usuario una indicación de para qué se usa el cuadro de texto. Para personalizar el aspecto del encabezado, puedes establecer la propiedad [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) en lugar de Header. *Para obtener información acerca del diseño, consulta Directrices para etiquetas*.
 
 Puedes restringir el número de caracteres que el usuario puede escribir estableciendo la propiedad [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.maxlength.aspx). Sin embargo, MaxLength no restringe la longitud del texto pegado. Usa el evento [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) para modificar el texto pegado si esto es importante para la aplicación.
@@ -97,6 +106,7 @@ El cuadro de texto incluye un botón Borrar todo ("X") que aparece cuando se esc
 El botón Borrar todo solo se muestra para cuadros de texto editables, de una única línea que contienen texto y tienen el foco.
 
 El botón Borrar todo no se muestra en ninguno de estos casos:
+
 - **IsReadOnly** es **true**
 - **AcceptsReturn** es **true**
 - **TextWrap** tiene un valor distinto de **NoWrap**
@@ -111,10 +121,10 @@ Un cuadro de texto de solo lectura tiene el mismo aspecto que un cuadro de texto
 Un usuario puede seleccionar y copiar texto.
 IsEnabled
 
-
 ### <a name="enable-multi-line-input"></a>Habilitar la entrada de varias líneas
 
 Hay dos propiedades que puedes usar para controlar si el cuadro de texto muestra texto en más de una línea. Normalmente, se establecen ambas propiedades para crear un cuadro de texto multilínea.
+
 - Para indicar que el cuadro de texto puede permitir y mostrar los caracteres de nueva línea o retorno, establece la propiedad [AcceptsReturn](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) en **true**.
 - Para habilitar el ajuste de texto, establece la propiedad [TextWrapping](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) en **Wrap**. Esto hace que el texto se ajuste cuando llega al borde del cuadro de texto, independientemente de los caracteres del separador de línea.
 
@@ -244,46 +254,45 @@ Para obtener más información y ejemplos, consulta [Usar el ámbito de entrada 
 
 ## <a name="recommendations"></a>Recomendaciones
 
--   Usa una etiqueta o un texto de marcador de posición si el propósito del cuadro de texto no está claro. Una etiqueta es visible, tenga o no un valor el cuadro de entrada de texto. El texto de marcador de posición se muestra dentro del cuadro de entrada y desaparece una vez que se ha escrito un valor.
--   Dota al cuadro de texto de un ancho apropiado para los valores que se pueden escribir. La longitud de las palabras varía según el lenguaje, así que tenlo en cuenta si quieres que tu aplicación sea internacional.
--   Un cuadro de entrada de texto suele ser de línea única (`TextWrap = "NoWrap"`). Si los usuarios tienen que escribir o editar una cadena larga, debes establecer un cuadro de entrada de texto de varias líneas (`TextWrap = "Wrap"`).
--   Por lo general, un cuadro de entrada de texto se usa para texto editable. Sin embargo, puedes hacer que sea de solo lectura, de modo que sea posible leer, seleccionar y copiar su contenido, pero no modificarlo.
--   Si quieres reducir el número de elementos de una vista que se encuentra atestada, podrías hacer que se muestre un conjunto de cuadros de entrada de texto solo cuando se marque una casilla de control. También puedes vincular el estado habilitado de un cuadro de entrada de texto a un control, por ejemplo, de tipo casilla.
--   Piensa en cómo quieres que se comporte un cuadro de entrada de texto cuando contenga un valor y el usuario lo pulse. El comportamiento predeterminado es adecuado para editar el valor en lugar de reemplazarlo; el punto de inserción se coloca entre las palabras y no se selecciona nada. Si reemplazar es el caso más usado para un cuadro de entrada de texto, puedes seleccionar todo el texto del campo siempre que el control reciba el foco; al escribir, se reemplazará el texto seleccionado.
+- Usa una etiqueta o un texto de marcador de posición si el propósito del cuadro de texto no está claro. Una etiqueta es visible, tenga o no un valor el cuadro de entrada de texto. El texto de marcador de posición se muestra dentro del cuadro de entrada y desaparece una vez que se ha escrito un valor.
+- Dota al cuadro de texto de un ancho apropiado para los valores que se pueden escribir. La longitud de las palabras varía según el lenguaje, así que tenlo en cuenta si quieres que tu aplicación sea internacional.
+- Un cuadro de entrada de texto suele ser de línea única (`TextWrap = "NoWrap"`). Si los usuarios tienen que escribir o editar una cadena larga, debes establecer un cuadro de entrada de texto de varias líneas (`TextWrap = "Wrap"`).
+- Por lo general, un cuadro de entrada de texto se usa para texto editable. Sin embargo, puedes hacer que sea de solo lectura, de modo que sea posible leer, seleccionar y copiar su contenido, pero no modificarlo.
+- Si quieres reducir el número de elementos de una vista que se encuentra atestada, podrías hacer que se muestre un conjunto de cuadros de entrada de texto solo cuando se marque una casilla de control. También puedes vincular el estado habilitado de un cuadro de entrada de texto a un control, por ejemplo, de tipo casilla.
+- Piensa en cómo quieres que se comporte un cuadro de entrada de texto cuando contenga un valor y el usuario lo pulse. El comportamiento predeterminado es adecuado para editar el valor en lugar de reemplazarlo; el punto de inserción se coloca entre las palabras y no se selecciona nada. Si reemplazar es el caso más usado para un cuadro de entrada de texto, puedes seleccionar todo el texto del campo siempre que el control reciba el foco; al escribir, se reemplazará el texto seleccionado.
 
-**Cuadros de entrada de texto de una línea**
+### <a name="single-line-input-boxes"></a>Cuadros de entrada de texto de una línea
 
--   Usa varios cuadros de texto de una línea para capturar muchos fragmentos pequeños de información de texto. Si los cuadros de texto están relacionados, agrúpalos.
+- Usa varios cuadros de texto de una línea para capturar muchos fragmentos pequeños de información de texto. Si los cuadros de texto están relacionados, agrúpalos.
 
--   Haz tus cuadros de texto de una línea ligeramente más grandes que la entrada más larga prevista. Si al hacerlo el control queda demasiado ancho, sepáralo en dos controles. Por ejemplo, puedes dividir una única entrada de dirección en "Línea 1 de dirección" y "Línea 2 de dirección".
--   Establece la longitud máxima de caracteres que es posible escribir. Si el origen de datos de respaldo no permite una cadena de entrada larga, limita la entrada y usa una ventana emergente de validación para avisar al usuario cuando alcance el límite.
--   Usa controles de entrada de texto de una línea para recopilar pequeños fragmentos de texto de los usuarios.
+- Haz tus cuadros de texto de una línea ligeramente más grandes que la entrada más larga prevista. Si al hacerlo el control queda demasiado ancho, sepáralo en dos controles. Por ejemplo, puedes dividir una única entrada de dirección en "Línea 1 de dirección" y "Línea 2 de dirección".
+- Establece la longitud máxima de caracteres que es posible escribir. Si el origen de datos de respaldo no permite una cadena de entrada larga, limita la entrada y usa una ventana emergente de validación para avisar al usuario cuando alcance el límite.
+- Usa controles de entrada de texto de una línea para recopilar pequeños fragmentos de texto de los usuarios.
 
     El siguiente ejemplo muestra un cuadro de texto de una línea para capturar una respuesta a una pregunta de seguridad. La respuesta que se espera es presumiblemente corta y por eso el cuadro de texto de una línea es el más adecuado en este caso.
 
     ![Entrada de texto básica](images/guidelines_and_checklist_for_singleline_text_input_type_text.png)
 
--   Usa un conjunto de controles cortos de entrada de texto en una línea de tamaño fijo para escribir datos con un formato específico.
+- Usa un conjunto de controles cortos de entrada de texto en una línea de tamaño fijo para escribir datos con un formato específico.
 
     ![Entrada de texto con formato](images/textinput_example_productkey.png)
 
--   Usa un control de entrada de texto sin restricciones en una línea para escribir o editar cadenas, en combinación con un botón de comando que ayude a los usuarios a seleccionar valores válidos.
+- Usa un control de entrada de texto sin restricciones en una línea para escribir o editar cadenas, en combinación con un botón de comando que ayude a los usuarios a seleccionar valores válidos.
 
     ![Entrada de texto asistida](images/textinput_example_assisted.png)
 
+### <a name="multi-line-text-input-controls"></a>Controles de entrada de texto de varias líneas
 
-**Controles de entrada de texto de varias líneas**
-
--   Cuando crees un cuadro de texto enriquecido, proporciona botones de estilo e implementa sus acciones.
--   Usa una fuente coherente con el estilo de la aplicación.
--   Ajusta la altura del control de texto para que permita acomodar las entradas típicas.
--   Si tienes que capturar textos largos con un número máximo de caracteres o palabras, usa un cuadro de texto sin formato e incluye un contador con ejecución dinámica que muestre al usuario cuántos caracteres o palabras le quedan antes de alcanzar el límite. Deberás crear el contador tú mismo; colócalo debajo del cuadro de texto y actualízalo dinámicamente a medida que el usuario escriba cada carácter o palabra.
+- Cuando crees un cuadro de texto enriquecido, proporciona botones de estilo e implementa sus acciones.
+- Usa una fuente coherente con el estilo de la aplicación.
+- Ajusta la altura del control de texto para que permita acomodar las entradas típicas.
+- Si tienes que capturar textos largos con un número máximo de caracteres o palabras, usa un cuadro de texto sin formato e incluye un contador con ejecución dinámica que muestre al usuario cuántos caracteres o palabras le quedan antes de alcanzar el límite. Deberás crear el contador tú mismo; colócalo debajo del cuadro de texto y actualízalo dinámicamente a medida que el usuario escriba cada carácter o palabra.
 
     ![Texto largo](images/guidelines_and_checklist_for_multiline_text_input_text_limits.png)
 
--   No permitas que los controles de entrada de texto crezcan en altura a medida que los usuarios escriben.
--   No uses un cuadro de texto multilínea si los usuarios solo necesitan una única línea.
--   No uses un control de texto enriquecido si un control de texto sin formato es suficiente.
+- No permitas que los controles de entrada de texto crezcan en altura a medida que los usuarios escriben.
+- No uses un cuadro de texto multilínea si los usuarios solo necesitan una única línea.
+- No uses un control de texto enriquecido si un control de texto sin formato es suficiente.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
