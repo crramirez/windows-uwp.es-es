@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 59da5dd5866fe79f4420e1e895af74f976526f27
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 3664ecae152b7178709bffc373a877e58a86461a
+ms.sourcegitcommit: eaee5a45d5eace64c69e67691e5330b466cc74c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046265"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083270"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Activación del modo de desarrollador de Xbox One
 
@@ -38,19 +38,21 @@ El modo de desarrollador se puede habilitar en cualquier consola Xbox One comerc
 
     ![Paso de activación 5](images/activation-step-5.png)  
     
-5.  Ve a [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices).
+5.  [Registrar una cuenta de desarrollador de la aplicación Centro de partners](https://developer.microsoft.com/store/register).  También es el primer paso para publicar tu juego.
 
-6.  Inicia sesión con tus credenciales de cuenta en [El centro de partners](https://partner.microsoft.com/dashboard) .
+6.  Inicia sesión con tu cuenta de desarrollador de la aplicación de centro de partners válido, actual en [El centro de partners](https://partner.microsoft.com/dashboard) .  Si no ves varias opciones en el panel de navegación izquierdo o no ve la opción de **crear una nueva aplicación** en la sección de **información general** , los siguientes pasos y activación vínculos _no funcionarán_; Asegúrate de que totalmente registraste tu cuenta de desarrollador de la aplicación del paso anterior.
 
-7.  Escribe el código de activación que se muestra en la aplicación Dev Mode Activation. Tienes un número limitado de activaciones asociadas con tu cuenta. Una vez que se ha activado el modo de desarrollador, el centro de partners indicará que has usado una de las activaciones asociadas con tu cuenta.
+7.  Ve a [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices).
+
+8.  Escribe el código de activación que se muestra en la aplicación Dev Mode Activation. Tienes un número limitado de activaciones asociadas con tu cuenta. Una vez que se ha activado el modo de desarrollador, el centro de partners indicará que has usado una de las activaciones asociadas con tu cuenta.
 
     ![Paso de activación 8](images/activation-step-8-rs2.png)    
     
-8.  Haz clic en **Agree and activate**. De esta manera, volverá a cargarse la página y verás que el dispositivo completa datos en la tabla. Los términos del acuerdo del Programa de activación del modo de desarrollador de Xbox One están disponibles en [Programa de activación del modo de desarrollador de Xbox One](https://go.microsoft.com/fwlink/p/?LinkId=760399).
+9.  Haz clic en **Agree and activate**. De esta manera, volverá a cargarse la página y verás que el dispositivo completa datos en la tabla. Los términos del acuerdo del Programa de activación del modo de desarrollador de Xbox One están disponibles en [Programa de activación del modo de desarrollador de Xbox One](https://go.microsoft.com/fwlink/p/?LinkId=760399).
 
-9.  Después de escribir el código de activación, la consola mostrará una pantalla de progreso para el proceso de activación.  
+10. Después de escribir el código de activación, la consola mostrará una pantalla de progreso para el proceso de activación.  
     
-10. Cuando finalice la activación, abre la aplicación Dev Mode Activation y haz clic en **Cambiar y reiniciar** para ir al modo de desarrollador. Ten en cuenta que este proceso tardará más de lo habitual.
+11. Cuando finalice la activación, abre la aplicación Dev Mode Activation y haz clic en **Cambiar y reiniciar** para ir al modo de desarrollador. Ten en cuenta que este proceso tardará más de lo habitual.
 
     ![Paso de activación 12](images/activation-step-12.png)   
 
