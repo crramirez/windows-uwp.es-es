@@ -2,23 +2,23 @@
 Description: You can submit apps to the Microsoft Store in over 100 languages.
 title: Idiomas admitidos
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
-ms.date: 10/25/2018
+ms.date: 02/20/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2e883fca2b5ca350322fc44c1de51a02aaa4d85
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 02a68cd325823bf671f7e0a99c64a899b17caddd
+ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938025"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083713"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
 
 Puedes enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
 
-Para obtener más información sobre cómo configurar los idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
+Para obtener más información sobre la configuración de idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
 ## <a name="supported-languages"></a>Idiomas admitidos
 
@@ -43,7 +43,7 @@ Códigos de idioma que no se incluyen aquí no son compatibles con la tienda. Te
 | Búlgaro             | bg, bg-bg                                                                                                                                                                                             |
 | Catalán               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
 | Cheroqui              | chr-cher, chr-cher-us, chr-latn                                                                                                                                                                       |
-| Chino (Simplificado)  | zh, zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
+| Chino (Simplificado)  | zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
 | Chino (Tradicional) | zh-Hant, zh-hk, zh-mp, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
 | Croata              | hr, hr-hr, hr-ba                                                                                                                                                                                      |
 | Checo                 | cs, cs-cz                                                                                                                                                                                             |
