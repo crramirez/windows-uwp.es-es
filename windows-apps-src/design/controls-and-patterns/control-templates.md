@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ad66d8797234d01673518256d6f5376ce93245f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 539f67079547db28a02ef34fc4b9af2e15d107d3
+ms.sourcegitcommit: 4e80ee8d577c3475b6d247317a24411a48b02c29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928706"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083896"
 ---
 # <a name="control-templates"></a>Plantillas de control
 
@@ -53,7 +53,7 @@ Este código XAML crea una clase [**ControlTemplate**](https://msdn.microsoft.co
 Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es un enlace especial que vincula el valor de una propiedad de una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML. Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 > [!NOTE]
-> A partir de Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puedes usar extensiones de marcado [**x: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) en lugares usas [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
+> A partir de Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puedes usar las extensiones de marcado [**x: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) en lugares usas [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -200,7 +200,7 @@ En los artículos que documentan los estilos y plantillas de los controles XAML 
 
 Para algunos de los atributos de los ejemplos de XAML, quizás hayas observado referencias a recursos que usan la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md). Esta es una técnica que permite a una única plantilla de control usar recursos que pueden ser diferentes valores en función del tema que esté activo en cada momento. Esto resulta especialmente importante para pinceles y colores, porque el principal propósito de los temas es permitir a los usuarios elegir si quieren aplicar un tema oscuro, claro o de alto contraste a todo el sistema. Las aplicaciones que usan el sistema de recursos de XAML pueden usar un conjunto de recursos que sea apropiado para ese tema, de manera que las opciones de temas en la interfaz de usuario de una aplicación reflejen el tema elegido por el usuario para todo el sistema.
 
- ## Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 * [Muestra de galería de controles de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Muestra de control de edición de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
