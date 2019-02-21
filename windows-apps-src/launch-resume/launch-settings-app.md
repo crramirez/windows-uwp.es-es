@@ -6,12 +6,12 @@ ms.date: 1/8/2019
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 92cfb1318f176e7d8adb8052c119a006389f49e5
-ms.sourcegitcommit: 158467c576c5924e1822d397bd449fc8251bf92f
+ms.openlocfilehash: 5a1f9d853e41642ca5f8027d42b49fcbc3122a66
+ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "8996080"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9086663"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 
@@ -103,7 +103,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 
 |Página Configuración| URI |
 |-------------|-----|
-| Permisos e historial | ms-settings:cortana-permissions |
+| Historial de & permisos | ms-settings:cortana-permissions |
 | Más detalles | ms-settings:cortana-moredetails |
 | Cortana en Mis dispositivos | ms-settings:cortana-notifications |
 | Hablar con Cortana | ms-settings:cortana-language<br/>MS-configuración: cortana<br/>MS-configuración: cortana-talktocortana |
@@ -136,7 +136,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Audio | ms-settings:easeofaccess-audio |
 | Subtítulos | ms-settings:easeofaccess-closedcaptioning |
 | Filtros de color | MS-configuración: easeofaccess-colorfilter |
-| Tamaño de cursor y puntero | MS-configuración: easeofaccess-cursorandpointersize |
+| Tamaño del puntero de cursor & | MS-configuración: easeofaccess-cursorandpointersize |
 | Pantalla | ms-settings:easeofaccess-display |
 | Control ocular | ms-settings:easeofaccess-eyecontrol |
 | Fuentes | ms-settings:fonts |
@@ -288,7 +288,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Escritorio remoto | ms-settings:remotedesktop |
 | Teléfono | MS-configuración: teléfono (**en desuso en Windows 10, versión 1809 y posteriores**) |
 | Inicio/apagado y suspensión | ms-settings:powersleep |
-| Sonidos | ms-settings:sounds |
+| Sonido | MS-configuración: sonido |
 | Almacenamiento | ms-settings:storagesense |
 | Sensor de almacenamiento | ms-settings:storagepolicies |
 

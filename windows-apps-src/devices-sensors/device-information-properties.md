@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ca733ef88eb8b575b8974f71f9395800d5de3875
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f2810221aca0399d037fc56f7f3ac783a2c0df12
+ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935177"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9086673"
 ---
 # <a name="device-information-properties"></a>Propiedades de información de dispositivo
 
@@ -34,7 +34,7 @@ Un objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/app
 Cuando solicites propiedades, no estás limitado a las propiedades comunes con nombres descriptivos. Puedes especificar el GUID subyacente y el identificador de la propiedad (PID) para solicitar cualquier propiedad disponible, incluso las propiedades personalizadas proporcionadas por controladores o dispositivos individuales. El formato para especificar una propiedad personalizada es "`{GUID} PID`". Por ejemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
 
 > [!Note]
-> Puedes encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador de dispositivo.
+> Puedes encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador del dispositivo.
 
 Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind), aunque la mayoría son únicas para un tipo específico. En las secciones siguientes se muestran algunas propiedades comunes que se ordenan por la enumeración individual **DeviceInformationKind**. Para obtener más información sobre cómo se relacionan los diferentes tipos entre sí, consulta **DeviceInformationKind**.
 
@@ -153,7 +153,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.AepService.ParentAepIsPaired** | Booleano | Indica si el objeto primario **AssociationEndpoint** está emparejado con el sistema.                           |
 | **System.Devices.AepService.ProtocolId**        | GUID    | Identidad del protocolo usado para detectar este dispositivo.                                                           |
 | **System.Devices.AepService.ServiceClassId**    | GUID    | Identidad del servicio representado por este dispositivo.                                                             |
-| **System.Devices.AeoService.ServiceId**         | Cadena  | Identidad de este servicio. Este también es el valor de [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id). |
+| **System.Devices.AepService.ServiceId**         | Cadena  | Identidad de este servicio. Este también es el valor de [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id). |
 | **System.ItemNameDisplay**                      | Cadena  | El mejor nombre para mostrar para este servicio.                                                                           |
 
  
