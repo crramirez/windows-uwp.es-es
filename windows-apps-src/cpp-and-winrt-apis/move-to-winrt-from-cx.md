@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: ba64afe3440ed209a6f637871f21427716533b09
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: 39f60576962d9e69d8ec7ba80918fdbdfe96f070
+ms.sourcegitcommit: 9b0f9c8854277d2e786e9294af3a2b559aa457a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042287"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "9099322"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Migrar a C++/WinRT desde C++/CX
 
@@ -282,6 +282,7 @@ C++/CX proporciona varios tipos de datos en el espacio de nombres de **Plataform
 | C++/CX | C++/WinRT |
 | ---- | ---- |
 | **Platform:: Agile\ ^** | [**agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
+| **Platform:: Array\ ^** | Consulta [puerto **Platform:: Array\ ^** ](#port-platformarray) |
 | **Platform::Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
 | **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
@@ -301,6 +302,9 @@ En C++/WinRT.
 ```cppwinrt
 winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 ```
+
+### <a name="port-platformarray"></a>Puerto **Platform:: Array\ ^**
+Las opciones incluyen el uso de una lista de inicializadores, un **std:: Array**o un **std:: vector**. Para obtener más información y ejemplos de código, consulta [listas de inicializadores estándares](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) y [matrices y vectores estándares](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors).
 
 ### <a name="port-platformexception-to-winrthresulterror"></a>Migrar **Platform:: Exception\^** a **winrt::hresult_error**
 El tipo **Platform::Exception\^** se produce en C++/CX cuando una API de Windows Runtime devuelve un HRESULT que no es S\_OK. El equivalente de C++/WinRT es [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).
