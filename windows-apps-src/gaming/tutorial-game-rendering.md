@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
-ms.openlocfilehash: f73665e60513e4f8465be3dbe69f792af285a8e1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934650"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117755"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Marco de representación II: representación de juego
 
@@ -42,7 +42,7 @@ Estos son algunos conceptos que puedes usar para intentar diseñar el representa
     * Utiliza varios búferes de constantes con diferentes frecuencias para reducir la cantidad de datos que deben enviarse a la GPU por fotograma. Este ejemplo separa las constantes en diferentes búferes, según la frecuencia con la que deben actualizarse. Este es el procedimiento recomendado para la programación de Direct3D. 
     * En esta muestra de juego se definen 4 búferes de constantes.
         1. __m\_constantBufferNeverChanges__ contiene los parámetros de iluminación. Se establece una vez en el método __FinalizeCreateGameDeviceResources__ y nunca vuelve a cambiar.
-        2. __m\_constantBufferChangeOnResize__ contiene la matriz de proyección. La matriz de proyección depende del tamaño y la relación de aspecto de la ventana. Se establece en [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method) y, a continuación, se actualiza después de que los recursos se cargan en el método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Si la representación es en 3D, también se cambia dos veces por fotograma.
+        2. __m\_constantBufferChangeOnResize__ contiene la matriz de proyección. La matriz de proyección depende del tamaño y la relación de aspecto de la ventana. Se establece en [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) y, a continuación, se actualiza después de que los recursos se cargan en el método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Si la representación es en 3D, también se cambia dos veces por fotograma.
         3. __m\_constantBufferChangesEveryFrame__ contiene la matriz de vista. Esta matriz depende de la posición de la cámara y la dirección de vista (lo normal para la proyección) y cambia solamente una vez por fotograma en el método __Render__. Esto se explicó anteriormente en __Marco de representación I: Introducción a la representación__, en el método [__GameRenderer::Render__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
         4. __m\_constantBufferChangesEveryPrim__ contiene las propiedades de la matriz de modelos y los materiales de cada primitivo. La matriz de modelos transforma los vértices desde las coordenadas locales en coordenadas globales. Estas constantes son específicas de cada primitivo y se actualizan para cada llamada de dibujo. Esto se explicó anteriormente en __Marco de representación I: Introducción a la representación__, en el tutorial [Representación de primitivos](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
 * Los objetos de recursos del sombreador que guardan las texturas para los primitivos se definen también en esta clase.
@@ -158,7 +158,7 @@ GameRenderer::GameRenderer(const std::shared_ptr<DX::DeviceResources>& deviceRes
 En la muestra de juego (y en la plantilla __DirectX 11 App (Universal Windows)__ de Visual Studio, la creación y la carga de recursos del juego se implementa mediante estos dos métodos, que se llaman desde el constructor __GameRenderer__:
 
 * [__CreateDeviceDependentResources__](#createdevicedependentresources-method)
-* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method)
+* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)
 
 ## <a name="createdevicedependentresources-method"></a>Método CreateDeviceDependentResources
 
@@ -590,7 +590,7 @@ Los recursos de tamaño de ventana se actualizan de esta manera:
 
 Para esta muestra de juego, un cierto número de llamadas a métodos son las mismas que en el método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Para ver un tutorial de código, ve a la sección anterior.
 
-Los ajustes de representación al HUD y al tamaño de ventana de superposición del juego se tratan en [Agregar una interfaz de usuario](#tutorial--adding-a-user-interface).
+Los ajustes de representación al HUD y al tamaño de ventana de superposición del juego se tratan en [Agregar una interfaz de usuario](tutorial--adding-a-user-interface.md).
 
 ```cpp
 // Initializes view parameters when the window size changes.

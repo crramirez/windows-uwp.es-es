@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 008dce5ffc3824d49830bc368a3eaa9d55b7d229
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d4739442414b02358f3afea8967b0fc404ff7f9
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8948027"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117825"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
 
@@ -43,7 +43,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Lenguaje de diseño.</strong><br><br>Un conjunto de convenciones que indica el aspecto y comportamiento de las aplicaciones en la plataforma.</td>
 <td align="left">En las directrices de <strong>diseño de material de Android</strong> se proporciona un lenguaje visual que deben seguir los diseñadores y desarrolladores de Android.</td>
 <td align="left">En <strong>Directrices de interfaz humana</strong> se ofrece asesoramiento para los desarrolladores y diseñadores de iOS.</td>
-<td align="left">En el <a href="https://dev.windows.com/design"><strong>diseño de aplicaciones de Windows para UWP</strong></a> se muestra cómo crear una aplicación para que tenga un aspecto fantástico en todos los dispositivos Windows 10. Encontrarás aspectos básicos sobre el diseño de la interfaz de usuario (UI), técnicas de diseño dinámico y una lista completa de directrices detalladas.<br/></td>
+<td align="left">En el <a href="https://developer.microsoft.com/en-us/windows/apps/design"><strong>diseño de aplicaciones de Windows para UWP</strong></a> se muestra cómo crear una aplicación para que tenga un aspecto fantástico en todos los dispositivos Windows 10. Encontrarás aspectos básicos sobre el diseño de la interfaz de usuario (UI), técnicas de diseño dinámico y una lista completa de directrices detalladas.<br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Lenguaje de marcado de la interfaz de usuario.</strong> <br><br>Un lenguaje de marcado que representa y describe una interfaz de usuario y sus componentes. En cada plataforma se proporciona un editor para la edición tanto visual y como de marcado.<br/></td>

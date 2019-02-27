@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 212b5843a302c8210cd01dd0ab4017eda016098a
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.openlocfilehash: 7e3faf82ab9786f6ba079e44d79b6ed49394b881
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075128"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117795"
 ---
 # <a name="text-box"></a>Cuadro de texto
 
@@ -110,6 +110,19 @@ El botón Borrar todo no se muestra en ninguno de estos casos:
 - **IsReadOnly** es **true**
 - **AcceptsReturn** es **true**
 - **TextWrap** tiene un valor distinto de **NoWrap**
+
+Este ejemplo muestra cómo obtener y establecer el contenido actual de un cuadro de texto.
+
+```xaml
+<TextBox name="SampleTextBox" Text="Sample Text"/>
+```
+
+```csharp
+string sampleText = SampleTextBox.Text;
+...
+SampleTextBox.Text = "Sample text retrieved";
+```
+
 
 ### <a name="make-a-text-box-read-only"></a>Hacer un cuadro de texto de solo lectura
 

@@ -1,27 +1,27 @@
 ---
-title: Dispositivo PointOfService reclamar y habilitar el modelo
+title: Dispositivo PointOfService reclamar y habilitar modelo
 description: Obtén información sobre la notificación de PointOfService y habilitar el modelo
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e7d60c0b612a8067ac4c225dff9da5da428f1a1
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924951"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117655"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio de notificación y habilitar el modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio de notificación y habilitar modelo
 
 ## <a name="claiming-for-exclusive-use"></a>Reclamar para uso exclusivo
 
 Después de haber creado un objeto de dispositivo PointOfService correctamente, debes reclamarlo mediante el método de notificación adecuado para el tipo de dispositivo para poder usar el dispositivo para la entrada o salida.  La notificación concede a la aplicación acceso exclusivo a muchas de las funciones del dispositivo para garantizar que una aplicación no interfiere con el uso del dispositivo por parte de otra aplicación.  Solo una aplicación puede reclamar un dispositivo PointOfService para uso exclusivo cada vez. 
 
 > [!Note]
-> La acción de notificación establece un bloqueo exclusivo para un dispositivo, pero no se coloca en un estado operativo.  Para obtener más información, consulta [Habilitar el dispositivo para las operaciones de E/S](#Enable-device-for-I/O-operations) .
+> La acción de notificación establece un bloqueo exclusivo para un dispositivo, pero no se coloca en un estado operativo.  Para obtener más información, consulta [Habilitar el dispositivo para las operaciones de E/S](#enable-device-for-io-operations) .
 
-### <a name="apis-used-to-claim--release"></a>Las API que se usan para reclamar / liberar
+### <a name="apis-used-to-claim--release"></a>Las API que se usan para reclamar / versión
 
 |Dispositivo|Notificación | Lanzamiento | 
 |-|:-|:-|
@@ -34,9 +34,9 @@ Después de haber creado un objeto de dispositivo PointOfService correctamente, 
 
 ## <a name="enable-device-for-io-operations"></a>Habilitar el dispositivo para las operaciones de E/S
 
-La acción de notificación simplemente establece un derechos exclusivos en el dispositivo, pero no se coloca en un estado operativo.  Para poder recibir eventos o realizar operaciones salida debes habilitar el dispositivo mediante **EnableAsync**.  Por el contrario, puedes llamar a **DisableAsync** para dejar de escuchar eventos desde el dispositivo o la realización de salida.  También puedes usar **IsEnabled** para determinar el estado del dispositivo.
+La acción de notificación simplemente establece un derechos exclusivos en el dispositivo, pero no se coloca en un estado operativo.  Debes habilitar el dispositivo mediante **EnableAsync**para recibir eventos o realizar operaciones de salida.  Por el contrario, puedes llamar a **DisableAsync** para dejar de escuchar los eventos desde el dispositivo o la realización de salida.  También puedes usar **IsEnabled** para determinar el estado del dispositivo.
 
-### <a name="apis-used-enable--disable"></a>API que se usan habilitan / deshabilitar
+### <a name="apis-used-enable--disable"></a>API que se usan habilitar / deshabilitar
 
 | Dispositivo | Habilitar | Deshabilitar | ¿IsEnabled? |
 |-|:-|:-|:-|
@@ -47,7 +47,7 @@ La acción de notificación simplemente establece un derechos exclusivos en el d
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-Visualización de líneas ¹ no requieren que habilitar el dispositivo para las operaciones de E/S de manera explícita.  Habilitar realiza automáticamente las APIs de LineDisplay PointOfService que realizan E/S.
+Visualización de líneas ¹ no requieren que habilitar el dispositivo para las operaciones de E/S de manera explícita.  Habilitar se realiza automáticamente por las APIs de LineDisplay PointOfService que realizan E/S.
 
 ## <a name="code-sample-claim-and-enable"></a>Ejemplo de código: reclamar y habilitar
 

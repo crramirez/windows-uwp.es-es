@@ -6,12 +6,12 @@ ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d1fac6d735d4f6915dea1af531dffa666607fe3
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941102"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117815"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -20,7 +20,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usua
 En muchos casos puede llamar a Windows Runtime APIs directamente desde la aplicación de escritorio, por lo tanto, antes de revisar esta guía, consulta [mejorar para Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Esta guía se da por hecho que has creado un paquete de la aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, consulta [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
+>Esta guía se da por hecho que has creado un paquete de aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, vea [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
 
 Si estás listo, comencemos.
 
@@ -76,7 +76,7 @@ A continuación, desde tu proyecto de UWP, agrega una referencia al componente d
 
 ### <a name="build-your-solution"></a>Compilar la solución
 
-La solución para garantizar que no aparezcan errores de compilación. Si recibes errores, abre el **Administrador de configuración** y asegúrate de que tus proyectos destinados a la misma plataforma.
+Compilar la solución para garantizar que no aparece ningún error. Si recibes errores, abre el **Administrador de configuración** y asegúrate de que tus proyectos destinados a la misma plataforma.
 
 ![Administrador de configuración](images/desktop-to-uwp/config-manager.png)
 
@@ -93,7 +93,7 @@ Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de us
 ![diseño adaptativo](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Este ejemplo muestra una UI de XAML agregando un proyecto de UWP a la solución. Que es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no es recomendable que usas en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>En este ejemplo se muestra una UI de XAML mediante la adición de un proyecto de UWP a la solución. Este es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [los controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
@@ -103,7 +103,7 @@ Para mostrar una interfaz de usuario basada en XAML, deberás hacer lo siguiente
 
 :dos: [Crear una interfaz de usuario de XAML](#xaml-UI)
 
-:tres: [Agregar una extensión de protocolo al proyecto de UWP](#protocol)
+:tres: [Agregar una extensión de protocolo al proyecto de UWP](#add-a-protocol-extension)
 
 :cuatro: [Iniciar la aplicación para UWP desde tu aplicación de escritorio](#start)
 
@@ -151,7 +151,7 @@ Agregar una interfaz de usuario de XAML a tu proyecto de UWP Este es el XAML par
 
 ### <a name="add-a-protocol-extension"></a>Agregar una extensión de protocolo
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega esta extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega esta extensión.
 
 ```xml
 <Extensions>
@@ -250,7 +250,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Puedes hacer la aplicación de escritorio sea un destino de recursos compartidos para que los usuarios puedan compartir con facilidad datos, como imágenes de otras aplicaciones que admiten el uso compartido.
 
-Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación de fotos. Esta es una aplicación de muestra WPF que tiene esa funcionalidad.
+Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación fotos. Esta es una aplicación de muestra WPF que tiene esa funcionalidad.
 
 ![destino de uso compartido](images/desktop-to-uwp/share-target.png).
 
@@ -264,7 +264,7 @@ Para que la aplicación sea un destino de recursos compartidos, deberás hacer l
 
 : dos: [invalidar el controlador de eventos OnShareTargetActivated](#override)
 
-: tres: [extensiones de escritorio de agregar al proyecto de UWP](#desktop-extensions)
+: tres: [Agregar extensiones de escritorio al proyecto de UWP](#desktop-extensions)
 
 : four: [Agregar la extensión del proceso de plena confianza](#full-trust)
 
@@ -302,7 +302,7 @@ También tendrás que especificar qué tipos de archivos se pueden compartir con
 
 ### <a name="override-the-onsharetargetactivated-event-handler"></a>Invalidar el controlador de eventos OnShareTargetActivated
 
-Invalidar el controlador de eventos **OnShareTargetActivated** en la clase de **aplicación** de tu proyecto UWP.
+Invalidar el controlador de eventos **OnShareTargetActivated** en la clase de la **aplicación** del proyecto UWP.
 
 A este controlador de eventos se llama cuando los usuarios eligen tu aplicación para compartir sus archivos.
 
@@ -335,7 +335,7 @@ En este código, se guarda la imagen que se comparte por el usuario en una carpe
 
 ### <a name="add-desktop-extensions-to-the-uwp-project"></a>Agregar extensiones de escritorio al proyecto UWP
 
-Agregar la extensión de **Extensiones de escritorio de Windows para UWP** para el proyecto de aplicación para UWP.
+Agregar la extensión de **Extensiones de escritorio de Windows para UWP** al proyecto de aplicación para UWP.
 
 ![extensión de escritorio](images/desktop-to-uwp/desktop-extensions.png)
 
@@ -365,7 +365,7 @@ Modificar la aplicación de escritorio para buscar y procesar el archivo compart
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-Para las instancias de la aplicación de escritorio que ya están abierta por el usuario, te podríamos controlar el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) y pasa la ruta de acceso a la ubicación del archivo. De este modo todas las instancias abiertas de la aplicación de escritorio mostrarán la foto compartida.
+Para las instancias de la aplicación de escritorio que ya está abierta por el usuario, te podríamos controlar el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) y pasa la ruta de acceso a la ubicación del archivo. De este modo, todas las instancias de la aplicación de escritorio abiertas mostrará la foto compartida.
 
 ```csharp
 ...

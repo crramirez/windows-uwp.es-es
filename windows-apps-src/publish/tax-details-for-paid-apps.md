@@ -6,12 +6,12 @@ ms.date: 01/31/2019
 ms.topic: article
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: cf57fa923297b8e4a57d7c5ca4668868bfae7038
-ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
+ms.openlocfilehash: e5ada027b835e852d1db728ef124a798540abdf7
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042495"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117765"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para los desarrolladores de juego o aplicación de Windows y los editores de Azure Marketplace
 
@@ -223,7 +223,7 @@ Para comprender su impuesto consideraciones para la selección de precios y la r
 | Eslovenia                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70% de (precio seleccionado menos el 22% de impuestos) | Microsoft          |
 | Islas Salomón                  | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Somalia                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
-| Sudáfrica                     | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countriesregions) | 70% del precio seleccionado                 | Desarrollador          |
+| Sudáfrica                     | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countriesregions-for-windows-appgame-developers) | 70% del precio seleccionado                 | Desarrollador          |
 | España                            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70% de (precio seleccionado menos el 21% de impuestos) | Microsoft          |
 | Sri Lanka                        | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Surinam                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
@@ -257,7 +257,7 @@ Para comprender su impuesto consideraciones para la selección de precios y la r
 | Vanuatu                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Ciudad del Vaticano                     | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Venezuela                        | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
-| Vietnam                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countriesregions) | 70% del precio seleccionado                 | Desarrollador          |
+| Vietnam                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countriesregions-for-windows-appgame-developers) | 70% del precio seleccionado                 | Desarrollador          |
 | Wallis y Futuna                | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Yemen                            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Zambia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |

@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
-ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4c16f1fbb55374b1d04c9fc9f5f7eae72ad19b00
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931300"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117785"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 
@@ -71,7 +71,7 @@ void App::Initialize(
 
 ## <a name="display-the-graphics-by-rendering-the-frame"></a>Mostrar los gráficos representando el fotograma
 
-La escena de juego debe representarse cuando se inicia el juego. Las instrucciones para la representación empiezan en el método [__GameMain::Run__](#gameamainrun-method), tal y como se muestra a continuación.
+La escena de juego debe representarse cuando se inicia el juego. Las instrucciones para la representación empiezan en el método [__GameMain::Run__](#gamemainrun-method), tal y como se muestra a continuación.
 
 El flujo simple es:
 1. __Actualizar__
@@ -130,7 +130,7 @@ Consulta el artículo [Administración del flujo de los juegos](tutorial-game-fl
 
 La representación se implementa mediante una llamada al método [__GameRenderer::Render__](#gamerendererrender-method) en __GameMain::Run__.
 
-Si la [representación en estéreo](#stereo-rendering) está habilitada, hay dos fases de representación: una para el ojo derecho y otra para el ojo izquierdo. En cada pase de representación, enlazamos el destino de representación y la [vista de galería de símbolos de profundidad](#depth-stencil-view) al dispositivo. También borramos la vista de galería de símbolos de profundidad después.
+Si la [representación en estéreo](#stereo-rendering) está habilitada, hay dos fases de representación: una para el ojo derecho y otra para el ojo izquierdo. En cada pase de representación, enlazamos el destino de representación y la vista de galería de símbolos de profundidad al dispositivo. También borramos la vista de galería de símbolos de profundidad después.
 
 > [!Note]
 > La representación en estéreo se puede conseguir con otros métodos, como el estéreo de pase único mediante la creación de instancias de vértices o los sombreadores de geometría. El método de dos pases de representación es más lento, pero más conveniente para lograr la representación en estéreo.
@@ -146,7 +146,7 @@ En esta muestra de juego, el representador está diseñado para usar un diseño 
 
 Establece el contexto de Direct3D para usar un diseño de vértice de entrada. Los objetos del diseño de entrada describen cómo se transmiten los datos del búfer de vértices en la [canalización de representación](#rendering-pipeline). 
 
-A continuación, establecemos el contexto de Direct3D para usar los [búferes de constantes](#constant-buffers) definidos anteriormente, usados por el estado de la canalización del [sombreador de vértices](#vertex-shaders-and-pixel-shaders) y del [sombreador de píxeles](#vertex-shaders-and-pixel-shaders). 
+A continuación, establecemos el contexto de Direct3D para usar los búferes de constantes definidos anteriormente, usados por el estado de la canalización del [sombreador de vértices](#vertex-shaders-and-pixel-shaders) y del [sombreador de píxeles](#vertex-shaders-and-pixel-shaders). 
 
 > [!Note]
 > Consulta [Marco de representación II: representación de juego](tutorial-game-rendering.md) para obtener más información acerca de la definición de los búferes de constantes.
@@ -338,11 +338,11 @@ Al representar la escena, recorres todos los objetos que se deben representar. L
 * __m\_constantBufferChangesEveryPrim__ contiene los parámetros para cada objeto.  Incluye la matriz de transformación objeto a mundo, así como propiedades de materiales, como el color y el exponente especular para calcular la iluminación.
 * Definir el contexto de Direct3D para usar el diseño de vértice de entrada para que los datos de objeto de malla se transmitan en la fase de ensamblador-entrada (IA) de la [canalización de representación](#rendering-pipeline)
 * Establecer el contexto de Direct3D para usar un [búfer de índices](#index-buffer) en la fase de IA. Proporciona la información del primitivo: tipo, orden de datos.
-* Enviar una llamada Draw para dibujar al primitivo indexado sin instancia. El método __GameObject::Render__ actualiza el [búfer de constantes](#constant-buffer-or-shader-constant-buffer) primitivas con los datos específicos a un primitivo determinado. El resultado de todo esto es una llamada a __DrawIndexed__ en el contexto para dibujar la geometría de cada primitivo. En concreto, esta llamada a Draw coloca comandos y datos en la cola para la unidad de procesos de gráficos (GPU), parametrizados por los datos del búfer de constantes. Cada llamada a Draw ejecuta el [sombreador de vértices](#vertex-shaders-and-pixel-shaders) una vez por vértice y después el [sombreador de píxeles](#vertex-shaders-and-pixel-shaders) una vez por cada píxel de cada triángulo del primitivo. Las texturas forman parte del estado que el sombreador de píxeles usa para llevar a cabo la representación.
+* Enviar una llamada Draw para dibujar al primitivo indexado sin instancia. El método __GameObject::Render__ actualiza el [búfer de constantes](#constant-buffer-or-shader-constant-buffer) primitivas con los datos específicos a un primitivo determinado. El resultado de todo esto es una llamada a __DrawIndexed__ en el contexto para dibujar la geometría de cada primitivo. En concreto, esta llamada a Draw coloca comandos y datos en la cola para la unidad de procesos de gráficos (GPU), parametrizados por los datos del búfer de constantes. Cada llamada a Draw ejecuta el sombreador de vértices una vez por vértice y después el [sombreador de píxeles](#vertex-shaders-and-pixel-shaders) una vez por cada píxel de cada triángulo del primitivo. Las texturas forman parte del estado que el sombreador de píxeles usa para llevar a cabo la representación.
 
 Razones para varios búferes de constantes:
     * El juego usa múltiples búferes de constantes, pero sólo necesita actualizar dichos búferes una vez por primitivo. Como se ha mencionado antes, los búferes de constantes son como entradas para los sombreadores que se ejecutan para cada primitivo. Algunos datos son estáticos (__m\_constantBufferNeverChanges__); algunos datos son constantes para todo el fotograma (__m\_constantBufferChangesEveryFrame)__, como la posición de la cámara; y algunos datos son específicos del primitivo, como su color y sus texturas (__m\_constantBufferChangesEveryPrim__)
-    * El [representador](#renderer) del juego separa estas entradas en distintos búferes de constantes para optimizar el ancho de banda de la memoria que usan la CPU y la GPU. Esta medida ayuda a minimizar la cantidad de datos de los que la GPU debe realizar un seguimiento. La GPU tiene una gran cola de comandos y que, cada vez que el juego llama a __Draw__, ese comando se pone a la cola junto con sus datos asociados. Cuando el juego actualiza el búfer de constantes de primitivos y envía el siguiente comando __Draw__, el controlador de gráficos agrega este comando siguiente y los datos asociados a la cola. Si el juego dibuja 100 primitivos, podría haber potencialmente 100 copias de los datos del búfer de constantes en la cola. Para minimizar la cantidad de datos que el juego envía a la GPU, el juego use un búfer de constantes de primitivos independiente que solo contiene las actualizaciones de cada primitivo.
+    * El representador del juego separa estas entradas en distintos búferes de constantes para optimizar el ancho de banda de la memoria que usan la CPU y la GPU. Esta medida ayuda a minimizar la cantidad de datos de los que la GPU debe realizar un seguimiento. La GPU tiene una gran cola de comandos y que, cada vez que el juego llama a __Draw__, ese comando se pone a la cola junto con sus datos asociados. Cuando el juego actualiza el búfer de constantes de primitivos y envía el siguiente comando __Draw__, el controlador de gráficos agrega este comando siguiente y los datos asociados a la cola. Si el juego dibuja 100 primitivos, podría haber potencialmente 100 copias de los datos del búfer de constantes en la cola. Para minimizar la cantidad de datos que el juego envía a la GPU, el juego use un búfer de constantes de primitivos independiente que solo contiene las actualizaciones de cada primitivo.
 
 #### <a name="gameobjectrender-method"></a>Método GameObject::Render
 

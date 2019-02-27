@@ -4,32 +4,12 @@ description: Esta guía básica proporciona una visión general de las caracter�
 title: Enterprise
 ms.date: 08/30/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: 'Windows 10, UWP'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058586"
 ---
 # <a name="enterprise"></a>Enterprise
 
-En este artículo se proporciona una visión general de las características fundamentales de empresa proporcionados por la plataforma Universal de Windows (UWP) para aplicaciones de Windows 10.
-
-## <a name="whats-new-and-recent-for-enterprise-applications"></a>Novedades y recientes para aplicaciones empresariales
-
-> [!div class="checklist"]
-> * [Windows Template Studio](#template-studio)
-> * [Controles para crear interfaces de usuario de estilo de escritorio](#desktop-style-UI)
-> * [Controles para admitir escenarios empresariales](#enterprise)
-> * [Biblioteca de la interfaz de usuario de Windows](#UI-library)
-> * [Controles UWP en aplicaciones de escritorio](#xaml-islands)
-> * [.NET Standard 2.0](#standard)
-> * [Conectividad de SQL Server](#sql-server)
-> * [Implementación de MSIX](#MSIX)
-
-Para ver un vídeo que muestra algunas de estas características en detalle, [Rápidamente construir las aplicaciones de LOB con UWP y Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
+En este artículo se proporciona una visión general de las características fundamentales de empresa proporcionados por la plataforma Universal de Windows (UWP) para aplicaciones de Windows 10. Para ver un vídeo que muestra algunas de estas características en detalle, [Rápidamente construir las aplicaciones de LOB con UWP y Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
 
 <a id="template-studio" />
 

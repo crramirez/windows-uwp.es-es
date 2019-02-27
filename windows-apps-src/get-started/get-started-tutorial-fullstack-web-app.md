@@ -5,12 +5,12 @@ keywords: hosted web app, aplicación web hospedada, HWA, HWA, REST API, API de 
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114581"
+ms.locfileid: "9117725"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crea una web de una sola página con back-end de API de REST
 
@@ -40,7 +40,7 @@ Si decides dejar (o posponer) la parte de Azure, simplemente omite las secciones
 
 Primero, crearemos una API del juego de memoria sencillo para iniciar nuestra aplicación web de juego de memoria. Usaremos [Swagger](https://swagger.io/) para definir nuestra API y generar código scaffolding y una interfaz de usuario web para la prueba manual.
 
-Si quieres omitir esta parte e ir directamente a [Parte II: crear una aplicación web de una sola página](#part-ii-build-a-single-page-web-appl), aquí tienes el [código terminado para la parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Sigue las instrucciones de *LÉAME* para que el código funcione de forma local o consulta *5. Hospedar el servicio de API en Azure y habilitar CORS* para ejecutarlo desde Azure.
+Si quieres omitir esta parte e ir directamente a [Parte II: crear una aplicación web de una sola página](#part-ii-build-a-single-page-web-application), aquí tienes el [código terminado para la parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Sigue las instrucciones de *LÉAME* para que el código funcione de forma local o consulta *5. Hospedar el servicio de API en Azure y habilitar CORS* para ejecutarlo desde Azure.
 
 ### <a name="game-overview"></a>Introducción al juego
 

@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd3d20aa39ea471618e7707d066c67a6547f9f
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058756"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117665"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, alto contraste y otros calificadores
 
@@ -130,7 +130,7 @@ El calificador `contrast` se usa para proporcionar recursos que se ajusten mejor
 
 ## <a name="custom"></a>Personalizado
 
-La aplicación puede establecer un valor para el calificador `custom` y, a continuación, se cargan los recursos que coincidan más con ese valor. Por ejemplo, puedes cargar recursos basados en la licencia de la aplicación. Cuando se inicia la aplicación, comprueba su licencia y usa eso como el valor del calificador `custom`, llamando a [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_), como se muestra en el ejemplo de código.
+La aplicación puede establecer un valor para el calificador `custom` y, a continuación, se cargan los recursos que coincidan más con ese valor. Por ejemplo, puedes cargar recursos basados en la licencia de la aplicación. Cuando se inicia la aplicación, comprueba su licencia y usa eso como el valor del calificador `custom`, llamando a [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue), como se muestra en el ejemplo de código.
 
 ```csharp
 public void SetLicenseLevel(BrandID brand)
@@ -263,7 +263,7 @@ El calificador `theme` se usa para proporcionar recursos que coincidan mejor con
 ## <a name="important-apis"></a>API importantes
 
 * [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
-* [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
+* [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)
 
 ## <a name="related-topics"></a>Temas relacionados
 

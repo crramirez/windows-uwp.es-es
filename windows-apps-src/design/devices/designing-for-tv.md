@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 788f47c1b29766cae1f437992aee8414580f3935
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: 431b8912e43647bc2678aaab7efc9ec68b866d10
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116497"
+ms.locfileid: "9117585"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Diseño para Xbox y televisión
 
@@ -122,7 +122,7 @@ Los elementos interactivos de la interfaz de usuario deben tener una altura mín
 
 #### <a name="number-of-clicks"></a>Número de clics
 
-Cuando el usuario está navegando desde un extremo a otro de la pantalla del televisor, no debería llevarle más de **seis clics** para simplificar tu interfaz de usuario. Nuevamente se aplica aquí el principio de **simplicidad**. Para obtener más información, consulta [El camino de menos clics](#path-of-least-clicks).
+Cuando el usuario está navegando desde un extremo a otro de la pantalla del televisor, no debería llevarle más de **seis clics** para simplificar tu interfaz de usuario. Nuevamente se aplica aquí el principio de **simplicidad**. 
 
 ![6 iconos a lo ancho](images/designing-for-tv/six-clicks.png)
 
@@ -462,7 +462,7 @@ Si bien los botones estándar de la UWP funcionan bien en televisores, algunos e
 
 La interfaz de usuario anidada expone los elementos anidados que pueden requerir acción dentro de un elemento de interfaz de usuario del contenedor en el que tanto el elemento anidado como el elemento contenedor pueden tener un foco independiente entre sí.
 
-La interfaz de usuario anidada funciona bien para algunos tipos de entrada, pero no siempre para el controlador para juegos y el control remoto, que dependen de la navegación XY. Asegúrate de seguir las directrices de este tema para garantizar que el usuario pueda acceder fácilmente a todos los elementos interactivos y que la interfaz de usuario esté optimizada para el entorno de 304,8cm. Una solución habitual es colocar elementos de interfaz de usuario anidadas en un elemento `ContextFlyout` (consulta [CommandBar y ContextFlyout](#commandbar-and-contextflyout)).
+La interfaz de usuario anidada funciona bien para algunos tipos de entrada, pero no siempre para el controlador para juegos y el control remoto, que dependen de la navegación XY. Asegúrate de seguir las directrices de este tema para garantizar que el usuario pueda acceder fácilmente a todos los elementos interactivos y que la interfaz de usuario esté optimizada para el entorno de 304,8cm. Una solución habitual es colocar elementos de interfaz de usuario anidados en un `ContextFlyout`.
 
 Para obtener más información sobre la interfaz de usuario anidada, consulta [Interfaz de usuario anidada en elementos de lista](../controls-and-patterns/nested-ui.md).
 
@@ -558,7 +558,7 @@ bool IsTenFoot = (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily 
                     "Windows.Xbox");
 ```
 
-Luego, puedes realizar los ajustes adecuados para la interfaz de usuario en el bloque de código siguiendo esta comprobación. Se muestra un ejemplo de esto en [muestra de color UWP](#uwp-color-sample).
+Luego, puedes realizar los ajustes adecuados para la interfaz de usuario en el bloque de código siguiendo esta comprobación. 
 
 ## <a name="summary"></a>Resumen
 
