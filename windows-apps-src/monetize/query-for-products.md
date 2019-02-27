@@ -2,16 +2,16 @@
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Usa este método en la API de colecciones de Microsoft Store para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros.
 title: Consultar productos
-ms.date: 03/16/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0f7f8c0f682eaa129f44eaa421fabd63dbfce4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 700cb111f74a4534f2f5e1de70eddfb88b456aa7
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922472"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116197"
 ---
 # <a name="query-for-products"></a>Consultar productos
 
@@ -76,7 +76,7 @@ El objeto ProductSkuId contiene los parámetros siguientes.
 
 | Parámetro | Tipo   | Descripción          | Obligatorio |
 |-----------|--------|----------------------|----------|
-| productId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para un [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un producto es 9NBLGGH42CFD. | Sí      |
+| productId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para un [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de Microsoft Store. Un ejemplo de Id. de Store para un producto es 9NBLGGH42CFD. | Sí      |
 | skuID     | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) de un producto del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un SKU es 0010.       | Sí      |
 
 
@@ -128,13 +128,13 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | Parámetro            | Tipo               | Descripción            | Obligatorio |
 |----------------------|--------------------|-------------------------|----------|
 | acquiredDate         | datetime           | Fecha en que el usuario compró el artículo.                  | Sí      |
-| campaignId           | string             | Identificador de campaña que se proporcionó al realizar la compra del artículo.                  | No       |
+| campaignId           | cadena             | Identificador de campaña que se proporcionó al realizar la compra del artículo.                  | No       |
 | devOfferId           | string             | El identificador de la oferta de una compra desde la aplicación.              | No       |
 | endDate              | datetime           | La fecha de finalización del artículo.              | Sí      |
 | fulfillmentData      | string             | N/D         | No       |
 | inAppOfferToken      | string             | La cadena de identificador de producto especificado por el desarrollador que se asigna al elemento en el centro de partners. Un ejemplo de identificador de producto es *product123*. | No       |
 | itemId               | string             | Id. que identifica este artículo de colección de otros artículos que posee el usuario. Este identificador es único para cada producto.   | Sí      |
-| localTicketReference | string             | Id. de *localTicketReference* que se suministró previamente en el cuerpo de la solicitud.                  | Sí      |
+| localTicketReference | cadena             | Id. de *localTicketReference* que se suministró previamente en el cuerpo de la solicitud.                  | Sí      |
 | modifiedDate         | datetime           | Fecha de la última modificación de este artículo.              | Sí      |
 | orderId              | string             | Si está presente, el identificador del objeto del que se obtuvo este artículo.              | No       |
 | orderLineItemId      | string             | Si está presente, el artículo de línea de un pedido concreto para el que se obtuvo el artículo.              | No       |
@@ -144,7 +144,7 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | purchasedCountry     | string             | N/D   | No       |
 | purchaser            | IdentityContractV6 | Si está presente, representa la identidad del comprador del artículo. Consulta los detalles de este objeto a continuación.        | No       |
 | quantity             | number             | Cantidad del artículo. Actualmente, el valor siempre será 1.      | No       |
-| skuId                | string             | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) del producto del catálogo de Microsoft Store. Un ejemplo de Id. de Store para una SKU es 0010.     | Sí      |
+| skuId                | cadena             | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) del producto del catálogo de Microsoft Store. Un ejemplo de Id. de Store para una SKU es 0010.     | Sí      |
 | skuType              | string             | Tipo de la SKU. Entre los valores posibles se incluyen **Trial**, **Full** y **Rental**.        | Sí      |
 | startDate            | datetime           | Fecha en que el artículo comienza a ser válido.       | Sí      |
 | status               | string             | Estado del artículo. Entre los valores posibles se incluyen **Active**, **Expired**, **Revoked** y **Banned**.    | Sí      |

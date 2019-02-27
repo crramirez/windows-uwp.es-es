@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b61c36143749ddb358cea1d4cf59f43ecb8c6338
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 4ba3a45701d82ad0b43591469bf390190ec18db0
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037097"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116457"
 ---
 # <a name="navigation-view"></a>Vista de navegación
 
@@ -143,7 +143,7 @@ Puedes usar la propiedad PaneDisplayMode para colocar el panel encima del conten
 El panel NavigationView puede contener:
 
 - Objetos [NavigationViewItem](/uwp/api/windows.ui.xaml.controls.navigationviewitem) . Elementos de navegación para navegar a páginas específicas.
-- Objetos [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) . Separadores para agrupar elementos de navegación. Establece la propiedad [Opacity](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) en 0 para representar el separador de espacio.
+- Objetos [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) . Separadores para agrupar elementos de navegación. Establece la propiedad [Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) en 0 para representar el separador de espacio.
 - Objetos [NavigationViewItemHeader](/uwp/api/windows.ui.xaml.controls.navigationviewitemheader) . Encabezados para etiquetar grupos de elementos.
 - Un control [AutoSuggestBox](auto-suggest-box.md) opcional para permitir la búsqueda de nivel de la aplicación. Asignar el control a la propiedad [NavigationView.AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.navigationview.autosuggestbox) .
 - Un punto de entrada opcional para la [configuración de la aplicación](../app-settings/app-settings-and-data.md). Para ocultar el elemento de configuración, Establece la propiedad [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) en **false**.
@@ -710,7 +710,7 @@ Este ejemplo muestra cómo invalidar los recursos de tema en App.xaml. Al invali
 </Application>
 ```
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 - [Clase NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 - [Maestro/detalles](master-details.md)

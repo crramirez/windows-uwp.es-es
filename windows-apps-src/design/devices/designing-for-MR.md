@@ -6,19 +6,19 @@ label: Designing for Mixed Reality
 template: detail.hbs
 isNew: true
 keywords: Realidad mixta, HoloLens, realidad aumentada, mirada, voz, controlador
-ms.date: 2/5/2018
+ms.date: 02/05/2018
 ms.topic: article
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932568"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116217"
 ---
 # <a name="designing-for-mixed-reality"></a>Diseñar para realidad mixta
 
@@ -84,7 +84,7 @@ Se han diseñado novedosos métodos de entrada especialmente para usarlos con re
 * [Dispositivo de control de presentaciones](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (solo HoloLens)
 * [Controladores de movimiento](https://developer.microsoft.com/windows/mixed-reality/motion_controllers) (solo dispositivos de realidad mixta, mostrados anteriormente)
 
-Estos controladores hacen que interactuar con objetos virtuales parezca natural y preciso. Algunas de las interacciones que consigues de forma gratuita. Por ejemplo, HoloLens selecciona el gesto o al hacer clic en la tecla de Windows del controlador de movimiento o un desencadenador, se generará la respuesta de entrada que esperas, nuevamente, sin ninguna codificación de tu parte.
+Estos controladores hacen que interactuar con objetos virtuales parezca natural y preciso. Algunas de las interacciones que consigues de forma gratuita. Por ejemplo, HoloLens selecciona el gesto o al hacer clic en la tecla de Windows del controlador de movimiento o un desencadenador, se generará la respuesta de entrada que esperas, nuevamente, sin ninguna codificación por tu parte.
 
 En otras ocasiones querrás agregar código para aprovechar la información adicional y las entradas disponibles. Por ejemplo, los controladores de movimiento pueden usarse para manipular los objetos con un nivel preciso de control, si escribes código que tenga en cuenta su posición y pulsaciones de botones.
 

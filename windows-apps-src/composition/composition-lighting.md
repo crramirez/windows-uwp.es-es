@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5182981483069d42339ad71a5347dc9c6c36ed58
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 733ce75942a05482ade88c1510e788f1cbd515d4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058746"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115952"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de luces en la interfaz de usuario de Windows
 
@@ -22,7 +22,7 @@ Las APIs Windows.UI.Composition te permiten crear efectos y animaciones en tiemp
 Iluminación de composición te permite crear interesantes de la interfaz de usuario, ya que permite:
 
 - Transformación de un luz independiente de otros objetos de la escena para habilitar escenarios envolventes como escenas de reproducción de música.
-- La capacidad para emparejar un objeto con una luz, por lo que se muevan juntos independiente del resto de la escena para habilitar escenarios como Fluent [Mostrar](/design/style/reveal) resaltado.
+- La capacidad para emparejar un objeto con una luz, por lo que se muevan juntos independiente del resto de la escena para habilitar escenarios como Fluent [Mostrar](/windows/uwp/design/style/reveal) resaltado.
 - Transformación de la luz y la escena completa como un grupo para crear materiales y profundidad.
 
 Iluminación de composición admite tres conceptos clave: **luz**, **destinos**y **SceneLightingEffect**.
@@ -74,7 +74,7 @@ Concepto | Detalles
 **Luz de ambiente** | Agregar una luz que no sean ambiental a la escena se desactivará toda la luz existente.  Los elementos que no está destinados por una luz que no sean ambiente aparecerá en negros.  Para iluminar elementos visuales que le rodea no dirigidos por la luz en una forma natural, usa la luz de ambiente junto con otras luces.
 **Número de luces** | Puede utilizar los dos luces de composición no ambiente en cualquier combinación de la interfaz de usuario de destino. Las luces de ambiente no están restringidas; punto, punto y las luces distantes son.
 **Ciclo de vida** | CompositionLight puede experimentar condiciones de ciclo de vida (ejemplo: el recolector de elementos no utilizados puede reciclar el objeto de luz antes de que se usa).  Se recomienda mantener una referencia a las luces agregando las luces como un miembro para ayudar a las aplicaciones administrar del ciclo de vida.
-**Transformaciones** | Las luces deben colocarse en un nodo por encima de la interfaz de usuario que usa efectos, como [transformaciones de perspectiva](/design/layout/3-d-perspective-effects) en la estructura visual se dibujará correctamente.
+**Transformaciones** | Las luces deben colocarse en un nodo por encima de la interfaz de usuario que usa efectos, como [transformaciones de perspectiva](/windows/uwp/design/layout/3-d-perspective-effects) en la estructura visual se dibujará correctamente.
 **Espacio de coordenadas y destinos** | CoordinateSpace es el espacio visual que todas las propiedades de luces deben establecerse en. CompositionLight.Targets debe estar dentro del árbol CoordinateSpace.
 
 ## <a name="lighting-properties"></a>Propiedades de iluminación

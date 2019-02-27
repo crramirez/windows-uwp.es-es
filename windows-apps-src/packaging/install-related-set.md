@@ -1,16 +1,16 @@
 ---
 title: Instalar un conjunto relacionado con un archivo del Instalador de aplicación
 description: En esta sección, revisaremos los pasos que debes tomar para permitir la instalación de un conjunto relacionado a través del Instalador de aplicación. También analizaremos los pasos para crear un archivo *.appinstaller que definirá su conjunto relacionado.
-ms.date: 1/4/2018
+ms.date: 01/04/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: c90fffeee7003159f58cf2e108286f4fe7732fd6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 946c0ae2251d1f75ea250d43881b29b172b9ad1d
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944037"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116167"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar un conjunto relacionado con un archivo del Instalador de aplicación
 

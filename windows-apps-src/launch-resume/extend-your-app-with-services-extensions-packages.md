@@ -1,16 +1,16 @@
 ---
 title: Ampliar la aplicación con servicios de aplicaciones, extensiones y paquetes
 description: Describe cómo crear una tarea en segundo plano que se ejecuta cuando se actualice la aplicación de la tienda de la plataforma Universal de Windows (UWP).
-ms.date: 05/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, ampliar, separar por componentes, servicio de aplicaciones, paquete, ampliación
 ms.localizationpriority: medium
-ms.openlocfilehash: fd14ce6248f7017160a0c6b222e31ba55e9d2977
-ms.sourcegitcommit: f35480718452a8d95b1862581449a038b63184de
+ms.openlocfilehash: 47ab6491d09775bf86f0f484fc96d85bd07f53a4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015103"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116187"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Ampliar tu aplicación con servicios de aplicaciones, extensiones y paquetes
 

@@ -2,16 +2,10 @@
 description: Obtén información sobre cómo desarrollar una aplicación para UWP.
 title: Desarrollo de aplicaciones para UWP
 layout: LandingPage
-keywords: los desarrolladores de desarrollo de UWP desarrollo subprocesos async plataforma Introducción a portal de la aplicación
-ms.date: 3/29/2018
+keywords: los desarrolladores de desarrollo de UWP development subprocesos async plataforma Introducción a portal de la aplicación
+ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926381"
 ---
 <div> 
 <h1>Desarrollo de aplicaciones para UWP</h1>
@@ -26,12 +20,12 @@ ms.locfileid: "8926381"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                 
-                            <img src="http://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt=" "/>
+                            <img src="https://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt=" "/>
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Información general de la plataforma Universal de Windows</h3>
-                        <p>Una explicación de qué UWP es, cómo funciona, y las características que proporciona.</p>
+                        <p>Una explicación de para qué UWP es, cómo funciona, y las características que proporciona.</p>
                     </div>
                 </div>
             </div>
@@ -45,12 +39,12 @@ ms.locfileid: "8926381"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                
-                            <img src="http://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
+                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
                         </div>
                     </div>                
                     <div class="cardText">
                         <h3>Guía de migración</h3>
-                        <p>Llevar tu existente o Windows Forms, WPF, Android, aplicación de iOS a UWP. </p>
+                        <p>Llevar tu existentes de Windows Forms, WPF, Android o aplicación de iOS a UWP. </p>
                     </div>
                 </div>
             </div>
@@ -59,7 +53,7 @@ ms.locfileid: "8926381"
     </li>                 
 </ul>
 
-## <a name="api-reference"></a>Referencia de API
+## <a name="api-reference"></a>Referencia de la API
 
 <ul class="panelContent cardsH" style="margin-left: 1px">
     <li>
@@ -83,7 +77,7 @@ ms.locfileid: "8926381"
                 <div class="card">
                     <div class="cardText">
                         <h3>Esquemas para UWP</h3>
-                        <p>Especificaciones de esquema de archivo y XML para las aplicaciones de la plataforma Universal de Windows (UWP). </p>
+                        <p>Especificaciones del esquema de archivo y XML para las aplicaciones de la plataforma Universal de Windows (UWP). </p>
                     </div>
                 </div>
             </div>
@@ -212,7 +206,7 @@ ms.locfileid: "8926381"
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">Impresión</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">Impresión en 3D</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/nfc">NFC</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Información de la batería</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Información de batería</a></p>
                     </div>
                 </div>
             </div>
@@ -264,12 +258,12 @@ ms.locfileid: "8926381"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                 
-                            <img src="http://docs.microsoft.com/media/illustrations/sql-database-develop.svg" alt=" "/>
+                            <img src="https://docs.microsoft.com/media/illustrations/sql-database-develop.svg" alt=" "/>
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Ejemplos</h3>
-                        <p> Obtén información sobre cómo compilar aplicaciones increíbles para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo características funcionan y ayudar a rápidamente tus propias aplicaciones para UWP.</p>
+                        <p> Obtén información sobre cómo compilar aplicaciones increíbles para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo las características funcionan y ayudar a impulsar tus propias aplicaciones para UWP.</p>
                     </div>
                 </div>
             </div>
@@ -283,7 +277,7 @@ ms.locfileid: "8926381"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                
-                            <img src="http://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" alt=" " />
+                            <img src="https://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" alt=" " />
                         </div>
                     </div>                
                     <div class="cardText">

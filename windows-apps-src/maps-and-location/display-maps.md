@@ -2,16 +2,16 @@
 title: Mostrar mapas con vistas 2D, 3D y Streetside
 description: Puedes mostrar un mapa en una ventana de cierre del elemento por cambio de foco llamado *colocar tarjeta* o en un control de mapa completo.
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
-ms.date: 03/14/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, control de mapa, map control, vistas de mapa, map views
 ms.localizationpriority: medium
-ms.openlocfilehash: 03c864a6e8bc6191f63a2b6fd55d8eb23ad965e4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 41d44f75c80e10123c21fc310bff46371ede0fca
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046994"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116387"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Mostrar mapas con vistas 2D, 3D y Streetside
 

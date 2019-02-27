@@ -2,7 +2,7 @@
 description: Reveal es un efecto de iluminación que te ayuda a dar profundidad y foco a los elementos interactivos de tu aplicación.
 title: Mostrar resaltado
 template: detail.hbs
-ms.date: 08/9/2017
+ms.date: 08/09/2017
 ms.topic: article
 keywords: Windows 10, UWP
 pm-contact: kisai
@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e5647d60cc043e167f8e2962680a88c750cc2eb1
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: aeba4dbd734ea4b521033726968e90c232c154cb
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037267"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116407"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -262,7 +262,7 @@ Al habilitar Reveal en un control personalizado o nuevamente modelo o una superf
 * Para los elementos dominantes adyacentes que están tan cerca que se tocan: agrega un margen de 1 píxel entre los dos elementos. 
 
 ## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
-### <a name="do"></a>Hacer:
+### <a name="do"></a>hacer:
 - Usar Reveal en elementos donde el usuario puede realizar muchas acciones (barras de comandos, menús de navegación)
 - Usar Reveal en agrupaciones de elementos interactivos que no tienen separadores visuales de manera predeterminada (listas, cintas de opciones)
 - Usar Reveal en áreas con una alta densidad de elementos interactivos (escenarios dominantes)

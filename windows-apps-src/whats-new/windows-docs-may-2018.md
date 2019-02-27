@@ -2,15 +2,15 @@
 title: 'Novedades en los documentos de Windows en mayo de 2018: desarrollar aplicaciones para UWP'
 description: Se agregaron nuevas características, vídeos y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de mayo de 2018 y la conferencia de Microsoft Build.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, mayo de compilación
-ms.date: 5/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be67c83a986602318adf995bae35c09e5a7a4997
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 69df2bbe8bc91fcf4a2631c0f257fc44851c24f2
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048672"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116227"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos de Windows de mayo de 2018
 

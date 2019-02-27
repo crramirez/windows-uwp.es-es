@@ -1,17 +1,11 @@
 ---
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: Archivos, carpetas y bibliotecas
-description: Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música.
+title: 'Archivos, carpetas y bibliotecas'
+description: 'Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música.'
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: 'windows10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: 517302b7db1e7b65ca7a181a8c766ce1e71737ac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044549"
 ---
  # <a name="files-folders-and-libraries"></a>Archivos, carpetas y bibliotecas
 
@@ -22,6 +16,7 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 |-------|--------------|
 | [Enumerar y consultar archivos y carpetas](quickstart-listing-files-and-folders.md) | Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas. |
 | [Crear, escribir y leer archivos](quickstart-reading-and-writing-files.md) | Lee y escribe un archivo con un objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
+| [Procedimientos recomendados para escribir en archivos](best-practices-for-writing-to-files.md) | Obtén información sobre los procedimientos recomendados para usar el archivo diversos métodos de las clases [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) y [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio) de escritura. |
 | [Obtener las propiedades de archivos](quickstart-getting-file-properties.md) | Obtén las propiedades de nivel superior, básicas y extendidas de un archivo representado mediante un objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Abrir archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md) | Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881) para obtener acceso a una carpeta. |
 | [Guardar un archivo con un selector](quickstart-save-a-file-with-a-picker.md) | Usa [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo. |

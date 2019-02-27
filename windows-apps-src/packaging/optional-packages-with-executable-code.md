@@ -1,16 +1,16 @@
 ---
 title: Paquetes opcionales con código ejecutable
 description: Aprende a usar Visual Studio para crear un paquete opcional con código ejecutable.
-ms.date: 9/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: 465253be7ebf8cf7794004c0a6832a78cb0ced69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 44e32438034cf09695f313d24055b6ed3c82df0b
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927704"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115892"
 ---
 # <a name="optional-packages-with-executable-code"></a>Paquetes opcionales con código ejecutable
  
@@ -24,10 +24,10 @@ Los paquetes opcionales con código ejecutable son útiles para dividir una apli
 Para obtener las herramientas de desarrollo más recientes, consulta [Descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados a la Store, necesitarás tener permiso. Paquetes opcionales y conjuntos relacionados pueden usarse para las aplicaciones de línea de negocio (LOB) o enterprise sin el permiso del centro de partners si no vas a enviar a la tienda. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
+> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados a la Store, necesitarás tener permiso. Paquetes opcionales y conjuntos relacionados pueden usarse para las aplicaciones de línea de negocio (LOB) o enterprise sin el permiso del centro de partners si no se enviarán a la tienda. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
 
 > [!NOTE]
-> Paquetes opcionales que contiene el código ejecutable deben formar parte de un [conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). No podrán ejecutar código desde un paquete opcional, a menos que forma parte de un conjunto relacionado.
+> Paquetes opcionales con código ejecutable deben formar parte de un [conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). No podrán ejecutar código desde un paquete opcional, a menos que forma parte de un conjunto relacionado.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Paquetes opcionales de C++ con código ejecutable
 

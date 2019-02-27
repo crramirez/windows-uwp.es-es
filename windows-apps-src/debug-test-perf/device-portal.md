@@ -2,16 +2,16 @@
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: Introducción a Windows Device Portal
 description: Obtén información sobre cómo Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB.
-ms.date: 2/19/2019
+ms.date: 02/19/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 372524b5a5f002e68c02a8f298703cb7ef99bfdf
-ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
+ms.openlocfilehash: ba3c0a393cc5eb536de43539df48f43bb98d8ef1
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9083723"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116357"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 

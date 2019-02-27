@@ -12,14 +12,14 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f3fd2173296c433015fa30b81c0d90e32d2d4b0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036947"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116104"
 ---
-## <a name="dialog-controls"></a>Controles de cuadro de diálogo
+# <a name="dialog-controls"></a>Controles de cuadro de diálogo
 
 Los controles de cuadro de diálogo son superposiciones modales en la interfaz de usuario que proporcionan información sobre la aplicación contextuales. Bloquean las interacciones con la ventana de la aplicación hasta que se descartan de forma explícita. A menudo solicitan algún tipo de acción por parte del usuario.
 
