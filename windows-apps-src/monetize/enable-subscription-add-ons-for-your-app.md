@@ -5,12 +5,12 @@ keywords: windows 10, uwp, suscripciones, complementos, add-ons, compras desde l
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 44553d2a772dcfe3b46ea196d6f6bb7c20fdfec0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: cda22488f613c508b2c753c6b530b2b34b10909d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046691"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114481"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para tu aplicación
 
@@ -27,7 +27,7 @@ Los complementos de una suscripción para aplicaciones para UWP admiten las sigu
 * Puedes agregar períodos de prueba gratuita de 1semana o 1mes a tu suscripción.
 * Windows SDK [proporciona API](#code-examples) que puedes usar en tu aplicación para obtener información acerca de los complementos de suscripción disponibles para la aplicación y permitir la compra del complemento de una suscripción. También proporcionamos las API de REST a las que puedes llamar desde tus servicios para [administrar suscripciones para un usuario](#manage-subscriptions).
 * Puedes ver informes analíticos que proporcionan el número de adquisiciones de suscripción, suscriptores activos y suscripciones canceladas en un período de tiempo determinado.
-* Los clientes pueden administrar su suscripción en la página [http://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft. Los clientes pueden usar esta página para ver todas las suscripciones que han adquirido, cancelar una suscripción y cambiar la forma de pago asociada a su suscripción.
+* Los clientes pueden administrar su suscripción en la página [https://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft. Los clientes pueden usar esta página para ver todas las suscripciones que han adquirido, cancelar una suscripción y cambiar la forma de pago asociada a su suscripción.
 
 ## <a name="steps-to-enable-a-subscription-add-on-for-your-app"></a>Pasos para habilitar el complemento de una suscripción para tu aplicación
 
@@ -109,7 +109,7 @@ Una vez que la aplicación actualizada esté en la Tienda y los clientes puedan 
 
 ## <a name="cancellations"></a>Cancelaciones
 
-Los clientes pueden usar la página [http://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft para ver todas las suscripciones que han adquirido, cancelar una suscripción y cambiar la forma de pago asociada a su suscripción. Cuando un cliente cancela una suscripción con esta página, continúa teniendo acceso a la suscripción durante la vigencia del periodo de facturación actual. No obtienen reembolso de ninguna parte del periodo de facturación actual. Al final del periodo de facturación actual, su suscripción se desactiva.
+Los clientes pueden usar la página [https://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft para ver todas las suscripciones que han adquirido, cancelar una suscripción y cambiar la forma de pago asociada a su suscripción. Cuando un cliente cancela una suscripción con esta página, continúa teniendo acceso a la suscripción durante la vigencia del periodo de facturación actual. No obtienen reembolso de ninguna parte del periodo de facturación actual. Al final del periodo de facturación actual, su suscripción se desactiva.
 
 También puedes cancelar una suscripción en nombre de un usuario con nuestra API de REST para [cambiar el estado de facturación de la suscripción de un usuario determinado](change-the-billing-state-of-a-subscription-for-a-user.md).
 
@@ -124,7 +124,7 @@ No ofrecemos período de gracia para la facturación de la suscripción. Si no p
 Los siguientes escenarios no son compatibles actualmente con complementos de una suscripción.
 
 * En este momento no se admite la venta de suscripciones a clientes directamente a través de la Tienda. Las suscripciones solo están disponibles para compras desde la aplicación de productos digitales.
-* Los clientes no pueden cambiar periodos de suscripción utilizando la página [http://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft. Para cambiar a un período de suscripción diferente, los clientes deben cancelar su suscripción actual y, a continuación, comprar una suscripción con un período de suscripción diferente desde la aplicación.
+* Los clientes no pueden cambiar periodos de suscripción utilizando la página [https://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft. Para cambiar a un período de suscripción diferente, los clientes deben cancelar su suscripción actual y, a continuación, comprar una suscripción con un período de suscripción diferente desde la aplicación.
 * El cambio de nivel no se admite actualmente para complementos de una suscripción (por ejemplo, el cambio de un cliente de una suscripción básica a una suscripción premium con más características).
 * Las [Ventas](../publish/put-apps-and-add-ons-on-sale.md) y los [códigos promocionales](../publish/generate-promotional-codes.md) no se admiten actualmente para complementos de una suscripción.
 

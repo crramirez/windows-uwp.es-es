@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8334a99fc27d96214a73d0ad01ec8ece791fd90f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 9bf23926a1c17615db5ef838d21f9a46a8921c8c
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049662"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114671"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
 
@@ -64,7 +64,7 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Un entorno de creación de juegos.
 
--   [Construct 2]( http://go.microsoft.com/fwlink/p/?LinkID=320481)
+-   [Construct 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
 
     Un entorno de creación de juegos.
 

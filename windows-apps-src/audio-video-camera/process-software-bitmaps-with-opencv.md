@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: ccc3f22d0485faa0df01828f1a6f807d2a1ce555
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 9ce41a495297870f512f0694e4f2b63eedebbc37
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046904"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114601"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Procesar mapas de bits con OpenCV
 
@@ -20,7 +20,7 @@ En este artículo se explica cómo usar la clase **[SoftwareBitmap](https://docs
 Los ejemplos de este artículo te guían para crear un componente de Windows Runtime de código nativo que puede usarse desde una aplicación para UWP, incluidas las aplicaciones creadas con C#. Este componente auxiliar expondrá un único método, **Desenfoque**, que usará la función de procesamiento de imagen de desenfoque de OpenCV. El componente implementa métodos privados que obtienen un puntero al búfer de datos de imagen subyacente que se puede utilizar directamente en la biblioteca de OpenCV, lo que facilita ampliar el componente auxiliar para implementar otras características de procesamiento de OpenCV. 
 
 * Para obtener una introducción sobre el uso de **SoftwareBitmap**, consulta [Crear, editar y guardar imágenes de mapa de bits](imaging.md). 
-* Para obtener información sobre cómo usar la biblioteca OpenCV, ve a [http://opencv.org](https://opencv.org).
+* Para obtener información sobre cómo usar la biblioteca OpenCV, ve a [https://opencv.org](https://opencv.org).
 * Para ver cómo usar el componente auxiliar OpenCV que se muestra en este artículo con **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** para implementar el procesamiento de imágenes en tiempo real de fotogramas de una cámara, consulta [Use OpenCV with MediaFrameReader](use-opencv-with-mediaframereader.md).
 * Para ver un ejemplo de código completo que implementa algunos efectos diferentes, consulta [Fotogramas de Cámara + Muestra de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) en el repositorio de GitHub de muestras universales de Windows.
 

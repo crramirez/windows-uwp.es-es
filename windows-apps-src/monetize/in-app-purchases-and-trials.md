@@ -6,12 +6,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, compras desde la aplicación, IAP, complementos, pruebas, consumible, duradero, suscripción
 ms.localizationpriority: medium
-ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5a8bad5207c5907beb91e5664b4bc7e140ab036b
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945997"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114681"
 ---
 # <a name="in-app-purchases-and-trials"></a>Pruebas y compras desde la aplicación
 
@@ -34,7 +34,7 @@ Existen dos espacios de nombres diferentes que puedes usar para agregar compras 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;Todas las versiones de Windows 10 también admiten una API anterior para las compras desde la aplicación y las pruebas en este espacio de nombres. Para obtener información sobre el espacio de nombres **Windows.ApplicationModel.Store**, consulta [Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 > [!IMPORTANT]
-> El espacio de nombres **Windows.ApplicationModel.Store** ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres **Windows.Services.Store** en su lugar si es posible para tu aplicación. El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en las aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso para cualquier juego que se integra con Xbox Live).
+> El espacio de nombres **Windows.ApplicationModel.Store** ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres **Windows.Services.Store** en su lugar si es posible para tu aplicación. El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso para cualquier juego que se integra con Xbox Live).
 
 <span id="concepts" />
 
@@ -50,7 +50,7 @@ Las aplicaciones para UWP pueden ofrecer los siguientes tipos de complementos.
 
 | Tipo de complemento |  Descripción  |
 |---------|-------------------|
-| Durable  |  Un complemento que persiste durante el ciclo de vida que se [especifica en el centro de partners](../publish/enter-iap-properties.md). <p/><p/>De manera predeterminada, los complementos durables nunca expiran, por lo que solo se pueden adquirir una vez. Si especificas una duración particular para el complemento, el usuario puede volver a comprar el complemento después de su expiración. |
+| Durable  |  Un complemento que persiste durante el ciclo de vida [especificado en el centro de partners](../publish/enter-iap-properties.md). <p/><p/>De manera predeterminada, los complementos durables nunca expiran, por lo que solo se pueden adquirir una vez. Si especificas una duración particular para el complemento, el usuario puede volver a comprar el complemento después de su expiración. |
 | Consumible administrado por el desarrollador  |  Un complemento que se puede comprar, usar y volver a comprar después de que se consume. Es responsable de realizar un seguimiento del saldo del usuario de los elementos que representa el complemento.<p/><p/>Cuando el usuario consume elementos asociados con el complemento, eres responsable del mantenimiento del saldo del usuario y de informar de la compra del complemento cuando se complete en la Store y una vez que el usuario haya consumido todos los elementos. El usuario no puede comprar el complemento otra vez hasta que la aplicación notifique que la compra del complemento anterior se ha completado. <p/><p/>Por ejemplo, si el complemento representa 100 monedas en un juego y el usuario consume 10 monedas, la aplicación o el servicio debe mantener el nuevo saldo restante de 90 monedas para el usuario. Cuando el usuario haya consumido las 100 monedas, la aplicación debe notificar el complemento como completado y, a continuación, el usuario puede volver a comprar el complemento de 100 monedas.    |
 | Consumible administrado por la Store  |  Un complemento que se puede comprar, usar y volver a comprar en cualquier momento. La Store realiza un seguimiento del saldo del usuario de los elementos que representa el complemento.<p/><p/>Cuando el usuario consume algún elemento asociado al complemento, debes notificar dichos elementos como completados en la Store, tras lo cual la Store actualiza el saldo del usuario. Los usuarios pueden adquirir el complemento tantas veces como quieran (no necesitan consumir los elementos antes). La aplicación puede consultar el saldo actual del usuario en cualquier momento. <p/><p/> Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 50 monedas, la aplicación notifica a la Store que se han completado 50 unidades del complemento, y la Store actualiza el saldo restante. Si el usuario vuelve a comprar el complemento para adquirir 100 monedas más, ahora tendrá 150 monedas totales. <p/><p/>**Nota**&nbsp;&nbsp;Para usar consumibles administrados por Microsoft Store, la aplicación debe destinarse a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio, y debe usar el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**.  |
 | Suscripción | Un complemento duradero donde al cliente se le continúa cobrando en intervalos periódicos para poder seguir usando el complemento. El cliente puede cancelar la suscripción en cualquier momento para evitar más cargos. <p/><p/>**Nota**&nbsp;&nbsp;Para usar complementos de suscripción, la aplicación debe destinarse a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio, y debe usar el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**.  |
@@ -158,7 +158,7 @@ Para excluir o limitar características en una versión de prueba de la aplicaci
 
 Si la aplicación usa las API en el espacio de nombres **Windows.Services.Store** para implementar la compra desde la aplicación o la funcionalidad de prueba, debes publicar tu aplicación en Microsoft Store y descargar la aplicación en el dispositivo de desarrollo para usar su licencia para las pruebas. Sigue este proceso para probar el código:
 
-1. Si la aplicación aún no está publicada y disponible en la tienda, asegúrate de que la aplicación cumple los requisitos mínimos de [Kit de certificación de aplicaciones de Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y asegúrese de que la aplicación supera el proceso de certificación. Puedes [configurar la aplicación para que no se pueda descubrir en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mientras la pruebas. Ten en cuenta la configuración adecuada de [paquetes piloto](../publish/package-flights.md). Incorrectamente configurado paquete piloto puede no ser podrán descargarse.
+1. Si la aplicación aún no está publicada y disponible en la tienda, asegúrese de que la aplicación cumple los requisitos mínimos de [Kit de certificación de aplicaciones de Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y asegúrese de que la aplicación supera el proceso de certificación. Puedes [configurar la aplicación para que no se pueda descubrir en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mientras la pruebas. Ten en cuenta la configuración correcta de [paquetes piloto](../publish/package-flights.md). Incorrectamente configurado paquete piloto puede no ser podrán descargarse.
 
 2. Después, asegúrate de haber seguido estos pasos:
 
@@ -175,7 +175,7 @@ Si la aplicación usa las API en el espacio de nombres **Windows.Services.Store*
     > [!NOTE]
     > Después de completar estos pasos, puedes seguir con la actualización del código de la aplicación y, después, depurar el proyecto actualizado en el equipo de desarrollo sin enviar nuevos paquetes de aplicación a la Tienda. Solo debes descargar la versión de la aplicación de la Tienda en el equipo de desarrollo una vez para obtener la licencia local que se usará para las pruebas. Solo necesitas enviar nuevos paquetes de la aplicación a la Tienda si después de completar las pruebas quieres que las características de compras o pruebas desde la aplicación de tu aplicación estén disponibles para tus clientes.
 
-Si la aplicación usa el espacio de nombres **Windows.ApplicationModel.Store**, puedes usar la clase [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) de tu aplicación para simular la información de licencia durante las pruebas antes de enviar la aplicación a la Tienda. Para obtener más información, consulta [Introducción a las clases CurrentApp y CurrentAppSimulator] (in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
+Si la aplicación usa el espacio de nombres **Windows.ApplicationModel.Store**, puedes usar la clase [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) de tu aplicación para simular la información de licencia durante las pruebas antes de enviar la aplicación a la Tienda. Para obtener más información, consulta la [Introducción a las clases CurrentApp y CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
 
 > [!NOTE]
 > El espacio de nombres **Windows.Services.Store** no proporciona ninguna clase que puedas usar para simular la información de licencia durante las pruebas. Si usas el espacio de nombres **Windows.Services.Store** para implementar las pruebas o compras desde la aplicación, debes publicar tu aplicación en la Tienda y descargar la aplicación en el dispositivo de desarrollo para usar su licencia para las pruebas como se ha descrito anteriormente.
@@ -259,7 +259,7 @@ Para los productos con SKU y disponibilidades, la SKU y las disponibilidades tam
 Si quieres que un complemento esté disponible para los clientes en el contexto de la aplicación, debes [especificar un identificador de producto único](../publish/set-your-add-on-product-id.md#product-id) para el complemento al [crear el envío del complemento](../publish/add-on-submissions.md) en el centro de partners. Puedes usar este id. del producto para hacer referencia al complemento en tu código, aunque los escenarios específicos en los que puedes usar el identificador de producto dependen de qué espacio de nombres usas para las compras desde la aplicación en tu aplicación.
 
 > [!NOTE]
-> El identificador de producto que especificas en el centro de partners de un complemento es diferente a [Identificador de la tienda del](#store-ids). El identificador de la tienda se genera mediante el centro de partners.
+> El identificador de producto que especificaste en el centro de partners para un complemento es diferente a [Identificador de la tienda del](#store-ids). Se genera el identificador de la tienda mediante el centro de partners.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Aplicaciones que usan el espacio de nombres Windows.Services.Store
 

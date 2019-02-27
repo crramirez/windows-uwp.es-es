@@ -5,12 +5,12 @@ keywords: hosted web app, aplicación web hospedada, HWA, HWA, REST API, API de 
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fa606da245c3506c8b4125edeb1edfc47f6aab0d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049552"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114581"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crea una web de una sola página con back-end de API de REST
 
@@ -209,7 +209,7 @@ Con esto, ha llegado el momento de ejecutar el servidor. Vamos a configurar Visu
 ]
 ```
 
-Ahora pulsa F5 y abre el explorador en [http://localhost:8000](https://localhost:8000). La página debe abrirse en la interfaz de usuario Swagger para nuestra API del juego de memoria y desde allí puedes expandir los detalles y los campos de entrada para cada uno de los métodos. Incluso puedes intentar llamar a las API, aunque sus respuestas contendrán solamente datos ficticios (proporcionados por el módulo [Swagmock](https://www.npmjs.com/package/swagmock)). Es el momento de agregar la lógica del juego para que estas API sean reales.
+Ahora pulsa F5 y abre el explorador en [https://localhost:8000](https://localhost:8000). La página debe abrirse en la interfaz de usuario Swagger para nuestra API del juego de memoria y desde allí puedes expandir los detalles y los campos de entrada para cada uno de los métodos. Incluso puedes intentar llamar a las API, aunque sus respuestas contendrán solamente datos ficticios (proporcionados por el módulo [Swagmock](https://www.npmjs.com/package/swagmock)). Es el momento de agregar la lógica del juego para que estas API sean reales.
 
 ### <a name="3-set-up-your-route-handlers"></a>3. Configurar los controladores de rutas
 
@@ -235,7 +235,7 @@ En este nivel de nuestro programa se representan las cartas de memoria y se prop
 
 Por cuestiones de simplicidad, almacenamos nuestro tablero del juego en una variable global (`global.board`) en nuestro servidor Node. Pero en realidad deberías usar almacenamiento en la nube (como Google [Cloud Datastore](https://cloud.google.com/datastore/) o Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/)) para convertirlo en un servicio de API de juego de memoria viable que admita simultáneamente varios juegos y jugadores.
 
-Asegúrate de haber guardado todos los cambios en código VS, vuelve a iniciar el servidor (F5 en código VS o `npm start` desde el shell y, a continuación, ve a [http://localhost:8000](https://localhost:8000)) para probar la API del juego.
+Asegúrate de haber guardado todos los cambios en código VS, vuelve a iniciar el servidor (F5 en código VS o `npm start` desde el shell y, a continuación, ve a [https://localhost:8000](https://localhost:8000)) para probar la API del juego.
 
 Cada vez que pulses el botón **Pruébalo** en una de las operaciones **/game**, **/guess** o **/new**, comprueba el **Cuerpo de la respuesta** resultante y el **Código de respuesta** más abajo, para comprobar que todo funciona como se espera.
 
@@ -333,7 +333,7 @@ Empecemos por crear el proyecto de Node.js con Express.
     npm start
     ```
 
-5. Puedes ver tu aplicación yendo a [http://localhost:3000/](https://localhost:3000/).
+5. Puedes ver tu aplicación yendo a [https://localhost:3000/](https://localhost:3000/).
 
     ![Una captura de pantalla de http://localhost:3000/](./images/express.png)
 
@@ -620,7 +620,7 @@ La adición de un movimiento de volteo con [transformaciones CSS](https://docs.m
 
 1. Abre un símbolo del sistema en el directorio memory y escribe el siguiente comando: `npm start`
 
-2. En el explorador, ve a [http://localhost:3000/](https://localhost:3000/) y juega.
+2. En el explorador, ve a [https://localhost:3000/](https://localhost:3000/) y juega.
 
 3. Si se producen errores, puedes usar las herramientas de depuración de Node.js de Visual Studio Code, presionando F5 en el teclado y escribiendo `Node.js`. Para más información sobre la depuración en Visual Studio Code, echa un vistazo a este [artículo](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations). 
 

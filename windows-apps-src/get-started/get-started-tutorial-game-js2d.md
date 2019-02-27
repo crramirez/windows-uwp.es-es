@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 3527cae294f2268b2457b9fe9a6593cf1b539ee8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050152"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114561"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -88,7 +88,7 @@ A propósito, ahora es un buen momento para abrir **main.js**.
 
 ### <a name="2-loading-the-bitmaps"></a>2. Cargar los mapas de bits
 
-EaselJS nos proporciona distintos tipos de objetos gráficos. Podemos crear formas simples (por ejemplo, el rectángulo azul que se usa para el cielo), o mapas de bits (por ejemplo, las nubes que vamos a agregar), objetos de texto y sprites. Los sprites usan un (SpriteSheet) [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: un único mapa de bits que contiene varias imágenes. Por ejemplo, usamos este SpriteSheet para almacenar los distintos fotogramas de la animación de dinosaurio:
+EaselJS nos proporciona distintos tipos de objetos gráficos. Podemos crear formas simples (por ejemplo, el rectángulo azul que se usa para el cielo), o mapas de bits (por ejemplo, las nubes que vamos a agregar), objetos de texto y sprites. Los sprites usan un (SpriteSheet) [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: un único mapa de bits que contiene varias imágenes. Por ejemplo, usamos este SpriteSheet para almacenar los distintos fotogramas de la animación de dinosaurio:
 
 ![Hoja de sprite de un dinosaurio caminando](images/JS2D_4.png)
 

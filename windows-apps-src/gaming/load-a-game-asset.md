@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, cargar recursos, games, loading resources
 ms.localizationpriority: medium
-ms.openlocfilehash: ca16dd6115bbbe84529928ca58ee0d3074498728
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 478c61713dfcf5bc8a420aa71b0dced81ed6a169
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937214"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114591"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 
@@ -690,7 +690,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 En este código, después de leer los datos de bytes para el archivo CSO del sombreador de vértices, creas el sombreador de vértices llamando a [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524). A continuación, creas el diseño de entrada para el sombreador en la misma expresión lambda.
 
-Otros tipos de sombreador, como los sombreadores de casco y geometría, también pueden requerir una configuración específica. Encontrarás el código completo para una variedad de métodos de carga de sombreadores en [Código completo para BasicLoader](complete-code-for-basicloader.md) y en [Muestra de carga de recursos de Direct3D]( http://go.microsoft.com/fwlink/p/?LinkID=265132).
+Otros tipos de sombreador, como los sombreadores de casco y geometría, también pueden requerir una configuración específica. Encontrarás el código completo para una variedad de métodos de carga de sombreadores en [Código completo para BasicLoader](complete-code-for-basicloader.md) y en [Muestra de carga de recursos de Direct3D]( https://go.microsoft.com/fwlink/p/?LinkID=265132).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -698,7 +698,7 @@ Llegados a este punto, deberías comprender y poder crear o modificar métodos p
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de carga de recursos de Direct3D]( http://go.microsoft.com/fwlink/p/?LinkID=265132)
+* [Muestra de carga de recursos de Direct3D]( https://go.microsoft.com/fwlink/p/?LinkID=265132)
 * [Código completo para BasicLoader](complete-code-for-basicloader.md)
 * [Código completo para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
 * [Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)

@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: medium
-ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: db4cde6f8c195101ec31de26c00ffa7325e08d71
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929029"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114491"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos de promoción
 
 
-[El centro de partners](https://partner.microsoft.com/dashboard) te permite generar códigos promocionales para una aplicación o complemento que hayas publicado en Microsoft Store. Los códigos de promoción son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También podrías usar códigos promocionales para escenarios de servicio de cliente de dirección por lo que da a los usuarios acceso gratuito a la aplicación o complemento, o para [las pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10. 
+[El centro de partners](https://partner.microsoft.com/dashboard) te permite generar códigos promocionales para una aplicación o complemento que hayas publicado en Microsoft Store. Los códigos de promoción son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También podrías usar códigos promocionales para escenarios de servicio de clientes de dirección por lo que da a los usuarios acceso gratuito a la aplicación o complemento, o para las [pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10. 
 
-Cada código promocional tiene una correspondiente URL única y canjeable que un cliente puede hacer clic con el fin de canjear el código e instalar la aplicación o complemento desde Microsoft Store.  Recuerda que la aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los clientes puedan canjear un código promocional para instalarla.
+Cada código promocional contiene una correspondiente URL única y canjeable que un cliente puede hacer clic con el fin de canjear el código e instalar la aplicación o complemento desde Microsoft Store.  Recuerda que la aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los clientes puedan canjear un código promocional para instalarla.
 
 Puedes generar códigos de uso único (y distribuir uno a cada cliente), o puedes elegir generar un código que puede usarse varias veces por un número especificado de clientes.
 
@@ -36,7 +36,7 @@ Ten en cuenta las siguientes directivas para los códigos de promoción:
 -   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluida la sección **3k. Códigos promocionales**.
 
 > [!NOTE]
-> Puedes usar códigos promocionales incluso si la aplicación no está disponible para los clientes (es decir, si has seleccionado **hacer este producto disponible, pero no detectable en Store** con la adquisición de detención **: los clientes con un vínculo directo podrán ver la tienda del producto Descripción, pero solo podrán descargarlo si ya tienen el producto, o tienen un código promocional y están usando un dispositivo de Windows 10** opción en la sección de [visibilidad](choose-visibility-options.md#discoverability) de tu envío). Con esta opción, los clientes deben estar en Windows 10 (incluyendo Xbox) para poder adquirir el producto con un código promocional.
+> Puedes usar códigos promocionales incluso si la aplicación está disponible para los clientes (es decir, si has seleccionado **hacer este producto disponible, pero no detectable en Store** con la adquisición de detención **: los clientes con un vínculo directo podrán ver la tienda del producto Descripción, pero solo podrán descargarlo si ya tienen el producto, o tienen un código promocional y están usando un dispositivo de Windows 10** opción en la sección de [visibilidad](choose-visibility-options.md#discoverability) de tu envío). Con esta opción, los clientes deben estar en Windows 10 (incluyendo Xbox) para poder adquirir el producto con un código promocional.
 
 
 ## <a name="order-promotional-codes"></a>Pedir códigos promocionales
@@ -71,7 +71,7 @@ Para descargar un pedido completado de códigos promocionales y distribuirlos a 
     -   **Nombre del producto**: es el nombre de la aplicación o complemento con el que está asociado el código.
     -   **Nombre del pedido**: es el nombre del pedido con el que se generó este código.
     -   **Código promocional**: es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **Dirección URL canjeable**: Es la dirección URL en la que el cliente puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el siguiente formato: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code >
+    -   **Dirección URL canjeable**: Es la dirección URL en la que el cliente puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el siguiente formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code>
     -   **Fecha de inicio**: La fecha en la que este código se activó.
     -   **Fecha de expiración**: La fecha de expiración de este código.
     -   **Id. de código**: Un identificador único de este código.

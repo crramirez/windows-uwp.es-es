@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: e3c8729a6d2ac828f3d7b257681d64f4c7834587
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: b480e96621e143e283a2556bdbef394aaf7dbc07
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048875"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114471"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
@@ -24,13 +24,13 @@ Para obtener la [Certificación de Windows](https://msdn.microsoft.com/windows/d
 Requisitos previos para probar una aplicación universal de Windows:
 
 -   Debe instalar y ejecutar Windows 10.
--   Debes instalar la [versión del Kit de certificación de aplicaciones de Windows 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), que se incluye en el Kit de desarrollo de Software (SDK) de Windows para Windows 10.
+-   Debes instalar la [versión del Kit de certificación de aplicaciones de Windows 10]( https://go.microsoft.com/fwlink/p/?LinkID=309666), que se incluye en el Kit de desarrollo de Software (SDK) de Windows para Windows 10.
 -   Debes [habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Debes implementar la aplicación de Windows que deseas probar en tu equipo.
 
 **Note sobre actualizaciones en contexto**
 
-La instalación de un [Kit para la certificación de aplicaciones en Windows]( http://go.microsoft.com/fwlink/p/?LinkID=309666) más reciente reemplazará las versiones anteriores que estén instaladas en el equipo.
+La instalación de un [Kit para la certificación de aplicaciones en Windows]( https://go.microsoft.com/fwlink/p/?LinkID=309666) más reciente reemplazará las versiones anteriores que estén instaladas en el equipo.
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>Validar la aplicación de Windows usando interactivamente el Kit para la certificación de aplicaciones en Windows
 

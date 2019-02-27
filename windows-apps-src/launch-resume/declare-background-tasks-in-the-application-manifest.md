@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d987eac76c13b8ceb34a8779903a8067ed6a607
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 4b30cd39a4440a1ade1ea0dda5a35d3f7c15f963
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048702"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114521"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -107,7 +107,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 
 Repite el paso 2 para todas las clases de tareas en segundo plano que haya registrado tu aplicación.
 
-El siguiente ejemplo es el elemento Application completo de la [muestra de tarea en segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509). Este muestra el uso de 2 clases de tareas en segundo plano con un total de 3 tipos de desencadenadores. Copia la sección Extensions de este ejemplo y modifícala conforme sea necesario para declarar tareas en segundo plano en el manifiesto de la aplicación.
+El siguiente ejemplo es el elemento Application completo de la [muestra de tarea en segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509). Este muestra el uso de 2 clases de tareas en segundo plano con un total de 3 tipos de desencadenadores. Copia la sección Extensions de este ejemplo y modifícala conforme sea necesario para declarar tareas en segundo plano en el manifiesto de la aplicación.
 
 ```xml
 <Applications>
