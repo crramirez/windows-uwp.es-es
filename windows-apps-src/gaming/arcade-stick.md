@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, stick arcade, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933820"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593150"
 ---
 # <a name="arcade-stick"></a>Stick arcade
 
@@ -22,21 +22,21 @@ En esta página encontrarás información sobre:
 * Cómo obtener una lista de sticks arcade conectados y sus usuarios
 * Cómo detectar que se ha agregado o quitado un stick arcade
 * Cómo leer la entrada de uno o más sticks arcade
-* cómo se comportan los sticks arcade como dispositivos de navegación de la interfaz de usuario
+* Cómo arcade sticks se comportan como los dispositivos de navegación de la interfaz de usuario
 
 ## <a name="arcade-stick-overview"></a>Información general sobre el stick arcade
 
 Los sticks arcade son dispositivos de entrada apreciados por reproducir la sensación de las máquinas arcade de pie y por sus controles de alta precisión digital. Los sticks arcade son el dispositivo de entrada perfecto para los combates cara a acara y otros juegos de estilo arcade, además de ser adecuados para cualquier juego que funcione con controles totalmente digitales. Los sticks arcade son compatibles con aplicaciones para UWP de Windows 10 y Xbox One en el espacio de nombres [Windows.Gaming.Input][].
 
-Sticks arcade de Xbox One están equipados con un joystick digital de 8 vías, seis botones de **acción** (representados como A1 A6 en la imagen siguiente) y dos botones **especial** (representados como S1 y S2); se encuentra en los dispositivos de entrada totalmente digital que no admiten controles analógicos o vibración. Sticks arcade de Xbox One también están equipados con botones de **vista** y el **menú** que se usan para admitir la navegación de la interfaz de usuario, pero no está pensadas para admitir comandos de juego y no se puede acceder a ellos fácilmente como botones de joystick.
+Xbox One sticks arcade están equipados con un joystick digital de 8 puntas, seis **acción** botones (representados como A1 a A6 en la imagen siguiente) y dos **especial** botones (representados como S1 y S2); son digital de todos los dispositivos de entrada que no son compatibles con los controles analógicos o vibración. Xbox One sticks arcade también están equipados con **vista** y **menú** botones que se usan para admitir la navegación de la interfaz de usuario, pero no está diseñadas para admitir los comandos de juego y no se puede acceder fácilmente como botones de joystick .
 
-![Stick con 4 direccional joystick, Arcade 6 botones de acción (A1 A6) y 2 botones especiales (S1 y S2)](images/arcade-stick-1.png)
+![Arcade stick con joystick direccional 4, 6 botones de acción (A1 a A6) y 2 botones especiales (S1 y S2)](images/arcade-stick-1.png)
 
 ### <a name="ui-navigation"></a>Navegación de la interfaz de usuario
 
 Para aliviar la carga de la compatibilidad con muchos dispositivos de entrada diferentes para la navegación de la interfaz de usuario y fomentar la coherencia entre dispositivos y juegos, la mayoría de dispositivos de entrada _física_ actúan simultáneamente como dispositivo independiente de entrada _lógica_, llamado [controlador de navegación de la interfaz de usuario](ui-navigation-controller.md). El controlador de navegación de la interfaz de usuario proporciona un vocabulario común para los comandos de navegación de la interfaz de usuario entre los dispositivos de entrada.
 
-Como un controlador de navegación de la interfaz de usuario, los sticks arcade asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación al joystick y los botones de **vista**, **menú**, **acción 1**y **2 de la acción** .
+Como un controlador de navegación de la interfaz de usuario, arcade sticks mapa la [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación para el joystick y **vista**, **menú**, **1 acción**, y **acción 2** botones.
 
 | Comando de navegación | Entrada del stick arcade  |
 | ------------------:| ------------------- |
@@ -53,7 +53,7 @@ Los sticks arcade no se asignan a ninguno de los comandos del [conjunto opcional
 
 ## <a name="detect-and-track-arcade-sticks"></a>Detección y seguimiento de los sticks arcade
 
-Detección y seguimiento sticks arcade funciona exactamente del mismo modo que lo hace para los controladores para juegos, excepto con la clase [ArcadeStick][] en lugar de la clase del [controlador para juegos](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) . Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
+Detección y seguimiento arcade sticks funcionan exactamente del mismo modo que para la configuración de los controles, excepto con el [ArcadeStick][] clase en lugar de la [Gamepad](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) clase. Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
 
 <!-- Arcade sticks are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected arcades sticks and events to notify you when an arcade stick is added or removed.
 
@@ -121,7 +121,7 @@ Each arcade stick can be associated with a user account to link their identity t
 
 ## <a name="reading-the-arcade-stick"></a>Lectura del stick arcade
 
-Después de identificar el stick arcade que te interesa, puedes recopilar datos de él. Sin embargo, a diferencia de algunos otros tipos de entrada con los que puedes estar familiarizado, los sticks arcade no comunican el cambio de estado mediante la generación de eventos. En su lugar, tienes que realizar lecturas regulares de su estado actual mediante _sondeos_.
+Después de identificar el stick arcade que te interesa, puedes recopilar datos de él. Sin embargo, a diferencia de algunos otros tipos de entrada con los que puedes estar familiarizado, los sticks arcade no comunican el cambio de estado mediante la generación de eventos. En cambio, tienes que realizar lecturas regulares de su estado actual mediante _sondeos_.
 
 ### <a name="polling-the-arcade-stick"></a>Sondeo del stick arcade
 
@@ -141,14 +141,14 @@ Además del estado del stick arcade, cada lectura incluye una marca de tiempo qu
 
 ### <a name="reading-the-buttons"></a>Lectura de los botones
 
-Cada uno de los botones del stick arcade&mdash;las cuatro direcciones del joystick, seis botones de **acción** y dos botones **especiales** &mdash;proporciona una lectura digital que indica si está presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración de [ArcadeStickButtons][] .
+Cada uno de los botones de stick arcade&mdash;las cuatro direcciones del joystick, seis **acción** botones y dos **especial** botones&mdash;proporciona una lectura digital que indica si se ha presionado () o publicado (arriba). Para mejorar la eficacia, lecturas del botón no se representan como valores booleanos individuales; en su lugar, están todo empaquetados en un único campo de bits representado por el [ArcadeStickButtons][] enumeración.
 
 > [!NOTE]
-> Los sticks Arcade están equipados con botones adicionales que se usan para la navegación de la interfaz de usuario, como los botones de **vista** y de **menú** . Estos botones no forman parte de la enumeración `ArcadeStickButtons` y solo se pueden leer accediendo al stick arcade como dispositivo de navegación de la interfaz de usuario. Para obtener más información, consulta [UI Navigation Device (Dispositivo de navegación de la interfaz de usuario)](ui-navigation-controller.md).
+> Arcade sticks están equipados con botones adicionales que se usa para la navegación de la interfaz de usuario, como el **vista** y **menú** botones. Estos botones no forman parte de la enumeración `ArcadeStickButtons` y solo se pueden leer accediendo al stick arcade como dispositivo de navegación de la interfaz de usuario. Para obtener más información, consulta [UI Navigation Device (Dispositivo de navegación de la interfaz de usuario)](ui-navigation-controller.md).
 
 Los valores de los botones se leen en la propiedad `Buttons` de la estructura [ArcadeStickReading][]. Dado que esta propiedad es un campo de bits, se usa el enmascaramiento bit a bit para aislar el valor del botón que te interesa. El botón está presionado (abajo) cuando se establece el bit correspondiente; de lo contrario no lo está (arriba).
 
-En el ejemplo siguiente se determina si se presiona el botón de **acción 1** .
+El ejemplo siguiente determina si el **1 acción** está presionado.
 
 ```cpp
 if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action1))
@@ -157,7 +157,7 @@ if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action
 }
 ```
 
-En el ejemplo siguiente se determina si el botón de **acción 1** no está presionado.
+El ejemplo siguiente determina si el **1 acción** se suelta el botón.
 
 ```cpp
 if (ArcadeStickButtons::None == (reading.Buttons & ArcadeStickButtons::Action1))
@@ -172,11 +172,11 @@ A veces, es posible que quieras determinar si se suelta un botón que está pres
 
 La [muestra de InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) ilustra cómo usar los sticks arcade y distintos tipos de dispositivos de entrada conjuntamente, así como el comportamiento de estos dispositivos de entrada como controladores de navegación de la interfaz de usuario.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Windows.Gaming.Input.UINavigationController][]
 * [Windows.Gaming.Input.IGameController][]
-* [Prácticas de entrada para juegos](input-practices-for-games.md)
+* [Prácticas recomendadas de entrada para juegos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.IGameController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx

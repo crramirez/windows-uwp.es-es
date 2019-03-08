@@ -4,14 +4,14 @@ description: Obtén información sobre cómo detectar dispositivos remotos desde
 ms.assetid: 5b4231c0-5060-49e2-a577-b747e20cf633
 ms.date: 02/08/2017
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
+keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
 ms.localizationpriority: medium
 ms.openlocfilehash: 7788cb546eddf77292210b5b1e8268239504a843
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592140"
 ---
 # <a name="discover-remote-devices"></a>Detectar dispositivos remotos
 Tu aplicación puede usar la red inalámbrica, Bluetooth y conexión de nube para detectar dispositivos Windows en los que se inicie sesión con la misma cuenta de Microsoft que en el dispositivo detectado. Los dispositivos remotos no necesitan tener instalado ningún software especial para que se puedan reconocer.
@@ -31,7 +31,7 @@ Los objetos de filtro se deben crear antes de que se inicialice el objeto **Remo
 
 > [!NOTE]
 > El valor de filtro de proximidad no garantiza el grado de proximidad física. Para escenarios que requieren proximidad física confiable, usa el valor [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) en el filtro. Actualmente, este filtro solo permite que los dispositivos se detecten por Bluetooth. Como se admiten nuevos mecanismos y protocolos de detección que garantizan la proximidad física, se incluirán aquí también.  
-También hay una propiedad en la clase [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) que indica si un dispositivo detectado está en realidad próximo físicamente: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
+También hay una propiedad en el [ **RemoteSystem** ](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) clase que indica si un dispositivo detectado es en realidad en proximidad física: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
 
 > [!NOTE]
 > Si quieres detectar dispositivos a través de una red local (determinado por la selección de filtro de tipo de detección), la red debe estar utilizando un perfil "privado" o de "dominio". El dispositivo no detectará otros dispositivos en una red "pública".
@@ -93,7 +93,7 @@ Para cambiar esta configuración, el usuario debe abrir la aplicación **Configu
 ![página de configuración de experiencias compartidas](images/shared-experiences-settings.png)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Aplicaciones y dispositivos conectados (Project Rome)](connected-apps-and-devices.md)
-* [Iniciar una aplicación remota](launch-a-remote-app.md)
-* [Referencia de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [Las aplicaciones conectadas y los dispositivos (proyecto Roma)](connected-apps-and-devices.md)
+* [Inicie una aplicación remota](launch-a-remote-app.md)
+* [Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
 * [Muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

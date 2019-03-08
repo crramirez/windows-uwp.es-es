@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use custom timestamps on your toast notifications.
+Description: Obtenga información sobre cómo usar las marcas de tiempo personalizado en sus notificaciones del sistema.
 title: Marcas de tiempo personalizadas en notificaciones del sistema
 label: Custom timestamps on toasts
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, marca de tiempo personalizada, marca de tiempo, notificación, Centro de actividades
 ms.localizationpriority: medium
 ms.openlocfilehash: c18c32e1dcee5486ff6545a1db0ec8f0cd67bfae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625820"
 ---
 # <a name="custom-timestamps-on-toasts"></a>Marcas de tiempo personalizadas en notificaciones del sistema
 
@@ -23,7 +23,7 @@ De manera predeterminada, la marca de tiempo de las notificaciones del sistema (
 Opcionalmente, puedes invalidar la marca de tiempo con tu propia fecha y hora personalizadas, de manera que la marca de tiempo represente la hora en que realmente se creó el mensaje, la información o el contenido, en lugar de la hora en que se envió la notificación. Esto también garantiza que las notificaciones aparecen en el orden correcto en el Centro de actividades (que se ordenan por hora). Se recomienda que la mayoría de las aplicaciones especifiquen una marca de tiempo personalizada.
 
 > [!IMPORTANT]
-> **Requiere CreatorsUpdate y 1.4.0 de la biblioteca de notificaciones**: debes estar ejecutando Escritorio compilación 15063 o superior para ver las marcas de hora personalizadas. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para asignar la marca de hora en el contenido de tu notificación del sistema.
+> **Requiere Creators Update y 1.4.0 de biblioteca de notificaciones**: Debe ejecutar compilación 15063 o superior para ver las marcas de tiempo personalizado. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para asignar la marca de hora en el contenido de tu notificación del sistema.
 
 Para usar una marca de tiempo personalizada, solo tienes que asignar la propiedad **DisplayTimestamp** en tu **ToastContent**.
 
@@ -68,4 +68,4 @@ Si has enviado una notificación local, usamos la hora en que la plataforma de n
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Enviar una notificación del sistema local](send-local-toast.md)
-- [Documentación del contenido de la notificación del sistema](adaptive-interactive-toasts.md)
+- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)

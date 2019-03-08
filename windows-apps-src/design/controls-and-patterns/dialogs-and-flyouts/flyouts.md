@@ -1,10 +1,10 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
-title: Controles flotantes
+Description: Los cuadros de diálogo y los controles flotantes muestran elementos transitorios de la interfaz de usuario que aparecen cuando el usuario los solicita o cuando sucede algo que requiere notificación o aprobación.
+title: Controles de ventana flotante
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: ad6affd9-a3c0-481f-a237-9a1ecd561be8
 pm-contact: yulikl
 design-contact: kimsea
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037137"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625020"
 ---
 # <a name="flyouts"></a>Controles flotantes
 
@@ -24,13 +24,13 @@ Un control flotante es un control de cierre del elemento por cambio de foco que 
 
 ![Menú contextual anidado dentro de un control flotante](../images/flyout-nested.png)
 
-> **API importantes**: [clase Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **API importantes**: [Clase de ventana flotante](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 * No uses un control flotante en lugar de una [información sobre herramientas](../tooltips.md) o un [menú contextual](../menus.md). Usa una información sobre herramientas para mostrar una descripción breve que se oculta tras un tiempo determinado. Usa un menú contextual para acciones contextuales relacionadas con un elemento de la interfaz de usuario, como copiar y pegar.
 
-Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo usar un cuadro de diálogo (un control similar), consulta [los cuadros de diálogo y controles flotantes](index.md). 
+Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo se debe usar un cuadro de diálogo (un control similar), vea [menús emergentes y cuadros de diálogo](index.md). 
 
 ## <a name="examples"></a>Ejemplos
 
@@ -41,7 +41,7 @@ Para obtener recomendaciones sobre cuándo usar un control flotante frente a cu�
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> o <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -51,7 +51,7 @@ Para obtener recomendaciones sobre cuándo usar un control flotante frente a cu�
 ##  <a name="how-to-create-a-flyout"></a>Cómo crear un control flotante
 
 
-Los controles flotantes se asocian a controles específicos. Puedes usar la propiedad [Placement](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) para especificar dónde aparece un control flotante: superior, inferior, izquierda, derecha o completo. Si seleccionas el [modo de colocación completa](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), la aplicación amplía el control flotante y lo centra dentro de la ventana de la aplicación. Algunos controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), proporcionan una propiedad [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que puedes usar para asociar un control flotante o [menú contextual](../menus.md).
+Los controles flotantes se asocian a controles específicos. Puede usar el [colocación](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) propiedad para especificar dónde aparece una ventana flotante: Parte superior, izquierda, abajo, derecha o completo. Si seleccionas el [modo de colocación completa](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), la aplicación amplía el control flotante y lo centra dentro de la ventana de la aplicación. Algunos controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), proporcionan una propiedad [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que puedes usar para asociar un control flotante o [menú contextual](../menus.md).
 
 En este ejemplo se crea un control flotante simple que muestra parte del texto cuando se presiona el botón.
 ````xaml
@@ -214,6 +214,6 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>Artículos relacionados
 - [Información sobre herramientas](../tooltips.md)
-- [Menús y menús contextuales](../menus.md)
-- [Clase Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Los menús y el menú contextual](../menus.md)
+- [Clase de ventana flotante](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612930"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
-Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, esto es, teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un elevado número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar la interfaz de usuario para cada dispositivo, te recomendamos diseñar unas cuantas categorías de ancho clave (también denominados "puntos de interrupción"): 
+Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, esto es, teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un gran número de destinos de dispositivos y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar la IU para cada dispositivo, se recomienda diseñar para algunas categorías de ancho de clave (también denominado "puntos de interrupción"): 
 - Pequeño (menos de 640 píxeles)
 - Medio (de 641 a 1007 píxeles)
 - Grande (1008 píxeles o más)
@@ -47,27 +47,27 @@ Esta tabla describe las distintas clases de tamaño y los puntos de interrupció
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">Media</td>
+<td style="vertical-align:top;">Medio</td>
 <td style="vertical-align:top;">De 641 a 1007 píxeles</td>
 <td style="vertical-align:top;">De 7 a 12 pulgadas</td>
 <td style="vertical-align:top;">Tabléfono, tabletas</td>
-<td style="vertical-align:top;">960x540</td>
+<td style="vertical-align:top;">960 x 540</td>
 </tr>
 <tr class="even">
 <td style="vertical-align:top;">Grande</td>
 <td style="vertical-align:top;">1008 píxeles o más</td>
 <td style="vertical-align:top;">13 pulgadas o más</td>
 <td style="vertical-align:top;">PC, portátiles, Surface Hub</td>
-<td style="vertical-align:top;">1024x640, 1366x768, 1920x1080</td>
+<td style="vertical-align:top;">1024 x 640, 1366 x 768, 1920 x 1080</td>
 </tr>
 </tbody>
 </table>
 
 ## <a name="why-are-tvs-considered-small"></a>¿Por qué los televisores se consideran "pequeños"? 
 
-Aunque la mayoría de los televisores son físicamente bastante grandes (de 40a 65 pulgadas es lo habitual) y tienen resoluciones altas (HD o 4k), el diseño para una televisión de 1080píxeles que se ve a 10m de distancia es diferente del diseño de un monitor de 1080píxeles cuando se está sentado a una distancia de 300m en tu escritorio. Cuando tienes en cuenta la distancia, los 1080píxeles de los televisores son más similares al monitor 540píxeles que está mucho más cerca.
+Aunque la mayoría de los televisores son físicamente bastante grandes (de 40 a 65 pulgadas es lo habitual) y tienen resoluciones altas (HD o 4k), el diseño para una televisión de 1080 píxeles que se ve a 10 m de distancia es diferente del diseño de un monitor de 1080 píxeles cuando se está sentado a una distancia de 300 m en tu escritorio. Cuando tienes en cuenta la distancia, los 1080 píxeles de los televisores son más similares al monitor 540 píxeles que está mucho más cerca.
 
-El sistema de píxeles eficaz de UWP tiene en cuenta automáticamente para ti la distancia de visualización. Al especifica un tamaño para un control o un intervalo de punto de interrupción, estás usando realmente píxeles "efectivos". Por ejemplo, si creas código dinámico para 1080píxeles y superior, un monitor1080 usará ese código, pero un televisor de 1080píxeles no lo hará porque aunque un televisor de 1080píxeles tiene 1080 píxeles físicos, solo tiene 540píxeles efectivos. Lo que hace que el diseño para un televisor similar al diseño de un teléfono.
+El sistema de píxeles eficaz de UWP tiene en cuenta automáticamente para ti la distancia de visualización. Al especifica un tamaño para un control o un intervalo de punto de interrupción, estás usando realmente píxeles "efectivos". Por ejemplo, si creas código dinámico para 1080 píxeles y superior, un monitor 1080 usará ese código, pero un televisor de 1080 píxeles no lo hará porque aunque un televisor de 1080 píxeles tiene 1080 píxeles físicos, solo tiene 540 píxeles efectivos. Lo que hace que el diseño para un televisor similar al diseño de un teléfono.
 
 ## <a name="effective-pixels-and-scale-factor"></a>Píxeles efectivos y factor de escala
 
@@ -100,6 +100,6 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo acoplado para que siempre se muestre.
 
 >[!TIP] 
-> Con [**Continuum para teléfonos**](https://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectar dispositivos móviles compatibles con Windows 10 a un monitor, mouse y teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
+> Con [ **Continuum para teléfonos**](https://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectarse los dispositivos móviles Windows 10 compatibles con un monitor, mouse y teclado para que sus teléfonos funcione, como equipos portátiles. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
 
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: Usar la API de análisis de Microsoft Store para recuperar mediante programación los datos de análisis de las aplicaciones que están registradas en tu o de tu organización '' cuenta del centro de partners de Windows.
+description: Usar la API de análisis de Microsoft Store para recuperar mediante programación los datos de análisis de aplicaciones que están registradas en su o su organización '' s cuenta del centro de partners de Windows.
 title: Acceder a los datos de análisis mediante los servicios de la Store
 ms.date: 06/04/2018
 ms.topic: article
@@ -8,39 +8,39 @@ keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store a
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046408"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592660"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
-Usa la *API de análisis de Microsoft Store* para recuperar mediante programación los datos de análisis de las aplicaciones que están registradas en la cuenta del centro de partners de Windows de tu o tu organización. Esta API permite recuperar los datos respecto a las adquisiciones de aplicaciones y de complementos (conocidas también como producto desde la aplicación o IAP), errores, valoraciones de la aplicación y opiniones. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
+Use la *API de análisis de Microsoft Store* para recuperar los datos de análisis de aplicaciones que están registradas en la cuenta del su su organización o centro de partners de Windows mediante programación. Esta API permite recuperar los datos respecto a las adquisiciones de aplicaciones y de complementos (conocidas también como producto desde la aplicación o IAP), errores, valoraciones de la aplicación y opiniones. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin:
 
 1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
-2.  Antes de llamar a un método en la API de análisis de Microsoft Store [obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60minutos para utilizar dicho token en llamadas a la API de análisis de Microsoft Store antes de que expire. Después de que el token expire, puedes generar un nuevo token.
+2.  Antes de llamar a un método en la API de análisis de Microsoft Store [obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar dicho token en llamadas a la API de análisis de Microsoft Store antes de que expire. Después de que el token expire, puedes generar uno nuevo.
 3.  [Llama a la API de análisis de Microsoft Store](#call-the-windows-store-analytics-api).
 
 <span id="prerequisites" />
 
-## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-analytics-api"></a>Paso 1: Completar los requisitos previos para usar la API de análisis de Microsoft Store
+## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-analytics-api"></a>Paso 1: Complete los requisitos previos para usar la API de análisis de Microsoft Store
 
 Antes de empezar a escribir código para llamar a la API de análisis de Microsoft Store, asegúrate de que has completado los siguientes requisitos previos.
 
-* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puede [crear un nuevo Azure AD en el centro de partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin ningún coste adicional.
+* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office 365 u otros servicios empresariales de Microsoft, ya tienes un directorio de Azure AD. En caso contrario, puede [cree un nuevo anuncio de Azure en el centro de partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin ningún cargo adicional.
 
-* Debes asociar una aplicación de Azure AD con tu cuenta del centro de partners, recuperar el identificador de inquilino y el identificador de cliente para la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de análisis de Microsoft Store. Necesitas el identificador de inquilino, el identificador de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
+* Debe asociar una aplicación de Azure AD con su cuenta de centro de partners, recuperar al inquilino de identificador y el identificador de cliente para la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de análisis de Microsoft Store. Necesitas el identificador de inquilino, de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
     > [!NOTE]
-    > Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, el identificador de cliente y la clave, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.
+    > Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, de cliente y la clave, puedes volver a usarlos cuando necesites crear un nuevo token de acceso de Azure AD.
 
-Para asociar una aplicación de Azure AD con tu cuenta del centro de partners y recuperar los valores necesarios:
+Para asociar una aplicación de Azure AD con su cuenta de centro de partners y recuperar los valores necesarios:
 
-1.  En el centro de partners, [asociar la cuenta del centro de partners de tu organización con el directorio de Azure AD de tu organización](../publish/associate-azure-ad-with-partner-center.md).
+1.  En el centro de partners, [asociar la cuenta del centro de partners de su organización con el directorio de Azure AD de su organización](../publish/associate-azure-ad-with-partner-center.md).
 
-2.  A continuación, desde la página de **usuarios** en la sección de **configuración de la cuenta** del centro de partners, [Agregar la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o el servicio que usarás para acceder a datos de análisis de la cuenta del centro de partners. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el centro de partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
+2.  A continuación, en el **usuarios** página en el **configuración de la cuenta** sección del centro de partners, [agregar la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o servicio que se va a usar para obtener acceso a datos de análisis de la cuenta del centro de partners. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe todavía en el directorio de Azure AD, puede [crear una nueva aplicación de Azure AD en el centro de partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
 
 3.  Vuelve a la página **Usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
 
@@ -48,9 +48,9 @@ Para asociar una aplicación de Azure AD con tu cuenta del centro de partners y 
 
 <span id="obtain-an-azure-ad-access-token" />
 
-## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtención de un token de acceso de Azure AD
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtener un token de acceso de Azure AD
 
-Antes de llamar a cualquiera de los métodos en la API de análisis de Microsoft Store, debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
+Antes de llamar a cualquiera de los métodos en la API de análisis de Microsoft Store, debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
 Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
@@ -65,13 +65,13 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-El valor de *tenant\_id* de POST URI y los parámetros *client\_id* y *client\_secret* , especifica el identificador de inquilino, Id. de cliente y la clave de la aplicación que recuperó del centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
+Para el *inquilino\_Id. de* en el URI de entrada y la *cliente\_id* y *cliente\_secreto* parámetros, especifique el inquilino ID, Id. de cliente y la clave para la aplicación que obtuvo en el centro de partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
 
 Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-analytics-api" />
 
-## <a name="step-3-call-the-microsoft-store-analytics-api"></a>Paso 3: Llama a la API de análisis de Microsoft Store
+## <a name="step-3-call-the-microsoft-store-analytics-api"></a>Paso 3: Llame a la API de análisis de Microsoft Store
 
 Cuando tengas un token de acceso de Azure AD, podrás llamar a la API de análisis de Microsoft Store. Debes pasar el token de acceso al encabezado **Authorization** de cada método.
 
@@ -81,11 +81,11 @@ Los siguientes métodos de análisis están disponibles para aplicaciones para U
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
-| Adquisiciones, conversiones, instalaciones y uso |  <ul><li>[Obtener adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener datos de embudo de adquisiciones de aplicaciones](get-acquisition-funnel-data.md)</li><li>[Obtener conversiones de aplicaciones por canal](get-app-conversions-by-channel.md)</li><li>[Obtener adquisiciones de complementos](get-in-app-acquisitions.md)</li><li>[Obtener adquisiciones de complementos de suscripción](get-subscription-acquisitions.md)</li><li>[Obtener conversiones de complementos por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de la aplicación](get-app-installs.md)</li><li>[Obtener el uso diario de la aplicación](get-app-usage-daily.md)</li><li>[Obtener el uso mensual de la aplicación](get-app-usage-monthly.md)</li></ul> |
-| Errores de la aplicación | <ul><li>[Obtener datos de informes de errores](get-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Descargar el archivo CAB de un error en tu aplicación](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Perspectivas | <ul><li>[Obtener datos de información de la aplicación](get-insights-data-for-your-app.md)</li></ul>  |
-| Calificaciones y opiniones | <ul><li>[Obtener clasificaciones de la aplicación](get-app-ratings.md)</li><li>[Obtener opiniones de la aplicación](get-app-reviews.md)</li></ul> |
-| Anuncios en la aplicación y campañas de anuncios | <ul><li>[Obtener los datos de rendimiento de los anuncios](get-ad-performance-data.md)</li><li>[Obtener los datos de rendimiento de la campaña publicitaria](get-ad-campaign-performance-data.md)</li></ul> |
+| Adquisiciones, las conversiones, instala y uso |  <ul><li>[Obtener las adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener datos de embudo de adquisición de aplicaciones](get-acquisition-funnel-data.md)</li><li>[Obtener las conversiones de aplicación por canal](get-app-conversions-by-channel.md)</li><li>[Obtener las adquisiciones de complemento](get-in-app-acquisitions.md)</li><li>[Obtener suscripción adquisiciones de complemento](get-subscription-acquisitions.md)</li><li>[Obtener las conversiones del complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de aplicaciones](get-app-installs.md)</li><li>[Obtener el uso diario de las aplicaciones](get-app-usage-daily.md)</li><li>[Obtener el uso mensual de las aplicaciones](get-app-usage-monthly.md)</li></ul> |
+| Errores de la aplicación | <ul><li>[Obtener datos de informes de errores](get-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)</li><li>[Obtener el seguimiento de pila para un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Descargue el archivo CAB para un error en la aplicación](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
+| Insights | <ul><li>[Obtener datos de insights para la aplicación](get-insights-data-for-your-app.md)</li></ul>  |
+| Calificaciones y opiniones | <ul><li>[Obtenga las clasificaciones de la aplicación](get-app-ratings.md)</li><li>[Obtener las revisiones de la aplicación](get-app-reviews.md)</li></ul> |
+| Anuncios en la aplicación y campañas de anuncios | <ul><li>[Obtener datos de rendimiento de ad](get-ad-performance-data.md)</li><li>[Obtener datos de rendimiento de campaña de anuncio](get-ad-campaign-performance-data.md)</li></ul> |
 
 ### <a name="methods-for-desktop-applications"></a>Métodos para aplicaciones de escritorio
 
@@ -93,10 +93,10 @@ Los siguientes métodos de análisis están disponibles para que las cuentas de 
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
-| Instalaciones |  <ul><li>[Obtener instalaciones de aplicaciones de escritorio](get-desktop-app-installs.md)</li></ul> |
-| Bloques |  <ul><li>[Obtener bloques de actualización de la aplicación de escritorio](get-desktop-block-data.md)</li><li>[Obtener detalles de bloque de actualización de la aplicación de escritorio](get-desktop-block-data-details.md)</li></ul> |
-| Errores de aplicaciones |  <ul><li>[Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargar el archivo CAB de un error en tu aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Perspectivas | <ul><li>[Obtener datos de información de la aplicación de escritorio](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Instalaciones |  <ul><li>[Obtener la instalación de la aplicación de escritorio](get-desktop-app-installs.md)</li></ul> |
+| Bloques |  <ul><li>[Conseguir que los bloques de actualización para su aplicación de escritorio](get-desktop-block-data.md)</li><li>[Obtener detalles del bloqueo de actualización para su aplicación de escritorio](get-desktop-block-data-details.md)</li></ul> |
+| Errores de aplicaciones |  <ul><li>[Obtener datos para su aplicación de escritorio de los informes de errores](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de pila para un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargue el archivo CAB para un error en la aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
+| Insights | <ul><li>[Obtener datos de insights para su aplicación de escritorio](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para los servicios de Xbox Live
 
@@ -106,20 +106,20 @@ Los siguientes métodos adicionales están disponibles para que las usen las cue
 |---------------|--------------------|
 | Análisis general |  <ul><li>[Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)</li><li>[Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)</li><li>[Obtener datos de uso simultáneo de Xbox Live](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | Análisis de estado |  <ul><li>[Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)</li></ul> |
-| Análisis de la comunidad |  <ul><li>[Obtener datos del hub de juegos de Xbox Live](get-xbox-live-game-hub-data.md)</li><li>[Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)</li><li>[Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)</li></ul>  |
+| Análisis de la comunidad |  <ul><li>[Obtener datos del centro de juegos de Xbox Live](get-xbox-live-game-hub-data.md)</li><li>[Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)</li><li>[Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-one-games"></a>Métodos para juegos de Xbox One
 
-Los siguientes métodos adicionales están disponibles para su uso por las cuentas de desarrollador con los juegos de Xbox One añadidos a través del Portal de desarrollador de Xbox (XDP) y disponible en el panel de análisis de XDP.
+Los siguientes métodos adicionales están disponibles para su uso con las cuentas de desarrollador con juegos de Xbox One que se ingieren mediante el Portal para desarrolladores de Xbox (XDP) y disponible en el panel de análisis de XDP.
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
-| Adquisiciones |  <ul><li>[Obtener adquisiciones de juegos de Xbox One](get-xbox-one-game-acquisitions.md)</li><li>[Obtener adquisiciones de complementos de Xbox One](get-xbox-one-add-on-acquisitions.md)</li></ul> |
-| Errores |  <ul><li>[Obtener datos de informes de errores en tu juego de Xbox One](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Obtener detalles de un error en tu juego de Xbox One](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Obtener el seguimiento de la pila de un error en tu juego de Xbox One](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Descargar el archivo CAB de un error de tu juego de Xbox One](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
+| Adquisiciones |  <ul><li>[Obtener las adquisiciones de juegos Xbox One](get-xbox-one-game-acquisitions.md)</li><li>[Obtener las adquisiciones de complemento Xbox One](get-xbox-one-add-on-acquisitions.md)</li></ul> |
+| Errores |  <ul><li>[Obtener juegos para Xbox One datos de informe de errores](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Obtener los detalles de un error en Xbox One juegos](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Obtener el seguimiento de pila para un error en Xbox One juegos](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Descargue el archivo CAB para un error en el juego de Xbox One](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
 
-Las cuentas de desarrollador que pertenecen al [programa de panel de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar los datos de análisis de hardware y controladores. Para obtener más información, consulta [API del panel de Hardware](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Las cuentas de desarrollador que pertenecen a la [programa del panel de Windows hardware](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tiene acceso a un conjunto de métodos para recuperar datos de análisis de hardware y controladores adicional. Para obtener más información, consulte [panel Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Ejemplo de código
 

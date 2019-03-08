@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 87eb6562c6ee66ca1d409d3748e688861d5f3920
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936479"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605050"
 ---
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
 
 La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior a uno o más búferes de la memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU.
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Finalidad y usos
+## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Propósito y usos
 
 
 ![Diagrama de ubicación de la fase de salida de flujo en la canalización](images/d3d10-pipeline-stages-so.png)
@@ -33,17 +33,17 @@ Existen dos formas de transmitir datos de salida de flujo a la canalización:
 -   Los datos de la secuencia de flujo pueden devolverse a la fase del ensamblador de entrada (IA).
 -   Los datos de la secuencia de flujo pueden ser leerlos sombreadores programables mediante el uso de funciones [Load](https://msdn.microsoft.com/library/windows/desktop/bb509694).
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 Los datos de vértices procedentes de una fase anterior del sombreador.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Resultados
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Salida
 
 
-La fase de salida de flujo (SO) devuelve (o transmite) continuamente datos de vértices de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o más búferes de la memoria. Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de flujo (SO) transmite continuamente datos de vértices de la fase de sombreador de dominios (DS) en los búferes de memoria (o si DS también está inactiva, desde la fase de sombreador de vértices (VS)).
+La fase de salida de flujo (SO) devuelve (o transmite) continuamente datos de vértices de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o más búferes de la memoria. Si la fase de sombreador de geometría (GS) está inactiva, la fase de salida de Stream (así) continuamente envía los datos de vértice de la etapa del sombreador de dominio (DS) en los búferes de memoria (o si DS también está inactiva, de la etapa del sombreador de vértices (VS)).
 
-Cuando una franja de triángulos o líneas está enlazada a la fase de ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices a la vez de triángulos); los primitivos incompletos nunca se transmiten. Los tipos primitivos con proximidad descartan los datos de adyacencia antes de transmitir los datos.
+Cuando una franja de triángulos o líneas está enlazada con la fase del ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices cada vez en el caso de los triángulos); los primitivos incompletos nunca se transmiten. Los tipos de primitivos con proximidad descartan los datos de proximidad antes de transmitir los datos.
 
 La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
 

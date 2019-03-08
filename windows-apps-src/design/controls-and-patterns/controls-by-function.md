@@ -1,19 +1,19 @@
 ---
-Description: Provides a list by function of some of the controls that you can use in your apps.
+Description: Proporciona una lista por función de algunos de los controles que puedes usar en tus aplicaciones.
 title: Controles por función
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a0a267385668a276fc776c5f5d495b27ae72a2b3
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037307"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611520"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -26,9 +26,9 @@ Puedes ver muchos de los controles de interfaz de usuario de Windows si descarga
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación de la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> , haz clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir la aplicación y ver NavigationView en acción</a> </p>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">abra la aplicación y ver el control NavigationView en acción</a> </p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -40,7 +40,7 @@ Aquí se muestra una lista por función de los controles de XAML comunes que pue
 
 ## <a name="appbars-and-commands"></a>Barras de la aplicación y comandos
 
-### <a name="app-bar"></a>Barra de aplicaciones
+### <a name="app-bar"></a>Barra de la aplicación
 Barra de herramientas para mostrar comandos específicos de la aplicación. Consulta Barra de comandos.
 
 Referencia: [AppBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.aspx) 
@@ -52,23 +52,23 @@ Botón para mostrar comandos con estilo de barra de la aplicación.
 
 Referencia: [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [SymbolIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.symbolicon.aspx), [BitmapIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.bitmapicon.aspx), [FontIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.fonticon.aspx), [PathIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pathicon.aspx) 
 
-Diseño y procedimientos: [Guía de control de la barra de la aplicación y la barra de comandos](app-bars.md) 
+Diseño y procedimientos: [Guía de control de barra de la aplicación y la barra de comandos](app-bars.md) 
 
-Código de muestra: [Muestra de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de ejemplo: [Ejemplo de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="app-bar-separator"></a>Separador de la barra de la aplicación
 Separa visualmente grupos de comandos en una barra de comandos.
 
 Referencia: [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) 
 
-Código de muestra: [Muestra de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de ejemplo: [Ejemplo de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="app-bar-toggle-button"></a>Botón de alternancia de la barra de la aplicación
 Un botón para alternar comandos en una barra de comandos.
 
 Referencia: [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx) 
 
-Código de muestra: [Muestra de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de ejemplo: [Ejemplo de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="command-bar"></a>Barra de comandos
 Barra de la aplicación especial que gestiona el cambio de tamaño de los elementos de botón de la barra de la aplicación.
@@ -84,9 +84,9 @@ Barra de la aplicación especial que gestiona el cambio de tamaño de los elemen
 ```
 Referencia: [CommandBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx) 
 
-Diseño y procedimientos: [Guía de control de la barra de la aplicación y la barra de comandos](app-bars.md)
+Diseño y procedimientos: [Guía de control de barra de la aplicación y la barra de comandos](app-bars.md)
 
-Código de muestra: [Muestra de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de ejemplo: [Ejemplo de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="buttons"></a>Botones
 
@@ -100,11 +100,11 @@ Control que responde a la entrada del usuario y que genera un evento **Click**.
         Click="Button_Click" />
 ```
 
-Referencia: [botón](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx) 
+Referencia: [Button](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx) 
 
 Diseño y procedimientos: [Guía de control de botones](buttons.md) 
 
-### <a name="hyperlink"></a>Hipervínculo
+### <a name="hyperlink"></a>Hyperlink
 Consulta el botón de hipervínculo.
 
 ### <a name="hyperlink-button"></a>Botón de hipervínculo
@@ -137,7 +137,7 @@ Diseño y procedimientos: [Guía de control de botones](buttons.md)
 
 ## <a name="collectiondata-controls"></a>Controles de datos o colección
 
-### <a name="flip-view"></a>Invertir vista
+### <a name="flip-view"></a>Inversión de la vista
 Control que presenta una colección de elementos por los que el usuario se puede desplazar rápidamente, de uno en uno.
 
 ```xaml
@@ -150,7 +150,7 @@ Control que presenta una colección de elementos por los que el usuario se puede
 
 Referencia: [FlipView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx) 
 
-Diseño y procedimientos: [Guía de control de invertir vista](flipview.md) 
+Diseño y procedimientos: [Voltear la Guía de control de vista](flipview.md) 
 
 ### <a name="grid-view"></a>Vista de cuadrícula
 Control que presenta una colección de elementos en filas y columnas por las que es posible desplazarse verticalmente.
@@ -166,7 +166,7 @@ Referencia: [GridView](https://msdn.microsoft.com/library/windows/apps/xaml/wind
 
 Diseño y procedimientos: [Listas](lists.md) 
 
-Código de muestra: [Muestra de ListView](https://go.microsoft.com/fwlink/p/?LinkId=619900)
+Código de ejemplo: [Ejemplo de ListView](https://go.microsoft.com/fwlink/p/?LinkId=619900)
 
 ### <a name="items-control"></a>Control de elementos
 Control que presenta una colección de elementos en una interfaz de usuario especificada por una plantilla de datos. 
@@ -191,7 +191,7 @@ Referencia: [ListView](https://msdn.microsoft.com/library/windows/apps/xaml/wind
 
 Diseño y procedimientos: [Listas](lists.md) 
 
-Código de muestra: [Muestra de ListView](https://go.microsoft.com/fwlink/p/?LinkId=619900)
+Código de ejemplo: [Ejemplo de ListView](https://go.microsoft.com/fwlink/p/?LinkId=619900)
 
 ## <a name="date-and-time-controls"></a>Controles de fecha y hora
 
@@ -206,7 +206,7 @@ Control que permite a un usuario seleccionar una fecha mediante una presentació
 
 Referencia: [CalendarDatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx) 
 
-Diseño y procedimientos: [Controles de calendario, fecha y hora](date-and-time.md)
+Diseño y procedimientos: [Calendario, fecha y controles de tiempo](date-and-time.md)
  
 ### <a name="calendar-view"></a>Vista de calendario
 Pantalla de calendario configurable que permite a un usuario seleccionar una o varias fechas.
@@ -217,7 +217,7 @@ Pantalla de calendario configurable que permite a un usuario seleccionar una o v
 
 Referencia: [CalendarView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx) 
 
-Diseño y procedimientos: [Controles de calendario, fecha y hora](date-and-time.md) 
+Diseño y procedimientos: [Calendario, fecha y controles de tiempo](date-and-time.md) 
 
 ### <a name="date-picker"></a>Selector de fecha
 Control que permite a un usuario seleccionar una fecha.
@@ -230,7 +230,7 @@ Control que permite a un usuario seleccionar una fecha.
 
 Referencia: [DatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx) 
 
-Diseño y procedimientos: [Controles de calendario, fecha y hora](date-and-time.md)
+Diseño y procedimientos: [Calendario, fecha y controles de tiempo](date-and-time.md)
  
 ### <a name="time-picker"></a>Selector de hora
 Control que permite a un usuario seleccionar un valor de hora.
@@ -243,7 +243,7 @@ Control que permite a un usuario seleccionar un valor de hora.
 
 Referencia: [TimePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx) 
 
-Diseño y procedimientos: [Controles de calendario, fecha y hora](date-and-time.md)
+Diseño y procedimientos: [Calendario, fecha y controles de tiempo](date-and-time.md)
 
 ## <a name="flyouts"></a>Controles flotantes
 
@@ -264,9 +264,9 @@ Muestra un mensaje que requiere la intervención del usuario. (Al contrario que 
 </Flyout>
 ```
 
-Referencia: [Control flotante](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
+Referencia: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Diseño y procedimientos: [los controles flotantes](dialogs-and-flyouts/flyouts.md) 
+Diseño y procedimientos: [Menús emergentes](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Control flotante de menú
 Muestra de forma temporal una lista de comandos u opciones relacionados con lo que está haciendo el usuario.
@@ -286,16 +286,16 @@ Muestra de forma temporal una lista de comandos u opciones relacionados con lo q
 
 Referencia: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-Diseño y procedimientos: [menús y menús contextuales](menus.md) 
+Diseño y procedimientos: [Menús y menús contextuales](menus.md) 
 
-Código de muestra: [Muestra del menú contextual XAML](https://go.microsoft.com/fwlink/p/?LinkId=620021)
+Código de ejemplo: [Ejemplo de menú contextual de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620021)
 
 ### <a name="popup-menu"></a>Menú emergente
 Menú personalizado que presenta los comandos que especifiques.
 
 Referencia: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Diseño y procedimientos: [cuadros de diálogo](dialogs-and-flyouts/dialogs.md) 
+Diseño y procedimientos: [Cuadros de diálogo](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>Información sobre herramientas
 Ventana emergente que muestra información para un elemento. 
@@ -309,22 +309,22 @@ Ventana emergente que muestra información para un elemento.
 
 Referencia: [ToolTip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltip.aspx), [ToolTipService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltipservice.aspx) 
 
-Diseño y procedimientos: directrices para obtener información sobre herramientas 
+Diseño y procedimientos: Directrices para información sobre herramientas 
 
 ## <a name="images"></a>Imágenes
 
-### <a name="image"></a>Imagen
+### <a name="image"></a>Image
 Control que presenta una imagen.
 
 ```xaml
 <Image Source="Assets/Logo.png" />
 ```
 
-Referencia: [Imagen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx) 
+Referencia: [Image](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx) 
 
-Diseño y procedimientos: [Imagen e ImageBrush](images-imagebrushes.md) 
+Diseño y procedimientos: [Imagen y ImageBrush](images-imagebrushes.md) 
 
-Código de muestra: [Muestra de imágenes XAML](https://go.microsoft.com/fwlink/p/?linkid=226867)
+Código de ejemplo: [Ejemplo de las imágenes XAML](https://go.microsoft.com/fwlink/p/?linkid=226867)
 
 ## <a name="graphics-and-ink"></a>Gráficos y entrada de lápiz
 
@@ -351,9 +351,9 @@ Diversos objetos gráficos en modo retenido que se pueden representar como elips
 
 Referencia: [Formas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.aspx) 
 
-Procedimientos: [Dibujar formas](../../graphics/drawing-shapes.md) 
+Cómo: [Dibujar formas](../../graphics/drawing-shapes.md) 
 
-Código de muestra: [Muestra de dibujo basado en vectores de XAML](https://go.microsoft.com/fwlink/p/?linkid=226866)
+Código de ejemplo: [Ejemplo de dibujo basada en vectores de XAML](https://go.microsoft.com/fwlink/p/?linkid=226866)
 
 ## <a name="layout-controls"></a>Controles de diseño
 
@@ -373,7 +373,7 @@ Control de contenedor que dibuja un borde, fondo o ambos alrededor de otro objet
 </Border>
 ```
 
-Referencia: [Borde](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.border.aspx)
+Referencia: [Border](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.border.aspx)
 
 ### <a name="canvas"></a>Lienzo
 Panel de diseño que admite el posicionamiento absoluto de elementos secundarios relativos a la esquina superior izquierda del lienzo.
@@ -389,7 +389,7 @@ Panel de diseño que admite el posicionamiento absoluto de elementos secundarios
 </Canvas>
 ```
 
-Referencia: [Lienzo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
+Referencia: [Canvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
  
 ### <a name="grid"></a>Cuadrícula
 Un panel de diseño que permite reorganizar los elementos secundarios en filas y columnas.
@@ -451,9 +451,9 @@ Un control de contenedor que permite al usuario ver vistas panorámicas y acerca
 
 Referencia: [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx)
 
-Diseño y procedimientos: [Guía de control de movimiento panorámico y desplazamiento](scroll-controls.md) 
+Diseño y procedimientos: [Guía de controles de desplazamiento y desplazamiento lateral](scroll-controls.md) 
 
-Código de muestra: [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=238577)
+Código de ejemplo: [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=238577)
 
 ### <a name="stack-panel"></a>Panel de pila
 Panel de diseño en el que los elementos secundarios se organizan en una sola línea y se pueden orientar horizontal o verticalmente.
@@ -542,7 +542,7 @@ Referencia: [MediaTransportControls](https://msdn.microsoft.com/library/windows/
 
 Diseño y procedimientos: [Guía de control de elemento multimedia](media-playback.md) 
 
-Código de muestra: [Muestra de controles de transporte de medios](https://go.microsoft.com/fwlink/p/?LinkId=620023)
+Código de ejemplo: [Ejemplo de controles de transporte de medios](https://go.microsoft.com/fwlink/p/?LinkId=620023)
 
 ### <a name="video"></a>Vídeo
 Consulta Elemento multimedia
@@ -555,7 +555,7 @@ Un contenedor adaptable y el modelo de navegación flexible que implementa el pa
 
 Referencia: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Diseño y procedimientos: [Guía de control de NavigationView](navigationview.md)
+Diseño y procedimientos: [Guía del control NavigationView](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 
@@ -576,7 +576,7 @@ Control de contenedor con dos vistas; una vista para el contenido principal y ot
 
 Referencia: [SplitView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) 
 
-Diseño y procedimientos: [Guía de control de vista en dos paneles](split-view.md)
+Diseño y procedimientos: [Guía de control de vista dividida](split-view.md)
 
 ### <a name="web-view"></a>Vista web
 
@@ -589,9 +589,9 @@ Control de contenedor que hospeda el contenido web.
 
 Referencia: [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) 
 
-Diseño y procedimientos: Directrices para vistas web 
+Diseño y procedimientos: Directrices para las vistas Web 
 
-Código de muestra: [Muestra de control WebView de XAML](https://go.microsoft.com/fwlink/p/?linkid=238582)
+Código de ejemplo: [Ejemplo de control WebView de XAML](https://go.microsoft.com/fwlink/p/?linkid=238582)
 
 ### <a name="semantic-zoom"></a>Zoom semántico
 
@@ -612,7 +612,7 @@ Referencia: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/
 
 Diseño y procedimientos: [Guía de control de zoom semántico](semantic-zoom.md)
 
-Código de muestra: [Muestra de agrupación de GridView y SemanticZoom XAML](https://go.microsoft.com/fwlink/p/?linkid=226564)
+Código de ejemplo: [Ejemplo de SemanticZoom y agrupación de XAML GridView](https://go.microsoft.com/fwlink/p/?linkid=226564)
 
 ## <a name="progress-controls"></a>Controles de progreso
 
@@ -637,7 +637,7 @@ Barra de progreso que muestra un progreso indeterminado.
 
 Referencia: [ProgressBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx) 
 
-Diseño y procedimientos: [Guía de control del progreso](progress-controls.md) 
+Diseño y procedimientos: [Guía de los controles de progreso](progress-controls.md) 
 
 ### <a name="progress-ring"></a>Círculo de progreso
 Control que indica el progreso indeterminado mediante un círculo. 
@@ -650,7 +650,7 @@ Control que indica el progreso indeterminado mediante un círculo.
 
 Referencia: [ProgressRing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx) 
 
-Diseño y procedimientos: [Guía de control del progreso](progress-controls.md) 
+Diseño y procedimientos: [Guía de los controles de progreso](progress-controls.md) 
 
 ## <a name="text-controls"></a>Controles de texto
 
@@ -661,9 +661,9 @@ Un cuadro de entrada de texto que proporciona texto sugerido a medida que el usu
 
 Referencia: [AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 
-Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control del cuadro de sugerencia automática](auto-suggest-box.md)
+Diseño y procedimientos: [Los controles de texto](text-controls.md), [Guía de control de cuadro de sugerencias automáticas](auto-suggest-box.md)
 
-Código de muestra: [Muestra de migración de AutoSuggestBox](https://go.microsoft.com/fwlink/p/?LinkId=619996)
+Código de ejemplo: [Ejemplo de migración AutoSuggestBox](https://go.microsoft.com/fwlink/p/?LinkId=619996)
 
 ### <a name="multi-line-text-box"></a>Cuadro de texto multilínea
 Consulta Cuadro de texto.
@@ -680,9 +680,9 @@ Control para escribir contraseñas.
 
 Referencia: [PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx) 
 
-Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control de cuadro de contraseña](password-box.md) 
+Diseño y procedimientos: [Los controles de texto](text-controls.md), [Guía de control de cuadro de contraseña](password-box.md) 
 
-Código de muestra: [Muestra de visualización de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579), [Muestra de edición de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
+Código de ejemplo: [Ejemplo de presentación de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579), [edición de ejemplo de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
 
 ### <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 Control que permite a un usuario editar documentos de texto enriquecido con contenido como texto con formato, hipervínculos e imágenes.
@@ -693,9 +693,9 @@ Control que permite a un usuario editar documentos de texto enriquecido con cont
 
 Referencia: [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) 
 
-Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control del cuadro de edición con formato](rich-edit-box.md)
+Diseño y procedimientos: [Los controles de texto](text-controls.md), [Rich edit Guía de control de casilla](rich-edit-box.md)
 
-Código de muestra: [Muestra de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
+Código de ejemplo: [Ejemplo de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
 
 ### <a name="search-box"></a>Cuadro de búsqueda
 Consulta Cuadro de sugerencias automáticas.
@@ -717,9 +717,9 @@ Control que muestra texto.
 
 Referencia: [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx) 
 
-Diseño y procedimiento: [Controles de texto](text-controls.md), [Guía de control de bloque de texto](text-block.md), [Guía de control de bloque de texto enriquecido](rich-text-block.md)
+Diseño y procedimientos: [Los controles de texto](text-controls.md), [Guía de control de bloque de texto](text-block.md), [Guía de control de bloque de texto enriquecido](rich-text-block.md)
 
-Código de muestra: [Muestra de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
+Código de ejemplo: [Ejemplo de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
 
 ### <a name="text-box"></a>Cuadro de texto
 Campo de texto sin formato de una línea o multilínea.
@@ -733,9 +733,9 @@ Campo de texto sin formato de una línea o multilínea.
 
 Referencia: [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) 
 
-Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control de cuadro de texto](text-box.md) 
+Diseño y procedimientos: [Los controles de texto](text-controls.md), [Guía de control de cuadro de texto](text-box.md) 
 
-Código de muestra: [Muestra de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
+Código de ejemplo: [Ejemplo de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
 
 ## <a name="selection-controls"></a>Controles de selección
 
@@ -751,7 +751,7 @@ Control que un usuario puede activar y desactivar.
 
 Referencia: [CheckBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) 
 
-Diseño y procedimientos: [Guía de control de casillas](checkbox.md) 
+Diseño y procedimientos: [Guía de control de casilla de verificación](checkbox.md) 
 
 ### <a name="combo-box"></a>Cuadro combinado
 Lista desplegable de elementos entre los que puede seleccionar un usuario.
@@ -789,7 +789,7 @@ Referencia: [ListBox](https://msdn.microsoft.com/library/windows/apps/xaml/windo
 
 Diseño y procedimientos: [Listas](lists.md) 
 
-### <a name="radio-button"></a>Botón de radio
+### <a name="radio-button"></a>Botón de selección
 Control que permite que el usuario seleccione una sola opción entre un grupo de ellas. Cuando se agrupan los botones de radio, se excluyen mutuamente.
 
 ![Controles de botón de radio](images/controls/radio-button.png)
@@ -805,7 +805,7 @@ Control que permite que el usuario seleccione una sola opción entre un grupo de
 
 Referencia: [RadioButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.radiobutton.aspx) 
 
-Diseño y procedimientos: [Guía de control del botón de radio](radio-button.md)
+Diseño y procedimientos: [Guía de control de botón de radio](radio-button.md)
  
 ### <a name="slider"></a>Control deslizante
 Control que permite que el usuario seleccione entre un intervalo de valores moviendo un control Thumb por una pista.
@@ -818,7 +818,7 @@ Control que permite que el usuario seleccione entre un intervalo de valores movi
 
 Referencia: [Control deslizante](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) 
 
-Diseño y procedimientos: [Guía de control de control deslizante](slider.md) 
+Diseño y procedimientos: [Guía de control deslizante](slider.md) 
 
 ### <a name="toggle-button"></a>Botón de alternancia
 Botón que se puede alternar entre dos estados.

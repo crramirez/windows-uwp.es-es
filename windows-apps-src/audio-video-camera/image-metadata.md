@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ab1279a8744d6dc9cddc88abaa064058f1259c2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943081"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631810"
 ---
 # <a name="image-metadata"></a>Metadatos de imagen
 
@@ -19,7 +19,7 @@ ms.locfileid: "8943081"
 
 En este artículo se muestra cómo leer y escribir propiedades de metadatos de imagen y cómo incluir geoetiquetas en archivos mediante la clase de utilidad [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) .
 
-## <a name="image-properties"></a>Propiedades de imagen
+## <a name="image-properties"></a>Propiedades de la imagen
 
 La propiedad [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) devuelve un objeto [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) que proporciona acceso a información relacionada con el contenido del archivo. Obtén las propiedades específicas de la imagen mediante una llamada a [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646). El objeto [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) devuelto expone los miembros que contienen los campos básicos de metadatos de la imagen, como el título de la imagen y la fecha de captura.
 
@@ -33,7 +33,7 @@ Para acceder a un conjunto de metadatos de archivo más grande, usa el Sistema d
 
 -   Algunas propiedades solo son compatibles con ciertos códecs de imagen y contenedores de archivos. Para obtener una lista de los metadatos de imagen compatibles con cada tipo de imagen, consulta [directivas de metadatos de fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003).
 
--   Dado que las propiedades que no son compatibles pueden devolver un valor nulo cuando se recuperan, siempre debes verificar los valores nulos antes de usar un valor de metadatos devueltos.
+-   Dado que las propiedades que no son compatibles pueden devolver un valor nulo cuando se recuperan, siempre debes comprobar los valores nulos antes de usar un valor de metadatos devueltos.
 
 ## <a name="geotag-helper"></a>Geolocalizar auxiliares
 
@@ -69,7 +69,7 @@ Cuando tengas el descodificador, crea una lista de cadenas y agrega una entrada 
 
 -   Para obtener información sobre el lenguaje de consulta de metadatos WIC y las propiedades compatibles, consulta el tema [Consultas de metadatos nativos de formato de imagen WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   Muchas propiedades de metadatos solo son compatibles con un subconjunto de tipos de imagen. [**GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) no se ejecutará correctamente y generará un error con el código 0x88982F41 si la imagen asociada con el descodificador no admite una de las propiedades solicitadas y con el código 0x88982F81 si la imagen no admite metadatos. Las constantes asociadas con estos códigos de error son WINCODEC\_ERR\_PROPERTYNOTSUPPORTED y WINCODEC\_ERR\_UNSUPPORTEDOPERATION y se definen en el archivo de encabezado winerror.h.
+-   Muchas propiedades de metadatos solo son compatibles con un subconjunto de tipos de imagen. [**GetPropertiesAsync** ](https://msdn.microsoft.com/library/windows/apps/br226250) se producirá un error con el código de error 0x88982F41 si una de las propiedades solicitadas no es compatible con la imagen asociada con el descodificador y 0x88982F81 si la imagen no admite los metadatos. Las constantes asociadas con estos códigos de error son WINCODEC\_ERR\_PROPERTYNOTSUPPORTED y WINCODEC\_ERR\_UNSUPPORTEDOPERATION y se definen en el archivo de encabezado winerror.h.
 -   Como una imagen puede contener o no un valor para una propiedad concreta, usa el elemento **IDictionary.ContainsKey** para comprobar que una propiedad está presente en los resultados antes de intentar acceder a ella.
 
 La escritura de metadatos de imagen en la secuencia requiere un elemento **BitmapEncoder** asociado al archivo de resultado de la imagen.
@@ -80,11 +80,11 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 -   Para obtener información detallada sobre las propiedades que se admiten para cada tipo de archivo de imagen, consulta [Propiedades de Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Directivas de metadatos de fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003) y [Consultas de metadatos nativos de formato de imagen WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) no se ejecutará correctamente y devolverá el código de error 0x88982F41 si la imagen asociada con el codificador no admite una de las propiedades solicitadas.
+-   [**SetPropertiesAsync** ](https://msdn.microsoft.com/library/windows/apps/br226252) se producirá un error con el código de error 0x88982F41 si una de las propiedades solicitadas no es compatible con la imagen asociada con el codificador.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Creación de imágenes](imaging.md)
+* [Imaging](imaging.md)
  
 
  

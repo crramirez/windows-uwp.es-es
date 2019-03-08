@@ -1,22 +1,22 @@
 ---
-Description: Use nested UI to enable multiple actions on a list item
+Description: Usar la interfaz de usuario anidada para permitir varias acciones en un elemento de lista
 title: Interfaz de usuario anidada en elementos de lista
 label: Nested UI in list items
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
 pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8edb38b8ae91d836e283a8eb37830850bf504db4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929108"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661310"
 ---
 # <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
 
@@ -26,7 +26,7 @@ La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los co
 
 Puedes usar la interfaz de usuario anidada para presentar a un usuario las opciones adicionales que le ayudarán a acelerar la realización de acciones importantes. Sin embargo, cuantas más acciones expongas, más complicada será la interfaz de usuario. Debes prestar especial atención si decides usar este patrón de interfaz de usuario. En este artículo se proporcionan directrices para ayudar a determinar el mejor curso de acción para tu interfaz de usuario concreta.
 
-> **API importantes**: [Clase ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
+> **API importantes**: [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [clase GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 En este artículo, se trata la creación de la interfaz de usuario anidada en los elementos [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) y [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Aunque en esta sección no se tratan otros casos de interfaz de usuario anidada, estos conceptos son transferibles. Antes de comenzar, debes estar familiarizado con las instrucciones generales para usar los controles ListView o GridView en la interfaz de usuario, que encontrarás en los artículos [Listas](lists.md) y [Vista de lista y vista de cuadrícula](listview-and-gridview.md).
 
@@ -109,7 +109,7 @@ Si la interfaz de usuario de la lista con elementos anidados admite acciones com
 
 ![Partes de la interfaz de usuario anidada](images/nested-ui-navigation.png)
 
-**Controlador para juegos**
+**Gamepad**
 
 Cuando la entrada proviene de un controlador para juegos, proporciona esta experiencia del usuario:
 
@@ -167,7 +167,7 @@ Para conseguir esta interfaz de usuario, establece las siguientes propiedades en
 
 Cuando los elementos de lista no realizan ninguna acción, se recomienda seguir estas instrucciones para controlar la navegación con un controlador para juegos o un teclado.
 
-**Controlador para juegos**
+**Gamepad**
 
 Cuando la entrada proviene de un controlador para juegos, proporciona esta experiencia del usuario:
 

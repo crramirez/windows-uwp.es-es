@@ -7,17 +7,17 @@ keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
 ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046538"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626640"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
 
 En este tema se describen los problemas conocidos de UWP en el Programa para desarrolladores de Xbox One. Para obtener más información acerca de este programa, consulta [UWP en Xbox](index.md). 
 
-\[Si llegaste aquí desde un vínculo en un tema de referencia de API y buscas información sobre la API de la familia de dispositivos universales, consulta [UWP features that aren't yet supported on Xbox](https://go.microsoft.com/fwlink/?LinkID=760755) (Características de la UWP que aún no se admiten en Xbox).\]
+\[Si llegó aquí desde un vínculo en un tema de referencia de API y está buscando información sobre las API familia Universal del dispositivo, consulte [características UWP que aún no se admiten en Xbox](https://go.microsoft.com/fwlink/?LinkID=760755).\]
 
 La siguiente lista destaca algunos problemas conocidos que puedes encontrarte, aunque esta no es una lista exhaustiva. 
 
@@ -115,6 +115,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [Preguntas más frecuentes](frequently-asked-questions.md)
 - [UWP en Xbox One](index.md)

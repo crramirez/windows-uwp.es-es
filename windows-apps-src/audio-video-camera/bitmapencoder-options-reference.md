@@ -4,14 +4,14 @@ description: En este artículo se enumeran las opciones de codificación que pue
 title: Referencia de opciones de BitmapEncoder
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07f5c6ef180cb4abe90a705e73be8d99ecbd2ca7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947088"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603190"
 ---
 # <a name="bitmapencoder-options-reference"></a>Referencia de opciones de BitmapEncoder
 
@@ -20,23 +20,23 @@ Este artículo enumera las opciones de codificación que pueden usarse con [**Bi
 
 | Nombre                    | PropertyType | Notas de uso                                                                                        | Formatos válidos |
 |-------------------------|--------------|----------------------------------------------------------------------------------------------------|---------------|
-| ImageQuality            | single       | Valores válidos de 0 a 1.0. Los valores más altos indican una mayor calidad.                                 | JPEG, JPEG-XR |
+| ImageQuality            | único       | Valores válidos de 0 a 1.0. Los valores más altos indican una mayor calidad.                                 | JPEG, JPEG-XR |
 | CompressionQuality      | único       | Valores válidos de 0 a 1.0. Los valores más altos indican un esquema de compresión más eficaz y más lento. | TIFF          |
-| Lossless                | booleano      | Si se establece en true, se omite la opción ImageQuality.                                        | JPEG-XR       |
-| InterlaceOption         | booleano      | Define si se entrelaza la imagen.                                                                    | PNG           |
+| Lossless                | boolean      | Si se establece en true, se omite la opción ImageQuality.                                        | JPEG-XR       |
+| InterlaceOption         | boolean      | Define si se entrelaza la imagen.                                                                    | PNG           |
 | FilterOption            | uint8        | Usa la enumeración [**PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389).                                | PNG           |
 | TiffCompressionMethod   | uint8        | Usa la enumeración [**TiffCompressionMode**](https://msdn.microsoft.com/library/windows/apps/br226399).                    | TIFF          |
 | Luminance               | uint32Array  | Una matriz de 64 elementos que contiene constantes de cuantificación de luminancia.                               | JPEG          |
 | Chrominance             | uint32Array  | Una matriz de 64 elementos que contiene constantes de cuantificación de crominancia.                             | JPEG          |
 | JpegYCrCbSubsampling    | uint8        | Usa la enumeración [**JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386).                    | JPEG          |
-| SuppressApp0            | booleano      | Define si se suprime la creación de un bloque de metadatos App0.                                        | JPEG          |
-| EnableV5Header32bppBGRA | booleano      | Define si se debe codificar a una versión de 5 BMP que admita alfa.                                         | BMP           |
+| SuppressApp0            | boolean      | Define si se suprime la creación de un bloque de metadatos App0.                                        | JPEG          |
+| EnableV5Header32bppBGRA | boolean      | Define si se debe codificar a una versión de 5 BMP que admita alfa.                                         | BMP           |
 
  
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear, editar y guardar imágenes de mapa de bits](imaging.md)
+* [Crear, editar y guardar las imágenes de mapa de bits](imaging.md)
 * [Códecs admitidos](supported-codecs.md)
 
  

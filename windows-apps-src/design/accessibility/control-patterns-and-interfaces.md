@@ -1,19 +1,19 @@
 ---
-Description: Lists the Microsoft UI Automation control patterns, the classes that clients use to access them, and the interfaces providers use to implement them.
+Description: Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos.
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Interfaces y patrones de control
 label: Control patterns and interfaces
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 87afe086ca28e27a39f5508a2bea5ea9fcb1c6a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597240"
 ---
 # <a name="control-patterns-and-interfaces"></a>Interfaces y patrones de control  
 
@@ -29,12 +29,12 @@ Al implementar un patrón de control, debes consultar también la documentación
 
 | Patrón de control | Interfaz de proveedor de clase | Descripción |
 |-----------------|--------------------------|-------------|
-| **Annotation** | [**IAnnotationProvider**](https://msdn.microsoft.com/library/windows/apps/Hh738493) | Se usa para exponer las propiedades de una anotación en un documento. |
-| **Dock** | [**IDockProvider**](https://msdn.microsoft.com/library/windows/apps/BR242565) | Se usa para controles que pueden acoplarse en un contenedor de acoplamiento. Por ejemplo, barras de herramientas o paletas herramientas. |
-| **Drag** | [**IDragProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750322) | Se usa para admitir controles arrastrables o controles con elementos arrastrables. |
+| **Anotación** | [**IAnnotationProvider**](https://msdn.microsoft.com/library/windows/apps/Hh738493) | Se usa para exponer las propiedades de una anotación en un documento. |
+| **Acoplar** | [**IDockProvider**](https://msdn.microsoft.com/library/windows/apps/BR242565) | Se usa para controles que pueden acoplarse en un contenedor de acoplamiento. Por ejemplo, barras de herramientas o paletas herramientas. |
+| **Arrastre** | [**IDragProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750322) | Se usa para admitir controles arrastrables o controles con elementos arrastrables. |
 | **DropTarget** | [**IDropTargetProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750327) | Se usa para admitir controles que pueden ser el destino para una operación de arrastrar y colocar. |
 | **ExpandCollapse** | [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/BR242568) | Se usa para admitir controles que se expanden visualmente para mostrar más contenido y se reducen para ocultar el contenido. |
-| **Grid** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | Se usa para los controles que admiten funcionalidad de cuadrícula, como la variación de tamaño y el desplazamiento a una celda especificada. Ten en cuenta que la cuadrícula en sí no implementa este patrón, porque proporciona diseño pero no es un control |
+| **Cuadrícula** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | Se usa para los controles que admiten funcionalidad de cuadrícula, como la variación de tamaño y el desplazamiento a una celda especificada. Ten en cuenta que la cuadrícula en sí no implementa este patrón, porque proporciona diseño pero no es un control |
 | **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | Se usa para controles que tienen celdas dentro de cuadrículas. |
 | **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Se usa para los controles que se pueden invocar, como  [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265). |
 | **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Permite que las aplicaciones encuentren un elemento en un contenedor, como una lista virtualizada. |
@@ -43,21 +43,21 @@ Al implementar un patrón de control, debes consultar también la documentación
 | **RangeValue** | [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) | Se usa para los controles que tienen un intervalo de valores que pueden aplicarse al control. Por ejemplo, un control de número que contiene años puede tener un intervalo desde 1900 al año actual, mientras que otro control de número que presenta meses tendría un intervalo de 1 a 12. |
 | **Scroll** | [**IScrollProvider**](https://msdn.microsoft.com/library/windows/apps/BR242601) | Se usa para los controles que pueden desplazarse. Por ejemplo, un control que tiene barras de desplazamiento que están activas cuando existe más información que se puede mostrar en un área visualizable del control. |
 | **ScrollItem** | [**IScrollItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242599) | Se usa para controles que tienen elementos individuales en una lista que se desplaza. Por ejemplo, un control de lista que tiene elementos individuales en la lista de desplazamiento, como un control de cuadro combinado. |
-| **Selection** | [**ISelectionProvider**](https://msdn.microsoft.com/library/windows/apps/BR242616) | Se usa para controles de contenedor de selección. Por ejemplo, [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) y [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/BR209348). |
+| **Selección** | [**ISelectionProvider**](https://msdn.microsoft.com/library/windows/apps/BR242616) | Se usa para controles de contenedor de selección. Por ejemplo, [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) y [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/BR209348). |
 | **SelectionItem** | [**ISelectionItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242610) | Se usa para elementos individuales en controles de contenedor de selección, como cuadros de lista y cuadros combinados. |
 | **Spreadsheet** | [**ISpreadsheetProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251821) | Se usa para exponer el contenido de una hoja de cálculo u otro documento basado en cuadrícula. |
 | **SpreadsheetItem** | [**ISpreadsheetItemProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251817) | Se usa para exponer las propiedades de una celda de una hoja de cálculo u otro documento basado en cuadrícula. |
-| **Styles** | [**IStylesProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251823) | Se usa para describir un elemento de interfaz de usuario que tiene un estilo, color de relleno, patrón de relleno o forma específicos. |
+| **Estilos** | [**IStylesProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251823) | Se usa para describir un elemento de interfaz de usuario que tiene un estilo, color de relleno, patrón de relleno o forma específicos. |
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Permite a las aplicaciones cliente de automatización de la interfaz de usuario dirigir la entrada de mouse o teclado a un elemento específico de la interfaz de usuario. |
 | **Table** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | Se usa para controles que tienen una cuadrícula así como información de encabezado. Por ejemplo, un control de calendario tabular. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | Se usa para elementos de una tabla. |
-| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Se usa para editar documentos y controles que exponen información textual. Consulta también [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) y [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
+| **Texto** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Se usa para editar documentos y controles que exponen información textual. Consulta también [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) y [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
 | **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | Se usa para acceder al antecesor más próximo de un elemento que admite el patrón de control **Text**. |
 | **TextEdit** | No hay ninguna clase administrada disponible | Proporciona acceso a un control que modifica texto, por ejemplo, un control que realiza autocorrección o habilita la composición de entrada mediante un editor de métodos de entrada (IME). |
 | **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | Proporciona acceso a un intervalo de texto continuo en un contenedor de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider). Consulta también [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2). |
-| **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Se usa para los controles donde puede alternarse el estado. Por ejemplo, elementos de menú y [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) que pueden comprobarse. |
-| **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Se usa para los controles cuyo tamaño puede cambiarse, que pueden moverse y girarse. Los usos típicos del patrón de control de transformación son diseñadores, formularios, editores gráficos y aplicaciones de dibujo. |
-| **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. |
+| **Alternancia** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Se usa para los controles donde puede alternarse el estado. Por ejemplo, elementos de menú y [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) que pueden comprobarse. |
+| **Transformación** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Se usa para los controles cuyo tamaño puede cambiarse, que pueden moverse y girarse. Los usos típicos del patrón de control de transformación son diseñadores, formularios, editores gráficos y aplicaciones de dibujo. |
+| **Valor** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Expone elementos dentro de contenedores que están virtualizados y deben ponerse totalmente a disposición como elementos de automatización de la interfaz de usuario. |
 | **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Expone información específica de windows, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son los cuadros de diálogo y las ventanas secundarias. |
 
@@ -65,10 +65,10 @@ Al implementar un patrón de control, debes consultar también la documentación
 > No encontrarás necesariamente implementaciones de todos estos patrones en los controles XAML existentes. Algunos de los patrones tienen interfaces únicamente para admitir la paridad con la definición de patrones del marco de trabajo de automatización de la interfaz de usuario y para admitir los escenarios de sistemas de automatización del mismo nivel que requerirán una implementación personalizada para admitir dicho patrón.
 
 > [!NOTE]
-> Las aplicaciones de la Tienda de Windows Phone no admiten todos los patrones de control de Automatización de la interfaz de usuario que figuran en la lista. **Annotation**, **Dock**, **Drag**, **DropTarget** y **ObjectModel** son algunos de los patrones no admitidos.
+> Las aplicaciones de la Tienda de Windows Phone no admiten todos los patrones de control de Automatización de la interfaz de usuario que figuran en la lista. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel** son algunos de los patrones no admitidos.
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Temas relacionados  
-* [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md)
+* [Automatización del mismo nivel personalizado](custom-automation-peers.md)
 * [Accesibilidad](accessibility.md) 

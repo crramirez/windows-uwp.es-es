@@ -1,22 +1,22 @@
 ---
-Description: Learn how Fluent motion uses directionality and gravity.
+Description: Obtenga información sobre cómo Fluent movimiento usa direccionalidad y gravedad.
 title: Direccionalidad y gravedad - animación en aplicaciones para UWP
 label: Directionality and gravity
 template: detail.hbs
 ms.date: 10/02/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4bb6f0ba60e89720a6daa37604cbe93696fb2bb7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603080"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
@@ -112,5 +112,5 @@ Aquí, un elemento de la fila superior de la cuadrícula se ve afectado por la g
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Introducción al movimiento](index.md)
-- [Sincronización y aceleración](timing-and-easing.md)
+- [Información general del movimiento](index.md)
+- [Control de tiempo y de aceleración](timing-and-easing.md)

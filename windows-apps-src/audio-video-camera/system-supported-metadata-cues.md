@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, metadata, metadatos, cue, indicación, speech, voz, chapter, capítulo
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b3753e92524e300252930f48433f91e175353c9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635860"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicaciones de metadatos temporizados admitidos por el sistema
 En este artículo se describe cómo sacar provecho de los diversos formatos de metadatos temporizados que pueden estar integrados en archivos o secuencias multimedia. Las aplicaciones para UWP pueden registrarse en los eventos que genera la canalización multimedia durante la reproducción cada vez que se encuentren estas indicaciones de metadatos. Con la clase [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), las aplicaciones pueden implementar sus propias indicaciones de metadatos personalizados, pero en este artículo nos centramos en varios estándares de metadatos que la canalización multimedia detecta automáticamente, por ejemplo:
@@ -48,7 +48,7 @@ Después de registrarse para los eventos de metadatos de subtítulo de imagen, e
 
 [!code-cs[ImageSubtitlePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetImageSubtitlePlay)]
 
-En el método auxiliar **RegisterMetadataHandlerForImageSubtitles**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
+En el método auxiliar **RegisterMetadataHandlerForImageSubtitles**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) de la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
 
 [!code-cs[RegisterMetadataHandlerForImageSubtitles](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForImageSubtitles)]
 
@@ -75,7 +75,7 @@ Después de registrarse para los eventos de metadatos de voz, el objeto **MediaI
 
 [!code-cs[SpeechPlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetSpeechPlay)]
 
-En el método auxiliar **RegisterMetadataHandlerForSpeech**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
+En el método auxiliar **RegisterMetadataHandlerForSpeech**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) de la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
 
 [!code-cs[RegisterMetadataHandlerForWords](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForWords)]
 
@@ -122,7 +122,7 @@ Después de registrarse para los eventos de metadatos de M3U, el objeto **MediaI
 
 [!code-cs[EXTM3UCuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3UCuePlay)]
 
-En el método auxiliar **RegisterMetadataHandlerForEXTM3UCues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "EXTM3U" si la pista representa comentarios M3U. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
+En el método auxiliar **RegisterMetadataHandlerForEXTM3UCues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "EXTM3U" si la pista representa comentarios M3U. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) de la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
 
 [!code-cs[RegisterMetadataHandlerForEXTM3UCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEXTM3UCues)]
 
@@ -144,7 +144,7 @@ Después de registrarse para los eventos de metadatos de ID3 el objeto **MediaIt
 [!code-cs[ID3CuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetID3CuePlay)]
 
 
-En el método auxiliar **RegisterMetadataHandlerForID3Cues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor que contiene la cadena GUID "15260DFFFF49443320FF49443320000F" si la pista representa etiquetas ID3. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
+En el método auxiliar **RegisterMetadataHandlerForID3Cues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor que contiene la cadena GUID "15260DFFFF49443320FF49443320000F" si la pista representa etiquetas ID3. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) de la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
 
 [!code-cs[RegisterMetadataHandlerForID3Cues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForID3Cues)]
 
@@ -166,7 +166,7 @@ Después de registrarse para los eventos de cuadro emsg, el objeto **MediaItem**
 [!code-cs[EmsgCuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEmsgCuePlay)]
 
 
-En el método auxiliar **RegisterMetadataHandlerForEmsgCues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "emsg:mp4" si la pista representa cuadros emsg. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
+En el método auxiliar **RegisterMetadataHandlerForEmsgCues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "emsg:mp4" si la pista representa cuadros emsg. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) de la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
 
 
 [!code-cs[RegisterMetadataHandlerForEmsgCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEmsgCues)]
@@ -181,8 +181,8 @@ En la parte siguiente del ejemplo se muestra el escenario donde se desencadena l
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Reproducción de contenido multimedia](media-playback.md)
-* [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md)
+* [Reproducción de multimedia](media-playback.md)
+* [Realiza un seguimiento, listas de reproducción y elementos multimedia](media-playback-with-mediasource.md)
 
 
  

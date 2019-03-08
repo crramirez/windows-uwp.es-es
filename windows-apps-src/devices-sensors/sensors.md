@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c29673a0b41b4f071d438f0c03255c2d73831dc5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946876"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626800"
 ---
 # <a name="sensors"></a>Sensores
 
@@ -23,12 +23,12 @@ Como regla general, decide desde el comienzo si la aplicación dependerá exclus
 
 | Tema                                                       | Descripción  |
 |-------------------------------------------------------------|--------------|
-| [Calibrar los sensores](calibrate-sensors.md)                   | Es probable que sea necesario calibrar los sensores basados en el magnetómetro de un dispositivo, es decir, la brújula, el inclinómetro y el sensor de orientación, debido a factores ambientales. La enumeración [<strong>MagnetometerAccuracy</strong>](https://msdn.microsoft.com/library/windows/apps/Dn297552) puede ayudar a determinar un curso de acción cuando el dispositivo necesite calibración. |
-| [Orientación del sensor](sensor-orientation.md)                 | Los datos de sensor procedentes de las clases [<strong>OrientationSensor</strong>](https://msdn.microsoft.com/library/windows/apps/BR206371) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. |
+| [Calibrar sensores](calibrate-sensors.md)                   | Es probable que sea necesario calibrar los sensores basados en el magnetómetro de un dispositivo, es decir, la brújula, el inclinómetro y el sensor de orientación, debido a factores ambientales. La enumeración [<strong>MagnetometerAccuracy</strong>](https://msdn.microsoft.com/library/windows/apps/Dn297552) puede ayudar a determinar un curso de acción cuando el dispositivo necesite calibración. |
+| [Orientación de sensor](sensor-orientation.md)                 | Los datos de sensor procedentes de las clases [<strong>OrientationSensor</strong>](https://msdn.microsoft.com/library/windows/apps/BR206371) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. |
 | [Usar el acelerómetro](use-the-accelerometer.md)           | Aprende a usar el acelerómetro para responder al movimiento del usuario. |
-| [Usar la brújula](use-the-compass.md)                       | Aprende a usar la brújula para determinar el rumbo actual. |
-| [Usar el girómetro](use-the-gyrometer.md)                   | Aprende a usar el girómetro para detectar los cambios en el movimiento del usuario. | 
-| [Usar el inclinómetro](use-the-inclinometer.md)             | Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje Y (roll) y la rotación alrededor del eje Z (yaw). |
+| [Uso de la brújula](use-the-compass.md)                       | Aprende a usar la brújula para determinar el rumbo actual. |
+| [Utilice el girómetro](use-the-gyrometer.md)                   | Aprende a usar el girómetro para detectar los cambios en el movimiento del usuario. | 
+| [Utilice el inclinómetro](use-the-inclinometer.md)             | Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje y la rotación alrededor del eje Y (yaw). |
 | [Usar el sensor de luz](use-the-light-sensor.md)             | Aprende a usar el sensor de luz ambiental para detectar cambios de iluminación. |
 | [Usar el sensor de orientación](use-the-orientation-sensor.md) | Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.|
 
@@ -86,7 +86,7 @@ El sensor [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705
 
 ![Lecturas de brújula en relación con el polo norte magnético](images/compass.png)
 
-Las aplicaciones que quieren mostrar una rosa de los vientos o navegar por un mapa, generalmente usan el sensor de brújula.
+Las aplicaciones que quieren mostrar una rosa de los vientos o navegar por un mapa generalmente usan el sensor de brújula.
 
 Para obtener un ejemplo de implementación, consulta la [muestra de compás](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
 
@@ -108,7 +108,7 @@ El sensor [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 Las aplicaciones que cambian la vista para coincidir con la orientación del dispositivo pueden usar el sensor de inclinómetro. También, las aplicaciones que muestran un avión que coincide con la rotación alrededor del eje x, la rotación alrededor del eje y la rotación alrededor del eje z del dispositivo podrían usar las lecturas del inclinómetro.
 
-Para un ejemplo de implementación, consulta la muestra de inclinómetro [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+Para una implementación de ejemplo, vea el ejemplo de inclinómetro [ https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 ## <a name="light-sensor"></a>Sensor de luz
 

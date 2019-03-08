@@ -4,14 +4,14 @@ description: En este artículo se describe cómo agregar la reproducción de con
 title: Streaming adaptable
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 66618d79166e06f6ee2696ed3c9f193a310b6ae9
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617880"
 ---
 # <a name="adaptive-streaming"></a>Streaming adaptable
 
@@ -42,7 +42,7 @@ Llama a [**MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windo
 [!code-cs[ManifestSource](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetManifestSource)]
 
 > [!NOTE] 
-> A partir de Windows10, versión 1607, se recomienda usar la clase **MediaPlayer** para reproducir elementos multimedia. **MediaPlayerElement** es un control XAML ligero que se usa para representar el contenido de un objeto **MediaPlayer** en una página XAML. El control **MediaElement** se sigue admitiendo para la compatibilidad con versiones anteriores. Para obtener más información sobre el uso de **MediaPlayer** y **MediaPlayerElement** para reproducir contenido multimedia, consulta [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md). Para obtener información sobre cómo usar **MediaSource** y las API relacionada para trabajar con contenido multimedia, consulta [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
+> A partir de Windows 10, versión 1607, se recomienda usar la clase **MediaPlayer** para reproducir elementos multimedia. **MediaPlayerElement** es un control XAML ligero que se usa para representar el contenido de un objeto **MediaPlayer** en una página XAML. El control **MediaElement** se sigue admitiendo para la compatibilidad con versiones anteriores. Para obtener más información sobre el uso de **MediaPlayer** y **MediaPlayerElement** para reproducir contenido multimedia, consulta [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md). Para obtener información sobre cómo usar **MediaSource** y las API relacionada para trabajar con contenido multimedia, consulta [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
 
 ## <a name="adaptive-streaming-with-adaptivemediasource"></a>Streaming adaptable con AdaptiveMediaSource
 
@@ -115,11 +115,11 @@ Si quieres registrar controladores de eventos en el origen multimedia adaptable 
 [!code-cs[AMSBindingCurrentItemChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAMSBindingCurrentItemChanged)]
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Reproducción de contenido multimedia](media-playback.md)
+* [Reproducción de multimedia](media-playback.md)
 * [Compatibilidad con etiquetas HLS](hls-tag-support.md) 
-* [Soporte técnico de perfil DASH](dash-profile-support.md) 
+* [Compatibilidad con el perfil dash](dash-profile-support.md) 
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Reproducir elementos multimedia en segundo plano](background-audio.md) 
+* [Reproducir archivos multimedia en segundo plano](background-audio.md) 
 
 
 

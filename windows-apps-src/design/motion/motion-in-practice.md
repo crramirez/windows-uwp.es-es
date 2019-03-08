@@ -1,22 +1,22 @@
 ---
-Description: Learn how Fluent motion fundamentals come together in your app.
+Description: Obtenga información sobre cómo Fluent movimiento Fundamentos se fusionan en la aplicación.
 title: 'Movimiento en la práctica: animación en las aplicaciones para UWP'
 label: Motion in practice
 template: detail.hbs
 ms.date: 10/02/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058566"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599410"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -65,7 +65,7 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 **Ejemplo de objeto**
 
- ![Movimiento de 300milisegundos](images/control.gif)
+ ![Movimiento de 300 milisegundos](images/control.gif)
 
 :::row:::
     :::column:::
@@ -80,23 +80,23 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 ## <a name="implicit-animations"></a>Animaciones implícitas
 
-> Animaciones implícitas requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior.
+> Las animaciones implícitas requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior.
 
 
-Animaciones implícitas son una forma sencilla de lograr el movimiento de Fluent mediante la interpolación automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
+Las animaciones implícitas son una manera sencilla para lograr el movimiento de Fluent al interpolar automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
 
-Implícitamente se pueden animar los cambios en las siguientes propiedades:
+Implícitamente, puede animar los cambios realizados en las siguientes propiedades:
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
-  - **Opacity**
+  - **Opacidad**
   - **Rotación**
-  - **Escala**
-  - **Translation**
+  - **Escalar**
+  - **traducción**
 
-- [Border](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)o [Panel](/uwp/api/windows.ui.xaml.controls.panel)
-  - **Segundo plano**
+- [Borde](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter), o [Panel](/uwp/api/windows.ui.xaml.controls.panel)
+  - **En segundo plano**
 
-Cada propiedad que puede tener cambios implícitamente animados tiene una propiedad de _transición_ correspondiente. Para animar la propiedad, asigna un tipo de transición a la propiedad correspondiente de la _transición_ . Esta tabla muestran las propiedades de _transición_ y el tipo de transición que se usará para cada uno de ellos.
+Todas las propiedades que pueden tener cambios implícitamente animados le corresponde una _transición_ propiedad. Para animar la propiedad, asignar un tipo de transición correspondiente _transición_ propiedad. Esta tabla se muestran los _transición_ propiedades y el tipo de transición que se usará para cada uno de ellos.
 
 | Propiedad animada | Propiedad de transición | Tipo de transición implícita |
 | -- | -- | -- |
@@ -108,7 +108,7 @@ Cada propiedad que puede tener cambios implícitamente animados tiene una propie
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-Este ejemplo muestra cómo usar la propiedad Opacity y transición para crear un botón fundido de entrada cuando se habilita el control y una atenuación cuando está deshabilitado.
+En este ejemplo se muestra cómo usar la propiedad de opacidad y la transición para que el botón de fundido de entrada cuando el control está habilitado y el fundido de salida cuando se deshabilita.
 
 ```xaml
 <Button x:Name="SubmitButton"
@@ -129,6 +129,6 @@ public double OpaqueIfEnabled(bool IsEnabled)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Introducción al movimiento](index.md)
-- [Sincronización y aceleración](timing-and-easing.md)
+- [Información general del movimiento](index.md)
+- [Control de tiempo y de aceleración](timing-and-easing.md)
 - [Direccionalidad y gravedad](directionality-and-gravity.md)

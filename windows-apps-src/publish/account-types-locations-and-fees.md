@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fda6fc33ab82283047e4bdf4b78d21f78a577c9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601640"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
-Las ventanas de programas en [El centro de partners](https://partner.microsoft.com/dashboard) ofrece ambos individuales y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
+Programar el Windows en [centro de partners](https://partner.microsoft.com/dashboard) ofrece ambos individuales y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona que acceso para publicar aplicaciones en el Store y participar en otros programas de Microsoft.
 
 > [!NOTE]
-> Cuando se abre tu cuenta de desarrollador, asegúrate de iniciar sesión en [El centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
+> Al abrir la cuenta de desarrollador, asegúrese de iniciar sesión en [centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que se va a utilizar para la cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
 Cuando [comiences el proceso de suscripción](https://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 
@@ -31,13 +31,13 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
 | Cuenta individual | Cuenta de empresa |
 |--------------------|-----------------|
-| <ul><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
+| <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por las [Directivas de la tienda](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), las aplicaciones con ciertas funciones, como aquellos que tienen acceso cuentas financieras información o que requieren autenticación para tener acceso a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar por las cuentas de empresa.
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por el [Store directivas](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), información de la cuenta de aplicaciones con cierta funcionalidad, como las que tienen acceso a financiero o que requieren autenticación para acceder a la funcionalidad principal (sin usar un tercero seguro dedicado proveedor de autenticación), solo se pueden publicar las cuentas de empresa.
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que esté comprobada pero, mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en la preparación de los envíos.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No se puede enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras espera, puede [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) continuar compilar y probar aplicaciones y trabajar sobre cómo preparar sus envíos.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
 
@@ -60,197 +60,197 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 
 | País o región | Tarifa de reg. individual | Tarifa de reg. de empresa | Pago | PayPal |
 |----------------|---------------------|------------------|--------|--------|
-| Afganistán | 19USD | 99USD | USD pagados al banco | No |
-| Albania | 19USD | 99USD | USD pagados al banco | No |
+| Afganistán | 19 USD | 99 USD | USD pagados al banco | No |
+| Albania | 19 USD | 99 USD | USD pagados al banco | No |
 | Argelia | 1535 DZD | 7000 DZD | USD pagados al banco | No | 
-|  Andorra | 14EUR | 75EUR | No pago | No | 
-|  Angola | 19USD | 99USD | USD pagados al banco | No | 
-|  Antigua y Barbuda | 19USD | 99USD | XCD pagados al banco | No | 
+|  Andorra | 14 EUR | 75 EUR | Sin pago | No | 
+|  Angola | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Antigua y Barbuda | 19 USD | 99 USD | XCD pagados al banco | No | 
 |  Argentina | 106 ARS | 420 ARS | USD pagados al banco | No | 
-|  Armenia | 19USD | 99USD | USD pagados al banco | No | 
-|  Australia | 21AUD | 110AUD | AUD pagados al banco | Sí | 
-|  Austria | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Azerbaiyán | 19USD | 99USD | AZN pagados al banco | No | 
-|  Bahamas | 19USD | 99USD | No pago | No | 
+|  Armenia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Australia | 21 AUD | 110 AUD | AUD pagados al banco | Sí | 
+|  Austria | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Azerbaiyán | 19 USD | 99 USD | AZN pagados al banco | No | 
+|  Bahamas | 19 USD | 99 USD | Sin pago | No | 
 |  Baréin | 7 BHD | 38 BHD | BHD pagados al banco | No | 
 |  Bangladesh | 1468 BDT | 7600 BDT | BDT pagados al banco | No | 
-|  Barbados | 19USD | 99USD | No pago | No | 
-|  Belarús | 19USD | 99USD | USD pagados al banco | No | 
-|  Bélgica | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Belice | 19USD | 99USD | No pago | No | 
-|  Benín | 19USD | 99USD | XOF pagados al banco | No | 
-|  Bután | 19USD | 99USD | No pago | No | 
-|  Bolivia | 19USD | 99USD | USD pagados al banco | No | 
-|  Bosnia y Herzegovina | 19USD | 99USD | USD pagados al banco | No | 
-|  Botsuana | 19USD | 99USD | BWP pagados al banco | No | 
-|  Brasil | 46BRL | 160BRL | USD pagados al banco | No | 
-|  Brunéi | 19USD | 99USD | No pago | No | 
+|  Barbados | 19 USD | 99 USD | Sin pago | No | 
+|  Belarús | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Bélgica | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Belice | 19 USD | 99 USD | Sin pago | No | 
+|  Benín | 19 USD | 99 USD | XOF pagados al banco | No | 
+|  Bután | 19 USD | 99 USD | Sin pago | No | 
+|  Bolivia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Bosnia y Herzegovina | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Botsuana | 19 USD | 99 USD | BWP pagados al banco | No | 
+|  Brasil | 46 BRL | 160 BRL | USD pagados al banco | No | 
+|  Brunéi | 19 USD | 99 USD | Sin pago | No | 
 |  Bulgaria | 28 BGN | 160 BGN | BGN pagados al banco | No | 
-|  Burkina Faso | 19USD | 99USD | XOF pagados al banco | No | 
-|  Burundi | 19USD | 99USD | USD pagados al banco | No | 
-|  Cabo Verde | 19USD | 99USD | No pago | No | 
-|  Camboya | 19USD | 99USD | USD pagados al banco | No | 
-|  Camerún | 19USD | 99USD | XAF pagados al banco | No | 
-|  Canadá | 20CAD | 99CAD | CAD pagados al banco | Sí | 
-|  República Centroafricana | 19USD | 99USD | XAF pagados al banco | No | 
-|  Chad | 19USD | 99USD | XAF pagados al banco | No | 
-|  Chile | 9776CLP | 46000CLP | USD pagados al banco | No | 
-|  China | 116CNY | 600CNY | USD pagados al banco | Sí* | 
-|  Colombia | 36543COP | 180000COP | USD pagados al banco | No | 
-|  Comoras | 19USD | 99USD | USD pagados al banco | No | 
-|  Congo | 19USD | 99USD | XAF pagados al banco | No | 
-|  Congo (RDC) | 19USD | 99USD | USD pagados al banco | No | 
+|  Burkina Faso | 19 USD | 99 USD | XOF pagados al banco | No | 
+|  Burundi | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Cabo Verde | 19 USD | 99 USD | Sin pago | No | 
+|  Camboya | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Camerún | 19 USD | 99 USD | XAF pagados al banco | No | 
+|  Canadá | 20 CAD | 99 CAD | CAD pagados al banco | Sí | 
+|  República Centroafricana | 19 USD | 99 USD | XAF pagados al banco | No | 
+|  Chad | 19 USD | 99 USD | XAF pagados al banco | No | 
+|  Chile | 9776 CLP | 46 000 CLP | USD pagados al banco | No | 
+|  China | 116 CNY | 600 CNY | USD pagados al banco | Sí* | 
+|  Colombia | 36 543 COP | 180 000 COP | USD pagados al banco | No | 
+|  Comoras | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Congo | 19 USD | 99 USD | XAF pagados al banco | No | 
+|  Congo (RDC) | 19 USD | 99 USD | USD pagados al banco | No | 
 |  Costa Rica | 9578 CRC | 49725 CRC | CRC pagados al banco | No | 
-|  Côte d'Ivoire | 19USD | 99USD | XOF pagados al banco | No | 
+|  Côte d'Ivoire | 19 USD | 99 USD | XOF pagados al banco | No | 
 |  Croacia | 107 HRK | 500 HRK | HRK pagados al banco | No | 
-|  Chipre | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  República Checa | 365CZK | 1720CZK | CZK pagadas al banco | Sí | 
-|  Dinamarca | 106DKK | 530DKK | DKK pagadas al banco | Sí | 
-|  Yibuti | 19USD | 99USD | No pago | No | 
-|  Dominica | 19USD | 99USD | XCD pagados al banco | No | 
-|  República Dominicana | 19USD | 99USD | DOP pagados al banco | No | 
-|  Ecuador | 19USD | 99USD | USD pagados al banco | No | 
-|  Egipto | 133EGP | 600EGP | EGP pagadas al banco | No | 
-|  El Salvador | 19USD | 99USD | USD pagados al banco | No | 
-|  Guinea Ecuatorial | 19USD | 99USD | No pago | No | 
-|  Eritrea | 19USD | 99USD | USD pagados al banco | No | 
-|  Estonia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Etiopía | 19USD | 99USD | ETB pagados al banco | No | 
-|  Islas Feroe | 19USD | 99USD | No pago | No | 
-|  Fiyi | 19USD | 99USD | FJD pagados al banco | No | 
-|  Finlandia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Francia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Gabón | 19USD | 99USD | No pago | No | 
-|  Gambia | 19USD | 99USD | No pago | No | 
-|  Georgia | 19USD | 99USD | USD pagados al banco | No | 
-|  Alemania | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Ghana | 19USD | 99USD | GHS pagados al banco | No | 
-|  Grecia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Groenlandia | 19USD | 99USD | No pago | No | 
-|  Granada | 19USD | 99USD | No pago | No | 
+|  Chipre | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  República Checa | 365 CZK | 1720 CZK | CZK pagadas al banco | Sí | 
+|  Dinamarca | 106 DKK | 530 DKK | DKK pagadas al banco | Sí | 
+|  Yibuti | 19 USD | 99 USD | Sin pago | No | 
+|  Dominica | 19 USD | 99 USD | XCD pagados al banco | No | 
+|  República Dominicana | 19 USD | 99 USD | DOP pagados al banco | No | 
+|  Ecuador | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Egipto | 133 EGP | 600 EGP | EGP pagadas al banco | No | 
+|  El Salvador | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Guinea Ecuatorial | 19 USD | 99 USD | Sin pago | No | 
+|  Eritrea | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Estonia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Etiopía | 19 USD | 99 USD | ETB pagados al banco | No | 
+|  Islas Feroe | 19 USD | 99 USD | Sin pago | No | 
+|  Fiyi | 19 USD | 99 USD | FJD pagados al banco | No | 
+|  Finlandia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Francia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Gabón | 19 USD | 99 USD | Sin pago | No | 
+|  Gambia | 19 USD | 99 USD | Sin pago | No | 
+|  Georgia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Alemania | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Ghana | 19 USD | 99 USD | GHS pagados al banco | No | 
+|  Grecia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Groenlandia | 19 USD | 99 USD | Sin pago | No | 
+|  Granada | 19 USD | 99 USD | Sin pago | No | 
 |  Guatemala | 145 GTQ | 750 GTQ | GTQ pagados al banco | No | 
-|  Guinea | 19USD | 99USD | USD pagados al banco | No | 
-|  Guinea-Bisáu | 19USD | 99USD | No pago | No | 
-|  Guyana | 19USD | 99USD | No pago | No | 
-|  Haití | 19USD | 99USD | USD pagados al banco | No | 
-|  Honduras | 19USD | 99USD | USD pagados al banco | No | 
-|  RAE de Hong Kong | 147HKD | 760HKD | HKD pagados al banco | Sí | 
-|  Hungría | 4237HUF | 18800HUF | HUF pagados al banco | Sí* | 
-|  Islandia | 2319ISK | 11929ISK | USD pagados al banco | No | 
-|  India | 1201INR | 4500INR | INR pagadas al banco | No | 
+|  Guinea | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Guinea-Bisáu | 19 USD | 99 USD | Sin pago | No | 
+|  Guyana | 19 USD | 99 USD | Sin pago | No | 
+|  Haití | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Honduras | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Región Administrativa Especial de Hong Kong | 147 HKD | 760 HKD | HKD pagados al banco | Sí | 
+|  Hungría | 4237 HUF | 18 800 HUF | HUF pagados al banco | Sí* | 
+|  Islandia | 2319 ISK | 11929 ISK | USD pagados al banco | No | 
+|  India | 1201 INR | 4500 INR | INR pagadas al banco | No | 
 |  Indonesia | 203015 IDR | 1000000 IDR | IDR pagados al banco | No | 
 |  Irak | 22078 IQD | 120000 IQD | USD pagados al banco | No | 
-|  Irlanda | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Israel | 67ILS | 350ILS | ILS pagados al banco | Sí | 
-|  Italia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Jamaica | 19USD | 99USD | JMD pagados al banco | No | 
-|  Japón | 1847JPY | 9800JPY | JPY pagados al banco | Sí | 
+|  Irlanda | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Israel | 67 ILS | 350 ILS | ILS pagados al banco | Sí | 
+|  Italia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Jamaica | 19 USD | 99 USD | JMD pagados al banco | No | 
+|  Japón | 1847 JPY | 9800 JPY | JPY pagados al banco | Sí | 
 |  Jordania | 13 JOD | 70 JOD | JOD pagados al banco | No | 
 |  Kazajistán | 2897 KZT | 15038 KZT | KZT pagados al banco | No | 
 |  Kenia | 1900 KES | 9999 KES | KES pagados al banco | No | 
-|  Kiribati | 19USD | 99USD | No pago | No | 
-|  Corea del Sur | 21216KRW | 108000KRW | USD pagados al banco | No | 
+|  Kiribati | 19 USD | 99 USD | Sin pago | No | 
+|  Corea del Sur | 21216 KRW | 108000 KRW | USD pagados al banco | No | 
 |  Kuwait | 5 KWD | 28 KWD | KWD pagados al banco | No | 
-|  Kirguistán | 19USD | 99USD | No pago | No | 
-|  Laos | 19USD | 99USD | USD pagados al banco | No | 
-|  Letonia | 14EUR | 75EUR | EUR pagados al banco | No | 
+|  Kirguistán | 19 USD | 99 USD | Sin pago | No | 
+|  Laos | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Letonia | 14 EUR | 75 EUR | EUR pagados al banco | No | 
 |  Líbano | 28690 LBP | 149686 LBP | LBP pagadas al banco | No | 
-|  Lesoto | 19USD | 99USD | No pago | No | 
-|  Liberia | 19USD | 99USD | USD pagados al banco | No | 
-|  Libia | 19USD | 99USD | No pago | No | 
+|  Lesoto | 19 USD | 99 USD | Sin pago | No | 
+|  Liberia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Libia | 19 USD | 99 USD | Sin pago | No | 
 |  Liechtenstein | 17 CHF | 93 CHF | CHF pagados al banco | Sí | 
-|  Lituania | 14EUR | 75EUR | EUR pagados al banco | No | 
-|  Luxemburgo | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  RAE de Macao | 19USD | 99USD | No pago | No | 
-|  ERY de Macedonia | 19USD | 99USD | USD pagados al banco | No | 
-|  Madagascar | 19USD | 99USD | USD pagados al banco | No | 
-|  Malawi | 19USD | 99USD | MWK pagados al banco | No | 
+|  Lituania | 14 EUR | 75 EUR | EUR pagados al banco | No | 
+|  Luxemburgo | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  RAE de Macao | 19 USD | 99 USD | Sin pago | No | 
+|  ERY de Macedonia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Madagascar | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Malawi | 19 USD | 99 USD | MWK pagados al banco | No | 
 |  Malasia | 62 MYR | 300 MYR | USD pagados al banco | No | 
-|  Maldivas | 19USD | 99USD | No pago | No | 
-|  Malí | 19USD | 99USD | XOF pagados al banco | No | 
-|  Malta | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Islas Marshall | 19USD | 99USD | No pago | No | 
-|  Mauritania | 5681 MRO | 30046 MRO | No pago | No | 
-|  Mauricio | 19USD | 99USD | MUR pagados al banco | No | 
+|  Maldivas | 19 USD | 99 USD | Sin pago | No | 
+|  Malí | 19 USD | 99 USD | XOF pagados al banco | No | 
+|  Malta | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Islas Marshall | 19 USD | 99 USD | Sin pago | No | 
+|  Mauritania | 5681 MRO | 30046 MRO | Sin pago | No | 
+|  Mauricio | 19 USD | 99 USD | MUR pagados al banco | No | 
 |  México | 247 MXN | 1140 MXN | MXN pagados al banco | Sí | 
-|  Micronesia | 19USD | 99USD | No pago | No | 
-|  Mónaco | 14EUR | 75EUR | EUR pagados al banco | No | 
-|  Mongolia | 19USD | 99USD | USD pagados al banco | No | 
-|  Montenegro | 14EUR | 75EUR | EUR pagados al banco | No | 
+|  Micronesia | 19 USD | 99 USD | Sin pago | No | 
+|  Mónaco | 14 EUR | 75 EUR | EUR pagados al banco | No | 
+|  Mongolia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Montenegro | 14 EUR | 75 EUR | EUR pagados al banco | No | 
 |  Marruecos | 158 MAD | 800 MAD | MAD pagados al banco | No | 
-|  Mozambique | 19USD | 99USD | USD pagados al banco | No | 
-|  Myanmar | 19USD | 99USD | No pago | No | 
-|  Namibia | 19USD | 99USD | No pago | No | 
-|  Nauru | 19USD | 99USD | No pago | No | 
-|  Nepal | 19USD | 99USD | USD pagados al banco | No | 
-|  Países Bajos | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Nueva Zelanda | 24NZD | 140NZD | NZD pagados al banco | Sí | 
-|  Nicaragua | 19USD | 99USD | USD pagados al banco | No | 
-|  Níger | 19USD | 99USD | XOF pagados al banco | No | 
+|  Mozambique | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Myanmar | 19 USD | 99 USD | Sin pago | No | 
+|  Namibia | 19 USD | 99 USD | Sin pago | No | 
+|  Nauru | 19 USD | 99 USD | Sin pago | No | 
+|  Nepal | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Países Bajos | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Nueva Zelanda | 24 NZD | 140 NZD | NZD pagados al banco | Sí | 
+|  Nicaragua | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Níger | 19 USD | 99 USD | XOF pagados al banco | No | 
 |  Nigeria | 3700 NGN | 19500 NGN | NGN pagados al banco | No | 
-|  Noruega | 113NOK | 580NOK | NOK pagadas al banco | Sí | 
+|  Noruega | 113 NOK | 580 NOK | NOK pagadas al banco | Sí | 
 |  Omán | 7 OMR | 40 OMR | OMR pagados al banco | No | 
 |  Pakistán | 1959 PKR | 9000 PKR | PKR pagados al banco | No | 
-|  Palaos | 19USD | 99USD | No pago | No | 
-|  Panamá | 19USD | 99USD | USD pagados al banco | No | 
-|  Papúa Nueva Guinea | 19USD | 99USD | No pago | No | 
-|  Paraguay | 19USD | 99USD | USD pagados al banco | No | 
+|  Palaos | 19 USD | 99 USD | Sin pago | No | 
+|  Panamá | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Papúa Nueva Guinea | 19 USD | 99 USD | Sin pago | No | 
+|  Paraguay | 19 USD | 99 USD | USD pagados al banco | No | 
 |  Perú | 54 PEN | 280 PEN | PEN pagados al banco | No | 
 |  Filipinas | 832 PHP | 4400 PHP | PHP pagados al banco | Sí | 
-|  Polonia | 59PLN | 280PLN | PLN pagados al banco | Sí | 
-|  Portugal | 14EUR | 75EUR | EUR pagados al banco | Sí | 
+|  Polonia | 59 PLN | 280 PLN | PLN pagados al banco | Sí | 
+|  Portugal | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
 |  Catar | 69 QAR | 360 QAR | QAR pagados al banco | No | 
-|  Rumania | 14EUR | 75EUR | USD pagados al banco | No | 
-|  Rusia | 626RUB | 3000RUB | RUB pagados al banco | Sí* | 
-|  Ruanda | 19USD | 99USD | RWF pagados al banco | No | 
-|  San Cristóbal y Nieves | 19USD | 99USD | No pago | No | 
-|  Santa Lucía | 19USD | 99USD | No pago | No | 
-|  San Vicente y las Granadinas | 19USD | 99USD | XCD pagados al banco | No | 
-|  Samoa | 19USD | 99USD | No pago | No | 
-|  San Marino |  14EUR | 75EUR | No pago | No | 
-|  Santo Tomé y Príncipe | 19USD | 99USD | No pago | No | 
+|  Rumania | 14 EUR | 75 EUR | USD pagados al banco | No | 
+|  Rusia | 626 RUB | 3000 RUB | RUB pagados al banco | Sí* | 
+|  Ruanda | 19 USD | 99 USD | RWF pagados al banco | No | 
+|  San Cristóbal y Nieves | 19 USD | 99 USD | Sin pago | No | 
+|  Santa Lucía | 19 USD | 99 USD | Sin pago | No | 
+|  San Vicente y las Granadinas | 19 USD | 99 USD | XCD pagados al banco | No | 
+|  Samoa | 19 USD | 99 USD | Sin pago | No | 
+|  San Marino |  14 EUR | 75 EUR | Sin pago | No | 
+|  Santo Tomé y Príncipe | 19 USD | 99 USD | Sin pago | No | 
 |  Arabia Saudí | 71 SAR | 380 SAR | SAR pagados al banco | No | 
-|  Senegal | 19USD | 99USD | XOF pagados al banco | No | 
+|  Senegal | 19 USD | 99 USD | XOF pagados al banco | No | 
 |  Serbia | 1619 RSD | 7000 RSD | USD pagados al banco | No | 
-|  Seychelles | 19USD | 99USD | No pago | No | 
-|  Sierra Leona | 19USD | 99USD | USD pagados al banco | No | 
-|  Singapur | 24SGD | 120SGD | SGD pagados al banco | Sí | 
-|  Eslovaquia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Eslovenia | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Islas Salomón | 19USD | 99USD | No pago | No | 
-|  Somalia | 19USD | 99USD | USD pagados al banco | No | 
-|  Sudáfrica | 193ZAR | 700ZAR | ZAR pagados al banco | No | 
-|  España | 14EUR | 75EUR | EUR pagados al banco | Sí | 
-|  Sri Lanka | 19USD | 99USD | LKR pagados al banco | No | 
-|  Surinam | 19USD | 99USD | No pago | No | 
-|  Suazilandia | 19USD | 99USD | No pago | No | 
-|  Suecia | 123SEK | 700SEK | SEK pagadas al banco | Sí | 
+|  Seychelles | 19 USD | 99 USD | Sin pago | No | 
+|  Sierra Leona | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Singapur | 24 SGD | 120 SGD | SGD pagados al banco | Sí | 
+|  Eslovaquia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Eslovenia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Islas Salomón | 19 USD | 99 USD | Sin pago | No | 
+|  Somalia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Sudáfrica | 193 ZAR | 700 ZAR | ZAR pagados al banco | No | 
+|  España | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
+|  Sri Lanka | 19 USD | 99 USD | LKR pagados al banco | No | 
+|  Surinam | 19 USD | 99 USD | Sin pago | No | 
+|  Suazilandia | 19 USD | 99 USD | Sin pago | No | 
+|  Suecia | 123 SEK | 700 SEK | SEK pagadas al banco | Sí | 
 |  Suiza | 17 CHF | 90 CHF | CHF pagados al banco | Sí | 
-|  Taiwán | 568TWD | 2840TWD | USD pagados al banco | Sí | 
-|  Tayikistán | 19USD | 99USD | USD pagados al banco | No | 
-|  Tanzania | 19USD | 99USD | TZS pagados al banco | No | 
-|  Tailandia | 601THB | 3000THB | THB pagados al banco | Sí | 
-|  Timor-Leste | 19USD | 99USD | USD pagados al banco | No | 
-|  Togo | 19USD | 99USD | XOF pagados al banco | No | 
-|  Tonga | 19USD | 99USD | TOP pagados al banco | No | 
+|  Taiwán | 568 TWD | 2840 TWD | USD pagados al banco | Sí | 
+|  Tayikistán | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Tanzania | 19 USD | 99 USD | TZS pagados al banco | No | 
+|  Tailandia | 601 THB | 3000 THB | THB pagados al banco | Sí | 
+|  Timor-Leste | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Togo | 19 USD | 99 USD | XOF pagados al banco | No | 
+|  Tonga | 19 USD | 99 USD | TOP pagados al banco | No | 
 |  Trinidad y Tobago | 122 TTD | 636 TTD | TTD pagados al banco | No | 
 |  Túnez | 31 TND | 140 TND | TND pagados al banco | No | 
-|  Turquía | 37TRY | 160TRY | TRY pagadas al banco | No | 
-|  Turkmenistán | 19USD | 99USD | USD pagados al banco | No | 
-|  Tuvalu | 19USD | 99USD | No pago | No | 
-|  Uganda | 19USD | 99USD | UGX pagados al banco | No | 
+|  Turquía | 37 TRY | 160 TRY | TRY pagadas al banco | No | 
+|  Turkmenistán | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Tuvalu | 19 USD | 99 USD | Sin pago | No | 
+|  Uganda | 19 USD | 99 USD | UGX pagados al banco | No | 
 |  Ucrania | 156 UAH | 800 UAH | USD pagados al banco | No | 
-|  Emiratos Árabes Unidos | 19USD | 99USD | EUR pagados al banco | Sí | 
-|  Reino Unido | 12GBP | 65GBP | GBP pagadas al banco | Sí | 
-|  Estados Unidos | 19USD | 99USD | USD pagados al banco | Sí | 
-|  Uruguay | 19USD | 99USD | UYU pagados al banco | No | 
-|  Uzbekistán | 19USD | 99USD | USD pagados al banco | No | 
-|  Vanuatu | 19USD | 99USD | No pago | No | 
+|  Emiratos Árabes Unidos | 19 USD | 99 USD | EUR pagados al banco | Sí | 
+|  Reino Unido | 12 GBP | 65 GBP | GBP pagadas al banco | Sí | 
+|  Estados Unidos | 19 USD | 99 USD | USD pagados al banco | Sí | 
+|  Uruguay | 19 USD | 99 USD | UYU pagados al banco | No | 
+|  Uzbekistán | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Vanuatu | 19 USD | 99 USD | Sin pago | No | 
 |  Venezuela | 119 VEF | 420 VEF | USD pagados al banco | No | 
 |  Vietnam | 400425 VND | 2000000 VND | VND pagados al banco | No | 
-|  Yemen | 4080 YER | 21245 YER | No pago | No | 
-|  Zambia | 19USD | 99USD | ZMK pagados al banco | No | 
-|  Zimbabue | 19USD | 99USD | USD pagados al banco | No |
+|  Yemen | 4080 YER | 21245 YER | Sin pago | No | 
+|  Zambia | 19 USD | 99 USD | ZMK pagados al banco | No | 
+|  Zimbabue | 19 USD | 99 USD | USD pagados al banco | No |
 
-\* PayPal puede usarse como método de pago para cuentas de pago en este mercado, pero no puede usarse para pagar la tarifa de registro de la cuenta de desarrollador.
+\* PayPal puede usarse como un método de pago para las cuentas de pago en este mercado, pero no se puede usar para pagar la tarifa de registro de la cuenta de desarrollador.
 

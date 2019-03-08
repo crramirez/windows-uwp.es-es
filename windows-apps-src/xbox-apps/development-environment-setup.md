@@ -3,15 +3,15 @@ title: Configurar el entorno de desarrollo de UWP en Xbox
 description: Pasos para configurar y probar el entorno de desarrollo de UWP en Xbox.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046009"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603880"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar el entorno de desarrollo de UWP en Xbox
 
@@ -23,11 +23,11 @@ En este artículo se describen los pasos para configurar y probar el entorno de 
 
 ## <a name="visual-studio-setup"></a>Instalación de Visual Studio
 
-1. Instalar Visual Studio 2017, Visual Studio 2015 Update 3 o la versión más reciente de Visual Studio. Para obtener más información, consulta [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads). Te recomendamos que uses la última versión de Visual Studio para que pueda recibir las actualizaciones más recientes para los desarrolladores y la seguridad.
+1. Instale la versión más reciente de Visual Studio, Visual Studio 2015 Update 3 o Visual Studio 2017. Para obtener más información, consulta [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads). Se recomienda usar la versión más reciente de Visual Studio para que puedan recibir las actualizaciones más recientes para desarrolladores y seguridad.
 
 2. Si estás instalando Visual Studio 2017, debes asegurarte de que eliges la carga de trabajo **Desarrollo de la Plataforma universal de Windows**. Si eres un desarrollador de C++, asegúrate de que también seleccionas la casilla de verificación **Herramientas de la Plataforma universal de Windows de C++** en el panel **Resumen** de la derecha, bajo **Desarrollo de la Plataforma universal de Windows**. No es parte de la instalación predeterminada.
 
-    ![Instalar Visual Studio2017](images/development-environment-setup-1.png)
+    ![Instalar Visual Studio 2017](images/development-environment-setup-1.png)
 
     Si instalas Visual Studio 2015 Update 3, asegúrate de seleccionar la casilla **Herramientas de desarrollo de aplicaciones universales de Windows**.
 
@@ -46,7 +46,7 @@ Antes de poder implementar aplicaciones desde el PC de desarrollo, debes habilit
 
 Para poder implementar una aplicación en tu Xbox One, un usuario debe haber iniciado sesión en la consola. Puedes usar tu cuenta de Xbox Live existente o crear una cuenta nueva para la consola en el modo de desarrollador. 
 
-## <a name="create-your-first-app"></a>Crear tu primera aplicación
+## <a name="create-your-first-app"></a>Crea tu primera aplicación
 
 1. Asegúrate de que el equipo de desarrollo esté en la misma red local que la consola Xbox One de destino. Por lo general, esto significa que deben usar el mismo enrutador y estar en la misma subred. Se recomienda una conexión de red con cable.
 
@@ -112,7 +112,7 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
   
     ![Cuadro de diálogo Emparejar con Visual Studio](images/development-environment-setup-5.png)
 
-    c. Introduce el PIN en el cuadro de diálogo **Emparejar con Visual Studio**. El PIN siguiente es solo un ejemplo; el tuyo será diferente.
+    c. Introduce el PIN en el cuadro de diálogo **Pair with Visual Studio**. El PIN siguiente es solo un ejemplo; el tuyo será diferente.
 
     ![Cuadro de diálogo Emparejar con PIN de Visual Studio](images/devhome_pin.png)
 
@@ -120,8 +120,8 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
 
 Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox correctamente.
 
-## <a name="see-also"></a>Consulta también
-- [Activación del modo de desarrollador de Xbox One](devkit-activation.md)  
+## <a name="see-also"></a>Consulte también
+- [Activación de un modo de programador Xbox](devkit-activation.md)  
 - [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads)  
 - [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md) 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e49a9dcaa2638065946f01797cbea084a1432a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602310"
 ---
 # <a name="devices"></a>Dispositivos
 
@@ -58,7 +58,7 @@ Dado que el comportamiento de los dispositivos de referencia y de software propo
 <td align="left"><p>Los tipos de dispositivos de Direct3D incluyen dispositivos de la capa de abstracción de hardware (HAL) y el rasterizador de referencia.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="windowed-vs--full-screen-mode.md">Modo de ventana frente a modo de pantalla completa</a></p></td>
+<td align="left"><p><a href="windowed-vs--full-screen-mode.md">División de particiones frente a modo de pantalla completa</a></p></td>
 <td align="left"><p>Las aplicaciones de Direct3D pueden ejecutarse en cualquiera de los dos modos de pantalla: completa o de ventana. En el <em>modo de ventana</em>, la aplicación comparte el espacio de pantalla del escritorio disponible con todas las aplicaciones en ejecución. En el <em>modo de pantalla completa</em>, la ventana en la que la aplicación se ejecuta abarca todo el escritorio, ocultando todas las aplicaciones en ejecución (incluido el entorno de desarrollo).</p></td>
 </tr>
 <tr class="odd">
@@ -70,7 +70,7 @@ Dado que el comportamiento de los dispositivos de referencia y de software propo
 <td align="left"><p>Una cadena de intercambio es una colección de búferes que se usan para mostrar fotogramas al usuario. Cada vez que una aplicación presenta un nuevo marco para mostrar, el primer búfer de la cadena de intercambio toma el lugar del búfer que se muestra. Este proceso se denomina <em>intercambio</em> o <em>inversión</em>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="introduction-to-rasterization-rules.md">Introducción a las reglas de rasterización</a></p></td>
+<td align="left"><p><a href="introduction-to-rasterization-rules.md">Introducción a las reglas de la rasterización</a></p></td>
 <td align="left"><p>A menudo, los puntos especificados para los vértices no coinciden con precisión con los píxeles en la pantalla. Cuando esto ocurre, Direct3D aplica reglas de rasterización de triángulo para decidir qué píxeles se aplican a un triángulo determinado.</p></td>
 </tr>
 </tbody>

@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 18703a75747e09436e7938e1229dda09cd457fa5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946732"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589850"
 ---
-# <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Muestreo de punto más cercano
+# <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Más próximo al punto de muestreo
 
 
-Las aplicaciones no tienen que usar el filtrado de textura. Direct3D puede establecerse para que calcule la dirección de los elementos de textura, que a menudo no evalúa como enteros, y copia el color del elemento de textura con la dirección del número entero más cercano. Este proceso se denomina *muestreo de punto más cercano*. El muestreo de punto más cercano puede ser una forma rápida y eficiente de procesar texturas si el tamaño de la textura es similar al tamaño de la imagen del primitivo en la pantalla. De lo contrario, se debe ampliar o minimizar la textura. El resultado de no hacer coincidir los tamaños de textura con el tamaño de la imagen del primitivo puede ser una imagen cortada, que no coincide o borrosa.
+Las aplicaciones no tienen que usar el filtrado de textura. Direct3D puede establecerse para que calcule la dirección de elementos de textura, que a menudo no se evalúa como enteros, y para que copie el color del elemento de textura con la dirección de entero más próxima. Este proceso se denomina *muestreo de punto más cercano*. El muestreo de punto más cercano puede ser una forma rápida y eficiente de procesar texturas si el tamaño de la textura es similar al tamaño de la imagen del primitivo en la pantalla. De lo contrario, se debe ampliar o minimizar la textura. El resultado de no hacer coincidir los tamaños de textura con el tamaño de la imagen del primitivo puede ser una imagen cortada, que no coincide o borrosa.
 
 Usa el muestreo de punto más cercano con cuidado: a veces, puede causar artefactos gráficos cuando se muestrea una textura que está en el límite entre dos elementos de textura. Este límite es la posición a lo largo de la textura (u o v) en la que el elemento de textura de muestra cambia de un elemento de textura al siguiente. Cuando se usa el muestreo de punto, el sistema elige un elemento de textura de muestra u otro y el resultado puede cambiar repentinamente de un elemento de textura al siguiente si se cruzan los límites. Este efecto puede aparecer como artefactos gráficos no deseados en la textura mostrada. Cuando se usa el filtrado lineal, el elemento de textura resultante se calcula a partir de ambos elementos de textura admitidos y los combina sin problemas porque el índice de texturas se mueve a través del límite.
 
@@ -27,13 +27,13 @@ En la mayoría de los casos, las aplicaciones reciben los mejores resultados por
 
 ![ilustración de un cuadro de seis secciones con líneas horizontales discontinuas en los dos cuadrados superiores de la derecha](images/ptrtfct.png)
 
-Los dos cuadrados de la esquina superior derecha del grupo aparecen diferentes que los que tienen al lado, con desplazamientos en diagonal. Para evitar estos artefactos gráficos, debes estar familiarizado con las reglas de muestreo de texturas de Direct3D para el filtrado de punto más cercano. Direct3D asigna una coordenada de textura de punto flotante que va desde \[0,0, 1,0\] (0,0 a 1,0, ambos incluidos) a un valor de espacio de elemento de textura entero que va desde \[- 0,5, n - 0,5\], donde n es el número de elementos de textura de una dimensión determinada en la textura. El índice de textura resultante se redondea al entero más próximo. Esta asignación puede introducir imprecisiones de muestreo en los límites de los elementos de textura.
+Los dos cuadrados de la esquina superior derecha del grupo aparecen diferentes que los que tienen al lado, con desplazamientos en diagonal. Para evitar estos artefactos gráficos, debes estar familiarizado con las reglas de muestreo de texturas de Direct3D para el filtrado de punto más cercano. Direct3D asigna una coordenada de textura de punto flotante comprendido entre \[0.0, 1.0\] (0,0 a 1,0, ambos inclusive) a un valor de espacio de textura entero comprendido entre \[ - 0,5, n - 0,5\], donde n es el número de elementos de textura en un determinado dimensión de la textura. El índice de textura resultante se redondea al entero más próximo. Esta asignación puede introducir imprecisiones de muestreo en los límites de los elementos de textura.
 
 Por ejemplo, simplemente, supongamos que tenemos una aplicación que representa polígonos con el modo de direccionamiento de texturas de ajuste. Con la asignación que usa Direct3D, el índice de texturas u se asigna como se muestra en el siguiente diagrama para una textura con un ancho de 4 elementos de textura.
 
 ![diagrama de coordenadas de textura 0,0 y 1,0 en el límite entre elementos de textura](images/ptsmpprb.png)
 
-Las coordenadas de textura, 0,0 y 1,0 en esta ilustración, están exactamente en el límite entre elementos de textura. Con el método que usa Direct3D para asignar valores, las coordenadas de la textura están comprendidas entre \[- 0,5, 4 - 0,5\], donde 4 es el ancho de la textura. En este caso, el elemento de textura de muestreo es el elemento de textura 0 para un índice de texturas de 1,0. Sin embargo, si la coordenada de textura solo es ligeramente menor que 1,0, el elemento de textura de muestreo sería el elemento de textura n en lugar del 0.
+Las coordenadas de textura, 0,0 y 1,0 en esta ilustración, están exactamente en el límite entre elementos de textura. Mediante el método por el que se asigna a los valores de Direct3D, la textura coordina el intervalo comprendido entre \[ - 0,5, 4 - 0,5\], donde 4 representa el ancho de la textura. En este caso, el elemento de textura de muestreo es el elemento de textura 0 para un índice de texturas de 1,0. Sin embargo, si la coordenada de textura solo es ligeramente menor que 1,0, el elemento de textura de muestreo sería el elemento de textura n en lugar del 0.
 
 La implicación que tiene esto es que ampliar una textura pequeña con coordenadas de textura de exactamente 0,0 y 1,0 con filtrado de punto más cercano en un triángulo alineado al espacio de pantalla causa píxeles para los que se hace un muestreo del mapa de texturas en el límite entre los elementos de textura. Cualquier imprecisión en el cálculo de coordenadas de texturas, aunque sea pequeño, causa artefactos a lo largo de las áreas de la imagen representada que corresponden a los bordes de los elementos de textura del mapa de texturas.
 
@@ -46,7 +46,7 @@ El mejor enfoque es usar el filtrado de punto más cercano solo cuando sea neces
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Filtrado de texturas](texture-filtering.md)
+[Filtrado de textura](texture-filtering.md)
 
  
 

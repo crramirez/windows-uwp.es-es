@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ac2a625b3769377ed6c8dddce3ca25177dee5f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608390"
 ---
 # <a name="credential-locker"></a>Caja de seguridad de credenciales
 
@@ -124,7 +124,7 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## <a name="best-practices"></a>Procedimientos recomendados
+## <a name="best-practices"></a>Procedimiento recomendado
 
 
 Usa la caja de seguridad de credenciales solo para contraseñas y no para blobs de datos más grandes.

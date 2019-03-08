@@ -1,27 +1,27 @@
 ---
-title: ¿Qué es una aplicación para Plataforma universal de Windows (UWP)?
+title: ¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?
 description: Obtén más información sobre las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos que ejecuten Windows 10.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 ms.date: 05/07/2018
 ms.topic: article
-keywords: windows 10, uwp, universal
+keywords: Windows 10, uwp, universal
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a43cdd5c16e4ab7ec254c263df75c182ce3faba
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618180"
 ---
-# <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para Plataforma universal de Windows (UWP)?
+# <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?
 
-![Aplicaciones de Windows para la plataforma universales ejecutan en una variedad de dispositivos, el soporte de interfaz de usuario adaptable, entrada de usuario intuitiva, una tienda, el centro de partners y servicios en la nube](images/universalapps-overview.png)
+![Aplicaciones de la plataforma de Windows universales ejecutan en una variedad de dispositivos, admiten la interfaz de usuario adaptable, proporcionados por el usuario natural, un almacén, centro de partners y servicios en la nube](images/universalapps-overview.png)
 
 Una aplicación para UWP es:
 
-- Segura: Las aplicaciones para UWP declaran cuáles son los recursos y datos de dispositivos a los que acceden. El usuario debe autorizar ese acceso.
+- Seguro: Las aplicaciones para UWP declaran qué recursos de dispositivo y acceso a datos. El usuario debe autorizar ese acceso.
 - Pueden usar una API común en todos los dispositivos que usan Windows 10.
-- Pueden usar funcionalidades específicas de dispositivo y adaptar la interfaz de usuario a las PPP, resoluciones y tamaños de pantalla de diferentes dispositivos.
+- Puede usar funcionalidades específicas del dispositivo y adaptar la interfaz de usuario para los tamaños de pantalla de otro dispositivo, resoluciones y PPP.
 - Disponible desde Microsoft Store en todos los dispositivos (o solo aquellos que especifiques) que se ejecutan en Windows 10. Microsoft Store proporciona varias maneras de ganar dinero en tu aplicación.
 - Puede instalarse y desinstalarse sin riesgo para la máquina ni incurrir en "equipo rot".
 - Atractiva: usa iconos dinámicos, notificaciones de inserción y actividades del usuario que interactúan con la escala de tiempo de Windows y la función Continuar donde lo dejé de Cortana para atraer a los usuarios.
@@ -35,9 +35,9 @@ La aplicaciones para UWP declaran en el manifiesto las capacidades del dispositi
 
 ## <a name="a-common-api-surface-across-all-devices"></a>Una superficie de API común para todos los dispositivos
 
-Windows 10 presenta la plataforma Universal de Windows (UWP), que proporciona una plataforma común de aplicaciones en todos los dispositivos que se ejecuta Windows 10. Las API principales de la UWP son las mismas en todos los dispositivos Windows. Si la aplicación solo usa las API principales, se ejecutará en cualquier dispositivo Windows 10, con independencia de si están destinados a un equipo de escritorio, Xbox, unos auriculares de realidad mixta y así sucesivamente.
+Windows 10 presenta la plataforma Universal de Windows (UWP), que proporciona una plataforma de aplicación comunes en todos los dispositivos que ejecutan Windows 10. Las API principales de la UWP son las mismas en todos los dispositivos Windows. Si la aplicación solo usa las API centrales, ejecutará en cualquier dispositivo Windows 10 con independencia de que el destino sea un PC de escritorio, Xbox, auriculares de realidad mixta y así sucesivamente.
 
-Una aplicación para UWP escrita en C++ /WinRT or C++ /CX tiene acceso a las API de Win32 que forman parte de la UWP. Todos los dispositivos de Windows 10 se implementan estas API de Win32.
+Una aplicación para UWP escrita en C++ /WinRT or C++ /CX tiene acceso a las API de Win32 que forman parte de la UWP. Estas API de Win32 son implementadas por todos los dispositivos Windows 10.
 
 ## <a name="extension-sdks-expose-the-unique-capabilities-of-specific-device-types"></a>Las SDK de extensión exponen las funcionalidades exclusivas de tipos específicos de dispositivo
 
@@ -66,11 +66,11 @@ Algunos aspectos de la interfaz de usuario de la aplicación se adaptan automát
 
 ## <a name="theres-one-store-for-all-devices"></a>Hay una tienda para todos los dispositivos
 
-Una tienda de aplicaciones unificada hace que la aplicación disponible en dispositivos de Windows 10 como PC, tabletas, Xbox, HoloLens, Surface Hub y dispositivos de Internet de las cosas (IoT). Puedes enviar la aplicación a la tienda y hacer que esté disponible en todos los tipos de dispositivos, o solo en los que elijas. Puedes enviar y administrar todas tus aplicaciones para los dispositivos Windows desde un solo lugar. ¿Tienes una aplicación de escritorio en C++ y quieres modernizarla con características de UWP y venderla en Microsoft Store? Tampoco hay problema.
+Una tienda de aplicaciones unificada hace que la aplicación esté disponible en dispositivos Windows 10, como PC, Tablet PC, Xbox, HoloLens, Surface Hub y los dispositivos de Internet de las cosas (IoT). Puedes enviar la aplicación a la tienda y hacer que esté disponible en todos los tipos de dispositivos, o solo en los que elijas. Puedes enviar y administrar todas tus aplicaciones para los dispositivos de Windows en un solo lugar. ¿Tienes una aplicación de escritorio en C++ y quieres modernizarla con características de UWP y venderla en Microsoft Store? Tampoco hay problema.
 
 Las aplicaciones de UWP se integran con [Application Insights](https://azure.microsoft.com/services/application-insights/) para los análisis y la telemetría detallada, una herramienta esencial para entender a tus usuarios y mejorar las aplicaciones.
 
-### <a name="monetize-your-app"></a>Monetizar la aplicación
+### <a name="monetize-your-app"></a>Rentabiliza tu aplicación
 
 Puedes elegir cómo monetizar tu aplicación. Existen muchas maneras de ganar dinero con tus aplicaciones. Lo único que necesitas hacer es elegir la que mejor se adapte a ti, por ejemplo:
 
@@ -97,7 +97,7 @@ Hay varias formas de mantener a los usuarios interesados con tu aplicación para
 - Tu aplicación puede usar la voz y dispositivos Bluetooth de bajo consumo para que los usuarios interactúen con el mundo que los rodea.
 - Integra Cortana para agregar funcionalidad de comando de voz a tu aplicación.
 
-##  <a name="use-a-language-you-already-know"></a>Usa un lenguaje que ya conozcas
+##  <a name="use-a-language-you-already-know"></a>Usar un lenguaje que ya conoces
 
 Las aplicaciones para UWP usan Windows Runtime, la API nativa provista por el sistema operativo. Esta API se implementa en C++ y es compatible con C#, Visual Basic, C++ y JavaScript. Algunas de las opciones para escribir aplicaciones para UWP son:
 
@@ -107,7 +107,7 @@ Las aplicaciones para UWP usan Windows Runtime, la API nativa provista por el si
 
 ## <a name="links-to-help-you-get-going"></a>Vínculos que te ayudan a empezar
 
-### <a name="get-set-up"></a>Prepárate
+### <a name="get-set-up"></a>Preparación
 
 Consulta [Prepárate](get-set-up.md) para descargar las herramientas que necesitas a fin de empezar a crear aplicaciones y [escribe tu primera aplicación](your-first-app.md).
 
@@ -130,9 +130,9 @@ Además de la interacción en diferentes dispositivos, [planea la aplicación](h
 - Aprende a [agregar Cortana a tu aplicación](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382) para que tu aplicación pueda responder a comandos de voz.
 - Incluye [notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/mt187203) y [compras desde la aplicación](https://msdn.microsoft.com/library/windows/apps/mt219684) en tu planificación. Estas características deberían funcionar en todos los dispositivos.
 
-### <a name="submit-your-app-to-the-store"></a>Enviar la aplicación a la tienda
+### <a name="submit-your-app-to-the-store"></a>Envía tu aplicación a la Tienda.
 
-[El centro de partners](https://partner.microsoft.com/dashboard) te permite administrar y enviar todas las aplicaciones para dispositivos de Windows en un solo lugar. Ver [juegos y publicar aplicaciones de Windows](../publish/index.md) para aprender a enviar tus aplicaciones para publicarlas en Microsoft Store.
+[Centro de partners](https://partner.microsoft.com/dashboard) le permite administrar y enviar todas las aplicaciones para dispositivos de Windows en un solo lugar. Consulte [Windows publicar aplicaciones y juegos](../publish/index.md) para aprender a enviar sus aplicaciones para la publicación en la Microsoft Store.
 
 Las nuevas funciones simplifican los procesos y te dan más control. También encontrarás [informes analíticos](https://msdn.microsoft.com/library/windows/apps/mt148522) detallados combinados con [detalles de pago](https://msdn.microsoft.com/library/windows/apps/dn986925), formas de [promocionar la aplicación y atraer a los clientes](https://msdn.microsoft.com/library/windows/apps/mt148526) y mucho más.
 
@@ -145,14 +145,14 @@ Para obtener más material de introducción, consulta [An Introduction to Buildi
 - Para obtener la lista completa de las API de Win32 disponibles para las aplicaciones para UWP, consulta [Conjuntos de API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/desktop/mt186421) y [DLLs para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/desktop/mt186422).
 - Consulta [aplicaciones universales de Windows en. NET](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net) para obtener información general sobre la escritura de aplicaciones para UWP. NET.
 - Para obtener una lista de tipos de .NET que puedes usar en una aplicación para UWP, consulta [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/mt185501.aspx)
-- [Compilar aplicaciones con .NET nativo](https://docs.microsoft.com/dotnet/framework/net-native/)
+- [Compilar aplicaciones con .NET Native](https://docs.microsoft.com/dotnet/framework/net-native/)
 - Aprende a agregar experiencias modernas para los usuarios de Windows 10 a tu aplicación de escritorio existente y distribuirla en Microsoft Store con el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop).
 
 ## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Cómo se relaciona con la plataforma Universal de Windows a Windows Runtime APIs
-Si vas a crear una aplicación de plataforma Universal de Windows (UWP), a continuación, puedes obtener una gran cantidad de kilometraje y comodidad fuera de los términos "universales de Windows (UWP)" y "Windows Runtime (WinRT)" se trata como sinónimos más o menos. Pero *es* posible buscar en el interior de la tecnología y determinar solo cuál es la diferencia entre las ideas. Si tienes curiosidad sobre esto, esta última sección es para TI.
+Si va a compilar una aplicación de plataforma Universal de Windows (UWP), a continuación, puede obtener un lote de kilometraje y comodidad de tratamiento de los términos "plataforma de Windows Universal (UWP)" y "Windows en tiempo de ejecución (WinRT)" como sinónimos más o menos. Pero *es* posible buscar en segundo plano de la tecnología y determinar justo lo que es la diferencia entre estas ideas. Si tiene curiosidad acerca de eso, esta última sección es para usted.
 
-El tiempo de ejecución de Windows y WinRT APIs, son una evolución de las API de Windows. Originalmente, Windows se programan a través de plana, API de Win32 de estilo C. Para los usuarios se agregaron COM APIs ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) que se va a obtener un ejemplo destacado). Los lenguajes administrados,. NET, WPF y Windows Forms poner su propios forma de escribir aplicaciones de Windows y su propio tipo de tecnología de API. El tiempo de ejecución de Windows es, en realidad, la siguiente etapa de COM. En la capa de interfaz binaria (ABI) de la aplicación real, sus raíces de COM se vuelven visibles. Pero el tiempo de ejecución de Windows se diseñó para ser puede llamar desde una gran variedad de lenguajes de programación. Y que se puede llamar de manera que es muy natural a cada uno de esos idiomas. Para ello, el acceso al tiempo de ejecución de Windows estará disponible a través de lo que se conoce como proyecciones de lenguaje. Hay una proyección de lenguaje de Windows Runtime en C#, en Visual Basic, en C++ estándar, en JavaScript y así sucesivamente. Además, una vez empaquetada correctamente (consulta el [Puente de escritorio](/windows/uwp/porting/desktop-to-uwp-root)), puedes llamar a WinRT APIs desde una aplicación compilada en uno de un intervalo excelente de modelos de aplicación: WPF, WinForms, .NET y Win32.
+El tiempo de ejecución de Windows y WinRT APIs, son una evolución de las API de Windows. Originalmente, programó plana, las API de Win32 de estilo C a través de Windows. A los que se agregaron COM APIs ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) que se va a obtener un ejemplo destacado). Puede poner su propia manera de escribir aplicaciones de Windows y su propio tipo de la tecnología de la API de Windows Forms, WPF, .NET y lenguajes administrados. Es el tiempo de ejecución de Windows, en segundo plano, la siguiente fase de COM. En la capa de interfaz binaria (ABI) de una aplicación real, sus raíces en COM se hacen visibles. Pero el tiempo de ejecución de Windows se diseñó para que pueda llamar desde una gran gama de diferentes lenguajes de programación. Y que se puede llamar de manera que es muy natural a cada uno de esos lenguajes. Con este fin, el acceso al tiempo de ejecución de Windows está disponible a través de lo que se conoce como las proyecciones de lenguaje. Hay una proyección de lenguaje en tiempo de ejecución de Windows en C#, en Visual Basic, en el estándar de C++, en JavaScript y así sucesivamente. Además, una vez empaquetarse adecuadamente (consulte [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root)), puede llamar a WinRT APIs desde una aplicación compilada en uno de una gran gama de modelos de aplicación: Win32,. NET, formularios Windows Forms y WPF.
 
-Y, por supuesto, puedes llamar WinRT APIs desde tu aplicación para UWP. UWP es un modelo de aplicaciones que se basa en el tiempo de ejecución de Windows. Técnicamente, el modelo de aplicaciones para UWP se basa en [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication), aunque ese detalle que se ocultará, en función de su elección del lenguaje de programación. Como se explica en este tema, desde un punto de vista de la propuesta de valor, el UWP se presta a escribir un único código binario que, debe elegir, se puede publicarse en la Microsoft Store y ejecutar en cualquiera de una gran variedad de factores de forma de dispositivo. El alcance del dispositivo de la aplicación para UWP depende el subconjunto de las API de UWP es limitar la aplicación para llamar a o llamar condicionalmente.
+Y, por supuesto, puede llamar a WinRT APIs desde su aplicación para UWP. UWP es un modelo de aplicación basado en el tiempo de ejecución de Windows. Técnicamente, el modelo de aplicación para UWP se basa en [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication), aunque pueden estar oculto que detalles del usuario, según la elección del lenguaje de programación. Tal y como se ha explicado en este tema, desde un punto de vista de la propuesta de valor, la UWP se presta a la escritura de un archivo binario único que puede, debería elegir, se publican en la Microsoft Store y ejecutar en cualquiera de una gran gama de factores de forma. La cobertura de los dispositivos de su aplicación para UWP depende el subconjunto de las API de UWP que limite la aplicación que realiza la llamada, o llamar condicionalmente.
 
-Afortunadamente, esta sección ha tenido éxito en la descripción de la diferencia entre la tecnología subyacente de Windows en tiempo de ejecución APIs y el mecanismo y el valor de empresas de la plataforma Universal de Windows.
+Espero que esta sección ha tenido éxito en la descripción de la diferencia entre la tecnología subyacente de Windows en tiempo de ejecución APIs y el mecanismo y valor empresarial de la plataforma Universal de Windows.

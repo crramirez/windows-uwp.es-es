@@ -1,5 +1,5 @@
 ---
-Description: The following article describes all of the properties and elements within the toast content XML payload.
+Description: En el siguiente artículo se describen todas las propiedades y elementos dentro de la carga XML de contenido del sistema.
 title: Esquema XML de contenido del sistema
 ms.assetid: AF49EFAC-447E-44C3-93C3-CCBEDCF07D22
 label: Toast content XML schema
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b9535cd8c2dd82b0c209919080df9a88bb80ccc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934394"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612780"
 ---
 # <a name="toast-content-xml-schema"></a>Esquema XML de contenido del sistema
 
@@ -43,7 +43,7 @@ En los siguientes esquemas XML, el sufijo "?" significa que el atributo es opcio
 </toast>
 ```
 
-**Atributos de &lt;toast&gt;**
+**Los atributos &lt;notificaciones del sistema&gt;**
 
 launch?
 
@@ -75,7 +75,7 @@ scenario?
 -   No es necesario a menos que en el escenario aparezca una alarma, un recordatorio o una llamada entrante.
 -   No usar solo para mantener la notificación de forma persistente en la pantalla.
 
-**Atributos de &lt;visual&gt;**
+**Los atributos &lt;visual&gt;**
 
 lang?
 
@@ -89,11 +89,11 @@ addImageQuery?
 
 -   Consulta [este artículo de esquema de elemento](https://msdn.microsoft.com/library/windows/apps/br230847) para obtener detalles sobre este atributo opcional.
 
-**Atributos de &lt;binding&gt;**
+**Los atributos &lt;enlace&gt;**
 
 template?
 
--   \[Important\] template? = "ToastGeneric"
+-   \[¿Importante\] plantilla? = "ToastGeneric"
 -   Si estás usando cualquiera de las nuevas características de notificaciones interactivas y adaptables, asegúrate de empezar a usar la plantilla "ToastGeneric" en lugar de la plantilla heredada.
 -   Es posible que las plantillas heredadas funcionen con las nuevas acciones ahora, pero este no es su uso previsto y no podemos garantizar que sigan funcionando.
 
@@ -109,13 +109,13 @@ addImageQuery?
 
 -   Consulta [este artículo de esquema de elemento](https://msdn.microsoft.com/library/windows/apps/br230847) para obtener detalles sobre este atributo opcional.
 
-**Atributos de &lt;text&gt;**
+**Los atributos &lt;texto&gt;**
 
 lang?
 
 -   Consulta [este artículo de esquema de elemento](https://msdn.microsoft.com/library/windows/apps/br230847) para obtener detalles sobre este atributo opcional.
 
-**Atributos de &lt;image&gt;**
+**Los atributos &lt;imagen&gt;**
 
 src
 
@@ -144,7 +144,7 @@ hint-crop?
 -   "none" es el valor predeterminado, que significa no recortar.
 -   "circle" recorta la imagen en una forma circular. Úsalo para las imágenes de perfil de los contactos, imágenes de personas, etc.
 
-**Atributos de &lt;audio&gt;**
+**Los atributos &lt;audio&gt;**
 
 src?
 
@@ -177,7 +177,7 @@ En los siguientes esquemas XML, el sufijo "?" significa que el atributo es opcio
 </toast>
 ```
 
-**Atributos de &lt;input&gt;**
+**Los atributos &lt;entrada&gt;**
 
 id
 
@@ -210,7 +210,7 @@ defaultInput?
 -   Si el tipo de entrada es "text", se tratará como una entrada de cadena.
 -   Si el tipo de entrada es "selection", se espera que sea el identificador de una de las opciones disponibles dentro de los elementos de esta entrada.
 
-**Atributos de &lt;selection&gt;**
+**Los atributos &lt;selección&gt;**
 
 id
 
@@ -220,7 +220,7 @@ content
 
 -   Este atributo es obligatorio. Proporciona la cadena que se mostrará en este elemento de la selección.
 
-**Atributos de &lt;action&gt;**
+**Los atributos &lt;acción&gt;**
 
 content
 
@@ -255,7 +255,7 @@ hint-inputId
 
 El sistema puede controlar las acciones para posponer y descartar notificaciones si no quieres que la aplicación controle el aplazamiento o la reprogramación de notificaciones como una tarea en segundo plano. Las acciones controladas por el sistema se pueden combinar (o especificarse individualmente), pero no se recomienda implementar una acción para posponer sin una acción para descartar.
 
-Combinación de comandos del sistema: SnoozeAndDismiss
+Cuadro combinado de los comandos del sistema: SnoozeAndDismiss
 
 ```
 <toast>

@@ -1,6 +1,6 @@
 ---
 title: Vectores normales de caras y vértices
-description: Cada cara de una malla tiene un vector normal a la unidad. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
+description: Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
 keywords:
 - Vectores normales de caras y vértices
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2347efc5d68abd53442f52ecabdc060393ee561b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636560"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Vectores normales de caras y vértices
 
 
-Cada cara de una malla tiene un vector normal a la unidad. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
+Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
 
-## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vector normal de unidad perpendicular de una cara anterior.
+## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vector normal de unidad perpendicular por una cara frontal
 
 
 Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo. El vector normal de cara apunta hacia el lado frontal de la cara. En Direct3D, solo está visible la parte frontal de una cara. Una cara anterior es una en que los vértices se definen en el orden de las agujas del reloj.
@@ -28,12 +28,12 @@ En la siguiente ilustración se muestra un vector normal para una cara anterior:
 
 ![un vector normal para una cara anterior](images/nrmlvect.png)
 
-## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Selección de caras posteriores
+## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Se enfrenta a atrás de caras traseras
 
 
 Cualquier cara que no es anterior es posterior. Direct3D no siempre representa caras posteriores; se dice que las caras posteriores deben seleccionarse. La selección de cara posterior significa eliminar las caras posteriores de la representación. Puedes cambiar el modo de selección para representar caras posteriores si quieres. Consulta [Culling State (Estado de selección)](https://msdn.microsoft.com/library/windows/desktop/bb204882) para obtener más información.
 
-## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Vectores normales de unidad de vértice
+## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Normales de la unidad de vértice
 
 
 Direct3D usa los vectores normales de unidad de vértice para la iluminación, los efectos de texturas y el sombreado Gouraud.
@@ -53,7 +53,7 @@ En la siguiente ilustración se muestra una superficie plana formada por dos tri
 
 ![superficie plana formada por dos triángulos con vectores normales de vértice](images/flatvert.png)
 
-## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Sombreado suave en un objeto no plano
+## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Sombreado suave en un objeto que no sean planas
 
 
 En lugar de que el objeto sea plano, lo más probable es que el objeto se componga de franjas de triángulos y los triángulos no son coplanos. Una forma sencilla de lograr sombreado suave entre todos los triángulos de la franja consiste en calcular primero el vector normal de superficie para cada cara poligonal con la que el vértice esté asociado. El vector normal de vértice puede establecerse para que cree un ángulo igual con cada superficie normal. Sin embargo, es posible que este método no sea lo suficientemente eficaz para los primitivos complejos.
@@ -70,7 +70,7 @@ En la siguiente ilustración se muestran dos superficies (S1 y S2) con un vector
 
 ![dos superficies (S1 y S2) con un vector normal de vértice que se inclina hacia una cara](images/gvert2.png)
 
-## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Contornos afilados
+## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Bordes nítidos
 
 
 Puedes usar el sombreado Gouraud para mostrar algunos objetos en una escena en 3D con contornos afilados. Para ello, duplica los vectores normales de vértice en cualquier intersección de caras donde se requiera un contorno afilado.
@@ -88,7 +88,7 @@ Otra alternativa es cambiar a sombreado plano al representar objetos con contorn
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas y geometry](coordinate-systems-and-geometry.md)
 
  
 

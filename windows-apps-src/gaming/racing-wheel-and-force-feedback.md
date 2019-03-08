@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, racing wheel, volante, force feedback, fuerza de respuesta
 ms.localizationpriority: medium
 ms.openlocfilehash: ab7c5bc15b149d5f469b7fc5e6b6285986569b22
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608840"
 ---
-# <a name="racing-wheel-and-force-feedback"></a>Volante y fuerza de respuesta
+# <a name="racing-wheel-and-force-feedback"></a>Volante y retroalimentación de fuerza
 
-Esta página describen los conceptos básicos de programación para Xbox One los volantes con [Windows.Gaming.Input.RacingWheel] [ racingwheel] y las API relacionadas para la plataforma Universal de Windows (UWP).
+Esta página describen los conceptos básicos de programación para Xbox One racing ruedas mediante [Windows.Gaming.Input.RacingWheel] [ racingwheel] y las API relacionadas para la plataforma Universal de Windows (UWP).
 
 En esta página encontrarás información sobre:
 
@@ -33,7 +33,7 @@ Los volantes de Xbox One se ofrecen en distintas gamas de precios, por lo genera
 
 ### <a name="device-capabilities"></a>Funcionalidades del dispositivo
 
-Distintos volantes para Xbox One ofrecen diferentes conjuntos de funcionalidades del dispositivo opcionales y distintos niveles de compatibilidad para esas funcionalidades; Este nivel de variación entre un solo tipo de dispositivo de entrada es único entre los dispositivos compatibles con la API [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) . Además, la mayoría de los dispositivos disponibles admiten como mínimo algunas de las funcionalidades opcionales u otras variaciones. Por este motivo, es importante determinar las funcionalidades de cada volante conectado por separado y admitir la variación completa de funcionalidades que tenga sentido para tu juego.
+Ruedas de carreras de Xbox One diferentes ofrecen diferentes conjuntos de funcionalidades opcionales del dispositivo y distintos niveles de compatibilidad para esas capacidades; Este nivel de la variación entre un único tipo de dispositivo de entrada es único entre los dispositivos compatibles con el [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) API. Además, la mayoría de los dispositivos disponibles admiten como mínimo algunas de las funcionalidades opcionales u otras variaciones. Por este motivo, es importante determinar las funcionalidades de cada volante conectado por separado y admitir la variación completa de funcionalidades que tenga sentido para tu juego.
 
 Para obtener más información, consulta [Determinar las funcionalidades del volante](#determining-racing-wheel-capabilities).
 
@@ -66,18 +66,18 @@ Además, algunos volantes pueden asignar algún [conjunto opcional](ui-navigatio
 
 | Comando de navegación | Entrada del volante    |
 | ------------------:| --------------------- |
-|            Re Pág | _varía_              |
-|          Av Pág | _varía_              |
-|          Página a la izquierda | _varía_              |
-|         Página a la derecha | _varía_              |
-|          Desplazar hacia arriba | _varía_              |
-|        Desplazar hacia abajo | _varía_              |
-|        Desplazar a la izquierda | _varía_              |
-|       Desplazar a la derecha | _varía_              |
+|            Re Pág | _varies_              |
+|          Av Pág | _varies_              |
+|          Página a la izquierda | _varies_              |
+|         Página a la derecha | _varies_              |
+|          Desplazar hacia arriba | _varies_              |
+|        Desplazar hacia abajo | _varies_              |
+|        Desplazar a la izquierda | _varies_              |
+|       Desplazar a la derecha | _varies_              |
 |          Contexto 1 | Botón X (_habitualmente_) |
 |          Contexto 2 | Botón Y (_habitualmente_) |
-|          Contexto 3 | _varía_              |
-|          Contexto 4 | _varía_              |
+|          Contexto 3 | _varies_              |
+|          Contexto 4 | _varies_              |
 
 ## <a name="detect-and-track-racing-wheels"></a>Detectar y realizar un seguimiento de los volantes
 
@@ -260,7 +260,7 @@ if(racingwheel->HasClutch)
 
 ### <a name="reading-the-pattern-shifter"></a>Lectura de la palanca de cambios
 
-La palanca de cambios es un control opcional que proporciona una lectura digital entre -1 y [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear), que se representa como un valor entero con signo. Un valor de -1 o 0 corresponde a la _marcha atrás_ y el _punto muerto_, respectivamente; los valores más altos positivos corresponden a velocidades superiores hasta **MaxPatternShifterGear**, inclusive. El valor de la palanca de cambios se lee en la propiedad [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) de la estructura de [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) .
+La palanca de cambios es un control opcional que proporciona una lectura digital entre -1 y [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear), que se representa como un valor entero con signo. Un valor de -1 o 0 corresponde a la _marcha atrás_ y el _punto muerto_, respectivamente; los valores más altos positivos corresponden a velocidades superiores hasta **MaxPatternShifterGear**, inclusive. El valor de la palanca de patrón se lee desde el [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) propiedad de la [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) struct.
 
 ```cpp
 if (racingwheel->HasPatternShifter)
@@ -278,7 +278,7 @@ La [muestra InputInterfacingUWP _(GitHub)_](https://github.com/Microsoft/Xbox-AT
 
 ## <a name="force-feedback-overview"></a>Información general sobre la fuerza de respuesta
 
-Muchos volantes tienen funcionalidad de fuerza de respuesta para proporcionar una experiencia de conducción más envolvente y estimulante. Los volantes que admiten la fuerza de respuesta suelen estar equipados con un motor único que aplica fuerza al volante a lo largo de un solo eje: el eje de rotación del volante. Fuerza de respuesta se admite en aplicaciones de Windows 10 y Xbox One UWP [Windows.Gaming.Input.ForceFeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) del espacio de nombres.
+Muchos volantes tienen funcionalidad de fuerza de respuesta para proporcionar una experiencia de conducción más envolvente y estimulante. Los volantes que admiten la fuerza de respuesta suelen estar equipados con un motor único que aplica fuerza al volante a lo largo de un solo eje: el eje de rotación del volante. Fuerza de respuesta se admite en aplicaciones de Windows 10 y UWP de Xbox uno por la [Windows.Gaming.Input.ForceFeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) espacio de nombres.
 
 > [!NOTE]
 > Las API de fuerza de respuesta son capaces de admitir varios ejes de fuerza, pero ningún volante de Xbox One admite actualmente ningún eje de respuesta que no sea el de rotación del volante.
@@ -315,7 +315,7 @@ if (racingwheel->WheelMotor != nullptr)
 
 ### <a name="loading-force-feedback-effects"></a>Carga de los efectos de la fuerza de respuesta
 
-Los efectos de la fuerza de respuesta se cargan en el dispositivo de respuesta donde se "reproducen" de forma autónoma en el comando del juego. Se proporciona una serie de efectos básicos; se pueden crear efectos personalizados a través de una clase que implementa la interfaz [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) .
+Los efectos de la fuerza de respuesta se cargan en el dispositivo de respuesta donde se "reproducen" de forma autónoma en el comando del juego. Se proporciona una serie de efectos básicos; se pueden crear efectos personalizados a través de una clase que implementa el [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) interfaz.
 
 | Clase de efecto         | Descripción del efecto                                                                     |
 | -------------------- | -------------------------------------------------------------------------------------- |
@@ -369,11 +369,11 @@ else
 
 Por último, se puede habilitar, deshabilitar o restablecer de forma asincrónica todo el sistema de fuerza de respuesta en un volante concreto cuando sea necesario.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.uinavigationcontroller)
 * [Windows.Gaming.Input.IGameController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.igamecontroller)
-* [Prácticas de entrada para juegos](input-practices-for-games.md)
+* [Prácticas recomendadas de entrada para juegos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx

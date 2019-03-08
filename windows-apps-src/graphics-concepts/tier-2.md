@@ -1,6 +1,6 @@
 ---
 title: Nivel 2
-description: La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de mosaico estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en mosaicos asignados NULL trata el valor de muestra como cero.
+description: La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de icono estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en iconos asignados NULL tratan el valor de muestra como cero.
 ms.assetid: 111A28EA-661A-4D29-921A-F2E376A46DC5
 keywords:
 - Nivel 2
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9f9a69c0e30459929d1e31084ea88b3f7ebbd0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925369"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612890"
 ---
 # <a name="tier-2"></a>Nivel 2
 
 
-La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de mosaico estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en mosaicos asignados NULL tratan el valor de muestra como cero.
+La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de icono estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en iconos asignados NULL tratan el valor de muestra como cero.
 
-## <a name="span-idtier2generalsupportspanspan-idtier2generalsupportspanspan-idtier2generalsupportspantier-2-general-support"></a><span id="Tier_2_general_support"></span><span id="tier_2_general_support"></span><span id="TIER_2_GENERAL_SUPPORT"></span>Compatibilidad general del nivel 2
+## <a name="span-idtier2generalsupportspanspan-idtier2generalsupportspanspan-idtier2generalsupportspantier-2-general-support"></a><span id="Tier_2_general_support"></span><span id="tier_2_general_support"></span><span id="TIER_2_GENERAL_SUPPORT"></span>Compatibilidad general de nivel 2
 
 
 La compatibilidad del nivel 2 incluye lo siguiente.
@@ -30,14 +30,14 @@ La compatibilidad del nivel 2 incluye lo siguiente.
 
 Además, hay algunos problemas de compatibilidad específicos que se explican a continuación.
 
-## <a name="span-idnon-mappedtilesspanspan-idnon-mappedtilesspanspan-idnon-mappedtilesspannon-mapped-tiles"></a><span id="Non-mapped_tiles"></span><span id="non-mapped_tiles"></span><span id="NON-MAPPED_TILES"></span>Mosaicos sin asignar
+## <a name="span-idnon-mappedtilesspanspan-idnon-mappedtilesspanspan-idnon-mappedtilesspannon-mapped-tiles"></a><span id="Non-mapped_tiles"></span><span id="non-mapped_tiles"></span><span id="NON-MAPPED_TILES"></span>Iconos sin asignar
 
 
 Las lecturas desde mosaicos sin asignar devuelven 0 en todos los componentes del formato que no faltan y el valor predeterminado para los componentes que faltan.
 
 Las escrituras en mosaicos sin asignar no van a la memoria, pero es posible que acaben en memorias caché que lecturas posteriores en la misma dirección podrían detectar o no.
 
-## <a name="span-idtexturefilteringspanspan-idtexturefilteringspanspan-idtexturefilteringspantexture-filtering"></a><span id="Texture_filtering"></span><span id="texture_filtering"></span><span id="TEXTURE_FILTERING"></span>Filtrado de texturas
+## <a name="span-idtexturefilteringspanspan-idtexturefilteringspanspan-idtexturefilteringspantexture-filtering"></a><span id="Texture_filtering"></span><span id="texture_filtering"></span><span id="TEXTURE_FILTERING"></span>Filtrado de textura
 
 
 El filtrado de texturas con una superficie que incluya mosaicos **NULL** y no **NULL** contribuye 0 (con valores predeterminados para los componentes de formato que faltan) para los elementos de textura en mosaicos **NULL** en la operación general de filtro. Algún hardware anterior no cumple este requisito y devuelve 0 (con valores predeterminados para los componentes de formato que faltan) para el resultado del filtro completo si cualquier elemento de textura (con un ancho distinto de cero) se ubica en un mosaico **NULL**. No se permitirá a ningún otro hardware que pase por alto el requisito de incluir todos los elementos de textura (con ponderación distinta de cero) en la operación de filtro.
@@ -47,9 +47,9 @@ Los accesos a elementos de textura **NULL** hacen que la operación [**CheckAcce
 ## <a name="span-idalignmentconstraintsspanspan-idalignmentconstraintsspanspan-idalignmentconstraintsspanalignment-constraints"></a><span id="Alignment_constraints"></span><span id="alignment_constraints"></span><span id="ALIGNMENT_CONSTRAINTS"></span>Restricciones de alineación
 
 
-Restricciones de alineación para las formas de mosaico estándar: Los mapas MIP que llenen al menos un mosaico estándar en todas las dimensiones tienen garantizado usar la disposición en mosaico estándar, y el resto se considerarán empaquetados como una **unidad** en N mosaicos (N se notifica a la aplicación). La aplicación puede asignar los N mosaicos en ubicaciones arbitrariamente desligadas de un grupo de mosaicos, pero debes asignar todos o ninguno de los mosaicos empaquetados. El empaquetado MIP es un conjunto exclusivo de mosaicos empaquetado por segmento de matriz.
+Restricciones de alineación de icono estándar de formas: Mapas MIP que rellenar al menos un icono estándar en todas las dimensiones se garantiza que use el mosaico estándar, con el resto considera empaquetado como un **unidad** en mosaicos de N (N notificada a la aplicación). La aplicación puede asignar los N mosaicos en ubicaciones arbitrariamente desligadas de un grupo de mosaicos, pero debes asignar todos o ninguno de los mosaicos empaquetados. El empaquetado MIP es un conjunto exclusivo de mosaicos empaquetado por segmento de matriz.
 
-## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtrado de reducción mínimo/máximo
+## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtrado de reducción de Mín./máx.
 
 
 Se admite el filtrado de reducción mínimo/máximo. Consulta [Características de muestreo de texturas de recursos de streaming](streaming-resources-texture-sampling-features.md).
@@ -64,7 +64,7 @@ Las limitaciones respecto a cómo se puede acceder a los mosaicos cuando hay asi
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Niveles de características de los recursos de streaming](streaming-resources-features-tiers.md)
+[Los niveles de características de los recursos de streaming](streaming-resources-features-tiers.md)
 
  
 

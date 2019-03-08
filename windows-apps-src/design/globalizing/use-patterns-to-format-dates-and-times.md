@@ -1,21 +1,21 @@
 ---
-Description: Use the Windows.Globalization.DateTimeFormatting API with custom templates and patterns to display dates and times in exactly the format you wish.
+Description: Usar la API de Windows.Globalization.DateTimeFormatting con patrones y las plantillas personalizadas para mostrar fechas y horas en el formato exacto que desee.
 title: Usar patrones para dar formato a fechas y horas
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
 ms.date: 11/09/2017
 ms.topic: article
-keywords: windows 10, uwp, globalización, localizabilidad, localización
+keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 3849ccf0f129b65dc44f549a37859fe38ac71562
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048692"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615400"
 ---
-# <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
+# <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas y patrones para dar formato a fechas y horas
 
 Usa las clases en el espacio de nombres [**Windows.Globalization.DateTimeFormatting**](/uwp/api/windows.globalization.datetimeformatting?branch=live) con plantillas y patrones personalizados para mostrar fechas y horas en el formato exacto que quieras.
 
@@ -25,7 +25,7 @@ La clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 Sin embargo, cuando quieras tener aún más control sobre el orden y el formato de los componentes del objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que quieres mostrar, puedes pasar el patrón de formato al argumento *formatTemplate* del constructor. Un patrón de formato usa una sintaxis especial que te permite obtener los componentes individuales de un objeto **DateTime**&mdash;solo el nombre del mes o el valor del año, por ejemplo&mdash; para mostrarlos en el formato personalizado que desees. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota**esto es solo una introducción de patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Tenga en cuenta**  sólo una descripción general de los modelos de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>La diferencia entre los patrones y plantillas de formato
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 Esto crea un formateador basado en el valor de región e idioma del contexto actual. No importa el orden de los componentes de la plantilla de formato; el formateador los muestra en el orden correcto del idioma actual. Por ejemplo, muestra "January 1" para inglés (Estados Unidos), pero "1 janvier" para francés (Francia) y "1月1日" para japonés.
 
-Por otro lado, los patrones de formato son específicos de cada cultura. Vamos a obtener acceso al patrón de formato de nuestra plantilla de formato.
+Por otro lado, los patrones de formato son específicos de cada cultura. Vamos a tener acceso a modelo de formato para la plantilla de formato.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;
@@ -76,14 +76,14 @@ Además, un patrón que sea correcto hoy puede que no lo sea en el futuro. Los p
 
 Este es un resumen de la distinción entre los patrones y plantillas de formato.
 
-**Plantillas de formato, como “month day”**
+**Plantillas de formato, como "día del mes"**
 
 -   Es una representación abstracta de un formato de [DateTime](/uwp/api/windows.foundation.datetime?branch=live) que incluye valores para el mes, el día, etc. en algún orden.
 -   Garantiza que devuelve un formato estándar válido en todos los valores de idioma y región que admite Windows.
 -   Garantiza que te proporcionará una cadena con un formato apropiado según la referencia cultural para el idioma o la región específicos.
 -   No todas las combinaciones de componentes son válidas. Por ejemplo, "dayofweek day" no es válido.
 
-**Patrones de formato, como “{month.full} {day.integer}”**
+**Patrones de formato, como "{month.full} {day.integer}"**
 
 -   Es una cadena con un orden explícito que expresa el nombre del mes completo, seguido de un espacio y seguido de un número entero de día, en ese orden o del patrón de formato especificado.
 -   Es posible que no corresponda con un formato estándar válido para ningún par de idioma y región.
@@ -98,7 +98,7 @@ Supongamos que quieres mostrar el mes y el día actuales junto con la hora actua
 June 25 | 1:38 PM
 ```
 
-La parte de fecha corresponde a la plantilla de formato "month day" y la parte de hora corresponde a la plantilla de formato "hour minute". Por lo tanto, puedes crear los formateadores pertinentes para las plantillas de formato de tiempo y fecha pertinente y concatenar su salida conjunta con una cadena de formato localizable.
+La parte de fecha corresponde a la plantilla de formato "month day" y la parte de hora corresponde a la plantilla de formato "hour minute". Por lo tanto, puede construir a formateadores para las plantillas de formato de hora y fecha pertinente y, a continuación, concatenar sus resultados entre sí mediante una cadena de formato localizable.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;
@@ -113,7 +113,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` es un identificador de recursos que hace referencia a un recurso localizable del archivo de recursos (.resw). Para un idioma predeterminado de inglés (Estados Unidos), se debe establecer en un valor de "{0} | {1}"junto con un comentario que indique que"{0}"es la fecha y"{1}"es el tiempo. De este modo, los traductores pueden ajustar los elementos de formato según sea necesario. Por ejemplo, pueden cambiar el orden de los elementos si parece más natural en algunos idiomas o regiones tener la hora delante de la fecha. O pueden reemplazar "|" con algún otro carácter separador.
+`CustomDateTimeFormatString` es un identificador de recursos hace referencia a un recurso traducible en un archivo de recursos (.resw). Para un idioma predeterminado de inglés (Estados Unidos), se debe establecer en un valor de "{0} | {1}"junto con un comentario que indica que"{0}"es la fecha y"{1}"es el tiempo. De este modo, los traductores pueden ajustar los elementos de formato según sea necesario. Por ejemplo, pueden cambiar el orden de los elementos si parece más natural en algunos idiomas o regiones tener la hora delante de la fecha. O pueden reemplazar "|" con algún otro carácter separador.
 
 Otra forma de implementar este ejemplo es solicitar a los dos formateadores sus patrones de formato, concatenarlos juntos y generar a un tercer formateador a partir del patrón de formato resultante.
 
@@ -139,6 +139,6 @@ string output = patternFormatter.Format(System.DateTime.Now);
 * [DateTimeFormatter](/uwp/api/windows.globalization.datetimeformatting?branch=live)
 * [DateTime](/uwp/api/windows.foundation.datetime?branch=live)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplo de formato de fecha y hora](https://go.microsoft.com/fwlink/p/?LinkId=231618)
+* [Formato de ejemplo de fecha y hora](https://go.microsoft.com/fwlink/p/?LinkId=231618)

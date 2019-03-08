@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b5d245247d33f3c04839620615f2778ef7dfb59
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944681"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660030"
 ---
 # <a name="light-mapping-with-textures"></a>Mapas de luz con texturas
 
@@ -47,19 +47,19 @@ La información sobre cómo usar la combinación de texturas de Direct3D para re
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="monochrome-light-maps.md">Mapas de luz monocromática</a></p></td>
+<td align="left"><p><a href="monochrome-light-maps.md">Asigna la luz monocromático</a></p></td>
 <td align="left"><p>Los mapas de luz monocromática permiten que los adaptadores antiguos realicen la combinación de texturas multipase, cuando una placa aceleradora 3D anterior no admite la combinación de texturas con el valor alfa del píxel de destino.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="color-light-maps.md">Mapas de luz de colores</a></p></td>
+<td align="left"><p><a href="color-light-maps.md">Asignaciones de color claros</a></p></td>
 <td align="left"><p>Un mapa de luz de color usa los datos RGB del mapa de luz para su información de iluminación. Una aplicación normalmente representa escenas 3D de forma más realista si usa mapas de luces de colores.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="specular-light-maps.md">Mapas de luces especulares</a></p></td>
-<td align="left"><p>Cuando una fuente de luz los ilumina, los objetos brillantes que usan materiales muy reflectantes reciben resaltados especulares. A veces, puedes obtener resaltados más precisos si aplicas mapas de luces especulares a primitivos, en lugar de usar los resaltados especulares que produce el módulo de iluminación.</p></td>
+<td align="left"><p><a href="specular-light-maps.md">Asigna la luz especular</a></p></td>
+<td align="left"><p>Cuando una fuente de luz los ilumina, los objetos brillantes que usan materiales muy reflectantes reciben resaltados especulares. En ocasiones, es posible obtener resaltados más precisos al aplicar mapas de luces especulares primitivos, en lugar de usar los resaltados especulares creados por el módulo de iluminación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="diffuse-light-maps.md">Mapas de luces difusas</a></p></td>
+<td align="left"><p><a href="diffuse-light-maps.md">Asigna la luz difusa</a></p></td>
 <td align="left"><p>Las superficies mates tienen reflexión de la luz difusa. El brillo de la luz difusa depende de la distancia desde la fuente de luz y el ángulo entre la superficie normal y el vector de dirección de la fuente de luz. Los mapas de luces de textura pueden simular una iluminación difusa compleja.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ La información sobre cómo usar la combinación de texturas de Direct3D para re
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Texturas](textures.md)
+[Textures](textures.md)
 
  
 

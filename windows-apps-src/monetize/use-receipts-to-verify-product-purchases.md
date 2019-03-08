@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605730"
 ---
-# <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar compras de productos
+# <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar la compra de productos
 
 Cada transacción de Microsoft Store que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción. Este recibo proporciona información sobre el producto enumerado y el coste abonado por el cliente.
 
@@ -104,11 +104,11 @@ Esta sección describe los elementos y atributos de un recibo.
 
 El elemento raíz de este archivo es el elemento **Recibo** que contiene información sobre la aplicación y compras desde la aplicación. Este elemento contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  |  Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    No        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
 |  [ProductReceipt](#productreceipt)  |     No       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
-|  Signature  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://go.microsoft.com/fwlink/p/?linkid=251093). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
+|  Firma  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://go.microsoft.com/fwlink/p/?linkid=251093). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
 
 **Receipt** tiene los atributos siguientes.
 

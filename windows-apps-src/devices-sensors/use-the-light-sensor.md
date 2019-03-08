@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aeb60d67f0cdee77772797816e45fdd9bdc41b4
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114541"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623620"
 ---
 # <a name="use-the-light-sensor"></a>Usar el sensor de luz
 
@@ -21,7 +21,7 @@ ms.locfileid: "9114541"
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**LightSensor**](https://msdn.microsoft.com/library/windows/apps/BR225790)
 
-**Muestra**
+**Ejemplo**
 
 -   Para ver una implementación más completa, consulta la [muestra de sensor de luz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor).
 
@@ -31,7 +31,7 @@ El sensor de luz ambiental es uno de los distintos tipos de sensores ambientales
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
+Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un sensor de luz ambiental.
 
@@ -139,7 +139,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores del sensor de luz al cambiar la luz disponibles para el sensor o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -165,7 +165,7 @@ _lightsensor.ReadingChanged += new TypedEventHandler<LightSensor,
 LightSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Estos nuevos valores se escriben en un TextBlock que se encuentra en el código XAML del proyecto.
+Estos nuevos valores se escriben en un bloque de texto que se encuentra en el código XAML del proyecto.
 
 ```xml
 <TextBlock HorizontalAlignment="Left" Height="44" Margin="52,38,0,0" TextWrapping="Wrap" Text="LUX Reading" VerticalAlignment="Top" Width="150"/>

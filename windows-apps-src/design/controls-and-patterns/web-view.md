@@ -1,5 +1,5 @@
 ---
-Description: A web view control embeds a view into your app that renders web content using the Microsoft Edge rendering engine. Hyperlinks can also appear and function in a web view control.
+Description: Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 title: Vista web
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7af61b7d442fee7eff6399a7a5d143adb53fb560
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058556"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610640"
 ---
 # <a name="web-view"></a>Vista web
  
 
 Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 
-> **API importantes**: [Clase WebView](https://msdn.microsoft.com/library/windows/apps/br227702)
+> **API importantes**: [Clase de vista Web](https://msdn.microsoft.com/library/windows/apps/br227702)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -36,11 +36,11 @@ Usa un control de vista web para mostrar contenido HTML de formato enriquecido d
 - Para controlar la opacidad de la vista web, establece la propiedad [Opacity](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.opacity.aspx).
 - Para especificar un color que se usa como fondo de la página web cuando el contenido HTML no especifica uno, establece la propiedad [DefaultBackgroundColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultbackgroundcolor.aspx). 
 
-**Obtener el título de la página web**
+**Obtener el título de página web**
 
 Puedes obtener el título del documento HTML que se muestra actualmente en la vista web mediante la propiedad [DocumentTitle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.documenttitle.aspx). 
 
-**Eventos de entrada y orden de tabulación**
+**Eventos de entrada y el orden de tabulación**
 
 Aunque WebView no es una subclase de Control, recibe el foco de entrada de teclado y participa en la secuencia de tabulación. Proporciona un método [Focus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.focus.aspx) y eventos [GotFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.gotfocus.aspx) y [LostFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.lostfocus.aspx), pero carece de propiedades relacionadas con la tabulación. Su posición en la secuencia de tabulación es igual a su posición en el orden de documentos XAML. La secuencia de tabulación incluye todos los elementos de la vista web que pueden recibir el foco de entrada. 
 
@@ -48,7 +48,7 @@ Como se indica en la tabla Events de la página de la clase [WebView](https://ms
 
 ### <a name="navigating-to-content"></a>Navegar hasta el contenido
 
-La vista web proporciona varias API para navegación básica: [GoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goback.aspx), [GoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goforward.aspx), [Stop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.stop.aspx), [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.refresh.aspx), [CanGoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoback.aspx) y [CanGoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoforward.aspx). Puedes usarlos para agregar a tu aplicación la funcionalidad típica de exploración web. 
+Vista Web proporciona varias API para la navegación básica: [GoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goback.aspx), [GoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goforward.aspx), [detener](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.stop.aspx), [actualizar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.refresh.aspx), [CanGoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoback.aspx), y [CanGoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoforward.aspx). Puedes usarlos para agregar a tu aplicación la funcionalidad típica de exploración web. 
 
 Para establecer el contenido inicial de la vista web, debes establecer la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) en XAML. El analizador XAML convierte automáticamente la cadena en un [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.uri.aspx). 
 
@@ -91,7 +91,7 @@ Puedes cargar contenido local a través de un solucionador personalizado mediant
 
 ### <a name="responding-to-navigation-events"></a>Responder a eventos de navegación
 
-El control de vista web proporciona varios eventos que puedes usar para responder a estados de carga de contenido y navegación. Los eventos se producen en el siguiente orden para el contenido de vista web raíz: [NavigationStarting](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx), [ContentLoading](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx), [DOMContentLoaded](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [NavigationCompleted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
+El control de vista web proporciona varios eventos que puedes usar para responder a estados de carga de contenido y navegación. Los eventos se producen en el siguiente orden para el contenido de vista raíz web: [NavigationStarting](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx), [ContentLoading](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx), [DOMContentLoaded](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [NavigationCompleted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
 
 
 **NavigationStarting**: se produce antes de que la vista web se desplace al nuevo contenido. Puedes cancelar la navegación en un controlador para este evento estableciendo la propiedad WebViewNavigationStartingEventArgs.Cancel en true. 
@@ -258,7 +258,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 Los scripts en el contenido de la vista web pueden usar **window.external.notify** con un parámetro de cadena para enviar información a la aplicación. Para recibir estos mensajes, controla el evento [ScriptNotify](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx). 
 
-Para permitir que una página web externa active el evento **ScriptNotify** al llamar a window.external.notify, debes incluir el URI de la página en la sección **ApplicationContentUriRules** del manifiesto de la aplicación. (Puedes hacerlo en Microsoft Visual Studio en la pestaña URI de contenido del diseñador Package.appxmanifest). Los URI en esta lista deben usar HTTPS y pueden contener caracteres comodín en el subdominio (por ejemplo, `https://*.microsoft.com`), pero no en el dominio (por ejemplo, `https://*.com` y `https://*.*`). El requisito del manifiesto no se aplica al contenido que se origina en el paquete de la aplicación, que usa un URI ms-local-stream:// o se carga mediante [NavigateToString](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx). 
+Para permitir que una página web externa active el evento **ScriptNotify** al llamar a window.external.notify, debes incluir el URI de la página en la sección **ApplicationContentUriRules** del manifiesto de la aplicación. (Puede hacerlo en Microsoft Visual Studio en la pestaña de URI de contenido del diseñador Package.appxmanifest.) Los URI de esta lista debe usar HTTPS y puede contener caracteres comodín de subdominio (por ejemplo, `https://*.microsoft.com`), pero no pueden contener caracteres comodín de dominio (por ejemplo, `https://*.com` y `https://*.*`). El requisito del manifiesto no se aplica al contenido que se origina en el paquete de la aplicación, que usa un URI ms-local-stream:// o se carga mediante [NavigateToString](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx). 
 
 ### <a name="accessing-the-windows-runtime-in-a-web-view"></a>Obtener acceso a Windows Runtime en una vista web
 
@@ -323,7 +323,7 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Clase WebView](https://msdn.microsoft.com/library/windows/apps/br227702)
+* [Clase de vista Web](https://msdn.microsoft.com/library/windows/apps/br227702)
  
 
  

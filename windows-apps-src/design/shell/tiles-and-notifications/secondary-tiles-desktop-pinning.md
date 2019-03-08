@@ -1,5 +1,5 @@
 ---
-Description: Windows desktop applications can pin secondary tiles thanks to the Desktop Bridge!
+Description: Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al Puente de dispositivo de escritorio.
 title: Anclar iconos secundarios desde una aplicación de escritorio
 label: Pin secondary tiles from desktop application
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, puente de dispositivo de escritorio, iconos secundarios, anclar, anclado, inicio rápido, muestra de código, ejemplo, secondarytile, aplicación de escritorio, win32, winforms, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e713f37cd5e5fbf4b2771e76fb7e132b5976629
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924400"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609630"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde una aplicación de escritorio
 
@@ -22,7 +22,7 @@ Gracias al [Puente de dispositivo de escritorio](https://developer.microsoft.com
 ![Captura de pantalla de iconos secundarios](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Requiere la actualización de otoño Creators Update**: debes utilizar SDK 16299 y estar ejecutando la compilación 16299 o posterior para anclar iconos secundarios desde las aplicaciones de Puente de dispositivo de escritorio.
+> **Requiere Fall Creators Update**: Debe tener como destino 16299 del SDK y ejecutar compilación 16299 o posterior para anclar los iconos secundarios desde aplicaciones de puente de escritorio.
 
 Agregar un icono secundario desde tu aplicación WPF o WinForms es muy similar a una aplicación para UWP pura. La única diferencia es que debes especificar el identificador de la ventana principal (HWND). Esto es porque al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si quiere anclar el icono. Si la aplicación de escritorio no configura el objeto SecondaryTile con la ventana de propietario, Windows no sabe dónde se debe dibujar el cuadro de diálogo y se producirá un error en la operación.
 
@@ -90,15 +90,15 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>Enviar notificaciones de iconos
 
 > [!IMPORTANT]
-> **Requiere la actualización de abril de 2018, versión 17134.81 o posterior**: debes ejecutar la versión 17134.81 o posterior para enviar notificaciones de icono o distintivo a ventanas secundarias desde aplicaciones del Puente de dispositivo de escritorio. Antes de esta actualización de mantenimiento .81, se producía una excepción 0x80070490 *Elemento no encontrado* al enviar notificaciones de icono o distintivo a iconos secundarios desde las aplicaciones del Puente de dispositivo de escritorio.
+> **Requiere la versión 17134.81 o posterior de abril de 2018**: Debe ejecutar compilación 17134.81 o posterior para enviar notificaciones de icono o distintivo a los iconos secundarios desde aplicaciones de puente de escritorio. Antes de esta actualización de mantenimiento .81, se producía una excepción 0x80070490 *Elemento no encontrado* al enviar notificaciones de icono o distintivo a iconos secundarios desde las aplicaciones del Puente de dispositivo de escritorio.
 
 Enviar notificaciones de iconos o distintivos es los mismo que las aplicaciones para UWP. Consulta [Enviar una notificación de icono local](sending-a-local-tile-notification.md) para empezar.
 
 
 ## <a name="resources"></a>Recursos
 
-* [Muestra de código completo](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
-* [Información general sobre iconos secundarios](secondary-tiles.md)
-* [Anclar iconos secundarios (UWP)](secondary-tiles-pinning.md)
-* [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop)
-* [Muestras de código del Puente de dispositivo de escritorio](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+* [Ejemplo de código completo](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
+* [Información general de los iconos secundarios](secondary-tiles.md)
+* [Anclar los iconos secundarios (UWP)](secondary-tiles-pinning.md)
+* [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop)
+* [Ejemplos de código de puente de escritorio](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)

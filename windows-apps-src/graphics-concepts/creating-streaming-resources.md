@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ec96f6245969d32357563c44107f539fb9043aac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618250"
 ---
 # <a name="creating-streaming-resources"></a>Creación de recursos de streaming
 
@@ -43,32 +43,32 @@ No confundas este concepto con la noción de asignación de un recurso de Direct
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="mappings-are-into-a-tile-pool.md">Asignaciones a un grupo de mosaicos</a></p></td>
+<td align="left"><p><a href="mappings-are-into-a-tile-pool.md">Las asignaciones son en un grupo de icono</a></p></td>
 <td align="left"><p>Cuando un recurso se crea como un recurso de streaming, los mosaicos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de mosaicos. Un grupo de mosaicos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="streaming-resource-creation-parameters.md">Parámetros de creación de recursos de streaming</a></p></td>
+<td align="left"><p><a href="streaming-resource-creation-parameters.md">Los parámetros de creación de recursos de streaming</a></p></td>
 <td align="left"><p>Existen algunas limitaciones en el tipo de recursos de Direct3D que puedes crear como recurso de streaming.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="tile-pool-creation-parameters.md">Parámetros de creación de grupos de mosaicos</a></p></td>
+<td align="left"><p><a href="tile-pool-creation-parameters.md">Parámetros de creación del grupo de icono</a></p></td>
 <td align="left"><p>Usa los parámetros de esta sección para definir grupos de mosaicos al crear un búfer.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="streaming-resource-cross-process-and-device-sharing.md">Uso compartido de dispositivos y entre procesos de recursos de streaming</a></p></td>
+<td align="left"><p><a href="streaming-resource-cross-process-and-device-sharing.md">Streaming de recursos entre procesos y el uso compartido del dispositivo</a></p></td>
 <td align="left"><p>Los grupos de mosaicos pueden compartirse con otros procesos al igual que los recursos tradicionales. Los recursos de streaming que hacen referencia a grupos de mosaicos no pueden compartirse en diferentes dispositivos y procesos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="operations-available-on-streaming-resources.md">Operaciones disponibles en recursos de streaming</a></p></td>
+<td align="left"><p><a href="operations-available-on-streaming-resources.md">Operaciones disponibles en los recursos de streaming</a></p></td>
 <td align="left"><p>En esta sección se enumeran las operaciones que puedes realizar en recursos de streaming.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="operations-available-on-tile-pools.md">Operaciones disponibles en grupos de mosaicos</a></p></td>
+<td align="left"><p><a href="operations-available-on-tile-pools.md">Operaciones disponibles en los grupos de icono</a></p></td>
 <td align="left"><p>Las operaciones en grupos de mosaicos incluyen cambiar el tamaño de un grupo de mosaicos, ofrecer recursos (ceder memoria temporalmente al sistema para todo el grupo de mosaicos) y recuperar recursos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="how-a-streaming-resource-s-area-is-tiled.md">Cómo se organiza en mosaico el área de un recurso de streaming</a></p></td>
-<td align="left"><p>Cuando creas un recurso de streaming, las dimensiones, el tamaño del elemento de formato y el número de mapas MIP o los segmentos de matriz (si procede) determinan el número de mosaicos que son necesarios para cubrir toda la superficie.</p></td>
+<td align="left"><p><a href="how-a-streaming-resource-s-area-is-tiled.md">¿Cómo se coloca en mosaico de área de un recurso de transmisión por secuencias</a></p></td>
+<td align="left"><p>Cuando creas un recurso de streaming, las dimensiones, el tamaño del elemento de formato y el número de mapas MIP o los segmentos de matriz (si procede) determinan el número de iconos que son necesarios para cubrir toda la superficie.</p></td>
 </tr>
 </tbody>
 </table>

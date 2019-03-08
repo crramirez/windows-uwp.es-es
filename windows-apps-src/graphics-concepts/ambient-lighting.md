@@ -8,22 +8,22 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 558d7e655a54b22f1fc74591a718a7180d90366f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934444"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663650"
 ---
 # <a name="ambient-lighting"></a>Luz ambiente
 
 
-La luz de ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.
+La luz ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.
 
 La luz ambiente es el tipo de iluminación más rápido, pero obtienen los resultados menos realistas. Direct3D contiene una sola propiedad de luz ambiente global que puedes usar sin tener que crear ninguna luz. Como alternativa, puedes establecer cualquier objeto de luz para que proporcione luz ambiente.
 
 La luz ambiente para una escena se describe mediante la siguiente ecuación.
 
-Luz ambiente = Cₐ\*\[Gₐ + sum(Atten<sub>i</sub>\*Spot<sub>i</sub>\*L<sub>ai</sub>)\]
+Iluminación ambiente = Cₐ\*\[Gₐ + sum (Atten<sub></sub>\*terreno<sub></sub>\*L<sub>ai</sub>)\]
 
 Donde:
 
@@ -33,24 +33,24 @@ Donde:
 | Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Color ambiente global                                                                                              |
 | Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Atenuación lumínica de la luz i. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
 | Spot<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Factor del foco de luz de la luz i. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).  |
-| sum               | N/A           | N/C           | Suma de la luz ambiente                                                                                          |
+| sum               | N/D           | N/D           | Suma de la luz ambiente                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Color de luz ambiente de la luz i.                                                                              |
 
  
 
 El valor de Cₐ es:
 
--   vertex color1, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR1, y el primer color del vértice se suministra en la declaración del vértice.
--   vertex color2, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2, y el segundo color del vértice se suministra en la declaración del vértice.
+-   vértice color1, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR1 y el color del primer vértice se proporciona en la declaración de vértice.
+-   vértice color2, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2 y el segundo color de vértice se proporciona en la declaración de vértice.
 -   color ambiente del material.
 
-**Nota**  si se usan cualquiera de estas opciones de AMBIENTMATERIALSOURCE y no se proporciona el color del vértice, se usa el color ambiente del material.
+**Tenga en cuenta**    si se utilizan cualquiera de las opciones de AMBIENTMATERIALSOURCE y no se proporciona el color de vértice, a continuación, se usa el color ambiental de material.
 
  
 
 Para usar el color ambiente del material, usa SetMaterial como se muestra en el siguiente código de ejemplo.
 
-Gₐ es el color ambiente global. Se establece mediante SetRenderState(D3DRS\_AMBIENT). Hay un color ambiente global en una escena de Direct3D. Este parámetro no está asociado con un objeto de luz de Direct3D.
+Gₐ es el color ambiente global. Se establece mediante SetRenderState (D3DRS\_AMBIENT). Hay un color ambiente global en una escena de Direct3D. Este parámetro no está asociado con un objeto de luz de Direct3D.
 
 L<sub>ai</sub> es el color ambiente de la luz i en la escena. Cada luz en Direct3D tiene un conjunto de propiedades, una de ellas es el color ambiente. El término, sum(L<sub>ai</sub>) es la suma de todos los colores ambiente de la escena.
 
@@ -83,7 +83,7 @@ Para dar a los objetos un aspecto más realista, aplica iluminación especular o
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cálculos de iluminación](mathematics-of-lighting.md)
+[Matemáticas de iluminación](mathematics-of-lighting.md)
 
  
 

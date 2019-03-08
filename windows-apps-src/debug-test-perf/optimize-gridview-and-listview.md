@@ -4,19 +4,19 @@ title: Optimización de la interfaz de usuario de ListView y GridView
 description: Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f8ddbdd1e8079e4b5bf945455bfa2efe7094203
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919797"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630880"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Optimización de la interfaz de usuario de ListView y GridView
 
 
-**Nota**  para obtener más información, consulta la sesión de //build/ [Considerablemente aumentar el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de ListView y GridView](https://channel9.msdn.com/events/build/2013/3-158).
+**Tenga en cuenta**    para obtener más información, vea la sesión //build/ [drásticamente aumentar el rendimiento cuando los usuarios interactúan con grandes cantidades de datos en GridView y ListView](https://channel9.msdn.com/events/build/2013/3-158).
 
 Mejorar el rendimiento y el tiempo de inicio de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos. Para más información sobre técnicas de virtualización de datos, consulta [la virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md).
 
@@ -30,9 +30,9 @@ Para obtener unos movimientos panorámicos/desplazamientos suaves, es fundamenta
 
 ## <a name="ui-virtualization"></a>Virtualización de interfaz de usuario
 
-La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario representen los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (y otros controles derivados estándar de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recupera la memoria.
+La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario que representan los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. [**ListView** ](https://msdn.microsoft.com/library/windows/apps/BR242878) y [ **GridView** ](https://msdn.microsoft.com/library/windows/apps/BR242705) (y otro estándar [ **ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)-controles derivados) virtualización de interfaz de usuario para que realizar. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recuperará la memoria.
 
-Si proporcionas una plantilla del panel de elementos personalizada (consulta [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)), asegúrate de usar un panel de virtualización, como [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) o [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795). Si usas las clases [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), no obtendrás la virtualización. Además, los siguientes eventos [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) se generan únicamente cuando se usa una clase [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) o [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795): [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) y [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging).
+Si proporcionas una plantilla del panel de elementos personalizada (consulta [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)), asegúrate de usar un panel de virtualización, como [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) o [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795). Si usas las clases [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), no obtendrás la virtualización. Además, las siguientes [ **ListView** ](https://msdn.microsoft.com/library/windows/apps/BR242878) eventos se generan cuando se usa un [ **ItemsWrapGrid** ](https://msdn.microsoft.com/library/windows/apps/Dn298849) o [  **ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795): [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [ **ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer), y [ **ContainerContentChanging** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging).
 
 El concepto de una ventanilla es fundamental para la virtualización de la interfaz de usuario, porque el marco debe crear los elementos que es probable que se muestren. En general, la ventanilla de una clase [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) es del tamaño del control lógico. Por ejemplo, la ventanilla de un control [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) tiene el ancho y el alto del elemento **ListView**. Algunos paneles permiten que los elementos secundarios tengan espacio ilimitado, como [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) y [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), los cuales cuentan con columnas o filas de tamaño automático. Cuando una clase **ItemsControl** virtualizada se coloca en un panel como ese, necesita bastante espacio para mostrar todos sus elementos, lo que inhabilita la virtualización. Restaura la virtualización estableciendo un ancho y alto en **ItemsControl**.
 
@@ -81,7 +81,7 @@ Un ejemplo de estas técnicas suele verse en las aplicaciones de visualización 
 
 La característica temporal de elementos visuales de marcador de posición está activada de forma predeterminada y se controla con la propiedad [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders). Durante el movimiento panorámico o de desplazamiento rápido, esta característica proporciona al usuario una indicación visual de que quedan elementos por mostrarse completamente y, al mismo tiempo, se conserva la suavidad de movimientos. Si usas una de las técnicas siguientes, puedes establecer **ShowsScrollingPlaceholders** en "false" si prefieres que el sistema no represente marcadores de posición.
 
-**Actualizaciones progresivas de plantillas de datos con x:Phase**
+**Actualizaciones de plantilla progresiva de datos mediante la fase de x:**
 
 Aquí mostramos cómo usar el [atributo x:Phase](https://msdn.microsoft.com/library/windows/apps/Mt204790) con enlaces [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) para implementar las actualizaciones de plantilla de datos progresivas.
 
@@ -145,7 +145,7 @@ Aquí mostramos cómo usar el [atributo x:Phase](https://msdn.microsoft.com/libr
 
 3.  Si ejecutas la aplicación ahora y realizas rápidamente el movimiento panorámico o de desplazamiento a través de la vista de cuadrícula, verás que, a medida que aparece un elemento nuevo en la pantalla, este se representa en primer lugar como un rectángulo gris oscuro (debido a que la propiedad [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) está establecida de forma predeterminada en **true**) y que, a continuación, aparece el título, seguido del subtítulo, seguido de la descripción.
 
-**Actualizaciones progresivas de la plantilla de datos mediante ContainerContentChanging**
+**Actualizaciones de plantilla progresiva de datos mediante ContainerContentChanging**
 
 La estrategia general del evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging) es usar la propiedad **Opacity** para ocultar los elementos que no deben ser visibles inmediatamente. Cuando los elementos se reciclan, conservan sus valores antiguos, por que queremos ocultar esos elementos hasta que hayamos actualizado esos valores desde el elemento de datos nuevo. Para ello, usaremos la propiedad **Phase** en los argumentos del evento para determinar qué elementos actualizar y mostrar. Si se necesitan fases adicionales, se registra una devolución de llamada.
 
@@ -250,7 +250,7 @@ En algunas aplicaciones, debes tener una interfaz de usuario distinta para los d
 
 **El evento ChoosingItemContainer**
 
-[**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) es un evento que te permite proporcionar un elemento (**ListViewItem**/**GridViewItem**) a los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) cada vez que se necesita un nuevo elemento durante el inicio o el reciclado. Puedes crear un contenedor basado en el tipo de elemento de datos que mostrará el contenedor (puedes verlo en el siguiente ejemplo). **ChoosingItemContainer** es la mejor manera de conseguir el mayor rendimiento al usar diferentes plantillas de datos para distintos elementos. El almacenamiento en caché del contenedor se puede conseguir mediante **ChoosingItemContainer**. Por ejemplo, si tienes cinco plantillas diferentes y usas una de ellas más a menudo que las demás, entonces, el elemento ChoosingItemContainer no solo te permite crear elementos en las proporciones necesarias, sino también mantener un número apropiado de los elementos almacenados en caché y disponibles para su reciclaje. [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) proporciona la misma funcionalidad para encabezados de grupo.
+[**ChoosingItemContainer** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) es un evento que le permite proporcionar un elemento (**ListViewItem**/**GridViewItem**) a la [ **ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView** ](https://msdn.microsoft.com/library/windows/apps/BR242705) cada vez que se necesita un nuevo elemento durante el inicio o el reciclaje. Puedes crear un contenedor basado en el tipo de elemento de datos que mostrará el contenedor (puedes verlo en el siguiente ejemplo). **ChoosingItemContainer** es la mejor manera de conseguir el mayor rendimiento al usar diferentes plantillas de datos para distintos elementos. El almacenamiento en caché del contenedor se puede conseguir mediante **ChoosingItemContainer**. Por ejemplo, si tienes cinco plantillas diferentes y usas una de ellas más a menudo que las demás, entonces, el elemento ChoosingItemContainer no solo te permite crear elementos en las proporciones necesarias, sino también mantener un número apropiado de los elementos almacenados en caché y disponibles para su reciclaje. [**ChoosingGroupHeaderContainer** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) proporciona la misma funcionalidad para los encabezados de grupo.
 
 ```csharp
 // Example shows how to use ChoosingItemContainer to return the correct
@@ -312,7 +312,7 @@ private void ListView_ChoosingItemContainer
 }
 ```
 
-**Selector de plantillas de elementos**
+**Selector de plantillas de elemento**
 
 Un selector de plantillas de elementos ([**DataTemplateSelector**](https://msdn.microsoft.com/library/windows/apps/BR209469)) permite que una aplicación devuelva una plantilla de elementos diferente en tiempo de ejecución, en función del tipo de elemento de datos que se mostrará. Gracias a ello, el desarrollo es más productivo, pero la virtualización de la interfaz de usuario es más compleja ya que no todas las plantillas de elementos pueden volver a usarse en cada elemento de datos.
 

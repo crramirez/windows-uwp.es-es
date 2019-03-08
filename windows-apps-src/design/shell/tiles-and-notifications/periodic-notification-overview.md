@@ -1,5 +1,5 @@
 ---
-Description: Periodic notifications, which are also called polled notifications, update tiles and badges at a fixed interval by downloading content from a cloud service.
+Description: Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido directamente desde un servicio de nube.
 title: Introducción a las notificaciones periódicas
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050518"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624860"
 ---
 # <a name="periodic-notification-overview"></a>Introducción a las notificaciones periódicas
  
@@ -25,7 +25,7 @@ Las notificaciones periódicas, también denominadas notificaciones de sondeo, a
 
 Las notificaciones periódicas permiten a la aplicación obtener actualizaciones activas de icono con niveles mínimos de inversión de clientes y servicio de nube. También son un excelente método para distribuir el mismo contenido a una audiencia amplia.
 
-**Nota**  puedes aprender más al descargar la [muestra de inserción y las notificaciones periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows8.1 y volver a usar su código fuente en la aplicación de Windows 10.
+**Tenga en cuenta**    más descargando el [Push y ejemplo de notificaciones periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 y volver a usar su código fuente en la aplicación de Windows 10.
 
  
 
@@ -48,9 +48,9 @@ La respuesta del servidor de nube incluye el contenido descargado. El contenido 
 
 Para comenzar a sondear llama a uno de estos métodos:
 
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (distintivo)
--   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
+-   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Badge)
+-   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Tile)
 
 Cuando se llama a uno de estos métodos, se sondea inmediatamente el URI y el icono o distintivo se actualiza con el contenido recibido. Después de este sondeo inicial, Windows continúa proporcionando actualizaciones con el intervalo solicitado. El sondeo continúa hasta que lo detienes explícitamente (con [**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate)), se desinstala tu aplicación o, en el caso de un icono secundario, se quita el icono. En caso contrario, Windows sigue sondeando las actualizaciones del icono o distintivo aunque la aplicación no vuelva a iniciarse nunca.
 
@@ -103,7 +103,7 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Directrices sobre notificaciones periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
-* [Cómo configurar notificaciones periódicas para distintivos](https://msdn.microsoft.com/library/windows/apps/hh761476)
-* [Cómo configurar notificaciones periódicas para iconos](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [Directrices para las notificaciones periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
+* [Cómo configurar las notificaciones periódicas para notificaciones](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [Cómo configurar las notificaciones periódicas para iconos](https://msdn.microsoft.com/library/windows/apps/hh761476)
  

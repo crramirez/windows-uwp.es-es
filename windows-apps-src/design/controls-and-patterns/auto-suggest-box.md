@@ -1,5 +1,5 @@
 ---
-Description: A text entry box that provides suggestions as the user types.
+Description: Un cuadro de entrada de texto que proporciona sugerencias como tipos de usuarios.
 title: Directrices para los cuadros de sugerencias automáticas
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
@@ -7,23 +7,23 @@ label: Auto-suggest box
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 86b0063175b5e040cd7d92357bfa4b8abac4e13c
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592410"
 ---
 # <a name="auto-suggest-box"></a>Cuadro de sugerencias automáticas
 
 Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usuario seleccione una a medida que escribe.
 
-> **API importantes**: [Clase AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [Evento TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx), [Evento SuggestionChose](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [Evento QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
+> **API importantes**: [Clase AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [evento TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx), [SuggestionChose eventos](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [QuerySubmitted eventos](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
 
 ![Un cuadro de sugerencias automáticas](images/controls/auto-suggest-box-open.png)
 
@@ -42,7 +42,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/AutoSuggestBox">abrir la aplicación y ver AutoSuggestBox en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -153,7 +153,7 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 
 ![Ejemplo de punto de entrada para el control de la sugerencia automática](images/controls_autosuggest_entrypoint.png)
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 -   Cuando se usa un cuadro de sugerencias automáticas para realizar búsquedas y no existen resultados para el texto escrito, se muestra el mensaje de una línea "No hay resultados", para que los usuarios sepan que su solicitud se ha ejecutado:
 
@@ -177,13 +177,13 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 - [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
-- [Muestra de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
+- [Ejemplo de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de texto](text-controls.md)
-- [Revisión ortográfica](text-controls.md)
+- [Corrector ortográfico](text-controls.md)
 - [Buscar](search.md)
-- [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)

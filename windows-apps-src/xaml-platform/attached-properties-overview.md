@@ -4,18 +4,18 @@ title: Introducción a las propiedades adjuntas
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.openlocfilehash: 265a99e7abbb9b2f4c3341f90aecc3661ce3ffbf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614860"
 ---
 # <a name="attached-properties-overview"></a>Introducción a las propiedades adjuntas
 
@@ -36,7 +36,7 @@ En XAML, las propiedades adjuntas se establecen mediante la sintaxis _AttachedPr
 ```
 
 > [!NOTE]
-> Vamos a usar [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como una propiedad adjuntado de ejemplo sin explicar por qué la usarías. Si quieres saber más sobre el uso de **Canvas.Left** y el modo en que [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) controla sus elementos secundarios de diseño, consulta el tema de referencia de [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) o [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
+> Simplemente usamos [ **Canvas.Left** ](https://msdn.microsoft.com/library/windows/apps/hh759771) como un ejemplo de propiedad adjunta sin totalmente que explica por qué debería usarlo. Si quieres saber más sobre el uso de **Canvas.Left** y el modo en que [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) controla sus elementos secundarios de diseño, consulta el tema de referencia de [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) o [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
 
 ## <a name="why-use-attached-properties"></a>¿Por qué usar propiedades adjuntas?
 
@@ -58,7 +58,6 @@ Para obtener más información sobre estos escenarios y tipos propietarios, cons
 
 ## <a name="attached-properties-in-code"></a>Propiedades adjuntas en el código 
 
-
 Las propiedades adjuntas no tienen contenedores de propiedades típicos para obtener o establecer acceso fácilmente como lo hacen otras propiedades de dependencia. Esto se debe a que la propiedad adjunta no forma parte necesariamente del modelo de objetos centrado en el código para las instancias en las que se establece la propiedad. (Aunque no es lo más común, se permite definir una propiedad que sea tanto una propiedad adjunta que otros tipos puedan establecer en sí mismos, como que tenga un uso de propiedad convencional en el tipo propietario).
 
 Hay dos formas de establecer una propiedad adjunta en el código: usar las API del sistema de propiedades o usar los descriptores de acceso del patrón XAML. El resultado de cualquiera de las dos técnicas es casi idéntico, por lo tanto, la decisión acerca de cuál usar es una cuestión de estilo de codificación.
@@ -73,7 +72,7 @@ Para obtener el valor de una propiedad adjunta en el código, llama al método [
 
 ### <a name="using-the-xaml-accessor-pattern"></a>Uso del patrón de descriptor de acceso XAML
 
-Un procesador XAML debe poder establecer los valores de las propiedades adjuntas cuando se analiza el código XAML en un árbol de objetos. El tipo de propietario de la propiedad adjunta debe implementar métodos de descriptor de acceso exclusivos con nombre en el formulario **obtener *** PropertyName* y **establecer *** PropertyName*. Estos descriptores de acceso exclusivos también constituyen una forma de obtener o establecer la propiedad adjunta en el código. Desde el punto de vista del código, una propiedad adjunta es similar a un campo de respaldo en que cuenta con descriptores de acceso del método en lugar de descriptores de acceso de la propiedad, y en que el campo de respaldo puede existir en cualquier objeto sin necesidad de definirlo específicamente.
+Un procesador XAML debe poder establecer los valores de las propiedades adjuntas cuando se analiza el código XAML en un árbol de objetos. El tipo de propietario de la propiedad adjunta debe implementar los métodos de descriptor de acceso dedicados con el formato **obtener *** PropertyName* y **establecer *** PropertyName*. Estos descriptores de acceso exclusivos también constituyen una forma de obtener o establecer la propiedad adjunta en el código. Desde el punto de vista del código, una propiedad adjunta es similar a un campo de respaldo en que cuenta con descriptores de acceso del método en lugar de descriptores de acceso de la propiedad, y en que el campo de respaldo puede existir en cualquier objeto sin necesidad de definirlo específicamente.
 
 El siguiente ejemplo muestra cómo se puede establecer una propiedad adjunta en el código a través de la API del descriptor de acceso XAML. En este ejemplo, `myCheckBox` es una instancia de la clase [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316). La última línea es el código que en realidad establece el valor, las líneas anteriores simplemente establecen las instancias y la relación entre sus elementos primarios y secundarios. La última línea sin comentario es la sintaxis si usas el sistema de propiedades. La última línea comentada es la sintaxis si usas el patrón del descriptor de acceso XAML.
 
@@ -121,18 +120,18 @@ Para ver ejemplos de código sobre cómo definir propiedades adjuntas personaliz
 
 El punto en el nombre de la propiedad adjunta es una parte fundamental del patrón de identificación. A veces se producen ambigüedades cuando una sintaxis o una situación trata el punto como si tuviese otro significado. Por ejemplo, el punto se trata como un cruce seguro del modelo de objetos para una ruta de acceso de enlace. En la mayoría de los casos en los que se produce esta ambigüedad, la propiedad adjunta tiene una sintaxis especial que permite que el punto interno se analice como separador _owner_**.**_property_ de una propiedad adjunta.
 
-- Para especificar una propiedad adjunta como parte de una ruta de destino de una animación, encierra el nombre de la propiedad adjunta entre paréntesis ("()"), por ejemplo, "(Canvas.Left)". Para obtener más información, consulta [Sintaxis de property-path](property-path-syntax.md).
+- Para especificar una propiedad adjunta como parte de una ruta de destino de una animación, encierra el nombre de la propiedad adjunta entre paréntesis ("()"), por ejemplo, "(Canvas.Left)". Para más información, consulta [Sintaxis de property-path](property-path-syntax.md).
 
 > [!WARNING]
-> Una limitación de la implementación de XAML de Windows Runtime es que no puedes animar una propiedad adjunta personalizada.
+> Una limitación de la implementación de Windows en tiempo de ejecución XAML existente es que no se puede animar una propiedad asociada personalizada.
 
-- Para especificar una propiedad adjunta como propiedad de destino para una referencia a un recurso desde un archivo de recursos a **x:Uid**, usa una sintaxis especial que inyecte una declaración **using:** completa con estilo de código entre corchetes ("\[\]") para crear un salto de ámbito deliberado. Por ejemplo, si suponemos que existe un elemento `<TextBlock x:Uid="Title" />`, la clave de recurso en el archivo de recursos que tiene como destino el valor **Canvas.Top** en esa instancia es "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obtener más información sobre archivos de recursos y XAML, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+- Para especificar una propiedad adjunta como la propiedad de destino para una referencia de recurso de un archivo de recursos para **x: Uid**, usar una sintaxis especial que inserta un estilo de código, un nombre completo **mediante:** declaración dentro de los corchetes ("\[\]"), para crear un salto de ámbito deliberada. Por ejemplo, suponiendo que existe un elemento `<TextBlock x:Uid="Title" />`, la clave de recurso en el archivo de recursos que tiene como destino el **Canvas.Top** valor en esa instancia es "Title.\[ Using:Windows.UI.Xaml.Controls\]Canvas.Top ". Para obtener más información sobre los archivos de recursos y XAML, vea [inicio rápido: Traducción de los recursos de la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Propiedades adjuntas personalizadas](custom-attached-properties.md)
-- [Introducción a las propiedades de dependencia](dependency-properties-overview.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350)
-- [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/hh943060)
+- [Inicio rápido: Traducción de los recursos de la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/hh943060)
 - [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)
 - [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)

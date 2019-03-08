@@ -4,7 +4,7 @@ title: Enumerar y consultar archivos y carpetas
 description: Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
 ms.date: 12/19/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045101"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613930"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar y consultar archivos y carpetas
 
@@ -25,13 +25,13 @@ Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, 
 Para obtener información sobre cómo almacenar los datos de la aplicación para la Plataforma universal de Windows, consulta la clase [ApplicationData](/uwp/api/windows.storage.applicationdata).
 
 > [!NOTE]
-> Para obtener una muestra completa, consulta la [muestra de enumeración de carpetas](https://go.microsoft.com/fwlink/p/?linkid=619993).
+> Para obtener un ejemplo completo, vea el [ejemplo de enumeración de carpeta](https://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
+-   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
 
-    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++ / WinRT, consulta [operaciones simultáneas y asincrónicas con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para aprender a escribir aplicaciones asincrónicas en C++ / CX, consulta [programación asincrónica en C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para obtener información sobre cómo escribir aplicaciones asincrónicas en C++ / c++ / WinRT, consulte [simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para obtener información sobre cómo escribir aplicaciones asincrónicas en C++ / c++ / CX, consulte [programación asincrónica en C++ / c++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Permisos de acceso a la ubicación**
 
@@ -40,9 +40,9 @@ Para obtener información sobre cómo almacenar los datos de la aplicación para
 ## <a name="enumerate-files-and-folders-in-a-location"></a>Enumerar archivos y carpetas en una ubicación
 
 > [!NOTE]
-> Recuerda declarar la funcionalidad **picturesLibrary**.
+> No olvide declarar el **picturesLibrary** capacidad.
 
-En este ejemplo usamos primero el método [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para obtener todos los archivos en la carpeta raíz de la [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (no en las subcarpetas) y el nombre de cada archivo. A continuación, usamos el método [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) para obtener todas las subcarpetas en el **PicturesLibrary** y el nombre de cada subcarpeta.
+En este ejemplo se usa primero el [ **StorageFolder.GetFilesAsync** ](/uwp/api/windows.storage.storagefolder.getfilesasync) método para obtener todos los archivos de la carpeta raíz de la [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) (no en las subcarpetas) y el nombre de cada archivo de lista. A continuación, usamos el [ **StorageFolder.GetFoldersAsync** ](/uwp/api/windows.storage.storagefolder.getfoldersasync) método para obtener todas las subcarpetas la **PicturesLibrary** y el nombre de cada subcarpeta de la lista.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -177,7 +177,7 @@ Next folder
 > [!NOTE]
 > En C# o Visual Basic, recuerda poner la palabra clave **async** en la declaración del método de cualquier método en el que uses el operador **await**.
 
-Como alternativa, puedes usar el método [**StorageFolder.GetItemsAsync**](/uwp/api/windows.storage.storagefolder.getitemsasync) para obtener todos los elementos (archivos y subcarpetas) en una ubicación en particular. El siguiente ejemplo usa el método **GetItemsAsync** para obtener todos los archivos y subcarpetas en la carpeta raíz de la [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (no en las subcarpetas). Después, en el ejemplo se muestra el nombre de cada archivo y subcarpeta. Si el elemento es una subcarpeta, el ejemplo anexa `"folder"` al nombre.
+Como alternativa, puede usar el [ **clase StorageFolder.GetItemsAsync** ](/uwp/api/windows.storage.storagefolder.getitemsasync) método para obtener todos los elementos (archivos y subcarpetas) en una ubicación determinada. En el ejemplo siguiente se usa el **GetItemsAsync** método para obtener todos los archivos y subcarpetas en la carpeta raíz de la [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) (no en las subcarpetas). Después, en el ejemplo se muestra el nombre de cada archivo y subcarpeta. Si el elemento es una subcarpeta, el ejemplo anexa `"folder"` al nombre.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -280,7 +280,7 @@ Next item
 
 ## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Consultar archivos en una ubicación y enumerar archivos coincidentes
 
-En este ejemplo, se consultan todos los archivos en el [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) agrupados por mes y esta vez el ejemplo recorre de forma recursiva en las subcarpetas. En primer lugar, se llama a [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) y se pasa el valor [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) al método. Esto nos da un objeto [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult).
+En este ejemplo se consulta para todos los archivos en el [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) agrupados por mes, y esta vez la recorre de ejemplo en las subcarpetas. En primer lugar, se llama a [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) y se pasa el valor [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) al método. Esto nos da un objeto [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult).
 
 Después, llamamos a [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync), que devuelve objetos [**StorageFolder**](/uwp/api/windows.storage.storagefolder) que representan carpetas virtuales. En este caso, la agrupación se realiza por mes, por lo que cada carpeta virtual representa un grupo de archivos del mismo mes.
 

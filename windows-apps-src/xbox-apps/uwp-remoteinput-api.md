@@ -5,18 +5,18 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 882e84c5126e4f67e246dd479008133c979c06b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939963"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595960"
 ---
 # <a name="remote-input-api-reference"></a>Referencia de API de entrada remota   
 Puedes enviar la entrada de mouse, teclado y controlador en tiempo real de manera remota mediante esta API.
 
-**Solicitud**
+**Request**
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 Websocket | /ext/remoteinput
 <br />
@@ -28,7 +28,7 @@ Websocket | /ext/remoteinput
 
 - Ninguno
 
-**Solicitud**
+**Request**
 
 El websocket de una serie de mensajes de matriz de bytes. Para cada mensaje el formato es el siguiente:
 
@@ -47,7 +47,7 @@ Para un mensaje de mouse, el siguiente valor es un UINT16 en orden de red (2 byt
 
 | Tipo de acción        | Valor UINT16 |
 |------------|-------------|
-Move | 0x0001
+Mover | 0x0001
 LeftDown | 0x0002
 LeftUp | 0x0004
 RightDown | 0x0008
@@ -101,7 +101,7 @@ VK_GAMEPAD_RIGHT_THUMBSTICK_LEFT   |  0xDA
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

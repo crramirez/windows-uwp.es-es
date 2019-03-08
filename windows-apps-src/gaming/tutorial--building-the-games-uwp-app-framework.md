@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 175009773f7969adbaf36a036e733443f593467f
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620560"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir el marco de la aplicación para UWP
 
@@ -22,16 +22,16 @@ Para configurar este marco, primero debes obtener un proveedor de vista, de mane
 El objeto proveedor de vista implementa la interfaz __IFrameworkView__, que consta de una serie de métodos que deben estar configurados para crear esta muestra de juego.
 
 Deberás implementar estos cinco métodos que el singleton de la aplicación llama:
-* [__Initialize__](#initialize-the-view-provider)
+* [__inicializar__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
-* [__Load__](#load-method-of-the-view-provider)
+* [__Carga__](#load-method-of-the-view-provider)
 * [__Run__](#run-method-of-the-view-provider)
-* [__Uninitialize__](#uninitialize-method-of-the-view-provider)
+* [__Anular la inicialización__](#uninitialize-method-of-the-view-provider)
 
 El método __Initialize__ se llama en el inicio de la aplicación. El método __SetWindow__ se llama después de __Initialize__. Y, después, se llama al método __Load__. El método __Run__ es el que ocurre cuando el juego se está ejecutando. Cuando el juego finaliza, se llama al método __Uninitialize__. Para obtener más información, consulta la [referencia de API __IFrameworkView__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview). 
 
 >[!Note]
->Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Ten en cuenta que este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+>Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 ## <a name="objective"></a>Objetivo
 
@@ -186,7 +186,7 @@ void App::Load(
 
 ### <a name="gamemain-constructor"></a>Constructor de GameMain
 
-* Crear e inicializar el representador de juego. Para obtener más información, consulta [Marco de representación I: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md).
+* Crear e inicializar el representador de juego. Para obtener más información, consulte [marco de representación lo hago?: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md).
 * Crear el objeto initialize the Simple3Dgame. Para obtener más información, consulta la sección [Definir el objeto principal del juego](tutorial--defining-the-main-game-loop.md).    
 * Crear el objeto de control de interfaz de usuario del juego y mostrar la superposición de información del juego para mostrar una barra de progreso como la carga de archivos de recursos. Para más información, consulta [Agregar una interfaz de usuario](tutorial--adding-a-user-interface.md).
 * Crear el controlador de manera que pueda leer entradas del controlador (táctil, mouse o mando inalámbrico de la XBox). Para más información, consulta [Agregar controles](tutorial--adding-controls.md).
@@ -298,19 +298,19 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="run-method-of-the-view-provider"></a>El método Run del proveedor de vista
 
-Los tres métodos anteriores: __Initialize__, __SetWindow__ y __Load__ han preparado el camino. Ahora el juego puede avanzar al método **Run** y ¡ya puede empezar la diversión! Los eventos que usa para realizar la transición entre estados de juego se despachan y procesan. Los gráficos se actualizan durante el ciclo del bucle del juego.
+Los tres métodos anteriores: __Inicializar__, __SetWindow__, y __carga__ ha establecido la fase. Ahora el juego puede avanzar al método **Run** y ¡ya puede empezar la diversión! Los eventos que usa para realizar la transición entre estados de juego se despachan y procesan. Los gráficos se actualizan durante el ciclo del bucle del juego.
 
 ### <a name="apprun"></a>App::Run
 
 Empieza un bucle __while__ que finaliza cuando el jugador cierra la ventana del juego.
 
 El código de muestra realiza la transición a uno de estos dos estados en la máquina de estado del motor de juego:
-    * __Deactivated__: La ventana de juego se desactiva (pierde el foco) o se acopla. Cuando esto sucede, el juego suspende el procesamiento de eventos y espera a que la ventana recupere el foco o se desacople.
-    * __TooSmall__: El juego actualiza su propio estado y representa los gráficos para mostrar.
+    * __Desactiva__: La ventana de juego se desactiva (pierde el foco) o se acopla. Cuando esto sucede, el juego suspende el procesamiento de eventos y espera a que la ventana recupere el foco o se desacople.
+    * __TooSmall__: El juego actualiza su propio estado y presenta los gráficos para mostrar.
 
 Cuando el juego tiene el foco, debes controlar cada evento en la cola de mensajes tan pronto como llegue, y por tanto debes llamar a [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) con la opción **ProcessAllIfPresent**. Otras opciones pueden causar retrasos en el procesamiento de eventos de mensaje, lo que puede provocar que el juego no responda bien o que los comportamientos táctiles parezcan lentos e imprecisos.
 
-Cuando el juego no está visible o está suspendido o acoplado, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. En este caso, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. A continuación, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente una vez procesada la cola.
+Cuando el juego no está visible o está suspendido o acoplado, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. En este caso, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. [**ProcessEvents** ](https://msdn.microsoft.com/library/windows/apps/br208215) , a continuación, devuelve inmediatamente después de procesar la cola.
 
 ```cpp
 void App::Run()
@@ -382,11 +382,11 @@ void GameMain::Run()
 
 ## <a name="uninitialize-method-of-the-view-provider"></a>El método Uninitialize del proveedor de vista
 
-Cuando el usuario finalmente finaliza la sesión de juego, debemos limpiar. Aquí es donde entra en acción **Uninitialize**.
+Cuando el usuario finalmente finaliza la sesión de juego, debemos limpiar. Aquí es donde entra en acción la propiedad **Uninitialize**.
 
-En Windows 10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, pero en su lugar escribe el estado del singleton de la aplicación en la memoria. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, incluyendo cualquier limpieza de recursos, pon el código de esa limpieza en este método.
+En Windows 10, cierre la ventana de la aplicación no terminar el proceso de la aplicación, pero en su lugar, escribe el estado de singleton de la aplicación en la memoria. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, incluyendo cualquier limpieza de recursos, pon el código de esa limpieza en este método.
 
-### <a name="app-uninitialize"></a>App:: Uninitialize
+### <a name="app-uninitialize"></a>Aplicación: Uninitialize
 
 ```cpp
 void App::Uninitialize()

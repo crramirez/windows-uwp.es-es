@@ -7,27 +7,27 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, texturas, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: a857f62839841a2e20c4f6b6cf753e9d85dcb32c
-ms.sourcegitcommit: 7ba0637453bc2de1ca6922be97625cbcf9c32df5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "9099615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601660"
 ---
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas en primitivos
 
 Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md). También te mostramos cómo introducir un modelo de iluminación simple con producto escalar, donde las superficies del cubo son más claras o más oscuras a una distancia y ángulos relativos a una fuente de luz.
 
-**Objetivo:** Aplicar texturas en primitivos.
+**Objetivo:** Para aplicar texturas a tipos primitivos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para obtener el máximo partido de este tema, tendrás que estar familiarizado con C++. También tendrás que experiencia básica con los conceptos de programación de gráficos. Y, en teoría, tendrás que ya has seguido junto con [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md), [crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md)y [usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
+Para obtener el máximo partido de este tema, deberá estar familiarizado con C++. También necesitará experiencia básica con los conceptos de programación de gráficos. Y, idealmente, tendrá que ya ha seguido junto con [inicio rápido: configuración de los recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md), [crear sombreadores y primitivos de dibujo](creating-shaders-and-drawing-primitives.md), y [Using profundidad y efectos en los primitivos](using-depth-and-effects-on-primitives.md).
 
-**Tiempo para completarlo:** 20minutos.
+**Tiempo en completarse:** 20 minutos.
 
 <a name="instructions"></a>Instrucciones
 ------------
-### <a name="1-defining-variables-for-a-textured-cube"></a>1. Definir variables para un cubo con textura
+### <a name="1-defining-variables-for-a-textured-cube"></a>1. Definir variables para un cubo de textura
 
 Primero necesitamos definir las estructuras **BasicVertex** y **ConstantBuffer** para el cubo con textura. Estas estructuras especifican las posiciones de los vértices, las orientaciones y texturas para el cubo y de qué manera se visualizará el cubo. De lo contrario, declaramos variables de forma similar a lo explicado en el tutorial anterior [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
@@ -60,19 +60,19 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. Crear sombreadores de vértices y píxeles con elementos de textura y superficie
+### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. Creación de sombreadores de vértices y píxeles con elementos de textura y de superficie
 
 Aquí creamos sombreadores de vértices y píxeles más complejos con respecto al tutorial anterior, [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md). El sombreador de vértices de la aplicación transforma cada posición de vértice en un espacio de proyección y pasa la coordenada de textura del vértice por el sombreador de píxeles.
 
-La matriz de estructuras [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) de la aplicación que describen el diseño del código del sombreador de vértices tiene tres elementos de diseño: uno define la posición del vértice, otro define el vector normal de superficie (dirección a la que la superficie normalmente queda de frente) y el último define las coordenadas de textura.
+Matriz de la aplicación de [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estructuras que describen el diseño de código de sombreador de vértices tiene tres elementos de diseño: un elemento define la posición del vértice, otro elemento define el vector normal expuesto (es decir, la dirección que normalmente se enfrenta a la superficie), y el tercer elemento define las coordenadas de textura.
 
 Creamos búferes de vértices, índices y constantes que definen un cubo con textura en órbita.
 
-**Para definir un cubo con textura en órbita**
+**Para definir un cubo de textura órbita**
 
-1.  En primer lugar, definimos el cubo. A cada vértice se le asigna una posición, un vector normal de superficie y coordenadas de textura. Usamos varios vértices para cada esquina con el fin de permitir que se definan distintos vectores y coordenadas de textura.
-2.  Luego describimos los búferes de vértices y de índices ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) y [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) mediante la definición del cubo. Llamamos a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) una vez para cada búfer.
-3.  A continuación, creamos un búfer de constantes ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) para pasar las matrices de proyección, vista y modelo al sombreador de vértices. Luego podemos usar el búfer de constantes para girar el cubo y aplicarle una proyección de perspectiva. Llamamos a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para crear el búfer de constantes.
+1.  Primero definimos el cubo. A cada vértice se le asigna una posición, un vector normal de superficie y coordenadas de textura. Usamos varios vértices para cada esquina con el fin de permitir que se definan distintos vectores y coordenadas de textura.
+2.  A continuación, se describen los búferes de vértices y de índices ([**D3D11\_búfer\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) y [ **D3D11\_SUBRESOURCE\_Datos**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) mediante la definición del cubo. Llamamos a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) una vez para cada búfer.
+3.  A continuación, creamos un búfer de constantes ([**D3D11\_búfer\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) para pasar matrices de modelo, vista y proyección al sombreador de vértices. Luego podemos usar el búfer de constantes para girar el cubo y aplicarle una proyección de perspectiva. Llamamos a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para crear el búfer de constantes.
 4.  Por último, especificamos la transformación de vista que corresponde a una posición de la cámara de X = 0, Y = 1, Z = 2.
 
 ```cppcx
@@ -261,19 +261,19 @@ auto createCubeTask = (createPSTask && createVSTask).then([this]()
 });
 ```
 
-### <a name="3-creating-textures-and-samplers"></a>3. Crear texturas y muestrarios
+### <a name="3-creating-textures-and-samplers"></a>3. Creación de las texturas y muestras
 
 Aquí aplicamos datos de texturas a un cubo, en lugar de aplicar colores como hicimos en el tutorial anterior, [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
 Usamos datos de texturas sin procesar para crear texturas.
 
-**Para crear texturas y muestrarios**
+**Para crear texturas y muestras**
 
 1.  En primer lugar, leemos datos de texturas sin procesar en el archivo texturedata.bin del disco.
-2.  A continuación, construimos una estructura [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) que hace referencia a esos datos de texturas sin procesar.
-3.  Luego rellenamos una estructura [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) para describir la textura. Pasamos las estructuras [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) y **D3D11\_TEXTURE2D\_DESC** en una llamada a [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para crear la textura.
-4.  A continuación, creamos una vista de los recursos de sombreador para la textura, de modo que los sombreadores la puedan usar. Para crear una vista de los recursos de sombreador, rellenamos una estructura [**D3D11\_SHADER\_RESOURCE\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476211) para describir la vista y para pasar la descripción y la textura a [**ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519). Por lo general, se hace coincidir la descripción de la vista con la descripción de la textura.
-5.  A continuación, creamos un estado de muestrario para la textura. Este estado de muestrario usa datos de texturas relevantes para definir de qué manera se determina el color de una coordenada de textura determinada. Rellenamos una estructura [**D3D11\_SAMPLER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476207) para describir el estado de muestrario. Pasamos la estructura **D3D11\_SAMPLER\_DESC** en una llamada a [**ID3D11Device::CreateSamplerState**](https://msdn.microsoft.com/library/windows/desktop/ff476518) para crear el estado de muestrario.
+2.  A continuación, construimos un [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estructura que hace referencia a esos datos sin procesar de textura.
+3.  A continuación, rellenamos un [ **D3D11\_TEXTURE2D\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476253) estructura para describir la textura. Después, pasamos el [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) y **D3D11\_TEXTURE2D\_DESC** estructuras en un la llamada a [ **ID3D11Device::CreateTexture2D** ](https://msdn.microsoft.com/library/windows/desktop/ff476521) para crear la textura.
+4.  A continuación, creamos una vista de los recursos de sombreador para la textura, de modo que los sombreadores la puedan usar. Para crear la vista de recursos del sombreador, rellenamos un [ **D3D11\_SOMBREADOR\_recursos\_vista\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476211) para describir la vista de recursos del sombreador y pase la descripción de la vista de recurso de sombreador y la textura a [ **ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519). Por lo general, se hace coincidir la descripción de la vista con la descripción de la textura.
+5.  A continuación, creamos un estado de muestrario para la textura. Este estado de muestrario usa datos de texturas relevantes para definir de qué manera se determina el color de una coordenada de textura determinada. Rellenamos un [ **D3D11\_muestra\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476207) estructura para describir el estado de la muestra. Después, pasamos el **D3D11\_muestra\_DESC** estructura en una llamada a [ **ID3D11Device::CreateSamplerState** ](https://msdn.microsoft.com/library/windows/desktop/ff476518) para crear el estado de la muestra.
 6.  Por último, declaramos una variable *degree* que vamos a usar para animar al cubo haciéndolo girar en cada fotograma.
 
 ```cppcx
@@ -384,17 +384,17 @@ auto constructSubresourceTask = loadTDTask.then([this](const std::vector<byte>& 
 float degree = 0.0f;
 ```
 
-### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. Girar y dibujar el cubo con textura y mostrar la imagen representada
+### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. La rotación y dibujar el cubo de textura y presentar la imagen representada
 
 Al igual que en los tutoriales anteriores, introducimos un bucle sin fin para representar y mostrar continuamente la escena. Llamamos a la función insertada **rotationY** (BasicMath.h) con una cantidad de rotación para establecer los valores que girarán la matriz de modelo del cubo en torno al eje Y. A continuación, llamamos a [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para actualizar el búfer de constantes y girar el modelo del cubo. Llamamos a [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación y la vista de la galería de símbolos y profundidad. Llamamos a [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para borrar el destino de representación de color azul y llamamos a [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para borrar el búfer de profundidad.
 
 En el bucle sin fin, también dibujamos el cubo con textura en la superficie azul.
 
-**Para dibujar el cubo con textura**
+**Para dibujar el cubo de textura**
 
-1.  En primer lugar, llamamos a [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para describir cómo se transmitirán los datos del búfer de vértices a la etapa del ensamblador.
+1.  En primer lugar, llamamos a [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para describir cómo se emitirán los datos del búfer de vértices a la etapa del ensamblador.
 2.  A continuación, llamamos a [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) y [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) para enlazar los búferes de vértices e índices a la etapa del ensamblador de entrada.
-3.  Después llamamos a [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) con el valor [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) para especificar que en la etapa del ensamblador de entrada se interpreten los datos de vértice como una franja de triángulos.
+3.  A continuación, llamamos a [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) con el [ **D3D11\_PRIMITIVOS\_topología\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) valor que se especifica para que la etapa del ensamblador de entrada interpretar los datos de vértice como una tira de triángulos.
 4.  A continuación, llamamos a [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) para inicializar la etapa del sombreador de vértices con el código del sombreador de vértices e [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) para inicializar la etapa del sombreador de píxeles con el código del sombreador de píxeles.
 5.  A continuación, llamamos a [**ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491) para establecer el búfer de constantes que se usa en la fase de canalización del sombreador de vértices.
 6.  Luego llamamos a [**PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473) para enlazar la vista de los recursos de sombreador de la textura con la fase de canalización del sombreador de píxeles.
@@ -507,4 +507,4 @@ DX::ThrowIfFailed(
 
 ## <a name="summary"></a>Resumen
 
-En este tema, cargar los datos de texturas sin procesar y aplicamos esos datos a un primitivo 3D.
+En este tema, cargar datos de textura sin procesar y aplicar esos datos a 3D primitivo.

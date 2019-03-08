@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623810"
 ---
 # <a name="use-the-inclinometer"></a>Usar el inclinómetro
 
@@ -21,17 +21,17 @@ ms.locfileid: "8932664"
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Inclinómetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
-**Muestra**
+**Ejemplo**
 
 -   Para ver una implementación más completa, consulta la [muestra de inclinómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
-Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje Y (roll) y la rotación alrededor del eje Z (yaw).
+Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje y la rotación alrededor del eje Y (yaw).
 
 Algunos juegos en 3D necesitan un inclinómetro como dispositivo de entrada. Un ejemplo común es el simulador de vuelos, que asigna los tres ejes del inclinómetro (X, Y y Z) a los datos de entrada del timón de profundidad, el alerón y el timón de dirección del avión.
 
  ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
+Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
 
 El dispositivo o emulador que estés usando debe tener un inclinómetro.
 
@@ -140,7 +140,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores de inclinómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -167,7 +167,7 @@ _inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer,
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Estos nuevos valores se escriben en los TextBlocks que se encuentran en el código XAML del proyecto.
+Estos nuevos valores se escriben en los bloques de texto que se encuentran en el código XAML del proyecto.
 
 ```xml
 <TextBlock HorizontalAlignment="Left" Height="21" Margin="0,8,0,0" TextWrapping="Wrap" Text="Pitch: " VerticalAlignment="Top" Width="45" Foreground="#FFF9F4F4"/>

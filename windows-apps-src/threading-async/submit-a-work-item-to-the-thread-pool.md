@@ -1,21 +1,21 @@
 ---
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar un elemento de trabajo al grupo de subprocesos
-description: Obtén información acerca de cómo trabajar en un subproceso distinto mediante el envío de un elemento de trabajo al grupo de subprocesos.
+description: Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
 ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048622"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658020"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Se actualizó con las aplicaciones para UWP en Windows 10. Para artículos de Windows 8.x, consulte el [archive](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 <b>API importantes</b>
 
@@ -31,7 +31,7 @@ Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://msdn.m
 Hay tres versiones de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
 >[!NOTE]
->Usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder al subproceso de interfaz de usuario y mostrar el progreso del elemento de trabajo.
+>Use [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para tener acceso el subproceso de UI y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
@@ -350,7 +350,7 @@ Ten en cuenta que el controlador de finalización comprueba si el elemento de tr
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Puedes obtener más información, descarga el código de este inicio rápido en la [creación de un grupo de subprocesos funcionan elemento muestra](https://go.microsoft.com/fwlink/p/?LinkID=328569) escrita para Windows8.1 y vuelve a usar el código fuente en una aplicación Windows 10 win\_unap.
+Para más información, descargue el código de este inicio rápido en el [creación un grupo de subprocesos de trabajo de ejemplo de elemento](https://go.microsoft.com/fwlink/p/?LinkID=328569) escrita para Windows 8.1 y volver a usar el código fuente en un archivo de win\_aplicación unap Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, Game Hubs, hubs de juegos
 ms.localizationpriority: medium
 ms.openlocfilehash: 09c2a2c69e32d151c393c5a0652c1d9de7b4360e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939185"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57600010"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Obtener datos del hub de juegos de Xbox Live
 
@@ -25,14 +25,14 @@ Usa este método en la API de análisis de Microsoft Store para obtener datos de
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de solicitud       |
+| Método | URI de la solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
@@ -41,17 +41,17 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Necesario  
+| Parámetro        | Tipo   |  Descripción      |  Requerido  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de hub de juegos de Xbox Live.  |  Sí  |
-| metricType | cadena | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagergamehub**.  |  Sí  |
+| applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de hub de juegos de Xbox Live.  |  Sí  |
+| metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagergamehub**.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor siempre es la fecha actual. |  No  |
+| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 
@@ -70,8 +70,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | matriz  | Una matriz de objetos que contienen datos del hub de juegos para cada fecha del intervalo de fechas especificado. Para más información sobre los datos de cada objeto, consulta la tabla siguiente.                                                                                                                      |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de la consulta. |
+| Valor      | array  | Una matriz de objetos que contienen datos del hub de juegos para cada fecha del intervalo de fechas especificado. Para más información sobre los datos de cada objeto, consulta la tabla siguiente.                                                                                                                      |
+| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de la consulta. |
 | TotalCount | entero    | El número total de filas del resultado de datos de la consulta.  |
 
 
@@ -79,12 +79,12 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| fecha                | cadena | La fecha de los datos del hub de juegos de este objeto. |
-| applicationId       | cadena | El Id de Store del juego sobre la que estás recuperando los datos del hub de juegos.     |
+| fecha                | string | La fecha de los datos del hub de juegos de este objeto. |
+| applicationId       | string | El Id de Store del juego sobre la que estás recuperando los datos del hub de juegos.     |
 | gameHubLikeCount     | número |   El número de "Me gusta" agregados a la página del hub de juegos en la fecha especificada.   |
 | gameHubCommentCount          | número |  El número de comentarios agregados a la página del hub de juegos en la fecha especificada.  |
 | gameHubShareCount           | número | El número de veces que la página del hub de juegos de tu aplicación fue compartida por los clientes en la fecha especificada.   |
-| gameHubFollowerCount          | number | El número de seguidores de siempre para la página del hub de juegos para la aplicación.   |
+| gameHubFollowerCount          | número | El número de seguidores de siempre para la página del hub de juegos para la aplicación.   |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -116,11 +116,11 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 }
 ```
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
 * [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
 * [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)
-* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)
+* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: d62ce9abd84a0769a2393db169b8198d3d9f6cec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921682"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616410"
 ---
 # <a name="version-adaptive-code"></a>Código adaptativo para versiones
 
@@ -69,11 +69,11 @@ Inconvenientes:
 
 ## <a name="adaptive-code-examples"></a>Ejemplos de código adaptativo
 
-En esta sección se muestran varios ejemplos de código adaptativo que usan las API que son nuevas en Windows10, versión 1607 (Windows Insider Preview).
+En esta sección se muestran varios ejemplos de código adaptativo que usan las API que son nuevas en Windows 10, versión 1607 (Windows Insider Preview).
 
 ### <a name="example-1-new-enum-value"></a>Ejemplo 1: Nuevo valor de enumeración
 
-Windows10, versión 1607, agrega un nuevo valor a la enumeración [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx): **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
+Windows 10, versión 1607 agrega un nuevo valor para el [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) enumeración: **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
 
 Este ejemplo muestra cómo comprobar si el valor de enumeración **ChatWithoutEmoji** está presente y establece la propiedad [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) de un **TextBox** si lo está. Si no se encuentra presente en el sistema en el que se ejecuta la aplicación, en su lugar la propiedad **InputScope** se establece en **Chat**. El código que se muestra podría colocarse en un controlador de eventos Page.Page constructor o Page.Loaded.
 
@@ -158,9 +158,9 @@ Si se usa el valor ChatWithoutEmoji en XAML o en el código sin comprobación, s
 
 Una nueva versión de Windows normalmente aporta nuevos controles a la superficie de las API para UWP que aportan nuevas funciones a la plataforma. Para aprovechar la presencia de un nuevo control, usa el método [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx).
 
-Windows10, versión 1607, presenta un nuevo control multimedia llamado [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Este control se basa en la clase [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx), por lo que aporta características como la capacidad para enlazar fácilmente el audio en segundo plano y aprovechar las mejoras de la arquitectura en la pila de multimedia.
+Windows 10, versión 1607, presenta un nuevo control multimedia llamado [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Este control se basa en la clase [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx), por lo que aporta características como la capacidad para enlazar fácilmente el audio en segundo plano y aprovechar las mejoras de la arquitectura en la pila de multimedia.
 
-Sin embargo, si la aplicación se ejecuta en un dispositivo que ejecute una versión de Windows10 anterior a la versión 1607, debes usar el control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) en lugar del nuevo control **MediaPlayerElement**. Puedes usar el método [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) para comprobar la presencia del control MediaPlayerElement en tiempo de ejecución y cargar cualquier control adecuado para el sistema en el que se ejecute la aplicación.
+Sin embargo, si la aplicación se ejecuta en un dispositivo que ejecute una versión de Windows 10 anterior a la versión 1607, debes usar el control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) en lugar del nuevo control **MediaPlayerElement**. Puedes usar el método [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) para comprobar la presencia del control MediaPlayerElement en tiempo de ejecución y cargar cualquier control adecuado para el sistema en el que se ejecute la aplicación.
 
 Este ejemplo muestra cómo crear una aplicación que use el nuevo control MediaPlayerElement o el control MediaElement antiguo en función de si el tipo MediaPlayerElement está presente. En este código, la clase [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx) se usa para separar por componentes tanto los controles como su interfaz de usuario y su código relacionados, por lo que se pueden alternar en función de la versión del sistema operativo. Como alternativa, es posible usar un control personalizado, lo que proporciona más funcionalidad y un comportamiento más personalizado de lo necesario para este sencillo ejemplo.
  
@@ -339,7 +339,7 @@ class IsPropertyPresentTrigger : StateTriggerBase
 
 El siguiente paso es configurar el desencadenador de estado visual en XAML, para que se produzcan dos estados visuales diferentes en función de la presencia de la API. 
 
-Windows10, versión 1607. introduce una nueva propiedad en la clase [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) llamada [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) que determina si un control toma el foco cuando un usuario interactúa con él. Esto resulta útil si se desea mantener el foco en un cuadro de texto para la entrada de datos (y mantener el teclado táctil visible) mientras el usuario hace clic en un botón.
+Windows 10, versión 1607. introduce una nueva propiedad en la clase [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) llamada [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) que determina si un control toma el foco cuando un usuario interactúa con él. Esto resulta útil si se desea mantener el foco en un cuadro de texto para la entrada de datos (y mantener el teclado táctil visible) mientras el usuario hace clic en un botón.
 
 El desencadenador de este ejemplo comprueba si la propiedad está presente. Si la propiedad está presente, establece la propiedad **AllowFocusOnInteraction** de un botón en **false**; si la propiedad no está presente, el botón conserva su estado original. TextBox se incluye para que sea más fácil ver el efecto de esta propiedad cuando se ejecuta el código.
 
@@ -373,7 +373,7 @@ El desencadenador de este ejemplo comprueba si la propiedad está presente. Si l
 
 ### <a name="example-2-new-enum-value"></a>Ejemplo 2: Nuevo valor de enumeración
 
-Este ejemplo muestra cómo establecer diferentes valores de enumeración en función de si un valor se encuentra presente. Usa un desencadenador de estado personalizado para lograr el mismo resultado que el ejemplo anterior de chat. En este ejemplo, se usa el nuevo ámbito de entrada ChatWithoutEmoji si el dispositivo ejecuta Windows10, versión 1607; de lo contrario, se usa el ámbito de entrada **Chat**. Los estados visuales que usan este desencadenador se configuran con un estilo *if-else*, en el que el ámbito de entrada se elige en función en la presencia del nuevo valor de enumeración.
+Este ejemplo muestra cómo establecer diferentes valores de enumeración en función de si un valor se encuentra presente. Usa un desencadenador de estado personalizado para lograr el mismo resultado que el ejemplo anterior de chat. En este ejemplo, se usa el nuevo ámbito de entrada ChatWithoutEmoji si el dispositivo ejecuta Windows 10, versión 1607; de lo contrario, se usa el ámbito de entrada **Chat**. Los estados visuales que usan este desencadenador se configuran con un estilo *if-else*, en el que el ámbito de entrada se elige en función en la presencia del nuevo valor de enumeración.
 
 **C#**
 ```csharp
@@ -446,4 +446,4 @@ class IsEnumPresentTrigger : StateTriggerBase
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detectar dinámicamente las características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

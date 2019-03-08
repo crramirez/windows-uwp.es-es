@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb511fad1aa4e1605d83090a5e4e8d98efff1be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620800"
 ---
 # <a name="balancing-style-and-consistency"></a>Equilibrio entre coherencia y estilo
 
  
 
-> Nota: Este artículo es un primer borrador para Windows10RS2. Los nombres de las características, la terminología y la funcionalidad no son definitivos.
+> Nota: En este artículo es un primer borrador para Windows 10 RS2. Los nombres de las características, la terminología y la funcionalidad no son definitivos.
 
 Cuando diseñas un producto, tú eres el protector del cliente. Todos hacemos todo lo posible por crear el mejor diseño que sea apropiado y fiel a nuestras intenciones. En este artículo se explica el equilibrio entre las siguientes convenciones para crear una experiencia de usuario coherente en comparación con la creación de características y experiencias únicas que diferencian tu aplicación. 
 
@@ -59,17 +59,17 @@ En este modelo, las capas base ofrecen unos cimientos probados y demostrados de 
 ## <a name="design-principles"></a>Principios de diseño
 Para usar este modelo de manera eficaz, necesitamos un conjunto de principios de diseño que nos ayuden a lograr el equilibrio adecuado. He aquí nuestros principios funcionales de coherencia en el diseño:
 
-**Si se ve igual, haz que funcione igual**
+**Si le parece la misma, marca actúan igual**
 -   Cuando el usuario ve un cuadro de texto o el control de hamburguesa, es muy probable que espere que se comporte de la misma manera en diferentes dispositivos. Si tienes una buena razón para desviarte de un comportamiento establecido, cumple con las expectativas del usuario haciendo que también se vea diferente.
 
-**Si un elemento se ve de manera muy similar a un elemento o una convención existentes, considera la posibilidad de que haga lo mismo**
+**Si un elemento es muy similar a un elemento existente o una convención, considere la posibilidad de realizar la misma**
 -   Necesitas un icono de "nuevo documento". Por qué diseñar uno nuevo que sea apenas un poco diferente, cuando puedes usar uno que el usuario ya reconozca.
 
-**La facilidad de uso bate a la coherencia**
+**Coherencia de triunfa sobre facilidad de uso**
 -   Es mejor que se pueda usar antes de que sea coherente. En algunos casos, puede que tengas que crear nuevos controles o comportamientos para facilitar el uso. Usar el teléfono con una sola mano presenta sus desafíos propios. Al igual que trabajar con una pantalla de 80". Un buen diseño hace que el usuario se sienta experto. 
 
-**El atractivo es importante**
+**Es importante Engagement**
 -   No hagas algo aburrido. Si todo es plano y tiene el mismo color con cuadrados, ¿los clientes querrán elegirlo y usarlo? Crea algo placentero. Introduce nuevos elementos que sorprendan sin interrumpir la capacidad de aprendizaje. 
 
-**Los comportamientos evolucionan**
+**Comportamientos de evolucionar**
 -   Este es un poco engañoso: a medida que el sector evoluciona, se establecen nuevas convenciones. Es posible que los comportamientos actuales se desvanezcan y que nuestros comportamientos coherentes tengan que adoptar nuevos estándares. Mira los gestos de acercar y alejar los dedos. Antes, era lo normal era acercar/alejar con la interfaz de usuario +/-, pero en la interfaz de usuario moderna se espera acercar y alejar los dedos para hacer zoom. Observa los nuevos paradigmas de experiencia y evoluciona. 

@@ -4,14 +4,14 @@ description: En este artículo se proporciona compatibilidad para las aplicacion
 title: Reproducción de contenido multimedia heredado en segundo plano
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ea8d387becaef171175fd5e91bfc3a1402e79faa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616620"
 ---
 # <a name="legacy-background-media-playback"></a>Reproducción de contenido multimedia heredado en segundo plano
 
@@ -19,7 +19,7 @@ ms.locfileid: "8927649"
 En este artículo se describe el modelo heredado de dos procesos para agregar compatibilidad con audio en segundo plano a tu aplicación para UWP. A partir de Windows 10, versión 1607, se ofrece un modelo de proceso único para audio en segundo plano mucho más fácil de implementar. Para obtener más información sobre las recomendaciones actuales sobre el audio en segundo plano, consulta [Reproducir elementos multimedia en segundo plano](background-audio.md). Este artículo está pensado para proporcionar compatibilidad para las aplicaciones desarrolladas con el modelo de dos procesos heredado.
 
 > [!NOTE]
-> A partir de Windows, versión 1703, **BackgroundMediaPlayer** está en desuso y puede no estar disponible en versiones futuras de Windows.
+> A partir de Windows, versión 1703, **BackgroundMediaPlayer** está en desuso y no estén disponibles en versiones futuras de Windows.
 
 ## <a name="background-audio-architecture"></a>Arquitectura del audio en segundo plano
 
@@ -114,11 +114,11 @@ Sin embargo, ten en cuenta que esto no significa que el primer plano depende del
 
 La siguiente tabla enumera qué políticas se aplican en los diferentes tipos de dispositivos.
 
-| Subpolítica             | Escritorio  | Móvil   | Otra    |
+| Subpolítica             | Escritorio  | Móvil   | Otras    |
 |------------------------|----------|----------|----------|
-| **Exclusividad**        | Deshabilitada | Habilitada  | Habilitada  |
-| **Tiempo de espera de inactividad** | Deshabilitada | Habilitada  | Deshabilitada |
-| **Duración compartida**    | Habilitada  | Deshabilitada | Deshabilitada |
+| **Exclusividad**        | Deshabilitada | Habilitado  | Habilitado  |
+| **Tiempo de espera de inactividad** | Deshabilitada | Habilitado  | Deshabilitada |
+| **Duración compartida**    | Habilitado  | Deshabilitada | Deshabilitada |
 
 
  

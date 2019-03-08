@@ -1,5 +1,5 @@
 ---
-title: Herramientas de diagnóstico de gráficos
+title: Herramientas de diagnóstico de elementos gráficos
 description: Obtén información sobre cómo obtener y usar las características de diagnóstico de elementos gráficos como, por ejemplo, el uso de la GPU, los análisis de fotogramas de gráficos y la depuración de elementos gráficos en Visual Studio.
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ms.date: 02/08/2017
@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, gráficos, diagnósticos, herramientas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e3c48e69dd1ad991a2a04017d4e262e45430504
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608540"
 ---
 # <a name="graphics-diagnostics-tools"></a>Herramientas de diagnóstico de elementos gráficos
 
 
 
-Con Windows 10, las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Para usar las características de diagnóstico de elementos gráficos proporcionadas en tiempo de ejecución y Visual Studio para desarrollar juegos o aplicaciones de DirectX, instala la característica opcional de herramientas de elementos gráficos:
+Con Windows 10, las herramientas de diagnóstico de gráficos ahora están disponibles en Windows como una característica opcional. Para usar las características de diagnóstico de elementos gráficos proporcionadas en tiempo de ejecución y Visual Studio para desarrollar juegos o aplicaciones de DirectX, instala la característica opcional de herramientas de elementos gráficos:
 
-1.  Ve a **configuración**, selecciona **las aplicaciones**y, a continuación, haz clic en **características opcionales de administrar**.
+1.  Vaya a **configuración**, seleccione **aplicaciones**y, a continuación, haga clic en **administrar características opcionales**.
 2.  Haz clic en **Agregar una característica**   
 3.  En la lista **Características opcionales**, selecciona **Herramientas gráficas** y, a continuación, haz clic en **Instalar**.
 
@@ -32,7 +32,7 @@ Entre las características de diagnóstico de elementos gráficos se incluye la 
 ## <a name="related-topics"></a>Temas relacionados
 
 
-[Información general de diagnósticos de elementos gráficos en Visual Studio](https://go.microsoft.com/fwlink/p/?LinkID=526382)
+[Información general sobre diagnóstico de gráficos en Visual Studio](https://go.microsoft.com/fwlink/p/?LinkID=526382)
 
  
 

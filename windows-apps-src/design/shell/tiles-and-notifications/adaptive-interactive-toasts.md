@@ -1,5 +1,5 @@
 ---
-Description: Adaptive and interactive toast notifications let you create flexible pop-up notifications with more content, optional inline images, and optional user interaction.
+Description: Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
 title: Contenido de notificaciones del sistema
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Toast content
@@ -9,27 +9,27 @@ ms.topic: article
 keywords: Windows 10, uwp, notificaciones del sistema, notificaciones del sistema interactivas, notificaciones del sistema adaptables, contenido de notificaciones del sistema, carga de notificaciones del sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: a75e39dfcddbef5bb5c37c2a253a46a7b9cc9577
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920805"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596830"
 ---
 # <a name="toast-content"></a>Contenido de notificaciones del sistema
 
 Las notificaciones del sistema interactivas y adaptables permiten crear notificaciones flexibles con texto, imágenes y botones/entradas.
 
-> **API importantes**: [paquete NuGet del kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **API importantes**: [Paquete de nuget para UWP Community Toolkit notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Para ver las plantillas heredadas de Windows8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificación del sistema heredadas](https://msdn.microsoft.com/library/windows/apps/hh761494).
+> Para ver las plantillas de heredada de Windows 8.1 y Windows Phone 8.1, consulte el [catálogo de plantillas del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
 
 ## <a name="getting-started"></a>Introducción
 
-**Instalar la biblioteca de notificaciones.** Si quieres usar C# en lugar de XML para generar notificaciones, instala el paquete de NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (buscar "notificaciones para UWP"). Los ejemplos de C# proporcionados en este artículo usan la versión 1.0.0 del paquete NuGet.
+**Instale la biblioteca de notificaciones.** Si quieres usar C# en lugar de XML para generar notificaciones, instala el paquete de NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (buscar "notificaciones para UWP"). Los ejemplos de C# proporcionados en este artículo usan la versión 1.0.0 del paquete NuGet.
 
-**Instala Notifications Visualizer** Al igual que la vista de editor o de diseño XAML de Visual Studio, esta aplicación para UWP gratuita te ayuda a diseñar notificaciones del sistema interactivas proporcionando una vista previa visual instantánea de la notificación a medida que la editas. Consulta [Notifications Visualizer](notifications-visualizer.md) para obtener más información o bien, [descargar Notifications Visualizer de la Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**Instale el visualizador de notificaciones.** Al igual que la vista de editor o de diseño XAML de Visual Studio, esta aplicación para UWP gratuita te ayuda a diseñar notificaciones del sistema interactivas proporcionando una vista previa visual instantánea de la notificación a medida que la editas. Consulta [Notifications Visualizer](notifications-visualizer.md) para obtener más información o bien, [descargar Notifications Visualizer de la Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
 ## <a name="sending-a-toast-notification"></a>Envío de una notificación del sistema
@@ -42,10 +42,10 @@ Para obtener información sobre cómo enviar una notificación, consulta [Enviar
 Las notificaciones del sistema son una combinación de algunas propiedades de datos como etiqueta o grupo (que te permiten identificar la notificación) y el *contenido del sistema*.
 
 Los componentes principales del contenido de notificación del sistema son...
-* **launch**: define qué argumentos se devolverán a la aplicación cuando el usuario haga clic en la notificación del sistema, lo que te permite vincular en profundidad en el contenido correcto que muestra la notificación del sistema. Para obtener más información, consulta [Enviar notificación del sistema local](send-local-toast.md).
-* **visual**: la parte visual de la notificación del sistema, incluido el enlace genérico que contiene el texto y las imágenes.
-* **actions**: la parte interactiva del sistema, incluyendo las entradas y las acciones.
-* **audio**: controla el audio reproducido cuando se muestra la notificación del sistema al usuario.
+* **launch**: Esto define qué argumentos se pasarán a la aplicación cuando el usuario hace clic en la notificación del sistema, permitiéndole al vínculo profundo en el contenido correcto que estaba mostrando el toast. Para obtener más información, consulta [Enviar notificación del sistema local](send-local-toast.md).
+* **visual**: La parte visual de la notificación del sistema, incluidos el tipo genérico de enlace contiene texto e imágenes.
+* **acciones**: La parte interactiva de la notificación del sistema, incluidas entradas y acciones.
+* **audio**: Los controles en el audio se reproduce cuando el toast se muestra al usuario.
 
 El contenido de la notificación del sistema se define en XML sin formato, pero puedes usar nuestra [biblioteca de NuGet](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para obtener un modelo de objetos de C# (o C++) para construir el contenido de notificación del sistema. En este artículo se documenta todo lo que se envía dentro del contenido de la notificación del sistema.
 
@@ -148,7 +148,7 @@ De manera predeterminada, la notificación del sistema mostrará el logotipo de 
 
 <img alt="Toast with app logo override" src="images/toast-applogooverride.jpg" width="364"/>
 
-Puedes usar la propiedad **HintCrop** para cambiar el recorte de la imagen. Por ejemplo, **Circle** da como resultado una imagen recortada en forma de círculo. De lo contrario, la imagen es cuadrada. Las dimensiones de la imagen son 48x48 píxeles al 100% de escala.
+Puedes usar la propiedad **HintCrop** para cambiar el recorte de la imagen. Por ejemplo, **Circle** da como resultado una imagen recortada en forma de círculo. De lo contrario, la imagen es cuadrada. Las dimensiones de la imagen son 48 x 48 píxeles al 100 % de escala.
 
 ```csharp
 new ToastBindingGeneric()
@@ -173,7 +173,7 @@ new ToastBindingGeneric()
 
 ## <a name="hero-image"></a>Imagen principal
 
-**Novedad en la Actualización de aniversario**: las notificaciones del sistema pueden mostrar una imagen principal, que es una imagen destacada [**ToastGenericHeroImage**](toast-schema.md#toastgenericheroimage) que se muestra en un lugar destacado del banner de notificación del sistema y dentro del centro de actividades. Las dimensiones de la imagen son 360x180 píxeles al 100% de escala.
+**Novedades de la actualización de aniversario de**: Notificaciones del sistema pueden mostrar una imagen prominente, que es un destacado [ **ToastGenericHeroImage** ](toast-schema.md#toastgenericheroimage) muestran de forma destacada en el banner de notificaciones y dentro de centro de actividades. Las dimensiones de la imagen son 360 x 180 píxeles al 100 % de escala.
 
 <img alt="Toast with hero image" src="images/toast-heroimage.jpg" width="364"/>
 
@@ -234,18 +234,18 @@ Las imágenes que usas en la notificación del sistema pueden provenir de...
  - ms-appx:///
  - ms-appdata:///
 
-Para imágenes web remotas de http y https, hay límites en el tamaño del archivo de cada imagen individual. En la actualización de Fall Creators Update (16299), aumentamos el límite de 3MB, en conexiones normales y de 1MB en conexiones de uso medido. Antes, el límite de las imágenes siempre era de 200KB.
+Para imágenes web remotas de http y https, hay límites en el tamaño del archivo de cada imagen individual. En la actualización de Fall Creators Update (16299), aumentamos el límite de 3 MB, en conexiones normales y de 1 MB en conexiones de uso medido. Antes, el límite de las imágenes siempre era de 200 KB.
 
 | Conexión normal | Conexión de uso medido | Antes de Fall Creators Update |
 | - | - | - |
-| 3 MB | 1 MB | 200KB |
+| 3 MB | 1 MB | 200 KB |
 
 Si una imagen supera el tamaño del archivo o no genera un error al descargar, o se agota el tiempo de espera, la imagen se eliminará y se mostrará el resto de la notificación.
 
 
 ## <a name="attribution-text"></a>Texto de atribución
 
-**Novedad en la Actualización de aniversario**: si necesita hacer referencia al origen de su contenido, puedes usar el texto de atribución. Este texto siempre se muestra en la parte inferior de la notificación, junto con la identidad de tu aplicación o la marca de tiempo de la notificación.
+**Novedades de la actualización de aniversario de**: Si tiene que hacer referencia al origen del contenido, puede usar texto atribución. Este texto siempre se muestra en la parte inferior de la notificación, junto con la identidad de tu aplicación o la marca de tiempo de la notificación.
 
 En versiones anteriores de Windows que no admiten el texto de atribución, el texto simplemente se mostrará como otro elemento de texto (suponiendo que todavía no tienes el número máximo de tres elementos de texto).
 
@@ -273,7 +273,7 @@ new ToastBindingGeneric()
 
 ## <a name="custom-timestamp"></a>Marca de tiempo personalizada
 
-**Novedad de la actualización Creators Update**: ahora puedes reemplazar la marca de tiempo proporcionada por el sistema por su propia marca de tiempo que representa de forma precisa cuándo se generó el mensaje, la información o el contenido. Esta marca de tiempo está visible en el centro de actividades.
+**Novedades de la actualización Creators**: Ahora puede reemplazar la marca de tiempo proporcionado por el sistema con su propia marca de tiempo que se representa con precisión cuando se generó el mensaje o información o contenido. Esta marca de tiempo está visible en el centro de actividades.
 
 <img alt="Toast with custom timestamp" src="images/toast-customtimestamp.jpg" width="396"/>
 
@@ -296,7 +296,7 @@ ToastContent toastContent = new ToastContent()
 
 ## <a name="progress-bar"></a>Barra de progreso
 
-**Novedad en Creators Update**: puedes proporcionar una barra de progreso en la notificación del sistema para mantener al usuario informado sobre el progreso de las operaciones, como descargas y mucho más.
+**Novedades de la actualización Creators**: Puede proporcionar una barra de progreso en la notificación del sistema para mantener al usuario informado del progreso de las operaciones, como las descargas y mucho más.
 
 <img alt="Toast with progress bar" src="images/toast-progressbar.png" width="364"/>
 
@@ -305,7 +305,7 @@ Para obtener más información sobre cómo usar una barra de progreso, consulta 
 
 ## <a name="headers"></a>Encabezados
 
-**Novedad en Creators Update**: puedes agrupar notificaciones en los encabezados del Centro de actividades. Por ejemplo, puedes agrupar mensajes de un chat de grupo en un encabezado, o agrupar notificaciones de un tema común en un encabezado o más.
+**Novedades de la actualización Creators**: Puede agrupar las notificaciones en los encabezados en el centro de actividades. Por ejemplo, puedes agrupar mensajes de un chat de grupo en un encabezado, o agrupar notificaciones de un tema común en un encabezado o más.
 
 <img alt="Toasts with header" src="images/toast-headers-action-center.png" width="396"/>
 
@@ -314,7 +314,7 @@ Para obtener más información acerca del uso de encabezados, consulta [Encabeza
 
 ## <a name="adaptive-content"></a>Contenido adaptable
 
-**Novedad en la Actualización de aniversario**: además del contenido especificado anteriormente, también puedes mostrar más contenido adaptable que está visible cuando se expande la notificación del sistema.
+**Novedades de la actualización de aniversario de**: Además del contenido especificado anteriormente, también puede mostrar contenido adaptable adicional que es visible cuando se expande el toast.
 
 Este contenido adicional se especifica con el diseño adaptable, sobre el que puedes obtener más información leyendo la [documentación de Iconos adaptables](create-adaptive-tiles.md).
 
@@ -461,7 +461,7 @@ ToastContent content = new ToastContent()
 
 ### <a name="buttons-with-icons"></a>Botones con iconos
 
-Puedes agregar iconos a los botones. Estos iconos son imágenes de 16x16píxeles transparentes en blanco al 100% de escala y no deben incluir relleno en la propia imagen. Si decides proporcionar iconos en una notificación del sistema, debes proporcionar iconos para TODOS los botones de la notificación, ya que transforma el estilo de tus botones en botones de icono.
+Puedes agregar iconos a los botones. Estos iconos son imágenes de 16 x 16 píxeles transparentes en blanco al 100 % de escala y no deben incluir relleno en la propia imagen. Si decides proporcionar iconos en una notificación del sistema, debes proporcionar iconos para TODOS los botones de la notificación, ya que transforma el estilo de tus botones en botones de icono.
 
 > [!NOTE]
 > Para accesibilidad, asegúrate de incluir una versión en blanco de contraste del icono (icono negro para fondos de color blanco), de forma que cuando el usuario activa el modo de blanco en contraste alto, tu icono esté visible. Obtén más información en la [página de accesibilidad de notificaciones del sistema](tile-toast-language-scale-contrast.md).
@@ -488,7 +488,7 @@ new ToastButton("Dismiss", "dismiss")
 
 ### <a name="buttons-with-pending-update-activation"></a>Botones con activación de actualización pendiente
 
-**Novedad en la actualización de Fall Creators Update**: en botones de activación en segundo plano, puedes usar un comportamiento tras la activación de **PendingUpdate** para crear interacciones de varios pasos en las notificaciones del sistema. Cuando el usuario hace clic en el botón, se activa tu tarea en segundo plano y la notificación del sistema se coloca en un estado de "actualización pendiente", donde permanece en pantalla hasta que la tarea en segundo plano reemplaza la notificación del sistema por una nueva notificación del sistema.
+**Novedad en Fall Creators Update**: En los botones de activación en segundo plano, puede usar una activación después el comportamiento de **PendingUpdate** para crear interacciones de varios pasos en las notificaciones del sistema. Cuando el usuario hace clic en el botón, se activa tu tarea en segundo plano y la notificación del sistema se coloca en un estado de "actualización pendiente", donde permanece en pantalla hasta que la tarea en segundo plano reemplaza la notificación del sistema por una nueva notificación del sistema.
 
 Para obtener información sobre cómo implementar esto, consulta [Actualización pendiente de notificaciones del sistema](toast-pending-update.md).
 
@@ -497,7 +497,7 @@ Para obtener información sobre cómo implementar esto, consulta [Actualización
 
 ### <a name="context-menu-actions"></a>Acciones de menú contextual
 
-**Novedad de la Actualización de aniversario**: puedes agregar acciones de menú contextual adicionales al menú contextual existente que aparece cuando el usuario hace clic con el botón derecho en la notificación del sistema desde dentro del Centro de actividades. Ten en cuenta que este menú solo aparece cuando se hace clic con el botón derecho desde el Centro de actividades. No aparece al hacer clic con el botón derecho en un banner de elementos emergentes de notificaciones del sistema.
+**Novedades de la actualización de aniversario de**: Puede agregar acciones de menú contextual adicionales en el menú contextual existente que aparece cuando el usuario hace clic con del sistema desde dentro del centro de actividades. Ten en cuenta que este menú solo aparece cuando se hace clic con el botón derecho desde el Centro de actividades. No aparece al hacer clic con el botón derecho en un banner de elementos emergentes de notificaciones del sistema.
 
 > [!NOTE]
 > En dispositivos más antiguos, estas acciones de menú contextual adicionales aparecerán simplemente como botones normales en tu notificación del sistema.
@@ -796,7 +796,7 @@ Para usar las acciones de posponer y descartar del sistema:
 
 -   Especificar un **ToastButtonSnooze** o **ToastButtonDismiss**
 -   Tienes la opción de especificar una cadena de contenido personalizada:
-    -   Si no proporcionas una cadena, automáticamente usaremos las cadenas localizadas de "Posponer" y "Descartar".
+    -   Si no proporciona una cadena, vamos a usar automáticamente las cadenas localizadas para "Posponer" y "Descartar".
 -   Tienes la opción de especificar el **SelectionBoxId**:
     -   Si no quieres que el usuario seleccione un intervalo de aplazamiento y, en su lugar, solo quieres que la notificación se posponga solo una vez en un intervalo de tiempo definido por el sistema (que es coherente en todo el sistema operativo), no crees ningún &lt;input&gt; en absoluto.
     -   Si quieres proporcionar las selecciones de intervalo de aplazamiento:
@@ -847,9 +847,9 @@ Para crear alarmas, avisos y notificaciones de llamadas entrantes, simplemente u
 > [!IMPORTANT]
 > Cuando uses Recordatorio o alarma, debes proporcionar al menos un botón en la notificación del sistema. De lo contrario, la notificación del sistema se tratará como una notificación del sistema normal.
 
-* **Aviso**: la notificación permanecerá en pantalla hasta que el usuario la descarte o realice una acción. En Windows Mobile, la notificación del sistema también aparecerá previamente expandida. Se reproducirá un sonido de aviso.
-* **Alarma**: además de los comportamientos de aviso, las alarmas repetirán además con un sonido de alarma predeterminado.
-* **IncomingCall**: las notificaciones de llamadas entrantes se muestran en pantalla completa en los dispositivos Windows Mobile. De lo contrario, tienen los mismos comportamientos que las alarmas excepto en que usan audio de tono y sus botones tienen un estilo diferente.
+* **Reminder**: La notificación permanecerá en la pantalla hasta que el usuario lo descarte o realiza una acción. En Windows Mobile, la notificación del sistema también aparecerá previamente expandida. Se reproducirá un sonido de aviso.
+* **Alarma**: Además de los comportamientos de recordatorio, alarmas además bucle audio con un sonido de alarma de forma predeterminada.
+* **IncomingCall**: Las notificaciones de llamadas entrantes se muestran en pantalla completa en los dispositivos Windows Mobile. De lo contrario, tienen los mismos comportamientos que las alarmas excepto en que usan audio de tono y sus botones tienen un estilo diferente.
 
 ```csharp
 ToastContent content = new ToastContent()
@@ -879,6 +879,6 @@ Para obtener información sobre cómo controlar activaciones de notificación de
  
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Enviar una notificación del sistema local y administrar la aplicación](send-local-toast.md)
-* [Biblioteca de notificaciones en GitHub (parte del Kit de herramientas de la comunidad de UWP)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
-* [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.](tile-toast-language-scale-contrast.md)
+* [Enviar una activación local del sistema y de identificador](send-local-toast.md)
+* [Biblioteca de notificaciones en GitHub (parte de UWP Community Toolkit)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Icono y notificaciones del sistema compatibilidad con las notificaciones para el idioma, la escala y el contraste alto](tile-toast-language-scale-contrast.md)

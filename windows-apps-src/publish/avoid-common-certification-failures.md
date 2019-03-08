@@ -1,17 +1,17 @@
 ---
-Description: Review this list to help avoid issues that frequently prevent apps from getting certified, or that might be identified during a spot check after the app is published.
+Description: Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado.
 title: Evitar errores de certificación comunes
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 62c99c159ff68201919fa15baded999e3b6a2477
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625800"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar errores de certificación comunes
 
@@ -19,7 +19,7 @@ ms.locfileid: "8932012"
 Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado.
 
 > [!NOTE]
-> Asegúrate de revisar las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) para garantizar que la aplicación cumple los requisitos establecidos en ellas.
+> No olvide revisar la [las directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) para asegurarse de que la aplicación cumple todos los requisitos en la lista.
 
 -   Envía la aplicación solamente cuando esté terminada. Puedes usar la descripción de la aplicación para mencionar las próximas funciones, pero asegúrate de que no contenga secciones incompletas, vínculos a páginas web en construcción o cualquier elemento que pueda dar al cliente la impresión de que la aplicación está incompleta.
 
@@ -31,7 +31,7 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 -   No te olvides de [proporciona toda la información necesaria](notes-for-certification.md) que se requiere para usar tu aplicación, como el nombre de usuario y contraseña para una cuenta de prueba en el caso de que tu aplicación necesite que los usuarios se registren en un servicio, o todos los pasos necesarios para acceder a funciones ocultas o bloqueadas.
 
--   Incluir una [dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url) , si la aplicación requiere una; Por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier forma o si exige por ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Incluir un [URL de la política de privacidad](enter-app-properties.md#privacy-policy-url) si su aplicación requiere una; por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier manera o en caso contrario es requerido por la ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revise el [acuerdo del desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y [las directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Asegúrate de que la descripción de la aplicación refleja fielmente lo que hace la aplicación. Para obtener ayuda, consulta nuestras directrices sobre cómo [escribir una buena descripción de la aplicación](write-a-great-app-description.md).
 
@@ -39,7 +39,7 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 -   No [declares tu aplicación como accesible](product-declarations.md#this-app-has-been-tested-to-meet-accessibility-guidelines), a menos que hayas realizado en ella ingeniería específica y la hayas probado en escenarios de accesibilidad.
 
--   Si tu aplicación usa las API de comercio de la Tienda Windows desde el espacio de nombres [**Windows.ApplicationModel.Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), asegúrate de probar la aplicación y comprobar que administre excepciones típicas. Asimismo, asegúrate de que la aplicación use la clase [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) y no la clase [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator), que está destinada a fines de prueba solamente. (Ten en cuenta si la aplicación está destinada a Windows10, versión 1607 (o posteriores), se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) en lugar del espacio de nombres Windows.ApplicationModel.Store).
+-   Si tu aplicación usa las API de comercio de la Tienda Windows desde el espacio de nombres [**Windows.ApplicationModel.Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), asegúrate de probar la aplicación y comprobar que administre excepciones típicas. Asimismo, asegúrate de que la aplicación use la clase [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) y no la clase [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator), que está destinada a fines de prueba solamente. (Ten en cuenta si la aplicación está destinada a Windows 10, versión 1607 (o posteriores), se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) en lugar del espacio de nombres Windows.ApplicationModel.Store).
 
 
  

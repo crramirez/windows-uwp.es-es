@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 012b0bae7c0abdacba352a3e8f60bcfd0aa1dd54
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935226"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646330"
 ---
 # <a name="lighting"></a>Iluminación
 
 
 Las luces se usan para iluminar objetos de una escena. El color del vértice de cada objeto se basa en el mapa de texturas actual, los colores del vértice y las fuentes de luz.
 
-**Nota**  en esta sección es solo para la canalización de función fija. Los sombreadores programables realizan toda la iluminación explícitamente.
+**Tenga en cuenta**    en esta sección es solo para la canalización de funciones fijas. Los sombreadores programables realizan toda la iluminación explícitamente.
 
  
 
@@ -39,7 +39,7 @@ Las luces se usan para iluminar objetos de una escena. El color del vértice de 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="lighting-overview.md">Introducción a la iluminación</a></p></td>
+<td align="left"><p><a href="lighting-overview.md">Información general de iluminación</a></p></td>
 <td align="left"><p>Cuando usas la iluminación de Direct3D, permites que Direct3D controle los detalles de iluminación en tu lugar. Los usuarios avanzados pueden realizar la iluminación ellos mismos, si lo prefieren.</p></td>
 </tr>
 <tr class="even">
@@ -47,11 +47,11 @@ Las luces se usan para iluminar objetos de una escena. El color del vértice de 
 <td align="left"><p>La propiedad de tipo de luz define qué tipo de fuente de luz estás usando. Hay tres tipos de luz en Direct3D: luces puntuales, focos de luz y luces direccionales.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="light-properties.md">Propiedades de luz</a></p></td>
+<td align="left"><p><a href="light-properties.md">Propiedades de la luz</a></p></td>
 <td align="left"><p>Las propiedades de la luz describen el tipo de la fuente de luz (puntual, direccional o foco), la atenuación, el color, la dirección, la posición y el intervalo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mathematics-of-lighting.md">Cálculos de iluminación</a></p></td>
+<td align="left"><p><a href="mathematics-of-lighting.md">Matemáticas de iluminación</a></p></td>
 <td align="left"><p>El modelo de luz de Direct3D cubre la iluminación de ambiente, difusa, especular y de emisión. Es suficiente flexibilidad para resolver una gran variedad de situaciones de iluminación. La cantidad total de luz en una escena se conoce como <em>iluminación global</em>.</p></td>
 </tr>
 </tbody>

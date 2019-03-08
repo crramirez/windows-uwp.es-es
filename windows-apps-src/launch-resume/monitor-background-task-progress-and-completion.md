@@ -1,21 +1,21 @@
 ---
 title: Supervisar el progreso y la finalización de tareas en segundo plano
-description: Obtén información sobre el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano.
+description: Aprende el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 ms.date: 07/06/2018
 ms.topic: article
-keywords: Windows 10, uwp, tarea en segundo plano
+keywords: Windows 10, uwp, tareas en segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050828"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595820"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Supervisar el progreso y la finalización de tareas en segundo plano
 
@@ -29,14 +29,14 @@ Aprende cómo la aplicación puede reconocer el progreso y la finalización noti
 
 El código de la aplicación puede supervisar el progreso y la finalización de la tarea en segundo plano. Para ello, la aplicación se suscribe a eventos de las tareas en segundo plano que ha registrado con el sistema.
 
-- En este tema se supone que tienes una aplicación que registra tareas en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano que se ejecuta fuera del proceso](create-and-register-a-background-task.md). Para obtener información más detallada acerca de condiciones y desencadenadores, consulta [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md).
+- En este tema se supone que tienes una aplicación que registra tareas en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md). Para obtener información más detallada acerca de las condiciones y los desencadenadores, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Crear un controlador de eventos para controlar las tareas en segundo plano finalizadas
 
 ### <a name="step-1"></a>Paso 1
-Crea una función de controlador de eventos para controlar las tareas en segundo plano finalizadas. Este código necesita seguir una superficie específica, que toma un objeto de [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) y un objeto [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) .
+Crea una función de controlador de eventos para controlar las tareas en segundo plano finalizadas. Este código debe seguir una superficie específica, que toma un [ **IBackgroundTaskRegistration** ](https://msdn.microsoft.com/library/windows/apps/br224803) objeto y un [ **BackgroundTaskCompletedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br224778) objeto.
 
-Usa la siguiente superficie para el método de controlador de eventos de tarea de **OnCompleted** en segundo plano.
+Utilice la siguiente superficie para el **OnCompleted** método de controlador de eventos de tarea en segundo plano.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -287,16 +287,16 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-a-background-task.md)
-* [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
-* [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md).
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
+* [Declare tareas en segundo plano en el manifiesto de aplicación](declare-background-tasks-in-the-application-manifest.md)
+* [Controlar una tarea cancelada en segundo plano](handle-a-cancelled-background-task.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
 * [Actualizar un icono dinámico desde una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
+* [Uso de un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)

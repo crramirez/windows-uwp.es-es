@@ -1,16 +1,16 @@
 ---
-Description: View multiple parts of your app in separate windows.
+Description: Ver varias partes de la aplicación en ventanas independientes.
 title: Mostrar varias vistas de una aplicación
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ed69dc912e916f7964c125550621c22dfcd9555
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049067"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607630"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar varias vistas de una aplicación
 
@@ -85,9 +85,9 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
     Debes usar el método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
 
-    En XAML, lo normal es agregar un [**Marco**](https://msdn.microsoft.com/library/windows/apps/br242682) a la propiedad [**Contenido**](https://msdn.microsoft.com/library/windows/apps/br209051) de la [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) y luego desplazar al **Marco** a una [**Página**](https://msdn.microsoft.com/library/windows/apps/br227503) XAML donde has definido el contenido de la aplicación. Para obtener más información, consulta [Navegación de punto a punto entre dos páginas](../basics/navigate-between-two-pages.md).
+    En XAML, lo normal es agregar un elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) a la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) del elemento [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) y luego desplazar al elemento **Frame** a una [**página**](https://msdn.microsoft.com/library/windows/apps/br227503) XAML donde has definido el contenido de la aplicación. Para obtener más información, consulta [Navegación de punto a punto entre dos páginas](../basics/navigate-between-two-pages.md).
 
-    Después de rellenar la nueva [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) debes llamar al método [**Activar**](https://msdn.microsoft.com/library/windows/apps/br209046) de la **Ventana** para mostrar la **Ventana** más adelante. Este trabajo se realiza en la conversación de la nueva vista, de modo que la nueva **Ventana** se activa.
+    Después de rellenar el elemento nuevo [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) debes llamar al método [**Activate**](https://msdn.microsoft.com/library/windows/apps/br209046) del elemento **Window** para mostrar el elemento **Window** más adelante. Este trabajo se realiza en la conversación de la nueva vista, de modo que la nueva **Ventana** se activa.
 
     Por último, obtén el [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120) de la nueva vista que vas a usar para mostrar la vista más adelante. De nuevo, este trabajo se realiza en la conversación de la nueva vista, por lo que [**ApplicationView.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh701672) obtiene el **Id** de la nueva vista.
 
@@ -117,7 +117,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 La primera vista que se crea al iniciar la aplicación se denomina *vista principal*. Esta vista se almacena en la propiedad [**CoreApplication.MainView**](https://msdn.microsoft.com/library/windows/apps/hh700465) y su propiedad [**IsMain**](https://msdn.microsoft.com/library/windows/apps/hh700452) es true. El usuario no crea esta vista, sino que la crea la aplicación. El subproceso de la vista principal sirve de administrador de la aplicación, y todos los eventos de activación de la aplicación se entregan en este subproceso.
 
-Si se abren vistas secundarias, se puede ocultar la ventana de la vista principal (por ejemplo, con un clic en el botón de cierre (x) de la barra de título de la ventana), pero su subproceso permanece activo. Al llamar a [**Cerrar**](https://msdn.microsoft.com/library/windows/apps/br209049) en la [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) de la vista principal se produce una **InvalidOperationException**. (Usa [**Application.Exit**](https://msdn.microsoft.com/library/windows/apps/br242327) para cerrar la aplicación). Si finaliza la conversación principal de la vista, se cierra la aplicación.
+Si se abren vistas secundarias, se puede ocultar la ventana de la vista principal (por ejemplo, con un clic en el botón de cierre (x) de la barra de título de la ventana), pero su subproceso permanece activo. Al llamar a [**Cerrar**](https://msdn.microsoft.com/library/windows/apps/br209049) en la [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) de la vista principal se produce una **InvalidOperationException**. (Use [ **Application.Exit** ](https://msdn.microsoft.com/library/windows/apps/br242327) para cerrar la aplicación.) Si se termina el subproceso de la vista principal, se cierra la aplicación.
 
 ## <a name="secondary-views"></a>Vistas secundarias
 
@@ -137,7 +137,7 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 Cuando uses [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097), puedes elegir si quieres cerrar la ventana inicial y quitarla de la barra de tareas; para ello, especifica el valor de [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105).
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 * No proporciones un punto de entrada clara a la vista secundaria usando el glifo de "abrir ventana nueva".
 * No comuniques el objetivo de la vista secundaria a los usuarios.

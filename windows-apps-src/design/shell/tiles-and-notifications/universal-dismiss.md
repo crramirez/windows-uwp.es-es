@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use Universal Dismiss on your toast notifications.
+Description: Obtenga información sobre cómo usar descartar Universal en las notificaciones del sistema.
 title: Descartar universal
 label: Universal Dismiss
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, descartar universal, notificación, entre dispositivos, descartar una vez descartar en todas partes
 ms.localizationpriority: medium
 ms.openlocfilehash: 0dc87e8856e35d60660c2643b70b820b2857b488
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922121"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605100"
 ---
 # <a name="universal-dismiss"></a>Descartar universal
 
 Descartar universal, con tecnología del Centro de actividades en la nube, significa que, al descartar una notificación de un dispositivo, también se descarta la misma notificación en tus otros dispositivos.
 
 > [!IMPORTANT]
-> **Requiere la Actualización de aniversario**: debes utilizar el SDK 14393 y estar ejecutando la compilación 14393 o superior para usar Descartar universal.
+> **Requiere la actualización de aniversario de**: Debe tener como destino el SDK 14393 y se ejecuta la compilación 14393 o posterior para usar descartar Universal.
 
-El ejemplo habitual de este escenario es avisos de calendario... tienes una aplicación de calendario en ambos dispositivos... obtienes un aviso en el teléfono y el escritorio... haces clic en descartar en el escritorio... gracias a Descartar universal, ¡también se descarta el aviso en el teléfono! **¡Habilitar Descartar universal solo requiere una línea de código!**
+El ejemplo habitual de este escenario es avisos de calendario... tienes una aplicación de calendario en ambos dispositivos... obtienes un aviso en el teléfono y el escritorio... haces clic en descartar en el escritorio... gracias a Descartar universal, ¡también se descarta el aviso en el teléfono! **Habilitación de descartar Universal solo requiere una línea de código!**
 
 <img alt="Diagram of Universal Dismiss" src="images/universal-dismiss.gif" width="406"/>
 
@@ -34,7 +34,7 @@ Como desarrollador, es muy fácil habilitar Descartar universal. Solo tienes que
 
 ![Diagrama de RemoteId de Descartar universal](images/universal-dismiss-remoteid.jpg)
 
-> **RemoteId**: identificador que identifica de manera única una notificación *en todos los dispositivos*.
+> **RemoteId**: Un identificador que identifica de forma única una notificación *en todos los dispositivos*.
 
 T solo toma una línea de código para agregar RemoteId, ¡habilitando la compatibilidad para Descartar universal! La manera de generar tu RemoteId depende de ti. Sin embargo, debes asegurarte de que identifica de manera única tu notificación en todos los dispositivos y que se puede generar el mismo identificador desde distintas instancias de la aplicación que se ejecuta en diferentes dispositivos.
 
@@ -57,7 +57,7 @@ El siguiente código se ejecuta tanto en mi teléfono como en la aplicación de 
 
 ¡Eso es todo lo que tienes que hacer! Cuando el usuario descarte (o haga clic en) una notificación, comprobaremos si tiene un RemoteId y, de ser así, distribuiremos un descarte de ese RemoteId en todos los dispositivos del usuario.
 
-**Problema conocido**: la recuperación del **RemoteId** a través de la API de `ToastNotificationHistory.GetHistory()` siempre devolverá una cadena vacía en lugar del **RemoteId** especificado. No te preocupes, todo es funcional; solo se trata de recuperar el valor que se ha roto.
+**Problema conocido**: Recuperando el **RemoteId** a través de la `ToastNotificationHistory.GetHistory()` API siempre devolverá una cadena vacía en lugar de **RemoteId** que especificó. No te preocupes, todo es funcional; solo se trata de recuperar el valor que se ha roto.
 
 > [!NOTE]
 > Si el usuario o la empresa deshabilita la [creación de reflejo de notificación](notification-mirroring.md) para tu aplicación (o deshabilita por completo la creación de reflejo de notificación), Descartar universal no funcionará, puesto que no tenemos tus notificaciones en la nube.

@@ -1,19 +1,19 @@
 ---
 description: Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Este tema muestra cómo implementar y consumir una propiedad observable y cómo enlazar un control XAML a dicha propiedad.
-title: Controles XAML; enlazar a una propiedad C++/WinRT.
+title: Controles XAML; enlazar a una propiedad C++/WinRT
 ms.date: 08/21/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, propiedad
 ms.localizationpriority: medium
 ms.openlocfilehash: 4033327fa51b0801583a518a0dea055f59e57fc8
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042447"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616630"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; enlazar a una propiedad C++/WinRT
-Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Esta idea se basa en el modelo de diseño de software conocido como el *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)y cómo enlazar controles de XAML a ellos.
+Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Esta idea se basa en el modelo de diseño de software conocido como el *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)y cómo enlazar controles XAML a ellos.
 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
@@ -24,10 +24,10 @@ Supongamos que una clase en tiempo de ejecución denominada **BookSku** tiene un
 Un elemento de texto XAML o control puede enlazarse a estos eventos y controlarlos mediante la recuperación de los valores actualizados y luego actualizarse automáticamente para mostrar el nuevo valor.
 
 > [!NOTE]
-> Para obtener información sobre cómo instalar y usar C++ / WinRT extensión de Visual Studio (VSIX) (que proporciona soporte para plantillas de proyecto) consulta [soporte de Visual Studio para C++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obtener información sobre cómo instalar y usar C++ / c++ / WinRT extensión de Visual Studio (VSIX) (que proporciona compatibilidad con plantillas de proyecto) vea [compatibilidad con Visual Studio C++ / c++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="create-a-blank-app-bookstore"></a>Crear una aplicación en blanco (Bookstore)
-Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Universal** > **aplicación vacía (C++ / WinRT)** del proyecto y asígnale *Bookstore*.
+Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Universal** > **aplicación vacía (C++ / c++ / WinRT)** del proyecto y asígnele el nombre *librería*.
 
 Vamos a crear una nueva clase para representar un libro que tenga una propiedad de título observable. Vamos a crear y consumir la clase dentro de la misma unidad de compilación. Pero queremos poder enlazar a esta clase desde XAML y para ello tiene que ser una clase en tiempo de ejecución. Y vamos a usar C++/WinRT para crearla y consumirla.
 
@@ -45,15 +45,15 @@ namespace Bookstore
 ```
 
 > [!NOTE]
-> Las clases del modelo de vista&mdash;de hecho, cualquier clase en tiempo de ejecución que se declara en la aplicación&mdash;que se deriva de una clase base. La clase **BookSku** declarada anteriormente es un ejemplo de ello. Implementa una interfaz, pero no deriva de una clase base.
+> Las clases de modelo de vista&mdash;de hecho, cualquier clase en tiempo de ejecución que se declara en la aplicación&mdash;no debe derivar de una clase base. El **BookSku** clase declarada anteriormente es un ejemplo de eso. Implementa una interfaz, pero no derivar desde cualquier clase base.
 >
-> Cualquier clase en tiempo de ejecución que se declara en la aplicación que *hace* derivar de una base de la clase se conoce como un *ajustable* clase. Y hay restricciones de las clases. Para una aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (y, por tanto, para que la aplicación se añada correctamente en Microsoft Store), una clase puede componer debe en última instancia, derivar de una clase base de Windows. Esto significa que la clase en la raíz de la parte de la jerarquía de herencia debe ser un tipo que se origine en un espacio de nombres Windows *. Si es necesario derivar una clase en tiempo de ejecución de una clase base&mdash;por ejemplo, para implementar una clase **BindableBase** para todos los modelos de vista derivar de&mdash;, a continuación, puedes derivar de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
+> Cualquier clase en tiempo de ejecución que se declara en la aplicación que *does* derivan de una base de clase se conoce como un *que admite composición* clase. Y hay restricciones en torno a las clases que admiten composición. Para una aplicación pasar el [Windows App Certification Kit](../debug-test-perf/windows-app-certification-kit.md) usadas por Visual Studio y la Microsoft Store para validar los envíos de pruebas (y, por tanto, para que la aplicación correctamente se introducen en la Microsoft Store), un clase que se pueden componer en última instancia, debe derivar de una clase base de Windows. Lo que significa que la clase en la misma raíz de la jerarquía de herencia debe ser un tipo que se originan en un espacio de nombres Windows.*. Si es necesario derivar una clase en tiempo de ejecución de una clase base&mdash;por ejemplo, para implementar un **BindableBase** clase para todos los modelos de vista pueden derivar&mdash;, a continuación, puede derivar de [ **Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 >
-> Un modelo de vista es una abstracción de una vista y, por lo tanto, está enlazado directamente a la vista (el marcado XAML). Un modelo de datos es una abstracción de datos, y se consume solo desde tus modelos de vista y no se vincula directamente en XAML. Por lo tanto, puedes declarar tus modelos de datos no como clases en tiempo de ejecución, pero como clases o estructuras de C++. No necesitan estar declarados en MIDL y eres libre de usar cualquier le gusta la jerarquía de herencia.
+> Un modelo de vista es una abstracción de una vista y, por lo que está enlazado directamente a la vista (el marcado XAML). Un modelo de datos es una abstracción de datos, y tiene consumidos sólo en los modelos de vista y no se enlazan directamente a XAML. Por lo tanto, se pueden declarar los modelos de datos, no como clases en tiempo de ejecución, sino como clases o structs de C++. No necesitan declararse en MIDL, y tiene la libertad usar cualquier jerarquía de herencia que desee.
 
 Guarda el archivo y compila el proyecto. Durante el proceso de compilación, la herramienta `midl.exe` se ejecutará para crear un archivo de metadatos de Windows Runtime (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`) que describe la clase en tiempo de ejecución. Después se ejecutará la herramienta `cppwinrt.exe` para generar archivos de código fuente y ayudarte a crear y consumir tu clase en tiempo de ejecución. Estos archivos incluyen códigos auxiliares para que puedas empezar a implementar la clase en tiempo de ejecución **BookSku** que declaraste en tu archivo IDL. Estos archivos de código auxiliar son `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` y `BookSku.cpp`
 
-Haz clic en el nodo del proyecto y haz clic en **Abrir carpeta en el Explorador de archivos**. Esto abre la carpeta del proyecto en el Explorador de archivos. Allí, copia los archivos de código auxiliar `BookSku.h` y `BookSku.cpp` desde el `\Bookstore\Bookstore\Generated Files\sources\` carpeta y a la carpeta del proyecto, que es `\Bookstore\Bookstore\`. En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Haz clic con el botón derecho en los archivos de código auxiliar que has copiado y haz clic en **Incluir en el proyecto**.
+Haga clic en el nodo del proyecto y haga clic en **Abrir carpeta en el Explorador de archivos**. Se abre la carpeta del proyecto en el Explorador de archivos. Allí, copie los archivos de código auxiliar `BookSku.h` y `BookSku.cpp` desde el `\Bookstore\Bookstore\Generated Files\sources\` carpeta y en la carpeta del proyecto, que es `\Bookstore\Bookstore\`. En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Haz clic con el botón derecho en los archivos de código auxiliar que has copiado y haz clic en **Incluir en el proyecto**.
 
 ## <a name="implement-booksku"></a>Implementar **BookSku**
 Ahora, vamos a abrir `\Bookstore\Bookstore\BookSku.h` y `BookSku.cpp` e implementar nuestra clase en tiempo de ejecución. En `BookSku.h`, agrega un constructor que tome un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), un miembro privado para almacenar la cadena de título y otro para el evento que generaremos cuando cambie el título. Después de realizar estos cambios, su `BookSku.h` tendrá este aspecto.
@@ -122,10 +122,10 @@ namespace winrt::Bookstore::implementation
 }
 ```
 
-En la función de mutación de **título** , comprobamos si es que se establece un valor que sea diferente del valor actual. Y, si es así, actualizamos el título y también generamos el evento [**INotifyPropertyChanged:: PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) con un argumento igual al nombre de la propiedad que ha cambiado. Esto sirve para que la interfaz de usuario sepa qué valor de propiedad tiene que volver a consultar.
+En el **título** función mutador, comprobamos si es que se establece un valor que es diferente del valor actual. Y, si es así, actualice el título y también generan el [ **INotifyPropertyChanged::PropertyChanged** ](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) eventos con un argumento igual al nombre de la propiedad que ha cambiado. Esto sirve para que la interfaz de usuario sepa qué valor de propiedad tiene que volver a consultar.
 
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>Declarar e implementar **BookstoreViewModel**
-Nuestra página principal de XAML se enlazará a un modelo de vista principal. Y ese modelo de vista tendrá varias propiedades, incluida una de tipo **BookSku **. En este paso, declararemos e implementaremos la clase en tiempo de ejecución del modelo de vista principal.
+Nuestra página principal de XAML se enlazará a un modelo de vista principal. Y ese modelo de vista tendrá varias propiedades, incluida una de tipo **BookSku** . En este paso, declararemos e implementaremos la clase en tiempo de ejecución del modelo de vista principal.
 
 Agrega un nuevo elemento **Midl File (.idl)** denominado `BookstoreViewModel.idl`.
 
@@ -142,7 +142,7 @@ namespace Bookstore
 }
 ```
 
-Guarda y compila Copia `BookstoreViewModel.h` y `BookstoreViewModel.cpp` desde la carpeta `Generated Files` en la carpeta del proyecto e inclúyelos en el proyecto. Abre estos archivos e implementar la clase en tiempo de ejecución, como se muestra a continuación. Ten en cuenta cómo, en `BookstoreViewModel.h`, incluimos `BookSku.h`, que declara el tipo de implementación (**winrt::Bookstore::implementation::BookSku**). Y nos estamos restaurar el constructor predeterminado mediante la eliminación de `= delete`.
+Guarda y compila. Copia `BookstoreViewModel.h` y `BookstoreViewModel.cpp` desde la carpeta `Generated Files` en la carpeta del proyecto e inclúyelos en el proyecto. Abrir esos archivos e implemente la clase en tiempo de ejecución tal como se muestra a continuación. Tenga en cuenta cómo, en `BookstoreViewModel.h`, hemos incluido `BookSku.h`, que declara el tipo de implementación (**winrt::Bookstore::implementation::BookSku**). Y nos estamos restaurar el constructor predeterminado mediante la eliminación de `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -185,10 +185,10 @@ namespace winrt::Bookstore::implementation
 ```
 
 > [!NOTE]
-> El tipo de `m_bookSku` es el tipo proyectado (**winrt::Bookstore::BookSku**) y el parámetro de plantilla que usas con [**winrt:: Make**](/uwp/cpp-ref-for-winrt/make) es el tipo de implementación (**winrt::Bookstore::implementation::BookSku**). Aun así, **make** devuelve una instancia del tipo proyectado.
+> El tipo de `m_bookSku` es el tipo proyectado (**winrt::Bookstore::BookSku**) y el parámetro de plantilla que usa con [ **winrt::make** ](/uwp/cpp-ref-for-winrt/make) es el tipo de implementación (**winrt::Bookstore::implementation::BookSku**). Aun así, **make** devuelve una instancia del tipo proyectado.
 
 ## <a name="add-a-property-of-type-bookstoreviewmodel-to-mainpage"></a>Agrega una propiedad de tipo **BookstoreViewModel** a **MainPage**
-Abre `MainPage.idl`, que declara la clase en tiempo de ejecución que representa nuestra página de interfaz de usuario principal. Agrega una instrucción de importación para importar `BookstoreViewModel.idl` y agrega una propiedad de solo lectura denominada MainViewModel de tipo **BookstoreViewModel **. También quita la propiedad **MyProperty** . Ten en cuenta también la `import` la directiva en la siguiente lista.
+Abre `MainPage.idl`, que declara la clase en tiempo de ejecución que representa nuestra página de interfaz de usuario principal. Agrega una instrucción de importación para importar `BookstoreViewModel.idl` y agrega una propiedad de solo lectura denominada MainViewModel de tipo **BookstoreViewModel** . Quitar también el **MyProperty** propiedad. Tenga en cuenta también la `import` la directiva en la lista siguiente.
 
 ```idl
 // MainPage.idl
@@ -204,13 +204,13 @@ namespace Bookstore
 }
 ```
 
-Guarda el archivo. El proyecto no se compilará hasta el final en ese momento, pero compilar ahora es algo útil porque vuelve a crear los archivos de código fuente en el que se implementa la clase en tiempo de ejecución de **MainPage** (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Por lo tanto, Continuemos y generar ahora. El error de compilación que posiblemente vea en esta etapa es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
+Guarda el archivo. No se compilará el proyecto hasta su finalización en este momento, pero crear ahora es algo útil porque lo vuelve a generar los archivos de código fuente en el que el **MainPage** se implementa la clase en tiempo de ejecución (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Así que compila ahora. El error de compilación puede esperar ver en esta fase es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
 
-Si se omite la inclusión de `BookstoreViewModel.idl` (vea la descripción de `MainPage.idl` anteriormente), a continuación, podrás ver el error **se esperaba \< cerca de "MainViewModel"**. Otra sugerencia es asegurarse de que deja todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en las listas de código.
+Si se omite el archivo de inclusión de `BookstoreViewModel.idl` (consulte la lista de `MainPage.idl` anteriormente), verá el error **espera \< cerca de "MainViewModel"**. Otra sugerencia es asegurarse de que deje todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en los listados de código.
 
-Para resolver el error que esperamos ver, tendrás que ahora copiar los códigos auxiliares de descriptor de acceso para la propiedad **MainViewModel** fuera de los archivos generados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`) y en `\Bookstore\Bookstore\MainPage.h` y `MainPage.cpp`.
+Para resolver el error que se espera ver, ahora deberá copiar el código auxiliar de descriptor de acceso para el **MainViewModel** propiedad fuera de los archivos generados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`) y en `\Bookstore\Bookstore\MainPage.h` y `MainPage.cpp`.
 
-En `\Bookstore\Bookstore\MainPage.h`, incluyen `BookstoreViewModel.h`, que declara el tipo de implementación (**winrt::Bookstore::implementation::BookstoreViewModel**). Agrega un miembro privado para almacenar el modelo de vista. Ten en cuenta que la función de descriptor de acceso de propiedad (y el miembro m_mainViewModel) se implementan en términos de **Bookstore::BookstoreViewModel**, que es el tipo proyectado. El tipo de implementación está en el mismo proyecto (unidad de compilación) que la aplicación, por lo que construimos m_mainViewModel a través de la sobrecarga de constructor que toma `nullptr_t`. También quita la propiedad **MyProperty** .
+En `\Bookstore\Bookstore\MainPage.h`, incluir `BookstoreViewModel.h`, que declara el tipo de implementación (**winrt::Bookstore::implementation::BookstoreViewModel**). Agregar un miembro privado para almacenar el modelo de vista. Ten en cuenta que la función de descriptor de acceso de propiedad (y el miembro m_mainViewModel) se implementan en términos de **Bookstore::BookstoreViewModel**, que es el tipo proyectado. El tipo de implementación es en el mismo proyecto (unidad de compilación) de forma que la aplicación, por lo que construimos m_mainViewModel a través de la sobrecarga del constructor que toma `nullptr_t`. Quitar también el **MyProperty** propiedad.
 
 ```cppwinrt
 // MainPage.h
@@ -234,7 +234,7 @@ namespace winrt::Bookstore::implementation
 ...
 ```
 
-En `\Bookstore\Bookstore\MainPage.cpp`, llama a [**winrt:: Make**](/uwp/cpp-ref-for-winrt/make) (con el tipo de implementación) para asignar una nueva instancia del tipo proyectado a m_mainViewModel. Asigna un valor inicial para el título del libro. Implementa el descriptor de acceso para la propiedad MainViewModel. Y, por último, actualiza el título del libro en el controlador de eventos del botón. También quita la propiedad **MyProperty** .
+En `\Bookstore\Bookstore\MainPage.cpp`, llame a [ **winrt::make** ](/uwp/cpp-ref-for-winrt/make) (con el tipo de implementación) para asignar una nueva instancia del tipo previsto a m_mainViewModel. Asigna un valor inicial para el título del libro. Implementa el descriptor de acceso para la propiedad MainViewModel. Y, por último, actualiza el título del libro en el controlador de eventos del botón. Quitar también el **MyProperty** propiedad.
 
 ```cppwinrt
 // MainPage.cpp
@@ -265,7 +265,7 @@ namespace winrt::Bookstore::implementation
 ```
 
 ## <a name="bind-the-button-to-the-title-property"></a>Enlaza el botón a la propiedad **Title**
-Abre `MainPage.xaml`, que contiene la marcación XAML de nuestra página principal de la interfaz de usuario. Como se muestra en la siguiente lista, quitar el nombre del botón y cambia su valor de propiedad de **contenido** desde un literal a una expresión de enlace. Ten en cuenta la propiedad `Mode=OneWay` en la expresión de enlace (unidireccional desde el modelo de vista a la interfaz de usuario). Sin dicha propiedad, la interfaz de usuario no responderá a los eventos cambiados de propiedad.
+Abre `MainPage.xaml`, que contiene la marcación XAML de nuestra página principal de la interfaz de usuario. Como se muestra en la lista que aparece a continuación, quitar el nombre del botón y cambie su **contenido** valor de propiedad de un literal en una expresión de enlace. Ten en cuenta la propiedad `Mode=OneWay` en la expresión de enlace (unidireccional desde el modelo de vista a la interfaz de usuario). Sin dicha propiedad, la interfaz de usuario no responderá a los eventos cambiados de propiedad.
 
 ```xaml
 <Button Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>
@@ -273,13 +273,13 @@ Abre `MainPage.xaml`, que contiene la marcación XAML de nuestra página princip
 
 Ahora compila y ejecuta el proyecto. Haz clic en el botón para ejecutar el controlador de eventos **Clic**. Este controlador llama la función de mutación de título del libro; la mutación genera un evento para que la interfaz de usuario sepa que la propiedad **Title** ha cambiado; y el botón vuelve a consultar el valor de dicha propiedad para actualizar su propio valor **Content**.
 
-## <a name="using-the-binding-markup-extension-with-cwinrt"></a>Con la extensión de marcado {Binding} con C++ / WinRT
-Para la versión actual en el mercado de C++ / WinRT, para poder usar la extensión de marcado {Binding}, tendrás que implementan las interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) y [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) .
+## <a name="using-the-binding-markup-extension-with-cwinrt"></a>Uso de la extensión de marcado {Binding} con C++ / c++ / WinRT
+Para la versión actualmente publicada de C / c++ / WinRT, con el fin de poder usar la extensión de marcado {Binding}, deberá implementar la [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) y [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) interfaces.
 
 ## <a name="important-apis"></a>API importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)
-* [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
+* [plantilla de función winrt::Make](/uwp/cpp-ref-for-winrt/make)
 
-## <a name="related-topics"></a>Artículos relacionados
-* [Consumir API con C++/WinRT](consume-apis.md)
-* [Crear API con C++/WinRT](author-apis.md)
+## <a name="related-topics"></a>Temas relacionados
+* [Consumo de API con C / c++ / WinRT](consume-apis.md)
+* [Crear las API con C++ / c++ / WinRT](author-apis.md)

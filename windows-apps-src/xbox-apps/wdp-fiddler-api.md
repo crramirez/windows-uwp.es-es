@@ -7,26 +7,26 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603340"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si está habilitado el seguimiento de Fiddler
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si el seguimiento de Fiddler está habilitado
 
-**Solicitud**
+**Request**
 
-Puedes comprobar para ver si está habilitado el seguimiento de Fiddler en el dispositivo con la siguiente solicitud.
+Puedes comprobar para ver si el seguimiento de Fiddler está habilitado en el dispositivo con la siguiente solicitud.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/fiddler
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -40,11 +40,11 @@ GET | /ext/fiddler
 
 **Respuesta**   
 
-- Propiedad JSON bool IsProxyEnabled qué especificadores indica si el proxy está habilitado o no.
+- Propiedad booleana IsProxyEnabled de JSON que especifica si el proxy está habilitado o no.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -54,15 +54,15 @@ Código de estado HTTP      | Descripción
 
 ## <a name="enable-fiddler-tracing"></a>Habilitar el seguimiento de Fiddler
 
-**Solicitud**
+**Request**
 
 Puedes habilitar el seguimiento de Fiddler para el kit de desarrollo con la siguiente solicitud.  Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /ext/fiddler
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
@@ -73,7 +73,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | updateCert (opcional)| Un valor booleano que indica si se proporciona el certificado raíz de Fiddler. Debe ser true si Fiddler nunca se ha configurado en este kit de desarrollo o si se ha configurado para un host diferente.  |
 <br>
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -87,7 +87,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -97,15 +97,15 @@ Código de estado HTTP      | Descripción
 
 ## <a name="disable-fiddler-tracing-on-the-devkit"></a>Deshabilitar el seguimiento de Fiddler en el kit de desarrollo
 
-**Solicitud**
+**Request**
 
 Puedes deshabilitar el seguimiento de Fiddler en el dispositivo con la siguiente solicitud. Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /ext/fiddler
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -123,7 +123,7 @@ DELETE | /ext/fiddler
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -136,6 +136,6 @@ Código de estado HTTP      | Descripción
 
 * Windows Xbox
 
-## <a name="see-also"></a>Consulta también
-- [Configuración de Fiddler para la UWP en Xbox](uwp-fiddler.md)
+## <a name="see-also"></a>Consulte también
+- [Configurar Fiddler para UWP en Xbox](uwp-fiddler.md)
 

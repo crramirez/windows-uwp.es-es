@@ -1,23 +1,23 @@
 ---
 title: Ejecutar la Optimización guiada por perfiles (PGO) en aplicaciones para Plataforma universal de Windows (UWP)
-description: Una guía paso a paso para aplicar la optimización de guiada de perfil (PGO) a las aplicaciones de la plataforma Universal de Windows (UWP).
+description: Una guía paso a paso para aplicar la optimización guiada por perfiles (PGO) a las aplicaciones de la plataforma Universal de Windows (UWP).
 ms.date: 02/08/2017
 ms.localizationpriority: medium
 ms.topic: article
 ms.openlocfilehash: 8c19ea1701c6b5e82e66a54223620dace57de4b6
-ms.sourcegitcommit: e83f30486d899401debc782de891c388ba5fc03b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "9062487"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632920"
 ---
 # <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a>Ejecutar la Optimización guiada por perfiles en aplicaciones para Plataforma universal de Windows 
  
 Este tema se ofrece una guía paso a paso para aplicar la Optimización de guiada de perfil (PGO) a las aplicaciones para Plataforma universal de Windows (UWP). Dado que no todos los pasos disponibles para las aplicaciones clásicas de win32 están disponibles para las aplicaciones para UWP, nuestro objetivo es explicar el proceso necesario para incorporar PGO para que la optimización les resulte más sencilla y más accesible a los desarrolladores de UWP.
 
-El siguiente es un tutorial básico sobre cómo aplicar PGO a la plantilla de aplicación DirectX 11 (UWP) predeterminada mediante el uso de VisualStudio2015Update3.
+El siguiente es un tutorial básico sobre cómo aplicar PGO a la plantilla de aplicación DirectX 11 (UWP) predeterminada mediante el uso de Visual Studio 2015 Update 3.
  
-Las capturas de pantalla en este tutorial se basan en el siguiente nuevo proyecto: ![cuadro de diálogo de nuevo proyecto](images/pgo-001.png)
+Las capturas de pantalla en esta guía se basan en el nuevo proyecto siguiente: ![Cuadro de diálogo nuevo proyecto](images/pgo-001.png)
 
 Para aplicar PGO a la plantilla de aplicación DirectX 11:
 
@@ -67,9 +67,9 @@ Para aplicar PGO a la plantilla de aplicación DirectX 11:
   pgosweep.exe App1.exe “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!1.pgc”
   ```
  
-  Una recopilación adicional también podría ser `App1!CoreScenario.pgc`, `App1!UseCase5.pgc`, etc. Si los archivos .pgc se denominan de este modo y están en la ubicación de resultado de la compilación junto con el archivo .pgd, se combinarán automáticamente durante la vinculación descrita en el paso9.
+  También podría ser más recopilando `App1!CoreScenario.pgc`, `App1!UseCase5.pgc`, etcetera. Si los archivos .pgc se denominan de esta manera y en la ubicación de salida de compilación junto con el .pgd, automáticamente combinados al vincular en el paso 9.
  
-8. OPCIONAL: De manera predeterminada, todos los archivos .pgc denominados según se describe en el paso7 y que se hayan colocado junto al archivo .pgd se combinarán cuando se realice la vinculación y se ponderarán de forma equitativa, pero también puedes tener mayor control sobre cómo se ponderan determinadas ejecuciones. Para ello, tienes que usar la herramienta **pgomgr.exe** que también se encuentra en la misma carpeta donde encontraste la copia de `pgort140.dll` por primera vez. Por ejemplo, para combinar la ejecución `CoreScenario` con tres veces la prioridad de las otras ejecuciones, podemos usar el siguiente comando:
+8. OPCIONAL: De forma predeterminada, se combinarán todos los archivos .pgc denominados como se especifica en el paso 7 y colocada junto a la PGD cuando vinculación y ponderado por igual, pero también puede tener mayor control sobre cómo determinadas ejecuciones se ponderan. Para ello, tienes que usar la herramienta **pgomgr.exe** que también se encuentra en la misma carpeta donde encontraste la copia de `pgort140.dll` por primera vez. Por ejemplo, para combinar la ejecución `CoreScenario` con tres veces la prioridad de las otras ejecuciones, podemos usar el siguiente comando:
  
  ```
  pgomgr.exe -merge:3 “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!CoreScenario.pgc” “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1.pgd”
@@ -81,7 +81,7 @@ Para aplicar PGO a la plantilla de aplicación DirectX 11:
  
 10. De este modo, cuando se compile el proyecto, el enlazador llamará a pgomgr.exe para combinar cualquier archivo `<PGDName>!*.pgc` con el archivo .pgd con el peso predeterminado de 1 y la aplicación resultante se optimizará según los datos de la generación de perfiles.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [Rendimiento](performance-and-xaml-ui.md)
 
  

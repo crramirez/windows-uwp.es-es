@@ -7,11 +7,11 @@ keywords: introducción, uwp, windows 10, pista de aprendizaje, configuración, 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931903"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614640"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Guardar y cargar la configuración en una aplicación para UWP
 
@@ -76,7 +76,7 @@ if (composite != null)
 
 Para cargar una configuración desde el dispositivo local, obtén primero una instancia de **ApplicationDataContainer** para el almacén de datos de configuración local con `Windows.Storage.ApplicationData.Current.LocalSettings`. A continuación, úsala para recuperar pares de clave y valor.
 
-Para cargar una configuración de roaming, sigue una trama similar. Obtén primero una instancia de **ApplicationDataContainer** desde el almacén de datos de configuración de roaming con `Windows.Storage.ApplicationData.Current.RoamingSettings`. Obtén acceso a los pares de clave y valor desde esa instancia. Si los datos no se han pasado aún al dispositivo desde el que está obteniendo acceso a la configuración, obtendrás un valor de **ApplicationDataContainer ** nulo. Ese es el motivo por el que hay una comprobación `if (composite != null)` en el código de ejemplo anterior.
+Para cargar una configuración de roaming, sigue una trama similar. Obtén primero una instancia de **ApplicationDataContainer** desde el almacén de datos de configuración de roaming con `Windows.Storage.ApplicationData.Current.RoamingSettings`. Obtén acceso a los pares de clave y valor desde esa instancia. Si los datos no se han pasado aún al dispositivo desde el que está obteniendo acceso a la configuración, obtendrás un valor de **ApplicationDataContainer**  nulo. Ese es el motivo por el que hay una comprobación `if (composite != null)` en el código de ejemplo anterior.
 
 ## <a name="useful-apis-and-docs"></a>API y documentos de utilidad
 
@@ -95,11 +95,11 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 
 | Tema | Descripción |
 |-------|----------------|
-| [Directrices para la configuración de una aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | Describe los procedimientos recomendados para crear y mostrar la configuración de la aplicación. |
+| [Directrices para la configuración de la aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | Describe los procedimientos recomendados para crear y mostrar la configuración de la aplicación. |
 | [Almacenar y recuperar la configuración y otros datos de aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | Tutorial para guardar y recuperar la configuración, incluida la configuración de roaming. |
 
 ## <a name="useful-code-samples"></a>Muestras de código útiles
 
 | Ejemplo de código | Descripción |
 |-----------------|---------------|
-| [Ejemplo de los datos de la aplicación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) | Escenarios 2 y 4 Enfoque en la configuración |
+| [Ejemplo de datos de aplicación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) | Escenarios 2 y 4 Enfoque en la configuración |

@@ -1,6 +1,6 @@
 ---
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
-Description: The TextBox control lets a user enter text into an app.
+Description: El control TextBox permite a un usuario escribir texto en una aplicación.
 title: Cuadro de texto
 label: Text box
 template: detail.hbs
@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e3faf82ab9786f6ba079e44d79b6ed49394b881
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117795"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602690"
 ---
 # <a name="text-box"></a>Cuadro de texto
 
@@ -24,7 +24,7 @@ El control TextBox permite a un usuario escribir texto en una aplicación. Se us
 
 TextBox tiene varias características que pueden simplificar la entrada de texto. Incluye un menú contextual integrado y familiar con compatibilidad para copiar y pegar texto. El botón "Borrar todo" permite al usuario eliminar rápidamente todo el texto que se ha escrito. También cuenta con funcionalidades de revisión ortográfica integradas y habilitadas de manera predeterminada.
 
-> **API importantes**: [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Propiedad Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
+> **API importantes**: [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [propiedad Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -49,7 +49,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/TextBox">abrir la aplicación y ver TextBox en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -83,7 +83,7 @@ Este es el cuadro de texto que se obtiene de este XAML.
 
 Es habitual usar un cuadro de texto para aceptar la entrada de datos en un formulario y usar la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obtener la cadena de texto completa del cuadro de texto. Normalmente usas un evento como un clic del botón Enviar para tener acceso a la propiedad Text, pero puedes controlar el evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) o [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) eventos si necesitas hacer algo cuando cambia el texto.
 
-Este ejemplo muestra cómo obtener y establecer el contenido actual de un cuadro de texto.
+En este ejemplo se muestra cómo obtener y establecer el contenido actual de un cuadro de texto.
 
 ```xaml
 <TextBox name="SampleTextBox" Text="Sample Text"/>
@@ -95,7 +95,7 @@ string sampleText = SampleTextBox.Text;
 SampleTextBox.Text = "Sample text retrieved";
 ```
 
-Puedes agregar un [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx) (o etiqueta) y [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx) (o marca de agua) al cuadro de texto para dar al usuario una indicación de para qué se usa el cuadro de texto. Para personalizar el aspecto del encabezado, puedes establecer la propiedad [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) en lugar de Header. *Para obtener información acerca del diseño, consulta Directrices para etiquetas*.
+Puedes agregar un [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx) (o etiqueta) y [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx) (o marca de agua) al cuadro de texto para dar al usuario una indicación de para qué se usa el cuadro de texto. Para personalizar el aspecto del encabezado, puedes establecer la propiedad [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) en lugar de Header. *Para obtener información de diseño, consulta Directrices para etiquetas*.
 
 Puedes restringir el número de caracteres que el usuario puede escribir estableciendo la propiedad [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.maxlength.aspx). Sin embargo, MaxLength no restringe la longitud del texto pegado. Usa el evento [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) para modificar el texto pegado si esto es importante para la aplicación.
 
@@ -111,7 +111,7 @@ El botón Borrar todo no se muestra en ninguno de estos casos:
 - **AcceptsReturn** es **true**
 - **TextWrap** tiene un valor distinto de **NoWrap**
 
-Este ejemplo muestra cómo obtener y establecer el contenido actual de un cuadro de texto.
+En este ejemplo se muestra cómo obtener y establecer el contenido actual de un cuadro de texto.
 
 ```xaml
 <TextBox name="SampleTextBox" Text="Sample Text"/>
@@ -314,9 +314,9 @@ Para obtener más información y ejemplos, consulta [Usar el ámbito de entrada 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de texto](text-controls.md)
-- [Directrices sobre revisión ortográfica](text-controls.md)
+- [Directrices para comprobar la ortografía](text-controls.md)
 - [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Directrices para la entrada de texto](text-controls.md)
-- [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Clase de PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

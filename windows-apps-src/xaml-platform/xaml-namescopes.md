@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ffe6119e9cac162486d23472f5d5876924b7ef9e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928426"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589820"
 ---
 # <a name="xaml-namescopes"></a>Ámbitos de nombres XAML
 
@@ -30,11 +30,11 @@ También puedes usar el método de utilidad [**FindName**](https://msdn.microsof
 
 Técnicamente, lo que sucede es que el código XAML se somete a un pase del compilador de marcado al mismo tiempo que el código XAML y la clase parcial que define para el código subyacente se compilan juntos. Cada elemento de objeto con un **Name** o [atributo x:Name](x-name-attribute.md) definido en el marcado genera un campo interno con un nombre que coincide con el nombre XAML. Este campo inicialmente está vacío. Después, la clase genera un método **InitializeComponent** que solo se llama cuando todo el código XAML está cargado. Dentro de la lógica de **InitializeComponent**, cada campo interno se rellena con el valor devuelto [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para la cadena de nombre equivalente. Para observar esta infraestructura por ti mismo, examina los archivos ".g" (generados) que se crean para cada página XAML en la subcarpeta /obj de un proyecto de aplicación de Windows Runtime después de la compilación. También puedes considerar a los campos y el método **InitializeComponent** como miembros de los ensamblados resultantes si reflexionas sobre ellos o examinas el contenido del lenguaje de la interfaz.
 
-**Nota**específicamente para las extensiones de componentes de VisualC ++ (C++ / CX) de las aplicaciones, no se crea un campo de respaldo de una referencia de **x: Name** para el elemento raíz de un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++/CX, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Tenga en cuenta**  específicamente para extensiones de componentes de Visual C++ (C++ / c++ / CX) las aplicaciones, un campo de respaldo para una **x: Name** referencia no se creó para el elemento raíz de un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++/CX, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ## <a name="creating-objects-at-run-time-with-xamlreaderload"></a>Creación de objetos en tiempo de ejecución con XamlReader.Load
 
-XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)).
+El lenguaje XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)).
 
 ### <a name="xaml-namescope-implications-of-xamlreaderload"></a>Implicaciones del ámbito de nombres XAML de XamlReader.Load 
 
@@ -81,7 +81,7 @@ Debido a la separación de los ámbitos de nombres XAML, buscar elementos con no
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Introducción a XAML](xaml-overview.md)
-* [atributo x:Name](x-name-attribute.md)
+* [atributo x: Name](x-name-attribute.md)
 * [Inicio rápido: Plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
 * [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
 * [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)

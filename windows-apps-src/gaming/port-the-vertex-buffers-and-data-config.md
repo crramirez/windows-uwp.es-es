@@ -7,13 +7,13 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, port, portar, vertex buffers, búferes de vértices, data, datos, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938488"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592820"
 ---
-# <a name="port-the-vertex-buffers-and-data"></a>Portar datos y búferes de vértices
+# <a name="port-the-vertex-buffers-and-data"></a>Migrar datos y búferes de vértices
 
 
 
@@ -28,7 +28,7 @@ En este paso, definirás los búferes de vértices que contendrán las mallas, y
 
 Examinemos ahora el modelo rígido de la malla del cubo que estamos usando. Ambas representaciones tienen vértices organizados en una lista de triángulos (de manera opuesta a una franja o a otro diseño de triángulos más eficiente). Todos los vértices en ambas representaciones también tienen valores de color e índices asociados. La mayor parte del código Direct3D de este tema hace referencia a variables y objetos definidos en el proyecto de Direct3D.
 
-Este es el cubo para que OpenGL ES 2.0 procese. En la implementación de la muestra, cada vértice consiste en 7 valores flotantes: 3 coordenadas de posición seguidas de 4 valores de color RGBA.
+Este es el cubo para que OpenGL ES 2.0 procese. En la implementación de ejemplo, cada vértice es 7 valores float: seguido de 4 valores de color RGBA 3 coordenadas de posición.
 
 ```cpp
 #define CUBE_INDICES 36
@@ -112,11 +112,11 @@ Suponiendo que trasladaste correctamente la malla de cubo del sistema de coorden
 
 ## <a name="instructions"></a>Instrucciones
 
-### <a name="step-1-create-an-input-layout"></a>Paso 1: crear un diseño de entrada
+### <a name="step-1-create-an-input-layout"></a>Paso 1: Crear un diseño de entrada
 
 En OpenGL ES 2.0, los datos de vértice se suministran como atributos y estos atributos se proporcionarán a los objetos de sombreador para que los lea. Normalmente, le proporcionas una cadena que contiene el nombre del atributo que figura en el GLSL del sombreador al objeto del programa sombreador y obtienes una ubicación de memoria que puedes suministrar al sombreador. En este ejemplo, un objeto de búfer de vértices contiene una lista de estructuras personalizadas de vértice a las que se define y se da formato de esta manera: 
 
-OpenGL ES 2.0: configurar los atributos que contiene la información por vértice
+OpenGL ES 2.0: Configurar los atributos que contienen la información de vértice.
 
 ``` syntax
 typedef struct 
@@ -126,13 +126,13 @@ typedef struct
 } Vertex;
 ```
 
-En OpenGL ES 2.0, los diseños de entrada son implícitos. Tomas un elemento GL\_ELEMENT\_ARRAY\_BUFFER de propósito general y suministras el intervalo y el desplazamiento para que el sombreador de vértices pueda interpretar los datos después de la carga. Debes informar al sombreador antes de representar los atributos que se asignarán a determinadas porciones de cada bloque de datos de vértice mediante **glVertexAttribPointer**.
+En OpenGL ES 2.0, los diseños de entrada son implícitos; tomar un propósito general GL\_elemento\_matriz\_búfer y proporcione el intervalo y desplazamiento de forma que el sombreador de vértices puede interpretar los datos después de cargarlo. Debes informar al sombreador antes de representar los atributos que se asignarán a determinadas porciones de cada bloque de datos de vértice mediante **glVertexAttribPointer**.
 
 Cuando se trata de Direct3D, debes proporcionar un diseño de entrada para describir la estructura de los datos de vértice en el búfer de vértices cuando creas el búfer, en lugar de hacerlo antes de dibujar la geometría. Para ello, puedes usar un diseño de entrada que se corresponda con el diseño de los datos de nuestros vértices individuales en la memoria. Es muy importante que especifiques esto de la manera correcta.
 
-Una vez hecho esto, debes crear una descripción de entrada como una matriz de estructuras [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180).
+En este caso, crea una descripción como una matriz de entrada [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estructuras.
 
-Direct3D: definir una descripción de diseño de entrada
+Direct3D: Definir una descripción del diseño de entrada.
 
 ``` syntax
 struct VertexPositionColor
@@ -153,11 +153,11 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 
 Esta descripción de entrada define un vértice como un par de vectores de 3 coordenadas: un vector 3D para almacenar la posición del vértice en las coordenadas del modelo y otro vector 3D para almacenar el valor de color RGB asociado con el vértice. En este caso, usas un formato de punto flotante de 3x32 bits, cuyos elementos se representan como `XMFLOAT3(X.Xf, X.Xf, X.Xf)` en nuestro código. Recuerda que debes usar los tipos de la biblioteca [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574) siempre que estés manipulando datos que posteriormente usará un sombreador, dado que esto garantiza un correcto empaquetado y alineamiento de esos datos. (Por ejemplo, usa [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) o [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) para los datos de vector y [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621) para las matrices).
 
-Para obtener una lista de todos los tipos de formato posibles, consulta [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
+Para obtener una lista de todos los tipos de formato posibles, consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
 
-Mediante el diseño de entrada por vértice definido, crearás el objeto de diseño. En el siguiente código, escribes en **m\_inputLayout** una variable de tipo **ComPtr** (que apunta a un objeto de tipo [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData** contiene el objeto de sombreador de vértices compilado del paso anterior, [Portar los sombreadores](port-the-shader-config.md).
+Mediante el diseño de entrada por vértice definido, crearás el objeto de diseño. En el código siguiente, que se va a escribir **m\_inputLayout**, una variable de tipo **ComPtr** (que apunta a un objeto de tipo [ **ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData** contiene el objeto de sombreador de vértices compilado del paso anterior, [Portar los sombreadores](port-the-shader-config.md).
 
-Direct3D: crear el diseño de entrada utilizado por el búfer de vértices
+Direct3D: Crear el diseño de entrada utilizado por el búfer de vértices.
 
 ``` syntax
 Microsoft::WRL::ComPtr<ID3D11InputLayout>      m_inputLayout;
@@ -175,11 +175,11 @@ m_d3dDevice->CreateInputLayout(
 
 Ya definimos el diseño de entrada. A continuación, crearemos un búfer que use este diseño y lo cargue con los datos de la malla del cubo.
 
-### <a name="step-2-create-and-load-the-vertex-buffers"></a>Paso 2: crear y cargar los búferes de vértices
+### <a name="step-2-create-and-load-the-vertex-buffers"></a>Paso 2: Crear y cargar los búferes de vértices
 
-En OpenGL ES 2.0, debes crear un par de búferes: uno para los datos de posición y otro para los datos de color. (También puedes crear una estructura que pueda contener a ambos o a un solo búfer). A continuación, enlazas cada búfer y escribes en ellos los datos de posición y color. Luego, durante la función de representación, vuelves a enlazar los búferes y le proporcionas al sombreador el formato de los datos del búfer para que pueda interpretarlos correctamente.
+En OpenGL ES 2.0, debes crear un par de búferes: uno para los datos de posición y otro para los datos de color. (También podría crear una estructura que contiene ambos y un único búfer.) Enlazar cada búfer y escribir datos de color y posición en ellos. Luego, durante la función de representación, vuelves a enlazar los búferes y le proporcionas al sombreador el formato de los datos del búfer para que pueda interpretarlos correctamente.
 
-OpenGL ES 2.0: enlazar búferes de vértices
+OpenGL ES 2.0: Enlazar los búferes de vértices
 
 ``` syntax
 // upload the data for the vertex position buffer
@@ -188,13 +188,13 @@ glBindBuffer(GL_ARRAY_BUFFER, renderer->vertexBuffer);
 glBufferData(GL_ARRAY_BUFFER, sizeof(VERTEX) * CUBE_VERTICES, renderer->vertices, GL_STATIC_DRAW);   
 ```
 
-En cuanto a Direct3D, los búferes accesibles de los sombreadores se representan como estructuras [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220). Para enlazar la ubicación de este búfer al objeto de sombreador, necesitas crear una estructura CD3D11\_BUFFER\_DESC para cada búfer mediante [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501); a continuación debes establecer el contexto de dispositivo de Direct3D llamando a un método set específico del tipo de búfer, como [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).
+En Direct3D, búferes accesibles para el sombreador se representan como [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estructuras. Para enlazar la ubicación de este búfer para el objeto de sombreador, deberá crear un CD3D11\_búfer\_estructura DESC para cada búfer con [ **ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)y, a continuación, establezca el búfer de contexto de dispositivo de Direct3D mediante una llamada a un método set específico del tipo de búfer, como [ **ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).
 
 Una vez hayas establecido el búfer, debes indicar tanto el intervalo (correspondiente al tamaño del elemento de datos de un vértice individual) como el desplazamiento (donde empieza realmente la matriz de datos de vértice).
 
-Ten en cuenta que asignaremos el puntero a la matriz **vertexIndices** del campo **pSysMem** perteneciente a la estructura [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220). Si estos datos no son correctos, querrá decir que la malla está dañada o vacía.
+Tenga en cuenta que asignamos el puntero a la **vertexIndices** de matriz a la **pSysMem** campo de la [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estructura. Si estos datos no son correctos, querrá decir que la malla está dañada o vacía.
 
-Direct3D: crear y establecer el búfer de vértices
+Direct3D: Crear y establecer el búfer de vértices
 
 ``` syntax
 D3D11_SUBRESOURCE_DATA vertexBufferData = {0};
@@ -220,13 +220,13 @@ m_d3dContext->IASetVertexBuffers(
   &offset);
 ```
 
-### <a name="step-3-create-and-load-the-index-buffer"></a>Paso 3: crear y cargar los búferes de índices
+### <a name="step-3-create-and-load-the-index-buffer"></a>Paso 3: Crear y cargar el búfer de índice
 
 Los búferes de índices son una manera eficiente de permitir que el sombreador de vértices busque vértices individuales. Aunque no sean obligatorios, los usamos en este representador de muestra. Al igual que con los búferes de vértices en OpenGL ES 2.0, un búfer de índices se crea y enlaza como un búfer de propósito general y allí se copian los índices de vértices que creaste antes.
 
 Cuando estés listo para comenzar a dibujar, debes volver a enlazar ambos búferes (el de vértices y el de índices) y llamar a **glDrawElements**.
 
-OpenGL ES 2.0: enviar el orden de índices a la llamada Draw
+OpenGL ES 2.0: Enviar el orden del índice a la llamada a draw.
 
 ``` syntax
 GLuint indexBuffer;
@@ -248,9 +248,9 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->indexBuffer);
 glDrawElements (GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
 ```
 
-Con Direct3D, es un proceso bastante similar, aunque un poco más didáctico. Suministra el búfer de índices como un subrecurso de Direct3D a la interfaz [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) que creaste cuando configuraste Direct3D. Para ello, llama a [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588) mediante el subrecurso configurado de la matriz de índices, de esta manera: (Recuerda tener en cuenta que asignarás el puntero a la matriz **cubeIndices** del campo **pSysMem** perteneciente a la estructura [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)).
+Con Direct3D, es un proceso bastante similar, aunque un poco más didáctico. Suministra el búfer de índices como un subrecurso de Direct3D a la interfaz [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) que creaste cuando configuraste Direct3D. Para ello, llama a [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588) mediante el subrecurso configurado de la matriz de índices, de esta manera: (De nuevo, tenga en cuenta que asignar el puntero a la **cubeIndices** de matriz a la **pSysMem** campo de la [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estructura.)
 
-Direct3D: crear el búfer de índices
+Direct3D: Crear el búfer de índice.
 
 ``` syntax
 m_indexCount = ARRAYSIZE(cubeIndices);
@@ -276,7 +276,7 @@ m_d3dContext->IASetIndexBuffer(
 
 A continuación, dibujarás los triángulos mediante una llamada a [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (o al método [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) de los vértices no indizados), de esta manera: (Para obtener más información, consulta la sección [Dibujar en la pantalla](draw-to-the-screen.md)).
 
-Direct3D: dibujar los vértices indizados
+Direct3D: Dibuje los vértices indizados.
 
 ``` syntax
 m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
@@ -293,11 +293,11 @@ m_d3dContext->DrawIndexed(
 ## <a name="previous-step"></a>Paso anterior
 
 
-[Portar objetos de sombreador](port-the-shader-config.md)
+[Migrar objetos de sombreador](port-the-shader-config.md)
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Portar GLSL](port-the-glsl.md)
+[Migrar GLSL](port-the-glsl.md)
 
 ## <a name="remarks"></a>Observaciones
 
@@ -306,8 +306,8 @@ Cuando estructures tu contenido de Direct3D, separa el código que llama a los m
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Portar un representador simple de OpenGL ES 2.0 a Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
-* [Portar objetos de sombreador](port-the-shader-config.md)
+* [Cómo: puerto un representador simple de OpenGL ES 2.0 a Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [Migrar objetos de sombreador](port-the-shader-config.md)
 * [Migrar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md)
 * [Migrar GLSL](port-the-glsl.md)
 

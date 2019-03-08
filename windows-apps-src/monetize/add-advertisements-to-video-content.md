@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, video, vídeo, scheduler, programador, javascript, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 69fef2bc5deb21be8685badb0cf18f38769170cb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045078"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603850"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anuncios en contenido de vídeo
 
@@ -22,11 +22,11 @@ Este tutorial muestra cómo usar la clase **AdScheduler** para mostrar anuncios 
 
 **AdScheduler** funciona tanto con contenido multimedia progresivo como de streaming y utiliza los formatos de carga Video Ad Serving Template (VAST) 2.0/3.0 y VMAP estándar de IAB. Al usar estándares, **AdScheduler** es independiente del servicio de anuncios con el que interactúa.
 
-La publicidad para el contenido de vídeo es diferente en función de si el programa es inferior a 10minutos (formato corto) o superior a 10minutos (formato largo). Aunque la segunda opción es más complicada de configurar en el servicio, realmente no existe ninguna diferencia en cómo se escribe el código del lado cliente. Si la clase **AdScheduler** recibe una carga de VAST con un solo anuncio en lugar de un manifiesto, esto se trata como si el manifiesto llamara a un solo anuncio ya preparado (un salto en el minuto 00:00).
+La publicidad para el contenido de vídeo es diferente en función de si el programa es inferior a 10 minutos (formato corto) o superior a 10 minutos (formato largo). Aunque la segunda opción es más complicada de configurar en el servicio, realmente no existe ninguna diferencia en cómo se escribe el código del lado cliente. Si la clase **AdScheduler** recibe una carga de VAST con un solo anuncio en lugar de un manifiesto, esto se trata como si el manifiesto llamara a un solo anuncio ya preparado (un salto en el minuto 00:00).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior.
+* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio 2015 o una versión posterior.
 
 * El proyecto debe usar el control [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) para proporcionar el contenido de vídeo en el que se programarán los anuncios. Este control está disponible en la colección de bibliotecas [TVHelpers](https://github.com/Microsoft/TVHelpers) disponible a través de Microsoft en GitHub.
 
@@ -51,16 +51,16 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
 3. Agrega a tu proyecto una referencia a la biblioteca **Microsoft Advertising SDK for JavaScript**.
 
-    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón derecho en **Referencias** y luego selecciona **Agregar referencia...**
-    2. En el **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para JavaScript** (versión 10.0).
+    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y, a continuación, selecciona **Agregar referencia...**
+    2. En el **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **Microsoft Advertising SDK for JavaScript** (versión 10.0).
     3. En el **Administrador de referencias**, haz clic en Aceptar.
 
 4.  Agrega el archivo AdScheduler.js al proyecto:
 
-    1. En VisualStudio, haz clic en **Proyecto** y en **Administrar paquetes de NuGet**.
+    1. En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
     2. En el cuadro de búsqueda, escribe **Microsoft.StoreServices.VideoAdScheduler** e instala el paquete Microsoft.StoreServices.VideoAdScheduler. El archivo AdScheduler.js se agrega al subdirectorio .. /js en el proyecto.
 
-5.  Abre el archivo index.html (u otro archivo HTML adecuado para el proyecto). En la sección `<head>`, después de las referencias de JavaScript del proyecto de default.css y main.js, agrega la referencia a ad.js y adscheduler.js.
+5.  Abre el archivo index.html (u otro archivo html adecuado para el proyecto). En la sección `<head>`, después de las referencias de JavaScript del proyecto de default.css y main.js, agrega la referencia a ad.js y adscheduler.js.
 
     ``` html
     <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
@@ -142,7 +142,7 @@ Cuando se reanuda el contenido que contiene publicidad, establece **playSkippedM
 
 ### <a name="requesttimeout"></a>requestTimeout
 
-Esta propiedad obtiene o establece el número de milisegundos para esperar una respuesta de la solicitud de anuncios antes del tiempo de espera. Un valor de 0 informa al sistema ningún tiempo de espera. El valor predeterminado es 30000 ms (30 segundos).
+Esta propiedad obtiene o establece el número de milisegundos de espera para una respuesta de solicitud anuncio antes de agotar el tiempo. Un valor de 0 informa al sistema ningún tiempo de espera. El valor predeterminado es 30000 ms (30 segundos).
 
 ### <a name="schedule"></a>programar
 
@@ -152,9 +152,9 @@ Esta propiedad obtiene los datos de programación que se recuperaron del servido
 
 Este evento se genera cuando la reproducción de anuncios alcanza puntos de control de cuartil. El segundo parámetro del controlador de eventos (*eventInfo*) es un objeto JSON con los siguientes miembros:
 
-* **progress**: el estado de reproducción de anuncios (uno de los valores de enumeración de **MediaProgress** definidos en AdScheduler.js).
-* **clip**: el clip de vídeo que se está reproduciendo. Este objeto no está pensado para utilizarlo en el código.
-* **adPackage**: un objeto que representa la parte de la carga de anuncios que corresponde al anuncio que se está reproduciendo. Este objeto no está pensado para utilizarlo en el código.
+* **curso**: El estado de reproducción de ad (uno de los **MediaProgress** valores de enumeración definidos en AdScheduler.js).
+* **clip**: El clip de vídeo que se reproduce. Este objeto no está pensado para utilizarlo en el código.
+* **adPackage**: Un objeto que representa la parte de la carga de ad que corresponde al anuncio que se está reproduciendo. Este objeto no está pensado para utilizarlo en el código.
 
 ### <a name="onallcomplete"></a>onAllComplete  
 
@@ -168,8 +168,8 @@ Este evento se genera cuando **AdScheduler** encuentra un error. Para obtener m�
 
 Este evento se genera cuando un anuncio se está reproduciendo e indica cuánto tiempo permanece en el pod actual. El segundo parámetro del controlador de eventos (*eventData*) es un objeto JSON con los siguientes miembros:
 
-* **remainingAdTime**: el número de segundos restantes para el anuncio actual.
-* **remainingPodTime**: el número de segundos restantes para el pod actual.
+* **remainingAdTime**: El número de segundos restantes para el anuncio actual.
+* **remainingPodTime**: El número de segundos que quedan durante el pod actual.
 
 > [!NOTE]
 > Un pod es un grupo de anuncios que se reproducen en una secuencia, como un grupo de anuncios que se reproduce durante una interrupción comercial. Para obtener más información, consulta la especificación de IAB Digital Video Ad Serving Template (VAST).
@@ -178,12 +178,12 @@ Este evento se genera cuando un anuncio se está reproduciendo e indica cuánto 
 
 Este evento se genera cuando finaliza un pod de anuncios. El segundo parámetro del controlador de eventos (*eventData*) es un objeto JSON con los siguientes miembros:
 
-* **startTime**: el tiempo de inicio del pod, en segundos.
-* **pod**: un objeto que representa el pod. Este objeto no está pensado para utilizarlo en el código.
+* **startTime**: Hora de inicio del pod, en segundos.
+* **pod**: Un objeto que representa el pod. Este objeto no está pensado para utilizarlo en el código.
 
 ### <a name="onpodstart"></a>onPodStart
 
 Este evento se genera cuando se inicia un pod de anuncios. El segundo parámetro del controlador de eventos (*eventData*) es un objeto JSON con los siguientes miembros:
 
-* **startTime**: el tiempo de inicio del pod, en segundos.
-* **pod**: un objeto que representa el pod. Este objeto no está pensado para utilizarlo en el código.
+* **startTime**: Hora de inicio del pod, en segundos.
+* **pod**: Un objeto que representa el pod. Este objeto no está pensado para utilizarlo en el código.

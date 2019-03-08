@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, completar, consumible, Microsoft Store collection API, fulfill, consumable
 ms.localizationpriority: medium
 ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116031"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615810"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Notificar productos consumibles como completados
 
@@ -37,7 +37,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de solicitud                                                   |
+| Método | URI de la solicitud                                                   |
 |--------|---------------------------------------------------------------|
 | POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
@@ -46,17 +46,17 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | cadena | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
+| Autorización  | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;.                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
-| Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
+| Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
-| Parámetro     | Tipo         | Descripción         | Obligatorio |
+| Parámetro     | Tipo         | Descripción         | Requerido |
 |---------------|--------------|---------------------|----------|
-| beneficiary   | UserIdentity | El usuario para el que se está consumiendo este artículo. Para obtener más información, consulta la siguiente tabla.        | Sí      |
+| beneficiary   | UserIdentity | El usuario para el que se está consumiendo este artículo. Para obtener más información, consulte la siguiente tabla.        | Sí      |
 | itemId        | string       | Valor *itemId* devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con *trackingId*.      | No       |
 | trackingId    | guid         | Identificador de seguimiento único proporcionado por el desarrollador. Usa este parámetro con *itemId*.         | No       |
 | productId     | string       | Valor *productId* devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con *transactionId*.   | No       |
@@ -65,11 +65,11 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 El objeto UserIdentity contiene los parámetros siguientes.
 
-| Parámetro            | Tipo   | Descripción       | Obligatorio |
+| Parámetro            | Tipo   | Descripción       | Requerido |
 |----------------------|--------|-------------------|----------|
-| identityType         | cadena | Especifica el valor de cadena **b2b**.    | Sí      |
+| identityType         | string | Especifica el valor de cadena **b2b**.    | Sí      |
 | identityValue        | string | La [clave de id. de Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.      | Sí      |
-| localTicketReference | cadena | El identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la [notificación](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) *userId* de la clave de id. de Microsoft Store. | Sí      |
+| localTicketReference | string | El identificador solicitado para la respuesta devuelta. Se recomienda que use el mismo valor que el *userId*[notificación](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) en la clave de Id. de Microsoft Store.   | Sí      |
 
 
 ### <a name="request-examples"></a>Ejemplos de solicitud
@@ -136,9 +136,9 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 | Código | Error        | Código de error interno           | Descripción           |
 |------|--------------|----------------------------|-----------------------|
-| 401  | No autorizado | AuthenticationTokenInvalid | El token de acceso de Azure AD no es válido. En algunos casos, los detalles del código ServiceError contendrán más información, como la fecha de expiración del token o si falta la notificación *appid*. |
-| 401  | No autorizado | PartnerAadTicketRequired   | No se pasó un token de acceso de Azure AD al servicio en el encabezado de autorización.                                                                                                   |
-| 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de id. de Microsoft Store del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
+| 401  | Sin autorización | AuthenticationTokenInvalid | El token de acceso de Azure AD no es válido. En algunos casos, los detalles del código ServiceError contendrán más información, como la fecha de expiración del token o si falta la notificación *appid*. |
+| 401  | Sin autorización | PartnerAadTicketRequired   | No se pasó un token de acceso de Azure AD al servicio en el encabezado de autorización.                                                                                                   |
+| 401  | Sin autorización | InconsistentClientId       | La notificación *clientId* de la clave de id. de Microsoft Store del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
 
 <span/> 
 
@@ -147,4 +147,4 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 * [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)
 * [Consultar productos](query-for-products.md)
 * [Conceder productos gratuitos](grant-free-products.md)
-* [Renovar una clave de id. de Microsoft Store](renew-a-windows-store-id-key.md)
+* [Renovar una clave de Id. de Microsoft Store](renew-a-windows-store-id-key.md)

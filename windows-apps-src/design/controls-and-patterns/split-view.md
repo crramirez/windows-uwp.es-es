@@ -13,17 +13,17 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e0c709261b08231fa82af615d5398fd66648d4e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646470"
 ---
 # <a name="split-view-control"></a>Control de vista en dos paneles
 
 Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido.
 
-> **API importantes**: [Clase SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
+> **API importantes**: [Clase de SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar su hub.
 
@@ -36,17 +36,17 @@ Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar s
 
     El panel está oculto hasta que se abre. Cuando se abre, el panel se superpone al área de contenido.
 
--   **En línea**
+-   **Inline**
 
     El panel siempre está visible y no se superpone al área de contenido. Las áreas del panel y el contenido dividen la superficie disponible de la pantalla.
 
 -   **CompactOverlay**
 
-    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, se superpondrá al área de contenido.
+    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48 px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, se superpondrá al área de contenido.
 
 -   **CompactInline**
 
-    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, reducirá el espacio disponible para el contenido para apartarlo de su camino.
+    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48 px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, reducirá el espacio disponible para el contenido para apartarlo de su camino.
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -63,7 +63,7 @@ Si quieres crear un menú de navegación con un botón de expandir/contraer y un
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SplitView">abrir la aplicación y ver SplitView en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -97,7 +97,7 @@ Este es un control SplitView con un panel abierto que aparece en línea junto al
 
 - [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 - [Patrón de panel de navegación](navigationview.md)
 - [Vista de lista](lists.md)
-- [Maestro y detalles](master-details.md)
+- [Maestro/detalles](master-details.md)

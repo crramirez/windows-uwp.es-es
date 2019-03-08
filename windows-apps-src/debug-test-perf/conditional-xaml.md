@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611770"
 ---
 # <a name="conditional-xaml"></a>XAML condicional
 
@@ -183,7 +183,7 @@ Puedes usar calificadores condicionales con distintas formas de [sintaxis de pro
 </Rectangle>
 ```
 
-Al enlazar una propiedad con otra propiedad que dependa de un espacio de nombres condicional, debes usar la misma condición en ambas propiedades. Aquí, `colorPicker.Color` depende del espacio de nombres condicional 'contract5Present', por lo que también se debe colocar el prefijo 'contract5Present' en la propiedad SolidColorBrush.Color. (O también puedes colocar el prefijo 'contract5Present' en SolidColorBrush en lugar de en la propiedad Color). Si no lo haces, obtendrás un error en el tiempo de compilación.
+Al enlazar una propiedad con otra propiedad que dependa de un espacio de nombres condicional, debes usar la misma condición en ambas propiedades. Aquí, `colorPicker.Color` depende del espacio de nombres condicional 'contract5Present', por lo que también se debe colocar el prefijo 'contract5Present' en la propiedad SolidColorBrush.Color. (O bien, puede colocar el prefijo 'contract5Present' en el objeto SolidColorBrush en lugar de en la propiedad de Color). Si no lo hace, obtendrá un error en tiempo de compilación.
 
 ```xaml
 <SolidColorBrush contract5Present:Color="{x:Bind colorPicker.Color, Mode=OneWay}"/>
@@ -245,5 +245,5 @@ Si la aplicación se ejecuta en Fall Creators Update, usa ColorPicker para permi
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Guía de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detectar dinámicamente las características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo de compilación de 2015)

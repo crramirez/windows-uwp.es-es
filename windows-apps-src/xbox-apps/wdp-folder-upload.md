@@ -7,23 +7,23 @@ keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
 ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617610"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>Cargar una carpeta en el directorio de desarrollo
 
-**Solicitud**
+**Request**
 
 Puedes cargar una carpeta completa de una vez en el id. de la carpeta conocida para DevelopmentFiles (o en una subcarpeta dentro de esa carpeta).
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :------
 POST | /api/app/packagemanager/upload 
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
@@ -32,7 +32,7 @@ Parámetro del URI      | Descripción
 destinationFolder (necesario) | El nombre de la carpeta de destino de la carpeta que se va a cargar. Esta carpeta se colocará en d:\developmentfiles\LooseApps en la consola. El nombre de esta carpeta debe estar codificado en Base64, ya que puede contener separadores de ruta de acceso si la carpeta es una subcarpeta de LooseApps.
 <br />
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -44,7 +44,7 @@ destinationFolder (necesario) | El nombre de la carpeta de destino de la carpeta
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

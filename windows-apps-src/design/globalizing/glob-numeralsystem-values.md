@@ -1,5 +1,5 @@
 ---
-Description: This topic lists the values available to the NumeralSystem property of various classes in the Windows.Globalization namespace.
+Description: En este tema se enumeran los valores disponibles en la propiedad NumeralSystem de diversas clases en el espacio de nombres Windows.Globalization.
 title: Valores NumeralSystem
 template: detail.hbs
 ms.date: 11/02/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: f4b7e914684d2e4d3d9c4c1f0cdc7e88d7b5b8fe
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610050"
 ---
 # <a name="numeralsystem-values"></a>Valores NumeralSystem
 
@@ -53,7 +53,7 @@ Estos son los valores de **NumeralSystem** que se admiten en Windows.
 | Mlym | Malayalam | U+0D66, U+0D67, U+0D68, U+0D69, U+0D6A, U+0D6B, U+0D6C, U+0D6D, U+0D6E, U+0D6F |
 | Mong | Mongol | U+1810, U+1811, U+1812, U+1813, U+1814, U+1815, U+1816, U+1817, U+1818, U+1819 |
 | Mtei | Meetei mayek | U+ABF0, U+ABF1, U+ABF2, U+ABF3, U+ABF4, U+ABF5, U+ABF6, U+ABF7, U+ABF8, U+ABF9 |
-| Mymr | Birmano | U+1040, U+1041, U+1042, U+1043, U+1044, U+1045, U+1046, U+1047, U+1048, U+1049 |
+| Mymr | Myanmar | U+1040, U+1041, U+1042, U+1043, U+1044, U+1045, U+1046, U+1047, U+1048, U+1049 |
 | MymrShan | Birmano shan | U+1090, U+1091, U+1092, U+1093, U+1094, U+1095, U+1096, U+1097, U+1098, U+1099 |
 | Nkoo | Nko | U+07C0, U+07C1, U+07C2, U+07C3, U+07C4, U+07C5, U+07C6, U+07C7, U+07C8, U+07C9 |
 | Olck | Ol chiki | U+1C50, U+1C51, U+1C52, U+1C53, U+1C54, U+1C55, U+1C56, U+1C57, U+1C58, U+1C59 |

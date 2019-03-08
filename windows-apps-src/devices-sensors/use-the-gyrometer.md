@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 940f82e5e4cff30a2756c32c80d2f3ab02ae440a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050508"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660510"
 ---
 # <a name="use-the-gyrometer"></a>Usar el girómetro
 
@@ -21,7 +21,7 @@ ms.locfileid: "9050508"
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Girómetro**](https://msdn.microsoft.com/library/windows/apps/BR225718)
 
-**Muestra**
+**Ejemplo**
 
 -   Para ver una implementación más completa, consulta la [muestra del girómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).
 
@@ -31,7 +31,7 @@ Los girómetros complementan los acelerómetros como controladores de juegos. Lo
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
+Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
 
 El dispositivo o emulador que uses debe ser compatible con un girómetro.
 
@@ -140,7 +140,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores de girómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -180,4 +180,4 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
 
  ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra del girómetro](https://go.microsoft.com/fwlink/p/?linkid=241379)
+* [Ejemplo de Girómetro](https://go.microsoft.com/fwlink/p/?linkid=241379)

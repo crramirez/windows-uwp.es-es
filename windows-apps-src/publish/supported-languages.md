@@ -1,5 +1,5 @@
 ---
-Description: You can submit apps to the Microsoft Store in over 100 languages.
+Description: Puede enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
 title: Idiomas admitidos
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ms.date: 02/20/2019
@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02a68cd325823bf671f7e0a99c64a899b17caddd
-ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9083713"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657760"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
 
-Puedes enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
+Puede enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
 
-Para obtener más información sobre la configuración de idiomas en tus aplicaciones, consulta la [globalización y localización](../design/globalizing/globalizing-portal.md) y [comprender los idiomas del perfil usuario y los idiomas de manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
+Para más información sobre cómo configurar los idiomas en sus aplicaciones, consulte [globalización y localización](../design/globalizing/globalizing-portal.md) y [entender idiomas de perfil de usuario y aplicación manifiesto idiomas](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
 ## <a name="supported-languages"></a>Idiomas admitidos
 
 
-Estos son los idiomas que admite Microsoft Store. La aplicación debe admitir al menos uno de estos idiomas. 
+Estos son los idiomas que admite la Microsoft Store. La aplicación debe admitir al menos uno de estos idiomas. 
 
-Códigos de idioma que no se incluyen aquí no son compatibles con la tienda. Te recomendamos que no se incluye paquetes destinados a los códigos de idioma que no sean los que se indican a continuación; dichos paquetes no se distribuirán a los clientes y pueden causar retrasos o errores de certificación.
+Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recomienda que no incluya los paquetes destinados a los códigos de idioma que no aparecen a continuación; Estos paquetes no se distribuirá a los clientes y pueden provocar retrasos o errores en la certificación.
 
 | Nombre de idioma         | Códigos de idiomas admitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,15 +36,15 @@ Códigos de idioma que no se incluyen aquí no son compatibles con la tienda. Te
 | Armenio              | hy, hy-am                                                                                                                                                                                             |
 | Asamés              | as, as-in                                                                                                                                                                                             |
 | Azerbaiyano           | az, az-arab, az-arab-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
-| Euskera (euskera)       | eu, eu-es                                                                                                                                                                                             |
+| Euskera (Euskera)       | eu, eu-es                                                                                                                                                                                             |
 | Bielorruso            | be, be-by                                                                                                                                                                                             |
 | Bangla                | bn, bn-bd, bn-in                                                                                                                                                                                      |
 | Bosnio               | bs, bs-cyrl, bs-cyrl-ba, bs-latn, bs-latn-ba                                                                                                                                                          |
 | Búlgaro             | bg, bg-bg                                                                                                                                                                                             |
 | Catalán               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
 | Cheroqui              | chr-cher, chr-cher-us, chr-latn                                                                                                                                                                       |
-| Chino (Simplificado)  | zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
-| Chino (Tradicional) | zh-Hant, zh-hk, zh-mp, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
+| Chino (simplificado)  | zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
+| Chino (tradicional) | zh-Hant, zh-hk, zh-mp, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
 | Croata              | hr, hr-hr, hr-ba                                                                                                                                                                                      |
 | Checo                 | cs, cs-cz                                                                                                                                                                                             |
 | Danés                | da, da-dk                                                                                                                                                                                             |
@@ -108,7 +108,7 @@ Códigos de idioma que no se incluyen aquí no son compatibles con la tienda. Te
 | Gaélico escocés       | gd-gb, gd-latn                                                                                                                                                                                        |
 | Serbio (latino)       | sr-Latn, sr-latn-cs, sr, sr-latn-ba, sr-latn-me, sr-latn-rs                                                                                                                                           |
 | Serbio (cirílico)    | sr-cyrl, sr-cyrl-ba, sr-cyrl-cs, sr-cyrl-me, sr-cyrl-rs                                                                                                                                               |
-| Sesotho sa Leboa      | nso, nso-za                                                                                                                                                                                           |
+| Sesotho sa leboa      | nso, nso-za                                                                                                                                                                                           |
 | Setsuana              | tn, tn-bw, tn-za                                                                                                                                                                                      |
 | Sindhi                | sd-arab, sd-arab-pk, sd-deva                                                                                                                                                                          |
 | Sinhala               | si, si-lk                                                                                                                                                                                             |

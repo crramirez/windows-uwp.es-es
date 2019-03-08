@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales, servidor web de Azure
 ms.localizationpriority: medium
 ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929692"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608800"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar una aplicación para UWP desde una aplicación Web de Azure
 
@@ -22,7 +22,7 @@ En este tema se describen los pasos para configurar un Azure Web Server para que
 
 Para seguir correctamente este tutorial, necesitarás lo siguiente:
  
-1. Una suscripción a MicrosoftAzure 
+1. Una suscripción a Microsoft Azure 
 2. Paquete de la aplicación para UWP: el paquete de la aplicación que vas a distribuir
 
 Opcional: [Proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp) en GitHub. Esto es útil si no tienes un paquete de la aplicación o página web con la que trabajar, pero aun así deseas obtener información acerca de cómo usar esta característica.

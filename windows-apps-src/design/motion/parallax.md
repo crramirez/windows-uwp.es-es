@@ -1,29 +1,29 @@
 ---
-Description: Use the ParallaxView control to add depth and movement to your app.
+Description: Usa el control ParallaxView para agregar profundidad y movimiento a la aplicación.
 title: Cómo usar el control ParallaxView para agregar profundidad y movimiento a la aplicación.
 ms.assetid: ''
 label: Parallax View
 template: detail.hbs
 ms.date: 08/09/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 pm-contact: abarlow
 design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 719a150c6750116a368d59fff9600fcf65bf8f61
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115812"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590690"
 ---
 # <a name="parallax"></a>Parallax
 
 Parallax es un efecto visual donde elementos más cercanos al usuario se mueven más rápido que los elementos en el fondo. Parallax crea una sensación de profundidad, perspectiva y movimiento. En una aplicación para UWP, puedes usar el control ParallaxView para crear un efecto de paralaje.  
 
-> **API importantes**: [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propiedad VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propiedad HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
+> **API importantes**: [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [VerticalShift propiedad](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [HorizontalShift propiedad](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>Ejemplos
 
@@ -34,7 +34,7 @@ Parallax es un efecto visual donde elementos más cercanos al usuario se mueven 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ParallaxView">abrir la aplicación y ver ParallaxView en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -47,9 +47,9 @@ Parallax es un efecto visual donde elementos más cercanos al usuario se mueven 
 
 ## <a name="how-it-works-in-a-user-interface"></a>Cómo funciona en una interfaz de usuario
 
-En una interfaz de usuario, puedes crear un efecto de paralaje si mueves distintos objetos a diferentes velocidades cuando la interfaz de usuario se desplaza o realiza un movimiento panorámico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demostrarlo, echemos un vistazo a dos capas de contenido, una lista y una imagen de fondo.  La lista se coloca encima de la imagen de fondo, lo que ya proporciona la ilusión de que la lista puede estar más cerca del usuario.  Ahora, para lograr el efecto de paralaje, queremos que el objeto más cercano a nosotros se desplace "más rápido" que el objeto que está más lejos.  Cuando el usuario desplaza la interfaz, la lista se mueve a una velocidad más rápida que la imagen de fondo, lo que crea la ilusión de profundidad.
+En una interfaz de usuario, puedes crear un efecto de paralaje si mueves distintos objetos a diferentes velocidades cuando la interfaz de usuario se desplaza o realiza un movimiento panorámico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demostrar, echemos un vistazo a dos capas de contenido, una lista y una imagen de fondo.  La lista se coloca encima de la imagen de fondo, lo que ya proporciona la ilusión de que la lista puede estar más cerca del usuario.  Ahora, para lograr el efecto de paralaje, queremos que el objeto más cercano a nosotros se desplace "más rápido" que el objeto que está más lejos.  Cuando el usuario desplaza la interfaz, la lista se mueve a una velocidad más rápida que la imagen de fondo, lo que crea la ilusión de profundidad.
 
- ![Ejemplo de efecto de paralaje con la lista y una imagen en el fondo](images/_Parallax_v2.gif)
+ ![Ejemplo de efecto parallax con la lista y una imagen en segundo plano](images/_Parallax_v2.gif)
 
  
 ## <a name="using-the-parallaxview-control-to-create-a-parallax-effect"></a>Usar el control de ParallaxView para crear un efecto de paralaje
@@ -126,5 +126,5 @@ Para obtener la lista completa de maneras de personalizar el paralaje, consulta 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
-- [Fluent Design para UWP](../fluent-design-system/index.md)
-- [Science in the System: Fluent Design and Depth (Ciencia en el sistema: Fluent Design y profundidad)](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [Diseño Fluent para UWP](../fluent-design-system/index.md)
+- [Ciencia del sistema: Diseño Fluent y profundidad](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

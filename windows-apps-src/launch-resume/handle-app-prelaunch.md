@@ -1,5 +1,5 @@
 ---
-title: Controlar el inicio previo de aplicaciones
+title: Administrar el inicio previo de aplicaciones
 description: Aprende a controlar el inicio previo de aplicaciones al invalidar el método OnLaunched y llamar a CoreApplication.EnablePrelaunch(true).
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
 ms.date: 07/05/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925809"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658710"
 ---
 # <a name="handle-app-prelaunch"></a>Administrar el inicio previo de aplicaciones
 
@@ -19,9 +19,9 @@ Obtén información sobre cómo controlar el inicio previo de las aplicaciones m
 
 ## <a name="introduction"></a>Introducción
 
-Cuando los recursos del sistema disponibles lo permiten, se mejora el rendimiento de inicio de aplicaciones para UWP en dispositivos de familia de dispositivos de escritorio iniciando de forma proactiva las aplicaciones más usadas del usuario en segundo plano. Una aplicación iniciada previamente se pone en estado suspendido poco después de iniciarse. Después, cuando el usuario invoca la aplicación, esta pasa del estado de suspensión al de ejecución para reanudarse, lo que resulta más rápido que iniciarla en frío. La experiencia del usuario es que la aplicación se inicia muy rápidamente.
+Al permitir que los recursos del sistema disponibles, se mejora el rendimiento de inicio de aplicaciones para UWP en dispositivos de familia de dispositivos de escritorio, inicie las aplicaciones del usuario utilizadas con frecuencia en segundo plano de forma proactiva. Una aplicación iniciada previamente se pone en estado suspendido poco después de iniciarse. Después, cuando el usuario invoca la aplicación, esta pasa del estado de suspensión al de ejecución para reanudarse, lo que resulta más rápido que iniciarla en frío. La experiencia del usuario es que la aplicación se inicia muy rápidamente.
 
-Antes de Windows10, las aplicaciones no aprovechaban el inicio previo automáticamente. En Windows 10, versión 1511, todas las aplicaciones de la plataforma Universal de Windows (UWP) son candidatas para el inicio previo. En Windows 10, versión 1607, debes participar en el comportamiento de inicio previo llamando a [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Es un buen lugar para poner esta llamada dentro de `OnLaunched()` cerca de la ubicación en que se realiza la comprobación `if (e.PrelaunchActivated == false)`.
+Antes de Windows 10, las aplicaciones no aprovechaban el inicio previo automáticamente. En Windows 10, versión 1511, todas las aplicaciones de plataforma Universal de Windows (UWP) eran candidatos para la que se realizó un inicio previo. En Windows 10, versión 1607, debes participar en el comportamiento de inicio previo llamando a [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Es un buen lugar para poner esta llamada dentro de `OnLaunched()` cerca de la ubicación en que se realiza la comprobación `if (e.PrelaunchActivated == false)`.
 
 Si una aplicación se inicia previamente depende de los recursos del sistema. Si el sistema experimenta una presión del recurso, las aplicaciones no se inician previamente.
 
@@ -35,7 +35,7 @@ Cuando se hace un inicio previo de una aplicación, esta enseguida entra en esta
 
 ## <a name="detect-and-handle-prelaunch"></a>Detectar y controlar el inicio previo
 
-Las aplicaciones reciben la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) durante la activación. Usa esta marca para ejecutar código que solo debe ejecutarse cuando el usuario inicia explícitamente la aplicación, como se muestra en la siguiente modificación [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Las aplicaciones reciben la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) durante la activación. Use esta marca para ejecutar el código que solo debe ejecutar cuando el usuario inicia explícitamente la aplicación, como se muestra en la siguiente modificación [ **Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -110,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-Ten en cuenta el `TryEnablePrelaunch()` funcionar, anteriormente. La razón por la llamada a `CoreApplication.EnablePrelaunch()` se incluyen en esta función es porque cuando se llama a un método, intentará JIT (solo en la compilación) compilar todo el método. Si la aplicación se ejecuta en una versión de Windows 10 que no es compatible con `CoreApplication.EnablePrelaunch()`, a continuación, se producirá un error JIT. Mediante la factorización de la llamada a un método que solo se llama cuando la aplicación determina que es compatible con la plataforma `CoreApplication.EnablePrelaunch()`, te evitar este problema.
+Tenga en cuenta el `TryEnablePrelaunch()` funcione, versiones posteriores. La razón por la llamada a `CoreApplication.EnablePrelaunch()` se divide horizontalmente en esta función es porque cuando se llama a un método, el compilador JIT (just-in-compilación de tiempo) intentará compilar todo el método. Si la aplicación se ejecuta en una versión de Windows 10 que no es compatible con `CoreApplication.EnablePrelaunch()`, se producirá un error en el compilador JIT. Al dividir la llamada a un método que sólo se llama cuando la aplicación determina que es compatible con la plataforma por `CoreApplication.EnablePrelaunch()`, nos evitar este problema.
 
-Hay también código en el ejemplo anterior que se puede quites los comentarios si la aplicación debe rechazar el inicio previo cuando se ejecuta en Windows 10, versión 1511. En la versión 1511, todas las aplicaciones UWP se han optado por automáticamente por en el inicio previo, que puede no ser adecuados para la aplicación.
+Hay también código en el ejemplo anterior que se puede quitar el comentario si la aplicación necesita para participar en el inicio previo cuando se ejecuta en Windows 10, versión 1511. En la versión 1511, todas las aplicaciones UWP se suscriben automáticamente en el inicio previo, que puede no ser adecuado para la aplicación.
 
 ## <a name="use-the-visibilitychanged-event"></a>Usar el evento VisibilityChanged
 
@@ -203,7 +203,7 @@ Si la aplicación de WinJS está destinada a una versión anterior de Windows 10
     -   Un ejemplo de implicación de rendimiento es que podrías esperar a que el usuario cambie a la aplicación para recuperar la información meteorológica actual, en lugar de cargarla con el inicio previo de la aplicación y tener que volver a cargarla cuando la aplicación sea visible para garantizar que la información esté actualizada.
 -   Si la aplicación borra su icono dinámico al iniciarse, aplaza esto hasta el evento de cambio de visibilidad.
 -   La telemetría de la aplicación debería distinguir entre las activaciones de icono normales y las de inicio previo para que puedas limitar el escenario en caso de problemas.
--   Si tienes Microsoft Visual Studio2015 Update 1 y Windows 10, versión 1511, puedes simular el inicio previo de la aplicación en Visual Studio2015 seleccionando **Depurar** &gt; **Otros destinos de depuración** &gt; **Depurar la aplicación Universal de Windows El inicio previo**.
+-   Si tiene Microsoft Visual Studio 2015 Update 1 y Windows 10, versión 1511, puede simular el inicio previo de la aplicación en Visual Studio 2015 de la aplicación eligiendo **depurar** &gt; **otros destinos de depuración** &gt; **Depurar la aplicación Universal de Windows inicio previo**.
 
 ## <a name="related-topics"></a>Temas relacionados
 

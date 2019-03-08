@@ -1,5 +1,5 @@
 ---
-Description: Use a RichTextBlock with RichTextBlockOverflow elements to create advanced text layouts.
+Description: Usa un control RichTextBlock con elementos RichTextBlockOverflow para crear diseños de texto avanzados.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ab83e74dc59b407c15e1a8213540c8954fcd16e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037050"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610900"
 ---
 # <a name="rich-text-block"></a>Bloque de texto enriquecido
 
@@ -24,7 +24,7 @@ ms.locfileid: "9037050"
 
 Los bloques de texto enriquecido proporcionan varias características para el diseño avanzado de texto que puedes usar cuando necesitas admitir párrafos, elementos de interfaz de usuario en línea o diseños de texto complejos.
 
-> **API importantes**: [Clase RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [Clase RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [Clase Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [Clase Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+> **API importantes**: [Clase RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [RichTextBlockOverflow clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [párrafo clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [clase de tipografía](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -43,7 +43,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/RichTextBlock">abrir la aplicación y ver RichTextBlock en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -52,7 +52,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 
 ## <a name="create-a-rich-text-block"></a>Crear un bloque de texto enriquecido
 
-La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx), que admite el texto basado en párrafos a través del elemento [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx). No tiene una propiedad **Text** que puedas usar para acceder fácilmente a contenido de texto del control en la aplicación. Sin embargo, RichTextBlock proporciona varias características únicas que TextBlock no ofrece. 
+La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx), que admite el texto basado en párrafos a través del elemento [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx). No tiene una propiedad **Text** que puedas usar para obtener acceso con facilidad a contenido de texto del control en la aplicación. Sin embargo, RichTextBlock proporciona varias características únicas que TextBlock no ofrece. 
 
 RichTextBlock admite:
 - Varios párrafos. Configura la propiedad [TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.textindent.aspx) para establecer la sangría de los párrafos.
@@ -158,14 +158,14 @@ Consulta las directrices para texto y tipografía.
 [Controles de texto](text-controls.md)
 
 **Para diseñadores**
-- [Directrices sobre revisión ortográfica](text-controls.md)
+- [Directrices para comprobar la ortografía](text-controls.md)
 - [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Directrices para la entrada de texto](text-controls.md)
 
 **Para desarrolladores (XAML)**
-- [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
-**Para desarrolladores (otros)**
+**Para los desarrolladores (otros)**
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de recursos
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ae65d13f92f5ab28f2f5eda468032bb7f83793
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944356"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594670"
 ---
 # <a name="introduction-to-asset-packages"></a>Introducción a los paquetes de activos
 
 > [!IMPORTANT]
 > Si quieres enviar la aplicación a la Store, debes ponerte en contacto con [Soporte técnico para desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener la aprobación para utilizar paquetes de activos.
 
-Los paquetes de activos son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura. Los paquetes de activos son similares a los paquetes de recursos en que se han diseñado para incluir contenido estático necesario para que se ejecute tu aplicación, pero diferentes en que todos los paquetes de activos siempre se descargan, independientemente de la arquitectura, idioma o escala de pantalla del sistema del usuario.
+Los paquetes de recurso son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura. Los paquetes de activos son similares a los paquetes de recursos en que se han diseñado para incluir contenido estático necesario para que se ejecute tu aplicación, pero diferentes en que todos los paquetes de activos siempre se descargan, independientemente de la arquitectura, idioma o escala de pantalla del sistema del usuario.
 
 ![Diagrama de recopilación de paquetes de activos](images/primary-bundle.png)
 
@@ -26,7 +26,7 @@ Dado que los paquetes de activos contienen todos los archivos independientes de 
 ### <a name="how-do-asset-packages-affect-publishing"></a>¿Cómo afectan los paquetes de activos a la publicación?
 La ventaja más evidente de los paquetes de activos es el tamaño reducido de las aplicaciones empaquetadas. Los paquetes de la aplicación más pequeños aceleran el proceso de publicación de la aplicación al permitir que la Store procese menos archivos; sin embargo, esta no es la principal ventaja de los paquetes de activos.
 
-Cuando se crea un paquete de recursos, puedes especificar si se debe permitir que se ejecute el paquete. Dado que los paquetes de activos solamente contienen archivos independientes de arquitectura, por lo general, no contienen ningún archivo .dll o .exe, por lo que normalmente no hay que ejecutar los paquetes de activos. La importancia de esta distinción es que durante el proceso de publicación, deben analizarse todos los paquetes ejecutables para garantizar que no contienen malware y este proceso de exploración tarda más tiempo para los paquetes más grandes. Sin embargo, si un paquete está designado como no ejecutable, la instalación de la aplicación garantizará que no se puedan ejecutar los archivos contenidos en este paquete. Esta garantía elimina la necesidad de una exploración completa del paquete y reducirá en gran medida el tiempo de exploración de malware durante la publicación de la aplicación (y también en actualizaciones):, por consiguiente, acelera notablemente la publicación en aplicaciones que usan los paquetes de activos. Ten en cuenta que [los paquetes de aplicaciones de recopilación plana](flat-bundles.md) también debe usarse para obtener esta ventaja de publicación, dado que esto es lo que permite a la tienda procesar cada archivo de paquete .appx o .msix en paralelo. 
+Cuando se crea un paquete de recursos, puedes especificar si se debe permitir que se ejecute el paquete. Dado que los paquetes de activos solamente contienen archivos independientes de arquitectura, por lo general, no contienen ningún archivo .dll o .exe, por lo que normalmente no hay que ejecutar los paquetes de activos. La importancia de esta distinción es que durante el proceso de publicación, deben analizarse todos los paquetes ejecutables para garantizar que no contienen malware y este proceso de exploración tarda más tiempo para los paquetes más grandes. Sin embargo, si un paquete está designado como no ejecutable, la instalación de la aplicación garantizará que no se puedan ejecutar los archivos contenidos en este paquete. Esta garantía elimina la necesidad de una exploración completa del paquete y reducirá en gran medida el tiempo de exploración de malware durante la publicación de la aplicación (y también en actualizaciones):, por consiguiente, acelera notablemente la publicación en aplicaciones que usan los paquetes de activos. Tenga en cuenta que [paquetes de aplicación sin formato](flat-bundles.md) también debe usarse para obtener esta publicación ventaja ya que esto es lo que permite que el Store procesar cada archivo de paquete .appx o .msix en paralelo. 
 
 
 ### <a name="should-i-use-asset-packages"></a>¿Debo usar paquetes de activos?

@@ -1,5 +1,5 @@
 ---
-description: Puedes crear una vista de árbol expansible al enlazar ItemsSource a un origen de datos jerárquicos, o puedes crear y administrar los objetos TreeViewNode tú mismo.
+description: Puede crear una vista de árbol expandible mediante el enlace de ItemsSource a un origen de datos jerárquicos, o puede crear y administrar objetos TreeViewNode usted mismo.
 title: Vista de árbol
 label: Tree view
 template: detail.hbs
@@ -15,11 +15,11 @@ dev_langs:
 - vb
 ms.custom: RS5
 ms.openlocfilehash: 7c666d417fb980cab72165681583ac83e9eaca00
-ms.sourcegitcommit: e83f30486d899401debc782de891c388ba5fc03b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "9062477"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628520"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -29,18 +29,18 @@ Las API TreeView admiten las siguientes características:
 
 - Anidamiento de n niveles
 - Selección de uno o varios nodos
-- Enlace de datos a la propiedad ItemsSource de la vista de árbol y TreeViewItem
-- TreeViewItem como raíz de la plantilla de elemento de vista de árbol
-- Arbitrarios tipos de contenido en un elemento TreeViewItem
+- Enlace de datos a la propiedad ItemsSource en la vista de árbol y elemento TreeViewItem
+- Elemento TreeViewItem como la raíz de la plantilla de elemento de vista de árbol
+- Tipos arbitrarios del contenido en un elemento TreeViewItem
 - Arrastrar y colocar entre las vistas de árbol
 
-| **Obtén la biblioteca de la interfaz de usuario de Windows** |
+| **Obtención de la biblioteca de interfaz de usuario de Windows** |
 | - |
-| Este control se incluye como parte de la biblioteca de la interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y funciones de la interfaz de usuario para aplicaciones para UWP. Para obtener más información, incluidas las instrucciones de instalación, vea la [información general de la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y características de interfaz de usuario para aplicaciones UWP. Para obtener más información, incluidas las instrucciones de instalación, consulte el [Introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **API de la plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
+| **API de plataforma** | **API de biblioteca de interfaz de usuario de Windows** |
 | - | - |
-| [Clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview), [clase TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource propiedad](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) | [Clase TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [clase TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource propiedad](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource) |
+| [Clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview), [TreeViewNode clase](/uwp/api/windows.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource propiedad](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) | [Clase TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [TreeViewNode clase](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource propiedad](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource) |
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -55,9 +55,9 @@ Las API TreeView admiten las siguientes características:
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación de la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> , haz clic aquí para <a href="xamlcontrolsgallery:/item/TreeView">Abrir la aplicación y ver la vista de árbol en acción</a>.</p>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/TreeView">abra la aplicación y vea la vista de árbol en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -66,26 +66,26 @@ Las API TreeView admiten las siguientes características:
 
 ## <a name="treeview-ui"></a>Interfaz de usuario de la vista de árbol
 
-La vista de árbol utiliza una combinación de sangría e iconos para representar la relación anidada entre primarios y los nodos secundarios. Los nodos contraídos utilizan comillas angulares que señalan hacia la derecha, mientras que los expandidos usan comillas angulares que señalan hacia abajo.
+La vista de árbol utiliza una combinación de sangría e iconos para representar la relación entre los nodos primarios y nodos secundarios anidada. Los nodos contraídos utilizan comillas angulares que señalan hacia la derecha, mientras que los expandidos usan comillas angulares que señalan hacia abajo.
 
 ![El icono de comillas angulares en la vista de árbol](images/treeview-simple.png)
 
-Puedes incluir un icono en la plantilla de datos del elemento de vista de árbol para representar los nodos. Por ejemplo, si se muestra una jerarquía de sistema de archivos, podría usar iconos de la carpeta de las notas de primaria y los iconos de archivos para los nodos de hoja.
+Puedes incluir un icono en la plantilla de datos del elemento de vista de árbol para representar los nodos. Por ejemplo, si se muestra una jerarquía de sistema de archivos, podría usar iconos de carpeta para las notas de la primaria y los iconos de archivos para los nodos hoja.
 
 ![Los iconos de comillas angulares y de carpeta juntos en una vista de árbol](images/treeview-icons.png)
 
 ## <a name="create-a-tree-view"></a>Crear una vista de árbol
 
-Puedes crear una vista de árbol enlazando [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) a un origen de datos jerárquicos, o puedes crear y administrar los objetos TreeViewNode tú mismo.
+Puede crear una vista de árbol enlazando el [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) a los datos jerárquicos origen, o puede crear y administrar objetos TreeViewNode usted mismo.
 
-Para crear una vista de árbol, usa un control [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) y una jerarquía de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Crear la jerarquía de nodos agregando uno o varios nodos de raíz a la colección [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) del control de vista de árbol. A continuación, cada TreeViewNode puede tener más nodos agregados a su colección de elementos secundarios. Puedes anidar nodos de vista de árbol con cualquier profundidad necesaria.
+Para crear una vista de árbol, usa un control [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) y una jerarquía de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Crear la jerarquía de nodos mediante la adición de uno o varios nodos raíz para el control TreeView [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) colección. A continuación, cada TreeViewNode puede tener más nodos agregados a su colección de elementos secundarios. Puedes anidar nodos de vista de árbol con cualquier profundidad necesaria.
 
-Puedes enlazar un origen de datos jerárquicos a la propiedad [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para proporcionar el contenido de la vista de árbol, tal como lo harías con ItemsSource de ListView. Del mismo modo, se usa [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (y la opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para proporcionar una clase DataTemplate que representa el elemento.
+Puede enlazar un origen de datos jerárquicos para la [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) propiedad para proporcionar el contenido de la vista de árbol, como haría con ItemsSource de ListView. De forma similar, utilice [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (y la propiedad opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para proporcionar una DataTemplate que representa el elemento.
 
 > [!IMPORTANT]
-> ItemsSource y sus API relacionado requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o en la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> Sus API relacionado y ItemsSource requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o el [biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 >
-> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control de vista de árbol. No puedes establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, nodos crean y puede tener acceso a ellos desde la propiedad TreeView.RootNodes.
+> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control TreeView. No se puede establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, crean automáticamente los nodos y puede tener acceso a ellos desde la propiedad TreeView.RootNodes.
 
 Este es un ejemplo de una vista de árbol sencilla que se ha declarado en XAML. Normalmente se agregan los nodos en el código, pero te mostramos aquí la jerarquía XAML, porque puede resultar útil para visualizar cómo se crea la jerarquía de nodos.
 
@@ -103,11 +103,11 @@ Este es un ejemplo de una vista de árbol sencilla que se ha declarado en XAML. 
 </TreeView>
 ```
 
-En la mayoría de los casos, la vista de árbol muestra datos desde un origen de datos, por lo que suele declararse el control de vista de árbol en XAML raíz, pero agrega los objetos TreeViewNode en el código o mediante el enlace de datos.
+En la mayoría de los casos, la vista de árbol muestra los datos desde un origen de datos, por lo que normalmente declarar la raíz del control TreeView de XAML, pero agregue los objetos TreeViewNode en código o utilizando el enlace de datos.
 
 ### <a name="bind-to-a-hierarchical-data-source"></a>Enlazar a un origen de datos jerárquicos
 
-Para crear una vista de árbol con enlace de datos, Establece la propiedad de TreeView.ItemsSource una colección jerárquica. A continuación, en la clase ItemTemplate, establece al elemento secundario colección items a la propiedad TreeViewItem.ItemsSource.
+Para crear una vista de árbol mediante el enlace de datos, Establece una colección jerárquica en la propiedad TreeView.ItemsSource. A continuación, en ItemTemplate, establezca al elemento secundario colección de elementos a la propiedad TreeViewItem.ItemsSource.
 
 ```xaml
 <TreeView ItemsSource="{x:Bind DataSource}">
@@ -120,23 +120,23 @@ Para crear una vista de árbol con enlace de datos, Establece la propiedad de Tr
 </TreeView>
 ```
 
-Consulta la _vista de árbol con enlace de datos_ de la sección ejemplos para obtener el código completo.
+Consulte _mediante enlace de datos de vista de árbol_ la sección ejemplos para el código completo.
 
-#### <a name="items-and-item-containers"></a>Elementos y contenedores de elementos
+#### <a name="items-and-item-containers"></a>Los elementos y los contenedores de elementos
 
-Si usas TreeView.ItemsSource, estas API están disponibles para obtener el elemento de datos o el nodo desde el contenedor y viceversa.
+Si usa TreeView.ItemsSource, estas API están disponibles para obtener el nodo o elemento de datos desde el contenedor y viceversa.
 
 | **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
-| [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtiene el elemento de datos para el contenedor TreeViewItem especificado. |
-| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtiene el contenedor TreeViewItem para el elemento de datos especificadas. |
+| [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtiene el elemento de datos para el contenedor de TreeViewItem especificado. |
+| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtiene el contenedor de TreeViewItem para el elemento de datos especificado. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
-| [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | Obtiene la TreeViewNode el contenedor TreeViewItem especificado. |
-| [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | Obtiene el contenedor TreeViewItem el TreeViewNode especificado. |
+| [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | Obtiene el TreeViewNode para el contenedor de TreeViewItem especificado. |
+| [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | Obtiene el contenedor de TreeViewItem para el TreeViewNode especificado. |
 
-### <a name="manage-tree-view-nodes"></a>Administrar los nodos de vista de árbol
+### <a name="manage-tree-view-nodes"></a>Administrar los nodos de la vista de árbol
 
 Esta vista de árbol es la misma que se creó anteriormente en XAML, pero los nodos se crean en código en su lugar.
 
@@ -180,8 +180,8 @@ Estas API están disponibles para administrar la jerarquía de datos de su vista
 | [Children](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Agrega objetos TreeViewNode a la colección de elementos secundarios de un nodo primario para crear la jerarquía del nodo. Un nodo es el elemento **Parent** de todos los nodos en su colección **Children**. |
 | [HasChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.haschildren) | **true** si el nodo ha realizado los elementos secundarios. **false** indica una carpeta vacía o un elemento. |
 | [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) | Usa esta propiedad si estás rellenando nodos cuando se expanden. Consulta _Rellenar un nodo cuando está en expansión_ más adelante en este artículo. |
-| [Profundidad](/uwp/api/windows.ui.xaml.controls.treeviewnode.depth) | Indica a qué distancia está un nodo secundario del nodo raíz. |
-| [Primario](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtiene la TreeViewNode que posee la colección **Children** de la que forma parte este nodo. |
+| [profundidad](/uwp/api/windows.ui.xaml.controls.treeviewnode.depth) | Indica a qué distancia está un nodo secundario del nodo raíz. |
+| [Parent](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtiene la TreeViewNode que posee la colección **Children** de la que forma parte este nodo. |
 
 La vista de árbol utiliza las propiedades **HasChildren** y **HasUnrealizedChildren** para determinar si se muestra el icono de expandir/contraer. Si cualquiera de estas propiedades es **true**, se muestra el icono; de lo contrario, no se muestra.
 
@@ -205,19 +205,19 @@ Dim pictureNode As New TreeViewNode With {.Content = picturesFolder}
 Puedes proporcionar una clase [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate) para especificar cómo se muestra el elemento de datos en la vista de árbol.
 
 > [!NOTE]
-> En Windows 10, versión 1803, tienes que volver a crear la plantilla del control de vista de árbol y especificar un ItemTemplate personalizado si el contenido no es una cadena. Para obtener más información, vea el ejemplo completo al final de este artículo. En versiones posteriores, Establece la propiedad [TreeView.ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) .
+> En Windows 10, versión 1803, tienes que volver a crear la plantilla del control de vista de árbol y especificar un ItemTemplate personalizado si el contenido no es una cadena. Para obtener más información, vea el ejemplo completo al final de este artículo. En versiones posteriores, establezca el [TreeView.ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) propiedad.
 
-### <a name="item-container-style"></a>Estilo del contenedor de elementos
+### <a name="item-container-style"></a>Estilo del elemento de contenedor
 
-Si usas ItemsSource o RootNodes, los elementos reales usados para mostrar cada nodo denominada "contenedor": es un objeto [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) . Puedes aplicar estilo del contenedor con la vista de árbol ItemContainerStyle o ItemContainerStyleSelector propiedades.
+Si usa ItemsSource o RootNodes, los elementos reales utilizados para mostrar cada nodo – denominado "contenedor": es un [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) objeto. Puede aplicar estilos del contenedor mediante la vista de árbol ItemContainerStyle o ItemContainerStyleSelector propiedades.
 
-### <a name="item-template-selectors"></a>Selectores de plantilla de elemento
+### <a name="item-template-selectors"></a>Selectores de la plantilla de elemento
 
-Puedes elegir establecer una DataTemplate diferentes para los elementos de la vista de árbol en función del tipo de elemento. Por ejemplo, en una aplicación de explorador de archivos, podrías usar una plantilla de datos de carpetas y otro para archivos.
+Puede establecer un DataTemplate diferentes para los elementos de vista de árbol según el tipo de elemento. Por ejemplo, en una aplicación de explorador de archivos, podría usar una plantilla de datos para las carpetas y otro para los archivos.
 
-![Usar diferentes plantillas de datos de archivos y carpetas](images/treeview-icons.png)
+![Uso de plantillas de datos diferentes de archivos y carpetas](images/treeview-icons.png)
 
-Este es un ejemplo de cómo crear y usar un selector de plantilla de elemento.
+Este es un ejemplo de cómo crear y usar un selector de plantillas de elemento.
 
 ```xaml
 <Page.Resources>
@@ -291,9 +291,9 @@ Existen 2 formas de expandir o contraer un nodo de vista de árbol en el código
 
 Es posible que debas mostrar un gran número de nodos en la vista de árbol, o que no sepas con antelación cuántos nodos tendrá. El control TreeView no se virtualiza, para que puedas administrar recursos rellenado cada nodo mientras se expande y quitando los nodos secundarios cuando se contrae.
 
-Manipula el evento [Expanding](/uwp/api/windows.ui.xaml.controls.treeview.expand) y usa la propiedad [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) para agregar elementos secundarios a un nodo cuando se expande. La propiedad HasUnrealizedChildren indica si el nodo debe rellenarse, o si ya se ha rellenado su colección de elementos secundarios. Es importante recordar que el TreeViewNode no establece este valor, debes realizar la administración en el código de la aplicación.
+Manipula el evento [Expanding](/uwp/api/windows.ui.xaml.controls.treeview.expand) y usa la propiedad [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) para agregar elementos secundarios a un nodo cuando se expande. La propiedad HasUnrealizedChildren indica si el nodo debe rellenarse, o si ya se ha rellenado su colección de elementos secundarios. Es importante recordar que el TreeViewNode no establezca este valor, debe administrarlo en el código de aplicación.
 
-Este es un ejemplo de estos API en uso. Ver el código de ejemplo completo al final de este artículo para obtener contexto, incluida la implementación de 'FillTreeNode'.
+Este es un ejemplo de estos API en uso. Vea el código de ejemplo completo al final de este artículo para el contexto, incluida la implementación de 'FillTreeNode'.
 
 ```csharp
 private void SampleTreeView_Expanding(TreeView sender, TreeViewExpandingEventArgs args)
@@ -339,11 +339,11 @@ Un usuario puede invocar una acción (considerando al elemento como un botón) e
 > [!NOTE]
 > A diferencia de ListView, que tiene la propiedad [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled), invocando un elemento siempre habilitado en la vista de árbol. Aún puede elegir si desea controlar el evento o no.
 
-**Clase [TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs)**
+**[TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs) clase**
 
-Los argumentos del evento ItemInvoked dan acceso al elemento invocado. La propiedad [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem) tiene el nodo que se haya invocado. Puedes transmitirlo a TreeViewNode y obtener el elemento de datos de la propiedad TreeViewNode.Content.
+Los argumentos del evento ItemInvoked proporcionan acceso al elemento invocado. La propiedad [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem) tiene el nodo que se haya invocado. Puedes transmitirlo a TreeViewNode y obtener el elemento de datos de la propiedad TreeViewNode.Content.
 
-Este es un ejemplo de un controlador de eventos ItemInvoked. El elemento de datos es un [IStorageItem](/uwp/api/windows.storage.istorageitem) y este ejemplo solo muestra información sobre el archivo y el árbol. Además, si el nodo es un nodo de carpeta, expande o contrae el nodo al mismo tiempo. De lo contrario, el nodo expande o contrae solo cuando se hace clic en las comillas angulares.
+Este es un ejemplo de un controlador de eventos ItemInvoked. El elemento de datos es un [IStorageItem](/uwp/api/windows.storage.istorageitem) y este ejemplo solo muestra información sobre el archivo y el árbol. Además, si el nodo es un nodo de carpeta, se expande o contrae el nodo al mismo tiempo. De lo contrario, el nodo expande o contrae solo cuando se hace clic en las comillas angulares.
 
 ```csharp
 private void SampleTreeView_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
@@ -384,9 +384,9 @@ El control TreeView admite tanto la selección única como la múltiple. De mane
 
 #### <a name="multiple-selection"></a>Selección múltiple
 
-Cuando se habilita la selección múltiple, se muestra una casilla junto a cada nodo de vista de árbol, y se resaltan los elementos seleccionados. Un usuario puede seleccionar o anular la selección de un elemento usando la casilla; al hacer clic en el elemento se le sigue invocando.
+Cuando se habilita la selección múltiple, se muestra una casilla de verificación junto a cada nodo de la vista de árbol y se resaltan los elementos seleccionados. Un usuario puede seleccionar o anular la selección de un elemento usando la casilla; al hacer clic en el elemento se le sigue invocando.
 
-Seleccionar o cancelar la selección de un nodo primario se active o anular la selección de todos los elementos secundarios debajo de ese nodo. Si algunos, pero no todos, de los elementos secundarios en un nodo primario están seleccionados, la casilla de verificación para el nodo primario se muestra como indeterminado (que se rellena con una caja negra).
+Seleccionar o cancelar la selección de un nodo primario se seleccione o anule la selección de todos los elementos secundarios bajo ese nodo. Si algunos, pero no en todas se seleccionan los elementos secundarios bajo un nodo primario, la casilla del nodo principal se muestra como indeterminada (rellenado con una caja negra).
 
 ![Selección múltiple en una vista de árbol](images/treeview-selection.png)
 
@@ -405,7 +405,7 @@ Si la vista de árbol tiene nodos no ejecutados, no se tienen en cuenta para la 
 
 ## <a name="code-examples"></a>Ejemplos de código
 
-### <a name="tree-view-using-xaml"></a>Vista de árbol con XAML
+### <a name="tree-view-using-xaml"></a>Vista de árbol mediante XAML
 
 En este ejemplo se muestra cómo crear una sencilla estructura de vista de árbol en XAML. La vista de árbol muestra ingredientes y sabores de helado entre los que el usuario puede elegir, organizados en categorías. Se habilita la selección múltiple, y cuando el usuario hace clic en un botón, se muestran SelectedItems en la interfaz de usuario de la aplicación principal.
 
@@ -514,9 +514,9 @@ Private Sub SelectAllButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-### <a name="tree-view-using-data-binding"></a>Vista de árbol con enlace de datos
+### <a name="tree-view-using-data-binding"></a>Vista de árbol mediante el enlace de datos
 
-Este ejemplo muestra cómo crear la misma vista de árbol que el ejemplo anterior. Sin embargo, en lugar de crear la jerarquía de datos en XAML, los datos se crea en el código y enlazados a la propiedad ItemsSource de la vista de árbol. (Los controladores de eventos de botón que se muestra en el ejemplo anterior se aplican a este ejemplo también).
+En este ejemplo se muestra cómo crear la misma vista de árbol que el ejemplo anterior. Sin embargo, en lugar de crear la jerarquía de datos en XAML, los datos se crean en código y enlazados a la propiedad ItemsSource de la vista de árbol. (Los controladores de eventos de botón que se muestra en el ejemplo anterior se aplican a este ejemplo también.)
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="100">
@@ -931,6 +931,6 @@ End Sub
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
-- [Clase ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
+- [TreeView (clase)](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
+- [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
 - [ListView y GridView](listview-and-gridview.md)

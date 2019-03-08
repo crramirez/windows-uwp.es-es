@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10 s, siempre conectado, emulación x86 en ARM, solución de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 396bb0bf2c5ba5236e0e46e7b474867ffacb8c75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938616"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589860"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solución de problemas de aplicaciones de escritorio x86
 >[!IMPORTANT]
-> El SDK de ARM64 ahora está disponible como parte de Visual Studio 15.8 Preview 1. Te recomendamos que vuelvas a compilar la aplicación para ARM64 para que la aplicación se ejecute a velocidad nativa total. Para obtener más información, consulta entrada de blog [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM).
+> El SDK de ARM64 ahora está disponible como parte de Visual Studio 15.8 Preview 1. Te recomendamos que vuelvas a compilar la aplicación para ARM64 para que la aplicación se ejecute a velocidad nativa total. Para obtener más información, consulta entrada de blog [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (Vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM).
 
 Si una aplicación de escritorio x86 no funciona de forma que lo hace en un equipo x86, aquí te ofrecemos algunas indicaciones para ayudarte a solucionar problemas.
 

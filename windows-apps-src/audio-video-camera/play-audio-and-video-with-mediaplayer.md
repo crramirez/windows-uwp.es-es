@@ -4,14 +4,14 @@ description: En este artículo se muestra cómo reproducir elementos multimedia 
 title: Reproducir audio y vídeo con MediaPlayer
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d33a2bf1505618dca4e0e54c2bd9a534f58bcfc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628210"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproducir audio y vídeo con MediaPlayer
 
@@ -58,7 +58,7 @@ Establece la propiedad [**AudioCategory**](https://msdn.microsoft.com/library/wi
 [!code-cs[SetAudioCategory](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioCategory)]
 
 ### <a name="output-to-a-specific-audio-endpoint"></a>Salida a un punto de conexión de audio específico
-De manera predeterminada, la salida de audio de una clase **MediaPlayer** se enruta hacia el punto de conexión de audio predeterminado para el sistema, pero puedes especificar un punto de conexión de audio que la clase **MediaPlayer** deba usar para la salida. En el ejemplo siguiente, el elemento [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) devuelve una cadena que exclusivamente identifica la categoría de representación de audio de los dispositivos. A continuación, se llama al método [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation) [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) para obtener una lista de todos los dispositivos disponibles del tipo seleccionado. Se puede determinar mediante programación el dispositivo que quieres usar o agregar los dispositivos devueltos a un control [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) para permitir al usuario seleccionar un dispositivo.
+De manera predeterminada, la salida de audio de una clase **MediaPlayer** se enruta hacia el punto de conexión de audio predeterminado para el sistema, pero puedes especificar un punto de conexión de audio que la clase **MediaPlayer** deba usar para la salida. En el ejemplo siguiente, el elemento [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) devuelve una cadena que exclusivamente identifica la categoría de representación de audio de los dispositivos. A continuación, se llama al método [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation)[**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) para obtener una lista de todos los dispositivos disponibles del tipo seleccionado. Se puede determinar mediante programación el dispositivo que quieres usar o agregar los dispositivos devueltos a un control [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) para permitir al usuario seleccionar un dispositivo.
 
 [!code-cs[SetAudioEndpointEnumerate](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpointEnumerate)]
 
@@ -81,7 +81,7 @@ A partir de Windows 10, versión 1803, puedes establecer la rotación con el que
 
 [!code-cs[SetRotation](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetRotation)]
 
-### <a name="detect-expected-and-unexpected-buffering"></a>Detectar el almacenamiento en búfer esperado e inesperado
+### <a name="detect-expected-and-unexpected-buffering"></a>Detectar almacenamiento en búfer esperado e inesperado
 El objeto **MediaPlaybackSession** que se describe en la sección anterior proporciona dos eventos para detectar cuándo el archivo multimedia que se está reproduciendo actualmente empieza y termina el almacenamiento en búfer, **[BufferingStarted](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingStarted)** y **[BufferingEnded](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingEnded)**. Esto te permite actualizar la interfaz de usuario para mostrar al usuario que se está produciendo el almacenamiento en búfer. Se espera el almacenamiento en búfer inicial cuando se abre un archivo multimedia por primera vez o cuando el usuario cambia a un nuevo elemento de una lista de reproducción. El almacenamiento en búfer inesperado puede producirse cuando se reduce la velocidad de la red o si el sistema de administración de contenido que proporciona el contenido experimenta problemas técnicos. A partir de RS3, puedes usar el evento **BufferingStarted** para determinar si se espera el evento de almacenamiento en búfer o si es inesperado y está interrumpiendo la reproducción. Puedes usar esta información como datos de telemetría para tu servicio de entrega multimedia o aplicación. 
 
 Registrar controladores para que los eventos **BufferingStarted** y **BufferingEnded** reciban notificaciones de estado de almacenamiento en búfer.
@@ -104,7 +104,7 @@ A continuación, declara un objeto **Rect** que almacenará el rectángulo de or
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-El controlador **ManipulationDelta** ajusta la escala o la traslación del rectángulo de zoom. Si el valor de escala delta no es 1, significa que el usuario realizó un gesto de reducir. Si el valor es mayor que 1, el rectángulo de origen debe hacerse más pequeño para acercar el contenido. Si el valor es inferior a 1, el rectángulo de origen debe hacerse más grande para alejar. Antes de establecer los nuevos valores de escala, se comprueba el rectángulo resultante para garantizar que quede por completo dentro de los límites (0,0,1,1).
+El controlador **ManipulationDelta** ajusta la escala o la traslación del rectángulo de zoom. Si el valor de escala delta no es 1, significa que el usuario realizó un gesto de reducir. Si el valor es mayor que 1, el rectángulo de origen debe hacerse más pequeño para acercar el contenido. Si el valor es menor que 1, el rectángulo de origen debe hacerse más grande para alejar. Antes de configurar los nuevos valores de escala, se comprueba el rectángulo resultante para asegurarse de que quede por completo dentro de los límites (0,0,1,1).
 
 Si el valor de escala es 1, se controla el gesto de traslación. Simplemente, el número de píxeles en el gesto dividido por el ancho y alto del control traslada el rectángulo. De nuevo, se comprueba el rectángulo resultante para asegurarse de que se encuentra dentro de los límites (0,0,1,1).
 
@@ -143,7 +143,7 @@ En el siguiente ejemplo se muestra cómo usar un objeto **MediaTimelineControlle
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**Precaución** La clase [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) proporciona integración automática entre **MediaPlayer** y los controles de transporte de contenido multimedia del sistema (SMTC), pero no se puede usar esta integración automática con reproductores multimedia que se controlen con un objeto **MediaTimelineController**. Por lo tanto, debes deshabilitar el administrador de comandos del reproductor multimedia antes de establecer el controlador de línea de tiempo del reproductor. Si no se hace, se generará una excepción con el siguiente mensaje: "Se bloqueó la adjunción del controlador de línea de tiempo multimedia debido al estado actual del objeto". Para obtener más información sobre la integración del reproductor multimedia con los SMTC, consulta [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md). Si estás usando un objeto **MediaTimelineController**, aún puedes controlar los SMTC manualmente. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md).
+**Precaución** La clase [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) proporciona integración automática entre **MediaPlayer** y los controles de transporte de contenido multimedia del sistema (SMTC), pero no se puede usar esta integración automática con reproductores multimedia que se controlen con un objeto **MediaTimelineController**. Por lo tanto, debes deshabilitar el administrador de comandos del reproductor multimedia antes de establecer el controlador de línea de tiempo del reproductor. Si no lo hace generará una excepción con el mensaje siguiente: "Asociar el controlador de escala de tiempo multimedia está bloqueado debido al estado actual del objeto." Para obtener más información sobre la integración del reproductor multimedia con los SMTC, consulta [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md). Si estás usando un objeto **MediaTimelineController**, aún puedes controlar los SMTC manualmente. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md).
 
 Cuando hayas adjuntado un objeto **MediaTimelineController** a uno o más reproductores multimedia, puedes controlar el estado de reproducción con los métodos que expone el controlador. El siguiente ejemplo llama al método [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start) para iniciar la reproducción de todos los reproductores multimedia adjuntos al inicio del elemento multimedia.
 
@@ -193,7 +193,7 @@ Para reproducir vídeo esférico, sigue los pasos de reproducción de contenido 
 
 [!code-cs[OpenSphericalVideo](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenSphericalVideo)]
 
-En el controlador **MediaOpened**, comprueba primero el formato de fotogramas del elemento multimedia recién abierto. Para ello, comprueba la propiedad [**PlaybackSession.SphericalVideoProjection.FrameFormat**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksphericalvideoprojection.FrameFormat). Si este valor es [**SphericaVideoFrameFormat.Equirectangular**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.sphericalvideoframeformat), el sistema puede proyectar automáticamente el contenido de vídeo. Primero, establece la propiedad [**PlaybackSession.SphericalVideoProjection.IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksphericalvideoprojection.IsEnabled) en **true**. También puedes ajustar las propiedades, como la orientación de vista y el campo de vista que el reproductor multimedia usará para proyectar el contenido de vídeo. En este ejemplo, el campo de vista se estableció en un valor ancho de 120grados al establecer la propiedad [**HorizontalFieldOfViewInDegrees**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksphericalvideoprojection.HorizontalFieldOfViewInDegrees).
+En el controlador **MediaOpened**, comprueba primero el formato de fotogramas del elemento multimedia recién abierto. Para ello, comprueba la propiedad [**PlaybackSession.SphericalVideoProjection.FrameFormat**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksphericalvideoprojection.FrameFormat). Si este valor es [**SphericaVideoFrameFormat.Equirectangular**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.sphericalvideoframeformat), el sistema puede proyectar automáticamente el contenido de vídeo. Primero, establece la propiedad [**PlaybackSession.SphericalVideoProjection.IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksphericalvideoprojection.IsEnabled) en **true**. También puedes ajustar las propiedades, como la orientación de vista y el campo de vista que el reproductor multimedia usará para proyectar el contenido de vídeo. En este ejemplo, el campo de vista se estableció en un valor ancho de 120 grados al establecer la propiedad [**HorizontalFieldOfViewInDegrees**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksphericalvideoprojection.HorizontalFieldOfViewInDegrees).
 
 Si el contenido de vídeo es esférico, pero está en un formato que no sea equirectangular, puedes implementar tu propio algoritmo de proyección mediante el modo de servidor de fotogramas del reproductor multimedia para recibir y procesar fotogramas individuales.
 
@@ -228,13 +228,13 @@ Una vez que todos los objetos necesarios se hayan inicializado, se llama a **Cop
 
 Para más información sobre el uso de Win2D, consulta el [repositorio GitHub de Win2D](https://github.com/Microsoft/Win2D). Para probar el código de ejemplo que se muestra arriba, tendrás que agregar el paquete de NuGet Win2D al proyecto con las siguientes instrucciones.
 
-**Para agregar el paquete de NuGet Win2D al proyecto de efecto**
+**Para agregar el paquete Win2D NuGet al proyecto efecto**
 
 1.  En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto y selecciona **Administrar paquetes NuGet**.
 2.  En la parte superior de la ventana, selecciona la pestaña **Examinar**.
 3.  En el cuadro de búsqueda, escribe **Win2D**.
 4.  Selecciona **Win2D.uwp**y luego selecciona **Instalar** en el panel derecho.
-5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haz clic en **Aceptar**.
+5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haga clic en **Aceptar**.
 6.  Acepta la licencia del paquete.
 
 ## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>Detectar y responder a cambios de nivel de audio por el sistema
@@ -257,11 +257,11 @@ El usuario puede decidir que quiere pausar o continuar la reproducción, incluso
 [!code-cs[ButtonUserClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetButtonUserClick)]
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Reproducción de contenido multimedia](media-playback.md)
-* [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md)
-* [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md)
-* [Crear, programar y administrar interrupciones multimedia](create-schedule-and-manage-media-breaks.md)
-* [Reproducir elementos multimedia en segundo plano](background-audio.md)
+* [Reproducción de multimedia](media-playback.md)
+* [Realiza un seguimiento, listas de reproducción y elementos multimedia](media-playback-with-mediasource.md)
+* [Integrar con los controles de transporte de medios del sistema](integrate-with-systemmediatransportcontrols.md)
+* [Crear, programar y administrar los medios](create-schedule-and-manage-media-breaks.md)
+* [Reproducir archivos multimedia en segundo plano](background-audio.md)
 
 
 

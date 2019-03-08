@@ -6,21 +6,21 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: 946c0ae2251d1f75ea250d43881b29b172b9ad1d
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116167"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637150"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar un conjunto relacionado con un archivo del Instalador de aplicación
 
 Si estás empezando con paquetes opcionales para UWP o conjuntos relacionados, los siguientes artículos son buenos recursos para empezar a trabajar. 
 
-1.  [Ampliar tu aplicación con paquetes opcionales](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
-2.  [Crear tu primer paquete opcional](https://blogs.msdn.microsoft.com/appinstaller/2017/05/09/build-your-first-optional-package/)
-3.  [Cargar código desde un paquete opcional](https://blogs.msdn.microsoft.com/appinstaller/2017/05/11/loading-code-from-an-optional-package/)
+1.  [Ampliar la aplicación con paquetes opcionales](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
+2.  [Crear el primer paquete opcional](https://blogs.msdn.microsoft.com/appinstaller/2017/05/09/build-your-first-optional-package/)
+3.  [Código de carga de un paquete opcional](https://blogs.msdn.microsoft.com/appinstaller/2017/05/11/loading-code-from-an-optional-package/)
 4.  [Herramientas para crear un conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)
-5.  [Paquetes opcionales y creación de conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)
+5.  [Creación de un conjunto relacionado y paquetes opcionales](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)
 
 Con el Windows 10 Fall Creators Update, se pueden instalar ahora conjuntos relacionados mediante el Instalador de aplicación. Esto permite la distribución y la implementación de paquetes de aplicaciones de conjuntos relacionados para los usuarios. 
 
@@ -86,8 +86,8 @@ La plantilla básica incluye la información del archivo del Instalador de aplic
 </AppInstaller>
 ```
 
-### <a name="step-3-add-the-main-package-information"></a>Paso 3: Agregar la información del paquete principal 
-Si el paquete de aplicación principal es un archivo .appxbundle o .msixbundle, usa el `<MainBundle>` se muestra a continuación. Si el paquete de aplicación principal es un archivo .appx o .msix, a continuación, usar `<MainPackage>` en lugar de `<MainBundle>` en el fragmento de código. 
+### <a name="step-3-add-the-main-package-information"></a>Paso 3: Agregue la información del paquete principal 
+Si el paquete de aplicación principal es un archivo .appxbundle o .msixbundle, a continuación, utilice el `<MainBundle>` se muestra a continuación. Si el paquete de aplicación principal es un archivo .appx o .msix, a continuación, utilice `<MainPackage>` en lugar de `<MainBundle>` en el fragmento de código. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -106,7 +106,7 @@ Si el paquete de aplicación principal es un archivo .appxbundle o .msixbundle, 
 ```
 La información del atributo `<MainBundle>` o `<MainPackage>` debe coincidir con el elemento [Paquete/identidad](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) del manifiesto del lote de aplicaciones o del manifiesto del paquete de la aplicación, respectivamente. 
 
-### <a name="step-4-add-the-optional-packages"></a>Paso 4: Agregar paquetes opcionales 
+### <a name="step-4-add-the-optional-packages"></a>Paso 4: Agregue los paquetes opcionales 
 De manera similar al atributo del paquete de aplicación principal, si el paquete opcional puede ser un paquete de aplicación o un lote de aplicaciones, el elemento secundario dentro del atributo `<OptionalPackages>` debe ser `<Package>` o `<Bundle>` respectivamente. La información del paquete de los elementos secundarios debe coincidir con el elemento de identidad del manifiesto del paquete o del lote. 
 
 ``` xml
@@ -146,7 +146,7 @@ De manera similar al atributo del paquete de aplicación principal, si el paquet
 </AppInstaller>
 ```
 
-### <a name="step-5-add-dependencies"></a>Paso 5: Agregar dependencias. 
+### <a name="step-5-add-dependencies"></a>Paso 5: Agregar dependencias 
 En el elemento de dependencias, puedes especificar los paquetes de marco necesarios para el paquete principal o los paquetes opcionales. 
 
 ``` xml

@@ -1,5 +1,5 @@
 ---
-Description: Learn how to group notifications in Action Center using collections.
+Description: Obtenga información sobre cómo agrupar las notificaciones en el centro de actividades de uso de colecciones.
 title: Colecciones de notificaciones del sistema
 label: Toast Collections
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.topic: article
 keywords: windows 10, uwp, notificación, colecciones, colección, agrupar notificaciones, agrupación de notificaciones, agrupar, organizar el centro de actividades, notificación del sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b6818f876c094298a0a6636faa00efa9a192545
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943886"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57600690"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>Agrupación de notificaciones del sistema con colecciones
 Usa colecciones para organizar las notificaciones del sistema de la aplicación en el Centro de actividades. Las colecciones ayudan a los usuarios a encontrar con mayor facilidad información en el Centro de actividades y permitir a los desarrolladores administrar mejor sus notificaciones.  Las API siguientes permiten la eliminación, creación y actualización de colecciones de notificaciones.
 
 > [!IMPORTANT]
-> **Requiere la actualización Creators Update**: debes utilizar SDK 15063 y estar ejecutando la compilación 15063 o superior para usar las colecciones de notificaciones del sistema. Entre las API relacionadas se incluyen [Windows.UI.Notifications.ToastCollection](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollection) y [Windows.UI.Notifications.ToastCollectionManager](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollectionmanager).
+> **Requiere la actualización Creators**: Debe tener como destino el SDK 15063 y se ejecuta la compilación 15063 o posterior para usar las colecciones de notificación del sistema. Entre las API relacionadas se incluyen [Windows.UI.Notifications.ToastCollection](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollection) y [Windows.UI.Notifications.ToastCollectionManager](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollectionmanager).
 
 Puedes ver el ejemplo siguiente con una aplicación de mensajería que separa las notificaciones basadas en el grupo de chat; cada título (chat de proyecto Comp Sci 160A, mensajes directos, Lacrosse Team Chat) es una colección independiente.  Ten en cuenta cómo se agrupan de manera diferente las notificaciones como si procedieran de una aplicación independiente, aunque todas las notificaciones provienen de la misma aplicación.  Si buscando una manera más sutil de organizar las notificaciones, consulta [encabezados de notificación del sistema](toast-headers.md).  
-![Ejemplo de colección con dos grupos diferentes de notificaciones](images/toast-collection-example.png)
+![Ejemplo de la colección con dos grupos diferentes de notificaciones](images/toast-collection-example.png)
 
 ## <a name="creating-collections"></a>Creación de colecciones
 Al crear cada colección, debes proporcionar un nombre para mostrar y un icono, que se muestran en el Centro de actividades como parte del título de la colección, como se muestra en la imagen anterior. Las colecciones también requieren un argumento de inicio para ayudar a la aplicación a navegar a la ubicación correcta dentro de la aplicación cuando el usuario hace clic en el título de la colección.  
@@ -188,6 +188,6 @@ Las colecciones de notificaciones del sistema que crees también se reflejarán 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Contenido de notificaciones del sistema](adaptive-interactive-toasts.md)
-* [Encabezados de notificaciones del sistema](toast-headers.md)
-* [Biblioteca de notificaciones en GitHub (parte del Kit de herramientas de Comunidad Windows)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Contenido de notificación del sistema](adaptive-interactive-toasts.md)
+* [Encabezados del sistema](toast-headers.md)
+* [Biblioteca de notificaciones en GitHub (parte del Kit de herramientas de comunidad de Windows)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

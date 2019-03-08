@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins
 ms.localizationpriority: medium
 ms.openlocfilehash: bfb307093889c5a40a452d2d406f02224ab5eab1
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050648"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659280"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Mostrar puntos de interés en un mapa
 
 Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML. Un punto de interés es un punto concreto del mapa que representa algo de interés. Por ejemplo, la ubicación de un negocio, ciudad o amigo.
 
-Para obtener más información sobre la presentación de puntos de interés en tu aplicación, descarga la muestra siguiente desde el [repo de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub: [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+Para más información acerca de cómo mostrar POI en su aplicación, descargue el ejemplo siguiente la [repositorio de ejemplos de Windows universal](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub: [Ejemplo de asignación de universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 Para mostrar marcadores, imágenes y formas en el mapa añadiendo objetos [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) y [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) a una colección **MapElements** de un objeto [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer). A continuación, agrega ducho nivel a la colección **Layers** de un control de mapa.
 
@@ -163,9 +163,9 @@ public void AddLandmarkPhoto()
 }
 ```
 
-Hay tres partes de este código que vale la pena examinar un poco más de cerca: la imagen, la cámara de referencia y la propiedad [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint).
+Hay tres partes de este código, vale la pena examinar investigarlo más en profundidad: La imagen, la cámara de referencia y el [ **NormalizedAnchorPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) propiedad.
 
-### <a name="image"></a>Imagen
+### <a name="image"></a>Image
 
 Este ejemplo muestra una imagen personalizada guardada en la carpeta **Activos** del proyecto. La propiedad [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.Image) del elemento [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) espera un valor de tipo [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813). Para este tipo es necesaria una declaración **using** para el espacio de nombres [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791).
 
@@ -471,13 +471,13 @@ En la página XAML, enlaza a la propiedad en la clase de modelo de vista que dev
     MapServiceToken="Your token" Layers="{x:Bind ViewModel.LandmarkLayer}"/>
 ```
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Centro para desarrolladores de Bing Maps](https://www.bingmapsportal.com/)
+* [Ejemplo de asignación de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Instrucciones de diseño de mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Compilación 2015 vídeo: Aprovechamiento de mapas y ubicación en el teléfono, tableta y PC en sus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación UWP tráfico](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)

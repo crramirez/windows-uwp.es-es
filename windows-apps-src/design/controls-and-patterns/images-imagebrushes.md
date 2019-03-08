@@ -1,5 +1,5 @@
 ---
-Description: Learn how to integrate images into your app, including how to use the APIs of the two main XAML classes, Image and ImageBrush.
+Description: Aprende a integrar imágenes en la aplicación, así como a usar las API de las dos clases principales de XAML, Image e ImageBrush.
 title: Imágenes y pinceles de imagen
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5451e0dd94510873f87b981a817fb55ba2c4f985
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049782"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622020"
 ---
 # <a name="images-and-image-brushes"></a>Imágenes y pinceles de imagen
 
 Para mostrar una imagen, puedes usar los objetos **Image** o **ImageBrush**. Un objeto Image representa una imagen y un objeto ImageBrush pinta otro objeto con una imagen. 
 
-> **API importantes**: [Clase Image](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [Propiedad Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx), [Clase ImageBrush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx), [Propiedad ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
+> **API importantes**: [Clase de la imagen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [del origen de propiedad](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx), [clase ImageBrush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx), [propiedad ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
 
 ## <a name="are-these-the-right-elements"></a>¿Son estos los elementos adecuados?
 Usa un elemento **Image** para mostrar una imagen independiente en la aplicación.
@@ -35,7 +35,7 @@ Usa un elemento **ImageBrush** para aplicar una imagen a otro objeto. Entre los 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Image">abrir la aplicación y ver la imagen en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -56,7 +56,7 @@ Este es el objeto Image representado.
 
 ![Ejemplo de un elemento de imagen](images/Image_Licorice.jpg)
 
-En este ejemplo, la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica la ubicación de la imagen que quieres mostrar. Puedes establecer el origen especificando una dirección URL absoluta (por ejemplo, http://contoso.com/myPicture.jpg) o especificando una dirección URL que es relativa a la estructura de empaquetado de la aplicación. En nuestro ejemplo, el archivo de imagen "licorice.jpg" se ubica en la carpeta raíz del proyecto y se declara la configuración del proyecto que incluye el archivo de imagen como contenido.
+En este ejemplo, la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica la ubicación de la imagen que quieres mostrar. Puede establecer el origen mediante la especificación de una dirección URL absoluta (por ejemplo, http://contoso.com/myPicture.jpg) o especificando una dirección URL que sea relativa a la estructura de empaquetado de la aplicación. En nuestro ejemplo, el archivo de imagen "licorice.jpg" se ubica en la carpeta raíz del proyecto y se declara la configuración del proyecto que incluye el archivo de imagen como contenido.
 
 ### <a name="imagebrush"></a>ImageBrush
 
@@ -80,10 +80,10 @@ Este es el elemento Ellipse que ha pintado ImageBrush.
 
 Si no se establecen los valores [Width](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) o [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) de un elemento **Image**, se representa con las dimensiones que especifique la propiedad **Source**. Cuando se establecen los valores **Width** y **Height**, se crea un área rectangular contenedora donde se muestra la imagen. Es posible especificar la forma en que la imagen rellena esta área contenedora mediante el uso de la propiedad [Stretch](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.stretch.aspx). La propiedad Stretch acepta estos valores, que define la enumeración [Stretch](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx):
 
--   **None**: la imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con esta configuración de Stretch; si la imagen de origen es más grande que el área contenedora, la imagen se recortará, lo cual no es deseable, ya que no tendrás control sobre la ventanilla, que sí tendrías con un elemento [Clip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx) intencionado.
--   **Uniform**: la imagen se escala para ajustarse a las dimensiones de salida. aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
--   **UniformToFill**: la imagen se escala para rellenar completamente el área de salida, pero mantiene su relación de aspecto original.
--   **Fill**: la imagen se escala para ajustarse a las dimensiones de salida. Como el alto y el ancho del contenido se escalan de forma independiente, la relación de aspecto original de la imagen quizás no se mantenga. En otras palabras, la imagen podría distorsionarse para rellenar completamente el área de salida.
+-   **Ninguna**: La imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con esta configuración de Stretch; si la imagen de origen es más grande que el área contenedora, la imagen se recortará, lo cual no es deseable, ya que no tendrás control sobre la ventanilla, que sí tendrías con un elemento [Clip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx) intencionado.
+-   **Uniforme**: La imagen se escala para ajustarse a las dimensiones de salida. aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
+-   **UniformToFill**: La imagen se escala para que rellene el área de salida completamente pero conserva su relación de aspecto original.
+-   **Rellenar**: La imagen se escala para ajustarse a las dimensiones de salida. Como el alto y el ancho del contenido se escalan de forma independiente, la relación de aspecto original de la imagen quizás no se mantenga. En otras palabras, la imagen podría distorsionarse para rellenar completamente el área de salida.
 
 ![Ejemplo de las configuraciones de Stretch.](images/Image_Stretch.jpg)
 
@@ -147,7 +147,7 @@ La clase [RenderTargetBitmap](https://msdn.microsoft.com/library/windows/apps/xa
 
 ### <a name="image-sources-and-scaling"></a>Orígenes y escala de las imágenes
 
-Deberías crear los orígenes de imágenes con varios tamaños recomendados para garantizar que la aplicación tenga una apariencia excelente cuando Windows cambie su escala. Cuando se especifica una propiedad **Source** para un elemento **Image**, puedes usar una convención de nomenclatura que haga referencia automáticamente al recurso correcto para la escala actual. Para ver información más específica sobre la convención de nomenclatura y otros temas, consulta [Inicio rápido: usar recursos de archivo o imagen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965325).
+Deberías crear los orígenes de imágenes con varios tamaños recomendados para garantizar que la aplicación tenga una apariencia excelente cuando Windows cambie su escala. Cuando se especifica una propiedad **Source** para un elemento **Image**, puedes usar una convención de nomenclatura que haga referencia automáticamente al recurso correcto para la escala actual. Para obtener información específica de la convención de nomenclatura y obtener más información, consulte [inicio rápido: Uso de recursos de imagen o archivo](https://msdn.microsoft.com/library/windows/apps/xaml/hh965325).
 
 Para más información sobre cómo diseñar teniendo en cuenta la escala, consulta [Directrices sobre la experiencia del usuario para diseño y escalado](https://msdn.microsoft.com/library/windows/apps/dn611863).
 
@@ -167,5 +167,5 @@ Si defines un elemento Image o ImageBrush mediante código, usa los constructore
 ## <a name="related-articles"></a>Artículos relacionados
 
 -   [Audio, vídeo y cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
--   [Clase Image](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
+-   [Clase de imagen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
 -   [Clase ImageBrush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)

@@ -6,13 +6,13 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593080"
 ---
-# <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Creación de diseños adaptativos
+# <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Crear diseños adaptables
 
 Este tutorial explica los conceptos básicos del uso de las funciones de diseño adaptativo y personalizado de XAML, que te permiten crear aplicaciones que parezcan hechas expresamente para cualquier dispositivo. Aprenderás a crear una nueva DataTemplate, agregar puntos de acoplamiento de ventana y adaptar el diseño de la aplicación mediante los elementos VisualStateManager y AdaptiveTrigger. Vamos a utilizar estas herramientas para optimizar un programa de edición de imágenes para pantallas de dispositivos más pequeñas. 
 
@@ -28,34 +28,34 @@ La **página de detalles**, que muestra una sola foto después de que se haya se
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Visual Studio 2017: [Descargar Visual Studio 2017 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
-* Windows 10 SDK (10.0.15063.468 o posterior): [Descargar el Windows SDK más reciente (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Emulador de Windows Mobile: [Descargar el Emulador de Windows 10 Mobile (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
+* Visual Studio 2017: [Descargar Visual Studio 2017 Community (gratis)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* SDK de Windows 10 (10.0.15063.468 o posterior):  [Descargue el último SDK de Windows (gratis)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Emulador de Windows mobile: [Descargar el emulador de Windows 10 mobile (gratis)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
-## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtener el código de inicio de GitHub
+## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtener el código de inicio de github
 
 En este tutorial, empezaremos con una versión simplificada del ejemplo PhotoLab. 
 
-1. Ve a [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Esto te llevará a la página de GitHub que contiene el ejemplo. 
+1. Vaya a [ https://github.com/Microsoft/Windows-appsample-photo-lab ](https://github.com/Microsoft/Windows-appsample-photo-lab). Esto te llevará a la página de GitHub que contiene el ejemplo. 
 2. A continuación deberás clonar o descarga dicho ejemplo. Haz clic en el botón **Clone or download**. Aparecerá un submenú.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
         <figcaption>El menú <b>Clone or download</b> de la página de GitHub del ejemplo de PhotoLab.</figcaption>
     </figure>
 
-    **Si no conoces GitHub muy bien:**
+    **Si no está familiarizado con GitHub:**
     
     a. Haz clic en **Download ZIP** y guarda el archivo localmente. Esto descargará un archivo .zip que contiene todos los archivos de proyecto que necesitas.
     b. Extrae el archivo. Usa el Explorador de archivos para ir al archivo .zip que acabas de descargar, haz clic en él con el botón derecho y selecciona **Extraer todo...**. c. Dirígete a la copia local del ejemplo y ve al directorio `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout`.    
 
-    **Si ya conoces GitHub:**
+    **Si está familiarizado con GitHub:**
 
     a. Clona la bifurcación principal del repositorio localmente.
     b. Dirígete al directorio `Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout`.
 
 3. Abre el proyecto haciendo clic en `Photolab.sln`.
 
-## <a name="part-1-run-the-mobile-emulator"></a>Parte 1: Ejecutar el emulador móvil
+## <a name="part-1-run-the-mobile-emulator"></a>1ª parte: Ejecutar el emulador de dispositivos móvil
 
 En la barra de herramientas de Visual Studio, asegúrate de que la plataforma de soluciones esté establecida en x86 o x64, no ARM y, a continuación, cambia el dispositivo de destino del equipo local a uno de los emuladores móviles que tengas instalados (por ejemplo, el Emulador de Windows Mobile 10.0.15063 WVGA de 5 pulgadas y 1 GB). Prueba a ejecutar la aplicación Galería fotográfica en el emulador móvil que hayas seleccionado presionando **F5**.
 
@@ -63,7 +63,7 @@ En cuanto se inicie la aplicación, probablemente observarás que, mientras la a
 
 ![Diseño móvil: después](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
 
-## <a name="part-2-build-a-tailored-mobile-layout"></a>Parte 2: Crear un diseño personalizado para móviles
+## <a name="part-2-build-a-tailored-mobile-layout"></a>2ª parte: Crear un diseño móvil adaptado
 Para lograr que esta aplicación quede bien en dispositivos más pequeños, vamos a crear un conjunto de estilos distinto en nuestra página XAML, que se usará solo si se detecta un dispositivo móvil.
 
 ### <a name="create-a-new-datatemplate"></a>Crear una nueva DataTemplate
@@ -211,7 +211,7 @@ Ahora intenta ejecutar la aplicación con un emulador móvil. ¿Se muestra corre
 
 ![Diseño móvil: después](../basics/images/xaml-basics/adaptive-layout-mobile-after.png)
 
-## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>Parte 3: adaptarse a varios tamaños de ventana en un solo dispositivo.
+## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>Parte 3: Adaptarse a varios tamaños de ventana en un único dispositivo
 Crear un nuevo diseño personalizado resuelve el problema de diseño con capacidad de respuesta para dispositivos móviles pero, ¿qué pasa con los equipos de escritorio y las tabletas? La aplicación puede quedar bien a pantalla completa, pero si el usuario reduce la ventana, puede acabar con una interfaz incómoda. Es posible garantizar que la experiencia del usuario final siempre tenga una apariencia y sensación correctas usando el **VisualStateManager** para adaptarse a varios tamaños de ventana en un solo dispositivo.
 
 ![Ventana pequeña: antes](../basics/images/xaml-basics/adaptive-layout-small-before.png)
@@ -230,7 +230,7 @@ El primer paso es definir los "puntos de acoplamiento" en los que se desencadena
 
 Esto nos da tres puntos de acoplamiento, que nos permiten crear nuevos **VisualStates** para tres intervalos de tamaños de ventana:
 + Pequeño (0 - 640 píxeles de ancho)
-+ Medio (641a 1007 píxeles de ancho)
++ Medio (641 a 1007 píxeles de ancho)
 + Grande (> 1007 píxeles de ancho)
 
 ### <a name="create-new-visualstates-and-statetriggers"></a>Crear nuevos VisualStates y StateTriggers
@@ -321,7 +321,7 @@ Ahora que has completado este laboratorio, tienes suficiente información de dis
 
 Si te quedas bloqueado, puedes encontrar más información en estas secciones de [Definir diseños de página con XAML](../layout/layouts-with-xaml.md).
 
-+ [Estados visuales y desencadenadores de estado](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
++ [Estados visuales y los desencadenadores de estado](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
 + [Diseños personalizados](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#tailored-layouts)
 
 Como alternativa, si quieres obtener más información sobre cómo se creó la aplicación inicial de edición de fotos, consulta estos tutoriales de XAML, [interfaces de usuario](../basics/xaml-basics-ui.md) y [enlace de datos](../../data-binding/xaml-basics-data-binding.md).

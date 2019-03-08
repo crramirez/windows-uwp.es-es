@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 474f97f32439c389be8283bb10e0c0ed716b3f69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923339"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662050"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Filtrado de texturas con mapas MIP
 
@@ -43,11 +43,11 @@ Direct3D puede evaluar qué textura de un conjunto de mapas MIP es la solución 
 
 Para usar mapas MIP, la aplicación debe crear un conjunto de mapas MIP. Para aplicar mapas MIP, las aplicaciones seleccionan el mapa MIP establecido como primera textura en el conjunto de texturas actuales. Consulta [Combinación de texturas](texture-blending.md).
 
-A continuación, la aplicación debe establecer el método de filtrado que Direct3D usará para el muestreo de los elementos de textura. El método más rápido de filtrado de mapas MIP es que Direct3D seleccione el elemento de textura más cercano. Usa el valor enumerado D3DTEXF\_POINT para seleccionarlo. Direct3D puede producir los mejores resultados de filtrado si la aplicación usa el valor enumerado D3DTEXF\_LINEAR. Esto selecciona el mapa MIP más cercano y, a continuación, calcula la media ponderada de los elementos de textura que rodean la ubicación en la textura a la que el píxel actual se asigna.
+A continuación, la aplicación debe establecer el método de filtrado que Direct3D usará para el muestreo de los elementos de textura. El método más rápido de filtrado de mapas MIP es que Direct3D seleccione el elemento de textura más cercano. Utilice el D3DTEXF\_punto enumera el valor que se seleccione esta opción. Puede generar Direct3D mejor filtrado de resultados si la aplicación utiliza el D3DTEXF\_lineal valor enumerado. Esto selecciona el mapa MIP más cercano y, a continuación, calcula la media ponderada de los elementos de textura que rodean la ubicación en la textura a la que el píxel actual se asigna.
 
 Las texturas de mapas MIP se usan en escenas en 3D para disminuir el tiempo necesario para representarlas. También mejoran el realismo de la escena. Sin embargo, a menudo requieren grandes cantidades de memoria.
 
-**Nota**  cada superficie de una cadena de mapas MIP tiene dimensiones que son la mitad que la superficie anterior de la cadena. Si el mapa MIP de nivel superior tiene unas dimensiones de 256 x 128, las dimensiones del mapa MIP de segundo nivel son de 128 x 64, las del tercer nivel son de 64 x 32, y así sucesivamente hasta 1 x 1. No puedes solicitar un número de niveles de mapa MIP en niveles que haría que el ancho o el alto de cualquier mapa MIP de la cadena fuera inferior a 1. En el caso sencillo de una superficie de mapa MIP de nivel superior de 4 x 2, el valor máximo permitido para los niveles es tres. Las dimensiones del nivel superior son 4 x 2, las dimensiones del segundo nivel son 2 x 1 y las dimensiones del tercer nivel son 1 x 1. Un valor mayor de 3 en los niveles da como resultado un valor fraccional en la altura del mapa MIP del segundo nivel, por lo que no se permite.
+**Tenga en cuenta**    cada superficie en una cadena de mipmap tiene las dimensiones que están en la mitad que el de la superficie de la cadena anterior. Si el mapa MIP de nivel superior tiene unas dimensiones de 256 x 128, las dimensiones del mapa MIP de segundo nivel son de 128 x 64, las del tercer nivel son de 64 x 32, y así sucesivamente hasta 1 x 1. No puedes solicitar un número de niveles de mapa MIP en niveles que haría que el ancho o el alto de cualquier mapa MIP de la cadena fuera inferior a 1. En el caso sencillo de una superficie de mapa MIP de nivel superior de 4 x 2, el valor máximo permitido para los niveles es tres. Las dimensiones del nivel superior son 4 x 2, las dimensiones del segundo nivel son 2 x 1 y las dimensiones del tercer nivel son 1 x 1. Un valor mayor de 3 en los niveles da como resultado un valor fraccional en la altura del mapa MIP del segundo nivel, por lo que no se permite.
 
  
 
@@ -56,7 +56,7 @@ Direct3D puede realizar automáticamente el filtrado de texturas de los mapas MI
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Filtrado de texturas](texture-filtering.md)
+[Filtrado de textura](texture-filtering.md)
 
  
 

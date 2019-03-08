@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, rendering, representación, scene, escena, depth testing, pruebas de profundidad, direct3d, shadows, sombras
 ms.localizationpriority: medium
 ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630460"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Representar la escena con prueba de profundidad
 
 
 
 
-Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles. Parte 3 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles. Parte 3 de [Tutorial: Implementar los volúmenes de instantáneas con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="include-transformation-for-light-frustum"></a>Incluir la transformación para el frustum de la luz
 
@@ -67,7 +67,7 @@ Luego el sombreador de píxeles usará la posición del espacio de luz interpola
 ## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Probar si la posición está en el frustum de la luz
 
 
-Primero comprueba que el píxel esté en el frustum de vista de la luz normalizando las coordenadas X e Y. Si ambas están en el rango \[0, 1\], es posible que el píxel esté en la sombra. De lo contrario, puedes omitir la prueba de profundidad. Un sombreador puede probar esto rápidamente llamando a [Saturar](https://msdn.microsoft.com/library/windows/desktop/hh447231) y comparando el resultado con el valor original.
+Primero comprueba que el píxel esté en el frustum de vista de la luz normalizando las coordenadas X e Y. Si ambos están dentro del intervalo \[0, 1\] , a continuación, es posible que el píxel en la sombra. De lo contrario, puedes omitir la prueba de profundidad. Un sombreador puede probar esto rápidamente llamando a [Saturar](https://msdn.microsoft.com/library/windows/desktop/hh447231) y comparando el resultado con el valor original.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.

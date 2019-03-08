@@ -1,5 +1,5 @@
 ---
-Description: Learn how to select an installed language to use for speech recognition.
+Description: Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz.
 title: Especificar el idioma del reconocedor de voz
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e23cb9c01178640bfa1519d8df369ec76ed2a6c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046558"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593840"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
 
@@ -33,10 +33,10 @@ Debes tener un conocimiento básico del reconocimiento de voz y de las restricci
 
 Si acabas de empezar a desarrollar aplicaciones para la Plataforma universal de Windows (UWP), consulta estos temas para familiarizarte con las tecnologías que te presentamos aquí.
 
--   [Crear tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   [Crea tu primera aplicación.](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
-**Directrices sobre la experiencia del usuario:**
+**Instrucciones para la experiencia de usuario:**
 
 Para obtener sugerencias útiles sobre el diseño de una aplicación habilitada para voz que sea útil y atractiva, consulta [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
@@ -56,15 +56,15 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Los idiomas instalados pueden variar entre dispositivos. Debes comprobar la existencia de un idioma si dependes de él para una restricción concreta.
 
-**Nota**se requiere un reinicio después de instala un nuevo paquete de idioma. Si el idioma especificado no es compatible o la instalación no ha finalizado, se genera una excepción con código de error SPERR\_NOT\_FOUND (0x8004503a).
+**Tenga en cuenta**  es necesario reiniciar después de instala un nuevo paquete de idioma. Una excepción con el código de error SPERR\_no\_FOUND (0x8004503a) se produce si el idioma especificado no es compatible o no ha terminado de instalarse.
 
  
 
 Determina los idiomas admitidos en un dispositivo al comprobar una de las dos propiedades estáticas de la clase [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226):
 
--   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251): es la colección de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) que se usa con gramáticas predefinidas de dictado y búsqueda en Internet.
+-   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251): la colección de [ **lenguaje** ](https://msdn.microsoft.com/library/windows/apps/br206804) objetos usados con dictado predefinida y las gramáticas de búsqueda web.
 
--   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250): es la colección de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) que se usa con una restricción de lista o un archivo de Especificación de gramática de reconocimiento de voz (SRGS).
+-   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250): la colección de [ **lenguaje** ](https://msdn.microsoft.com/library/windows/apps/br206804) objetos usados con una restricción de la lista o un archivo de especificación de gramática de reconocimiento de voz (SRGS).
 
 ## <a name="specify-a-language"></a>Especificar un idioma
 
@@ -86,7 +86,7 @@ Una restricción de tema puede configurarse mediante la adición de [**SpeechRec
 
 Una restricción de lista se configura mediante la adición de [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) a la colección [**Restricciones**](https://msdn.microsoft.com/library/windows/apps/dn653241) de [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) y, luego, llamando a [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). No se puede especificar el idioma de una lista personalizada directamente. En su lugar, la lista se procesará mediante el idioma del reconocedor.
 
-Una gramática SRGS es un formato XML estándar abierto representado por la clase [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). A diferencia de las listas personalizadas, puedes especificar el idioma de la gramática en el marcado SRGS. Se produce un error en [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) con un objeto [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** si no se inicializa el reconocedor en el mismo idioma que el marcado SRGS.
+Una gramática SRGS es un formato XML estándar abierto representado por la clase [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). A diferencia de las listas personalizadas, puedes especificar el idioma de la gramática en el marcado SRGS. [**CompileConstraintsAsync** ](https://msdn.microsoft.com/library/windows/apps/dn653240) se produce un error con un [ **SpeechRecognitionResultStatus** ](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** si el reconocedor no se ha inicializado en el mismo idioma que el marcado SRGS.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -96,11 +96,11 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 **Diseñadores**
 
-* [Directrices para el diseño de Voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 
-**Muestras**
+**Ejemplos**
 
-* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconocimiento de voz y ejemplo de síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

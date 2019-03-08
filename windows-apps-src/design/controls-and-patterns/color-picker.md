@@ -1,5 +1,5 @@
 ---
-Description: A color picker lets a user browse through and select colors.
+Description: Un selector de colores permite a un usuario explorar y seleccionar colores.
 title: Selector de colores
 label: Color Picker
 template: detail.hbs
@@ -12,17 +12,17 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 215a15e3a8e1b0264987adcf6228ec52a696f50c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047104"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654480"
 ---
 # <a name="color-picker"></a>Selector de colores
 
 Un selector de colores se usa para explorar y seleccionar colores. De manera predeterminada, permite a un usuario navegar por los colores en un espectro de colores o especificar un color en los cuadros de texto rojo, verde y azul (RGB), valor de matiz-saturación (HSV) o hexadecimal.
 
-> **API importantes**: [Clase ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [Propiedad Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [Evento ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
+> **API importantes**: [Clase ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [propiedad de Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged eventos](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ![Selector de colores predeterminado](images/color-picker-default.png)
 
@@ -42,7 +42,7 @@ Si tu aplicación está dibujando o realizando tareas similares con el lápiz, p
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ColorPicker">abrir la aplicación y ver ColorPicker en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -188,7 +188,7 @@ En este ejemplo se muestra cómo configurar el selector de colores con una inter
 
 En esta tabla se muestran todas las opciones que puedes usar para configurar el control ColorPicker.
 
-Función | Propiedades
+Característica | Propiedades
 --------|-----------
 Espectro de colores | IsColorSpectrumVisible, ColorSpectrumShape, ColorSpectrumComponents
 Vista previa del color | IsColorPreviewVisible
@@ -213,7 +213,7 @@ Valores hexadecimales | IsHexInputVisible
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Interacciones de lápices en aplicaciones para UWP](../input/pen-and-stylus-interactions.md)
+- [Interacciones del lápiz y el lápiz óptico en aplicaciones para UWP](../input/pen-and-stylus-interactions.md)
 - [Entrada manuscrita](inking-controls.md)
 
 <!--

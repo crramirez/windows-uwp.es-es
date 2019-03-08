@@ -1,5 +1,5 @@
 ---
-Description: The core text APIs in the Windows.UI.Text.Core namespace enable a Universal Windows Platform (UWP) app to receive text input from any text service supported on Windows devices.
+Description: Las API de texto principales en el espacio de nombres Windows.UI.Text.Core habilitan una aplicación de la Plataforma universal de Windows (UWP) para recibir una entrada de texto desde cualquier servicio de texto compatible con dispositivos Windows.
 title: Introducción a la entrada de texto personalizado
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: dfb2a5203d2a8e5c497fa427c6a2a7ed5fe2302d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046185"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638710"
 ---
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
@@ -61,7 +61,7 @@ Los intervalos y selecciones de texto se representan mediante la estructura [**C
 
  
 
-Por ejemplo, en el intervalo de texto que se mostró anteriormente, el intervalo \[0, 5\] especifica la palabra "Hello". **StartCaretPosition** debe ser siempre menor o igual que **EndCaretPosition**. El intervalo \[5, 0\] no es válido.
+Por ejemplo, en el intervalo de texto mostrado anteriormente, el intervalo \[0, 5\] especifica la palabra "Hello". **StartCaretPosition** debe ser siempre menor o igual que **EndCaretPosition**. El intervalo \[5, 0\] no es válido.
 
 ### <a name="insertion-point"></a>Punto de inserción
 
@@ -73,7 +73,7 @@ Algunos controles de edición admiten selecciones no contiguas. Por ejemplo, las
 
 Por ejemplo, observa este flujo de texto:
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-2.png) Hay dos opciones: \[0, 1\] y \[6, 11\]. El control de edición debe notificar solo uno de ellos; ya sea \[0, 1\] o \[6, 11\].
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-2.png) hay dos opciones: \[0, 1\] y \[6, 11\]. El control de edición debe notificar solo uno de ellos; cualquier \[0, 1\] o \[6, 11\].
 
 ## <a name="working-with-text"></a>Trabajar con texto
 
@@ -94,9 +94,9 @@ El control de edición normalmente debe aceptar solicitudes de actualización de
 2.  Colocar la selección en la posición especificada en [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233).
 3.  Notificar al sistema que la actualización se realizó correctamente estableciendo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) en [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237).
 
-Por ejemplo, este es el estado de un control de edición antes que el usuario escriba "d". El punto de inserción es en \[10, 10\].
+Por ejemplo, este es el estado de un control de edición antes que el usuario escriba "d". El punto de inserción está en \[10, 10\].
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-3.png) Cuando el usuario escribe "d", se genera un evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) con los siguientes datos [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229):
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-3.png) cuando el usuario escribe "d", un [ **TextUpdating** ](https://msdn.microsoft.com/library/windows/apps/dn958176) evento se desencadena con los siguientes [ **CoreTextTextUpdatingEventArgs** ](https://msdn.microsoft.com/library/windows/apps/dn958229) datos:
 
 -   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
 -   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
@@ -115,11 +115,11 @@ Por ejemplo, imagina que un control de edición solo acepta una dirección de co
 
 A veces el control de edición realiza cambios en el texto, como cuando el texto se pega o se corrige de forma automática. En estos casos, debes notificar a los servicios de texto estos cambios mediante una llamada al método [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
 
-Por ejemplo, este es el estado de un control de edición antes de que el usuario pegue "World". El punto de inserción es en \[6, 6\].
+Por ejemplo, este es el estado de un control de edición antes de que el usuario pegue "World". El punto de inserción está en \[6, 6\].
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-5.png) El usuario realiza la acción pegar y el control de edición quedaría con el texto siguiente:
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-5.png) el usuario realiza la acción de pegar y el control de edición termina con el texto siguiente:
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-4.png) Cuando esto ocurre, se debe llamar a [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) con estos argumentos:
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-4.png) cuando esto sucede, debe llamar a [ **NotifyTextChanged** ](https://msdn.microsoft.com/library/windows/apps/dn958172) con estos argumentos:
 
 -   *modifiedRange* = \[6, 6\]
 -   *newLength* = 5
@@ -131,13 +131,13 @@ Aparecerán uno o más eventos [**TextRequested**](https://msdn.microsoft.com/li
 
 Es posible que quieras reemplazar una actualización de texto en el control de edición para proporcionar funciones de corrección automática.
 
-Por ejemplo, imagina un control de edición que proporciona una función de corrección que formaliza las contracciones. A continuación te mostramos el estado del control de edición antes de que el usuario presione la barra espaciadora para desencadenar la corrección. El punto de inserción es en \[3, 3\].
+Por ejemplo, imagina un control de edición que proporciona una función de corrección que formaliza las contracciones. A continuación te mostramos el estado del control de edición antes de que el usuario presione la barra espaciadora para desencadenar la corrección. El punto de inserción está en \[3, 3\].
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-6.png) El usuario presiona la barra espaciadora y se genera el correspondiente evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176). El control de edición acepta la actualización de texto. Este es el estado del control de edición un instante antes de que finalice la corrección. El punto de inserción es en \[4, 4\].
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-6.png) el usuario presiona la tecla barra espaciadora y su correspondiente [ **TextUpdating** ](https://msdn.microsoft.com/library/windows/apps/dn958176) provoca el evento. El control de edición acepta la actualización de texto. Este es el estado del control de edición un instante antes de que finalice la corrección. El punto de inserción está en \[4, 4\].
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-7.png) Fuera del controlador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), el control de edición realiza la siguiente corrección. Este es el estado del control de edición una vez completada la corrección. El punto de inserción es en \[5, 5\].
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-7.png) fuera de la [ **TextUpdating** ](https://msdn.microsoft.com/library/windows/apps/dn958176) controlador de eventos, la corrección siguiente hace que el control de edición. Este es el estado del control de edición una vez completada la corrección. El punto de inserción está en \[5, 5\].
 
-![diagrama de flujo de texto de ejemplo](images/coretext/stream-8.png) Cuando esto ocurre, se debe llamar a [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) con estos argumentos:
+![diagrama de secuencia de texto de ejemplo](images/coretext/stream-8.png) cuando esto sucede, debe llamar a [ **NotifyTextChanged** ](https://msdn.microsoft.com/library/windows/apps/dn958172) con estos argumentos:
 
 -   *modifiedRange* = \[1, 2\]
 -   *newLength* = 2
@@ -154,8 +154,8 @@ Habrá veces que [**Range**](https://msdn.microsoft.com/library/windows/apps/dn9
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Ejemplos**
-* [Ejemplo de Control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
- **Muestras de archivo**
-* [Muestra de edición de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Ejemplo de Control de edición personalizados](https://go.microsoft.com/fwlink/?linkid=831024)  
+ **archivar ejemplos**
+* [Ejemplo de edición de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
 
 

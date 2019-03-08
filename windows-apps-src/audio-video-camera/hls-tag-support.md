@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c6664d13e76a5774172094d632de9db25109fdc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923382"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613090"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Compatibilidad con etiquetas HTTP Live Streaming (HLS)
 En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplicaciones para UWP.
@@ -29,13 +29,13 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 | 4.3.2.2.  EXT-X-BYTERANGE |4|7|OPCIONAL|Se admite|Se admite|Se admite|
 | 4.3.2.3.  EXT-X-DISCONTINUITY |1|2|OPCIONAL|Se admite|Se admite|Se admite|
 | 4.3.2.4.  EXT-X-KEY |1|0|OPCIONAL|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp; METHOD|1|0|Atributo|"NONE, AES-128"|"NONE, AES-128"|"NONE, AES-128, SAMPLE-AES"|
-|&nbsp;&nbsp;&nbsp; URI|1|0|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp; MÉTODO|1|0|Atributo|"NONE, AES-128"|"NONE, AES-128"|"NONE, AES-128, SAMPLE-AES"|
+|&nbsp;&nbsp;&nbsp; IDENTIFICADOR URI|1|0|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp; IV|2|3|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp; KEYFORMAT|5|9|Atributo|No se admite|No se admite|No se admite|
 |&nbsp;&nbsp;&nbsp; KEYFORMATVERSIONS|5|9|Atributo|No se admite|No se admite|No se admite|
 | 4.3.2.5.  EXT-X-MAP |5|9|OPCIONAL|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp; URI|5|9|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp; IDENTIFICADOR URI|5|9|Atributo|No se admite|No se admite|No se admite|
 |&nbsp;&nbsp;&nbsp; BYTERANGE|5|9|Atributo|No se admite|No se admite|No se admite|
 | 4.3.2.6.  EXT-X-PROGRAM-DATE-TIME |1|0|OPCIONAL|No se admite|No se admite|No se admite|
 |4.3.3.  Etiquetas de lista de reproducción de multimedia                 |             |                   |         |             |     |    | 
@@ -47,43 +47,43 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 | 4.3.3.6.  EXT-X-I-FRAMES-ONLY |4|7|OPCIONAL|No se admite|No se admite|No se admite|
 |4.3.4.  Etiquetas de lista de reproducción maestra                 |             |                   |         |             |     |    |
 | 4.3.4.1.  EXT-X-MEDIA |4|7|OPCIONAL|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  TYPE|4|7|Atributo|"AUDIO, VIDEO"|"AUDIO, VIDEO"|"AUDIO, VIDEO, SUBTITLES"|
-|&nbsp;&nbsp;&nbsp;  URI|4|7|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  TIPO|4|7|Atributo|"AUDIO, VIDEO"|"AUDIO, VIDEO"|"AUDIO, VIDEO, SUBTITLES"|
+|&nbsp;&nbsp;&nbsp;  IDENTIFICADOR URI|4|7|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  GROUP-ID|4|7|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  LANGUAGE|4|7|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  IDIOMA|4|7|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  ASSOC-LANGUAGE|6|13|Atributo|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp;  NAME|4|7|Atributo|No se admite|No se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  DEFAULT|4|7|Atributo|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp;  AUTOSELECT|4|7|Atributo|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp;  FORCED|5|9|Atributo|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp;  INSTREAM-ID|6|12|Atributo|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp;  CHARACTERISTICS|5|9|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  NOMBRE|4|7|Atributo|No se admite|No se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  VALOR PREDETERMINADO|4|7|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  SELECCIÓN AUTOMÁTICA|4|7|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  FORZADO|5|9|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  LAS GUARDA-ID|6|12|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  CARACTERÍSTICAS|5|9|Atributo|No se admite|No se admite|No se admite|
 | 4.3.4.2.  EXT-X-STREAM-INF  |1|0|OBLIGATORIA|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  BANDWIDTH|1|0|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  PROGRAM-ID|1|0|Atributo|NA|NA|NA|
+|&nbsp;&nbsp;&nbsp;  ANCHO DE BANDA|1|0|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  IDENTIFICADOR DE PROGRAMA|1|0|Atributo|N/A|N/A|N/A|
 |&nbsp;&nbsp;&nbsp;  AVERAGE-BANDWIDTH|7|14|Atributo|No se admite|No se admite|No se admite|
-|&nbsp;&nbsp;&nbsp;  CODECS|1|0|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  RESOLUTION|2|3|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  FRAME-RATE|7|15|Atributo|NA|NA|NA|
+|&nbsp;&nbsp;&nbsp;  CÓDECS|1|0|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  RESOLUCIÓN|2|3|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  VELOCIDAD DE FOTOGRAMAS|7|15|Atributo|N/A|N/A|N/A|
 |&nbsp;&nbsp;&nbsp;  AUDIO|4|7|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  VIDEO|4|7|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  SUBTITLES|5|9|Atributo|No se admite|No se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  CLOSED-CAPTIONS|6|12|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  VÍDEO|4|7|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  SUBTÍTULOS|5|9|Atributo|No se admite|No se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  LOS SUBTÍTULOS|6|12|Atributo|No se admite|No se admite|No se admite|
 | 4.3.4.3.  EXT-X-I-FRAME-STREAM-INF  |4|7|OPCIONAL|No se admite|No se admite|No se admite|
 | 4.3.4.4.  EXT-X-SESSION-DATA  |7|14|OPCIONAL|No se admite|No se admite|No se admite|
 | 4.3.4.5.  EXT-X-SESSION-KEY |7|17|OPCIONAL|No se admite|No se admite|No se admite|
 |4.3.5.  Etiquetas de la lista de reproducción maestra o multimedia                  |             |                   |         |             |     |    |
 | 4.3.5.1.  EXT-X-INDEPENDENT-SEGMENTS |6|13|OPCIONAL|No se admite|Se admite|Se admite|
 | 4.3.5.2.  EXT-X-START  |6|12|OPCIONAL|No se admite|Se admite parcialmente|Se admite parcialmente|
-|&nbsp;&nbsp;&nbsp;  TIME-OFFSET|6|12|Atributo|No se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  PRECISE|6|12|Atributo|No se admite|Se admite "NO" predeterminado|Se admite "NO" predeterminado|
+|&nbsp;&nbsp;&nbsp;  DESPLAZAMIENTO DE HORA|6|12|Atributo|No se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  PRECISA|6|12|Atributo|No se admite|Se admite "NO" predeterminado|Se admite "NO" predeterminado|
 
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Reproducción de contenido multimedia](media-playback.md)
-* [Streaming adaptable](adaptive-streaming.md)
+* [Reproducción de multimedia](media-playback.md)
+* [Transmisión por secuencias adaptativa](adaptive-streaming.md)
  
 
  

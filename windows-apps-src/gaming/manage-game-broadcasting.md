@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, juego, difusión
 ms.localizationpriority: medium
 ms.openlocfilehash: c906551fd626dec726498ded9a7995007230504f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930496"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607590"
 ---
 # <a name="manage-game-broadcasting"></a>Administrar la difusión de juegos
 Este artículo muestra cómo administrar la difusión de juegos para una aplicación para UWP. Los usuarios deben iniciar la difusión usando la interfaz de usuario del sistema integrada en Windows pero, a partir de Windows 10, versión 1709, las aplicaciones pueden iniciar la interfaz de usuario de difusión del sistema y pueden recibir notificaciones cuando se inicia y se detiene la difusión.
@@ -21,8 +21,8 @@ Las API para administrar la emisión de la aplicación, que se encuentran en el 
 
 1. En Visual Studio, en **Explorador de soluciones**, expande el proyecto UWP, haz clic con el botón derecho en **Referencias** y entonces selecciona **Agregar referencia...**. 
 2. Expande el nodo **Windows Universal** y selecciona **Extensiones**.
-3. En la lista de extensiones, marca la casilla de verificación junto a la entrada de **Extensiones de escritorio de Windows para UWP** que coincida con la compilación de destino del proyecto. Para las funciones de difusión de aplicaciones, la versión debe ser 1709 o superior.
-4. Haz clic en **Aceptar**.
+3. En la lista de extensiones, marca la casilla de verificación junto a la entrada de **Extensiones de escritorio de Windows para UWP** que coincida con la compilación de destino del proyecto. Para las funciones de difusión de aplicación, la versión debe ser 1709 o superior.
+4. Haga clic en **Aceptar**.
 
 ## <a name="launch-the-system-ui-to-allow-the-user-to-initiate-broadcasting"></a>Iniciar la interfaz de usuario del sistema para permitir que el usuario inicie la difusión
 Existen varios motivos por los que la aplicación tal vez no pueda difundir, incluyendo si el dispositivo actual no cumple los requisitos de hardware para la difusión o si otra aplicación está actualmente difundiendo. Antes de iniciar la interfaz de usuario del sistema, puedes comprobar si la aplicación es capaz de difundir actualmente. En primer lugar, comprueba si las API de difusión están disponibles en el dispositivo actual. Las API no están disponibles en dispositivos que ejecutan una versión de sistema operativo anterior a Windows 10, versión 1709. En lugar de comprobar si hay una versión específica del sistema operativo, usa el método **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** para preguntar por la versión 1.0 de *Windows.Media.AppBroadcasting.AppBroadcastingContract*. Si este contrato está presente, las API de difusión están disponibles en el dispositivo.

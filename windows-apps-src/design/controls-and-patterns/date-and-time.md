@@ -1,5 +1,5 @@
 ---
-Description: Date and time controls let you view and set the date and time. This article provides design guidelines and helps you pick the right control.
+Description: Los controles de fecha y hora permiten ver y establecer la fecha y la hora. Este artículo ofrece directrices de diseño y ayuda a elegir el control correcto.
 title: Directrices para los controles de fecha y hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
@@ -13,11 +13,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 93be1b0b947be84e795a29774b4b26cb888f5f1a
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037277"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660280"
 ---
 # <a name="calendar-date-and-time-controls"></a>Calendario, controles de fecha y hora
 
@@ -25,7 +25,7 @@ ms.locfileid: "9037277"
 
 Los controles de fecha y hora ofrecen maneras estándar y localizadas para que el usuario pueda ver y establecer los valores de fecha y hora en la aplicación. Este artículo ofrece directrices de diseño y ayuda a elegir el control correcto.
 
-> **API importantes**: [Clase CalendarView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx), [Clase CalendarDatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx), [Clase DatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [Clase TimePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
+> **API importantes**: [Clase CalendarView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx), [CalendarDatePicker clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx), [DatePicker clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [TimePicker clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
 
 <table>
 <th align="left">Galería de controles XAML<th>
@@ -34,7 +34,7 @@ Los controles de fecha y hora ofrecen maneras estándar y localizadas para que e
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/category/DataInput">abrir la aplicación y ver estos controles en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -56,7 +56,7 @@ Selector de hora         |![Ejemplo de selector de hora](images/time-picker-clos
 
 ### <a name="calendar-view"></a>Vista de calendario
 
-**CalendarView** permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década. Un usuario puede seleccionar una fecha determinada o un intervalo de fechas. No tiene una superficie de selector y el calendario está siempre visible.
+**CalendarView** permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década. Un usuario puede seleccionar una fecha determinada o un intervalo de fechas. No tiene una superficie de selector y el calendario es siempre visible.
 
 La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vista de año y la vista de década. De manera predeterminada, se abre en la vista de mes, pero se puede especificar cualquier vista como la inicial.
 
@@ -67,7 +67,7 @@ La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vi
 
 ### <a name="calendar-date-picker"></a>Selector de fecha del calendario
 
-**CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se ha completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o limite las fechas disponibles.
+**CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en el que la información contextual es importante, por ejemplo, el día de la semana o lo que se ha completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o para que limite las fechas disponibles.
 
 El punto de entrada muestra texto del marcador de posición si no se ha establecido una fecha; de lo contrario, muestra la fecha elegida. Cuando el usuario selecciona el punto de entrada, se expande una vista de calendario para que el usuario realice una selección de fecha. La vista de calendario se superpone a otra interfaz de usuario; no hace que la otra interfaz desaparezca.
 
@@ -99,7 +99,7 @@ El punto de entrada muestra la hora elegida y, cuando el usuario lo selecciona, 
 
 Consulte los siguientes artículos para obtener información y ejemplos específicos de cada control de fecha y hora.
 
-- [Vista de calendario](calendar-view.md)
+- [Vista del calendario](calendar-view.md)
 - [Selector de fecha del calendario](calendar-date-picker.md)
 - [Selector de fecha](date-picker.md)
 - [Selector de hora](time-picker.md)
@@ -108,7 +108,7 @@ Consulte los siguientes artículos para obtener información y ejemplos específ
 
 Los controles de fecha XAML admiten todos los sistemas de calendario compatibles con Windows. Estos calendarios se especifican en la clase [Windows.Globalization.CalendarIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx). Cada control usa el calendario correcto para el idioma predeterminado de tu aplicación o puedes establecer la propiedad **CalendarIdentifier** para usar un sistema de calendario específico.
 
-El control de selector de hora admite cada uno de los sistemas de reloj especificados en la clase [Windows.Globalization.ClockIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx). Puedes establecer la propiedad [ClockIdentifier](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) para usar un reloj de 12 horas o un reloj de 24 horas. El tipo de la propiedad es String, pero debes usar valores que correspondan a las propiedades de cadena estática de la clase ClockIdentifiers. Estos son: TwelveHour (la cadena "12HourClock") y TwentyFourHour (la cadena "24HourClock"). El valor predeterminado es "12HourClock".
+El control de selector de hora admite cada uno de los sistemas de reloj especificados en la clase [Windows.Globalization.ClockIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx). Puedes establecer la propiedad [ClockIdentifier](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) para usar un reloj de 12 horas o un reloj de 24 horas. El tipo de la propiedad es String, pero debes usar valores que correspondan a las propiedades de cadena estática de la clase ClockIdentifiers. Son estas: TwelveHour (la cadena "12HourClock") y TwentyFourHour (la cadena "24HourClock"). El valor predeterminado es "12HourClock".
 
 
 ### <a name="datetime-and-calendar-values"></a>Valores de DateTime y Calendar
@@ -121,10 +121,10 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 
 .NET admite también un tipo denominado [DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), que implícitamente se puede convertir a una estructura [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx). Por lo tanto, es posible que veas un tipo de "DateTime" que se usa en el código .NET que se usa para establecer valores que son realmente DateTimeOffset. Para obtener más información sobre la diferencia entre DateTime y DateTimeOffset, consulta las observaciones de la clase [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx).
 
-> **Nota**&nbsp;&nbsp;No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador de XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posible es definir una fecha que está disponible como un objeto de datos o en el contexto de datos, luego establece la propiedad como un atributo XAML que haga referencia a una expresión [\Extensión de marcado {Binding}](../../xaml-platform/binding-markup-extension.md) que pueda obtener acceso a la fecha como datos.
+> **Nota**&nbsp;&nbsp;No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador de XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posibles consiste en definir una fecha que está disponible como un objeto de datos o en el contexto de datos y, después, establezca la propiedad como un atributo XAML que hace referencia a un [ \{enlace\} extensión de marcado](../../xaml-platform/binding-markup-extension.md) expresión que puede tener acceso a la fecha como datos.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
-* [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Ejemplo de conceptos básicos de XAML UI](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
 
 ## <a name="related-topics"></a>Temas relacionados

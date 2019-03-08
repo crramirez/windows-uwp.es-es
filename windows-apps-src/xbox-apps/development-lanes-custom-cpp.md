@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
 ms.openlocfilehash: 23dfb8843ed8e70fc6f979bd778a517d0c30327a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943926"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613880"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Llevar los juegos C++ personalizados a UWP en Xbox
 
@@ -27,7 +27,7 @@ Para conocer cómo convertir la consola en un kit de desarrollo y cómo realizar
 > Xbox One no es compatible con DirectX 12 en este momento.
 
 
-## <a name="see-also"></a>Consulta también
-- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
+## <a name="see-also"></a>Consulte también
+- [Volver a poner existentes juegos para Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)
 

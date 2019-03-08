@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4227a3ad77eadaa40e47420a5fdab6d65c875da5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594010"
 ---
-# <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas alfa de 1 bit y opacas
+# <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas de alfa opacas y de 1 bit
 
 
 El formato de textura BC1 es para texturas opacas o que tienen un único color transparente.
@@ -55,7 +55,7 @@ else
 
 Se recomienda establecer los componentes RGBA del píxel de transparencia a cero antes de combinar.
 
-En las siguientes tablas se muestra el diseño de la memoria para el bloque de 8 bytes. Se supone que el primer índice corresponde a la coordenada Y y el segundo, a la coordenada X. Por ejemplo, Texel\[1\]\[2\] hace referencia al píxel del mapa de textura de la posición (x,y) = (2,1).
+En las siguientes tablas se muestra el diseño de la memoria para el bloque de 8 bytes. Se supone que el primer índice corresponde a la coordenada Y y el segundo, a la coordenada X. Por ejemplo, la textura\[1\]\[2\] hace referencia a la textura píxel del mapa (x, y) = (2,1).
 
 El siguiente es el diseño de la memoria para el bloque de 8 bytes (64 bits):
 
@@ -63,12 +63,12 @@ El siguiente es el diseño de la memoria para el bloque de 8 bytes (64 bits):
 |--------------|----------------|
 | 0            | Color\_0       |
 | 1            | Color\_1       |
-| 2            | Bitmap Word\_0 |
-| 3            | Bitmap Word\_1 |
+| 2            | Mapa de bits de Word\_0 |
+| 3            | Mapa de bits de Word\_1 |
 
  
 
-Color\_0 y Color\_1, los colores de los dos extremos, tienen el siguiente diseño:
+Color\_0 y el Color\_1, los colores en los dos extremos, se distribuyen como sigue:
 
 | Bits        | Color                 |
 |-------------|-----------------------|
@@ -78,36 +78,36 @@ Color\_0 y Color\_1, los colores de los dos extremos, tienen el siguiente diseñ
 
  
 
-\*bit menos importante
+\*bit menos significativo
 
-Bitmap Word\_0 tiene el siguiente diseño:
+Mapa de bits de Word\_0 se distribuyen como sigue:
 
 | Bits          | Elemento de textura           |
 |---------------|-----------------|
-| 1:0 (LSB)     | Texel\[0\]\[0\] |
-| 3:2           | Texel\[0\]\[1\] |
-| 5:4           | Texel\[0\]\[2\] |
-| 7:6           | Texel\[0\]\[3\] |
-| 9:8           | Texel\[1\]\[0\] |
+| 1:0 (LSB)     | Elemento de textura\[0\]\[0\] |
+| 3:2           | Elemento de textura\[0\]\[1\] |
+| 5:4           | Elemento de textura\[0\]\[2\] |
+| 7:6           | Elemento de textura\[0\]\[3\] |
+| 9:8           | Elemento de textura\[1\]\[0\] |
 | 11:10         | Texel\[1\]\[1\] |
 | 13:12         | Texel\[1\]\[2\] |
-| 15:14 (MSB\*) | Texel\[1\]\[3\] |
+| 15:14 (MSB\*) | Elemento de textura\[1\]\[3\] |
 
  
 
-\*bit más importante (MSB)
+\*bit más significativo (MSB)
 
-Bitmap Word\_1 tiene el siguiente diseño:
+Mapa de bits de Word\_1 se distribuyen como sigue:
 
 | Bits        | Elemento de textura           |
 |-------------|-----------------|
-| 1:0 (LSB)   | Texel\[2\]\[0\] |
+| 1:0 (LSB)   | Elemento de textura\[2\]\[0\] |
 | 3:2         | Texel\[2\]\[1\] |
 | 5:4         | Texel\[2\]\[2\] |
-| 7:6         | Texel\[2\]\[3\] |
-| 9:8         | Texel\[3\]\[0\] |
+| 7:6         | Elemento de textura\[2\]\[3\] |
+| 9:8         | Elemento de textura\[3\]\[0\] |
 | 11:10       | Texel\[3\]\[1\] |
-| 13:12       | Texel\[3\]\[2\] |
+| 13:12       | Elemento de textura\[3\]\[2\] |
 | 15:14 (MSB) | Texel\[3\]\[3\] |
 
  
@@ -115,7 +115,7 @@ Bitmap Word\_1 tiene el siguiente diseño:
 ## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Ejemplo de codificación de color opaco
 
 
-Como ejemplo de codificación opaca, supongamos que los colores rojo y negro se encuentran en los extremos. Rojo es color\_0 y negro es color\_1. Hay cuatro colores interpolados que forman el degradado uniformemente distribuido entre ellos. Para determinar los valores del mapa de bits de 4x4, se usan los siguientes cálculos:
+Como ejemplo de codificación opaca, supongamos que los colores rojo y negro se encuentran en los extremos. El color rojo es el color\_0 y negro es el color\_1. Hay cuatro colores interpolados que forman el degradado uniformemente distribuido entre ellos. Para determinar los valores del mapa de bits de 4x4, se usan los siguientes cálculos:
 
 ```
 00 ? color_0
@@ -130,7 +130,7 @@ El mapa de bits tiene el aspecto del siguiente diagrama.
 
 Tiene el aspecto de la siguiente serie ilustrada de colores.
 
-**Nota**  en una imagen, los píxeles (0,0) aparecen en la parte superior izquierda.
+**Tenga en cuenta**    en una imagen, píxeles (0,0) aparecen en la esquina superior izquierda.
 
  
 
@@ -139,7 +139,7 @@ Tiene el aspecto de la siguiente serie ilustrada de colores.
 ## <a name="span-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanexample-of-1-bit-alpha-encoding"></a><span id="Example_of_1_Bit_Alpha_Encoding"></span><span id="example_of_1_bit_alpha_encoding"></span><span id="EXAMPLE_OF_1_BIT_ALPHA_ENCODING"></span>Ejemplo de codificación alfa de 1 bit
 
 
-Este formato se selecciona cuando el entero de 16 bits sin signo, color\_0, es menor que el entero de 16 bits sin signo, color\_1. Un ejemplo de dónde se puede usar este formato es en hojas de un árbol, que se muestran contra un cielo azul. Algunos elementos de textura se pueden marcar como transparentes, a la vez que hay disponibles tres tonos de verde disponibles para las hojas. Dos colores fijan los extremos y el tercero es un color interpolado.
+Este formato está activado cuando el entero de 16 bits sin signo, el color\_0, es menor que el entero de 16 bits sin signo, color\_1. Un ejemplo de dónde se puede usar este formato es en hojas de un árbol, que se muestran contra un cielo azul. Algunos elementos de textura se pueden marcar como transparentes, a la vez que hay disponibles tres tonos de verde disponibles para las hojas. Dos colores fijan los extremos y el tercero es un color interpolado.
 
 La siguiente ilustración es un ejemplo de esta imagen.
 
@@ -163,7 +163,7 @@ El mapa de bits tiene el aspecto del siguiente diagrama.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Recursos de texturas comprimidas](compressed-texture-resources.md)
+[Recursos de textura comprimido](compressed-texture-resources.md)
 
  
 

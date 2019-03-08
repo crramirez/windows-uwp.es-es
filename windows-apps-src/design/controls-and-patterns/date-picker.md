@@ -1,5 +1,5 @@
 ---
-Description: The date picker gives you a standardized way to let users pick a localized date value using touch, mouse, or keyboard input.
+Description: El selector de fecha te ofrece una forma estandarizada de permitir a los usuarios seleccionar un valor de fecha localizada usando entrada táctil, de mouse o de teclado.
 title: Selector de fecha
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
 isNew: true
@@ -14,11 +14,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a51705b1e74508d89328ce5ace3d7fd869aa0940
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606400"
 ---
 # <a name="date-picker"></a>Selector de fecha
 
@@ -26,7 +26,7 @@ ms.locfileid: "9037317"
 
 El selector de fecha te ofrece una forma estandarizada de permitir a los usuarios seleccionar un valor de fecha localizada usando entrada táctil, de mouse o de teclado. 
 
-> **API importantes**: [Clase DatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [Propiedad Date](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx)
+> **API importantes**: [Clase DatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [propiedad de fecha](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
@@ -43,7 +43,7 @@ Para obtener más información acerca de cómo elegir el control de fecha adecua
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/DatePicker">abrir la aplicación y ver DatePicker en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -81,5 +81,5 @@ El selector de fecha resultante tiene este aspecto:
 
 - [Controles de fecha y hora](date-and-time.md)
 - [Selector de fecha del calendario](calendar-date-picker.md)
-- [Vista de calendario](calendar-view.md)
+- [Vista del calendario](calendar-view.md)
 - [Selector de hora](time-picker.md)

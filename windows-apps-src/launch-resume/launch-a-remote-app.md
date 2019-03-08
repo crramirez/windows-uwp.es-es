@@ -3,21 +3,21 @@ title: Iniciar una aplicación en un dispositivo remoto
 description: Obtén más información sobre cómo iniciar una aplicación en un dispositivo remoto con Project Rome.
 ms.date: 02/12/2018
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
+keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: 26a67816195105572d9f690599b9a880ece90c98
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930786"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658420"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar una aplicación en un dispositivo remoto
 
 Este artículo explica cómo iniciar una aplicación de Windows en un dispositivo remoto.
 
-A partir de Windows10, versión 1607, una aplicación para UWP puede iniciar una aplicación para UWP o una aplicación de escritorio de Windows remotamente en otro dispositivo que también esté ejecutando Windows 10, versión 1607 o posterior, siempre que ambos dispositivos hayan iniciado sesión con la misma cuenta de Microsoft (MSA). Este es el caso de uso más sencillo del proyecto Rome.
+A partir de Windows 10, versión 1607, una aplicación para UWP puede iniciar una aplicación para UWP o una aplicación de escritorio de Windows remotamente en otro dispositivo que también esté ejecutando Windows 10, versión 1607 o posterior, siempre que ambos dispositivos hayan iniciado sesión con la misma cuenta de Microsoft (MSA). Este es el caso de uso más sencillo del proyecto Rome.
 
 La característica de inicio remoto ofrece experiencias de usuario orientadas a tareas, es decir, un usuario puede iniciar una tarea en un dispositivo y terminarla en otro. Por ejemplo, si el usuario está escuchando música en su teléfono en el automóvil, luego podría trasladar la funcionalidad de reproducción a su Xbox One al llegar a casa. El inicio remoto permite a las aplicaciones pasar datos contextuales a la aplicación remota que se inicia para continuar la tarea donde se haya dejado.
 
@@ -25,7 +25,7 @@ La característica de inicio remoto ofrece experiencias de usuario orientadas a 
 
 ### <a name="add-the-remotesystem-capability"></a>Agregar la funcionalidad remoteSystem
 
-Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, debes agregar la funcionalidad `remoteSystem` al manifiesto del paquete de la aplicación. Si quieres usar el diseñador de manifiestos del paquete para agregarla, selecciona **Sistema remoto** en la pestaña **Funcionalidades** o bien puedes agregar manualmente la siguiente línea al archivo _Package.appxmanifest_ del proyecto.
+Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, debes agregar la funcionalidad `remoteSystem` al manifiesto del paquete de la aplicación. Si quieres usar el diseñador de manifiestos del paquete para agregarla, selecciona **Sistema remoto** en la pestaña **Funcionalidades**, o bien puedes agregar manualmente la siguiente línea al archivo _Package.appxmanifest_ del proyecto.
 
 ``` xml
 <Capabilities>
@@ -35,7 +35,7 @@ Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, 
 
 ### <a name="enable-cross-device-sharing"></a>Habilitar el uso compartido en todos los dispositivos
 
-Además, debe establecerse el dispositivo cliente para permitir el uso compartido entre dispositivos. Esta configuración, a la que se obtiene acceso en **Configuración**: **Sistema** > **Experiencias compartidas** > **Compartir entre dispositivos**, está habilitada de manera predeterminada. 
+Además, debe establecerse el dispositivo cliente para permitir el uso compartido entre dispositivos. Esta configuración, que se accede en **configuración**: **Sistema** > **comparten experiencias** > **recurso compartido en todos los dispositivos**, está habilitado de forma predeterminada. 
 
 ![página de configuración de experiencias compartidas](images/shared-experiences-settings.png)
 
@@ -74,7 +74,7 @@ El objeto [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Referencia de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-[Introducción a aplicaciones y dispositivos conectados (Project Rome)](connected-apps-and-devices.md)  
+[Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Introducción (proyecto Roma) a aplicaciones y dispositivos conectado](connected-apps-and-devices.md)  
 [Detectar dispositivos remotos](discover-remote-devices.md)  
 La [muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) indica cómo detectar un sistema remoto, iniciar una aplicación en un sistema remoto y usar los servicios de aplicaciones para enviar mensajes entre aplicaciones que se ejecuten en dos sistemas.

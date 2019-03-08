@@ -1,5 +1,5 @@
 ---
-Description: You can use extensions to integrate your packaged desktop app with Windows 10 in predefined ways.
+Description: Puedes usar extensiones para integrar tu aplicación de escritorio empaquetada con Windows 10 mediante formas predefinidas.
 Search.Product: eADQiWindows 10XVcnh
 title: Integrar la aplicación con Windows 10 (Puente de dispositivo de escritorio)
 ms.date: 04/18/2018
@@ -8,17 +8,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e1f40d527d4bc7b5773b885f35ed87c3866449e
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058736"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613830"
 ---
-# <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación de escritorio empaquetada con Windows 10
+# <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación empaquetada de escritorio con Windows 10
 
-Usa extensiones para integrar la aplicación de escritorio empaquetada con Windows 10 mediante formas predefinidas.
+Usar extensiones para integrar la aplicación empaquetada de escritorio con Windows 10 en formas predefinidas.
 
-Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación sea la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
+Por ejemplo, utilice una extensión para crear una excepción de firewall, que la aplicación predeterminada para un tipo de archivo de la aplicación o elija los iconos de inicio a la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
 
 En este tema se describen estas extensiones y las tareas que puedes realizar al usarlas.
 
@@ -26,10 +26,10 @@ En este tema se describen estas extensiones y las tareas que puedes realizar al 
 
 Ayuda a los usuarios a cambiar a la aplicación empaquetada.
 
-* [Incluir los iconos de inicio y los botones de la barra de tareas existentes en la aplicación empaquetada](#point)
-* [Hacer que la aplicación empaquetada abra archivos en lugar de la aplicación de escritorio](#make)
+* [Elija los iconos de inicio existentes y los botones de barra de tareas a la aplicación empaquetada](#point)
+* [Asegúrese de abrir archivos en lugar de la aplicación de escritorio de la aplicación empaquetada](#make)
 * [Asociar la aplicación empaquetada con un conjunto de tipos de archivo](#associate)
-* [Agregar opciones en los menús contextuales de los archivos que tienen un tipo de archivo específico](#add)
+* [Agregar opciones a los menús contextuales de los archivos que tienen un tipo de archivo determinado.](#add)
 * [Abrir determinados tipos de archivos mediante una dirección URL](#open)
 
 <a id="point" />
@@ -87,13 +87,13 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 #### <a name="related-sample"></a>Muestra relacionada
 
-[Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+[Visor de imágenes WPF con transición y migración/desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="make" />
 
-### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>Hacer que la aplicación empaquetada abra archivos en lugar de la aplicación de escritorio
+### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>Asegúrese de abrir archivos en lugar de la aplicación de escritorio de la aplicación empaquetada
 
-Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada para determinados tipos de archivos en lugar de abrir la versión de escritorio de la aplicación de forma predeterminada.
+Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de forma predeterminada para tipos específicos de archivos en lugar de abrir la versión de escritorio de la aplicación.
 
 Para ello, especifica el [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) de cada aplicación desde la cual quieras heredar asociaciones de archivos.
 
@@ -119,8 +119,8 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puedes usar este identificador para administrar los cambios en versiones futuras de la aplicación. |
-|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde el que quieras heredar asociaciones de archivos.|
+|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
+|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que desea heredar las asociaciones de archivo.|
 
 #### <a name="example"></a>Ejemplo
 
@@ -148,13 +148,13 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 #### <a name="related-sample"></a>Muestra relacionada
 
-[Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+[Visor de imágenes WPF con transición y migración/desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="associate" />
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Asociar la aplicación empaquetada con un conjunto de tipos de archivo
 
-Puedes asociar la aplicación empaquetada con extensiones de tipo de archivo. Si un usuario hace clic con el botón un archivo y, a continuación, selecciona la opción **Abrir con** , la aplicación aparece en la lista de sugerencias.
+La aplicación empaquetada puede asociar extensiones de tipo de archivo. Si un usuario hace clic con el botón un archivo y, a continuación, selecciona el **abrir con** opción, la aplicación aparece en la lista de sugerencias.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -178,7 +178,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puedes usar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
+|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
 |FileType |Es el archivo de extensión compatible con la aplicación. |
 
 #### <a name="example"></a>Ejemplo
@@ -207,7 +207,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 #### <a name="related-sample"></a>Muestra relacionada
 
-[Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+[Visor de imágenes WPF con transición y migración/desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="add" />
 
@@ -242,9 +242,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Categoría | Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
 |Verb |Es el nombre que aparece en el menú contextual del Explorador de archivos. Esta cadena se puede localizar mediante ```ms-resource```.|
-|Id |Es el identificador único del verbo. Si la aplicación es una aplicación para UWP, esto se pasa a la aplicación como parte de los argumentos del evento de activación para que pueda controlar correctamente la selección del usuario. Si la aplicación es una aplicación de plena confianza empaquetada, recibe parámetros en su lugar (consulta el siguiente punto). |
-|Parameters |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación de plena confianza empaquetada, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puedes personalizar el comportamiento de la aplicación en función de los distintos verbos de activación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación para UWP, no podrás pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
-|Extended |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **False** (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
+|Id |Es el identificador único del verbo. Si la aplicación es una aplicación para UWP, se pasa a la aplicación como parte de sus argumentos del evento de activación para que pueda procesar correctamente la selección del usuario. Si la aplicación es una aplicación empaquetada de plena confianza, recibe los parámetros en su lugar (consulte la siguiente viñeta). |
+|Parámetros |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación empaquetada de plena confianza, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puede personalizar el comportamiento de la aplicación en función de los verbos de activación diferentes. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación para UWP, no puede pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
+|Extendido |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **False** (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
 
 #### <a name="example"></a>Ejemplo
 
@@ -274,13 +274,13 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 #### <a name="related-sample"></a>Muestra relacionada
 
-[Visor de imágenes WPF con transición, migración o desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+[Visor de imágenes WPF con transición y migración/desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="open" />
 
 ### <a name="open-certain-types-of-files-directly-by-using-a-url"></a>Abrir determinados tipos de archivos mediante una dirección URL
 
-Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada para determinados tipos de archivos en lugar de abrir la versión de escritorio de la aplicación de forma predeterminada.
+Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de forma predeterminada para tipos específicos de archivos en lugar de abrir la versión de escritorio de la aplicación.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -305,8 +305,8 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
-|UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, cualquier intento que realice la aplicación para abrir un archivo mediante una URL, provocará que el sistema descargue el archivo localmente. |
-|Parameters |parámetros opcionales. |
+|UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, trata de la aplicación para abrir un archivo mediante una causa de la dirección URL del sistema para la primera descarga el archivo localmente. |
+|Parámetros |parámetros opcionales. |
 |FileType |Extensiones de archivo relevantes. |
 
 #### <a name="example"></a>Ejemplo
@@ -335,14 +335,14 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ## <a name="perform-setup-tasks"></a>Realizar tareas de configuración
 
-* [Crear la excepción de firewall de la aplicación](#rules)
-* [Colocar los archivos DLL en cualquier carpeta del paquete](#load-paths)
+* [Crear la excepción de firewall para la aplicación](#rules)
+* [Coloque los archivos DLL en cualquier carpeta del paquete](#load-paths)
 
 <a id="rules" />
 
 ### <a name="create-firewall-exception-for-your-app"></a>Crear la excepción de firewall de la aplicación
 
-Si la aplicación requiere la comunicación a través de un puerto, puedes agregar la aplicación a la lista de excepciones del firewall.
+Si la aplicación requiere comunicación a través de un puerto, puede agregar la aplicación a la lista de excepciones de firewall.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -369,9 +369,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.firewallRules``|
-|Executable |Nombre del archivo ejecutable que quieras agregar a la lista de excepciones del firewall |
-|Direction |Indica si la regla es entrante o saliente |
+|Categoría |Siempre ``windows.firewallRules``|
+|Archivo ejecutable |Nombre del archivo ejecutable que quieras agregar a la lista de excepciones del firewall |
+|Dirección |Indica si la regla es entrante o saliente |
 |IPProtocol |Protocolo de comunicación |
 |LocalPortMin |El menor número de puerto en un intervalo de números de puerto local. |
 |LocalPortMax |El mayor número de puerto de un intervalo de números de puerto local. |
@@ -458,16 +458,16 @@ Esta opción permite que los usuarios organicen tus archivos e interactúen con 
 
 * [Definir cómo se comporta la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo](#define)
 * [Mostrar el contenido del archivo en una imagen en miniatura en el Explorador de archivos](#show)
-* [Mostrar el contenido del archivo en un panel de vista previa del Explorador de archivos](#preview)
-* [Permitir que los usuarios agrupen los archivos mediante la columna Tipo del Explorador de archivos](#enable)
-* [Hacer que las propiedades de archivo tengan disponibles las opciones de búsqueda, índice, diálogos de propiedad y panel de detalles](#make-file-properties)
-* [Hacer que los archivos del servicio en la nubes aparezcan en el Explorador de archivos](#cloud-files)
+* [Mostrar el contenido del archivo en el panel de vista previa del explorador de archivos](#preview)
+* [Permitir que los usuarios para agrupar los archivos mediante el uso de la columna de tipo en el Explorador de archivos](#enable)
+* [Propiedades de archivo a disposición búsqueda, índice, cuadros de diálogo Propiedades y el panel de detalles](#make-file-properties)
+* [Asegúrese de archivos desde su servicio en la nube aparecen en el Explorador de archivos](#cloud-files)
 
 <a id="define" />
 
 ### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definir cómo se comporta la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo
 
-Especifica cómo se comporta la aplicación cuando un usuario abre varios archivos al mismo tiempo.
+Especifique cómo se comporta la aplicación cuando un usuario abre varios archivos simultáneamente.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -504,7 +504,7 @@ Las aplicaciones de escritorio empaquetadas tienen las mismas tres opciones que 
 
 * ``Player``: La aplicación se activa una vez. Todos los archivos seleccionados se pasan a la aplicación como parámetros de argumento.
 * ``Single``: La aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten.
-* ``Document``: Una nueva instancia independiente de la aplicación se activa para cada archivo seleccionado.
+* ``Document``: Se activa una instancia nueva e independiente de la aplicación para cada archivo seleccionado.
 
  Puedes establecer preferencias diferentes para distintos tipos de archivo y acciones. Por ejemplo, si deseas abrir *documentos* en el modo *Document* y las *imágenes* en el modo *Player*.
 
@@ -812,14 +812,14 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.cloudfiles``
 |iconResource |El icono que representa tu servicio de proveedor de archivos en la nube. Este icono aparece en el panel Navegación del Explorador de archivos.  Los usuarios eligen este icono para mostrar archivos desde tu servicio en la nube. |
 |Clsid CustomStateHandler |El identificador de clase de la aplicación que implementa el CustomStateHandler. El sistema usa este id. de clase para solicitar estados personalizados y columnas para archivos de la nube. |
 |Clsid ThumbnailProviderHandler |El identificador de clase de la aplicación que implementa el ThumbnailProviderHandler. El sistema usa este id. de clase para solicitar imágenes en miniatura para archivos de la nube. |
 |Clsid ExtendedPropertyHandler |El identificador de clase de la aplicación que implementa el ExtendedPropertyHandler.  El sistema usa este id. de clase para solicitar propiedades ampliadas para un archivo de la nube. |
-|Verbo |El nombre que aparece en el menú contextual del Explorador de archivos para archivos proporcionados por el servicio en la nube. |
+|Verb |El nombre que aparece en el menú contextual del Explorador de archivos para archivos proporcionados por el servicio en la nube. |
 |Id |Es el id. único del verbo. |
 
 #### <a name="example"></a>Ejemplo
@@ -851,19 +851,19 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 <a id="start" />
 
-## <a name="start-your-application-in-different-ways"></a>Iniciar la aplicación de formas diferentes
+## <a name="start-your-application-in-different-ways"></a>Iniciar la aplicación de maneras diferentes
 
-* [Iniciar la aplicación mediante un protocolo](#protocol)
-* [Iniciar la aplicación mediante un alias](#alias)
-* [Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows](#executable)
-* [Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC](#autoplay)
-* [Reiniciar automáticamente después de recibir una actualización de Microsoft Store](#updates)
+* [Inicie la aplicación mediante un protocolo](#protocol)
+* [Inicie la aplicación mediante un alias](#alias)
+* [Iniciar un archivo ejecutable cuando los usuarios iniciar sesión en Windows](#executable)
+* [Permitir que los usuarios iniciar la aplicación cuando se conecta a un dispositivo a su PC](#autoplay)
+* [Reinicie automáticamente después de recibir una actualización de la Microsoft Store](#updates)
 
 <a id="protocol" />
 
-### <a name="start-your-application-by-using-a-protocol"></a>Iniciar la aplicación mediante un protocolo
+### <a name="start-your-application-by-using-a-protocol"></a>Inicie la aplicación mediante un protocolo
 
-Las asociaciones de protocolos permiten que otros programas y componentes del sistema interactúen con la aplicación empaquetada. Cuando la aplicación empaquetada se inicia mediante un protocolo, puedes especificar parámetros específicos que pasar a sus argumentos de evento de activación, de forma que se comporte en consecuencia. Los parámetros solo son compatibles con aplicaciones empaquetadas de plena confianza. Las aplicaciones para UWP no pueden usar parámetros.
+Las asociaciones de protocolos permiten que otros programas y componentes del sistema interactúen con la aplicación empaquetada. Cuando se inicia la aplicación empaquetada mediante un protocolo, puede especificar los parámetros específicos para pasar a sus argumentos de evento de activación para que pueda comportarse según corresponda. Los parámetros solo son compatibles con aplicaciones empaquetadas de plena confianza. Las aplicaciones para UWP no pueden usar parámetros.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -886,7 +886,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.protocol``
 |Nombre |Nombre del protocolo. |
-|Parameters |La lista de parámetros y valores para pasar a la aplicación como argumentos del evento cuando se activa la aplicación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. |
+|Parámetros |La lista de parámetros y valores para pasar a la aplicación como argumentos de evento cuando se activa la aplicación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. |
 
 ### <a name="example"></a>Ejemplo
 
@@ -913,9 +913,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 <a id="alias" />
 
-### <a name="start-your-application-by-using-an-alias"></a>Iniciar la aplicación mediante un alias
+### <a name="start-your-application-by-using-an-alias"></a>Inicie la aplicación mediante un alias
 
-Los usuarios y otros procesos de usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
+Los usuarios y otros procesos que pueden usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -935,10 +935,10 @@ Los usuarios y otros procesos de usar un alias para iniciar la aplicación sin t
 </Extension>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.appExecutionAlias``
-|Executable |Ruta de acceso relativa al archivo ejecutable que se iniciará cuando se llame al alias. |
+|Archivo ejecutable |Ruta de acceso relativa al archivo ejecutable que se iniciará cuando se llame al alias. |
 |Alias |Nombre corto de la aplicación. Siempre debe acabar con la extensión ".exe". Solo puedes especificar un único alias de ejecución de la aplicación para cada aplicación del paquete. Si varias aplicaciones se registran para el mismo alias, el sistema llamará a la última que se haya registrado, así que asegúrate de elegir un alias exclusivo que sea bastante improbable que otras aplicaciones sustituyan.
 |
 
@@ -973,10 +973,10 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-an-executable-file-when-users-log-into-windows"></a>Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows
 
-Las tareas de inicio que la aplicación pueda ejecutar un archivo ejecutable automáticamente cuando un usuario inicia sesión.
+Las tareas de inicio que la aplicación pueda ejecutar automáticamente un archivo ejecutable cada vez que un usuario inicia sesión.
 
 > [!NOTE]
-> El usuario tiene que iniciar la aplicación al menos una vez para registrar esta tarea de inicio.
+> El usuario debe iniciar la aplicación al menos una vez para registrar esta tarea de inicio.
 
 La aplicación puede declarar varias tareas de inicio. Cada tarea se inicia de forma independiente. Todas las tareas de inicio aparecerán en el Administrador de tareas de la pestaña **Inicio** con el nombre especificado en el manifiesto de la aplicación y el icono de la aplicación. El Administrador de tareas analizará automáticamente el impacto en el inicio de las tareas.
 
@@ -1000,12 +1000,12 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.startupTask``|
-|Executable |Ruta de acceso relativa para que se inicie el archivo ejecutable. |
-|TaskId |Identificador único de la tarea. Con este identificador, la aplicación puede llamar a las API en la clase [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) para habilitar o deshabilitar una tarea de inicio mediante programación. |
-|Enabled |Indica si la tarea que se inicia primero está habilitada o deshabilitada. Las tareas habilitadas se ejecutarán la próxima vez que el usuario inicie sesión (a menos que el usuario las deshabilite). |
+|Archivo ejecutable |Ruta de acceso relativa para que se inicie el archivo ejecutable. |
+|TaskId |Identificador único de la tarea. Con este identificador, la aplicación puede llamar a las API el [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) clase para habilitar o deshabilitar una tarea de inicio mediante programación. |
+|Habilitado |Indica si la tarea que se inicia primero está habilitada o deshabilitada. Las tareas habilitadas se ejecutarán la próxima vez que el usuario inicie sesión (a menos que el usuario las deshabilite). |
 |DisplayName |Nombre de la tarea que aparece en el Administrador de tareas. Puedes localizar esta cadena mediante ```ms-resource```. |
 
 #### <a name="example"></a>Ejemplo
@@ -1034,9 +1034,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 <a id="autoplay" />
 
-### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC
+### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios iniciar la aplicación cuando se conecta a un dispositivo a su PC
 
-Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecta un dispositivo a su PC.
+Reproducción automática puede presentar la aplicación como una opción cuando un usuario conecta un dispositivo a su PC.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -1055,17 +1055,17 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </AutoPlayHandler>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.autoPlayHandler``
-|ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que conectan a un PC (por ejemplo: "Importar archivos" o "Reproducir vídeo"). |
-|ProviderDisplayName | Una cadena que representa la aplicación o servicio (por ejemplo: "Reproductor de vídeo Contoso"). |
+|ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que se conectan a un equipo (por ejemplo: "Importar archivos" o "Reproducir vídeo"). |
+|ProviderDisplayName | Una cadena que representa la aplicación o servicio (por ejemplo: "Contoso Reproductor de vídeo"). |
 |ContentEvent |El nombre de un evento de contenido que hace que a los usuarios les aparezca tu ``ActionDisplayName`` y ``ProviderDisplayName``. Se genera un evento de contenido cuando se inserta en el PC un dispositivo de volumen, como una tarjeta de memoria de cámara, una unidad USB o un DVD. Puedes encontrar la lista completa de esos eventos [aquí](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).  |
-|Verbo |La configuración verbo identifica un valor que se pasa a la aplicación para la opción seleccionada. Puedes especificar varias acciones de inicio para un evento de Reproducción automática y usar la configuración Verbo para determinar qué opción seleccionó un usuario para tu aplicación. Para saber qué opción seleccionó el usuario, comprueba la propiedad verb de los argumentos del evento de inicio que se pasaron a la aplicación. Puedes usar cualquier valor para la configuración Verbo a excepción de open, que está reservado. |
-|DropTargetHandler |El identificador de clase de la aplicación que implementa la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) . Los archivos del medio extraíble se pasan al método [Colocar](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) de tu implementación [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
-|Parámetros |No tienes que implementar la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) para todos los eventos de contenido. Para cualquiera de los eventos de contenido, podrías proporcionar los parámetros de línea de comandos en lugar de implementar la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017). Para esos eventos, reproducción automática iniciará la aplicación utilizando los parámetros de línea de comandos. Puedes analizar esos parámetros en el código de inicialización de la aplicación para determinar si se inició mediante Reproducción automática y, a continuación, proporcionar tu implementación personalizada. |
+|Verb |El valor del verbo identifica un valor que se pasa a la aplicación para la opción seleccionada. Puedes especificar varias acciones de inicio para un evento de Reproducción automática y usar la configuración Verbo para determinar qué opción seleccionó un usuario para tu aplicación. Para saber qué opción seleccionó el usuario, comprueba la propiedad verb de los argumentos del evento de inicio que se pasaron a la aplicación. Puedes usar cualquier valor para la configuración Verbo a excepción de open, que está reservado. |
+|DropTargetHandler |El identificador de clase de la aplicación que implementa el [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interfaz. Los archivos del medio extraíble se pasan al método [Colocar](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) de tu implementación [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
+|Parámetros |No tienes que implementar la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) para todos los eventos de contenido. Para cualquiera de los eventos de contenido, podrías proporcionar los parámetros de línea de comandos en lugar de implementar la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017). Para estos eventos, reproducción automática iniciará la aplicación mediante el uso de esos parámetros de línea de comandos. Puedes analizar esos parámetros en el código de inicialización de la aplicación para determinar si se inició mediante Reproducción automática y, a continuación, proporcionar tu implementación personalizada. |
 |DeviceEvent |El nombre de un evento de dispositivo que hace que a los usuarios les aparezca tu ``ActionDisplayName`` y ``ProviderDisplayName``. Un evento de dispositivo de Reproducción automática se genera cuando se conecta un dispositivo al PC. Los eventos de dispositivo comienzan con la cadena ``WPD`` y puedes encontrarlos enumerados [aquí](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference). |
-|HWEventHandler |El identificador de clase de la aplicación que implementa la interfaz [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) . |
+|HWEventHandler |El identificador de clase de la aplicación que implementa el [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interfaz. |
 |InitCmdLine |El parámetro de cadena que desees pasar al método [Inicializar](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx) de la interfaz [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx). |
 
 ### <a name="example"></a>Ejemplo
@@ -1095,18 +1095,18 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Reiniciar automáticamente después de recibir una actualización de Microsoft Store
 
-Si la aplicación está abierta cuando los usuarios instalar una actualización, se cierra la aplicación.
+Si la aplicación está abierta cuando los usuarios instalen una actualización a él, se cierra la aplicación.
 
-Si quieres que esa aplicación se reinicie una vez completada la actualización, llama a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) en cada proceso que quieras reiniciar.
+Si desea que esa aplicación reiniciar después de la actualización se complete, llame a la [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) función en todos los procesos que desea reiniciar.
 
-Cada ventana activa de la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
+Cada ventana activa en la aplicación recibe un [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) mensaje. En este momento, la aplicación puede llamar a la [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) función nuevo para actualizar la línea de comandos si es necesario.
 
-Cuando cada ventana activa de la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar los datos y se cierra.
+Cuando cada ventana activa en la aplicación recibe el [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) mensaje, la aplicación debe guardar los datos y apagar.
 
 >[!NOTE]
-Las ventanas activas también reciben el mensaje [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) en caso de que la aplicación no controle el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) .
+Las ventanas activas, también recibirán el [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) del mensaje en caso de que la aplicación no controla el [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) mensaje.
 
-En este punto, la aplicación tiene 30 segundos para cerrar sus procesos o la plataforma ellos fuerza.
+En este momento, la aplicación tiene 30 segundos para cerrar los procesos de su propio o la plataforma lo detiene forzosamente.
 
 Una vez completada la actualización, se reinicia la aplicación.
 
@@ -1114,17 +1114,17 @@ Una vez completada la actualización, se reinicia la aplicación.
 
 Realiza procesos de integración con otras aplicaciones, inicia otros procesos o comparte información.
 
-* [Hacer que la aplicación aparezca como destino de impresión en aplicaciones que admitan funciones de impresión](#printing)
-* [Compartir fuentes con otras aplicaciones de Windows](#fonts)
-* [Iniciar un proceso de Win32 desde una aplicación de la Plataforma universal de Windows (UWP)](#win32-process)
+* [Hacer que la aplicación aparece como el destino de impresión en aplicaciones que admiten la impresión](#printing)
+* [Compartir las fuentes con otras aplicaciones de Windows](#fonts)
+* [Iniciar un proceso de Win32 desde una aplicación de plataforma Universal de Windows (UWP)](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Hacer que la aplicación aparezca como destino de impresión en aplicaciones que admitan funciones de impresión
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Hacer que la aplicación aparece como el destino de impresión en aplicaciones que admiten la impresión
 
-Cuando los usuarios quieran imprimir datos desde otra aplicación, como el Bloc de notas, puede hacer que la aplicación aparezca como destino de impresión en la lista de destinos de impresión disponibles.
+Cuando los usuarios desean imprimir los datos desde otra aplicación como el Bloc de notas, puede hacer que la aplicación aparece como un destino de impresión en la lista de la aplicación de los destinos de impresión disponibles.
 
-Tendrás que modificar la aplicación para que reciba datos de impresión en formato XML Paper Specification (XPS).
+Tendrá que modificar la aplicación para que reciba datos de impresión en formato XML Paper Specification (XPS).
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -1146,7 +1146,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
-|Parameters |Los parámetros que necesita la aplicación para controlar correctamente la solicitud. |
+|Parámetros |Los parámetros que requiera la aplicación para controlar correctamente la solicitud. |
 
 #### <a name="example"></a>Ejemplo
 
@@ -1195,7 +1195,7 @@ Puedes encontrar la referencia de esquema completa [aquí](/uwp/schemas/appxpack
 |Nombre |Descripción |
 |-------|-------------|
 |Categoría |Siempre ``windows.sharedFonts``
-|File |Es el archivo que contiene las fuentes que quieres compartir. |
+|Archivo |Es el archivo que contiene las fuentes que quieres compartir. |
 
 #### <a name="example"></a>Ejemplo
 
@@ -1242,7 +1242,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 |-------|-------------|
 |Categoría |Siempre ``windows.fullTrustProcess``
 |GroupID |Cadena que identifica el conjunto de parámetros que quieres pasar al archivo ejecutable. |
-|Parameters |Parámetros que quieres pasar al archivo ejecutable. |
+|Parámetros |Parámetros que quieres pasar al archivo ejecutable. |
 
 #### <a name="example"></a>Ejemplo
 
@@ -1271,16 +1271,16 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Package>
 ```
 
-Esta extensión puede resultar útil si quieres crear una interfaz de usuario de plataforma Universal de Windows que se ejecuta en todos los dispositivos, pero quieres que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
+Esta extensión puede ser útil si desea crear una interfaz de usuario de plataforma Universal de Windows que se ejecuta en todos los dispositivos, pero desea que los componentes de la aplicación Win32 podrá seguir ejecutándose en plena confianza.
 
-Solo tienes que crear un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Este extensiones indica que quieres iniciar un archivo ejecutable en el paquete de aplicación de Windows.  Si quieres comunicarte entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](../launch-resume/app-services.md) para poder hacerlo. Puedes leer más acerca de este ejemplo [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
+Ahora crearé un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Las extensiones de este indica que desea iniciar un archivo ejecutable en el paquete de aplicación de Windows.  Si quieres comunicarte entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](../launch-resume/app-services.md) para poder hacerlo. Puedes leer más acerca de este ejemplo [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a tus preguntas**
+**Encuentre respuestas a sus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
-**Enviar comentarios o realizar sugerencias acerca de las características**
+**Proporcionar comentarios o hacer sugerencias**
 
 Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

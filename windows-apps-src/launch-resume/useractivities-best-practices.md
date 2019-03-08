@@ -6,72 +6,72 @@ ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e98f5d73cf2d1afb26a823ed417c8980d118485c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046884"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589910"
 ---
 # <a name="user-activities-best-practices"></a>Procedimientos recomendados de las actividades de usuario
 
-Esta guía describe los procedimientos recomendados para crear y actualizar las actividades del usuario. Para obtener información general de la característica de actividades del usuario en Windows, vea [la actividad de usuario continuar, incluso en diferentes dispositivos](https://docs.microsoft.com/windows/uwp/launch-resume/useractivities). O bien, consulta la [sección de actividades del usuario](https://docs.microsoft.com/windows/project-rome/user-activities/) de Project Rome para las implementaciones de actividades en otras plataformas de desarrollo.
+Esta guía describe los procedimientos recomendados para crear y actualizar las actividades del usuario. Para obtener información general de la característica de las actividades del usuario en Windows, consulte [continuar con la actividad del usuario, incluso en dispositivos](https://docs.microsoft.com/windows/uwp/launch-resume/useractivities). O bien, consulte el [sección de actividades de usuario](https://docs.microsoft.com/windows/project-rome/user-activities/) de Roma de proyecto para las implementaciones de las actividades en otras plataformas de desarrollo.
 
 ## <a name="when-to-create-or-update-user-activities"></a>Cuándo se debe crear o actualizar las actividades del usuario
 
-Dado que cada aplicación es diferente, depende de cada desarrollador para determinar la mejor manera de asignar acciones dentro de la aplicación a las actividades del usuario. Las actividades de usuario se mostrarán en Cortana y la escala de tiempo, que se centra en la eficacia y la productividad de los usuarios de aumento y te ayuda a volver a contenido que se ha visitado en el pasado.
+Dado que cada aplicación es diferente, depende de cada desarrollador para determinar la mejor manera de asignar acciones dentro de la aplicación a las actividades del usuario. Se mostrarán las actividades de usuario en Cortana y escala de tiempo, que se centran en la eficacia y la productividad de aumento de los usuarios al permitirles regresar al contenido que visitaban en el pasado.
 
 **Directrices generales**
 
-* **Registra una sola actividad para un grupo de usuario relacionada con acciones.** Esto es especialmente importante para listas de reproducción de música o de TV: una actividad solo puede actualizarse a intervalos regulares para reflejar el progreso del usuario. En este caso, tendrás una actividad de usuario único con varios elementos de historial que representan los períodos de participación en varios días o semanas. Lo mismo se aplica a las actividades de documento basado en el que el usuario realiza gradual progreso dentro de la aplicación.
-* **Almacenar datos de usuario en la nube.** Si quieres admitir actividades entre dispositivos, tendrás que para asegurarse de que el contenido requerido para volver a usar esta actividad se almacena en una ubicación en la nube. Actividades específicas de dispositivo aparecerán en la línea de tiempo en el dispositivo donde se creó la actividad, pero podrían no aparecer en otros dispositivos.
-* **No cree actividades para las acciones que los usuarios no necesitan reanudar.** Si la aplicación se usa para completar operaciones simples única que no se conserva el estado, probablemente no es necesario crear una actividad de usuario.
-* **No se crea actividades para acciones completadas por otros usuarios.** Si una cuenta externa envía al usuario un mensaje o @-mentions ellos dentro de la aplicación, no se debe crear una actividad para esto. Este tipo de acción es preferible las notificaciones del centro de actividades.
-  * Escenarios de colaboración son una excepción: si varios usuarios están trabajando en la misma actividad juntos (por ejemplo, un documento de Word), habrá casos en los que otro usuario ha realizado cambios después de que el usuario. En este caso, puedes actualizar la actividad existente para reflejar los cambios realizados en el documento. Esto incluiría la actualización de los datos de contenido de la actividad del usuario existentes sin tener que crear un nuevo elemento de historial.
+* **Registre una sola actividad para un grupo de acciones de usuario relacionada.** Esto es especialmente relevante para las listas de reproducción de música o programas de TV: una actividad solo se puede actualizar a intervalos regulares para reflejar el progreso del usuario. En este caso, tendrá una única actividad de usuario con varios elementos de historial que representan los períodos de engagement a través de varios días o semanas. Lo mismo se aplica a las actividades de documento basado en el que el usuario realiza progresos gradual dentro de la aplicación.
+* **Store los datos de usuario en la nube.** Si desea admitir las actividades entre dispositivos, deberá asegurarse de que el contenido necesario para volver a interactuar con esta actividad se almacena en una ubicación en la nube. Las actividades específicas del dispositivo aparecerán en la escala de tiempo en el dispositivo donde se creó la actividad, pero no pueden aparecer en otros dispositivos.
+* **No cree actividades para las acciones que los usuarios no tendrá que reanudar.** Si la aplicación se usa para completar las operaciones simples, un solo uso que no se conserva el estado, probablemente no es necesario crear una actividad de usuario.
+* **No cree actividades para acciones completadas por otros usuarios.** Si una cuenta externa envía al usuario un mensaje o @-mentions ellos dentro de la aplicación, no debería crear una actividad para este. Este tipo de acción se obtienen mejores resultado notificaciones del centro de actividades.
+  * Escenarios de colaboración son una excepción: Si varios usuarios trabajan en la misma actividad juntos (por ejemplo, un documento de Word), habrá casos en que otro usuario ha realizado cambios después de que el usuario. En este caso, desea actualizar la actividad existente para reflejar los cambios realizados en el documento. Esto implicaría que actualizar los datos de contenido de la actividad de usuario existentes sin necesidad de crear un nuevo elemento de historial.
 
-**Directrices para determinados tipos de aplicaciones**
+**Directrices para tipos específicos de aplicaciones**
 
-Aunque cada aplicación es diferente, la mayoría de las aplicaciones se incluirán en uno de los siguientes patrones de interacción.
-* **Aplicaciones basadas en el documento** : crear una actividad por documento, con uno o más elementos de historial que refleja períodos de uso. Es importante para la actividad de actualización que se realizan cambios en el documento.
-* **Juegos** : crear una actividad para cada juego guardar o el mundo. Si el juego admite solo una sola secuencia de niveles, puedes volver a publicar la misma actividad con el tiempo, aunque es posible que desees actualizar los datos de contenido para mostrar el progreso o los logros más recientes.
-* **Las aplicaciones de utilidad** : si no hay nada dentro de la aplicación que los usuarios tendrían que deje y reanudar, no es necesario usar las actividades del usuario. Un buen ejemplo es una aplicación sencilla como calculadora.
-* **Las aplicaciones de línea de negocio** , existen muchas aplicaciones para administrar tareas sencillas o flujos de trabajo. Crear una actividad para cada flujo de trabajo diferente al que se accede a través de la aplicación (por ejemplo, informes de gastos sería cada una actividad por separado, a continuación, el usuario podría hacer clic en una actividad para ver si se aprobó un informe en particular).
-* **Las aplicaciones de reproducción de multimedia** : crear una actividad por una agrupación lógica de contenido (por ejemplo, un contenido de la lista de reproducción, programa o independiente). La pregunta subyacente para los desarrolladores de aplicaciones es si una cada parte del contenido (episodio TV, canción) se cuenta como contenido independiente o como parte de una colección. Como regla general, si el usuario opta por reproducir una colección o contenido secuencial, la colección como un todo es la actividad. Si optan por reproducir un solo elemento de contenido, que una parte del contenido es la actividad. Consulta las directrices más específicas a continuación.
-  * **Música: álbum o intérprete o género** : si el usuario selecciona un álbum, el artista o el género y llega a **Reproducir**, dicha colección es la actividad. no escribir una actividad independiente para cada canción. Para breves colecciones como un álbum o colecciones que se reproducen en orden aleatorio, es posible que no debes actualizar la actividad para reflejar la posición actual del usuario. Para la reproducción larga secuencial como un álbum o la lista de reproducción, la grabación de su posición dentro del álbum podría tener sentido.
-  * **Música: inteligente, listas de reproducción** : las aplicaciones que reproducen música en orden aleatorio deben registrar una actividad única para esa lista de reproducción. Si el usuario reproduce la lista de reproducción una segunda vez, debe crear registros de historial adicionales para la misma actividad. Grabación de la posición del usuario actual en la lista de reproducción no es necesaria porque la ordenación es aleatoria.
-  * **Serie de TV** : si la aplicación está configurada para reproducir el episodio siguiente una vez completada la actual, debes escribir una sola actividad para la serie de TV. Como los diversos episodios se reproducción varias sesiones de visualización, actualizaremos tu actividad para reflejar la posición actual en la serie y se crean varios registros de historial.
-  * **Películas** : una película es un solo elemento de contenido y debe tener su propio registro del historial. Si el usuario deja de supervisión de la forma parte de películas a través de, es conveniente para registrar su posición. Cuando quieran reanudarlo en el futuro, la actividad podría reanudar la película donde la dejó o incluso pedir al usuario si desea reanudar o comience desde el principio.
+Aunque cada aplicación es diferente, la mayoría de las aplicaciones entrarán dentro de uno de los siguientes patrones de interacción.
+* **Las aplicaciones basadas en documento** : creación de una actividad por documento, con uno o varios elementos de historial que refleja los períodos de uso. Es importante actualizar la actividad que se realizan cambios en el documento.
+* **Juegos** : crear una actividad para cada juego guardado o el mundo. Si su juego admite solo una única secuencia de niveles, se puede volver a publicar la misma actividad con el tiempo, aunque puede que desee actualizar los datos de contenido para mostrar el progreso o los logros más reciente.
+* **Las aplicaciones de utilidad** : si no hay nada dentro de la aplicación que los usuarios tendrían que salir y reanudar, no es necesario usar las actividades del usuario. Un buen ejemplo es una sencilla aplicación como la calculadora.
+* **Aplicaciones de línea de negocio** , existen muchas aplicaciones para administrar tareas sencillas o flujos de trabajo. Crear una actividad para cada flujo de trabajo independiente que se tiene acceso a través de la aplicación (por ejemplo, informes de gastos sería cada uno una actividad independiente, para que el usuario, a continuación, hacer clic en una actividad para ver si se ha aprobado un informe determinado).
+* **Aplicaciones de reproducción de multimedia** : crear una actividad por una agrupación lógica de contenido (por ejemplo, un contenido de la lista de reproducción, programa o independiente). La pregunta subyacente para los desarrolladores de aplicaciones es si una cada parte del contenido (episodio de televisión, canción) se considera contenido independiente o parte de una colección. Como norma general, si el usuario opta por reproducir una colección o contenido secuencial, la colección como un todo es la actividad. Si deciden contratar para reproducir un solo elemento de contenido, que una parte del contenido es la actividad. Consulte instrucciones más específicas a continuación.
+  * **Música: Álbum, intérprete o género** : si el usuario selecciona un álbum, artista, o género y aciertos **reproducir**, esa colección es la actividad; ¿escribe una actividad independiente para cada canción. Para colecciones corto como un álbum o colecciones que se reproduce en orden aleatorio, es posible que no deberá actualizar la actividad para reflejar la posición actual del usuario. Para la reproducción larga secuencial como un álbum o una lista de reproducción, grabación de posición en el álbum podría tener sentido.
+  * **Música: las listas de reproducción smart** : aplicaciones que reproducirán música en orden aleatorio deben registrar una sola actividad para esa lista de reproducción. Si el usuario desempeña la lista de reproducción de una segunda vez, debe crear registros de historial adicionales para la misma actividad. Grabación de la posición del usuario actual en la lista de reproducción no es necesario porque la ordenación es aleatoria.
+  * **Serie de TV** : si la aplicación está configurada para reproducir el episodio siguiente una vez completada la actual, debe escribir una sola actividad de la serie de TV. Cuando reproduzca los varios episodios en varias sesiones de visualización, se actualizará la actividad para reflejar la posición actual de la serie y se crearán varios registros de historial.
+  * **Película** — una película es un único fragmento de contenido y debe tener su propio registro de historial. Si el usuario detiene viendo la película parte-recorrido, es deseable para registrar su posición. Cuando desea reanudar la reproducción en el futuro, la actividad podría reanudar la película donde lo dejó o pida al usuario incluso si desea reanudar o comience desde el principio.
 
 ## <a name="user-activity-design"></a>Diseño de la actividad de usuario
 
-Actividades del usuario constan de tres componentes: una activación de URI, datos visuales y metadatos de contenido.
-* La activación de URI es un URI que se puede pasar a una aplicación o experiencia con el fin de reanudar la aplicación con un contexto específico. Por lo general, estos vínculos adoptan la forma de controlador de protocolo para un esquema (por ejemplo, "my-app://page2?action=edit"). Es el desarrollador para determinar cómo su aplicación administra los parámetros URI. Para más información, consulta [la activación de URI de controlar](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation) .
-* Los datos visuales, que consta de un conjunto de propiedades necesarias y opcionales (por ejemplo: título, una descripción o elementos de la tarjeta adaptable), permitir a los usuarios identificar visualmente una actividad. Consulta a continuación para obtener instrucciones sobre cómo crear elementos visuales de tarjeta adaptable para la actividad.
-* Los metadatos de contenido son datos JSON que pueden usarse para agrupar y recuperar las actividades en un contexto específico. Por lo general, esto adopta la forma de http://schema.org datos. Consulta a continuación para obtener instrucciones sobre cómo rellenar un vistazo a estos datos.
+Las actividades de usuario constan de tres componentes: un URI de activación, datos visuales y metadatos de contenido.
+* La activación URI es un URI que se puede pasar a una aplicación o la experiencia para reanudar la aplicación con un contexto específico. Normalmente, estos vínculos adoptan la forma del controlador de protocolo para un esquema (por ejemplo, "Mi-app://page2?action=edit"). Es el desarrollador para determinar cómo se controlarán los parámetros de URI por su aplicación. Consulte [activación controlar URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation) para obtener más información.
+* Los datos visuales, que consta de un conjunto de propiedades obligatorias y opcionales (por ejemplo: elementos de la tarjeta adaptable, la descripción o título), permiten a los usuarios identificar visualmente una actividad. Consulte a continuación para obtener instrucciones sobre cómo crear objetos visuales de tarjeta adaptable para su actividad.
+* Los metadatos de contenido son datos JSON que pueden utilizarse para agrupar y recuperar las actividades bajo un contexto específico. Normalmente, esto adopta la forma de http://schema.org datos. Consulte a continuación para obtener instrucciones sobre rellenar estos datos.
 
-### <a name="adaptive-card-design-guidelines"></a>Directrices de diseño de tarjeta adaptables
+### <a name="adaptive-card-design-guidelines"></a>Instrucciones de diseño de tarjeta adaptables
 
-Cuando las actividades aparecen en la línea de tiempo, se muestran con el [marco de tarjeta adaptable](https://docs.microsoft.com/adaptive-cards/). Si el desarrollador no proporciona una tarjeta adaptable para cada actividad, línea de tiempo creará automáticamente una tarjeta simple basada en el icono o nombre de aplicación, el campo de título obligatorio y el campo de descripción opcional. 
+Cuando las actividades aparecen en la escala de tiempo, se muestran mediante el [framework tarjeta adaptable](https://docs.microsoft.com/adaptive-cards/). Si el desarrollador no proporciona una tarjeta adaptable para cada actividad, escala de tiempo creará automáticamente una tarjeta simple basada en el nombre e iconos de aplicación, el campo obligatorio de título y el campo de descripción opcional. 
 
-Los desarrolladores de aplicaciones se recomienda proporcionar tarjetas personalizadas mediante el esquema de JSON de tarjeta adaptable simple. Consulta la [documentación de tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/authoring-cards/getting-started) para obtener instrucciones técnicas sobre cómo crear objetos de tarjeta adaptable. Consulta las instrucciones a continuación para diseñar tarjetas adaptables en las actividades del usuario.
-* Usar imágenes
-  * Usar una imagen única para cada actividad, si es posible. El nombre de la aplicación y el icono se mostrará automáticamente junto a la tarjeta de la actividad. imágenes adicionales ayudará a los usuarios a encontrar la actividad que buscan.
-  * Imágenes no deben incluir el texto que se espera que el usuario leer. Este texto no estará disponible para los usuarios con necesidades de accesibilidad y no se puede buscar.
-  * Si la imagen no contiene texto y se puede recortar sobre una relación de 2:1, debería usarlo como una imagen de fondo. Esto da como resultado una tarjeta de actividad negrita que destaque en línea de tiempo. La imagen se se oscurece ligeramente para garantizar que el texto permanece visible en la tarjeta y se recomienda usar el nombre de la actividad en este caso, solo como texto más pequeño que puede resultar difícil de leer.
-  * Si la imagen no se puede recortar a 2:1, se debe colocar dentro de la tarjeta de actividad.  
-    * Si la relación de aspecto es cuadrada, vertical, anclar la imagen en el lado derecho de la tarjeta sin márgenes.
-    * Si la relación de aspecto es horizontal, la imagen en la esquina superior derecha de la tarjeta de anclaje.
-* Cada actividad es necesario para proporcionar un nombre de la actividad, que siempre se debe mostrar.
-  * Este nombre debe mostrarse en la esquina superior izquierda de la tarjeta con la opción de negrita grandes. Es importante que el nombre es fácilmente reconocible, como esta es la única parte a los usuarios verán cuando se muestre la actividad en escenarios de Cortana. Que muestra el mismo nombre en la línea de tiempo facilita a los usuarios explorar un gran número de actividades.
-* Usar el mismo estilo visual para todas las actividades de la aplicación, para que los usuarios puedan encontrar fácilmente las actividades de la aplicación en la línea de tiempo.
-  * Por ejemplo, las actividades deben usar el mismo color de fondo.
-* Usa información de texto complementario con moderación. 
-  * Evitar la tarjeta se llene con texto y solo usa información complementaria que ayuda a los usuarios en la búsqueda de la actividad derecha o refleja la información de estado (por ejemplo, el progreso actual en una tarea particular).
+Los desarrolladores de aplicaciones se recomienda proporcionar tarjetas personalizadas mediante el esquema de JSON de tarjeta adaptable simple. Consulte la [documentación de las tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/authoring-cards/getting-started) para obtener instrucciones técnicas sobre cómo construir objetos de la tarjeta adaptable. Consulte las instrucciones a continuación para diseñar las tarjetas adaptables en las actividades del usuario.
+* Use imágenes
+  * Usar una imagen única para cada actividad, si es posible. El nombre de la aplicación y un icono automáticamente se mostrarán junto a la tarjeta de la actividad. imágenes adicionales permiten que los usuarios localizar la actividad que están buscando.
+  * Las imágenes no deben incluir el texto que se espera que el usuario para leer. Este texto no estará disponible para los usuarios con necesidades de accesibilidad y no se puede buscar.
+  * Si la imagen no contiene texto y se puede recortar sobre una relación de 2:1, debe utilizarlo como una imagen de fondo. Esto da como resultado una tarjeta de actividad en negrita que destaque en escala de tiempo. La imagen se se oscurecerá ligeramente para garantizar el texto permanece visible en la tarjeta y se recomienda usar solo el nombre de actividad en este caso, como texto más pequeño puede ser difícil de leer.
+  * Si no se puede recortar la imagen a 2:1, debe colocarlo dentro de la tarjeta de actividad.  
+    * Si la relación de aspecto es cuadrada, vertical, delimite la imagen en el lado derecho de la tarjeta sin márgenes.
+    * Si la relación de aspecto es horizontal, delimite la imagen a la esquina superior derecha de la tarjeta.
+* Cada actividad debe proporcionar un nombre de actividad, que siempre se deben mostrar.
+  * Este nombre debe mostrarse en la esquina superior izquierda de la tarjeta mediante la opción de gran tamaño de texto en negrita. Es importante que el nombre sea fácilmente reconocible, ya que esta es la única parte a los usuarios verán cuando se muestra la actividad en escenarios de Cortana. Que muestra el mismo nombre en la escala de tiempo facilita a los usuarios busquen un gran número de actividades.
+* Use el mismo estilo visual para todas las actividades de la aplicación, para que los usuarios puedan encontrar fácilmente las actividades de la aplicación en la escala de tiempo.
+  * Por ejemplo, las actividades deben utilizar el mismo color de fondo.
+* Utilice la información de texto complementario con moderación. 
+  * Evitar que se llene la tarjeta con texto y usar solo información complementaria que ayuda a los usuarios en la búsqueda de la actividad adecuada o refleja la información de estado (por ejemplo, el progreso actual en una tarea en particular).
 
 ### <a name="content-metadata-guidelines"></a>Directrices de metadatos de contenido
 
-Actividades del usuario también pueden contener metadatos de contenido, que Windows y Cortana se usan para clasificar las actividades y generar inferencias. A continuación, se pueden agrupar las actividades alrededor de un tema particular, como una ubicación (si el usuario está investigando vacaciones), el objeto (si el usuario está investigando algo) o la acción (si el usuario es comprar un producto concreto entre diferentes aplicaciones y sitios Web). Es una buena idea para representar los nombres y los verbos implicada en una actividad. 
+Las actividades de usuario también pueden contener metadatos de contenido, Windows y Cortana se usan para categorizar las actividades y generar inferencias. A continuación, se pueden agrupar actividades en torno a un tema en particular, como una ubicación (si el usuario trata de investigar vacaciones), el objeto (si el usuario trata de investigar algo) o la acción (si el usuario es todo lo necesario para un determinado producto a través de diferentes aplicaciones y sitios Web). Es una buena idea para representar los nombres y los verbos implicada en una actividad. 
 
-En el siguiente ejemplo, los metadatos de contenido JSON, sigue los estándares de [Schema.org](https://schema.org/), representan el escenario: "John reproduce aves queja con Steve".
+En el ejemplo siguiente, los metadatos de contenido JSON, siguiendo los estándares de [Schema.org](https://schema.org/), representa el escenario: "Juan reproduce pájaros enfadado con Steve".
 
 ```json
 // John played angry birds with Steve.
@@ -97,11 +97,11 @@ En el siguiente ejemplo, los metadatos de contenido JSON, sigue los estándares 
 
 * [Espacio de nombres UserActivities](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Actividades del usuario (documentos de Project Rome)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Actividades del usuario (docs Roma del proyecto)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/)
-* [Visualizador de tarjetas adaptables, muestras](https://adaptivecards.io/)
-* [Administración de la activación de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-* [Interactuar con los clientes en cualquier plataforma con Microsoft Graph, fuentes de actividades y tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
+* [Visualizador de las tarjetas adaptables, ejemplos](https://adaptivecards.io/)
+* [Activación de identificador URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [Interactuar con sus clientes en cualquier plataforma mediante Microsoft Graph, fuente de actividades y las tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

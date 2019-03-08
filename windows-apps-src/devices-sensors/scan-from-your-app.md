@@ -1,17 +1,17 @@
 ---
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Digitalizar desde tu aplicación
-description: Aprende a digitalizar contenido desde tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente.
+description: Aprende aquí a digitalizar contenido de tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c01c21ae65f9e93638e2ce1df604591043a729
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601220"
 ---
 # <a name="scan-from-your-app"></a>Digitalizar desde tu aplicación
 
@@ -22,9 +22,9 @@ ms.locfileid: "8924201"
 -   [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)
 -   [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)
 
-Aprende aquí a digitalizar contenido de tu aplicación con ayuda de un escáner plano, un dispositivo multifunción o un origen de digitalización configurado automáticamente.
+Aprende aquí a digitalizar contenido de tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente.
 
-**Importante**las API [**Windows.Devices.Scanner**](https://msdn.microsoft.com/library/windows/apps/Dn264250) forman parte de la [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631)de escritorio. Las aplicaciones pueden usar estas API solo en la versión de escritorio de Windows 10.
+**Importante**  el [ **Windows.Devices.Scanners** ](https://msdn.microsoft.com/library/windows/apps/Dn264250) API forman parte del escritorio [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631). Las aplicaciones pueden usar estas API solo en la versión de escritorio de Windows 10.
 
 Para digitalizar contenido desde tu aplicación, antes deberás enumerar los escáneres disponibles. Para ello, declara un nuevo objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) para obtener el tipo [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381). Solo se mostrarán aquellos escáneres que estén instalados localmente con controladores de WIA y que estén disponibles para tu aplicación.
 
@@ -84,7 +84,7 @@ Windows no detecta los escáneres automáticamente. Debes llevar a cabo este pas
     }
 ```
 
-## <a name="scan"></a>Digitalizar
+## <a name="scan"></a>Digitalización
 
 1.  **Obtener un objeto ImageScanner**
 
@@ -94,22 +94,22 @@ Para cada tipo de enumeración [**ImageScannerScanSource**](https://msdn.microso
     ImageScanner myScanner = await ImageScanner.FromIdAsync(deviceId);
  ```
 
-2.  **Solo digitalización**
+2.  **Solo digitalizarán**
 
 Para digitalizar con la configuración predeterminada, tu aplicación se basa en el nombre de espacios [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) para seleccionar un escáner, y digitaliza desde ese origen. No se cambia la configuración de digitalización. Los escáneres posibles son autoconfigurado, plano o alimentador. Este tipo de digitalización probablemente tendrá como resultado una operación de digitalización correcta, aunque digitalice desde un origen incorrecto, como un escáner plano en vez de alimentador.
 
-**Nota**si el usuario coloca el documento que quiere digitalizar en el alimentador, el escáner se digitalización desde el plano en su lugar. Si el usuario intenta digitalizar desde un alimentador vacío, el proceso no generará ningún archivo digitalizado.
+**Tenga en cuenta**  si el usuario coloca el documento que se va a examinar en el alimentador, el analizador se examinará desde el plano. Si el usuario intenta digitalizar desde un alimentador vacío, el proceso no generará ningún archivo digitalizado.
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
 ```
 
-3.  **Digitalizar desde un origen autoconfigurado, plano o alimentador**
+3.  **Examen de configurado automáticamente, escáner plano o alimentador de origen**
 
 Tu aplicación puede usar la [Digitalización autoconfigurada](https://msdn.microsoft.com/library/windows/hardware/Ff539393) del dispositivo, de modo que digitalice usando la configuración óptima. Con esta opción, el propio dispositivo puede determinar la configuración de digitalización, como el modo de color y la resolución, en función del contenido que se vaya a digitalizar. El dispositivo selecciona la configuración de digitalización en tiempo de ejecución para cada trabajo de digitalización nuevo.
 
-**Nota**no todos los escáneres son compatibles con esta característica, por lo que la aplicación debe comprobar si el escáner admite esta característica antes de usar esta configuración.
+**Tenga en cuenta**  no todos los escáneres admiten esta característica, por lo que la aplicación debe comprobar si el escáner admite esta característica antes de usar esta configuración.
 
 En este ejemplo, la aplicación comprueba primero si el escáner es capaz de autoconfigurarse y, a continuación, procede a la digitalización. Para especificar un escáner plano o alimentador, basta con que sustituyas **AutoConfigured** por **Flatbed** o **Feeder**.
 

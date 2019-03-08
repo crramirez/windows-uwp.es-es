@@ -1,48 +1,48 @@
 ---
 title: Iniciar recortes de pantalla
-description: En este tema se describe los esquemas de URI ms-screenclip y ms-screensketch. La aplicación puede usar estos esquemas de URI para iniciar la aplicación de recorte & boceto o abrir un recorte nuevo.
+description: En este tema se describe los esquemas de URI ms-screenclip y ms-screensketch. La aplicación puede usar estos esquemas de URI para iniciar la aplicación de recorte & boceto o para abrir un recorte nuevo.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 06e988387f574b74d511b14a2ebca24b0a149158
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595390"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 
-El **ms-screenclip:** y **ms-screensketch:** esquemas de URI te permite iniciar recortes o capturas de pantalla de edición.
+El **ms screenclip:** y **screensketch de ms:** Esquemas de URI le permite iniciar recortes o capturas de pantalla de edición.
 
-## <a name="open-a-new-snip-from-your-app"></a>Abre un nuevo recorte desde la aplicación
+## <a name="open-a-new-snip-from-your-app"></a>Abra un recorte nuevo desde la aplicación
 
-El **ms-screenclip:** URI permite que la aplicación automáticamente abrir e iniciar un nuevo recorte. El recorte resultante se copia en el Portapapeles del usuario, pero no se pasa automáticamente a la aplicación de apertura.
+El **screenclip de ms:** URI permite que la aplicación para abrir e iniciar un recorte nuevo automáticamente. El recorte resultante se copia en el Portapapeles del usuario, pero no se pasa automáticamente a la aplicación de apertura.
 
-**ms-screenclip:** acepta los siguientes parámetros:
+**MS-screenclip:** toma los parámetros siguientes:
 
-| Parámetro | Tipo | Obligatorio | Descripción |
+| Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso en segundos completas, entre la llamada URI y cuando comienza la recortes. |
+| Código fuente | string | no | Una cadena de formato libre para indicar el origen que se inicia el URI. |
+| delayInSeconds | entero | no | Un valor entero entre 1 y 30. Especifica el retardo, en segundos completos, entre la llamada URI y recortes cuando comienza. |
 | callbackformat | string | no | Este parámetro no está disponible. |
 
-## <a name="launching-the-snip--sketch-app"></a>Iniciar la aplicación de recorte & boceto
+## <a name="launching-the-snip--sketch-app"></a>Iniciar la aplicación de boceto y recorte
 
-El **ms-screensketch:** URI te permite iniciar la aplicación de recorte & boceto mediante programación y abrir una imagen específica en esa aplicación para la anotación.
+El **screensketch de ms:** URI le permite iniciar la aplicación de recorte & boceto mediante programación y abrir una imagen específica en esa aplicación para la anotación.
 
-**ms-screensketch:** acepta los siguientes parámetros:
+**MS-screensketch:** toma los parámetros siguientes:
 
-| Parámetro | Tipo | Obligatorio | Descripción |
+| Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| sharedAccessToken | string | no | Un token que identifica el archivo para abrirlo en la aplicación de bocetos & de recorte. Recupera [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, se iniciará la aplicación sin abrir un archivo. |
-| secondarySharedAccessToken | string | no | Una cadena que identifica un archivo JSON con metadatos sobre el recorte. Los metadatos pueden incluir un campo de **clipPoints** con una matriz de coordenadas x e y o un [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity). |
-| origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| isTemporary | bool | no | Si se establece en True, bocetos de pantalla intentará eliminar el archivo después de abrirla. |
+| sharedAccessToken | string | no | Un token que identifica el archivo para abrirlo en la aplicación de recorte & boceto. Recuperan [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, se iniciará la aplicación sin un archivo abierto. |
+| secondarySharedAccessToken | string | no | Cadena que identifica un archivo JSON con metadatos sobre el recorte. Los metadatos pueden incluir un **clipPoints** campo con una matriz de coordenadas x, y, o un [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity). |
+| Código fuente | string | no | Una cadena de formato libre para indicar el origen que se inicia el URI. |
+| isTemporary | bool | no | Si se establece en True, el boceto de pantalla intentará eliminar el archivo después de abrirla. |
 
-En el ejemplo siguiente, se llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) para enviar una imagen a recorte & boceto desde la aplicación de usuario.
+El ejemplo siguiente se llama el [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) método para enviar una imagen al recorte & boceto desde la aplicación del usuario.
 
 ```csharp
 
@@ -50,7 +50,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-screenske
 
 ```
 
-El siguiente ejemplo muestra lo que podría contener un archivo especificado por el parámetro **secondarySharedAccessToken** de **ms-screensketch** :
+El ejemplo siguiente muestra lo que un archivo especificado por el **secondarySharedAccessToken** parámetro de **ms screensketch** podría contener:
 
 ```json
 {

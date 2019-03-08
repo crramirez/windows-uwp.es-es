@@ -1,5 +1,5 @@
 ---
-Description: You can encourage your customers to leave feedback by launching Feedback Hub from your app.
+Description: Puedes animar a los clientes a dejar comentarios iniciando el Centro de opiniones desde la aplicación.
 title: Iniciar el Centro de opiniones desde la aplicación
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 02/08/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f5d5c12deed9fffc3d2515529aa5bba5fbffc47
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631840"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 
-Puedes animar a los clientes a dejar comentarios agregando un control (como un botón) a la aplicación de la Plataforma universal de Windows (UWP) que inicia el Centro de opiniones. El Centro de opiniones es una aplicación preinstalada que proporciona un único lugar para recopilar comentarios sobre Windows y las aplicaciones instaladas. Todos los comentarios de los clientes que se ha enviado para tu aplicación a través del centro de opiniones se recopilan y presentan en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners, para que puedas ver los problemas, sugerencias y votos a favor que los clientes han enviado en un informe.
+Puedes animar a los clientes a dejar comentarios agregando un control (como un botón) a la aplicación de la Plataforma universal de Windows (UWP) que inicia el Centro de opiniones. El Centro de opiniones es una aplicación preinstalada que proporciona un único lugar para recopilar comentarios sobre Windows y las aplicaciones instaladas. Todos los comentarios de los clientes que se envían para su aplicación a través del centro de comentarios se recopilan y se presenta en el [informes de comentarios](../publish/feedback-report.md) en Centro de partners, por lo que puede ver los problemas, sugerencias y votos a favor que tienen los clientes se envió en un informe.
 
 Para iniciar el Centro de opiniones desde la aplicación, usa una API que se incluya con el [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Se recomienda usar esta API para iniciar el Centro de opiniones desde un elemento de la interfaz de usuario de tu aplicación que siga nuestras directrices para el diseño.
 
@@ -36,7 +36,7 @@ Para iniciar el Centro de opiniones desde la aplicación:
   * Establece el texto en el control en el código de carácter Unicode hexadecimal E939. Este es el código de carácter para el icono de comentarios recomendados en la fuente **Segoe MDL2 Assets**.
   * Establece la visibilidad del control en oculto.
     > [!NOTE]
-    > Te recomendamos que ocultes el control de comentarios y que lo muestres en el código de inicialización solo si el Centro de opiniones está disponible en el dispositivo del usuario. En el paso siguiente se muestra cómo hacerlo.
+    > Te recomendamos que ocultes el control de comentarios de manera predeterminada y que lo muestres en el código de inicialización solo si el Centro de opiniones está disponible en el dispositivo del usuario. En el paso siguiente se muestra cómo hacerlo.
 
     El siguiente código muestra la definición XAML de una clase [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que está configurada como se describió anteriormente.
 
@@ -76,4 +76,4 @@ También te recomendamos que uses una o varias de las siguientes opciones de ubi
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe de comentarios](../publish/feedback-report.md)
+* [Informe Comentarios](../publish/feedback-report.md)

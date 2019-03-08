@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 9ac96766-df89-4403-89f2-200549436921
 ms.localizationpriority: medium
 ms.openlocfilehash: 11af5f09d9c66fc9103b36dc80eae8b8bbc88854
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595170"
 ---
 # <a name="bringing-existing-games-to-xbox"></a>Llevar los juegos existentes a Xbox
 
@@ -23,10 +23,10 @@ Según las tecnologías que use el juego, a continuación se describen algunos p
 
 | Motor      | Descripción |
 |------------|-------------|
-|[C++ personalizado](development-lanes-custom-cpp.md)| Información relativa al desarrollo de juegos C++ en Xbox mediante UWP. |
+|[Personalizar C++](development-lanes-custom-cpp.md)| Información relativa al desarrollo de juegos C++ en Xbox mediante UWP. |
 |[Unity](development-lanes-unity.md)| Tutorial que te ayuda a llevar juegos existentes de Unity a Xbox. |
-|[HTML/JS](development-lanes-html.md)| Información relativa al desarrollo de juegos HTML en Xbox. |
+|[HTML / JS](development-lanes-html.md)| Información relativa al desarrollo de juegos HTML en Xbox. |
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [UWP en Xbox One](index.md)

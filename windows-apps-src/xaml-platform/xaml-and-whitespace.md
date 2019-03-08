@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 521e794680df6449ebc49745319c4aeec74405d1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923911"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589960"
 ---
 # <a name="xaml-and-whitespace"></a>XAML y espacio en blanco
 
@@ -20,14 +20,14 @@ Obtén información sobre las reglas de procesamiento de espacios en blanco que 
 
 ## <a name="whitespace-processing"></a>Procesamiento de espacios en blanco
 
-De forma coherente con XML, espacios en blanco en XAML son espacios, saltos de línea y tabulaciones. Estos corresponden a los valores Unicode 0020, 000A y 0009 respectivamente. De manera predeterminada, se produce la siguiente normalización de los espacios en blanco cuando un procesador XAML procesa el texto interno que se encuentra entre los elementos de un archivo XAML:
+Al igual que en XML, los espacios en blanco en XAML son espacios, saltos de línea y tabulaciones. Estos corresponden a los valores Unicode 0020, 000A y 0009 respectivamente. De manera predeterminada, se produce la siguiente normalización de los espacios en blanco cuando un procesador XAML procesa el texto interno que se encuentra entre los elementos de un archivo XAML:
 
 -   Se eliminan los saltos de línea entre los caracteres de Asia oriental.
 -   Todos los espacios en blanco (espacio, salto de línea, tabulación) se convierten en espacios.
 -   Se eliminan todos los espacios consecutivos y se reemplazan por un espacio.
 -   Se elimina el espacio que sigue inmediatamente a la etiqueta de inicio.
 -   Se elimina el espacio que precede a la etiqueta de cierre.
--   Los *caracteres de Asia Oriental* se definen como un conjunto de intervalos de caracteres Unicode: de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. Este subconjunto también se denomina *ideogramas CJK* Para obtener más información, consulte http://www.unicode.org.
+-   Los *caracteres de Asia Oriental* se definen como un conjunto de intervalos de caracteres Unicode, U+20000 a U+2FFFD y U+30000 a U+3FFFD. Este subconjunto también se denomina *ideogramas CJK* Para obtener más información, consulte http://www.unicode.org.
 
 "Predeterminado" corresponde al estado que indica el valor predeterminado del atributo **xml:space**.
 
@@ -50,7 +50,7 @@ Incluso para los modelos de contenido que aceptan cadenas, el comportamiento pre
 
 Hay varias técnicas para conservar los espacios en blanco en el código XAML de origen para la presentación final que no se ven afectadas por la normalización de espacios en blanco del procesador XAML.
 
-`xml:space="preserve"`: especifica este atributo en el nivel del elemento donde se desea conservar el espacio en blanco. Ten en cuenta que esto conservará todos los espacios en blanco, incluidos los espacios que podrían agregar las aplicaciones de edición de código o las superficies de diseño para alinear los elementos de marcado como un anidamiento visualmente intuitivo. Una vez más, que esos espacios se representen depende del modelo de contenido del elemento contenedor. No se recomienda especificar `xml:space="preserve"` en el nivel raíz ya que la mayoría de los modelos de objetos no consideran los espacios en blanco significativos de una u otra forma. Se recomienda establecer únicamente el atributo de forma específica en el nivel de elementos que representan los espacios en blanco dentro de las cadenas o que son colecciones de espacios en blanco significativas.
+`xml:space="preserve"`: Especifique este atributo en el nivel del elemento donde es necesario conservar espacio en blanco. Ten en cuenta que esto conservará todos los espacios en blanco, incluidos los espacios que podrían agregar las aplicaciones de edición de código o las superficies de diseño para alinear los elementos de marcado como un anidamiento visualmente intuitivo. Una vez más, que esos espacios se representen depende del modelo de contenido del elemento contenedor. No se recomienda especificar `xml:space="preserve"` en el nivel raíz ya que la mayoría de los modelos de objetos no consideran los espacios en blanco significativos de una u otra forma. Se recomienda establecer únicamente el atributo de forma específica en el nivel de elementos que representan los espacios en blanco dentro de las cadenas o que son colecciones de espacios en blanco significativas.
 
-Entidades y los espacios de no separación: XAML admite la colocación de cualquier entidad Unicode dentro de un modelo de objetos de texto. Puedes usar entidades dedicadas como espacios de no separación (en la codificación UTF-8). También puedes usar controles de texto enriquecido que admitan espacios de no separación. Ten cuidado si vas a usar entidades para simular características de diseño como sangrías, ya que la salida en tiempo de ejecución de las entidades se ve afectada por un número mayor de factores que con las utilidades de diseño generales, como el uso correcto de paneles y márgenes.
+Las entidades y espacios de no separación: XAML permite colocar cualquier entidad Unicode dentro de un modelo de objetos de texto. Puedes usar entidades dedicadas como espacios de no separación (en la codificación UTF-8). También puedes usar controles de texto enriquecido que admitan espacios de no separación. Ten cuidado si vas a usar entidades para simular características de diseño como sangrías, ya que la salida en tiempo de ejecución de las entidades se ve afectada por un número mayor de factores que con las utilidades de diseño generales, como el uso correcto de paneles y márgenes.
 

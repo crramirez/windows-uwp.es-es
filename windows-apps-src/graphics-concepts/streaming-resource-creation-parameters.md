@@ -1,6 +1,6 @@
 ---
 title: Parámetros de creación de recursos de streaming
-description: Existen algunas limitaciones en el tipo de recursos de Direct3D que se pueden crear como recurso de streaming.
+description: Existen algunas limitaciones en el tipo de recursos de Direct3D que puedes crear como recurso de streaming.
 ms.assetid: 6FC5AD93-6F47-479E-947C-895C99B427BC
 keywords:
 - Parámetros de creación de recursos de streaming
@@ -8,44 +8,44 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ddb150e570e25af7162a50309b9b0fc30cedf60
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617340"
 ---
 # <a name="streaming-resource-creation-parameters"></a>Parámetros de creación de recursos de streaming
 
 
-Existen algunas limitaciones en el tipo de recursos de Direct3D que se pueden crear como recurso de streaming.
+Existen algunas limitaciones en el tipo de recursos de Direct3D que puedes crear como recurso de streaming.
 
 <span id="Supported-Resource-Type"></span><span id="supported-resource-type"></span><span id="SUPPORTED-RESOURCE-TYPE"></span>**Tipo de recurso admitido**  
-Texture2D\[Array\] (incluido TextureCube\[Array\], que es una variante de Texture2D\[Array\]) o Buffer.
+Texture2D\[matriz\] (incluidos TextureCube\[matriz\], que es una variante de Texture2D\[matriz\]) o el búfer.
 
-**No admite:** Texture1D\ [Array\].
+**NO compatible:  **Texture1D\[matriz\] .
 
-<span id="Supported-Resource-Usage"></span><span id="supported-resource-usage"></span><span id="SUPPORTED-RESOURCE-USAGE"></span>**Uso de recurso admitido**  
+<span id="Supported-Resource-Usage"></span><span id="supported-resource-usage"></span><span id="SUPPORTED-RESOURCE-USAGE"></span>**Uso de recursos admitidos**  
 Uso predeterminado.
 
-**No admite:** Dinámico, provisional o inmutable.
+**NO compatible:  **dinámico, almacenamiento provisional o inmutables.
 
-<span id="Supported-Resource-Misc-Flags"></span><span id="supported-resource-misc-flags"></span><span id="SUPPORTED-RESOURCE-MISC-FLAGS"></span>**Marcas variadas de los recursos admitidos**  
+<span id="Supported-Resource-Misc-Flags"></span><span id="supported-resource-misc-flags"></span><span id="SUPPORTED-RESOURCE-MISC-FLAGS"></span>**Marcas de varios recursos admitidos**  
 En mosaico; es decir, emisión (por definición), cubo de textura, dibujo de argumentos indirectos, almacenar en búfer vistas sin procesar permitidas, búfer estructurado, compresión de recursos o generar MIP.
 
-**No admite:** compartido, exclusión mutua con clave, compatible con GDI, identificador de NT compartido, contenido restringido, restringir el recurso compartido, restringir el controlador del recurso compartido, protegido o grupo de iconos.
+**NO compatible:  **compartido, compartido con clave exclusión mutua, GDI compatible, comparten el identificador de NT, restringe el contenido, restringir el recurso compartido, restringir el controlador del recurso compartido, protegido o icono grupo.
 
-<span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Indicadores de enlace admitidos**  
+<span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Marcas de enlace admitidos**  
 Enlazar como recurso de sombreador, destino de representación, galería de símbolos de profundidad o acceso sin ordenar.
 
-**No admite:** Enlazar como búfer de constantes, búfer de vértices (admite el enlace un búfer en mosaico como SRV/UAV/RTV es), índice de búfer, salida de flujo, descodificador o codificador de vídeo.
+**NO compatible:  **Bind como búfer de constantes, búfer de vértices (un búfer en mosaico de enlace que admita SRV/UAV/RTV), índice de búfer, salida stream, descodificador o codificador de vídeo.
 
 <span id="Supported-Formats"></span><span id="supported-formats"></span><span id="SUPPORTED-FORMATS"></span>**Formatos admitidos**  
 Todos los formatos que deberían estar disponibles para la configuración dada, independientemente de esta sea en mosaico, con algunas excepciones.
 
-<span id="Supported-Sample-Description--Multisample-count--quality-"></span><span id="supported-sample-description--multisample-count--quality-"></span><span id="SUPPORTED-SAMPLE-DESCRIPTION--MULTISAMPLE-COUNT--QUALITY-"></span>**Descripción de muestras admitidas (recuento de muestras múltiples, calidad)**  
+<span id="Supported-Sample-Description--Multisample-count--quality-"></span><span id="supported-sample-description--multisample-count--quality-"></span><span id="SUPPORTED-SAMPLE-DESCRIPTION--MULTISAMPLE-COUNT--QUALITY-"></span>**Descripción de ejemplo compatibles (recuento de muestreo múltiple, calidad)**  
 Cualquiera que se admitiría para la configuración dada, independientemente de que sea en mosaico, con algunas excepciones.
 
-<span id="Supported-Width-Height-MipLevels-ArraySize"></span><span id="supported-width-height-miplevels-arraysize"></span><span id="SUPPORTED-WIDTH-HEIGHT-MIPLEVELS-ARRAYSIZE"></span>**Width/Height/MipLevels/ArraySize admitidos**  
+<span id="Supported-Width-Height-MipLevels-ArraySize"></span><span id="supported-width-height-miplevels-arraysize"></span><span id="SUPPORTED-WIDTH-HEIGHT-MIPLEVELS-ARRAYSIZE"></span>**Compatible ancho/alto/MipLevels/tamaño de matriz**  
 Extensiones completas admitidas por Direct3D. Los recursos de streaming no tienen la restricción respecto al tamaño de la memoria total que se impone a los recursos que no son de streaming. Los recursos de streaming solo están restringidos por los límites generales del espacio de direcciones virtual. Consulte [Espacio de direcciones disponible para recursos de streaming](address-space-available-for-streaming-resources.md).
 
 El contenido inicial de la memoria del grupo de iconos no está definido.
@@ -66,8 +66,8 @@ El contenido inicial de la memoria del grupo de iconos no está definido.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="address-space-available-for-streaming-resources.md">Espacio de direcciones disponible para recursos de streaming</a></p></td>
-<td align="left"><p>En esta sección se especifica el espacio de direcciones virtual que está disponible para los recursos de streaming.</p></td>
+<td align="left"><p><a href="address-space-available-for-streaming-resources.md">Espacio disponible para el streaming de recursos de direcciones</a></p></td>
+<td align="left"><p>En esta sección se especifica el espacio de direcciones virtuales que está disponible para los recursos de streaming.</p></td>
 </tr>
 </tbody>
 </table>

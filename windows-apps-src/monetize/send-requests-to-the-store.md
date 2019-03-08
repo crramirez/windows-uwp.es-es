@@ -1,5 +1,5 @@
 ---
-Description: You can use the SendRequestAsync method to send requests to the Microsoft Store for operations that do not yet have an API available in the Windows SDK.
+Description: Puede usar el método SendRequestAsync para enviar solicitudes a la Microsoft Store para las operaciones que aún no dispone de una API disponible en el SDK de Windows.
 title: Enviar solicitudes a Microsoft Store
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 03/22/2018
@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
 ms.openlocfilehash: d492bc7dde990404552689516731850974c31a7c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942101"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589800"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitudes a Microsoft Store
 
-A partir de Windows10, versión1607, el WindowsSDK proporciona API para las operaciones relacionadas con la Store (como las compras desde la aplicación) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Sin embargo, aunque los servicios compatibles con la Store se actualizan, amplían y mejoran constantemente entre publicaciones de sistemas operativos, las nuevas API se suelen agregar en el WindowsSDK únicamente durante las publicaciones principales de sistemas operativos.
+A partir de Windows 10, versión 1607, el Windows SDK proporciona API para las operaciones relacionadas con la Store (como las compras desde la aplicación) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Sin embargo, aunque los servicios compatibles con la Store se actualizan, amplían y mejoran constantemente entre publicaciones de sistemas operativos, las nuevas API se suelen agregar en el Windows SDK únicamente durante las publicaciones principales de sistemas operativos.
 
-Proporcionamos el método [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) como una forma flexible para que las nuevas operaciones de la Store están disponibles para las aplicaciones para la Plataforma universal de Windows(UWP) antes de que se publique una nueva versión del WindowsSDK. Puedes usar este método para enviar solicitudes a la Store para nuevas operaciones que aún no tienen una API correspondiente disponible en la versión más reciente del WindowsSDK.
+Proporcionamos el método [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) como una forma flexible para que las nuevas operaciones de la Store están disponibles para las aplicaciones para la Plataforma universal de Windows (UWP) antes de que se publique una nueva versión del Windows SDK. Puedes usar este método para enviar solicitudes a la Store para nuevas operaciones que aún no tienen una API correspondiente disponible en la versión más reciente del Windows SDK.
 
 > [!NOTE]
-> El método **SendRequestAsync** solo está disponible para aplicaciones dirigidas a Windows10, versión1607 o posterior. Algunas de las solicitudes compatibles con este método solo se admiten en versiones posteriores a Windows10, versión 1607.
+> El método **SendRequestAsync** solo está disponible para aplicaciones dirigidas a Windows 10, versión 1607 o posterior. Algunas de las solicitudes compatibles con este método solo se admiten en versiones posteriores a Windows 10, versión 1607.
 
 **SendRequestAsync** es un método estático de la clase [StoreRequestHelper](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper). Para llamar a este método, debes pasar la siguiente información al método:
 * Un objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) que proporciona información sobre el usuario para el que quieres realizar la operación. Para obtener más información sobre este objeto, consulta [Introducción a la clase StoreContext](in-app-purchases-and-trials.md#get-started-with-the-storecontext-class).
@@ -60,8 +60,8 @@ El método **SendRequestAsync** admite un conjunto de solicitudes para escenario
 
 |  Valor del tipo de solicitud  |  Descripción  |
 |----------------------|---------------|
-|  7                   |  Las solicitudes se realizan en el contexto del dispositivo actual. Este valor solo puede usarse en Windows10, versión 1703 o posterior.  |
-|  8                   |  Las solicitudes se realizan en el contexto del usuario que actualmente inició sesión en la Store. Este valor puede usarse en Windows10, versión 1607 o posterior.  |
+|  7                   |  Las solicitudes se realizan en el contexto del dispositivo actual. Este valor solo puede usarse en Windows 10, versión 1703 o posterior.  |
+|  8                   |  Las solicitudes se realizan en el contexto del usuario que actualmente inició sesión en la Store. Este valor puede usarse en Windows 10, versión 1607 o posterior.  |
 
 Actualmente se implementan las siguientes solicitudes del grupo piloto.
 
@@ -77,7 +77,7 @@ Esta solicitud recupera las variables remotas para el grupo piloto de clasificac
 |  *requestKind*                   |  Especifica 7 para devolver el grupo piloto de clasificación más alta para el dispositivo, o especifica 8 para devolver el grupo piloto de clasificación más alta para el dispositivo y el usuario actuales. Te recomendamos que uses el valor de 8 para el parámetro *requestKind*, porque este valor devolverá el grupo piloto de clasificación más alta en la pertenencia tanto para el dispositivo como para el usuario actual.  |
 |  *parametersAsJson*                   |  Pasa una cadena con formato JSON que contiene los datos que se muestran en el siguiente ejemplo.  |
 
-En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *GetRemoteVariables*. Asigna el campo *projectId* al identificador del proyecto en el que definiste las variables remotas en el centro de partners.
+En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *GetRemoteVariables*. Asignar el *projectId* campo para el Id. del proyecto en el que se definen las variables remotas en el centro de partners.
 
 ```json
 { 
@@ -154,7 +154,7 @@ En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *pa
 
 Si hay un error con la solicitud, la propiedad [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) del valor devuelto en [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene el código de respuesta.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Mostrar un diálogo de clasificación y reseña en la aplicación](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
+* [Una clasificación de programa y revise el cuadro de diálogo de la aplicación](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
 * [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)

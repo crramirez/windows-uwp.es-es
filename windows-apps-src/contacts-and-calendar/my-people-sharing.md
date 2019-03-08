@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 91d88dc78fd02ae3f16e1d980aa207d1dd458417
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945401"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597830"
 ---
 # <a name="my-people-sharing"></a>Uso compartido de Mis allegados
 
@@ -27,8 +27,8 @@ La función Mis allegados permite a los usuarios anclar contactos a su barra de 
 
 Hay tres pasos que debes seguir para habilitar la aplicación destino de uso compartido de Mis allegados:
 
-1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anotar los contactos con los que los usuarios pueden compartir al usar tu aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anotar los contactos que los usuarios pueden compartir al uso de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3. Admitir varias instancias de la aplicación en ejecución al mismo tiempo.  Los usuarios deben poder interactuar con una versión completa de la aplicación mientras también la usan para compartir con otros. Puede que la usen a la vez en varias ventanas de uso compartido. Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
 
 Cuando hayas hecho esto, la aplicación aparecerá como un destino de uso compartido en la ventana de compartir Mis allegados, que se puede iniciar de dos maneras:
@@ -40,7 +40,7 @@ Cuando hayas hecho esto, la aplicación aparecerá como un destino de uso compar
 Para declarar la compatibilidad de la aplicación como destino de contenido compartido, primero abre la aplicación en Visual Studio. En el **Explorador de soluciones**, haz clic con el botón derecho en **Package.appxmanifest** y selecciona **Abrir con**. En el menú, selecciona **Editor XML (texto)** y haz clic en **Aceptar**. Después, realiza los siguientes cambios en el manifiesto:
 
 
-**Antes**
+**Antes de**
 ```xml
 <Applications>
     <Application Id="MyApp"
@@ -50,7 +50,7 @@ Para declarar la compatibilidad de la aplicación como destino de contenido comp
 </Applications>
 ```
 
-**Después**
+**Después de**
 
 ```xml
 <Applications>
@@ -131,7 +131,7 @@ protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs arg
 }
 ```
 
-## <a name="see-also"></a>Consulta también
-+ [Agregar compatibilidad con Mis allegados](my-people-support.md)
+## <a name="see-also"></a>Consulte también
++ [Admitir agregar personas de mi](my-people-support.md)
 + [Clase ShareTarget](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget)
 + [Ejemplo de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)

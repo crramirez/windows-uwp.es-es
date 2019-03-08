@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d4364bf9973b69587ae042a809d026b553ee2ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932150"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662320"
 ---
 # <a name="copying-and-accessing-resource-data"></a>Copia y acceso a datos de recursos
 
@@ -42,7 +42,7 @@ Copiar datos entre recursos asignables es más problemático, ya que el rendimie
 
 Las aplicaciones que deseen copiar datos desde un recurso con el uso predeterminado a un recurso con el uso provisional (para permitir que la CPU lea los datos, es decir, el problema de lectura de la GPU) deben hacerlo con cuidado. Consulta [Acceso a datos de recursos](#accessing) a continuación.
 
-## <a name="span-idaccessingspanspan-idaccessingspanspan-idaccessingspanaccessing-resource-data"></a><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>Acceso a datos de recursos
+## <a name="span-idaccessingspanspan-idaccessingspanspan-idaccessingspanaccessing-resource-data"></a><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>Acceso a los datos de recursos
 
 
 El acceso a un recurso requiere asignar el recurso; "asignar" básicamente significa que la aplicación intenta darle a la CPU acceso a la memoria. El proceso de asignar un recurso para que la CPU pueda acceder a la memoria subyacente puede provocar algunos cuellos de botella en el rendimiento y, por este motivo, debe tenerse cuidado en cuanto al cómo y cuándo se realiza esta tarea.
@@ -85,7 +85,7 @@ Por lo tanto, si una aplicación quiere asignar un recurso que se origina en la 
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Fotograma</th>
+<th align="left">Frame</th>
 <th align="left">Estado de la GPU/CPU</th>
 </tr>
 </thead>

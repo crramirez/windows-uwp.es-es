@@ -1,5 +1,5 @@
 ---
-Description: You can customize a control's visual structure and visual behavior by creating a control template in the XAML framework.
+Description: Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML.
 MS-HAID: dev\_ctrl\_layout\_txt.control\_templates
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,20 +9,20 @@ label: Control templates
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 539f67079547db28a02ef34fc4b9af2e15d107d3
-ms.sourcegitcommit: 4e80ee8d577c3475b6d247317a24411a48b02c29
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9083896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613520"
 ---
 # <a name="control-templates"></a>Plantillas de control
 
 Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML. Los controles tienen muchas propiedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) y [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que puedes establecer para especificar diferentes aspectos de la apariencia del control. Sin embargo, los cambios que puedes realizar estableciendo estas propiedades son limitados. Puedes especificar personalizaciones adicionales al crear una plantilla con la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). A continuación te mostramos cómo crear una clase **ControlTemplate** para personalizar la apariencia de un control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
 
-> **API importantes**: [**Clase ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), [**Propiedad Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
+> **API importantes**: [**Clase ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), [ **Control.Template propiedad**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
 
 ## <a name="custom-control-template-example"></a>Ejemplo de plantilla de control personalizada
 
@@ -53,7 +53,7 @@ Este código XAML crea una clase [**ControlTemplate**](https://msdn.microsoft.co
 Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es un enlace especial que vincula el valor de una propiedad de una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML. Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 > [!NOTE]
-> A partir de Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puedes usar las extensiones de marcado [**x: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) en lugares usas [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
+> A partir de Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puede usar [ **x: Bind** ](https://msdn.microsoft.com/library/windows/apps/Mt204783) las extensiones de marcado en los lugares que utilice [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) . Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -89,7 +89,7 @@ Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es
 </ControlTemplate>
 ```
 
-## <a name="specify-the-visual-behavior-of-a-control"></a>Especifica el comportamiento visual de un control
+## <a name="specify-the-visual-behavior-of-a-control"></a>Especificar el comportamiento visual de un control
 
 Un comportamiento visual especifica la apariencia de un control cuando tiene un estado determinado. El control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) tiene tres estados de selección: `Checked`, `Unchecked` e `Indeterminate`. El valor de la propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/br209798) determina el estado de **CheckBox**, y su estado determina lo que aparece en el cuadro.
 
@@ -97,15 +97,15 @@ Esta tabla enumera los posibles valores de [**IsChecked**](https://msdn.microsof
 
 |                     |                    |                         |
 |---------------------|--------------------|-------------------------|
-| Valor **IsChecked** | Estado de **CheckBox** | Aspecto de **CheckBox** |
+| valor **IsChecked** | estado de **CheckBox** | apariencia de **CheckBox** |
 | **true**            | `Checked`          | Contiene una "X".        |
 | **false**           | `Unchecked`        | Vacío.                  |
-| **nulo**            | `Indeterminate`    | Contiene un círculo.      |
+| **null**            | `Indeterminate`    | Contiene un círculo.      |
 
 
 La apariencia de un control se especifica cuando tiene un estado determinado mediante objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007). Un **VisualState** contiene una clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053) que cambia la apariencia de los elementos de la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Cuando el control ingresa en el estado que especifica la propiedad [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031), se aplican los cambios de propiedad en **Setter** o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490). Cuando el control sale del estado, se eliminan los cambios. Agregas objetos **VisualState** a objetos [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014). Agregas objetos **VisualStateGroup** a la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505), que se establece en la raíz [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) de la clase **ControlTemplate**.
 
-Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) para los estados `Checked`, `Unchecked` e `Indeterminate`. El ejemplo establece la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) en [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), que es el elemento raíz de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). **VisualState** `Checked` especifica que el valor de [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de la clase [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) denominada `CheckGlyph` (que mostramos en el ejemplo anterior) es 1. **VisualState** `Indeterminate` especifica que el valor de **Opacity** de la clase [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) denominada `IndeterminateGlyph` es 1. **VisualState** `Unchecked` no tiene ninguna clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490), por lo que [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) vuelve a su apariencia predeterminada.
+Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) para los estados `Checked`, `Unchecked` e `Indeterminate`. El ejemplo establece la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) en [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), que es el elemento raíz de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). El `Checked` **VisualState** especifica que el [ **opacidad** ](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de la [ **ruta** ](/uwp/api/Windows.UI.Xaml.Shapes.Path) denominado `CheckGlyph` (que se muestra en el ejemplo anterior) es 1. El `Indeterminate` **VisualState** especifica que el **opacidad** de la [ **elipse** ](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) denominado `IndeterminateGlyph` es 1. El `Unchecked` **VisualState** no tiene ningún [ **establecedor** ](https://msdn.microsoft.com/library/windows/apps/br208817) o [ **guión gráfico**](https://msdn.microsoft.com/library/windows/apps/br210490), por lo que el [ **Casilla** ](https://msdn.microsoft.com/library/windows/apps/br209316) vuelve a su apariencia predeterminada.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -173,9 +173,9 @@ Para comprender mejor cómo funcionan los objetos [**VisualState**](https://msdn
 |                                      |                                                                                                                                                                                                                                                                                                                                                |                                                   |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | Transición de estado                     | Qué sucede                                                                                                                                                                                                                                                                                                                                   | Apariencia de CheckBox cuando la transición finaliza |
-| De `Unchecked` a `Checked`.       | Se aplica el valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) `Checked`, por lo tanto, el valor de [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `CheckGlyph` es 1.                                                                                                                                                         | Se muestra una X.                                |
-| De `Checked` a `Indeterminate`.   | Se aplica el valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) `Indeterminate`, por lo tanto, el valor de [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` es 1. Se quita el valor **Setter** de **VisualState** `Checked`, por lo tanto, el valor de [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078) de `CheckGlyph` es 0. | Se muestra un círculo.                            |
-| De `Indeterminate` a `Unchecked`. | Se quita el valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) `Indeterminate`, por lo tanto, el valor de [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` es 0.                                                                                                                                           | No se muestra nada.                             |
+| De `Unchecked` a `Checked`.       | El [ **establecedor** ](https://msdn.microsoft.com/library/windows/apps/br208817) valor de la `Checked` [ **VisualState** ](https://msdn.microsoft.com/library/windows/apps/br209007) se aplica, por lo que la [ **opacidad**  ](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `CheckGlyph` es 1.                                                                                                                                                         | Se muestra una X.                                |
+| De `Checked` a `Indeterminate`.   | El [ **establecedor** ](https://msdn.microsoft.com/library/windows/apps/br208817) valor de la `Indeterminate` [ **VisualState** ](https://msdn.microsoft.com/library/windows/apps/br209007) se aplica, por lo que la [ **opacidad**  ](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` es 1. El **establecedor** valor de la `Checked` **VisualState** se quita, por lo que la [ **opacidad** ](https://msdn.microsoft.com/library/windows/apps/br228078) de `CheckGlyph` es 0. | Se muestra un círculo.                            |
+| De `Indeterminate` a `Unchecked`. | El [ **establecedor** ](https://msdn.microsoft.com/library/windows/apps/br208817) valor de la `Indeterminate` [ **VisualState** ](https://msdn.microsoft.com/library/windows/apps/br209007) se quita, por lo que la [ **opacidad**  ](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` es 0.                                                                                                                                           | No se muestra nada.                             |
 
  
 Para obtener más información sobre cómo crear estados visuales para los controles (y, más en concreto, sobre cómo usar la clase [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) y los tipos de animación), consulta [Animaciones de guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808).
@@ -190,7 +190,7 @@ Cuando creas una plantilla para un control, aparte de estar cambiando el comport
 
 Para separar la lógica de control básica y, asimismo, cumplir algunos de los requisitos de arquitectura de la automatización de la interfaz de usuario, las clases de los controles incorporan la compatibilidad con la accesibilidad en una clase aparte: un sistema de automatización del mismo nivel. A veces, los sistemas de automatización del mismo nivel interactúan con las plantillas de control, ya que esperan que en ellas haya determinados elementos con nombre que permitan habilitar tecnologías de ayuda para invocar acciones de botones.
 
-Cuando crees un control personalizado completamente nuevo, habrá veces en las que también quieras crear un sistema de automatización del mismo nivel que lo complemente. Para más información, consulta [Personalizar sistemas de automatización del mismo nivel](../accessibility/custom-automation-peers.md).
+Cuando crees un control personalizado completamente nuevo, habrá veces en las que también quieras crear un sistema de automatización del mismo nivel que lo complemente. Para obtener más información, consulta [Personalizar sistemas de automatización del mismo nivel](../accessibility/custom-automation-peers.md).
 
 ## <a name="learn-more-about-a-controls-default-template"></a>Obtener más información sobre la plantilla predeterminada de un control
 
@@ -202,5 +202,5 @@ Para algunos de los atributos de los ejemplos de XAML, quizás hayas observado r
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-* [Muestra de galería de controles de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
-* [Muestra de control de edición de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
+* [Ejemplo de la Galería de controles de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Ejemplo de control de edición de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)

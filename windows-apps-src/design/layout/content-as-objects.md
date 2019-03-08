@@ -4,11 +4,11 @@ title: Contenido como objetos
 template: detail.hbs
 ms.localizationpriority: medium
 ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593120"
 ---
 # <a name="content-as-objects"></a>Contenido como objetos
 
@@ -16,7 +16,7 @@ ms.locfileid: "8981449"
 
 Puedes manipular la profundidad u orden z de elementos para crear una jerarquía visual que te ayude a que tu aplicación sea más fácil de usar.  
 
-> Nota: este artículo es un primer borrador de una nueva característica de Windows10RS2. Los nombres de las características, la terminología y la funcionalidad no son definitivos. 
+> Nota: En este artículo es un primer borrador de una nueva característica de Windows 10 RS2. Los nombres de las características, la terminología y la funcionalidad no son definitivos. 
 
 ## <a name="why-visual-hierarchy-is-important"></a>Por qué es importante la jerarquía visual
 
@@ -35,7 +35,7 @@ Una jerarquía visual clara indica al usuario qué elementos son los más import
   <p>Así que, ¿cómo puedes crear una jerarquía visual clara? Con las versiones anteriores de Windows 10, podías usar espacio en blanco, posición y tipografía para definir una jerarquía visual. </p>
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/flat-layout.png">Una distribución plana</a>
+    <a href="images/content-as-objects/flat-layout.png">Un diseño sin formato</a>
     
   </div>
 </div>
@@ -43,7 +43,7 @@ Una jerarquía visual clara indica al usuario qué elementos son los más import
 
 Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad. 
 
-<a href="images/content-as-objects/depth-in-layout2.png">Profundidad en la distribución</a>
+<a href="images/content-as-objects/depth-in-layout2.png">Profundidad de diseño</a>
 
 
 ## <a name="use-depth-to-establish-a-hierarchy"></a>Usar profundidad para establecer una jerarquía 
@@ -59,14 +59,14 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
     </p>
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">Profundidad en la distribución</a> 
+    <a href="images/content-as-objects/elements-forward-backward.png">Profundidad de diseño</a> 
     
   </div>
 </div>
 </div>
 
 ## <a name="how-does-it-work"></a>¿Cómo funciona?
-> TAREA: breve descripción de cómo puedes controlar el orden z de elementos. ¿Para ti codifica explícitamente el orden z o hay un sistema de clasificación semántica? ¿Cómo mover elementos de un nivel a otro? ¿Qué hace el sistema automáticamente y de qué deben preocuparse los diseñadores/desarrolladores? 
+> TODO: Breve descripción de cómo se puede controlar el orden z de los elementos. ¿Para ti codifica explícitamente el orden z o hay un sistema de clasificación semántica? ¿Cómo mover elementos de un nivel a otro? ¿Qué hace el sistema automáticamente y de qué deben preocuparse los diseñadores/desarrolladores? 
 
 ## <a name="the-four-layers-of-a-typical-app-layers"></a>Los cuatro niveles de una aplicación típica
 
@@ -76,12 +76,12 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Fondo posterior</b> Este nivel se encuentra detrás de la aplicación.  Cuando los elementos se muevan a este nivel, te recomendamos que los hagas no interactivos. Los elementos en este nivel tienen el efecto parallax más lento y se recortan en la ventana de la aplicación. TAREA: ¿escala este nivel? 
+<b>Más allá de fondo</b> esta capa se encuentra detrás de la aplicación.  Cuando los elementos se muevan a este nivel, te recomendamos que los hagas no interactivos. Los elementos en este nivel tienen el efecto parallax más lento y se recortan en la ventana de la aplicación. TODO: ¿Esta capa escala? 
 
-<p>Los elementos de fondo del ejemplo incluyen la imagen detrás del contenido, TAREA: ejemplo, TAREA: ejemplo.</p>
+<p>Los elementos en segundo plano de ejemplo incluyen imagen detrás de contenido, la lista de tareas: Lista de tareas de ejemplo: Ejemplo.</p>
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">El nivel de fondo posterior de una aplicación</a>
+    <a href="images/content-as-objects/elements-forward-backward.png">Más allá de la capa de una aplicación en segundo plano</a>
     
   </div>
 </div>
@@ -92,12 +92,12 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Nivel pasivo</b> Este es el nivel de base de la aplicación, donde se encuentran los elementos de la interfaz de usuario de manera predeterminada.  Los elementos se mueven en tiempo real a este nivel (sin parallax), se recortan en la ventana de la aplicación y se procesan al 100% de la escala. 
+<b>Capa pasiva</b> trata de la capa de base de la aplicación, que se encuentran elementos de interfaz de usuario de forma predeterminada.  Los elementos se mueven en tiempo real a este nivel (sin parallax), se recortan en la ventana de la aplicación y se procesan al 100 % de la escala. 
 
-<p>Elementos de ejemplo: fondo de la aplicación, texto, interfaz de usuario secundaria, como la interfaz de usuario para navegar por la aplicación.</p>
+<p>Elementos de ejemplo: La aplicación en segundo plano, texto, la interfaz de usuario secundaria, como la interfaz de navegación de aplicación.</p>
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">El nivel pasivo de una aplicación</a>
+    <a href="images/content-as-objects/elements-forward-backward.png">La capa pasiva de una aplicación</a>
     
   </div>
 </div>
@@ -108,12 +108,12 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Llama a la acción</b> Este nivel es para los elementos interactivos que DES prioridad por encima de los elementos de nivel pasivo. Los elementos en este nivel tienen el efecto parallax medio y se recortan en la ventana de la aplicación. TAREA: ¿los elementos en este nivel escalan o tienen una sombra paralela?
+<b>Llamadas a la acción</b> esta capa es para los elementos interactivos que se priorizan por encima de los elementos de una capa pasiva. Los elementos en este nivel tienen el efecto parallax medio y se recortan en la ventana de la aplicación. TODO: ¿Son los elementos a esta escala de la capa o tiene una sombra paralela?
 
-<p>Elementos de ejemplo: listas, cuadrículas, comandos principales (TAREA: como...).</p> 
+<p>Elementos de ejemplo: listas, cuadrículas, los comandos principales (lista de tareas: Such as...).</p> 
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">El nivel de llamada a la acción de una aplicación</a>
+    <a href="images/content-as-objects/elements-forward-backward.png">La capa de la llamada a la acción de una aplicación</a>
     
   </div>
 </div>
@@ -123,12 +123,12 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Nivel principal</b> Este nivel es para el elemento de mayor prioridad en la pantalla en el momento.  Los elementos de este nivel pueden interrumpir los límites de la ventana de la aplicación, pueden escalar y pueden obtener automáticamente una sombra paralela.
+<b>Capa de imagen prominente</b> esta capa es para el elemento de prioridad más alta en la pantalla en el momento.  Los elementos de este nivel pueden interrumpir los límites de la ventana de la aplicación, pueden escalar y pueden obtener automáticamente una sombra paralela.
 
 <p>Elementos de ejemplo: elementos fotográficos, el elemento seleccionado actualmente.</p>  
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">El nivel principal de una aplicación</a>
+    <a href="images/content-as-objects/elements-forward-backward.png">La capa de imagen prominente de una aplicación</a>
     
   </div>
 </div>
@@ -140,11 +140,11 @@ Con Windows 10 RS2, hemos agregado literalmente otra dimensión: la profundidad.
 Depth is meaningful; it establishes visual and interactive hierarchy for users to efficiently complete tasks. Depth orients users in our system. 
 -->
 
-## <a name="example-tbd"></a>Ejemplo: TBD
-> TAREA: mostrar cómo adaptar un patrón común de interfaz de usuario para usar el orden z. Debemos mostrar ilustraciones y código. 
+## <a name="example-tbd"></a>Por ejemplo: TBD
+> TODO: Muestra cómo adaptar un patrón común de interfaz de usuario para usar el orden z. Debemos mostrar ilustraciones y código. 
 
 ## <a name="download-the-code-samples"></a>Descargar las muestras de código
->TAREA: vínculo a ejemplos que muestran esta característica. 
+>TODO: Vínculo a ejemplos que muestran esta característica. 
 
 
 ## <a name="related-articles"></a>Artículos relacionados

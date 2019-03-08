@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use the powerful Visits Tracking feature for more practical location tracking.
+Description: Obtén información sobre cómo usar la eficaz característica Visits Tracking para un seguimiento de ubicación más práctico.
 title: Directrices para usar Visits tracking
 ms.assetid: 0c101684-48a9-4592-9ed5-6c20f3b830f2
 ms.date: 05/18/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, ubicación, geovisit, geovisits
 ms.localizationpriority: medium
 ms.openlocfilehash: db351660722cd13a4e8f14bebb651d60f33d1671
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927544"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640780"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>Directrices para usar Visits tracking
 

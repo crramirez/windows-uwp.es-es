@@ -3,25 +3,25 @@ title: ms-tonepicker scheme
 description: En este tema se describe el esquema de URI ms-tonepicker y cómo usarlo para mostrar un selector de tono para seleccionar un tono, guardar un tono y obtener el nombre descriptivo de un tono.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
 ms.openlocfilehash: 293c755ecaf81ce80fab148a8aca92a7e3a8fa48
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618590"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Elegir y guardar los tonos con el esquema de URI ms-tonepicker
 
-En este tema se describe cómo usar el esquema de URI **ms-tonepicker:**. Este esquema de URI puede usarse para:
+Este tema describe cómo usar el **tonepicker de ms:** Esquema de URI. Este esquema de URI puede usarse para:
 - Determinar si el selector de tono está disponible en el dispositivo.
 - Mostrar el selector de tono para obtener una lista de tonos disponibles, sonidos del sistema, tonos de SMS y sonidos de alarma; y obtener un token de tono que represente el sonido seleccionado por el usuario.
 - Mostrar el protector de tono, que toma un token de archivo de sonido como entrada y lo guarda en el dispositivo. A continuación, los tonos guardados están disponibles mediante el selector de tono. Los usuarios también pueden asignar al tono un nombre descriptivo.
 - Convertir un token de tono a su nombre descriptivo.
 
-## <a name="ms-tonepicker-uri-scheme-reference"></a>Referencia del esquema de URI ms-tonepicker:
+## <a name="ms-tonepicker-uri-scheme-reference"></a>ms-tonepicker: Referencia de esquema URI
 
 Este esquema de URI no pasa argumentos a través de la cadena de esquema de URI, sino que pasa argumentos a través de una clase [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). Todas las cadenas distinguen mayúsculas de minúsculas.
 
@@ -43,7 +43,7 @@ if (status != LaunchQuerySupportStatus.Available)
 
 Los argumentos que puedes pasar para mostrar el selector de tono son los siguientes:
 
-| Parámetro | Tipo | Obligatorio | Valores posibles | Descripción |
+| Parámetro | Tipo | Requerido | Posibles valores | Descripción |
 |-----------|------|----------|-------|-------------|
 | Acción | string | sí | "PickRingtone" | Abre el selector de tono. |
 | CurrentToneFilePath | string | no | Un token de tono existente. | Tono para mostrar como el tono actual en el selector de tono. Si no se establece este valor, el primer tono de la lista se selecciona de manera predeterminada.<br>No se trata, estrictamente hablando, de una ruta de archivo. Puedes obtener un valor adecuado para `CurrenttoneFilePath` del valor `ToneToken` que devuelve el selector de tono.  |
@@ -51,14 +51,14 @@ Los argumentos que puedes pasar para mostrar el selector de tono son los siguien
 
 Valores que se devuelven en [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
-| Valores devueltos | Tipo | Valores posibles | Descripción |
+| Valores devueltos | Tipo | Posibles valores | Descripción |
 |--------------|------|-------|-------------|
 | Resultado | Int32 | 0: correcto. <br>1: cancelado <br>7: parámetros no válidos. <br>8: ningún tono coincide con los criterios de filtro. <br>255: la acción especificada no está implementada. | Resultado de la operación del selector. |
 | ToneToken | string | Token del tono seleccionado. <br>La cadena está vacía si el usuario selecciona **default** en el selector. | Este token puede usarse en una carga de notificación del sistema, o puede asignarse como tono de un contacto o tono de SMS. El parámetro se devuelve en la clase ValueSet solamente si **Result** es 0. |
 | DisplayName | string | Nombre descriptivo del tono especificado. | Cadena que puede mostrarse al usuario para representar el tono seleccionado. El parámetro se devuelve en la clase ValueSet solamente si **Result** es 0. |
 
 
-**Ejemplo: Abrir el selector de tono para que el usuario pueda seleccionar un tono**
+**Ejemplo: Abrir el selector de tono para que el usuario puede seleccionar un tono**
 
 ``` cs
 LauncherOptions options = new LauncherOptions();
@@ -90,7 +90,7 @@ if (result.Status == LaunchUriStatus.Success)
 
 Los argumentos que puedes pasar para mostrar el protector de tono son los siguientes:
 
-| Parámetro | Tipo | Obligatorio | Valores posibles | Descripción |
+| Parámetro | Tipo | Requerido | Posibles valores | Descripción |
 |-----------|------|----------|-------|-------------|
 | Acción | string | sí | "SaveRingtone" | Abre el selector para guardar un tono. |
 | ToneFileSharingToken | string | sí | Token de uso compartido de archivos [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) para el archivo de tonos que se va a guardar. | Guarda un archivo de sonido específico como un tono. Los tipos de contenido admitidos para el archivo son audio MPEG y audio x-ms-wma. |
@@ -98,9 +98,9 @@ Los argumentos que puedes pasar para mostrar el protector de tono son los siguie
 
 Valores que se devuelven en [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
-| Valores devueltos | Tipo | Valores posibles | Descripción |
+| Valores devueltos | Tipo | Posibles valores | Descripción |
 |--------------|------|-------|-------------|
-| Resultado | Int32 | 0: correcto.<br>1: cancelado por el usuario.<br>2: archivo no válido.<br>3: tipo de contenido de archivo no válido.<br>4: el archivo supera el tamaño de tono máximo (1MB en Windows 10).<br>5: el archivo supera la duración máxima de 40 segundos.<br>6: el archivo está protegido por administración de derechos digitales.<br>7: parámetros no válidos. | Resultado de la operación del selector. |
+| Resultado | Int32 | 0: correcto.<br>1: cancelado por el usuario.<br>2: archivo no válido.<br>3: tipo de contenido de archivo no válido.<br>4: el archivo supera el tamaño de tono máximo (1 MB en Windows 10).<br>5: el archivo supera la duración máxima de 40 segundos.<br>6: el archivo está protegido por administración de derechos digitales.<br>7: parámetros no válidos. | Resultado de la operación del selector. |
 
 **Ejemplo: Guardar un archivo de música local como un tono**
 
@@ -150,23 +150,23 @@ if (result.Status == LaunchUriStatus.Success)
  }
 ```
 
-## <a name="task-convert-a-tone-token-to-its-friendly-name"></a>Tarea: Convertir un token de tono a su nombre descriptivo
+## <a name="task-convert-a-tone-token-to-its-friendly-name"></a>Tarea: Convertir un token de tono en su nombre descriptivo
 
 Los argumentos que puedes pasar para obtener el nombre descriptivo de un tono son los siguientes:
 
-| Parámetro | Tipo | Obligatorio | Valores posibles | Descripción |
+| Parámetro | Tipo | Requerido | Posibles valores | Descripción |
 |-----------|------|----------|-------|-------------|
 | Acción | string | sí | "GetToneName" | Indica que quieres obtener el nombre descriptivo de un tono. |
 | ToneToken | string | sí | Token de tono | Token de tono desde el que se obtiene un nombre para mostrar. |
 
 Valores que se devuelven en [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
-| Valor devuelto | Tipo | Valores posibles | Descripción |
+| Valor devuelto | Tipo | Posibles valores | Descripción |
 |--------------|------|-------|-------------|
 | Resultado | Int32 | 0: la operación del selector se realizó correctamente.<br>7: parámetro incorrecto (por ejemplo, no se proporcionó ningún valor ToneToken).<br>9: error al leer el nombre del token especificado.<br>10: no se encuentra el token de tono especificado. | Resultado de la operación del selector.
 | DisplayName | string | Nombre descriptivo del tono. | Devuelve el nombre para mostrar del tono seleccionado. Este parámetro solo se devuelve en la clase ValueSet si **Result** es 0. |
 
-**Ejemplo: Recuperar un token de tono de Contact.RingToneToken y mostrar su nombre descriptivo en la tarjeta de contacto.**
+**Ejemplo: Recuperar un token de tono de Contact.RingToneToken y su nombre descriptivo para mostrar en la tarjeta de contacto.**
 
 ```cs
 using (var connection = new AppServiceConnection())

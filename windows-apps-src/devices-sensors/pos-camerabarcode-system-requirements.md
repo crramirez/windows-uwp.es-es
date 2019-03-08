@@ -1,16 +1,16 @@
 ---
 title: Requisitos del sistema para el escáner de código de barras basado en cámara
 description: Este artículo enumeran los requisitos para usar el escáner de código de barras basado en cámara desde una aplicación para UWP.
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: aea2a339c450f50ca3ae6f6250d056b4a1e70aa1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: da9934f29b1c9f73a76421c4dfa793c9c7f5fae9
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614040"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a>Requisitos del sistema para el escáner de código de barras basado en cámara
 A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a través del objetivo de una cámara estándar desde una aplicación Universal de Windows.
@@ -18,14 +18,14 @@ A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a 
 ## <a name="supported-windows-editions"></a>Versiones compatibles de Windows
 - Windows 10 Professional en modo S
 - Windows 10 Professional
-- Windows 10 Enterprise
+- Windows 10 Enterprise
 - Windows 10 IOT Core
 
 
 ## <a name="webcam-requirements"></a>Requisitos de la cámara web
-| Categoría      | Recomendación           | Comentarios |
+| Categoría      | Recomendación           | Observaciones |
 | ------------- | ------------------------ | -------- |
-| Enfoque         | Enfoque automático               | No se recomienda el enfoque fijo |
+| Focus         | Enfoque automático               | No se recomienda el enfoque fijo |
 | Resolución    | 1920 x 1440 o superior    | Hemos tenido la mejor experiencia con cámaras compatibles con una resolución de 1920 x 1440 o superior.  Algunas cámaras de resolución más baja pueden leer códigos de barras estándar si la impresión es lo suficientemente grande. Los códigos de barras con elementos más estrechos pueden requerir cámaras de mayor resolución. |
 |
 

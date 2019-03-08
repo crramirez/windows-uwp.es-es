@@ -1,11 +1,11 @@
 ---
-Description: Use the pull-to-refresh control to get new content into a list.
+Description: Utilice el control de incorporación de cambios para actualizar para obtener nuevos contenidos en una lista.
 title: Extraer para actualizar
 label: Pull-to-refresh
 template: detail.hbs
 ms.date: 03/07/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
 pm-contact: predavid
 design-contact: kimsea
@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932841"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659260"
 ---
 # <a name="pull-to-refresh"></a>Extraer para actualizar
 
@@ -62,13 +62,13 @@ Cuando el usuario extrae la lista en la dirección especificada por la propiedad
 
     ![extraer para actualizar antes del umbral](images/ptr-prethreshold.png)
 
-    Visualmente, el icono aparece como deshabilitado (60% de opacidad). Además, el icono hace una rotación completa con la acción de desplazamiento.
+    Visualmente, el icono aparece como deshabilitado (60 % de opacidad). Además, el icono hace una rotación completa con la acción de desplazamiento.
 
 - Si el usuario extrae la lista más allá del umbral, el visualizador pasa de **Interacting** a **Pending**.
 
     ![extraer para actualizar en el umbral](images/ptr-atthreshold.png)
 
-    Visualmente, el icono cambia a un 100% de opacidad y su tamaño se amplía hasta un 150% para volver al 100% durante la transición.
+    Visualmente, el icono cambia a un 100 % de opacidad y su tamaño se amplía hasta un 150 % para volver al 100 % durante la transición.
 
 ### <a name="pending"></a>Pending
 
@@ -79,7 +79,7 @@ Cuando el usuario ha extraído la lista más allá del umbral, el visualizador s
 
 ![extraer para actualizar después del umbral](images/ptr-postthreshold.png)
 
-Visualmente, el icono tiene un 100% de tamaño y opacidad. En este estado, el icono sigue hacia abajo con la acción de desplazamiento, pero ya no gira.
+Visualmente, el icono tiene un 100 % de tamaño y opacidad. En este estado, el icono sigue hacia abajo con la acción de desplazamiento, pero ya no gira.
 
 ### <a name="refreshing"></a>Actualizando
 
@@ -101,7 +101,7 @@ Cuando el usuario extrae la dirección de la actualización desde una posición 
 
 De manera predeterminada, el usuario extrae una lista de arriba hacia abajo para iniciar una actualización. Si tienes una lista o cuadrícula con una orientación diferente, debes cambiar la dirección de extracción del contenedor de actualización para que coincida.
 
-La propiedad [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) tiene uno de estos valores [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection): **BottomToTop**, **TopToBottom**, **RightToLeft** o **LeftToRight**.
+El [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) propiedad toma uno de estos [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection) valores: **BottomToTop**, **TopToBottom**, **RightToLeft**, o **LeftToRight**.
 
 Cuando se cambia la dirección de extracción, la posición inicial de giro de progreso del visualizador rota de manera automática, para que la flecha empiece en la posición adecuada para la dirección de la extracción. Si es necesario, puedes cambiar la propiedad [RefreshVisualizer.Orientation](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.Orientation) para invalidar el comportamiento automático. En la mayoría de los casos, se recomienda dejar el valor predeterminado **Auto**.
 
@@ -116,7 +116,7 @@ Para agregar a una lista la función de extraer para actualizar, se necesitan so
 > [!NOTE]
 > Puedes crear instancias de un RefreshVisualizer por sí solo. Sin embargo, te recomendamos que ajustes el contenido en un RefreshContainer y uses el RefreshVisualizer que proporciona la propiedad RefreshContainer.Visualizer, incluso en escenarios no táctiles. En este artículo, se supone que el visualizador siempre se obtiene desde el contenedor de la actualización.
 
-> Además, se puede usar a miembros de RequestRefresh y RefreshRequested del contenedor de la actualización para mayor comodidad. `refreshContainer.RequestRefresh()` es equivalente a `refreshContainer.Visualizer.RequestRefresh()` y generará los eventos RefreshContainer.RefreshRequested y RefreshVisualizer.RefreshRequested.
+> Además, se puede usar a miembros de RequestRefresh y RefreshRequested del contenedor de la actualización para mayor comodidad. `refreshContainer.RequestRefresh()` es equivalente a `refreshContainer.Visualizer.RequestRefresh()`, y cualquiera, producirá el evento RefreshContainer.RefreshRequested y los eventos RefreshVisualizer.RefreshRequested.
 
 ### <a name="request-a-refresh"></a>Solicitar una actualización
 
@@ -335,5 +335,5 @@ public class ListItemData
 
 - [Interacciones táctiles](../input/touch-interactions.md)
 - [Vista de lista y vista de cuadrícula](listview-and-gridview.md)
-- [Plantillas y contenedores de elementos](item-containers-templates.md)
+- [Las plantillas y los contenedores de elementos](item-containers-templates.md)
 - [Animaciones de expresión](../../composition/composition-animation.md)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, javascript, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e2e1c019497fc22e8d922ba5f0a02a30034b65
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050668"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617760"
 ---
 # <a name="handle-ad-errors"></a>Controlar errores de anuncios
 
@@ -53,7 +53,7 @@ Consulta [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthr
 
 Para controlar los errores de **ErrorOccur** en una aplicación de JavaScript:
 
-1.  Asigna el evento **onErrorOccurred** a un controlador de eventos.
+1.  Asignar el evento **onErrorOccurred** a un controlador de eventos.
 
 2.  Codifica el controlador de eventos.
 

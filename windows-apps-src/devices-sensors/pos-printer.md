@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 11937934230b2c977e8e328fae0e693e8c1ab95a
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116427"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615460"
 ---
 # <a name="posprinter"></a>POSPrinter
 
@@ -19,7 +19,7 @@ Esta sección proporciona instrucciones para crear aplicaciones de la Plataforma
 ## <a name="in-this-section"></a>En esta sección
 |Tema |Descripción |
 |------|------------|
-| [ESC/POS de Epson con formato](epson-esc-pos-with-formatting.md) | Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto (como, por ejemplo, aplicar negrita o caracteres de tamaño doble) de la impresora de punto de servicio. |
+| [Epson ESC/POS con formato](epson-esc-pos-with-formatting.md) | Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto, como aplicar negrita o caracteres de tamaño doble, para tu impresora de punto de servicio. |
 |
 
 <!-- Future topics to be added

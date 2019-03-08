@@ -4,20 +4,20 @@ title: Pruebas beta
 description: Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921375"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654110"
 ---
 # <a name="beta-testing"></a>Pruebas beta
 
 
 
-Las *pruebas beta* te ofrecen la posibilidad de mejorar tu aplicación en función de los comentarios de los individuos fuera del equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
+Las *pruebas beta* te ofrecen la posibilidad de mejorar tu aplicación en función de los comentarios de las personas fuera del equipo de desarrollo de aplicaciones, que prueban la aplicación no comercial en sus propios dispositivos.
 
 Esta sección describe las opciones de pruebas beta para las aplicaciones universales de Windows.
 
@@ -32,7 +32,7 @@ Con las pruebas beta, puedes:
 -   Probar la aplicación en una variedad de dispositivos.
 -   Identificar problemas de rendimiento y otros errores que de otra forma es posible que no hubiera encontrado.
 -   Obtener información de uso real que se puede usar para mejorar la experiencia del usuario.
--   Recibir comentarios sin que ello afecte clasificaciones públicas de Microsoft Store.
+-   Recibir comentarios sin que afecte a las clasificaciones públicas en la Microsoft Store.
 
 ## <a name="when-to-beta-test"></a>Cuando hacer las pruebas beta
 
@@ -40,7 +40,7 @@ Es mejor realizar las pruebas beta como la fase final de las pruebas antes de pu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En el [Centro de partners](https://partner.microsoft.com/dashboard), limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de los sistemas operativos destino de tu aplicación. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto del nombre de la aplicación público.)
+En [centro de partners](https://partner.microsoft.com/dashboard), puede limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de los sistemas operativos que su aplicación tiene como destino. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto al nombre público de la aplicación).
 
 Consulta [Pruebas beta y distribución dirigida](../publish/beta-testing-and-targeted-distribution.md) para aprender a enviar la aplicación a la Tienda para realizar pruebas beta.
 

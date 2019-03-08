@@ -4,14 +4,14 @@ title: Identificadores de clase de servicio AEP
 description: Los servicios de extremo de asociación (AEP) proporcionan un contrato de programación de los servicios que admite un dispositivo a través de un protocolo determinado. Algunos de estos servicios han establecido identificadores que deben usarse al hacer referencia a ellos.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08a186e0a8e7293b139f756b69966cd8d4b49c92
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598220"
 ---
 # <a name="aep-service-class-ids"></a>Identificadores de clase de servicio AEP
 
@@ -88,13 +88,13 @@ En general, todos los servicios UPnP tienen aplicado su nombre con hash en un GU
 
 | Nombre del servicio                       | GUID                                      |
 |------------------------------------|-------------------------------------------|
-| Administrador de conexiones                 | **ba36014c-b51f-51cc-bf71-1ad779ced3c6**  |
+| Connection Manager                 | **ba36014c-b51f-51cc-bf71-1ad779ced3c6**  |
 | Transporte AV                       | **deeacb78-707a-52df-b1c6-6f945e7e25bf**  |
 | Control de representaciones                  | **cc7fe721-a3c7-5a14-8c49-4419dc895513**  |
 | Reenvío de capa 3                 | **97d477fa-f403-577b-a714-b29a9007797f**  |
 | Configuración de la interfaz común WAN | **e4c1c624-c3c4-5104-b72e-ac425d9d157c**  |
-| Conexión WAP IP                  | **e4ac1c23-b5ac-5c27-8814-6bd837d8832c**  |
-| Configuración WFA WLAN             | **23d5f7db-747f-5099-8f21-3ddfd0c3c688**  |
+| conexión IP WAP                  | **e4ac1c23-b5ac-5c27-8814-6bd837d8832c**  |
+| Configuración WLAN WFA             | **23d5f7db-747f-5099-8f21-3ddfd0c3c688**  |
 | Impresora mejorada                   | **fb9074da-3d9f-5384-922e-9978ae51ef0c**  |
 | Impresora básica                      | **5d2a7252-d45c-5158-87a4-05212da327e1**  |
 | Registrador de receptor de multimedia           | **0b4a2add-d725-5198-b2ba-852b8bf8d183**  |
@@ -118,7 +118,7 @@ En general, todos los servicios WSD tienen aplicado su nombre con hash en un GUI
 
 ## <a name="aqs-sample"></a>Ejemplo de AQS
 
-Esta AQS filtrará todos los objetos **AssociationEndpointService** UPnP compatibles con DIAL. En este caso, [ **DeviceInformationKind** ](https://msdn.microsoft.com/library/windows/apps/Dn948991) se establece en **AsssociationEndpointService**.
+Esta AQS filtrará todos los objetos **AssociationEndpointService** UPnP compatibles con DIAL. En este caso, [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) se establece en **AsssociationEndpointService**.
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND

@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, error, error, stack trace, seguimiento de la pila
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cc8aaef2b26af88234efe62bf7cf1cb998e19bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937786"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659900"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Obtener el seguimiento de la pila de un error en la aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para obtener el seguimiento de la pila de un error en una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días. Seguimientos de la pila también están disponibles en el [informe de estado](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicaciones de escritorio en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener el seguimiento de la pila de un error en una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días. Los seguimientos de pila también están disponibles en el [informe de mantenimiento](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicaciones de escritorio en el centro de partners.
 
 Para poder usar este método, debes emplear antes el método para [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar el hash del identificador del archivo CAB que está asociado con el error para el que quieres recuperar el seguimiento de la pila.
 
@@ -24,7 +24,7 @@ Para poder usar este método, debes emplear antes el método para [obtener los d
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 * Obtén el hash del identificador del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este valor, usa el método [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método.
 
 ## <a name="request"></a>Solicitud
@@ -32,7 +32,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de solicitud                                                          |
+| Método | URI de la solicitud                                                          |
 |--------|----------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/stacktrace``` |
 
@@ -41,15 +41,15 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
  
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Necesario  |
+| Parámetro        | Tipo   |  Descripción      |  Requerido  |
 |---------------|--------|---------------|------|
-| applicationId | cadena | El identificador de producto de la aplicación de escritorio de la cual quieres obtener un seguimiento de la pila. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [informe de análisis de la aplicación de escritorio en el centro de partners](https://msdn.microsoft.com/library/windows/desktop/mt826504) (por ejemplo, el **informe de estado**) y recuperar el identificador de producto de la dirección URL. |  Sí  |
-| cabIdHash | cadena | El hash del identificador exclusivo del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este valor, usa el método [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar los detalles de un error específico de tu aplicación de escritorio y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método. |  Sí  |
+| applicationId | string | El identificador de producto de la aplicación de escritorio de la cual quieres obtener un seguimiento de la pila. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [análisis de informes para su aplicación de escritorio en el centro de partners](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. |  Sí  |
+| cabIdHash | string | El hash del identificador exclusivo del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este valor, usa el método [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar los detalles de un error específico de tu aplicación de escritorio y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método. |  Sí  |
 
  
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -68,9 +68,9 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo    | Descripción                  |
 |------------|---------|--------------------------------|
-| Valor      | matriz   | Una matriz de objetos, todos los cuales contienen un marco de los datos de seguimiento de la pila. Para más información sobre los datos de cada objeto, consulta la sección sobre los [valores del rastreo de la pila](#stack-trace-values) que encontrarás a continuación. |
-| @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de errores de la solicitud. |
-| TotalCount | entero | El número total de filas en el resultado de datos de la consulta.          |
+| Valor      | array   | Una matriz de objetos, todos los cuales contienen un marco de los datos de seguimiento de la pila. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores del rastreo de la pila](#stack-trace-values) que encontrarás a continuación. |
+| @nextLink  | string  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de errores de la solicitud. |
+| TotalCount | número entero | El número total de filas del resultado de datos de la consulta.          |
 
 
 ### <a name="stack-trace-values"></a>Valores del seguimiento de la pila
@@ -79,10 +79,10 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor           | Tipo    | Descripción      |
 |-----------------|---------|----------------|
-| level            | cadena  |  El número de marco que este elemento representa en la pila de llamadas.  |
-| image   | cadena  |   El nombre del archivo ejecutable o la biblioteca de imágenes que contiene la función que se llama en este marco de la pila.           |
-| function | cadena  |  El nombre de la función que se llama en este marco de la pila. Está disponible únicamente si la aplicación incluye símbolos para el archivo ejecutable o la biblioteca.              |
-| offset     | cadena  |  El desplazamiento de bytes de la instrucción actual en relación con el inicio de la función.      |
+| level            | string  |  El número de marco que este elemento representa en la pila de llamadas.  |
+| image   | string  |   El nombre del archivo ejecutable o la biblioteca de imágenes que contiene la función que se llama en este marco de la pila.           |
+| function | string  |  El nombre de la función que se llama en este marco de la pila. Está disponible únicamente si la aplicación incluye símbolos para el archivo ejecutable o la biblioteca.              |
+| offset     | string  |  El desplazamiento de bytes de la instrucción actual en relación con el inicio de la función.      |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -119,8 +119,8 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe Estado](../publish/health-report.md)
-* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)
+* [Informe de mantenimiento](../publish/health-report.md)
+* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obtener datos para su aplicación de escritorio de los informes de errores](get-desktop-application-error-reporting-data.md)
 * [Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)
-* [Descargar el archivo .cab para un error en tu aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)
+* [Descargue el archivo CAB para un error en la aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)

@@ -1,19 +1,19 @@
 ---
-Description: User interactions in the Universal Windows Platform (UWP) are a combination of input and output sources (such as mouse, keyboard, pen, touch, touchpad, speech, Cortana, controller, gesture, gaze, and so on), along with various modes or modifiers that enable extended experiences (including mouse wheel and buttons, pen eraser and barrel buttons, touch keyboard, and background app services).
+Description: Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, Cortana, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano).
 title: Información básica sobre interacción
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051098"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596570"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -34,7 +34,7 @@ Para la **Actualización de abril de 2018 de Windows 10**, hemos introducido sop
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
-- Tableta
+- Tablet
 - PC y portátiles
 
 ### <a name="typical-usage"></a>Uso típico
@@ -43,15 +43,15 @@ Realiza un seguimiento de la mirada, la atención y la presencia del usuario en 
 
 ### <a name="more-info"></a>Más información
 
-[Interacciones de mirada y seguimiento de ojos](gaze-interactions.md)
+[Observación de las interacciones y seguimiento de los ojos](gaze-interactions.md)
 
-## <a name="surface-dial"></a>SurfaceDial
+## <a name="surface-dial"></a>Surface Dial
 
 Para la **Actualización de aniversario de Windows 10**, presentamos la categoría de rueda de Windows de dispositivo de entrada. Surface Dial es el primer dispositivo de esta clase.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
-- Tableta
+- Tablet
 - PC y portátiles
 
 ### <a name="typical-usage"></a>Uso típico
@@ -60,16 +60,16 @@ Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dia
 
 ### <a name="more-info"></a>Más información
 
-[Directrices de diseño de Surface Dial](windows-wheel-interactions.md)
+[Exponer instrucciones de diseño de acceso telefónico](windows-wheel-interactions.md)
 
 ## <a name="cortana"></a>Cortana
 
-En Windows 10, extensibilidad de **Cortana** te permite controlar los comandos de voz del usuario e iniciar la aplicación para llevar a cabo una única acción.
+En Windows 10, **Cortana** extensibilidad le permite controlar los comandos de voz de un usuario e iniciar la aplicación para llevar a cabo una sola acción.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT
@@ -82,7 +82,7 @@ En Windows 10, extensibilidad de **Cortana** te permite controlar los comandos d
 
 Un comando de voz es una expresión única, definida en un archivo de definición de comando de voz (VCD), dirigida a una aplicación instalada a través de **Cortana**. Se puede iniciar la aplicación en primer o en segundo plano, según el nivel y la complejidad de la interacción. Por ejemplo, los comandos de voz que requieren más contexto o la entrada del usuario se administran mejor en primer plano, mientras que los comandos básicos se pueden controlar en segundo plano.
 
-Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** se convierta en un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario mucho tiempo y esfuerzo. Para obtener más información, consulta las [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
+Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** se convierta en un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario un tiempo y esfuerzo considerables. Para obtener más información, consulta las [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
 
 ### <a name="more-info"></a>Más información
 
@@ -100,14 +100,14 @@ Texto a voz (también conocido como TTS o síntesis de voz) se usa para informar
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT
 -   Xbox
 -   HoloLens
 
-![Voz](images/input-interactions/icons-speech01.png)
+![voz](images/input-interactions/icons-speech01.png)
 
 ### <a name="typical-usage"></a>Uso típico
 
@@ -135,14 +135,14 @@ La función de dictado normalmente se usa cuando una aplicación no necesita com
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de Voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+[Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
  
 
 ## <a name="pen"></a>Lápiz
 
 Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de píxeles (por ejemplo, un mouse) y es el dispositivo de entrada ideal para la entrada de lápiz digital.
 
-**Nota**hay dos tipos de dispositivos de lápiz: activo y pasivo.
+**Tenga en cuenta**  hay dos tipos de dispositivos de lápiz: activo y pasivo.
   -   Los lápices pasivos no contienen electrónica y emulan la entrada táctil de un dedo de forma eficaz. Requieren una pantalla de dispositivo básico que reconozca la entrada basada en la presión por contacto. Dado que los usuarios a menudo sitúan la mano a medida que escriben en la superficie de entrada, los datos de entrada pueden contaminarse debido a un rechazo de palma incorrecto.
   -   Los lápices activos contienen electrónica y pueden funcionar con pantallas de dispositivos complejos para proporcionar datos de entrada mucho más amplios (lo que incluye mantener el puntero sobre un elemento o los datos de proximidad) al sistema y a la aplicación. El rechazo de la palma es mucho más eficaz.
 
@@ -151,7 +151,7 @@ Cuando hacemos referencia a dispositivos de lápiz, nos referimos a lápices act
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT
@@ -160,11 +160,11 @@ Cuando hacemos referencia a dispositivos de lápiz, nos referimos a lápices act
 
 ### <a name="typical-usage"></a>Uso típico
 
-La plataforma de entrada de lápiz de Windows, junto con un lápiz, ofrece una forma natural de crear notas, dibujos y anotaciones manuscritas. La plataforma admite la captura de datos de entrada de lápiz desde la entrada del digitalizador, la generación de datos de entrada de lápiz, la representación de los datos como trazos de lápiz en el dispositivo de salida, la administración de los datos de entrada de lápiz y la ejecución del reconocimiento de escritura a mano. Además de capturar movimientos espaciales del lápiz a medida que el usuario escribe o dibuja, la aplicación también puede recopilar información como la presión, la forma, el color y la opacidad para ofrecer experiencias de usuario que se asemejan mucho a dibujar sobre papel con un lápiz o un pincel.
+La plataforma de entrada de lápiz de Windows, junto con un lápiz, ofrece una forma natural de crear notas, dibujos y anotaciones manuscritas. La plataforma admite la captura de datos de entrada de lápiz desde el digitalizador, la generación de datos de lápiz, la representación de los datos como trazos de lápiz en el dispositivo de salida, la administración de los datos de lápiz y la ejecución del reconocimiento de escritura a mano. Además de capturar movimientos espaciales del lápiz a medida que el usuario escribe o dibuja, la aplicación también puede recopilar información como la presión, la forma, el color y la opacidad para ofrecer experiencias de usuario que se asemejan mucho a dibujar sobre papel con un lápiz o un pincel.
 
 La entrada de lápiz y la entrada táctil difieren en la posibilidad de esta última de simular la manipulación directa de los elementos de la interfaz de usuario en la pantalla a través de gestos físicos realizados sobre esos objetos (como deslizar rápidamente, deslizar, arrastrar, girar, etc.).
 
-Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de lápiz. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
+Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de lápiz. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom a los objetos.
 
 ### <a name="more-info"></a>Más información
 
@@ -178,7 +178,7 @@ Con la función táctil, es posible usar gestos físicos mediante uno o más ded
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT
@@ -215,7 +215,7 @@ Un panel táctil combina la entrada multitáctil indirecta con la entrada precis
 -   PC y portátiles
 -   IoT
 
-![Panel táctil](images/input-interactions/icons-touchpad01.png)
+![panel táctil](images/input-interactions/icons-touchpad01.png)
 
 ### <a name="typical-usage"></a>Uso típico
 
@@ -223,7 +223,7 @@ Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que p
 
 Debido a esta convergencia de experiencias de interacción admitidas por paneles táctiles, también es recomendable que proporciones comandos de interfaz de usuario de estilo ratón o prestaciones en lugar de confiar únicamente en la compatibilidad con la entrada táctil. Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de panel táctil.
 
-Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
+Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom a los objetos.
 
 ### <a name="more-info"></a>Más información
 
@@ -234,19 +234,19 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
 
-Con [Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y teclado para que los teléfonos funcionen como un portátil.
+Con [Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia para dispositivos móviles compatibles de Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y teclado para que sus teléfonos funcione como un equipo portátil.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT
 -   Xbox
 -   HoloLens
 
-![Teclado](images/input-interactions/icons-keyboard01.png)
+![teclado](images/input-interactions/icons-keyboard01.png)
 
 ### <a name="typical-usage"></a>Uso típico
 
@@ -256,7 +256,7 @@ El teclado en pantalla es un teclado de software visual que puedes usar en lugar
 
 El teclado táctil es un teclado de software visual que se usa para escribir texto con entrada táctil. El teclado táctil no reemplaza al teclado en pantalla, ya que se usa únicamente para escribir texto (no simula el teclado de hardware) y solo aparece cuando se hace foco en un campo editable o en otro control de texto editable. El teclado táctil no admite comandos de aplicación ni del sistema.
 
-**Nota**el teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el teclado en pantalla está presente.
+**Tenga en cuenta**  The OSK tiene prioridad sobre el teclado táctil, que no se muestra si está presente el OSK.
 
 En general, un teclado:
 
@@ -277,12 +277,12 @@ Un mouse es ideal para aplicaciones de productividad e interfaz de usuario de al
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT
 
-![Mouse](images/input-interactions/icons-mouse01.png)
+![mouse](images/input-interactions/icons-mouse01.png)
 
 ### <a name="typical-usage"></a>Uso típico
 
@@ -290,7 +290,7 @@ Se puede modificar la entrada de mouse con la adición de diversas teclas del te
 
 De modo similar al lápiz, la entrada de mouse y la entrada táctil difieren en la posibilidad de esta última de emular la manipulación directa de los elementos de la interfaz de usuario en la pantalla a través de gestos físicos realizados sobre esos objetos (como deslizar rápidamente, deslizar, arrastrar, girar, etc.).
 
-Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
+Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom a los objetos.
 
 ### <a name="more-info"></a>Más información
 
@@ -349,7 +349,7 @@ Acoger al máximo de usuarios y dispositivos posibles y diseñar tus aplicacione
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
--   Tableta
+-   Tablet
 -   PC y portátiles
 -   Surface Hub
 -   IoT

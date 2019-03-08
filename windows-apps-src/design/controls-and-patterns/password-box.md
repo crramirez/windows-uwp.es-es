@@ -1,5 +1,5 @@
 ---
-Description: A password box is a text input box that conceals the characters typed into it for the purpose of privacy.
+Description: Un cuadro de contraseña es un cuadro de entrada de texto que oculta los caracteres escritos para asegurar la privacidad.
 title: Directrices para cuadros de contraseña
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
@@ -7,17 +7,17 @@ label: Password box
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 43639ac22c07501da89e29419a226a8a3ce8af48
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613070"
 ---
 # <a name="password-box"></a>Cuadro de contraseña
 
@@ -25,7 +25,7 @@ ms.locfileid: "9036917"
 
 Un cuadro de contraseña es un cuadro de entrada de texto que oculta los caracteres escritos para asegurar la privacidad. Un cuadro de contraseña parece un cuadro de texto, salvo en que representa caracteres de marcador de posición en vez del texto que se ha escrito. Puedes configurar el carácter de marcador de posición.
 
-> **API importantes**: [Clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Propiedad Password](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx), [Propiedad PasswordChar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx), [Propiedad PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [Evento PasswordChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
+> **API importantes**: [Clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [propiedad Password](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx), [propiedad PasswordChar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx), [PasswordRevealMode propiedad](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [PasswordChanged (evento)](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
 
 De manera predeterminada, el cuadro de contraseña proporciona un método para que el usuario pueda ver su contraseña si mantiene presionado el botón Mostrar. Puedes deshabilitar el botón Mostrar, o proporcionar un mecanismo alternativo para mostrar la contraseña como, por ejemplo, una casilla.
 
@@ -44,7 +44,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/PasswordBox">abrir la aplicación y ver PasswordBox en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -177,13 +177,13 @@ Esta clase PasswordBox tiene el aspecto siguiente.
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 
-Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba. PasswordBox solo es compatible con los valores de ámbito de entrada **Password** y **NumericPin**. Se pasará por alto cualquier otro valor.
+Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario. PasswordBox solo es compatible con los valores de ámbito de entrada **Password** y **NumericPin**. Se ignorará cualquier otro valor.
 
 Para obtener más información sobre cómo usar los ámbitos de entrada, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 ## <a name="recommendations"></a>Recomendaciones
 
--   Usa una etiqueta o un texto de marcador de posición si el propósito del cuadro de contraseña no está claro. Una etiqueta es visible, sin importar si el cuadro de entrada de texto tiene algún valor escrito o no. En cuanto al texto de marcador de posición, este se muestra dentro del cuadro de entrada y desaparece una vez que se ha escrito un valor.
+-   Usa una etiqueta o un texto de marcador de posición si el propósito del cuadro de contraseña no está claro. Una etiqueta es visible, tenga o no un valor el cuadro de entrada de texto. El texto de marcador de posición se muestra dentro del cuadro de entrada y desaparece una vez que se ha escrito un valor.
 -   Dota al cuadro de contraseña de un ancho apropiado para los valores que se pueden escribir. La longitud de las palabras varía según el lenguaje, así que tenlo en cuenta si quieres que tu aplicación sea internacional.
 -   No pongas otro control justo al lado de un cuadro de entrada de contraseñas. El cuadro de contraseña tiene un botón Mostrar para que el usuario pueda comprobar las contraseñas escritas. Si sitúas al lado otro control, podrías provocar que las contraseñas se muestren de forma accidental al intentar interactuar con él. Para evitar que esto suceda, deja un poco de espacio entre el cuadro de entrada de contraseña y el otro control, o pon el otro control en la siguiente línea.
 -   También puedes tener en cuenta la posibilidad de presentar dos cuadros de contraseña para la creación de cuentas: uno para la nueva contraseña y otro para confirmarla.
@@ -198,9 +198,9 @@ Para obtener más información sobre cómo usar los ámbitos de entrada, consult
 
 [Controles de texto](text-controls.md)
 
-- [Directrices sobre revisión ortográfica](text-controls.md)
+- [Directrices para comprobar la ortografía](text-controls.md)
 - [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Directrices para la entrada de texto](text-controls.md)
-- [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

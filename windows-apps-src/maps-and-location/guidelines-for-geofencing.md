@@ -1,5 +1,5 @@
 ---
-Description: Follow these best practices for geofencing in your app.
+Description: Sigue estos procedimientos recomendados para el uso de geovallas en tu aplicación.
 title: Directrices para usar geovallas en aplicaciones
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, geovalla, geofencing
 ms.localizationpriority: medium
 ms.openlocfilehash: e3fe7cb84d4ae265ed20a6a74b76e4f08dd4c1dd
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622480"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Directrices para usar geovallas en aplicaciones
 
@@ -20,7 +20,7 @@ ms.locfileid: "9047410"
 
 **API importantes**
 
--   [**Clase Geofence (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn263587)
+-   [**Clase Geovalla (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn263587)
 -   [**Clase Geolocator (XAML)**](https://msdn.microsoft.com/library/windows/apps/br225534)
 
 Sigue estos procedimientos recomendados para el uso de [**geovallas**](https://msdn.microsoft.com/library/windows/apps/dn263744) en una aplicación.
@@ -129,7 +129,7 @@ Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los u
 
 * [Configurar una geovalla](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Obtener la ubicación actual](https://msdn.microsoft.com/library/windows/apps/mt219698)
-* [Ejemplo de ubicación de UWP (geolocation)](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Ejemplo de ubicación de UWP (geolocalización)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

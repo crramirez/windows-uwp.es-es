@@ -4,14 +4,14 @@ title: Efectos de composición
 description: Las API de efectos permiten a los desarrolladores personalizar la representación de su interfaz de usuario.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653830"
 ---
 # <a name="composition-effects"></a>Efectos de composición
 
@@ -27,10 +27,10 @@ Los efectos también se pueden aplicar a objetos UIElements de XAML mediante un 
 
 ## <a name="effect-features"></a>Características de los efectos
 
-- [Biblioteca de efectos](./composition-effects.md#effect-library)
+- [Biblioteca de efecto](./composition-effects.md#effect-library)
 - [Encadenamiento de efectos](./composition-effects.md#chaining-effects)
 - [Compatibilidad con animaciones](./composition-effects.md#animation-support)
-- [Comparación entre las propiedades de efectos constantes y las animadas](./composition-effects.md#constant-vs-animated-effect-properties)
+- [Vs constantes. Propiedades de los efectos animados](./composition-effects.md#constant-vs-animated-effect-properties)
 - [Varias instancias de efecto con propiedades independientes](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>Biblioteca de efectos
@@ -44,8 +44,8 @@ La composición admite actualmente los siguientes efectos:
 | Efecto de fusión         | Crea un efecto de fusión que combina dos imágenes. La composición proporciona 21 de los 26 [modos de fusión](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) que se admiten en Win2D.        |
 | Fuente de color         | Genera una imagen con un color sólido.                                                                                                                                                                               |
 | Compuesta            | Combina dos imágenes. La composición proporciona los 13 [modos compuestos](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) que se admiten en Win2D.                                              |
-| Contraste             | Aumenta o disminuye el contraste de una imagen.                                                                                                                                                                           |
-| Exposición             | Aumenta o disminuye la exposición de una imagen.                                                                                                                                                                           |
+| Compare             | Aumenta o disminuye el contraste de una imagen.                                                                                                                                                                           |
+| Exposure             | Aumenta o disminuye la exposición de una imagen.                                                                                                                                                                           |
 | Escala de grises            | Convierte una imagen a gris monocromático.                                                                                                                                                                                   |
 | Transferencia gama       | Modifica los colores de una imagen mediante la aplicación de una función de transferencia gama por canal.                                                                                                                                           |
 | Giro de matiz           | Modifica el color de una imagen mediante la rotación de sus valores de matiz.                                                                                                                                                                   |
@@ -54,7 +54,7 @@ La composición admite actualmente los siguientes efectos:
 | Sepia                | Convierte una imagen a tonos sepia.                                                                                                                                                                                          |
 | Temperatura y tono | Ajusta la temperatura y/o el tono de una imagen.                                                                                                                                                                           |
 
-Consulta el espacio de nombres [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) de Win2D para obtener información más detallada. Los efectos que no se admiten en la composición se indican como \[NoComposition\].
+Consulta el espacio de nombres [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) de Win2D para obtener información más detallada. No se admite en la composición de los efectos se indican como \[NoComposition\].
 
 ### <a name="chaining-effects"></a>Encadenamiento de efectos
 
@@ -134,11 +134,11 @@ Al especificar que un parámetro debe ser dinámico durante la compilación del 
 Este tutorial de inicio rápido muestra cómo usar algunas de las funciones básicas de los efectos.
 
 - [Instalación de Visual Studio](./composition-effects.md#installing-visual-studio)
-- [Creación de un nuevo proyecto](./composition-effects.md#creating-a-new-project)
-- [Instalación de Win2D](./composition-effects.md#installing-win2d)
-- [Configuración de los conceptos básicos de la composición](./composition-effects.md#setting-your-composition-basics)
-- [Creación de un pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
-- [Creación, compilación y aplicación de efectos](./composition-effects.md#creating-compiling-and-applying-effects)
+- [Crear un nuevo proyecto](./composition-effects.md#creating-a-new-project)
+- [Instalar Win2D](./composition-effects.md#installing-win2d)
+- [Configuración de los conceptos básicos de composición](./composition-effects.md#setting-your-composition-basics)
+- [Crear un pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
+- [Crear, compilar y aplicar efectos](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Instalación de Visual Studio
 
@@ -237,12 +237,12 @@ LoadImage(surfaceBrush);
 
 ## <a name="more-information"></a>Más información
 
-- [Microsoft: tema sobre la composición en GitHub](https://github.com/Microsoft/composition)
+- [Microsoft – GitHub de composición](https://github.com/Microsoft/composition)
 - [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
 - [Equipo de composición de Windows en Twitter](https://twitter.com/wincomposition)
-- [Información general de la composición](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
-- [Conceptos básicos del árbol visual](composition-visual-tree.md)
+- [Información general de composición](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
+- [Conceptos básicos del árbol Visual](composition-visual-tree.md)
 - [Pinceles de composición](composition-brushes.md)
 - [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
 - [Información general sobre animaciones](composition-animation.md)
-- [Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw](composition-native-interop.md)
+- [Interoperación nativo de DirectX y Direct2D de composición con BeginDraw y EndDraw](composition-native-interop.md)

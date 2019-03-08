@@ -1,5 +1,5 @@
 ---
-Description: By using a wizard in Visual Studio, you can generate push notifications from a mobile service that was created with Azure Mobile Services.
+Description: Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure.
 title: Código generado por el Asistente para notificaciones de inserción
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 template: detail.hbs
@@ -8,16 +8,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac5ca785eab39612bb3a9c6ccd58779c6241059
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596870"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  
 
-Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure. El Asistente de Visual Studio genera código para ayudarte a empezar. En este tema se explica cómo el asistente modifica el proyecto, qué hace el código generado, cómo se usa este código y qué puedes hacer después para sacarle todo el partido a las notificaciones de inserción. Consulta la [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md).
+Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure. El Asistente de Visual Studio genera código para ayudarte a empezar. En este tema se explica cómo el asistente modifica el proyecto, qué hace el código generado, cómo se usa este código y qué puedes hacer después para sacarle todo el partido a las notificaciones de inserción. Consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md).
 
 ## <a name="how-the-wizard-modifies-your-project"></a>Cómo el asistente modifica tu proyecto
 
@@ -42,7 +42,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
 ## <a name="registration-for-push-notifications"></a>Registro para notificaciones de inserción
 
 
-En push.register.\*, el método UploadChannel registra el dispositivo para recibir notificaciones de inserción. La Tienda realiza un seguimiento de las copias de tu aplicación que hay instaladas y ofrece el canal de notificaciones de inserción. Consulta [**PushNotificationChannelManager**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager).
+En push.register. \*, el método UploadChannel registra el dispositivo para recibir notificaciones de inserción. La Tienda realiza un seguimiento de las copias de tu aplicación que hay instaladas y ofrece el canal de notificaciones de inserción. Consulta [**PushNotificationChannelManager**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager).
 
 El código de cliente es similar para tanto para el backend de JavaScript como para el backend de .NET. De manera predeterminada, al agregar notificaciones de inserción para un servicio backend de JavaScript, se inserta una llamada de ejemplo a la API personalizada notifyAllUsers en el método UploadChannel.
 
@@ -207,7 +207,7 @@ function sendNotifications(request) {
 
 La función sendNotifications envía una sola notificación en forma de notificación del sistema. También puedes usar otros tipos de notificaciones de inserción.
 
-**Sugerencia**para obtener información sobre cómo obtener ayuda durante la edición de scripts, consulta [Habilitar IntelliSense para JavaScript del lado servidor](https://go.microsoft.com/fwlink/p/?LinkId=309275).
+**Sugerencia**  para obtener información acerca de cómo obtener ayuda mientras se editan las secuencias de comandos, consulte [habilitar IntelliSense para JavaScript del lado servidor](https://go.microsoft.com/fwlink/p/?LinkId=309275).
 
  
 
@@ -233,7 +233,7 @@ Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) direc
 
 También puedes enviar notificaciones de inserción si ejecutas una tarea programada en tu servicio móvil. Consulta [Programación de trabajos periódicos en Servicios móviles](https://go.microsoft.com/fwlink/p/?linkid=301694).
 
-**Advertencia**una vez que hayas ejecutado el Asistente para notificaciones de inserción una vez, no ejecuta el Asistente una segunda vez para agregar el código de registro para otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, para lograrlo puedes mover el código generado por el asistente en push.register.\* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento OnLaunched, pero los detalles de esto dependerán de la arquitectura de la aplicación.
+**Advertencia**  una vez que haya ejecutado el Asistente para la notificación de inserción de una vez, no ejecutar el Asistente para una segunda vez para agregar código de registro para otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, puede hacerlo moviendo el código generado por el Asistente en push.register. \* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera de lo OnLaunched eventos, pero los detalles de este dependerá de la arquitectura de la aplicación.
 
  
 
@@ -242,9 +242,9 @@ También puedes enviar notificaciones de inserción si ejecutas una tarea progra
 
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Introducción a las notificaciones sin procesar](raw-notification-overview.md)
-* [Conexión con los Servicios móviles de Microsoft Azure (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
-* [Conexión con los Servicios móviles de Microsoft Azure (C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
-* [Inicio rápido: agregar notificaciones de inserción para un servicio móvil (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
+* [Conectarse a Windows Azure Mobile Services (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
+* [Conectarse a Windows Azure Mobile Services (C#/C+ c++ / VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
+* [Inicio rápido: Agregar notificaciones de inserción para un servicio móvil (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
  
 
  

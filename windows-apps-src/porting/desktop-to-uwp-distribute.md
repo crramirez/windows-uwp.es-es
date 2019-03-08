@@ -1,65 +1,65 @@
 ---
-Description: Distribute a packaged desktop application (Desktop Bridge)
+Description: Distribuir una aplicación de escritorio empaquetada (puente de escritorio)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o más dispositivos.
+title: Publicar la aplicación de escritorio empaquetada en la Microsoft Store o transferir localmente en uno o varios dispositivos.
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 8968864a0ff4bcf9e27f75a44a0a500736bb54b8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049193"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619700"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir una aplicación de escritorio empaquetada
 
-Publicar la aplicación de escritorio empaquetada a la Microsoft Store o la instalación de prueba en uno o más dispositivos.  
+Publicar la aplicación de escritorio empaquetada en la Microsoft Store o transferir localmente en uno o varios dispositivos.  
 
 > [!NOTE]
-> ¿Tienes un plan para la forma de transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
+> ¿Tiene un plan para cómo podría realizar la transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
 
-## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
+## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación mediante la publicación en la Microsoft Store
 
 [Microsoft Store](https://www.microsoft.com/store/apps) es la forma más cómoda para que los clientes obtengan la aplicación.
 
-Publicar la aplicación en la Microsoft Store para alcanzar el público más amplio. Asimismo, los clientes de empresas pueden comprar la aplicación para distribuirla de manera interna en sus organizaciones mediante la [Tienda Microsoft para empresas](https://www.microsoft.com/business-store).
+Publicar la aplicación en la Microsoft Store para llegar a la audiencia más amplia. Además, los clientes de la organización pueden adquirir la aplicación para distribuir internamente a sus organizaciones a través de la [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
-Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puedes leer más acerca de este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puede leer más sobre este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
-No tienes que firmar la aplicación antes de enviarla a la tienda.
+No se debe firmar la aplicación antes de enviarla a la Store.
 
 >[!IMPORTANT]
-> Si vas a publicar la aplicación en la Microsoft Store, asegúrate de que la aplicación funciona correctamente en dispositivos que ejecutan Windows 10 S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
+> Si va a publicar la aplicación en la Microsoft Store, asegúrese de que la aplicación funciona correctamente en los dispositivos que ejecutan Windows 10 S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
 
 <a id="side-load" />
 
-## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Distribuir la aplicación sin enviarla a Microsoft Store
+## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Distribuir la aplicación sin colocarlo en la Microsoft Store
 
-Si prefieres distribuir la aplicación sin tener que usar la tienda, puedes manualmente distribuir aplicaciones a uno o más dispositivos.
+Si en su lugar, podría distribuir la aplicación sin usar el Store, puede distribuir aplicaciones a uno o más dispositivos manualmente.
 
 Esta opción puede serte de ayuda si quieres controlar mejor la experiencia de distribución o si no quieres realizar el proceso de certificación de Microsoft Store.
 
-Para distribuir la aplicación a otros dispositivos sin enviarla en la tienda, tienes que obtener un certificado, firmar la aplicación con ese certificado y, a continuación, transferir localmente la aplicación en esos dispositivos.
+Para distribuir la aplicación a otros dispositivos sin colocarlo en el Store, tendrá que obtener un certificado, firmar la aplicación mediante el uso de ese certificado y, a continuación, transferir localmente su aplicación en esos dispositivos.
 
 Puedes [crear un certificado](../packaging/create-certificate-package-signing.md) u obtenerlo de un proveedor habitual como [Verisign](https://www.verisign.com/).
 
-Si vas a distribuir la aplicación en dispositivos que ejecutan Windows 10 S, la aplicación debe estar firmada por Microsoft Store, por lo que tendrás que pasar por el proceso de envío de la tienda antes de distribuir la aplicación en esos dispositivos.
+Si va a distribuir la aplicación en dispositivos que ejecutan Windows 10 S, la aplicación debe estar firmado por la Microsoft Store, por lo que tendrá que pasar por el proceso de envío Store para poder distribuir su aplicación en esos dispositivos.
 
 Si decides crear un certificado, tienes que instalarlo en el almacén de certificados **Raíz de confianza** o **Personas de confianza** de cada dispositivo que ejecute la aplicación. Si obtienes un certificado de un proveedor habitual, no tendrás que instalar nada en otros sistemas, además de la aplicación.  
 
 > [!IMPORTANT]
 > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
 
-Para firmar la aplicación con un certificado, vea [firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+Para firmar la aplicación mediante un certificado, consulte [firmar un paquete de aplicación mediante SignTool](../packaging/sign-app-package-using-signtool.md).
 
-Para transferir localmente la aplicación a otros dispositivos, consulta [transferir localmente aplicaciones LOB en Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
+Para transferir localmente su aplicación en otros dispositivos, consulte [LOB transferir localmente aplicaciones de Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
 **Vídeos**
 
-|Publicar la aplicación en Microsoft Store |Distribuir una aplicación de empresa  |
+|Publicar la aplicación en la Microsoft Store |Distribuir una aplicación empresarial  |
 |---|---|
 |<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Windows-Store-Publication-3cWyG5WhD_5506218965"      width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Distribution-for-Enterprise-Apps-XJ5Hd5WhD_1106218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 
@@ -71,20 +71,20 @@ Antes de distribuir la aplicación, es buena idea agregar algunas extensiones al
 
 * Incluir los iconos de inicio y los botones de la barra de tareas existentes en la aplicación empaquetada.
 * Asociar la aplicación empaquetada con un conjunto de tipos de archivo.
-* Hacer que la aplicación empaquetada abra determinados tipos de archivos de manera predeterminada.
+* Asegúrese de abrir determinados tipos de archivos de forma predeterminada la aplicación empaquetada.
 
 Para obtener la lista completa de las extensiones y las instrucciones que indican cómo usarlas, consulta [Transition users to your app (Realizar la transición de usuarios a la aplicación)](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
-Asimismo, puedes agregar código a la aplicación empaquetada que te permitirá realizar estas tareas:
+Además, considere la posibilidad de agregar código a la aplicación empaquetada que lleva a cabo estas tareas:
 
-* Migrar los datos de usuario asociados con la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
+* Migra los datos de usuario asociados con su aplicación de escritorio a las ubicaciones de carpeta correspondiente de la aplicación empaquetada.
 * Ofrecer a los usuarios la opción de desinstalar la versión de escritorio de la aplicación.
 
 Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de usuario.
 
 ### <a name="migrate-user-data"></a>Migrar datos de usuario
 
-Si vas a agregar código que migra los datos de usuario, es mejor para ese código se ejecute solamente cuando se inicie la aplicación. Antes de migrar los datos de los usuarios, puedes mostrar un cuadro de diálogo al usuario donde se explica lo que sucede, por qué se recomienda y lo que va a suceder con sus datos.
+Si va a agregar código que migra los datos de usuario, es mejor ejecutar ese código únicamente cuando la aplicación se inicia por primera vez. Antes de migrar los datos de los usuarios, puedes mostrar un cuadro de diálogo al usuario donde se explica lo que sucede, por qué se recomienda y lo que va a suceder con sus datos.
 
 Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación empaquetada basada en .NET.
 
@@ -123,7 +123,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>Desinstalar la versión de escritorio de la aplicación
 
-Es mejor no desinstalar la aplicación de escritorio de los usuarios sin antes solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si esto sucede, tendrás que decidir si quieres bloquear el uso de la aplicación de escritorio o permitir el uso en paralelo de ambas aplicaciones.
+Es mejor no desinstala la aplicación de escritorio de los usuarios sin solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si esto sucede, tendrá que decidir si desea bloquear el uso de la aplicación de escritorio o admite el uso en paralelo de ambas aplicaciones.
 
 Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación empaquetada basada en .NET.
 
@@ -173,12 +173,12 @@ private void RemoveDesktopApp()
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a tus preguntas**
+**Encuentre respuestas a sus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 Si tienes problemas al publicar la aplicación en la Store, esta [entrada de blog](https://blogs.msdn.microsoft.com/appconsult/2017/09/25/preparing-a-desktop-bridge-application-for-the-store-submission/) contiene algunos consejos útiles.
 
-**Enviar comentarios o realizar sugerencias acerca de las características**
+**Proporcionar comentarios o hacer sugerencias**
 
 Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

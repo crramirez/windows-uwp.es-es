@@ -1,5 +1,5 @@
 ---
-Description: An overview of common page patterns and UI elements for displaying content in your UWP app.
+Description: Información general de los patrones comunes de página y elementos de interfaz de usuario para mostrar el contenido en su aplicación para UWP.
 title: Conceptos básicos del diseño de contenido para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
@@ -7,14 +7,14 @@ template: detail.hbs
 op-migration-status: ready
 ms.date: 12/1/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594590"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
 
@@ -80,7 +80,7 @@ Para crear estos patrones de página, debes usar una combinación de elementos d
 <tr class="odd">
 <td align="left">Audio y vídeo<br/><br/>
     <img src="images/content-basics/media-transport.png" alt="media transport control" /></td>
-<td align="left"><a href="../controls-and-patterns/media-playback.md">Controles de transporte y reproducción de contenido multimedia</a></td>
+<td align="left"><a href="../controls-and-patterns/media-playback.md">Controles de transporte y reproducción de multimedia</a></td>
 <td align="left">Reproduce audio y vídeo.</td>
 </tr>
 <tr class="even">
@@ -105,7 +105,7 @@ Para crear estos patrones de página, debes usar una combinación de elementos d
 </td>
 </tr>
 <tr class="odd">
-<td align="left">Mapas<br/><br/>
+<td align="left">Maps<br/><br/>
     <img src="images/content-basics/mapcontrol.png" alt="map control" /></td>
 <td align="left"><a href="../../maps-and-location/display-maps.md">MapControl</a></td>
 <td align="left">Muestra un mapa simbólico o fotorrealista de la Tierra.</td>

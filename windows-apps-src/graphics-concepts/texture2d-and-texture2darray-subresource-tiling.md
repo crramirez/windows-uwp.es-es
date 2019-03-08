@@ -1,25 +1,25 @@
 ---
-title: Organización en mosaico de los subrecursos Texture2D y Texture2DArray
+title: Mosaico de subrecurso Texture2D y Texture2DArray
 description: Estas tablas muestran cómo los subrecursos Texture2D y Texture2DArray se organizan en mosaico.
 ms.assetid: 2DC14DFC-5299-44D9-895F-5A223D3FD530
 keywords:
-- Organización en mosaico de los subrecursos Texture2D y Texture2DArray
+- Mosaico de subrecurso Texture2D y Texture2DArray
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2175ce19824068a850ff70340b467f09e5c76540
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941588"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592750"
 ---
-# <a name="texture2d-and-texture2darray-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture2D y Texture2DArray
+# <a name="texture2d-and-texture2darray-subresource-tiling"></a>Mosaico de subrecurso Texture2D y Texture2DArray
 
 
 Estas tablas muestran cómo los subrecursos [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) y [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) se organizan en mosaico. Los valores de estas tablas no cuentan el empaquetado de MIP de cola.
 
-## <a name="span-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spansubresources-with-multisample-counts-of-1"></a><span id="Subresources-with-multisample-counts-of-1"></span><span id="subresources-with-multisample-counts-of-1"></span><span id="SUBRESOURCES-WITH-MULTISAMPLE-COUNTS-OF-1"></span>Subrecursos con recuentos de muestras múltiples de 1
+## <a name="span-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spansubresources-with-multisample-counts-of-1"></a><span id="Subresources-with-multisample-counts-of-1"></span><span id="subresources-with-multisample-counts-of-1"></span><span id="SUBRESOURCES-WITH-MULTISAMPLE-COUNTS-OF-1"></span>Recursos secundarios de Metadata con un número del 1 de muestreo múltiple
 
 
 En esta tabla se muestra cómo los subrecursos [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) y [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) con recuentos de muestras múltiples de 1 se organizan en mosaico.
@@ -30,15 +30,15 @@ En esta tabla se muestra cómo los subrecursos [**Texture2D**](https://msdn.micr
 | 16                          | 256 x 128                       |
 | 32                          | 128 x 128                       |
 | 64                          | 128 x 64                        |
-| 128                         | 64 x 64                         |
+| 128                         | 64x64                         |
 | BC1, 4                       | 512 x 256                       |
 | BC2, 3, 5, 6 y 7                 | 256 x 256                       |
 
  
 
-Los recuentos de bits de formato no admitidos con los recursos de streaming son los formatos de 96 bpp, los formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM y DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
+Recuentos de bits de formato no compatibles con los recursos de streaming son 96 formatos bpp, formatos de vídeo, DXGI\_formato\_R1\_UNORM, DXGI\_formato\_R8G8\_B8G8\_UNORM, y DXGI\_formato\_R8R8\_G8B8\_UNORM.
 
-## <a name="span-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspansubresources-with-various-multisample-counts"></a><span id="Subresources-with-various-multisample-counts"></span><span id="subresources-with-various-multisample-counts"></span><span id="SUBRESOURCES-WITH-VARIOUS-MULTISAMPLE-COUNTS"></span>Subrecursos con diversos recuentos de muestras múltiples
+## <a name="span-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspansubresources-with-various-multisample-counts"></a><span id="Subresources-with-various-multisample-counts"></span><span id="subresources-with-various-multisample-counts"></span><span id="SUBRESOURCES-WITH-VARIOUS-MULTISAMPLE-COUNTS"></span>Recursos secundarios de Metadata con distintos números de muestreo múltiple
 
 
 En esta tabla se muestra cómo los subrecursos [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) y [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) con diversos recuentos de muestras múltiples se organizan en mosaico.
@@ -64,7 +64,7 @@ Las restricciones sobre los formatos y recuentos de muestras admitidos se deben 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cómo se organiza en mosaico el área de un recurso de streaming](how-a-streaming-resource-s-area-is-tiled.md)
+[¿Cómo se coloca en mosaico de área de un recurso de transmisión por secuencias](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

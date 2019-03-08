@@ -3,15 +3,15 @@ description: Aprende a usar la tipografía en tu aplicación para ayudar a los u
 title: Tipografía en aplicaciones para UWP
 ms.date: 04/06/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944727"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610030"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -154,7 +154,7 @@ Cuando la cantidad de texto se extiende más allá del espacio disponible, se re
     :::column-end:::
 :::row-end:::
 
-**Nota**: Si los contenedores no están bien definidos (por ejemplo, no hay ningún color diferenciador de fondo), o cuando hay un vínculo para ver más texto, usa puntos suspensivos.
+**Nota**: Si los contenedores no están bien definidos (por ejemplo, no hay diferenciador color de fondo), o cuando hay un vínculo para ver más texto, a continuación, utilice el botón de puntos suspensivos.
 
 ## <a name="languages"></a>Idiomas 
 
@@ -187,7 +187,7 @@ Usa las [API de asignación de fuentes LanguageFont](https://docs.microsoft.com/
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: Leelawadee UI;">Leelawadee UI</td>
-<td align="left">Normal, Semilight, negrita</td>
+<td align="left">Normal, semidelgada, negrita</td>
 <td align="left">Fuente de interfaz de usuario para alfabetos del sureste asiático (buginés, lao, khmer, tailandés).</td>
 </tr>
 <tr class="odd">
@@ -272,7 +272,7 @@ Las fuentes sin serifa son una buena opción para encabezados y elementos de int
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">Normal, semidelgada, delgada, negrita, seminegrita</td>
-<td align="left">Una fuente de código abierto que es métricamente compatible con Segoe UI, diseñada para aplicaciones en otras plataformas que no incluyen Segoe UI. <a href="https://github.com/Microsoft/Selawik">Obtén Selawik en GitHub.</a></td>
+<td align="left">Una fuente de código abierto que es métricamente compatible con Segoe UI, diseñada para aplicaciones en otras plataformas que no incluyen Segoe UI. <a href="https://github.com/Microsoft/Selawik">Obtener Selawik en GitHub.</a></td>
 </tr>
 
 </tbody>
@@ -348,6 +348,6 @@ Las fuentes con serifa son útiles para presentar grandes cantidades de texto.
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Controles de texto](../controls-and-patterns/text-controls.md)
-* [Recursos de temas XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
+* [Recursos de tema XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
 * [Estilos XAML](../controls-and-patterns/xaml-styles.md)
 * [Tipografía de Microsoft](https://docs.microsoft.com/typography/)

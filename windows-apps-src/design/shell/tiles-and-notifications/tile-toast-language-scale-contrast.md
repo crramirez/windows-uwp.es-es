@@ -1,5 +1,5 @@
 ---
-Description: Your tiles and toasts can load strings and images tailored for display language, display scale factor, high contrast, and other runtime contexts.
+Description: Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el factor de escala de visualización, el contraste alto y otros contextos de tiempo de ejecución.
 title: Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
 template: detail.hbs
 ms.date: 10/12/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942911"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601480"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
 
-Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el [factor de escala de visualización](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), el contraste alto y otros contextos de tiempo de ejecución. Para información general sobre cómo usar calificadores en los nombres de los archivos de recursos, consulta [adaptar los recursos de idioma, escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) y [logotipos e iconos de la aplicación](/windows/uwp/design/style/app-icons-and-logos).
+Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el [factor de escala de visualización](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), el contraste alto y otros contextos de tiempo de ejecución. Para obtener información sobre cómo usar calificadores en los nombres de los archivos de recursos, consulte [adaptar los recursos de idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) y [iconos de aplicación y los logotipos](/windows/uwp/design/style/app-icons-and-logos).
 
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../../globalizing/globalizing-portal.md).
 
@@ -74,7 +74,7 @@ Estas son las cadenas de consulta que puedes usar.
 | --------- | ------------ | ------- |
 | Escala | ms-scale | ?ms-scale=400 |
 | Idioma | ms-lang | ?ms-lang=en-US |
-| Contraste | ms-contrast | ?ms-contrast=high |
+| Compare | ms-contrast | ?ms-contrast=high |
 
 Para ver una tabla de referencia de todos los valores de calificador posibles que puedes usar en las cadenas de consulta, atiende a [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
 
@@ -84,12 +84,12 @@ Para ver una tabla de referencia de todos los valores de calificador posibles qu
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Tamaños de pantalla y puntos de interrupción de diseño adaptativo](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
-* [Adaptar los recursos al idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Tamaños de pantalla y los puntos de interrupción para el diseño dinámico](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
+* [Adaptar los recursos de idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Directrices de activos de ventanas e iconos](app-assets.md).
 * [Globalización y localización](../../globalizing/globalizing-portal.md)
-* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](../../../app-resources/localize-strings-ui-manifest.md)
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
 * [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
-* [Esquema de ventana](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
+* [Esquema de icono](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
 * [Esquema de notificación del sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

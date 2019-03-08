@@ -1,17 +1,17 @@
 ---
-Description: Common questions about ad campaigns
+Description: Preguntas comunes sobre las campañas publicitarias
 title: Preguntas comunes sobre las campañas publicitarias
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6875f5b06bbd253b7fe80fbc53936fe0dcf1a6b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597070"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Preguntas comunes sobre las campañas publicitarias
 
@@ -21,7 +21,7 @@ Realmente depende de ti, pero recuerda: cuanto más gastes, más personas verán
 
 ### <a name="how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign"></a>¿Cómo se puede aumentar la cantidad máxima del presupuesto mensual permitida para la campaña publicitaria?
 
-Si tienes previsto gastar más de 10000$ en un mes en tus campañas publicitarias, ponte en contacto con [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Se te actualizará a una cuenta premium, que te permite gastar hasta 50000$ por campaña. Una cuenta premium también ofrece prestaciones adicionales, como la capacidad de definir las fechas de inicio finalización de la campaña y de especificar una dirección URL de destino de la campaña.
+Si tienes previsto gastar más de 10 000 $ en un mes en tus campañas publicitarias, ponte en contacto con [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Se te actualizará a una cuenta premium, que te permite gastar hasta 50 000 $ por campaña. Una cuenta premium también ofrece prestaciones adicionales, como la capacidad de definir las fechas de inicio finalización de la campaña y de especificar una dirección URL de destino de la campaña.
 
 ### <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>¿Puedo mostrar anuncios para una de mis aplicaciones en el resto de mis aplicaciones?
 
@@ -37,7 +37,7 @@ Si usas una de las plantillas de anuncio predeterminadas, puedes elegir el tama�
 
 ### <a name="where-will-my-ad-appear"></a>¿Dónde aparecerá el anuncio?
 
-El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en Microsoft Store. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
+El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Establecer estas propiedades cuando se publica la aplicación en la Microsoft Store. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 
@@ -59,5 +59,5 @@ Si no quieres esperar a que te facturen, puedes pagar la factura inmediatamente 
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>¿Cómo puedo eliminar una tarjeta de crédito o editar los detalles de una tarjeta de crédito?
 
-Ve a <http://commerce.microsoft.com>, inicia sesión con tus credenciales de cuenta de Microsoft y realizar los cambios necesarios.
+Vaya a <http://commerce.microsoft.com>, inicie sesión con sus credenciales de cuenta de Microsoft y realice los cambios necesarios.
 

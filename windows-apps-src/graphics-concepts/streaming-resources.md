@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c15c8a82219109a96d0a9ca192c4dfff5d86c9aa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940293"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598240"
 ---
 # <a name="streaming-resources"></a>Recursos de streaming
 
 
-Los *recursos de streaming* son grandes recursos lógicos que usan pequeñas cantidades de memoria física. En lugar de pasar un recurso grande completo, se transmiten pequeñas partes del recurso según son necesarias. Los recursos de streaming anteriormente se denominaban *recursos en mosaico*.
+Los *recursos de streaming* son grandes recursos lógicos que usan pequeñas cantidades de memoria física. En lugar de pasar un recurso grande completo, se transmiten pequeñas partes del recurso según son necesarias. Los recursos de streaming se conocían anteriormente como *recursos en mosaico*.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>En esta sección
 
@@ -37,19 +37,19 @@ Los *recursos de streaming* son grandes recursos lógicos que usan pequeñas can
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="the-need-for-streaming-resources.md">La necesidad de los recursos de streaming</a></p></td>
+<td align="left"><p><a href="the-need-for-streaming-resources.md">La necesidad de recursos de streaming</a></p></td>
 <td align="left"><p>Los recursos de streaming son necesarios para que no se malgaste memoria de la GPU al almacenar regiones de superficies a las que no se accederá, así como para indicar al hardware cómo filtrar entre mosaicos adyacentes.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="creating-streaming-resources.md">Creación de recursos de streaming</a></p></td>
-<td align="left"><p>Los recursos de streaming se crean especificando una marca al crear un recurso, que indica que el recurso es un recurso de streaming.</p></td>
+<td align="left"><p>Los recursos de streaming se crean al especificar una marca cuando creas un recurso, lo que indica que el recurso es un recurso de streaming.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pipeline-access-to-streaming-resources.md">Acceso de canalización a los recursos de streaming</a></p></td>
+<td align="left"><p><a href="pipeline-access-to-streaming-resources.md">Canalización de acceso a recursos de streaming</a></p></td>
 <td align="left"><p>Los recursos de streaming pueden usarse en las vistas de recurso de sombreador (SRV), vistas de destino de representación (RTV), vistas de galería de símbolos de profundidad (origen de datos) y vistas de acceso sin ordenar (UAV), así como en algunos puntos de enlace donde no se usan vistas, como los enlaces de búfer de vértices.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="streaming-resources-features-tiers.md">Niveles de características de los recursos de streaming</a></p></td>
+<td align="left"><p><a href="streaming-resources-features-tiers.md">Los niveles de características de los recursos de streaming</a></p></td>
 <td align="left"><p>Direct3D admite los recursos de streaming en tres niveles de funcionalidades.</p></td>
 </tr>
 </tbody>

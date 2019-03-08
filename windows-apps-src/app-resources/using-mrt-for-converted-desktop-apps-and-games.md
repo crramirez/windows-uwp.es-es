@@ -1,22 +1,22 @@
 ---
 title: Uso de MRT para juegos y aplicaciones de escritorio convertidos
-description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto de tiempo de ejecución. Este tema detallado describe las técnicas.
+description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto en tiempo de ejecución. Este tema detallado describe las técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
 ms.localizationpriority: medium
 ms.openlocfilehash: 287c22cbd50f1b69f505bbddd445740fe9422c31
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597020"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
 ## <a name="overview"></a>Introducción
 
-Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto de tiempo de ejecución. Este tema detallado describe las técnicas.
+Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto en tiempo de ejecución. Este tema detallado describe las técnicas.
 
 Existen muchas formas para localizar las aplicaciones Win32 tradicionales, pero Windows 8 introdujo un nuevo [sistema de administración de recursos](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) que funciona entre lenguajes de programación y tipos de aplicaciones, además de proporcionar funcionalidad que va más allá de una simple localización. Este sistema se denominará "MRT" en este tema. Históricamente, eso significaba "Tecnología de recursos modernos", pero ha dejado de usarse el término "Modernos". También se puede llamar al administrador de recursos MRM (administrador de recursos modernos) o PRI (índice de recursos del paquete).
 
@@ -45,7 +45,7 @@ En muchos casos, puedes seguir usando los formatos de localización y el código
 <tr>
 <td>Crear paquetes de recursos</td>
 <td>Último paso para minimizar los tamaños de descarga e instalación</td>
-<td>Bajo</td>
+<td>Pequeña</td>
 </tr>
 <tr>
 <td>Migrar a los formatos de recursos y API de MRT</td>
@@ -60,35 +60,35 @@ La mayoría de aplicaciones no triviales contienen elementos de la interfaz de u
 
 Por lo tanto, el propósito principal de cualquier tecnología de administración de recursos es traducir, en tiempo de ejecución, una solicitud de un *nombre de recurso* lógico o simbólico (como `SAVE_BUTTON_LABEL`) al mejor *valor* real posible (p. ej., "Guardar") de un conjunto de posibles *candidatos* (p. ej., "Guardar", "Speichern" o "저장"). MRT proporciona esta función y permite que las aplicaciones identifiquen los candidatos de recursos mediante una amplia variedad de atributos, denominados *calificadores*, como el idioma del usuario, el factor de escala de pantalla, el tema seleccionado por el usuario y otros factores del entorno. MRT es compatible incluso con calificadores personalizados para las aplicaciones que lo necesiten (por ejemplo, una aplicación puede proporcionar activos de gráficos diferentes para los usuarios que han iniciado sesión con una cuenta frente a los usuarios invitados, sin agregar explícitamente esta comprobación en cada parte de su aplicación). MRT funciona con recursos de cadenas y recursos basados en archivos, donde los recursos basados en archivos se implementan como referencias a datos externos (los propios archivos). 
 
-### <a name="example"></a>Por ejemplo
+### <a name="example"></a>Ejemplo
 
-Este es un ejemplo sencillo de una aplicación que tiene etiquetas de texto en dos botones (`openButton` y `saveButton`), así como un archivo PNG que se usa para un logotipo (`logoImage`). Las etiquetas de texto están localizadas en inglés y alemán, y el logotipo está optimizado para pantallas de escritorio normales (factor de escala del 100%) y teléfonos de alta resolución (factor de escala del 300%). Ten en cuenta que en este diagrama se presenta una visión conceptual de nivel superior del modelo; no se corresponde exactamente con la implementación:
+Este es un ejemplo sencillo de una aplicación que tiene etiquetas de texto en dos botones (`openButton` y `saveButton`), así como un archivo PNG que se usa para un logotipo (`logoImage`). Las etiquetas de texto están localizadas en inglés y alemán, y el logotipo está optimizado para pantallas de escritorio normales (factor de escala del 100 %) y teléfonos de alta resolución (factor de escala del 300 %). Ten en cuenta que en este diagrama se presenta una visión conceptual de nivel superior del modelo; no se corresponde exactamente con la implementación:
 
 <p><img src="images\conceptual-resource-model.png"/></p>
 
 En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la pseudo-función `GetResource` usa MRT para buscar estos nombres de recursos en la tabla de recursos (llamada archivo PRI) y encuentra el candidato más adecuado en función de las condiciones de entorno (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, se usan las cadenas directamente. En el caso de la imagen de logotipo, las cadenas se interpretan como nombres de archivo y se leen los archivos del disco. 
 
-Si el usuario habla un idioma diferente del inglés o alemán, o tiene un factor de escala de pantalla que no es del 100 o 300%, MRT selecciona el candidato coincidente "más próximo", en función de un conjunto de reglas de reserva (consulta [el tema **Sistema de administración de recursos** en MSDN](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) para más información). 
+Si el usuario habla un idioma diferente del inglés o alemán, o tiene un factor de escala de pantalla que no es del 100 o 300 %, MRT selecciona el candidato coincidente "más próximo", en función de un conjunto de reglas de reserva (consulta [el tema **Sistema de administración de recursos** en MSDN](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) para más información). 
 
-Ten en cuenta que MRT es compatible con recursos adaptados a más de un calificador, por ejemplo, si la imagen del logotipo contiene texto incrustado que también se tiene que localizar, el logotipo tendrá cuatro candidatos: EN/Scale-100, DE/Scale-100, EN/Scale-300 y DE/Scale-300.
+Tenga en cuenta que MRT es compatible con los recursos que se adaptan a más de un calificador, por ejemplo, si la imagen de logotipo contiene texto incrustado que también sea necesario localizar, el logotipo tendría cuatro candidatos: Escala/EN-100, DE/escala-100, EN/escala-300 y DE/escala-300.
 
 ### <a name="sections-in-this-document"></a>Secciones de este documento
 
 En las secciones siguientes se describen las tareas de nivel superior necesarias para integrar MRT con la aplicación.
 
-**Fase 0: compilar un paquete de aplicación**
+**Fase 0: Compilar un paquete de aplicación**
 
 En esta sección se indica cómo compilar la aplicación de escritorio existente como paquete de la aplicación. No se usa ninguna de las características de MRT en esta etapa.
 
-**Fase 1: localizar el manifiesto de la aplicación**
+**Fase 1: Localizar el manifiesto de aplicación**
 
 En esta sección se describe cómo localizar el manifiesto de la aplicación (para que aparezca correctamente en el shell de Windows), a pesar de que sigas usando el formato y la API de los recursos heredados para empaquetar y localizar los recursos. 
 
-**Fase 2: usar MRT para identificar y localizar recursos**
+**Fase 2: Usar MRT para identificar y buscar los recursos**
 
 En esta sección se describe cómo modificar el código de la aplicación (y posiblemente el diseño de recursos) para localizar recursos mediante MRT, a pesar de que sigas usando las API y los formatos de los recursos existentes para cargar y consumir los recursos. 
 
-**Fase 3: crear paquetes de recursos**
+**Fase 3: Creación de paquetes de recursos**
 
 En esta sección se resumen los cambios finales necesarios para separar los recursos en distintos *paquetes de recursos* y minimizar así el tamaño de la descarga (e instalación) de la aplicación.
 
@@ -96,13 +96,13 @@ En esta sección se resumen los cambios finales necesarios para separar los recu
 
 Después de completar las fases 0 a 3 anteriores, tendrás un "conjunto" de aplicaciones que puede enviarse a Microsoft Store y que minimizará el tamaño de la descarga e instalación para los usuarios, omitiendo los recursos que no necesiten (por ejemplo, idiomas que no hablen). Se pueden realizar otras mejoras en el tamaño y la funcionalidad de la aplicación siguiendo un último paso. 
 
-**Fase 4: migrar a formatos y API de recursos de MRT**
+**Fase 4: Migrar a los formatos de recursos MRT y API**
 
 Esta fase está fuera del ámbito de este documento. implica mover los recursos (especialmente cadenas) desde formatos heredados, como MUI DLL o ensamblados de recursos .NET a archivos PRI. Esto puede ahorrar más espacio para los tamaños de descarga e instalación. También permite usar otras características de MRT, por ejemplo, minimizar la descarga e instalación de los archivos de imagen en función del factor de escala, la configuración de accesibilidad, etc.
 
 - - -
 
-## <a name="phase-0-build-an-application-package"></a>Fase 0: compilar un paquete de aplicación
+## <a name="phase-0-build-an-application-package"></a>Fase 0: Compilar un paquete de aplicación
 
 Antes de realizar cambios en los recursos de la aplicación, tienes que reemplazar la tecnología de empaquetado e instalación actual por la tecnología estándar de empaquetado e implementación de UWP. Hay tres maneras de hacerlo:
 
@@ -110,7 +110,7 @@ Antes de realizar cambios en los recursos de la aplicación, tienes que reemplaz
 0. Si tienes una aplicación de escritorio más pequeña con relativamente pocos archivos o un programa de instalación simple y sin enlaces de extensibilidad, puedes crear el diseño del archivo y la información del manifiesto manualmente.
 0. Si vuelves a compilar desde el origen y quieres actualizar la aplicación para sea una aplicación para UWP "pura", puedes crear un nuevo proyecto en Visual Studio y confiar en IDE para que realice la mayor parte del trabajo.
 
-Si quieres usar [Desktop App Converter](https://aka.ms/converter), consulta [el tema **Puente de escritorio a UWP: Desktop App Converter** en MSDN](https://aka.ms/converterdocs) para más información sobre el proceso de conversión. Encontrarás un conjunto completo de ejemplos de Desktop Converter en [el repositorio de GitHub **Desktop app bridge to UWP Samples**](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
+Si desea usar el [Desktop App Converter](https://aka.ms/converter), consulte [el **escritorio al puente de UWP: Desktop App Converter** tema en MSDN](https://aka.ms/converterdocs) para obtener más información sobre el proceso de conversión. Encontrarás un conjunto completo de ejemplos de Desktop Converter en [el repositorio de GitHub **Desktop app bridge to UWP Samples**](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
 
 Si quieres crear manualmente el paquete, tendrás que crear una estructura de directorios que incluya todos los archivos de la aplicación (ejecutables y contenido, pero no código fuente) y un archivo `AppXManifest.xml`. Encontrarás un ejemplo en [la muestra de GitHub de **Hola mundo**](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/blob/master/Samples/HelloWorldSample/CentennialPackage/AppxManifest.xml), pero el siguiente es un archivo `AppXManifest.xml` básico que ejecuta el ejecutable de escritorio denominado `ContosoDemo.exe`, donde tienes que reemplazar el <span style="background-color: yellow">texto resaltado</span> por tus propios valores:
 
@@ -160,15 +160,15 @@ Por último, si usas Visual Studio para crear un nuevo proyecto y migrar el cód
 
 ---
 
-## <a name="phase-1-localize-the-application-manifest"></a>Fase 1: localizar el manifiesto de la aplicación
+## <a name="phase-1-localize-the-application-manifest"></a>Fase 1: Localizar el manifiesto de aplicación
 
-### <a name="step-11-update-strings--assets-in-the-appxmanifest"></a>Paso 1.1: actualización de cadenas y activos en AppXManifest
+### <a name="step-11-update-strings--assets-in-the-appxmanifest"></a>Paso 1.1: Actualice las cadenas de & recursos en el AppXManifest
 
 En la fase 0 creaste un archivo `AppXManifest.xml` básico para tu aplicación (basado en los valores proporcionados al convertidor, extraídos del archivo MSI o introducidos manualmente en el manifiesto), pero no contendrá información localizada, ni será compatible con características adicionales como activos del icono Inicio de alta resolución. 
 
 Para garantizar que el nombre y la descripción de la aplicación estén localizados correctamente, debes definir algunos recursos en un conjunto de archivos de recursos y actualizar el manifiesto AppX para hacer referencia a ellos.
 
-**Creación de un archivo de recursos predeterminado**
+**Crear un archivo de recursos predeterminado**
 
 El primer paso es crear un archivo de recursos predeterminado en el idioma predeterminado (p. ej., inglés de Estados Unidos). Puedes hacerlo manualmente con un editor de texto o con el diseñador de recursos en Visual Studio.
 
@@ -178,7 +178,7 @@ Si quieres crear los recursos manualmente:
  * Usa el código BCP-47 adecuado si el idioma predeterminado no es inglés de Estados Unidos. 
 0. En el archivo XML, agrega el contenido siguiente, donde el <span style="background-color: yellow">texto resaltado</span> se reemplaza por el texto adecuado para la aplicación, en el idioma predeterminado.
 
-[!Note] Existen restricciones sobre las longitudes de algunas de estas cadenas. Consulta [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live) para obtener más información.
+[!Note] Hay restricciones en las longitudes de algunas de estas cadenas. Consulta [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live) para obtener más información.
 
 <blockquote>
 <pre>
@@ -205,7 +205,7 @@ Si quieres crear los recursos manualmente:
 
 Si quieres usar el diseñador de Visual Studio:
 
-0. Crea la carpeta `Strings\en-us` (o de otro idioma si corresponde) en el proyecto y agrega un **Nuevo elemento** a la carpeta raíz del proyecto, con el nombre predeterminado de `resources.resw`
+0. Crear el `Strings\en-us` carpeta (u otro lenguaje según corresponda) en el proyecto y agregue un **nuevo elemento** a la carpeta raíz del proyecto, con el nombre predeterminado de `resources.resw`
  * Asegúrate de elegir **Archivo de recursos (.resw)** y no **Diccionario de recursos**; un diccionario de recursos es un archivo que usan las aplicaciones XAML
 0. Con el diseñador, escribe las siguientes cadenas (usa el mismo elemento `Names` pero reemplaza `Values` por el texto adecuado para la aplicación):
 
@@ -213,13 +213,13 @@ Si quieres usar el diseñador de Visual Studio:
 
 Nota: Si empiezas con el diseñador de Visual Studio, siempre puedes editar el XML directamente presionando `F7`. Sin embargo, si empiezas con un archivo XML mínimo, *el diseñador no reconocerá el archivo* porque le falta una gran cantidad de metadatos adicionales. Para solucionar este problema, copia la información de XSD reutilizable de un archivo generado por el diseñador en el archivo XML que has editado manualmente. 
 
-**Actualización del manifiesto para hacer referencia a los recursos**
+**Actualizar el manifiesto para hacer referencia a los recursos**
 
 Una vez definidos los valores en el archivo `.resw`, el siguiente paso es actualizar el manifiesto para que haga referencia a las cadenas de recursos. De nuevo, puedes editar un archivo XML directamente o confiar en el diseñador de manifiestos de Visual Studio.
 
 Si editas el XML directamente, abre el archivo `AppxManifest.xml` y realiza los siguientes cambios en los <span style="background-color: lightgreen">valores resaltados</span>; usa este texto *exacto*, no un texto específico para la aplicación. No es obligado usar estos nombres exactos para los recursos; puedes elegir los tuyos propios, pero los que elijas deben coincidir exactamente con lo que aparece en el archivo `.resw`. Estos nombres deben coincidir con el elemento `Names` que creaste en el archivo `.resw`, con el prefijo del esquema `ms-resource:` y el espacio de nombres `Resources/`. 
 
-*Nota: Muchos de los elementos del manifiesto se han omitido en este fragmento de código, no elimines nada.*
+*Nota: muchos elementos del manifiesto se han omitido en este fragmento de código: no se eliminan.*
 
 <blockquote>
 <pre>
@@ -250,7 +250,7 @@ Si usas el diseñador de manifiestos de Visual Studio, abre el archivo `Package.
 <img src="images\editing-application-info.png"/>
 <img src="images\editing-packaging-info.png"/>
 
-### <a name="step-12-build-pri-file-make-an-appx-package-and-verify-its-working"></a>Paso 1.2: compilación de un archivo PRI, creación de un paquete AppX y comprobación del funcionamiento
+### <a name="step-12-build-pri-file-make-an-appx-package-and-verify-its-working"></a>Paso 1.2: Compilar archivo PRI, realizar un paquete AppX y comprobar funciona
 
 Ahora ya puedes compilar el archivo `.pri` e implementar la aplicación para comprobar que la información correcta (en el idioma predeterminado) aparece en el menú Inicio. 
 
@@ -267,31 +267,31 @@ Si vas a compilar manualmente, sigue estos pasos para crear un archivo de config
 ```
 
 0. Puedes escribir `makepri createconfig /?` para ver qué hace cada parámetro; pero, en resumen:
- * `/cf` establece el nombre de archivo de configuración (la salida de este comando).
- * `/dq` establece los calificadores predeterminados, en este caso, el idioma `en-US`
- * `/pv` establece la versión de la plataforma, en este caso Windows 10.
- * `/o` lo establece en sobrescribir el archivo de salida, si existe.
+ * `/cf` establece el nombre de archivo de configuración (la salida de este comando)
+ * `/dq` establece los calificadores predeterminado, en este caso, el idioma `en-US`
+ * `/pv` establece la versión de la plataforma, en este caso de Windows 10
+ * `/o` establece para sobrescribir el archivo de salida si existe
 0. Ahora que tienes un archivo de configuración, vuelve a ejecutar `MakePRI` para buscar en el disco los recursos y empaquetarlos en un archivo PRI. Reemplaza "contoso_demop.xml" por el nombre de archivo XML que usaste en el paso anterior y asegúrate de especificar el directorio principal para la entrada y la salida: 
 
     `makepri new /pr . /cf ..\contoso_demo.xml /of ..\resources.pri /mf AppX /o`
 0. Puedes escribir `makepri new /?` para ver qué hace cada parámetro; pero, en resumen:
- * `/pr` establece la raíz del proyecto (en este caso, el directorio actual).
- * `/cf` establece el nombre de archivo de configuración, creado en el paso anterior.
- * `/of` establece el archivo de salida. 
- * `/mf` crea un archivo de asignación (de modo que se puedan excluir archivos del paquete en un paso posterior).
- * `/o` lo establece en sobrescribir el archivo de salida, si existe.
+ * `/pr` establece la raíz del proyecto (en este caso, el directorio actual)
+ * `/cf` establece el nombre de archivo de configuración creado en el paso anterior
+ * `/of` establece el archivo de salida 
+ * `/mf` crea un archivo de asignación (por lo que se pueden excluir archivos del paquete en un paso posterior)
+ * `/o` establece para sobrescribir el archivo de salida si existe
 0. Ahora tienes un archivo `.pri` con los recursos de idioma predeterminados (p. ej., en-US). Para comprobar que funcionan correctamente, puedes ejecutar el comando siguiente:
 
     `makepri dump /if ..\resources.pri /of ..\resources /o`
 0. Puedes escribir `makepri dump /?` para ver qué hace cada parámetro; pero, en resumen:
- * `/if` establece el nombre de archivo de entrada. 
- * `/of` establece el nombre de archivo de salida (`.xml` se agregará automáticamente).
- * `/o` lo establece en sobrescribir el archivo de salida, si existe.
+ * `/if` establece el nombre de archivo de entrada 
+ * `/of` establece el nombre de archivo de salida (`.xml` se anexará automáticamente)
+ * `/o` establece para sobrescribir el archivo de salida si existe
 0. Por último, puedes abrir `..\resources.xml` en un editor de texto y comprobar que se enumeran los valores de `<NamedResource>` (como `ApplicationDescription` y `PublisherDisplayName`) junto con los valores de `<Candidate>` para el idioma predeterminado elegido (habrá otro contenido al principio del archivo; ignóralo por ahora).
 
 Si quieres, puedes abrir el archivo de asignación `..\resources.map.txt` para comprobar que contiene los archivos necesarios para el proyecto (incluido el archivo PRI, que no forma parte del directorio del proyecto). Es importante saber que el archivo de asignación *no* incluirá una referencia a tu fichero `resources.resw` porque el contenido de ese archivo ya se ha incrustado en el archivo PRI. Sin embargo, contendrá otros recursos como los nombres de archivo de las imágenes.
 
-**Creación y firma del paquete**
+**Compilar y firmar el paquete**
 
 Ahora que se ha compilado el archivo PRI, puedes compilar y firmar el paquete:
 
@@ -299,19 +299,19 @@ Ahora que se ha compilado el archivo PRI, puedes compilar y firmar el paquete:
 
     `makeappx pack /m AppXManifest.xml /f ..\resources.map.txt /p ..\contoso_demo.appx /o`
 0. Puedes escribir `makeappx pack /?` para ver qué hace cada parámetro; pero, en resumen:
- * `/m` establece el archivo de manifiesto que se va a usar.
- * `/f` establece el archivo de asignación que se va a usar (creado en el paso anterior). 
- * `/p` establece el nombre del paquete de salida.
- * `/o` lo establece en sobrescribir el archivo de salida, si existe.
-0. Una vez creado el paquete, se tiene que firmar. La forma más sencilla de obtener un certificado de firma es crear un proyecto Universal de Windows en Visual Studio y copiando el `.pfx` crea el archivo, pero puedes crear uno manualmente con el `MakeCert` y `Pvk2Pfx` utilidades tal como se describe en <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832.aspx">cómo crear un certificado de firma el paquete de aplicación</a>, un tema de MSDN. 
- * **Importante:** Si creas manualmente un certificado de firma, asegúrate de colocar los archivos en un directorio diferente del proyecto de origen o el origen del paquete, de lo contrario, podría incluirse como parte del paquete, incluida la clave privada.
+ * `/m` establece el archivo de manifiesto para usar
+ * `/f` establece la asignación de archivo que se usará (creada en el paso anterior) 
+ * `/p` establece la salida de nombre del paquete
+ * `/o` establece para sobrescribir el archivo de salida si existe
+0. Una vez creado el paquete, se tiene que firmar. La manera más fácil de obtener un certificado de firma que se está creando un proyecto vacío de Windows Universal en Visual Studio y copiando la `.pfx` archivo lo crea, pero puede crear uno manualmente mediante el `MakeCert` y `Pvk2Pfx` utilidades como se describe en <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832.aspx"> Cómo crear un certificado de firma del paquete de aplicación</a>, un tema en MSDN. 
+ * **Importante:** Si crea manualmente un certificado de firma, asegúrese de que colocar los archivos en un directorio diferente que el proyecto de origen o el origen del paquete, en caso contrario, es posible que obtenga incluye como parte del paquete, incluida la clave privada.
 0. Para firmar el paquete, usa el comando siguiente. Ten en cuenta que el elemento `Publisher` especificado en el elemento `Identity` de `AppxManifest.xml` debe coincidir con el elemento `Subject` del certificado (**no** es el elemento `<PublisherDisplayName>`, que es el nombre localizado que se muestra a los usuarios). Como es habitual, reemplaza los nombres de archivo `contoso_demo...` por los nombres adecuados para el proyecto y (**muy importante**) asegúrate de que el archivo `.pfx` no está en el directorio actual (de lo contrario se habría ha creado como parte del paquete, incluida la clave privada de firma):
 
     `signtool sign /fd SHA256 /a /f ..\contoso_demo_key.pfx ..\contoso_demo.appx`
 0. Puedes escribir `signtool sign /?` para ver qué hace cada parámetro; pero, en resumen:
- * `/fd` establece el algoritmo de compendio del archivo (SHA256 es el valor predeterminado de AppX).
- * `/a` seleccionará automáticamente el mejor certificado.
- * `/f` especifica el archivo de entrada que contiene el certificado de firma.
+ * `/fd` establece el algoritmo de resumen de archivo (SHA256 es el valor predeterminado de AppX)
+ * `/a` seleccionará automáticamente el mejor certificado
+ * `/f` Especifica el archivo de entrada que contiene el certificado de firma
 
 Por último, puedes hacer doble clic en el archivo `.appx` para instalarlo o, si prefieres la línea de comandos, puedes abrir un símbolo del sistema de PowerShell, ir al directorio que contiene el paquete y escribir lo siguiente (sustituyendo `contoso_demo.appx` por el nombre del paquete):
 
@@ -329,25 +329,25 @@ Para usar la línea de comandos:
 
     `certutil -addstore TrustedPeople contoso_demo.cer`
 0. Puedes ejecutar `certutil -addstore /?` para ver qué hace cada parámetro; pero, en resumen:
- * `-addstore` agrega un certificado al almacén de certificados.
- * `TrustedPeople` indica el almacén en el que se coloca el certificado.
+ * `-addstore` Agrega un certificado a un almacén de certificados
+ * `TrustedPeople` indica el almacén en el que se coloca el certificado
 
 Para usar el Explorador de Windows:
 
 0. Navega hasta la carpeta que contiene el archivo `.pfx`.
 0. Haz doble clic en el archivo `.pfx`, debe aparecer **Asistente para importación de certificados**.
-0. Elige `Local Machine` y haz clic en `Next`
-0. Acepta la petición de elevación del administrador de Control de cuentas de usuario, si aparece, y haz clic en `Next`
-0. Escribe la contraseña de la clave privada, si existe una, y haz clic en `Next`
-0. Selecciona `Place all certificates in the following store`
+0. Elija `Local Machine` y haga clic en `Next`
+0. Acepte la petición de elevación del Administrador de Control de cuentas de usuario, si aparece y haga clic en `Next`
+0. Escriba la contraseña de la clave privada, si hay alguno y haga clic en `Next`
+0. Seleccione `Place all certificates in the following store`
 0. Haz clic en `Browse` y elige la carpeta `Trusted People` (**no** "Editores de confianza")
-0. Haz clic en `Next` y, a continuación, en `Finish`
+0. Haga clic en `Next` y, a continuación, `Finish`
 
 Después de agregar el certificado al almacén `Trusted People`, intenta volver a instalar el paquete.
 
 Ahora tu aplicación debería aparecer en la lista "Todas las aplicaciones" del menú Inicio, con la información correcta del archivo `.resw` / `.pri`. Si ves una cadena vacía o la cadena `ms-resource:...`, algo no ha ido bien: vuelve a comprobar las ediciones y asegúrate de que sean correctas. Si haces clic con el botón derecho en la aplicación en el menú Inicio, puedes anclarla como un icono y comprobar que allí también se muestra la información correcta.
 
-### <a name="step-13-add-more-supported-languages"></a>Paso 1.3: adición de más idiomas compatibles
+### <a name="step-13-add-more-supported-languages"></a>Paso 1.3: Agregar más idiomas admitidos
 
 Una vez realizados los cambios en el manifiesto AppX y después de crear el archivo `resources.resw` inicial, agregar más idiomas es fácil.
 
@@ -384,7 +384,7 @@ Por ejemplo, el archivo `Strings\de-DE\resources.resw` podría tener el siguient
 
 En los siguientes pasos se supone que has agregado recursos para `de-DE` y `fr-FR`, pero se puede seguir el mismo patrón para cualquier idioma.
 
-**Actualizar el manifiesto AppX para la lista de idiomas compatibles**
+**Actualizar el manifiesto de AppX para idiomas de la lista compatible con**
 
 Hay que actualizar el manifiesto AppX para que liste los idiomas compatibles con la aplicación. Desktop App Converter agrega el idioma predeterminado, pero los demás deben agregarse explícitamente. Si editas el archivo `AppxManifest.xml` directamente, actualiza el nodo `Resources` de la manera siguiente, agregando todos los elementos que necesites, sustituyendo los <span style="background-color: yellow">idiomas adecuados compatibles</span> y asegurándote de que la primera entrada de la lista sea el idioma predeterminado (de reserva). En este ejemplo, el valor predeterminado es el inglés (Estados Unidos), con compatibilidad adicional con el alemán (Alemania) y el francés (Francia):
 
@@ -408,7 +408,7 @@ Si usas Visual Studio, no necesitas hacer nada más; si consultas `Package.appxm
 </pre>
 </blockquote>
 
-**Recompilar con los valores localizados**
+**Volver a compilar con los valores traducidos**
 
 Ahora puedes volver a compilar e implementar la aplicación y, si cambias la preferencia de idioma en Windows, aparecerán los valores recién localizados en el menú Inicio (las instrucciones sobre cómo cambiar el idioma las encontrarás a continuación).
 
@@ -422,22 +422,22 @@ Si compilas manualmente el proyecto, sigue los pasos anteriores, pero agrega los
 
 Esto creará un archivo PRI que contiene todos los idiomas especificados que puedes usar fácilmente para la prueba. Si el tamaño total de los recursos es pequeño, o solo son compatibles unos pocos idiomas, podría ser aceptable para tu aplicación de envío; solo si quieres disfrutar de las ventajas de la minimización del tamaño de instalación y descarga de los recursos necesitarás realizar algún trabajo adicional para compilar paquetes de idiomas independientes.
 
-**Probar con los valores localizados**
+**Probar con los valores traducidos**
 
 Para probar los nuevos cambios localizados, basta con agregar un nuevo idioma preferido de interfaz de usuario a Windows. No es necesario descargar paquetes de idiomas, reiniciar el sistema o que la interfaz de usuario de Windows completa aparezca en otro idioma. 
 
 0. Ejecuta la aplicación `Settings` (`Windows + I`)
-0. Ve a `Time & language`
-0. Ve a `Region & language`
-0. Haz clic en `Add a language`
+0. Vete a `Time & language`
+0. Vete a `Region & language`
+0. Haga clic en `Add a language`
 0. Escribe (o selecciona) el idioma que quieras (p. ej., `Deutsch` o `German`)
  * Si hay subidiomas, elige el que quieras (p. ej., `Deutsch / Deutschland`)
 0. Selecciona el nuevo idioma en la lista de idiomas
-0. Haz clic en `Set as default`
+0. Haga clic en `Set as default`
 
 Ahora abre el menú Inicio y busca la aplicación. Deberías ver los valores localizados para el idioma seleccionado (otras aplicaciones también pueden aparecer localizadas). Si no ves el nombre localizado enseguida, espera unos minutos hasta que se actualice la memoria caché del menú Inicio. Para volver a tu idioma nativo, simplemente haz que sea el idioma predeterminado en la lista de idiomas. 
 
-### <a name="step-14-localizing-more-parts-of-the-appx-manifest-optional"></a>Paso 1.4: localización de más partes del manifiesto AppX (opcional)
+### <a name="step-14-localizing-more-parts-of-the-appx-manifest-optional"></a>Paso 1.4: Localizar más partes del manifiesto AppX (opcional)
 
 Se pueden localizar otras secciones del manifiesto AppX. Por ejemplo, si la aplicación controla extensiones de archivo, necesitas una extensión `windows.fileTypeAssociation` en el manifiesto, indicando el <span style="background-color: lightgreen">texto resaltado en verde</span> exactamente tal como se muestra (ya que hará referencia a recursos) y reemplazando el <span style="background-color: yellow">texto resaltado en amarillo</span> por información específica de la aplicación:
 
@@ -485,7 +485,7 @@ Compila y prueba el paquete como antes, empleando los nuevos escenarios que debe
 
 - - -
 
-## <a name="phase-2-use-mrt-to-identify-and-locate-resources"></a>Fase 2: usar MRT para identificar y localizar recursos
+## <a name="phase-2-use-mrt-to-identify-and-locate-resources"></a>Fase 2: Usar MRT para identificar y localizar recursos
 
 En la sección anterior se mostraba cómo usar MRT para localizar el archivo de manifiesto de la aplicación para que el shell de Windows pueda mostrar correctamente el nombre de la aplicación y otros metadatos. No se necesitaron cambios en el código; simplemente se requirió el uso de archivos `.resw` y algunas herramientas adicionales. En esta sección se mostrará cómo usar MRT para localizar los recursos en los formatos de recursos existentes y con el código de control de recursos existente con unos cambios mínimos.
 
@@ -495,7 +495,7 @@ Debido a que hay muchas formas de localizar las aplicaciones de escritorio de Wi
 
 **Diseño del archivo de recursos**
 
-En estas notas del producto se supone que los recursos localizados tienen todos los mismos nombres de archivo (p. ej., `contoso_demo.exe.mui`, `contoso_strings.dll` o `contoso.strings.xml`) pero que están colocados en distintas carpetas con nombres BCP-47 (`en-US`, `de-DE`, etc.). Independientemente de cuántos archivos de recursos tengas, cuáles sean sus nombres, cuáles sean los formatos de archivo o API asociadas, etc., lo único importante es que cada recurso *lógico* tenga el mismo nombre de archivo (pero colocado en un directorio *físico* diferente). 
+En estas notas del producto se supone que los recursos localizados tienen todos los mismos nombres de archivo (p. ej., `contoso_demo.exe.mui`, `contoso_strings.dll` o `contoso.strings.xml`) pero que están colocados en distintas carpetas con nombres BCP-47 (`en-US`, `de-DE`, etc.). No importa cuántos archivos de recursos tiene, ¿cuáles son sus nombres, lo que sus formatos de archivo / asociados a las API son, etcetera. Lo único que importa es que cada *lógico* recurso tiene el mismo nombre de archivo (pero colocados en otro *físico* directorio). 
 
 Como contraejemplo, si la aplicación usa una estructura de archivo plana con un solo directorio `Resources` que contiene los archivos `english_strings.dll` y `french_strings.dll`, no se asignará bien a MRT. Una estructura mejor sería un directorio `Resources` con subdirectorios y archivos `en\strings.dll` y `fr\strings.dll`. También es posible usar el mismo nombre de archivo base, pero con calificadores incrustados, como `strings.lang-en.dll` y `strings.lang-fr.dll`, pero el uso de directorios con códigos de idioma es conceptualmente más sencillo, por lo que es en lo que nos centraremos.
 
@@ -537,7 +537,7 @@ MRT solo requiere el cambio de los dos primeros pasos de este proceso: cómo det
  
 Por ejemplo, la aplicación puede usar la API de Win32 `GetUserPreferredUILanguages`, la función de CRT `sprintf` y la API de Win32 `CreateFile` para reemplazar las tres funciones de seudocódigo anteriores y, luego, analizar manualmente el archivo de texto buscando pares de `name=value`. (Los detalles no son importantes; es simplemente para ilustrar que MRT no tiene ningún efecto en las técnicas usadas para controlar los recursos una vez localizados).
 
-### <a name="step-21-code-changes-to-use-mrt-to-locate-files"></a>Paso 2.1: cambios en el código para usar MRT para localizar archivos
+### <a name="step-21-code-changes-to-use-mrt-to-locate-files"></a>Paso 2.1: Cambios de código para usar MRT para buscar archivos
 
 El cambio del código para usar MRT para localizar recursos no es difícil. Requiere el uso de un conjunto de tipos de WinRT y unas pocas líneas de código. Los tipos principales que usarás son los siguientes:
 
@@ -570,11 +570,11 @@ set bestCandidate = desiredResource.Resolve(resourceContext)
 set absoluteFileName = bestCandidate.ValueAsString
 ```
 
-Ten en cuenta que el código **no** solicita una carpeta de idioma específico, como `UICommands\en-US\ui.txt`, aunque es el modo en que los archivos existen en el disco. En su lugar, pide el nombre de archivo *lógico* `UICommands\ui.txt` y se basa en MRT para encontrar el archivo en disco adecuado en uno de los directorios de idioma.
+Ten en cuenta que el código **no** solicita una carpeta de idioma específico, como `UICommands\en-US\ui.txt`, aunque es el modo en que los archivos existen en el disco. En su lugar, pide el nombre de archivo *lógico*`UICommands\ui.txt` y se basa en MRT para encontrar el archivo en disco adecuado en uno de los directorios de idioma.
 
 A partir de aquí, la aplicación de muestra puede continuar usando `CreateFile` para cargar `absoluteFileName` y analizar los pares de `name=value` igual que antes; no es necesario cambiar nada de esa lógica en la aplicación. Si escribes en C# o C++/CX, el código real no es mucho más complicado que este (y, de hecho, muchas de las variables intermedias pueden evitarse); consulta la sección **Carga de recursos de .NET**, más adelante. Las aplicaciones basadas en C++/WRL serán más complejas debido a las API basadas en COM de nivel inferior que se usan para activar y llamar a las API de WinRT, pero los pasos fundamentales que se siguen son los mismos: consulta la sección **Carga de recursos de Win32 MUI**, más adelante.
 
-**Carga de recursos de .NET**
+**Cargar los recursos de .NET**
 
 Debido a que .NET tiene integrado un mecanismo para localizar y cargar recursos (denominados "ensamblados satélite"), no hay ningún código explícito que se tenga que reemplazar como en el ejemplo sintético anterior: en .NET solo se necesitan los archivos DLL de recursos en los directorios adecuados y se localizan automáticamente. Cuando una aplicación se empaqueta como AppX con paquetes de recursos, la estructura de directorios es un poco diferente: en lugar de que los directorios de recursos sean subdirectorios del directorio de la aplicación principal, son del mismo nivel (o no están presentes en absoluto si el idioma no aparece en las preferencias del usuario). 
 
@@ -648,7 +648,7 @@ El tiempo de ejecución de .NET generará el evento `AssemblyResolve` siempre qu
 
 **Nota** Si la aplicación ya tiene un controlador `AssemblyResolve` para otros fines, tendrás que integrar el código de resolución de recursos con el código existente.
 
-**Carga de recursos de Win32 MUI**
+**Cargar los recursos de Win32 MUI**
 
 La carga de recursos de Win32 MUI es básicamente igual que la carga de ensamblados de satélite de .NET, pero usa el código C++/CX o C++/WRL en su lugar. El uso de C++/CX permite un código mucho más sencillo que coincide estrechamente con el código C# anterior, pero usa las extensiones del lenguaje C++, los modificadores de compilador y sobrecarga de tiempo de ejecución adicional que seguramente querrás evitar. Si es así, C++/WRL proporciona una solución con un impacto mucho menor a costa de código más detallado. No obstante, si estás familiarizado con la programación ATL (o COM en general), WRL te resultará familiar. 
 
@@ -708,16 +708,16 @@ HRESULT GetMrtResourceHandle(LPCWSTR resourceFilePath,  HINSTANCE* resourceHandl
 }
 ```
 
-## <a name="phase-3-building-resource-packs"></a>Fase 3: creación de paquetes de recursos
+## <a name="phase-3-building-resource-packs"></a>Fase 3: Creación de módulos de recursos
 
 Ahora que ya tienes un "fat pack" que contiene todos los recursos, hay dos rutas de acceso para la compilación del paquete principal independiente y los paquetes de recursos con el fin de minimizar los tamaños de descarga e instalación:
 
 0. Tomar un fat pack existente y ejecutarlo a través de [la herramienta Bundle Generator](https://aka.ms/bundlegen) para crear automáticamente paquetes de recursos. Este es el enfoque preferido si tienes un sistema de compilación que ya produce un fat pack y quieres post-procesarlo para generar paquetes de recursos.
 0. Producir directamente los paquetes de recursos individuales y compilarlos en un conjunto. Este es el enfoque preferido si tienes más control sobre el sistema de compilación y puedes compilar los paquetes directamente.
 
-### <a name="step-31-creating-the-bundle"></a>Paso 3.1: creación del conjunto
+### <a name="step-31-creating-the-bundle"></a>Paso 3.1: Creación del paquete
 
-**Con la herramienta Bundle Generator**
+**Mediante la herramienta Generador de agrupación**
 
 Para poder usar la herramienta Bundle Generator, tienes que actualizar manualmente el archivo de configuración PRI creado para el paquete, para quitar la sección `<packaging>`.
 
@@ -755,9 +755,9 @@ makeappx pack /m AppXManifest.xml /f ..\resources.map.txt /p ..\contoso_demo.app
 
 Ahora puedes ir al último paso, que es la firma (consulta más adelante).
 
-**Creación manual de los paquetes de recursos**
+**Creación manual de paquetes de recursos**
 
-Crear manualmente los paquetes de recursos requiere la ejecución de un conjunto de comandos ligeramente diferente para crear archivos `.pri` y `.appx` independientes; son similares a los comandos usados anteriormente para crear fat packs, por lo que solo se proporciona una explicación mínima. Nota: En todos los comandos se supone que el directorio actual es el directorio que contiene el archivo `AppXManifest.xml`, pero todos los archivos se colocan en el directorio principal (puedes usar un directorio diferente, si es necesario, pero no tienes que contaminar el directorio del proyecto con ninguno de estos archivos). Como siempre, reemplaza los nombres de archivo "Contoso" por tus propios nombres de archivo.
+Crear manualmente los paquetes de recursos requiere la ejecución de un conjunto de comandos ligeramente diferente para crear archivos `.pri` y `.appx` independientes; son similares a los comandos usados anteriormente para crear fat packs, por lo que solo se proporciona una explicación mínima. Nota: Todos los comandos se suponen que el directorio actual es el directorio que contiene el `AppXManifest.xml` archivo, pero todos los archivos se colocan en el directorio principal (puede utilizar un directorio diferente, si es necesario, pero no contaminen el directorio del proyecto con cualquiera de estos archivos). Como siempre, reemplaza los nombres de archivo "Contoso" por tus propios nombres de archivo.
 
 0. Usa el siguiente comando para crear un archivo de configuración que nombre **solo** el idioma predeterminado como calificador predeterminado (en este caso, `en-US`):
 
@@ -777,14 +777,14 @@ Crear manualmente los paquetes de recursos requiere la ejecución de un conjunto
 
 El último paso para compilar el paquete es la firma.
 
-### <a name="step-32-signing-the-bundle"></a>Paso 3.2: firma del conjunto
+### <a name="step-32-signing-the-bundle"></a>Paso 3.2: Firmar el paquete
 
 Cuando hayas creado el archivo `.appxbundle` (ya sea mediante la herramienta Bundle Generator o manualmente) tendrás un único archivo que contiene el paquete principal y todos los paquetes de recursos. El paso final consiste en firmar el archivo para que Windows lo instale:
 
     signtool sign /fd SHA256 /a /f ..\contoso_demo_key.pfx ..\contoso_demo.appxbundle
 
-Esto generará un archivo `.appxbundle` firmado que contiene el paquete principal y todos los paquetes de recursos específicos del idioma. Se puede hacer doble clic en él, como un archivo de paquete, para instalar la aplicación y los idiomas correspondientes en función de las preferencias de idioma de Windows del usuario.
+Esto generará un firmado `.appxbundle` archivo que contiene el paquete principal además de todos los paquetes de recursos específicos del idioma. Se puede hacer doble clic en él, como un archivo de paquete, para instalar la aplicación y los idiomas correspondientes en función de las preferencias de idioma de Windows del usuario.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Adaptar los recursos al idioma, la escala, el contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)

@@ -1,5 +1,5 @@
 ---
-Description: Hyperlinks navigate the user to another part of the app, to another app, or launch a specific uniform resource identifier (URI) using a separate browser app.
+Description: Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente.
 title: Hipervínculos
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058606"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606480"
 ---
 # <a name="hyperlinks"></a>Hipervínculos
 
@@ -25,7 +25,7 @@ ms.locfileid: "9058606"
 
 Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
 
-> **API importantes**: [Elemento de texto Hyperlink](https://msdn.microsoft.com/library/windows/apps/dn279356), [Control HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)
+> **API importantes**: [Elemento de texto de hipervínculo](https://msdn.microsoft.com/library/windows/apps/dn279356), [control HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 ![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
@@ -49,14 +49,14 @@ Elige el tipo correcto de hipervínculo según tus necesidades:
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/HyperlinkButton">abrir la aplicación y ver HyperlinkButton en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-## <a name="create-a-hyperlink-text-element"></a>Crear un elemento de texto Hyperlink
+## <a name="create-a-hyperlink-text-element"></a>Crea un elemento de texto Hyperlink
 
 En este ejemplo se muestra cómo usar un elemento de texto Hyperlink dentro de un bloque [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).
 
@@ -109,7 +109,7 @@ helpLinkButton.NavigateUri = new Uri("http://www.contoso.com");
 
 En los dos tipos de hipervínculos, puedes controlar la navegación del mismo modo; puedes establecer la propiedad **NavigateUri** o controlar el evento **Click**.
 
-**Navegar a un URI**
+**Vaya a un URI**
 
 Para usar el hipervínculo para navegar a un URI, establece la propiedad NavigateUri. Cuando un usuario hace clic en el hipervínculo o lo pulsa, el URI especificado se abre en el explorador predeterminado. El explorador predeterminado se ejecuta en un proceso independiente de la aplicación.
 
@@ -123,7 +123,7 @@ Cuando un usuario hace clic en el hipervínculo, el valor de la propiedad Naviga
 Si no quieres que el hipervínculo cargue contenido en un explorador web predeterminado (y no quieres que aparezca un explorador), no establezcas un valor para NavigateUri. En su lugar, controla el evento Click y escribe código que haga lo que quieres.
 
 
-**Controlar el evento Click**
+**Controlar el evento de clic**
 
 Usa el evento Click para las acciones que no sean iniciar un URI en un explorador, como la navegación dentro de la aplicación. Por ejemplo, si quieres cargar una nueva página de la aplicación, en lugar de abrir un explorador, llama a un método [Frame.Navigate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.frame.navigate.aspx) en el controlador de eventos Click para navegar a la nueva página de la aplicación. Si quieres que un URI absoluto y externo se cargue dentro de un control [WebView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.aspx) que también exista en la aplicación, llama a [WebView.Navigate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.navigate.aspx) como parte de la lógica del controlador de eventos Click.
 
@@ -134,7 +134,7 @@ No hay nada que se pueda hacer en el controlador de eventos Click para impedir q
 ## <a name="hyperlink-underlines"></a>Subrayados de los hipervínculos
 De manera predeterminada, los hipervínculos aparecen subrayados. Este subrayado es importante porque ayuda a cumplir los requisitos de accesibilidad. Los usuarios daltónicos se ayudan del subrayado para distinguir entre hipervínculos y otros tipos de texto. Si deshabilita los subrayados, considera la posibilidad de agregar algún otro tipo de diferencia de formato para distinguir los hipervínculos de otros tipos de texto, como FontWeight o FontStyle.
 
-**Elementos de texto Hyperlink**
+**Elementos de texto de hipervínculo**
 
 Puedes establecer la propiedad [UnderlineStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.hyperlink.underlinestyle.aspx) para deshabilitar el subrayado. Si lo haces, considera la posibilidad de usar [FontWeight](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.fontweight.aspx) o [FontStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.fontstyle.aspx) para diferenciar el texto de los vínculos.
 
@@ -160,7 +160,7 @@ Como un elemento Hyperlink no es un [UIElement](https://msdn.microsoft.com/libra
 
 El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que no sean otro elemento Hyperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
 
-**Comportamiento de Hyperlink y el tema y estilo**
+**Comportamiento de hipervínculo y estilo del tema**
 
 Hyperlink no hereda de [Control](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.aspx), de modo que no tiene una propiedad [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.style.aspx) ni una [Template](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.template.aspx). Se pueden modificar las propiedades que se heredan de [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.aspx) como, por ejemplo, Foreground o FontFamily, para cambiar la apariencia de un elemento Hyperlink, pero no se puede usar una plantilla ni un estilo comunes para aplicar los cambios. En lugar de usar una plantilla, considere la posibilidad de usar recursos comunes para los valores de las propiedades de Hyperlink a fin de ofrecer una experiencia coherente. Algunas propiedades de Hyperlink usan valores predeterminados de un valor de extensión de marcado {ThemeResource} que proporciona el sistema. Esto permite que la apariencia del elemento Hyperlink cambie de forma adecuada cuando el usuario modifique el tema del sistema en tiempo de ejecución.
 

@@ -1,36 +1,36 @@
 ---
 description: Usa tu Mac actual para desarrollar aplicaciones para Windows.
-title: Configuración de Mac con Windows10
+title: Configuración de Mac con Windows 10
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4f7b0469ae8c50e6da40fb248678a69a2827931
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663830"
 ---
-# <a name="setting-up-your-mac-with-windows-10"></a>Configuración del Mac con Windows 10
+# <a name="setting-up-your-mac-with-windows-10"></a>Configuración de Mac con Windows 10
 
 
 Usa tu Mac actual para desarrollar aplicaciones para Windows.
 
 ## <a name="run-windows-on-your-mac-and-use-visual-studio"></a>Ejecutar Windows en tu Mac y usar Visual Studio
 
-¿Estás listo para empezar a desarrollar aplicaciones universales de Windows, pero no tienes un PC a mano? Eso no es ningún problema. Puedes usar tu Mac. Gracias a soluciones populares de terceros, como Apple Boot Camp, Oracle VirtualBox, VMware Fusion y Parallels Desktop, puedes instalar Windows 10 y Microsoft Visual Studio en un equipo Apple.
+¿Estás listo para empezar a desarrollar aplicaciones universales de Windows, pero no tienes un PC a mano? Eso no es ningún problema. Puedes usar tu Mac. Con soluciones populares de terceros, como Apple Boot Camp, Oracle VirtualBox, VMware Fusion y Parallels Desktop, puede instalar Windows 10 y Microsoft Visual Studio en un equipo Apple.
 
-**Nota**tendrá una imagen de arranque de Windows 10 en el disco o unidad flash USB. Si estás suscrito a MSDN, puedes descargar la imagen de instalación desde el Área de descarga para suscriptores de MSDN. Si no estás suscrito, se puede comprar el instalador de [Microsoft Store](https://apps.microsoft.com/windows/app). También puedes descargarlo desde [esta ubicación](https://go.microsoft.com/fwlink/?LinkId=623906), lo que resulta útil si ya ejecutas Windows y quieres actualizar.
+**Tenga en cuenta**  tendrá una imagen de arranque de Windows 10 en el disco o unidad flash USB. Si estás suscrito a MSDN, puedes descargar la imagen de instalación desde el Área de descarga para suscriptores de MSDN. Si no es un suscriptor, se puede adquirir el instalador desde el [Microsoft Store](https://apps.microsoft.com/windows/app). También puedes descargarlo desde [esta ubicación](https://go.microsoft.com/fwlink/?LinkId=623906), lo que resulta útil si ya ejecutas Windows y quieres actualizar.
 
-Una vez que tengas Windows que se ejecuta, a continuación, puede instalar la versión más reciente de Visual Studio desde [descargas para desarrolladores para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) y empezar a escribir aplicaciones!
+Una vez que ejecute Windows, a continuación, puede instalar la versión más reciente de Visual Studio desde [descargas para desarrolladores para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) y comience a escribir aplicaciones!
 
-**Nota**si vas a usar los emuladores de dispositivo de Visual Studio, primero **debes** instalar una versión de 64 bits (x 64) de Windows 10 Pro o superior. Por desgracia, algunos Mac antiguos no pueden ejecutar Windows de 64 bits. Ponte en contacto con Apple en esta[página de asistencia de Apple](https://go.microsoft.com/fwlink/p/?LinkID=397959)para saber si tu hardware es compatible.
+**Tenga en cuenta**  si tiene previsto usar los emuladores de dispositivos de Visual Studio, **debe** instalar una versión de 64 bits (x 64) de Windows 10 Pro o superior. Por desgracia, algunos Mac antiguos no pueden ejecutar Windows de 64 bits. Ponte en contacto con Apple en esta[página de asistencia de Apple](https://go.microsoft.com/fwlink/p/?LinkID=397959)para saber si tu hardware es compatible.
 
 ## <a name="apple-boot-camp"></a>Apple Boot Camp
 
-La aplicación Boot Camp Assistant viene preinstalada en todos los equipos Mac recientes e inicias, te guiará por el proceso de instalación de Windows 10. Todo lo que necesitas es una copia de Windows (de las fuentes que se indican arriba) y al menos 30GB de espacio libre en disco. Una vez instalado, puedes arrancar en MacOSX o Windows10. Para obtener más información, consulta la [página de instrucciones de Boot Camp](https://go.microsoft.com/fwlink/?LinkId=623912) de Apple.
+La aplicación Boot Camp Ayudante está preinstalada en cada equipo Mac recientes e iniciarlo le guiará a través del proceso de instalación de Windows 10. Todo lo que necesitas es una copia de Windows (de las fuentes que se indican arriba) y al menos 30 GB de espacio libre en disco. Una vez instalado, puedes arrancar en Mac OSX o Windows 10. Para obtener más información, consulta la [página de instrucciones de Boot Camp](https://go.microsoft.com/fwlink/?LinkId=623912) de Apple.
 
 ## <a name="parallels-desktop"></a>Parallels Desktop
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, entrada, registro, personalizado
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633610"
 ---
 # <a name="registry-data-for-game-controllers"></a>Datos del registro para dispositivos de juego
 
@@ -32,7 +32,7 @@ La siguiente tabla explica los valores esperados en la ubicación raíz del disp
     <tr>
         <th>Nombre</th>
         <th>Tipo</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información</th>
     </tr>
     <tr>
@@ -40,10 +40,10 @@ La siguiente tabla explica los valores esperados en la ubicación raíz del disp
         <td>DWORD</td>
         <td>No</td>
         <td>
-            <p>Indica que este dispositivo particular debe estar deshabilitada.</p>
+            <p>Indica que se debe deshabilitar este dispositivo concreto.</p>
             <ul>
-                <li><b>0</b>: el dispositivo no está deshabilitado.</li>
-                <li><b>1</b>: el dispositivo está deshabilitado.</li>
+                <li><b>0</b>: Dispositivo no está deshabilitado.</li>
+                <li><b>1</b>: Dispositivo está deshabilitado.</li>
             </ul>
         </td>
     </tr>
@@ -65,7 +65,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información</th>
     </tr>
     <tr>
@@ -90,7 +90,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
         <td>Sí</td>
     </tr>
     <tr>
-        <td>Y</td>
+        <td>esté</td>
         <td>Sí</td>
     </tr>
     <tr>
@@ -178,7 +178,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información</th>
     </tr>
     <tr>
@@ -337,7 +337,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información</th>
     </tr>
     <tr>
@@ -398,7 +398,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información</th>
     </tr>
     <tr>
@@ -416,7 +416,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
         <td rowspan="4" style="vertical-align: middle;">Véase <a href="#axis-mapping">Asignación de ejes</a></td>
     </tr>
     <tr>
-        <td>Cabeceo</td>
+        <td>Rotación alrededor del eje x (pitch)</td>
         <td>Sí</td>
     </tr>
     <tr>
@@ -441,7 +441,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información</th>
     </tr>
     <tr>
@@ -558,7 +558,7 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
         <th>Origen</th>
         <th>Nombre de valor</th>
         <th>Tipo de valor</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información de valor</th>
     </tr>
     <tr>
@@ -592,8 +592,8 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
         <td>DWORD</td>
         <td>Sí</td>
         <td>
-            <p>Define el tamaño de una ventana alrededor del valor <b>ThresholdPercent</b>, que se usa para esperar el estado notificado del botón. El intervalo válido de valores es de 0 a 100. Las transiciones de estado del botón solo se pueden producir cuando el valor de eje cruza los límites superiores o inferiores de la ventana de espera. Por ejemplo, un <b>ThresholdPercent</b> de 50 y un <b>DebouncePercent</b> de 10 darán por resultado límites de espera de 45% y 55 % de los valores a escala completa del eje. El botón no puede realizar la transición al estado presionado hasta que el valor de eje alcance el 55% o más, y no puede pasar de vuelta al estado liberado hasta que el valor de eje alcance el 45% o menos.</p>
-            <p>Los límites de la ventana de espera calculado están fijados entre 0% y 100%. Por ejemplo, un umbral del 5% y una ventana de espera del 20% provocarían que los límites de la ventana de espera cayeran al 0% y al 15%. El estado del botón para valores del eje del 0% y del 100% siempre se notifican como liberado y presionado, respectivamente, independientemente de los valores de umbral y espera.</p>
+            <p>Define el tamaño de una ventana alrededor del valor <b>ThresholdPercent</b>, que se usa para esperar el estado notificado del botón. El intervalo válido de valores es de 0 a 100. Las transiciones de estado del botón solo se pueden producir cuando el valor de eje cruza los límites superiores o inferiores de la ventana de espera. Por ejemplo, un <b>ThresholdPercent</b> de 50 y un <b>DebouncePercent</b> de 10 darán por resultado límites de espera de 45 % y 55 % de los valores a escala completa del eje. El botón no puede realizar la transición al estado presionado hasta que el valor de eje alcance el 55 % o más, y no puede pasar de vuelta al estado liberado hasta que el valor de eje alcance el 45 % o menos.</p>
+            <p>Los límites de la ventana de espera calculado están fijados entre 0 % y 100 %. Por ejemplo, un umbral del 5 % y una ventana de espera del 20 % provocarían que los límites de la ventana de espera cayeran al 0 % y al 15 %. El estado del botón para valores del eje del 0 % y del 100 % siempre se notifican como liberado y presionado, respectivamente, independientemente de los valores de umbral y espera.</p>
         </td>
     </tr>
     <tr>
@@ -610,13 +610,13 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
         <td>
             <p>Indica la posición del conmutador que hará que el botón asignado informe de que está siendo presionado. Los valores de posición pueden ser una de las siguientes cadenas:</p>
             <ul>
-                <li>Up</li> 
+                <li>Arriba</li> 
                 <li>UpRight</li>
-                <li>Right</li>
+                <li>Derecha</li>
                 <li>DownRight</li>
-                <li>Down</li>
+                <li>Abajo</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>Izquierda</li>
                 <li>UpLeft</li>
             </ul>
         </td>
@@ -638,7 +638,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
         <th>Origen</th>
         <th>Nombre de valor</th>
         <th>Tipo de valor</th>
-        <th>¿Es obligatorio?</th>
+        <th>¿Obligatorio?</th>
         <th>Información de valor</th>
     </tr>
     <tr>
@@ -726,13 +726,13 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
         <td>
             <p>Una de las cadenas siguientes:</p>
             <ul>
-                <li>Up</li>
+                <li>Arriba</li>
                 <li>UpRight</li>
-                <li>Right</li>
+                <li>Derecha</li>
                 <li>DownRight</li>
-                <li>Down</li>
+                <li>Abajo</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>Izquierda</li>
                 <li>UpLeft</li>
             </ul>
             <p>Indica la posición del conmutador que hace que el valor de eje asignados se notifique como 1.0. La dirección opuesta de <b>MaxValueSwitchPosition</b> se trata como 0.0. Por ejemplo, si <b>MaxValueSwitchPosition</b> es <b>Up</b>, la traslación del valor de eje se muestra a continuación:</p>
@@ -742,7 +742,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>Arriba</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -750,7 +750,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
                     <td>0.5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>Abajo</td>
                     <td>0.0</td>
                 </tr>
             </table>
@@ -768,7 +768,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>Arriba</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -784,7 +784,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
                     <td>0.5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>Abajo</td>
                     <td>0.0</td>
                 </tr>
                 <tr>
@@ -820,7 +820,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b> o <b>EightWay</b>
+        <td><b>TwoWay</b>, <b>FourWay</b>, o <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -926,7 +926,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td>Right</td>
+                    <td>Derecha</td>
                     <td>1</td>
                     <td>2</td>
                 </tr>
@@ -936,7 +936,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>Arriba</td>
                     <td>3</td>
                     <td>0</td>
                 </tr>
@@ -946,7 +946,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
                     <td>7</td>
                 </tr>
                 <tr>
-                    <td>Left</td>
+                    <td>Izquierda</td>
                     <td>5</td>
                     <td>6</td>
                 </tr>
@@ -956,7 +956,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
                     <td>5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>Abajo</td>
                     <td>7</td>
                     <td>4</td>
                 </tr>
@@ -966,7 +966,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
 
 #### <a name="buttonindex-values"></a>*Valores de ButtonIndex
 
-\*Índice de valores de ButtonIndex en la matriz de botones de **RawGameController**:
+\*Indexar valores ButtonIndex el **RawGameController**de matriz de botón:
 
 <table>
     <tr>
@@ -1047,7 +1047,7 @@ Estos son valores de asignación estática para diferentes tipos de asignación.
 
 ## <a name="labels"></a>Etiquetas
 
-Las etiquetas deben estar presentes en la clave **Labels**, en la raíz del dispositivo. **Labels** puede tener 3 subclaves: **Buttons**, **Axes** y **Switches**.
+Las etiquetas deben estar presentes en la clave **Labels**, en la raíz del dispositivo. **Las etiquetas** puede tener 3 subclaves: **Botones**, **ejes**, y **conmutadores**.
 
 ### <a name="button-labels"></a>Etiquetas de los botones
 
@@ -1345,8 +1345,8 @@ Windows Registry Editor Version 5.00
 "Invert" = dword:00000000
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
-* [Espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
-* [Espacio de nombres Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
+* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Windows.Gaming.Input.Custom Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [Archivos INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

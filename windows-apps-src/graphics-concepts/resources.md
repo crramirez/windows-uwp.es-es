@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c31dcbcc3019538d769118b018c693174b17b4c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922927"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631480"
 ---
 # <a name="resources"></a>Recursos
 
@@ -51,11 +51,11 @@ Una vista de recursos proporciona un modelo general para acceder a un recurso (c
 <td align="left"><p>Un recurso es una colección de datos que se usa en la canalización 3D. La creación de recursos y la definición de su comportamiento constituyen el primer paso para la programación de la aplicación. En esta guía se tratan los aspectos básicos para elegir los recursos necesarios para la aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="copying-and-accessing-resource-data.md">Copia y acceso a datos de recursos</a></p></td>
+<td align="left"><p><a href="copying-and-accessing-resource-data.md">Copiar y obtener acceso a datos de recursos</a></p></td>
 <td align="left"><p>Los indicadores de uso indican cómo la aplicación pretende utilizar los datos de recursos para colocar recursos en el área de mayor rendimiento de memoria posible. Los datos de recursos se copian en los recursos para que la CPU o la GPU puedan acceder a estos sin que ello afecte al rendimiento.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="texture-views.md">Vistas de texturas</a></p></td>
+<td align="left"><p><a href="texture-views.md">Vistas de textura</a></p></td>
 <td align="left"><p>En Direct3D, se accede a los recursos de texturas con una vista, que es un mecanismo para la interpretación de hardware de un recurso en memoria. Una vista permite que una fase de la canalización concreta acceda solo a los <a href="resource-types.md">subrecursos</a> que necesita, en la representación que desea la aplicación.</p></td>
 </tr>
 </tbody>

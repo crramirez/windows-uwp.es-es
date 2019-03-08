@@ -1,5 +1,5 @@
 ---
-Description: Edge-based animations show or hide UI that originates from the edge of the screen.
+Description: Las animaciones en el borde muestran u ocultan una interfaz de usuario que se origina en el borde de la pantalla.
 title: Animaciones de UI en el borde en aplicaciones para UWP
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e07ac565fe2e223b2fb33573ad083edfdfbc888a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934850"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610210"
 ---
 # <a name="edge-based-ui-animations"></a>Animaciones de UI en el borde
 
@@ -23,10 +23,10 @@ ms.locfileid: "8934850"
 
 Las animaciones en el borde muestran u ocultan una interfaz de usuario que se origina en el borde de la pantalla. Tanto el usuario como la aplicación pueden comenzar las acciones de mostrar u ocultar. La interfaz de usuario puede superponerse a la aplicación o formar parte de la superficie de la aplicación principal. Si la interfaz de usuario forma parte de la superficie de la aplicación, puede que sea necesario cambiar el tamaño del resto de la aplicación para que quepa.
 
-> **API importantes**: [**clase EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)
+> **API importantes**: [**Clase EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 -   Usa animaciones de interfaz de usuario de borde para mostrar u ocultar un mensaje personalizado o barra de error que no se extiende por toda la pantalla.
@@ -45,13 +45,13 @@ Las animaciones en el borde muestran u ocultan una interfaz de usuario que se or
 
 
 **Para desarrolladores**
-* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animación de interfaz de usuario en el borde](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Animar la interfaz de usuario basada en el perímetro](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 * [**Clase PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh969160)
-* [Animación de atenuación](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
-* [Animación de reposiciones](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
+* [Animación de fundido](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
+* [Vuelve a colocar la animación](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
 
  
 

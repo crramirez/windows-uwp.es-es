@@ -1,26 +1,26 @@
 ---
-Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
-title: Cómo compara y elige recursos el sistema de administración de recursos
+Description: Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato a devolver. Este tema describe con detalle ese proceso y proporciona ejemplos.
+title: Cómo compara y elige recursos el sistema de administración
 template: detail.hbs
 ms.date: 10/23/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943465"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593890"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo compara y elige recursos el sistema de administración
-Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato que se va a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.
+Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.
 
 En este proceso de clasificación, se asignan prioridades diferentes a los distintos calificadores: el idioma tiene el mayor impacto en la clasificación global, seguido del contraste, la escala, etc. Para cada calificador, se comparan los calificadores de los candidatos con el valor del calificador de contexto para determinar una calidad de coincidencia. El modo en que se realiza la comparación depende del calificador.
 
 Para conocer detalles más concretos sobre cómo se realiza la coincidencia de la etiqueta de idiomas, consulta [Cómo compara etiquetas de idioma el sistema de administración de recursos](how-rms-matches-lang-tags.md).
 
-En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado como "scale-100"coincide con un contexto de "escala-400" hasta cierto pequeña, aunque no así como un candidato calificado como"escala-200"o (para coincidencia perfecta)"escala-400".
+En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado para "escala 100" coincide con un contexto de "escalado-400" hasta cierto punto pequeño, aunque no así como un candidato calificado para "escalado-200" o (para una coincidencia perfecta) "escalado-400".
 
 Sin embargo, en el resto de calificadores, como el idioma o la región principal, es posible que haya una comparación no coincidente (además de grados de coincidencia). Por ejemplo, un candidato con la calificación de idioma "en-US" representa una coincidencia parcial en un contexto "en-GB", pero un candidato con la calificación "fr" no es coincidente en modo alguno. De manera similar, un candidato con la calificación de región principal "155" (Europa occidental) coincide bien de alguna manera con un contexto de usuario cuya región principal esté definida en "FR", pero un candidato calificado como "US" no coincide en modo alguno.
 

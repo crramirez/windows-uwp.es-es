@@ -1,5 +1,5 @@
 ---
-Description: You can programmatically pin your own app's primary tile to Start, just like you can pin secondary tiles. And you can check whether it's currently pinned.
+Description: Mediante programación, puedes anclar el icono principal de tu propia aplicación a Inicio, al igual que puedes anclar iconos secundarios. Y puedes comprobar si está anclado actualmente.
 title: API de icono principal
 label: Primary tile API's
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, anclar icono principal, api de icono principal, comprobar si el icono está anclado, icono dinámico
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d7c66b358a3a465522ad3b56d8ae926358ae57
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922940"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596200"
 ---
 # <a name="primary-tile-apis"></a>API de icono principal
  
@@ -20,7 +20,7 @@ ms.locfileid: "8922940"
 Las API de icono principal te permiten comprobar si tu aplicación está anclada actualmente a Inicio y solicitar anclar el icono principal de la aplicación.
 
 > [!IMPORTANT]
-> **Requiere la actualización Creators Update**: debes utilizar SDK 15063 y estar ejecutando la compilación 15063 o superior para usar las API de icono principal.
+> **Requiere la actualización Creators**: Debe tener como destino el SDK 15063 y se ejecuta la compilación 15063 o posterior para usar la API del icono principal.
 
 > **API importantes**: [**Clase StartScreenManager**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
 
@@ -84,7 +84,7 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 Si actualmente tu icono principal no está anclado, y el icono es compatible con Inicio, es posible que quieras mostrar una sugerencia a los usuarios de que pueden anclar tu icono principal.
 
 > [!NOTE]
-> Debe llamar a esta API desde un subproceso de interfaz de usuario mientras la aplicación está en primer plano, y solo debes llamar a este APIafterthe usuario haya solicitado intencionadamente el bepinned de icono principal (por ejemplo, después el usuario hizo clic en Sí a la sugerencia sobre cómo anclar el icono).
+> Debe llamar a esta API desde un subproceso de interfaz de usuario mientras la aplicación está en primer plano y solo debe llamar a esta API después de que el usuario ha solicitado intencionadamente anclar el icono principal (por ejemplo, después de que el usuario hace clic en Sí en una sugerencia sobre anclar el icono).
 
 Si el usuario hace clic en el botón para anclar el icono principal, a continuación llamaría al método [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) para solicitar que el icono se anclar a Inicio. Esta acción mostrará un cuadro de diálogo en el que se le pedirá al usuario que confirme que quiere que el icono quede anclado a Inicio.
 
@@ -101,7 +101,7 @@ bool isPinned = await StartScreenManager.GetDefault().RequestAddAppListEntryAsyn
 
 ## <a name="resources"></a>Recursos
 
-* [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
+* [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
 * [Anclar a la barra de tareas](../pin-to-taskbar.md)
 * [Iconos, distintivos y notificaciones](index.md)
-* [Documentación de iconos adaptables](create-adaptive-tiles.md)
+* [Documentación de icono adaptable](create-adaptive-tiles.md)

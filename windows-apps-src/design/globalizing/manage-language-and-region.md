@@ -1,5 +1,5 @@
 ---
-Description: This topic defines the terms user profile language list, app manifest language list, and app runtime language list. We'll be using these terms in this topic and other topics in this feature area, so it's important to know what they mean.
+Description: En este tema se define la lista de idioma de perfil de usuario de términos, lista de idiomas de manifiesto de aplicación y lista de idiomas de aplicación en tiempo de ejecución. Utilizaremos estos términos en este y otros temas en esta área de funciones, por lo que es importante que sepas lo que significan.
 title: Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
@@ -8,25 +8,25 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: d782e8cd64cb976df964c72199964c1d349d527e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605580"
 ---
-# <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil de usuario y los idiomas de manifiesto de la aplicación
+# <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede utilizar **Configuración** > **Hora e idioma** > **Región e idioma** para configurar una lista ordenada de idiomas de visualización preferidos o simplemente un único idioma de visualización preferido. Un idioma puede tener una variante regional. Por ejemplo, puedes seleccionar el español de España, el español de México o el español que se habla en Estados Unidos, entre otros.
 
 También, en **Configuración** > **Hora e idioma** > **Región e idioma**, aparte del idioma, el usuario puede especificar su ubicación (conocida como región) en el mundo. Ten en cuenta que el idioma de visualización (y la variante regional) no es un elemento que determina la configuración de la región y viceversa. Por ejemplo, un usuario que actualmente puede estar viviendo en Francia elige como idioma preferido de visualización de Windows el español (México).
 
-En las aplicaciones UWP, los idiomas se representan mediante una [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302). Por ejemplo, la etiqueta de idioma BCP-47 "en-US" corresponde a inglés (Estados Unidos) en el menú **Configuración **. Las API de UWP correspondientes aceptan y devuelven representaciones de cadena de las etiquetas de idioma BCP-47.
+En las aplicaciones UWP, los idiomas se representan mediante una [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302). Por ejemplo, la etiqueta de idioma BCP-47 "en-US" corresponde a inglés (Estados Unidos) en el menú **Configuración** . Las API de UWP correspondientes aceptan y devuelven representaciones de cadena de las etiquetas de idioma BCP-47.
 
 Consulta también el [Registro de subetiquetas de IANA](https://go.microsoft.com/fwlink/p/?linkid=227303).
 
 Las siguientes tres secciones definen los términos "Lista de idiomas del perfil de usuario", "Lista de idiomas de manifiesto de la aplicación" y "Lista de idiomas de la aplicación en tiempo de ejecución". Utilizaremos estos términos en este y otros temas en esta área de funciones, por lo que es importante que sepas lo que significan.
 
 ## <a name="user-profile-language-list"></a>Lista de idiomas del perfil de usuario
-La lista de idiomas del perfil de usuario es el nombre de la lista que está configurada por el usuario en **Configuración** > **Hora e idioma** > **Región e idioma** > **Idiomas **. Puedes utilizar la propiedad [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) en código para acceder a la lista de idiomas del perfil de usuario como una lista de cadenas de solo lectura, donde cada cadena es una [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) como "en-US" o "ja-JP".
+La lista de idiomas del perfil de usuario es el nombre de la lista que está configurada por el usuario en **Configuración** > **Hora e idioma** > **Región e idioma** > **Idiomas** . Puedes utilizar la propiedad [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) en código para acceder a la lista de idiomas del perfil de usuario como una lista de cadenas de solo lectura, donde cada cadena es una [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) como "en-US" o "ja-JP".
 
 ```csharp
     IReadOnlyList<string> userLanguages = Windows.System.UserProfile.GlobalizationPreferences.Languages;
@@ -70,7 +70,7 @@ La tercera lista de idiomas de interés es la intersección entre las dos listas
 
 Más concretamente, la lista de idiomas de la aplicación en tiempo de ejecución se compone de estos elementos.
 
-1.  **(Opcional) Invalidación del idioma principal**. La [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) es una sencilla configuración de invalidación para las aplicaciones que ofrecen a los usuarios su propia elección de idioma independiente, o bien para las aplicaciones con un motivo fundado para invalidar las opciones de idioma predeterminado. Para más información, echa un vistazo a la [Muestra de recursos de la aplicación y localización](https://go.microsoft.com/fwlink/p/?linkid=231501).
+1.  **(Opcional) Invalidación del idioma principal**. La [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) es una sencilla configuración de invalidación para las aplicaciones que ofrecen a los usuarios su propia elección de idioma independiente, o bien para las aplicaciones con un motivo fundado para invalidar las opciones de idioma predeterminado. Para más información, echa un vistazo a la [muestra de recursos de la aplicación y localización](https://go.microsoft.com/fwlink/p/?linkid=231501).
 2.  **Los idiomas del usuario son compatibles con la aplicación**. Esta es la lista de idiomas del perfil de usuario filtrada por la lista de idiomas del manifiesto de la aplicación. Si los idiomas del usuario se filtran en función de aquellos que la aplicación admite, se mantendrá la coherencia en los kits de desarrollo de software (SDK), las bibliotecas de clases, los paquetes de marcos dependientes y la aplicación.
 3.  **Si 1 y 2 están vacíos, entonces el idioma predeterminado o el primer idioma admitido por la aplicación**. Si la lista de idiomas del perfil de usuario no contiene ninguno de los idiomas que admite la aplicación, entonces el idioma de la aplicación en tiempo de ejecución es el primer idioma admitido por la aplicación.
 
@@ -88,34 +88,34 @@ También puedes acceder como una lista de cadenas de solo lectura, cada una con 
     runtimeLanguages = Windows.Globalization.ApplicationLanguages.Languages;
 ```
 
-La lista de idiomas de la aplicación en tiempo de ejecución determina los recursos que Windows carga para la aplicación y también el idioma o idiomas utilizados para dar formato a las fechas, horas, números y otros componentes. Consulta [Globalizar los formatos de fecha y hora o número](use-global-ready-formats.md).
+La lista de idiomas de la aplicación en tiempo de ejecución determina los recursos que Windows carga para la aplicación y también el idioma o idiomas utilizados para dar formato a las fechas, horas, números y otros componentes. Consulta [Globaliza los formatos de fecha, hora o número](use-global-ready-formats.md).
 
 **Nota** Si el idioma del perfil de usuario y el idioma del manifiesto de la aplicación son variantes regionales de cada uno, se usa la variante regional del usuario como el idioma de la aplicación en tiempo de ejecución. Por ejemplo, si el usuario prefiere en-GB, pero la aplicación admite en-US, el idioma de la aplicación en tiempo de ejecución es en-GB. Esto garantiza que las fechas, las horas y los números tengan un formato más cercano a las expectativas del usuario (en-GB), pero los recursos localizados siguen cargándose (debido a la coincidencia de idiomas) en el idioma admitido por la aplicación (en-US).
 
 ## <a name="qualify-resource-files-with-their-language"></a>Calificar los archivos de recursos con sus idiomas
-Nombra los archivos de recursos o sus carpetas con calificadores de recursos de idiomas. Para saber más sobre los calificadores de recursos, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Un archivo de recursos puede ser una imagen (u otro activo) o puede ser un archivo de contenedor de recursos, como un *.resw* que contiene las cadenas de texto.
+Nombra los archivos de recursos o sus carpetas con calificadores de recursos de idiomas. Para saber más sobre los calificadores de recursos, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Un archivo de recursos puede ser una imagen (u otros activos), o puede ser un archivo contenedor de recursos, como un *.resw* que contiene cadenas de texto.
 
-**Nota** Incluso los recursos en el idioma predeterminado de la aplicación deben especificar el calificador de idioma. Por ejemplo, si el idioma predeterminado de la aplicación es el inglés (Estados Unidos), luego califica los activos como `\Assets\Images\en-US\logo.png`.
+**Tenga en cuenta** incluso los recursos en el idioma predeterminado de la aplicación deben especificar el calificador de idioma. Por ejemplo, si el idioma predeterminado de la aplicación es inglés (Estados Unidos), a continuación, califique sus activos como `\Assets\Images\en-US\logo.png`.
 
-- Windows lleva a cabo tareas complejas de coincidencia incluso entre variantes regionales como en-US y en-GB. Por lo tanto, incluir la etiqueta de región secundarias según corresponda. Consulta [Cómo el sistema de gestión de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
-- Especifica una etiqueta secundarias de script de idioma en el calificador cuando no hay ningún valor de Script de supresión definido para el idioma. Por ejemplo, en lugar de zh-CN o zh-TW, usa zh-Hant, zh-Hant-TW o zh-Hans (para obtener más información, consulta el [registro de subetiquetas de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)).
-- Para los idiomas que tienen un solo dialecto estándar, no es necesario para incluir el calificador de región. Por ejemplo, usa ja en lugar de ja-JP.
+- Windows realiza una coincidencia complejos, incluidos entre variantes regionales como en-US y en-GB. Por lo que incluye la etiqueta secundaria de la región según corresponda. Consulta [Cómo el sistema de gestión de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
+- Especifique una etiqueta secundaria de script de idioma en el calificador cuando no hay ningún valor de secuencia de comandos de suprimir definido para el lenguaje. Por ejemplo, en lugar de zh-CN o zh-TW, usar zh-Hant, zh-Hant-TW o zh-Hans (para obtener más información, consulte el [registro de subetiquetas del lenguaje IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)).
+- Para los lenguajes que tienen un dialecto estándar, no hay ninguna necesidad para incluir el calificador de la región. Por ejemplo, utilice ja, ja-JP en lugar de.
 - Algunas herramientas y otros componentes como los traductores automáticos pueden buscar etiquetas de idioma específicas, como información de dialectos, que son útiles para comprender los datos.
 
-### <a name="not-all-resources-need-to-be-localized"></a>No todos los recursos es necesario localizar
+### <a name="not-all-resources-need-to-be-localized"></a>No todos los recursos deben localizarse
 
-Localización no sea necesaria para todos los recursos.
+Localización no puede ser necesaria para todos los recursos.
 
-- Como mínimo, asegúrate de que todos los recursos existen en el idioma predeterminado.
-- Un subconjunto de algunos recursos puede ser suficiente para un idioma estrechamente relacionados entre sí (localización parcial). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. Para los usuarios que hablan Catalán y después el español, los recursos que no están disponibles en Catalán aparecerán en español.
-- Algunos recursos pueden requerir excepciones para un idioma concreto, mientras que la mayoría de otro recursos se asigna a un recurso común. En este caso, marca el recurso destinado para usarse para todos los idiomas con la etiqueta de idioma sin determinar 'und'. Windows interpreta la etiqueta de idioma 'und' como carácter comodín (de manera similar a '\*'), en el sentido de que establece la correspondencia con el idioma de la aplicación principal después de cualquier otra coincidencia específica. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
-- Los recursos que se basan en un script de lenguaje, como una fuente o el alto del texto, usa la etiqueta de idioma indeterminado con un script especificado: ' und -&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
+- Como mínimo, asegúrese de que todos los recursos existen en el idioma predeterminado.
+- Un subconjunto de algunos recursos podría ser suficiente para un idioma estrechamente relacionado (localización parcial). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. Para los usuarios que hablan Catalán y, a continuación, español, los recursos que no están disponibles en Catalán aparecen en español.
+- Algunos recursos pueden requerir excepciones para idiomas específicos, mientras que la mayoría de los otro recursos se asignan a un recurso común. En este caso, marque el recurso diseñado para utilizarse para todos los idiomas con la etiqueta de idioma indeterminado "und". Windows interpreta la etiqueta de idioma 'und' como carácter comodín (similar a '\*') en que coincida con el idioma de la aplicación superior después de cualquier otra coincidencia específica. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
+- Para los recursos que se basan en una secuencia de comandos de lenguaje, como una fuente o el alto del texto, usan la etiqueta de idioma indeterminado con una secuencia de comandos especificada: "und -&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
 
 ## <a name="set-the-http-accept-language-request-header"></a>Establecer el encabezado de solicitud Accept Language HTTP
 Considera si los servicios web a los que llamas tienen el mismo grado de localización que tu aplicación. Las solicitudes HTTP realizadas desde aplicaciones UWP y aplicaciones de escritorio en solicitudes web típicas y XMLHttpRequest (XHR) usan el encabezado estándar de solicitud Accept-Language HTTP. De manera predeterminada, el encabezado HTTP se establece en la lista de idiomas del perfil de usuario. Cada idioma de la lista se expande aún más para incluir valores independientes del idioma y una ponderación (q). Por ejemplo, la lista de idiomas de un usuario de fr-FR y en-US da como resultado un encabezado de solicitud Accept-Language HTTP de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3"). Pero si tu aplicación del tiempo (por ejemplo) muestra una interfaz de usuario en francés (Francia), pero el idioma que está en primer lugar de la lista de preferencias del usuario es el alemán, a continuación, deberás solicitar explícitamente francés (Francia) desde el servicio para que siga siendo coherente dentro de la aplicación.
 
 ## <a name="apis-in-the-windowsglobalization-namespace"></a>API en el espacio de nombres Windows.Globalization.
-Generalmente, las API del espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) utilizan la lista de idiomas de la aplicación en tiempo de ejecución para determinar el idioma. Si ninguno tiene un formato que coincida, se utiliza la configuración regional del usuario, Es la misma que se utiliza para el reloj del sistema. La configuración regional del usuario está disponible en **Configuración** > **Hora e idioma** > **Región e idioma** > **Opciones adicionales de fecha, hora y configuración regional** > **Región: Cambiar formatos de fecha, hora o número**. Las API de **Windows.Globalization** también tienen invalidación para especificar una lista de idiomas que se usará en lugar de la lista de idiomas de la aplicación en tiempo de ejecución.
+Generalmente, las API del espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) utilizan la lista de idiomas de la aplicación en tiempo de ejecución para determinar el idioma. Si ninguno tiene un formato que coincida, se utiliza la configuración regional del usuario, que es la misma que se usa para el reloj del sistema. La configuración regional del usuario está disponible en **configuración** > **hora e idioma** > **región e idioma**  >  **Adicionales de fecha, hora y la configuración regional** > **región: Cambiar la fecha, hora o formatos de número**. Las API de **Windows.Globalization** también tienen invalidación para especificar una lista de idiomas que se usará en lugar de la lista de idiomas de la aplicación en tiempo de ejecución.
 
 Al utilizar la clase [**Idioma**](/uwp/api/windows.globalization.language?branch=live), puedes inspeccionar detalles acerca de un idioma en particular como el script del idioma, el nombre para mostrar y el nombre nativo.
 
@@ -152,48 +152,48 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 <td align="left">Inglés (Reino Unido)</td>
 <td align="left">ninguno</td>
 <td align="left">Inglés (Reino Unido)</td>
-<td align="left">UI: Inglés (Reino Unido)<br>Fechas/Horas/Números: Inglés (Reino Unido)</td>
+<td align="left">INTERFAZ DE USUARIO: Inglés (Reino Unido)<br>Fechas/horas o números: Inglés (Reino Unido)</td>
 </tr>
 <tr>
 <td align="left">Alemán (Alemania) (predeterminado); Francés (Francia); Italiano (Italia)</td>
 <td align="left">Francés (Austria)</td>
 <td align="left">ninguno</td>
 <td align="left">Francés (Austria)</td>
-<td align="left">UI: Francés (Francia) (reserva desde francés (Austria))<br>Fechas/Horas/Números: Francés (Austria)</td>
+<td align="left">INTERFAZ DE USUARIO: Francés (Francia) (reserva de francés (Austria))<br>Fechas/horas o números: Francés (Austria)</td>
 </tr>
 <tr>
 <td align="left">Inglés (Estados Unidos) (predeterminado); Francés (Francia); Inglés (Reino Unido)</td>
 <td align="left">Inglés (Canadá); Francés (Canadá)</td>
 <td align="left">ninguno</td>
 <td align="left">Inglés (Canadá); Francés (Canadá)</td>
-<td align="left">UI: Inglés (Estados Unidos) (reserva desde inglés (Canadá))<br>Fechas/Horas/Números: Inglés (Canadá)</td>
+<td align="left">INTERFAZ DE USUARIO: Inglés (Estados Unidos) (del inglés (Canadá) la reserva)<br>Fechas/horas o números: Inglés (Canadá)</td>
 </tr>
 <tr>
 <td align="left">Español (España) (predeterminado); Español (México); Español (Latinoamérica); Portugués (Brasil)</td>
 <td align="left">Inglés (Estados Unidos)</td>
 <td align="left">ninguno</td>
 <td align="left">Español (España)</td>
-<td align="left">UI: Español (España) (usa el valor predeterminado dado que no existe reserva disponible para el inglés)<br>Fechas/Horas/Números Español (España)</td>
+<td align="left">INTERFAZ DE USUARIO: Español (España) (se usa de forma predeterminada desde ninguna reserva disponible para inglés)<br>Fechas/Horas/Números Español (España)</td>
 </tr>
 <tr>
 <td align="left">Catalán (predeterminado); Español (España); Francés (Francia)</td>
 <td align="left">Catalán; Francés (Francia)</td>
 <td align="left">ninguno</td>
 <td align="left">Catalán; Francés (Francia)</td>
-<td align="left">UI: principalmente catalán y algo de francés (Francia) porque no todas las cadenas están en catalán<br>Fechas/Horas/Números: catalán</td>
+<td align="left">INTERFAZ DE USUARIO: Principalmente, catalán y algunos francés (Francia) porque no todas las cadenas están en Catalán<br>Fechas/horas o números: Catalán</td>
 </tr>
 <tr>
 <td align="left">Inglés (Reino Unido) (predeterminado); Francés (Francia); Alemán (Alemania)</td>
 <td align="left">Alemán (Alemania); Inglés (Reino Unido)</td>
 <td align="left">Inglés (Reino Unido) (elegido por el usuario en la interfaz de usuario de la aplicación)</td>
 <td align="left">Inglés (Reino Unido); Alemán (Alemania)</td>
-<td align="left">UI: Inglés (Reino Unido) (invalidación de idioma)<br>Fechas/Horas/Números Inglés (Reino Unido)</td>
+<td align="left">INTERFAZ DE USUARIO: Inglés (GB) (reemplazo de lenguaje)<br>Fechas/Horas/Números Inglés (Reino Unido)</td>
 </tr>
 </tbody>
 </table>
 
 >[!NOTE]
-> Para obtener una lista de códigos de país/región estándar usados por Microsoft, consulta la [Lista oficial de país o región](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+> Para obtener una lista de códigos de país o región estándar usados por Microsoft, consulte el [lista oficial de país o región](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
 
 ## <a name="important-apis"></a>API importantes
 * [GlobalizationPreferences.Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
@@ -207,13 +207,13 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 * [GlobalizationPreferences.HomeGeographicRegion](/uwp/api/windows.system.userprofile.globalizationpreferences.HomeGeographicRegion)
 * [GeographicRegion](/uwp/api/windows.globalization.geographicregion?branch=live)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 * [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Registro de subetiquetas de idiomas IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
-* [Adaptar los recursos al idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Registro de subetiquetas del lenguaje IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
+* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Idiomas admitidos](../../publish/supported-languages.md)
-* [Globalizar los formatos de fecha, hora o número](use-global-ready-formats.md)
-* [Cómo el sistema de administración de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
+* [Globalizar sus formatos de fecha/hora y números](use-global-ready-formats.md)
+* [Cómo coincide el sistema de administración de recursos con etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
-## <a name="samples"></a>Ejemplos
-* [Ejemplo de recursos de aplicación y localización](https://go.microsoft.com/fwlink/p/?linkid=231501)
+## <a name="samples"></a>Muestras
+* [Ejemplo de localización y recursos de la aplicación](https://go.microsoft.com/fwlink/p/?linkid=231501)

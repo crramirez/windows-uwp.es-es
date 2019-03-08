@@ -1,22 +1,22 @@
 ---
 title: 'Novedades en los documentos de Windows de agosto de 2017: desarrollar aplicaciones para UWP'
-description: Se han agregado nuevas características, vídeos y directrices para los desarrolladores a la documentación de agosto de 2017 para los desarrolladores de Windows 10.
+description: Se han agregado nuevas características, vídeos y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de agosto de 2017.
 keywords: novedades, actualización, características, directrices para los desarrolladores, Windows 10, 1708
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050788"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614870"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novedades de la documentación de los desarrolladores de Windows de agosto de 2017
+# <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novedades de los documentos de Windows de agosto de 2017
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre las características, directrices para los desarrolladores y los vídeos están a tu disposición desde hace poco y contienen información nueva y actualizada para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -28,7 +28,7 @@ Usa la nueva extensión de [Windows Template Studio](https://aka.ms/wtsinstall) 
 
 ### <a name="conditional-xaml"></a>XAML condicional
 
-Ahora tienes acceso a una vista previa del [XAML condicional](../debug-test-perf/conditional-xaml.md) para crear [aplicaciones adaptables para versiones](../debug-test-perf/version-adaptive-apps.md). El XAML condicional te permite usar el método ApiInformation.IsApiContractPresent en el marcado XAML para establecer propiedades y crear una instancia del objeto con un marcado basado en la presencia de una API, sin necesidad de usar código subyacente.
+Ya tienes acceso a una vista previa del [XAML condicional](../debug-test-perf/conditional-xaml.md) para crear [aplicaciones adaptables para versiones](../debug-test-perf/version-adaptive-apps.md). El XAML condicional te permite usar el método ApiInformation.IsApiContractPresent en el marcado XAML para establecer propiedades y crear una instancia de los objetos con un marcado basado en la presencia de una API, sin necesidad de usar código subyacente.
 
 ### <a name="game-mode"></a>Modo de juego
 
@@ -43,7 +43,7 @@ La [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de la Tienda
+### <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de la Store
 
 Hemos agregado el artículo [Esquemas de datos para productos de la Tienda](../monetize/data-schemas-for-store-products.md). Este artículo proporciona esquemas para los datos relacionados con la Tienda Windows disponibles para varios objetos en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), incluidos [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) y [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense).
 
@@ -53,19 +53,19 @@ Hemos agregado dos guías que te ayudarán a agregar experiencias modernas que d
 
 Consulta [Mejorar tu aplicación de escritorio para Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance) para encontrar y hacer referencia a los archivos correctos y, a continuación, escribe el código para mejorar las experiencias de UWP para los usuarios de Windows 10.  
 
-Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend) para incorporar interfaces de usuario basadas en XAML modernas y otras experiencias de UWP que deben ejecutarse en un contenedor de aplicación para UWP.
+Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend) para incorporar modernas interfaces de usuario basadas en XAML y otras experiencias de UWP que deben ejecutarse en un contenedor de aplicación para UWP.
 
 ### <a name="getting-started-with-point-of-service"></a>Introducción al punto de servicio
 
-Hemos agregado una nueva guía para que te sirva de [introducción con los dispositivos con un punto de servicio](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-get-started). Hablaremos sobre la enumeración de dispositivos, comprobar las funcionalidades del dispositivo, reclamar dispositivos y compartirlos. 
+Hemos agregado una nueva guía para que te sirva de [introducción con los dispositivos con un punto de servicio](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-get-started). Trata de temas como la enumeración de dispositivos, la comprobación de las funcionalidades del dispositivo, la reclamación de los dispositivos y el uso compartido. 
 
-### <a name="xbox-live"></a>Xbox Live
+### <a name="xbox-live"></a>Xbox Live
 
 Hemos agregado documentos para los desarrolladores de Xbox Live, para los juegos de UWP y el Kit de desarrollo de Xbox (XDK).
 
 Consulta la [guía para desarrolladores de Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/) para obtener información sobre cómo usar las API de Xbox Live para conectar tu juego a la red social de juegos de Xbox Live.
 
-Con el [programa de creadores de Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators), cualquier desarrollador de juegos de UWP puede desarrollar y publicar un juego de Xbox Live habilitado para PC y Xbox One.
+Con el [Programa de creadores de Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators), cualquier desarrollador de juegos de UWP puede desarrollar y publicar un juego de Xbox Live habilitado para PC y Xbox One.
 
 Consulta la [información general del programa de desarrollador de Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/developer-program-overview) para obtener información sobre los programas y características disponibles para los desarrolladores de Xbox Live.
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e1f7e787f2ee80a3168d38a9afd9a249dc0e6de0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603070"
 ---
 # <a name="pixel-shader-ps-stage"></a>Fase del sombreador de píxeles (PS)
 
@@ -36,14 +36,14 @@ Los datos de entrada del sombreador de píxeles incluyen atributos de vértice (
 
 Los atributos de vértice se interpolan (o evalúan) en las ubicaciones del centro del sombreador de píxeles. Los modos de interpolación de atributos del sombreador de píxeles se declaran en una declaración del registro de entrada, por elemento, ya sea en un [argumento](https://msdn.microsoft.com/library/windows/desktop/bb509606) o una [estructura de entrada](https://msdn.microsoft.com/library/windows/desktop/bb509668). Los atributos se pueden interpolar de forma lineal o con el muestreo de centroide. Consulta la sección "Muestreo centroide de atributos durante el suavizado de contorno multimuestra" en [Reglas de rasterización](rasterization-rules.md). La evaluación centroide es importante solamente durante el muestreo múltiple para resolver casos donde un píxel está incluido en un tipo, pero un centro de píxel podría no estarlo; la evaluación centroide se produce lo más cerca posible del centro de píxeles (no incluido).
 
-Las entradas también se pueden declarar con una [semántica de valor del sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647), que marca un parámetro que se utiliza en otras fases de la canalización. Por ejemplo, una posición de píxel debería marcarse con la semántica SV\_Position. La [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) puede producir un escalar para un sombreador de píxeles (con SV\_PrimitiveID); la [fase del rasterizador (RS)](rasterizer-stage--rs-.md) también puede generar un escalar para un sombreador de píxeles (con SV\_IsFrontFace).
+Las entradas también se pueden declarar con una [semántica de valor del sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647), que marca un parámetro que se utiliza en otras fases de la canalización. Por ejemplo, una posición de píxel debe marcarse con la VP\_la semántica de posición. El [etapa del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) puede generar uno escalar de un sombreador de píxeles (mediante SV\_PrimitiveID); el [etapa del rasterizador (RS)](rasterizer-stage--rs-.md) también se puede generar uno escalar de un sombreador de píxeles (mediante SV\_ IsFrontFace).
 
 ## <a name="span-idoutputsspanspan-idoutputsspanspan-idoutputsspanoutputs"></a><span id="Outputs"></span><span id="outputs"></span><span id="OUTPUTS"></span>Salidas
 
 
 Un sombreador de píxeles puede producir hasta 8 colores de 4 componentes y 32 bits, o ningún color si el píxel se descarta. Los componentes de registro de salida del sombreador de píxeles deben declararse para que se puedan utilizar; se permite una máscara de escritura de salida diferente a cada registro.
 
-Usa el estado depth-write-enable [en la [fase de fusión de salida (OM)](output-merger-stage--om-.md)] para controlar si los datos de profundidad se escriben en un búfer de profundidad (o utilice la instrucción discard para descartar los datos de ese píxel). Un sombreador de píxeles también puede generar un valor de profundidad de punto flotante de 1 componente y 32 bits opcional para las pruebas de profundidad (con la semántica SV\_Depth). El valor de profundidad es genera en el registro de oDepth y reemplaza el valor de profundidad interpolado de las pruebas de profundidad (suponiendo que las pruebas de profundidad estén habilitadas). No hay ninguna manera de cambiar dinámicamente entre utilizar el registro oDepth del sombreador o la profundidad de función fija.
+Usa el estado depth-write-enable [en la [fase de fusión de salida (OM)](output-merger-stage--om-.md)] para controlar si los datos de profundidad se escriben en un búfer de profundidad (o utilice la instrucción discard para descartar los datos de ese píxel). Un sombreador de píxeles puede generar también un valor de profundidad de 32 bits, componente de 1, punto flotante, opcional para las pruebas de profundidad (mediante la VP\_profundidad semántica). El valor de profundidad es genera en el registro de oDepth y reemplaza el valor de profundidad interpolado de las pruebas de profundidad (suponiendo que las pruebas de profundidad estén habilitadas). No hay ninguna manera de cambiar dinámicamente entre utilizar el registro oDepth del sombreador o la profundidad de función fija.
 
 Un sombreador de píxeles no puede generar un valor de la galería de símbolos.
 

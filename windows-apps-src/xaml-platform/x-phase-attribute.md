@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6def088b3e7f6410f12d1b2e411bcb547c90a09a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918566"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613290"
 ---
 # <a name="xphase-attribute"></a>Atributo x:Phase
 
@@ -30,7 +30,7 @@ Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.
 
 | Término | Descripción |
 |------|-------------|
-| PhaseValue | Un número que indica la fase en la que se procesará el elemento. El predeterminado es 0. | 
+| PhaseValue | Un número que indica la fase en la que se procesará el elemento. El valor predeterminado es 0. | 
 
 ## <a name="remarks"></a>Observaciones
 
@@ -79,5 +79,5 @@ Los números de fase no necesitan ser contiguos y son los mismos que el valor de
 
 El escalonamiento solo afecta a los enlaces [{x:Bind}](x-bind-markup-extension.md) , no a los enlaces [{Binding}](binding-markup-extension.md) .
 
-El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, esto significa [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) o [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
+El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, que significa [ **ListView** ](https://msdn.microsoft.com/library/windows/apps/br242878) y [ **GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) o [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
 

@@ -1,5 +1,5 @@
 ---
-Description: Simulate and automate input from devices such as keyboard, mouse, touch, pen, and gamepad in your UWP apps.
+Description: Simular y automatizar la entrada de los dispositivos, como el teclado, mouse, táctil, lápiz y gamepad en sus aplicaciones para UWP.
 title: Simular la entrada del usuario a través de la inserción de entrada
 label: Input injection
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602330"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular la entrada del usuario a través de la inserción de entrada
 
@@ -41,11 +41,11 @@ Para usar las API de inserción de entrada en tu aplicación para UWP, tendrás 
 
 | ![Muestra de inserción de entrada táctil](images/injection/touch-input-injection.gif) | 
 |:--:|
-| *Muestra de inserción de entrada táctil* |
+| *Ejemplo de inserción de entrada táctil* |
 
 En este ejemplo se muestra cómo usar las API de inserción de entrada ([Windows.UI.Input.Preview.Injection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)) para escuchar eventos de entrada de mouse en una región de una aplicación y simular eventos de entrada táctil correspondientes en otra región.
 
-**Descarga esta muestra de [Muestra de inserción de entrada (de mouse a entrada táctil)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)**
+**Descargar este ejemplo de [ejemplo de inserción de entrada (mouse para touch)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)**
 
 1. En primer lugar, debemos configurar la interfaz de usuario (MainPage.xaml).
 
@@ -360,8 +360,8 @@ En este ejemplo se muestra cómo usar las API de inserción de entrada ([Windows
 
 4. Por último, controlamos cualquier evento enrutado [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) de botón en el área de inserción de entrada y actualizamos la interfaz de usuario con el nombre del botón en el que se ha hecho clic.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 ### <a name="topic-samples"></a>Ejemplos del tema
 
-- [Muestra de inserción de entrada (de mouse a entrada táctil)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)
+- [Ejemplo de inserción de entrada (mouse para touch)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)

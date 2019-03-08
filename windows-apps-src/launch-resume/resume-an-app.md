@@ -1,10 +1,10 @@
 ---
-title: Administrar la reanudación de la aplicación
+title: Controlar la reanudación de aplicaciones
 description: Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
 ms.date: 07/06/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: f424a274d3e96b58f32875620f3165ccfac82ba6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612470"
 ---
 # <a name="handle-app-resume"></a>Controlar la reanudación de aplicaciones
 
@@ -116,16 +116,16 @@ void MainPage::App_Resuming(Object^ sender, Object^ e)
 ```
 
 > [!NOTE]
-> Dado que no se genera el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) desde el subproceso de interfaz de usuario, debe usar un distribuidor en el controlador para distribuir todas las llamadas a la interfaz de usuario.
+> Dado que el [ **Reanudando** ](https://msdn.microsoft.com/library/windows/apps/br242339) no se produce el evento desde el subproceso de interfaz de usuario, se debe usar un distribuidor en el controlador para enviar las llamadas a la interfaz de usuario.
 
 ## <a name="remarks"></a>Observaciones
 
 Cuando la aplicación está conectada al depurador de Visual Studio, no se suspenderá. Sin embargo, se puede suspender desde el depurador y luego volver a enviarle un evento **Resume**, para que puedas depurar el código. Asegúrate de que la **barra de herramientas Ubicación de depuración** es visible y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**.
 
-En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del evento [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
+En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del evento [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
-* [Controlar la activación de aplicaciones](activate-an-app.md)
-* [Administrar la suspensión de aplicaciones](suspend-an-app.md)
+* [Identificador de activación de la aplicación](activate-an-app.md)
+* [Suspender el identificador de aplicación](suspend-an-app.md)

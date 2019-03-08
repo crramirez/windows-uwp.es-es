@@ -1,6 +1,6 @@
 ---
-Description: Learn how to pin a secondary tile to Start from your UWP app.
-title: Anclar iconos secundarios a inicio
+Description: Obtenga información sobre cómo anclar un icono secundario para que se inicie desde su aplicación para UWP.
+title: Iconos secundarios de anclar a inicio
 label: Pin secondary tiles to Start
 template: detail.hbs
 ms.date: 05/25/2017
@@ -8,13 +8,13 @@ ms.topic: article
 keywords: Windows 10, uwp, iconos secundarios, anclar, anclado, inicio rápido, ejemplo de código, ejemplo, secondarytile
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bebee86c824242cf031503617d4a880ebbb74df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939671"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653160"
 ---
-# <a name="pin-secondary-tiles-to-start"></a>Anclar iconos secundarios a inicio
+# <a name="pin-secondary-tiles-to-start"></a>Iconos secundarios de anclar a inicio
 
 
 Este tema te guiará por pasos a dar para crear un icono secundario para tu aplicación para UWP y anclarlo al menú Inicio.
@@ -37,10 +37,10 @@ using Windows.UI.StartScreen;
 
 Los iconos secundarios se componen de algunos componentes clave...
 
-* **TileId**: identificador único que permite identificar el icono entre los demás iconos secundarios.
-* **DisplayName**: nombre que quieras que se muestre en el icono.
-* **Arguments**: copia de los argumentos que quieras devolver a la aplicación cuando el usuario haga clic en el icono.
-* **Square150x150Logo**: logotipo obligatorio, mostrado en el icono de tamaño mediano (y cambiado de tamaño para iconos de tamaño pequeño si no se proporciona un logotipo pequeño).
+* **TileId**: Un identificador único que le permite identificar el icono de entre los otros iconos secundarios.
+* **DisplayName**: El nombre que desea que se muestren en el icono.
+* **Argumentos**: Los argumentos que desee pasado a la aplicación cuando el usuario hace clic en el icono.
+* **Square150x150Logo**: El logotipo necesario, se muestra en el tamaño medio de mosaico (y cambiar de tamaño al icono de tamaño pequeño si ningún logotipo pequeño proporcionado).
 
 **DEBES** proporcionar valores inicializados para todas las propiedades anteriores, ya que en caso contrario obtendrás una excepción.
 
@@ -67,7 +67,7 @@ SecondaryTile tile = new SecondaryTile(
 ```
 
 
-## <a name="optional-add-support-for-larger-tile-sizes"></a>Opcional: Agregar compatibilidad para tamaños de icono mayores
+## <a name="optional-add-support-for-larger-tile-sizes"></a>Opcional: Agregar compatibilidad con mayores tamaños de icono
 
 Si vas a mostrar notificaciones de icono enriquecidas en el icono secundario, probablemente querrás que el usuario pueda cambiar el tamaño de su ventana para que sea ancha o grande, para poder ver más parte de tu contenido.
 
@@ -88,7 +88,7 @@ tile.VisualElements.Square44x44Logo = new Uri("ms-appx:///Assets/CityTiles/Squar
 ```
 
 
-## <a name="optional-enable-showing-the-display-name"></a>Opcional: Habilitar presentar el nombre para mostrar
+## <a name="optional-enable-showing-the-display-name"></a>Opcional: Permitir que se muestra el nombre para mostrar
 
 De manera predeterminada, NO se presentará el nombre para mostrar. Para presentar el nombre para mostrar en modo mediano/ancho/grande, agrega el siguiente código.
 
@@ -100,8 +100,8 @@ tile.VisualElements.ShowNameOnSquare310x310Logo = true;
 ```
 
 
-## <a name="optional-3d-secondary-tiles"></a>Opcional: iconos secundarios 3D
-Puedes mejorar tu icono secundario para Windows Mixed Reality al agregar los activos 3D. Los usuarios pueden colocar iconos 3D directamente en su página principal de Windows Mixed Reality en lugar del menú Inicio al usar tu aplicación en un entorno de realidad mixta. Por ejemplo, puedes crear fotoesferas de 360° que vinculen directamente a una aplicación de visualizador de fotos de 360° o bien, dejar que los usuarios coloquen un modelo 3D de una silla de un catálogo de muebles que abra una página de detalles sobre las opciones de precios y colores para ese objeto cuando se selecciona. Para empezar, consulta la [documentación para desarrolladores de realidad mixta](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).
+## <a name="optional-3d-secondary-tiles"></a>Opcional: Mosaicos secundarios 3D
+Puedes mejorar tu icono secundario para Windows Mixed Reality al agregar los activos 3D. Los usuarios pueden colocar iconos 3D directamente en su página principal de Windows Mixed Reality en lugar del menú Inicio al usar tu aplicación en un entorno de realidad mixta. Por ejemplo, puedes crear fotoesferas de 360 ° que vinculen directamente a una aplicación de visualizador de fotos de 360 ° o bien, dejar que los usuarios coloquen un modelo 3D de una silla de un catálogo de muebles que abra una página de detalles sobre las opciones de precios y colores para ese objeto cuando se selecciona. Para empezar, consulta la [documentación para desarrolladores de realidad mixta](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).
 
 
 
@@ -179,8 +179,8 @@ Para obtener información sobre cómo mostrar contenido enriquecido en el icono 
 
 ## <a name="related"></a>Relacionados
 
-* [Información general sobre iconos secundarios](secondary-tiles.md)
-* [Instrucciones sobre iconos secundarios](secondary-tiles-guidance.md)
-* [Activos de icono](app-assets.md)
-* [Documentación del contenido de iconos](create-adaptive-tiles.md)
+* [Información general de los iconos secundarios](secondary-tiles.md)
+* [Guía de los iconos secundarios](secondary-tiles-guidance.md)
+* [Recursos de icono](app-assets.md)
+* [Documentación de contenido de mosaico](create-adaptive-tiles.md)
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)

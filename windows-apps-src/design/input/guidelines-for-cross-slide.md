@@ -1,17 +1,17 @@
 ---
-Description: Use cross-slide to support selection with the swipe gesture and drag (move) interactions with the slide gesture.
+Description: Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 title: Instrucciones para el deslizamiento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.date: 10/25/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658130"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -26,7 +26,7 @@ ms.locfileid: "9045198"
 
 Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 
-## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Consejos
 
 
 -   Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección.
@@ -56,7 +56,7 @@ Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de in
 
 Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Nota**en casos donde pueda desplazarse lateralmente en dos direcciones; por ejemplo, los exploradores web o lectores de e, el área de contenido se debe usar la interacción pulsar y sostener para invocar el menú contextual para objetos como imágenes e hipervínculos.
+**Tenga en cuenta**  en casos donde el área de contenido puede estar distribuido en dos direcciones, como los exploradores web o lectores electrónicos, la interacción con hora presione y mantenga debe usarse para invocar el menú contextual para los objetos como imágenes e hipervínculos.
 
  
 
@@ -69,7 +69,7 @@ Usa el deslizamiento transversal para listas y colecciones que se desplazan en u
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
-**Seleccionar**
+**Selecting**
 
 Seleccionar es el marcado de uno o más objetos sin que haya inicio o activación. Esta acción es similar a un único clic con el mouse o la tecla Mayús y un clic del mouse sobre uno o varios objetos.
 
@@ -123,7 +123,7 @@ Por estas razones, la interacción de selección mediante el deslizamiento trans
 
 ### <span id="draganddrop"></span><span id="DRAGANDDROP"></span>
 
-**Arrastrar**
+**Arrastre**
 
 Usa la acción de arrastrar para mover uno o más objetos de un lugar a otro.
 
@@ -133,19 +133,19 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
 
 
 **Ejemplos**
-* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Muestras de archivo**
-* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de prueba de acceso táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: ejemplo de entrada de lápiz simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: muestra de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: muestra de manipulaciones y gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Muestra de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+**Ejemplos de archivo**
+* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Ejemplo de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

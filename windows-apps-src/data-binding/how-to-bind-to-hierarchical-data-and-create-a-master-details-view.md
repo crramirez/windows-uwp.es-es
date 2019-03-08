@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602080"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 
 
 
-> **Nota**consulta también la [muestra de maestro y detalles](https://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Tenga en cuenta**  Consulte también el [ejemplo de principal-detalle](https://go.microsoft.com/fwlink/p/?linkid=619991).
 
-Puedes hacer una vista de tipo maestro-detalles (también conocida como list-details) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) cuando es necesario.
+Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) cuando es necesario.
 
 Una estructura común de las aplicaciones de Plataforma de Windows universal (UWP) es navegar a distintas páginas de detalles cuando un usuario realiza una selección en una lista maestra. Esto es útil cuando quieres ofrecer una representación visual rica de cada elemento en cada nivel de una jerarquía. Otra opción es mostrar varios niveles de datos en una sola página. Esto es útil cuando quieres mostrar unas pocas listas sencillas que permitirán al usuario navegar rápidamente hasta el elemento que le interesa. En este tema se describe cómo implementar esta interacción. Las instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) hacen un seguimiento de la selección actual en cada nivel jerárquico.
 
@@ -29,7 +29,7 @@ Crearemos una vista de una jerarquía de un equipo deportivo organizada en lista
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tema suponemos que sabes cómo crear una aplicación básica UWP. Si quieres obtener instrucciones para crear tu primera aplicación UWP, consulta el tema sobre cómo [crear tu primera aplicación UWP con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
+En este tema suponemos que sabes cómo crear una aplicación básica para UWP. Si quieres obtener instrucciones para crear tu primera aplicación UWP, consulta el tema sobre cómo [crear tu primera aplicación UWP con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
 
 ## <a name="create-the-project"></a>Crear el proyecto
 
@@ -110,7 +110,7 @@ namespace MasterDetailsBinding
 
 ## <a name="create-the-view"></a>Crear la vista
 
-Después, expón la clase del origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
+Después, expón la clase de origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
 
 ```cs
 namespace MasterDetailsBinding

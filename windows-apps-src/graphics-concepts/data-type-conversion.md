@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 08c6dda8759a6e1452daf7cf0a3cd3e5db9ea1e6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930526"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590580"
 ---
 # <a name="data-type-conversion"></a>Conversión de tipos de datos
 
 
 En las secciones siguientes se describe cómo Direct3D controla las conversiones entre tipos de datos.
 
-## <a name="span-iddatatypeterminologyspanspan-iddatatypeterminologyspanspan-iddatatypeterminologyspandata-type-terminology"></a><span id="Data_Type_Terminology"></span><span id="data_type_terminology"></span><span id="DATA_TYPE_TERMINOLOGY"></span>Terminología de tipos de datos
+## <a name="span-iddatatypeterminologyspanspan-iddatatypeterminologyspanspan-iddatatypeterminologyspandata-type-terminology"></a><span id="Data_Type_Terminology"></span><span id="data_type_terminology"></span><span id="DATA_TYPE_TERMINOLOGY"></span>Terminología de tipo de datos
 
 
 El conjunto de términos siguiente se usa posteriormente para caracterizar varias conversiones de formato.
@@ -42,7 +42,7 @@ Los términos anteriores se suelen usar como "Modificadores de nombres de format
 
 Siempre que se produzca una conversión de punto flotante entre diferentes representaciones, incluida la conversión a o desde representaciones de punto no flotante, se aplican las reglas siguientes.
 
-### <a name="span-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanconververting-from-a-higher-range-representation-to-a-lower-range-representation"></a><span id="Conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="CONVERVERTING_FROM_A_HIGHER_RANGE_REPRESENTATION_TO_A_LOWER_RANGE_REPRESENTATION"></span>Conversión de una representación de intervalo superior a una representación de intervalo inferior
+### <a name="span-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanconververting-from-a-higher-range-representation-to-a-lower-range-representation"></a><span id="Conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="CONVERVERTING_FROM_A_HIGHER_RANGE_REPRESENTATION_TO_A_LOWER_RANGE_REPRESENTATION"></span>Conververting desde una representación de intervalo superior a una representación de rango inferior
 
 -   El redondeo a cero se usa durante la conversión a otro formato float. Si el destino es un entero o un formato de punto fijo, se usa el redondeo a par más cercano, a menos que la conversión se documente explícitamente con otro comportamiento de redondeo, por ejemplo, redondear al valor más cercano de FLOAT a SNORM, de FLOAT a UNORM o de FLOAT a sRGB. Otras excepciones son las instrucciones de sombreador ftoi y ftou, que usan el redondeo a cero. Por último, las conversiones de valor float a fijo que usa el muestrario de textura y el rasterizador tienen una tolerancia especificada medida en ULP (unidades en último lugar) desde un ideal infinitamente preciso.
 -   Para los valores de origen superiores al intervalo dinámico de un formato de destino de intervalo inferior (p. ej., un valor float grande de 32 bits se escribe en un elemento RenderTarget de tipo float de 16 bits), da como resultado el valor máximo que se puede representar (con un signo correcto), SIN incluir un valor infinito con signo (debido al redondeo a cero que se describe anteriormente).
@@ -50,13 +50,13 @@ Siempre que se produzca una conversión de punto flotante entre diferentes repre
 -   INF en un formato de intervalo superior se convertirá en INF del formato de intervalo inferior si está disponible. Si el formato inferior no tiene ninguna representación de INF, se convertirá en el valor máximo que se pueda representar. El signo se conservará si está disponible en el formato de destino.
 -   El número no normalizado en un formato de intervalo superior se convertirá en la representación del número no normalizado del formato de intervalo inferior, si está disponible en el formato de intervalo inferior y la conversión es posible; de lo contrario, el resultado será 0. El bit de signo se conservará si está disponible en el formato de destino.
 
-### <a name="span-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>Conversión de una representación de intervalo inferior a una representación de intervalo superior
+### <a name="span-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>Conversión de una representación de intervalo inferior a una representación de rango superior
 
 -   NaN en un formato de intervalo inferior se convertirá en la representación de NaN del formato de intervalo superior, si está disponible en el formato de intervalo superior. Si el formato de intervalo superior no tiene ninguna representación de NaN, se convertirá en 0.
--   INF en un formato de intervalo inferior se convertirá en la representación de INF del formato de intervalo superior, si está disponible en el formato de intervalo superior. Si el formato superior no tiene ninguna representación de INF, se convertirá en el valor máximo que se pueda representar (MAX\_FLOAT en ese formato). El signo se conservará si está disponible en el formato de destino.
+-   INF en un formato de intervalo inferior se convertirá en la representación de INF del formato de intervalo superior, si está disponible en el formato de intervalo superior. Si el formato superior no tiene una representación INF, se convertirá en el valor máximo que se puede representar (máx.\_FLOAT en ese formato). El signo se conservará si está disponible en el formato de destino.
 -   El número no normalizado en un formato de intervalo inferior se convertirá en una representación normalizada del formato de intervalo superior, si es posible, o bien en una representación del número no normalizado del formato de intervalo superior, si esta existe. En caso de que se produzca un error en estos, si el formato del intervalo superior no tiene ninguna representación de número no normalizado, este se convertirá en 0. El signo se conservará si está disponible en el formato de destino. Observa que los números de tipo float de 32 bits cuentan como formato sin una representación de número no normalizado (porque los números no normalizados en operaciones de valores float de 32 bits se vacían en 0 con signo).
 
-## <a name="span-idintegerconversionspanspan-idintegerconversionspanspan-idintegerconversionspaninteger-conversion"></a><span id="Integer_Conversion"></span><span id="integer_conversion"></span><span id="INTEGER_CONVERSION"></span>Conversión de enteros
+## <a name="span-idintegerconversionspanspan-idintegerconversionspanspan-idintegerconversionspaninteger-conversion"></a><span id="Integer_Conversion"></span><span id="integer_conversion"></span><span id="INTEGER_CONVERSION"></span>Conversión de entero
 
 
 En la siguiente tabla se describen las conversiones de varias representaciones descritas anteriormente para otras representaciones. Solo se muestran las conversiones que realmente se producen en Direct3D.
@@ -124,7 +124,7 @@ Con enteros, a menos que se especifique lo contrario, todas las conversiones a/d
 <li>Se coloca la fracción decimal y el punto flotante restante (integral) se convierte directamente en un entero.</li>
 </ul></li>
 </ul>
-<p>A esta conversión se le permite una tolerancia de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (en el lado entero). Esto significa que, después de la conversión de la escala float a entera, cualquier valor dentro de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place de un valor de formato de destino que se puede representar puede asignarse a ese valor. El requisito adicional de invertibilidad de datos garantiza que la conversión no es descendente entre el intervalo y que pueden obtenerse todos los valores de salida.</p></td>
+<p>A esta conversión se le permite una tolerancia de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (en el lado entero). Esto significa que, después de la conversión de la escala float a entera, cualquier valor dentro de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place de un valor de formato de destino que se pueda representar puede asignarse a ese valor. El requisito adicional de invertibilidad de datos garantiza que la conversión no es descendente entre el intervalo y que pueden obtenerse todos los valores de salida.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sRGB</td>
@@ -155,7 +155,7 @@ Con enteros, a menos que se especifique lo contrario, todas las conversiones a/d
 <li>Se coloca la fracción decimal y el punto flotante restante (integral) se convierte directamente en un entero.</li>
 </ul></li>
 </ul>
-<p>A esta conversión se le permite una tolerancia de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (en el lado entero). Esto significa que, después de la conversión de la escala float a entera, cualquier valor dentro de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place de un valor de formato de destino que se puede representar puede asignarse a ese valor. El requisito adicional de invertibilidad de datos garantiza que la conversión no es descendente entre el intervalo y que pueden obtenerse todos los valores de salida.</p></td>
+<p>A esta conversión se le permite una tolerancia de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (en el lado entero). Esto significa que, después de la conversión de la escala float a entera, cualquier valor dentro de D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place de un valor de formato de destino que se pueda representar puede asignarse a ese valor. El requisito adicional de invertibilidad de datos garantiza que la conversión no es descendente entre el intervalo y que pueden obtenerse todos los valores de salida.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">SINT</td>
@@ -170,7 +170,7 @@ Con enteros, a menos que se especifique lo contrario, todas las conversiones a/d
 <tr class="odd">
 <td align="left">SINT</td>
 <td align="left">UINT con más bits</td>
-<td align="left"><p>Para realizar una conversión de SINT a UINT con más bits: si el valor es negativo, se restringe hasta 0. De lo contrario, el número se copia en los bits menos importantes (LSB) del formato de destino y los bits más importantes (MSB) adicionales se rellenan con 0.</p></td>
+<td align="left"><p>Para convertir de SINT a UINT con más bits: Si es negativo, el valor se fija en 0. De lo contrario, el número se copia en los bits menos importantes (LSB) del formato de destino y los bits más importantes (MSB) adicionales se rellenan con 0.</p></td>
 </tr>
 <tr class="even">
 <td align="left">UINT</td>
@@ -187,7 +187,7 @@ Con enteros, a menos que se especifique lo contrario, todas las conversiones a/d
 
  
 
-## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Conversión de número entero de punto fijo
+## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Conversión de entero de punto fijo
 
 
 Los enteros de punto fijo son simplemente enteros con algunos bits de tamaño que tienen un punto decimal implícito en una ubicación fija.
@@ -234,8 +234,8 @@ Las representaciones de enteros de punto fijo se usan de dos formas en Direct3D.
 <td align="left">Entero de punto fijo</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>Supone que la representación de punto fijo específica que se convierte en tipo float no contiene más de un total de 24 bits de información, de los cuales, menos de 23 bits está en el componente fraccionario. Supone que un número de punto fijo dado, fxp, se encuentra en la forma i.f. (entero de bits i, fracción de bits f). La conversión al valor float es como el siguiente seudocódigo.</p>
-<p>resultado de float = (float) (fxp &gt; &gt; f) + / / entero de extracción</p>
-((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); fracción de extracción</td>
+<p>resultado de float = (float)(fxp &gt;&gt; f) + // entero de extracción</p>
+((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); / / extraer fracción</td>
 </tr>
 </tbody>
 </table>
@@ -245,7 +245,7 @@ Las representaciones de enteros de punto fijo se usan de dos formas en Direct3D.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Anexos](appendix.md)
+[Apéndices](appendix.md)
 
  
 

@@ -1,20 +1,20 @@
 ---
-title: Comportamiento de la SRV con iconos sin asignar
+title: Comportamiento SRV con iconos sin asignar
 description: El comportamiento de las lecturas de la vista de recurso de sombreador (SRV) que implican iconos sin asignar depende del nivel de compatibilidad del hardware.
 ms.assetid: 0E1D64BE-EB09-4F9D-9800-BD23A3B374EE
 keywords:
-- Comportamiento de la SRV con iconos sin asignar
+- Comportamiento SRV con iconos sin asignar
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d62a1d3158e13187f89277a1ba009bd56fc2b39a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921408"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659430"
 ---
-# <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>Comportamiento de la SRV con iconos sin asignar
+# <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>Comportamiento SRV con iconos no asignados
 
 
 El comportamiento de las lecturas de la vista de recurso de sombreador (SRV) que implican iconos sin asignar depende del nivel de compatibilidad del hardware. Para ver un desglose de los requisitos, consulta el comportamiento de la lectura para los [Niveles de características de los recursos de streaming](streaming-resources-features-tiers.md). En esta sección se resume el comportamiento ideal, que requiere el [nivel 2](tier-2.md).
@@ -26,7 +26,7 @@ Algún hardware de [nivel 2](tier-2.md) de primera generación no cumple este re
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Canalización de acceso a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f52a032b7fe61df67aaf35c57b2ca64ac8eef6a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933337"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591390"
 ---
 # <a name="texture-resources"></a>Recursos de texturas
 
 
 Las texturas son un tipo de recurso usado para la representación.
 
-## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Representación mediante recursos de textura
+## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Representación con recursos de textura
 
 
 Direct3D admite la fusión de texturas múltiples mediante el concepto de fases de textura. Cada fase de textura contiene una textura y operaciones que pueden realizarse en dicha textura. Las texturas de las fases de textura forman el conjunto de texturas actuales. Consulta [Combinación de texturas](texture-blending.md). El estado de cada textura se encapsula en su fase de textura.
@@ -29,7 +29,7 @@ La aplicación también puede establecer los estados de la perspectiva de la tex
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Texturas](textures.md)
+[Textures](textures.md)
 
  
 

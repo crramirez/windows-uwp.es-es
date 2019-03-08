@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4b8c137d65339701b40027bb3230162e2c2456
-ms.sourcegitcommit: fde2d41ef4b5658785723359a8c4b856beae8f95
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "9079213"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620480"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -45,11 +45,11 @@ El espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/
 
 -   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). Contenido como un búfer
 -   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). Contenido como tuplas de nombre y valor codificadas con el tipo MIME **application/x-www-form-urlencoded**.
--   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). Contenido con el formato del tipo MIME **multipart/\***.
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). Contenido en el formulario de la **varias partes /\***  tipo MIME.
 -   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). Contenido que se codifica como el tipo MIME **multipart/form-data**.
 -   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). Contenido como un flujo (el tipo interno lo usan el método HTTP GET para recibir datos y el método HTTP POST para cargar datos).
 -   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). Contenido como una cadena.
--   [**IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684): una interfaz base para que los desarrolladores creen sus propios objetos de contenido.
+-   [**IHttpContent** ](https://msdn.microsoft.com/library/windows/apps/dn279684) -una interfaz base para los desarrolladores crear sus propios objetos de contenido
 
 El fragmento de código de la sección "Enviar una solicitud GET sencilla a través de HTTP" usa la clase [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) para representar la respuesta HTTP de una solicitud HTTP GET como una cadena.
 
@@ -57,7 +57,7 @@ El espacio de nombres [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/
 
 ## <a name="send-a-simple-get-request-over-http"></a>Enviar una solicitud GET sencilla a través de HTTP
 
-Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. El siguiente fragmento de código muestra cómo enviar una solicitud GET para http://www.contoso.com mediante la clase [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y la clase de [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para leer la respuesta de la solicitud GET.
+Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. El fragmento de código siguiente muestra cómo enviar una solicitud GET a http://www.contoso.com utilizando el [ **Windows.Web.Http.HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) clase y el [  **Windows.Web.Http.HttpResponseMessage** ](https://msdn.microsoft.com/library/windows/apps/dn279631) clase para leer la respuesta de la solicitud GET.
 
 ```csharp
 //Create an HTTP client object
@@ -156,12 +156,12 @@ int main()
 }
 ```
 
-## <a name="post-binary-data-over-http"></a>Datos binarios POST a través de HTTP
+## <a name="post-binary-data-over-http"></a>Datos POST binarios a través de HTTP
 
-El [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) siguiente ejemplo de código ilustra el uso de datos de un formulario y una solicitud POST para enviar una pequeña cantidad de datos binarios como una carga de archivos a un servidor web. El código usa la clase [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) para representar los datos binarios y la clase [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) para representar los datos de varias partes del formulario.
+El [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis) ejemplo de código siguiente ilustra el uso de datos del formulario y una solicitud POST para enviar una pequeña cantidad de datos binarios como una carga de archivos a un servidor web. El código usa el [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) clase para representar los datos binarios y el [ **HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) clase a representar los datos del formulario de varias partes.
 
 > [!NOTE]
-> Una llamada a **obtener** (tal como se muestra en el siguiente ejemplo de código) no es apropiado para un subproceso de interfaz de usuario. Para que la correcta de la técnica usar en ese caso, consulta [operaciones simultáneas y asincrónicas con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
+> Una llamada a **obtener** (como se muestra en el ejemplo de código siguiente), no es adecuada para un subproceso de interfaz de usuario. Para que la correcta de la técnica usar en ese caso, consulte [simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 ```cppwinrt
 // pch.h
@@ -228,25 +228,25 @@ int main()
 }
 ```
 
-Para registrar el contenido de un archivo binario real (en lugar de los datos binarios explícitos utilizados anteriormente), le resultará más fácil de usar un objeto [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) . Construye uno y, como el argumento de su constructor, pasa el valor devuelto desde una llamada a [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync). Este método devuelve una secuencia de los datos en el archivo binario.
+Para publicar el contenido de un archivo binario real (en lugar de los datos binarios explícitos usados anteriormente), le resultará más fácil de usar un [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) objeto. Construir uno y, como argumento a su constructor, pase el valor devuelto de una llamada a [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync). Este método devuelve una secuencia para los datos en el archivo binario.
 
-Además, si estás cargando un archivo grande (más de aproximadamente 10MB), a continuación, te recomendamos que puedes usar el tiempo de ejecución de Windows [Transferencia en segundo plano](/uwp/api/windows.networking.backgroundtransfer) API.
+Además, si está cargando un archivo grande (mayor que 10MB aproximadamente), a continuación, se recomienda que utilice el tiempo de ejecución de Windows [transferencia en segundo plano](/uwp/api/windows.networking.backgroundtransfer) API.
 
 ## <a name="exceptions-in-windowswebhttp"></a>Excepciones en Windows.Web.Http
 
 Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998).
 
-**. NET:** el tipo de [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) aparece como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
+**. NET:**  el [ **Windows.Foundation.Uri** ](https://msdn.microsoft.com/library/windows/apps/br225998) tipo aparece como [ **System.Uri** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
 
 En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) para probar la cadena recibida del usuario antes de que se cree el URI.
 
 En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación recibe información del usuario relativa a [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998), el constructor debe estar en un bloque Try/Catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
-[**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
+[  **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
 
-En las aplicaciones usando el Framework4.5 de .NET en C#, VB.NET, la [System.Exception](https://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](https://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](https://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+En las aplicaciones con .NET Framework 4.5 en C#, VB.NET, el [System.Exception](https://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](https://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](https://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 En las aplicaciones que usan C++ administrado, [Platform::Exception](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
+Para la mayoría de los errores de validación de parámetro, el **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a método no válida, el **HRESULT** devuelto es **E\_ilegal\_método\_llamar a**.
 

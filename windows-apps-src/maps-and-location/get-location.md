@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability
 ms.localizationpriority: medium
 ms.openlocfilehash: b3582aa8ed406a25eb704f2f86f8ed272bea2c63
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627330"
 ---
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
@@ -20,9 +20,9 @@ ms.locfileid: "9050225"
 
 Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
 
-**Sugerencia** Para obtener más información sobre cómo obtener acceso a la ubicación del usuario desde la aplicación, descarga la muestra siguiente del [repositorio Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) de GitHub.
+**Sugerencia** Para obtener más información sobre cómo obtener acceso a la ubicación del usuario en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Ejemplo de asignación de universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar la funcionalidad de ubicación
 
@@ -44,7 +44,7 @@ En esta sección se describe cómo detectar la ubicación geográfica del usuari
 
 ### <a name="step-1-request-access-to-the-users-location"></a>Paso 1: Solicitar acceso a la ubicación del usuario
 
-A menos que la aplicación tiene la funcionalidad de ubicación aproximada (ver nota), debes solicitar acceso a la ubicación del usuario mediante el método de [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de intentar acceder a la ubicación. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. Hasta que el usuario no conceda permiso a la aplicación, esta no podrá acceder a la información de ubicación del usuario.\*
+A menos que la aplicación tiene la funcionalidad de ubicación aproximada (Véase la nota), debe solicitar acceso a la ubicación del usuario mediante el [ **RequestAccessAsync** ](https://msdn.microsoft.com/library/windows/apps/dn859152) método antes de intentar acceder a la ubicación. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. La aplicación no podrá tener acceso a información de ubicación del usuario hasta el usuario concede permiso a la aplicación.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -56,7 +56,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 El método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) pide permiso al usuario para acceder a su ubicación. Solo se pide confirmación al usuario una vez (por aplicación). Cuando el usuario concede o deniega el permiso por primera vez, este método ya no vuelve a solicitarlo. Para ayudar al usuario a cambiar los permisos de ubicación una vez se han solicitado, se recomienda proporcionar un vínculo a la configuración de ubicación, tal como se muestra más adelante en este tema.
 
->Nota: La característica de ubicación aproximada permite que la aplicación obtener una ubicación deliberadamente ofuscada (imprecisa) sin obtener permiso explícito del usuario (el cambio de ubicación de todo el sistema debe seguir estando **en**, sin embargo). Para obtener información sobre cómo usar la ubicación aproximada de tu aplicación, consulta el método [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) en la clase [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) .
+>Nota:  La característica de la ubicación general permite que la aplicación obtener una ubicación (imprecisa) ofuscada intencionadamente sin obtener permiso explícito del usuario (debe estar en el conmutador de la ubicación de todo el sistema **en**; no obstante,). Para obtener información sobre cómo usar la ubicación general de la aplicación, consulte el [ **AllowFallbackToConsentlessPositions** ](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) método en el [ **Geolocator** ](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx)clase.
 
 ### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>Paso 2: Obtener la ubicación del usuario y registrar los cambios en los permisos de ubicación
 
@@ -94,9 +94,9 @@ switch (accessStatus)
 }
 ```
 
-### <a name="step-3-handle-changes-in-location-permissions"></a>Paso 3: Controlar cambios en los permisos de ubicación
+### <a name="step-3-handle-changes-in-location-permissions"></a>Paso 3: Controlar los cambios en los permisos de ubicación
 
-El objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) desencadena el evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) para indicar que se ha modificado la configuración de ubicación del usuario. Ese evento pasa el estado correspondiente mediante la propiedad **Status** del argumento (de tipo [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599)). Ten en cuenta que no se llama a este método desde el subproceso de interfaz de usuario, y que el objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca los cambios de la interfaz de usuario.
+El objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) desencadena el evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) para indicar que se ha modificado la configuración de ubicación del usuario. Ese evento pasa el estado correspondiente mediante la propiedad **Status** del argumento (de tipo [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599)). Ten en cuenta que no se llama a este método desde el subproceso de interfaz de usuario, y que el objeto [**Distribuidor**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca los cambios de la interfaz de usuario.
 
 ```csharp
 using Windows.UI.Core;
@@ -169,7 +169,7 @@ Esta sección describe cómo usar el evento [**PositionChanged**](https://msdn.m
 
 En esta sección se supone que ya se ha habilitado la funcionalidad de ubicación y que has llamado a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) desde el subproceso de la interfaz de usuario de la aplicación en primer plano.
 
-### <a name="step-1-define-the-report-interval-and-register-for-location-updates"></a>Paso 1: Definir el intervalo de informes y registrarse para obtener actualizaciones de ubicación
+### <a name="step-1-define-the-report-interval-and-register-for-location-updates"></a>Paso 1: Definir el intervalo de informe y registrarse para obtener actualizaciones de ubicación
 
 En este ejemplo, se usa una instrucción **switch** con **accessStatus** (del ejemplo anterior) para que actúe solamente cuando se permita el acceso a la ubicación del usuario. Si se permite el acceso a la ubicación del usuario, el código crea un objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534), especifica el tipo de seguimiento y registra las actualizaciones de ubicación.
 
@@ -214,7 +214,7 @@ switch (accessStatus)
 }
 ```
 
-### <a name="step-2-handle-location-updates"></a>Paso 2: Controlar actualizaciones de la ubicación
+### <a name="step-2-handle-location-updates"></a>Paso 2: Controlar las actualizaciones de ubicación
 
 El objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) desencadena el evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) para indicar que se ha modificado la ubicación del usuario o que ha pasado el tiempo, en función de cómo lo hayas configurado. Ese evento pasa la ubicación correspondiente mediante la propiedad **Position** del argumento (de tipo [**Geoposition**](https://msdn.microsoft.com/library/windows/apps/br225543)). En este ejemplo, no se llama al método desde el subproceso de la interfaz de usuario, y el objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca los cambios de la interfaz de usuario.
 
@@ -261,12 +261,12 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 Para que la aplicación pueda acceder a la ubicación del usuario, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **Ubicación para este dispositivo …** está **activada (no es aplicable en Windows 10 Mobile)**
+-   **Ubicación para este dispositivo...**  está activado **en** (no aplicable en Windows 10 Mobile)
 -   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
--   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
+-   En **Elegir las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida en el valor **activado**
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de ubicación geográfica para UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
-* [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Ejemplo de geolocalización UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Instrucciones de diseño para el perímetro](https://msdn.microsoft.com/library/windows/apps/dn631756)
+* [Instrucciones de diseño de aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)

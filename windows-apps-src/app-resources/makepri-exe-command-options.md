@@ -1,5 +1,5 @@
 ---
-Description: MakePri.exe has the set of commands createconfig, dump, new, resourcepack, and versioned. This topic details their use.
+Description: 'MakePri.exe tiene el conjunto de comandos siguiente: createconfig, dump, new, resourcepack y versioned. En este tema se detalla su uso.'
 title: Opciones de línea de comandos de MakePri.exe
 template: detail.hbs
 ms.date: 04/10/2018
@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943419"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603400"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) tiene el conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` y `versioned`. En este tema se detallan las opciones de línea de comandos para su uso.
 
 > [!NOTE]
-> MakePri.exe se instala al comprobar la opción de **SDK de Windows administra las aplicaciones para UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (también en carpetas con el nombre para el resto de arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> Se instala MakePri.exe al comprobar la **Windows SDK para aplicaciones de UWP administradas** opción al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las demás arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-## <a name="getting-help-from-the-command-line"></a>Obtener ayuda de la línea de comandos
+## <a name="getting-help-from-the-command-line"></a>Obtención de Ayuda de la línea de comandos
 
-Puedes ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que se pueden usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en casos muy raros, incluso `MakePri.exe <command> <option>` para ver detalles acerca de una opción.
+Puede ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que puede usar con MakePri.exe. También pueden emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en muy raras ocasiones, incluso `MakePri.exe <command> <option>` para ver información específica acerca de una opción.
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 
@@ -115,7 +115,7 @@ Help:
 El comando `dump` genera un archivo xml volcado que contiene una lista de todos los recursos de un archivo PRI especificado. Ejecuta `MakePri.exe dump /?` para ver ayuda detallada para este comando.
 
 > [!NOTE]
-> Un paquete de recursos sin esquemas es el que se creó con el conmutador *omitSchemaFromResourcePacks* del archivo de configuración PRI. Para volcar un paquete de recursos sin esquema, usa el conmutador `/es <main_package_PRI_file>`. Si no especificas el archivo principal, verás el mensaje de error "*The resources.pri in the package was corrupted so encryption failed (error PRI222: 0xdef0000f - Unspecified error occurred)*".
+> Un paquete de recursos sin esquemas es el que se creó con el conmutador *omitSchemaFromResourcePacks* del archivo de configuración PRI. Para volcar un paquete de recursos sin esquema, usa el conmutador `/es <main_package_PRI_file>`. Si no especifica el archivo principal, a continuación, verá el mensaje de error "*el resources.pri en el paquete se ha dañado por lo que no se pudo cifrado (error PRI222: 0xdef0000f - se ha producido un error no especificado)*".
 
 ```console
 C:\>makepri dump /?
@@ -236,7 +236,7 @@ Help:
 
 ## <a name="resourcepack-command"></a>Comando ResourcePack (Paquete de recursos)
 
-El comando `resourcepack` crea un nuevo archivo PRI indizando los archivos del proyecto, según lo indique el archivo de configuración. Un archivo PRI de paquete de recursos contiene solo las variantes adicionales de recursos ya especificados en un archivo PRI existente. Ejecuta `MakePri.exe resourcepack /?` para ver ayuda detallada para este comando.
+El comando `resourcepack` crea un nuevo archivo PRI indizando los archivos en el proyecto, según lo indique el archivo de configuración. Un archivo PRI de paquete de recursos contiene solo las variantes adicionales de recursos ya especificados en un archivo PRI existente. Ejecuta `MakePri.exe resourcepack /?` para ver ayuda detallada para este comando.
 
 ```console
 C:\>makepri resourcepack /?
@@ -416,18 +416,18 @@ Para `resourcepack` y `versioned`, en lugar de proporcionar un archivo PRI como 
 
 **FILEPATH** es un token que especifica la ubicación del archivo PRI de entrada o el archivo de esquema PRI.
 
-## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) opción
+## <a name="47indexoptionsio-option"></a>&#47;Opción IndexOptions(io)
 
-Debes usar la opción de opciones de índice (/ io) con `new`, `resourcepack`, y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de indizadores de recursos. Opciones de índice se deshabilitan de manera predeterminada.
+Utilice la opción de opciones de índice (/ io) con `new`, `resourcepack`, y `versioned` para especificar las opciones que proporcionan control detallado sobre el comportamiento de los indizadores de recursos. Opciones de índice están deshabilitadas de forma predeterminada.
 
 ```console
 /IndexOptions(io) <OPTIONS>
 ```
 
-**Opciones** es una lista separada por comas que consta de las siguientes opciones.
+**Opciones de** es una lista separada por comas que consta de las siguientes opciones.
 
-- +/-HiddenFiles(hf). El índice (+) o ignorar (-) archivos y carpetas ocultos.
-- +/-LinkedFiles(lf). El índice (+) o ignorar (-) vinculado archivos y carpetas.
+- +/-HiddenFiles(hf). Índice (+) o ignorar (-) archivos y carpetas ocultos.
+- +/-LinkedFiles(lf). Índice (+) o ignorar (-) vinculado a archivos y carpetas.
 
 ## <a name="47mappingfilemf-option"></a>Opción &#47;MappingFile(mf)
 
@@ -458,7 +458,7 @@ Y este es un contenido de ejemplo de un archivo de asignación de paquete de rec
 
 ## <a name="output-summary"></a>Resumen de salida
 
-Si se crean paquetes de recursos, el resumen de salida de MakePRI.exe tiene una forma más detallada. Aquí tienes un ejemplo.
+Si se crean paquetes de recursos, el resumen de salida de MakePRI.exe tiene una forma más detallada. A continuación te mostramos un ejemplo.
 
 ```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
@@ -501,7 +501,7 @@ Aquí te mostramos una condición de error de ejemplo y el mensaje de error corr
 
 | Condición de error | Mensaje de error |
 | --------------- | ------------- |
-| El nombre del archivo de salida es igual que el nombre de uno de los paquetes de recursos de la configuración. | Configuración no válida: el nombre del paquete de recursos <resource pack name> no puede ser el mismo que el del archivo de salida <outputfilename.pri>. |
+| El nombre del archivo de salida es igual que el nombre de uno de los paquetes de recursos de la configuración. | Configuración no válida: Nombre del módulo de recursos <resource pack name> no puede ser el mismo que el archivo de salida < outputfilename.pri >. |
 
 ## <a name="reversemaprm-option"></a>Opción /ReverseMap(rm) (Invertir asignación)
 
@@ -549,6 +549,6 @@ La opción de versión principal (/vma) (para el comando `new`) está en desuso 
 
 Para proporcionar el número de versión principal usa el atributo [resources@majorVersion](makepri-exe-configuration.md) en el archivo de configuración.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [MakePri.exe](compile-resources-manually-with-makepri.md)

@@ -4,14 +4,14 @@ description: Cuando usas la iluminación de Direct3D, permites que Direct3D cont
 ms.assetid: FCBF6A92-4EAC-4CCC-A76C-79985AF348AE
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e90e460cf5f5bda7d90447440d76cf6898a83747
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660210"
 ---
 # <a name="lighting-overview"></a>Introducción a la iluminación
 
@@ -27,7 +27,7 @@ Cómo trabajas con la iluminación y los materiales marca la diferencia en la ap
 
 No son necesarias las luces para representar una escena, pero no se ven los detalles de una escena representada sin luz. Como mucho, representar una escena sin luz da como resultado una silueta de los objetos de la escena. No es suficiente detalle para la mayoría de los casos.
 
-## <a name="span-iddirectlightvsambientlightspanspan-iddirectlightvsambientlightspandirect-light-vs-ambient-light"></a><span id="direct_light_vs._ambient_light"></span><span id="DIRECT_LIGHT_VS._AMBIENT_LIGHT"></span>Luz directa frente a luz de ambiente
+## <a name="span-iddirectlightvsambientlightspanspan-iddirectlightvsambientlightspandirect-light-vs-ambient-light"></a><span id="direct_light_vs._ambient_light"></span><span id="DIRECT_LIGHT_VS._AMBIENT_LIGHT"></span>Luz directa frente a la luz ambiente
 
 
 Aunque la luz directa y la de ambiente iluminan los objetos de una escena, son independientes la una de la otra, tienen efectos muy diferentes y necesitan que trabajes con ellas de formas totalmente distintas.
@@ -57,7 +57,7 @@ La luz directa es la luz que genera una fuente en una escena, siempre tiene colo
 
 Además, el material de un polígono tiene propiedades que afectan a cómo ese polígono refleja la luz que recibe. Estableces un solo rasgo de reflectancia que describe cómo refleja el material la luz de ambiente y estableces rasgos individuales para determinar la reflectancia especular y difusa del material.
 
-## <a name="span-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspancolor-values-for-lights-and-materials"></a><span id="Color_Values_for_Lights_and_Materials"></span><span id="color_values_for_lights_and_materials"></span><span id="COLOR_VALUES_FOR_LIGHTS_AND_MATERIALS"></span>Valores de colores para luces y materiales
+## <a name="span-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspancolor-values-for-lights-and-materials"></a><span id="Color_Values_for_Lights_and_Materials"></span><span id="color_values_for_lights_and_materials"></span><span id="COLOR_VALUES_FOR_LIGHTS_AND_MATERIALS"></span>Valores de color para materiales y luces
 
 
 Direct3D describe el color como cuatro componentes (rojo, verde, azul y alfa) que se combinan para crear un color final. Cada componente oscila entre 0,0 y 1,0. Aunque las luces y los materiales usan la misma estructura para describir el color, las luces usan los valores de un modo ligeramente distinto al de los materiales.
@@ -73,7 +73,7 @@ Consulta [Tipos de luz](light-types.md) y [Propiedades de luz](light-properties.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Luces y materiales](lights-and-materials.md)
+[Materiales y luces](lights-and-materials.md)
 
  
 

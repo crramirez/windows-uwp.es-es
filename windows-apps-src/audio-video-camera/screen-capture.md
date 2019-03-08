@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
 ms.openlocfilehash: dfed365e097b6f0d3816477513202b2693127ade
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049982"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592970"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -20,15 +20,15 @@ A partir de Windows 10, versión 1803, el espacio de nombres [Windows.Graphics.C
 Con la captura de pantalla, los desarrolladores invocan la interfaz de usuario de sistema seguro para que los usuarios finales elijan la pantalla o la ventana de la aplicación que se capturará, y se dibuja un borde de notificación amarilla alrededor del elemento capturado activamente. En el caso de varias sesiones de captura simultánea, se dibuja un borde amarillo alrededor de cada elemento que se captura.
 
 > [!NOTE]
-> La API de captura de pantalla solo se admiten en escritorio y cascos envolventes de realidad mixta de Windows.
+> Solo se admiten las API de captura de pantalla en el escritorio e inmersivos Windows Mixed Reality.
 
 ## <a name="add-the-screen-capture-capability"></a>Agregar la funcionalidad de captura de pantalla
 
-Las API que se encuentran en el espacio de nombres **Windows.Graphics.Capture** requieren una funcionalidad general deben declararse en el manifiesto de la aplicación:
+Las API se encuentra en la **Windows.Graphics.Capture** espacio de nombres requieren una capacidad general deben declararse en el manifiesto de la aplicación:
     
-1. Abre **Package.appxmanifest** en el **Explorador de soluciones**.
+1. Abra **Package.appxmanifest** en el **el Explorador de soluciones**.
 2. Selecciona la pestaña **Funcionalidades**.
-3. Comprueba la **captura de gráficos**.
+3. Comprobar **captura de gráficos**.
 
 ![Captura de gráficos](images/screen-capture-1.png)
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Dado que es el código de la interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si estás llamarlo desde el código subyacente de una página de la aplicación (por ejemplo, **MainPage.xaml.cs**) Esto se hace por TI automáticamente, pero si no es así, puedes forzar que se ejecute en el subproceso de interfaz de usuario con el siguiente código:
+Se trata de código de interfaz de usuario, debe llamarse en el subproceso de interfaz de usuario. Si está llamando desde el código subyacente para una página de la aplicación (como **MainPage.xaml.cs**) Esto se realiza automáticamente para usted, pero si no, puede forzar que se ejecute en el subproceso de interfaz de usuario con el código siguiente:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -81,7 +81,7 @@ await window.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
 
 ## <a name="create-a-capture-frame-pool-and-capture-session"></a>Crear una sesión de captura y grupo de fotogramas de captura
 
-Con **GraphicsCaptureItem**, crearás un [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) con el dispositivo D3D, el formato de píxel admitido (**DXGI\_FORMAT\_B8G8R8A8\_UNORM**), el número de fotogramas deseados (que puede ser un entero) y el tamaño del fotograma. La propiedad **ContentSize** de la clase **GraphicsCaptureItem** se puede usar como el tamaño del fotograma:
+Mediante el **GraphicsCaptureItem**, creará un [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) con el dispositivo D3D, admite el formato de píxel (**DXGI\_formato\_ B8G8R8A8\_UNORM**), el número de fotogramas deseados (que pueden ser cualquier entero) y marco de tamaño. La propiedad **ContentSize** de la clase **GraphicsCaptureItem** se puede usar como el tamaño del fotograma:
 
 ```cs
 private GraphicsCaptureItem _item;
@@ -163,10 +163,10 @@ Cuando se llama a **Recreate**, se descartan todos los marcos existentes. Esto e
 
 ## <a name="putting-it-all-together"></a>Implementación
 
-El siguiente fragmento de código es un ejemplo de principio a fin de cómo implementar la captura de pantalla en una aplicación para UWP. En este ejemplo, tenemos un botón en el front-end que, al hacer clic, llama al método **Button_ClickAsync** .
+El fragmento de código siguiente es un ejemplo de extremo a otro de cómo implementar la captura de pantalla en una aplicación de UWP. En este ejemplo, tenemos un botón en el front-end que, al hacer clic, llama a la **Button_ClickAsync** método.
 
 > [!NOTE]
-> Este fragmento de código usa [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), una biblioteca para la representación de gráficos 2D. Consulta su documentación para obtener información acerca de cómo se configura para el proyecto.
+> Este fragmento de código usa [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), una biblioteca para la representación de gráficos 2D. Consulte su documentación para obtener información acerca de cómo configurarlo para su proyecto.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -386,8 +386,8 @@ namespace WindowsGraphicsCapture
 
 ## <a name="record-a-video"></a>Grabar un vídeo
 
-Si quieres registrar un vídeo de la aplicación, puede hacerlo más fácilmente con el [espacio de nombres Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Esto forma parte de la extensión Desktop SDK, por lo que solo funciona en el escritorio y requiere que se agrega una referencia a ella desde el proyecto. Para más información, consulta la [información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
+Si desea grabar un vídeo de la aplicación, puede hacerlo más fácilmente con el [Windows.Media.AppRecording espacio de nombres](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Esto forma parte de la extensión de escritorio SDK, por lo que solo funciona en el escritorio y requiere que se agregue una referencia a él desde el proyecto. Consulte [información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) para obtener más información.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 * [Windows.Graphics.Capture Namespace](https://docs.microsoft.com/uwp/api/windows.graphics.capture)

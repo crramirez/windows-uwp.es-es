@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050908"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606750"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticación web
 
@@ -87,7 +87,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Además de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), el espacio de nombres [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contiene un método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). No llame a este método. Está diseñada para las aplicaciones destinadas a Windows Phone 8.1 solo y está en desuso a partir de Windows 10.
+>Además de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), el espacio de nombres [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contiene un método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). No llame a este método. Está diseñado para aplicaciones destinadas a Windows Phone 8.1 solo y está en desuso a partir de Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Conéctate con inicio de sesión único (SSO).
 
@@ -136,30 +136,30 @@ Hay varias maneras de solucionar los problemas de las API del agente de autentic
 
 ### <a name="operational-logs"></a>Registros operativos
 
-Con frecuencia, los registros operativos ayudan a determinar qué no está funcionando. Existe un canal de registro de eventos dedicado, Microsoft-Windows-WebAuth\\Operational, que permite a los desarrolladores de sitios web comprender cómo el agente de autenticación web procesa sus páginas web. Para habilitarlo, inicia eventvwr.exe y habilita el registro operativo en Application and Services\\Microsoft\\Windows\\WebAuth. Asimismo, el agente de autenticación web anexa una cadena única a la cadena de agente de usuario para identificarse en el servidor web. La cadena es "MSAuthHost/1.0". Ten en cuenta que el número de versión podría cambiar en el futuro, por lo que no debes depender de dicho número de versión en tu código. Este es un ejemplo de la cadena de agente de usuario completa, seguida de los pasos completos de depuración.
+Con frecuencia, los registros operativos ayudan a determinar qué no está funcionando. Hay un canal de registro de eventos dedicado Microsoft-Windows-WebAuth\\operativo que permite a los desarrolladores del sitio Web comprender cómo se procesan sus páginas web por el agente de autenticación Web. Para habilitarla, lanzamiento eventvwr.exe y enable Operational inicie sesión en la aplicación y los servicios\\Microsoft\\Windows\\WebAuth. Asimismo, el agente de autenticación web anexa una cadena única a la cadena de agente de usuario para identificarse en el servidor web. La cadena es "MSAuthHost/1.0". Ten en cuenta que el número de versión podría cambiar en el futuro, por lo que no debes depender de dicho número de versión en tu código. Este es un ejemplo de la cadena de agente de usuario completa, seguida de los pasos completos de depuración.
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 
 1.  Habilita los registros operativos.
 2.  Ejecuta la aplicación social de Contoso. ![visor de eventos que muestra los registros operativos webauth](images/wab-event-viewer-1.png)
 3.  Las entradas de los registros generados se pueden usar para comprender el comportamiento del agente de autenticación web con más detalle. En este caso, pueden incluir:
-    -   Navegación - iniciar: registra cuándo se inicia AuthHost y contiene información sobre las direcciones URL de inicio y terminación.
+    -   Inicio de navegación: Se registra cuando el AuthHost se inicia y contiene información sobre las direcciones URL de inicio y finalización.
     -   ![ilustra los detalles de Inicio de navegación](images/wab-event-viewer-2.png)
-    -   Navegación - completa: registra la finalización de la carga de una página web.
-    -   Etiqueta meta: registra cuándo se encuentra una etiqueta meta, incluidos los detalles.
-    -   Navegación - finalizar: navegación terminada por el usuario.
-    -   Navegación - error: AuthHost encuentra un error de navegación en una dirección URL e incluye HttpStatusCode.
-    -   Navegación - fin: se ha encontrado la dirección URL de terminación.
+    -   Exploración completa: Registra la finalización de la carga de una página web.
+    -   Etiqueta META: Registros cuando se encuentra una etiqueta meta incluidos los detalles.
+    -   Finalizar la navegación: Navegación finalizado por el usuario.
+    -   Error de navegación: AuthHost detecta un error de navegación en una dirección URL incluida HttpStatusCode.
+    -   Fin de navegación: Finalizando la dirección URL se ha encontrado.
 
 ### <a name="fiddler"></a>Fiddler
 
 El depurador web Fiddler puede usarse con aplicaciones.
 
-1.  Dado que AuthHost se ejecuta en su propio contenedor de aplicación, para darle la funcionalidad de red privada debe establecer una clave del registro: Editor del registro de Windows 5.00
+1.  Dado que el AuthHost se ejecuta en su propio contenedor de la aplicación, para adaptarlo a la capacidad de red privada debe establecer una clave del registro: Editor del registro de Windows versión 5.00
 
-    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Opciones de ejecución del archivo de imágenes**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
+    **HKEY\_LOCAL\_máquina**\\**SOFTWARE**\\**Microsoft**\\**Windows NT** \\ **CurrentVersion**\\**File Execution Options de la imagen**\\**authhost.exe** \\ **EnablePrivateNetwork** = 00000001
 
-    Si no tienes esta clave del registro, puede crear en un símbolo del sistema con privilegios de administrador.
+    Si no tiene esta clave del registro, puede crearlo en un símbolo del sistema con privilegios de administrador.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

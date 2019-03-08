@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, ubicación, geovalla, notificaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e00a3db8890183f50efad6caa31bd573707c6a6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9045694"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606130"
 ---
 # <a name="set-up-a-geofence"></a>Configurar una geovalla
 
@@ -22,7 +22,7 @@ Configura una [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn2
 
 **Sugerencia** Para obtener más información sobre el acceso a la ubicación en tu aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Ejemplo de asignación de universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar la funcionalidad de ubicación
 
@@ -52,7 +52,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 El método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) pide permiso al usuario para acceder a su ubicación. Solo se pide confirmación al usuario una vez (por aplicación). Cuando el usuario concede o deniega el permiso por primera vez, este método ya no vuelve a solicitarlo. Para ayudar al usuario a cambiar los permisos de ubicación una vez se han solicitado, se recomienda proporcionar un vínculo a la configuración de ubicación, tal como se muestra más adelante en este tema.
 
-### <a name="step-2-register-for-changes-in-geofence-state-and-location-permissions"></a>Paso 2: Registrar cambios en los permisos de estado y ubicación de una geovalla
+### <a name="step-2-register-for-changes-in-geofence-state-and-location-permissions"></a>Paso 2: Registrar los cambios en los permisos de estado y la ubicación de la geovalla
 
 En este ejemplo, se usa una instrucción **switch** con **accessStatus** (del ejemplo anterior) para que actúe solamente cuando se permita el acceso a la ubicación del usuario. Si se permite el acceso a la ubicación del usuario, el código accede a las geovallas actuales, y registra los cambios de estado de las geovallas y los cambios en los permisos de ubicación.
 
@@ -95,7 +95,7 @@ protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
 }
 ```
 
-### <a name="step-3-create-the-geofence"></a>Paso 3: Crear la geovalla
+### <a name="step-3-create-the-geofence"></a>Paso 3: Creación de la geovalla
 
 Ahora ya estás listo para definir y configurar un objeto [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn263587). Puedes elegir entre diferentes sobrecargas de constructor según tus necesidades. En el constructor de geovalla más básico, especifica únicamente [**Id**](https://msdn.microsoft.com/library/windows/apps/dn263724) y [**Geoshape**](https://msdn.microsoft.com/library/windows/apps/dn263718) como se muestra aquí.
 
@@ -120,11 +120,11 @@ Geofence geofence = new Geofence(fenceId, geocircle);
 
 Puedes ajustar aún más la geovalla mediante uno de los otros constructores. En el siguiente ejemplo, el constructor de geovalla especifica estos parámetros adicionales:
 
--   [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728): indica de qué eventos de geovalla quieres recibir notificaciones para entrar en la región definida, salir de la región definida o eliminar la geovalla.
--   [**SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732): quita la geovalla cuando se alcanzan todos los estados de la geovalla que se está supervisando.
--   [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703): indica cuánto tiempo debe estar el usuario dentro o fuera del área definida antes de desencadenar eventos de entrada o salida.
--   [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735): indica cuándo comenzar a supervisar la geovalla.
--   [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697): indica el periodo durante el cual se va a supervisar la geovalla.
+-   [**MonitoredStates** ](https://msdn.microsoft.com/library/windows/apps/dn263728) -indica qué eventos de la geovalla que desea reciben notificaciones para especificar la región definida, dejando la región definida, o la eliminación de la geovalla.
+-   [**SingleUse** ](https://msdn.microsoft.com/library/windows/apps/dn263732) -quita la geovalla una vez que se hayan cumplido todos los Estados que se está supervisando la geovalla para.
+-   [**DwellTime** ](https://msdn.microsoft.com/library/windows/apps/dn263703) -indica cuánto tiempo el usuario debe ser o no en el área definida antes de que se desencadenan los eventos de ENTRAR y salir.
+-   [**StartTime** ](https://msdn.microsoft.com/library/windows/apps/dn263735) -indica cuándo se debe iniciar la supervisión de la geovalla.
+-   [**Duración** ](https://msdn.microsoft.com/library/windows/apps/dn263697) -indica el período para el que se va a supervisar la geovalla.
 
 ```csharp
 // Set the fence ID.
@@ -173,7 +173,7 @@ try {
 }
 ```
 
-### <a name="step-4-handle-changes-in-location-permissions"></a>Paso 4: Controlar cambios en los permisos de ubicación
+### <a name="step-4-handle-changes-in-location-permissions"></a>Paso 4: Controlar los cambios en los permisos de ubicación
 
 El objeto [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) desencadena el evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) para indicar que se ha modificado la configuración de ubicación del usuario. Ese evento pasa el estado correspondiente mediante la propiedad **sender.Status** del argumento (de tipo [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Ten en cuenta que no se llama a este método desde el subproceso de interfaz de usuario, y que el objeto [**Distribuidor**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca los cambios de la interfaz de usuario.
 
@@ -250,7 +250,7 @@ private void Initialize()
 
 ```
 
-### <a name="step-2-implement-the-geofence-event-handler"></a>Paso 2: Implementar el controlador de eventos de geovalla
+### <a name="step-2-implement-the-geofence-event-handler"></a>Paso 2: Implementar el controlador de eventos de la geovalla
 
 El paso siguiente es implementar los controladores de eventos. La acción que se siga aquí dependerá de la finalidad para la que tu aplicación use la geovalla.
 
@@ -313,7 +313,7 @@ Para escuchar un evento de geovalla en segundo plano
 
 ### <a name="step-1-register-for-geofence-state-change-events"></a>Paso 1: Registrarse para eventos de cambio de estado de geovalla
 
-En el manifiesto de la aplicación, en la pestaña **Declaraciones**, agrega una declaración para una tarea de ubicación en segundo plano. Para ello haz lo siguiente:
+En el manifiesto de la aplicación, en la pestaña **Declaraciones**, agrega una declaración para una tarea de ubicación en segundo plano. Para ello:
 
 -   Agrega una declaración del tipo **Tareas en segundo plano**.
 -   Establece una propiedad de tipo de tarea **Ubicación**.
@@ -371,7 +371,7 @@ async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
 
 ```
 
-### <a name="step-3-handling-the-background-notification"></a>Paso 3: Administrar la notificación en segundo plano
+### <a name="step-3-handling-the-background-notification"></a>Paso 3: Controlar la notificación en segundo plano
 
 La acción que realices para notificar al usuario dependerá de lo que haga tu aplicación, pero puedes mostrar una notificación del sistema, reproducir un sonido o actualizar un icono dinámico. El código de este paso administra la notificación.
 
@@ -442,9 +442,9 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 ## <a name="test-and-debug-your-app"></a>Probar y depurar la aplicación
 
 
-Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un desafío porque dependen de la ubicación del dispositivo. Aquí describimos varios métodos para probar geovallas en primer y en segundo plano.
+Las tareas para probar y depurar aplicaciones de geovalla pueden resultar todo un desafío porque dependen de la ubicación del dispositivo. Aquí describimos varios métodos para probar geovallas en primer y en segundo plano.
 
-**Para depurar una aplicación de geovalla**
+**Para depurar una aplicación de perímetro**
 
 1.  Mueve físicamente el dispositivo a nuevas ubicaciones.
 2.  Intenta acceder a una geovalla creando una región de geovalla que incluya tu ubicación física actual, de modo que ya estés dentro de la geovalla. El evento "geofenced entered" (ingreso en geovalla) se desencadenará inmediatamente.
@@ -452,7 +452,7 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 
 ### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-foreground"></a>Probar y depurar una aplicación de geovalla que se ejecuta en primer plano
 
-**Para probar la aplicación de geovalla que se ejecuta en primer plano**
+**Para probar la aplicación de perímetro ejecuta el primer plano**
 
 1.  Compila tu aplicación en Visual Studio.
 2.  Inicia la aplicación en el emulador de Visual Studio.
@@ -461,7 +461,7 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 
 ### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-background"></a>Probar y depurar una aplicación de geovalla que se ejecuta en segundo plano
 
-**Para probar la aplicación de geovalla que se ejecuta en segundo plano**
+**Para probar la aplicación de perímetro se está ejecutando el fondo**
 
 1.  Compila tu aplicación en Visual Studio. Ten en cuenta que la aplicación debe establecer el tipo de tarea en segundo plano de **Ubicación**.
 2.  Primero, implementa la aplicación localmente.
@@ -475,12 +475,12 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 
 Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **Ubicación para este dispositivo …** está **activada (no es aplicable en Windows 10 Mobile)**
+-   **Ubicación para este dispositivo...**  está activado **en** (no aplicable en Windows 10 Mobile)
 -   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
--   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
+-   En **Elegir las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida en el valor **activado**
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de ubicación geográfica para UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
-* [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Ejemplo de geolocalización UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Instrucciones de diseño para el perímetro](https://msdn.microsoft.com/library/windows/apps/dn631756)
+* [Instrucciones de diseño de aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)

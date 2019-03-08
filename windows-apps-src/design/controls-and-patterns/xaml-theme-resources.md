@@ -1,5 +1,5 @@
 ---
-Description: Theme resources in XAML are a set of resources that apply different values depending on which system theme is active.
+Description: Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo.
 MS-HAID: dev\_ctrl\_layout\_txt.xaml\_theme\_resources
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -12,17 +12,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e65ad1f4dcb5a83eb7336fc8e1eb794b107dcf01
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634650"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
-Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo. Existen tres temas que admiten el marco XAML: "Light", "Dark" y "HighContrast".
+Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo. Hay 3 temas que admite el marco de trabajo XAML: "Light", "Oscuro" y "Contraste alto".
 
-**Prerequisites**: para este tema se presupone que has leído [Referencias a ResourceDictionary y a recursos XAML](resourcedictionary-and-xaml-resource-references.md).
+**Requisitos previos**: Para este tema se presupone que has leído [Referencias a ResourceDictionary y a recursos XAML](resourcedictionary-and-xaml-resource-references.md).
 
 ## <a name="theme-resources-v-static-resources"></a>Comparación entre recursos de temas y recursos estáticos
 
@@ -34,7 +34,7 @@ En cambio, una [extensión de marcado {StaticResource}](../../xaml-platform/stat
 
 ## <a name="theme-resources-in-the-resource-dictionary-structure"></a>Recursos de temas en la estructura del diccionario de recursos
 
-Cada recurso de tema es parte del archivo XAML themeresources.xaml. Por cuestiones de diseño, themeresources.xaml está disponible en la carpeta \\(Archivos de programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;Versión del SDK&gt;\\Generic de una instalación del Kit de desarrollo de software (SDK) de Windows. Los diccionarios de recursos de themeresources.xaml también se reproducen en generic.xaml en el mismo directorio.
+Cada recurso de tema es parte del archivo XAML themeresources.xaml. Para fines de diseño, themeresources.xaml está disponible en el \\(archivos de programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP \\ &lt;Versión del SDK&gt;\\carpeta genérico desde una instalación del Kit de desarrollo de Software (SDK) de Windows. Los diccionarios de recursos de themeresources.xaml también se reproducen en generic.xaml en el mismo directorio.
 
 Windows Runtime no usa estos archivos físicos para la búsqueda en tiempo de ejecución. Por este motivo, están específicamente en una carpeta DesignTime y no se copian a aplicaciones de forma predeterminada. En cambio, estos diccionarios de recursos existen en la memoria como parte del propio Windows Runtime y las referencias de los recursos XAML de la aplicación a recursos de tema (o recursos del sistema) se resuelven allí en tiempo de ejecución.
 
@@ -44,11 +44,11 @@ Sigue estas instrucciones cuando definas y consumas tus propios recursos de tema
 
 - Especifica los diccionarios de temas para "Light" y "Dark", además de tu diccionario "HighContrast". Aunque puedes crear un objeto [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) con "Predeterminado" como clave, se prefiere que seas explícito y en su lugar uses "Light", "Dark" y "HighContrast".
 
-- Usa la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) en: Estilos, Establecedores, Plantillas de controles, Establecedores de propiedades y Animaciones.
+- Use la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) en: Los estilos, los establecedores, controlar las plantillas, los establecedores de propiedades y las animaciones.
 
 - No uses la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) en las definiciones de recursos dentro de [ThemeDictionaries](https://msdn.microsoft.com/library/windows/apps/br208807). Usa la [extensión de marcado {StaticResource}](../../xaml-platform/staticresource-markup-extension.md) en su lugar.
 
-    EXCEPCIÓN: se puede usar la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) como referencia para los recursos independientes del tema de la aplicación en tus [ThemeDictionaries](https://msdn.microsoft.com/library/windows/apps/br208807). Algunos ejemplos de estos recursos son recursos de color de énfasis como `SystemAccentColor`, o los recursos de color del sistema, que normalmente llevan el prefijo SystemColor como `SystemColorButtonFaceColor`.
+    EXCEPCIÓN: Puede usar el [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) referencias a los recursos que son válidos para el tema de la aplicación en su [ThemeDictionaries](https://msdn.microsoft.com/library/windows/apps/br208807). Algunos ejemplos de estos recursos son recursos de color de énfasis como `SystemAccentColor`, o los recursos de color del sistema, que normalmente llevan el prefijo SystemColor como `SystemColorButtonFaceColor`.
 
 > [!CAUTION]
 > Si no sigues estas directrices es posible que veas un comportamiento inesperado con relación a los temas de tu aplicación. Para más información, consulta la sección [Solución de problemas de recursos de tema](#troubleshooting-theme-resources).
@@ -63,9 +63,9 @@ Para obtener más información acerca de cómo aplicar color en tu aplicación p
 
 El marco XAML proporciona un conjunto de recursos [Color](/uwp/api/Windows.UI.Color) designados con valores diseñados exclusivamente para los temas "Light" y "Dark". Las claves que usas para hacer referencia a estos tienen un formato de nombre de tipo: `System[Simple Light/Dark Name]Color`.
 
-Esta tabla enumera la clave, el nombre simple y la representación de cadena del color (con el formato \#aarrggbb) para los recursos "Light" y "Dark" proporcionados por el marco XAML. La clave se usa para hacer referencia al recurso en una aplicación. El "Nombre simple claro/oscuro" se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante.
+Esta tabla enumeran la clave, un nombre simple y representación de cadena del color (mediante el \#aarrggbb formato) para los recursos de "Claro" y "Oscuro" proporcionados por el marco de trabajo XAML. La clave se usa para hacer referencia al recurso en una aplicación. El "Nombre simple claro/oscuro" se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante.
 
-| Tecla                             | Nombre simple claro/oscuro | Light      | Dark       |
+| Tecla                             | Nombre simple claro/oscuro | Claro      | Oscuro       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -158,9 +158,9 @@ Esta tabla enumera los colores de todo el sistema que XAML proporciona como obje
 | SystemColorGrayTextColor      | **Texto deshabilitado**              | Deshabilitada                 | \#FF6D6D6D      |
 | SystemColorHighlightColor     | **Texto seleccionado** (segundo plano) | Resaltar                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **Texto seleccionado** (primer plano) | HighlightAlt             | \#FFFFFFFF      |
-| SystemColorHotlightColor      | **Hyperlinks**                 | Hyperlink                | \#FF0066CC      |
-| SystemColorWindowColor        | **Background**                 | PageBackground           | \#FFFFFFFF      |
-| SystemColorWindowTextColor    | **Text**                       | PageText                 | \#FF000000      |
+| SystemColorHotlightColor      | **Hipervínculos**                 | Hyperlink                | \#FF0066CC      |
+| SystemColorWindowColor        | **En segundo plano**                 | PageBackground           | \#FFFFFFFF      |
+| SystemColorWindowTextColor    | **Texto**                       | PageText                 | \#FF000000      |
 
 Windows proporciona distintos temas de contraste alto y permite al usuario establecer los colores específicos para su configuración de contraste alto a través del Centro de accesibilidad, como se muestra aquí. Por lo tanto, no es posible proporcionar una lista definitiva de valores de color de contraste alto.
 
@@ -177,7 +177,7 @@ Además de los colores de tema de contraste alto del sistema, el color de énfas
 
 ### <a name="theme-dependent-brushes"></a>Pinceles dependientes del tema
 
-Los recursos de color que se muestra en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo: `SystemControlBackroundAltHighBrush`.
+Los recursos de color que se muestra en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo, `SystemControlBackroundAltHighBrush`.
 
 Veamos cómo se determina el valor de color de este pincel en tiempo de ejecución. En los diccionarios de recursos "Light" y "Dark", el pincel se define así:
 
@@ -191,8 +191,8 @@ Cuando este pincel se aplica a un elemento XAML, el tema actual determina su col
 
 | Tema        | Nombre simple del color | Recurso de color             | Valor en tiempo de ejecución                                              |
 |--------------|-------------------|----------------------------|------------------------------------------------------------|
-| Light        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
-| Dark         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
+| Claro        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
+| Oscuro         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
 | HighContrast | Background        | SystemColorButtonFaceColor | El color especificado en la configuración para el fondo del botón. |
 
 Puedes usar el esquema de nombre `SystemControl[Simple HighContrast name][Simple light/dark name]Brush` para determinar qué pincel aplicar a tus propios elementos XAML.
@@ -202,7 +202,7 @@ For many examples of how the brushes are used in the XAML control templates, see
 -->
 
 > [!NOTE]
-> No todas las combinaciones de \[*Nombre simple de contraste alto*\]\[*Nombre simple claro/oscuro*\] se proporcionan como recurso de pincel.
+> No todas las combinaciones de \[ *contraste alto Simple nombre*\]\[*nombre claro/oscuro Simple* \] se proporciona como un recurso de pincel.
 
 ## <a name="the-xaml-type-ramp"></a>La rampa de tipos XAML
 
@@ -375,7 +375,7 @@ Proporciona las propiedades comunes para todos los demás estilos contenedores d
 </Style>
 ```
 
-**Nota**: los estilos [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) no tienen todos los estilos de rampa de texto que [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) , principalmente porque el modelo de objetos de documento basado en bloques de **RichTextBlock** facilita establecer los atributos en el texto individual elementos. Además, al establecer [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) mediante la propiedad de contenido XAML se crea una situación en la que no hay ningún elemento de texto para el estilo y, por tanto, tendrías que aplicar estilo al contenedor. Esto no supone ningún problema para **RichTextBlock**, porque su contenido de texto siempre tiene que estar en elementos de texto específicos, como [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503), que es donde probablemente aplicarás los estilos XAML para el encabezado de página, el subtítulo de página y las definiciones de rampa de texto similares.
+**Nota**:  El [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) estilos no tienen todo el texto rampa que diseña [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) hace, principalmente porque el objeto de documento basado en bloques de modelo para **RichTextBlock** facilita más fácil de establecer los atributos en los elementos de texto individuales. Además, al establecer [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) mediante la propiedad de contenido XAML se crea una situación en la que no hay ningún elemento de texto para el estilo y, por tanto, tendrías que aplicar estilo al contenedor. Esto no supone ningún problema para **RichTextBlock**, porque su contenido de texto siempre tiene que estar en elementos de texto específicos, como [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503), que es donde probablemente aplicarás los estilos XAML para el encabezado de página, el subtítulo de página y las definiciones de rampa de texto similares.
 
 ## <a name="miscellaneous-named-styles"></a>Varios estilos con nombre
 

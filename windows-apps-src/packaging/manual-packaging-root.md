@@ -1,19 +1,19 @@
 ---
 ms.assetid: ee51eae3-ed55-419e-ad74-6adf1e1fb8b9
-title: Empaquetado manual de la aplicación
+title: Empaquetado de aplicación manual
 description: En esta sección se incluyen artículos o vínculos a artículos sobre el empaquetado manual de aplicaciones para la Plataforma universal de Windows (UWP).
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, packaging, empaquetado
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c429c3c88b0ae23cb518a59cab2e5a3c4f380a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928499"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658200"
 ---
-# <a name="manual-app-packaging"></a>Empaquetado manual de la aplicación
+# <a name="manual-app-packaging"></a>Empaquetado de aplicación manual
 
 Si quieres crear y firmar un paquete de aplicación, pero no usaste Visual Studio para desarrollar tu aplicación, tendrás que usar las herramientas de empaquetado de aplicación manual.
 
@@ -26,9 +26,9 @@ En esta sección se incluyen artículos o vínculos a artículos sobre el empaqu
 
 | Tema | Descripción |
 |-------|-------------|
-| [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](create-app-package-with-makeappx-tool.md) | MakeAppx.exe crea, cifra, descifra y extrae los archivos de paquetes de aplicaciones y lotes. |
-| [Crear un certificado para firmar paquetes](create-certificate-package-signing.md) | Crea y exporta un certificado para firmar paquetes de la aplicación con herramientas de PowerShell. |
-| [Firmar un paquete de la aplicación con SignTool](sign-app-package-using-signtool.md) | Usa SignTool para firmar manualmente un paquete de la aplicación con un certificado. |
+| [Crear un paquete de aplicación con la herramienta MakeAppx.exe](create-app-package-with-makeappx-tool.md) | MakeAppx.exe crea, cifra, descifra y extrae los archivos de paquetes de aplicaciones y lotes. |
+| [Crear un certificado de firma del paquete](create-certificate-package-signing.md) | Crea y exporta un certificado para firmar paquetes de la aplicación con herramientas de PowerShell. |
+| [Firmar un paquete de aplicación mediante SignTool](sign-app-package-using-signtool.md) | Usa SignTool para firmar manualmente un paquete de aplicación con un certificado. |
 
 ### <a name="advanced-topics"></a>Temas avanzados
 
@@ -40,7 +40,7 @@ Esta sección contiene temas más avanzados para crear componentes de una aplica
 
 | Tema | Descripción |
 |-------|-------------|
-| [Introducción a los paquetes de activos](asset-packages.md) | Los paquetes de activos son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura. |
-| [Desarrollar con paquetes de activos y plegado de paquete](package-folding.md) | Aprende a organizar de forma eficaz tu aplicación con paquetes de activos y plegado de paquete. |
-| [Paquetes de aplicaciones de lotes planos](flat-bundles.md) | Describe cómo crear una recopilación plana para los archivos de paquete de la aplicación. |
-| [Creación del paquete con el diseño del empaquetado](packaging-layout.md) | El diseño del empaquetado es un solo documento que describe la estructura del empaquetado de la aplicación. Especifica los lotes de una aplicación (principal y opcional), los paquetes de los lotes y los archivos de los paquetes. |
+| [Introducción a los paquetes de activos](asset-packages.md) | Los paquetes de recurso son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura. |
+| [Desarrollo con paquetes de activo y plegamiento de paquete](package-folding.md) | Aprende a organizar de forma eficaz tu aplicación con paquetes de activos y plegado de paquete. |
+| [Paquetes de aplicación sin formato](flat-bundles.md) | Describe cómo crear un paquete sin formato para archivos de paquete de la aplicación. |
+| [Creación del paquete con el diseño de empaquetado](packaging-layout.md) | El diseño del empaquetado es un solo documento que describe la estructura del empaquetado de la aplicación. Especifica los lotes de una aplicación (principal y opcional), los paquetes de los lotes y los archivos de los paquetes. |

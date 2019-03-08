@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b1e8958874ede50a18f2d2446c8f156361210e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932061"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589900"
 ---
 # <a name="multipass-texture-blending"></a>Combinación de texturas multipase
 
 
-Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales mediante la aplicación de varias texturas a un primitivo a lo largo de varios pases de representación. El término habitual para esto es *combinación de texturas multipase*. Un uso habitual de la combinación de texturas multipase es emular los efectos de modelos complejos de iluminación y sombreado con la aplicación de varios colores de distintas texturas diferentes. Este tipo de aplicaciones se conocen como *mapas de luz*. Consulta [Mapas de luz con texturas](light-mapping-with-textures.md).
+Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales al aplicar varias texturas a un primitivo a lo largo de varios pasos de representación. El término habitual para esto es *combinación de texturas multipase*. Un uso típico de una combinación de texturas multipase es emular los efectos de los modelos complejos de iluminación y sombreado aplicando varios colores desde varias texturas distintas. Esto se denomina *mapa de luces*. Consulta [Mapas de luz con texturas](light-mapping-with-textures.md).
 
-**Nota**  algunos dispositivos son capaces de aplicar varias texturas a primitivos en un solo paso. Consulta [Combinación de texturas](texture-blending.md).
+**Tenga en cuenta**    algunos dispositivos son capaces de aplicar texturas múltiples a tipos primitivos en un único paso. Consulta [Combinación de texturas](texture-blending.md).
 
  
 
@@ -37,7 +37,7 @@ Para realizar una combinación de texturas multipase en una aplicación de C o C
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Combinación de texturas](texture-blending.md)
+[Mezcla de texturas](texture-blending.md)
 
  
 

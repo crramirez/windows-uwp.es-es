@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1785b06aa2217e8ec15aeaa560bd98a65522df2e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603380"
 ---
 # <a name="diffuse-lighting"></a>Luz difusa
 
@@ -25,17 +25,17 @@ Después de calcular la cantidad de luz reflejada, Direct3D aplica estos nuevos 
 
 La iluminación difusa se describe en la siguiente ecuación.
 
-Iluminación difusa = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir</sub>)\*Atten\*Spot\]
+Color difuso de iluminación = suma\[C<sub>d.</sub>\*L<sub>d.</sub>\*(N<sup>.</sup> L<sub>dir</sub>)\*Atten\*terreno\]
 
 | Parámetro       | Valor predeterminado | Tipo          | Descripción                                                                                      |
 |-----------------|---------------|---------------|--------------------------------------------------------------------------------------------------|
-| sum             | N/A           | N/A           | Suma de cada componente difuso de luz.                                                     |
+| sum             | N/D           | N/D           | Suma de cada componente difuso de luz.                                                     |
 | C<sub>d</sub>   | (0,0,0,0)     | D3DCOLORVALUE | Color difuso.                                                                                   |
 | L<sub>d</sub>   | (0,0,0,0)     | D3DCOLORVALUE | Color difuso claro.                                                                             |
-| N               | N/A           | D3DVECTOR     | Normal del vértice                                                                                    |
-| L<sub>dir</sub> | N/A           | D3DVECTOR     | Vector de dirección del vértice del objeto a la luz.                                                |
-| Atten           | N/A           | FLOAT         | Atenuación de la luz. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
-| Spot            | N/A           | FLOAT         | Factor de foco de luz Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).  |
+| N               | N/D           | D3DVECTOR     | Normal del vértice                                                                                    |
+| L<sub>dir</sub> | N/D           | D3DVECTOR     | Vector de dirección del vértice del objeto a la luz.                                                |
+| Atten           | N/D           | FLOAT         | Atenuación de la luz. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
+| Spot            | N/D           | FLOAT         | Factor de foco de luz Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).  |
 
  
 
@@ -43,7 +43,7 @@ Para calcular la atenuación (Atten) o las características de foco de luz (Spot
 
 Los componentes difusos se restringen para estar entre 0 y 255, después de que todas las luces se procesen e interpolen por separado. El valor de iluminación difuso resultante es una combinación de los valores de luz ambiental, difusa y de emisor.
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Por ejemplo:
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
 En este ejemplo, el objeto se colorea con el color difuso de la luz y un color difuso del material.
@@ -67,7 +67,7 @@ La iluminación difusa cuesta más de calcular que la iluminación ambiental. Da
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cálculos de iluminación](mathematics-of-lighting.md)
+[Matemáticas de iluminación](mathematics-of-lighting.md)
 
  
 

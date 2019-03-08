@@ -1,5 +1,5 @@
 ---
-Description: Learn how to programmatically manage focus navigation with keyboard, gamepad, and accessibility tools in a UWP app.
+Description: Obtenga información sobre cómo administrar mediante programación la navegación del foco con el teclado, gamepad y herramientas de accesibilidad en una aplicación para UWP.
 title: Navegación con foco mediante programación con teclado, controlador para juegos y herramientas de accesibilidad
 label: Programmatic focus navigation
 keywords: teclado, controlador para juegos, control remoto, navegación, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
@@ -11,11 +11,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 00d25896a490b0a6b1d65075852f44dfb89c2e53
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662720"
 ---
 # <a name="programmatic-focus-navigation"></a>Navegación con foco mediante programación
 
@@ -143,7 +143,7 @@ Cuando el elemento B tiene el foco, FindNextElement identifica I como el candida
 
 ![Personaliza el comportamiento de navegación con foco mediante sugerencias de navegación](images/keyboard/navigation-hints.png)
 
-*Personaliza el comportamiento de navegación con foco mediante sugerencias de navegación*
+*Comportamiento de navegación del foco personalizado mediante las sugerencias de navegación*
 
 ## <a name="navigation-focus-events"></a>Eventos de foco de navegación
 
@@ -211,7 +211,7 @@ La siguiente imagen muestra cómo, al pasar de A a la derecha, XYFocus elige B4 
 
 ![Cambio del destino de navegación con foco en el evento GettingFocus](images/keyboard/focus-events.png)
 
-*Cambio del destino de navegación con foco en el evento GettingFocus*
+*Cambiar el destino de navegación de foco en el evento GettingFocus*
 
 Aquí te mostraremos cómo controlar el evento [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y redirigir el foco.
 
@@ -327,6 +327,6 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad](focus-navigation.md)
+- [Navegación del foco de teclado, gamepad, control remoto y las herramientas de accesibilidad](focus-navigation.md)
 - [Interacciones de teclado](keyboard-interactions.md)
 - [Accesibilidad de teclado](../accessibility/keyboard-accessibility.md)

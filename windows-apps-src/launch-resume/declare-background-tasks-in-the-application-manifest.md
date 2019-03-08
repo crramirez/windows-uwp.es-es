@@ -4,14 +4,14 @@ description: Habilita el uso de tareas en segundo plano declarándolas como exte
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, tarea en segundo plano
+keywords: Windows 10, uwp, tareas en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b30cd39a4440a1ade1ea0dda5a35d3f7c15f963
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114521"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615680"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -90,7 +90,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 
 2.  Cambia la lista del atributo Task Type para indicar el tipo de registro de tareas usado con esta tarea en segundo plano. Si la tarea en segundo plano se registra con varios tipos de desencadenadores, agrega elementos Task y atributos Type adicionales para cada uno.
 
-    **Nota**asegurarse de que la lista de cada uno de los tipos de desencadenadores que uses o la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) generará un error y generar una excepción).
+    **Tenga en cuenta**  Asegúrese de que para mostrar cada uno de los tipos de desencadenador usa o no se registrará la tarea en segundo plano con los tipos de desencadenadores no declarado (el [ **registrar** ](https://msdn.microsoft.com/library/windows/apps/br224772) método fallará e iniciará una excepción).
 
     Este ejemplo de fragmento de código indica el uso de desencadenadores de eventos del sistema y de notificaciones de inserción:
 
@@ -209,7 +209,7 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Ejecutar en un nuevo proceso cada vez que un desencadenador se activa con el atributo SupportsMultipleInstances
 
-Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debe establecer el destino de versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
+Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debe tener como destino el SDK versión '10.0.15063' (Windows 10 Creators Update) o superior.
 
 ```xml
 <Package
@@ -230,7 +230,7 @@ Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nue
 ```
 
 > [!NOTE]
-> No puedes especificar `ResourceGroup` ni `ServerName` junto con `SupportsMultipleInstances`.
+> No puedes especificar `ResourceGroup` o `ServerName` junto con `SupportsMultipleInstances`.
 
 ## <a name="related-topics"></a>Temas relacionados
 

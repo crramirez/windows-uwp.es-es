@@ -4,14 +4,14 @@ description: En la tabla siguiente se enumeran las asignaciones que .NET Framewo
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ef98f3f4a9d20e836d5f9bddbc111a232f864bf5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927511"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602620"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Asignaciones de .NET Framework de tipos de Windows Runtime
 
@@ -24,7 +24,7 @@ En la tabla siguiente se enumeran las asignaciones que .NET Framework realiza en
 
 La mayoría de los tipos que tienen el mismo espacio de nombres y nombre de tipo tanto en UWP como en .NET Framework son estructuras (o tipos asociados con estructuras, como enumeraciones). En la UWP, las estructuras no tienen miembros que no sean campos y requieren tipos de ayuda que .NET Framework oculta. Las versiones de .NET Framework de estas estructuras tienen propiedades y métodos que proporcionan la funcionalidad de los tipos de ayuda escondida.
 
-Tabla 1: tipos UWP que se asignan a tipos de .NET Framework con un nombre o un espacio de nombres diferente.
+Tabla 1: Los tipos de UWP que se asignan a tipos de .NET Framework con un nombre diferente o un espacio de nombres.
 
 | Tipo UWP/espacio de nombres                                            | Tipo de .NET Framework/espacio de nombres                                          | Ensamblado de .NET Framework                           |
 |---------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------|
@@ -57,12 +57,12 @@ Tabla 1: tipos UWP que se asignan a tipos de .NET Framework con un nombre o un e
 
  
 
-Tabla 2: tipos UWP que se asignan a tipos de .NET Framework con el mismo nombre y espacio de nombres.
+Tabla 2: Los tipos de UWP que se asignan a tipos de .NET Framework con el mismo nombre y espacio de nombres.
 
 | Espacio de nombres                           | Tipo               | Ensamblado de .NET Framework                   |
 |-------------------------------------|--------------------|-------------------------------------------|
 | Windows.UI                          | Color              | System.Runtime.WindowsRuntime.dll         |
-| Windows.Foundation                  | Punto              | System.Runtime.WindowsRuntime.dll         |
+| Windows.Foundation                  | Point              | System.Runtime.WindowsRuntime.dll         |
 | Windows.Foundation                  | Rect               | System.Runtime.WindowsRuntime.dll         |
 | Windows.Foundation                  | Tamaño               | System.Runtime.WindowsRuntime.dll         |
 | Windows.UI.Xaml.Input               | ICommand           | System.ObjectModel.dll                    |
@@ -73,7 +73,7 @@ Tabla 2: tipos UWP que se asignan a tipos de .NET Framework con el mismo nombre 
 | Windows.UI.Xaml                     | GridUnitType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | Grosor          | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Controls.Primitives | GeneratorPosition  | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Media               | Matriz             | System.Runtime.WindowsRuntime.UI.Xaml.dll |
+| Windows.UI.Xaml.Media               | Matrix             | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Media.Animation     | KeyTime            | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Media.Animation     | RepeatBehavior     | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Media.Animation     | RepeatBehaviorType | System.Runtime.WindowsRuntime.UI.Xaml.dll |
@@ -83,4 +83,4 @@ Tabla 2: tipos UWP que se asignan a tipos de .NET Framework con el mismo nombre 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Creación de componentes de Windows en tiempo de ejecución en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

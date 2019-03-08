@@ -3,15 +3,15 @@ title: Crear un certificado para firmar paquetes
 description: Crea y exporta un certificado para firmar paquetes de la aplicación con herramientas de PowerShell.
 ms.date: 09/30/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 963c73bb7667ced5bbe9e33fef0cac561fe1183a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591550"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Crear un certificado para firmar paquetes
 
@@ -23,7 +23,7 @@ En este artículo se explica cómo crear y exportar un certificado para firmar p
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- **Una aplicación empaquetada o desempaquetada**  
+- **Una aplicación empaquetada o sin empaquetar**  
 Una aplicación que contiene un archivo AppxManifest.xml. Debes hacer referencia al archivo de manifiesto al crear el certificado que se usará para firmar el paquete final de la aplicación. Para obtener más información acerca de cómo empaquetar una aplicación manualmente, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
 
 - **Cmdlets de la infraestructura de clave pública (PKI)**  
@@ -54,9 +54,9 @@ En función del archivo AppxManifest.xml del ejemplo anterior, debes usar la sig
 New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
 ```
 
-Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado del comando también generará huella digital del certificado.  
+Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado del comando también producirá la huella digital del certificado.  
 
-**Nota**  
+**Note**  
 Puedes ver el certificado en una ventana de PowerShell mediante los siguientes comandos:
 ```
 Set-Location Cert:\LocalMachine\My

@@ -1,41 +1,41 @@
 ---
-title: Reducir la latencia con cadenas de intercambio de DXGI1.3
-description: Usa DXGI1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma.
+title: Reducir la latencia con cadenas de intercambio de DXGI 1.3
+description: Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, latency, latencia, dxgi, swap chains, cadenas de intercambio, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: acb5c58eebafa53fe140442550356f7eb7534efe
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047174"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594920"
 ---
-# <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reducir la latencia con cadenas de intercambio de DXGI1.3
+# <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reducir la latencia con cadenas de intercambio de DXGI 1.3
 
 
 
-Usa DXGI1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. Por lo general, los juegos necesitan proporcionar la menor latencia posible desde el momento en el que se recibe la entrada del jugador hasta que el juego responde a dicha entrada actualizando la pantalla. En este tema se describe una técnica (disponible a partir de Direct3D11.2) que puedes usar para reducir la latencia de fotogramas efectiva de tu juego.
+Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. Por lo general, los juegos necesitan proporcionar la menor latencia posible desde el momento en el que se recibe la entrada del jugador hasta que el juego responde a dicha entrada actualizando la pantalla. En este tema se describe una técnica (disponible a partir de Direct3D 11.2) que puedes usar para reducir la latencia de fotogramas efectiva de tu juego.
 
 ## <a name="how-does-waiting-on-the-back-buffer-reduce-latency"></a>¿De qué forma reduce la latencia esperar al búfer de reserva?
 
 
 Con la cadena de intercambio del modelo de volteo, los "giros" del búfer de reserva se ponen en cola cada vez que el juego llama a [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). Cuando el bucle de representación llama a Present(), el sistema bloquea el subproceso hasta que se termine de mostrar un fotograma anterior, lo que permite crear espacio para el nuevo fotograma antes de que se muestre realmente. Esto hace que haya más latencia entre el momento en el que el juego dibuja un fotograma y el momento en el que el sistema le permite mostrar dicho fotograma. Muchas veces, el sistema logrará un equilibrio estable en el que el juego siempre esté esperando casi un fotograma extra completo entre el momento en el que representa y el momento en que muestra cada fotograma. Lo mejor es esperar a que el sistema esté listo para aceptar un nuevo fotograma y, luego, representar el fotograma según los datos actuales y poner el fotograma inmediatamente en cola.
 
-Crea una cadena de intercambio que pueda esperar con la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](https://msdn.microsoft.com/library/windows/desktop/bb173076). Las cadenas de intercambio que se crean de este modo pueden informar al bucle de representación de cuándo está el sistema listo para aceptar un nuevo fotograma, lo que hace posible que el juego represente según los datos actuales y, luego, ponga el resultado directamente en la cola actual.
+Crear una cadena de intercambio que puede esperar con el [ **DXGI\_intercambio\_cadena\_marca\_marco\_LATENCIA\_WAITABLE\_objeto** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) marca. Las cadenas de intercambio que se crean de este modo pueden informar al bucle de representación de cuándo está el sistema listo para aceptar un nuevo fotograma, lo que hace posible que el juego represente según los datos actuales y, luego, ponga el resultado directamente en la cola actual.
 
-## <a name="step-1-create-a-waitable-swap-chain"></a>Paso1: Crear una cadena de intercambio que pueda esperar
+## <a name="step-1-create-a-waitable-swap-chain"></a>Paso 1: Crear una cadena de intercambio que puede esperar
 
 
-Especifica la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](https://msdn.microsoft.com/library/windows/desktop/bb173076) cuando llames a [**CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559).
+Especifique el [ **DXGI\_intercambiar\_cadena\_marca\_marco\_LATENCIA\_WAITABLE\_objeto** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) marca al llamar a [ **CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559).
 
 ```cpp
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Nota**  a diferencia de otras marcas, esta no se puede agregar ni quitar con [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). DXGI devuelve un código de error si esta marca se configura de otro modo distinto de cuando se creó la cadena de intercambio.
+> **Tenga en cuenta**    a diferencia de algunos indicadores, esta marca no se puede agregar o quitar mediante [ **ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). DXGI devuelve un código de error si esta marca se configura de otro modo distinto de cuando se creó la cadena de intercambio.
 
  
 
@@ -50,7 +50,7 @@ HRESULT hr = m_swapChain->ResizeBuffers(
     );
 ```
 
-## <a name="step-2-set-the-frame-latency"></a>Paso2: Establecer la latencia de fotogramas
+## <a name="step-2-set-the-frame-latency"></a>Paso 2: Establecer la latencia de marco
 
 
 Define la latencia de fotogramas con la API [**IDXGISwapChain2::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/dn268313), en vez de llamar a [**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334).
@@ -68,7 +68,7 @@ La latencia de fotogramas de las cadenas de intercambio que pueden esperar se es
 //    );
 ```
 
-## <a name="step-3-get-the-waitable-object-from-the-swap-chain"></a>Paso3: Obtener el objeto que puede esperar de la cadena de intercambio
+## <a name="step-3-get-the-waitable-object-from-the-swap-chain"></a>Paso 3: Obtener el objeto que puede esperar de la cadena de intercambio
 
 
 Llama a [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309) para obtener el identificador de espera, que es un elemento que señala al objeto que puede esperar. Guarda este identificador para que lo use el bucle de representación.
@@ -80,10 +80,10 @@ Llama a [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.micros
 m_frameLatencyWaitableObject = swapChain2->GetFrameLatencyWaitableObject();
 ```
 
-## <a name="step-4-wait-before-rendering-each-frame"></a>Paso4: Esperar a que cada fotograma se represente
+## <a name="step-4-wait-before-rendering-each-frame"></a>Paso 4: Esperar antes de procesar cada fotograma
 
 
-El bucle de representación debe esperar a que la cadena de intercambio indique (a través del objeto que puede esperar) que se puede representar cada fotograma. Esto incluye el primer fotograma representado con la cadena de intercambio. Usa [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036) (suministrando el identificador de espera obtenido en el paso2) para indicar el inicio de cada fotograma.
+El bucle de representación debe esperar a que la cadena de intercambio indique (a través del objeto que puede esperar) que se puede representar cada fotograma. Esto incluye el primer fotograma representado con la cadena de intercambio. Usa [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036) (suministrando el identificador de espera obtenido en el paso 2) para indicar el inicio de cada fotograma.
 
 En el siguiente ejemplo se muestra el bucle de representación de la muestra de DirectXLatency:
 
@@ -147,14 +147,14 @@ Consulta los siguientes temas relacionados para obtener más información sobre 
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Muestra de DirectXLatency](https://go.microsoft.com/fwlink/p/?LinkID=317361)
+* [Ejemplo de DirectXLatency](https://go.microsoft.com/fwlink/p/?LinkID=317361)
 * [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309)
 * [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036)
 * [**Windows.System.Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)
 * [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/mt187334)
-* [Procesos y subprocesos](https://msdn.microsoft.com/library/windows/desktop/ms684841)
+* [Los procesos y subprocesos](https://msdn.microsoft.com/library/windows/desktop/ms684841)
 * [Sincronización](https://msdn.microsoft.com/library/windows/desktop/ms686353)
-* [Uso de objetos de evento (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms686915)
+* [Uso de objetos de eventos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms686915)
 
  
 

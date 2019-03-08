@@ -1,5 +1,5 @@
 ---
-title: El objeto de aplicación y DirectX
+title: Objeto de aplicación y DirectX
 description: Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows.
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 ms.date: 02/08/2017
@@ -7,19 +7,19 @@ ms.topic: article
 keywords: Windows 10, UWP, DirectX, objeto de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: e12ad6ce221440e8840006b3883980721b899ae6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616980"
 ---
-# <a name="the-app-object-and-directx"></a>El objeto de aplicación y DirectX
+# <a name="the-app-object-and-directx"></a>Objeto de aplicación y DirectX
 
 
 
 Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows. Como se ejecutan a un nivel más bajo en la pila de Windows Runtime, deben interoperar con el marco de la interfaz de usuario de una manera más básica, mediante el acceso y la interoperación con el objeto de aplicación directamente. Aprende cuándo y cómo se realiza esta interoperación y de qué manera puedes usar eficazmente, como desarrollador de DirectX, este modelo en el desarrollo de una aplicación para UWP.
 
-Consulte el [Glosario de gráficos de Direct3D](../graphics-concepts/index.md) para obtener información acerca de los términos de gráficos desconocidos o los conceptos que se producen durante la lectura.
+Consulte la [Glosario de gráficos Direct3D](../graphics-concepts/index.md) para obtener información acerca de los términos de gráficos desconocidas o conceptos que se produce durante la lectura.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>Los espacios de nombres de interfaz de usuario principales
 
@@ -32,7 +32,7 @@ En primer lugar, veamos los espacios de nombres de Windows Runtime que debes inc
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Nota**  si no estás desarrollando una aplicación para UWP, usa los componentes de interfaz de usuario incluidos en las bibliotecas de JavaScript o XAML específicas y espacios de nombres en lugar de los tipos proporcionados en estos espacios de nombres.
+> **Tenga en cuenta**    si no está desarrollando una aplicación para UWP, use los componentes de interfaz de usuario proporcionados en las bibliotecas de JavaScript o XAML específico y los espacios de nombres en lugar de los tipos proporcionados en estos espacios de nombres.
 
  
 
@@ -57,7 +57,7 @@ Este es el conjunto básico de pasos necesarios para obtener una ventana con el 
 
     En este tipo, define:
 
-    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso1.
+    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso 1.
 
 3.  Pasa una instancia del proveedor de vistas a [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) desde **main**.
 
@@ -87,14 +87,14 @@ En resumen, el objeto aplicación proporciona una fábrica de proveedores de vis
 ## <a name="coreapplicationview-behaviors-and-properties"></a>Comportamientos y propiedades de CoreApplicationView
 
 
-[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) representa la vista actual de la aplicación. El singleton de aplicación crea la vista de la aplicación durante la inicialización, pero la vista permanece inactiva hasta que se activa. Puedes obtener la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que muestra la vista al accediendo a la propiedad [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) de esta y puedes controlar eventos de activación y desactivación para la vista registrando delegados con el evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
+[**CoreApplicationView** ](https://msdn.microsoft.com/library/windows/apps/br225017) representa la visión actual de la aplicación. El singleton de aplicación crea la vista de la aplicación durante la inicialización, pero la vista permanece inactiva hasta que se activa. Puedes obtener la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que muestra la vista al accediendo a la propiedad [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) de esta y puedes controlar eventos de activación y desactivación para la vista registrando delegados con el evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
 
 ## <a name="corewindow-behaviors-and-properties"></a>Comportamientos y propiedades de CoreWindow
 
 
 La ventana primaria, que es una instancia de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), se crea y se pasa al proveedor de vistas cuando se inicializa el objeto de aplicación. Si la aplicación tiene una ventana para mostrar, la muestra; de lo contrario, simplemente inicializa la vista.
 
-[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) proporciona diversos eventos específicos de entrada y comportamientos básicos de ventana. Puedes controlar estos eventos registrando tus propios delegados con ellos.
+[**CoreWindow** ](https://msdn.microsoft.com/library/windows/apps/br208225) proporciona una serie de eventos de comportamientos específicos de entrada y básica de ventana. Puedes controlar estos eventos registrando tus propios delegados con ellos.
 
 También puedes obtener el distribuidor de eventos de ventana para la ventana a través de la propiedad [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) que proporciona una instancia de [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
 

@@ -1,5 +1,5 @@
 ---
-Description: Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input.
+Description: Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz.
 title: Establecer tiempos de espera de reconocimiento de voz
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 679c2632fd5793ae083b2a79e29de3a3e9da04cf
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044928"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627170"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Establecer tiempos de espera de reconocimiento de voz
 
@@ -31,7 +31,7 @@ Aquí especificamos diversos valores de [**Timeouts**](https://msdn.microsoft.co
 -   BabbleTimeout: el período de tiempo que un SpeechRecognizer continúa escuchando sonidos no reconocibles (hablante) antes de que se suponga que la entrada de voz ha finalizado y finaliza la operación de reconocimiento.
 -   EndSilenceTimeout: el período de tiempo en que un objeto SpeechRecognizer detecta silencio (después de que se hayan generado los resultados de reconocimiento) y da por hecho que ha finalizado la entrada de voz.
 
-**Nota**tiempos de espera se pueden establecer por reconocedor.
+**Tenga en cuenta**  tiempos de espera se pueden establecer en una base por reconocedor.
 
  
 
@@ -47,7 +47,7 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 * [Interacciones de voz](speech-interactions.md)
 **Ejemplos**
-* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconocimiento de voz y ejemplo de síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

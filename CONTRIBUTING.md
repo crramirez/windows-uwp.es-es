@@ -2,34 +2,50 @@
 
 Gracias por tu interés en la documentación para la Plataforma universal de Windows (UWP). Agradecemos tus comentarios, modificaciones y adiciones a nuestros documentos.
 
-En esta página se describen los pasos básicos para contribuir a nuestra documentación para desarrolladores.
+## <a name="writing-content"></a>Escribir el contenido
 
-## <a name="public-and-private-repos"></a>Repositorios públicos y privados
+Nuestra documentación se escribe en Markdown, una sintaxis de estilo de texto ligero. Si no está familiarizado con Markdown, puede [aprender los conceptos básicos en GitHub](https://guides.github.com/features/mastering-markdown/). Cuando no está seguro, siempre puede copiar el estilo de formato de las otras páginas en nuestra documentación.
 
-Los documentos conceptuales de UWP se alojan en dos repositorios diferentes que luego se combinan, se mezclan y actualizan en un único sitio: un repositorio es para las contribuciones de cualquier persona y el otro es solo para empleados de Microsoft.
+## <a name="public-contributions"></a>Sus contribuciones públicas
 
-Si ***no*** eres empleado de Microsoft, trabaja en el [repositorio de contenido público](https://github.com/MicrosoftDocs/windows-uwp).
+Si estás **no** empleado de Microsoft, que puede contribuir a través de la [repositorio de contenido público](https://github.com/MicrosoftDocs/windows-uwp). Sus contribuciones públicas son adecuadas para los cambios y aclaraciones para las páginas existentes.
 
-Si ***eres*** empleado de Microsoft, puedes trabajar en el repositorio público o el [repositorio de contenido privado](https://cpubwin.visualstudio.com/_git/windows-uwp). Los empleados pueden insertar cambios de manera dinámica algo más rápidamente si contribuyen en el repositorio privado o usan una [rama concreta](https://review.docs.microsoft.com/en-us/windows-authoring-guide/uwp/conceptual/setup-local-repo-for-large-changes#what-branch-should-i-use-for-my-authoring) para los cambios que deben permanecer confidenciales hasta una fecha futura.
+### <a name="editing-a-file"></a>Edición de un archivo
 
-## <a name="editing-topics-on-the-public-repo"></a>Editar temas en el repositorio público
+Si ya está en el repositorio de contenido público, comience por navegar al archivo que desea cambiar. Desde allí, seleccione el icono de lápiz situado encima el contenido que se muestra para comenzar a editar.
 
-Hemos intentado hacer que las ediciones en un archivo existente sean lo más simple posible. 
-- Si ya estás en el repositorio, simplemente navega al archivo y haz clic en el botón **Editar**.  
-- Como alternativa, si estás viendo una página Docs.microsoft.com en el explorador, haz clic en el botón **Editar** de la parte superior derecha de la página. Serás redirigido al archivo de origen de marcado correcto en el repositorio, donde puedes hacer clic en el botón **Editar**. 
+Como alternativa, si está viendo una página en docs.microsoft.com, puede seleccionar la **editar** botón en la parte superior derecha de la página. Esto le redirigirá al archivo en el repositorio de código fuente asociado.
 
-GitHub bifurca automáticamente el repositorio oficial en tu cuenta personal de GitHub, donde puedes realizar los cambios. Cuando hayas terminado, envía una solicitud de extracción hacia la rama "docs". Después de crear la solicitud de extracción, un miembro del equipo de documentación para UWP revisará los cambios. Si tu solicitud se acepta, las actualizaciones se publican en https://docs.microsoft.com/windows/.
+Cuando empiece a editar, GitHub automáticamente bifurque el repositorio oficial en su cuenta personal de GitHub, donde puede realizar los cambios. Cuando haya terminado, envíe una solicitud de incorporación de cambios a la **docs** rama.
 
-Puedes aprender los conceptos básicos de marcado en tan solo unos minutos.  Para empezar, consulta [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) (Aprender sobre marcado).
+### <a name="pull-requests"></a>Solicitudes de incorporación de cambios
 
-## <a name="making-more-substantial-changes"></a>Hacer cambios más sustanciales
+Después de enviar la solicitud de incorporación de cambios, se evalúa una lista de comprobación de la calidad del contenido para asegurarse de cumple con nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si se produce un error, se le indicará qué cambios se deben para realizar.
 
-Para hacer cambios sustanciales en un artículo existente, agregar o cambiar imágenes, o contribuir a un nuevo artículo, tendrás que crear un clon local de nuestro repositorio de contenido privado. Sigue las [instrucciones de nuestra guía de creación de Windows](https://review.docs.microsoft.com/en-us/windows-authoring-guide/uwp/conceptual/). Si todavía no configuraste una cuenta de GitHub y el alias de Microsoft unido al dominio, [empieza aquí](https://review.docs.microsoft.com/en-us/windows-authoring-guide/github-account).
+Los revisores asignados pueden aprobar o rechazar la solicitud o trabajan con usted para realizar más cambios.
+
+## <a name="internal-contributions"></a>Contribuciones internas
+
+Si es empleado de Microsoft, que puede contribuir a través de la [repositorio de contenido privado](https://cpubwin.visualstudio.com/_git/windows-uwp). Puede encontrar instrucciones sobre cómo usar este repositorio en el [Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Documentación sobre las próximas características debe aportarse mediante el repositorio privado solo.
+
+### <a name="editing-a-file"></a>Edición de un archivo
+
+Como se muestra en el repositorio público, puede realizar pequeños cambios en el repositorio privado en el explorador, sin necesidad de crear un clon local. Le **debe** asegurarse de que va colaborar en la rama adecuada. Para obtener más información sobre la creación de la rama de personal, consulte [las instrucciones de la Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/conceptual/branches?branch=master).
+
+### <a name="making-substantial-changes"></a>Realizar cambios importantes
+
+Para realizar cambios más extensivos en un artículo existente, agregar o cambiar imágenes, o contribuir con un artículo nuevo, crear un clon local del repositorio de contenido privado. Para obtener más información, siga [las instrucciones de la Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/conceptual/).
+
+### <a name="pull-requests"></a>Solicitudes de incorporación de cambios
+
+Al crear una solicitud de incorporación de cambios en el repositorio interno, asegúrese de que se va a combinar la rama de personal en la rama que desde donde se ha creado.
+
+Después de enviar la solicitud de incorporación de cambios, se evalúa un [lista de comprobación de calidad del contenido](https://review.docs.microsoft.com/windows-authoring-guide/managing-contributions/editorial-checklist?branch=master) para asegurarse de cumple con nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si se produce un error, se le indicará qué cambios se deben para realizar.
+
+Los revisores asignados pueden aprobar o rechazar la solicitud o trabajan con usted para realizar más cambios. Los revisores no combinará PR hasta que se ha aprobado usted mismo.
 
 ## <a name="using-issues-to-provide-feedback-on-uwp-conceptual-documentation"></a>Usar problemas para proporcionar comentarios en la documentación conceptual para UWP
 
-Si quieres proporcionar comentarios, en lugar de modificar directamente las páginas de documentación real, puedes [crear una incidencia en el repositorio público](https://github.com/MicrosoftDocs/windows-uwp/issues). Haz clic en la pestaña "Problemas" y luego en el botón **Nuevo problema**. Asegúrate de incluir el título del tema y la dirección URL de la página.
+Si desea proporcionar comentarios sobre los documentos en lugar de realizar modificaciones usted mismo, también puede [crear un problema en el repositorio público](https://github.com/MicrosoftDocs/windows-uwp/issues). Seleccione el **problemas** pestaña y seleccione el **nuevo problema** botón. Asegúrate de incluir el título del tema y la dirección URL de la página. El problema se asignará a los miembros del equipo de documentación de UWP para su revisión.
 
-Los miembros del equipo de documentación para UWP revisan periódicamente los problemas y los clasificarán, asignar y solucionarán según corresponda.
-
-*Para los problemas internos, usa la herramienta de solicitud de contenido WDG en [http://aka.ms/pubrequest](http://aka.ms/pubrequest). 
+* Para problemas internos, use el [WDG contenido de la herramienta solicitud](https://aka.ms/pubrequest).

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, games, juegos, input, entrada, flight stick, palanca de mandos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5eceb30c62f1e803397aff71d59b560c39736cf9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927978"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609020"
 ---
 # <a name="flight-stick"></a>Palanca de mandos
 
 En esta página se describen los conceptos básicos de programación para palancas de mandos certificadas para Xbox One mediante [Windows.Gaming.Input.FlightStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick) y las API relacionadas para la Plataforma universal de Windows (UWP).
 
-En esta página encontrarás información sobre lo siguiente:
+En esta página encontrarás información sobre:
 
 * Cómo obtener una lista de palancas de mandos conectadas y sus usuarios
 * Cómo detectar que se ha agregado o quitado una palanca de mandos
@@ -51,7 +51,7 @@ Como dispositivo de navegación de la interfaz de usuario, una palanca de mandos
 |               Abajo | Joystick hacia abajo                       |
 |               Izquierda | Joystick hacia la izquierda                       |
 |              Derecha | Joystick hacia la derecha                      |
-|               Vista | Botón **Vista**                     |
+|               Ver | Botón **Vista**                     |
 |               Menú | Botón **Mené**                     |
 |             Aceptar | Botón **FirePrimary**              |
 |             Cancelar | Botón **FireSecondary**            |
@@ -116,11 +116,11 @@ Each flight stick can be associated with a user account to link their identity t
 
 ## <a name="reading-the-flight-stick"></a>Lectura de la palanca de mandos
 
-Después de identificar la palanca de mandos que te interesa, puedes recopilar datos de ella. Sin embargo, a diferencia de algunos otros tipos de entrada con los que puedes estar familiarizado, las palancas de mandos no comunican el cambio de estado mediante la generación de eventos. En cambio, tienes que realizar lecturas periódicas de su estado actual mediante _sondeos_.
+Después de identificar la palanca de mandos que te interesa, puedes recopilar datos de ella. Sin embargo, a diferencia de algunos otros tipos de entrada con los que puedes estar familiarizado, las palancas de mandos no comunican el cambio de estado mediante la generación de eventos. En cambio, tienes que realizar lecturas regulares de su estado actual mediante _sondeos_.
 
 ### <a name="polling-the-flight-stick"></a>Sondeo de la palanca de mandos
 
-El sondeo captura una instantánea de la palanca de mandos en un momento preciso en el tiempo. Este enfoque de la recopilación de entrada es una buena opción para la mayoría de los juegos porque su lógica normalmente se ejecuta en un bucle determinista en lugar de controlarse mediante eventos También suele ser más sencillo interpretar comandos de juego de la entrada recopilada de una vez que de muchas entradas individuales recopiladas a lo largo del tiempo
+El sondeo captura una instantánea de la palanca de mandos en un momento preciso en el tiempo. Este método para la recopilación de entradas es una buena opción para la mayoría de los juegos porque su lógica suele ejecutarse en un bucle determinista en lugar de ser impulsada por eventos. También suele ser más sencillo interpretar los comandos de juego desde las entradas recopiladas en una sola vez que lo que es de muchas entradas individuales recopiladas a medida que pasa el tiempo.
 
 Una palanca de mandos se sondea al llamar a [FlightStick.GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick.GetCurrentReading). Esta función devuelve un objeto [FlightStickReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstickreading) que contiene el estado de la palanca de mandos.
 
@@ -150,7 +150,7 @@ float yaw = reading.Yaw;
 
 Al leer los valores del joystick, verás que no producen una lectura neutra confiable de 0,0 cuando el joystick está en reposo en la posición central. En su lugar, se producen diferentes valores próximos a 0,0 cada vez que se mueve el joystick y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten.
 
-Una manera de implementar una zona muerta es determinar la distancia que se ha desplazado el joystick desde el centro y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos (no es exacta porque las lecturas del joystick son básicamente valores polares, no planos) simplemente con el teorema de Pitágoras. Esto genera una zona muerta radial.
+Una manera de implementar una zona muerta es determinar la distancia que se ha desplazado el joystick desde el centro y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos (no es exacta porque las lecturas del joystick son básicamente valores polares, no planos) simplemente con el teorema de Pitágoras. Esto genera un zona muerta radial.
 
 En el siguiente ejemplo se muestra una zona muerta radial básica mediante el teorema de Pitágoras:
 
@@ -197,7 +197,7 @@ if (FlightStickButtons::None == (reading.Buttons & FlightStickButtons::FirePrima
 }
 ```
 
-A veces, es posible que quieras determinar si se suelta un botón que está presionado o si se presiona un botón que no lo estaba, si se presionan o sueltan varios botones o si un conjunto de botones tiene una disposición determinada; algunos presionados y otros no. Para información sobre cómo detectar cada una de estas condiciones, consulta [Detección de transiciones de botón](input-practices-for-games.md#detecting-button-transitions) y [Detección de disposiciones de botones complejas](input-practices-for-games.md#detecting-complex-button-arrangements).
+A veces, es posible que quieras determinar si se suelta un botón que está presionado o si se presiona un botón que no lo estaba, si se presionan o sueltan varios botones o si un conjunto de botones tiene una disposición determinada; algunos presionados y otros no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detecting button transitions (Detección de transiciones de botón)](input-practices-for-games.md#detecting-button-transitions) y [Detecting complex button arrangements (Detección de disposiciones de botones complejas)](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 El valor del botón de control se lee de la propiedad [FlightStickReading.HatSwitch](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstickreading.HatSwitch). Dado que esta propiedad también es un campo de bits, las máscaras bit a bit se vuelven a usar aislar la posición del botón de control.
 
@@ -223,8 +223,8 @@ if (GameControllerSwitchPosition::Center == (reading.HatSwitch & GameControllerS
 
 The [InputInterfacingUWP sample _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) demonstrates how to use flight sticks and different kinds of input devices in tandem, as well as how these input devices behave as UI navigation controllers.-->
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Clase Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller)
 * [Interfaz Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Prácticas de entrada para juegos](input-practices-for-games.md)
+* [Prácticas recomendadas de entrada para juegos](input-practices-for-games.md)

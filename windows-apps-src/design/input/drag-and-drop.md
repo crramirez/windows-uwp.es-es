@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e508feb8a530f29b40d5a3839df573cb2ce89896
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932176"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634400"
 ---
 # <a name="drag-and-drop"></a>Arrastrar y colocar
 
 Arrastrar y colocar es una forma intuitiva de transferir datos dentro de una aplicación o entre aplicaciones en el escritorio de Windows. Arrastrar y colocar permite al usuario transferir datos entre aplicaciones o dentro de una aplicación mediante un gesto estándar (presionar, colocar y aplicar panorámica con el dedo o presionar y aplicar panorámica con un mouse o un lápiz).
 
-> **API importantes**: [CanDrag property](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [AllowDrop property](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
+> **API importantes**: [Propiedad CanDrag](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [propiedad AllowDrop](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
 
 El origen de arrastre, que es la aplicación o área donde se desencadena el gesto de arrastre, proporciona los datos que se van a transferir rellenando un objeto de paquete de datos que puede contener formatos de datos estándar, incluidos texto, RTF, HTML, mapas de bits, elementos de almacenamiento o formatos de datos personalizados. El origen también indica el tipo de operaciones que admite: copiar, mover o enlazar. Cuando se libera el puntero, se produce la colocación. El destino para colocar, que es la aplicación o área situada debajo del puntero, procesa el paquete de datos y devuelve el tipo de operación que realizó.
 
@@ -51,13 +51,13 @@ No es necesario realizar ninguna otra acción para poder arrastrar elementos, a 
 
 En la mayoría de los casos, el sistema creará un paquete de datos de forma automática. El sistema controla automáticamente lo siguiente:
 * Imágenes
-* Texto 
+* Text 
 
 Para otro contenido, deberás controlar los eventos **DragStarted** y **DragCompleted** y usarlos para crear tu propio [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage).
 
 ## <a name="enable-dropping"></a>Habilitar la operación de colocar
 
-En la siguiente revisión se muestra cómo establecer un área específica de la aplicación como un valor válido para la operación de colocar mediante [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) en XAML. Si un usuario intenta colocar elementos en otro lugar, el sistema no se lo permitirá. Si quieres que los usuarios puedan colocar elementos en cualquier parte de la aplicación, establece todo el fondo como destino para colocar elementos.
+En el siguiente marcado se muestra cómo establecer un área específica de la aplicación como un valor válido para la operación de colocar mediante [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) en XAML. Si un usuario intenta colocar elementos en otro lugar, el sistema no se lo permitirá. Si quieres que los usuarios puedan colocar elementos en cualquier parte de la aplicación, establece todo el fondo como destino para colocar elementos.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
@@ -98,7 +98,7 @@ El sistema mostrará automáticamente las animaciones adecuadas para colocar en 
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementación de la operación de arrastrar y colocar personalizada
 
-La clase [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte del trabajo de implementación de arrastrar y colocar automáticamente Pero si quieres, puedes implementar su propia versión usando las API de [espacio de nombres Windows.ApplicationModel.DataTransfer.DragDrop.Core](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
+La clase [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte del trabajo de implementación de arrastrar y colocar automáticamente Pero si lo desea, puede implementar su propia versión mediante las API en el [Windows.ApplicationModel.DataTransfer.DragDrop.Core espacio de nombres](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
 
 | Funcionalidad | API de WinRT |
 | --- | --- |
@@ -109,7 +109,7 @@ La clase [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielemen
 
 
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 * [Comunicación entre aplicaciones](index.md)
 * [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)

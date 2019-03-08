@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cad23f5f82ce70b3a9920726d054b59446925b8
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 0ee5142997e3d4824152adf6d0b26bccb8a30f7f
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981529"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613310"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 
@@ -27,7 +27,7 @@ Obtén información acerca de cómo crear un elemento de trabajo que se ejecute 
 
 Usa el método [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996).
 
-> **Nota** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) puedes usar para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres minutos:
 
@@ -221,7 +221,7 @@ Si el temporizador sigue contando el tiempo restante pero ya no se necesita el e
 
 Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario. En su lugar, puedes usar un [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
 
-Consulta la [muestra de grupo de subprocesos](http://go.microsoft.com/fwlink/p/?linkid=255387) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos. El ejemplo de código se escribió originalmente para Windows8.1, pero el código se puede reutilizar en Windows 10.
+Consulta la [muestra de grupo de subprocesos](https://go.microsoft.com/fwlink/p/?linkid=255387) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos. El ejemplo de código se escribió originalmente para Windows 8.1, pero el código se puede volver a usar en Windows 10.
 
 Para obtener información sobre cómo repetir temporizadores, consulta [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md).
 

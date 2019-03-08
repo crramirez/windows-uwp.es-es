@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial de introducción: un juego para UWP en 3D en JavaScript'
-description: Un juego para UWP para Microsoft Store, escrito en JavaScript con three.js
+description: Una juego para la Microsoft Store, escritas en JavaScript con three.js UWP
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047779"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595500"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -24,11 +24,11 @@ Para esta muestra, vamos a aprovechar la biblioteca de **three.js**. Esta biblio
 
 ¿Quieres hacerte una idea de la aplicación que vamos a crear antes de seguir leyendo? Échale un vistazo en CodePen.
 
-<iframe height='300' scrolling='no' title='Juego de dinosaurio final' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Dino game final</a> (Juego de dinosaurio) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Dino juego final' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Dino game final</a> (Juego de dinosaurio) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE] 
-> Esto no es un juego completo; está diseñada para mostrar como usar JavaScript y una biblioteca de terceros para preparar una aplicación lista para publicarse en la Microsoft Store.
+> Esto no es un juego completo; está diseñado para demostrar el uso de JavaScript y una biblioteca de terceros para que una aplicación esté listo para publicar en la Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -50,7 +50,7 @@ Si no quieres clonar el proyecto, puedes descargarlo como un archivo ZIP.
 Una vez que se ha cargado la solución en Visual Studio, verás varios archivos, incluidos:
 -   Images/: carpeta que contiene diferentes iconos que requieren las aplicaciones para UWP.
 - css/: carpeta que contiene el CSS que se va a usar.
--   js/: carpeta que contiene archivos JavaScript. El archivo main.js es nuestro juego, mientras que los demás archivos son las bibliotecas de terceros.
+-   js/: una carpeta que contiene archivos JavaScript. El archivo main.js es nuestro juego, mientras que los demás archivos son las bibliotecas de terceros.
 -   models/: carpeta que contiene modelos 3D. En este juego, solo tenemos uno para el dinosaurio.
 -   index.html: página web que hospeda al representador del juego.
 
@@ -61,7 +61,7 @@ Presiona F5 para iniciar la aplicación. Deberías ver una ventana abierta que t
 > [!NOTE] 
 > ¿Hubo algún problema? Asegúrate de haber instalado Visual Studio con el soporte web. Puedes crear un proyecto nuevo para comprobarlo; si no existe compatibilidad con JavaScript, tendrás que volver a instalar Visual Studio y marcar el cuadro Microsoft Web Developer Tools.
 
-## <a name="walkthrough"></a>Tutorial
+## <a name="walkthrough"></a>tutorial
 
 Cuando inicies este juego, verás un mensaje que te solicita hacer clic en la pantalla. La [API de bloqueo de puntero](https://developer.mozilla.org/docs/Web/API/Pointer_Lock_API) sirve para que puedas moverte con el mouse. El movimiento se realiza presionando W, A, S, D o las teclas de dirección.
 El objetivo de este juego es mantenerse lejos del dinosaurio. Si el dinosaurio está lo suficientemente cerca de ti, empezará a perseguirte hasta que salgas de su rango o te acerques demasiado y pierdas.
@@ -94,7 +94,7 @@ Ahora, lo configuraremos con las bibliotecas que usaremos y el `div` (denominado
 
 Ahora que tenemos el HTML de inicio listo para ejecutarse, vayamos a **main.js** y creemos algunos gráficos.
 
-### <a name="2-creating-your-scene"></a>2. Crear el escenario
+### <a name="2-creating-your-scene"></a>2. Creación de la escena
 
 En esta sección del tutorial, vamos a agregar la base del juego.
 
@@ -256,11 +256,11 @@ Este fue un fragmento de código considerable, pero ahora tenemos un hermoso cub
 
 Puedes copiar y pegar todo el JavaScript de este CodePen para saber si hay algún problema, o modificarlo para ajustar algunas luces y cambiar algunos colores. 
 
-<iframe height='300' scrolling='no' title='Las luces, cámara, cubo!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>luces, cámara, cubo!</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Las luces, cámara, cubo!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>luces, cámara, el cubo.</a> mediante Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-### <a name="3-making-the-maze"></a>3. Crear el laberinto
+### <a name="3-making-the-maze"></a>3. Realizar el laberinto
 
 Aunque observar un cubo es impresionante, espera a ver un laberinto creado con cubos. Es un secreto muy conocido en la comunidad de juegos que una de las formas más rápidas de crear un nivel es colocar cubos con una matriz 2D.
  
@@ -402,7 +402,7 @@ No dudes en probar cosas en el CodePen, como cambiar los colores de los cubos o 
 <iframe height='300' scrolling='no' title='Creación de laberinto' src='//codepen.io/MicrosoftEdgeDocumentation/embed/JWKYzG/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/JWKYzG/'>Maze building</a> (Crear un laberinto) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="4-allowing-the-player-to-look-around"></a>4. Permitir que el jugador mire a su alrededor
+### <a name="4-allowing-the-player-to-look-around"></a>4. Permitir que el jugador debe buscar en torno a
 
 Es hora de incluir el laberinto y empezar a echar un vistazo. Para ello, usaremos la biblioteca **PointerLockControls.js** y la cámara.
 
@@ -486,11 +486,11 @@ animate();
 
 En este momento, tenemos la capacidad de **mirar** alrededor, pero el factor sorprendente será poder **moverse**. Las cosas se van a poner un poco matemáticas con los vectores, ¿pero qué son los gráficos en 3D sin un poco de matemáticas?
 
-<iframe height='300' scrolling='no' title='Mirar alrededor' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Look around</a> (Mirar alrededor) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mire' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Look around</a> (Mirar alrededor) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-### <a name="5-adding-player-movement"></a>5. Agregar movimiento al jugador
+### <a name="5-adding-player-movement"></a>5. Adición de movimiento del jugador
 
 Para profundizar en cómo dar movimiento al jugador, tenemos que volver a nuestros días de cálculo. Queremos aplicar velocidad (movimiento) a la `camera` a lo largo de un determinado vector (dirección).
 
@@ -638,15 +638,15 @@ Al final, aplicamos cualquiera de los valores actualizados `x` e `y` a la cámar
 
 ---
 
-¡Enhorabuena! Ya tienes una cámara controlada por el jugador que puede moverse y mirar alrededor. Todavía podemos colarnos por las paredes, pero eso lo solucionaremos más tarde. A continuación, agregaremos el dinosaurio.
+Enhorabuena. Ya tienes una cámara controlada por el jugador que puede moverse y mirar alrededor. Todavía podemos colarnos por las paredes, pero eso lo solucionaremos más tarde. A continuación, agregaremos el dinosaurio.
 
-<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el lápiz <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> mediante Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE]
 > Si usas estos controles en tu aplicación para UWP, puede que notes retrasos en el movimiento y eventos de `keyUp` sin registrar. Estamos investigando este problema y esperamos arreglar esta parte de la muestra en breves.
 
-### <a name="6-load-that-dino"></a>6. Cargar el dinosaurio
+### <a name="6-load-that-dino"></a>6. ¡Cargar ese dino!
 
 Si clonaste o descargarte este repositorio de proyectos, verás una carpeta `models` con un archivo `dino.json` dentro. Este archivo JSON es un modelo de dinosaurio en 3D que se ha creado y exportado desde Blender.
 
@@ -698,10 +698,10 @@ Una vez cargado el dinosaurio, actualizamos el elemento `instructions` con las i
 
 Ya tenemos el modelo de dinosaurio cargado. Échale un vistazo.
 
-<iframe height='300' scrolling='no' title='Agregar el dinosaurio' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adding the dino</a> (Agregar el dinosaurio) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Agregar el dino' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adding the dino</a> (Agregar el dinosaurio) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="7-move-that-dino"></a>7. Mover el dinosaurio
+### <a name="7-move-that-dino"></a>7. ¡Mover ese dino!
 
 Crear inteligencia artificial para un juego puede ser extremadamente complejo, así que para este ejemplo haremos que el dinosaurio tenga un comportamiento de movimiento sencillo. Nuestra dinosaurio se moverá en línea recta, deslizándose a través de las paredes y a través de la niebla lejana.
 
@@ -729,10 +729,10 @@ function animateDino(delta) {
 
 Ver al dinosaurio moverse por ahí no es muy divertido, pero cuando agreguemos la detección de colisión todo será más divertido.
 
-<iframe height='300' scrolling='no' title='Mover el dinosaurio - ninguna colisión' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/jBMbbL/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/jBMbbL/'>Moving the dino - no collision</a> (Mover el dinosaurio, sin ninguna colisión) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover el dino - ninguna colisión' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/jBMbbL/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/jBMbbL/'>Moving the dino - no collision</a> (Mover el dinosaurio, sin ninguna colisión) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="8-collision-detection-for-the-player"></a>8. Detección de colisiones para el jugador
+### <a name="8-collision-detection-for-the-player"></a>8. Detección de colisión para el Reproductor
 
 Ya tenemos al jugador y al dinosaurio en movimiento, pero todavía queda un problema: todo el mundo puede atravesar las paredes. Cuando aprendimos a agregar cubos y paredes en este tutorial, los insertamos en la matriz `collidableObjects`. Esta matriz es la que usaremos para indicar si un jugador está demasiado cerca de algo que no puede atravesar.
 
@@ -844,11 +844,11 @@ function animatePlayer(delta) {
 
 Ahora ya podemos detectar las colisiones del jugador, así que ya puedes intentar atravesar las paredes.
 
-<iframe height='300' scrolling='no' title='Mover el jugador - colisión' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - no collision</a> (Mover el jugador, sin ninguna colisión) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>
+<iframe height='300' scrolling='no' title='Movimiento del jugador - colisión' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - no collision</a> (Mover el jugador, sin ninguna colisión) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>
 </iframe>
 
 
-### <a name="9-collision-detection-and-animation-for-dino"></a>9. Detección de colisiones y animación del dinosaurio
+### <a name="9-collision-detection-and-animation-for-dino"></a>9. Detección de colisiones y animación de dino
 
 Ahora vamos a evitar que el dinosaurio atraviese las paredes y que se mueva hacia otra dirección aleatoria cuando esté demasiado cerca de un objeto contra el que puede colisionar.
 
@@ -931,10 +931,10 @@ Al agregar este valor a la rotación `y` del dinosaurio con `dino.rotation.y += 
 
 ¡Lo logramos! Ya tenemos un dinosaurio con inteligencia artificial que puede moverse por el laberinto.
 
-<iframe height='300' scrolling='no' title='Mover el dinosaurio - colisión' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el lápiz para <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>mover el dinosaurio - colisión</a> Microsoft Edge docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover el dino - colisión' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>moviendo el dino - colisión</a> mediante Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="10-starting-the-chase"></a>10. Iniciar la persecución
+### <a name="10-starting-the-chase"></a>10. Iniciando el grano
 
 Cuando el dinosaurio está a una determinada distancia del jugador, queremos que comience a perseguirlo. Dado que esto es solo un ejemplo, no hay algoritmos avanzados aplicados para que el dinosaurio persiga al jugador. En su lugar, el dinosaurio mirará al jugador y se dirigirá hacia él. En una parte abierta del laberinto esto funcionará bien, pero el dinosaurio puede quedarse atrapado contra una pared.
 
@@ -999,7 +999,7 @@ dinoAlert.style.display = 'none';
 En este punto, tenemos un dinosaurio salvaje que comienza a perseguir al jugador si se acerca demasiado y que no parará hasta que su posición se encuentre sobre la del jugador
 El último paso es agregar algunas condiciones de fin del juego una vez que el dinosaurio esté a unas unidades de `CATCHOFFSET` de distancia.
 
-<iframe height='300' scrolling='no' title='La persecución' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpRBqR/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpRBqR/'>The chase</a> (La persecución) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='El grano' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpRBqR/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpRBqR/'>The chase</a> (La persecución) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -1080,11 +1080,11 @@ Eso es todo. Ha sido un viaje largo, pero ya tenemos nuestro juego creado con **
 Consulta la parte superior de la página para ver el [último CodePen](#introduction).
 
 
-## <a name="publishing-to-the-microsoft-store"></a>Publicar en Microsoft Store
-Ahora que tienes una aplicación para UWP, es posible publicar en Microsoft Store (siempre que la hayas mejorado). Hay unos pocos pasos para el proceso.
+## <a name="publishing-to-the-microsoft-store"></a>Publicación en la Microsoft Store
+Ahora tiene una aplicación para UWP, es posible que publicarla en la Microsoft Store (suponiendo que se han mejorado en primer lugar). Este proceso tiene diferentes pasos.
 
 1.  Tienes que estar [registrado](https://developer.microsoft.com/store/register) como desarrollador de Windows.
 2.  Debes usar la [lista de comprobación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
 3.  La aplicación debe enviarse para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
-Para obtener más información, consulte la [publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
+Para obtener más información, consulte [publicar su aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 

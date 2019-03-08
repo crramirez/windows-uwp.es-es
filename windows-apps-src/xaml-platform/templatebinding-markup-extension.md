@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ade10b4d5e2653eb214d93c2c9166e6a3e3defc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940114"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661810"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
@@ -38,11 +38,11 @@ Vincula el valor de una propiedad en una plantilla de control al valor de otra p
 
 ## <a name="remarks"></a>Observaciones
 
-El uso de **TemplateBinding** es una parte fundamental de la definición de una plantilla de control, tanto si eres un autor de control personalizado como si reemplazas una plantilla de control para los controles existentes. Para obtener más información, consulta [Inicio rápido: plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
+El uso de **TemplateBinding** es una parte fundamental de la definición de una plantilla de control, tanto si eres un autor de control personalizado como si reemplazas una plantilla de control para los controles existentes. Para obtener más información, consulte [inicio rápido: Plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
-Es bastante común que *propertyName* y *targetProperty* usen el mismo nombre de propiedad. En este caso, un control podría definir una propiedad en sí misma y reenviar la propiedad a una propiedad existente y con un nombre asignado intuitivamente de una de sus partes componentes. Por ejemplo, un control que incorpore un objeto [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) en su composición, que se usa para mostrar la propiedad **Texto** del control, podría incluir este código XAML como parte de la plantilla del control: `<TextBlock Text="{TemplateBinding Text}" .... />`
+Es bastante común que *propertyName* y *targetProperty* usen el mismo nombre de propiedad. En este caso, un control podría definir una propiedad en sí misma y reenviar la propiedad a una propiedad existente y con un nombre asignado intuitivamente de una de sus partes componentes. Por ejemplo, un control que incorpore un [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) en su composición, que se usa para mostrar la propiedad **Texto**, podría incluir este código XAML como parte de la plantilla del control: `<TextBlock Text="{TemplateBinding Text}" .... />`
 
-Los tipos usados como valor para la propiedad de origen y la propiedad de destino deben coincidir. No existe la posibilidad de introducir un convertidor al usar **TemplateBinding**. Si no coinciden los valores, se produce un error al analizar el XAML. Si necesitas un convertidor, puedes usar la sintaxis detallada para un enlace de plantillas como:  `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
+Los tipos usados como valor para la propiedad de origen y la propiedad de destino deben coincidir. No existe la posibilidad de introducir un convertidor al usar **TemplateBinding**. Si no coinciden los valores, se produce un error al analizar el XAML. Si necesitas un convertidor, puedes usar la sintaxis detallada para un enlace de plantillas como: `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
 
 Al intentar usar un **TemplateBinding** fuera de una definición de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) en XAML se generará un error del analizador.
 
@@ -52,20 +52,20 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 **TemplateBinding** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
 
-**Nota**implementación del procesador en el XAML en tiempo de ejecución de Windows, no hay ninguna representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
+**Tenga en cuenta**  implementación del procesador en el XAML en tiempo de ejecución de Windows, no hay ninguna representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
 
 ### <a name="xbind-in-controltemplate"></a>x: Bind en ControlTemplate
 
 > [!NOTE]
-> El uso de x: Bind en ControlTemplate requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Uso de x: Bind en un ControlTemplate requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-A partir de Windows 10, versión 1809, puedes usar la extensión de marcado **x: Bind** en cualquier lugar de usar **TemplateBinding** en [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
+A partir de Windows 10, versión 1809, puede usar el **x: Bind** extensión de marcado en cualquier parte use **TemplateBinding** en un [ **ControlTemplate** ](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
-La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) es necesaria (no opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
+El [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) propiedad es necesaria (no es opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
 
-Con el soporte de **x: Bind** , puedes usar ambos [enlaces de función](../data-binding/function-bindings.md) como enlaces bidireccionales bien como en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
+Con **x: Bind** admite, puede usar ambos [función enlaces](../data-binding/function-bindings.md) , así como los enlaces bidireccionales en un [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
 
-En este ejemplo, la propiedad **TextBlock.Text** se evalúa como **Button.Content.ToString**. TargetType en ControlTemplate actúa como el origen de datos y realice el mismo resultado que TemplateBinding al elemento primario.
+En este ejemplo, el **TextBlock.Text** propiedad se evalúa en **Button.Content.ToString**. TargetType de ControlTemplate actúa como el origen de datos y lleva a cabo el mismo resultado que TemplateBinding al elemento primario.
 
 ```xaml
 <ControlTemplate TargetType="Button">
@@ -81,6 +81,6 @@ En este ejemplo, la propiedad **TextBlock.Text** se evalúa como **Button.Conten
 * [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [Introducción a XAML](xaml-overview.md)
-* [Introducción a las propiedades de dependencia](dependency-properties-overview.md)
+* [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
  
 

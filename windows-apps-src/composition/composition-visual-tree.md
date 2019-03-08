@@ -1,29 +1,29 @@
 ---
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: Elemento visual de composición
-description: Los elementos visuales de composición conforman la estructura del árbol visual que usan todas las demás funciones de la API de composición y sobre la cual construyen. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
+description: Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b1c0b78ca45d98428f38518b337b5889f595c49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943383"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602440"
 ---
 # <a name="composition-visual"></a>Elemento visual de composición
 
-Los elementos visuales de composición conforman la estructura del árbol visual que usan todas las demás funciones de la API de composición y sobre la cual construyen. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
+Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
 
 ## <a name="visuals"></a>Elementos visuales
 
 Existen tres tipos de elementos visuales que conforman la estructura del árbol visual, además de una clase de pincel base con varias subclases que afectan al contenido de un elemento visual:
 
-- [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
-- [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad de crear elementos secundarios.
-- [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) y agrega la capacidad de asociar un pincel, de modo que el elemento Visual pueda representar píxeles, incluyendo imágenes, efectos o un color sólido.
+- [**Visual** ](https://msdn.microsoft.com/library/windows/apps/Dn706858) : base de objeto, la mayoría de las propiedades son aquí y heredan los demás objetos visuales.
+- [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) : se deriva de [ **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)y agrega la capacidad para crear elementos secundarios.
+- [**SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) : se deriva de [ **ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) y agrega la capacidad de asociar un pincel para que el objeto Visual puede representar píxeles, incluidas las imágenes, efectos o un sólido Color.
 
 Puedes aplicar contenido y efectos a SpriteVisuals mediante el objeto [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) y sus subclases, incluyendo [**CompositionColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) y [**CompositionEffectBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush). Para más información sobre los pinceles, consulta nuestra [**Introducción a CompositionBrush**](https://docs.microsoft.com/windows/uwp/composition/composition-brushes).
 
@@ -35,14 +35,14 @@ En el ejemplo, hay un número de cuadrados de color sólido en los que se puede 
 
 Esto muestra varios de los conceptos básicos para trabajar con la API, entre los que se incluye lo siguiente:
 
-- Creación de un compositor
+- Crear un compositor
 - Crear un objeto SpriteVisual con un objeto CompositionColorBrush
 - Recortar un elemento visual
 - Girar un elemento visual
-- Configuración de la opacidad
+- Configurar la opacidad
 - Cambiar la posición del elemento visual en la colección
 
-## <a name="creating-a-compositor"></a>Creación de un compositor
+## <a name="creating-a-compositor"></a>Crear un compositor
 
 Creación de un [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) y almacenamiento del mismo en una variable para usarlo como fábrica es una tarea sencilla. En el siguiente fragmento se muestra la creación de un nuevo objeto **Compositor**:
 
@@ -52,14 +52,14 @@ _compositor = new Compositor();
 
 ## <a name="creating-a-spritevisual-and-colorbrush"></a>Crear un objeto SpriteVisual y un objeto ColorBrush
 
-Con el objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789), es fácil crear objetos cuando los necesites, como un objeto [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) o un objeto [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399):
+Con el objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789), es fácil crear objetos cuando los necesites, tales como un objeto [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) y un objeto [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399):
 
 ```cs
 var visual = _compositor.CreateSpriteVisual();
 visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
 ```
 
-Si bien solo hay unas pocas líneas de código, se muestra un concepto muy eficaz, los objetos [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) son el corazón del sistema de efectos. Los objetos **SpriteVisual** permiten mucha flexibilidad e interacción en cuanto a la creación de colores, imágenes y efectos. El objeto **SpriteVisual** es un tipo visual único que puede rellenar un rectángulo 2D con un pincel; en este caso, un color sólido.
+Aunque esto es sólo unas pocas líneas de código, muestra un concepto eficaz: [**SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) objetos son el corazón del sistema efectos. El objeto **SpriteVisual** permite mucha flexibilidad e interacción en cuanto a la creación de colores, imágenes y efectos. El objeto **SpriteVisual** es un tipo visual único que puede rellenar un rectángulo 2D con un pincel; en este caso, un color sólido.
 
 ## <a name="clipping-a-visual"></a>Recortar un elemento visual
 
@@ -76,7 +76,7 @@ _currentVisual.Clip = clip;
 
 Al igual que otros objetos de la API, se pueden aplicar animaciones a las propiedades del objeto [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825).
 
-## <a name="span-idrotatingaclipspanspan-idrotatingaclipspanspan-idrotatingaclipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Giro de un recorte
+## <a name="span-idrotatingaclipspanspan-idrotatingaclipspanspan-idrotatingaclipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Girar una imagen prediseñada
 
 Un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) se puede transformar con una rotación. Ten en cuenta que el objeto [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle) admite tanto radianes como grados. El valor predeterminado es radianes, pero es fácil especificar grados, tal como se muestra en el siguiente fragmento de código:
 
@@ -86,7 +86,7 @@ child.RotationAngleInDegrees = 45.0f;
 
 La rotación es tan solo un ejemplo de un conjunto de componentes de transformación que la API proporciona para facilitar estas tareas. Entre otras se incluyen Offset, Scale, Orientation, RotationAxis y 4x4 TransformMatrix.
 
-## <a name="setting-opacity"></a>Configuración de la opacidad
+## <a name="setting-opacity"></a>Configurar la opacidad
 
 Configurar la opacidad de un elemento visual es una operación sencilla que usa un valor flotante. Por ejemplo, en la muestra, todos los cuadrados empiezan con una opacidad de 0,8:
 
