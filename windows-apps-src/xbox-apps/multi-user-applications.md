@@ -3,15 +3,15 @@ title: Introducción a las aplicaciones multiusuario
 description: Una introducción sencilla de nivel superior que describe el modelo multiusuario de Xbox.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
 ms.openlocfilehash: b56140f9a71c8233d2832c2b0da6ed927b5a19ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922250"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607720"
 ---
 # <a name="introduction-to-multi-user-applications"></a>Introducción a las aplicaciones multiusuario
 
@@ -20,7 +20,7 @@ En este tema realizaremos una sencilla introducción de nivel superior para desc
 El modelo de usuario de Xbox One se ajusta a los requisitos de una consola de juegos que permite que varios usuarios puedan jugar de forma cooperativa en el mismo dispositivo. Asimismo, permite que varios usuarios, cada uno con su propio controlador, inicien sesión y usen la consola al mismo tiempo en una sola sesión interactiva. Esto es diferente en otros dispositivos Windows. Por ejemplo:
 * Los **equipos de escritorio de Windows** permiten que varios usuarios usen el mismo dispositivo, pero cada uno de ellos tiene su propia sesión interactiva que, a su vez, es totalmente independiente de otras sesiones del dispositivo.
 * Los **teléfonos Windows** solo permiten que un único usuario use el dispositivo. Ese usuario único se determina durante la configuración rápida y no podrá cerrar la sesión una vez la haya iniciado. De hecho, si otro usuario quiere usar el dispositivo, deberá restablecerlo. 
-* La consola **Xbox One** permite que varios usuarios inicien sesión y usen el dispositivo simultáneamente en una única sesión interactiva.
+* La consola **Xbox One** permite que varios usuarios inicien sesión, para que así puedan usar el dispositivo a la vez en una única sesión interactiva.
 
 Cada usuario del modelo de usuario de Xbox One cuenta con una cuenta de usuario local. Esta cuenta de usuario local se asocia con una cuenta de Xbox Live y, por lo tanto, con una cuenta de Microsoft. Esto significa que existe una asignación estricta en lo que respecta a una relación uno a uno entre una cuenta de usuario Xbox y las cuentas de Xbox Live y de Microsoft.
 
@@ -28,7 +28,7 @@ Cada usuario del modelo de usuario de Xbox One cuenta con una cuenta de usuario 
 De forma predeterminada, las aplicaciones para Plataforma universal de Windows (UWP) se ejecutan en el contexto del usuario que inició la aplicación. Estas *aplicaciones de usuario único* (SUA) solo tienen en cuenta a ese único usuario y se ejecutan en un modo que sea compatible con el modelo que el usuario tenga en otros dispositivos Windows. El modelo de usuario de Xbox administra qué usuario está asociado con la aplicación y garantiza que el usuario inicie sesión cuando este inicie la aplicación. En este modelo, los creadores de juegos y aplicaciones para UWP no deben hacer nada especial para ejecutarlas en Xbox. 
 
 ## <a name="multi-user-applications"></a>Aplicaciones multiusuario
-Los juegos para UWP pueden formar parte del modelo multiusuario de Xbox One. Estas *aplicaciones multiusuario* (MUA) se ejecutan en el contexto de una cuenta de sistema (denominada Cuenta predeterminada) y pueden aprovechar al máximo la flexibilidad y eficacia que les ofrece el modelo de usuario de XboxOne. Para este tipo de juegos, el modelo de usuario de Xbox no se encarga de administrar qué usuario está asociado con el juego y tampoco es necesario que el usuario inicie sesión para poder ejecutar el juego. Esto significa que estos juegos deben escribirse para que quede claro cuáles son los requisitos de usuario y cómo deben administrarse; esto es, si es necesario que el usuario inicie sesión, si se debe implementar el concepto de "usuario actual", si se deben permitir entradas de contenido simultáneas de varios usuarios, etc.
+Los juegos para UWP pueden formar parte del modelo multiusuario de Xbox One. Estas *aplicaciones multiusuario* (MUA) se ejecutan en el contexto de una cuenta de sistema (denominada Cuenta predeterminada) y pueden aprovechar al máximo la flexibilidad y eficacia que les ofrece el modelo de usuario de Xbox One. Para este tipo de juegos, el modelo de usuario de Xbox no se encarga de administrar qué usuario está asociado con el juego y tampoco es necesario que el usuario inicie sesión para poder ejecutar el juego. Esto significa que estos juegos deben escribirse para que quede claro cuáles son los requisitos de usuario y cómo deben administrarse; esto es, si es necesario que el usuario inicie sesión, si se debe implementar el concepto de "usuario actual", si se deben permitir entradas de contenido simultáneas de varios usuarios, etc.
    
 Para formar parte del modelo multiusuario:   
 1. Abre el proyecto en Visual Studio.   
@@ -50,5 +50,5 @@ Consulta el tema [KeyRoutedEventArgs.DeviceId](https://msdn.microsoft.com/librar
 ## <a name="guidance-on-which-model-to-choose"></a>Orientación sobre qué modelo elegir
 Todas las aplicaciones para UWP y la mayoría de los juegos de usuario único pueden escribirse para que sean de tipo SUA. Te recomendamos que uses el modelo multiusuario de Xbox One en juegos multijugador.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [UWP en Xbox One](index.md)

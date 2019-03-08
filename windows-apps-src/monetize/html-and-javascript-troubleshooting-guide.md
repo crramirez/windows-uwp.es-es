@@ -7,25 +7,25 @@ ms.topic: article
 keywords: Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633240"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guía de solución de problemas de HTML y JavaScript
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
 
 * [HTML](#html)
-  * [AdControl no aparece](#html-notappearing)
-  * [La caja negra parpadea y desaparece](#html-blackboxblinksdisappears)
-  * [Los anuncios no se actualizan](#html-adsnotrefreshing)
+  * [Elemento AdControl no aparecen](#html-notappearing)
+  * [Caja negra hace parpadear y desaparece](#html-blackboxblinksdisappears)
+  * [Anuncios no actualizar](#html-adsnotrefreshing)
 
 * [JavaScript](#js)
-  * [AdControl no aparece](#js-adcontrolnotappearing)
-  * [La caja negra parpadea y desaparece](#js-blackboxblinksdisappears)
-  * [Los anuncios no se actualizan](#js-adsnotrefreshing)
+  * [Elemento AdControl no aparecen](#js-adcontrolnotappearing)
+  * [Caja negra hace parpadear y desaparece](#js-blackboxblinksdisappears)
+  * [Anuncios no actualizar](#js-adsnotrefreshing)
 
 ## <a name="html"></a>HTML
 
@@ -33,7 +33,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 ### <a name="adcontrol-not-appearing"></a>AdControl no aparece
 
-1.  Asegúrate de que la funcionalidad **Internet (Client)** está seleccionada en Package.appxmanifest.
+1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
 
 2.  Asegúrate de que la referencia de JavaScript esté presente. Sin la referencia de ad.js en la sección &lt;head&gt; (después de la referencia de default.js), **AdControl** no podrá mostrarse y se producirá un error durante la compilación.
 
@@ -46,7 +46,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </head>
     ```
 
-3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de anuncio que obtuviste en el centro de partners. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
+3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de ad que obtuvo en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -58,7 +58,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </div>
     ```
 
-4.  Comprueba las propiedades **height** y **width**. Estos deben establecerse en uno de los [tamaños de anuncio admitidos para banners](supported-ad-sizes-for-banner-ads.md).
+4.  Comprueba las propiedades **height** y **width**. Estos deben establecerse en uno de los [tamaños de anuncio admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -142,7 +142,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 ### <a name="black-box-blinks-and-disappears"></a>La caja negra parpadea y desaparece
 
-1.  Vuelve a comprobar todos los pasos anteriores en la sección [AdControl no aparece](#html-notappearing).
+1.  Vuelve a comprobar todos los pasos de la sección [AdControl no aparece](#html-notappearing) anterior.
 
 2.  Controla el evento **onErrorOccurred** y usa el mensaje que se pasa al controlador de eventos para determinar si se produjo un error y qué tipo de error se ha producido. Para leer más detalles, consulta [Error handling in JavaScript walkthrough](error-handling-in-javascript-walkthrough.md) (Tutorial de control de errores en JavaScript).
 
@@ -271,7 +271,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     });  
     ```
 
-4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de anuncio que obtuviste en el centro de partners. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
+4.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de ad que obtuvo en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript

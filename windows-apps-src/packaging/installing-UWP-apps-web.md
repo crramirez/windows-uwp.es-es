@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: 515beebd55049ecb4d0c6747fa7d37e76577ef7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927077"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623560"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalación de aplicaciones para UWP desde una página web
 
@@ -28,10 +28,10 @@ En este mecanismo, el Instalador de aplicación se registra con con el sistema o
 
 ### <a name="requirements-for-protocol-activation-scheme"></a>Requisitos para el esquema de activación de protocolos
 
-1. Servidores Web que admiten solicitudes de intervalo de bytes (HTTP/1.1)
-    - Los servidores que admiten el protocolo HTTP/1.1 deben tener soporte técnico para las solicitudes de intervalo de bytes 
-2. Servidores Web que conocer acerca de los tipos de contenido del paquete de aplicación de Windows 10
-    - Aquí te mostramos cómo declarar los nuevos tipos de contenido como parte del [archivo de configuración de web](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
+1. Los servidores Web deben tener compatibilidad con solicitudes de intervalo de bytes (HTTP/1.1)
+    - Los servidores que admiten el protocolo HTTP/1.1 deben tener compatibilidad para las solicitudes de intervalo de bytes 
+2. Los servidores Web debe conocer acerca de los tipos de contenido del paquete de aplicación de Windows 10
+    - Aquí le mostramos cómo declarar los nuevos tipos de contenido como parte de [archivo de configuración web](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>Cómo habilitar esto en una página web 
 Los desarrolladores de aplicaciones que quieran hospedar paquetes de aplicaciones en sus sitios web deben seguir este paso:
@@ -74,6 +74,6 @@ Esta es una comparación rápida de la versión de actualización de Windows 10 
 En las versiones anteriores de Windows 10 Fall Creators Update, el Instalador de aplicación no puede instalar directamente una app desde la web. En estas versiones, el Instalador de aplicación solo puede instalar paquetes de la aplicación que están disponibles de forma local. En su lugar, el Instalador de aplicación descargará el paquete y requerirá que el usuario haga doble clic en el paquete descargado que se instalará.
 
 
-## <a name="microsoft-smartscreen-integration"></a>Integración con MicrosoftSmartScreen
+## <a name="microsoft-smartscreen-integration"></a>Integración con Microsoft SmartScreen
 
 Microsoft SmartScreen siempre ha formado parte del proceso de la instalación para instalar aplicaciones a través del Instalador de aplicación. SmartScreen garantiza que los usuarios están protegidos del contenido malintencionado que puede abrirse camino hasta sus dispositivos. Con la actualización más reciente del Instalador de aplicación, la integración de SmartScreen es más sencilla y eficaz, y ofrece advertencias al instalar aplicaciones desconocidas y proteger los dispositivos de daños. 

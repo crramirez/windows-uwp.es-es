@@ -1,17 +1,17 @@
 ---
 title: Crear y mostrar una malla básica
-description: En los juegos 3D para la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies.
+description: En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies.
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, malla, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595650"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Crear y mostrar una malla básica
 
@@ -19,7 +19,7 @@ ms.locfileid: "8934630"
 
 En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies. Las listas de vértices que comprimen la estructura de estos objetos poligonales y superficies se denominan mallas. A continuación crearemos una malla básica para un objeto de cubo y haremos que se represente y muestre a través de la canalización de sombreador.
 
-> **Importante**  el código de ejemplo incluido aquí usa tipos (como DirectX:: Xmfloat3 y DirectX:: Xmfloat4x4) y métodos insertados declarados en DirectXMath.h. Si vas a cortar y pegar este código, usa \#include &lt;DirectXMath.h&gt; en el proyecto.
+> **Importante**    el código de ejemplo incluido aquí utiliza tipos (por ejemplo, DirectX::XMFLOAT3 y DirectX::XMFLOAT4X4) y métodos insertados se declaran en DirectXMath.h. Si está cortar y pegar este código, \#incluyen &lt;DirectXMath.h&gt; en el proyecto.
 
  
 
@@ -33,7 +33,7 @@ En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usa
 ### <a name="prerequisites"></a>Requisitos previos
 
 -   Conocimiento básico sobre álgebra lineal y sistemas de coordenadas 3D
--   Un Visual Studio 2015 o posterior plantilla Direct3D
+-   Un Visual Studio 2015 o una plantilla de Direct3D posterior
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -46,7 +46,7 @@ Si prefieres una explicación comentada de estos conceptos, echa un vistazo a es
 <iframe src="https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/03/player#time=7m39s:paused" width="600" height="338" allowFullScreen frameBorder="0"></iframe>
 
 
-### <a name="step-1-construct-the-mesh-for-the-model"></a>Paso 1: Construir la malla para el modelo
+### <a name="step-1-construct-the-mesh-for-the-model"></a>Paso 1: Construcción de la malla para el modelo
 
 En la mayoría de los juegos, la malla para un objeto del juego se carga desde un archivo que contiene los datos de vértices específicos. El orden de estos vértices depende de la aplicación, pero, por lo general, están serializados en franjas o ventiladores. Los datos de vértices pueden proceder de cualquier origen de software o pueden crearse manualmente. Depende de tu juego interpretar los datos de una forma que el sombreador de vértices pueda procesarlos de manera efectiva.
 
@@ -100,25 +100,25 @@ m_d3dDevice->CreateInputLayout(
 
 En este código, especificas un diseño para los vértices, o sea qué datos contiene cada elemento de la lista de vértices. Aquí, en **basicVertexLayoutDesc**, especificas dos componentes de datos:
 
--   **POSITION**: Semántica HLSL para los datos de posición proporcionados a un sombreador. En este código, es un valor DirectX::XMFLOAT3 o, más específicamente, una estructura con 3 valores de punto flotante de 32 bits que corresponden a una coordenada 3D (x, y, z). También podrías usar un valor float4, si estás dando la coordenada homogénea "w". En ese caso, especificas DXGI\_FORMAT\_R32G32B32A32\_FLOAT. Usar un valor DirectX::XMFLOAT3 o un valor float4 depende de las necesidades específicas del juego. Tan solo asegúrate de que los datos de vértices para la malla sean los que corresponden al formato que usas.
+-   **POSICIÓN**: Se trata de una semántica para los datos de posición proporcionados a un sombreador HLSL. En este código, es un valor DirectX::XMFLOAT3 o, más específicamente, una estructura con 3 valores de punto flotante de 32 bits que corresponden a una coordenada 3D (x, y, z). También puede usar un float4 si está proporcionando la coordenada "w" homogénea, y en ese caso, se especifica DXGI\_formato\_R32G32B32A32\_FLOAT. Usar un valor DirectX::XMFLOAT3 o un valor float4 depende de las necesidades específicas del juego. Tan solo asegúrate de que los datos de vértices para la malla sean los que corresponden al formato que usas.
 
     Cada valor de coordenada se expresa como un valor de punto flotante entre -1 y 1, en el espacio de coordenadas del objeto. Cuando el sombreador de vértices se completa, el vértice transformado se encuentra en el espacio de proyección de vista homogénea (perspectiva corregida).
 
     "Pero el valor de enumeración indica RGB, no XYZ", observas inteligentemente. ¡Buen ojo! Tanto en datos de color como en datos de coordenadas, normalmente usas 3 o 4 valores de componentes, entonces, ¿por qué no usar el mismo formato para ambos?. La semántica HLSL, no el nombre del formato, indica la manera en que el sombreador trata los datos.
 
--   **COLOR**: semántica HLSL para datos de color. Como **POSICIÓN**, consiste en 3 valores de punto flotante de 32 bits (DirectX::XMFLOAT3). Cada valor contiene un componente de color: rojo (r), azul (b) o verde (g), expresados como un número flotante entre 0 y 1.
+-   **COLOR**: Se trata de una semántica para los datos de color HLSL. Como **POSICIÓN**, consiste en 3 valores de punto flotante de 32 bits (DirectX::XMFLOAT3). Cada valor contiene un componente de color: rojo (r), azul (b) o verde (g), expresados como un número flotante entre 0 y 1.
 
     Los valores de **COLOR**, por lo general, se devuelven como un valor RGBA de 4 componentes al final de la canalización de sombreador. En este ejemplo, establecerás el valor alfa "A" en 1.0 (opacidad máxima) en la canalización de sombreador para todos los píxeles.
 
-Si quieres obtener la lista completa de formatos, consulta [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Si quieres obtener la lista completa de la semántica HLSL, consulta [Semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Para obtener una lista completa de formatos, vea [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Si quieres obtener la lista completa de la semántica HLSL, consulta [Semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
 Llama a [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) y crea el diseño de entrada en el dispositivo Direct3D. Ahora necesitas crear un búfer que pueda realmente mantener los datos.
 
-### <a name="step-3-populate-the-vertex-buffers"></a>Paso 3: Rellenar los búferes de vértices
+### <a name="step-3-populate-the-vertex-buffers"></a>Paso 3: Rellene los búferes de vértices
 
 Los búferes de vértices contienen la lista de vértices para cada triángulo de la malla. Cada vértice debe ser único en esta lista. En nuestro ejemplo, tienes 8 vértices para el cubo. El sombreador de vértices se ejecuta en el dispositivo de gráficos y lee el búfer de vértices. Interpreta los datos según el diseño de entrada que especificaste en el paso anterior.
 
-En el siguiente ejemplo, proporcionas una descripción y un subrecurso para el búfer que le dan a Direct3D una serie de indicaciones sobre la asignación física de los datos de vértices y cómo tratarlos en la memoria del dispositivo de gráficos. Esto es necesario porque usas un [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) genérico, que podría contener de todo. Las estructuras [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) y [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) sirven para asegurar que Direct3D comprenda el diseño de la memoria física del búfer, incluido el tamaño de cada elemento del vértice, así como el tamaño máximo de la lista de vértices. Aquí también puedes controlar el acceso a la memoria del búfer y su recorrido, pero eso ya correspondería a otro tutorial.
+En el siguiente ejemplo, proporcionas una descripción y un subrecurso para el búfer que le dan a Direct3D una serie de indicaciones sobre la asignación física de los datos de vértices y cómo tratarlos en la memoria del dispositivo de gráficos. Esto es necesario porque usas un [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) genérico, que podría contener de todo. El [ **D3D11\_búfer\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) y [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220)estructuras se suministran para asegurarse de que Direct3D comprende el diseño de memoria física del búfer, incluido el tamaño de cada elemento de vértices en el búfer, así como el tamaño máximo de la lista de vértices. Aquí también puedes controlar el acceso a la memoria del búfer y su recorrido, pero eso ya correspondería a otro tutorial.
 
 Después de configurar el búfer, llama a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para crearlo realmente. Obviamente, si tienes más de un objeto, crea búferes para cada uno de los modelos.
 
@@ -147,13 +147,13 @@ m_d3dDevice->CreateBuffer(
 
 Vértices cargados. ¿Pero cuál es el orden de procesamiento de estos vértices? Esto se controla cuando proporcionas una lista de índices a los vértices (el orden de estos índices es el orden en que el sombreador de vértices los procesa).
 
-### <a name="step-4-populate-the-index-buffers"></a>Paso 4: Rellenar los búferes de índices
+### <a name="step-4-populate-the-index-buffers"></a>Paso 4: Rellene los búferes de índice
 
 Ahora proporciona una lista de índices para cada uno de los vértices. Estos índices corresponden a la posición del vértice en el búfer de vértices, empezando por 0. Para ayudarte a visualizar esto, considera que cada vértice de la malla tiene asignado un número único, como un Id. Este Id. es la posición de entero del vértice en el búfer de vértices.
 
 ![un cubo con ocho vértices numerados](images/cube-mesh-1.png)
 
-En nuestro cubo de ejemplo, tienes 8 vértices que crean 6 cuadrantes para los lados. Divides los cuadrantes en triángulos, por un total de 12 triángulos que usan los 8 vértices. Con 3 vértices por triángulo, tienes 36 entradas en el búfer de índices. En nuestro ejemplo, este patrón de índices se conoce como una lista de triángulos y la indicas a Direct3D como **D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST**, cuando estableces la topología primitiva.
+En nuestro cubo de ejemplo, tienes 8 vértices que crean 6 cuadrantes para los lados. Divides los cuadrantes en triángulos, por un total de 12 triángulos que usan los 8 vértices. Con 3 vértices por triángulo, tienes 36 entradas en el búfer de índices. En nuestro ejemplo, este patrón de índice se conoce como una lista de triángulo y se indica a Direct3D como un **D3D11\_PRIMITIVOS\_topología\_TRIANGLELIST** al establecer la topología primitiva.
 
 Esta es probablemente la forma más ineficiente de hacer una lista de índices, ya que hay muchas redundancias cuando los triángulos comparten puntos y lados. Por ejemplo, cuando un triángulo comparte un lado en forma de rombo, haces una lista de 6 índices para los cuatro vértices, como la siguiente:
 
@@ -162,7 +162,7 @@ Esta es probablemente la forma más ineficiente de hacer una lista de índices, 
 -   Triángulo 1: \[0, 1, 2\]
 -   Triángulo 2: \[0, 2, 3\]
 
-En una topología de abanico o franja, ordenas los vértices de manera que se eliminan varios lados redundantes durante el recorrido (como el lado del índice 0 al índice 2 de la imagen). Para mallas grandes, esto reduce mucho la cantidad de veces que se ejecuta el sombreador de vértices y mejora significativamente el rendimiento. Pero ahora lo hacemos de manera simple y nos adherimos a la lista de triángulos.
+En una topología de banda o ventilador, ordena los vértices de una manera que elimina muchos lados redundantes durante el recorrido (por ejemplo, el lado del índice 0 al índice 2 en la imagen.) Para las mallas grandes, esto reduce considerablemente el número de veces que se ejecuta en el sombreador de vértices y mejora considerablemente el rendimiento. Pero ahora lo hacemos de manera simple y nos adherimos a la lista de triángulos.
 
 Declara los índices para el búfer de vértices como una simple topología de lista de triángulos.
 
@@ -187,11 +187,11 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-Treinta y seis elementos de índice en el búfer es un número muy redundante para tan solo 8 vértices. Si eliges eliminar algunas de las redundancias y usar otro tipo de lista de vértices, como una franja o abanico, debes especificar el tipo cuando proporcionas un valor [**D3D11\_PRIMITIVE\_TOPOLOGY**](https://msdn.microsoft.com/library/windows/desktop/ff476189) específico para el método [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455).
+Treinta y seis elementos de índice en el búfer es un número muy redundante para tan solo 8 vértices. Si opta por eliminar algunas de las redundancias y usar un tipo de lista de vértices diferentes, como una banda o de un ventilador, debe especificar ese tipo al proporcionar un determinado [ **D3D11\_PRIMITIVOS\_topología** ](https://msdn.microsoft.com/library/windows/desktop/ff476189) valor para el [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) método.
 
 Para obtener más información sobre las distintas técnicas de listas de índices, consulta [Topologías primitivas](https://msdn.microsoft.com/library/windows/desktop/bb205124).
 
-### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Paso 5: Crear un búfer de constantes para las matrices de transformación
+### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Paso 5: Crear un búfer de constantes para las matrices de la transformación
 
 Antes de empezar a procesar los vértices, necesitas proporcionar las matrices de transformación que se aplicarán (multiplicarán) para cada vértice durante su ejecución. Hay tres matrices que se usan en la mayoría de los juegos 3D:
 
@@ -205,7 +205,7 @@ HLSL no cambia los búferes de constantes. Puedes cambiarlos cuando el juego act
 
 En este ejemplo, lo único que no cambia son los datos DirectX::XMFLOAT4X4 para las tres matrices.
 
-> **Nota**  el código de ejemplo que presentamos aquí usa matrices principales de columna. Puedes usar matrices principales de fila en lugar de usar la palabra clave **row\_major** en HLSL y asegurarte de que coincida con los datos de la matriz de origen. DirectXMath usa matrices principales de fila y puede usarse directamente con matrices HLSL definidas con la palabra clave **row\_major**.
+> **Tenga en cuenta**    el código de ejemplo presentado aquí usa matrices principales de la columna. Se pueden utilizar matrices por filas mediante la **fila\_principales** palabra clave en HLSL y garantizar que los datos de la matriz de origen también es la fila principal. DirectXMath usa matrices por filas y se puede usar directamente con matrices HLSL definidas con el **fila\_principales** palabra clave.
 
  
 
@@ -257,7 +257,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Nota**normalmente, se declara la matriz de proyección al configurar recursos específicos del dispositivo, como los resultados de la multiplicación deben coincidir con los parámetros de tamaño de la ventanilla 2D actual (que a menudo corresponden con el alto de píxel y el ancho de la Mostrar). Si cambian, debes aumentar los valores de la coordenada x y la coordenada y, en consecuencia.
+> **Tenga en cuenta**  normalmente declara la matriz de proyección al configurar recursos específicos del dispositivo, como los resultados de la multiplicación con ella deben coincidir con los parámetros actuales de tamaño de ventanilla 2D (que suelen corresponden con el píxel alto y ancho de la pantalla). Si cambian, debes aumentar los valores de la coordenada x y la coordenada y, en consecuencia.
 
  
 
@@ -312,7 +312,7 @@ m_d3dDeviceContext->IASetIndexBuffer(
 
 ¡Listo! Ensamblado de entrada completo. Todo está en su lugar para la representación. Pongamos en funcionamiento el sombreador de vértices.
 
-### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>Paso 6: Procesar la malla con el sombreador de vértices
+### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>Paso 6: Proceso de la malla con el sombreador de vértices
 
 Ahora que tienes un búfer de vértices, con los vértices que definen la malla, y el búfer de índices, que define el orden en que se procesarán los vértices, los envías al sombreador de vértices. El código del sombreador de vértices, expresado en lenguaje de sombreado de alto nivel compilado, se ejecuta una vez para cada vértice en el búfer de vértices. Esto te permite realizar transformaciones por vértice. El resultado final normalmente es una proyección 2D.
 
@@ -381,9 +381,9 @@ PixelShaderInput SimpleVertexShader(VertexShaderInput input)
 
 **PixelShaderInput** especifica el diseño de los datos que devuelve la función principal del sombreador de vértices. Cuando terminas de procesar un vértice, devolverás una posición de vértices en el espacio de proyección 2D y un color para la iluminación por vértice. La tarjeta gráfica usa la salida de datos del sombreador para calcular los "fragmentos" (posibles píxeles) que deben colorearse cuando el sombreador de píxeles se ejecute en la siguiente etapa de la canalización.
 
-### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>Paso 7: Pasar la malla por el sombreador de píxeles
+### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>Paso 7: Pasar la malla mediante el sombreador de píxeles
 
-Normalmente, en esta etapa de la canalización de gráficos, haces operaciones por píxel en las superficies visibles proyectadas de los objetos. (A la gente le gusta las texturas). Pero, para la muestra, simplemente pasas por esta etapa.
+Normalmente, en esta etapa de la canalización de gráficos, haces operaciones por píxel en las superficies visibles proyectadas de los objetos. (A los usuarios, como las texturas). Para los fines de ejemplo, sin embargo, simplemente pasarlo a través de esta fase.
 
 Primero creamos una instancia del sombreador de píxeles. El sombreador de píxeles se ejecuta para cada píxel en la proyección 2D de la escena, asignando un color a cada uno de esos píxeles. En este caso, pasamos directamente a través del color que el sombreador de vértices devolvió para el píxel.
 
@@ -410,7 +410,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 Coloca este código en un archivo HLSL independiente del HLSL del sombreador de vértices (como SimplePixelShader.hlsl). Este código se ejecuta una vez para cada píxel visible en la ventanilla (una representación en memoria de la parte de la pantalla en que dibujas) que, en este caso, corresponde a toda la pantalla. Ahora la canalización de gráficos está completamente definida.
 
-### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Paso 8: Rasterizar y mostrar la malla
+### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Paso 8: Rasterización y mostrar la malla
 
 Ejecutemos la canalización. Esto es fácil: llama a [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565).
 
@@ -438,7 +438,7 @@ m_swapChain->Present(1, 0);
 
 ¡Y listo! Para una escena repleta de modelos, usa varios búferes de índices y vértices. Incluso podrías tener distintos sombreadores para distintos tipos de modelos. Recuerda que cada modelo tiene su propio sistema de coordenadas y necesitas transformarlos al sistema compartido de coordenadas globales, usando las matrices definidas en el búfer de constantes.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En este tema se explica cómo crear y mostrar la geometría simple que tú mismo has elaborado. Para obtener más información sobre cómo cargar geometría compleja de un archivo y convertirla al formato del objeto de búfer de vértices (.vbo) específico de la muestra, consulta [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md).  
 
@@ -447,7 +447,7 @@ En este tema se explica cómo crear y mostrar la geometría simple que tú mismo
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md)
+* [Cómo cargar recursos en los juegos de DirectX](load-a-game-asset.md)
 
  
 

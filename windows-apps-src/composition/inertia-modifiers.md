@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: f99ebc4b98c87a4bc6d77fd2c626f481563e50c5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639640"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>Creación de puntos de acoplamiento con modificadores de inercia
 
@@ -20,9 +20,9 @@ En este artículo analizaremos más a fondo cómo usar la característica Inerti
 
 En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
 
-- [Animaciones controladas por entradas](input-driven-animations.md)
-- [Experiencias de manipulación personalizadas con InteractionTracker](interaction-tracker-manipulations.md)
-- [Animaciones basadas en relaciones](relation-animations.md)
+- [Animaciones de entrada](input-driven-animations.md)
+- [Experiencias de manipulación personalizado con InteractionTracker](interaction-tracker-manipulations.md)
+- [Animaciones en función de relación](relation-animations.md)
 
 ## <a name="what-are-snap-points-and-why-are-they-useful"></a>¿Qué son los puntos de acoplamiento y por qué son útiles?
 

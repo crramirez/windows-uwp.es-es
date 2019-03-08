@@ -1,19 +1,19 @@
 ---
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
 description: Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de vídeo mejorados, como vídeo HDR y prioridad de exposición.
-title: Controles manuales de la cámara para la captura de vídeo
+title: Controles manuales de la cámara para la captura de vídeo.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f144ef398fc55e79d2f0190c61214cdf1aa93b68
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924083"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607660"
 ---
-# <a name="manual-camera-controls-for-video-capture"></a>Controles manuales de la cámara para la captura de vídeo
+# <a name="manual-camera-controls-for-video-capture"></a>Controles manuales de la cámara para la captura de vídeo.
 
 
 
@@ -26,7 +26,7 @@ Todas las API de control de dispositivos mencionadas en este artículo son miemb
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
 > [!NOTE] 
-> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
+> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
 ## <a name="hdr-video"></a>Vídeo HDR
 
@@ -40,7 +40,7 @@ Habilitar o deshabilitar el procesamiento de vídeos HDR estableciendo [**HdrVid
 
 ## <a name="exposure-priority"></a>Prioridad de exposición
 
-[**ExposurePriorityVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926644), cuando se habilita, evalúa los fotogramas de vídeos desde el dispositivo de captura para determinar si el vídeo está capturando una escena de poca luz. Si es así, el control reduce la velocidad de fotogramas del vídeo capturado con el fin de aumentar el tiempo de exposición por cada fotograma y mejorar la calidad visual del vídeo capturado.
+[  **ExposurePriorityVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926644), cuando se habilita, evalúa los fotogramas de vídeos desde el dispositivo de captura para determinar si el vídeo está capturando una escena de poca luz. Si es así, el control reduce la velocidad de fotogramas del vídeo capturado con el fin de aumentar el tiempo de exposición por cada fotograma y mejorar la calidad visual del vídeo capturado.
 
 Determina si el control de la prioridad de exposición es compatible en el dispositivo actual comprobando la propiedad [**ExposurePriorityVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926647).
 
@@ -51,7 +51,7 @@ Habilita o deshabilita el control de la prioridad de exposición estableciendo [
 ## <a name="temporal-denoising"></a>Eliminación de ruido temporal
 A partir de Windows 10, versión 1803, puedes habilitar la eliminación de ruido temporal para vídeo en dispositivos que lo admitan. Esta característica fusiona los datos de imagen de varios fotogramas adyacentes en tiempo real para producir fotogramas de vídeo que tengan menos ruido visual.
 
-El [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol) permite a la aplicación determinar si se admite la eliminación de ruido temporal en el dispositivo actual y, de ser así, qué modos de eliminación de ruido se admiten. Los modos de eliminación de ruido disponibles son [**Desactivado**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode), [**Activado**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode) y [**Automático**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode). Un dispositivo no puede admitir todos los modos, pero cada dispositivo debe admitir **Auto** o **On** y **Off**.
+El [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol) permite a la aplicación determinar si se admite la eliminación de ruido temporal en el dispositivo actual y, de ser así, qué modos de eliminación de ruido se admiten. Los modos de ruido disponibles son [ **desactivar**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode), [ **en**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode), y [ **automática** ](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode). Un dispositivo puede no admitir todos los modos, pero deben admitir todos los dispositivos **automática** o **en** y **desactivar**.
 
 El siguiente ejemplo usa una interfaz de usuario sencilla para proporcionar botones de radio que permiten al usuario pasar de un modo de eliminación de ruido a otro.
 
@@ -86,9 +86,9 @@ Para obtener más información acerca de la obtención de fotogramas de vídeo p
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
 *  [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)
  
 

@@ -1,5 +1,5 @@
 ---
-title: Firmar un paquete de aplicación con SignTool
+title: Firmar un paquete de aplicaciones con SignTool
 description: Usa SignTool para firmar manualmente un paquete de aplicación con un certificado.
 ms.date: 09/30/2018
 ms.topic: article
@@ -7,13 +7,13 @@ keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a6d39a78ba73dcb598f209ea48c4b131e375ab6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594810"
 ---
-# <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicación con SignTool
+# <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicaciones con SignTool
 
 
 **SignTool** es una herramienta de línea de comandos que se usa para firmar un paquete de aplicación o un lote de aplicaciones con un certificado. El certificado puede crearlo el usuario (con fines de prueba) o emitirlo una empresa (para distribución). Firmar un paquete de aplicación proporciona al usuario la verificación de que los datos de la aplicación no se han modificado después de haberse firmado, a la vez que confirma la identidad del usuario o la empresa que la firmara. **SignTool** puede firmar paquetes de aplicación y lotes de aplicaciones cifrados o sin cifrar.
@@ -32,8 +32,8 @@ Para obtener más información sobre la firma de código y los certificados en g
 
 - **SignTool.exe**  
     En función de la ruta de acceso de instalación del SDK, aquí es donde está **SignTool** en tu equipo Windows 10:
-    - x86: C:\Archivos de programa (x86)\Windows Kits\10\bin\x86\SignTool.exe
-    - x64: C:\Archivos de programa (x86)\Windows Kits\10\bin\x64\SignTool.exe
+    - x86: C:\Program archivos (x86) \Windows Kits\10\bin\x86\SignTool.exe
+    - x64: C:\Program archivos (x86) \Windows Kits\10\bin\x64\SignTool.exe
 
 ## <a name="using-signtool"></a>Uso de SignTool
 
@@ -119,13 +119,13 @@ Un error más común es 0x8007000B. Para este tipo de error, puedes encontrar m�
  
 Para encontrar más información en el registro de eventos:
 - Ejecuta Eventvwr.msc.
-- Abre el registro de eventos: Visor de eventos (locales) -> Registros de aplicaciones y servicios -> Microsoft -> Windows -> AppxPackagingOM -> Microsoft-Windows-AppxPackaging/Operational.
+- Abra el registro de eventos: Visor de eventos (Local) -> aplicaciones y los registros de servicios -> Microsoft -> Windows -> AppxPackagingOM -> Microsoft-Windows-AppxPackaging/Operational
 - Busca el evento de error más reciente.
 
 Normalmente, el error interno 0x8007000B se corresponde a uno de estos valores:
 
-| **Id. de evento** | **Ejemplo de cadena de evento** | **Sugerencia** |
+| **Id. de evento** | **Ejemplo de cadena de eventos** | **Sugerencia** |
 |--------------|--------------------------|----------------|
-| 150          | Error 0x8007000B: el nombre del editor del manifiesto de la aplicación (CN = Contoso) debe coincidir con el nombre del sujeto del certificado de firma (CN = Contoso, C = EE. UU.). | El nombre del editor del manifiesto de la aplicación debe coincidir exactamente con el nombre de sujeto de la firma.               |
-| 151.          | Error 0x8007000B: El método de hash de la firma especificado (SHA512) debe coincidir con el método de hash usado en la asignación de bloques del paquete de la aplicación (SHA256).     | El hashAlgorithm especificado en el parámetro /fd es incorrecto. Vuevle a ejecutar **SignTool** con un hashAlgorithm que coincida con la asignación de bloques del paquete de la aplicación (se usada para crear el paquete de la aplicación).  |
-| 152          | Error 0x8007000B: El contenido del paquete de la aplicación debe validarse respecto a su asignación de bloques.                                                           | El paquete de la aplicación está dañado y debe volver a compilarse para generar una nueva asignación de bloques. Para obtener más información sobre cómo crear un paquete de aplicación, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |
+| 150          | Error 0x8007000B: El nombre del publicador de manifiesto de aplicación (CN = Contoso) debe coincidir con el nombre del sujeto del certificado de firmado (CN = Contoso, C = US). | El nombre del editor del manifiesto de la aplicación debe coincidir exactamente con el nombre de sujeto de la firma.               |
+| 151          | Error 0x8007000B: El método de hash de firma especificado (SHA512) debe coincidir con el método de hash utilizado en la asignación de bloque del paquete de aplicación (SHA256).     | El hashAlgorithm especificado en el parámetro /fd es incorrecto. Vuevle a ejecutar **SignTool** con un hashAlgorithm que coincida con la asignación de bloques del paquete de la aplicación (se usada para crear el paquete de la aplicación).  |
+| 152          | Error 0x8007000B: El contenido del paquete de aplicación debe validar su asignación de bloque.                                                           | El paquete de la aplicación está dañado y debe volver a compilarse para generar una nueva asignación de bloques. Para obtener más información sobre cómo crear un paquete de aplicación, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |

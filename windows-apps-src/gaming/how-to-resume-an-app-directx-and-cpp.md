@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, reanudar, resuming, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947346"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601610"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Cómo reanudar una aplicación (DirectX y C++)
 
 
 
-En este tema se muestra cómo restaurar datos importantes de la aplicación cuando el sistema reanude la aplicación DirectX para la Plataforma universal de Windows (UWP).
+En este tema se muestra cómo restaurar datos importantes de la aplicación cuando el sistema reanuda la aplicación DirectX para la Plataforma universal de Windows (UWP).
 
 ## <a name="register-the-resuming-event-handler"></a>Registrar el controlador de eventos de reanudación
 

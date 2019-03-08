@@ -8,20 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c40c7d3bd080bd927fc52cb7f740e1dc4a6358c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8948007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620810"
 ---
 # <a name="texture-blending"></a>Combinación de texturas
 
 
-Direct3D puede combinar hasta ocho texturas en primitivos en un solo pase. El uso de la combinación de texturas múltiples puede aumentar profundamente la velocidad de fotogramas de una aplicación de Direct3D. Una aplicación emplea la combinación de texturas múltiples para aplicar texturas, sombras, iluminación especular, iluminación difusa y otros efectos especiales en una solo pase.
+Direct3D puede combinar hasta ocho texturas en primitivos en un solo pase. El uso de la combinación de texturas múltiples puede aumentar profundamente la velocidad de fotogramas de una aplicación de Direct3D. Una aplicación emplea la combinación de texturas múltiples para aplicar texturas, sombras, iluminación especular, iluminación difusa y otros efectos especiales en un solo pase.
 
 Para usar la combinación de texturas, la aplicación debe comprobar antes si el hardware del usuario la admite.
 
-## <a name="span-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespantexture-stages-and-the-texture-blending-cascade"></a><span id="Texture-Stages-and-the-Texture-Blending-Cascade"></span><span id="texture-stages-and-the-texture-blending-cascade"></span><span id="TEXTURE-STAGES-AND-THE-TEXTURE-BLENDING-CASCADE"></span>Fases de textura y la cascada de la combinación de texturas
+## <a name="span-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespantexture-stages-and-the-texture-blending-cascade"></a><span id="Texture-Stages-and-the-Texture-Blending-Cascade"></span><span id="texture-stages-and-the-texture-blending-cascade"></span><span id="TEXTURE-STAGES-AND-THE-TEXTURE-BLENDING-CASCADE"></span>Fases de la textura y la textura de fusión en cascada
 
 
 Direct3D admite la combinación de texturas múltiples de un solo paso mediante el uso de fases de textura. Una fase de textura toma dos argumentos y realiza una operación de combinación en ellas, y luego pasa el resultado para su procesamiento posterior o su rasterización. Puedes visualizar una fase de textura como se muestra en el siguiente diagrama.
@@ -30,7 +30,7 @@ Direct3D admite la combinación de texturas múltiples de un solo paso mediante 
 
 Como se muestra en el diagrama anterior, las fases de la textura combinan dos argumentos mediante el operador especificado. Las operaciones comunes incluyen la modulación simple o la incorporación de los componentes de color o alfa de los argumentos, pero se admiten más de dos docenas de operaciones. Los argumentos de una fase pueden ser una textura asociada, el color o el alfa en iteración (repetidos durante el sombreado Gouraud), un color y un alfa arbitrarios o el resultado de la fase de textura anterior.
 
-**Nota**  Direct3D distingue la combinación de Alfas de color. Las aplicaciones establecen las operaciones y los argumentos de combinación para el color y el alfa individualmente, y los resultados de estos parámetros de configuración son independientes uno del otro.
+**Tenga en cuenta**    Direct3D distingue mezclas de combinación alfa de color. Las aplicaciones establecen las operaciones y los argumentos de combinación para el color y el alfa individualmente, y los resultados de estos parámetros de configuración son independientes uno del otro.
 
  
 
@@ -60,12 +60,12 @@ Si la aplicación varía la cantidad de fases que usa para diferentes situacione
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="blending-stages.md">Fases de combinación</a></p></td>
-<td align="left"><p>Una fase de fusión es un conjunto de operaciones de textura y sus argumentos que definen la forma en que se combinan las texturas.</p></td>
+<td align="left"><p><a href="blending-stages.md">Fases de mezcla</a></p></td>
+<td align="left"><p>Una fase de combinación es un conjunto de operaciones con texturas y sus argumentos que definen la forma en que se combinan las texturas.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="multipass-texture-blending.md">Combinación de texturas multipase</a></p></td>
-<td align="left"><p>Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales mediante la aplicación de varias texturas a un primitivo a lo largo de varios pases de representación. El término habitual para esto es <em>combinación de texturas multipase</em>. Un uso habitual de la combinación de texturas multipase es emular los efectos de modelos complejos de iluminación y sombreado con la aplicación de varios colores de distintas texturas diferentes. Esto se denomina <em>mapa de luces</em>.</p></td>
+<td align="left"><p><a href="multipass-texture-blending.md">Una textura de fusión</a></p></td>
+<td align="left"><p>Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales al aplicar varias texturas a un primitivo a lo largo de varios pasos de representación. El término habitual para esto es <em>combinación de texturas multipase</em>. Un uso típico de una combinación de texturas multipase es emular los efectos de los modelos complejos de iluminación y sombreado aplicando varios colores desde varias texturas distintas. Esto se denomina <em>mapa de luces</em>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -75,7 +75,7 @@ Si la aplicación varía la cantidad de fases que usa para diferentes situacione
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Texturas](textures.md)
+[Textures](textures.md)
 
  
 

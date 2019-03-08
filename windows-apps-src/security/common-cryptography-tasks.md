@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: d52943ab28ba9cb7544db827528985746585e361
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940263"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607570"
 ---
 # <a name="common-cryptography-tasks"></a>Tareas comunes de criptografía
 
@@ -20,8 +20,8 @@ En estos artículos se ofrece código de ejemplo para tareas comunes de criptogr
 | Tema                                                                                 | Descripción                                                                                            |
 |---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [Crear números aleatorios](create-random-numbers.md)                                     | Este código de ejemplo muestra cómo crear un número aleatorio o búfer para usarlo en criptografía en una aplicación para UWP. |
-| [Comparar búferes](compare-buffers.md)                                                 | Este código de ejemplo muestra cómo comparar búferes en una aplicación para UWP.                                          |
-| [Convertir entre datos binarios y cadenas](convert-between-strings-and-binary-data.md) | Este código de ejemplo muestra cómo convertir entre cadenas y datos binarios en una aplicación para UWP.                  |
-| [Copiar a la matriz de bytes o desde ella](copy-to-and-from-byte-arrays.md)                       | Este código de ejemplo muestra cómo copiar a matrices de bytes o desde ellas en una aplicación para UWP.                             |
+| [Comparar los búferes](compare-buffers.md)                                                 | Este código de ejemplo muestra cómo comparar búferes en una aplicación para UWP.                                          |
+| [La conversión entre cadenas y datos binarios](convert-between-strings-and-binary-data.md) | Este código de ejemplo muestra cómo convertir entre cadenas y datos binarios en una aplicación para UWP.                  |
+| [Copia y pega las matrices de bytes](copy-to-and-from-byte-arrays.md)                       | Este código de ejemplo muestra cómo copiar a matrices de bytes o desde ellas en una aplicación para UWP.                             |
 | [Codificar y descodificar datos](encode-and-decode-data.md)                                   | Este código de ejemplo muestra cómo codificar y descodificar datos hexadecimales y base64 en una aplicación para UWP.            |
 

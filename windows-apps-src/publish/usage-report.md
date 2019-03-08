@@ -1,22 +1,22 @@
 ---
-Description: The Usage report in Partner Center lets you see how customers are using your app.
-title: Informe Uso
+Description: El informe de uso en el centro de partners le permite ver cómo los clientes usan la aplicación.
+title: Informe de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d0be1399ebc00ffda57ecf27a72be994fa994ce
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943498"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610910"
 ---
-# <a name="usage-report"></a>Informe Uso
+# <a name="usage-report"></a>Informe de uso
 
 
-El informe de **uso** del [Centro](https://partner.microsoft.com/dashboard) de partners te permite ver cómo los clientes de Windows 10 (incluyendo Xbox) usan la aplicación y muestra información sobre los eventos personalizados que hayas definido. Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El **uso** notificar en [centro de partners](https://partner.microsoft.com/dashboard) le permite ver cómo los clientes en Windows 10 (incluido Xbox) usan la aplicación y muestra información sobre los eventos personalizados que haya definido. Puede ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) ver sin conexión.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -25,9 +25,9 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 
 También puedes expandir la opción **Filtros** para filtrarlos datos de esta página por versión de paquete, mercado o tipo de dispositivo.
 
--   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
--   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a uno o varios mercados.
--   **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero también puedes mostrar los datos de un determinado tipo de dispositivo (PC, consola, tableta, etc.).
+-   **Versión del paquete**: El valor predeterminado es **todas**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
+-   **Mercado**: El filtro predeterminado es **todos los mercados**, pero puede limitar los datos a uno o varios de los mercados.
+-   **Tipo de dispositivo**: El valor predeterminado es **todas**, pero puede optar por mostrar los datos de un único tipo de dispositivo específico (PC, consola, tableta, etcetera.).
 
 La información de todos los gráficos enumerados a continuación reflejará el intervalo de fechas y los filtros que has seleccionado (a excepción de **Nuevos usuarios** en el gráfico **Uso**, que no aparecerá si se selecciona algún filtro). Algunas secciones también te permiten aplicar filtros adicionales.
 
@@ -39,19 +39,19 @@ La información de todos los gráficos enumerados a continuación reflejará el 
 
 El gráfico **Uso** muestra detalles acerca de cómo los clientes están usando tu aplicación durante el período de tiempo seleccionado. Ten en cuenta que este gráfico no realiza un seguimiento de usuarios únicos de tu aplicación ni sesiones de usuario único (es decir, un usuario se representa en este gráfico tanto si usó la aplicación una vez como si lo hizo varias veces).
 
-Este gráfico tiene pestañas independientes que se pueden ver, mostrando el uso por día o semana (en función de la duración que hayas seleccionado).
+Este gráfico tiene pestañas independientes que se pueden ver, que muestra el uso por día o semana (según la duración que ha seleccionado).
 
-- **Usuarios**: muestra el número total de **sesiones de usuario** durante el período de tiempo seleccionado. Cada sesión de usuario representa un período de tiempo distinto, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad. Por este motivo, un cliente único podría tener varias sesiones de usuario en el mismo día o semana. El número total de **Usuarios activos** (cualquier cliente que use la aplicación ese día o semana) y **Nuevos usuarios** (un cliente que usó la aplicación por primera vez ese día o semana) también se muestran. Ten en cuenta que si has aplicado filtros a la página, no verás **Nuevos usuarios** en este gráfico.
-- **Dispositivos**: muestra el número de dispositivos que usan cada día todos los usuarios para interactuar con la aplicación.
-- **Duración**: muestra el total de horas de interacción (horas en las que un usuario usa la aplicación de forma activa).
-- **Participación**: muestra los minutos de interacción promedio por usuario (duración promedio de todas las sesiones de usuario). 
-- **Retención**: muestra el número total de **DAU/MAU** (usuarios activos diariamente/usuarios activos mensualmente) durante el período de tiempo seleccionado.
-- **Predicción de las**: muestra cuántos usuarios que predecimos están probable que dejen de usar la aplicación pronto, en función de su uso reciente.
+- **Usuarios**: Muestra el número total de **las sesiones de usuario** durante el período de tiempo seleccionado. Cada sesión de usuario representa un período de tiempo distinto, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad. Por este motivo, un cliente único podría tener varias sesiones de usuario en el mismo día o semana. El número total de **Usuarios activos** (cualquier cliente que use la aplicación ese día o semana) y **Nuevos usuarios** (un cliente que usó la aplicación por primera vez ese día o semana) también se muestran. Ten en cuenta que si has aplicado filtros a la página, no verás **Nuevos usuarios** en este gráfico.
+- **Dispositivos**: Muestra el número de dispositivos diarios que se usa para interactuar con la aplicación todos los usuarios.
+- **Duración**: Muestra las horas de compromiso total (horas que un usuario esté usando activamente la aplicación).
+- **Engagement**: Muestra los minutos de engagement Media por usuario (duración media de todas las sesiones de usuario). 
+- **Retención**: Muestra el número total de **MAU/dau Acumulados** (usuarios activos diariamente usuarios/mensuales activos) en el período de tiempo seleccionado.
+- **Predicción de abandono**: Muestra cuántos usuarios se predecir es probable que detener mediante la aplicación lo antes posible, en función de su uso reciente.
 
-Cuando la **30D** se selecciona el período de tiempo, puedes ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
+Cuando el **d. 30** está seleccionado el período de tiempo, puede ver los marcadores de círculo al ver el **usuarios**, **dispositivos**, o **duración** pestañas. Estos representan un aumento significativo o disminuyen en un valor determinado que creemos que desea conocer. La fecha en la que aparece el círculo representa el final de la semana en el que se ha detectado un significativo aumento o disminución en comparación con la semana antes de que. Para ver más detalles sobre lo que ha cambiado, mantenga el mouse sobre el círculo.  
 
 > [!TIP]
-> Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).
+> Puede ver más información relacionada con cambios significativos durante los últimos 30 días en el [informe Insights](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sesiones de usuario

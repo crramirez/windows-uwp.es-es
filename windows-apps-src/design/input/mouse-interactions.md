@@ -1,19 +1,19 @@
 ---
-Description: Respond to mouse input in your apps by handling the same basic pointer events that you use for touch and pen input.
+Description: Responde a las entradas de mouse de tus aplicaciones controlando los mismos eventos de puntero básicos que usas para las entradas táctiles y de pluma.
 title: Interacciones de mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f81634fdb0f9382b1f660394764e5555189783e4
-ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999918"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622360"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
@@ -59,7 +59,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Nota</strong>con el botón secundario para mostrar un menú contextual si la selección o aplicación de los comandos de barra no son comportamientos de la interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Tenga en cuenta</strong>  con el botón secundario para mostrar un menú contextual si la selección o la aplicación de la barra de comandos no es los comportamientos de la interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
  
@@ -84,9 +84,9 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 </tbody>
 </table>
 
-## <a name="mouse-input-events"></a>Eventos de entrada de mouse
+## <a name="mouse-input-events"></a>Eventos de entrada del mouse
 
-La mayoría de entrada de mouse se puede controlar a través de los eventos de entrada enrutados comunes compatibles con todos los objetos de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Estos son:
+La mayoría de mouse de entrada puede controlarse a través de los eventos de entrada enrutados comunes admitidos por todos los [ **UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) objetos. Entre ellos se incluyen los siguientes:
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -101,7 +101,7 @@ La mayoría de entrada de mouse se puede controlar a través de los eventos de e
 - [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
 - [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
 - [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
-- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**Que contiene**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
 - [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
 - [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
 - [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
@@ -124,13 +124,13 @@ La mayoría de entrada de mouse se puede controlar a través de los eventos de e
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**Punteado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
-Sin embargo, pueden sacar provecho de las capacidades específicas de cada dispositivo (por ejemplo, los eventos de rueda del mouse) con el puntero, movimiento y eventos de manipulación en [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
+Sin embargo, puede aprovechar las capacidades específicas de cada dispositivo (por ejemplo, eventos de la rueda del mouse) mediante los eventos de puntero, gestos y manipulación de [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 
-**Muestras:** Consulta nuestra [muestra BasicInput](https://go.microsoft.com/fwlink/p/?LinkID=620302).
+**Ejemplos:** Consulte nuestra [BasicInput ejemplo](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
 
-## <a name="guidelines-for-visual-feedback"></a>Instrucciones para la información visual
+## <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
 - Cuando se detecta un mouse (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el mouse no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del mouse vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
 - No uses el cursor para obtener información al mantener el mouse. La información proporcionada por el elemento es suficiente (consulta la sección Cursores más abajo).
@@ -157,13 +157,13 @@ Si necesitas personalizar el cursor del mouse:
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Controlar la entrada de puntero](handle-pointer-input.md)
-- [Identificar dispositivos de entrada](identify-input-devices.md)
+- [Control de la entrada con puntero](handle-pointer-input.md)
+- [Identificación de dispositivos de entrada](identify-input-devices.md)
 - [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
 
-### <a name="samples"></a>Ejemplos
+### <a name="samples"></a>Muestras
 
-- [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+- [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)

@@ -7,26 +7,26 @@ keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920894"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598650"
 ---
 # <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.
 
 ## <a name="get-all-developer-settings-at-once"></a>Obtener todas las opciones de configuración del desarrollador al mismo tiempo
 
-**Solicitud**
+**Request**
 
 Puedes usar la siguiente solicitud para obtener todas las opciones de configuración de desarrollador en una única solicitud.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/settings
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -43,22 +43,22 @@ La respuesta es una matriz JSON de configuración que contiene toda la configura
 
 * Nombre: (cadena) el nombre de la opción de configuración.
 * Valor: (cadena) el valor de la opción de configuración.
-* RequiresReboot: ("Yes" | "No") este campo indica si es necesario un reinicio para que la configuración surta efecto.
+* RequiresReboot - ("Sí" | "No") Este campo indica si es necesario un reinicio para que la configuración surta efecto.
 * Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
 * Category: (cadena) la categoría de la opción de configuración.
 * Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
 
 Si el valor es un número:
-* Min: (número) este campo indica el valor numérico mínimo de la configuración.
-* Max: (número) este campo indica el valor numérico máximo de la configuración.
+* Min - (número) de este campo indica el valor numérico mínimo de la configuración.
+* Max - (número) de este campo indica el valor numérico máximo de la configuración.
 
-Si se selecciona la opción de configuración:
-* > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
+Si se selecciona la configuración:
+* OptionsVariable - ("Sí" | "No") en este campo indica si las opciones de configuración son variables, si las opciones válidas se pueden cambiar sin tener que reiniciar.
 * Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -69,13 +69,13 @@ Código de estado HTTP      | Descripción
 ## <a name="get-settings-one-at-a-time"></a>Obtener las opciones de configuración de una en una
 Las opciones de configuración también se pueden recuperar individualmente.
 
-**Solicitud**
+**Request**
 
 Puedes usar la siguiente solicitud para obtener información acerca de una opción de configuración individual.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
-GET | /ext/settings/\<setting name\>
+GET | /ext/Settings/\<nombre de la configuración\>
 <br />
 **Parámetros de URI**
 
@@ -94,22 +94,22 @@ La respuesta es un objeto JSON con los siguientes campos:
 
 * Nombre: (cadena) el nombre de la opción de configuración.
 * Valor: (cadena) el valor de la opción de configuración.
-* RequiresReboot: ("Yes" | "No") este campo indica si es necesario un reinicio para que la configuración surta efecto.
+* RequiresReboot - ("Sí" | "No") Este campo indica si es necesario un reinicio para que la configuración surta efecto.
 * Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
 * Category: (cadena) la categoría de la opción de configuración.
 * Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
 
 Si el valor es un número:
-* Min: (número) este campo indica el valor numérico mínimo de la configuración.
-* Max: (número) este campo indica el valor numérico máximo de la configuración.
+* Min - (número) de este campo indica el valor numérico mínimo de la configuración.
+* Max - (número) de este campo indica el valor numérico máximo de la configuración.
 
-Si se selecciona la opción de configuración:
-* > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
+Si se selecciona la configuración:
+* OptionsVariable - ("Sí" | "No") en este campo indica si las opciones de configuración son variables, si las opciones válidas se pueden cambiar sin tener que reiniciar.
 * Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -120,13 +120,13 @@ Código de estado HTTP      | Descripción
 ## <a name="set-the-value-of-a-setting"></a>Configurar el valor de una opción de configuración
 Puedes configurar el valor de una opción de configuración.
 
-**Solicitud**
+**Request**
 
 Puedes usar la siguiente solicitud para configurar el valor para una opción de configuración.
 
 Método      | URI de la solicitud
 :------     | :-----
-PUT | /ext/settings/\<setting name\>
+PUT | /ext/Settings/\<nombre de la configuración\>
 <br />
 **Parámetros de URI**
 
@@ -146,7 +146,7 @@ Valor: (cadena) el nuevo valor de la opción de configuración.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

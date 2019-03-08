@@ -1,22 +1,22 @@
 ---
-Description: Windows Push Notification Services (WNS) enables third-party developers to send toast, tile, badge, and raw updates from their own cloud service. There are many ways to send the notifications depending on the needs of your application
+Description: Con los Servicios de notificaciones de inserción de Windows (WNS), los desarrolladores de terceros pueden enviar actualizaciones de notificaciones del sistema, de iconos, de distintivos y otras sin procesar desde su propio servicio en la nube. Existen muchas formas de enviar las notificaciones según las necesidades de la aplicación
 title: Elegir el tipo adecuado de canal de notificación de inserción
 ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 075eaf5c02e5bddb4b87d7e4aaf931cbfde53cdd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944300"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616420"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Elegir el tipo adecuado de canal de notificación de inserción
 
 Este artículo cubre los tres tipos de canales de notificaciones de inserción UWP (principal, secundario y alternativo) que te ayudarán a entregar contenido a tu aplicación. 
 
-(Para obtener más información sobre cómo crear las notificaciones de inserción, consulta la [información general de los servicios de notificaciones de inserción de Windows (WNS)](../tiles-and-notifications/windows-push-notification-services--wns--overview.md)). 
+(Para obtener más información sobre cómo crear notificaciones de inserción, vea el [información general de servicios de notificaciones de inserción de Windows (WNS)](../tiles-and-notifications/windows-push-notification-services--wns--overview.md).) 
 
 ## <a name="types-of-push-channels"></a>Tipos de canales de inserción 
 
@@ -38,10 +38,10 @@ Son los más usados actualmente en Windows y son adecuados para casi todos los e
 
 ### <a name="what-do-primary-channels-enable"></a>¿Qué permiten los canales principales?
 
--   **Enviar actualizaciones de iconos o distintivos para el icono principal.** Si el usuario ha elegido anclar tu icono a la pantalla de inicio, esta es tu oportunidad de que esté a la vista. Envía actualizaciones con información útil o avisos de experiencias dentro de la aplicación. 
--   **Envío de notificaciones del sistema.** Las notificaciones son una oportunidad de poner inmediatamente determinada información ante el usuario. Las hace mostrar el shell en la parte superior de la mayoría de las aplicaciones y, aparecen en vivo en el centro de actividades, por lo que el usuario puede volver atrás e interactuar con ellas más tarde. 
+-   **Envío de actualizaciones de icono o un distintivo en el icono principal.** Si el usuario ha elegido anclar tu icono a la pantalla de inicio, esta es tu oportunidad de que esté a la vista. Envía actualizaciones con información útil o avisos de experiencias dentro de la aplicación. 
+-   **Cómo enviar notificaciones.** Las notificaciones son una oportunidad de poner inmediatamente determinada información ante el usuario. Las hace mostrar el shell en la parte superior de la mayoría de las aplicaciones y, aparecen en vivo en el centro de actividades, por lo que el usuario puede volver atrás e interactuar con ellas más tarde. 
 -   **Envío de notificaciones sin procesar para desencadenar una tarea en segundo plano.** A veces, quieres realizar algún trabajo en nombre del usuario, en función de una notificación. Las notificaciones sin procesar permiten que se ejecuten las tareas en segundo plano de tu aplicación 
--   **Cifrado de mensajes en tránsito proporcionado por Windows con TLS.** Los mensajes se cifran en la red tanto al llegar a WNS como al ir hacia el dispositivo del usuario.  
+-   **Cifrado de mensajes en tránsito proporcionado por Windows mediante TLS.** Los mensajes se cifran en la red tanto al llegar a WNS como al ir hacia el dispositivo del usuario.  
 
 ### <a name="limitations-of-primary-channels"></a>Limitaciones de los canales principales
 
@@ -108,19 +108,19 @@ Esta es una comparación rápida entre los distintos tipos de canales:
 
 <tr class="header">
 <th align="left"><b>Tipo</b></th>
-<th align="left"><b>¿Notificación del sistema?</b></th>
-<th align="left"><b>¿Notificación de icono, distintivo?</b></th>
-<th align="left"><b>¿Notificaciones de inserción sin procesar?</b></th>
+<th align="left"><b>¿Notificación de inserción?</b></th>
+<th align="left"><b>¿Icono/notificación de inserción?</b></th>
+<th align="left"><b>¿Sin procesar notificaciones de inserción?</b></th>
 <th align="left"><b>Autenticación</b></th>
 <th align="left"><b>API</b></th>
-<th align="left"><b>¿Es obligatorio el registro en la Tienda?</b></th>
+<th align="left"><b>¿Requerido el registro de Store?</b></th>
 <th align="left"><b>Canales</b></th>
 <th align="left"><b>Cifrado</b></th>
 </tr>
 
 
 <tr class="odd">
-<td align="left">Principal</td>
+<td align="left">Primario</td>
 <td align="left">Sí</td>
 <td align="left">Sí, solo el icono principal</td>
 <td align="left">Sí</td>
@@ -142,7 +142,7 @@ Esta es una comparación rápida entre los distintos tipos de canales:
 <td align="left">En transito</td>
 </tr>
 <tr class="odd">
-<td align="left">Alternativo</td>
+<td align="left">Alternativa</td>
 <td align="left">No</td>
 <td align="left">No</td>
 <td align="left">Sí</td>
@@ -166,12 +166,12 @@ En general, te recomendamos que uses el canal principal en la aplicación, con u
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Enviar una notificación de icono local](../tiles-and-notifications/sending-a-local-tile-notification.md)
-* [Notificaciones del sistema adaptables e interactivas](../tiles-and-notifications/adaptive-interactive-toasts.md)
-* [Inicio rápido: envío de una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Cómo actualizar un distintivo mediante notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
+* [Notificaciones del sistema interactivas y adaptables](../tiles-and-notifications/adaptive-interactive-toasts.md)
+* [Inicio rápido: Enviar una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
+* [Cómo actualizar una notificación a través de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
 * [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Directrices y lista de comprobación de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465450)
+* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
+* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435)
+* [Directrices y lista de comprobación para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Notificaciones sin procesar](raw-notification-overview.md)

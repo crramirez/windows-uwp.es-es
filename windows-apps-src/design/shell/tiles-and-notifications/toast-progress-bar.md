@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use a progress bar within your toast notification.
+Description: Obtenga información sobre cómo usar una barra de progreso dentro de la notificación del sistema.
 title: Enlace de datos y barra de progreso de notificación del sistema
 label: Toast progress bar and data binding
 template: detail.hbs
@@ -8,22 +8,22 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, barra de progreso, barra de progreso de notificación del sistema, notificación, enlace de datos de notificación del sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
-ms.sourcegitcommit: 88265a8c9f6a77a0508a0c9d89b6ab0a6238a1da
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "8969062"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624830"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Enlace de datos y barra de progreso de notificación del sistema
 
 El uso de una barra de progreso dentro de la notificación del sistema te permite transmitir el estado de las operaciones de larga duración para el usuario, como descargas, representación de vídeo, objetivos de ejercicio y mucho más.
 
 > [!IMPORTANT]
-> **Requiere Creators Update y 1.4.0 de la biblioteca de notificaciones**: debes utilizar SDK 15063 y estar ejecutando la compilación 15063 o superior para usar las barras de progreso en las notificaciones del sistema. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para construir la barra de progreso en el contenido de tu notificación del sistema.
+> **Requiere Creators Update y 1.4.0 de biblioteca de notificaciones**: Debe tener como destino el SDK 15063 y se ejecuta la compilación 15063 o posterior para usar las barras de progreso en las notificaciones del sistema. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para construir la barra de progreso en el contenido de tu notificación del sistema.
 
-Una barra de progreso dentro de una notificación del sistema puede ser "indeterminada" (ningún valor específico, puntos animados indican se está produciendo una operación) o "determinada" (un porcentaje específico de la barra se rellena, como el 60%).
+Una barra de progreso dentro de una notificación del sistema puede ser "indeterminate" (ningún valor específico, animados puntos indican una operación se está produciendo) o "determinada" (un porcentaje específico de la barra se llena, al igual que 60%).
 
-> **API importantes**: [clase NotificationData](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [método ToastNotifier.Update](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [clase ToastNotification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
+> **API importantes**: [Clase NotificationData](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [ToastNotifier.Update método](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification clase](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
 > [!NOTE]
 > Solo Escritorio admite barras de progreso en notificaciones del sistema. En otros dispositivos, la barra de progreso se quitará de la notificación.
@@ -32,11 +32,11 @@ La siguiente imagen muestra una barra de progreso determinada con todas sus prop
 
 <img alt="Toast with progress bar properties labeled" src="images/toast-progressbar-annotated.png" width="626"/>
 
-| Propiedad | Tipo | Obligatorio | Descripción |
+| Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Título** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
+| **Title** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
 | **Valor** | doble o [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) o [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | falso | Obtiene o establece el valor de la barra de progreso. Admite el enlace de datos. El valor predeterminado es 0. Puede ser uno doble entre 0,0 y 1,0, `AdaptiveProgressBarValue.Indeterminate`, o `new BindableProgressBarValue("myProgressValue")`. |
-| **ValueStringOverride** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena opcional que se mostrará en lugar de la cadena de porcentaje predeterminada. Si no se proporciona, se mostrará algo similar a "70%". |
+| **ValueStringOverride** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena opcional que se mostrará en lugar de la cadena de porcentaje predeterminada. Si no se proporciona, se mostrará algo similar a "70 %". |
 | **Estado** | cadena o [BindableString](toast-schema.md#bindablestring) | true | Obtiene o establece una cadena de estado (obligatoria), que se muestra debajo de la barra de progreso a la izquierda. Esta cadena debe reflejar el estado de la operación, como "Descargando…" o "Instalando..." |
 
 
@@ -204,15 +204,15 @@ Desde Windows 10, siempre podrías **reemplazar** una notificación enviando una
 
 | | Reemplazar | Actualizándose |
 | -- | -- | --
-| **Posición en el Centro de actividades** | Mueve la notificación a la parte superior del Centro de actividades. | Deja la notificación colocada en el Centro de actividades. |
-| **Modificar el contenido** | Puede cambiar completamente todo el contenido o el diseño de la notificación del sistema. | Solo puede cambiar las propiedades que admiten el enlace de datos (barra de progreso y texto de nivel superior). |
-| **Volver a aparecer como emergente** | Puede volver a aparecer como un elemento emergente de notificación del sistema si dejas **SuppressPopup** establecido en `false` (o establecido en true para enviarlo de forma silenciosa al Centro de actividades). | No volverá a aparecer como elemento emergente; los datos de la notificación del sistema se actualizan de forma silenciosa en el Centro de actividades. |
-| **Usuario descartado** | Con independencia de si el usuario descartó la notificación anterior, siempre se enviará la notificación del sistema de reemplazo. | Si el usuario descartó la notificación del sistema, se producirá un error en la actualización de la notificación del sistema. |
+| **Posición en el centro de actividades** | Mueve la notificación a la parte superior del Centro de actividades. | Deja la notificación colocada en el Centro de actividades. |
+| **Modificación de contenido** | Puede cambiar completamente todo el contenido o el diseño de la notificación del sistema. | Solo puede cambiar las propiedades que admiten el enlace de datos (barra de progreso y texto de nivel superior). |
+| **Vuelvan a aparecer como emergente** | Puede volver a aparecer como un elemento emergente de notificación del sistema si dejas **SuppressPopup** establecido en `false` (o establecido en true para enviarlo de forma silenciosa al Centro de actividades). | No volverá a aparecer como elemento emergente; los datos de la notificación del sistema se actualizan de forma silenciosa en el Centro de actividades. |
+| **Usuario descartada** | Con independencia de si el usuario descartó la notificación anterior, siempre se enviará la notificación del sistema de reemplazo. | Si el usuario descartó la notificación del sistema, se producirá un error en la actualización de la notificación del sistema. |
 
 En general, **la actualización es útil para...**
 
 - Información que cambia con frecuencia en un período breve de tiempo y que no requiere que se lleve a primera vista de la atención del usuario.
-- Cambios sutiles del contenido de la notificación del sistema, como cambiar del 50% al 65%
+- Cambios sutiles del contenido de la notificación del sistema, como cambiar del 50 % al 65 %
 
 En ocasiones, una vez que se haya completado la secuencia de las actualizaciones (como que se haya descargado el archivo), se recomienda reemplazar para el paso final, ya que...
 
@@ -222,5 +222,5 @@ En ocasiones, una vez que se haya completado la secuencia de las actualizaciones
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-progress-bar)
-- [Documentación del contenido de la notificación del sistema](adaptive-interactive-toasts.md)
+- [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-progress-bar)
+- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)

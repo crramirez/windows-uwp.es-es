@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
 ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117755"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610510"
 ---
-# <a name="rendering-framework-ii-game-rendering"></a>Marco de representación II: representación de juego
+# <a name="rendering-framework-ii-game-rendering"></a>Marco de representación II: Representación de juegos
 
 En [Marco de representación](tutorial--assembling-the-rendering-pipeline.md), hemos analizado cómo se puede tomar la información de las escenas y mostrarla en la pantalla de visualización. Ahora, vamos a dar un paso atrás y aprender a preparar los datos para la representación.
 
 >[!Note]
->Si no has descargado el código del juego más reciente de este ejemplo, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Ten en cuenta que este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+>Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 ## <a name="objective"></a>Objetivo
 
@@ -26,9 +26,9 @@ Resumen rápido del objetivo. Es necesario comprender cómo se debe configurar u
 
  1. Establecer una conexión con nuestra interfaz gráfica
  2. Preparación: Crear los recursos que necesitamos para dibujar los gráficos
- 3. Mostrar los gráficos: Representar un fotograma
+ 3. Mostrar los gráficos: Representar el fotograma
 
-[Marco de representación I: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md) explica cómo se representan los gráficos, en los pasos 1 y 3. 
+[Marco de representación lo hago?: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md) se explica cómo se procesan los gráficos, que abarcan los pasos 1 y 3. 
 
 Este artículo explica cómo configurar otras partes del fotograma y preparar los datos necesarios antes de que puede producirse la representación, que es el paso 2 del proceso.
 
@@ -37,19 +37,19 @@ Este artículo explica cómo configurar otras partes del fotograma y preparar lo
 El representador es responsable de crear y mantener todos los objetos D3D11 y D2D usados para generar los elementos visuales del juego. La clase __GameRenderer__ es el representador de este juego de muestra y está diseñada para satisfacer las necesidades de representación del juego.
 
 Estos son algunos conceptos que puedes usar para intentar diseñar el representador de tu juego:
-* Dado que las API de Direct3D 11 están definidas como API [COM](https://msdn.microsoft.com/library/windows/desktop/ms694363.aspx), debes proporcionar referencias de [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) a los objetos definidos por estas API. Estos objetos se liberan automáticamente cuando su última referencia sale del ámbito cuando la aplicación finaliza. Para obtener más información, consulta [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr). Ejemplos de estos objetos: búferes de constantes, objetos de sombreador - [sombreador de vértices](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [sombreador de píxeles](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders) y objetos de recursos de sombreador.
+* Dado que las API de Direct3D 11 están definidas como API [COM](https://msdn.microsoft.com/library/windows/desktop/ms694363.aspx), debes proporcionar referencias de [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) a los objetos definidos por estas API. Estos objetos se liberan automáticamente cuando su última referencia sale del alcance cuando la aplicación finaliza. Para obtener más información, consulta [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr). Ejemplos de estos objetos: búferes de constantes, objetos de sombreador - [sombreador de vértices](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [sombreador de píxeles](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders) y objetos de recursos de sombreador.
 * Los búferes de constantes se definen en esta clase para contener diversos datos necesarios para la representación.
     * Utiliza varios búferes de constantes con diferentes frecuencias para reducir la cantidad de datos que deben enviarse a la GPU por fotograma. Este ejemplo separa las constantes en diferentes búferes, según la frecuencia con la que deben actualizarse. Este es el procedimiento recomendado para la programación de Direct3D. 
     * En esta muestra de juego se definen 4 búferes de constantes.
         1. __m\_constantBufferNeverChanges__ contiene los parámetros de iluminación. Se establece una vez en el método __FinalizeCreateGameDeviceResources__ y nunca vuelve a cambiar.
         2. __m\_constantBufferChangeOnResize__ contiene la matriz de proyección. La matriz de proyección depende del tamaño y la relación de aspecto de la ventana. Se establece en [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) y, a continuación, se actualiza después de que los recursos se cargan en el método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Si la representación es en 3D, también se cambia dos veces por fotograma.
-        3. __m\_constantBufferChangesEveryFrame__ contiene la matriz de vista. Esta matriz depende de la posición de la cámara y la dirección de vista (lo normal para la proyección) y cambia solamente una vez por fotograma en el método __Render__. Esto se explicó anteriormente en __Marco de representación I: Introducción a la representación__, en el método [__GameRenderer::Render__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
-        4. __m\_constantBufferChangesEveryPrim__ contiene las propiedades de la matriz de modelos y los materiales de cada primitivo. La matriz de modelos transforma los vértices desde las coordenadas locales en coordenadas globales. Estas constantes son específicas de cada primitivo y se actualizan para cada llamada de dibujo. Esto se explicó anteriormente en __Marco de representación I: Introducción a la representación__, en el tutorial [Representación de primitivos](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
+        3. __m\_constantBufferChangesEveryFrame__ contiene la matriz de vista. Esta matriz depende de la posición de la cámara y la dirección de vista (lo normal para la proyección) y cambia solamente una vez por fotograma en el método __Render__. Esto se explicó anteriormente en __marco de representación lo hago?: Introducción a la representación__, en el [ __GameRenderer::Render__ método](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
+        4. __m\_constantBufferChangesEveryPrim__ contiene las propiedades del modelo matrix y material de cada tipo primitivo. La matriz de modelos transforma los vértices desde las coordenadas locales en coordenadas globales. Estas constantes son específicas de cada primitivo y se actualizan para cada llamada de dibujo. Esto se explicó anteriormente en __marco de representación lo hago?: Introducción a la representación__, en el [representación primitiva](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
 * Los objetos de recursos del sombreador que guardan las texturas para los primitivos se definen también en esta clase.
     * Algunas texturas están predefinidas ([DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991.aspx) es un formato de archivo que puede usarse para almacenar texturas comprimidas y sin comprimir. Las texturas DDS se usan para las paredes y el piso del mundo, así como esferas de munición).
-    * En esta muestra de juego los objetos de recursos de sombreador son los siguientes: __m\_sphereTexture__, __m\_cylinderTexture__, __m\_ceilingTexture__, __m\_floorTexture__ y __m\_wallsTexture__.
+    * En este ejemplo de juego, son objetos de recurso de sombreador: __m\_sphereTexture__, __m\_cylinderTexture__, __m\_ceilingTexture__, __m\_floorTexture__, __m\_wallsTexture__.
 * Los objetos del sombreador se definen en esta clase para calcular nuestros primitivos y texturas. 
-    * En esta muestra de juego, los objetos de sombreador son __m\_vertexShader__, __m\_vertexShaderFlat__, __m\_pixelShader__ y __m\_pixelShaderFlat__.
+    * En este ejemplo de juego, los objetos de sombreador son __m\_vertexShader__, __m\_vertexShaderFlat__, y __m\_pixelShader__, __m\_pixelShaderFlat__.
     * El sombreador de vértices procesa la iluminación básica y los primitivos y el sombreador de píxeles (en ocasiones llamado sombreador de fragmentos), procesa las texturas y cualquier efecto por píxel.
     * Existen dos versiones de estos sombreadores (regular y plano) para representar distintos primitivos. La razón por la que tenemos diferentes versiones es que las versiones planas son mucho más sencillas y no crean resaltados especulares ni ningún efecto de iluminación por píxel. Se usan en paredes y logran que las representaciones sean más rápidas en dispositivos de baja potencia.
 
@@ -168,7 +168,7 @@ En el juego de muestra, estas operaciones de los objetos de escena se dividen en
 
 Para esta muestra de juego, ¿qué se incluye en este método?
 
-* Variables instanciadas (__m\_gameResourcesLoaded__ = false y __m\_levelResourcesLoaded__ = "false") que indican si se han cargado recursos antes de pasar a representar, dado que estamos cargándolos asíncronamente. 
+* Crea una instancia de variables (__m\_gameResourcesLoaded__ = false y __m\_levelResourcesLoaded__ = false) que indican si se han cargado antes de mover recursos Reenviar para representar, ya que nos estamos cargando asincrónicamente. 
 * Dado que la representación de HUD y superposición están en objetos de clase independientes, llama a los métodos __GameHud::CreateDeviceDependentResources__ y __GameInfoOverlay::CreateDeviceDependentResources__ aquí.
 
 Este es el código para __GameRenderer::CreateDeviceDependentResources__.
@@ -241,11 +241,11 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="creategamedeviceresourcesasync-method"></a>Método CreateGameDeviceResourcesAsync
 
-__CreateGameDeviceResourcesAsync__ se llama desde el método constructor __GameMain__ del bucle __create\_task__, ya que estamos cargando los recursos del juego asíncronamente.
+__CreateGameDeviceResourcesAsync__ se llama desde el __GameMain__ método de constructor en el __crear\_tarea__ bucle puesto que los recursos de juego que estamos cargando de forma asincrónica.
         
-__CreateDeviceResourcesAsync__ es un método que ejecuta un conjunto distinto de tareas asíncronas para cargar los recursos del juego. Puesto que se espera que se ejecute en un subproceso independiente, solo tiene acceso a los métodos de dispositivo de Direct3D11 (los definidos en __ID3D11Device__), y no a los métodos de contexto de dispositivo (los definidos en __ID3D11DeviceContext__), por lo que no realiza ninguna representación.
+__CreateDeviceResourcesAsync__ es un método que ejecuta un conjunto de tareas asincrónicas distinto para cargar los recursos del juego. Puesto que se espera que se ejecute en un subproceso independiente, solo tiene acceso a los métodos de dispositivo de Direct3D 11 (los definidos en __ID3D11Device__), y no a los métodos de contexto de dispositivo (los definidos en __ID3D11DeviceContext__), por lo que no realiza ninguna representación.
 
-El método __FinalizeCreateGameDeviceResources__ se ejecuta en el subproceso principal y carece de acceso a los métodos de contexto de dispositivo de Direct3D11.
+El método __FinalizeCreateGameDeviceResources__ se ejecuta en el subproceso principal y carece de acceso a los métodos de contexto de dispositivo de Direct3D 11.
 
 En principio:
 * Usa solamente los métodos __ID3D11Device__ de __CreateGameDeviceResourcesAsync__ porque son de subprocesamiento libre, lo que significa que se pueden ejecutar en cualquier subproceso. También se espera que no se ejecuten en el mismo subproceso en que se creó __GameRenderer__. 
@@ -254,13 +254,13 @@ En principio:
 * Usa este método para cargar texturas (por ejemplo, los archivos .dds) y la información del sombreador (por ejemplo, los archivos .cso) en los [sombreadores](tutorial--assembling-the-rendering-pipeline.md#shaders).
 
 Este método se usa para:
-* Crear los 4 [búferes de constantes](tutorial--assembling-the-rendering-pipeline.md#buffer): __m\_constantBufferNeverChanges__, __m\_constantBufferChangeOnResize__, __m\_constantBufferChangesEveryFrame__ y __m\_ constantBufferChangesEveryPrim__
+* Creación de la versión 4 [búferes de constantes](tutorial--assembling-the-rendering-pipeline.md#buffer): __m\_constantBufferNeverChanges__, __m\_constantBufferChangeOnResize__, __m \_constantBufferChangesEveryFrame__, __m\_constantBufferChangesEveryPrim__
 * Crear un objeto [sampler-state](tutorial--assembling-the-rendering-pipeline.md#sampler-state) que encapsula la información de muestreo de una textura
 * Crear un grupo de tareas que contiene todas las tareas asíncronas creadas por el método. Espera a que finalicen todas estas tareas asíncronas y después llama a __FinalizeCreateGameDeviceResources__.
 * Crea un cargador usando [Cargador básico](tutorial--assembling-the-rendering-pipeline.md#basicloader). Agrega las operaciones de carga asíncrona del cargador como tareas del grupo de tareas creado anteriormente.
 * Los métodos como __BasicLoader::LoadShaderAsync__ y __BasicLoader::LoadTextureAsync__ se usan para cargar:
     * objetos de sombreador compilados (VertextShader.cso, VertexShaderFlat.cso, PixelShader.cso y PixelShaderFlat.cso). Para obtener más información, consulta [Diversos formatos de archivo de sombreador](tutorial--assembling-the-rendering-pipeline.md#various-shader-file-formats).
-    * texturas específicas del juego (Assets\\seafloor.dds, metal_texture.dds, cellceiling.dds, cellfloor.dds, cellwall.dds).
+    * juegos específicas texturas (activos\\seafloor.dds, metal_texture.dds, cellceiling.dds, cellfloor.dds, cellwall.dds).
 
 ```cpp
 task<void> GameRenderer::CreateGameDeviceResourcesAsync(_In_ Simple3DGame^ game)
@@ -363,8 +363,8 @@ Se llama al método __FinalizeCreateGameDeviceResources__ una vez que se complet
 __FinalizeCreateGameDeviceResources__ y [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) comparten partes similares del código para estos elementos:
 * Usa __SetProjParams__ para garantizar que la cámara tenga la matriz de proyección adecuada. Para obtener más información, visita [Cámaras y espacio en coordenadas](tutorial--assembling-the-rendering-pipeline.md#camera-and-coordinate-space).
 * Controlar la rotación de pantalla multiplicando la matriz de rotación 3D por la matriz de proyección de la cámara. A continuación, actualiza el búfer de constantes __ConstantBufferChangeOnResize__ con la matriz de proyección resultante.
-* Establece la variable global __m\_gameResourcesLoaded__ __booleano__ para indicar que los recursos se han cargado en los búferes, listos para el siguiente paso. Recuerda que primero inicializamos esta variable como __FALSE__ en el método constructor de __GameRenderer__, a través del método __GameRenderer::CreateDeviceDependentResources__. 
-* Cuando este __m\_gameResourcesLoaded__ es __TRUE__, puede realizarse la representación de los objetos de escena. Esto se explicó anteriormente en el artículo __Marco de representación I: Introducción a la representación__, en el método [__GameRenderer::Render method__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
+* Establecer el __m\_gameResourcesLoaded__ __booleano__ variable global para indicar que los recursos se cargan ahora en los búferes, listos para el paso siguiente. Recuerda que primero inicializamos esta variable como __FALSE__ en el método constructor de __GameRenderer__, a través del método __GameRenderer::CreateDeviceDependentResources__. 
+* Cuando esto __m\_gameResourcesLoaded__ es __TRUE__, representación de objetos de la escena puede tener lugar. Esto se trata en el __marco de representación lo hago?: Introducción a la representación__ artículo, en [ __GameRenderer::Render método__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
 
 ```cpp
 // When creating this sample game using the DirectX 11 App template, this method needs to be created.
@@ -581,7 +581,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 
 ## <a name="createwindowsizedependentresource-method"></a>Método CreateWindowSizeDependentResource
 
-Los métodos CreateWindowSizeDependentResources se llaman cada vez que cambia el tamaño de ventana, la orientación, la representación habilitada para estéreo o los cambios de resolución. En el juego de muestra, actualiza la matriz de proyección en __ConstantBufferChangeOnResize__.
+Los métodos CreateWindowSizeDependentResources se llaman cada vez que cambia el tamaño de ventana, la orientación, la representación habilitada para estéreo o los cambios de resolución. En el juego de ejemplo, actualiza la matriz de proyección en __ConstantBufferChangeOnResize__.
 
 Los recursos de tamaño de ventana se actualizan de esta manera: 
 * El marco de la aplicación obtiene uno de los diversos eventos posibles que indican un cambio en el estado de ventana. 

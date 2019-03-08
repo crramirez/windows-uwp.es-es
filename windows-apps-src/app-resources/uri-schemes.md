@@ -1,5 +1,5 @@
 ---
-Description: There are several URI (Uniform Resource Identifier) schemes that you can use to refer to files that come from your app's package, your app's data folders, or the cloud. You can also use a URI scheme to refer to strings loaded from your app's Resources Files (.resw).
+Description: Existen varios esquemas de URI (identificador uniforme de recursos) que puedes usar para hacer referencia a archivos que provienen del paquete de la aplicación, las carpetas de datos de la aplicación o la nube. También puedes usar un esquema de URI para hacer referencia a cadenas cargadas desde archivos de recursos (.resw) de la aplicación.
 title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048352"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632060"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -77,7 +77,7 @@ ms-appx-web:///
 
 ### <a name="user-info-and-port-ms-appx-and-ms-appx-web"></a>Información del usuario y puerto (ms-appx y ms-appx-web)
 
-El esquema `ms-appx`, a diferencia de otros esquemas populares, no define un componente de información del usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error.
+El esquema `ms-appx`, a diferencia de otros esquemas populares, no define un componente de información del usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error:
 
 ```xml
 ms-appx://john@contoso.myapp/default.html
@@ -150,7 +150,7 @@ ms-appdata:///
 
 ### <a name="user-info-and-port-ms-appdata"></a>Información de usuario y puerto (ms-appdata)
 
-El esquema `ms-appdata`, a diferencia de otros esquemas populares, no define un componente de información de usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error:
+El esquema `ms-appdata`, a diferencia de otros esquemas populares, no define un componente de información del usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error:
 
 ```xml
 ms-appdata://john@contoso.myapp/local/data.xml
@@ -236,7 +236,7 @@ La autoridad distingue entre mayúsculas y minúsculas y la forma normalizada ma
 
 ### <a name="user-info-and-port-ms-resource"></a>Información de usuario y puerto (ms-resource)
 
-El esquema `ms-resource`, a diferencia de otros esquemas populares, no define un componente de información de usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error.
+El esquema `ms-resource`, a diferencia de otros esquemas populares, no define un componente de información del usuario o puerto. Dado que no se permite el uso de "@" and ":" como valores de autoridad válidos, la búsqueda generará un error caso de que estén incluidos. Cada uno de los siguientes elementos generará un error:
 
 ```xml
 ms-resource://john@contoso.myapp/Resources/String1
@@ -251,9 +251,9 @@ La ruta de acceso identifica la ubicación jerárquica del subárbol [ResourceMa
 
 Para obtener ejemplos y más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, la recuperación subyacente hace un [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) con *ignoreCase* establecido en `true`.
+El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, la recuperación subyacente no un [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) con *ignoreCase* establecido en `true`.
 
-La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. Por lo tanto recuperar un recurso de cadena desde un archivo de recursos denominado `Hello#World.resw`, usa este URI.
+La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. Por lo tanto, para recuperar un recurso de cadena de un archivo de recursos denominado `Hello#World.resw`, usar este URI.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -271,6 +271,6 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 * [Empaquetado de aplicaciones](../packaging/index.md)
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
-* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
+* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](localize-strings-ui-manifest.md)
 * [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
+* [Icono y notificaciones del sistema compatibilidad con las notificaciones para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

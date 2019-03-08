@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, optimizar, muestreo múltiple, cadenas de intercambio
 ms.localizationpriority: medium
 ms.openlocfilehash: e9618a35ecd8f9d1a37b627494c0f00a5ed84806
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940394"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595020"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>Optimización y temas avanzados para juegos DirectX
 
@@ -46,23 +46,23 @@ En el tema sobre el escalado y superposiciones de cadenas de intercambio se expl
 <td align="left"><p>Comprende la programación asincrónica y los subprocesos con DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="handling-device-lost-scenarios.md">Controlar escenarios cuando se quitan dispositivos en Direct3D11</a></p></td>
+<td align="left"><p><a href="handling-device-lost-scenarios.md">Controlar los escenarios de dispositivo quitado en Direct3D 11</a></p></td>
 <td align="left"><p>Recrea la cadena de la interfaz de dispositivo Direct3D y DXGI cuando se quita o reinicializa el adaptador de gráficos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md">Muestreo múltiple en aplicaciones para UWP</a></p></td>
+<td align="left"><p><a href="multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md">El muestreo múltiple en las aplicaciones UWP</a></p></td>
 <td align="left"><p>Usa el muestreo múltiple en juegos para UWP compilados con Direct3D.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">Optimizar la entrada y el bucle de representación</a></p></td>
+<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">Optimizar el bucle de representación y entrada</a></p></td>
 <td align="left"><p>Reduce la latencia de entrada y optimiza el bucle de representación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">Reducir la latencia con cadenas de intercambio DXGI1.3</a></p></td>
+<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">Reducir la latencia de las cadenas de intercambio DXGI 1.3</a></p></td>
 <td align="left"><p>Usa DXGI 1.3 para reducir la latencia efectiva de los fotogramas.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="multisampling--scaling--and-overlay-swap-chains.md">Escalado y superposiciones de cadenas de intercambio</a></p></td>
+<td align="left"><p><a href="multisampling--scaling--and-overlay-swap-chains.md">Escalado de cadena de intercambio y superposiciones</a></p></td>
 <td align="left"><p>Crea cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas y usa cadenas de intercambio de superposición para mejorar la calidad visual.</p></td>
 </tr>
 </tbody>

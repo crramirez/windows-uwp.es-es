@@ -1,23 +1,23 @@
 ---
-Description: Lists display and enable interaction with collection-based content.
+Description: Mostrar listas y habilitar la interacción con el contenido basado en la colección.
 title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 pm-contact: predavid
 design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: eb9c600e58be04d8ce967eb119777d6746507fbe
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004591"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636370"
 ---
 # <a name="lists"></a>Listas
 
@@ -30,14 +30,14 @@ Mostrar listas y habilitar la interacción con el contenido basado en la colecci
 
 Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista.
 
-> **API importantes**: [Clase ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [Clase ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
+> **API importantes**: [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox (clase)](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
+> <strong>Windows 10 Fall Creators Update - cambio de comportamiento</strong>
 > </div>
 > De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo ahora se desplaza/realiza movimiento panorámico en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta el tema de referencia de API para la <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Clase ScrollViewer</a>.
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, vea el tema de referencia de API para el <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer clase</a>.
 
 ## <a name="list-views"></a>Vistas de lista
 
@@ -59,7 +59,7 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 
 ### <a name="recommendations"></a>Recomendaciones
 
--   Los elementos dentro de una lista deben tener el mismo comportamiento.
+-   Los elementos de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
 
 ### <a name="list-view-articles"></a>Artículos de vista de lista
@@ -80,11 +80,11 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 <td align="left"><p>Aprende los conceptos básicos del uso de una vista de lista o una vista de cuadrícula en tu aplicación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="item-containers-templates.md">Plantillas y contenedores de elementos</a></p></td>
+<td align="left"><p><a href="item-containers-templates.md">Las plantillas y los contenedores de elementos</a></p></td>
 <td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-listview.md">Plantillas de elemento para la vista de lista</a></p></td>
+<td align="left"><p><a href="item-templates-listview.md">Plantillas de elemento de vista de lista</a></p></td>
 <td align="left"><p>Usa estas plantillas de elemento de lista para una clase ListView y obtén así la apariencia de los tipos de aplicación más comunes.</p></td>
 </tr>
 <tr class="even">
@@ -92,11 +92,11 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 <td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue estas instrucciones para usar una lista invertida en tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pull-to-refresh.md">Extraer para actualizar</a></p></td>
+<td align="left"><p><a href="pull-to-refresh.md">Pull-to-refresh</a></p></td>
 <td align="left"><p>El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa estas instrucciones para implementar el patrón extraer para actualizar en tu vista de lista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidada</a></p></td>
+<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidado</a></p></td>
 <td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
 </tr>
 </tbody>
@@ -126,7 +126,7 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 
 ### <a name="recommendations"></a>Recomendaciones
 
--   Los elementos dentro de una lista deben tener el mismo comportamiento.
+-   Los elementos de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
 
 ### <a name="grid-view-articles"></a>Artículos de la vista de cuadrícula
@@ -147,15 +147,15 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 <td align="left"><p>Aprende los conceptos básicos del uso de una vista de lista o una vista de cuadrícula en tu aplicación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="item-containers-templates.md">Plantillas y contenedores de elementos</a></p></td>
+<td align="left"><p><a href="item-containers-templates.md">Las plantillas y los contenedores de elementos</a></p></td>
 <td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-gridview.md">Plantillas de elemento para vista de cuadrícula</a></p></td>
+<td align="left"><p><a href="item-templates-gridview.md">Plantillas de elemento de vista de cuadrícula</a></p></td>
 <td align="left"><p>Usa estas plantillas de elemento de lista para una clase GridView y obtén así la apariencia de los tipos de aplicación más comunes.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidada</a></p></td>
+<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidado</a></p></td>
 <td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
 </tr>
 </tbody>
@@ -229,9 +229,9 @@ El modo de selección permite a los usuarios seleccionar uno o varios elementos 
 
 Existen tres modos de selección diferentes:
 
--   Único: el usuario puede seleccionar un solo elemento a la vez.
--   Múltiple: el usuario puede seleccionar varios elementos sin usar un modificador.
--   Extendido: el usuario puede seleccionar varios elementos con un modificador, por ejemplo, manteniendo presionada la tecla MAYÚS.
+-   soltero: El usuario puede seleccionar sólo un elemento a la vez.
+-   Varios: El usuario puede seleccionar varios elementos sin usar un modificador.
+-   Extendido: El usuario puede seleccionar varios elementos con un modificador, como manteniendo presionada la tecla MAYÚS.
 
 Al tocar en cualquier parte de un elemento, este se selecciona. Tocar sobre la acción de la barra de comandos afecta a todos los elementos seleccionados. Si no se selecciona ningún elemento, las acciones de la barra de comandos deberían estar desactivadas, excepto "Seleccionar todo".
 
@@ -262,14 +262,14 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Panel de maestro y detalles](master-details.md)
+- [Maestro/detalles](master-details.md)
 - [Panel de navegación](navigationview.md)
 - [Zoom semántico](semantic-zoom.md)
 - [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [Imágenes en miniatura](../../files/thumbnails.md)
 
 **Para desarrolladores**
-- [Clase ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
 - [Clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [Clase ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [Clase ListBox](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [ComboBox (clase)](https://msdn.microsoft.com/library/windows/apps/br209348)
+- [Clase de cuadro de lista](https://msdn.microsoft.com/library/windows/apps/br242868)

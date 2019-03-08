@@ -1,5 +1,5 @@
 ---
-Description: You can log custom events from your UWP app and review those events in the Usage report in Partner Center.
+Description: Puede registrar eventos personalizados de la aplicación UWP y revisar los eventos en el informe de uso en el centro de partners.
 title: Registrar eventos personalizados para el Centro de partners
 ms.date: 06/01/2018
 ms.topic: article
@@ -7,24 +7,24 @@ keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log 
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b338fd3b34d530ad365b0377d6b6c6c65398b7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604240"
 ---
 # <a name="log-custom-events-for-partner-center"></a>Registrar eventos personalizados para el Centro de partners
 
-El [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners te permite obtener información sobre los eventos personalizados que hayas definido en la aplicación de plataforma Universal de Windows (UWP). Un evento personalizado es una cadena arbitraria que representa un evento o una actividad en tu aplicación. Por ejemplo, un juego podría definir eventos personalizados denominados *firstLevelPassed*, *secondLevelPassed*, y así sucesivamente, que se registren cuando el usuario supere los distintos niveles del juego.
+El [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en le permite de centro de partners para obtener información sobre los eventos personalizados que haya definido en la aplicación de plataforma Universal de Windows (UWP). Un evento personalizado es una cadena arbitraria que representa un evento o una actividad en tu aplicación. Por ejemplo, un juego podría definir eventos personalizados denominados *firstLevelPassed*, *secondLevelPassed*, y así sucesivamente, que se registren cuando el usuario supere los distintos niveles del juego.
 
-Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) proporcionado por el Microsoft Store Services SDK. Puedes revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.
+Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) proporcionado por el Microsoft Store Services SDK. Puede revisar las apariciones totales para los eventos personalizados en el **eventos personalizados** sección de la [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el centro de partners.
 
 > [!NOTE]
-> Eventos personalizados que inicie sesión en el centro de partners no están relacionados con [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)y no aparecen en **El Visor de eventos**.
+> Eventos personalizados que inicie sesión en el centro de partners son no relacionada con [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx), y no aparecen en **Visor de eventos**.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para revisar los eventos de registro personalizado en el **informe de uso** de la aplicación en el centro de partners, la aplicación debe publicarse en la tienda.
+Para poder revisar eventos de registro personalizado en el **informe de uso** para la aplicación en el centro de partners, se debe publicar la aplicación en el Store.
 
 ## <a name="how-to-log-custom-events"></a>Cómo registrar eventos personalizados
 
@@ -38,7 +38,7 @@ Para revisar los eventos de registro personalizado en el **informe de uso** de l
 
 5. En la lista de los SDK, haz clic en la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
 
-6. Agrega la siguiente instrucción en la parte superior de cada archivo de código donde quieras registrar eventos personalizados.
+6. Agrega la siguiente instrucción en la parte superior de cada archivo de código en el que quieras registrar eventos personalizados.
     [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
 
 7. En cada sección del código en la que quieras registrar un evento personalizado, obtén un objeto [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) y, a continuación, llama al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log). Pasa la cadena de eventos personalizada al método.

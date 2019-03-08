@@ -1,19 +1,19 @@
 ---
 description: Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código.
-title: Sintaxis de PropertyPath
+title: Sintaxis de property-path
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f0f49792a92010f97c8388540fd63c38eed5f75e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919301"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632370"
 ---
-# <a name="property-path-syntax"></a>Sintaxis de PropertyPath
+# <a name="property-path-syntax"></a>Sintaxis de property-path
 
 
 Puedes usar la clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) y la sintaxis de cadena para crear una instancia de un valor **PropertyPath** en XAML o en código. El enlace de datos usa los valores de **PropertyPath**. Una sintaxis similar se usa para seleccionar el destino de las animaciones de guión gráfico. Para los dos escenarios, una ruta de acceso de propiedades describe un cruce seguro de una o más relaciones de propiedades de objeto que finalmente se resuelven en una sola propiedad.
@@ -50,11 +50,11 @@ En cada uno de estos pasos, el valor se trata como un objeto. El tipo de resulta
 
 ### <a name="indexers"></a>Indexadores
 
-Una ruta de acceso de propiedades para el enlace de datos puede incluir referencias a propiedades indexadas. Esto te permite habilitar el enlace a listas y vectores ordenadas, o a diccionarios y mapas. Usa corchetes "\[\]" para indicar una propiedad indexada. El contenido de estos corchetes puede ser un entero (para la lista ordenada) o una cadena sin comillas (para los diccionarios). También puedes enlazar con un diccionario en el que la clave sea un entero. Puedes usar propiedades indizadas diferentes en la misma ruta de acceso con un punto separando la propiedad del objeto.
+Una ruta de acceso de propiedades para el enlace de datos puede incluir referencias a propiedades indexadas. Esto te permite habilitar el enlace a listas y vectores ordenadas, o a diccionarios y mapas. Utilice los corchetes "\[\]" caracteres para indicar una propiedad indizada. El contenido de estos corchetes puede ser un entero (para la lista ordenada) o una cadena sin comillas (para los diccionarios). También puedes enlazar con un diccionario en el que la clave sea un entero. Puedes usar propiedades indizadas diferentes en la misma ruta de acceso con un punto separando la propiedad del objeto.
 
-Por ejemplo, imagina que tienes un objeto empresarial en el que hay una lista denominada "Teams" (lista ordenada) en la cual, cada equipo consta de un diccionario denominado "Players" donde se puede encontrar a cada integrante según su apellido. Un ejemplo de ruta de acceso de propiedades a un integrante específico del segundo equipo sería: "Teams\[1\].Players\[Smith\]". (Debes usar 1 para indicar el segundo elemento en "Teams" porque la lista tiene un índice de cero).
+Por ejemplo, imagina que tienes un objeto empresarial en el que hay una lista denominada "Teams" (lista ordenada) en la cual, cada equipo consta de un diccionario denominado "Players" donde se puede encontrar a cada integrante según su apellido. Es una ruta de acceso de propiedad de ejemplo con un reproductor específico en el segundo equipo: "Los equipos\[1\]. Los jugadores\[Smith\]". (Debes usar 1 para indicar el segundo elemento en "Teams" porque la lista tiene un índice de cero).
 
-**Nota**compatibilidad con la indexación de orígenes de datos de C++ es limitada; consulta el [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Tenga en cuenta**  compatibilidad con la indización de orígenes de datos de C++ es limitada; vea [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="attached-properties"></a>Propiedades adjuntas
 
@@ -84,15 +84,15 @@ Puedes animar una propiedad que es una subpropiedad del objeto de destino. Dicho
 
 ## <a name="specifying-a-particular-child-in-a-collection"></a>Especificar un elemento secundario en particular de una colección
 
-Para especificar un elemento secundario de una propiedad de colección, puedes usar un indexador numérico. Usa corchetes "\[\]" alrededor del valor del índice de entero. Ten en cuenta que puedes hacer referencia solo a listas ordenadas y no a diccionarios. Como una colección no es un valor que se pueda animar, el uso de un indizador nunca puede ser la propiedad final en una ruta de acceso de propiedades.
+Para especificar un elemento secundario de una propiedad de colección, puedes usar un indexador numérico. Utilice los corchetes "\[\]" valor de índice de caracteres en el entero. Ten en cuenta que puedes hacer referencia solo a listas ordenadas y no a diccionarios. Como una colección no es un valor que se pueda animar, el uso de un indizador nunca puede ser la propiedad final en una ruta de acceso de propiedades.
 
-Por ejemplo, para especificar que quieres animar el primer punto de parada de color en una clase [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/br210108) que se aplique a la propiedad [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) de un control, esta es la ruta de acceso de la propiedad que debes usar: "(Control.Background).(GradientBrush.GradientStops)\[0\].(GradientStop.Color)". Ten en cuenta que el indexador no es el último paso de la ruta de acceso, sino que el último paso debe hacer referencia, en particular, a la propiedad [**GradientStop.Color**](https://msdn.microsoft.com/library/windows/apps/br210094) del elemento 0 que se encuentra en la colección, para aplicarle un valor animado [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723).
+Por ejemplo, para especificar que desea que se va a animar el color de primer detener color en un [ **LinearGradientBrush** ](https://msdn.microsoft.com/library/windows/apps/br210108) que se aplica a un control [ **en segundo plano** ](https://msdn.microsoft.com/library/windows/apps/br209395) propiedad, se trata de la ruta de acceso de propiedad: "(Control.Background). (GradientBrush.GradientStops) \[0\]. () GradientStop.Color) ". Ten en cuenta que el indexador no es el último paso de la ruta de acceso, sino que el último paso debe hacer referencia, en particular, a la propiedad [**GradientStop.Color**](https://msdn.microsoft.com/library/windows/apps/br210094) del elemento 0 que se encuentra en la colección, para aplicarle un valor animado [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723).
 
 ## <a name="animating-an-attached-property"></a>Animar una propiedad adjunta
 
 No suele ser habitual, pero es posible animar una propiedad adjunta siempre que esta tenga un valor que coincida con un tipo de animación. Como el nombre identificador de una propiedad adjunta ya incluye un punto, deberás encerrar el nombre de la propiedad adjunta entre paréntesis para que el punto no se considere un paso de propiedad de objeto. Por ejemplo, la cadena para especificar que quieres animar la propiedad adjunta [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) en un objeto, usa la ruta de acceso de propiedad "(Grid.Row)".
 
-**Nota**para este ejemplo, el valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) es un tipo de propiedad **Int32** . Debido a ello, no podrás animarlo con una animación **Double**. En cambio, sí que puedes definir una clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tenga componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) en los cuales la propiedad [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) esté establecida como un entero "0" o "1".
+**Tenga en cuenta**  en este ejemplo, el valor de [ **Grid.Row** ](https://msdn.microsoft.com/library/windows/apps/hh759795) es un **Int32** tipo de propiedad. Debido a ello, no podrás animarlo con una animación **Double**. En cambio, sí que puedes definir una clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tenga componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) en los cuales la propiedad [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) esté establecida como un entero "0" o "1".
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>Reglas de las propiedades en una ruta de acceso de propiedades de selección de destino de animaciones
 
@@ -107,15 +107,15 @@ La clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br24
 
 La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) en XAML sin tener usar ningún código en absoluto. Pero en algunos casos, deberás definir un objeto **PropertyPath** mediante código y asignarlo a una propiedad en tiempo de ejecución.
 
-[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) tiene un constructor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), pero no tiene un constructor predeterminado. La cadena que pases a ese constructor deberá ser una cadena definida mediante la sintaxis de ruta de acceso de propiedades, tal como ya hemos explicado. Además, es también la misma cadena que usarías para asignar [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. Ten en cuenta que la única API de la clase **PropertyPath** es la propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), la cual es de solo lectura. Puedes usar esta propiedad como la cadena de construcción de otra instancia **PropertyPath**.
+[**PropertyPath** ](https://msdn.microsoft.com/library/windows/apps/br244259) tiene un [ **PropertyPath(String)** ](https://msdn.microsoft.com/library/windows/apps/br244261) constructor y no tiene un constructor predeterminado. La cadena que pases a ese constructor deberá ser una cadena definida mediante la sintaxis de ruta de acceso de propiedades, tal como ya hemos explicado. Además, es también la misma cadena que usarías para asignar [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. Ten en cuenta que la única API de la clase **PropertyPath** es la propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), la cual es de solo lectura. Puedes usar esta propiedad como la cadena de construcción de otra instancia **PropertyPath**.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)
-* [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354)
-* [Extensión de marcado {Binding}](binding-markup-extension.md)
+* [Animaciones amplía su información](https://msdn.microsoft.com/library/windows/apps/mt187354)
+* [Extensión de marcado {binding}](binding-markup-extension.md)
 * [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
-* [**Binding (Enlace)**](https://msdn.microsoft.com/library/windows/apps/br209820)
-* [**Binding constructor (Constructor Binding)**](https://msdn.microsoft.com/library/windows/apps/br209825)
+* [**enlace**](https://msdn.microsoft.com/library/windows/apps/br209820)
+* [**Constructor de enlace**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)
 

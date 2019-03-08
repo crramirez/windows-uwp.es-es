@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 86b8627461251a5d43762facc18c8a414a117fc9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941412"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604130"
 ---
 # <a name="light-properties"></a>Propiedades de luz
 
@@ -21,14 +21,14 @@ Las propiedades de la luz describen el tipo de la fuente de luz (puntual, direcc
 
 Las propiedades de posición, intervalo y atenuación definen la ubicación de la luz en el espacio global y cómo se comporta la luz que emite con la distancia.
 
-## <a name="span-idlightattenuationspanspan-idlightattenuationspanspan-idlightattenuationspanlight-attenuation"></a><span id="Light_Attenuation"></span><span id="light_attenuation"></span><span id="LIGHT_ATTENUATION"></span>Atenuación de la luz
+## <a name="span-idlightattenuationspanspan-idlightattenuationspanspan-idlightattenuationspanlight-attenuation"></a><span id="Light_Attenuation"></span><span id="light_attenuation"></span><span id="LIGHT_ATTENUATION"></span>Atenuación de luz
 
 
-La atenuación controla cómo disminuye la intensidad de la luz hacia la máxima distancia especificada por la propiedad de intervalo. A veces, se usan tres valores de punto flotante para representar la atenuación de la luz: Attenuation0, Attenuation1 y Attenuation2. Estos valores de punto flotante comprenden entre 0,0 y infinito y controlan la atenuación de la luz. Algunas aplicaciones establecen el miembro Attenuation1 en 1,0 y los demás, en 0,0, lo que resulta en un cambio en la intensidad de la luz de 1 / D, donde D es la distancia desde la fuente de luz hasta el vértice. La intensidad de la luz máxima está en el origen y disminuye en 1 / (intervalo de luz) en el intervalo de la luz.
+La atenuación controla cómo disminuye la intensidad de la luz hacia la máxima distancia especificada por la propiedad de intervalo. Tres valores de punto flotante a veces se usan para representar la atenuación de luz: Attenuation0, Attenuation1 y Attenuation2. Estos valores de punto flotante comprenden entre 0,0 y infinito y controlan la atenuación de la luz. Algunas aplicaciones establecen el miembro Attenuation1 en 1,0 y los demás, en 0,0, lo que resulta en un cambio en la intensidad de la luz de 1 / D, donde D es la distancia desde la fuente de luz hasta el vértice. La intensidad de la luz máxima está en el origen y disminuye en 1 / (intervalo de luz) en el intervalo de la luz.
 
 Aunque, por lo general, una aplicación establece Attenuation0 en 0,0, Attenuation1 en un valor de constante y Attenuation2 en 0,0, de modo que se pueden lograr varios efectos de luz si se modifica esto. Puedes combinar los valores de atenuación para obtener efectos de atenuación más complejos. O bien, puedes establecerlos en valores fuera del intervalo normal para crear efectos de atenuación más extraños. Sin embargo, no se permiten los valores de atenuación negativos. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).
 
-## <a name="span-idlightcolorspanspan-idlightcolorspanspan-idlightcolorspanlight-color"></a><span id="Light_Color"></span><span id="light_color"></span><span id="LIGHT_COLOR"></span>Color de la luz
+## <a name="span-idlightcolorspanspan-idlightcolorspanspan-idlightcolorspanlight-color"></a><span id="Light_Color"></span><span id="light_color"></span><span id="LIGHT_COLOR"></span>Color claro
 
 
 Las luces en Direct3D emiten tres colores que se usan de forma independiente en los cálculos de iluminación del sistema: un color difuso, un color de ambiente y un color especular. El módulo de iluminación de Direct3D los incorpora e interactúa con un equivalente del material actual, para producir un color final que se usa en la representación. El color difuso interactúa con la propiedad de reflectancia difusa del material actual y el color especular, con la propiedad de reflectancia especular del material, etc. Para obtener información específica sobre cómo aplica Direct3D estos colores, consulta [Cálculos de iluminación](mathematics-of-lighting.md).
@@ -69,7 +69,7 @@ La propiedad de intervalo de la luz determina la distancia, en el espacio global
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Luces y materiales](lights-and-materials.md)
+[Materiales y luces](lights-and-materials.md)
 
  
 

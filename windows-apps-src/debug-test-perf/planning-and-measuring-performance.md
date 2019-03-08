@@ -1,23 +1,23 @@
 ---
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
-title: Planeación del rendimiento
+title: Planificación del rendimiento
 description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bfe034ed697661c81b2f01b67fafeee1941832d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050768"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640320"
 ---
-# <a name="planning-for-performance"></a>Planeación del rendimiento
+# <a name="planning-for-performance"></a>Planificación del rendimiento
 
 
 
-Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos.
+Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, realiza mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos.
 
 ## <a name="specifying-goals"></a>Especificar objetivos
 
@@ -31,12 +31,12 @@ Es mejor establecer un objetivo inicial y revisarlo más tarde, que no tener nin
 
 Piensa en los intervalos de tiempo aceptables (*clases de interacción*) necesarios para que los usuarios realicen sus tareas en tu aplicación. Para cada clase de interacción, asigna una etiqueta, una opinión de percepción del usuario y unas duraciones máximas e ideales. Aquí tienes algunas sugerencias.
 
-| Etiqueta para clase de interacción | Percepción del usuario                 | Ideal            | Máxima          | Ejemplos                                                                     |
+| Etiqueta para clase de interacción | Percepción del usuario                 | Ideal            | Máximo          | Ejemplos                                                                     |
 |-------------------------|---------------------------------|------------------|------------------|------------------------------------------------------------------------------|
-| Rapidez                    | Retraso apenas perceptible      | 100 milisegundos | 200 milisegundos | Mostrar la barra de la aplicación, presionar un botón (primera respuesta)                        |
+| Fast                    | Retraso apenas perceptible      | 100 milisegundos | 200 milisegundos | Mostrar la barra de la aplicación, presionar un botón (primera respuesta)                        |
 | Típica                 | Veloz, pero no rápida             | 300 milisegundos | 500 milisegundos | Cambiar de tamaño, zoom semántico                                                        |
 | Dinámica              | No es veloz, pero se percibe dinámica | 500 milisegundos | 1 segundo         | Navegar a otra página, reanudar la aplicación desde un estado suspendido          |
-| Ejecución                  | Experiencia competitiva          | 1 segundo         | 3 segundos        | Iniciar la aplicación la primera vez o después de haberla cerrado |
+| Iniciar                  | Experiencia competitiva          | 1 segundo         | 3 segundos        | Iniciar la aplicación la primera vez o después de haberla cerrado |
 | Continua              | Ya no se percibe dinámica      | 500 milisegundos | 5 segundos        | Descargar un archivo de Internet                                            |
 | Cautiva                 | Extensa, el usuario podría marcharse    | 500 milisegundos | 10 segundos       | Instalar varias aplicaciones de la Tienda                                         |
 
@@ -47,7 +47,7 @@ Ahora puedes asignar clases de interacción a escenarios de rendimiento de la ap
 
 <!-- DHALE: used HTML table here b/c WDCML src used rowspans -->
 <table>
-<tr><th>Situación</th><th>Momento dado</th><th>Experiencia del usuario</th><th>Clase de interacción</th></tr>
+<tr><th>Escenario</th><th>Momento dado</th><th>Experiencia del usuario</th><th>Clase de interacción</th></tr>
 <tr><td rowspan="3">Navegar a una página de recetas </td><td>Primera respuesta</td><td>Comienzo de la animación de transición de página</td><td>Rápida (de 100 a 200 milisegundos)</td></tr>
 <tr><td>Dinámica</td><td>Carga de lista de ingredientes, sin imágenes</td><td>Dinámica (de 500 milisegundos a 1 segundo)</td></tr>
 <tr><td>Visibilidad completa</td><td>Carga de todo el contenido, incluidas las imágenes</td><td>Continua (de 500 milisegundos a 5 segundos)</td></tr>
@@ -79,7 +79,7 @@ Los objetivos de eficiencia apreciables específicos de la aplicación pueden in
 
 Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usando la aplicación de ejemplo de comidas, una vez que el usuario navega a la página de recetas, puedes elegir [actualizar elementos de forma incremental](optimize-gridview-and-listview.md#update-items-incrementally) para que el nombre de la receta se represente en primer lugar, la visualización de ingredientes se aplace y la visualización de imágenes se aplace aún más. Esto mantiene la capacidad de respuesta y una interfaz de usuario fluida en el movimiento panorámico y el desplazamiento, con una representación de fidelidad total una vez que la interacción se reduce a un ritmo que pueda seguir el subproceso de interfaz de usuario. A continuación se enumeran algunos otros aspectos que se deben tener en cuenta.
 
-**Interfaz de usuario**
+**UI**
 
 -   Maximiza el tiempo de análisis y carga y la eficacia de la memoria para cada página de la interfaz de usuario de tu aplicación (sobre todo en la página inicial) al [optimizar el marcado XAML](optimize-xaml-loading.md). En pocas palabras, aplaza la carga de la interfaz de usuario y el código hasta que estos sean necesarios.
 -   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), haz que todos los elementos tengan el mismo tamaño y usen tantas [técnicas de optimización de ListView y GridView](optimize-gridview-and-listview.md) como sea posible.
@@ -88,7 +88,7 @@ Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usa
 -   Opta por las transiciones de tema y las animaciones en lugar de las animaciones de guion gráfico. Para más información, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/Mt187350). Recuerda que las animaciones de guion gráfico requieren actualizaciones constantes en la pantalla, y mantienen la CPU y la canalización de gráficos activas. Para conservar la batería, no tengas animaciones en funcionamiento si el usuario no está interactuando con la aplicación.
 -   Las imágenes deben cargarse en el tamaño apropiado para la vista en que las presentas, con el método [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210).
 
-**CPU, memoria y energía**
+**CPU, memoria y potencia**
 
 -   Programa trabajos de menor prioridad para que se ejecuten en subprocesos o núcleos de menor prioridad. Consulta [Programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187335), la propiedad [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/BR209054) y la clase [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211).
 -   Para minimiza la superficie de memoria de la aplicación libera los recursos que consumen más memoria (como los recursos multimedia) en el estado de suspensión.
@@ -102,12 +102,12 @@ Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usa
 -   Si es posible, almacena en caché el contenido cuyo acceso sea difícil. Consulta las propiedades [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/BR241621) y [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622).
 -   Para los errores de caché, muestra una interfaz de usuario de marcador de posición lo más rápido posible que indique que la aplicación aún está cargando contenido. Haz que la transición de contenido de marcador de posición a dinámico se realice de una forma sencilla que no moleste al usuario. Por ejemplo, no cambie la posición del contenido debajo del dedo del usuario o el puntero del mouse mientras se carga el contenido dinámico.
 
-**Iniciar y reanudar aplicaciones**
+**Reanudar y el inicio de la aplicación**
 
 -   Aplaza la página de presentación de la aplicación y no la extiendas a menos que sea necesario. Para más información, consulta [Crear una experiencia de inicio de la aplicación rápida y fluida](https://go.microsoft.com/fwlink/p/?LinkId=317595) y [Mostrar una pantalla de presentación durante más tiempo](https://msdn.microsoft.com/library/windows/apps/Mt187309).
 -   Deshabilita las animaciones que se produzcan inmediatamente después de descartarse la página de presentación, ya que estas solo causan una sensación de demora en el inicio de la aplicación.
 
-**Interfaz de usuario adaptable y orientación**
+**UI adaptable y orientación**
 
 -   Usa la clase [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021).
 -   Completa solo el trabajo necesario de manera inmediata y aplaza el trabajo intensivo para más adelante: la aplicación tiene entre 200 y 800 milisegundos para terminar el trabajo, antes de que el usuario vea la interfaz en estado recortado.
@@ -165,19 +165,19 @@ Usa estas técnicas y herramientas para probar la aplicación con respecto a los
 -   Prueba en distintas configuraciones de hardware, incluidos los equipos de escritorio y todo en uno, equipos portátiles, ultrabooks, tabletas y otros dispositivos móviles.
 -   Prueba en distintos tamaños de pantalla. Si bien cuanto más grande sea la pantalla más se puede mostrar, presentar todo ese contenido adicional puede tener un impacto negativo en el rendimiento.
 -   Elimina todas las variables de prueba que puedas.
-    -   Cierra las aplicaciones en segundo plano en el dispositivo de prueba. Para ello, en Windows, selecciona **Configuración** desde el menú Inicio &gt; **Personalización** &gt; **Pantalla de bloqueo**. Selecciona cada aplicación activa y selecciona **Ninguno**.
+    -   Cierra las aplicaciones en segundo plano en el dispositivo de prueba. Para ello, en Windows, seleccione **configuración** desde el menú Inicio &gt; **personalización** &gt; **pantalla de bloqueo**. Selecciona cada aplicación activa y selecciona **Ninguno**.
     -   Compila la aplicación en código nativo. Para ello, compílala en la configuración de lanzamiento antes de implementarla en el dispositivo de prueba.
     -   Para garantizar que el mantenimiento automático no afecta el rendimiento del dispositivo de prueba, desencadénalo manualmente y espera a que finalice. En Windows, en el menú Inicio, busca **Seguridad y mantenimiento**. En el área **Mantenimiento**, en **Mantenimiento automático**, selecciona **Iniciar mantenimiento** y espera a que el estado cambie de **Mantenimiento en curso**.
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
 -   Prueba si se ha reducido la disponibilidad de consumo de energía. El dispositivo de tus usuarios podría tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de bajo consumo funciona, aproximadamente, a un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
 -   Combina herramientas, como Microsoft Visual Studio y el Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan captura y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
--   Antes de enviar la aplicación a la tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos de prueba relacionada con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de [pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"de [los casos de prueba de aplicación para UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Antes de enviar la aplicación para el Store para la certificación, asegúrese de incorporar en sus planes de pruebas los casos de prueba relacionados con el rendimiento, tal como se describe en la sección "Pruebas de rendimiento" de [Kit de certificación de aplicaciones de Windows comprueba](windows-app-certification-kit-tests.md) y en la sección "Rendimiento y estabilidad" de [casos de prueba de aplicación UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Para más información, consulta estos recursos y herramientas de generación de perfiles.
 
--   [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx)
--   [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)
--   [Analizar el rendimiento con herramientas de diagnóstico de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh696636.aspx)
+-   [Analizador de rendimiento de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx)
+-   [Kit de herramientas de rendimiento de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)
+-   [Analizar el rendimiento mediante las herramientas de diagnóstico de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh696636.aspx)
 -   La sesión //build/ [Rendimiento de XAML](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   La sesión //build/ [Nuevas herramientas XAML de Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697)
 

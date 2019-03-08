@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the schema of the MakePri.exe XML configuration file.
+Description: En este tema se describe el esquema del archivo de configuración XML de MakePri.exe.
 title: Archivo de configuración de MakePri.exe
 template: detail.hbs
 ms.date: 10/18/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: ef0e8834310e77084c0bb4a8aad22786a89fb312
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927130"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607800"
 ---
 # <a name="makepriexe-configuration-file"></a>Archivo de configuración de MakePri.exe
 
 En este tema se describe el esquema del archivo de configuración XML de [MakePri.exe](compile-resources-manually-with-makepri.md), también conocido como archivo de configuración PRI. La herramienta MakePri.exe tiene un [comando createconfig](makepri-exe-command-options.md#createconfig-command) que puedes usar para crear un nuevo archivo de configuración PRI inicializado.
 
 > [!NOTE]
-> MakePri.exe se instala al comprobar la opción de **SDK de Windows administra las aplicaciones para UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (también en carpetas con el nombre para el resto de arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> Se instala MakePri.exe al comprobar la **Windows SDK para aplicaciones de UWP administradas** opción al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las demás arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 El archivo de configuración PRI controla qué recursos se indizan y cómo lo hacen. El XML de configuración debe ajustarse al siguiente esquema.
 
@@ -204,7 +204,7 @@ Este atributo establece una marca en el archivo PRI origen
 - La combinación de implementación identifica que este archivo PRI se puede combinar.
 - GetFullyQualifiedReference devuelve un error si esta marca está establecida y el administrador de recursos se ha inicializado con un archivo.
 
-El valor predeterminado de este atributo es `true`. MakePri.exe solo establece la marca en PRI si el destino es Windows10.
+El valor predeterminado de este atributo es `true`. MakePri.exe solo establece la marca en PRI si el destino es Windows 10.
 
 Te recomendamos que omitas `isDeploymentMergeable` (o lo establezcas explícitamente en `true`) para crear paquetes de recursos si el destino es Windows 10.
 
@@ -226,7 +226,7 @@ MakePri.exe agrega el valor de `isDeploymentMergeable` en el archivo de volcado 
 
 El valor predeterminado de este atributo es 1. Si proporcionas un valor explícito y utilizas también la opción de línea de comandos en desuso `/VersionMajor(vma)` para la herramienta MakePri.exe, en ese caso tiene prioridad el archivo de configuración.
 
-Aquí tienes un ejemplo.
+A continuación te mostramos un ejemplo.
 
 ```xml
 <resources majorVersion="2">
@@ -244,10 +244,10 @@ Indica la versión del sistema operativo de destino. La siguiente tabla muestra 
 | Valor | Significado |
 | ----- | ------- |
 | 10.0.0 | Windows 10 |
-| 6.3.0 (predeterminado) | Windows 8.1 |
-| 6.2.1 | Windows8 |
+| 6.3.0 (predeterminado) | Windows 8.1 |
+| 6.2.1 | Windows 8 |
 
-Aquí tienes un ejemplo.
+A continuación te mostramos un ejemplo.
 
 ```xml
 <resources targetOsVersion="10.0.0">
@@ -260,7 +260,7 @@ Aquí tienes un ejemplo.
 
 **Nota** Windows es compatible con versiones anteriores con respecto a los archivos PRI; pero no siempre es compatible con versiones posteriores.
 
-MakePri.exe agrega el valor de `targetOsVersion` en el archivo de volcado si `makepri dump` se ejecuta con la opción `/dt detailed`.
+MakePri.exe agrega el valor de `targetOsVersion` en el archivo de volcado si `makepri dump`se ejecuta con la opción `/dt detailed`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -280,21 +280,21 @@ Aquí te mostramos algunas condiciones de error de ejemplo y el mensaje de error
 
 | Condición | Gravedad | Mensaje |
 | --------- | -------- | ------- |
-| Se especifica una targetOsVersion distinta de todos los valores admitidos. | Error | Configuración no válida: especificada targetOsVersion no válida. |
-| Se especifica una targetOsVersion de "6.2.1" y está presente un elemento `packaging`. | Error | Configuración no válida: el nodo 'packaging' no se admite con esta targetOsVersion. |
+| Se especifica una targetOsVersion distinta de todos los valores admitidos. | Error | Configuración no válida: TargetOsVersion no válido especificado. |
+| Se especifica una targetOsVersion de "6.2.1" y está presente un elemento `packaging`. | Error | Configuración no válida: Nodo "Empaquetado" no es compatible con este targetOsVersion. |
 | Se encontró más de un modo en la configuración. Por ejemplo, se especificó Manual y AutoResourcePackage. | Error | Configuración no válida: el nodo 'packaging' no puede tener más de un modo de funcionamiento. |
 | Se enumera un calificador predeterminado en el paquete de recursos. | Error | Configuración no válida: <Qualifiername>=<QualifierValue> es un calificador predeterminado y sus candidatos no se pueden agregar a un paquete de recursos. |
-| El calificador AutoResourcePackage contiene varios calificadores. Por ejemplo, language_scale. | Error | Configuración no válida: no se admite AutoResourcePackage con varios calificadores. |
-| El QualifierSet de ResourcePackage contiene varios calificadores. Por ejemplo, language-en-us_scale-100 | Error | Configuración no válida: no se admite QualifierSet con varios calificadores. |
-| Se encontró un nombre de paquete de recursos duplicado. | Error | Configuración no válida: nombre de paquete de recursos duplicado <rpname>. |
-| El mismo conjunto de calificadores se ha definido en dos paquetes de recursos. | Error | Configuración no válida: se encontraron varias instancias del QualifierSet "<qualifier tags>". |
-| No se encuentran candidatos para el QualifierSet enumerado para el nodo 'ResourcePackage'. | Advertencia | Configuración no válida: no se han encontrado candidatos para <Resource Package Name>. |
-| No se encuentran candidatos para el calificador enumerado en el nodo ‘AutoResourcePackage’. | Advertencia | Configuración no válida: no se han encontrado candidatos para el calificador <qualifier name>. Paquete de recursos no generado. |
-| No se ha encontrado ninguno de los modos. Es decir, se ha encontrado el nodo 'packaging' vacío. | Advertencia | Configuración no válida: no se especificó un modo de empaquetado. |
+| El calificador AutoResourcePackage contiene varios calificadores. Por ejemplo, language_scale. | Error | Configuración no válida: No se admite AutoResourcePackage con varios calificadores. |
+| El QualifierSet de ResourcePackage contiene varios calificadores. Por ejemplo, language-en-us_scale-100 | Error | Configuración no válida: No se admite QualifierSet con varios calificadores. |
+| Se encontró un nombre de paquete de recursos duplicado. | Error | Configuración no válida: Nombre del módulo de recursos duplicados <rpname>. |
+| El mismo conjunto de calificadores se ha definido en dos paquetes de recursos. | Error | Configuración no válida: Varias instancias de QualifierSet "<qualifier tags>" se encuentra. |
+| No se encuentran candidatos para el QualifierSet enumerado para el nodo 'ResourcePackage'. | Advertencia | Configuración no válida: Se encontró ningún candidato para <Resource Package Name>. |
+| No se encuentran candidatos para el calificador enumerado en el nodo ‘AutoResourcePackage’. | Advertencia | Configuración no válida: Se encontró ningún candidato para el calificador <qualifier name>. Paquete de recursos no generado. |
+| No se ha encontrado ninguno de los modos. Es decir, se ha encontrado el nodo 'packaging' vacío. | Advertencia | Configuración no válida: No se ha especificado ningún modo de empaquetado. |
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Opciones de línea de comandos de MakePri.exe: comando createconfig](makepri-exe-command-options.md#createconfig-command)
-* [Adaptar los recursos al idioma, la escala, el contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [Sistema de administración de recursos: ResourceContext](resource-management-system.md#resourcecontext)
+* [Opciones de línea de comandos MakePri.exe&mdash;createconfig comando](makepri-exe-command-options.md#createconfig-command)
+* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Sistema de administración de recursos&mdash;ResourceContext](resource-management-system.md#resourcecontext)

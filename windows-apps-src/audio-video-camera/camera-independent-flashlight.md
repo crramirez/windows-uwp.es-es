@@ -4,20 +4,20 @@ description: En este artículo se muestra cómo acceder a la luz de un dispositi
 title: Linterna independiente de la cámara
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fd69900995a51af806c99b25aae43149d6e30a7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919856"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622610"
 ---
 # <a name="camera-independent-flashlight"></a>Linterna independiente de la cámara
 
 
 
-Este artículo muestra cómo acceder y usar la luz de un dispositivo, si está presente. La funcionalidad de luz se administra por separado de la funcionalidad de cámara y flash de cámara del dispositivo. Además de adquirir una referencia a la luz y ajustar su configuración, este artículo también muestra cómo liberar correctamente el recurso de luz cuando no está en uso y cómo detectar cuándo cambia la disponibilidad de la luz en caso de que la esté usando otra aplicación.
+En este artículo se muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de luz se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara. Además de adquirir una referencia a la luz y ajustar su configuración, este artículo también muestra cómo liberar correctamente el recurso de luz cuando no está en uso y cómo detectar cuándo cambia la disponibilidad de la luz en caso de que la esté usando otra aplicación.
 
 ## <a name="get-the-devices-default-lamp"></a>Obtener la luz predeterminada del dispositivo
 
@@ -74,7 +74,7 @@ Cuando ya no uses la luz, debes deshabilitarla y llamar a [**Lamp.Close**](https
 [!code-cs[DisposeLamp](./code/Lamp/cs/MainPage.xaml.cs#SnippetDisposeLamp)]
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Reproducción de contenido multimedia](media-playback.md)
+- [Reproducción de multimedia](media-playback.md)
 
  
 

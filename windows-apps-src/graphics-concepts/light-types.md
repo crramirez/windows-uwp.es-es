@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1815f0956fbc175fec5ca892dbeeec92b2f939ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594700"
 ---
 # <a name="light-types"></a>Tipos de luz
 
@@ -33,7 +33,7 @@ Una bombilla es un buen ejemplo de una luz puntual. La atenuación y el interval
 
 Las luces direccionales tienen solo color y dirección, no posición. Emiten luz paralela. Esto significa que toda la luz que generan las luces direccionales viaja a través de una escena en la misma dirección. Imagina una luz direccional como una fuente de luz casi a distancia infinita, como el sol. La atenuación o el intervalo no afecta a las luces direccionales, por lo que la dirección y el color que especifiques son los únicos factores que se consideran cuando Direct3D calcula los colores de los vértices. Debido al pequeño número de factores de iluminación, estas luces son las menos intensivas a nivel de cálculo que se usan.
 
-## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>Foco de luz
+## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>SpotLight
 
 
 Los focos de luz tienen color, posición y dirección en la que emiten luz. La luz que emite un foco de luz se compone de un cono interno brillante y un cono externo más grande, con menos intensidad de luz entre los dos, como se muestra en la siguiente ilustración.
@@ -62,7 +62,7 @@ Si el producto escalar de los vectores L y D es menor o igual al coseno del áng
 
 ![fórmula para obtener la intensidad de la luz en el vértice, después de la caída](images/falloff.png)
 
-donde:
+Donde:
 
 -   I<sub>f</sub> es la intensidad de la luz después de la caída
 -   Alpha es el ángulo entre los vectores L y D
@@ -79,7 +79,7 @@ El efecto de distintos valores de caída en la iluminación real es sutil y se i
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Luces y materiales](lights-and-materials.md)
+[Materiales y luces](lights-and-materials.md)
 
  
 

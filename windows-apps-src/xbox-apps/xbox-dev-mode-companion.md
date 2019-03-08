@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.localizationpriority: medium
 ms.openlocfilehash: b04272c99d9062be2eaea27aa5b107e6078872f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940750"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616830"
 ---
 # <a name="xbox-dev-mode-companion"></a>Complemento del modo de desarrollo de Xbox
 
@@ -43,5 +43,5 @@ Por último, si usas los cuadros de texto, puedes enviar mensajes de texto a la 
 ## <a name="help"></a>Ayuda
 Puedes ver la página de ayuda haciendo clic en el icono con el símbolo de interrogación (?) que encontrarás en el cuadro de diálogo de conexión o en la barra de comandos.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [UWP en Xbox One](index.md)

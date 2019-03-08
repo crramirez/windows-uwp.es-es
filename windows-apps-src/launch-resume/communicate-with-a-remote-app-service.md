@@ -4,14 +4,14 @@ description: Puedes intercambiar mensajes con un servicio de aplicaciones que se
 ms.assetid: a0261e7a-5706-4f9a-b79c-46a3c81b136f
 ms.date: 02/08/2017
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome, tarea en segundo plano, servicio de aplicaciones
+keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma, tarea en segundo plano, el servicio de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: ddadae05ca3243f9bbd6b53cbb98f234ac560acd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939463"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612940"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicarse con un servicio de aplicaciones remoto
 
@@ -20,7 +20,7 @@ Además de iniciar una aplicación en un dispositivo remoto mediante un URI, tam
 ## <a name="set-up-the-app-service-on-the-host-device"></a>Configurar el servicio de aplicaciones en el dispositivo host
 Para ejecutar un servicio de aplicaciones en un dispositivo remoto, debes contar ya con un proveedor de dicho servicio de aplicaciones instalado en el dispositivo host. Esta guía usará la versión CSharp del servicio de aplicaciones del [ejemplo del servicio de aplicaciones del generador de números aleatorios](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices), que está disponible en el [repositorio de muestras universales de Windows](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices). Para obtener instrucciones sobre cómo escribir tu propio servicio de aplicaciones, consulta [Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md).
 
-Si usas un servicio de aplicaciones ya hecho o escribes el tuyo propio, deberás realizar algunas modificaciones para que el servicio sea compatible con sistemas remotos. En Visual Studio, ve al proyecto del proveedor de servicios de aplicaciones (denominado "AppServicesProvider" en el ejemplo) y selecciona su archivo _Package.appxmanifest_. Haz clic con el botón secundario y selecciona **Ver código** para ver todo el contenido del archivo. Crea un elemento **Extensions** dentro del elemento de la **aplicación** principal (o buscarla si ya existe). A continuación, cree una **extensión** para definir el proyecto como un servicio de aplicaciones y hacer referencia a su proyecto principal.
+Si usas un servicio de aplicaciones ya hecho o escribes el tuyo propio, deberás realizar algunas modificaciones para que el servicio sea compatible con sistemas remotos. En Visual Studio, ve al proyecto del proveedor de servicios de aplicaciones (denominado "AppServicesProvider" en el ejemplo) y selecciona su archivo _Package.appxmanifest_. Haz clic con el botón secundario y selecciona **Ver código** para ver todo el contenido del archivo. Crear un **extensiones** elemento dentro de los principales **aplicación** elemento (o lo encuentre si ya existe). A continuación, cree un **extensión** para definir el proyecto como un servicio de aplicaciones y hacer referencia a su proyecto primario.
 
 ``` xml
 ...
@@ -32,7 +32,7 @@ Si usas un servicio de aplicaciones ya hecho o escribes el tuyo propio, deberás
 ...
 ```
 
-Junto al elemento **AppService** , agrega el atributo **SupportsRemoteSystems** :
+Junto a la **AppService** elemento, agregue el **SupportsRemoteSystems** atributo:
 
 ``` xml
 ...
@@ -40,7 +40,7 @@ Junto al elemento **AppService** , agrega el atributo **SupportsRemoteSystems** 
 ...
 ```
 
-Para usar los elementos de este espacio de nombres **uap3** , debes agregar la definición de espacio de nombres en la parte superior del archivo de manifiesto si todavía no existe.
+Para poder usar los elementos en este **uap3** espacio de nombres, debe agregar la definición de espacio de nombres en la parte superior del archivo de manifiesto si aún no existe.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -53,7 +53,7 @@ Para usar los elementos de este espacio de nombres **uap3** , debes agregar la d
 </Package>
 ```
 
-A continuación, compila el proyecto de proveedor de servicio de aplicaciones e implementarla en los dispositivos de host.
+A continuación, compile el proyecto de proveedor de servicio de aplicación e implementarlo en los dispositivos de host.
 
 ## <a name="target-the-app-service-from-the-client-device"></a>Dirígete al servicio de aplicaciones desde el dispositivo cliente
 El dispositivo desde el que se va a llamar al servicio de aplicaciones remoto necesita una aplicación con la funcionalidad de sistemas remotos. Esto se puede agregar en la misma aplicación que proporciona el servicio de aplicaciones en el dispositivo host (en cuyo caso se instala la misma aplicación en ambos dispositivos) o se puede implementar en una aplicación totalmente distinta.
@@ -86,8 +86,8 @@ Ahora que te has conectado a un servicio de aplicaciones en un dispositivo remot
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Introducción a aplicaciones y dispositivos conectados (Project Rome)](connected-apps-and-devices.md)  
-[Iniciar una aplicación remota](launch-a-remote-app.md)  
-[Crear y usar un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md)  
-[Referencia de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Introducción (proyecto Roma) a aplicaciones y dispositivos conectado](connected-apps-and-devices.md)  
+[Inicie una aplicación remota](launch-a-remote-app.md)  
+[Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md)  
+[Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ddb1dc0e42f88cf65464841388b9addfb4b5748
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935929"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616690"
 ---
 # <a name="device-types"></a>Tipos de dispositivos
 
@@ -31,14 +31,14 @@ Las aplicaciones acceden directamente a adaptadores de gráficos. Llaman a méto
 
 Direct3D admite un tipo de dispositivo adicional denominado dispositivo de referencia o rasterizador de referencia. A diferencia de un dispositivo de software, el rasterizador de referencia es compatible con todas las características de Direct3D. Este dispositivo está pensado para usarse con fines de depuración y, por tanto, solo está disponible en máquinas donde se ha instalado el SDK de DirectX. Dado que estas características se pueden implementar para la precisión, en lugar de la velocidad, y se implementan en software, los resultados no son muy rápidos. El rasterizador de referencia hace uso de instrucciones de CPU especiales siempre que es posible, pero no está diseñado para aplicaciones comerciales. Usa el rasterizador de referencia solo para fines de pruebas o demostración de la característica.
 
-## <a name="span-idhalvsrefspanspan-idhalvsrefspanspan-idhalvsrefspanhal-vs-ref-devices"></a><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>Dispositivos HAL frente a REF
+## <a name="span-idhalvsrefspanspan-idhalvsrefspanspan-idhalvsrefspanhal-vs-ref-devices"></a><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>HAL vs. Dispositivos REF
 
 
 Los dispositivos HAL (capa de abstracción de hardware) y los dispositivos REF (rasterizador de REFerencia) son los dos tipos principales de dispositivos de Direct3D. El primero se basa en la compatibilidad de hardware, es muy rápido y es posible que no sea compatible con todo; mientras que el segundo no usa la aceleración de hardware, por lo tanto, es muy lento, pero garantiza la compatibilidad con el conjunto completo de características de Direct3D, de forma correcta. En general, solo tendrás que usar dispositivos HAL, pero si estás usando algunas características avanzadas que no admite tu tarjeta gráfica, es posible que debas volver a REF.
 
 Otro momento en que es posible que quieras usar REF es si el dispositivo HAL produce resultados extraños, es decir, si estás seguro de que tu código es correcto, pero el resultado recibido no es el que esperabas. El dispositivo REF garantiza un comportamiento correcto, por lo que puede que quieras probar tu aplicación en el dispositivo REF y ver si el comportamiento extraño continúa. Si no es así, significa que (a) la aplicación supone que la tarjeta gráfica admite algo que no puede funcionar, o (b) se trata de un error del controlador. Si tampoco funciona con el dispositivo REF, quiere decir que se trata de un error de la aplicación.
 
-## <a name="span-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanhardware-vs-software-vertex-processing"></a><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Procesamiento de vértices de hardware frente a software
+## <a name="span-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanhardware-vs-software-vertex-processing"></a><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Hardware frente a Procesamiento de vértices de software
 
 
 El procesamiento de vértices de hardware frente a software solo se aplica realmente a dispositivos HAL. Cuando insertas vértices a través de la canalización, estos deben transformarse (mediante las matrices de mundo, vista y proyección correspondientes) e iluminarse (mediante las luces integradas D3D): esta fase de procesamiento se conoce como T&L (para la transformación e iluminación). El procesamiento de vértices de hardware significa que el proceso se realiza en hardware, si el hardware lo admite; por lo tanto, el procesamiento de vértices de software lo realiza el software. El procedimiento general consiste en crear un dispositivo de T&L de hardware, si produce errores, probar el modo mixto, y, si ese produce errores, probar el software. (Si se produce un error en el software, renuncia y sal con un error).

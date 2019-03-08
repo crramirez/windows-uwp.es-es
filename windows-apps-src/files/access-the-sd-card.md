@@ -1,19 +1,19 @@
 ---
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Acceso a la tarjeta SD
-description: Puedes almacenar datos no esenciales en una tarjeta microSD opcional y luego acceder a ellos, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado.
+description: Puedes almacenar datos no esenciales y tener acceso a ellos en una tarjeta microSD opcional, especialmente en los dispositivos móviles de bajo coste que tienen un almacenamiento interno limitado.
 ms.date: 03/08/2017
 ms.topic: article
 keywords: windows 10, uwp, sd card, storage, tarjeta sd, almacenamiento
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ef97ed489f2dc35aece83821633a583dfba77e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931618"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625520"
 ---
-# <a name="access-the-sd-card"></a>Acceder a la tarjeta SD
+# <a name="access-the-sd-card"></a>Acceso a la tarjeta SD
 
 
 
@@ -62,7 +62,7 @@ Para tener acceso a los archivos multimedia de las bibliotecas multimedia (Músi
 
 ### <a name="getting-a-reference-to-the-sd-card"></a>Obtención de una referencia a la tarjeta SD
 
-La carpeta [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) es la clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) de raíz lógica para el conjunto de dispositivos extraíbles actualmente conectados al dispositivo. Si está presente una tarjeta SD, la primera (y única) clase **StorageFolder** en la carpeta **KnownFolders.RemovableDevices** representa la tarjetaSD.
+La carpeta [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) es la clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) de raíz lógica para el conjunto de dispositivos extraíbles actualmente conectados al dispositivo. Si está presente una tarjeta SD, la primera (y única) clase **StorageFolder** en la carpeta **KnownFolders.RemovableDevices** representa la tarjeta SD.
 
 Usa código como el siguiente para determinar la presencia de una tarjeta SD y para obtener una referencia a ella como [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230).
 
@@ -92,7 +92,7 @@ else
 
 La tarjeta SD puede contener muchas carpetas y archivos que no se reconocen como carpetas conocidas y que no se pueden consultar mediante el uso de una ubicación de [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151). Para buscar archivos, tu aplicación debe enumerar el contenido de la tarjeta recorriendo el sistema de archivos de forma recursiva. Usa [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) y [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281) para obtener el contenido de la tarjeta SD de un modo eficaz.
 
-Te recomendamos que uses un subproceso en segundo plano para recorrer la tarjetaSD. Una tarjeta SD puede contener varios gigabytes de datos.
+Te recomendamos que uses un subproceso en segundo plano para recorrer la tarjeta SD. Una tarjeta SD puede contener varios gigabytes de datos.
 
 Tu aplicación también solicitará al usuario que elija carpetas específicas mediante el selector de carpetas.
 

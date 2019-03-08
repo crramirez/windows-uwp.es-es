@@ -1,16 +1,16 @@
 ---
-Description: Manage submission options such as publishing hold options, notes for certification, and more.
+Description: Administrar opciones de envío, como las opciones de publicación de suspensión, notas de la certificación y mucho más.
 title: Administrar las opciones de envío
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, suspensión de publicación, fecha de publicación, realizar un envío para publicar, aprobación de funcionalidad restringida
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fb075a4d8766f4f9bfc352160c6a1f5d99d9a0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611750"
 ---
 # <a name="manage-submission-options"></a>Administrar las opciones de envío
 
@@ -26,26 +26,26 @@ De manera predeterminada, publicaremos tu envío en cuanto supere la certificaci
 
 **Publicar este envío tan pronto como supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación)** es la selección predeterminada y significa que el envío comenzará el proceso de publicación en cuanto supere la certificación, a menos que tengas fechas configuradas en la sección [Programación](configure-precise-release-scheduling.md) de la página **Precios y disponibilidad**.   
 
-Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de suspensión de publicación** manteniendo esta opción. Si quieres especificar determinadas fechas para la publicación de tu envío, usa **Publicar este envío en cuanto supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación**. Dejar esta sección en la opción predeterminada no provocará que el envío se publique antes de las fechas que hayas establecido en la sección **Programación**. Las fechas que seleccionaste en la sección **programación** se usará para determinar cuando tu producto esté disponible para los clientes en la tienda.
+Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de suspensión de publicación** manteniendo esta opción. Si quieres especificar determinadas fechas para la publicación de tu envío, usa **Publicar este envío en cuanto supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación**. Dejar esta sección en la opción predeterminada no provocará que el envío se publique antes de las fechas que hayas establecido en la sección **Programación**. Las fechas que seleccionó en el **programación** sección que se usará para determinar cuando el producto esté disponible para los clientes en el Store.
 
 
 ### <a name="publish-your-submission-manually"></a>Publicar el envío manualmente
 
-Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Después de la certificación de pasadas envío, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica de la misma manera, como se describe a continuación.
+Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Después de su envío pasa la certificación, puede publicarla seleccionando **publicar ahora** en la página de estado de certificación o seleccionando una fecha específica de la misma manera, tal como se describe a continuación.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Empezar a publicar el envío en una fecha determinada
 
-Elige **Comenzar la publicación de este envío en una fecha** para garantizar que el envío no se publique hasta una fecha determinada. Con esta opción, el envío se lanzará lo antes posible en la fecha que especifiques o después de ella. La fecha debe ser al menos 24 horas después del momento actual. Junto con la fecha, también puedes especificar la hora en la que el envío debe comenzar a publicarse. 
+Elige **Comenzar la publicación de este envío en una fecha** para garantizar que el envío no se publique hasta una fecha determinada. Con esta opción, el envío se lanzará lo antes posible en la fecha que especifiques o después de ella. La fecha debe ser al menos 24 horas después del momento actual. Junto con la fecha, también puedes especificar la hora en que el envío debe comenzar a publicarse. 
 
-Puedes cambiar esta fecha de lanzamiento después de enviar tu producto, siempre no haya entrado en el paso publicar. 
+Puede cambiar esta fecha de lanzamiento después de enviar su producto, siempre y cuando no entró en el paso de publicación aún. 
  
 Como se indicó anteriormente, si quieres especificar determinadas fechas para que el envío se publique, usa **Publicar este envío tan pronto como supere la certificación (o conforme a las fechas que hayas seleccionado en la sección Programación)** y dejar las **opciones de suspensión de publicación** establecidas en la selección predeterminada. El uso de la opción **Empezar a publicar este envío en una fecha** significa que el envío no comenzará el proceso de publicación hasta esa fecha, pero los retrasos durante la certificación o la publicación podrían hacer la fecha de lanzamiento real sea posterior a la fecha seleccionada. 
 
 
 ## <a name="notes-for-certification"></a>Notas para la certificación
 
-Cuando envías tu aplicación, tienes la opción de usar la sección **Notas para la certificación** para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a asegurarte de que tu aplicación se pruebe correctamente. 
+Cuando envías tu aplicación, tienes la opción de usar la sección **Notas para la certificación** para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a garantizar que tu aplicación se prueba correctamente. 
 
 Para obtener más información, consulta [Notas para la certificación](notes-for-certification.md).
 

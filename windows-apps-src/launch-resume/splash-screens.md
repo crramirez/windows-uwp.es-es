@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df3fc8f54a4174006fd28f319d7cab09142a81fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936340"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630200"
 ---
 # <a name="splash-screens"></a>Pantallas de presentación
 
@@ -21,7 +21,7 @@ La pantalla de presentación se muestra de inmediato cuando el usuario inicia la
 
 Una pantalla de presentación bien diseñada puede hacer que tu aplicación sea más atractiva. A continuación mostramos una pantalla de presentación sencilla:
 
-![Una captura de pantalla a una escala del 75% de la pantalla de presentación desde la muestra de pantalla de presentación.](images/regularsplashscreen.png)
+![Una captura de pantalla a una escala del 75 % de la pantalla de presentación desde la muestra de pantalla de presentación.](images/regularsplashscreen.png)
 
 Esta pantalla de presentación se crea mediante la combinación de un color de fondo verde con una imagen PNG en segundo plano transparente.
 

@@ -1,5 +1,5 @@
 ---
-Description: Sound helps complete an application's user experience, and gives them that extra audio edge they need to match the feel of Windows across all platforms.
+Description: El sonido ayuda a completar la experiencia de usuario de una aplicación y ofrece el toque de audio extra que se ajusta a la percepción de Windows en todas las plataformas.
 label: Sound
 title: Sonido
 template: detail.hbs
@@ -13,11 +13,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058516"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614380"
 ---
 # <a name="sound"></a>Sonido
 
@@ -33,7 +33,7 @@ La clase [**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windo
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-La **ElementSoundPlayer** tiene tres estados distintos: **Activado** **Desactivado** y **Automático**.
+El **ElementSoundPlayer** tiene tres estados diferentes: **En** **desactivar** y **automática**.
 
 Si se establece en **Desactivado**, independientemente de dónde se ejecute la aplicación, el sonido no se reproducirá nunca. Si se establece en **Activado**, los sonidos de tu aplicación se reproducirán en todas las plataformas.
 
@@ -44,9 +44,9 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 La propiedad **SpatialAudioMode** puede aceptar estos valores: 
-- **Automático**: el audio espacial se activará cuando el sonido esté activado. 
-- **Desactivado**: el audio espacial siempre está desactivado, incluso si el sonido está activado.
-- **Activado**: siempre se reproducirá audio espacial.
+- **Automático**: Audio espacial se activará cuando sonido está activado. 
+- **Off**: Audio espacial siempre está desactivado, incluso si el sonido está activado.
+- **Activado**: Siempre se reproducirá audio espacial.
 
 Para obtener más información acerca del audio espacial y de cómo XAML lo controla, consulta [AudioGraph: audio espacial](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio).
 
@@ -69,7 +69,7 @@ Donde el volumen máximo (en relación con el volumen del sistema) es 1.0 y el m
 
 Si no se desea un sonido predeterminado de un control, se puede deshabilitar. Esto se realiza mediante el **ElementSoundMode** en el control.
 
-El **ElementSoundMode** tiene dos estados: **Desactivado** y **Predeterminado**. Cuando no se establece, es **Predeterminado**. Si se establece en **Desactivado**, cada sonido que reproduzca el control se silenciará *excepto para foco*.
+El **ElementSoundMode** tiene dos estados: **Desactivar** y **predeterminado**. Cuando no se establece, es **Predeterminado**. Si se establece en **Desactivado**, cada sonido que reproduzca el control se silenciará *excepto para foco*.
 
 ```XAML
 <Button Name="ButtonName" Content="More Info" ElementSoundMode="Off"/>
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>Navegación dentro de una página
 
-Cuando se navega entre paneles o vistas en la página de la aplicación (consulta [pestañas y tablas dinámicas](../controls-and-patterns/pivot.md)), por lo general, hay un movimiento bidireccional. Esto significa que puedes pasar al siguiente panel o vista, o bien al anterior, sin salir de la página actual de la aplicación en la que te encuentras.
+Al navegar entre paneles o vistas en página de una aplicación (consulte [pestañas y elementos dinámicos](../controls-and-patterns/pivot.md)), suele haber movimiento bidireccional. Esto significa que puedes pasar al siguiente panel o vista, o bien al anterior, sin salir de la página actual de la aplicación en la que te encuentras.
 
 La experiencia de sonido con relación a este concepto de navegación está incluida en los sonidos **MovePrevious** y **MoveNext**.
 
@@ -149,7 +149,7 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 
 El sonido de **Foco** es el único sonido implícito en nuestro sistema. Esto significa que, aunque un usuario no interactúe directamente con nada, seguirá escuchando un sonido.
 
-El enfoque ocurre cuando un usuario navega a través de una aplicación, bien con el mando de juegos, el teclado, el control remoto o el kinect. Normalmente, el sonido de **Foco** *no se reproduce en eventos PointerEntered o al pasar el mouse por encima*.
+El enfoque ocurre cuando un usuario navega a través de una aplicación, bien con el mando de juegos, el teclado, el control remoto o el kinect. Normalmente, el sonido de **Foco***no se reproduce en eventos PointerEntered o al pasar el mouse por encima*.
 
 Para configurar un control para que reproduzca el sonido de **Foco** cuando el control recibe el foco, llama a:
 

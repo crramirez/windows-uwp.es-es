@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fde0cbf5335b4f5c3da2f21f692fc2c23455776
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937168"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630380"
 ---
 # <a name="natural-motion-animations"></a>Animaciones de movimientos naturales
 
@@ -23,8 +23,8 @@ Las grandes aplicaciones son los que crean experiencias que capturan y conservan
 Una forma en la que el movimiento puede ayudar a formar esta conexión es creando experiencias que a los usuarios les resulten familiares. Los usuarios tienen una expectativa inconsciente sobre cómo perciben el movimiento que se basa en sus experiencias reales. Vemos cómo los objetos se deslizan por el suelo, caen de la tabla, rebotan entre sí y oscilan con un muelle. El movimiento que aprovecha estas expectativas al estar basado en la física real resulta más natural a nuestros ojos. El movimiento se vuelve más natural e interactivo, pero lo más importante es que toda la experiencia es más memorable y agradable.
 
 ![Escalar el movimiento sin animación](images/animation/scale-no-animation.gif)
-![Escalar el movimiento con Cubic Bezier](images/animation/scale-cubic-bezier.gif)
-![Escalar el movimiento con animación de muelle](images/animation/scale-spring.gif)
+![escalar movimiento con Bézier cúbica](images/animation/scale-cubic-bezier.gif)
+![escalar movimiento con animaciones de muelle](images/animation/scale-spring.gif)
 
 El resultado final es una mayor participación y retención del usuario con la aplicación.
 

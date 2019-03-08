@@ -1,23 +1,23 @@
 ---
-title: Cambio del tamaño de los grupos de mosaicos
-description: Cambia el tamaño de un grupo de mosaicos para aumentar su tamaño si la aplicación necesita un mayor espacio de trabajo para los recursos de streaming que se le asignan, o para reducirlo si se necesita menos espacio.
+title: Cambio del tamaño de los grupos de iconos
+description: Cambia el tamaño de un grupo de iconos para aumentar un grupo de iconos si la aplicación necesita más espacio de trabajo para los recursos de streaming asignados. También puedes reducirlo si se necesita menos espacio.
 ms.assetid: A54A06DC-BDDB-42DC-85E8-C64241100ED5
 keywords:
-- Cambio del tamaño de los grupos de mosaicos
+- Cambio del tamaño de los grupos de iconos
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e08447c575e99178e503e99eb651cd5e225a898
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921994"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607780"
 ---
-# <a name="tile-pool-resizing"></a>Cambio del tamaño de los grupos de mosaicos
+# <a name="tile-pool-resizing"></a>Cambio del tamaño de los grupos de iconos
 
 
-Cambia el tamaño de un grupo de mosaicos para aumentar su tamaño si la aplicación necesita un mayor espacio de trabajo para los recursos de streaming que se le asignan, o para reducirlo si se necesita menos espacio. Otra opción para las aplicaciones es asignar grupos de mosaicos adicionales para nuevos recursos de streaming. Pero si un recurso de streaming individual necesita más espacio del que estaba disponible inicialmente en su grupo de mosaicos, aumentar su tamaño es una buena opción. Un recurso de streaming no puede tener asignaciones en varios grupos de mosaicos al mismo tiempo.
+Cambia el tamaño de un grupo de iconos para aumentar un grupo de iconos si la aplicación necesita más espacio de trabajo para los recursos de streaming asignados. También puedes reducirlo si se necesita menos espacio. Otra opción para las aplicaciones es asignar grupos de mosaicos adicionales para nuevos recursos de streaming. Pero si un recurso de streaming individual necesita más espacio del que estaba disponible inicialmente en su grupo de mosaicos, aumentar su tamaño es una buena opción. Un recurso de streaming no puede tener asignaciones en varios grupos de mosaicos al mismo tiempo.
 
 Cuando se aumenta el tamaño de un grupo de mosaicos, el controlador de pantalla agrega mosaicos adicionales al final mediante una o varias asignaciones nuevas. Este desglose en asignaciones no es visible para la aplicación. La memoria existente en el grupo de mosaicos permanece intacta, al igual que las asignaciones de recursos de streaming en esa memoria.
 
@@ -30,7 +30,7 @@ El hecho de reducir el tamaño (y quitar asignaciones) no necesariamente produce
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Asignaciones en un grupo de mosaicos](mappings-are-into-a-tile-pool.md)
+[Las asignaciones son en un grupo de icono](mappings-are-into-a-tile-pool.md)
 
  
 

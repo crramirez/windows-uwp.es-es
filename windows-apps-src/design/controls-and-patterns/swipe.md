@@ -3,22 +3,22 @@ pm-contact: kisai
 design-contact: ksulliv
 dev-contact: Shmazlou
 doc-status: Published
-Description: Swipe commanding is a touch accelerator for context menus.
-title: Deslizar el dedo
+Description: Comandos de pasar el dedo es un acelerador de toque de menús contextuales.
+title: Deslizar rápidamente
 label: Swipe
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d575eb25d9a013aa999cf304db6d83faeb87765
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626660"
 ---
-# <a name="swipe"></a>Deslizar el dedo
+# <a name="swipe"></a>Deslizar rápidamente
 
 El comando de deslizar el dedo es un acelerador para menús contextuales que permite a los usuarios acceder fácilmente a las acciones de menú comunes de forma táctil, sin necesidad de cambiar los estados de la aplicación.
 
@@ -30,7 +30,7 @@ El comando de deslizar el dedo es un acelerador para menús contextuales que per
 
 Los comandos de deslizar el dedo ahorran espacio. Resulta útil en situaciones en las que el usuario puede realizar la misma operación en varios elementos rápidamente. Y proporciona "acciones rápidas" en los elementos que no necesitan un cambio de estado ni que aparezca un cuadro de diálogo en la página.
 
-Deben usarse los comandos de deslizar el dedo cuando haya un grupo de elementos potencialmente grande y cada elemento tenga de 1a 3 acciones que un usuario quizá quiera realizar con regularidad. Estas acciones pueden incluir, entre otros aspectos:
+Deben usarse los comandos de deslizar el dedo cuando haya un grupo de elementos potencialmente grande y cada elemento tenga de 1 a 3 acciones que un usuario quizá quiera realizar con regularidad. Estas acciones pueden incluir, entre otros aspectos:
 
 - Eliminar
 - Marcar o archivar
@@ -46,7 +46,7 @@ Deben usarse los comandos de deslizar el dedo cuando haya un grupo de elementos 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SwipeControl">abrir la aplicación y ver SwipeControl en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -59,7 +59,7 @@ Deben usarse los comandos de deslizar el dedo cuando haya un grupo de elementos 
 
 ## <a name="how-does-swipe-work"></a>¿Cómo funciona Deslizar el dedo?
 
-Los comandos de deslizar el dedo de UWP tienen dos modos: [Mostrar](/uwp/api/windows.ui.xaml.controls.swipemode) y [Ejecutar](/uwp/api/windows.ui.xaml.controls.swipemode). También admite cuatro direcciones distintas para deslizar el dedo: arriba, abajo, izquierda y derecha.
+Comandos de pasar el dedo UWP tiene dos modos: [Revelar](/uwp/api/windows.ui.xaml.controls.swipemode) y [ejecutar](/uwp/api/windows.ui.xaml.controls.swipemode). También admite cuatro direcciones distintas para deslizar el dedo: arriba, abajo, izquierda y derecha.
 
 ### <a name="reveal-mode"></a>Modo Mostrar
 
@@ -96,7 +96,7 @@ Por ejemplo, no puedes tener dos definiciones [LeftItems](/uwp/api/windows.ui.xa
 Los comandos de deslizar el dedo tienen dos componentes que hay que definir:
 
 - [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), que se ajusta alrededor del contenido. En una colección, como ListView, se encuentra dentro de la plantilla de datos.
-- Los elementos de menú de deslizar con el dedo, es decir, uno o más objetos [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem) colocados en contenedores direccionales del control de deslizamiento con el dedo: [LeftItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.LeftItems), [RightItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.RightItems), [TopItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.TopItems) o [BottomItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.BottomItems)
+- Los elementos de menú de pasar el dedo, que consta de uno o más [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem) colocar objetos en contenedores direccional del control de pasar el dedo: [LeftItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.LeftItems), [RightItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.RightItems), [TopItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.TopItems), o [BottomItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.BottomItems)
 
 El contenido del deslizamiento con el dedo puede colocarse en línea o definirse en la sección de recursos de la página o aplicación.
 
@@ -182,7 +182,7 @@ Esta es una clase ListView con SwipeControl aplicado en la clase DataTemplate de
 
 ## <a name="handle-an-invoked-swipe-command"></a>Manipular un comando invocado de deslizar el dedo
 
-Para actuar en un comando de deslizar el ledo, manipula su evento [Invoked](/uwp/api/windows.ui.xaml.controls.swipeitem.Invoked). (Para obtener más información acerca de cómo un usuario puede invocar un comando, revisa la anterior sección _¿Cómo se desliza con el dedo?_ de este artículo.) Por lo general, un comando de deslizar con el dedo se produce en un escenario de tipo lista o ListView. En ese caso, cuando se invoca un comando, tienes que realizar una acción en el elemento en el que has deslizado el dedo.
+Para actuar en un comando de deslizar el ledo, manipula su evento [Invoked](/uwp/api/windows.ui.xaml.controls.swipeitem.Invoked). (Para obtener más información acerca de cómo un usuario puede invocar un comando, revise el _cómo funciona pasar el dedo?_ anteriormente en este artículo.) Normalmente, está en un ListView o un escenario de lista como un comando de deslizar rápidamente. En ese caso, cuando se invoca un comando, tienes que realizar una acción en el elemento en el que has deslizado el dedo.
 
 Aquí te mostramos cómo manipular el evento Invoked en el elemento de deslizar con el dedo _Eliminar_ que creaste anteriormente.
 
@@ -207,10 +207,10 @@ El elemento de datos es el DataContext del SwipeControl. En el código, puedes a
 
 En este caso concreto, se quita el elemento de la lista, por lo que no es importante el estado visual final del elemento deslizado. Sin embargo, en situaciones donde simplemente quieras realizar una acción y, a continuación, tengas que volver a contraer Deslizar con el dedo, puedes configurar la propiedad [BehaviorOnInvoked](/uwp/api/windows.ui.xaml.controls.swipeitem.BehaviorOnInvoked) con uno de los valores de enumeración [SwipeBehaviorOnInvoked](/uwp/api/windows.ui.xaml.controls.swipebehavioroninvoked).
 
-- **Automático**
+- **Auto**
   - En el modo Ejecutar, el elemento de deslizar con el dedo abierto permanecerá abierto cuando se invoca.
   - En el modo Mostrar, el elemento de deslizar con el dedo abierto se contraerá cuando se invoca.
-- **Cerrar**
+- **Close**
   - Cuando se invoca el elemento, el control de deslizar con el dedo siempre se contraerá y volverá al estado normal, sin importar el modo.
 - **RemainOpen**
   - Cuando se invoca el elemento, el control de deslizar con el dedo siempre seguirá abierto, sin importar el modo.
@@ -240,5 +240,5 @@ Aquí, se configura un elemento de deslizar el dedo _responder_ como Cerrar desp
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Vista de lista y vista de cuadrícula](listview-and-gridview.md)
-- [Plantillas y contenedores de elementos](item-containers-templates.md)
-- [Extraer para actualizar](pull-to-refresh.md)
+- [Las plantillas y los contenedores de elementos](item-containers-templates.md)
+- [Deslizar para actualizar](pull-to-refresh.md)

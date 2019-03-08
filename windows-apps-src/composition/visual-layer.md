@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 599c2625bffff40a30f26bfb40f7cce9c97acdd1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927606"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626410"
 ---
 # <a name="visual-layer"></a>Capa visual
 
-La capa visual ofrece una API de modo retenido y alto rendimiento para gráficos, efectos y animaciones, y es la base de todas las interfaces de usuario en todos los dispositivos Windows.La interfaz de usuario la defines de forma declarativa, y la capa visual depende de la aceleración de hardware, para garantizar que el contenido, los efectos y las animaciones se representan de manera suave y no entrecortada, independiente del subproceso de interfaz de usuario de la aplicación.
+La capa visual ofrece una API de modo retenido y alto rendimiento para gráficos, efectos y animaciones, y es la base de todas las interfaces de usuario en todos los dispositivos Windows. La interfaz de usuario la defines de forma declarativa, y la capa visual depende de la aceleración de hardware, para garantizar que el contenido, los efectos y las animaciones se representan de manera suave y no entrecortada, independiente del subproceso de interfaz de usuario de la aplicación.
 
 Información destacada:
 
@@ -32,13 +32,13 @@ Las aplicaciones para UWP de Windows ya usan la capa visual a través de uno de 
 
 Las principales funciones de la capa visual son las siguientes:
 
-1. **Contenido**: composición ligera de contenido dibujado personalizado
-1. **Efectos**: sistema de efectos de interfaz de usuario en tiempo real cuyos efectos se pueden animar, encadenar y personalizar
-1. **Animaciones**: animaciones expresivas, independientes del marco, que se ejecutan independientemente del subproceso de la interfaz de usuario
+1. **Contenido**: Composición ligera de contenido dibujado personalizado
+1. **Efectos**: Sistema cuyos efectos se pueden animar, encadenar y personalizar los efectos de la interfaz de usuario en tiempo real
+1. **Las animaciones**: Animaciones expresivas, independiente del marco de trabajo ejecuta independientemente del subproceso de interfaz de usuario
 
 ### <a name="content"></a>Contenido
 
-El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Subclases de Visual incluyen [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir elementos secundarios crear árboles de elementos visuales y [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contiene contenido y se pueden dibujar con colores sólidos, personalizado dibujados contenidos o efectos visuales. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
+El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Incluyen subclases de Visual  [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir que los elementos secundarios crear árboles de objetos visuales y [ **SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contiene el contenido y se puede pintar con cualquier colores sólidos, efectos personalizados de contenido o visuales dibujados. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
 
 Para más información, consulta la información general sobre los [objetos visuales de composición](composition-visual-tree.md).
 
@@ -52,7 +52,7 @@ Para más información, consulta la información general sobre los [efectos de c
 
 ### <a name="animations"></a>Animaciones
 
-El sistema de animación de la capa visual te permite mover elementos visuales, animar efectos e impulsar transformaciones, clips y otras propiedades.Se trata de un sistema independiente de marco que se diseñó desde el principio para mejorar el rendimiento.Se ejecuta de forma independiente desde el subproceso de interfaz de usuario para garantizar suavidad y escalabilidad.Si bien te permite usar animaciones de fotograma clave familiares para impulsar los cambios de propiedades a medida que pasa el tiempo, también te permite establecer relaciones matemáticas entre propiedades diferentes, como por ejemplo, la entrada del usuario, lo que te permite crear directamente experiencias coreografiadas ágiles.
+El sistema de animación de la capa visual te permite mover elementos visuales, animar efectos e impulsar transformaciones, clips y otras propiedades.  Se trata de un sistema independiente de marco que se diseñó desde el principio para mejorar el rendimiento.  Se ejecuta de forma independiente desde el subproceso de interfaz de usuario para garantizar suavidad y escalabilidad.  Si bien te permite usar animaciones de fotograma clave familiares para impulsar los cambios de propiedades a medida que pasa el tiempo, también te permite establecer relaciones matemáticas entre propiedades diferentes, como por ejemplo, la entrada del usuario, lo que te permite crear directamente experiencias coreografiadas ágiles.
 
 Para más información, consulta la información general sobre las [animaciones de composición](composition-animation.md).
 
@@ -68,4 +68,4 @@ Para más información, consulta la información general de [Uso de la capa visu
 * Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
 * [Galería de ejemplos de Windows.UI.Composition](https://aka.ms/winuiapp)
 * [@windowsui Fuente de Twitter ](https://twitter.com/windowsui)
-* Artículo de MSDN de Kenny Kerr sobre esta API: [Gráficos y animación: La nueva composición para Windows10](https://msdn.microsoft.com/magazine/mt590968)
+* Lea el artículo de MSDN de Kenny en esta API: [Gráficos y animación: la nueva composición para Windows 10](https://msdn.microsoft.com/magazine/mt590968)

@@ -1,5 +1,5 @@
 ---
-Description: The media player is used to view and listen to video, audio, and images.
+Description: El reproductor multimedia se usa para ver y escuchar vídeo, audio e imágenes.
 title: Reproductor multimedia
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
@@ -7,14 +7,14 @@ label: Media player
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: afda713e4a3d0ae30a4ee1ad9e9308d835062108
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037367"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640030"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -24,7 +24,7 @@ El reproductor multimedia se usa para ver y escuchar vídeo y audio. La reproduc
 
 ![Elemento del reproductor multimedia con controles de transporte](images/controls/mtc_double_video_inprod.png)
 
-> **API importantes**: [Clase MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [Clase MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)
+> **API importantes**: [Clase MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [MediaTransportControls clase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)
 
 
 > [!NOTE]
@@ -43,7 +43,7 @@ Usa un reproductor multimedia cuando quieras reproducir audio o vídeo en tu apl
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles de XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/MediaPlayerElement">MediaPlayerElement</a> o <a href="xamlcontrolsgallery:/item/MediaPlayer">MediaPlayer</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -87,17 +87,17 @@ Se recomienda el diseño de controles de fila doble (a continuación) en la mayo
 
 ![Ejemplo de controles MTC en el teléfono, fila doble](images/controls/mtc_double_inprod.png)
 
-**Controles de transporte de contenido multimedia del sistema**
+**Controles de transporte de medios del sistema**
 
 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) se integra automáticamente con los controles de transporte de contenido multimedia del sistema. Los controles de transporte de contenido multimedia del sistema son los controles que aparecen cuando se presionan teclas multimedia de hardware, como los botones multimedia de los teclados. Para obtener más información, consulta [SystemMediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677).
 
-> **Nota**&nbsp;&nbsp; [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926) no se integra automáticamente con los controles de transporte de contenido multimedia del sistema, por lo que debes conectarlos de forma manual. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](https://msdn.microsoft.com/library/windows/apps/mt228338).
+> **Tenga en cuenta** &nbsp; &nbsp; [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926) no se integra automáticamente con el sistema controla el transporte de medios por lo que debe conectarlas usted mismo. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](https://msdn.microsoft.com/library/windows/apps/mt228338).
 
 
 ### <a name="set-the-media-source"></a>Establecer el origen del contenido multimedia
 Para reproducir archivos de la red o archivos insertados en la aplicación, establece la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en [MediaSource](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx) con la ruta de acceso del archivo.
 
-**Sugerencia**para abrir archivos desde internet, debes declarar la funcionalidad de **Internet (cliente)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funciones de declaración, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Sugerencia**  para abrir archivos desde internet, debe declarar la **Internet (cliente)** capacidad en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funciones de declaración, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
@@ -173,7 +173,7 @@ Si la aplicación necesita acceso a las carpetas **Música** o **Vídeo** sin in
 
 El control [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) no requiere funcionalidades especiales para acceder a archivos en el sistema de archivos local, por ejemplo en las carpetas **Música** o **Vídeo** del usuario, porque el usuario tiene control total sobre el archivo al cual se accede. Desde una perspectiva de seguridad y privacidad, es mejor minimizar la cantidad de funcionalidades que usa la aplicación.
 
-**Para abrir contenido multimedia local con FileOpenPicker**
+**Para abrir medios locales mediante FileOpenPicker**
 
 1.  Llama a [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) para que el usuario pueda seleccionar un archivo multimedia.
 
@@ -246,7 +246,7 @@ Estas son algunas situaciones en las que debes liberar la solicitud de pantalla:
 
 > **Nota**&nbsp;&nbsp; Si [MediaPlayerElement.IsFullWindow](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.IsFullWindow.aspx) se establece en true y el contenido multimedia está en reproducción, automáticamente se impedirá que la pantalla se desactive.
 
-**Para mantener la pantalla activa**
+**Para mantener activa la pantalla**
 
 1.  Crea una variable [DisplayRequest](https://msdn.microsoft.com/library/windows/apps/br241816) global. Inicialízala como nula.
 ```csharp
@@ -302,11 +302,11 @@ private DisplayRequest appDisplayRequest = null;
 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo a través de la propiedad [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Para obtener una lista completa de propiedades, métodos y eventos, consulta la página de referencia de [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx).
 
 ### <a name="advanced-media-playback-scenarios"></a>Escenarios de reproducción avanzada de contenido multimedia
-Para los escenarios más complejos de reproducción de contenido multimedia, como reproducir una lista de reproducción, cambiar entre idiomas de audio o crear pistas de metadatos personalizadas, establece la propiedad [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en una clase [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) o [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx). Consulta la página de [reproducción de contenido multimedia](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) para obtener más información sobre cómo habilitar diversas funciones multimedia avanzadas.
+Para los escenarios más complejos de reproducción de contenido multimedia, como reproducir una lista de reproducción, cambiar entre idiomas de audio o crear pistas de metadatos personalizadas, establece la propiedad [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en una clase [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) o [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx). Consulte la [reproducción multimedia](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) para obtener más información sobre cómo habilitar diversas funcionalidades avanzadas para medios.
 
 ### <a name="enable-full-window-video-rendering"></a>Habilitar la representación de vídeo a pantalla completa
 
-Establece la propiedad [IsFullWindow](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx) para habilitar y deshabilitar la representación a pantalla completa. Al establecer la representación a pantalla completa mediante programación en la aplicación, debes usar siempre **IsFullWindow** en lugar de hacerlo manualmente. **IsFullWindow** garantiza que se realizarán las optimizaciones en el nivel del sistema que mejoran el rendimiento y la duración de la batería. Si la representación a pantalla completa no se configura correctamente, es posible que estas optimizaciones no se habiliten.
+Establece la propiedad [IsFullWindow](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx) para habilitar y deshabilitar la representación a pantalla completa. Al establecer la representación a pantalla completa mediante programación en la aplicación, debes usar siempre **IsFullWindow** en lugar de hacerlo manualmente. **IsFullWindow** garantiza que se llevarán a cabo las optimizaciones en el nivel del sistema que mejoran el rendimiento y la duración de la batería. Si la representación a pantalla completa no se configura correctamente, es posible que estas optimizaciones no se habiliten.
 
 Con el siguiente código se crea un [AppBarButton](https://msdn.microsoft.com/library/windows/apps/dn279244) que alterna la representación a pantalla completa.
 
@@ -383,9 +383,9 @@ El reproductor multimedia admite temas claros y oscuros, pero el tema oscuro pro
 
 Durante la reproducción de contenido de vídeo, fomenta una experiencia de visualización dedicada promocionando el modo de pantalla completa sobre el modo incorporado. La experiencia de visualización en pantalla completa es óptima, y las opciones están restringidas en el modo incorporado.
 
-Si tienes espacio en la pantalla o diseñas para la experiencia de 10 pies, opta por el diseño de doble fila. Proporciona más espacio para los controles que el diseño compacto de una sola fila y resulta más fácil navegar con el controlador para juegos en la experiencia de 10pies.
+Si tienes espacio en la pantalla o diseñas para la experiencia de 10 pies, opta por el diseño de doble fila. Proporciona más espacio para los controles que el diseño compacto de una sola fila y resulta más fácil navegar con el controlador para juegos en la experiencia de 10 pies.
 
-> **Nota**&nbsp;&nbsp; Consulta el artículo [Diseño para Xbox y televisión](../devices/designing-for-tv.md) para obtener más información sobre cómo optimizar la aplicación para la experiencia de 10pies.
+> **Nota**&nbsp;&nbsp; Consulta el artículo [Diseño para Xbox y televisión](../devices/designing-for-tv.md) para obtener más información sobre cómo optimizar la aplicación para la experiencia de 10 pies.
 
 Los controles predeterminados se han optimizado para la reproducción de contenido multimedia; sin embargo, tienes la posibilidad de las agregar opciones personalizadas que necesites en el reproductor multimedia con el fin de proporcionar experiencia óptima para tu aplicación. Consulta el artículo [Crear controles de transporte personalizados](custom-transport-controls.md) para obtener más información sobre cómo agregar controles personalizados.
 
@@ -395,5 +395,5 @@ Los controles predeterminados se han optimizado para la reproducción de conteni
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Conceptos básicos de diseño de los comandos para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958433)
-- [Conceptos básicos del diseño de contenido para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)
+- [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn958433)
+- [Conceptos básicos del diseño de contenido para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)

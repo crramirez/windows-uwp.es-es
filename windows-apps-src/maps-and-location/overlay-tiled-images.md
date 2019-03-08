@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
 ms.localizationpriority: medium
 ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046438"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663090"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
@@ -23,9 +23,9 @@ Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante 
 
 ## <a name="tiled-image-overview"></a>Información general de la imagen en mosaico
 
-Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256x256píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256 x 256 píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-**Importante**  al usar orígenes de icono, no tienes que escribir código para solicitar o colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
+**Importante**    al usar orígenes de mosaico, no tendrá que escribir código para solicitar o para colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
 
 Este es un ejemplo de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de una clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que muestra los parámetros reemplazables para las coordenadas X e Y, y el nivel de zoom.
 
@@ -176,13 +176,13 @@ Superpón imágenes en mosaico almacenadas como archivos en el almacenamiento lo
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
+    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control de los eventos [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
 
 3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
 
 Puedes usar los siguientes protocolos y ubicaciones para cargar mosaicos desde un almacenamiento local:
 
-| URI | Más información |
+| Uri | Más información |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | ms-appx:/// | Apunta a la raíz de la carpeta de instalación de la aplicación. |
 |  | Esta es la ubicación a la que hace referencia la propiedad [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). |
@@ -420,8 +420,8 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Ejemplo de aplicación de tráfico de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Centro para desarrolladores de Bing Maps](https://www.bingmapsportal.com/)
+* [Ejemplo de asignación de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Instrucciones de diseño de mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Compilación 2015 vídeo: Aprovechamiento de mapas y ubicación en el teléfono, tableta y PC en sus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación UWP tráfico](https://go.microsoft.com/fwlink/p/?LinkId=619982)

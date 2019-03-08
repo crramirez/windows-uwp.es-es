@@ -1,17 +1,17 @@
 ---
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
-title: Información general sobre animaciones
-description: Usa las animaciones de la biblioteca de animaciones de Windows Runtime para integrar el aspecto de Windows en tu aplicación.
+title: Introducción a las animaciones
+description: Usa las animaciones de la Biblioteca de animaciones de Windows Runtime para integrar el aspecto de Windows en la aplicación.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: de2544bbd8c7abe9b1852268373cc88913a30227
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940971"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621130"
 ---
 # <a name="animations-in-xaml"></a>Animaciones en XAML
 
@@ -38,25 +38,25 @@ Además, para determinados escenarios avanzados, como la animación de un elemen
 
 El objetivo último del sistema de animaciones de Windows Runtime y de la biblioteca de animaciones es permitir que los controles y otras partes de la interfaz de usuario tengan un comportamiento animado. Existen varios tipos de animaciones diferentes.
 
--   Las *transiciones de tema* se aplican automáticamente cuando cambian ciertas condiciones en la interfaz de usuario, incluidos los controles o los elementos de los tipos de interfaz de usuario de XAML de Windows Runtime predefinidos. Se conocen como *transiciones de tema* porque las animaciones admiten la apariencia de Windows y porque definen el comportamiento de todas las aplicaciones en escenarios de interfaz de usuario determinados cuando cambian de un modo de interacción a otro. Las transiciones de tema forman parte de la biblioteca de animaciones.
+-   Las *transiciones de tema* se aplican automáticamente cuando cambian ciertas condiciones en la interfaz de usuario, incluidos los controles o elementos de los tipos de interfaz de usuario de XAML de Windows Runtime predeterminados. Se conocen como *transiciones de tema* porque las animaciones admiten la apariencia de Windows y porque definen el comportamiento de todas las aplicaciones en escenarios de interfaz de usuario determinados cuando cambian de un modo de interacción a otro. Las transiciones de tema forman parte de la biblioteca de animaciones.
 -   Las *animaciones de tema* son animaciones de una o más propiedades de tipos de interfaz de usuario de XAML de Windows Runtime predefinidos. Las animaciones de tema no son iguales a las transiciones de tema, ya que las primeras están destinadas a un elemento específico y existen en estados visuales específicos dentro de un control, mientras que las últimas se asignan a propiedades del control que existen fuera de los estados visuales e influyen en las transiciones entre esos estados. Muchos de los controles XAML de Windows Runtime incluyen animaciones de tema dentro de guiones gráficos que forman parte de su plantilla de control y que se desencadenan por medio de estados visuales. Siempre y cuando no modifiques las plantillas, tendrás animaciones de tema integradas disponibles para los controles en la interfaz de usuario. Pero si las reemplazas, eliminarás al mismo tiempo las animaciones de tema de los controles integrados. Para recuperarlas, debes definir un guion gráfico que incluya estas animaciones dentro del conjunto de estados visuales del control. También puedes ejecutar las animaciones de tema desde guiones gráficos que no estén dentro de los estados visuales e iniciarlas con el método [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), pero esto no es tan común. Las animaciones de tema forman parte de la biblioteca de animaciones.
 -   Las *transiciones visuales* se aplican cuando un control cambia de uno de sus estados visuales definidos a otro estado. Son animaciones personalizadas escritas por ti y que suelen estar relacionadas con la plantilla personalizada que escribes para un control y las definiciones de estado visual incluidas en dicha plantilla. La animación solo se ejecuta en el espacio de tiempo entre ambos estados, que suele ser muy breve, de unos pocos segundos a lo sumo. Para más información, consulta la sección ["VisualTransition" de Animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808#VisualTransition).
--   *Las animaciones con guion gráfico* animan el valor de una propiedad de dependencia de Windows Runtime durante un período de tiempo. Los guiones gráficos pueden definirse como parte de una transición visual o bien puede desencadenarlos la aplicación en tiempo de ejecución. Para obtener más información, consulta [Animaciones con guion gráfico](storyboarded-animations.md). Para obtener más información sobre las propiedades de dependencia y dónde se encuentran, consulta [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583).
+-   *Las animaciones con guion gráfico* animan el valor de una propiedad de dependencia de Windows Runtime a lo largo de un período de tiempo. Los guiones gráficos pueden definirse como parte de una transición visual o bien puede desencadenarlos la aplicación en tiempo de ejecución. Para obtener más información, consulta [Animaciones con guion gráfico](storyboarded-animations.md). Para obtener más información sobre las propiedades de dependencia y dónde se encuentran, consulta [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583).
 -   Las *animaciones conectadas* que proporciona la nueva API [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) permiten a los desarrolladores crear fácilmente un efecto en el que un elemento parece animarse entre distintas vistas durante la navegación. Esta API está disponible a partir de Windows 10, versión 1607. Para obtener más información, consulta [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx).
 
 ## <a name="animations-available-in-the-library"></a>Animaciones disponibles en la biblioteca
 
 En la biblioteca de animaciones podrás encontrar las siguientes animaciones. Haz clic en el nombre de una animación para conocer los escenarios principales de uso y cómo definirla, y para ver un ejemplo.
 
--   [Transición de página](#page-transition): Anima las transiciones de página en un [**marco**](https://msdn.microsoft.com/library/windows/apps/br242682).
--   [Transición de contenido y de entrada](#content-transition-and-entrance-transition): Anima una parte o una sección del contenido que aparece o desaparece de la vista.
--   [Fundido de entrada, fundido de salida y encadenado](#fade-in-out-and-crossfade): Muestra elementos o controles transitorios o actualiza un área de contenido.
--   [Puntero arriba y abajo](#pointer-up-down): Aporta comentarios visuales de una pulsación o clic en una ventana.
--   [Cambiar la posición](#reposition): Mueve un elemento a una nueva posición.
--   [Mostrar u ocultar emergente](#show-hide-popup): Muestra la interfaz de usuario contextual en el frente.
--   [Mostrar u ocultar interfaces de usuario de borde](#show-hide-edge-ui): Desliza interfaces de usuario que aparecen o desaparecen desde el borde, incluidas interfaces grandes, como un panel.
--   [Cambios de elementos de lista](#list-item-changes): Agrega o elimina un elemento de una lista, o reordena sus elementos.
--   [Arrastrar y soltar](#drag-drop): Muestra comentarios visuales durante una operación de arrastrar y colocar.
+-   [Página de transición](#page-transition): Anima las transiciones de página en un [ **marco**](https://msdn.microsoft.com/library/windows/apps/br242682).
+-   [Transición de contenido y entrance](#content-transition-and-entrance-transition): Anima una pieza o conjunto de contenido dentro o fuera de la vista.
+-   [Fundido de entrada/salida y el encadenado](#fade-in-out-and-crossfade): Muestra los controles o elementos transitorios o actualiza un área de contenido.
+-   [Puntero arriba/abajo](#pointer-up-down): Proporciona comentarios visuales de un puntear o hacer clic en un icono.
+-   [Cambio de posición](#reposition): Mueve un elemento a una nueva posición.
+-   [Mostrar u ocultar emergente](#show-hide-popup): Muestra la interfaz de usuario contextual encima de la vista.
+-   [Mostrar/ocultar borde UI](#show-hide-edge-ui): Desliza la interfaz de usuario basada en edge, incluida la interfaz de usuario grande como un panel, dentro o fuera de la vista.
+-   [Los cambios de elemento de lista](#list-item-changes): Agrega o elimina un elemento de una lista o reordenación de los elementos.
+-   [Arrastrar y colocar](#drag-drop): Proporciona comentarios visuales durante una operación de arrastrar y colocar.
 
 ### <a name="page-transition"></a>Transición de página
 
@@ -68,7 +68,7 @@ Usa transiciones de página para animar la navegación dentro de una aplicación
 
 Usa las animaciones de transición de contenido ([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103)) para hacer que una parte o una sección de contenido aparezca o desaparezca de la vista actual. Por ejemplo, las animaciones de transición de contenido muestran contenido que no estaba listo cuando se cargó la página por primera vez o cuando cambia el contenido de una sección de una página.
 
-[**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) representa un movimiento que se puede aplicar al contenido cuando se carga por primera vez una página o una sección grande de la interfaz de usuario. De este modo, cuando el contenido se muestra por primera vez, el usuario podrá ver información diferente de la que se ve al cambiar el contenido. [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) es equivalente a un [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) con los parámetros predeterminados, pero puede usarse fuera de un [**marco**](https://msdn.microsoft.com/library/windows/apps/br242682).
+[**EntranceThemeTransition** ](https://msdn.microsoft.com/library/windows/apps/BR210288) representa un movimiento que se puede aplicar al contenido cuando se carga una página o sección grande de la interfaz de usuario por primera vez. De este modo, cuando el contenido se muestra por primera vez, el usuario podrá ver información diferente de la que se ve al cambiar el contenido. [**EntranceThemeTransition** ](https://msdn.microsoft.com/library/windows/apps/BR210288) es equivalente a un [ **NavigationThemeTransition** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) con los parámetros predeterminados, pero se puede usar fuera de un [ **Marco**](https://msdn.microsoft.com/library/windows/apps/br242682).
  
  
 <span id="fade-in-out-and-crossfade"/>
@@ -93,7 +93,7 @@ Usa las animaciones de reposición ([**RepositionThemeAnimation**](https://msdn.
 
 ### <a name="showhide-popup"></a>Mostrar u ocultar emergente
 
-Usa los objetos [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) y [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391) para mostrar y ocultar un objeto [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842) o elementos de interfaz de usuario contextuales similares en el frente de la vista actual. [**PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172) es una transición de tema que resulta útil si se quiere descartar un elemento emergente por un cambio de foco.
+Usa los objetos [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) y [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391) para mostrar y ocultar un objeto [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842) o elementos de interfaz de usuario contextuales similares en el frente de la vista actual. [**PopupThemeTransition** ](https://msdn.microsoft.com/library/windows/apps/Hh969172) es una transición de tema es comentarios útiles si desea mejorar descartar un menú emergente.
 
 <span id="show-hide-edge-ui"/>
 
@@ -125,14 +125,14 @@ En la tabla siguiente se ofrece un resumen de las recomendaciones sobre qué ani
 
 | Tipo de interfaz de usuario | Animación recomendada |
 |---------|-----------------------|
-| Cuadro de diálogo | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) y [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
-| Flyout | [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) y [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
-| Información sobre herramientas | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) y [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
-| Menú contextual | [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) y [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+| Cuadro de diálogo | [**FadeInThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/BR210298) y [ **FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+| Control flotante | [**PopInThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) y [ **PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+| Información sobre herramientas | [**FadeInThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/BR210298) y [ **FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+| Menú contextual | [**PopInThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) y [ **PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
 | Barra de comandos | [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.edgeuithemetransition.edgeuithemetransition) |
 | Panel de tareas o panel en el borde | [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.panethemetransition.panethemetransition) |
 | Contenido de cualquier contenedor de interfaz de usuario | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
-| Para controles o en casos en que no se apliquen otras animaciones | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) y [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+| Para controles o en casos en que no se apliquen otras animaciones | [**FadeInThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) y [ **FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 
  
 
@@ -349,7 +349,7 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 Al contrario que las animaciones de transición, una animación de tema no cuenta con un desencadenador integrado (la transición) que la ejecuta automáticamente. Debes usar un objeto [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) para incluir una animación de tema al definirla en XAML. También puedes cambiar el comportamiento predeterminado de la animación. Por ejemplo, puedes ralentizar el fundido de salida aumentando el valor de tiempo del objeto [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) en el objeto [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302).
 
-**Nota**para fines de mostrar técnicas de animación básicas, usamos código de la aplicación para iniciar la animación llamando a métodos de [**guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490). Puedes controlar cómo se ejecutan las animaciones **Storyboard** mediante los métodos [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) y [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard**. Pero esa no es la manera más común de incluir animaciones de la biblioteca en las aplicaciones. En cambio, las bibliotecas de animaciones se suelen integrar en los estilos y las plantillas de XAML que se aplican a los controles o elementos. Comprender el uso de plantillas y estados visuales es un poco más complicado. Pero sí explicamos cómo usar las animaciones de la biblioteca en los estados visuales como parte del tema sobre las [animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+**Tenga en cuenta**  para fines de mostrar las técnicas de animación básica, vamos a usar código de la aplicación para iniciar la animación mediante una llamada a métodos de [ **guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490). Puede controlar cómo el **guión gráfico** las animaciones que se ejecutan utilizando el [ **comenzar**](https://msdn.microsoft.com/library/windows/apps/BR210491), [ **detener**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [ **Pausar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), y [ **reanudar** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **guión gráfico** métodos. Pero esa no es la manera más común de incluir animaciones de la biblioteca en las aplicaciones. En cambio, las bibliotecas de animaciones se suelen integrar en los estilos y las plantillas de XAML que se aplican a los controles o elementos. Comprender el uso de plantillas y estados visuales es un poco más complicado. Pero sí explicamos cómo usar las animaciones de la biblioteca en los estados visuales como parte del tema sobre las [animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
  
 

@@ -5,13 +5,13 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
 ms.openlocfilehash: fb68b4bbd1b751591e9f336efe5dad3c22b3bf92
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618310"
 ---
-# <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
+# <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
 
 ## <a name="introduction"></a>Introducción
 
@@ -19,7 +19,7 @@ Los desarrolladores tienen varias opciones para lograr el inicio automatizado de
 
 La *activación de protocolos* permite que una aplicación se registre como controlador para un protocolo determinado. 
 
-La *activación del inicio* es el inicio normal de una aplicación, como por ejemplo, al iniciarla desde el icono de la aplicación.
+La *activación del inicio* es el inicio normal de una aplicación, como, por ejemplo, al iniciarla desde el icono de la aplicación.
 
 Con cada método de activación, tienes la posibilidad de usar la línea de comandos o una aplicación de selector. Para todos los métodos de activación, si la aplicación se está ejecutando, la activación la llevará al primer plano (lo que la reactiva) y proporcionará argumentos de activación nuevos. Esto ofrece flexibilidad para usar los comandos de activación para proporcionar mensajes nuevos a la aplicación. Es importante tener en cuenta que el proyecto debe compilarse e implementarse para que el método de activación ejecute la aplicación recién actualizada. 
 
@@ -120,7 +120,7 @@ El identificador de la aplicación se puede encontrar en el archivo **Package.ap
 
 ### <a name="command-line"></a>Línea de comandos
 
-Con el SDK de Windows10 se instala una herramienta para realizar una activación de inicio de una aplicación para UWP. Se puede ejecutar desde la línea de comandos y usa el AUMID de la aplicación para iniciarse como argumento.
+Con el SDK de Windows 10 se instala una herramienta para realizar una activación de inicio de una aplicación para UWP. Se puede ejecutar desde la línea de comandos y usa el AUMID de la aplicación para iniciarse como argumento.
 
 ```
 C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.softwarelogo.appxlauncher.exe <AUMID>
@@ -210,6 +210,6 @@ void OnActivated(IActivatedEventArgs^ args)
 ## <a name="summary"></a>Resumen
 En resumen, puedes usar distintos métodos para iniciar la aplicación para UWP. Dependiendo de los requisitos y de los casos de uso, algunos métodos pueden resultar más adecuados que otros. 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [UWP en Xbox One](index.md)
 

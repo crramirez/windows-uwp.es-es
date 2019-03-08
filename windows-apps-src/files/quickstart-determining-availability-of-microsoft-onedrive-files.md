@@ -1,36 +1,36 @@
 ---
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
-title: Determinar la disponibilidad de los archivos de Microsoft OneDrive
+title: Determinación de la disponibilidad de los archivos de Microsoft OneDrive
 description: Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad StorageFile.IsAvailable.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26eb371e767f0c1e7f3d5855cf68728958c0cda3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044998"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608940"
 ---
-# <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinar la disponibilidad de los archivos de Microsoft OneDrive
+# <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinación de la disponibilidad de los archivos de Microsoft OneDrive
 
 
 **API importantes**
 
 -   [**Clase FileIO**](https://msdn.microsoft.com/library/windows/apps/Hh701440)
--   [**Clase StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)
+-   [**Clase de StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)
 -   [**Propiedad StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)
 
 Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
+-   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Mt187337). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/Mt187334).
 
--   **Declaraciones de funcionalidades de la aplicación**
+-   **Declaraciones de capacidad para la aplicación**
 
     Consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
@@ -38,12 +38,12 @@ Determina si un archivo de Microsoft OneDrive está disponible mediante la propi
 
 Los usuarios pueden marcar los archivos de OneDrive como disponibles sin conexión (valor predeterminado) o disponibles solo en línea. Esta función les permite mover archivos grandes (como imágenes y vídeos) a OneDrive, marcarlos como disponibles solo en línea y ahorrar espacio en disco (lo único que se guarda de manera local es un archivo de metadatos).
 
-[**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) se usa para determinar si un archivo está disponible actualmente. En la siguiente tabla se muestra el valor de la propiedad **StorageFile.IsAvailable** en diversos escenarios.
+[**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx), se usa para determinar si un archivo está disponible actualmente. En la siguiente tabla se muestra el valor de la propiedad **StorageFile.IsAvailable** en diversos escenarios.
 
-| Tipo de archivo                              | Con conexión | Red de uso medido        | Sin conexión |
+| Tipo de archivo                              | Online | Red de uso medido        | Desconectado |
 |-------------------------------------------|--------|------------------------|---------|
-| Archivo local                                | Verdadero   | Verdadero                   | Verdadero    |
-| Archivo de OneDrive marcado como disponible sin conexión | Verdadero   | Verdadero                   | Verdadero    |
+| Archivo local                                | True   | True                   | True    |
+| Archivo de OneDrive marcado como disponible sin conexión | True   | True                   | True    |
 | Archivo de OneDrive marcado como disponible solo en línea       | True   | Según la configuración del usuario | False   |
 | Archivo de red                              | True   | Según la configuración del usuario | False   |
 

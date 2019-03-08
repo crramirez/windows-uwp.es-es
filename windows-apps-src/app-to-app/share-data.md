@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c1c9b75599efe4566bc1783f68ff9752510d1d99
-ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "9031381"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640570"
 ---
 # <a name="share-data"></a>Compartir datos
 
 
-Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP). El contrato para contenido compartido es una manera sencilla de compartir rápidamente los datos, como texto, vínculos, fotos y vídeos, entre aplicaciones. Por ejemplo, es posible que un usuario quiera compartir una página web con sus amigos mediante una aplicación de red social o guardar un vínculo en una aplicación de bloc de notas para consultarlo más adelante.
+Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP). El contrato para contenido compartido es una manera sencilla de compartir rápidamente los datos, como texto, vínculos, fotos y vídeos, entre aplicaciones. Por ejemplo, es posible que un usuario quiera compartir una página web con sus amigos mediante una aplicación de red social, o guardar un vínculo en una aplicación de notas para consultarlo más adelante.
 
 ## <a name="set-up-an-event-handler"></a>Configurar un controlador de eventos
 
@@ -60,7 +60,7 @@ El sistema proporciona una interfaz de usuario para uso compartido. Para iniciar
 
 ## <a name="handle-errors"></a>Controlar errores
 
-En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación solicite al usuario que seleccione contenido para compartir, pero el usuario no seleccionó nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que muestra un mensaje al usuario si se produce un error.
+En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación haya solicitado al usuario que seleccione contenido para compartir, pero el usuario no ha seleccionado nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que muestra un mensaje al usuario si se produce un error.
 
 ## <a name="delay-share-with-delegates"></a>Retrasar el uso compartido con funciones delegadas
 
@@ -93,7 +93,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## <a name="see-also"></a>Consulta también 
+## <a name="see-also"></a>Consulte también 
 
 * [Comunicación entre aplicaciones](index.md)
 * [Recibir datos](receive-data.md)

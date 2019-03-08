@@ -6,22 +6,22 @@ ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 421fb7c973c1aaa4e9e1924548d7f11439fd5350
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115842"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632870"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novedades de la documentación de los desarrolladores de Windows de febrero de 2018
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre las características, directrices para los desarrolladores y los vídeos están a tu disposición en el mes de enero y contienen información nueva y actualizada para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 
 ## <a name="features"></a>Características
 
-### <a name="adaptive-and-interactive-toast-notifications"></a>Notificaciones del sistema adaptables e interactivas
+### <a name="adaptive-and-interactive-toast-notifications"></a>Notificaciones del sistema interactivas y adaptables
 
 Mejora tu aplicación con notificaciones interactivas y adaptables. Empieza con nuestras [directrices actualizadas sobre notificaciones del sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md) y explora la nueva información sobre las restricciones de tamaño de imagen, las barras de progreso y la adición de opciones de entrada.
 
@@ -45,7 +45,7 @@ Crea y publica complementos de una suscripción para vender productos digitales 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="design-basics"></a>Conceptos básicos del diseño
+### <a name="design-basics"></a>Conceptos básicos de diseño
 
 Se ha mejorado nuestra [Introducción al diseño de aplicaciones para UWP](../design/basics/design-and-ui-intro.md) con una gran cantidad de nuevos ejemplos visuales. La introducción de las características de diseño universal de cada UWP destaca ahora cómo puedes poner en acción las capacidades del Fluent Design System.
 
@@ -63,7 +63,7 @@ Hemos actualizado y ampliado nuestro artículo en lo relativo a la voz y al tono
 
 ## <a name="videos"></a>Vídeos
 
-### <a name="xbox-live-creators-program"></a>Programa de creadores de XboxLive
+### <a name="xbox-live-creators-program"></a>Programa de creadores de Xbox Live
 
 El Programa de creadores de Xbox Live permite a los desarrolladores publicar rápidamente sus juegos para UWP en Xbox One y Windows 10. [Ve el vídeo](https://www.youtube.com/watch?v=zpFfHHBkVq4) para obtener información sobre el programa y luego [echa un vistazo a esta página](https://www.xbox.com/developers/creators-program) para empezar a trabajar.
 

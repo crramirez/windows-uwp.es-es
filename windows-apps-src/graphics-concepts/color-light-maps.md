@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e866b3841a610d4027ba9e91005591ef18c707e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940700"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623260"
 ---
 # <a name="color-light-maps"></a>Mapas de luz de colores
 
@@ -22,7 +22,7 @@ Un mapa de luz de color usa los datos RGB del mapa de luz para su información d
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Mapas de luz con texturas](light-mapping-with-textures.md)
+[Asignación clara con texturas](light-mapping-with-textures.md)
 
  
 

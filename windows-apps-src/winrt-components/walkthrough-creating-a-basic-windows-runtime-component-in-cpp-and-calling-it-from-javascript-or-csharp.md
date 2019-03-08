@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fce4ed3f32c0207e55b37a765b4d48d234343e38
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981439"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625040"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>Tutorial: Crear un componente de Windows Runtime en C++/CX y llamarlo desde JavaScript o C#
 > [!NOTE]
-> Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Para obtener información sobre cómo crear un componente de Windows Runtime con C++ / WinRT, consulta [crear eventos en C++ / WinRT](../cpp-and-winrt-apis/author-events.md).
+> Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Para obtener información sobre cómo crear un componente de tiempo de ejecución de Windows con C++ / c++ / WinRT, consulte [crear eventos en C / c++ / WinRT](../cpp-and-winrt-apis/author-events.md).
 
 En este tutorial se muestra cómo crear un archivo DLL básico del componente de Windows Runtime que se pueda llamar desde JavaScript, C# o Visual Basic. Antes de comenzar este tutorial, asegúrate de que conoces conceptos como la interfaz binaria abstracta (ABI), las clases de referencia y las extensiones del componente de Visual C++, que facilitan el trabajo con clases de referencia. Para obtener más información, consulta [Crear componentes de Windows Runtime en C++](creating-windows-runtime-components-in-cpp.md) y [Referencia del lenguaje de Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
@@ -24,19 +24,19 @@ En este ejemplo, en primer lugar se crea el proyecto de componente, pero primero
 
 Ten en cuenta que la clase principal del componente contiene ejemplos de definiciones de propiedad y método y una declaración de evento. Se proporcionan solo para mostrar cómo se hace. No son necesarios y, en este ejemplo, reemplazaremos todo el código generado por nuestro propio código.
 
-### **<a name="to-create-the-c-component-project"></a>Para crear el proyecto de componente de C++**
+### <a name="to-create-the-c-component-project"></a>**Para crear el proyecto de componente de C++**
 1. En la barra de menús de Visual Studio, elige **Archivo, Nuevo, Proyecto**.
 
 2. En el cuadro de diálogo **Nuevo proyecto**, en el panel izquierdo, expande **Visual C++** y, a continuación, selecciona el nodo para las aplicaciones universales de Windows.
 
-3. En el panel central, selecciona **Componente de Windows Runtime** y, a continuación, asigna al proyecto el nombre de WinRT\_CPP.
+3. En el panel central, seleccione **componente de Windows en tiempo de ejecución** y, a continuación, denomine al proyecto WinRT\_CPP.
 
 4. Elige el botón **Aceptar**.
 
-## **<a name="to-add-an-activatable-class-to-the-component"></a>Para agregar una clase activable al componente**
+## <a name="to-add-an-activatable-class-to-the-component"></a>**Para agregar una clase activable al componente**
 Una clase activable es la que puede crear el código de cliente mediante una **nueva** expresión (**Nuevo** en Visual Basic, o **ref new** en C++). En tu componente, debe declararse como **public ref class sealed**. De hecho, los archivos Class1.h y .cpp ya tienen una clase de referencia. Puedes cambiar el nombre, pero en este ejemplo, usaremos el nombre predeterminado: Class1. Puedes definir clases de referencia adicionales o normales en tu componente si son necesarias. Para obtener más información sobre las clases de referencia, consulta [Sistema de tipo (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
-Agregar estas \#directivas a Class1.h:
+Agregue estas \#directivas #include a Class1.h:
 
 ```cpp
 #include <collection.h>
@@ -479,7 +479,7 @@ Copia el siguiente código en el elemento de cuadrícula en MainPage.xaml.
 ```
 
 ## <a name="to-add-the-event-handlers-for-the-buttons"></a>Para agregar los controladores de eventos para los botones
-En el Explorador de soluciones, abre MainPage.xaml.cs. (El archivo puede anidarse en MainPage.xaml). Agrega una directiva using para System.Text, y, a continuación, agrega el controlador de eventos para el cálculo del logaritmo en la clase MainPage.
+En el Explorador de soluciones, abre MainPage.xaml.cs. (El archivo puede estar anidado en MainPage.xaml.) Agregue una mediante la directiva para System.Text, y, a continuación, agregue el controlador de eventos para el cálculo del logaritmo en la clase MainPage.
 
 ```csharp
 private void Button1_Click_1(object sender, RoutedEventArgs e)
@@ -584,15 +584,15 @@ Selecciona o bien el proyecto de C# o o bien el proyecto de JavaScript como proy
 ## <a name="inspecting-your-component-in-object-browser-optional"></a>Inspeccionar tu componente en el Explorador de objetos (opcional)
 En el Explorador de objetos, puedes inspeccionar todos los tipos de Windows Runtime que se definen en los archivos .winmd. Esto incluye los tipos en el espacio de nombres de plataforma y el espacio de nombres predeterminado. Sin embargo, dado que los tipos en el espacio de nombres Platform::Collections se definen en el archivo de encabezado collections.h, y no en un archivo winmd, no aparecen en el explorador de objetos.
 
-### **<a name="to-inspect-a-component"></a>Para inspeccionar un componente**
+### <a name="to-inspect-a-component"></a>**Para inspeccionar un componente**
 1. En la barra de menús, elige **Vista, Explorador de objetos** (Ctrl+Alt+J).
 
-2. En el panel izquierdo del explorador de objetos, expande el nodo WinRT\_CPP para mostrar los tipos y métodos que se definen en tu componente.
+2. En el panel izquierdo del Examinador de objetos, expanda el WinRT\_nodo CPP para mostrar los tipos y métodos que se definen en el componente.
 
 ## <a name="debugging-tips"></a>Consejos de depuración
 Para una mejor experiencia de depuración, descarga los símbolos de depuración de los servidores de símbolos públicos de Microsoft:
 
-### **<a name="to-download-debugging-symbols"></a>Para descargar los símbolos de depuración**
+### <a name="to-download-debugging-symbols"></a>**Para descargar símbolos de depuración**
 1. En la barra de menús, elige **Herramientas, Opciones**.
 
 2. En el cuadro de diálogo de **Opciones**, expande **Depuración** y selecciona **Símbolos**.
@@ -610,4 +610,4 @@ Si tu código JavaScript no reconoce las propiedades o métodos públicos en el 
 Si quitas un proyecto de componente de Windows Runtime de C++ de una solución, también debes quitar manualmente la referencia del proyecto de JavaScript. De lo contrario, no se efectuará la depuración o las operaciones de compilación posteriores. Si es necesario, a continuación puedes agregar una referencia de ensamblado a la DLL.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear componentes de Windows Runtime en C++/CX](creating-windows-runtime-components-in-cpp.md)
+* [Creación de componentes de Windows Runtime en C++ / c++ / CX](creating-windows-runtime-components-in-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Ciclo de vida de una aplicación para UWP de Windows10
+title: Ciclo de vida de una aplicación para UWP de Windows 10
 description: En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) desde el momento en que se activa hasta que se cierra.
 keywords: ciclo de vida de una aplicación, suspendida, reanudar, iniciar, activar
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
@@ -7,22 +7,22 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f70d768ad6589e210826f94f73249ed1ea272e1
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602650"
 ---
-# <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) de Windows10
+# <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) de Windows 10
 
 
 En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) desde el momento en que se inicia hasta que se cierra.
 
 ## <a name="a-little-history"></a>Un poco de historia
 
-Antes de Windows8, las aplicaciones tenían un ciclo de vida simple. Las aplicaciones Win32 y .NET están en ejecución o no. Cuando un usuario las minimiza o sale de ellas, continúan ejecutándose. Esto funcionó bien hasta que los dispositivos portátiles y la administración de la energía empezaron a cobrar cada vez más importancia.
+Antes de Windows 8, las aplicaciones tenían un ciclo de vida simple. Las aplicaciones Win32 y .NET están en ejecución o no. Cuando un usuario las minimiza o sale de ellas, continúan ejecutándose. Esto funcionó bien hasta que los dispositivos portátiles y la administración de la energía empezaron a cobrar cada vez más importancia.
 
-Windows8 introdujo un nuevo modelo de aplicación con las aplicaciones para UWP. En un nivel alto, se agregó un nuevo estado, el estado suspendido. Una aplicación para UWP pasa a estar suspendida poco después de que el usuario la minimice o cambie a otra aplicación. Esto significa que los subprocesos de la aplicación se detienen y la aplicación se deja en la memoria, a menos que el sistema operativo necesite recuperar algunos recursos. Cuando el usuario vuelve a la aplicación, esta se puede restaurar rápidamente a un estado en ejecución.
+Windows 8 introdujo un nuevo modelo de aplicación con las aplicaciones para UWP. En un nivel alto, se agregó un nuevo estado, el estado suspendido. Una aplicación para UWP pasa a estar suspendida poco después de que el usuario la minimice o cambie a otra aplicación. Esto significa que los subprocesos de la aplicación se detienen y la aplicación se deja en la memoria, a menos que el sistema operativo necesite recuperar algunos recursos. Cuando el usuario vuelve a la aplicación, esta se puede restaurar rápidamente a un estado en ejecución.
 
 Existen varias maneras para las aplicaciones que deben seguir ejecutándose cuando están en segundo plano, como las [tareas en segundo plano](support-your-app-with-background-tasks.md), la [ejecución ampliada](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.aspx) y la ejecución patrocinada por la actividad (por ejemplo, la funcionalidad **BackgroundMediaEnabled**, que permite a una aplicación proseguir la [reproducción de elementos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)). Además, las operaciones de transferencia en segundo plano pueden continuar incluso si la aplicación está suspendida o incluso si ha finalizado. Para obtener más información, consulta [Cómo descargar un archivo](https://msdn.microsoft.com/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
 
@@ -30,11 +30,11 @@ De manera predeterminada, las aplicaciones que no están en primer plano se susp
 
 El estado de suspendido agrega nuevos requisitos para los desarrolladores, porque el sistema operativo puede optar por finalizar una aplicación suspendida para liberar recursos. La aplicación finalizada seguirá apareciendo en la barra de tareas. Cuando el usuario haga clic en ella, la aplicación deberá restaurar el estado en el que estaba antes de finalizar, porque el usuario no sabrá que el sistema la ha cerrado. Pensará que ha estado en espera en segundo plano mientras estaba haciendo otras cosas y esperará que esté en el mismo estado que tenía cuando la ha dejado. En este tema veremos cómo lograrlo.
 
-Windows10, versión 1607, presenta dos estados más del modelo de aplicaciones: **Ejecución en primer plano** y **Ejecución en segundo plano**. También veremos estos nuevos estados en las secciones siguientes.
+Windows 10, versión 1607, se presentan dos Estados de modelo de aplicación más: **Que se ejecutan en primer plano** y **que se ejecuta en segundo plano**. También veremos estos nuevos estados en las secciones siguientes.
 
 ## <a name="app-execution-state"></a>Estado de ejecución de la aplicación
 
-Esta ilustración representa los posibles estados del modelo de aplicaciones a partir de Windows10, versión 1607. Veamos el ciclo de vida habitual de una aplicación para UWP.
+Esta ilustración representa los posibles estados del modelo de aplicaciones a partir de Windows 10, versión 1607. Veamos el ciclo de vida habitual de una aplicación para UWP.
 
 ![Diagrama de estados en el que se muestran las transiciones entre los estados de ejecución de la aplicación](images/updated-lifecycle.png)
 
@@ -51,12 +51,12 @@ Para obtener el estado anterior de la aplicación, usa [LaunchActivatedEventArgs
 | ApplicationExecutionState | Explicación | Acción que realizar |
 |-------|-------------|----------------|
 | **NotRunning** | Una aplicación puede estar en este estado debido a que no se haya iniciado desde la última vez que el usuario ha reiniciado el sistema o ha iniciado sesión. También puede encontrarse en este estado si se estaba ejecutando pero se ha bloqueado o porque el usuario la haya cerrado antes.| Inicializa la aplicación como si se ejecutara por primera vez en la sesión del usuario actual. |
-|**Suspended** | El usuario ha minimizado o ha abandonado la aplicación y no ha vuelto a ella en pocos segundos. | Cuando la aplicación se ha suspendido, su estado se ha conservado en la memoria. Solo tienes que volver a adquirir los identificadores de archivos u otros recursos que has liberado al suspender la aplicación. |
-| **Terminated** | La aplicación se había suspendida anteriormente, pero luego se ha cerrado en algún momento porque el sistema necesitaba recuperar memoria. | Restaura el estado en el que estaba la aplicación cuando el usuario la ha abandonado.|
+|**Suspendido** | El usuario ha minimizado o ha abandonado la aplicación y no ha vuelto a ella en pocos segundos. | Cuando la aplicación se ha suspendido, su estado se ha conservado en la memoria. Solo tienes que volver a adquirir los identificadores de archivos u otros recursos que has liberado al suspender la aplicación. |
+| **Finalizado** | La aplicación se había suspendida anteriormente, pero luego se ha cerrado en algún momento porque el sistema necesitaba recuperar memoria. | Restaura el estado en el que estaba la aplicación cuando el usuario la ha abandonado.|
 |**ClosedByUser** | El usuario ha cerrado la aplicación con el gesto de cerrar en el modo tableta o con Alt+F4. Cuando el usuario cierra la aplicación, primero se suspende y después finaliza. | Dado que la aplicación básicamente ha pasado por los mismos pasos que conducen al estado Terminated, debes gestionar este estado del mismo modo que lo harías con el estado Terminated.|
 |**Running** | La aplicación ya estaba abierta cuando el usuario ha intentado volver a iniciarla. | Nada. Ten en cuenta que no se inicia otra instancia de la aplicación. Simplemente se activa la instancia que ya está en ejecución. |
 
-**Nota** *Sesión del usuario actual* se basa en el inicio de sesión de Windows. Siempre y cuando el usuario actual no haya cerrado la sesión explícitamente, haya apagado el equipo ni haya reiniciado Windows, la sesión del usuario actual persiste durante eventos tales como la autenticación de pantalla de bloqueo y el cambio de usuario, entre otros. 
+**Nota**            La   *sesión del usuario actual* se basa en el inicio de sesión de Windows. Siempre y cuando el usuario actual no haya cerrado la sesión explícitamente, haya apagado el equipo ni haya reiniciado Windows, la sesión del usuario actual persiste durante eventos tales como la autenticación de pantalla de bloqueo y el cambio de usuario, entre otros. 
 
 Una circunstancia importante a tener en cuenta es que si el dispositivo tiene suficientes recursos, el sistema operativo realizará un inicio previo de las aplicaciones usadas frecuentemente que han optado por ese comportamiento para optimizar la capacidad de respuesta. Las aplicaciones que cuentan con inicio previo se inician en segundo plano y luego se suspenden rápidamente para que, cuando el usuario cambia a ellas, se puedan reanudar, lo que es más rápido que iniciar la aplicación.
 
@@ -73,7 +73,7 @@ Cuando la aplicación completa el inicio, entra en el estado **Running**, la pan
 Una aplicación puede activarla el sistema, en lugar de que la inicie el usuario. Una aplicación puede activarse mediante un contrato, como el contrato para contenido compartido. O se puede activar para controlar un protocolo URI personalizado o un archivo con una extensión que la aplicación esté registrada para controlar. Para obtener una lista con las distintas formas en las que se puede activar una aplicación, consulta [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
 
 La clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) define los métodos que puedes invalidar para controlar los distintos modos en los que se puede activar la aplicación.
-[**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) puede controlar todos los tipos de activación posibles. Sin embargo, es más habitual usar métodos específicos para controlar los tipos de activación más comunes y usar **OnActivated** como método de reserva para los tipos de activación menos comunes. Estos son los métodos adicionales para las activaciones específicas:
+[**OnActivated** ](https://msdn.microsoft.com/library/windows/apps/br242330) puede controlar todos los tipos posibles de activación. Sin embargo, es más habitual usar métodos específicos para controlar los tipos de activación más comunes y usar **OnActivated** como método de reserva para los tipos de activación menos comunes. Estos son los métodos adicionales para las activaciones específicas:
 
 [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797)  
 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)  
@@ -83,11 +83,11 @@ La clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 Los datos de evento de estos métodos incluyen la misma propiedad [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) que se ha tratado anteriormente, que indica el estado en el que se encontraba la aplicación antes de activarla. Interpreta el estado y lo que debes hacer del mismo modo que se describe anteriormente en la sección [Inicio de la aplicación](#app-launch).
 
-**Nota**si inicia sesión con la cuenta de administrador del equipo, no se puede activar las aplicaciones para UWP.
+**Tenga en cuenta** si inicia sesión con cuenta de administrador del equipo, no se puede activar las aplicaciones para UWP.
 
 ## <a name="running-in-the-background"></a>Ejecución en segundo plano ##
 
-A partir de Windows 10, versión 1607, las aplicaciones pueden ejecutar tareas en segundo plano en el mismo proceso que la propia aplicación. Puedes leer más sobre este tema en [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99). En este artículo no analizaremos el procesamiento en segundo plano dentro del proceso, pero este influye en el ciclo de vida de la aplicación porque se han agregado dos nuevos eventos relacionados con cuando la aplicación está en segundo plano. Se trata de: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground).
+A partir de Windows 10, versión 1607, las aplicaciones pueden ejecutar tareas en segundo plano en el mismo proceso que la propia aplicación. Puedes leer más sobre este tema en [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99). En este artículo no analizaremos el procesamiento en segundo plano dentro del proceso, pero este influye en el ciclo de vida de la aplicación porque se han agregado dos nuevos eventos relacionados con cuando la aplicación está en segundo plano. Estos son: [**EnteredBackground** ](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [ **LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground).
 
 Estos eventos también reflejan si el usuario puede ver la interfaz de usuario de la aplicación.
 
@@ -131,7 +131,7 @@ Ten en cuenta si la aplicación tiene actividad en segundo plano en curso que pu
 
 Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](https://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) en el objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) devuelto.
 
-Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete*del  aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*.
+Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete* del aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*.
 
 Si necesitas más tiempo para guardar el estado, investiga formas de guardar dicho estado por fases antes de que la aplicación entre en el estado en segundo plano para que haya menos que guardar en el controlador de eventos **EnteredBackground**. O puedes solicitar una [ExtendedExecutionSession](https://msdn.microsoft.com/magazine/mt590969.aspx) para obtener más tiempo. Sin embargo, no hay ninguna garantía de que la solicitud se conceda, por lo que es mejor encontrar maneras de minimizar la cantidad de tiempo que se debe guardar el estado.
 
@@ -139,7 +139,7 @@ Si necesitas más tiempo para guardar el estado, investiga formas de guardar dic
 
 Cuando el usuario minimiza una aplicación, Windows espera unos segundos para ver si dicho usuario vuelve a ella. Si no lo hace en ese periodo de tiempo y no hay activa ninguna ejecución ampliada, tarea en segundo plano ni ejecución patrocinada por la actividad, Windows suspende la aplicación. También se suspende una aplicación cuando aparece la pantalla de bloqueo, siempre que no haya ninguna sesión de ejecución ampliada, etc. activa en esa aplicación.
 
-Cuando se suspende una aplicación, esta invoca el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341). Las plantillas de proyecto para UWP de Visual Studio proporcionan un controlador para este evento denominado **OnSuspending** en **App.xaml.cs**. Antes de Windows10, versión 1607, el código para guardar el estado se ponía aquí. Ahora recomendamos guardar el estado cuando se entra en el estado en segundo plano, como se ha descrito anteriormente.
+Cuando se suspende una aplicación, esta invoca el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341). Las plantillas de proyecto para UWP de Visual Studio proporcionan un controlador para este evento denominado **OnSuspending** en **App.xaml.cs**. Antes de Windows 10, versión 1607, el código para guardar el estado se ponía aquí. Ahora recomendamos guardar el estado cuando se entra en el estado en segundo plano, como se ha descrito anteriormente.
 
 Conviene que liberes los recursos exclusivos y los identificadores de archivos para que otras aplicaciones puedan tener acceso a ellos cuando la aplicación esté suspendida. Algunos ejemplos de recursos exclusivos son las cámaras, los dispositivos de E/S, los dispositivos externos y los recursos de red. Liberar de forma explícita recursos exclusivos e identificadores de archivos sirve para que otras aplicaciones puedan acceder a ellos cuando la aplicación esté suspendida. Cuando la aplicación se reanude, deberá volver a adquirir sus recursos exclusivos y sus identificadores de archivos.
 
@@ -157,7 +157,7 @@ El sistema intenta mantener la aplicación y sus datos en la memoria mientras es
 
 Cuando la aplicación determina que se ha activado tras finalizar, debe cargar los datos de aplicación que se han guardado, de forma que se encuentre en el mismo estado en el que estaba antes de finalizar. Cuando el usuario vuelve a una aplicación suspendida que ha finalizado, la aplicación debe restaurar los datos de aplicación en el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). El sistema no notifica a una aplicación cuándo va a finalizar, por lo que la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos antes de su suspensión y restaurarlos cuando vuelva a activarse después de la finalización.
 
-**Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows suspenda una aplicación que esté conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
+**Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows la suspensión de una aplicación que está asociada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
 
 ## <a name="app-resume"></a>Reanudación de la aplicación
 
@@ -173,7 +173,7 @@ Si la aplicación suspendida se finalizó, no hay ningún evento **Resuming**, y
 
 Mientras una aplicación está suspendida, no recibe ninguno de los eventos de red que se haya registrado para recibir. Dichos eventos no se colocan en la cola; simplemente, se pierden. Por ello, la aplicación debe comprobar el estado de red cuando se reanude.
 
-**Nota**porque no se genera el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) desde el subproceso de interfaz de usuario, debes usar un distribuidor si el código en el controlador de reanudación se comunica con la interfaz de usuario. Consulta [Update the UI thread from a background thread](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md) (Actualizar el subproceso de la interfaz de usuario desde un subproceso en segundo plano) para obtener un ejemplo de cómo hacerlo.
+**Tenga en cuenta**  porque el [ **Reanudando** ](https://msdn.microsoft.com/library/windows/apps/br242339) no se produce el evento desde el subproceso de interfaz de usuario, se debe usar un distribuidor si el código en el controlador de reanudación se comunica con la interfaz de usuario. Consulta [Update the UI thread from a background thread](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md) (Actualizar el subproceso de la interfaz de usuario desde un subproceso en segundo plano) para obtener un ejemplo de cómo hacerlo.
 
 Para obtener instrucciones generales, consulta [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
@@ -181,9 +181,9 @@ Para obtener instrucciones generales, consulta [Directrices para suspender y rea
 
 Por lo general, no es necesario que los usuarios cierren las aplicaciones, sino que pueden dejar que Windows se encargue de ello. No obstante, los usuarios pueden decidir cerrar una aplicación mediante el gesto de cerrar, presionando Alt y F4 o mediante el conmutador de tareas en Windows Phone.
 
-No hay ningún evento que indique que el usuario ha cerrado dicha aplicación. Cuando el usuario cierra una aplicación, primero se suspende para que tengas la oportunidad de guardar su estado. En Windows8.1 y versiones posteriores, después de una aplicación se ha cerrado por el usuario, la aplicación se quita de la pantalla y cambiar la lista, pero no finaliza explícitamente.
+No hay ningún evento que indique que el usuario ha cerrado dicha aplicación. Cuando el usuario cierra una aplicación, primero se suspende para que tengas la oportunidad de guardar su estado. En Windows 8.1 y versiones posteriores, después de que el usuario ha cerrado una aplicación, la aplicación se quita de la pantalla y cambiar la lista pero terminan no explícitamente.
 
-**Comportamiento de cierre por parte del usuario:** si la aplicación debe hacer algo distinto cuando la cierra el usuario que cuando la cierra Windows, puedes usar el controlador de eventos de activación para determinar si la aplicación ha finalizado Windows o el usuario. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
+**Comportamiento de cierre por usuario:**  si la aplicación necesita hacer algo diferente cuando está cerrado por el usuario que cuando se cierra por Windows, puede usar para determinar si la aplicación se ha finalizado por el usuario o por el controlador de eventos de activación Windows. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
 
 Te recomendamos que las aplicaciones no se cierren automáticamente mediante programación a menos que sea absolutamente necesario. Por ejemplo, si una aplicación detecta una fuga de memoria, se puede cerrar para preservar la seguridad de los datos personales del usuario.
 
@@ -205,22 +205,22 @@ En las plantillas de proyecto de Visual Studio se proporciona el código básico
 
 ## <a name="key-application-lifecycle-apis"></a>API clave del ciclo de vida de la aplicación
 
--   Espacio de nombres [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691)
--   Espacio de nombres [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
--   Espacio de nombres [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865)
--   Clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) (XAML)
--   Clase [**Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) (XAML)
+-   [**Windows.ApplicationModel** ](https://msdn.microsoft.com/library/windows/apps/br224691) espacio de nombres
+-   [**Windows.ApplicationModel.Activation** ](https://msdn.microsoft.com/library/windows/apps/br224766) espacio de nombres
+-   [**Windows.ApplicationModel.Core** ](https://msdn.microsoft.com/library/windows/apps/br205865) espacio de nombres
+-   [**Windows.UI.Xaml.Application** ](https://msdn.microsoft.com/library/windows/apps/br242324) clase (XAML)
+-   [**Windows.UI.Xaml.Window** ](https://msdn.microsoft.com/library/windows/apps/br209041) clase (XAML)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)
-* [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Controlar el inicio previo de las aplicaciones](handle-app-prelaunch.md)
-* [Controlar la activación de aplicaciones](activate-an-app.md)
-* [Controlar la suspensión de aplicaciones](suspend-an-app.md)
-* [Controlar la reanudación de aplicaciones](resume-an-app.md)
+* [Directrices para la aplicación, suspensión y reanudar](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Controlar el inicio previo de la aplicación](handle-app-prelaunch.md)
+* [Identificador de activación de la aplicación](activate-an-app.md)
+* [Suspender el identificador de aplicación](suspend-an-app.md)
+* [Identificador de reanudar la aplicación](resume-an-app.md)
 * [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
-* [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [Reproducir archivos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 
  
 

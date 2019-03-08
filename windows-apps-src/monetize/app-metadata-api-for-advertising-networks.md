@@ -7,11 +7,11 @@ keywords: Windows 10, UWP, red de publicidad, metadatos de la aplicación
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
 ms.openlocfilehash: 0122c2fbe1e0e9905a8509694c4a589e04e33247
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049432"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621140"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadatos de la aplicación para redes de publicidad
 
@@ -58,7 +58,7 @@ Como alternativa, puedes llamar a la API mediante la interfaz de usuario proporc
 
 Este método tiene la siguiente sintaxis de solicitud.
 
-| Método | URI de solicitud                                                      |
+| Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://admetadata.azure-api.net/v1/app/{app_id}``` |
 
@@ -69,21 +69,21 @@ Este método tiene la siguiente sintaxis de solicitud.
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Ocp-Apim-Subscription-Key | cadena | Obligatorio. Clave de suscripción que has [recuperado desde el portal de API de metadatos de la aplicación](#get-key).  |
+| Ocp-Apim-Subscription-Key | string | Obligatorio. Clave de suscripción que has [recuperado desde el portal de API de metadatos de la aplicación](#get-key).  |
 
 <span/>
 
-### <a name="request-parameters"></a>Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Nombre        | Type   | Descripción                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------|
-| app_id | cadena | Obligatorio. El identificador de la aplicación para la que quieres recuperar los metadatos. Este puede ser uno de los valores siguientes:<br/><br/><ul><li>El Id. de la Store de la aplicación. Un ejemplo de un Id. de la Tienda sería 9NBLGGH29DM8.</li><li>El id. del producto (en ocasiones, también llamado el *identificador de la aplicación*) para una aplicación que originalmente se creó para Windows 8.x o Windows Phone 8.x. El id. del producto es un GUID.</li></ul> |
+| app_id | string | Obligatorio. El identificador de la aplicación para la que quieres recuperar los metadatos. Puede ser uno de los valores siguientes:<br/><br/><ul><li>El Id. de la Tienda de la aplicación. Un ejemplo de un Id. de la Tienda sería 9NBLGGH29DM8.</li><li>El id. del producto (en ocasiones, también llamado el *identificador de la aplicación*) para una aplicación que originalmente se creó para Windows 8.x o Windows Phone 8.x. El id. del producto es un GUID.</li></ul> |
 
 <span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-En el siguiente ejemplo se muestra cómo recuperar metadatos para una aplicación con el valor de Id. de la Store 9NBLGGH29DM8.
+En el siguiente ejemplo se muestra cómo recuperar metadatos para una aplicación con el valor de Id. de la Tienda 9NBLGGH29DM8.
 
 ```syntax
 GET https://admetadata.azure-api.net/v1/app/9NBLGGH29DM8 HTTP/1.1
@@ -128,22 +128,22 @@ Para obtener más información acerca de los valores del cuerpo de respuesta, co
 
 | Valor      | Tipo   | Descripción    |
 |------------|--------|--------------------|
-| storeId           | string  | Id. de la Store de la aplicación. Un ejemplo de un Id. de la Store sería 9NBLGGH29DM8.     |  
+| storeId           | string  | Id. de la Tienda de la aplicación. Un ejemplo de un Id. de la Tienda sería 9NBLGGH29DM8.     |  
 | name           | string  | El nombre de la aplicación.   |
-| description           | cadena  | La descripción de la Store para la aplicación.  |
+| description           | string  | La descripción de la Tienda para la aplicación.  |
 | phoneStoreGuid           | string  | El id. del producto (Windows Phone 8.x) de la aplicación. Este identificador es un GUID.  |
 | windowsStoreGuid           | string  | El id. del producto (Windows 8.x) de la aplicación. Este identificador es un GUID. |
-| storeCategory           | string  | La categoría de la aplicación en la Store. Para los valores admitidos, consulta la [Tabla de categoría y subcategoría](../publish/category-and-subcategory-table.md) para aplicaciones de la Store.  |
+| storeCategory           | string  | La categoría de la aplicación en la Tienda. Para los valores admitidos, consulta la [Tabla de categoría y subcategoría](../publish/category-and-subcategory-table.md) para aplicaciones de la Tienda.  |
 | iabCategory           | string  | La categoría de contenido de la aplicación tal como está definida por Interactive Advertising Bureau (IAB). Por ejemplo, **Noticias** o **Deportes**. Para obtener una lista de categorías de contenido, consulta la página sobre la [taxonomía de contenido de IAB Tech Lab](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy) en el sitio web de IAB.   |
-| iabCategoryId           | cadena  | El identificador de la categoría de contenido de la aplicación. Por ejemplo, **IAB12** es el identificador de la categoría de noticias e **IAB17** es el identificador de la categoría de deportes. Para obtener una lista de identificadores de categorías de contenido, consulta la sección 5.1 en la [especificación de API de OpenRTB](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
+| iabCategoryId           | string  | El identificador de la categoría de contenido de la aplicación. Por ejemplo, **IAB12** es el identificador de la categoría de noticias e **IAB17** es el identificador de la categoría de deportes. Para obtener una lista de identificadores de categorías de contenido, consulta la sección 5.1 en la [especificación de API de OpenRTB](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
 | coppa           | Booleano  | Devuelve verdadero si la aplicación está dirigida a niños menores de 13 años y, por tanto, tiene obligaciones en virtud de la Ley de protección de la privacidad infantil en línea (COPPA); de lo contrario, devuelve false.  |
-| downloadUrl           | cadena  | Vínculo a la descripción de la aplicación en la Store. Este vínculo está en formato ```https://www.microsoft.com/store/apps/<Store ID>```.  |
-| isLive           | booleano  | True si la aplicación está actualmente disponible en la Store; de lo contrario, false.  |
+| downloadUrl           | string  | Vínculo a la descripción de la aplicación en la Tienda. Este vínculo está en formato ```https://www.microsoft.com/store/apps/<Store ID>```.  |
+| isLive           | Booleano  | True si la aplicación está actualmente disponible en la Store; de lo contrario, false.  |
 | iconUrls           | array  |  Una matriz de una o más cadenas que contienen las rutas de acceso relativas a las direcciones URL de los iconos asociadas con la aplicación. Para recuperar los iconos, debes anteponer *http* o *https* a las direcciones URL.  |
-| type           | cadena  | Una de las siguientes cadenas: **App** o **Game**.  |
-| devices           |  array  | Una matriz de una o más de las siguientes cadenas que especifica los tipos de dispositivo que admite la aplicación: **PC**, **Phone**, **Xbox**, **IoT**, **Server** y **Holographic**.  |
-| platformVersions           | array  |  Una matriz de una o más de las siguientes cadenas que especifican las plataformas que admite la aplicación: **Windows.Universal**, **Windows.Windows8x** y **Windows.WindowsPhone8x**.  |
-| screenshotUrls           | matriz  | Una matriz de una o más cadenas que contienen las rutas de acceso relativas a las direcciones URL de captura de pantalla para esta aplicación. Para recuperar las capturas de pantalla, debes anteponer *http* o *https* a las direcciones URL.  |
+| type           | string  | Una de las cadenas siguientes: **Aplicación** o **juego**.  |
+| dispositivos           |  array  | Una matriz de uno o más de las siguientes cadenas que especifican los tipos de dispositivo que admite la aplicación: **PC**, **teléfono**, **Xbox**, **IoT**, **Server**, y **Holographic**.  |
+| platformVersions           | array  |  Una matriz de uno o más de las siguientes cadenas que especifican las plataformas que admite la aplicación: **Windows.Universal**, **Windows.Windows8x**, y **Windows.WindowsPhone8x**.  |
+| screenshotUrls           | array  | Una matriz de una o más cadenas que contienen las rutas de acceso relativas a las direcciones URL de captura de pantalla para esta aplicación. Para recuperar las capturas de pantalla, debes anteponer *http* o *https* a las direcciones URL.  |
 
 <span/>
 

@@ -7,11 +7,11 @@ ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1593ab8b547a464492a35aa7d49d38f667a8210b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927409"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626490"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
 
@@ -19,7 +19,7 @@ Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrón
 
 **En este artículo**
 
--   [Iniciar el cuadro de diálogo de redacción de correo electrónico](#launch-the-compose-email-dialog)
+-   [Iniciar el cuadro de diálogo de correo electrónico de compose](#launch-the-compose-email-dialog)
 -   [Resumen y pasos siguientes](#summary-and-next-steps)
 -   [Temas relacionados](#related-topics)
 
@@ -47,7 +47,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> Los datos adjuntos que agregas a un correo electrónico mediante el uso de la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecerá únicamente en la aplicación de correo. Si los usuarios tienen cualquier otro programa de correo configurado como su programa de correo predeterminada, aparecerá la ventana de la redacción sin los datos adjuntos. Se trata de un problema conocido.
+> Los datos adjuntos que agregue a un correo electrónico mediante el [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) clase sólo aparecerán en la aplicación de correo. Si los usuarios tienen que cualquier otro programa de correo electrónico configurado como su programa de correo electrónico predeterminado, aparecerá la ventana de redacción sin los datos adjuntos. Se trata de un problema conocido.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
@@ -56,7 +56,7 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de corre
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Selección de contactos](selecting-contacts.md)
-* [Cómo continuar la aplicación de Windows Phone después de llamar a un selector de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
+* [Para continuar con la aplicación de Windows Phone después de llamar a un selector de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
  
 
  

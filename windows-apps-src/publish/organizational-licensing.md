@@ -1,27 +1,24 @@
 ---
-author: jnHs
-Description: You can indicate whether and how your app can be offered for volume purchases through the Microsoft Store for Business and Microsoft Store for Education in the Organizational licensing section of an app submission.
-title: Opciones de licencias organizativas
+Description: Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de la Tienda Microsoft para Empresas y la Tienda Microsoft para Educación en la sección Licencias organizativas de un envío de aplicación.
+title: Opciones de licencia organizativas
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
-ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 10/31/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: "windows 10, uwp, store para empresas, store para educación, organizativa, licencias por volumen, empresa, educación store, empresa store, compras por volumen, en masa"
+keywords: windows 10, uwp, store para empresas, store para educación, organizativa, licencias por volumen, empresa, educación store, empresa store, compras por volumen, en masa
 localizationpriority: high
-ms.openlocfilehash: 7437b087c0966939bb5f5d8110d310f4dd5e73df
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
-ms.translationtype: HT
+ms.openlocfilehash: 4babaa9bca13fe1861d5772ba70ec5998cd06285
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57600980"
 ---
-# <a name="organizational-licensing-options"></a>Opciones de licencias organizativas
+# <a name="organizational-licensing-options"></a>Opciones de licencia organizativas
 
 
 Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de la Tienda Microsoft para Empresas y la Tienda Microsoft para Educación en la sección **Licencias organizativas** de la página [Precios y disponibilidad](set-app-pricing-and-availability.md#organizational-licensing) de un envío de aplicación.
 
-Estas opciones de configuración te permiten ofrecer tu aplicación a organizaciones (empresariales y educativas) que compran e implementan licencias múltiples para sus usuarios, lo que supone una oportunidad para aumentar tu relevancia en organizaciones que usan Windows10 en varios tipos de dispositivo, incluidos equipos, tabletas y teléfonos.
+A través de estos valores, puede optar por permitir que la aplicación esté disponible para las organizaciones (empresas y educación) que adquieren e implementación varias licencias para sus usuarios, dando la oportunidad de ampliar su alcance a las organizaciones a través de Windows 10 tipos de dispositivo, incluidos PCs, tabletas y teléfonos.
 
 Además, deberás permitir las licencias organizativas de las [aplicaciones de línea de negocio (LOB)](distribute-lob-apps-to-enterprises.md) que publiques directamente para las empresas.
 
@@ -29,7 +26,7 @@ Además, deberás permitir las licencias organizativas de las [aplicaciones de l
 > Las opciones son independientes para cada aplicación. Puedes cambiar tus preferencias para una aplicación en cualquier momento creando un nuevo envío. Los cambios surtirán efecto cuando el envío complete el [proceso de certificación](the-app-certification-process.md).
 
 > [!IMPORTANT]
-> Los envíos que usen la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) no estarán disponibles para Microsoft Store para Empresas y Microsoft Store para Educación. Para que la aplicación esté disponible para compras por volumen de empresas, debes usar el Panel del Centro de desarrollo de Windows para crear y realizar envíos.
+> Los envíos que usen la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) no estarán disponibles para Microsoft Store para Empresas y Microsoft Store para Educación. Para que la aplicación esté disponible para compras por volumen por organizaciones, debe crear y enviar sus envíos en el centro de partners.
 
 
 ## <a name="allowing-your-app-to-be-offered-to-organizations"></a>Permitir que la aplicación se ofrezca a las organizaciones
@@ -54,7 +51,7 @@ Ten en cuenta que esta casilla está **desactivada** de forma predeterminada. De
 Las licencias sin conexión permiten a las organizaciones adquirir la aplicación por volumen e instalarla sin necesidad de que cada uno de los dispositivos se conecte al sistema de licencias de la Tienda. La organización podrá descargar el paquete de la aplicación y una licencia que permite la instalación en dispositivos (a través de sus propias herramientas de administración o de la precarga de aplicaciones en imágenes del sistema operativo) sin notificar a la Tienda el uso de una licencia en particular. Si habilitas este escenario, podrás aumentar en gran medida la flexibilidad de implementación y podrás mejorar considerablemente el atractivo de la aplicación para estos clientes.
 
 > [!IMPORTANT]
-> Las licencias sin conexión no se admiten para paquetes .xap.  
+> Las licencias sin conexión no se admiten para paquetes .xap.
 
  
 ## <a name="paid-app-support"></a>Compatibilidad con aplicaciones de pago
@@ -62,7 +59,7 @@ Las licencias sin conexión permiten a las organizaciones adquirir la aplicació
 Actualmente, las cuentas de desarrollador ubicadas en determinados mercados pueden ofrecer aplicaciones de pago para adquirir licencias por volumen a través de la Tienda Microsoft para Empresas. 
 
 > [!NOTE]
-> En algunos mercados, el precio que se muestra para una aplicación en Microsoft Store para Empresas o Microsoft Store para Educación puede ser diferente del precio que se muestra a los clientes minoristas en Microsoft Store para la misma franja de precios. El pago de ganancias de las compras de una empresa funciona exactamente igual que para las compras de un consumidor de la aplicación. Para obtener más información, consulta [Recibir pagos](getting-paid-apps.md) y [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Para obtener una lista de los mercados donde la Tienda Microsoft para Empresas y la Tienda Microsoft para Educación están disponibles, consulta [Introducción a la Tienda Microsoft para Empresas y la Tienda Microsoft para Educación](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
+> En algunos mercados, el precio que se muestra para una aplicación en Microsoft Store para Empresas o Microsoft Store para Educación puede ser diferente del precio que se muestra a los clientes minoristas en Microsoft Store para la misma franja de precios. El pago de ganancias de las compras de una empresa funciona exactamente igual que para las compras de un consumidor de la aplicación. Para obtener más información, consulta [Recibir pagos](getting-paid-apps.md) y [Acuerdo para Desarrolladores de Aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para obtener una lista de los mercados donde la Tienda Microsoft para Empresas y la Tienda Microsoft para Educación están disponibles, consulta [Introducción a la Tienda Microsoft para Empresas y la Tienda Microsoft para Educación](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
 
 Si tu país o región no aparecen a continuación, las aplicaciones de pago no se ofrecen actualmente en la Tienda Microsoft para Empresas ni en la Tienda Microsoft para Educación. Si es el caso, es posible que las selecciones de licencias organizativas que hagas para las aplicaciones de pago se apliquen más adelante, dado que podemos admitir más mercados adicionales de cuentas de desarrolladores para envíos de aplicaciones de pago en el futuro.
 

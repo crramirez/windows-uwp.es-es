@@ -1,5 +1,5 @@
 ---
-Description: Learn how to improve both the usability and the accessibility of your UWP app by providing an intuitive way for users to quickly navigate and interact with an app's visible UI through a keyboard instead of a pointer device (such as touch or mouse).
+Description: Descubre cómo mejorar la facilidad de uso y la accesibilidad de tu aplicación para UWP al ofrecer a los usuarios una forma intuitiva para que naveguen e interactúen rápidamente con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de un dispositivo señalador (por ejemplo, la entrada táctil o el mouse).
 title: Directrices de diseño de las teclas de acceso
 label: Access keys design guidelines
 keywords: teclado, tecla de acceso, KeyTip, sugerencia de teclas, accesibilidad, navegación, foco, texto, entrada, interacción del usuario
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: bd71e4715b26f9e06326690d3642b4d19e23d292
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945807"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617270"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -27,7 +27,7 @@ Consulta el tema [Teclas de aceleración](keyboard-accelerators.md) para obtener
 > [!NOTE]
 > Un teclado es indispensable para los usuarios que tienen ciertas discapacidades (véase [Accesibilidad del teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
 
-La Plataforma universal de Windows(UWP) ofrece compatibilidad integrada en los controles de la plataforma tanto para teclas de acceso basadas en el teclado como para comentarios de la interfaz de usuario asociada a través de indicaciones visuales llamadas sugerencias de teclas.
+La Plataforma universal de Windows (UWP) ofrece compatibilidad integrada en los controles de la plataforma tanto para teclas de acceso basadas en el teclado como para comentarios de la interfaz de usuario asociada a través de indicaciones visuales llamadas sugerencias de teclas.
 
 ## <a name="overview"></a>Introducción
 
@@ -44,7 +44,7 @@ Las aplicaciones de Microsoft Office admiten una amplia variedad de teclas de ac
 
 ![Indicaciones de KeyTips de las teclas de acceso en Microsoft Word](images/accesskeys/keytip-badges-word.png)
 
-_Indicaciones de KeyTips de las claves de acceso en Microsoft Word_
+_KeyTip distintivos de las claves de acceso de Microsoft Word_
 
 Para agregar una tecla de acceso a un control, usa la **propiedad AccessKey**. El valor de esta propiedad especifica la secuencia de teclas de acceso, el acceso directo (si se trata de un único carácter alfanumérico) y la sugerencia de teclas.
 
@@ -72,11 +72,11 @@ Por ejemplo, Microsoft Word proporciona dos ámbitos de teclas de acceso: un ám
 
 Las imágenes siguientes muestran los dos ámbitos de teclas de acceso en Word. La primera muestra las teclas de acceso principales que permiten al usuario seleccionar una pestaña y otros comandos de nivel superior, mientras que la segunda muestra las claves de acceso secundarias de la pestaña Inicio.
 
-![Teclas de acceso principal en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
-_Teclas de acceso principal en Microsoft Word_
+![Las claves de acceso principal en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+_las claves de acceso principal en Microsoft Word_
 
-![Teclas de acceso secundario en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
-_Teclas de acceso secundario en Microsoft Word_
+![Las claves de acceso secundaria en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
+_las claves de acceso secundaria en Microsoft Word_
 
 Las teclas de acceso pueden duplicarse para elementos de distintos ámbitos. En el ejemplo anterior, "2" es la tecla de acceso para Deshacer en el ámbito principal y también es "Cursiva" en el ámbito secundario.
 
@@ -110,11 +110,11 @@ Aquí te mostramos cómo definir un ámbito de las teclas de acceso.
 
 ![Teclas de acceso principales para CommandBar](images/accesskeys/primary-access-keys-commandbar.png)
 
-_Ámbito principal de CommandBar y teclas de acceso admitidas_
+_Ámbito principal de barra de comandos y las claves de acceso admitidas_
 
 ![Teclas de acceso secundarias para CommandBar](images/accesskeys/secondary-access-keys-commandbar.png)
 
-_Ámbito secundario de CommandBar y teclas de acceso admitidas_
+_Ámbito secundario de barra de comandos y las claves de acceso admitidas_
 
 ### <a name="windows-10-creators-update-and-older"></a>Windows 10 Fall Creators Update y anteriores
 
@@ -233,13 +233,13 @@ Los recursos para cada idioma se agregan a las carpetas String correspondientes 
 
 ![Carpetas String de recursos para inglés y español](images/accesskeys/resource-string-folders.png)
 
-_Carpetas String de recursos para inglés y español_
+_Carpetas de cadena de recursos de inglés y español_
 
 Las teclas de acceso localizadas se especifican en el archivo resources.resw del proyecto:
 
 ![Especificar la propiedad AccessKey especificada en el archivo resources.resw](images/accesskeys/resource-resw-file.png)
 
-_Especificar la propiedad AccessKey especificada en el archivo resources.resw_
+_Especifique la propiedad AccessKey especificada en el archivo resources.resw_
 
 Para obtener más información, consulta [Traducir recursos de la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx).
 
@@ -251,11 +251,11 @@ Por lo general, alcanza con la ubicación predeterminada de las sugerencias de t
 
 ![Ejemplo de ubicación automática de sugerencias de teclas](images/accesskeys/auto-keytip-position.png)
 
-_Ejemplo de ubicación automática de sugerencias de teclas_
+_Ejemplo de selección de ubicación automática KeyTip_
 
 Sin embargo, en caso de necesitar más control sobre la ubicación de las sugerencias de teclas, se recomienda lo siguiente:
 
-1.  **Principio de asociación obvia**: El usuario puede asociar el control a la sugerencia de teclas fácilmente.
+1.  **Principio de la asociación obvia**: El usuario puede asociar fácilmente el control con la sugerencia de teclas.
 
     a.  El KeyTip debe estar **cerca** del elemento que tiene la tecla de acceso (el propietario).  
     b.  El KeyTip debe **evitar cubrir los elementos habilitados** que tienen teclas de acceso.   
@@ -265,7 +265,7 @@ Sin embargo, en caso de necesitar más control sobre la ubicación de las sugere
 
     a.  El KeyTip nunca se **superpone** con otras sugerencias de teclas.  
 
-3.  **Vistazo sencillo:** El usuario puede echar un vistazo fácilmente a las sugerencias de teclas.
+3.  **Fácil de análisis:** El usuario puede ojear fácilmente las sugerencias de teclas.
 
     a.  Los KeyTips deben estar **alineados** entre sí y con el elemento de la interfaz de usuario.
     b.  Los KeyTips deben estar **agrupados** tanto como sea posible. 
@@ -274,11 +274,11 @@ Sin embargo, en caso de necesitar más control sobre la ubicación de las sugere
 
 Usa la propiedad **KeyTipPlacementMode** para personalizar la ubicación de la sugerencia de teclas por elemento o por grupo.
 
-Los modos de ubicación son: Top, Bottom, Right, Left, Hidden, Center y Auto.
+Los modos de selección de ubicación son: Parte superior, inferior, derecha, izquierda, oculto, centro y automática.
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-postion-modes.png)
 
-_Modos de ubicación de sugerencia de teclas_
+_Modos de selección de ubicación de keytips_
 
 La línea central del control se usa para calcular la alineación vertical y horizontal del KeyTip.
 
@@ -303,7 +303,7 @@ La propiedad KeyTipHorizontalOffset indica cuánto mover la sugerencia de teclas
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-offsets.png)
 
-_Establecer el desplazamiento vertical y horizontal de una sugerencia de teclas_
+_Establecer los desplazamientos horizontales y verticales para un KeyTip._
 
 ``` xaml
 <Button
@@ -320,7 +320,7 @@ La ubicación de una sugerencia de teclas se ajusta automáticamente según el b
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytips-screen-edge.png)
 
-_El borde de la pantalla hace que la sugerencia de teclas se reubique automáticamente_
+_Hace que el borde de la pantalla la KeyTip reposicionarse automáticamente_
 
 ## <a name="key-tip-style"></a>Estilos de las sugerencias de teclas
 
@@ -330,7 +330,7 @@ Si necesitas especificar tus propios estilos de sugerencias de teclas, usa los r
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-customization.png)
 
-_Opciones de personalización de las sugerencias de teclas_
+_Opciones de personalización de keytips_
 
 En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 
@@ -349,7 +349,7 @@ En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 </Application.Resources>
 ```
 
-## <a name="access-keys-and-narrator"></a>Las teclas de acceso y el Narrador
+## <a name="access-keys-and-narrator"></a>Teclas de acceso y Narrador
 
 El marco XAML expone las propiedades de automatización que permiten a los clientes de automatización de la interfaz de usuario detectar información sobre los elementos en la interfaz de usuario.
 

@@ -1,6 +1,6 @@
 ---
-Description: Use visual feedback to show users when their interactions with a UWP app are detected, interpreted, and handled.
-title: Comentarios visuales
+Description: Usar comentarios visuales para mostrar a los usuarios cuando se detectan, interpreta y controlan las interacciones con una aplicación para UWP.
+title: Información visual
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
@@ -9,17 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b043ec71eb7d5883a1b22c4f0d8f43824034d454
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929287"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640790"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
 Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones. La información visual puede ayudar a los usuarios al promover la interacción. Indica si una interacción se ha realizado correctamente, lo que mejora la sensación de control del usuario. También transmite los estados del sistema y reduce los errores.
 
-> **API importantes**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
+> **API importantes**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -40,7 +40,7 @@ Al usar los controles de plataforma XAML disponibles, te aseguras de que la apli
 > [!Important]
 > Te recomendamos que no cambies el comportamiento de interacción de los gestos integrados.
 
-**Comentarios a través de los dispositivos**
+**Comentarios en todos los dispositivos**
 
 Los comentarios visuales dependen por lo general del dispositivo de entrada (táctil, panel táctil, mouse, lápiz o pluma, teclado, etc.). Por ejemplo, la información integrada para un mouse por lo general implica mover y cambiar el cursor, mientras que la entrada táctil o de lápiz requiere visualizaciones de contacto, y la navegación y entrada de teclado usa rectángulos de foco y resaltado.
 
@@ -65,7 +65,7 @@ Para la **experiencia de 10 pies** típica del uso de la Xbox y la televisión, 
 **Propiedades de borde**
 
 Los elementos visuales de enfoque de alta visibilidad constan de dos partes: el borde principal y el borde secundario. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario.
-![Contornos visuales de foco de alta visibilidad](images/FocusRectRedlines.png)
+![Bastidores visual de foco de alta visibilidad](images/FocusRectRedlines.png)
 
 Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVisualPrimaryThickness** o **FocusVisualSecondaryThickness**, respectivamente:
 ```XAML
@@ -73,7 +73,7 @@ Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVis
 ```
 ![Grosores de los márgenes visuales de foco de alta visibilidad](images/FocusMargin.png)
 
-El margen es una propiedad de tipo [**Grosor**](https://msdn.microsoft.com/library/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Consulta la siguiente información: ![Grosor de los márgenes visuales de foco de alta visibilidad, solo de la parte inferior](images/FocusThicknessSide.png)
+El margen es una propiedad de tipo [**Grosor**](https://msdn.microsoft.com/library/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Consulta a continuación: ![Alta visibilidad foco margen visual grosor solo abajo](images/FocusThicknessSide.png)
 
 El margen es el espacio entre los límites de los elementos visuales de control y el inicio del *borde secundario* de los elementos visuales de foco. El margen predeterminado está **1px** por encima de los límites del control. Puedes editar este margen según el control, cambiando la propiedad **FocusVisualMargin**:
 ```XAML
@@ -81,7 +81,7 @@ El margen es el espacio entre los límites de los elementos visuales de control 
 ```
 ![Diferencias en los márgenes visuales de foco de alta visibilidad](images/FocusPlusMinusMargin.png)
 
-*Un margen negativo alejará el borde del centro del control y un margen positivo acercará el borde hacia el centro del control.*
+*Un margen negativo envía notificaciones de inserción del borde fuera del centro del control y un margen positivo moverá el borde más cercano al centro del control.*
 
 Para desactivar elementos visuales de foco en el control por completo, simplemente se deshabilitó **UseSystemFocusVisuals**:
 ```XAML
@@ -109,26 +109,26 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Para diseñadores**
-* [Directrices sobre el movimiento panorámico](guidelines-for-panning.md)
+* [Directrices sobre movimiento panorámico](guidelines-for-panning.md)
 
 **Para desarrolladores**
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
 
-**Muestras**
-* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+**Ejemplos**
+* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Muestras de archivo**
-* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de prueba de acceso táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: ejemplo de entrada de lápiz simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: muestra de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: muestra de manipulaciones y gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Muestra de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Ejemplos de archivo**
+* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Ejemplo de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

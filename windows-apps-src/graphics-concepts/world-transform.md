@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: af694ed32d845e518f4189f75309f1f371743f90
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662420"
 ---
 # <a name="world-transform"></a>Transformación de mundos
 
@@ -28,7 +28,7 @@ El siguiente diagrama muestra la relación entre el sistema de coordenadas del m
 
 La transformación de mundos puede incluir cualquier combinación de traducciones, rotaciones y escalas.
 
-## <a name="span-idsettingupaworldmatrixxmlspansetting-up-a-world-matrix"></a><span id="SETTING_UP_A_WORLD_MATRIX.XML"></span>Configurar una matriz del mundo
+## <a name="span-idsettingupaworldmatrixxmlspansetting-up-a-world-matrix"></a><span id="SETTING_UP_A_WORLD_MATRIX.XML"></span>Configuración de una matriz universal
 
 
 Al igual que con cualquier otra transformación, crea la transformación de mundos concatenando una serie de matrices en una única matriz que contiene la suma total de sus efectos. En el caso más simple, cuando un modelo está en el origen del mundo y sus ejes de coordenadas locales están orientados igual que el espacio de mundo, la matriz del mundo es la matriz de identidad. Normalmente, la matriz de mundo es una combinación de una traslación en el espacio de mundo y posiblemente una o más rotaciones para girar el modelo según sea necesario.

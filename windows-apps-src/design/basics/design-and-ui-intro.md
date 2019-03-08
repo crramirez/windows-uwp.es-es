@@ -1,5 +1,5 @@
 ---
-Description: The universal design features included in every UWP app help you build apps that scale beautifully across a range of devices.
+Description: Las características de diseño universal incluidas en la Ayuda de cada aplicación UWP crea aplicaciones escalables perfectamente en una gama de dispositivos.
 title: Introducción al diseño de aplicaciones para la Plataforma universal de Windows (aplicaciones de Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 05/05/2018
@@ -8,17 +8,17 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058786"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611760"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
 ![muestra de aplicación de iluminación](images/introUWP-header.jpg)
 
-Las instrucciones sobre diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayuda a diseñar y crear fantásticas aplicaciones.
+Las instrucciones sobre diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayudan a diseñar y crear fantásticas aplicaciones.
 
 No se trata de una lista de reglas prescriptivas: es un documento vivo, diseñado para adaptarse a la evolución de nuestro [sistema Fluent Design](../fluent-design-system/index.md), así como a las necesidades de nuestra comunidad de creación de aplicaciones.
 
@@ -26,11 +26,11 @@ Esta introducción proporciona una descripción general de las características 
 
 ## <a name="effective-pixels-and-scaling"></a>Escalado y píxeles efectivos
 
-Las aplicaciones para UWP se ejecutan en todos los [dispositivos Windows 10](../devices/index.md), desde la televisión a tu tableta o PC. Entonces, ¿cómo se puede diseñar una interfaz de usuario que se vea bien en una amplia variedad de dispositivos y tamaños de pantalla?
+Las aplicaciones UWP se ejecutan en todos los [dispositivos Windows 10](../devices/index.md), desde la TV en la tableta o PC. ¿Cómo puede diseñar una interfaz de usuario que se vea bien en una amplia variedad de dispositivos y tamaños de pantalla?
 
 ![misma aplicación en varios dispositivos](images/universal-image-1.jpg)
 
-UWP ayuda ajustando automáticamente los elementos de la interfaz de usuario para que sean legibles y fáciles de interaccionar en todos los dispositivos y tamaños de pantalla.
+UWP le ayuda a ajustando automáticamente elementos de interfaz de usuario para que sean legibles y fáciles de interactuar con todos los dispositivos y tamaños de pantalla.
 
 Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
@@ -94,9 +94,9 @@ Dado que las aplicaciones para UWP automáticamente escalan en todos los disposi
 
 Para obtener más información sobre cómo implementar patrones comunes de la aplicación para UWP, consulta el artículo [Diseño de página](../layout/page-layout.md).
 
-También puedes usar el [WindowsTemplateStudio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master) en Visual Studio para empezar a trabajar con un diseño para la aplicación.
+También puedes usar el [Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master) en Visual Studio para empezar a trabajar con un diseño para la aplicación.
 
-## <a name="controls"></a>Controles
+## <a name="controls"></a>Controls
 
 La plataforma de diseño de UWP proporciona un conjunto de controles comunes cuyo funcionamiento está garantizado en todos los dispositivos de Windows y que cumplen nuestros principios de [Sistema Fluent Design](../fluent-design-system/index.md). Estos controles incluyen todo, desde controles simples, como botones y los elementos de texto, hasta controles sofisticados que pueden generar listas a partir de un conjunto de datos y una plantilla.
 
@@ -170,12 +170,12 @@ Proporcionamos una serie de herramientas que te ayudarán en el proceso de dise�
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>A continuación: el sistema Fluent Design
+## <a name="next-fluent-design-system"></a>Siguiente: Sistema Fluent Design
 
 Si quieres obtener información sobre los principios que rigen Fluent Design (el sistema de diseño de Microsoft) y ver más características que puedes incorporar a tu aplicación para UWP, sigue con [sistema Fluent Design](../fluent-design-system/index.md).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [¿Qué es una aplicación para UWP?](../../get-started/universal-application-platform-guide.md)
-- [Sistema FluentDesign](../fluent-design-system/index.md)
-- [Información general sobre la plataforma XAML](../../xaml-platform/index.md)
+- [Sistema Fluent Design](../fluent-design-system/index.md)
+- [Introducción a la plataforma XAML](../../xaml-platform/index.md)

@@ -1,19 +1,19 @@
 ---
-Description: The master/detail pattern displays a master list and the details for the currently selected item. This pattern is frequently used for email and contact lists/address books.
-title: Panel maestro/detalles
+Description: El patrón de maestro y detalles muestra una lista maestra y los detalles del elemento seleccionado actual. Este patrón se usa con frecuencia en listas de correo electrónico y de contactos y con libretas de direcciones.
+title: Panel de maestro y detalles
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940644"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601260"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
@@ -21,7 +21,7 @@ ms.locfileid: "8940644"
 
 El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y de correos electrónicos.
 
-> **API importantes**: [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [Clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **API importantes**: [Clase de ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView clase](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
@@ -39,8 +39,8 @@ Al implementar el patrón de maestro y detalles, te recomendamos que uses el est
 
 | Ancho de ventana disponible | Estilo recomendado |
 |------------------------|-------------------|
-| 320epx - 640epx        | Apilado           |
-| 641epx o más ancho       | En paralelo      |
+| 320 epx - 640 epx        | Apilado           |
+| 641 epx o más ancho       | En paralelo      |
 
  
 ## <a name="stacked-style"></a>Estilo apilado
@@ -93,16 +93,16 @@ Para crear un diseño adaptativo, define diferentes [**VisualStates**](https://d
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 Las siguientes muestras implementan el patrón de maestro y detalles con diseños adaptativos y muestran datos enlazados a recursos estáticos, de bases de datos y en línea: 
-- [Muestra de maestro y detalles](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
-- [Muestra de panel maestro y detalles con selección](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Muestra de panel maestro y detalles de Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
-- [Muestra de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
-- [Muestra de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
+- [Ejemplo de principal-detalle](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
+- [Ejemplo de selección además de detalles y maestras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [Ejemplo de plantilla de Windows Studio maestro y detalles](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
+- [Ejemplo de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
+- [Ejemplo de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
 - [Buscar](search.md)
-- [Barras de la aplicación y de comandos](app-bars.md)
-- [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [Clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+- [Barras de comandos y de aplicación](app-bars.md)
+- [Clase de ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase de SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)

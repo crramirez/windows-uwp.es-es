@@ -2,13 +2,18 @@
 title: Preparar la aplicación para el cambio de la era japonesa
 description: Obtén información sobre el cambio de la era japonesa de mayo de 2019 y cómo preparar la aplicación.
 ms.assetid: 5A945F9A-8632-4038-ADD6-C0568091EF27
-ms.date: 11/29/2018
+ms.date: 12/7/2018
 ms.topic: article
-keywords: 'windows 10, uwp, posibilidad de localización, localización, japonesa, era'
+keywords: windows 10, uwp, posibilidad de localización, localización, japonesa, era
 ms.localizationpriority: high
+ms.openlocfilehash: 0d5de4c1713ab80afcdf2e028d39340aebcc018b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617660"
 ---
-
-# Preparar la aplicación para el cambio de la era japonesa
+# <a name="prepare-your-application-for-the-japanese-era-change"></a>Preparar la aplicación para el cambio de la era japonesa
 
 El calendario japonés se divide en eras y, para la mayoría de la informática de la época moderna, hemos estado dentro de la era Heisei; sin embargo, se iniciará una nueva era el 1 de mayo de 2019. Dado que es la primera vez en décadas que cambiará la era, el software compatible con el calendario japonés deberá probarse para asegurar que funcionará correctamente cuando se inicie la nueva era.
 
@@ -17,14 +22,14 @@ En las secciones siguientes, aprenderás lo que puedes hacer para preparar y pro
 > [!NOTE]
 > Te recomendamos que uses un equipo de prueba para esto, porque los cambios que realices afectarán al comportamiento de todo el equipo.
 
-## Agregar una clave del Registro para la nueva era
+## <a name="add-a-registry-key-for-the-new-era"></a>Agregar una clave del Registro para la nueva era
 
 Es importante comprobar si hay problemas de compatibilidad antes de que cambie la era, y puedes hacerlo ahora usando un nombre de marcador de posición. Para ello, agrega una clave del Registro para la nueva era, mediante **Editor del Registro**:
 
 1. Ve a **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Calendars\Japanese\Eras**.
 2. Selecciona **Editar > Nuevo > Valor de cadena** y asígnale el nombre **2019 05 01**.
 3. Haz clic con el botón derecho en la clave y selecciona **Modificar**.
-4. En el campo **Datos de valor**, introduce **？？\_？\_??????\_?** (puedes copiar y pegar desde aquí para que sea más fácil).
+4. ¿En el **datos del valor** , introduzca **?？\_？\_??????\_?** (puedes copiar y pegar desde aquí para que sea más fácil).
 
 Consulta [Tratamiento de las eras del calendario japonés](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar) para obtener más información sobre el formato de estas claves del Registro.
 
@@ -32,7 +37,7 @@ Una vez que se anuncie el nombre de la nueva era, una actualización con una nue
 
 Puedes eliminar la clave del Registro de marcador de posición cuando hayas terminado de probar la aplicación. Esto garantiza que no interfiera con la nueva clave del Registro que se agregará al actualizar Windows.
 
-## Cambiar el formato de calendario del dispositivo
+## <a name="change-your-devices-calendar-format"></a>Cambiar el formato de calendario del dispositivo
 
 Una vez que hayas agregado la clave del registro de la nueva era, debes configurar tu dispositivo para usar el calendario japonés. No necesitas un dispositivo con idioma japonés para hacerlo. Para realizar pruebas exhaustivas, puede convenirte instalar también el paquete de idioma japonés, pero no es necesario para las pruebas básicas.
 
@@ -43,14 +48,14 @@ Para configurar el dispositivo para usar el calendario japonés:
 3. Selecciona **Configuración adicional**.
 4. Selecciona la pestaña **Fecha**.
 5. En el menú desplegable **Tipo de calendario**, selecciona **和暦** (*wareki*, el calendario japonés). Debería ser la segunda opción.
-6. Haz clic en **Aceptar**.
+6. Haga clic en **Aceptar**.
 7. Haz clic en **Aceptar**, en la ventana **Región** .
 
 Ahora, el dispositivo debería quedar configurado para usar el calendario japonés y reflejará todas las eras que haya en el registro. A continuación se incluye un ejemplo de lo que pudiera aparecer en la esquina inferior derecha de la pantalla:
 
 ![Fecha y hora en formato de calendario japonés](images/japanese-calendar-format.png)
 
-## Ajustar el reloj del dispositivo
+## <a name="adjust-your-devices-clock"></a>Ajustar el reloj del dispositivo
 
 Para comprobar que la aplicación funciona con la nueva era, debes adelantar el reloj del equipo al 1 de mayo de 2019 o fecha posterior. Las siguientes instrucciones son para Windows 10, pero deberían funcionar de forma similar con Windows 8 y 7:
 
@@ -60,17 +65,17 @@ Para comprobar que la aplicación funciona con la nueva era, debes adelantar el 
 4. Cambia la fecha al 1 de mayo de 2019 o a otra fecha posterior.
 
 > [!NOTE]
-> Tal vez no puedas cambiar la fecha en función de la configuración de la organización; si este es el caso, habla con el administrador. Como alternativa, puedes editar la clave del Registro de marcador de posición para una fecha que ya haya pasado.
+> Es podrán que no pueda cambiar la fecha según la configuración de la organización; Si este es el caso, hable con su administrador. Como alternativa, puede editar la clave del registro de marcador de posición para que tenga una fecha que ya ha pasado.
 
-## Probar la aplicación
+## <a name="test-your-application"></a>Probar la aplicación
 
-Ahora, prueba cómo la aplicación maneja la nueva era. Comprueba los lugares donde se muestra la fecha, como selectores de fecha y marcas de tiempo. Asegúrate de que la era sea correcta antes del 1 de mayo de 2019 (Heisei, 平成) y después (？？).
+Ahora, prueba cómo la aplicación maneja la nueva era. Comprueba los lugares donde se muestra la fecha, como selectores de fecha y marcas de tiempo. ¿Asegúrese de que la era es correcta antes 1 de mayo de 2019 (Heisei, 平成) y después (?？).
 
-### *Gannen* (元年)
+### <a name="gannen-"></a>*Gannen* (元年)
 
-El formato para el calendario japonés suele ser **&lt;Nombre de la era&gt; &lt;Año de la era&gt;**. Por ejemplo, el año 2018 es **Heisei 30** (平成30年).  Sin embargo, el primer año de cada era es especial; en lugar de ser **&lt;Nombre de la era&gt; 1**, es **&lt;Nombre de la era&gt; 元年** (*gannen*). Por lo tanto, el primer año de la era Heisei sería 平成元年 (*Heisei gannen*). Asegúrate de que tu aplicación maneje correctamente el primer año de la nueva era y presente correctamente ？？元年.
+Suele ser el formato para el calendario japonés  **&lt;nombre de la Era&gt; &lt;año de era&gt;**. Por ejemplo, el año 2018 es **Heisei 30** (平成30年).  Sin embargo, el primer año de cada era es especial; en lugar de ser **&lt;Nombre de la era&gt; 1**, es **&lt;Nombre de la era&gt; 元年** (*gannen*). Por lo tanto, el primer año de la era Heisei sería 平成元年 (*Heisei gannen*). ¿Asegúrese de que la aplicación maneja correctamente el primer año de la nueva era y se genera correctamente?? 元年.
 
-## API relacionadas
+## <a name="related-apis"></a>API relacionadas
 
 Hay varias API de WinRT, .NET y Win32 que se van a actualizar para manejar el cambio de era, por lo que, si las usas, no deberías tener demasiados problemas. Sin embargo, incluso si dependes totalmente de estas API, sigue siendo una buena idea probar la aplicación y asegurarse de obtener el comportamiento deseado, especialmente si haces algo especial con ellas, como analizar.
 
@@ -78,10 +83,10 @@ Puedes seguir con las actualizaciones para el sistema operativo y el SDK en [Act
 
 Se verán afectadas las API siguientes:
 
-### WinRT
+### <a name="winrt"></a>WinRT
 
-* [Espacio de nombres Windows.Globalization](https://docs.microsoft.com/uwp/api/windows.globalization)
-    * [Clase Calendar](https://docs.microsoft.com/uwp/api/windows.globalization.calendar)
+* [Windows.Globalization Namespace](https://docs.microsoft.com/uwp/api/windows.globalization)
+    * [Clase de calendario](https://docs.microsoft.com/uwp/api/windows.globalization.calendar)
         * [Método AddDays](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.adddays)
         * [Método AddEras](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.adderas)
         * [Método AddHours](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.addhours)
@@ -92,34 +97,34 @@ Se verán afectadas las API siguientes:
         * [Método AddSeconds](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.addseconds)
         * [Método AddWeeks](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.addweeks)
         * [Método AddYears](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.addyears)
-        * [Propiedad Era](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.era)
+        * [Propiedad era](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.era)
         * [Método EraAsString](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.eraasstring)
         * [Propiedad FirstYearInThisEra](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.firstyearinthisera)
         * [Propiedad LastEra](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.lastera)
         * [Propiedad LastYearInThisEra](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.lastyearinthisera)
         * [Propiedad NumberOfYearsInThisEra](https://docs.microsoft.com/uwp/api/windows.globalization.calendar.numberofyearsinthisera)     
-* [Espacio de nombre Windows.Globalization.DateTimeFormatting](https://docs.microsoft.com/uwp/api/windows.globalization.datetimeformatting)
+* [Windows.Globalization.DateTimeFormatting Namespace](https://docs.microsoft.com/uwp/api/windows.globalization.datetimeformatting)
     * [Clase DateTimeFormatter](https://docs.microsoft.com/uwp/api/windows.globalization.datetimeformatting.datetimeformatter)
-        * [Método Format](https://docs.microsoft.com/uwp/api/windows.globalization.datetimeformatting.datetimeformatter.format)
+        * [Método de formato](https://docs.microsoft.com/uwp/api/windows.globalization.datetimeformatting.datetimeformatter.format)
 
-### .NET
+### <a name="net"></a>.NET
 
-* [Espacio de nombres System](https://docs.microsoft.com/dotnet/api/system)
-    * [Estructura DateTime](https://docs.microsoft.com/dotnet/api/system.datetime)
-    * [Estructura DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset)
-* [Espacio de nombres System.Globalization](https://docs.microsoft.com/dotnet/api/system.globalization)
-    * [Clase Calendar](https://docs.microsoft.com/dotnet/api/system.globalization.calendar)
+* [Sistema Namespace](https://docs.microsoft.com/dotnet/api/system)
+    * [Estructura de fecha y hora](https://docs.microsoft.com/dotnet/api/system.datetime)
+    * [DateTimeOffset Struct](https://docs.microsoft.com/dotnet/api/system.datetimeoffset)
+* [System.Globalization Namespace](https://docs.microsoft.com/dotnet/api/system.globalization)
+    * [Clase de calendario](https://docs.microsoft.com/dotnet/api/system.globalization.calendar)
     * [Clase DateTimeFormatInfo](https://docs.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo)
-    * [Clase JapaneseCalendar](https://docs.microsoft.com/dotnet/api/system.globalization.japanesecalendar)
+    * [JapaneseCalendar (clase)](https://docs.microsoft.com/dotnet/api/system.globalization.japanesecalendar)
     * [Clase JapaneseLunisolarCalendar](https://docs.microsoft.com/dotnet/api/system.globalization.japaneselunisolarcalendar)
 
-### Win32
+### <a name="win32"></a>Win32
 
-* [Encabezado datetimeapi.h](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
+* [datetimeapi.h header](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
     * [Función GetDateFormatA](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata)
     * [Función GetDateFormatEx](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatex)
     * [Función GetDateFormatW](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatw)
-* [Encabezado winnls.h](https://docs.microsoft.com/windows/desktop/api/winnls/)
+* [encabezado winnls.h](https://docs.microsoft.com/windows/desktop/api/winnls/)
     * [Función EnumDateFormatsA](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsa)
     * [Función EnumDateFormatsExA](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsexa)
     * [Función EnumDateFormatsExEx](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsexex)
@@ -127,16 +132,13 @@ Se verán afectadas las API siguientes:
     * [Función EnumDateFormatsW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsw)
     * [Función GetCalendarInfoA](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfoa)
     * [Función GetCalendarInfoEx](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfoex)
-    * [Función GetCalendarInfoW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfow)
+    * [GetCalendarInfoW function](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfow)
 
-## Consulta también
+## <a name="see-also"></a>Consulte también
 
-* [Tratamiento de las eras en el calendario japonés](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar)
-* [Momento Y2K del calendario japonés](https://blogs.msdn.microsoft.com/shawnste/2018/04/12/the-japanese-calendars-y2k-moment/)
-* [Uso del Registro para probar la nueva era japonesa en Windows](https://blogs.msdn.microsoft.com/shawnste/2018/08/07/using-the-registry-to-test-the-new-japanese-era-on-windows/)
-* [Gannen frente a Ichinen](https://blogs.msdn.microsoft.com/shawnste/2018/11/12/gannen-vs-ichinen/)
-* [Actualizaciones para el cambio de era japonesa de mayo de 2019](https://support.microsoft.com/help/4470918/updates-for-may-2019-japan-era-change)
-* [Manejo de una nueva era del calendario japonés en .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)
-
-<!--HONumber=12月18_HO1-->
-
+* [Era el control para el calendario japonés](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar)
+* [Momento de Y2K del calendario japonés](https://blogs.msdn.microsoft.com/shawnste/2018/04/12/the-japanese-calendars-y2k-moment/)
+* [Mediante el registro para probar la nueva Era de japonés en Windows](https://blogs.msdn.microsoft.com/shawnste/2018/08/07/using-the-registry-to-test-the-new-japanese-era-on-windows/)
+* [Vs Gannen Ichinen](https://blogs.msdn.microsoft.com/shawnste/2018/11/12/gannen-vs-ichinen/)
+* [Las actualizaciones de 2019 Japón Era pueden cambiar](https://support.microsoft.com/help/4470918/updates-for-may-2019-japan-era-change)
+* [Control de una nueva era en el calendario japonés en .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)

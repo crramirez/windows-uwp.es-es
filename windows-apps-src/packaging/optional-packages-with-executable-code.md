@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: 44e32438034cf09695f313d24055b6ed3c82df0b
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115892"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637110"
 ---
 # <a name="optional-packages-with-executable-code"></a>Paquetes opcionales con código ejecutable
  
@@ -24,10 +24,10 @@ Los paquetes opcionales con código ejecutable son útiles para dividir una apli
 Para obtener las herramientas de desarrollo más recientes, consulta [Descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados a la Store, necesitarás tener permiso. Paquetes opcionales y conjuntos relacionados pueden usarse para las aplicaciones de línea de negocio (LOB) o enterprise sin el permiso del centro de partners si no se enviarán a la tienda. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
+> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados a la Store, necesitarás tener permiso. Paquetes opcionales y los conjuntos relacionados pueden usarse para aplicaciones de línea de negocio (LOB) o enterprise sin permiso del centro de partners si no se enviarán a la Store. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
 
 > [!NOTE]
-> Paquetes opcionales con código ejecutable deben formar parte de un [conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). No podrán ejecutar código desde un paquete opcional, a menos que forma parte de un conjunto relacionado.
+> Paquetes opcionales que contiene código ejecutable deben formar parte de un [relacionados con el conjunto](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). No será capaz de ejecutar código desde un paquete opcional, a menos que sea parte de un conjunto relacionado.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Paquetes opcionales de C++ con código ejecutable
 
@@ -61,7 +61,7 @@ Para comenzar a crear un paquete de código opcional en C#, sigue los pasos sigu
 
 7. Compila el proyecto de paquete opcional y, a continuación, navega hasta la carpeta de referencia del paquete en la salida de la compilación en `..\[PathToOptionalPackageProject]\bin\[architecture]\[configuration]\Reference`. Ten en cuenta que puedes elegir cualquier arquitectura en la ruta de acceso a la carpeta de la carpeta Referencia puesto que el archivo `.winmd` (paso 8) es independiente de la arquitectura.
 
-8. Agrega una referencia desde el proyecto de la aplicación principal al archivo `.winmd` que se encuentra en esta carpeta. Cada vez que cambie el área de superficie de la API en el proyecto del paquete opcional, este archivo `.winmd` **debe** actualizarse. Esta referencia proporciona al proyecto de la aplicación principal la información necesaria para compilar.
+8. Agrega una referencia desde el proyecto de la aplicación principal al archivo `.winmd` que se encuentra en esta carpeta. Cada vez que cambie el área de superficie de la API en el proyecto del paquete opcional, este archivo `.winmd`**debe** actualizarse. Esta referencia proporciona al proyecto de la aplicación principal la información necesaria para compilar.
 
 9. En el proyecto de aplicación principal, vea a las propiedades de compilación del proyecto y selecciona **Compilar con cadena de herramientas nativa de .NET**. Actualmente, solo se admite la depuración en .NET Native para la creación de paquetes de código opcional en C#. Ve a las propiedades de depuración del proyecto y selecciona **Implementar paquetes opcionales**. Esto garantizará que ambos paquetes estén sincronizados cuando implementes el proyecto de aplicación principal.
 

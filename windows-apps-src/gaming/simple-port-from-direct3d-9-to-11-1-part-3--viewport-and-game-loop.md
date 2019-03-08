@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, migración, bucle del juego, direct3d 9, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627990"
 ---
 # <a name="port-the-game-loop"></a>Migrar el bucle del juego
 
@@ -20,7 +20,7 @@ ms.locfileid: "8941638"
 **Resumen**
 
 -   [Parte 1: Inicializar Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
--   [Parte 2: Convertir el marco de representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+-   [Parte 2: Convertir el marco de trabajo de representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
 -   Parte 3: Migrar el bucle del juego
 
 
@@ -33,11 +33,11 @@ Para configurar una ventana de escritorio con una ventanilla de Direct3D 9, tuvi
 
 El entorno de UWP ofrece un sistema mucho más simple. En lugar de configurar una ventana tradicional, un juego de Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Esta interfaz existe para que los juegos y las aplicaciones de DirectX se ejecuten directamente en una clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) en el interior del contenedor de la aplicación.
 
-> **Nota**  Windows suministra punteros administrados a recursos como el objeto de aplicación de origen y de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulta [**identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Tenga en cuenta**    Windows proporciona punteros administrados a los recursos como el objeto de aplicación de origen y el [ **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**identificador de operador de objeto (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
-Tu clase principal "main" necesita heredar de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) e implementar los cinco métodos de **IFrameworkView**: [**Inicializar**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Cargar**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Ejecutar**](https://msdn.microsoft.com/library/windows/apps/hh700505) y [**Anular inicialización**](https://msdn.microsoft.com/library/windows/apps/hh700523). Además de crear **IFrameworkView**, que es (esencialmente) donde reside el juego, es necesario que implementes una clase de fábrica para que cree una instancia de tu **IFrameworkView**. El juego aún tiene un ejecutable con un método llamado **main()**, pero todo lo que puede hacer la función main es usar la fábrica para crear la instancia de **IFrameworkView**.
+Debe heredar de la clase "principal" [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700478) e implementar los cinco **IFrameworkView** métodos: [**Inicializar**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **carga**](https://msdn.microsoft.com/library/windows/apps/hh700501), [ **ejecutar** ](https://msdn.microsoft.com/library/windows/apps/hh700505), y [ **desinicializar**](https://msdn.microsoft.com/library/windows/apps/hh700523). Además de crear **IFrameworkView**, que es (esencialmente) donde reside el juego, es necesario que implementes una clase de fábrica para que cree una instancia de tu **IFrameworkView**. El juego aún tiene un ejecutable con un método llamado **main()**, pero todo lo que puede hacer la función main es usar la fábrica para crear la instancia de **IFrameworkView**.
 
 Función main
 
@@ -75,9 +75,9 @@ public:
 ## <a name="port-the-game-loop"></a>Migrar el bucle del juego
 
 
-Veamos el bucle del juego en nuestra implementación de Direct3D9. Este código existe en la función main de la aplicación. Cada iteración de este bucle procesa un mensaje de ventana o representa un marco.
+Veamos el bucle del juego en nuestra implementación de Direct3D 9. Este código existe en la función main de la aplicación. Cada iteración de este bucle procesa un mensaje de ventana o representa un marco.
 
-Bucle de un juego de escritorio de Direct3D9
+Bucle de un juego de escritorio de Direct3D 9
 
 ```cpp
 while(WM_QUIT != msg.message)
@@ -124,18 +124,18 @@ while (true)
 
 Ahora tenemos una aplicación para UWP que configura la misma infraestructura básica de elementos gráficos y representa el mismo cubo de color, como nuestro ejemplo de DirectX 9.
 
-## <a name="where-do-i-go-from-here"></a>Dónde ir desde aquí
+## <a name="where-do-i-go-from-here"></a>¿Y ahora qué?
 
 
-Usa un marcador para las [preguntas más frecuentes sobre la migración a DirectX11](directx-porting-faq.md).
+Usa un marcador para las [preguntas más frecuentes sobre la migración a DirectX 11](directx-porting-faq.md).
 
 Las plantillas de DirectX de UWP incluyen una sólida infraestructura de dispositivo de Direct3D lista para usar en tu juego. Si quieres obtener directrices para elegir la plantilla correcta, consulta [Crear un proyecto de juego DirectX con una plantilla](user-interface.md).
 
-Visitar los siguientes artículos de desarrollo de juegos de Microsoft Store para obtener:
+Visite los siguientes artículos de desarrollo de juegos de Microsoft Store detallados:
 
--   [Tutorial: un juego simple para UWP con DirectX](tutorial--create-your-first-uwp-directx-game.md)
+-   [Tutorial: un sencillo juego para UWP con DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Audio para juegos](working-with-audio-in-your-directx-game.md)
--   [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md)
+-   [Controles de movimiento vistazo para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md)
 
  
 

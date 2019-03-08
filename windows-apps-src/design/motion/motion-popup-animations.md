@@ -1,5 +1,5 @@
 ---
-Description: Use pop-up animations to show and hide pop-up UI for flyouts or custom pop-up UI elements. Pop-up elements are containers that appear over the app's content and are dismissed if the user taps or clicks outside of the pop-up element.
+Description: Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usuarios emergentes para controles flotantes o elementos personalizados emergentes de interfaz de usuario. Los elementos emergentes son contenedores que aparecen sobre el contenido de la aplicación y se descartan si el usuario presiona o hace clic fuera del elemento emergente.
 title: Animaciones de elementos emergentes de interfaz de usuario en aplicaciones para UWP
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d79c369e14236b827bdc18aba6c74349528728b3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635180"
 ---
 # <a name="pop-up-ui-animations"></a>Animaciones de interfaz de usuario emergente
 
@@ -21,10 +21,10 @@ ms.locfileid: "8942048"
 
 Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usuarios emergentes para controles flotantes o elementos personalizados emergentes de interfaz de usuario. Los elementos emergentes son contenedores que aparecen sobre el contenido de la aplicación y se descartan si el usuario presiona o hace clic fuera del elemento emergente.
 
-> **API importantes**: [**clase PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383), [**clase PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh969172)
+> **API importantes**: [**Clase PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383), [ **PopupThemeTransition clase**](https://msdn.microsoft.com/library/windows/apps/hh969172)
 
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 -   Usa animaciones de elementos emergentes para mostrar u ocultar elementos de interfaz de usuario emergentes personalizados que no son parte de la página de la aplicación. Los controles comunes proporcionados por Windows ya tienen esas animaciones integradas.
@@ -33,9 +33,9 @@ Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usu
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animación de interfaz de usuario emergente](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Animar la interfaz de usuario emergente](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383)
 * [**Clase PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210391)
 * [**Clase PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh969172)

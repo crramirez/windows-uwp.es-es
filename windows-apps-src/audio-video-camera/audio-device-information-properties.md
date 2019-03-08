@@ -4,14 +4,14 @@ description: En este artículo se enumeran las propiedades DeviceInformation rel
 title: Propiedades de información de dispositivo de audio
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 443bcc3c0280aca85de31d8c9f3704302432cb76
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627180"
 ---
 # <a name="audio-device-information-properties"></a>Propiedades de información de dispositivo de audio
 
@@ -28,10 +28,10 @@ En este artículo se enumeran las propiedades de información de dispositivos re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Enumerar dispositivos](../devices-sensors/enumerate-devices.md)
+* [Enumerar los dispositivos](../devices-sensors/enumerate-devices.md)
 * [Propiedades de información de dispositivo](../devices-sensors/device-information-properties.md)
 * [Crear un selector de dispositivos](../devices-sensors/build-a-device-selector.md)
-* [Reproducción de contenido multimedia](media-playback.md)
+* [Reproducción de multimedia](media-playback.md)
 
 
 

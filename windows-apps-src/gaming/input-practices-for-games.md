@@ -1,17 +1,17 @@
 ---
-title: Prácticas de entrada para juegos
+title: Procedimientos de entrada para juegos
 description: Obtén información sobre patrones y técnicas para el uso eficaz de los dispositivos de entrada.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
 ms.topic: article
-keywords: Windows 10, UWP, juegos, entrada, games, input
+keywords: windows 10, uwp, juegos, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634950"
 ---
 # <a name="input-practices-for-games"></a>Procedimientos de entrada para juegos
 
@@ -166,7 +166,7 @@ void OnGamepadRemoved(Platform::Object^ sender, Gamepad^ args)
 
 ## <a name="tracking-users-and-their-devices"></a>Seguimiento de usuarios y sus dispositivos
 
-Todos los dispositivos de entrada se asocian con un [usuario](https://docs.microsoft.com/uwp/api/windows.system.user) para que su identidad pueda vincularse a su juego, logros, cambios de configuración y otras actividades. Los usuarios pueden iniciar o cerrar sesión cuando quieran, y es habitual que un usuario diferente inicie sesión en un dispositivo de entrada que permanece conectado al sistema después de que el usuario anterior haya cerrado sesión. Cuando un usuario inicia o cierra sesión, se genera el evento [IGameController.UserChanged](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller.UserChanged). Puedes registrar un controlador de eventos para este evento a fin de realizar un seguimiento de los jugadores y de los dispositivos que usan.
+Todos los dispositivos de entrada se asocian con un [usuario](https://docs.microsoft.com/uwp/api/windows.system.user) para que su identidad pueda vincularse a su juego, logros, cambios de configuración y otras actividades. Los usuarios pueden iniciar o cerrar sesión cuando quieran y es habitual que un usuario diferente inicie sesión en un dispositivo de entrada que permanece conectado al sistema después de que el usuario anterior haya cerrado sesión. Cuando un usuario inicia o cierra sesión, se genera el evento [IGameController.UserChanged](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller.UserChanged). Puedes registrar un controlador de eventos para este evento a fin de realizar un seguimiento de los jugadores y de los dispositivos que usan.
 
 La identidad del usuario también es la manera en que un dispositivo de entrada se asocia a su correspondiente [controlador de navegación de la interfaz de usuario](ui-navigation-controller.md).
 
@@ -313,10 +313,10 @@ Para los dispositivos de juego compatibles con el informe de batería detallado,
     * 40 % (bajo)
     * 10 % (crítico)
 
-Si tu código realiza alguna acción (por ejemplo, dibujar la interfaz de usuario) en función del porcentaje de duración de batería restante, asegúrate de que cumpla con los valores anteriores. Por ejemplo, si deseas advertir al jugador cuando el controlador tenga poca batería, puedes hacerlo cuando llega al 10%.
+Si tu código realiza alguna acción (por ejemplo, dibujar la interfaz de usuario) en función del porcentaje de duración de batería restante, asegúrate de que cumpla con los valores anteriores. Por ejemplo, si deseas advertir al jugador cuando el controlador tenga poca batería, puedes hacerlo cuando llega al 10 %.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
-* [Windows.System.User class](https://docs.microsoft.com/uwp/api/windows.system.user)
+* [Clase Windows.System.User](https://docs.microsoft.com/uwp/api/windows.system.user)
 * [Interfaz Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
 * [Enumeración Windows.Gaming.Input.GamepadButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)

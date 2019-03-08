@@ -1,5 +1,5 @@
 ---
-Description: The Payout summary shows you details about the money you’ve earned with your apps and add-ons. It also lets you know when you’ll receive payments and how much you'll be paid.
+Description: En el apartado Resumen de pago se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y complementos. También se muestra información que te permite saber cuándo recibirás los pagos y cuánto te pagarán.
 title: Resumen de pago
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
 ms.openlocfilehash: e9ab2d2d096c6c0a639a831bb7d09f6d1d044a0c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629740"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
@@ -23,17 +23,17 @@ Si usas publicidad para ganar dinero, también podrás ver la información de pa
 Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/p/?LinkID=699560 ). Puedes encontrar más información sobre cómo generar informes de pagos de Azure Marketplace [aquí](https://go.microsoft.com/fwlink/p/?LinkID=722439).
 
 > [!NOTE]
-> Para ser apto para el pago, las ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría **Reservado** hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para las ganancias de publicidad, el umbral de pago es de 50USD (o su equivalente en moneda local). 
+> Para ser apto para el pago, las ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría **Reservado** hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para las ganancias de publicidad, el umbral de pago es de 50 USD (o su equivalente en moneda local). 
 >
 > Los pagos se realizan mensualmente (siempre que se haya alcanzado cualquier umbral de pago aplicable). Por lo general, enviaremos cualquier pago pendiente a día 15 de un mes determinado. Recuerda que los pagos suelen tardar entre 3 y 10 días laborables adicionales en acreditarse en tu cuenta de pago. Para obtener más información, consulta [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
 
-Para ver el **Resumen de pago**, haz clic en el icono de **pago** que aparece en la esquina superior derecha del centro de partners y luego selecciona **Resumen de pago**.
+Para ver su **resumen de pagos**, haga clic en el **pago** , a continuación, seleccione el icono que aparece cerca de la esquina superior derecha en el centro de partners, **resumen de pagos**.
 
 ## <a name="current-proceeds-and-payments"></a>Ganancias y pagos actuales
 
-En la parte superior de la página, encontrarás el apartado **Ganancias y pagos actuales**, que contiene tres secciones: **Reservado**, **Próximo pago** y **Pago más reciente**.
+Cerca de la parte superior de la página, encontrará su **actual continúa y pagos**, que contiene tres secciones: **Reservado**, **próximo pago**, y **pago más reciente**.
 
--   En **Reservado** se muestra el importe que ha acumulado tu cuenta, pero que aún no se ha programado para el pago, incluidas las ganancias por publicidad. (Las ganancias de Azure Marketplace no aparecen en la sección **Reservado**; si solo participas en Azure Marketplace, verás que aparece el valor 0,00USD en esta sección). Las ganancias obtenidas por las ventas de tus aplicaciones más recientes, se mantienen en un estado pendiente durante 30 días aproximadamente antes de que puedas cobrarlas. Después, se programan las ganancias para el pago en el mes siguiente (suponiendo que se haya alcanzado el [umbral de pago](payment-thresholds-methods-and-timeframes.md)). Cuando se intenta un pago, tu saldo reservado disminuirá en el importe del pago y verás el importe reflejado en **Próximo pago**. Ten en cuenta que el importe que se muestra en **Reservado** es una estimación, porque los tipos de cambio para las ventas en otras monedas pueden variar antes de la creación del pago. Puedes observar cómo tu saldo reservado cambia ligeramente al principio de cada mes. Tu saldo reservado se actualiza mensualmente para reflejar los tipos de cambio mensuales y así representa una estimación más precisa. Puedes hacer clic en **Ver detalles** para ver información adicional, o en el vínculo **Descargar las transacciones reservadas** para ver un archivo .csv de todas las transacciones que estén en la categoría **Reservado**.
+-   En **Reservado** se muestra el importe que ha acumulado tu cuenta, pero que aún no se ha programado para el pago, incluidas las ganancias de la publicidad. (Continúa de azure Marketplace no aparece en la **reservado** sección; si sólo participa en Azure Marketplace, verá $0.00 aquí.) Continúa desde la aplicación más reciente ventas permanecen en un estado pendiente durante unos 30 días antes de que sean aptos para el pago. Después, se programan las ganancias para el pago en el mes siguiente (suponiendo que se haya alcanzado el [umbral de pago](payment-thresholds-methods-and-timeframes.md)). Cuando se intenta un pago, tu saldo reservado disminuirá en el importe del pago y verás el importe reflejado en **Próximo pago**. Ten en cuenta que el importe que se muestra en **Reservado** es una estimación, porque los tipos de cambio para las ventas en otras monedas pueden variar antes de la creación del pago. Puedes observar cómo tu saldo reservado cambia ligeramente al principio de cada mes. Tu saldo reservado se actualiza mensualmente para reflejar los tipos de cambio mensuales y así representa una estimación más precisa. Puedes hacer clic en **Ver detalles** para ver información adicional, o en el vínculo **Descargar las transacciones reservadas** para ver un archivo .csv de todas las transacciones que estén en la categoría **Reservado**.
 -   En **Próximo pago** se muestra el número de pagos que se harán en un futuro, el importe de tus próximos pagos y las fechas de creación de los pagos. Si tus ganancias aptas aún no han alcanzado el [umbral de pago](payment-thresholds-methods-and-timeframes.md), no se muestra el próximo pago aquí. Selecciona **Ver detalles** para ver información adicional, como los importes de pago y su origen de ingresos correspondiente. Cuando se muestre un importe en la sección **Próximo pago**, verás un vínculo temporal a **Descargar transacciones**.  Si haces clic en el vínculo, puedes ver un archivo .csv que incluye todas las transacciones que componen los próximos pagos.  Ten en cuenta que, si el importe que consta en la sección **Próximo pago** pasa a la sección **Pago más reciente**, el vínculo **Descargar transacciones** ya no se muestra más.
 -   En **Pago más reciente** se muestra el importe del último pago intentado. Si el pago se realizó correctamente, el vínculo **Ver detalles** aparecerá en color azul y puedes hacer clic en él para ver los detalles de cada pago. Ten en cuenta que si intentamos hacer varios pagos y solo uno de ellos se realiza correctamente, aquí solo se mostrará el importe del pago correcto. Si se produce un error en uno o más pagos, el vínculo **Ver detalles** aparecerá en color rojo y se mostrará el número de pagos con error. Puedes hacer clic en **Ver detalles** para ver más detalles sobre el problema a fin de poder solucionarlo.
 

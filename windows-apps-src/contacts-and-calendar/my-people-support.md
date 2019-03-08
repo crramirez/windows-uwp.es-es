@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611540"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
 
@@ -27,8 +27,8 @@ La función Mis allegados permite a los usuarios a anclar contactos desde una ap
 
 Hay tres cosas que debes hacer para habilitar la aplicación para usar la función Mis allegados:
 
-1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anotar los contactos con los que los usuarios pueden compartir al usar tu aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anotar los contactos que los usuarios pueden compartir al uso de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  Admitir varias instancias de tu aplicación en ejecución al mismo tiempo. Los usuarios deben poder interactuar con una versión completa de la aplicación mientras la usan en un panel de contactos.  Pueden incluso usarla en varios paneles de contactos a la vez.  Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
 
 Cuando lo hayas hecho, la aplicación aparecerá en el panel de contactos de contactos marcados.
@@ -37,7 +37,7 @@ Cuando lo hayas hecho, la aplicación aparecerá en el panel de contactos de con
 
 Para declarar la compatibilidad para el contrato de Mis allegados, abre tu aplicación en Visual Studio. En el **Explorador de soluciones**, haz clic con el botón derecho en **Package.appxmanifest** y selecciona **Abrir con**. En el menú, selecciona **Editor XML (texto)** y haz clic en **Aceptar**. Realiza los siguientes cambios en el manifiesto:
 
-**Antes**
+**Antes de**
 
 ```xml
 <Package
@@ -53,7 +53,7 @@ Para declarar la compatibilidad para el contrato de Mis allegados, abre tu aplic
 
 ```
 
-**Después**
+**Después de**
 
 ```xml
 <Package
@@ -101,13 +101,13 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el Nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
+El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
 
 ## <a name="allow-contacts-to-invite-new-potential-users"></a>Permitir a los contactos invitar a nuevos usuarios potenciales
 
 De forma predeterminada, la aplicación solo aparecerá en el panel de contactos para los contactos que hayas anotado específicamente.  Esto es para evitar confusiones con los contactos con los que no se puede interactuar a través de la aplicación.  Si quieres que la aplicación se muestre para contactos que la aplicación no conoce (para invitar a los usuarios a agregar determinado contacto con su cuenta, por ejemplo), puedes agregar lo siguiente al manifiesto:
 
-**Antes**
+**Antes de**
 
 ```Csharp
 <Applications>
@@ -121,7 +121,7 @@ De forma predeterminada, la aplicación solo aparecerá en el panel de contactos
 </Applications>
 ```
 
-**Después**
+**Después de**
 
 ```Csharp
 <Applications>
@@ -188,7 +188,7 @@ Para identificar un contacto, el nodo del sistema de nivel superior debe incluir
     + P. ej. mailto:johndoe@mydomain.com
 + **Número de teléfono** 
     + P. ej. tel:888-888-8888
-+ **ID remoto** 
++ **Id. remoto** 
     + P. ej. remoteid:1234
 
 Este es un ejemplo de cómo identificar una notificación del sistema relacionada con una persona determinada:
@@ -248,11 +248,11 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 **Nota:** 
 
-## <a name="see-also"></a>Consulta también
-+ [Uso compartido de Mis allegados](my-people-sharing.md)
-+ [Notificaciones de Mis allegados](my-people-notifications.md)
-+ [Vídeo de Channel 9 sobre incluir compatibilidad con Mis allegados a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Ejemplo de integración de Mis allegados](https://aka.ms/mypeoplebuild2017)
-+ [Muestra de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
+## <a name="see-also"></a>Consulte también
++ [Mi personas compartir](my-people-sharing.md)
++ [Mis notificaciones de personas](my-people-notifications.md)
++ [Vídeo de Channel 9 sobre cómo agregar personas de mi soporte técnico a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [Mi ejemplo de integración de las personas](https://aka.ms/mypeoplebuild2017)
++ [Póngase en contacto con el ejemplo de tarjeta](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentación de la clase PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [Conectar la aplicación a acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [Conectar la aplicación para realizar acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 03cf647fdb243fd18212ca894f7682e913378907
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943186"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609640"
 ---
 # <a name="xuid-directive"></a>Directiva x:Uid
 
 
-Proporciona un identificador único para los elementos de marcado. En XAML de la plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw.
+Proporciona un identificador único para los elementos de marcado. En XAML de la Plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw.
 
 ## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
@@ -38,7 +38,7 @@ Usa **x:Uid** para identificar un elemento de objeto en tu código XAML. Este el
 <Button x:Uid="GoButton" Content="Go"/>
 ```
 
-Para especificar contenido para reemplazar el texto para mostrar **Go**, debes especificar un nuevo recurso procedente de un archivo de recursos. El archivo de recursos debería contener una entrada para el recurso denominada "GoButton.Content". [**Content**](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) es, en este caso, una propiedad específica heredada por la clase [**Button**](/uwp/api/windows.ui.xaml.controls.button). También podrías proporcionar valores localizados para otras propiedades de este botón; por ejemplo, podrías proporcionar un valor basado en recursos para "GoButton.FlowDirection". Para obtener más información acerca de cómo usar **x:Uid** y archivos de recursos juntos, consulta [Localizar las cadenas de la interfaz de usuario y el manifiesto de paquete de la aplicación](../app-resources/localize-strings-ui-manifest.md).
+Para especificar contenido para reemplazar el texto para mostrar **Go**, debes especificar un nuevo recurso procedente de un archivo de recursos. El archivo de recursos debería contener una entrada para el recurso denominada "GoButton.Content". [**Contenido** ](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) en este caso es una propiedad específica que hereda el [ **botón** ](/uwp/api/windows.ui.xaml.controls.button) clase. También podrías proporcionar valores localizados para otras propiedades de este botón; por ejemplo, podrías proporcionar un valor basado en recursos para "GoButton.FlowDirection". Para obtener más información acerca de cómo usar **x:Uid** y archivos de recursos juntos, consulta [Localizar las cadenas de la interfaz de usuario y el manifiesto de paquete de la aplicación](../app-resources/localize-strings-ui-manifest.md).
 
 Desde un punto de vista práctico, la validez de las cadenas que pueden usarse para un valor de **x:Uid** se determina según las cadenas que son legales como identificador en un archivo de recursos y una ruta de acceso de recurso.
 

@@ -4,14 +4,14 @@ ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor KeySpline o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 696a3f0f065c209bec28f774224da6e4c8d93275
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046328"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635550"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Animaciones de fotograma clave y animaciones de función de aceleración
 
@@ -33,16 +33,16 @@ Al inicio de la animación, si no existe ningún fotograma clave con un elemento
 
 De forma implícita, la duración de una animación de fotograma clave es la duración del valor más alto de **KeyTime** establecido en cualquiera de los fotogramas clave. Si quieres, puedes configurar un valor de [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) explícito, pero recuerda que no puede ser menor que el valor **KeyTime** de tus propios fotogramas clave; de lo contrario, cortarás parte de la animación.
 
-Además de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), puedes configurar todas las propiedades basadas en la clase [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) en una animación de fotograma clave, de la misma forma que con una animación **From**/**To**/**By**, ya que las clases de animación de fotograma clave también derivan de **Timeline**. Estas son:
+Además de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), puedes configurar todas las propiedades basadas en la clase [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) en una animación de fotograma clave, de la misma forma que con una animación **From**/**To**/**By**, ya que las clases de animación de fotograma clave también derivan de **Timeline**. Son estas:
 
--   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): una vez que se alcanza el último fotograma clave, los fotogramas se repiten en orden inverso desde el final. Esto duplica la duración aparente de la animación.
+-   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): una vez alcanzado el último fotograma clave, los fotogramas se repiten en orden inverso desde el final. Esto duplica la duración aparente de la animación.
 -   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): retrasa el inicio de la animación. La escala de tiempo para los valores **KeyTime** de los fotogramas no inicia el recuento hasta que se alcanza **BeginTime**, de modo que no hay riesgo de cortar los fotogramas.
--   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla lo que sucede cuando se llega al último fotograma clave. **FillBehavior** no tiene ningún efecto en los fotogramas clave intermedios.
+-   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla lo que ocurre cuando se alcanza el último fotograma clave. **FillBehavior** no tiene ningún efecto en los fotogramas clave intermedios.
 -   [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   si está establecido como **Forever**, los fotogramas clave y sus escalas de tiempo se repiten de manera indefinida.
     -   Si está establecido como un recuento de iteraciones, la escala de tiempo se repite esa cantidad de veces.
     -   Si está establecido como un valor de [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), la escala de tiempo se repite hasta llegar a dicho horario. Esto puede truncar parte de la animación en la secuencia de fotograma clave, si no es un factor entero de la duración implícita de la escala de tiempo.
--   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (no se usa habitualmente)
+-   [**SpeedRatio** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (no se usan habitualmente)
 
 ### <a name="linear-key-frames"></a>Fotogramas clave lineales
 
@@ -154,17 +154,17 @@ Las funciones de aceleración se pueden aplicar a las animaciones de tres formas
 
 A continuación te indicamos una lista de funciones de aceleración:
 
--   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): retira el movimiento de una animación un poco antes de que comience dicha animación en la ruta indicada.
--   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): crea un efecto de rebote.
--   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): crea una animación que se acelera o desacelera con una función circular.
--   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): crea una animación que se acelera o desacelera con la fórmula f(t) = t3.
--   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): crea una animación que se asemeja a un muelle que oscila de arriba abajo hasta que se detiene.
--   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): crea una animación que se acelera o desacelera con una fórmula exponencial.
--   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): crea una animación que se acelera o desacelera con la fórmula f(t) = tp, donde p equivale a la propiedad [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power).
--   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): crea una animación que se acelera o desacelera con la fórmula f(t) = t2.
--   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): crea una animación que se acelera o desacelera con la fórmula f(t) = t4.
--   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): crea una animación que se acelera o desacelera con la fórmula f(t) = t5.
--   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): crea una animación que se acelera o desacelera con una fórmula senoidal.
+-   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): Retrae ligeramente el movimiento de una animación antes de que comience a animarse en la ruta de acceso indicada.
+-   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): Crea un efecto de rebote.
+-   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): Crea una animación que aumenta o disminuye la velocidad utilizando una función circular.
+-   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): Crea una animación que aumenta o disminuye la velocidad usando la fórmula f = t3.
+-   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): Crea una animación que simula un muelle y hacia atrás hasta llegar a detenerse.
+-   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): Crea una animación que aumenta o disminuye la velocidad utilizando una fórmula exponencial.
+-   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): Crea una animación que aumenta o disminuye la velocidad usando la fórmula f = tp donde p es igual a la [ **Power** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) propiedad.
+-   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): Crea una animación que aumenta o disminuye la velocidad usando la fórmula f = t2.
+-   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): Crea una animación que aumenta o disminuye la velocidad usando la fórmula f = t4.
+-   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): Crear una animación que aumenta o disminuye la velocidad usando la fórmula f = t5.
+-   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): Crea una animación que aumenta o disminuye la velocidad utilizando una fórmula de seno.
 
 Algunas de las funciones de aceleración tienen sus propias propiedades. Por ejemplo, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) tiene dos propiedades [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) y [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) que modifican el comportamiento a lo largo del tiempo de dicha función **BounceEase**. Otras funciones de aceleración, como [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126), no tienen otras propiedades que no sean la propiedad [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) que comparten todas las funciones de aceleración y siempre producen el mismo comportamiento de la función a lo largo del tiempo.
 
@@ -194,13 +194,13 @@ En un ejemplo anterior, mostramos cómo declarar una función de aceleración pa
 
 Cuando se aplica una función de aceleración a una animación **From**/**To**/**By**, se cambian las características de la función a lo largo del tiempo, con respecto a cómo el valor se interpola entre los valores **From** y **To** durante el transcurso de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) de la animación. Sin una función de aceleración, se trataría de una interpolación lineal.
 
-## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animaciones de valores de objetos discretas
+## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animaciones de valor de objeto discreto
 
-Hay un tipo de animación que merece especial atención porque es la única forma en la que se puede aplicar un valor animado a las propiedades que no son del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) o [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Se trata de la animación de fotograma clave [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). La animación con valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) es diferente porque no es posible interpolar los valores entre los fotogramas. Cuando se alcanza el valor [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) del fotograma, el valor animado se establece inmediatamente en el valor especificado en la propiedad **Value** en el fotograma clave. Dado que no hay interpolación, hay un solo fotograma clave que puedes usar en la colección de fotogramas clave **ObjectAnimationUsingKeyFrames** [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
+Hay un tipo de animación que merece especial atención porque es la única forma en la que se puede aplicar un valor animado a las propiedades que no son del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) o [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Se trata de la animación de fotograma clave [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). La animación con valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) es diferente porque no es posible interpolar los valores entre los fotogramas. Cuando se alcanza el valor [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) del fotograma, el valor animado se establece inmediatamente en el valor especificado en la propiedad **Value** en el fotograma clave. Dado que no hay ninguna interpolación, hay solo un fotograma clave que se usa en el **ObjectAnimationUsingKeyFrames** colección de fotogramas clave: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
-Por lo general, la propiedad [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) de [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) se establece con una sintaxis de elementos de propiedades, ya que el valor del objeto que intentas establecer a menudo no se expresa como una cadena para rellenar la propiedad **Value** en una sintaxis de atributos. También puedes usar la sintaxis de atributos si usas una referencia como [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588).
+Por lo general, la propiedad [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) de la clase [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) se establece con una sintaxis de elementos de propiedades, ya que el valor del objeto que intentas establecer a menudo no se expresa como una cadena para rellenar la propiedad **Value** en una sintaxis de atributos. También puedes usar la sintaxis de atributos si usas una referencia como [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588).
 
-Verás que se usa [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) en las plantillas predeterminadas cuando una propiedad de la plantilla hace referencia a un recurso [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush). Estos recursos son objetos [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), no solo un valor [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), y usan recursos definidos como temas del sistema ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807)). Se pueden asignar directamente a un valor del tipo **Brush** como [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) y no necesitan usar selección indirecta. Pero, dado que **SolidColorBrush** no es [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ni **Color**, debes usar **ObjectAnimationUsingKeyFrames** para poder usar el recurso.
+Verás que se usa la clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) en las plantillas predeterminadas, cuando una propiedad de la plantilla hace referencia a un recurso [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush). Estos recursos son objetos [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), no solo un valor [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), y usan recursos definidos como temas del sistema ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807)). Se pueden asignar directamente a un valor del tipo **Brush** como [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) y no necesitan usar selección indirecta. Pero, dado que **SolidColorBrush** no es [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ni **Color**, debes usar **ObjectAnimationUsingKeyFrames** para poder usar el recurso.
 
 ```xml
 <Style x:Key="TextButtonStyle" TargetType="Button">
@@ -269,7 +269,7 @@ Puedes usar más de un [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/l
 
  ## <a name="related-topics"></a>Temas relacionados
 
-* [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
-* [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [**Guion gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [Sintaxis de ruta de acceso de propiedad](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [Información general sobre las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583)
+* [**guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)

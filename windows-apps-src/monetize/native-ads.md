@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio nativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045248"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628070"
 ---
 # <a name="native-ads"></a>Anuncios nativos
 
@@ -23,7 +23,7 @@ Para los anunciantes, los anuncios nativos proporcionan ubicaciones de alto rend
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior de VisualStudio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
+* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio 2015 o una versión posterior de Visual Studio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-a-native-ad-into-your-app"></a>Integrar un anuncio nativo en la aplicación
 
@@ -37,8 +37,8 @@ Sigue estas instrucciones para integrar un anuncio nativo en la aplicación y co
 
 3. Agrega una referencia al SDK de Microsoft Advertising en el proyecto:
 
-    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón derecho en **Referencias** y luego selecciona **Agregar referencia...**
-    2.  En **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
+    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y, a continuación, selecciona **Agregar referencia...**
+    2.  En **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **Microsoft Advertising SDK for XAML** (versión 10.0).
     3.  En el **Administrador de referencias**, haz clic en Aceptar.
 
 4. En el archivo de código adecuado de la aplicación (por ejemplo, en MainPage.xaml.cs o un archivo de código para otra página), agrega las siguientes referencias de espacio de nombres.
@@ -47,7 +47,7 @@ Sigue estas instrucciones para integrar un anuncio nativo en la aplicación y co
 
 5.  En una ubicación adecuada de tu aplicación (por ejemplo, en ```MainPage``` o en otra página), declara un objeto [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) y varios campos de cadenas que representen el id. de aplicación y el id. de unidad del anuncio nativo. En el siguiente ejemplo de código, se asignan los campos `myAppId` y `myAdUnitId` a los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para anuncios nativos.
     > [!NOTE]
-    > Cada **NativeAdsManagerV2** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control de anuncio nativo y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debes [reemplazar estos valores de prueba por valores dinámicos](#release) del centro de partners.
+    > Cada **NativeAdsManagerV2** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control de anuncio nativo y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en el Store, primero debe [reemplazar estos valores con los valores en vivo de prueba](#release) desde el centro de partners.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
@@ -109,17 +109,17 @@ Después de confirmar que la implementación de anuncios nativo muestra correcta
 
 1.  Asegúrate de que la implementación de anuncio nativo sigue nuestras [directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
-2.  En el centro de partners, ve a la página de [anuncios en la aplicación](../publish/in-app-ads.md) y [crear una unidad de anuncios](set-up-ad-units-in-your-app.md#live-ad-units). Especifica el tipo de unidad de anuncio **Nativo**. Anota el id. de la unidad de anuncios y el id. de la aplicación.
+2.  En el centro de partners, vaya a la [anuncios en la aplicación](../publish/in-app-ads.md) página y [crear una unidad de anuncio](set-up-ad-units-in-your-app.md#live-ad-units). Especifica el tipo de unidad de anuncio **Nativo**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
     > [!NOTE]
-    > Los valores de id. de la aplicación para unidades de anuncios de prueba y unidades de anuncios dinámicas de UWP tienen diferentes formatos. Los valores de id. de la aplicación de prueba son GUID. Cuando se crea una unidad de anuncios dinámica de UWP en el centro de partners, el valor de Id. de aplicación de la unidad de anuncios siempre coincide con el identificador de la tienda de la aplicación (un valor de Id. de Store parece a 9NBLGGH4R315).
+    > Los valores de id. de la aplicación para unidades de anuncios de prueba y unidades de anuncios dinámicas de UWP tienen diferentes formatos. Los valores de id. de la aplicación de prueba son GUID. Cuando se crea una unidad de anuncio UWP en vivo en el centro de partners, el valor de identificador de aplicación para la unidad de ad siempre coincide con el identificador de Store para su aplicación (un valor de Id. de Store de ejemplo similar a 9NBLGGH4R315).
 
 3. También tienes la opción de habilitar la mediación de anuncios para el anuncio nativo mediante la configuración de las opciones de la sección [Configuración de la mediación](../publish/in-app-ads.md#mediation) de la página [Anuncios desde la aplicación](../publish/in-app-ads.md). La mediación de anuncios te permite maximizar las funcionalidades de ingresos por anuncios y de promoción de la aplicación mostrando anuncios de múltiples redes de anuncio.
 
-4.  En el código, reemplaza los valores de unidad de anuncio de prueba (es decir, los parámetros *applicationId* y *adUnitId* del constructor [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) con los valores dinámicos generados en el centro de partners.
+4.  En el código, reemplace los valores de unidad de prueba de ad (es decir, el *applicationId* y *adUnitId* parámetros de la [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) constructor) con live valores se genera en el centro de partners.
 
-5.  [Enviar la aplicación](../publish/app-submissions.md) a la tienda mediante el centro de partners.
+5.  [Enviar la aplicación](../publish/app-submissions.md) para el Store mediante el centro de partners.
 
-6.  Revisa los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners.
+6.  Revise su [publicidad informes de rendimiento](../publish/advertising-performance-report.md) en el centro de partners.
 
 ## <a name="manage-ad-units-for-multiple-native-ads-in-your-app"></a>Administrar unidades de anuncios para varios anuncios nativos en tu aplicación
 
@@ -128,8 +128,8 @@ Puedes usar varias colocaciones de anuncios nativos en una sola aplicación. En 
 > [!IMPORTANT]
 > Puedes usar cada unidad de anuncios solo en una aplicación. Si usas una unidad de anuncios en más de una aplicación, no se publicarán anuncios para esa unidad de anuncios.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)
-* [Anuncios desde la aplicación](../publish/in-app-ads.md)
-* [Configurar unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)
+* [Anuncios en la aplicación](../publish/in-app-ads.md)
+* [Configurar las unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)

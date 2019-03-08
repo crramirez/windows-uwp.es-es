@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937420"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624360"
 ---
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 
@@ -22,7 +22,7 @@ En este artículo se describe el uso de certificados en las aplicaciones de la P
 
 ### <a name="shared-certificate-stores"></a>Almacenes de certificados compartidos
 
-Las aplicaciones para UWP usan el nuevo modelo de aplicación aislacionista introducido en Windows8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
+Aplicaciones de UWP usan el nuevo modelo de aplicación isolationist introducido en Windows 8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
 
 ### <a name="certificate-storage-per-app-container"></a>Almacenamiento de certificados por contenedor de aplicación
 
@@ -64,7 +64,7 @@ Algunos de estos campos y extensiones se pueden especificar directamente al usar
 | Algoritmo de firma | Contiene un identificador de objeto (OID) que especifica el algoritmo usado por la CA para firmar el certificado. Por ejemplo, 1.2.840.113549.1.1.5 especifica un algoritmo hash SHA-1 combinado con el algoritmo de cifrado RSA de RSA Laboratories. |
 | Emisor | Contiene el nombre distintivo (DN) X.500 de la entidad de certificación que creó y firmó el certificado. |
 | Validez | Especifica el intervalo de tiempo durante el cual el certificado es válido. Las fechas hasta el final de 2049 usan el formato de Hora universal coordinada (Hora del meridiano de Greenwich) (aammddhhmmssz). Las fechas a partir del 1 de enero de 2050 usan el formato de hora generalizada (aaaammddhhmmssz). |
-| Sujeto | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
+| Firmante | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
 | Clave pública | Contiene la clave pública y la información de algoritmo asociada. |
 
 ### <a name="version-2-fields"></a>Campos de la versión 2
@@ -84,11 +84,11 @@ Un certificado X.509 versión 3 contiene los campos definidos en la versión 1 y
 |--------|-------------|
 | Identificador de clave de entidad emisora | Identifica la clave pública de la entidad de certificación (CA) correspondiente a la clave privada de CA utilizada para firmar el certificado. |
 | Restricciones básicas | Especifica si la entidad se puede utilizar como una CA y, en caso afirmativo, el número de CA subordinadas que pueden existir por debajo en la cadena de certificados. |
-| Directivas del certificado | Especifica las directivas con las que se ha emitido el certificado y los fines para los que se puede utilizar. |
+| Directivas de certificado | Especifica las directivas con las que se ha emitido el certificado y los fines para los que se puede utilizar. |
 | Puntos de distribución CRL | Contiene el URI de la lista de revocación de certificados (CRL) de base. |
-| Uso mejorado de claves | Especifica la manera en que se puede utilizar la clave pública contenida en el certificado. |
+| Uso mejorado de clave | Especifica la manera en que se puede utilizar la clave pública contenida en el certificado. |
 | Nombre alternativo del emisor | Especifica una o más formas de nombre alternativas para el emisor de la solicitud de certificado. |
-| Uso de claves | Especifica restricciones en las operaciones que puede realizar la clave pública contenida en el certificado.|
+| Uso de la clave | Especifica restricciones en las operaciones que puede realizar la clave pública contenida en el certificado.|
 | Restricciones de nombre  | Especifica el espacio de nombres en el que deben encontrarse todos los nombres de firmantes en una jerarquía de certificados. La extensión solo se utiliza en un certificado de CA. |
 | Restricciones de directiva | Restringen la validación de rutas prohibiendo la asignación de directivas o exigiendo que cada certificado de la jerarquía contenga un identificador de directiva aceptable. La extensión solo se utiliza en un certificado de CA. |
 | Asignaciones de directiva | Especifica las directivas de una CA subordinada correspondientes a directivas de la CA emisora. |

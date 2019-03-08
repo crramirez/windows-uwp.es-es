@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, UWP, juegos, DirectX, 2d, gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632660"
 ---
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para juegos DirectX
 
@@ -32,7 +32,7 @@ En DirectX, los gráficos 2D son parte de la canalización 3D. La variedad de re
 
 A continuación presentamos varios conceptos básicos que deberías conocer al empezar a desarrollar gráficos 2D.
 
--   Coordenadas de píxeles y tramas. Un píxel es un único punto de una pantalla de trama. Tiene su propio par de coordenadas (x, y), que indica su ubicación en la pantalla. (El término "píxel" se suele usar indistintamente para los píxeles físicos que conforman la pantalla y los elementos de memoria direccionables que se usan para contener los valores de color y alfa de los píxeles antes de enviarlos a la pantalla). La API trata la trama como una cuadrícula rectangular de elementos de píxeles, a menudo con una correspondencia 1:1 con la cuadrícula de píxeles físicos de una pantalla. Los sistemas de coordenadas de trama empiezan a contar desde la esquina superior izquierda, con el píxel en la posición (0, 0) en la esquina superior izquierda de la cuadrícula.
+-   Coordenadas de píxeles y tramas. Un píxel es un único punto de una pantalla de trama. Tiene su propio par de coordenadas (x, y), que indica su ubicación en la pantalla. (El término "píxeles" se suelen usar indistintamente entre los píxeles físicos que componen la presentación y los elementos de memoria direccionable utilizados para contener los valores de color y alfa de los píxeles antes de enviarlos a la pantalla.) La trama se trata de las API como una cuadrícula rectangular de elementos de píxeles, que a menudo tiene una correspondencia 1:1 con la cuadrícula de píxeles físicos de una pantalla. Los sistemas de coordenadas de trama empiezan a contar desde la esquina superior izquierda, con el píxel en la posición (0, 0) en la esquina superior izquierda de la cuadrícula.
 -   Los gráficos de mapa de bits (en ocasiones denominados gráficos de trama) son elementos gráficos representados como una cuadrícula rectangular de valores de píxeles. Los sprites (matrices de píxeles calculadas con independencia de la trama) son un tipo de gráfico de mapa de bits, y normalmente se usan para los caracteres activos o los objetos animados que no forman parte del fondo de un juego. Las diferentes tramas de animación de un sprite se representan como colecciones de mapas de bits llamadas "hojas" o "lotes". Los fondos son objetos de mapa de bits de mayor tamaño con una resolución igual o mayor que la de la trama de pantalla, y a menudo actúan como telón de fondo para el campo de juego.
 -   Los gráficos vectoriales son gráficos que usan primitivos geométricos, como puntos, líneas, círculos y polígonos, para definir objetos 2D. En vez de con matrices de píxeles, se representan con las ecuaciones matemáticas que los definen en un espacio 2D. No tienen por qué tener una correspondencia 1:1 con la cuadrícula de píxeles de la pantalla, y es necesario transformarlos del sistema de coordenadas donde los representas al sistema de coordinadas de trama de la pantalla.
 -   Una traslación consiste en tomar un punto o un vértice y calcular su nueva ubicación en el mismo sistema de coordenadas.
@@ -56,6 +56,6 @@ Unas buenas ilustraciones serán tu activo más importante cuando se trate de ef
 ## <a name="reference"></a>Referencia
 
 
--   [Introducción a Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
--   [Inicio rápido de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
--   [Introducción a la interoperabilidad de Direct2D y Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
+-   [Información general de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
+-   [Guía de inicio rápido de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
+-   [Información general de interoperabilidad de Direct2D y Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)

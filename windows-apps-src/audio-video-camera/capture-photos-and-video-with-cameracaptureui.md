@@ -1,19 +1,19 @@
 ---
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de la cámara integrada en Windows.
-title: Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada en Windows
+title: Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 18ea6af70d4c0be068ecd79b925bff69ff149a8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617860"
 ---
-# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada en Windows
+# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
 
 
 
@@ -22,7 +22,7 @@ En este artículo se describe cómo usar la clase CameraCaptureUI para capturar 
 Si deseas proporcionar tu propia interfaz de usuario de la cámara o si tu escenario requiere un control de bajo nivel más sólido de la operación de captura, debes usar el objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) e implementar tu propia experiencia de captura. Para obtener más información, consulta [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
 > [!NOTE]
-> No debe especificar las funcionalidades de **cámara Web** o **micrófono** en el archivo de manifiesto de la aplicación si la aplicación solo usa CameraCaptureUI. Si lo haces, la aplicación se mostrará en la configuración de privacidad de la cámara del dispositivo, pero aunque el usuario deniegue el acceso de la cámara a tu aplicación, no impedirá que CameraCaptureUI capture multimedia. Esto es porque la aplicación de cámara integrada de Windows es una aplicación de origen de confianza que requiere que el usuario inicie la captura de fotos, audio y vídeo con la presión de un botón. La aplicación puede presentar errores de certificación del Kit de certificación de aplicaciones de Windows cuando enviadas a la tienda si se especifican las funcionalidades de cámara Web o micrófono al usar CameraCaptureUI como el único mecanismo de captura de fotos.
+> No se debe especificar el **webcam** o **micrófono** capacidades en su aplicación el archivo de manifiesto si la aplicación solo usa CameraCaptureUI. Si lo haces, la aplicación se mostrará en la configuración de privacidad de la cámara del dispositivo, pero aunque el usuario deniegue el acceso de la cámara a tu aplicación, no impedirá que CameraCaptureUI capture multimedia. Esto es porque la aplicación de cámara integrada de Windows es una aplicación de origen de confianza que requiere que el usuario inicie la captura de fotos, audio y vídeo con la presión de un botón. La aplicación puede producir un error de certificación del Kit de certificación de aplicaciones de Windows cuando envía a la Store si especifica las capacidades de cámara Web o micrófono cuando se usa CameraCaptureUI como su único mecanismo de captura de fotos.
 > Debes especificar las funcionalidades de cámara web o micrófono en el archivo de manifiesto de la aplicación si usas MediaCapture para capturar audio, fotos o vídeo mediante programación.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>Capturar una foto con CameraCaptureUI
@@ -74,7 +74,7 @@ Realiza una llamada a [**CaptureFileAsync**](https://msdn.microsoft.com/library/
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 
-Qué hacer con el archivo de vídeo capturado depende el escenario para tu aplicación. El resto de este artículo muestra cómo crear rápidamente una composición multimedia de uno o más vídeos capturados y mostrarla en la interfaz de usuario.
+Qué hacer con el archivo de vídeo capturado depende del escenario para la aplicación. El resto de este artículo muestra cómo crear rápidamente una composición multimedia de uno o más vídeos capturados y mostrarla en la interfaz de usuario.
 
 En primer lugar, agrega un control [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) en el que se mostrará la composición de vídeo en la página XAML.
 
@@ -88,8 +88,8 @@ Con el archivo de vídeo devuelto desde la interfaz de usuario de captura de cá
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 
  
 

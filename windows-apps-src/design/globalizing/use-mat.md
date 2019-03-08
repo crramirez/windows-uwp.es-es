@@ -1,17 +1,17 @@
 ---
-Description: The Multilingual App Toolkit (MAT) 4.0 integrates with Microsoft Visual Studio 2017 to provide UWP apps with translation support, translation file management, and editor tools.
+Description: El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con Microsoft Visual Studio 2017 para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas de editor.
 title: Usar el Kit de herramientas para aplicaciones multilingües
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
-keywords: windows 10, uwp, globalización, localizabilidad, localización
+keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047620"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610120"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Usar el Kit de herramientas para aplicaciones multilingües 4.0
 
@@ -28,7 +28,7 @@ El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con 
 
 ### <a name="step-1-design-your-app-for-globalization-and-localization"></a>Paso 1. Diseña tu aplicación para globalización y localización
 
-Para poder usar la MAT eficazmente, la aplicación debe localizarse previamente. En particular, el proyecto debe contener uno o más archivos de recursos (.resw) con las cadenas de la aplicación en el idioma predeterminado. Para más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../app-resources/localize-strings-ui-manifest.md). Una vez que lo hayas hecho, resulta muy sencillo y rápido añadir idiomas adicionales con el kit de herramientas.
+Para poder usar la MAT eficazmente, la aplicación debe localizarse previamente. En particular, el proyecto debe contener uno o más archivos de recursos (.resw) con las cadenas de la aplicación en el idioma predeterminado. Para más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación](../../app-resources/localize-strings-ui-manifest.md). Una vez que lo hayas hecho, resulta muy sencillo y rápido añadir idiomas adicionales con el kit de herramientas.
 
 Para la propuesta de valor de globalización y localización&mdash;, así como las definiciones de los términos de **globalización**, **localizabilidad** y **localización**&mdash;consulta [Globalización y localización ](globalizing-portal.md).
 
@@ -91,7 +91,7 @@ Sigue estos pasos para pseudolocalizar y probar el proyecto.
 
 Además de la sustitución y la expansión de caracteres, el pseudomotor proporciona un identificador de seguimiento único para cada recurso. Esta herramienta de seguimiento se antepone al comienzo de cada cadena y se encierra entre corchetes `[xxxxx]`. Puedes usar estos rastreadores durante la prueba de inspección de la interfaz de usuario visual. Pueden ayudar a realizar un seguimiento de recursos específicos del producto, especialmente si múltiples recursos tienen texto similar o duplicado.
 
-En el siguiente ejemplo "Hello, World!", la pseudotraducción se expande para que ocupe un 30por ciento más de espacio en la pantalla y después aplica la herramienta de seguimiento de recursos.
+En el siguiente ejemplo "Hello, World!", la pseudotraducción se expande para que ocupe un 30 por ciento más de espacio en la pantalla y después aplica la herramienta de seguimiento de recursos.
 
 ```
 "Hello World" -> "Ĥèĺļõ Ŵòŗłđ" -> "[!!_Ĥèĺļõ Ŵòŗłđ_!!]" -> "[hJ8s1][!!_Ĥèĺļõ Ŵòŗłđ_!!]"
@@ -107,7 +107,7 @@ Después de haber probado la aplicación con pseudoidioma, tienes tres opciones 
 Puedes usar el Editor multilingüe para traducir las cadenas de manera individual. Como ya hemos explicado, se incluye en [el instalador .msi ](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit).
 
 - Haz clic con el botón secundario en el archivo .xlf que quieras traducir.
-- Haz clic en **Abrir con... ** y selecciona el Editor multilingüe. Opcionalmente, puedes hacer clic en **Establecer como predeterminado **.
+- Haz clic en **Abrir con...**  y selecciona el Editor multilingüe. Opcionalmente, puedes hacer clic en **Establecer como predeterminado** .
 - Para cada cadena **Origen** se muestra la cadena original en el idioma predeterminado. En **Traducción**, escribe la cadena traducida al idioma correspondiente del archivo .xlf que estás editando.
 - Cuando hayas terminado, guarda y cierra el archivo.
 
@@ -119,9 +119,9 @@ También puedes abrir el Editor multilingüe de esta forma. Ve a Inicio, muestra
 
 Para subcontratar los trabajos de traducción y edición a los localizadores, selecciona los archivos .xlf deseados en el Explorador de soluciones, haz clic en ellos con el botón derecho del ratón y haz clic en **Kit de herramientas para aplicaciones multilingües** > **Exportar traducciones...**.
 
-Selecciona **Salida: destinatario de correo** en el cuadro de diálogo Exportar recursos de cadena, haz clic en Aceptar y los archivos se comprimirán y adjuntarán a un correo electrónico nuevo. Selecciona **Salida: Ubicación de carpeta de archivo**, busca una carpeta y haz clic en Aceptar, elige de manera opcional los archivos que se van a comprimir, haz clic en Aceptar de nuevo y tus archivos se (comprimirán y) guardarán en la ubicación que hayas elegido, dentro de una nueva carpeta con nombre para el proyecto.
+Seleccione **salida: Destinatario de correo** en el cuadro de diálogo de recursos de cadena de exportación y haga clic en Aceptar y los archivos se comprimen y adjunta a un nuevo correo electrónico. Seleccione **salida: Ubicación de carpeta del archivo**explorador para una carpeta y haga clic en Aceptar, opcionalmente elija para que se comprimen los archivos de nuevo en Aceptar y los archivos estarán (comprimido y) guardado en la ubicación que elija, dentro de una carpeta nueva denominada para el proyecto.
 
-Una vez a los localizadores finalicen el trabajo de traducción y envíen los archivos .xlf traducidos, puedes importarlos a tu proyecto. Selecciona los archivos .xlf deseados en el Explorador de soluciones, haz clic en ellos con el botón derecho del ratón y haz clic en **Kit de herramientas para aplicaciones multilingües** > **Importar/reciclar traducciones...**. Haz clic en **Agregar**, navega a los archivos .xlf o .zip y haz clic en **Importar**.
+Una vez a los localizadores finalicen el trabajo de traducción y envíen los archivos .xlf traducidos, puedes importarlos a tu proyecto. Seleccione los archivos XLF deseado en el Explorador de soluciones, haga clic en ellos y haga clic en **Kit de herramientas de aplicaciones multilingüe** > **reciclaje/Importar traducciones...** . Haga clic en **agregar**, vaya a los archivos XLF o .zip y haga clic en **importación**.
 
 **Nota** El proceso de importación realiza una validación básica antes de la importación. Esto garantiza que la información de referencia cultural de destino en los archivos que se están importando coincida con la de los archivos .xlf existentes.
 
@@ -152,7 +152,7 @@ En el Kit de herramientas para aplicaciones multilingües se incluyen dos provee
 - El proveedor del [Portal lingüístico de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295) admite el reciclaje de traducciones y la correspondencia terminológica en función de las traducciones del texto de la interfaz de usuario de los productos y servicios de Microsoft.
 - El proveedor [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) habilita los servicios de traducción automática a petición.
 
-Tú y tus traductores podéis administrar el estado de las traducciones en el editor multilingüe para revisar más tarde las traducciones que no son seguras. Puedes establecer el estado de cada cadena de la pestaña **Propiedades**. Los valores de estado son: **Nueva**, **Necesita revisión**, **Traducida**, **Final** y **Aprobada**. El indicador a la izquierda de la fila muestra el estado. Cuando todas las filas estén de color verde en el editor multilingüe, el trabajo de traducción habrá finalizado.
+Tú y tus traductores podéis administrar el estado de las traducciones en el editor multilingüe para revisar más tarde las traducciones que no son seguras. Puede establecer el estado de cada cadena de la **propiedades** ficha. Los valores de estado son: **Nuevo**, **requiere revisión**, **traducido**, **Final**, y **aprobó**. El indicador a la izquierda de la fila muestra el estado. Cuando todas las filas estén de color verde en el editor multilingüe, el trabajo de traducción habrá finalizado.
 
 Recompila el proyecto para hacer que las cadenas traducidas se copien en el archivo de recursos (.resw) que se corresponda con el archivo .xlf que estabas editando.
 
@@ -162,18 +162,18 @@ Antes de iniciar el proceso de certificación de Microsoft Store, debes excluir 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](../../app-resources/localize-strings-ui-manifest.md)
 * [Globalización y localización](globalizing-portal.md)
-* [Directrices sobre globalización](guidelines-and-checklist-for-globalizing-your-app.md)
-* [Haz que tu aplicación sea localizable](prepare-your-app-for-localization.md)
-* [Etiqueta de idioma de BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Directrices para la globalización](guidelines-and-checklist-for-globalizing-your-app.md)
+* [Hacer que la aplicación sea localizable](prepare-your-app-for-localization.md)
+* [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 
 ## <a name="downloads"></a>Descargas
 
-* [Instalador .vsix del Kit de herramientas para aplicaciones multilingües 4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [Instalador .msi del Kit de herramientas para aplicaciones multilingües 4.0](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
+* [Instalador de VSIX aplicación Toolkit 4.0 multilingüe](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
+* [Instalador de .msi de aplicación Toolkit 4.0 multilingüe](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>Servicios de traducción
 
-* [Portal lingüístico de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295)
-* [Microsoft Translator ](https://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Microsoft Language Portal](https://go.microsoft.com/fwlink/p/?LinkId=330295)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)

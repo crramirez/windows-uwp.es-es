@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: ca72f9570c5ecef4a93b03f297ecb1d5064c5bef
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927160"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623330"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>Instalar aplicaciones para UWP con el Instalador de aplicación
 
@@ -21,11 +21,11 @@ El Instalador de aplicación permite la instalación de las aplicaciones para UW
 
 | Tema | Descripción |
 |-------|-------------|
-| [Crear el archivo de Instalador de aplicación con Visual Studio](create-appinstallerfile-vs.md)| Obtén información sobre cómo usar Visual Studio para habilitar las actualizaciones automáticas mediante el archivo .appinstaller. |
+| [Crear archivo de instalador de aplicaciones con Visual Studio](create-appinstallerfile-vs.md)| Obtén información sobre cómo usar Visual Studio para habilitar las actualizaciones automáticas mediante el archivo .appinstaller. |
 | [Instalar aplicaciones para UWP desde una página web](installing-UWP-apps-web.md) | En esta sección, revisaremos los pasos que debes llevar a cabo para permitir que los usuarios instalen tus aplicaciones directamente desde la página web. |
-| [Instalar un conjunto relacionado con un archivo del Instalador de aplicación](install-related-set.md) | En esta sección, aprenderás a permitir la instalación de un conjunto relacionado a través del Instalador de aplicación. También analizaremos los pasos para crear un archivo del Instalador de aplicación que definirá su conjunto relacionado. |
-| [Solucionar problemas de instalación con el archivo del Instalador de aplicación](troubleshoot-appinstaller-issues.md) | Problemas y soluciones comunes al instalar aplicaciones de prueba con el archivo del Instalador de aplicación. |
-| [Referencia del archivo (.appinstaller) del Instalador de aplicación](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file) | Ver el esquema XML completo para el archivo del Instalador de aplicación. |
+| [Instalar un conjunto relacionado con un archivo de instalador de aplicación](install-related-set.md) | En esta sección, aprenderás a permitir la instalación de un conjunto relacionado a través del Instalador de aplicación. También analizaremos los pasos para crear un archivo del Instalador de aplicación que definirá su conjunto relacionado. |
+| [Solucionar problemas de instalación con el archivo instalador de la aplicación](troubleshoot-appinstaller-issues.md) | Problemas y soluciones comunes al instalar aplicaciones de prueba con el archivo del Instalador de aplicación. |
+| [Referencia de archivo (.appinstaller) del instalador de la aplicación](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file) | Ver el esquema XML completo para el archivo del Instalador de aplicación. |
 
 ## <a name="tutorials"></a>Tutoriales 
 
@@ -35,5 +35,5 @@ Sigue estos tutoriales y aprende a hospedar e instalar una aplicación para UWP 
 |----------|-------------|
 | [Instalar una aplicación para UWP desde una aplicación Web de Azure](web-install-azure.md) | Crear una aplicación Web de Azure y usarla para hospedar y distribuir tu paquete de aplicación para UWP. |
 | [Instalar una aplicación para UWP desde un servidor IIS](web-install-IIS.md) | Configura un servidor IIS, comprueba que tu aplicación web puede hospedar paquetes de aplicación y usa el Instalador de aplicación de manera eficaz. |
-| [Hospedaje de paquetes de aplicación para UWP en AWS para instalación web](web-install-aws.md) | Obtén información sobre cómo configurar el servicio de almacenamiento sencillo de Amazon para hospedar el paquete de aplicación para UWP desde un sitio Web. |
+| [Hospedaje de UWP instalarán paquetes de aplicaciones en AWS para web](web-install-aws.md) | Obtén información sobre cómo configurar el servicio de almacenamiento sencillo de Amazon para hospedar el paquete de aplicación para UWP desde un sitio Web. |
 

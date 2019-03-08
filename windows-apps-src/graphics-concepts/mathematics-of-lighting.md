@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 38a65a3532fe401f31fbf0da656aff1a141fa71a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636310"
 ---
 # <a name="mathematics-of-lighting"></a>Cálculos de iluminación
 
@@ -25,11 +25,11 @@ La iluminación global se calcula del siguiente modo:
 Global Illumination = Ambient Light + Diffuse Light + Specular Light + Emissive Light 
 ```
 
-[La luz de ambiente](ambient-lighting.md) es iluminación constante. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcula con rapidez, pero deja objetos con una apariencia plana y poco realista.
+[La luz de ambiente](ambient-lighting.md) es iluminación constante. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.
 
 [La iluminación difusa](diffuse-lighting.md) depende de la dirección de la luz y la superficie normal del objeto. La iluminación difusa varía por la superficie de un objeto como resultado de los cambios de la dirección de la luz y el vector numeral de la superficie. Lleva más tiempo calcular la iluminación difusa porque cambia para cada vértice del objeto. Sin embargo, la ventaja de usarla es que sombrea objetos y les da profundidad tridimensional (3D).
 
-[La iluminación especular](specular-lighting.md) identifica los resaltados especulares brillantes que se producen cuando la luz llega a una superficie del objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Lleva más tiempo calcular la iluminación especular que la iluminación difusa. Sin embargo, la ventaja de usarla es que agrega detalles importantes a una superficie.
+[La iluminación especular](specular-lighting.md) identifica los resaltados especulares brillantes que se producen cuando la luz alcanza la superficie de un objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Lleva más tiempo calcular la iluminación especular que la iluminación difusa. Sin embargo, la ventaja de usarla es que agrega detalles importantes a una superficie.
 
 [La iluminación de emisión](emissive-lighting.md) es la luz que emite un objeto; por ejemplo, un resplandor. La emisión hace que un objeto representado parezca que sea luminoso por sí mismo. La emisión afecta al color de un objeto y, por ejemplo, puede hacer que un material oscuro sea más brillante y absorba parte del color emitido.
 
@@ -57,27 +57,27 @@ Todos los cálculos de iluminación se realizan en el espacio de modelo al trans
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ambient-lighting.md">Iluminación de ambiente</a></p></td>
-<td align="left"><p>La luz de ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcula con rapidez, pero deja objetos con una apariencia plana y poco realista.</p></td>
+<td align="left"><p><a href="ambient-lighting.md">Iluminación ambiente</a></p></td>
+<td align="left"><p>La luz ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="diffuse-lighting.md">Luz difusa</a></p></td>
+<td align="left"><p><a href="diffuse-lighting.md">Color difuso de luz</a></p></td>
 <td align="left"><p><em>La iluminación difusa</em> depende de la dirección de la luz y la superficie normal del objeto. La iluminación difusa varía por la superficie de un objeto como resultado de los cambios de la dirección de la luz y el vector numeral de la superficie. Lleva más tiempo calcular la iluminación difusa porque cambia para cada vértice del objeto. Sin embargo, la ventaja de usarla es que sombrea objetos y les da profundidad tridimensional (3D).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="specular-lighting.md">Luz especular</a></p></td>
+<td align="left"><p><a href="specular-lighting.md">Iluminación especular</a></p></td>
 <td align="left"><p><em>La iluminación especular</em> identifica los resaltados especulares brillantes que se producen cuando la luz alcanza la superficie de un objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Lleva más tiempo calcular la iluminación especular que la iluminación difusa. Sin embargo, la ventaja de usarla es que agrega detalles importantes a una superficie.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="emissive-lighting.md">Luz de emisión</a></p></td>
+<td align="left"><p><a href="emissive-lighting.md">Iluminación de emisor de luz</a></p></td>
 <td align="left"><p><em>La iluminación de emisión</em> es la luz que emite un objeto; por ejemplo, un resplandor. La emisión hace que un objeto representado parezca que sea luminoso por sí mismo. La emisión afecta al color de un objeto y, por ejemplo, puede hacer que un material oscuro sea más brillante y absorba parte del color emitido.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="camera-space-transformations.md">Transformaciones del espacio de cámara</a></p></td>
-<td align="left"><p>Los vértices del espacio de cámara se calculan al transformar los vértices del objeto con la matriz de vista del mundo.</p></td>
+<td align="left"><p><a href="camera-space-transformations.md">Transformaciones de espacio de cámara</a></p></td>
+<td align="left"><p>Los vértices del espacio de cámara se calculan al transformar los vértices del objeto con la matriz de vista global.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="attenuation-and-spotlight-factor.md">Atenuación y factor de foco de luz</a></p></td>
+<td align="left"><p><a href="attenuation-and-spotlight-factor.md">Factor de atenuación y noticias destacadas</a></p></td>
 <td align="left"><p>Los componentes de iluminación difusa y especular de la ecuación global de iluminación contienen términos que describen la atenuación de la luz y el cono del foco de luz.</p></td>
 </tr>
 </tbody>
@@ -88,7 +88,7 @@ Todos los cálculos de iluminación se realizan en el espacio de modelo al trans
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Luces y materiales](lights-and-materials.md)
+[Materiales y luces](lights-and-materials.md)
 
  
 

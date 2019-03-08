@@ -7,11 +7,11 @@ keywords: windows 10, uwp, xbox one, tools, herramientas
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
 ms.localizationpriority: medium
 ms.openlocfilehash: ed106095d83ed0c6e055d22a1a0cf229380cff71
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945897"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609330"
 ---
 # <a name="introduction-to-xbox-one-tools"></a>Introducción a las herramientas de Xbox One
 
@@ -55,7 +55,7 @@ Para habilitar el Portal de dispositivos para Xbox en la consola Xbox One:
 ## <a name="xbox-dev-mode-companion"></a>Complemento del modo de desarrollo de Xbox
 Complemento de modo de desarrollo de Xbox es una herramienta que te permite trabajar en la consola sin salir del equipo. La aplicación permite ver la pantalla de la consola y enviarle elementos de entrada. Para obtener más información, consulta [Complemento de modo de desarrollo de Xbox](xbox-dev-mode-companion.md).
 
-## <a name="see-also"></a>Consulta también
-- [Cómo usar Fiddler con Xbox One al desarrollar para la UWP](uwp-fiddler.md)
-- [Introducción a Windows Device Portal](../debug-test-perf/device-portal.md)
+## <a name="see-also"></a>Consulte también
+- [Cómo usar Fiddler con Xbox One al desarrollo para UWP](uwp-fiddler.md)
+- [Información general de Windows Device Portal](../debug-test-perf/device-portal.md)
 - [UWP en Xbox One](index.md)

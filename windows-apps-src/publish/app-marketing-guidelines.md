@@ -1,27 +1,27 @@
 ---
-Description: Learn how to promote your apps and content in the Microsoft Store. These guidelines cover how to use the assets that are available to you, along with recommendations for promoting your apps in print, TV, social media and digital advertising.
-title: Directrices para aplicaciones de marketing de Microsoft Store
+Description: Obtenga información sobre cómo promover sus aplicaciones y el contenido de la Microsoft Store. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales.
+title: Microsoft Store directrices para aplicaciones de marketing
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8146e5f85887feb1bfa64b04de91b1cf875ccc27
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050948"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634070"
 ---
-# <a name="microsoft-store-marketing-guidelines-for-apps"></a>Directrices para aplicaciones de marketing de Microsoft Store
+# <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store directrices para aplicaciones de marketing
 
-Descubre cómo promocionar tus aplicaciones y contenido en la Microsoft Store. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales.
+Obtenga información sobre cómo promover sus aplicaciones y el contenido de la Microsoft Store. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales.
 
 ## <a name="store-badges"></a>Distintivos de la Tienda
 
-Hemos creado distintivos promocionales especiales para ayudarte a que lleguen a más clientes a la descripción de la aplicación en Microsoft Store. Estos distintivos están disponibles en 44 idiomas. Ten en cuenta que existen ciertos requisitos que debes cumplir al usar estas imágenes. Dichos requisitos, junto con los ejemplos de uso y las directrices, están disponibles en un archivo PDF.
+Hemos creado distintivos promocionales especiales para ayudar a impulsar a más clientes a la lista de la aplicación en la Microsoft Store. Estos distintivos están disponibles en 44 idiomas. Ten en cuenta que existen ciertos requisitos que debes cumplir al usar estas imágenes. Dichos requisitos, junto con los ejemplos de uso y las directrices, están disponibles en un archivo PDF.
 
-[ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=529769) **Directrices de distintivo de Microsoft Store (PDF, inglés)**
+[![Botón de descarga](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=529769) **instrucciones de notificación de Microsoft Store (PDF, inglés)**
 
 
 ## <a name="badge-generator-and-images"></a>Generador de distintivos e imágenes
@@ -30,28 +30,28 @@ Puedes usar nuestro [generador de distintivos](https://go.microsoft.com/fwlink/p
 
 También puedes descargar el conjunto completo de imágenes de distintivos (en formato PNG y PDF) desde el vínculo siguiente.
 
-[![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=529771) **Todas las imágenes de distintivo**
+[![Botón de descarga](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=529771) **todas las imágenes de distintivo**
 
 
 ## <a name="device-images"></a>Imágenes de dispositivo
 
-Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes pueden encontrarse en las [Directrices de Marketing de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=529769).
+Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Procedimientos recomendados y las especificaciones técnicas acerca de cómo utilizar estas imágenes pueden encontrarse en el [directrices de Marketing de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=529769).
 
-[ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivo de Windows**
+[![Botón de descarga](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **prediseñadas de dispositivo de Windows**
 
 ## <a name="license-to-microsoft-marks"></a>Licencia para las marcas Microsoft
 
-*Las marcas Microsoft* significa el *distintivo de Microsoft* que se describen en la página de [Generador de distintivos](https://go.microsoft.com/fwlink/p/?LinkID=534236) . Para usar estos distintivos, debes:
+*Microsoft Marks* significa el *distintivo Microsoft* se describe en el [generador distintivo](https://go.microsoft.com/fwlink/p/?LinkID=534236) página. Para usar estos distintivos, debes:
 
--   Tener la aplicación u otro contenido disponible en Microsoft Store o formar parte del [Programa de afiliados de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=624463).
+-   Tiene la aplicación u otro contenido disponible en la Microsoft Store o formar parte de la [el programa de afiliados de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Si estás registrado como desarrollador de aplicaciones en el centro de partners, cumplir con la sección ["licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del acuerdo para desarrolladores.
+-   Si se registran como desarrollador de aplicaciones en el centro de partners, cumplir con los ["Licencia para las marcas de Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) sección del acuerdo para desarrolladores de aplicación.
 
--   Si no estás registrado como desarrollador de aplicaciones en el centro de partners, Microsoft te concede una licencia mundial, no exclusiva, has, libre de regalías para usar los distintivos únicamente como se describe en las directrices de distintivo de Microsoft Store. Microsoft podría cambiar estas directrices, pero en el caso de que lo haga, usará los medios razonables para redirigirte a cualquier URL nueva donde se publiquen estas especificaciones. Microsoft se reserva todos los derechos no concedidos expresamente en el presente documento.
+-   Si no está registrado como desarrollador de aplicaciones en el centro de partners, Microsoft le concede una licencia mundial, no exclusiva, no transferible, libre de regalías para utilizar las notificaciones únicamente como se describe en las instrucciones de notificación de Microsoft Store. Microsoft podría cambiar estas directrices, pero en el caso de que lo haga, usará los medios razonables para redirigirte a cualquier URL nueva donde se publiquen estas especificaciones. Microsoft se reserva todos los derechos no concedidos expresamente en el presente documento.
 
--   Sigue las especificaciones de uso de logotipos descritas en las [Directrices de distintivo de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=529769).
+-   Siga las especificaciones de uso del logotipo se describe en el [instrucciones de notificación de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=529769).
 
-Microsoft es el único propietario de las marcas de Microsoft y del fondo de comercio asociado, y el único beneficiario del fondo de comercio asociado con tu uso de las marcas de Microsoft. Microsoft puede revocar esta licencia en cualquier momento y a su entera discreción.
+Microsoft es el único propietario de las Marcas de Microsoft y del fondo de comercio asociado, y el único beneficiario del fondo de comercio asociado con el uso que usted hace de las Marcas de Microsoft. Microsoft puede revocar esta licencia en cualquier momento y a su entera discreción.
 
  
 

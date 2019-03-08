@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e80d16b3338291c756b543018812e9db1370a4ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944913"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630420"
 ---
 # <a name="enumerate-devices-over-a-network"></a>Enumerar dispositivos a través de una red
 
@@ -33,7 +33,7 @@ Sin embargo, puede haber casos en los que quieras detectar dispositivos manualme
 
 Cuando crees tu selector, te recomendamos que limites el ámbito de la enumeración a los protocolos que te interesan. Por ejemplo, no es necesario que la radio de Wi-Fi busque dispositivos Wi-Fi Direct si lo que te interesa son los dispositivos UPnP. Windows ha definido una identidad para todos los protocolos que puedes usar para definir el ámbito de la enumeración. En la tabla siguiente se enumeran los tipos y los identificadores de protocolo.
 
-| Tipo de dispositivo de red o protocolo              | Identificador                                         |
+| Tipo de dispositivo de red o protocolo              | Id                                         |
 |----------------------------------------------|--------------------------------------------|
 | UPnP (incluido DIAL y DLNA)               | **{0e261de4-12f0-46e6-91ba-428607ccef64}** |
 | Web services on devices (WSD)                | **{782232aa-a2f9-4993-971b-aedc551346b0}** |

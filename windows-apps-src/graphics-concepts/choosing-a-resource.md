@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ccc99395dba2f2d1894db81fb48abb59f9a8ba4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613400"
 ---
 # <a name="choosing-a-resource"></a>Elección de un recurso
 
@@ -28,17 +28,17 @@ En esta tabla se enumeran los tipos de recursos que pueden enlazarse en cada fas
 
 | Fase de canalización  | Entrada/salida | Recurso               | Tipo de recurso                           |
 |-----------------|--------|------------------------|-----------------------------------------|
-| Ensamblador de entrada | Entrada     | Búfer de vértices          | Búfer                                  |
-| Ensamblador de entrada | Entrada     | Búfer de índices           | Búfer                                  |
-| Fases de sombreador   | Entrada     | Vista del recurso de sombreador    | Buffer, Texture1D, Texture2D, Texture3D |
-| Fases de sombreador   | Entrada     | Búfer de constantes del sombreador | Búfer                                  |
-| Salida de secuencia   | Salida    | Búfer                 | Búfer                                  |
-| Fusión de salida   | Salida    | Vista de destino de representación     | Buffer, Texture1D, Texture2D, Texture3D |
-| Fusión de salida   | Salida    | Vista de galería de símbolos de profundidad     | Texture1D, Texture2D                    |
+| Ensamblador de entrada | Acercar     | Búfer de vértices          | Búfer                                  |
+| Ensamblador de entrada | Acercar     | Búfer de índices           | Búfer                                  |
+| Fases de sombreador   | Acercar     | Vista del recurso de sombreador    | Buffer, Texture1D, Texture2D, Texture3D |
+| Fases de sombreador   | Acercar     | Búfer de constantes del sombreador | Búfer                                  |
+| Salida de secuencia   | Alejar    | Búfer                 | Búfer                                  |
+| Fusión de salida   | Alejar    | Vista de destino de representación     | Buffer, Texture1D, Texture2D, Texture3D |
+| Fusión de salida   | Alejar    | Vista de galería de símbolos de profundidad     | Texture1D, Texture2D                    |
 
  
 
-## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identificar cómo se usará cada recurso
+## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identificar cómo se utilizarán cada recurso
 
 
 Una vez que hayas elegido las fases de canalización que usará la aplicación (y, por lo tanto, los recursos que requiere cada fase), el siguiente paso es determinar cómo se usará cada recurso, es decir, si la CPU o la GPU puede acceder a un recurso.
@@ -49,7 +49,7 @@ El hardware en el que se ejecuta la aplicación tendrá un mínimo de una CPU y 
 |----------------|--------------------------------------|---------------------|
 | Predeterminado        | GPU                                  | con poca frecuencia        |
 | Dinámico        | CPU                                  | con frecuencia          |
-| Provisional        | GPU                                  | n/d                 |
+| Preconfiguración        | GPU                                  | n/d                 |
 | Inmutable      | CPU (solo en tiempo de creación de recursos) | n/d                 |
 
  
@@ -69,13 +69,13 @@ Otra forma de ver este concepto es pensar en lo que hace una aplicación con un 
 | Cargar una vez y no actualizar nunca            | Inmutable o predeterminado |
 | La aplicación rellena el recurso repetidamente | Dinámico              |
 | Representar en la textura                     | Predeterminado              |
-| Acceso de CPU a los datos de GPU                | Provisional              |
+| Acceso de CPU a los datos de GPU                | Preconfiguración              |
 
  
 
 Si no estás seguro de qué uso elegir, empieza con el uso predeterminado, ya que se espera que se el caso más común. Un búfer de constantes de sombreador es el tipo de recurso que siempre debería tener un uso predeterminado.
 
-## <a name="span-idresourcetypesandpipelinestagesspanspan-idresourcetypesandpipelinestagesspanspan-idresourcetypesandpipelinestagesspanbinding-resources-to-pipeline-stages"></a><span id="Resource_Types_and_Pipeline_stages"></span><span id="resource_types_and_pipeline_stages"></span><span id="RESOURCE_TYPES_AND_PIPELINE_STAGES"></span>Enlace de recursos a fases de canalización
+## <a name="span-idresourcetypesandpipelinestagesspanspan-idresourcetypesandpipelinestagesspanspan-idresourcetypesandpipelinestagesspanbinding-resources-to-pipeline-stages"></a><span id="Resource_Types_and_Pipeline_stages"></span><span id="resource_types_and_pipeline_stages"></span><span id="RESOURCE_TYPES_AND_PIPELINE_STAGES"></span>Enlazar recursos a etapas de canalización
 
 
 Un recurso puede enlazarse a más de una fase de canalización al mismo tiempo, siempre que se cumplan las restricciones especificadas cuando se creó el recurso. Estas restricciones se especifican como marcas de uso, marcas de enlace o marcas de acceso a la CPU. En concreto, un recurso puede enlazarse como entrada y salida simultáneamente, siempre que la parte de lectura y escritura de un recurso no se produzcan al mismo tiempo.

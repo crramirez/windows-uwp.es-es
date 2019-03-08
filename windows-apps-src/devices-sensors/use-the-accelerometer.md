@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 77ee3191bc41fca672a055a708523578390860b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919151"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623710"
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
@@ -21,7 +21,7 @@ ms.locfileid: "8919151"
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Acelerómetro**](https://msdn.microsoft.com/library/windows/apps/BR225687)
 
-**Muestra**
+**Ejemplo**
 
 -   Para ver una implementación más completa, consulta la [muestra de acelerómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
 
@@ -31,7 +31,7 @@ Una aplicación de juego sencilla puede usar un único sensor, el acelerómetro,
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
+Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un acelerómetro.
 
@@ -136,11 +136,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **AccelerometerCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="AccelerometerCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:AccelerometerCS"`.
 
--   Presiona F5 (o selecciona **Depurar** &gt; **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar** &gt; **Iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar los valores de acelerómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 (o selecciona **Depurar** &gt; **Detener depuración**) para detener la aplicación.
+-   Detener la aplicación, vuelva a Visual Studio y presione MAYÚS + F5 o seleccione **depurar** &gt; **Detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 
@@ -167,7 +167,7 @@ _accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer,
 AccelerometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Estos nuevos valores se escriben en los TextBlocks que se encuentran en el código XAML del proyecto.
+Estos nuevos valores se escriben en los bloques de texto que se encuentran en el código XAML del proyecto.
 
 ```xml
 <TextBlock x:Name="txtXAxis" HorizontalAlignment="Left" Height="15" Margin="70,16,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="61" Foreground="#FFF2F2F2"/>

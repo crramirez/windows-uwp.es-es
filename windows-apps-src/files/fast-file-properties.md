@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, archivo, propiedades
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ae884ca5424f50a7a835bc55602b5aa7c54096d
-ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9060059"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630240"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>Acceso rápido a las propiedades de archivo en UWP 
 
 Aprende rápidamente a recopilar una lista de archivos y sus propiedades de una biblioteca y usa esas propiedades en una aplicación.  
 
-Prerrequisitos 
-- **Programación asincrónica para aplicaciones de la plataforma Universal de Windows (UWP)**  puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic, vea [llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
-- **Permisos de acceso a bibliotecas**  El código de estos ejemplos requiere la funcionalidad de **picturesLibrary** , pero la ubicación del archivo no puede requerir una funcionalidad distinta o ninguna en absoluto. Para más información, consulta [Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
-- **Enumeración sencilla de archivos**  Este ejemplo usa [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) para establecer unas cuantas propiedades avanzadas de enumeración. Para obtener más información sobre cómo obtener solo una simple lista de archivos para un directorio más pequeño, consulta [Enumerar y consultar archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
+Requisitos previos 
+- **Programación de aplicaciones de plataforma Universal de Windows (UWP) asincrónica**   puede aprender a escribir aplicaciones asincrónicas C# o Visual Basic, vea [llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
+- **Permisos de acceso a las bibliotecas**   el código de estos ejemplos se requiere el **picturesLibrary** funcionalidad, pero la ubicación del archivo puede requerir una funcionalidad diferente, o ninguna funcionalidad en absoluto. Para más información, consulta [Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
+- **Enumeración de archivos simple**    este ejemplo se utiliza [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) establecer algunas propiedades avanzadas de enumeración. Para obtener más información sobre cómo obtener solo una simple lista de archivos para un directorio más pequeño, consulta [Enumerar y consultar archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 
 ## <a name="usage"></a>Uso  
 Muchas aplicaciones necesitan enumerar las propiedades de un grupo de archivos, pero no siempre es necesario interactuar directamente con los archivos. Por ejemplo, un aplicación de música reproduce (o abre) un archivo a la vez, pero necesita las propiedades de todos los archivos en una carpeta para que la aplicación pueda mostrar la cola de canciones o el usuario pueda seleccionar un archivo válido para reproducirlo. 
@@ -108,15 +108,15 @@ while (images.Count != 0 || index < 10000) 
 } 
 ```
 
-### <a name="results"></a>Resultados 
-Los archivos resultantes de StorageFile solo contienen las propiedades solicitadas, pero se devuelven 10 veces más rápido en comparación con el resto de IndexerOptions.La aplicación puede solicitar acceso a las propiedades que no están aún incluidas en la consulta, pero hay una penalización de rendimiento para abrir el archivo y recuperar esas propiedades.  
+### <a name="results"></a>Results 
+Los archivos resultantes de StorageFile solo contienen las propiedades solicitadas, pero se devuelven 10 veces más rápido en comparación con el resto de IndexerOptions. La aplicación puede solicitar acceso a las propiedades que no están aún incluidas en la consulta, pero hay una penalización de rendimiento para abrir el archivo y recuperar esas propiedades.  
 
 ## <a name="adding-folders-to-libraries"></a>Agregar carpetas a Bibliotecas 
 Las aplicaciones pueden solicitar al usuario agregar la ubicación al índice mediante [StorageLibrary.RequestAddFolderAsync](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibrary.RequestAddFolderAsync). Una vez que se incluye la ubicación, se podrá indizar automáticamente y las aplicaciones pueden usar esta técnica para enumerar los archivos.
  
-## <a name="see-also"></a>Consulta también
-[Referencia de API de QueryOptions](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
-[Enumerar y consultar archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
-[Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
+## <a name="see-also"></a>Consulte también
+[Referencia de la API QueryOptions](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
+[Enumerar y consultar los archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
+[Permisos de acceso de archivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
  
  

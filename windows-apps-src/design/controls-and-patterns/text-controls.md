@@ -1,5 +1,5 @@
 ---
-Description: Consider how often we read text in our daily lives - in email, a book, a road sign, the prices on a menu, tire pressure markings, or posters on a street pole.
+Description: Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle.
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
@@ -12,20 +12,20 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0812e4655b8d817f4318f6bd87f7578ee09d635e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037197"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621430"
 ---
 # <a name="text-controls"></a>Controles de texto
 
 Los controles de texto constan de cuadros de entrada de texto, cuadros de contraseña, cuadros de sugerencia automática y bloques de texto. El marco XAML brinda diversos controles para representar e ingresar texto, así como un conjunto de propiedades para aplicar formato al texto.
 
 - Los controles para mostrar texto de solo lectura son [TextBlock](text-block.md) y [RichTextBlock](rich-text-block.md).
-- Los controles de edición y entrada de texto son: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md)y [PasswordBox](password-box.md).
+- Los controles de entrada de texto y edición son: [Cuadro de texto](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md), y [PasswordBox](password-box.md).
 
-> **API importantes**: [clase TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [clase RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [clase TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [clase RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [clase AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
+> **API importantes**: [Clase TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [clase TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [RichEditBox clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [AutoSuggestBox clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [Clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -57,18 +57,18 @@ También debes usar un control AutoSuggestBox para implementar un cuadro de bús
 
 Usa un **RichEditBox** para mostrar y editar los archivos de texto. No uses un RichEditBox para que el usuario haga entradas en la aplicación de la manera que usas otros cuadros de entrada de texto estándar. En su lugar, úsalo para trabajar con archivos de texto que sean independientes de la aplicación. En general, el texto que se escribe en un RichEditBox se guarda en un archivo .rtf.
 
-**¿La entrada de texto es la mejor opción?**
+**¿Es la mejor opción de entrada de texto?**
 
 Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas preguntas ayudarán a responder si uno de los cuadros de texto de entrada estándar u otro control es la mejor opción para obtener la entrada del usuario.
 
--   **¿Es práctico enumerar eficientemente todos los valores válidos?** De ser así, deberías usar uno de los controles de selección, como una [casilla](checkbox.md), una [lista desplegable](lists.md), un [botón de radio](radio-button.md), un [control deslizante](slider.md), un [modificador para alternar](toggles.md), un [selector de fecha](date-and-time.md) o un selector de hora.
--   **¿Existe un conjunto reducido de valores válidos?** Si es así, considera la posibilidad de usar una [lista desplegable](lists.md) o un cuadro de lista, especialmente si la longitud de los valores supera los pocos caracteres.
--   **¿Los datos válidos no tienen absolutamente ninguna restricción? ¿O están los datos válidos restringidos solo por el formato (restricción de longitud o tipos de caracteres)?** Si es así, usa un control de entrada de texto. Puedes limitar el número de caracteres que se pueden especificar y puedes validar el formato en el código de la aplicación.
+-   **¿Es práctico enumerar todos los valores válidos de forma eficaz?** De ser así, deberías usar uno de los controles de selección, como una [casilla](checkbox.md), una [lista desplegable](lists.md), un [botón de radio](radio-button.md), un [control deslizante](slider.md), un [modificador para alternar](toggles.md), un [selector de fecha](date-and-time.md) o un selector de hora.
+-   **¿Hay un conjunto relativamente pequeño de valores válidos?** Si es así, considera la posibilidad de usar una [lista desplegable](lists.md) o un cuadro de lista, especialmente si la longitud de los valores supera los pocos caracteres.
+-   **¿No está los datos válidos completamente restringidos? ¿O bien, los datos válidos sólo está limitados por el formato (longitud limitada o tipos de caracteres)?** Si es así, usa un control de entrada de texto. Puedes limitar el número de caracteres que se pueden especificar y puedes validar el formato en el código de la aplicación.
 -   **¿El valor representa un tipo de datos que tiene un control común especializado?** Si es así, usa el control adecuado en lugar de un control de entrada de texto. Por ejemplo, usa un [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) en lugar de un control de entrada de texto para aceptar una entrada de fecha.
 -   Si los datos son estrictamente numéricos:
-    -   **¿El valor introducido es aproximado y/o relativo a otra cantidad mostrada en la misma página?** De ser así, usa un [control deslizante](slider.md).
-    -   **¿Sería bueno que el usuario recibiera una respuesta instantánea del efecto de los cambios en la configuración?** De ser así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
-    -   **¿Es probable que el valor introducido se ajuste tras observar el resultado (como, por ejemplo, el volumen o el brillo de pantalla)?** De ser así, usa un [control deslizante](slider.md).
+    -   **¿Es el valor que se va a introducir aproximada o en relación con otra cantidad en la misma página?** De ser así, usa un [control deslizante](slider.md).
+    -   **¿Beneficiaría al usuario de comentarios instantáneos sobre el efecto de los cambios de configuración?** De ser así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
+    -   **¿Es el valor introducido es probable que se ajuste una vez que se observa el resultado, por ejemplo, al igual que con el brillo de pantalla o el volumen?** De ser así, usa un [control deslizante](slider.md).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -79,7 +79,7 @@ Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas pr
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/category/Text">abrir la aplicación y ver los controles de texto en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -117,17 +117,17 @@ Consulta estos artículos para obtener directrices de fuentes:
 
 ## <a name="pen-input"></a>Entrada manuscrita
 
-**Se aplica a:** TextBox, RichEditBox, AutoSuggestBox
+**Se aplica a:** Cuadro de texto, RichEditBox, AutoSuggestBox
 
 A partir de Windows 10, versión 1803, los cuadros de entrada de texto XAML cuentan con soporte incrustado para usar una entrada manuscrita [Windows Ink](../input/pen-and-stylus-interactions.md). Cuando un usuario pulsa en un cuadro de entrada de texto con un lápiz de Windows, el cuadro de texto se transforma para permitir al usuario escribir directamente en él con un lápiz, en lugar de abrir un panel de entrada independiente.
 
 ![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/handwritingview/handwritingview2.gif)
 
-Para obtener más información, consulta la [entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
+Para obtener más información, consulte [entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 
-**Se aplica a:** TextBox, PasswordBox RichEditBox
+**Se aplica a:** Cuadro de texto, PasswordBox RichEditBox
 
 Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
 
@@ -144,7 +144,7 @@ Para obtener más información, consulta [Usar el ámbito de entrada para cambia
 
 ## <a name="color-fonts"></a>Colores de fuentes
 
-**Se aplica a:** TextBlock, RichTextBlock, TextBox, RichEditBox
+**Se aplica a:** TextBlock, RichEditBox RichTextBlock, cuadro de texto
 
 Windows tiene la posibilidad de que las fuentes incluyan varias capas de colores para cada glifo. Por ejemplo, la fuente Segoe UI Emoji define las versiones de color de los emoticonos y otros caracteres Emoji.
 
@@ -162,7 +162,7 @@ Para obtener más información, consulta la propiedad [IsColorFontEnabled](https
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>Directrices para los separadores de línea y de párrafo
 
-**Se aplica a:** TextBlock, RichTextBlock, TextBox multilínea, RichEditBox
+**Se aplica a:** Cuadro de texto de TextBlock, RichTextBlock, varias líneas, RichEditBox
 
 Usa el carácter separador de línea (0x2028) y el carácter separador de párrafo (0x2029) para dividir el texto sin formato. Se inicia una nueva línea después de cada separador de línea. Se inicia un nuevo párrafo detrás de cada separador de párrafo.
 
@@ -174,7 +174,7 @@ La aplicación puede insertar un separador de párrafo entre párrafos de texto.
 
 ## <a name="guidelines-for-spell-checking"></a>Directrices sobre revisión ortográfica
 
-**Se aplica a:** TextBox, RichEditBox
+**Se aplica a:** Cuadro de texto, RichEditBox
 
 Durante la edición y entrada de texto, la revisión ortográfica informa al usuario de que una palabra está escrita de forma errónea resaltándola con una línea en zigzag roja y permite que el usuario pueda corregir el error.
 
@@ -184,11 +184,11 @@ Este es un ejemplo del corrector ortográfico integrado:
 
 Usa la revisión ortográfica con controles de entrada de texto para estos dos propósitos:
 
--   **Para una corrección automática de los errores ortográficos**
+-   **Para la corrección automática errores de ortografía**
 
     El motor de revisión ortográfica corrige de forma automática las palabras mal escritas cuando está seguro de la corrección. Por ejemplo, el motor cambia automáticamente "dle" por "del".
 
--   **Para mostrar una ortografía alternativa**
+-   **Para mostrar de ortografías alternativas**
 
     Cuando el motor de revisión ortográfica no está seguro de las correcciones, agrega una línea roja debajo de la palabra mal escrita y muestra las alternativas en un menú contextual cuando presionas o haces clic con el botón secundario en la palabra.
 
@@ -203,9 +203,9 @@ Para los controles TextBox y RichEditBox, la revisión ortográfica está activa
 **Para diseñadores**
 - [Directrices de tipografía](../style/typography.md)
 - [Directrices y lista de iconos de Segoe MDL2](../style/segoe-ui-symbol-font.md)
-- [Agregar búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Para desarrolladores (XAML)**
-- [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)

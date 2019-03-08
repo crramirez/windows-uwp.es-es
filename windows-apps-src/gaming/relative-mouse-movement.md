@@ -7,13 +7,13 @@ keywords: Windows 10, UWP, games, juegos, mouse, input, entrada
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
 ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931568"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639660"
 ---
-# <a name="relative-mouse-movement-and-corewindow"></a>Movimiento de mouse relativo y CoreWindow
+# <a name="relative-mouse-movement-and-corewindow"></a>CoreWindow o movimiento de mouse relativo
 
 En los juegos, el mouse es una opción de control común que es conocida por muchos de los jugadores, y es también esencial para muchos géneros de juegos, como los juegos de disparos en primera y tercera persona, y los juegos de estrategia en tiempo real. Aquí analizamos la implementación de controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas. En su lugar, siguen el delta de píxeles entre los diferentes movimientos del mouse.
 
@@ -31,7 +31,7 @@ Cuando el usuario realiza una acción que mueve la aplicación fuera de un modo 
 - Desactivar el control del mouse relativo 
 - Establecer el cursor del mouse en un valor no nulo (que lo hace visible)
 
-> **Nota**  
+> **Note**  
 Con este patrón, la ubicación del cursor del mouse absoluto se conserva al entrar en el modo relativo sin cursor. El cursor reaparece en la misma ubicación de coordenada de pantalla en la que estaba antes de habilitar el modo de movimiento de mouse relativo.
 
  
@@ -93,10 +93,10 @@ Omite procesar en exceso los datos de mouse absoluto del evento [CoreWindow::Poi
 
 Cuando la aplicación salga del modo de manipulación de escenas u objetos 3D, y ya no use el movimiento de mouse relativo (por ejemplo, cuando devuelve una pantalla de menú) vuelve al procesamiento normal del movimiento de mouse absoluto. En este punto, deja de leer los datos de mouse relativo, reinicia el procesamiento de eventos de mouse (y puntero) estándar y establece [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) en un valor no nulo. 
 
-> **Nota**  
+> **Note**  
 Cuando tu aplicación se encuentra en el modo de manipulación de escenas u objetos 3D (procesamiento de movimientos de mouse relativo con el cursor desactivado), el mouse no puede invocar la interfaz de usuario perimetral como los accesos, la pila de retroceso o la barra de la aplicación. Por lo tanto, es importante proporcionar un mecanismo para salir de este modo específico, como la tecla **Esc** que se usa habitualmente.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
+* [Controles de movimiento vistazo para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
 * [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md)

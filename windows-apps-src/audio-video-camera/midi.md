@@ -4,20 +4,20 @@ description: En este artículo se muestra cómo enumerar dispositivos MIDI (inte
 title: MIDI
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cb210621b74fef5128456d06a7cdf047752f45f5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947568"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612750"
 ---
 # <a name="midi"></a>MIDI
 
 
 
-En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz Digital de instrumentos musicales) y enviar y recibir mensajes MIDI desde una aplicación universal de Windows. Windows 10 admite MIDI a través de USB (controladores compatibles con la clase y más propietarios), MIDI a través de Bluetooth LE (Windows 10 Anniversary Edition y versiones posteriores) y a través de productos de terceros disponible de forma gratuita, MIDI a través de Ethernet y enrutado MIDI.
+En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz digital de instrumentos musicales), y enviar y recibir mensajes MIDI desde una aplicación universal de Windows. Windows 10 es compatible con MIDI a través de USB (compatible con la clase y propiedad más controladores), MIDI a través de Bluetooth LE (Windows 10 Anniversary Edition y versiones posteriores) y los productos de terceros disponible de forma gratuita, MIDI a través de Ethernet y enrutado MIDI.
 
 ## <a name="enumerate-midi-devices"></a>Enumerar dispositivos MIDI
 
@@ -29,7 +29,7 @@ Agrega un control [**ListBox**](https://msdn.microsoft.com/library/windows/apps/
 
 [!code-xml[MidiListBoxes](./code/MIDIWin10/cs/MainPage.xaml#SnippetMidiListBoxes)]
 
-El método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) de clase [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) se usa para enumerar los diferentes tipos de dispositivos reconocidos por Windows. Para especificar que solo deseas el método para buscar dispositivos de entrada de MIDI, usa la cadena de selector devuelta por [**MidiInPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894779). **FindAllAsync** devuelve una clase [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) que contiene un objeto **DeviceInformation** para cada dispositivo de entrada MIDI registrado en el sistema. Si la colección devuelta no contiene ningún elemento, entonces no hay ningún dispositivo de entrada MIDI disponible. Si hay elementos en la colección, revisa los objetos **DeviceInformation** y agrega el nombre de cada dispositivo para el dispositivo de entrada MIDI **ListBox**.
+El método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) de clase [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) se usa para enumerar los diferentes tipos de dispositivos reconocidos por Windows. Para especificar que solo deseas el método para buscar dispositivos de entrada de MIDI, usa la cadena de selector devuelta por [**MidiInPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894779). **FindAllAsync** devuelve una [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) que contiene una **DeviceInformation** para cada dispositivo de entrada MIDI registrado con el sistema. Si la colección devuelta no contiene ningún elemento, entonces no hay ningún dispositivo de entrada MIDI disponible. Si hay elementos en la colección, revisa los objetos **DeviceInformation** y agrega el nombre de cada dispositivo para el dispositivo de entrada MIDI **ListBox**.
 
 [!code-cs[EnumerateMidiInputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiInputDevices)]
 
@@ -68,10 +68,10 @@ Registra controladores para los controladores de eventos del monitor.
 
 La clase **DeviceWatcher** tiene los eventos siguientes:
 
--   [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450): se genera cuando se agrega un nuevo dispositivo al sistema.
--   [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453): se genera cuando un dispositivo se quita del sistema.
--   [**Updated**](https://msdn.microsoft.com/library/windows/apps/br225458): se genera cuando se actualiza la información asociada a un dispositivo existente.
--   [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451): se genera cuando el monitor completa la enumeración del tipo de dispositivo solicitado.
+-   [**Agregar** ](https://msdn.microsoft.com/library/windows/apps/br225450) -se genera cuando se agrega un nuevo dispositivo en el sistema.
+-   [**Quitar** ](https://msdn.microsoft.com/library/windows/apps/br225453) -se genera cuando se quita un dispositivo desde el sistema.
+-   [**Actualizar** ](https://msdn.microsoft.com/library/windows/apps/br225458) -se genera cuando se actualiza la información asociada con un dispositivo existente.
+-   [**EnumerationCompleted** ](https://msdn.microsoft.com/library/windows/apps/br225451) -se genera cuando el monitor ha completado su enumeración del tipo solicitado del dispositivo.
 
 En el controlador de eventos para cada uno de estos eventos, se llama a un método auxiliar, **UpdateDevices**, para actualizar la **ListBox** con la lista actual de dispositivos. Dado que no se llama a estos controladores de eventos y a los elementos de interfaz de usuario de las actualizaciones **UpdateDevices** en el subproceso de interfaz de usuario, cada llamada debe estar encapsulada en una llamada a [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), lo que hace que el código se ejecute en el subproceso de interfaz de usuario especificado.
 
@@ -97,13 +97,13 @@ En el código subyacente de la página, debes declarar variables de miembros par
 
 Crea una nueva instancia de las clases auxiliares del monitor, pasando la cadena de selector de dispositivo, la **ListBox** que se va a rellenar y el objeto **CoreDispatcher** al que se pueda acceder a través de la propiedad **Dispatcher** de la página. Después, llama al método para iniciar cada objeto **DeviceWatcher**.
 
-Poco después de que cada objeto **DeviceWatcher** se inicie, finalizará la enumeración de los dispositivos que estén conectados al sistema y se generará su evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451); esto hace que cada elemento **ListBox** se actualice con los dispositivos MIDI actuales.
+Poco después de que se inicie cada objeto **DeviceWatcher**, finalizará la enumeración de los dispositivos actuales conectados al sistema y se generará su evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451), lo que provocará que cada elemento **ListBox** se actualice con los dispositivos MIDI actuales.
 
 [!code-cs[StartWatchers](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetStartWatchers)]
 
 Cuando el usuario selecciona un elemento en la entrada MIDI **ListBox**, se genera el evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776). En el controlador para este evento, obtén acceso a la propiedad **DeviceInformationCollection** de la clase auxiliar para obtener la lista actual de dispositivos. Si hay entradas en la lista, selecciona el objeto **DeviceInformation** con el índice correspondiente a la [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/br209768) del control **ListBox**.
 
-Crear el objeto [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) que representa el dispositivo de entrada seleccionado llamando a [**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776) pasando la propiedad [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) del dispositivo seleccionado.
+A continuación, crea el objeto [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) que representa el dispositivo de entrada seleccionado, llamando a [**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776) y pasando la propiedad [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) del dispositivo seleccionado.
 
 Registra un controlador para el evento [**MessageReceived**](https://msdn.microsoft.com/library/windows/apps/dn894781), el cual se genera siempre que recibas un mensaje de MIDI mediante el dispositivo especificado.
 
@@ -131,10 +131,10 @@ Cuando la aplicación se desactiva, asegúrate de limpiar los recursos de las ap
 
 Cuando enumeres dispositivos MIDI de salida mediante la técnica descrita anteriormente, la aplicación detectará un dispositivo de MIDI denominado "Sintetizador por tabla de ondas GS de Microsoft". Este es un sintetizador MIDI general integrado que puedes reproducir desde la aplicación. Sin embargo, al intentar crear un puerto de salida MIDI en este dispositivo se producirá un error a menos que hayas incluido la extensión SDK para el sintetizador integrado en el proyecto.
 
-**Para incluir la extensión del SDK de sintetizador MIDI general en el proyecto de aplicación**
+**Para incluir la extensión de SDK de sintetizador MIDI General en el proyecto de aplicación**
 
-1.  En el **Explorador de soluciones**, en tu proyecto, haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia...**
-2.  Expande el nodo **Windows Universal**.
+1.  En el **Explorador de soluciones**, justo en tu proyecto, haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia...**
+2.  Expande el nodo **Windows universal**.
 3.  Selecciona **Extensiones**.
 4.  En la lista de extensiones, selecciona **MIDI DLS general de Microsoft para aplicaciones universales de Windows**.
     > [!NOTE] 

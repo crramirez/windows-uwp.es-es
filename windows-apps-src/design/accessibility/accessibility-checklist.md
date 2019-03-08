@@ -1,19 +1,19 @@
 ---
-Description: Provides a checklist to help you ensure that your Universal Windows Platform (UWP) app is accessible.
+Description: Proporciona una lista de comprobación que te ayudará a garantizar que tu aplicación para Plataforma universal de Windows (UWP) sea accesible.
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: Lista de comprobación de accesibilidad
 label: Accessibility checklist
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c9ff9760b3ae9b852fe1ae1b86d1cc48e49c5dd4
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990488"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602450"
 ---
 # <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad
 
@@ -39,14 +39,14 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
     Si quieres obtener más información, consulta las [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
-3. Asegúrate de texto sea un tamaño legible
+3. Asegúrese de texto es un tamaño de lectura
 
-    * Windows incluye varias herramientas de accesibilidad y opciones de configuración que los usuarios pueden sacar provecho de y ajustar a sus propias necesidades y preferencias para leer texto. Estos son:
-        * La herramienta Lupa, lo que aumenta el tamaño de un área seleccionada de la interfaz de usuario. Debes asegurarte del que diseño del texto en la aplicación no lo hace difícil de usar lupa para la lectura.
-        * Configuración global de escala y la resolución en **Configuración -> sistema -> pantalla -> escala y diseño**. Las opciones de tamaño que están disponibles pueden variar, esto depende de las capacidades del dispositivo de pantalla.
-        * Configuración de tamaño de texto en **Configuración -> Accesibilidad -> pantalla**. Ajustar la configuración de **texto más grande** para especificar únicamente el tamaño del texto para admitir controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el texto escala experiencia sin necesidad de personalización o plantillas).
+    * Windows incluyen varias herramientas de accesibilidad y la configuración que los usuarios pueden aprovechar y ajustarse a sus propias necesidades y preferencias para la lectura de texto. Entre ellos se incluyen los siguientes:
+        * La herramienta Ampliador, que aumenta el tamaño de un área seleccionada de la interfaz de usuario. Debe asegurarse el diseño del texto en la aplicación no hacen que sea difícil utilizar el Ampliador para leerlo.
+        * Configuración global de escala y la resolución en **configuración -> sistema -> Mostrar -> escala y el diseño**. Exactamente qué opciones de ajuste de tamaño están disponibles pueden variar en función depende de las capacidades de la pantalla.
+        * Configuración de tamaño de texto en **facilidad de acceso de -> Configuración -> Mostrar**. Ajustar el **agrandar el texto** configuración para especificar solo el tamaño del texto en la compatibilidad con controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el escalado experiencia sin ninguna personalización o la creación de plantillas de texto).
         > [!NOTE]
-        > La configuración de **hacer todo más grande** permite al usuario especificar su tamaño preferido para el texto y las aplicaciones en general en solo su pantalla principal.
+        > El **asegurarse todo mayor** configuración permite a los usuarios especificar su tamaño preferido de texto y las aplicaciones en general en su pantalla principal solo.
 
 4. Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se representen correctamente en los temas de contraste alto y que los colores se usen correctamente.
 
@@ -73,7 +73,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 ## <a name="related-topics"></a>Temas relacionados  
 
 * [Requisitos de texto accesible](accessible-text-requirements.md)
-* [Ajuste de escala de texto](../input/text-scaling.md)
+* [Texto escalado](../input/text-scaling.md)
 * [Accesibilidad](accessibility.md)
-* [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [Procedimientos que deben evitarse](practices-to-avoid.md)
+* [Diseño para mejorar la accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [Prácticas que se deben evitar](practices-to-avoid.md)

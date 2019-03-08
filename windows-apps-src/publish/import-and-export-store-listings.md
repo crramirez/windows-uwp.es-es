@@ -1,42 +1,42 @@
 ---
-Description: You can create Store listings for your apps without using Partner Center by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
-title: Importar y exportar descripciones de Store
+Description: Puede crear listas de Store para sus aplicaciones sin usar el centro de partners mediante la exportación de los anuncios en un archivo .csv, escribir la información y recursos y, a continuación, importar el archivo actualizado.
+title: Importar y exportar descripciones de la Tienda
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv
 ms.localizationpriority: medium
 ms.openlocfilehash: 5630a9019aa11b87f06744e03ae74ec38c792d41
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939483"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636440"
 ---
-# <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de Store
+# <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de la Tienda
 
-En lugar de [escribir la información de las descripciones de Store directamente en el centro de partners](create-app-store-listings.md), tienes la opción de agregar o actualizar información exportando descripciones en un archivo .csv, introduciendo la información y los activos y luego importando el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado.
+En lugar de [escribir información de sus publicaciones Store directamente en el centro de partners](create-app-store-listings.md), tiene la opción para agregar o actualizar la información mediante la exportación de los anuncios en un archivo .csv, escribir la información y recursos y, a continuación, importar el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado.
 
-Esta opción es especialmente útil si quieres crear o actualizar descripciones de Store para el producto en varios idiomas, ya que puedes copiar y pegar la misma información en varios campos y realizar cualquier cambio fácilmente que se deben aplicar a un idioma concreto. Sin embargo, no puedes usar este método para crear o actualizar [descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para las aplicaciones publicado anteriormente compatibles con versiones anteriores de sistema operativo. 
+Esta opción es especialmente útil si quieres crear o actualizar descripciones de Store para el producto en varios idiomas, ya que puedes copiar y pegar la misma información en varios campos y realizar cualquier cambio fácilmente que se deben aplicar a un idioma concreto. Sin embargo, no se puede utilizar este método para crear o actualizar [anuncios de Store específicos de la plataforma](create-platform-specific-store-listings.md) para las aplicaciones publicadas anteriormente que compatibilidad con versiones anteriores de sistema operativo. 
 
 > [!TIP]
 > También puedes usar esta característica para importar y exportar descripciones de la Tienda de un complemento. En el caso de los complementos, el proceso funciona igual, salvo que se incluyen [únicamente los campos relevantes de los complementos](#add-ons).
 
-Ten en cuenta que siempre puede crear o actualizar descripciones directamente en el centro de partners (incluso si ya has utilizado el método de importar o exportar). Puede ser más fácil actualizar directamente en el centro de partners cuando solo estás realizando un simple cambio, pero puedes usar cualquiera de estos métodos en cualquier momento.
+Tenga en cuenta que siempre puede crear o actualizar programas directamente en el centro de partners (incluso si anteriormente ha usado el método de importación/exportación). La actualización directamente en el centro de partners puede ser más fácil cuando simplemente realiza un cambio sencillo, pero puede usar cualquiera de estos métodos en cualquier momento.
 
 ## <a name="export-listings"></a>Exportar descripciones
 
 En la página de información general de envíos, haz clic en **Exportar descripción** (en la sección **Descripciones de la Tienda**) para generar un archivo .csv codificado en UTF-8. Guarda este archivo en tu equipo.
 
-Puedes usar MicrosoftExcel u otro editor para editar este archivo. Ten en cuenta que las versiones de Excel de Office 365 te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones puede que no lo admitan. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Puedes usar Microsoft Excel u otro editor para editar este archivo. Ten en cuenta que las versiones de Excel de Office 365 te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones puede que no lo admitan. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel 2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Si aún no has creado las descripciones para tu producto, el archivo .csv que exportaste no incluirá los datos personalizados. Aparecerán las columnas **Campo**, **ID**, **Tipo** y **predeterminado**, así como las filas que corresponden a cada elemento que puede aparecer en una descripción de la Tienda.
 
 Si ya has creado descripciones (o has cargado paquetes), también aparecerán columnas etiquetadas con códigos de idioma y configuración regional que corresponden al idioma de cada descripción que has creado (o que hemos detectado en tus paquetes), así como la información de descripción que hayas proporcionado anteriormente.
      
 Aquí tienes información general del contenido de cada una de las columnas en el archivo .csv exportado:
-- La columna **Campo** incluye un nombre que está asociado a cada parte de una descripción de la Tienda. Estos se corresponden con los mismos elementos que puedes proporcionar al crear descripciones de la tienda en el centro de partners, aunque algunos de los nombres son ligeramente diferentes. En los elementos en los que puedes escribir más de un mismo tipo de elemento, aparecerán varias filas, hasta el número máximo que puedas especificar. Por ejemplo, en la opción **Características de la aplicación**, aparecerán las opciones **Feature1**, **Feature2**, etc., hasta un máximo de **Feature20** (ya que has especificado un máximo de 20 características de la aplicación).
-- La columna de **identificador** contiene un número que el centro de partners se asocia con cada campo. 
-- La columna **tipo** proporciona instrucciones generales sobre el tipo de información para proporcionar dicho campo, como **texto** o la **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)**. 
+- La columna **Campo** incluye un nombre que está asociado a cada parte de una descripción de la Tienda. Estos se corresponden con los mismos elementos que puede proporcionar al crear anuncios Store en el centro de partners, aunque algunos de los nombres son ligeramente diferentes. En los elementos en los que puedes escribir más de un mismo tipo de elemento, aparecerán varias filas, hasta el número máximo que puedas especificar. Por ejemplo, en la opción **Características de la aplicación**, aparecerán las opciones **Feature1**, **Feature2**, etc., hasta un máximo de **Feature20** (ya que has especificado un máximo de 20 características de la aplicación).
+- El **ID** columna contiene un número que el centro de partners se asocia a cada campo. 
+- El **tipo** columna proporciona instrucciones generales acerca de qué tipo de información para proporcionar para ese campo, como **texto** o **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)**. 
 - La columna **predeterminado** (y cualquier otra columna etiquetada con códigos de idioma y configuración regional) representa el texto o los activos asociados a cada parte de la descripción de la Tienda. Puedes editar los campos de estas columnas para realizar actualizaciones en la descripciones de la Tienda.
 
 >[!IMPORTANT]
@@ -61,26 +61,26 @@ Por ejemplo, considera la siguiente situación:
 
 Si no quieres realizar modificaciones en un campo específico, puedes eliminar toda la fila de la hoja de cálculo, **a excepción de las filas de tráileres y sus miniaturas y títulos asociados**. Excepto en el caso de estos elementos, eliminar una fila no afectará a los datos asociados a ese campo en tus descripciones. Esto te permite quitar todas las filas que no vayas a editar para que puedas centrarte en los campos en los que estás realizando cambios.
 
-Eliminar la información de un campo para un idioma, sin quitar toda la fila, funciona de manera diferente, en función del campo. En el caso de los campos en los que la opción **Tipo** es **Texto**, eliminar la información de un campo simplemente quitará dicha entrada de la descripción en ese idioma.  Sin embargo, eliminar la información de un campo de una imagen, como una captura de pantalla o logotipo, no tendrá ningún efecto; aún se usará la imagen anterior a menos que la quites editándola directamente en el centro de partners. Eliminar la información de un campo de tráiler se realmente quitar ese tráiler del centro de partners, así que asegúrate de que tienes una copia de los archivos necesarios antes de hacerlo.
+Eliminar la información de un campo para un idioma, sin quitar toda la fila, funciona de manera diferente, en función del campo. En el caso de los campos en los que la opción **Tipo** es **Texto**, eliminar la información de un campo simplemente quitará dicha entrada de la descripción en ese idioma.  Sin embargo, al eliminar la información en un campo para una imagen, como una captura de pantalla o el logotipo, no tendrá ningún efecto; la imagen anterior aún se usará a menos que quite editando directamente en el centro de partners. Eliminando la información de un campo de finalizador se realmente quitar ese finalizador desde el centro de partners, así que asegúrese de que tener una copia de los archivos necesarios antes de hacerlo.
 
 Muchos de los campos de tus descripciones exportadas requieren la entrada de texto, como por ejemplo, los que aparecen en el ejemplo anterior, **Descripción** y **ReleaseNotes**. En estos tipos de campos, simplemente escribe el texto correspondiente en el campo de cada idioma. Asegúrate de seguir la longitud y otros requisitos establecidos para cada campo. Para obtener más información sobre estos requisitos, consulta [Crear descripciones de la Tienda de aplicaciones](create-app-store-listings.md).
 
-Indicar información para los campos que corresponden a los activos, como por ejemplo, imágenes y tráileres, resulta un poco más complicado. En lugar de **texto**, el **tipo** de estos activos es la **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)**. 
+Indicar información para los campos que corresponden a los activos, como por ejemplo, imágenes y tráileres, resulta un poco más complicado. En lugar de **texto**, **tipo** para estos recursos es **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)**. 
      
 Si ya has cargado activos para tus descripciones de la Tienda, estos activos se representarán mediante una dirección URL. Estas direcciones URL pueden reutilizarse en varias descripciones de un producto, o incluso en diferentes productos de la misma cuenta de desarrollador, de modo que puedes copiarlas para volver a utilizarlas en un campo diferente si lo deseas.
 
 > [!TIP]
-> Para confirmar el activo que corresponde a una dirección URL, puedes escribir la dirección URL en un navegador para ver la imagen (o descargar el tráiler).  Debe iniciar sesión en tu cuenta del centro de partners en orden para esta dirección URL funcione.
+> Para confirmar el activo que corresponde a una dirección URL, puedes escribir la dirección URL en un navegador para ver la imagen (o descargar el tráiler).  Debe iniciar sesión con su cuenta de centro de partners en orden para esta dirección URL para que funcione.
 
-Si quieres usar un nuevo activo que no hayas agregado anteriormente al centro de partners, hacerlo mediante la importación de las descripciones como una carpeta, en lugar de un archivo .csv único. Tendrás que crear una carpeta que incluya el archivo .csv. Después agrega las imágenes de esa misma carpeta a la carpeta raíz o a una subcarpeta. Tendrás que especificar la ruta de acceso completa, incluido el nombre de carpeta raíz, en el campo.
+Si desea usar un nuevo recurso que aún no ha agregado anteriormente al centro de partners, puede hacerlo mediante la importación de sus publicaciones como una carpeta, en lugar de un archivo .csv único. Tendrás que crear una carpeta que incluya el archivo .csv. Después agrega las imágenes de esa misma carpeta a la carpeta raíz o a una subcarpeta. Tendrás que especificar la ruta de acceso completa, incluido el nombre de carpeta raíz, en el campo.
 
 > [!TIP]
 > Para obtener mejores resultados al importar tus descripciones como una carpeta, asegúrate de usar la versión más reciente de Microsoft Edge, Chrome o Firefox.
 
-Por ejemplo, si la carpeta raíz se denomina **my_folder** y quieres usar una imagen denominada **screenshot1.png** para **DesktopScreenshot1**, puedes agregar screenshot1.png a la raíz de dicha carpeta y luego escribir **my_folder/screenshot1.png** en el campo **DesktopScreenshot1**. Si has creado una carpeta de imágenes en la carpeta raíz y has colocado ahí screenshot.1jpg, deberías escribir **my_folder/images/screenshot1.png**. Ten en cuenta que después de importar las descripciones con una carpeta, las rutas de acceso a las imágenes se convertirá en las direcciones URL a los archivos en el centro de partners la próxima vez que exportes las descripciones. Puedes copiar y pegar estas direcciones URL para usarlas de nuevo (por ejemplo, para usar los mismos activos en varios idiomas de descripciones). 
+Por ejemplo, si la carpeta raíz se denomina **my_folder** y quieres usar una imagen denominada **screenshot1.png** para **DesktopScreenshot1**, puedes agregar screenshot1.png a la raíz de dicha carpeta y luego escribir **my_folder/screenshot1.png** en el campo **DesktopScreenshot1**. Si has creado una carpeta de imágenes en la carpeta raíz y has colocado ahí screenshot.1jpg, deberías escribir **my_folder/images/screenshot1.png**. Tenga en cuenta que después de importar los anuncios mediante una carpeta, rutas de acceso a las imágenes se convertirá a direcciones URL a los archivos en el centro de partners de la próxima vez que exportar los anuncios. Puedes copiar y pegar estas direcciones URL para usarlas de nuevo (por ejemplo, para usar los mismos activos en varios idiomas de descripciones). 
 
 > [!IMPORTANT]
-> Si la descripción exportada incluye tráileres, ten en cuenta que al eliminar la dirección URL al tráiler o a su imagen en miniatura del archivo .csv quitará por completo el archivo eliminado del centro de partners, y ya no podrás acceso a él (a menos que también se usa en-ano Puede que no se haya eliminado de la descripción). 
+> Si el anuncio exportado incluye finalizadores, tenga en cuenta que al eliminar la dirección URL para el finalizador o su imagen en miniatura del archivo .csv quitará por completo el archivo eliminado del centro de partners, y ya no podrá obtener acceso a él existe (a menos que también se usa en el ano Ther listado donde no se ha borrado). 
 
 ## <a name="import-listings"></a>Importar descripciones
 
@@ -95,13 +95,13 @@ Si se detectan problemas, aparecerá una nota que indica que tendrás que realiz
 > [!TIP]
 > Puedes volver a acceder a esta información más adelante a través del vínculo **Ver errores de la última importación**.
 
-Ninguna información del archivo .csv se guardará en el centro de partners hasta que todos los errores en el archivo se hayan resuelto, incluso para los campos sin errores. Una vez que hayas importado un archivo .csv que no tenga errores, la información de descripción que hayas proporcionado se guardará en el centro de partners y se usará para el envío.
+Ninguna de la información del archivo .csv se guardará en el centro de partners hasta que todos los errores en el archivo se ha resuelto, incluso para los campos sin errores. Después de importar un archivo .csv que no tiene ningún error, la información de la lista que has proporcionado se guardará en el centro de partners y se usará para esa presentación.
 
-Puedes seguir realizar actualizaciones en tus descripciones importando otro archivo .csv actualizado o realizando cambios directamente en el centro de partners.
+Puede seguir realizar actualizaciones en sus publicaciones mediante la importación de otro archivo CSV actualizado, o mediante la realización de cambios directamente en el centro de partners.
 
 ## <a name="add-ons"></a>Complementos
 
-Para los complementos, importar y exportar descripciones de la tienda usa el mismo proceso que se ha descrito anteriormente, salvo que solo verás los tres campos relevantes para las [descripciones de la tienda de complementos](create-add-on-store-listings.md): ( **StoreLogo300x300** , **título**y **Descripción** conoce como **icono** en la página de descripción de la tienda en el centro de partners). El campo **Título** es necesario y los otros dos campos son opcionales.
+Para complementos, importar y exportar listas Store utiliza el mismo proceso descrito anteriormente, salvo que solo verá los tres campos relevantes para [anuncios de complemento Store](create-add-on-store-listings.md): **Descripción**, **título**, y **StoreLogo300x300** (denominados **icono** en la página de listado de Store en el centro de partners). El campo **Título** es necesario y los otros dos campos son opcionales.
 
 Ten en cuenta que debes importar y exportar descripciones de la Tienda por separado para cada complemento de tu aplicación navegando a la página de información general de envíos del complemento.
 

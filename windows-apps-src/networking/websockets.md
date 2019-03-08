@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, networking, redes, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af1f478bc466719eef3c5e19d055ac6073a0b11
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045411"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615420"
 ---
 # <a name="websockets"></a>WebSockets
 Los WebSockets ofrecen un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S) y compatible con mensajes UTF-8 y binarios.
@@ -39,7 +39,7 @@ En la mayoría de los casos, querrás usar una conexión WebSocket segura para c
 | wss: | Se usa para conexiones seguras que deben estar cifradas. |
 | ws: | Se usa para conexiones sin cifrar. |
 
-Para cifrar tu conexión WebSocket, usa el esquema de URI `wss:`. Aquí tienes un ejemplo.
+Para cifrar tu conexión WebSocket, usa el esquema de URI `wss:`. A continuación te mostramos un ejemplo.
 
 ```csharp
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -67,7 +67,7 @@ IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
 ```
 
 ## <a name="use-messagewebsocket-to-connect"></a>Usar MessageWebSocket para conectar
-[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) permite que un mensaje completo de WebSocket se lea o escriba en una única operación. Por consiguiente, es apropiado cuando los mensajes no son muy grandes. La clase admite mensajes binarios y de UTF-8.
+[**MessageWebSocket** ](/uwp/api/windows.networking.sockets.messagewebsocket) permite que un mensaje completo de WebSocket al ser leídos/escritos en una sola operación. Por consiguiente, es apropiado cuando los mensajes no son muy grandes. La clase admite mensajes binarios y de UTF-8.
 
 El código de ejemplo que se incluye a continuación usa el servidor eco WebSocket.org &mdash; un servicio que simplemente muestra cualquier mensaje que se envía al remitente.
 
@@ -303,7 +303,7 @@ Una vez establecida una conexión, puedes enviar datos al servidor. Esto se hace
 **Nota** El **DataWriter** toma posesión del flujo de salida. Cuando el **DataWriter** queda fuera del ámbito, si el flujo de salida está conectado a él, el **DataWriter** cancela la asignación del el flujo de salida. Después de eso, los intentos posteriores de usar el flujo de salida dan un error con un valor HRESULT de 0x80000013. Pero puedes llamar a [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream) para ocultar el flujo de salida del **DataWriter** y devolver la propiedad del flujo al **MessageWebSocket**.
 
 ## <a name="use-streamwebsocket-to-connect"></a>Usar StreamWebSocket para conectar
-[**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) permite que se lean secciones de un mensaje con cada operación de lectura. Por consiguiente, es apropiado cuando se transfieren archivos muy grandes (como fotos y vídeos). La clase solo admite mensajes binarios.
+[**StreamWebSocket** ](/uwp/api/windows.networking.sockets.streamwebsocket) permite secciones de un mensaje que se lee con cada operación de lectura. Por consiguiente, es apropiado cuando se transfieren archivos muy grandes (como fotos y vídeos). La clase solo admite mensajes binarios.
 
 El código de ejemplo que se incluye a continuación usa el servidor eco WebSocket.org &mdash; un servicio que simplemente muestra cualquier mensaje que se envía al remitente.
 
@@ -606,11 +606,11 @@ auto connectTask = Concurrency::create_task(streamWebSocket->ConnectAsync(ref ne
 **Nota** No intentes cambiar una propiedad de control *después* de haber llamado a **ConnectAsync**. La única excepción a esa regla es [MessageWebSocketControl.MessageType](/uwp/api/windows.networking.sockets.messagewebsocketcontrol.MessageType).
 
 ## <a name="websocket-information-classes"></a>Clases de información de WebSocket
-[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) y [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) tienen una clase correspondiente que proporciona información adicional sobre el objeto.
+[**MessageWebSocket** ](/uwp/api/windows.networking.sockets.messagewebsocket) y [ **StreamWebSocket** ](/uwp/api/windows.networking.sockets.streamwebsocket) cada una tiene una clase correspondiente que se proporciona información adicional sobre el objeto.
 
-[**MessageWebSocketInformation**](/uwp/api/windows.networking.sockets.messagewebsocketinformation) proporciona información sobre un **MessageWebSocket** y puedes recuperar una instancia de ella usando la propiedad [**MessageWebSocket.Information**](/uwp/api/windows.networking.sockets.messagewebsocket.Information).
+[**MessageWebSocketInformation** ](/uwp/api/windows.networking.sockets.messagewebsocketinformation) proporciona información sobre un **MessageWebSocket**, y recuperar una instancia del mismo mediante la [ **MessageWebSocket.Information** ](/uwp/api/windows.networking.sockets.messagewebsocket.Information) propiedad.
 
-[**StreamWebSocketInformation**](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation) proporciona información sobre un **StreamWebSocket** y recuperas una instancia de ella utilizando la propiedad [**StreamWebSocket.Information**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information).
+[**StreamWebSocketInformation** ](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation) proporciona información sobre un **StreamWebSocket**, y recuperar una instancia del mismo mediante la [ **StreamWebSocket.Information** ](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information) propiedad.
 
 Ten en cuenta que todas las propiedades de estas clases de información son de solo lectura, pero puedes usarlas para recuperar la información actual en cualquier momento durante el ciclo de vida de un objeto de WebSocket.
 
@@ -622,9 +622,9 @@ La mayoría de los valores de enumeración **WebErrorStatus** corresponden a un 
 Para los errores de validación de parámetros, puedes usar el **HRESULT** de la excepción para obtener información más detallada del error. Los posibles valores de **HRESULT** se muestran en `Winerror.h`, que se puede encontrar en la instalación de SDK (por ejemplo, en la carpeta `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared`). Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E_INVALIDARG**.
 
 ## <a name="setting-timeouts-on-websocket-operations"></a>Establecimiento de tiempos de espera en operaciones de WebSocket
-**MessageWebSocket** y **StreamWebSocket** usan un servicio interno para enviar solicitudes de cliente de WebSocket y recibir respuestas de un servidor. El valor de tiempo de espera predeterminado que se usa en una operación de conexión de WebSocket es 60 segundos. Si el servidor HTTP que admite WebSockets y el servidor no responde o no puede responder a la solicitud de conexión de WebSocket (está temporalmente inactivo o bloqueado por una interrupción de la red), el servicio del sistema interno espera los 60segundos predeterminados antes de devolver un error. Este error provoca una excepción en el método **ConnectAsync** de WebSocket. Para las operaciones de envío y recepción después de que se haya establecido una conexión de WebSocket, el tiempo de espera predeterminado es de 30 segundos.
+**MessageWebSocket** y **StreamWebSocket** usan un servicio interno para enviar solicitudes de cliente de WebSocket y recibir respuestas de un servidor. El valor de tiempo de espera predeterminado que se usa en una operación de conexión de WebSocket es 60 segundos. Si el servidor HTTP que admite WebSockets y el servidor no responde o no puede responder a la solicitud de conexión de WebSocket (está temporalmente inactivo o bloqueado por una interrupción de la red), el servicio del sistema interno espera los 60 segundos predeterminados antes de devolver un error. Este error provoca una excepción en el método **ConnectAsync** de WebSocket. Para las operaciones de envío y recepción después de que se haya establecido una conexión de WebSocket, el tiempo de espera predeterminado es de 30 segundos.
 
-Si la consulta del nombre de un servidor HTTP del URI devuelve varias direcciones IP para el nombre, el servicio del sistema interno prueba hasta 5 direcciones IP para el sitio (cada una de ellas con un tiempo de espera predeterminado de 60segundos) antes de producir un error. En consecuencia, la aplicación podría esperar varios minutos intentando conectar a diversas direcciones IP antes de que controle una excepción. El usuario podría percibir este comportamiento como si la aplicación hubiera dejado de funcionar. 
+Si la consulta del nombre de un servidor HTTP del URI devuelve varias direcciones IP para el nombre, el servicio del sistema interno prueba hasta 5 direcciones IP para el sitio (cada una de ellas con un tiempo de espera predeterminado de 60 segundos) antes de producir un error. En consecuencia, la aplicación podría esperar varios minutos intentando conectar a diversas direcciones IP antes de que controle una excepción. El usuario podría percibir este comportamiento como si la aplicación hubiera dejado de funcionar. 
 
 Para que tu aplicación responda mejor y se minimicen estos problemas, puedes establecer un tiempo de espera menor en las solicitudes de conexión. El tiempo de espera se establece de igual forma que para **MessageWebSocket** y **StreamWebSocket**.
 
@@ -833,9 +833,9 @@ protected:
 * [WebSocketError.GetStatus](/uwp/api/windows.networking.sockets.websocketerror.getstatus)
 * [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 * [Protocolo WebSocket](https://tools.ietf.org/html/rfc6455)
 * [Sockets](sockets.md)
 
 ## <a name="samples"></a>Muestras
-* [Muestra de WebSocket](https://go.microsoft.com/fwlink/p/?LinkId=620623)
+* [Ejemplo de WebSocket](https://go.microsoft.com/fwlink/p/?LinkId=620623)

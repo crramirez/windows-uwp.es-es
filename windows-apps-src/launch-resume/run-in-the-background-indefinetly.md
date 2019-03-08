@@ -2,16 +2,16 @@
 title: Ejecutar en segundo plano de manera indefinida
 description: Usa la funcionalidad extendedExecutionUnconstrained para ejecutar una tarea en segundo plano o una sesión de ejecución extendida en segundo plano de manera indefinida.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: tarea en segundo plano, ejecución extendida, recursos, límites, tarea en segundo plano
-ms.date: 10/3/2017
+keywords: tarea en segundo plano, extendido de ejecución, recursos, los límites, la tarea en segundo plano
+ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aedd948fe58efcc3edc160db971478189d9cb4ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: faac1d8d47ddcff4e5ec32d35f2e46bab7a3f4aa
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933929"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630250"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Ejecutar en segundo plano de manera indefinida
 
@@ -75,12 +75,12 @@ _Package.appxmanifest_
 </Package>
 ```
 
-Esta funcionalidad quita las limitaciones de tiempo de ejecución y el guardián de tareas inactivas. Una vez se ha iniciado una tarea en segundo plano, ya sea mediante un desencadenador o una llamada al servicio de aplicaciones, una vez que toma un aplazamiento en el valor de [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) proporcionado por el método **Ejecutar**, se puede ejecutar de manera indefinida. Si la aplicación se establece en **administrado por Windows**, todavía puede tener una cuota de energía aplicada y sus tareas en segundo plano no se activarán cuando el ahorro de batería esté activo.Esto se puede cambiar con la configuración del sistema operativo. Encontrarás más información disponible en [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity).
+Esta funcionalidad quita las limitaciones de tiempo de ejecución y el guardián de tareas inactivas. Una vez se ha iniciado una tarea en segundo plano, ya sea mediante un desencadenador o una llamada al servicio de aplicaciones, una vez que toma un aplazamiento en el valor de [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) proporcionado por el método **Ejecutar**, se puede ejecutar de manera indefinida. Si la aplicación se establece en **administrado por Windows**, todavía puede tener una cuota de energía aplicada y sus tareas en segundo plano no se activarán cuando el ahorro de batería esté activo. Esto se puede cambiar con la configuración del sistema operativo. Encontrarás más información disponible en [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity).
 
 La Plataforma universal de Windows supervisa la ejecución de la tarea en segundo plano para garantizar una buena duración de la batería y una experiencia sin problemas de aplicación en primer plano. Sin embargo, las aplicaciones personales y las aplicaciones de línea de negocio empresariales pueden usar la ejecución ampliada y la funcionalidad **extendedBackgroundTaskTime** para crear aplicaciones que se ejecutarán siempre que sea necesario independientemente de la disponibilidad de los recursos del dispositivo.
 
 Ten en cuenta que las funcionalidades **extendedExecutionUnconstrained** y **extendedBackgroundTaskTime** pueden invalidar la directiva predeterminada para aplicaciones para UWP y podrían provocar una descarga importante de la batería. Antes de usar estas funcionalidades, primero confirma que las directivas de tiempo de tarea en segundo plano y ejecución ampliada predeterminadas no cumplen tus necesidades y realiza pruebas en condiciones de batería restringida para comprender el impacto que tendrá tu aplicación en un dispositivo.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Quitar las restricciones de recursos de tarea en segundo plano](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)

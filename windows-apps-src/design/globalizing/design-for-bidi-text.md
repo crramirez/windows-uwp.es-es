@@ -1,19 +1,19 @@
 ---
-Description: Design your app to provide bidirectional text support (BiDi) so that you can combine script from left-to-right (LTR) and right-to-left (RTL) writing systems, which generally contain different types of alphabets.
-title: Diseña tu aplicación para el texto bidireccional
+Description: Al diseñar la aplicación para proporcionar compatibilidad de texto bidireccional (bidireccional) para que se puede combinar la secuencia de comandos de izquierda a derecha (LTR) y de derecha a izquierda (RTL) sistemas, que suelen contengan distintos tipos de alfabetos de escritura.
+title: Diseñar la aplicación para el texto bidireccional
 template: detail.hbs
 ms.date: 11/10/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: 66a158a96fcab5391030f4517b6420ba4585bf04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641130"
 ---
-# <a name="design-your-app-for-bidirectional-text"></a>Diseña tu aplicación para el texto bidireccional
+# <a name="design-your-app-for-bidirectional-text"></a>Diseñar la aplicación para el texto bidireccional
 
 Diseña tu aplicación para proporcionar compatibilidad para texto bidireccional (BiDi), de modo que puedas combinar scripts con sistemas de escritura de derecha a izquierda (RTL) y de izquierda a derecha (LTR), que suelen contener distintos tipos de alfabetos.
 
@@ -43,7 +43,7 @@ Windows admite los cuatro elementos de diseño BiDi. Veremos algunas de las cara
 Windows ajusta la dirección de la cuadrícula tipográfica para que fluya de derecha a izquierda, lo que significa que el primer icono de la cuadrícula está situado en la esquina superior derecha, y el último, en la esquina inferior izquierda. Esto encaja con el patrón RTL de las publicaciones impresas, como libros y revistas, en las que el patrón de lectura siempre comienza en la esquina superior derecha y continúa hacia la izquierda.
 
 ![Menú de inicio BiDi](images/56283_BIDI_01_startscreen_resized.png)
-![Menú de inicio BiDi con accesos](images/56283_BIDI_02_startscreen_charm_resized.png)
+![BiDi menú Inicio con accesos](images/56283_BIDI_02_startscreen_charm_resized.png)
 
 Para mantener un flujo coherente de interfaz de usuario, el contenido de los iconos mantiene una distribución de derecha a izquierda, lo que significa que el nombre y el logotipo de la aplicación se encuentran en la esquina inferior derecha del icono, independientemente del idioma de la interfaz de usuario de la aplicación.
 
@@ -65,11 +65,11 @@ Los iconos admiten texto mixto. La región de notificación dispone de flexibili
 
 Todos los elementos de la interfaz de usuario de Windows se ajustan a la orientación RTL. Los accesos y los controles flotantes se han colocado en el borde izquierdo de la pantalla para que no se superpongan a los resultados de búsqueda ni afecten a la optimización de la entrada táctil. Pueden alcanzarse fácilmente con los pulgares.
 
-![Captura de pantalla BiDi](images/56286_BIDI_05_search_flyout_resized.png)
-![Captura de pantalla BiDi](images/56286_BIDI_06_print_flyout_resized.png)
+![Captura de pantalla de BiDi](images/56286_BIDI_05_search_flyout_resized.png)
+![BiDi captura de pantalla](images/56286_BIDI_06_print_flyout_resized.png)
 
-![Captura de pantalla BiDi](images/56286_BIDI_07_settings_flyout_resized.png)
-![Captura de pantalla BiDi](images/56286_BIDI_08_app_bars_resized.png)
+![Captura de pantalla de BiDi](images/56286_BIDI_07_settings_flyout_resized.png)
+![BiDi captura de pantalla](images/56286_BIDI_08_app_bars_resized.png)
 
 ### <a name="text-input-in-any-direction"></a>Entrada de texto en cualquier dirección
 
@@ -99,10 +99,10 @@ Con la introducción del algoritmo de paréntesis BiDi (BPA), los pares de paré
 
 Windows usa la fuente Segoe UI para todos los idiomas BiDi. La forma y la escala de esta fuente están adaptadas a la interfaz de usuario de Windows.
 
-![Fuente Segoe UI para idioma BiDi](images/56290_BIDI_13_start_screen_segoe.png)
-![Fuente Segoe UI para idioma BiDi](images/56290_BIDI_13_start_screen_segoe_arabic.png)
+![Fuente Segoe UI para lenguaje BiDi](images/56290_BIDI_13_start_screen_segoe.png)
+![fuente Segoe UI para idiomas bidireccionales](images/56290_BIDI_13_start_screen_segoe_arabic.png)
 
-## <a name="case-study-1-a-bidi-music-app"></a>Caso práctico 1: una aplicación de música en idioma BiDi
+## <a name="case-study-1-a-bidi-music-app"></a>Caso práctico de #1: Una aplicación de música bidireccionales
 
 ### <a name="overview"></a>Introducción
 
@@ -130,8 +130,8 @@ La manipulación de la alineación en toda la aplicación puede parecer sencilla
 
 | | Cadena en inglés (LTR) | Cadena en hebreo (RTL) |
 | -------------- | ------------------- | ------------------- |
-| **Alineación a la izquierda** | Hello, World! | בוקר טוב! |
-| **Alineación a la derecha** | !Hello, World | !בוקר טוב |
+| **Left-alignment** | Hello, World! | בוקר טוב! |
+| **Right-alignment** | !Hello, World | !בוקר טוב |
 
 Para garantizar que la información del intérprete se muestre correctamente en la aplicación de música, el equipo de desarrollo separó las propiedades de diseño de texto de la alineación. En otras palabras, la información del intérprete probablemente se muestra como alineada a la derecha en muchos de los casos, pero el ajuste de diseño de la cadena se establece sobre la base del procesamiento en segundo plano personalizado. El procesamiento en segundo plano determina la mejor configuración de diseño direccional sobre la base del contenido de la cadena.
 
@@ -182,7 +182,7 @@ string NormalizeTextDirection(string data)
 
 Los caracteres Unicode agregados son de ancho cero y, como resultado, no afectan el espaciado de las cadenas. Este código ocasiona una disminución del rendimiento potencial porque, para detectar la dirección de una cadena, es necesario recorrerla hasta encontrar un carácter que no sea neutro. Para detectar la neutralidad de cada carácter, primero se compara con varios intervalos Unicode, de modo que no es una comprobación trivial.
 
-## <a name="case-study-2-a-bidi-mail-app"></a>Caso práctico 2: una aplicación de correo en idioma BiDi
+## <a name="case-study-2-a-bidi-mail-app"></a>Caso práctico de #2: Una aplicación de correo bidireccionales
 
 ### <a name="overview"></a>Introducción
 

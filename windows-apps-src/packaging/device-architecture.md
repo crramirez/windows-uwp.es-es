@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, empaquetado, arquitectura, configuración de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 338dac1d43e08257fa00b51c0c311a090f3d95c0
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116114"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619940"
 ---
 # <a name="app-package-architectures"></a>Arquitecturas de paquetes de aplicaciones
 
@@ -44,8 +44,8 @@ Esta configuración se usa con menos frecuencia que la configuración x86. Debe 
 La configuración de Windows 10 en ARM incluye equipos de escritorio, dispositivos móviles y algunos dispositivos con IoT Core (Rasperry Pi 2, Raspberry Pi 3 y DragonBoard). Los equipos de escritorio con Windows 10 en ARM son una novedad de la familia de Windows, por lo que si eres desarrollador de aplicaciones para UWP, debes enviar los paquetes de ARM a la Tienda para obtener la mejor experiencia posible en estos equipos.
 
 >[!NOTE]
-> Para compilar la aplicación para UWP de destino de forma nativa la plataforma de ARM64, debe tener Visual Studio 2017 versión 15,9 o posterior. Para obtener más información, consulta [esta entrada de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+> Para compilar la aplicación para UWP como destino la plataforma ARM64 de forma nativa, debe tener Visual Studio 2017 versión 15,9 o posterior. Para obtener más información, consulte [esta entrada de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
 
-Para obtener más información, consulta [Windows 10 en ARM](../porting/apps-on-arm.md). Consulta esta charla de //Build para ver una demostración de [Windows 10 en ARM](https://channel9.msdn.com/Events/Build/2017/P4171) y obtener más información acerca de cómo funciona.
+Para obtener más información, consulte [Windows 10 en ARM](../porting/apps-on-arm.md). Consulta esta charla de //Build para ver una demostración de [Windows 10 en ARM](https://channel9.msdn.com/Events/Build/2017/P4171) y obtener más información acerca de cómo funciona.
 
-Para obtener más información sobre temas específicos de IoT, consulta [implementar una aplicación con Visual Studio](https://developer.microsoft.com/windows/iot/Docs/AppDeployment).
+Para obtener más información sobre temas específicos de IoT, consulte [implementar una aplicación con Visual Studio](https://developer.microsoft.com/windows/iot/Docs/AppDeployment).

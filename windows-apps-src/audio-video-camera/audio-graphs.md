@@ -4,14 +4,14 @@ description: En este artículo se muestra cómo usar las API del espacio de nomb
 title: Gráficos de audio
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: da1dc2ab7444bf65074d9c7ccc615aaee07fdcff
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627970"
 ---
 # <a name="audio-graphs"></a>Gráficos de audio
 
@@ -43,7 +43,7 @@ API de gráficos de audio de Windows Runtime:
 -   Son significativamente más fáciles de usar que XAudio2.
 -   Pueden usarse desde C#, además de ser compatibles con C++.
 -   Pueden usar archivos de audio directamente, incluidos formatos de archivo comprimido. XAudio2 solo funciona en búferes de audio y no proporciona ninguna funcionalidad de E/S de archivo.
--   Usar la canalización de audio de latencia baja en Windows 10.
+-   Puede usar la canalización de audio de baja latencia en Windows 10.
 -   Admite la conmutación automática de los extremos cuando se usan los parámetros de extremo predeterminados. Por ejemplo, si el usuario cambia del altavoz de un dispositivo a unos auriculares, el audio se redirige automáticamente a la entrada nueva.
 
 ## <a name="audiograph-class"></a>Clase AudioGraph
@@ -54,8 +54,8 @@ La clase [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn9141
 
 [!code-cs[InitAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetInitAudioGraph)]
 
--   Todos los tipos de nodo de audio se crean mediante los métodos Crear\* de la clase **AudioGraph**.
--   El método [**AudioGraph.Start**](https://msdn.microsoft.com/library/windows/apps/dn914244) hace que el gráfico de audio comience a procesar datos de audio. El método [**AudioGraph.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914245) detiene el procesamiento de audio. Cada nodo del gráfico se puede iniciar y detener de forma independiente mientras se está ejecutando el gráfico, pero ningún nodo está activo cuando se detiene el gráfico. [**ResetAllNodes**](https://msdn.microsoft.com/library/windows/apps/dn914242) hace que todos los nodos del gráfico descarten cualquier dato almacenado actualmente en sus búferes de audio.
+-   Todos los tipos de nodo de audio se crean mediante Create\* métodos de la **AudioGraph** clase.
+-   El método [**AudioGraph.Start**](https://msdn.microsoft.com/library/windows/apps/dn914244) hace que el gráfico de audio comience a procesar datos de audio. El método [**AudioGraph.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914245) detiene el procesamiento de audio. Cada nodo del gráfico se puede iniciar y detener de forma independiente mientras se está ejecutando el gráfico, pero ningún nodo está activo cuando se detiene el gráfico. [**ResetAllNodes** ](https://msdn.microsoft.com/library/windows/apps/dn914242) hace que todos los nodos en el gráfico para descartar los datos actualmente en sus búferes de audio.
 -   El evento [**QuantumStarted**](https://msdn.microsoft.com/library/windows/apps/dn914241) se produce cuando el gráfico está iniciando el procesamiento de un nuevo cuanto de datos de audio. El evento [**QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240) se produce cuando se completa el procesamiento de un cuanto.
 
 -   La única propiedad [**AudioGraphSettings**](https://msdn.microsoft.com/library/windows/apps/dn914185) requerida es [**AudioRenderCategory**](https://msdn.microsoft.com/library/windows/apps/dn297724). La especificación de este valor permite que el sistema optimice la canalización de audio para la categoría especificada.
@@ -64,8 +64,8 @@ La clase [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn9141
 -   La propiedad [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) determina la cantidad de procesamiento que realiza el dispositivo de representación principal en la salida del gráfico de audio. La configuración **Default** permite que el sistema use el procesamiento de audio predeterminado para la categoría de representación de audio especificada. Este procesamiento puede mejorar considerablemente el sonido de audio en algunos dispositivos, especialmente en los dispositivos móviles con altavoces pequeños. La configuración **Raw** puede mejorar el rendimiento al reducir la cantidad de procesamiento de señal realizado, pero puede producir una calidad de sonido inferior en algunos dispositivos.
 -   Si el [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208) se establece en **LowestLatency**, el gráfico de audio usará automáticamente **Raw** para [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522).
 - A partir de Windows 10, versión 1803, puedes establecer la propiedad [**AudioGraphSettings.MaxPlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.maxplaybackspeedfactor) para establecer un valor máximo usado para las propiedades [**AudioFileInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileinputnode.playbackspeedfactor), [**AudioFrameInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.playbackspeedfactor) y [**MediaSourceInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceinputnode.playbackspeedfactor). Cuando un gráfico de audio admite un factor de velocidad de reproducción mayor que 1, el sistema debe asignar memoria adicional para mantener un búfer de datos de audio suficiente. Por este motivo, al establecer **MaxPlaybackSpeedFactor** en el valor mínimo requerido por la aplicación se reducirá el consumo de memoria de la aplicación. Si tu aplicación solo va a reproducir contenido a velocidad normal, se recomienda que establezcas MaxPlaybackSpeedFactor en 1.
--   [**EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523) determina el formato de audio usado por el gráfico. Se admiten los formatos flotantes de 32 bits únicamente.
--   [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) establece el dispositivo de representación principal para el gráfico de audio. Si no estableces esto, se usa el dispositivo predeterminado del sistema. El dispositivo de representación principal se usa para calcular los tamaños de cuanto de otros nodos en el gráfico. Si no hay ningún dispositivo de representación de audio presente en el sistema, se producirá un error en la creación del gráfico de audio.
+-   [  **EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523) determina el formato de audio usado por el gráfico. Se admiten los formatos flotantes de 32 bits únicamente.
+-   [  **PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) establece el dispositivo de representación principal para el gráfico de audio. Si no estableces esto, se usa el dispositivo predeterminado del sistema. El dispositivo de representación principal se usa para calcular los tamaños de cuanto de otros nodos en el gráfico. Si no hay ningún dispositivo de representación de audio presente en el sistema, se producirá un error en la creación del gráfico de audio.
 
 Puedes permitir que el gráfico de audio use el dispositivo de representación de audio predeterminado o que use la clase [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obtener una lista dispositivos de representación de audio disponibles del sistema mediante una llamada a [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) y pasando el selector de dispositivos de representación de audio devuelto por [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817). Puedes elegir uno de los objetos **DeviceInformation** devueltos mediante programación o mostrar la interfaz de usuario para que el usuario pueda seleccionar un dispositivo y, a continuación, usarlo para establecer la propiedad [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524).
 
@@ -80,7 +80,7 @@ Un nodo de entrada de dispositivo envía audio al gráfico desde un dispositivo 
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Si quieres especificar un dispositivo de captura de audio específico para el nodo de entrada de dispositivo, puedes usar la clase [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obtener una lista de dispositivos de captura de audio disponibles del sistema mediante una llamada a [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) y pasar el audio devuelto por [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)el selector de dispositivos de representación. Puedes elegir uno de los objetos **DeviceInformation** devueltos mediante programación o mostrar la interfaz de usuario para que el usuario pueda seleccionar un dispositivo y luego pasarlo a [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
+Si desea especificar un dispositivo de captura de audio específico para el nodo de entrada de dispositivo, puede usar el [ **Windows.Devices.Enumeration.DeviceInformation** ](https://msdn.microsoft.com/library/windows/apps/br225393) clase para obtener una lista de audio disponible del sistema dispositivos de captura mediante una llamada a [ **FindAllAsync** ](https://msdn.microsoft.com/library/windows/apps/br225432) y pasando el selector de dispositivos de audio render devuelto por [  **Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). Puedes elegir uno de los objetos **DeviceInformation** devueltos mediante programación o mostrar la interfaz de usuario para que el usuario pueda seleccionar un dispositivo y luego pasarlo a [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
@@ -105,7 +105,7 @@ Un nodo de entrada de archivo te permite enviar datos desde un archivo de audio 
 -   Establece la propiedad [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn914130) para especificar el desplazamiento de tiempo en el archivo donde debe comenzar la reproducción. Si esta propiedad es null, se usa el comienzo del archivo. Establece la propiedad [**EndTime**](https://msdn.microsoft.com/library/windows/apps/dn914118) para especificar el desplazamiento de tiempo en el archivo donde debe finalizar la reproducción. Si esta propiedad es null, se usa el final del archivo. El valor de tiempo de inicio debe ser menor que el valor de tiempo final y el valor de hora final debe ser menor o igual a la duración del archivo de audio, que puede determinarse comprobando el valor de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn914116).
 -   Busca una posición en el archivo de audio llamando a [**Seek**](https://msdn.microsoft.com/library/windows/apps/dn914127) y especificando el desplazamiento de tiempo en el archivo al que se moverá la posición de reproducción. El valor especificado no debe superar el rango de [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn914130) y [**EndTime**](https://msdn.microsoft.com/library/windows/apps/dn914118). Obtén la posición de reproducción actual del nodo con la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/dn914124) de solo lectura.
 -   Habilita la función de repetición del archivo de audio estableciendo la propiedad [**LoopCount**](https://msdn.microsoft.com/library/windows/apps/dn914120). Cuando no sea null, este valor indica el número de veces que el archivo se reproducirá después de la reproducción inicial. Por lo tanto, por ejemplo, establecer **LoopCount** en 1 hará que el archivo se reproduzca 2 veces en total y, si se establece en 5, hará que el archivo que se reproduzca 6 veces en total. Establecer **LoopCount** en null hace que el archivo se repita indefinidamente. Para detener la repetición, establece este valor en 0.
--   Ajusta la velocidad a la que el archivo de audio se reproduce estableciendo [**PlaybackSpeedFactor**](https://msdn.microsoft.com/library/windows/apps/dn914123). Un valor de 1 indica la velocidad original del archivo, 0,5 es la velocidad media y 2 es el doble de velocidad.
+-   Ajusta la velocidad a la que el archivo de audio se reproduce estableciendo [**PlaybackSpeedFactor**](https://msdn.microsoft.com/library/windows/apps/dn914123). Un valor de 1 indica la velocidad original del archivo, .5 es la velocidad media y 2 es el doble de velocidad.
 
 ##  <a name="mediasource-input-node"></a>Nodo de entrada MediaSource
 
@@ -165,7 +165,7 @@ El siguiente código muestra un ejemplo de implementación de un método auxilia
 
 [!code-cs[GenerateAudioData](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetGenerateAudioData)]
 
--   Como este método tiene acceso el búfer sin procesar subyacente a los tipos de Windows Runtime, se debe declarar con la palabra clave **unsafe**. También debes configurar el proyecto en Microsoft Visual Studio para permitir la compilación del código no seguro abriendo la página **Properties** del proyecto, haciendo clic en la página de propiedades de **Build** y seleccionando la casilla **Permitir código no seguro**.
+-   Como este método tiene acceso el búfer sin procesar subyacente a los tipos de Windows Runtime, se debe declarar con la palabra clave **unsafe**. También debes configurar el proyecto en Microsoft Visual Studio para permitir la compilación del código no seguro; para ello, abre la página **Propiedades** del proyecto, haz clic en la página de propiedades de **Compilación** y selecciona la casilla **Permitir código no seguro**.
 -   Inicializa una nueva instancia de [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) en el espacio de nombres **Windows.Media** pasando el tamaño del búfer deseado al constructor. El tamaño de búfer es el número de muestras multiplicado por el tamaño de cada muestra.
 -   Obtén el [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/dn958454) de la trama de audio llamando a [**LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn930878).
 -   Obtén una instancia de la interfaz COM [**IMemoryBufferByteAccess**](https://msdn.microsoft.com/library/windows/desktop/mt297505) desde el búfer de audio realizando una llamada a [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn958457).
@@ -180,14 +180,14 @@ Un nodo de salida de fotogramas de audio permite recibir y procesar la salida de
 
 [!code-cs[CreateFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameOutputNode)]
 
-El evento [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph.QuantumStarted) se genera cuando el gráfico de audio comienza a procesar un cuanto de datos de audio. Puedes acceder a los datos de audio desde el controlador para este evento. 
+El evento [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph.QuantumStarted) se genera cuando el gráfico de audio comienza a procesar un cuanto de datos de audio. Puedes obtener acceso a los datos de audio desde dentro del controlador para este evento. 
 
 > [!NOTE]
 > Si quieres recuperar las tramas de audio en una cadencia regular, sincronizadas con el gráfico de audio, llama a [AudioFrameOutputNode.GetFrame](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeoutputnode.GetFrame) desde el controlador del evento **QuantumStarted** sincrónico. El evento **QuantumProcessed** se genera asincrónicamente después de que el motor de audio ha completado el procesamiento de audio, por lo que la cadencia puede ser irregular. Por lo tanto, no debes usar el evento **QuantumProcessed** para el procesamiento sincronizado de los datos de tramas de audio.
 
 [!code-cs[SnippetQuantumStartedFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStartedFrameOutput)]
 
--   Llama a [**GetFrame**](https://msdn.microsoft.com/library/windows/apps/dn914171) para obtener un objeto [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) rellenado con datos de audio del gráfico.
+-   Realiza una llamada a [**GetFrame**](https://msdn.microsoft.com/library/windows/apps/dn914171) para obtener un objeto [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) rellenado con datos de audio del gráfico.
 -   Se muestra a continuación un ejemplo de implementación del método auxiliar **ProcessFrameOutput**.
 
 [!code-cs[ProcessFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetProcessFrameOutput)]
@@ -230,7 +230,7 @@ La API de gráfico de audio te permite agregar efectos de audio para cada tipo d
 [!code-cs[AddEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddEffect)]
 
 -   Todos los efectos de audio implementan [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044). Cada nodo expone una propiedad **EffectDefinitions** que representa la lista de efectos aplicados a ese nodo. Agrega un efecto agregando su objeto de definición a la lista.
--   Existen varias clases de definición de efectos que se proporcionan en el espacio de nombres **Windows.Media.Audio**. Estos son:
+-   Existen varias clases de definición de efectos que se proporcionan en el espacio de nombres **Windows.Media.Audio**. Entre ellos se incluyen los siguientes:
     -   [**EchoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn914276)
     -   [**EqualizerEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn914287)
     -   [**LimiterEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn914306)
@@ -239,12 +239,12 @@ La API de gráfico de audio te permite agregar efectos de audio para cada tipo d
 -   Cada tipo de nodo expone un método **DisableEffectsByDefinition** que deshabilita todos los efectos de la lista **EffectDefinitions** del nodo que se agregaron mediante la definición especificada. **EnableEffectsByDefinition** habilita los efectos con la definición especificada.
 
 ## <a name="spatial-audio"></a>Audio espacial
-A partir de Windows10, versión 1607, **AudioGraph** admite audio espacial, que te permite especificar la ubicación en el espacio 3D desde la que se emite el audio de cualquier nodo de entrada o de submezcla. También puedes especificar una forma y una dirección en la que se emita el audio y una velocidad que se usará para cambiar el audio del nodo a Doppler, así como definir un modelo de caída que describa cómo se atenuará el audio con la distancia. 
+A partir de Windows 10, versión 1607, **AudioGraph** admite audio espacial, que te permite especificar la ubicación en el espacio 3D desde la que se emite el audio de cualquier nodo de entrada o de submezcla. También puedes especificar una forma y una dirección en la que se emita el audio y una velocidad que se usará para cambiar el audio del nodo a Doppler, así como definir un modelo de caída que describa cómo se atenuará el audio con la distancia. 
 
 Para crear un emisor, antes puedes crear una forma en la que el sonido se proyectará desde dicho emisor, que puede ser un cono o una forma omnidireccional. La clase [**AudioNodeEmitterShape**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterShape) proporciona métodos estáticos para crear cada una de estas formas. A continuación, crea un modelo de caída. Esto define cómo disminuye el volumen del audio desde el emisor a medida que aumenta la distancia desde el oyente. El método [**CreateNatural**](https://msdn.microsoft.com/library/windows/apps/mt711740) crea un modelo de caída que emula la caída natural del sonido mediante un modelo disminución de distancia cuadrado. Por último, crea un objeto [**AudioNodeEmitterSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterSettings). Actualmente, este objeto solo se usa para habilitar y deshabilitar la atenuación de Doppler basada en velocidad del audio del emisor. Llama al constructor [**AudioNodeEmitter**](https://msdn.microsoft.com/library/windows/apps/mt694324.aspx) pasando los objetos de inicialización que acabas de crear. De manera predeterminada, el emisor se coloca en el origen, pero puedes establecer la posición de dicho emisor con la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.Position).
 
 > [!NOTE]
-> Los emisores del nodo de audio solo pueden procesar audio en formato mono con una frecuencia de muestreo de 48kHz. Si se intenta usar audio estéreo o audio con una frecuencia de muestreo diferente, se producirá una excepción.
+> Los emisores del nodo de audio solo pueden procesar audio en formato mono con una frecuencia de muestreo de 48 kHz. Si se intenta usar audio estéreo o audio con una frecuencia de muestreo diferente, se producirá una excepción.
 
 Asigna el emisor a un nodo de audio cuando lo crees mediante el método de creación sobrecargado correspondiente al tipo de nodo que desees. En este ejemplo, se usa [**CreateFileInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914225) para crear un nodo de entrada de archivos desde un archivo especificado y el objeto [**AudioNodeEmitter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter) que se desee asociar con el nodo.
 
@@ -262,10 +262,10 @@ También puedes actualizar la ubicación, la velocidad y la orientación del obj
 
 [!code-cs[UpdateListener](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUpdateListener)]
 
-De manera predeterminada, el audio espacial se calcula mediante el algoritmo de función de transferencia relativo a la cabeza (HRTF) de Microsoft para atenuar el audio en función de su forma, su velocidad y su posición en relación con el oyente. Puedes establecer la propiedad [**SpatialAudioModel**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.SpatialAudioModel) **en FoldDown** para usar un método simple de mezcla estéreo de simulación de audio espacial, que es menos preciso pero también requiere menos recursos de CPU y memoria.
+De manera predeterminada, el audio espacial se calcula mediante el algoritmo de función de transferencia relativo a la cabeza (HRTF) de Microsoft para atenuar el audio en función de su forma, su velocidad y su posición en relación con el oyente. Puedes establecer la propiedad [**SpatialAudioModel**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.SpatialAudioModel)**en FoldDown** para usar un método simple de mezcla estéreo de simulación de audio espacial, que es menos preciso pero también requiere menos recursos de CPU y memoria.
 
-## <a name="see-also"></a>Consulta también
-- [Reproducción de contenido multimedia](media-playback.md)
+## <a name="see-also"></a>Consulte también
+- [Reproducción de multimedia](media-playback.md)
  
 
  

@@ -1,17 +1,17 @@
 ---
 title: Convertir el marco de representación
-description: Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.
+description: Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones, como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919251"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608830"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
@@ -20,11 +20,11 @@ ms.locfileid: "8919251"
 **Resumen**
 
 -   [Parte 1: Inicializar Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
--   Parte 2: Convertir el marco de representación
--   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+-   2ª parte: Convertir el marco de representación
+-   [Parte 3: El bucle de juego de puerto](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D9 a DirectX11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones, como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## <a name="convert-effects-to-hlsl-shaders"></a>Convertir efectos a sombreadores HLSL
 
@@ -93,19 +93,19 @@ technique RenderSceneSimple
 }
 ```
 
-En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombreador en su propio archivo HLSL para que Visual Studio los compile en distintos archivos. Luego los cargamos como recursos independientes de Direct3D. Establecemos el nivel de destino en [Sombreador modelo 4 nivel 9\_1 (/4\_0\_level\_9\_1)](https://msdn.microsoft.com/library/windows/desktop/ff476876) porque estos sombreadores se han escrito para las unidades de procesamiento gráfico (GPU) de DirectX 9.1.
+En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombreador en su propio archivo HLSL para que Visual Studio los compile en distintos archivos. Luego los cargamos como recursos independientes de Direct3D. Se establece el destino de nivel a [Shader Model 4 Level 9\_1 (/ 4\_0\_nivel\_9\_1)](https://msdn.microsoft.com/library/windows/desktop/ff476876) porque estos sombreadores se escriben para GPU de DirectX 9.1.
 
 Después de definir el diseño de entrada, nos aseguramos de que este represente la misma estructura de datos que usamos para almacenar datos de vértice en la memoria del sistema y en la memoria de GPU. De manera similar, la salida de un sombreador de vértices debe coincidir con la estructura que se usó como entrada en el sombreador de píxeles. Las reglas difieren de las de pasar datos de una función a otra en C++. Puedes omitir las variables no usadas al final de la estructura. No obstante, no se puede reorganizar el orden ni omitir contenido en el medio de la estructura de datos.
 
-> **Nota**  las reglas en Direct3D 9 para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
+> **Tenga en cuenta**    las reglas de Direct3D 9 para los sombreadores de vértices de enlace para sombreadores de píxeles se menos estricto que las reglas en Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
 
  
 
-Es posible que tus archivos HLSL usen la sintaxis anterior para la semántica de sombreador, por ejemplo, COLOR en lugar de SV\_TARGET. En ese caso, tendrás que habilitar el modo de compatibilidad HLSL (opción del compilador /Gec) o actualizar la [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647) del sombreador para la sintaxis actual. En este ejemplo, se actualizó el sombreador de vértices con la sintaxis actual.
+Es posible que los archivos HLSL usa la sintaxis antigua para semántica sombreador: por ejemplo, COLOR, en lugar de SV\_destino. En ese caso, tendrás que habilitar el modo de compatibilidad HLSL (opción del compilador /Gec) o actualizar la [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647) del sombreador para la sintaxis actual. En este ejemplo, se actualizó el sombreador de vértices con la sintaxis actual.
 
 Este es nuestro sombreador de vértices para la transformación de hardware, esta vez definido en su propio archivo.
 
-> **Nota**los sombreadores de vértices son necesarios para el valor del sistema SV\_POSITION de salida. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
+> **Tenga en cuenta**  los sombreadores de vértices son necesarios para generar la VP\_valor semántico del sistema de posición. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
 
  
 
@@ -150,9 +150,9 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 }
 ```
 
-Esto es todo lo que necesitamos para nuestro sombreador de píxeles de paso. Aunque lo llamamos de paso, en verdad obtiene datos de color interpolados en correcta perspectiva para cada píxel. Ten en cuenta que nuestro sombreador de píxeles aplica la semántica del valor del sistema SV\_TARGET a la salida del valor de color, como lo requiere la API.
+Esto es todo lo que necesitamos para nuestro sombreador de píxeles de paso. Aunque lo llamamos de paso, en verdad obtiene datos de color interpolados en correcta perspectiva para cada píxel. Tenga en cuenta que la VP\_valor semántico del sistema de destino se aplica a la salida del valor de color por nuestro sombreador de píxeles según sea necesario mediante la API.
 
-> **Nota**sombreadores de píxeles del nivel 9\_x de sombreador no pueden leer el valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
+> **Tenga en cuenta**  nivel sombreador 9\_x no se pueden leer la VP sombreadores de píxeles\_valor semántico del sistema de posición. Los sombreadores de píxeles 4.0 (y versiones posteriores) del modelo pueden usar SV\_posición para recuperar la ubicación de los píxeles en la pantalla, donde x es entre 0 y el ancho de destino de representación y y está entre 0 y el alto de destino de representación (cada desplazamiento por 0,5).
 
  
 
@@ -236,17 +236,17 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
-> **Nota**  Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL: haz clic en el archivo de origen HLSL en Visual Studio, selecciona propiedades y cambia la configuración de **Modelo de sombreador** en **compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
+> **Tenga en cuenta**    Asegúrese de establecer el nivel de función de destino correcto para el compilador HLSL: haga clic en el archivo de origen HLSL en Visual Studio, seleccione Propiedades y cambiar el **Shader Model** en **Compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
  
 
 ![Propiedades de sombreador HLSL](images/hlslshaderpropertiesmenu.png)![Tipo de sombreador HLSL](images/hlslshadertypeproperties.png)
 
-Este es un buen lugar para crear el diseño de entrada, que corresponde a la declaración de la transmisión de vértices en Direct3D 9. La estructura de datos de vértice debe coincidir con lo que el sombreador de vértices usa. En Direct3D 11 tenemos un mayor control del diseño de entrada; podemos definir el tamaño de la matriz y la longitud en bits de los vectores de punto flotante, y también podemos especificar la semántica para el sombreador de vértices. Creamos una estructura [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) y la usamos para informar a Direct3D el aspecto que tendrán los datos de vértice. Esperamos que termine la carga del sombreador de vértices para definir el diseño de entrada, porque la API lo valida con el recurso de sombreador de vértices. Si el diseño de entrada no es compatible, entonces Direct3D inicia una excepción.
+Este es un buen lugar para crear el diseño de entrada, que corresponde a la declaración de la transmisión de vértices en Direct3D 9. La estructura de datos de vértice debe coincidir con lo que el sombreador de vértices usa. En Direct3D 11 tenemos un mayor control del diseño de entrada; podemos definir el tamaño de la matriz y la longitud en bits de los vectores de punto flotante, y también podemos especificar la semántica para el sombreador de vértices. Creamos un [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estructurar y usarla para informar a Direct3D el aspecto que tendrá los datos de vértice. Esperamos que termine la carga del sombreador de vértices para definir el diseño de entrada, porque la API lo valida con el recurso de sombreador de vértices. Si el diseño de entrada no es compatible, entonces Direct3D inicia una excepción.
 
-Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Los tipos de datos DirectXMath pueden ser útiles, por ejemplo, DXGI\_FORMAT\_R32G32B32\_FLOAT corresponde a [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
+Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Pueden ayudar los tipos de datos DirectXMath; Por ejemplo, DXGI\_formato\_R32G32B32\_FLOAT corresponde a [ **XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Nota**  búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante a la vez. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para datos de búferes de constantes.
+> **Tenga en cuenta**    búferes de constantes usar un diseño fijo de entrada que se alinea con números de punto flotante de cuatro a la vez. [**XMFLOAT4** ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para los datos del búfer de constantes.
 
  
 
@@ -483,7 +483,7 @@ Presentar un marco en pantalla con DirectX 11
 m_swapChain->Present(1, 0);
 ```
 
-La cadena de representación que acabamos de crear recibirá una llamada proveniente de un bucle de juego implementado en el método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505). Esto se muestra en [Parte 3: Ventanilla y bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md).
+La cadena de representación que acabamos de crear recibirá una llamada proveniente de un bucle de juego implementado en el método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505). Esto se muestra en [parte 3: Bucle de juego y la ventanilla](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md).
 
  
 

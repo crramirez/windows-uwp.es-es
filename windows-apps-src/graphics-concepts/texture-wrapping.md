@@ -8,20 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6618b7573be7cd39f703299b9418d1575297120e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928406"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622630"
 ---
 # <a name="texture-wrapping"></a>Ajuste de texturas
 
 
-El ajuste de texturas cambia la forma básica en la que Direct3D rasteriza los polígonos texturizados mediante las coordenadas de textura especificadas para cada vértice. Durante la rasterización de un polígono, el sistema interpola entre las coordenadas de textura en cada uno de los vértices del polígono para determinar los elementos de textura que deberían usarse para cada píxel del polígono. Normalmente, el sistema trata la textura como un plano en 2D e interpola nuevos elementos de textura, para lo que toma la ruta más corta desde el punto A dentro de una textura al punto B. Si el punto A representa la posición u, v (0.8,0.1) y el punto B se encuentra en (0.1,0.1), la línea de interpolación es similar al siguiente diagrama.
+El ajuste de texturas cambia la forma básica en la que Direct3D rasteriza los polígonos texturizados mediante las coordenadas de textura especificadas para cada vértice. Durante la rasterización de un polígono, el sistema interpola entre las coordenadas de textura en cada uno de los vértices del polígono para determinar los elementos de textura que deberían usarse para cada píxel de dicho polígono. Normalmente, el sistema trata la textura como un plano en 2D e interpola nuevos elementos de textura, para lo que toma la ruta más corta desde el punto A dentro de una textura al punto B. Si el punto A representa la posición u, v (0.8,0.1) y el punto B se encuentra en (0.1,0.1), la línea de interpolación es similar al siguiente diagrama.
 
 ![Diagrama de una línea de la interpolación entre dos puntos](images/interp1.png)
 
-Ten en cuenta que la distancia más corta entre A y B en la siguiente ilustración discurre aproximadamente por el medio de la textura. Si se habilita el ajuste de las coordenadas de la textura u o la textura v, cambia el modo en que Direct3D percibe la ruta más corta entre las coordenadas de textura en la dirección u y la dirección v. Por definición, el ajuste de textura causa que el rasterizador tome la ruta más corta entre conjuntos de coordenadas de textura, y asume que 0.0 y 1.0 son coincidentes. El último bit es la parte complicada: puedes imaginar que habilitar el ajuste de textura en una dirección hace que el sistema trate una textura como si se ajustara alrededor de un cilindro. Por ejemplo, piensa en el siguiente diagrama.
+Ten en cuenta que la distancia más corta entre A y B en la siguiente ilustración discurre aproximadamente por el medio de la textura. Si se habilita el ajuste de las coordenadas de la textura u o la textura v, cambia el modo en que Direct3D percibe la ruta más corta entre las coordenadas de textura en la dirección u y la dirección v. Por definición, el ajuste de textura causa que el rasterizador tome la ruta más corta entre conjuntos de coordenadas de textura, y asume que 0.0 y 1.0 son coincidentes. La última es la parte difícil: Puede imaginar que habilitar ajuste en una dirección de la textura hace que el sistema tratar una textura como si se han alrededor de un cilindro. Por ejemplo, piensa en el siguiente diagrama.
 
 ![Diagrama de una textura y dos puntos ajustados alrededor de un cilindro](images/interp2.png)
 
@@ -41,9 +41,9 @@ Con el ajuste habilitado en la dirección u, la columna texturizada muestra los 
 
 Si el ajuste de texturas no está habilitado, el rasterizador no interpola en la dirección necesaria para generar una imagen reflejada creíble. En su lugar, el área situada en la parte delantera de la columna contiene una versión comprimida en horizontal de los elementos de textura entre las coordenadas u 0.175 y 0.875, cuando pasan a través del centro de la textura. El efecto del ajuste se arruina.
 
-No confundas el ajuste de texturas con los modos de direccionamiento de las texturas con nombre similar. El ajuste de texturas se realiza antes del direccionamiento de las texturas. Asegúrate de que el ajuste de los datos de la textura no contiene coordenadas de textura fuera del intervalo \[0.0, 1.0\], ya esto generará resultados indefinidos. Para obtener más información acerca de direccionamiento de las texturas, consulta [Modos de direccionamiento de las texturas](texture-addressing-modes.md).
+No confundas el ajuste de texturas con los modos de direccionamiento de las texturas con nombre similar. El ajuste de texturas se realiza antes del direccionamiento de las texturas. Asegúrese de que los datos de ajuste de la textura no contiene las coordenadas de textura fuera del intervalo de \[0.0, 1.0\] porque esto producirá resultados no definidos. Para obtener más información acerca de direccionamiento de las texturas, consulta [Modos de direccionamiento de las texturas](texture-addressing-modes.md).
 
-## <a name="span-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspandisplacement-map-wrapping"></a><span id="Displacement_Map_Wrapping"></span><span id="displacement_map_wrapping"></span><span id="DISPLACEMENT_MAP_WRAPPING"></span>Ajuste de la asignación de desplazamiento
+## <a name="span-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspandisplacement-map-wrapping"></a><span id="Displacement_Map_Wrapping"></span><span id="displacement_map_wrapping"></span><span id="DISPLACEMENT_MAP_WRAPPING"></span>Mapa de desplazamiento de ajuste
 
 
 Las asignaciones de desplazamiento las interpola el motor de teselación. Como el modo de ajuste no se puede especificar para el motor de teselación, el ajuste de texturas no se puede realizar con asignaciones de desplazamiento. Una aplicación puede usar un conjunto de vértices obligue a la interpolación a ajustar en cualquier dirección. La aplicación también puede especificar que la interpolación se realice como una interpolación lineal simple.
@@ -51,7 +51,7 @@ Las asignaciones de desplazamiento las interpola el motor de teselación. Como e
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Texturas](textures.md)
+[Textures](textures.md)
 
  
 

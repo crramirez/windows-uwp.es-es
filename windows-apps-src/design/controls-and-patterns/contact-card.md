@@ -1,26 +1,26 @@
 ---
-Description: A button gives the user a way to trigger an immediate action.
+Description: Un botón ofrece al usuario una forma de desencadenar una acción inmediata.
 title: Tarjeta de contacto
 ms.date: 03/07/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 pm-contact: kele
 design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
 ms.openlocfilehash: 71a3108e21455086e2742987db1d7125c733f6e2
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117605"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638830"
 ---
 # <a name="contact-card"></a>Tarjeta de contacto
 
 La tarjeta de contacto muestra información de contacto, como el nombre, el número de teléfono y la dirección, para un [Contacto](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (el mecanismo que usa UWP para representar personas y empresas).  La tarjeta de contacto también permite al usuario editar información de contacto. Puedes elegir entre mostrar una tarjeta de contacto compacta o una tarjeta de contacto completa que contenga información adicional.
 
-> **API importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [clase Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **API importantes**: [Método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [ShowFullContactCard método](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [IsShowContactCardSupported método](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [póngase en contacto con la clase](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 Hay dos formas de mostrar la tarjeta de contacto:  
 * Como una tarjeta de contacto estándar que aparece en un control flotante descartable por cambio de foco: la tarjeta de contacto desaparece cuando el usuario hace clic fuera de ella. 
@@ -181,5 +181,5 @@ Los ejemplos de este artículo crean un contacto simple. En una aplicación real
 
 ## <a name="related-articles"></a>Artículos relacionados
 - [Contactos y calendario](/windows/uwp/contacts-and-calendar/)
-- [Muestra de tarjetas de contacto](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [Ejemplo de las tarjetas de contacto](https://go.microsoft.com/fwlink/p/?LinkId=624040)
 - [Control de imagen de personas](/windows/uwp/controls-and-patterns/person-picture/)

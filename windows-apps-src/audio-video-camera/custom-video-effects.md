@@ -1,20 +1,20 @@
 ---
-Description: This article describes how to create a Windows Runtime component that implements the IBasicVideoEffect interface to allow you to create custom effects for video streams.
+Description: En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz IBasicVideoEffect para permitir la creación de efectos personalizados para las secuencias de vídeo.
 MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Efectos de vídeo personalizados
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e48febb3fb49a35fe256e58cf7c80b4abe93267
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045574"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623090"
 ---
 # <a name="custom-video-effects"></a>Efectos de vídeo personalizados
 
@@ -28,14 +28,14 @@ En este artículo se describe cómo crear un componente de Windows Runtime que i
 
 Un efecto de vídeo personalizado se define en una clase que implementa la interfaz [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788). Esta clase no se puede incluir directamente en el proyecto de la aplicación. En su lugar, debes usar un componente de Windows Runtime para hospedar la clase de efecto de vídeo.
 
-**Agregar un componente de Windows Runtime para el efecto de vídeo**
+**Agregar un componente en tiempo de ejecución de Windows para el efecto de vídeo**
 
 1.  En Microsoft Visual Studio, con la solución abierta, ve al menú **Archivo** y selecciona **Agregar-&gt;Nuevo proyecto**.
 2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)**.
 3.  Para este ejemplo, asigna al proyecto el nombre *VideoEffectComponent*. Se hará referencia a este nombre en el código más adelante.
-4.  Haz clic en **Aceptar**.
+4.  Haga clic en **Aceptar**.
 5.  La plantilla de proyecto crea una clase denominada Class1.cs. En el **Explorador de soluciones**, haz clic con el botón derecho en el icono de Class1.cs y selecciona **Cambiar nombre**.
-6.  Cambia el nombre del archivo a *ExampleVideoEffect.cs*. Visual Studio mostrará un mensaje que pregunta si quieres actualizar todas las referencias con el nuevo nombre. Haz clic en **Sí**.
+6.  Cambia el nombre del archivo a *ExampleVideoEffect.cs*. Visual Studio mostrará un mensaje que pregunta si quieres actualizar todas las referencias con el nuevo nombre. Haga clic en **Sí**.
 7.  Abre **ExampleVideoEffect.cs** y actualiza la definición de clase para implementar la interfaz [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788).
 
 [!code-cs[ImplementIBasicVideoEffect](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetImplementIBasicVideoEffect)]
@@ -152,7 +152,7 @@ Agrega el siguiente código dentro del espacio de nombres para que el efecto imp
 
  
 
-Ahora puedes agregar la implementación del método **ProcessFrame**. Primero, este método obtiene un objeto [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) de los mapas de bits de software de entrada y salida. Ten en cuenta que el fotograma de salida se abre para la escritura y, el de entrada, para la lectura. Luego, se obtiene un valor de [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671) para cada búfer llamando a [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046). A continuación, se obtiene el búfer de datos reales convirtiendo los objetos **IMemoryBufferReference** como la interfaz de interoperabilidad definida anteriormente, **IMemoryByteAccess** y, a continuación, se llama a **GetBuffer**.
+Ahora puedes agregar la implementación del método **ProcessFrame**. Primero, este método obtiene un objeto [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) de los mapas de bits de software de entrada y salida. Ten en cuenta que la trama de salida se abre para la escritura y, el de entrada, para la lectura. Luego, se obtiene un valor de [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671) para cada búfer llamando a [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046). A continuación, se obtiene el búfer de datos reales convirtiendo los objetos **IMemoryBufferReference** como la interfaz de interoperabilidad definida anteriormente, **IMemoryByteAccess** y, a continuación, se llama a **GetBuffer**.
 
 Ahora que ha se han obtenido los búferes de datos, puedes leer del búfer de entrada y escribir en el búfer de salida. El diseño del búfer se obtiene llamando a [**GetPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887330), que proporciona información sobre el ancho, intervalo y desplazamiento inicial del búfer. Los bits por píxel se determinan a partir de las propiedades de codificación establecidas previamente con el método [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884). La información de formato de búfer se usa para buscar el índice en el búfer para cada píxel. El valor del píxel en el búfer de origen se copia en el búfer de destino con los valores de color multiplicados por la propiedad FadeValue definida para que este efecto los atenúe según la cantidad especificada.
 
@@ -166,13 +166,13 @@ Crear un efecto de vídeo personalizado mediante el procesamiento de hardware (G
 
 Usa los siguientes pasos para agregar el paquete de NuGet Win2D en el proyecto creado como se describe en la sección **Agregar un efecto personalizado a la aplicación** al principio de este artículo.
 
-**Para agregar el paquete de NuGet Win2D al proyecto de efecto**
+**Para agregar el paquete Win2D NuGet al proyecto efecto**
 
 1.  En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto **VideoEffectComponent** y selecciona **Administrar paquetes NuGet**.
 2.  En la parte superior de la ventana, selecciona la pestaña **Examinar**.
 3.  En el cuadro de búsqueda, escribe **Win2D**.
 4.  Selecciona **Win2D.uwp**y luego selecciona **Instalar** en el panel derecho.
-5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haz clic en **Aceptar**.
+5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haga clic en **Aceptar**.
 6.  Acepta la licencia del paquete.
 
 Además de los espacios de nombres incluidos en la configuración básica del proyecto, debes incluir los siguientes espacios de nombres proporcionados por Win2D.
@@ -216,7 +216,7 @@ Para usar el efecto de vídeo desde la aplicación, debes agregar una referencia
 
 1.  En el Explorador de soluciones, en el proyecto de la aplicación, haz clic con el botón derecho en **Referencias** y selecciona **Agregar referencia**.
 2.  Expande la pestaña **Proyectos**, selecciona **Solución** y activa la casilla para el nombre del proyecto de efecto. Para este ejemplo, el nombre es *VideoEffectComponent*.
-3.  Haz clic en **Aceptar**.
+3.  Haga clic en **Aceptar**.
 
 ### <a name="add-your-custom-effect-to-a-camera-video-stream"></a>Agregar el efecto personalizado a una secuencia de vídeo de la cámara
 
@@ -239,7 +239,7 @@ Para obtener instrucciones generales sobre la creación de composiciones multime
 
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Acceso fácil a la vista previa de cámara](simple-camera-preview-access.md)
+* [Acceso a la vista previa de cámara simple](simple-camera-preview-access.md)
 * [Composiciones y edición multimedia](media-compositions-and-editing.md)
 * [Documentación de Win2D](https://go.microsoft.com/fwlink/p/?LinkId=519078)
-* [Reproducción de contenido multimedia](media-playback.md)
+* [Reproducción de multimedia](media-playback.md)

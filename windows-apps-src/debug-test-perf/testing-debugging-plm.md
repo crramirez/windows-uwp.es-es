@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b3e37d4de3a346e0f29909727a46d3b31f9d59d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608500"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
 
@@ -84,5 +84,5 @@ donde `Game` es el nombre de proceso y `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0
 Ten en cuenta que cada llamada a **/enableDebug** debe ser posterior a otra llamada PLMDebug con el conmutador **/disableDebug**. Además, la ruta de acceso a un depurador debe ser absoluta (no se admiten las rutas de acceso relativas).
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Implementación y depuración de aplicaciones para UWP](deploying-and-debugging-uwp-apps.md)
+- [Implementar y depurar aplicaciones para UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuración, pruebas y rendimiento](index.md)

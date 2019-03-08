@@ -5,19 +5,19 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 064eaf42fe7d664be273cd7e2222fa5d90be1a11
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608870"
 ---
-# <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones del proyecto para UWP
+# <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones de su proyecto UWP
 
 ¿Todavía no has compilado tu juego Unity para Xbox con la Plataforma universal de Windows (UWP)?  Como primer paso, consulta el documento [Llevar los juegos Unity a UWP en Xbox](development-lanes-unity.md).
 
 Existen diferentes motivos por los que quisieras agregar partes de tu directorio de UWP generado al control de versiones, una de ellas es agregar dependencias (por ejemplo, el SDK de Xbox Live).  Usaremos este escenario como ejemplo para este tutorial y esperamos que te sirva de ayuda para resolver las necesidades individuales de tu proyecto.
 
-***Declinación de responsabilidades: Usaremos Git como nuestra solución de control de versiones.  Aunque uses una solución distinta, los conceptos deberían poder aplicarse.***
+***Declinación de responsabilidades: Vamos a usar Git como nuestra solución de control de versión.  Si el suyo es diferente, todavía deben traducir los conceptos.***
 
 Para refrescarte la memoria, este es el aspecto actual del directorio de nuestro juego, ***ScrapyardPhoenix***:
 
@@ -29,7 +29,7 @@ Y este es el aspecto de nuestro directorio para UWP:
 
 En este directorio, lo único que nos interesa es una carpeta, la carpeta ***ScrapyardPhoenix*** (inserta el nombre de tu juego aquí).  En nuestro control de versiones, todo lo demás puede omitirse.
 
-***¿No sabes lo que es un archivo .gitignore?  Consulta [gitignore](https://git-scm.com/docs/gitignore).***
+***¿No conoce qué .gitignore es un archivo?  Consulte [gitignore](https://git-scm.com/docs/gitignore).***
 
     ##################################################################
     # The original .gitignore file can be found at
@@ -51,18 +51,18 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 
 ## <a name="folders"></a>Carpetas  
 
-`Assets` | ***Incluir*** | Contiene imágenes de Microsoft Store  
-`Data`   | ***Omitir*** | Donde Unity compila el proyecto (escenas, sombreadores, Scripts, Prefabs, etcetera.)  
-`Dependencies` | ***Incluir*** | Esta carpeta es que he creado para mantener todas las dependencias UWP en (por ejemplo, XboxLiveSDK.dll)  
-`Properties` | ***Incluir*** | Contiene la configuración más avanzada que se puede modificar el desarrollador  
+`Assets` | ***Incluir*** | Contiene las imágenes de Microsoft Store  
+`Data`   | ***Omitir*** | Donde Unity compila el proyecto (escenas, sombreadores, Scripts, prefabricados, etcetera.)  
+`Dependencies` | ***Incluir*** | Esta carpeta es uno que creó para mantener todas las dependencias UWP en (por ejemplo, XboxLiveSDK.dll)  
+`Properties` | ***Incluir*** | Contiene la configuración más avanzada que se puede modificar por el desarrollador  
 `Unprocessed` | ***Omitir*** | Contiene Unity `.dll` y `.pdb` archivos  
 
 ## <a name="files"></a>Archivos  
 
-`App.cs` | ***Incluir*** | Punto de entrada de la aplicación para UWP. se puede modificar y ampliar con otros archivos de origen  
-`Package.appxmanifest` | ***Incluir*** | Archivo de manifiesto de paquete de aplicación para tu AppX  
-`project.json` | ***Incluir*** | Describe los paquetes de NuGet tu `*.csproj` depende  
-`ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de compilación para UWP; Si agregas dependencias adicionales a tu UWP proyecto, este `*.csproj` archivo contendrá dicha información  
+`App.cs` | ***Incluir*** | Punto de entrada para la aplicación para UWP; Esto se puede modificar y extender con otros archivos de origen  
+`Package.appxmanifest` | ***Incluir*** | Archivo de manifiesto de origen del paquete de aplicación para su AppX  
+`project.json` | ***Incluir*** | Describe los paquetes de NuGet su `*.csproj` depende de  
+`ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de compilación UWP; Si agrega las dependencias adicionales a su UWP del proyecto, esto `*.csproj` archivo contendrán esa información  
 `ScrapyardPhoenix.csproj.user` | ***Omitir*** | Este archivo contiene información de usuario local
 
 ## <a name="resulting-gitignore"></a>Archivo .gitignore resultante
@@ -97,8 +97,8 @@ Para agregar dependencias a archivos DLL y WINMD, colócalos en la carpeta **Ass
 
 ![Solución para UWP](images/uwp-solution.PNG)
 
-***ScrapyardPhoenix (Universal Windows)*** es el proyecto al que agregarías una referencia, por ejemplo, el SDK de Xbox Live.
+***ScrapyardPhoenix (Universal Windows)*** es el proyecto al que agregarías una referencia; por ejemplo, el SDK de Xbox Live.
 
-## <a name="see-also"></a>Consulta también
-- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
+## <a name="see-also"></a>Consulte también
+- [Volver a poner existentes juegos para Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)

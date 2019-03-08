@@ -1,5 +1,5 @@
 ---
-Description: The Windows Push Notification Services (WNS) enables third-party developers to send toast, tile, badge, and raw updates from their own cloud service. This provides a mechanism to deliver new updates to your users in a power-efficient and dependable way.
+Description: Con los Servicios de notificaciones de inserción de Windows (WNS), los desarrolladores de terceros pueden enviar actualizaciones de notificaciones del sistema, de icono, de distintivo y sin procesar desde su propio servicio de nube. Esto proporciona un mecanismo para enviar nuevas actualizaciones a los usuarios de una manera segura y de bajo consumo.
 title: Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 267e6e1cf9a004b6703e000b694274b802220f60
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047530"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611930"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
  
@@ -28,7 +28,7 @@ En el siguiente diagrama se muestra el flujo completo de datos para el envío de
 2.  Windows solicita a WNS que cree un canal de notificación. que será devuelto al dispositivo de llamada en forma de identificador uniforme de recursos (URI).
 3.  Windows devuelve el URI del canal de notificación a tu aplicación.
 4.  Tu aplicación envía el URI a tu propio servicio de nube. A continuación, debes almacenar el URI en tu propio servicio de nube para poder acceder al URI al enviar notificaciones. El URI es una interfaz entre tu propia aplicación y tu propio servicio; es responsabilidad tuya implementar esta interfaz con estándares web seguros y fiables.
-5.  Cuando tu servicio de nube tenga una actualización por enviar, WNS recibe una notificación mediante el URI del canal. Para ello, se emite una solicitud HTTPPOST, incluida la carga de notificación, a través de la Capa de sockets seguros (SSL). Este paso requiere autenticación.
+5.  Cuando tu servicio de nube tenga una actualización por enviar, WNS recibe una notificación mediante el URI del canal. Para ello, se emite una solicitud HTTP POST, incluida la carga de notificación, a través de la Capa de sockets seguros (SSL). Este paso requiere autenticación.
 6.  WNS recibe la solicitud y enruta la notificación hacia el dispositivo pertinente.
 
 ![Diagrama de flujo de datos WNS para notificaciones de inserción](images/wns-diagram-01.png)
@@ -36,7 +36,7 @@ En el siguiente diagrama se muestra el flujo completo de datos para el envío de
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registro de una aplicación y recepción de las credenciales para el servicio de nube
 
 
-Antes de enviar notificaciones con WNS, la aplicación debe registrarse en el panel de la Tienda. Esto te proporcionará las credenciales de la aplicación que tu servicio en la nube usará en la autenticación con WNS. Estas credenciales son un identificador de seguridad de paquete (SID) y una clave secreta. Para realizar este registro, inicia sesión en [El centro de partners](https://partner.microsoft.com/dashboard). Después de crear la aplicación, puedes recuperar las credenciales siguiendo las instrucciones de la página **Administración de aplicaciones: WNS/MPNS**. Si quieres usar la solución Servicios de Live, sigue el vínculo del **sitio de Servicios Live** de esta página.
+Antes de enviar notificaciones con WNS, la aplicación debe registrarse en el panel de la Tienda. Esto te proporcionará las credenciales de la aplicación que tu servicio en la nube usará en la autenticación con WNS. Estas credenciales son un identificador de seguridad de paquete (SID) y una clave secreta. Para llevar a cabo este registro, inicie sesión en [centro de partners](https://partner.microsoft.com/dashboard). Después de crear la aplicación, puedes recuperar las credenciales siguiendo las instrucciones de la página **Administración de aplicaciones: WNS/MPNS**. Si quieres usar la solución Servicios de Live, sigue el vínculo del **sitio de Servicios Live** de esta página.
 
 Cada aplicación tiene su propio conjunto de credenciales para su servicio de nube. Estas credenciales no se pueden usar para enviar notificaciones a cualquier otra aplicación.
 
@@ -51,7 +51,7 @@ Después de crear correctamente un URI de canal, la aplicación lo envía a su s
 
 ### <a name="important-notes"></a>Notas importantes
 
--   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renueva periódicamente su canal en segundo plano, a continuación, puedes descargar la [muestra de inserción y las notificaciones periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows8.1 y volver a usar su código fuente y el patrón que muestra.
+-   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renovará periódicamente su canal en segundo plano, puede descargar el [Push y ejemplo de notificaciones periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 y volver a usar su código fuente o el patrón se muestra.
 -   El desarrollador es quien implementa la interfaz entre el servicio de nube y la aplicación cliente. Recomendamos que la aplicación pase por un proceso de autenticación con su propio servicio y transmita datos en un protocolo seguro, como HTTPS.
 -   Es importante que el servicio de nube siempre asegure que el URI de canal use el dominio "notify.windows.com". El servicio nunca debe insertar notificaciones en un canal en otro dominio. Si alguna vez la devolución de llamada de la aplicación se ve comprometida, un atacante malintencionado podría enviar un URI de canal para suplantar WNS. Si no se inspecciona el dominio, el servicio de nube podría revelar información a este atacante sin saberlo.
 -   Si tu servicio de nube intenta enviar una notificación a un canal expirado, WNS devolverá el [código de respuesta 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes). En respuesta a ese código, tu servicio no debe seguir intentando enviar notificaciones a ese URI.
@@ -70,9 +70,9 @@ En un nivel alto, la cadena de información es la siguiente:
 
 ![Diagrama WNS para la autenticación del servicio de nube](images/wns-diagram-02.png)
 
-En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Indica tu SID de paquete en el campo "client\_id" y tu clave secreta en el campo "client\_secret". Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
+En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Proporcionar el SID del paquete en el "cliente\_id" campo y el secreto de la clave en el "cliente\_secreto" campo. Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
 
-**Nota**esto es solo un ejemplo, no copiar y pegar el código que puede utilizar correctamente en su propio código.
+**Tenga en cuenta**  esto es simplemente un ejemplo, no cortar y pegar código que puede usar correctamente en su propio código.
 
  
 
@@ -119,7 +119,7 @@ El token de acceso descrito anteriormente puede volver a usarse para varias soli
 
     Aquí te mostramos un ejemplo de solicitud. Para obtener detalles de sintaxis, consulta el tema sobre [códigos de respuesta de una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435).
 
-    Para obtener detalles sobre cómo redactar la carga de notificación, consulta [Inicio rápido: envío de una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252). La carga de una notificación, una notificación del sistema o una notificación de icono se suministra como contenido XML conforme a su [Esquema de iconos adaptativos](adaptive-tiles-schema.md) o el [Esquema de iconos heredados](https://msdn.microsoft.com/library/windows/apps/br212853). Por su parte, la carga de una notificación sin procesar carece de una estructura específica, ya que se define estrictamente para cada aplicación.
+    Para obtener más información sobre la composición de la carga de notificación, consulte [inicio rápido: Enviar una notificación push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252). La carga de una notificación, una notificación del sistema o una notificación de icono se suministra como contenido XML conforme a su [Esquema de iconos adaptativos](adaptive-tiles-schema.md) o el [Esquema de iconos heredados](https://msdn.microsoft.com/library/windows/apps/br212853). Por su parte, la carga de una notificación sin procesar carece de una estructura específica, ya que se define estrictamente para cada aplicación.
 
     ``` http
      POST https://cloud.notify.windows.com/?token=AQE%bU%2fSjZOCvRjjpILow%3d%3d HTTP/1.1
@@ -160,20 +160,20 @@ Por ejemplo, durante un día de gran actividad en el mercado de valores, puedes 
 ## <a name="push-notifications-and-battery-saver"></a>Notificaciones de inserción y ahorro de batería
 
 
-El ahorro de batería amplía la duración de la batería limitando la actividad en segundo plano en el dispositivo. Windows 10 permite al usuario establecer el ahorro de batería que se active automáticamente cuando la batería caiga por debajo de un umbral especificado. Cuando el ahorro de batería está activado, se deshabilita la recepción de notificaciones de inserción para ahorrar energía. Sin embargo, hay algunas excepciones. La siguiente configuración de ahorro de batería de Windows 10 (que se encuentra en la aplicación **configuración** ) permite que la aplicación recibir notificaciones de inserción, incluso cuando el ahorro de batería está activado.
+El ahorro de batería amplía la duración de la batería limitando la actividad en segundo plano en el dispositivo. Windows 10 permite al usuario establecer como protector de la batería para activar automáticamente cuando la batería cae por debajo del umbral especificado. Cuando el ahorro de batería está activado, se deshabilita la recepción de notificaciones de inserción para ahorrar energía. Sin embargo, hay algunas excepciones. La siguiente configuración del protector de la batería de Windows 10 (se encuentra en la **configuración** aplicación) que la aplicación pueda recibir notificaciones de inserción, incluso cuando el protector de la batería se encuentra en.
 
--   **Permitir las notificaciones de inserción desde cualquier aplicación en el modo de ahorro de batería**: esta configuración permite que todas las aplicaciones reciban notificaciones de inserción aunque esté activado el ahorro de batería. Ten en cuenta que esta opción se aplica solo a Windows 10 para ediciones de escritorio (Home, Pro, Enterprise y Education).
--   **Siempre permitido**: esta opción permite que ciertas aplicaciones se ejecuten en segundo plano mientras el ahorro de batería está activado (recepción de notificaciones de inserción incluida). El usuario es quien debe mantener manualmente esta lista.
+-   **Permitir notificaciones push desde cualquier aplicación en el ahorro de batería**: Esta configuración permite que todas las aplicaciones recibir notificaciones de inserción mientras ahorro de batería. Tenga en cuenta que esta configuración se aplica solo a Windows 10 para las ediciones de escritorio (Home, Pro, Enterprise y Education).
+-   **Siempre permiten**: Esta configuración permite que aplicaciones específicas se ejecutan en segundo plano mientras el ahorro de batería está en - incluido recibir notificaciones de inserción. El usuario es quien debe mantener manualmente esta lista.
 
-No hay ninguna forma de comprobar el estado de estos dos valores, pero puedes comprobar el estado del ahorro de batería. En Windows 10, usa la propiedad [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) para comprobar el estado del ahorro de batería. La aplicación también puede usar el evento [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) para detectar cambios en el ahorro de batería.
+No hay ninguna forma de comprobar el estado de estos dos valores, pero puedes comprobar el estado del ahorro de batería. En Windows 10, use el [ **EnergySaverStatus** ](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) propiedad para comprobar el estado de ahorro de batería. La aplicación también puede usar el evento [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) para detectar cambios en el ahorro de batería.
 
-Si la aplicación depende en gran medida de las notificaciones de inserción, te recomendamos que notifiques a los usuarios que no pueden recibir notificaciones mientras esté activado el ahorro de batería y para que les resulte más fácil ajustar la **configuración de ahorro de batería**. Con el esquema URI de configuración de ahorro de batería en Windows 10, `ms-settings:batterysaver-settings`, puedes proporcionar un vínculo práctico a la aplicación configuración.
+Si la aplicación depende en gran medida de las notificaciones de inserción, te recomendamos que notifiques a los usuarios que no pueden recibir notificaciones mientras esté activado el ahorro de batería y para que les resulte más fácil ajustar la **configuración de ahorro de batería**. Con el esquema URI de configuración de la batería protector en Windows 10, `ms-settings:batterysaver-settings`, puede proporcionar un vínculo cómodo a la aplicación de configuración.
 
-**Sugerencia**  al notificar al usuario acerca de la configuración de ahorro de batería, te recomendamos que proporciones una forma de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
+**Sugerencia**    al notificar al usuario sobre la configuración del protector de la batería, le recomendamos que proporcione una manera para suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
 
  
 
-Este es un ejemplo de cómo comprobar si el ahorro de batería está activado en Windows 10. En este ejemplo se notifica al usuario y se inicia la aplicación Configuración para la **configuración de ahorro de batería**. La casilla `dontAskAgainSetting` permite al usuario suprimir el mensaje si no desea volver a recibir notificaciones.
+Este es un ejemplo de cómo comprobar si se activa el protector de la batería en Windows 10. En este ejemplo se notifica al usuario y se inicia la aplicación Configuración para la **configuración de ahorro de batería**. La casilla `dontAskAgainSetting` permite al usuario suprimir el mensaje si no desea volver a recibir notificaciones.
 
 ```cs
 using System;
@@ -244,13 +244,13 @@ Este es el código XAML para la clase [**ContentDialog**](https://docs.microsoft
 
 
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)
-* [Inicio rápido: Envío de una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Cómo actualizar un distintivo mediante notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
+* [Inicio rápido: Enviar una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
+* [Cómo actualizar una notificación a través de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
 * [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/jj709907.aspx)
-* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Directrices y lista de comprobación de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://msdn.microsoft.com/library/windows/apps/xaml/jj709907.aspx)
+* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
+* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435)
+* [Directrices y lista de comprobación para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Notificaciones sin procesar](https://msdn.microsoft.com/library/windows/apps/hh761488)
  
 

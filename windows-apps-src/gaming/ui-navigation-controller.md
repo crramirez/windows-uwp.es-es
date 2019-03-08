@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, interfaz de usuario, navegación
 ms.localizationpriority: medium
 ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599930"
 ---
 # <a name="ui-navigation-controller"></a>Controlador de navegación de la interfaz de usuario
 
@@ -95,18 +95,18 @@ En la siguiente tabla se resume cómo el _conjunto opcional_ de comandos de nave
 
 | Comando de navegación | Entrada del controlador para juegos          | Entrada del stick arcade | Entrada del volante    |
 | ------------------:| ---------------------- | ------------------ | --------------------- |
-|             PageUp | Gatillo izquierdo           | _no compatible_    | _varía_              |
-|           PageDown | Gatillo derecho          | _no compatible_    | _varía_              |
-|           PageLeft | Botón superior izquierdo            | _no compatible_    | _varía_              |
-|          PageRight | Botón superior derecho           | _no compatible_    | _varía_              |
-|           ScrollUp | Stick analógico derecho hacia arriba    | _no compatible_    | _varía_              |
-|         ScrollDown | Stick analógico derecho hacia abajo  | _no compatible_    | _varía_              |
-|         ScrollLeft | Stick analógico derecho hacia la izquierda  | _no compatible_    | _varía_              |
-|        ScrollRight | Stick analógico derecho hacia la derecha | _no compatible_    | _varía_              |
-|           Context1 | Botón X               | _no compatible_    | Botón X (_generalmente_) |
-|           Context2 | Botón Y               | _no compatible_    | Botón Y (_generalmente_) |
-|           Context3 | Presión del stick analógico izquierdo  | _no compatible_    | _varía_              |
-|           Context4 | Presión del stick analógico derecho | _no compatible_    | _varía_              |
+|             PageUp | Gatillo izquierdo           | _No se admite_    | _varies_              |
+|           PageDown | Gatillo derecho          | _No se admite_    | _varies_              |
+|           PageLeft | Botón superior izquierdo            | _No se admite_    | _varies_              |
+|          PageRight | Botón superior derecho           | _No se admite_    | _varies_              |
+|           ScrollUp | Stick analógico derecho hacia arriba    | _No se admite_    | _varies_              |
+|         ScrollDown | Stick analógico derecho hacia abajo  | _No se admite_    | _varies_              |
+|         ScrollLeft | Stick analógico derecho hacia la izquierda  | _No se admite_    | _varies_              |
+|        ScrollRight | Stick analógico derecho hacia la derecha | _No se admite_    | _varies_              |
+|           Context1 | Botón X               | _No se admite_    | Botón X (_generalmente_) |
+|           Context2 | Botón Y               | _No se admite_    | Botón Y (_generalmente_) |
+|           Context3 | Presión del stick analógico izquierdo  | _No se admite_    | _varies_              |
+|           Context4 | Presión del stick analógico derecho | _No se admite_    | _varies_              |
 
 
 ## <a name="detect-and-track-ui-navigation-controllers"></a>Detectar y realizar un seguimiento de los controladores de navegación de la interfaz de usuario
@@ -213,7 +213,7 @@ A veces, tal vez quieras determinar si se libera un botón que está presionado 
 
 La [muestra InputInterfacingUWP _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/InputInterfacingUWP) evidencia cómo los distintos dispositivos de entrada se comportan como controladores de navegación de la interfaz de usuario.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 [Windows.Gaming.Input.Gamepad][]
 [Windows.Gaming.Input.ArcadeStick][]
 [Windows.Gaming.Input.RacingWheel][]

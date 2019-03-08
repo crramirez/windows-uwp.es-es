@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, obtener ofertas dirigidas
 ms.localizationpriority: medium
 ms.openlocfilehash: 71cd6ce3b9736b812f8ccdf4d21d35357928c63c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622770"
 ---
 # <a name="get-targeted-offers"></a>Obtener ofertas dirigidas
 
@@ -26,7 +26,7 @@ Para usar este método, primero debes [obtener un token de cuenta de Microsoft](
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de solicitud                                                                |
+| Método | URI de la solicitud                                                                |
 |--------|----------------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v2.0/my/storeoffers/user``` |
 
@@ -35,10 +35,10 @@ Para usar este método, primero debes [obtener un token de cuenta de Microsoft](
 
 | Encabezado        | Tipo   | Descripción  |
 |---------------|--------|--------------|
-| Authorization | cadena | Obligatorio. El token de la cuenta de Microsoft para el usuario que inició sesión actualmente en la aplicación en la forma **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token Account de Microsoft para el usuario que inició sesión actual de la aplicación en el formulario **portador** &lt; *token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 Este método no tiene parámetros de URI ni de consulta.
 
@@ -55,8 +55,8 @@ Este método devuelve un cuerpo de respuesta en formato JSON que contiene una ma
 
 | Campo      | Tipo   | Descripción         |
 |------------|--------|------------------|
-| ofertas      | matriz  | Una matriz de identificadores de producto para los complementos que están asociados con las ofertas dirigidas que están disponibles para el usuario actual. Estos Id. del producto se especifican en la página **ofertas de destino** de la aplicación en el centro de partners.            |
-| trackingId  | cadena | Un GUID que, opcionalmente, puedes utilizar para realizar un seguimiento de la oferta dirigida en tu propio código o servicios. |
+| ofertas      | array  | Una matriz de identificadores de producto para los complementos que están asociados con las ofertas dirigidas que están disponibles para el usuario actual. Estos identificadores de producto se especifican en el **destino ofertas** página de la aplicación en el centro de partners.            |
+| trackingId  | string | Un GUID que, opcionalmente, puedes utilizar para realizar un seguimiento de la oferta dirigida en tu propio código o servicios. |
 
 
 ### <a name="example"></a>Ejemplo
@@ -75,9 +75,9 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 ]
 ```
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Administrar ofertas dirigidas usando los servicios de la Store](manage-targeted-offers-using-windows-store-services.md)
+* [Administrar ofertas de destino utilizando servicios de Store](manage-targeted-offers-using-windows-store-services.md)
 
  
 

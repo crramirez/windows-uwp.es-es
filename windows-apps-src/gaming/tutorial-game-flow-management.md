@@ -1,5 +1,5 @@
 ---
-title: Administración del flujo de los juegos
+title: Administración de flujo de juegos
 description: Obtén información sobre cómo inicializar estados de juegos, controlar eventos y establecer el bucle de actualización del juego.
 ms.assetid: 6c33bf09-b46a-4bb5-8a59-ca83ce257eb3
 ms.date: 10/24/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 37deaabe2586391b0f0c93359133f10830558539
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981499"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608860"
 ---
-# <a name="game-flow-management"></a>Administración del flujo de los juegos
+# <a name="game-flow-management"></a>Administración de flujo de juegos
 
 Ahora, el juego tiene una ventana, ha registrado un par de controladores de eventos y carga asíncronamente activos de carga. Esta sección trata sobre el uso de los estados del juego, cómo administrar estados de juego claves específicos y cómo crear un bucle de actualización para el motor del juego. A continuación, se tratará sobre el flujo de la interfaz de usuario y por último, sobre saber más acerca de los controladores de eventos y eventos que son necesarios para un juego UWP.
 
 >[!Note]
->Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Ten en cuenta que este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+>Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 ## <a name="game-states-used-to-manage-game-flow"></a>Estados del juego usados para administrar el flujo del juego
 
@@ -54,7 +54,7 @@ Este es un diagrama de flujo para ayudarte a visualizar el flujo y trata tanto s
 * La inicialización comienza en el nodo __inicio__ al comprobar el estado actual del juego. Para el código del juego, ve a [__GameMain::InitializeGameState__](#gamemaininitializegamestate-method).
 * Para obtener más información sobre el bucle de actualización, ve a [Motor de actualización de juego](#update-game-engine). Para el código del juego, ve a [__Active__](#appupdate-method).
 
-![máquina de estado principal para el juego](images/simple-dx-game-flow-statemachine.png)
+![the main state machine fo our game](images/simple-dx-game-flow-statemachine.png)
 
 ### <a name="gamemaininitializegamestate-method"></a>Método GameMain::InitializeGameState
 
@@ -131,8 +131,8 @@ En el método [__App:: Run__](https://github.com/Microsoft/Windows-universal-sam
 
 En la muestra de juego, existen 3 estados principales (__UpdateEngineState__) en los que puede estar el juego:
 
-1. __En espera de recursos__: El bucle del juego es cíclico, incapaz de realizar una transición hasta que disponga de recursos (en concreto, recursos gráficos). Cuando las tareas asíncronas de carga de recursos finalizan, el estado se actualiza a __ResourcesLoaded__. Esto suele ocurrir entre niveles cuando el nivel está cargando nuevos recursos del disco, servidor de juegos o back-end de la nube. En la muestra de juego, simulamos este comportamiento, dado que la muestra no necesita ningún recurso adicional por nivel en ese momento.
-2. __Waiting for press__: el bucle del juego está dando vueltas, esperando una entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración __PressResultState__.
+1. __Esperando recursos__: El bucle del juego está ciclando, incapaz de realizar la transición hasta que disponga de recursos (en concreto recursos gráficos). Cuando las tareas asincrónicas para cargar recursos finalizan, el estado se actualiza a __ResourcesLoaded__. Esto suele ocurrir entre niveles cuando el nivel está cargando nuevos recursos del disco, servidor de juegos o back-end de la nube. En la muestra de juego, simulamos este comportamiento, dado que la muestra no necesita ningún recurso adicional por nivel en ese momento.
+2. __Esperando presione__: El bucle del juego está ciclando, esperando a la entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración __PressResultState__.
 3. En __Dynamics__: El bucle del juego se está ejecutando mientras el usuario juega. Cuando el usuario está jugando, el juego comprueba 3 condiciones con las que puede realizar una transición: 
     * __TimeExpired__: acaba el tiempo establecido para un nivel
     * __LevelComplete__: completado de un nivel por parte del jugador 
@@ -144,7 +144,7 @@ Vamos a dar un vistazo a los códigos del bucle de actualización que viene a co
 
 ### <a name="appupdate-method"></a>Método App::Update
 
-Estructura de la máquina de estado usada para actualizar el motor de juego
+La estructura de la máquina de estado usada para actualizar el motor de juego
 
 ```cpp
 void GameMain::Update()
@@ -289,7 +289,7 @@ Estos son los controladores de eventos usados en esta muestra y los eventos que 
 <td align="left">OnDpiChanged</td>
 <td align="left">Controla <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. Los PPP de la pantalla han cambiado, por lo que la aplicación del juego ajusta sus recursos en consonancia.
 <div class="alert">
-<strong>Nota</strong> <a href="https://msdn.microsoft.com/library/windows/desktop/hh404559"><strong>CoreWindow</strong></a> coordenadas son en DIP (píxeles independientes del dispositivo) para <a href="https://msdn.microsoft.com/library/windows/desktop/dd370987">Direct2D</a>. Como resultado, se debe notificar a Direct2D del cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
+<strong>Tenga en cuenta</strong> <a href="https://msdn.microsoft.com/library/windows/desktop/hh404559"><strong>CoreWindow</strong> </a> las coordenadas están en DIP (píxeles independientes del dispositivo) para <a href="https://msdn.microsoft.com/library/windows/desktop/dd370987">Direct2D</a>. Como resultado, se debe notificar a Direct2D el cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
 </div>
 <div>
 </div></td>
@@ -335,8 +335,8 @@ En este tema, hemos analizado cómo se administra el flujo de juego general, usa
  
 Puedes ir viendo el resto de componentes que conforman el juego en cualquier orden:
 * [Definir el objeto principal del juego](tutorial--defining-the-main-game-loop.md)
-* [Marco de representación I: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md)
-* [Marco de representación II: Representación de juego](tutorial-game-rendering.md)
+* [Marco de representación lo hago?: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md)
+* [Marco de representación II: Representación de juegos](tutorial-game-rendering.md)
 * [Agregar una interfaz de usuario](tutorial--adding-a-user-interface.md)
 * [Agregar controles](tutorial--adding-controls.md)
 * [Agregar sonido](tutorial--adding-sound.md)

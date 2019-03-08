@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 59306e32fe1fcc68978c977b89934e64d85b8cc8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924291"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629920"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Muestra de Python: envío de aplicación con opciones de juego y tráileres
 
@@ -18,7 +18,7 @@ En este artículo se proporcionan ejemplos de código Python que muestran cómo 
 
 * Obtén un token de acceso de Azure AD para usarlo con la API de envío de Microsoft Store.
 * Crear un envío de aplicación
-* Configura los datos de la descripción de la Store para el envío de aplicación, incluida las opciones de descripciones avanzadas de [juegos](manage-app-submissions.md#gaming-options-object) y [tráileres](manage-app-submissions.md#trailer-object).
+* Configura los datos de la descripción de la Tienda para el envío de aplicación, incluida las opciones de descripciones avanzadas de [juegos](manage-app-submissions.md#gaming-options-object) y [tráileres](manage-app-submissions.md#trailer-object).
 * Carga el archivo ZIP que contiene los paquetes, las imágenes de descripciones y los archivos de tráileres para el envío de aplicación.
 * Confirma el envío de aplicación.
 
@@ -28,7 +28,7 @@ En este artículo se proporcionan ejemplos de código Python que muestran cómo 
 
 Este código llama a otras clases y funciones de ejemplo para usar la API de envío de Microsoft Store para crear y confirmar un envío de aplicación que contiene opciones de juego y un tráiler. Para adaptar este código a tu propio uso:
 
-* Asigna la variable ```tenant``` al identificador de inquilino para tu aplicación y asigna las variables ```client``` y ```secret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, consulta [cómo asociar una aplicación de Azure AD con tu cuenta del centro de partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Asigna la variable ```tenant``` al identificador de inquilino para tu aplicación y asigna las variables ```client``` y ```secret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, vea [cómo asociar una aplicación de Azure AD con su cuenta de centro de partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Asigna la variable ```application_id``` al [Id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la cual quieres crear un envío.
 
 > [!div class="tabbedCodeSnippets"]
@@ -57,4 +57,4 @@ El siguiente ejemplo define las funciones auxiliares que devuelven datos de la d
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

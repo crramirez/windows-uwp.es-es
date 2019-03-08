@@ -1,19 +1,19 @@
 ---
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo.
-title: Efectos para la captura de vídeo
+title: Efectos para captura de vídeos
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e9960e66c6bcdd7105e201d48e2317de4a39a19a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947517"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636630"
 ---
-# <a name="effects-for-video-capture"></a>Efectos para la captura de vídeo
+# <a name="effects-for-video-capture"></a>Efectos para captura de vídeos
 
 
 Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo.
@@ -45,7 +45,7 @@ También puedes quitar todos los efectos de la secuencia de vista previa o de ca
 
 El efecto de estabilización de vídeo manipula los marcos de una secuencia de vídeo para minimizar la sacudida causada por sujetar el dispositivo de captura con la mano. Dado que esta técnica hace que los píxeles de desplazamiento se muevan a derecha, izquierda, arriba o abajo, y como el efecto no puede saber cuál es el contenido que queda justo fuera del marco de vídeo, el vídeo estabilizado se recorta ligeramente en relación al vídeo original. Se proporciona una función de utilidad que te permite ajustar la configuración para administrar de forma óptima el corte realizado por el efecto de codificación de vídeo.
 
-En los dispositivos que lo admiten, la estabilización de imagen óptica (OIS) estabiliza el vídeo manipulando mecánicamente el dispositivo de captura y, por lo tanto, no es necesario recortar los bordes de los fotogramas de vídeos. Para más información, consulta [capturar controles del dispositivo de captura de vídeo](capture-device-controls-for-video-capture.md).
+En los dispositivos que lo admiten, la estabilización de imagen óptica (OIS) estabiliza el vídeo manipulando mecánicamente el dispositivo de captura y, por lo tanto, no es necesario recortar los bordes de los fotogramas de vídeos. Para obtener más información, consulta [Controles de dispositivo de captura para captura de vídeos](capture-device-controls-for-video-capture.md).
 
 ### <a name="set-up-your-app-to-use-video-stabilization"></a>Configurar tu aplicación para usar la estabilización de vídeo
 
@@ -85,7 +85,7 @@ Establece la propiedad [**Video**](https://msdn.microsoft.com/library/windows/ap
 
 [!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
 
-### <a name="handle-the-video-stabilization-effect-being-disabled"></a>El controlador del efecto de estabilización de vídeo está deshabilitado
+### <a name="handle-the-video-stabilization-effect-being-disabled"></a>Controlar el efecto de estabilización de vídeo que se va a deshabilitar
 
 El sistema puede deshabilitar automáticamente el efecto de estabilización de vídeo si el rendimiento de píxeles es demasiado alto para que el efecto pueda controlarlo, o si detecta que el efecto se está ejecutando lentamente. Si esto ocurre, se genera el evento EnabledChanged. La instancia **VideoStabilizationEffect** del parámetro *sender* indica el nuevo estado del efecto: habilitado o deshabilitado. La clase [**VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979) tiene un valor [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981) que indica por qué se habilitó o deshabilitó el efecto. Ten en cuenta que este evento también se genera, si mediante programación, habilitas o deshabilitas el efecto; en tal caso, el motivo será **Programmatic**.
 
@@ -99,10 +99,10 @@ Para limpiar el efecto de estabilización de vídeo, llama al método [**RemoveE
 
 [!code-cs[CleanUpVisualStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

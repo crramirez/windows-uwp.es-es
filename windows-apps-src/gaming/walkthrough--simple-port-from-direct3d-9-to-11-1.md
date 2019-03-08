@@ -1,23 +1,23 @@
 ---
 title: 'Tutorial: Migrar de Direct3D 9 a DirectX 11 y UWP'
-description: En este ejercicio de migración se muestra cómo llevar un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
+description: Este ejercicio de migración muestra cómo traer un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, directx, puerto, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634230"
 ---
-# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Tutorial Portar una aplicación de Direct3D 9 sencilla a DirectX 11 y la Plataforma universal de Windows (UWP)
+# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Tutorial: Portar una aplicación de Direct3D 9 simple a DirectX 11 y plataforma Universal de Windows (UWP)
 
 
 
-En este ejercicio de migración se muestra cómo llevar un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
+Este ejercicio de migración muestra cómo traer un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
 ## 
 <table>
 <colgroup>
@@ -32,15 +32,15 @@ En este ejercicio de migración se muestra cómo llevar un marco de representaci
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md">Inicializar Direct3D11</a></p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md">Inicializar Direct3D 11</a></p></td>
 <td align="left"><p>Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-2--rendering.md">Convertir el marco de representación</a></p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-2--rendering.md">Convertir el marco de trabajo de representación</a></p></td>
 <td align="left"><p>Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones, como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">Migrar el bucle del juego</a></p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">El bucle de juego de puerto</a></p></td>
 <td align="left"><p>Aprende a implementar una ventana para un juego de UWP y a traer el bucle de la repetición, incluso cómo crear una <a href="https://msdn.microsoft.com/library/windows/apps/hh700478"><strong>IFrameworkView</strong></a> para controlar una <a href="https://msdn.microsoft.com/library/windows/apps/br208225"><strong>CoreWindow</strong></a> de pantalla completa.</p></td>
 </tr>
 </tbody>
@@ -68,19 +68,19 @@ Ten en cuenta que este tutorial usa [**CoreWindow**](https://msdn.microsoft.com/
 ## <a name="prerequisites"></a>Requisitos previos
 
 
-Debes [preparar tu entorno de desarrollo para el desarrollo de juegos de DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero tendrás que Microsoft Studio2015 Visual para cargar las muestras de código de este tutorial.
+Debes [preparar tu entorno de desarrollo para el desarrollo de juegos de DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Aún no necesita una plantilla, pero necesitará Microsoft Visual Studio 2015 para cargar los ejemplos de código para este tutorial.
 
-Consulta [Conceptos y consideraciones de migración](porting-considerations.md) para comprender mejor los conceptos de programación de DirectX11 y UWP que se muestran en este tutorial.
+Consulta [Conceptos y consideraciones de migración](porting-considerations.md) para comprender mejor los conceptos de programación de DirectX 11 y UWP que se muestran en este tutorial.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 **Direct3D**
 
-* [Escribir sombreadores HLSL en Direct3D9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [Plantillas de proyectos de juegos DirectX](user-interface.md)
+* [Escribir sombreadores HLSL in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Plantillas de proyecto de juego de DirectX](user-interface.md)
 
 **Microsoft Store**
 
 * [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
-* [**Identificador para Objeto operador (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
+* [**Identificador de operador de objeto (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c1cc6e17d95f55cc97af7695c12b374edcaaa8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936393"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632890"
 ---
 # <a name="use-the-compass"></a>Usar la brújula
 
@@ -19,9 +19,9 @@ ms.locfileid: "8936393"
 **API importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Brújula**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+-   [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705)
 
-**Muestra**
+**Ejemplo**
 
 -   Para ver una implementación más completa, consulta la [muestra de brújula](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
 
@@ -31,7 +31,7 @@ Una aplicación puede devolver la orientación actual con respecto al norte magn
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
+Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
 
 El dispositivo o emulador que estés usando debe tener una brújula.
 
@@ -138,7 +138,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores de brújula moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 
@@ -165,7 +165,7 @@ _compass.ReadingChanged += new TypedEventHandler<Compass,
 CompassReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Estos nuevos valores se escriben en los TextBlocks que se encuentran en el código XAML del proyecto.
+Estos nuevos valores se escriben en los bloques de texto que se encuentran en el código XAML del proyecto.
 
 ```xml
  <TextBlock HorizontalAlignment="Left" Height="22" Margin="8,18,0,0" TextWrapping="Wrap" Text="Magnetic Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFFBF9F9"/>

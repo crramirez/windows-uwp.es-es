@@ -1,7 +1,7 @@
 ---
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permisos de acceso de archivos
-description: Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
+description: Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,24 +12,24 @@ dev_langs:
 - cpp
 - javascript
 ms.openlocfilehash: 4845b20ed74642f6fb34ea40dd774c91ae378e7b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630410"
 ---
 # <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
-Aplicaciones universales de la plataforma de Windows (UWP) pueden acceder a determinadas ubicaciones del sistema de archivos de manera predeterminada. Las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
+Aplicaciones universales de Windows Platform (UWP) pueden tener acceso a ciertas ubicaciones del sistema de archivos de forma predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
 
 ## <a name="the-locations-that-all-apps-can-access"></a>Ubicaciones a las que pueden tener acceso todas las aplicaciones
 
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
-### <a name="application-install-directory"></a>Directorio de instalación de la aplicación
+### <a name="application-install-directory"></a>Directorio de instalación de aplicación
 La carpeta donde está instalada la aplicación en el sistema del usuario.
 
-Hay dos formas principales para tener acceso a archivos y carpetas en tu aplicación directorio de instalación:
+Hay dos métodos principales para obtener acceso a archivos y carpetas de la aplicación de directorio de instalación:
 
 1. Puedes recuperar una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente el directorio de instalación de la aplicación como, por ejemplo:
 
@@ -97,7 +97,7 @@ El directorio de instalación de la aplicación es una ubicación de solo lectur
 ### <a name="application-data-locations"></a>Ubicaciones de datos de aplicación
 Son las carpetas en las que la aplicación puede almacenar datos. Estas carpetas (locales, móviles o temporales) se crean al instalar la aplicación.
 
-Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaciones de datos de la aplicación:
+Hay dos métodos principales para tener acceso a archivos y carpetas desde las ubicaciones de datos de la aplicación:
 
 1.  Usa las propiedades de [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar una carpeta de datos de la aplicación.
 
@@ -127,7 +127,7 @@ Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaci
     
     Tras recuperar una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente una ubicación de datos de la aplicación, podrás obtener acceso a los archivos y carpetas del directorio mediante los métodos de **StorageFolder**. En el ejemplo, estos objetos **StorageFolder** se almacenan en la variable `localFolder`. Puedes obtener más información sobre cómo usar las ubicaciones de datos de la aplicación en la ayuda de la página [ApplicationData class](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) (Clase ApplicationData) y si descargas la [muestra de datos de aplicación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) de GitHub.
 
-2. Puedes recuperar un archivo directamente desde la carpeta local de la aplicación mediante el uso de un URI de aplicación, como este:
+2. Puede recuperar un archivo directamente desde la carpeta local de la aplicación mediante el uso de una aplicación URI, como esta:
     
     ```csharp
     using Windows.Storage;
@@ -167,15 +167,15 @@ Asimismo, a diferencia de lo que sucede con otras ubicaciones, también puedes t
 No se puede tener acceso a las carpetas locales, móviles o temporales mediante el selector de archivos.
 
 ### <a name="removable-devices"></a>Dispositivos extraíbles
-Igualmente, la aplicación puede obtener acceso a algunos de los archivos en los dispositivos conectados de manera predeterminada. Esto es una alternativa en caso de que la aplicación use la [extensión de reproducción automática](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para iniciarse automáticamente cuando los usuarios conecten al sistema un dispositivo, como una cámara o una unidadUSB. Los archivos a los que la aplicación puede acceder se limitan a los tipos de archivo específicos que se definan a través de declaraciones de asociación de tipo de archivo en el manifiesto de la aplicación.
+Igualmente, la aplicación puede obtener acceso a algunos de los archivos en los dispositivos conectados de manera predeterminada. Esto es una alternativa en caso de que la aplicación use la [extensión de reproducción automática](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para iniciarse automáticamente cuando los usuarios conecten al sistema un dispositivo, como una cámara o una unidad USB. Los archivos a los que la aplicación puede acceder se limitan a los tipos de archivo específicos que se definan a través de declaraciones de asociación de tipo de archivo en el manifiesto de la aplicación.
 
 Sobra decir que también puedes tener acceso a los archivos y carpetas de un dispositivo extraíble llamando al selector de archivos (mediante [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)), y permitiendo que el usuario escoja los archivos y carpetas a los que la aplicación puede tener acceso. En [Abrir archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md) encontrarás más información sobre el uso del selector de archivos.
 
 > [!NOTE]
 > Para más información sobre el acceso a una tarjeta SD u otros dispositivos extraíbles, consulta [Acceso a la tarjeta SD](access-the-sd-card.md).
 
-## <a name="locations-that-uwp-apps-can-access"></a>Ubicaciones a las que pueden tener acceso las aplicaciones para UWP
-### <a name="users-downloads-folder"></a>Carpeta descargas del usuario
+## <a name="locations-that-uwp-apps-can-access"></a>Ubicaciones que pueden tener acceso las aplicaciones para UWP
+### <a name="users-downloads-folder"></a>Carpeta de descargas del usuario
 
 Es la carpeta donde se guardan de forma predeterminada los archivos que se descargan.
 
@@ -212,7 +212,7 @@ De manera predeterminada, tu aplicación puede acceder únicamente a los archivo
     });
     ```
 
-    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) se sobrecarga para que puedas especificar qué debe hacer el sistema en caso de que ya haya un archivo con el mismo nombre en la carpeta Descargas. Cuando estos métodos se completen, devuelven una clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa el archivo que se ha creado. Este archivo se llama `newFile` en el ejemplo.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[ **CreateFileAsync** ](https://msdn.microsoft.com/library/windows/apps/hh996761) se sobrecarga para que pueda especificar lo que debe hacer el sistema si ya existe un archivo existente en la carpeta de descargas que tiene el mismo nombre. Cuando estos métodos se completen, devuelven una clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa el archivo que se ha creado. Este archivo se llama `newFile` en el ejemplo.
 
 - Puedes crear una subcarpeta en la carpeta Descargas del usuario del siguiente modo:
 
@@ -245,7 +245,7 @@ De manera predeterminada, tu aplicación puede acceder únicamente a los archivo
     });
     ```
 
-    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) se sobrecarga para que puedas especificar qué debe hacer el sistema en caso de que ya haya una subcarpeta con el mismo nombre en la carpeta Descargas. Cuando estos métodos se completen, devuelven una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa la subcarpeta que se ha creado. Este archivo se llama `newFolder` en el ejemplo.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[ **CreateFolderAsync** ](https://msdn.microsoft.com/library/windows/apps/hh996763) se sobrecarga para que pueda especificar lo que debe hacer el sistema si ya hay una subcarpeta en la carpeta de descargas que tiene el mismo nombre. Cuando estos métodos se completen, devuelven una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa la subcarpeta que se ha creado. Este archivo se llama `newFolder` en el ejemplo.
 
 Si creas un archivo o carpeta en la carpeta Descargas, te recomendamos que agregues dicho elemento a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457), para que así la aplicación pueda acceder a él sin problemas.
 
@@ -257,17 +257,17 @@ Las aplicaciones que declaran la extensión [AppExecutionAlias](https://docs.mic
 
 En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acceso si declaras una funcionalidad (o varias) y usas la API de [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) correspondiente:
 
-| Ubicación | Funcionalidad | API de Windows.Storage |
+| Ubicación | Capacidad | API de Windows.Storage |
 |----------|------------|---------------------|
-| Todos los archivos a los que tiene acceso el usuario. Por ejemplo: documentos, imágenes, fotos, descargas, escritorio, OneDrive, etc. | broadFileSystemAccess<br><br>Es una funcionalidad restringida. Es configurable en la **configuración de**acceso > **privacidad** > **sistema de archivos**. Dado que los usuarios pueden conceder o denegar el permiso cualquier momento en la **configuración**, debes asegurarte de que tu aplicación sea resistente a esos cambios. Si te encuentras con que la aplicación no tiene acceso, puedes pedir al usuario cambiar la configuración, ya que ofrece un vínculo al artículo de [acceso al sistema de archivos de Windows 10 y privacidad](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Ten en cuenta que el usuario debe cerrar la aplicación, alterna la configuración y reinicia la aplicación. Si alterna la configuración mientras se ejecuta la aplicación, la plataforma, suspenderá la aplicación para que puedes guardar el estado y luego forzosamente finalizar la aplicación con el fin de aplicar la nueva configuración. En la actualización de abril de 2018, el valor predeterminado para el permiso está activada. En la actualización de octubre de 2018, el valor predeterminado es desactivado.<br /><br />Si envías una aplicación a la Store que declare esta funcionalidad, deberás proporcionar descripciones adicionales sobre por qué tu aplicación necesita esta funcionalidad y cómo pretende usarla.<br>Esta funcionalidad opera para las API del espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) . Consulta la sección de **ejemplo** al final de este artículo para obtener un ejemplo de cómo habilitar esta funcionalidad en la aplicación. | n/d |
-| Documentos | DocumentsLibrary <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. <br><br>Usa esta funcionalidad si tu aplicación:<br>- Facilita el acceso sin conexión entre plataformas al contenido específico de OneDrive mediante direcciones URL o id. de recursos de OneDrive válidos.<br>-Guarda los archivos abiertos en el OneDrive del usuario automáticamente y sin conexión | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| Todos los archivos a los que tiene acceso el usuario. Por ejemplo: documentos, imágenes, fotos, descargas, escritorio, OneDrive, etc. | broadFileSystemAccess<br><br>Es una funcionalidad restringida. El acceso es configurable en **configuración** > **privacidad** > **sistema de archivos**. Dado que los usuarios pueden conceder o denegar el permiso a cualquier momento en **configuración**, debe asegurarse de que la aplicación sea resistente a dichos cambios. Si encuentra que la aplicación no tiene acceso, puede elegir pedir al usuario cambiar la configuración, ya que proporciona un vínculo a la [acceso al sistema de archivos de Windows 10 y privacidad](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) artículo. Tenga en cuenta que el usuario debe cerrar la aplicación, cambiar la configuración y reinicie la aplicación. Si alterna la configuración mientras se ejecuta la aplicación, la plataforma suspenderá la aplicación para que puede guardar el estado y luego forzar la finalización con el fin de aplicar la nueva configuración de la aplicación. En la actualización de abril de 2018, el valor predeterminado para el permiso está en. En la actualización de octubre de 2018, el valor predeterminado es.<br /><br />Si envías una aplicación a la Store que declare esta funcionalidad, deberás proporcionar descripciones adicionales sobre por qué tu aplicación necesita esta funcionalidad y cómo pretende usarla.<br>Esta capacidad funciona con las API en el [ **Windows.Storage** ](https://msdn.microsoft.com/library/windows/apps/BR227346) espacio de nombres. Consulte la **ejemplo** sección al final de este artículo para obtener un ejemplo de cómo habilitar esta funcionalidad en la aplicación. | n/d |
+| Documentos | DocumentsLibrary <br><br>Nota: Debe agregar las asociaciones de tipo de archivo al manifiesto de aplicación que declare los tipos de archivo específico que puede tener acceso la aplicación en esta ubicación. <br><br>Usa esta funcionalidad si tu aplicación:<br>- Facilita el acceso sin conexión entre plataformas al contenido específico de OneDrive mediante direcciones URL o id. de recursos de OneDrive válidos.<br>-Guarda abre archivos de OneDrive del usuario automáticamente mientras sin conexión | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Música     | MusicLibrary <br>Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Imágenes  | PicturesLibrary<br> Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | Vídeos    | VideosLibrary<br>Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   
 | Dispositivos extraíbles  | RemovableDevices <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. <br><br>Consulta también [Acceso a la tarjeta SD](access-the-sd-card.md). | [KnownFolders.RemovableDevices](https://msdn.microsoft.com/library/windows/apps/br227158) |  
 | Bibliotecas de Grupo Hogar  | Se necesita al menos una de las siguientes funcionalidades. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | Dispositivos de servidores multimedia (DLNA) | Se necesita al menos una de las siguientes funcionalidades. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
-| Carpetas UNC (convención de nomenclatura universal) | Se necesita una combinación de las siguientes funcionalidades. <br><br>Funcionalidad de redes doméstica y de trabajo: <br>- PrivateNetworkClientServer <br><br>Y al menos una funcionalidad de Internet y redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>Además, si procede, la funcionalidad de credenciales de dominio:<br>- EnterpriseAuthentication <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. | Una carpeta se recupera mediante: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Un archivo se recupera mediante: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
+| Carpetas UNC (convención de nomenclatura universal) | Se necesita una combinación de las siguientes funcionalidades. <br><br>Funcionalidad de redes doméstica y de trabajo: <br>- PrivateNetworkClientServer <br><br>Y al menos una funcionalidad de Internet y redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>Además, si procede, la funcionalidad de credenciales de dominio:<br>- EnterpriseAuthentication <br><br>Nota: Debe agregar las asociaciones de tipo de archivo al manifiesto de aplicación que declare los tipos de archivo específico que puede tener acceso la aplicación en esta ubicación. | Una carpeta se recupera mediante: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Un archivo se recupera mediante: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
 
 **Ejemplo**
 

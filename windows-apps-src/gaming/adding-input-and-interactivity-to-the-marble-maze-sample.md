@@ -7,13 +7,13 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, entrada, ejemplo
 ms.localizationpriority: medium
 ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611820"
 ---
-# <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Agregar métodos de entrada e interactividad al ejemplo de Marble Maze
+# <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Agregar métodos de entrada e interactividad en la muestra de Marble Maze
 
 
 
@@ -324,7 +324,7 @@ case GameState::InGamePaused:
 
 ### <a name="tracking-touch-and-mouse-input"></a>Seguimiento de la entrada táctil y de mouse
 
-Para la entrada táctil y de mouse, se elige un elemento de menú cuando el usuario lo toca o hace clic en él. En el siguiente ejemplo se muestra cómo el método **MarbleMazeMain::Update** procesa la entrada del puntero para seleccionar elementos de menú. La variable de miembro **m\_pointQueue** realiza un seguimiento de las ubicaciones en las que el usuario ha pulsado o ha hecho clic en la pantalla. La forma en que Marble Maze recopila la entrada del puntero se describe con más detalle más adelante en este documento, en la sección [Procesamiento de entrada de puntero](#processing-pointer-input).
+Para la entrada táctil y de mouse, se elige un elemento de menú cuando el usuario lo toca o hace clic en él. En el siguiente ejemplo se muestra cómo el método **MarbleMazeMain::Update** procesa la entrada del puntero para seleccionar elementos de menú. El **m\_pointQueue** variable miembro realiza un seguimiento de las ubicaciones donde el usuario toca o hace clic en la pantalla. La forma en que Marble Maze recopila la entrada del puntero se describe con más detalle más adelante en este documento, en la sección [Procesamiento de entrada de puntero](#processing-pointer-input).
 
 ```cpp
 // Check whether the user chose a button from the UI. 
@@ -413,9 +413,9 @@ while (!m_windowClosed)
 }
 ```
 
-Si la ventana es visible, pasamos **CoreProcessEventsOption::ProcessAllIfPresent** a **ProcessEvents** para procesar todos los eventos en cola y regresar inmediatamente; de lo contrario, pasamos **CoreProcessEventsOption::ProcessOneAndAllPending** para procesar todos los eventos en cola y esperar al siguiente evento nuevo. Una vez que se han procesado los eventos, Marble Maze representa y presenta la siguiente trama.
+Si la ventana es visible, pasamos **CoreProcessEventsOption::ProcessAllIfPresent** a **ProcessEvents** para procesar todos los eventos en cola y regresar inmediatamente; de lo contrario, pasamos **CoreProcessEventsOption::ProcessOneAndAllPending** para procesar todos los eventos en cola y esperar al siguiente evento nuevo. Una vez que se han procesado los eventos, Marble Maze representa y presenta el siguiente marco.
 
-La llamada Windows Runtime llama al controlador registrado para cada evento que haya ocurrido. El método **App::SetWindow** registra eventos y reenvía la información del puntero a la clase **MarbleMazeMain**.
+Windows en tiempo de ejecución llama al controlador registrado para cada evento que ha ocurrido. El método **App::SetWindow** registra eventos y reenvía la información del puntero a la clase **MarbleMazeMain**.
 
 ```cpp
 void App::OnPointerPressed(
@@ -541,7 +541,7 @@ Comprobamos si la entrada desde el stick analógico izquierdo está fuera de la 
 
 ###  <a name="applying-input-to-the-game-state"></a>Aplicación de la entrada al estado del juego
 
-Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores escalándolos en el intervalo \[-1.0, 1.0\]. La función **PointToTouch**, que ya se ha descrito en esta sección, convierte las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
+Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze, normaliza cambiando el intervalo de valores \[-1,0, 1,0\]. La función **PointToTouch**, que ya se ha descrito en esta sección, convierte las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
 
 > [!TIP]
 > Incluso si la aplicación usa un método de entrada, recomendamos que siempre normalices los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
@@ -613,8 +613,8 @@ Lee [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-sample.md)
-* [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
+* [Agregar audio al ejemplo Marble Maze](adding-audio-to-the-marble-maze-sample.md)
+* [Agregar contenido visual al ejemplo Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
 * [Desarrollar Marble Maze, un juego para UWP en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  

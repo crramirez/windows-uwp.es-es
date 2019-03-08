@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a29d42a9254ca47402a38ea71c8c1ef69de5c6c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938686"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639650"
 ---
 # <a name="transforms"></a>Transformaciones
 
@@ -35,11 +35,11 @@ La parte de Direct3D que inserta geometría a través de la canalización de geo
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="transform-overview.md">Introducción a las transformaciones</a></p></td>
+<td align="left"><p><a href="transform-overview.md">Información general de transformación</a></p></td>
 <td align="left"><p>Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="world-transform.md">Transformación de mundos</a></p></td>
+<td align="left"><p><a href="world-transform.md">Transformación del mundo</a></p></td>
 <td align="left"><p>Una transformación de mundos cambia las coordenadas de un espacio de modelo, donde se definen los vértices con respecto al origen local de un modelo, a un espacio de mundo. En el espacio de mundo, se definen vértices en relación a un origen común a todos los objetos de una escena. La transformación de mundos coloca un modelo en el mundo.</p></td>
 </tr>
 <tr class="odd">
@@ -58,7 +58,7 @@ La parte de Direct3D que inserta geometría a través de la canalización de geo
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas y geometry](coordinate-systems-and-geometry.md)
 
  
 

@@ -4,14 +4,14 @@ description: En este artículo se muestra cómo usar un MediaFrameReader con Med
 title: Procesar tramas de audio con MediaFrameReader
 ms.date: 04/18/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058776"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598590"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 
@@ -26,12 +26,12 @@ En este artículo se muestra cómo usar un [**MediaFrameReader**](https://msdn.m
 ## <a name="setting-up-your-project"></a>Configurar tu proyecto
 El proceso para adquirir fotogramas de audio es prácticamente igual al de adquirir otros tipos de fotogramas multimedia. Al igual que con cualquier aplicación que use **MediaCapture**, debes declarar que tu aplicación usa la funcionalidad *cámara web* antes de intentar acceder a cualquier dispositivo de cámara. Si la aplicación captura desde un dispositivo de audio, también debes declarar la funcionalidad *micrófono* del dispositivo. 
 
-**Agregar funcionalidades al manifiesto de la aplicación**
+**Agregar capacidades al manifiesto de aplicación**
 
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
 3.  Selecciona las casillas **Cámara web** y **Micrófono**.
-4.  Para obtener acceso a la biblioteca de imágenes y vídeos, marca las casillas de **Biblioteca de imágenes** y el cuadro de **Biblioteca de vídeos**.
+4.  Para obtener acceso a la biblioteca de imágenes y vídeos, marca las casillas de **Biblioteca de imágenes** y de **Biblioteca de vídeos**.
 
 
 
@@ -76,10 +76,10 @@ Puedes usar un objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/window
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Muestra de fotogramas de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Ejemplo de marcos de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de audio](audio-graphs.md)
  
 

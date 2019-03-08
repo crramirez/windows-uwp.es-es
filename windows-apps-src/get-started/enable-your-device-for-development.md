@@ -7,11 +7,11 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044948"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618960"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -48,21 +48,21 @@ Esta es la página de configuración de la familia de dispositivos de escritorio
 
  Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
 
--   *Aplicaciones de Microsoft Store* es el valor predeterminado. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
+-   *Las aplicaciones de Microsoft Store* es la configuración predeterminada. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
 -   *Instalación de prueba* consiste en instalar y después ejecutar o probar una aplicación que no ha certificado Microsoft Store. Por ejemplo, una aplicación interna de tu empresa solamente.
--   El *Modo de desarrollador* permite transferir localmente aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración.
+-   El *Modo de desarrollador* te permite realizar la instalación de prueba de aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración.
 
 De forma predeterminada, solo puedes instalar aplicaciones para Plataforma universal de Windows (UWP) desde Microsoft Store. Si modificas esta configuración para usar las funciones de desarrollador, puede cambiar el nivel de seguridad de tu dispositivo. No debes instalar aplicaciones proveniente de orígenes sin comprobar.
 
 ### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
 
-La configuración de instalar aplicaciones normalmente se usa por las empresas o centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store o cualquier otra persona debe ejecutar aplicaciones de fuentes que no sean de Microsoft. En este caso, es habitual que la organización aplique una directiva que deshabilite el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+Normalmente se usa la configuración de aplicaciones de instalación de prueba por compañías, escuelas que deben instalar aplicaciones personalizadas en los dispositivos administrados sin pasar por la Microsoft Store o cualquier otra persona que necesita para ejecutar aplicaciones desde orígenes que no sean de Microsoft. En este caso, es habitual que la organización aplique una directiva que deshabilite el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 Información específica de la familia de dispositivos
 
--   En la familia de dispositivos de escritorio, puedes instalar un paquete de la aplicación (.appx) y cualquier certificado necesario para ejecutar la aplicación. Para hacerlo, ejecuta el script de Windows PowerShell que se creó con el paquete ("Add-AppDevPackage.ps1"). Para más información, consulta [Empaquetado de aplicaciones para UWP](../packaging/packaging-uwp-apps.md).
+-   En la familia de dispositivos de escritorio: Puede instalar un paquete de aplicación (.appx) y cualquier certificado que se necesita para ejecutar la aplicación ejecutando el script de Windows PowerShell que se crea con el paquete ("Add-AppDevPackage.ps1"). Para más información, consulta [Empaquetado de aplicaciones para UWP](../packaging/packaging-uwp-apps.md).
 
--   En la familia de dispositivos móviles: si el certificado necesario ya está instalado, puedes pulsar en el archivo para instalar cualquier archivo .appx que te hayan enviado por correo electrónico o que tengas en una tarjeta SD.
+-   En la familia de dispositivos móviles: Si ya está instalado el certificado necesario, puede puntear en el archivo para instalar cualquier .appx le enviada por correo electrónico o en una tarjeta SD.
 
 
 **Transferir localmente aplicaciones** es una opción más segura que el modo de desarrollador porque no permite instalar en el dispositivo aplicaciones que no tengan un certificado de confianza.
@@ -92,12 +92,12 @@ Esta imagen muestra las funciones de desarrollo para Windows 10:
 
 Para obtener más información sobre Device Portal, véase [Introducción a Windows Device Portal](../debug-test-perf/device-portal.md).
 
-Para obtener instrucciones de configuración para dispositivos específicos, consulta:
-- [Device Portal para equipos de escritorio](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Device Portal para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
-- [Device Portal para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
-- [Device Portal para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
-- [Device Portal para Xbox](../debug-test-perf/device-portal-xbox.md)
+Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
+- [Portal de dispositivo de escritorio](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+- [Portal de dispositivos para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
+- [Portal de dispositivo de IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
+- [Portal de dispositivos para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
+- [Portal de dispositivos para Xbox](../debug-test-perf/device-portal-xbox.md)
 
 Si se producen problemas al habilitar el modo de desarrollador o Device Portal, consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos problemas, o visita [Error al instalar el paquete de modo de desarrollador](#failure-to-install-developer-mode-package) para obtener más detalles y cuáles KB de WSUS deberían habilitarse para desbloquear el paquete de modo de desarrollador.
 
@@ -119,7 +119,7 @@ El servidor SSH existente que se usa en Windows aún no cumple con el protocolo,
 
 Al habilitar la detección de dispositivos, permites que el dispositivo esté visible para otros dispositivos de la red a través de mDNS.  Esta función también te permite obtener el PIN SSH para el emparejamiento con este dispositivo, presionando el botón "Emparejamiento" una vez habilitada la detección de dispositivos.  Este aviso de PIN debe mostrarse en la pantalla para completar la primera implementación de Visual Studio destinada al dispositivo.  
 
-![Emparejamiento por PIN](images/devmode-pc-pinpair.PNG)
+![Emparejamiento de PIN](images/devmode-pc-pinpair.PNG)
 
 Debes habilitar la detección de dispositivos solo si tienes previsto que el dispositivo sea un destino de implementación. Por ejemplo, si usas Device Portal para implementar una aplicación en un teléfono para probarla, debes habilitar la detección de dispositivos en el teléfono, pero no en el equipo de desarrollo.
 
@@ -133,20 +133,20 @@ En versiones anteriores de Windows 10 Mobile, estaba presente una opción de vol
 
 Hay varias herramientas que puedes usar para implementar una aplicación desde un PC con Windows 10 a un dispositivo con Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB. Ambas formas enumeradas solo instalan el paquete de aplicación (.appx/.appxbundle); no instalan certificados.
 
--   Usa la herramienta de implementación de aplicaciones de Windows10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
+-   Usa la herramienta de implementación de aplicaciones de Windows 10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
 -   Puedes usar [Device Portal](../debug-test-perf/device-portal.md) para realizar implementaciones desde el navegador a un dispositivo móvil con Windows 10, versión 1511 o posterior. Usa la página **[Aplicaciones](../debug-test-perf/device-portal.md#apps-manager)** de Device Portal para cargar un paquete de la aplicación (.appx) e instalarlo en el dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Error al instalar el paquete de modo de desarrollador
 En ocasiones, debido a problemas de red o administrativos, el modo de desarrollador no se instalará correctamente. Es necesario el paquete de modo de desarrollador para la implementación **remota** en este PC, con Device Portal desde un navegador o la detección de dispositivos para habilitar SSH, pero no para el desarrollo local.  Incluso si te encuentras estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio, o desde este dispositivo a otro.
 
-Consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas.
+Consulta el foro de [problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas.
 
 > [!NOTE]
-> Si el modo de desarrollador no se instala correctamente, te animamos a presentar una solicitud de comentarios. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
+> Si el modo de programador no se instala correctamente, le animamos a una solicitud de comentarios de archivos. En el **centro comentarios** aplicación, seleccione **agregue nuevos comentarios**y elija el **plataforma para desarrolladores de** categoría y el **modo de programador** subcategoría. Enviar comentarios le ayudará a Microsoft a solucionar el problema que se ha encontrado.
 
 ### <a name="failed-to-locate-the-package"></a>No se pudo ubicar el paquete
 
-"No se ha podido ubicar el paquete del modo de desarrollador en Windows Update. Código de error 0x80004005 Más información"   
+"No se pudo ubicar el paquete del modo de desarrollador en Windows Update. Código de error 0x80004005 Más información"   
 
 Este error puede producirse debido a un problema de conectividad de red, configuración de empresa o que falte el paquete.
 
@@ -154,7 +154,7 @@ Corregir este problema:
 
 1. Asegúrate de que el equipo esté conectado a Internet.
 2. Si estás en un equipo unido a un dominio, habla con el administrador de red. El paquete de modo de desarrollador, al igual que todas las funciones bajo demanda, está bloqueado de forma predeterminada en WSUS.
-2.1. Para desbloquear el paquete de modo de desarrollador en las versiones actuales y anteriores, deben permitirse las siguientes KB en WSUS: 4016509, 3180030, 3197985  
+2.1. Con el fin de desbloquear el paquete del modo de programador en las versiones actuales y anteriores, se deben permitir los siguientes artículos de KB en WSUS: 4016509, 3180030, 3197985  
 3. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > Actualizaciones de Windows.
 4. Comprueba que el paquete de modo de desarrollador de Windows esté presente en Configuración > Sistema > Aplicaciones y características > Administrar características opcionales > Agregar una característica. Si no aparece, Windows no puede encontrar el paquete correcto para el equipo.
 
@@ -163,21 +163,21 @@ Después de llevar a cabo cualquiera de los pasos anteriores, deshabilita y vuel
 
 ### <a name="failed-to-install-the-package"></a>No se pudo instalar el paquete
 
-"No se ha podido instalar el paquete de modo de desarrollador. Código de error 0x80004005  Más información"
+"No se pudo instalar el paquete de modo de desarrollador. Código de error 0x80004005  Más información"
 
 Este error puede producirse debido a incompatibilidades entre la compilación de Windows y el paquete de modo de desarrollador.
 
 Corregir este problema:
 
 1. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > Actualizaciones de Windows.
-2. Reinicia el equipo para asegurarte de que se apliquen todas las actualizaciones.
+2. Reinicia el equipo para asegurarte de que se aplican a todas las actualizaciones.
 
 
-## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a>Usar directivas de grupo o claves del registro para habilitar un dispositivo
+## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a>Usar directivas de grupo o claves del Registro para habilitar un dispositivo
 
-Para la mayoría de los desarrolladores, es recomendable usar la aplicación de configuración para habilitar el dispositivo para la depuración. En determinados escenarios, como las pruebas automatizadas, puedes usar otras formas de habilitar el dispositivo de escritorio con Windows 10 para el desarrollo.  Ten en cuenta que estos pasos no habilitarán el servidor SSH ni permitirán que el dispositivo sea destino para la implementación y depuración remota.
+Para la mayoría de los desarrolladores, es recomendable usar la aplicación de configuración para habilitar el dispositivo para la depuración. En determinados escenarios, como las pruebas automatizadas, puedes usar otras formas de habilitar el dispositivo de escritorio Windows 10 para el desarrollo.  Ten en cuenta que estos pasos no habilitarán el servidor SSH ni permitirán que el dispositivo sea destino para la implementación y depuración remota.
 
-Puedes usar gpedit.msc para definir las directivas de grupo para habilitar el dispositivo, a menos que tengas Windows 10 Home. Si tienes Windows 10 Home, tienes que usar regedit o los comandos de PowerShell para establecer directamente las claves del Registro para habilitar el dispositivo.
+Puedes usar gpedit.msc para definir las directivas de grupo necesarias para habilitar el dispositivo, a menos que tengas Windows 10 Home. Si tienes Windows 10 Home, tienes que usar regedit o los comandos de PowerShell para establecer directamente las claves del Registro para habilitar el dispositivo.
 
 **Usar gpedit para habilitar el dispositivo**
 
@@ -185,18 +185,18 @@ Puedes usar gpedit.msc para definir las directivas de grupo para habilitar el di
 2.  Ve a Directiva de equipo Local &gt; Configuración del equipo &gt; Plantillas administrativas &gt; Componentes de Windows &gt; Implementación de paquetes de aplicaciones
 3.  Para habilitar la instalación de prueba, edita las directivas para habilitar:
 
-    -   **Permitir la instalación de todas las aplicaciones de confianza**
+    -   **Permitir todas las aplicaciones de confianza instalar**
 
     - O bien
 
     Para habilitar el modo de desarrollador, edita las directivas para habilitar ambos:
 
-    -   **Permitir la instalación de todas las aplicaciones de confianza**
-    -   **Permite el desarrollo de aplicaciones para UWP e instalarlas desde un entorno de desarrollo integrado (IDE)**
+    -   **Permitir todas las aplicaciones de confianza instalar**
+    -   **Permite el desarrollo de aplicaciones para UWP e instalarlos desde un entorno de desarrollo integrado (IDE)**
 
 4.  Reinicia el equipo.
 
-**Usar regedit para habilitar el dispositivo**
+**Utilice regedit para habilitar el dispositivo**
 
 1.  Ejecuta **regedit**.
 2.  Para habilitar la instalación de prueba, establece el valor de este DWORD en 1:
@@ -209,18 +209,18 @@ Puedes usar gpedit.msc para definir las directivas de grupo para habilitar el di
 
     -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
 
-**Usar PowerShell para habilitar el dispositivo**
+**Uso de PowerShell para habilitar el dispositivo**
 
 1.  Ejecuta PowerShell con privilegios de administrador.
 2.  Para habilitar la instalación de prueba, ejecuta el siguiente comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    -   **PS C:\\WINDOWS\\system32&gt; reg agregar "HKEY\_LOCAL\_máquina\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ /T AppModelUnlock"REG\_DWORD /f /v"AllowAllTrustedApps"/d"1"**
 
     - O bien
 
     Para habilitar el modo de desarrollador, ejecuta el siguiente comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"**
+    -   **PS C:\\WINDOWS\\system32&gt; reg agregar "HKEY\_LOCAL\_máquina\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ /T AppModelUnlock"REG\_DWORD /f /v"AllowDevelopmentWithoutDevLicense"/d"1"**
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Actualizar el dispositivo de Windows 8.1 a Windows 10
 
@@ -233,13 +233,13 @@ Si creas o transfieres localmente aplicaciones en un dispositivo con Windows 8.1
 
 Después debes habilitar el dispositivo para el desarrollo, tal como se describe en este tema, para que puedas seguir desarrollando en este dispositivo. Si no lo haces, es posible que obtengas un error al depurar la aplicación o intentar crear un paquete para ella. Este es un ejemplo de este error:
 
-Error : DEP0700 : Error en el registro de la operación.
+Error : DEP0700: No se pudo registrar la aplicación.
 
 ## <a name="see-also"></a>Consulta también
 
-* [Tu primera aplicación](your-first-app.md)
-* [Publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
-* [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
+* [La primera aplicación](your-first-app.md)
+* [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
+* [Artículos de procedimientos sobre el desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Ejemplos de código para los desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
-* [Registrarse para obtener una cuenta de Windows](sign-up.md)
+* [Registrarse para la cuenta de Windows](sign-up.md)

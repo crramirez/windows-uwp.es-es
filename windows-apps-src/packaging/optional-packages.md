@@ -1,69 +1,69 @@
 ---
 ms.assetid: 3a59ff5e-f491-491c-81b1-6aff15886aad
-title: Paquetes opcionales y creación de conjuntos relacionados
+title: Creación de paquetes opcionales y de conjuntos relacionados
 description: Los paquetes opcionales tienen contenido que se puede integrar con un paquete principal. Estos son útiles para el contenido descargable (DLC), para dividir una aplicación grande que tenga restricciones de tamaño o para enviar cualquier contenido adicional aparte de la aplicación original.
 ms.date: 09/30/2018
 ms.topic: article
-keywords: Windows 10, uwp, paquetes opcionales, conjunto relacionado, extensión de paquete, visual studio
+keywords: windows 10, uwp, paquetes opcionales, conjunto relacionado, extensión de paquete, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: f62d6c99acc75033403fac7a498308cea6f7d3f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945595"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594030"
 ---
-# <a name="optional-packages-and-related-set-authoring"></a>Paquetes opcionales y creación de conjuntos relacionados
-Los paquetes opcionales tienen contenido que se puede integrar con un paquete principal. Estos son útiles para el contenido descargable (DLC), dividir una aplicación grande que tenga restricciones de tamaño, o para enviar cualquier contenido adicional aparte de la aplicación original.
+# <a name="optional-packages-and-related-set-authoring"></a>Creación de paquetes opcionales y de conjuntos relacionados
+Los paquetes opcionales tienen contenido que se puede integrar con un paquete principal. Estos son útiles para el contenido descargable (DLC), para dividir una aplicación grande que tenga restricciones de tamaño o para enviar cualquier contenido adicional aparte de la aplicación original.
 
-Conjuntos relacionados son una extensión de paquetes opcionales: permiten aplicar un conjunto estricto de versiones en todos los paquetes principales y opcionales. También permiten que cargar código nativo (C++) de los paquetes opcionales. 
+Los conjuntos relacionados son una extensión de los paquetes opcionales: te permiten aplicar un conjunto estricto de versiones tanto en los paquetes principales como en los opcionales. Asimismo, también te permiten cargar código nativo (C++) de paquetes opcionales. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Visual Studio 2017, versión 15.1
-- Windows 10 versión 1703
-- Windows 10, versión 1703 SDK
+- Windows 10, versión 1703
+- Windows 10, SDK versión 1703
 
-Para obtener todas las herramientas de desarrollo más recientes, consulte [las descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads).
+Para obtener las herramientas de desarrollo más recientes, consulta [Descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
-> Para enviar una aplicación que usa paquetes opcionales o conjuntos relacionados en la Microsoft Store, tendrás que permiso. Paquetes opcionales y conjuntos relacionados pueden usarse para las aplicaciones de línea de negocio (LOB) o enterprise sin el permiso del centro de partners si no vas a enviar a la tienda. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
+> Para enviar una aplicación que utiliza paquetes opcionales o conjuntos relacionados a la Microsoft Store, necesita permiso. Paquetes opcionales y los conjuntos relacionados pueden usarse para aplicaciones de línea de negocio (LOB) o enterprise sin permiso del centro de partners si no se enviarán a la Store. Consulta [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) para obtener el permiso necesario para enviar una aplicación que usa paquetes opcionales y conjuntos relacionados.
 
 ### <a name="code-sample"></a>Ejemplo de código
-Mientras que estás leyendo este artículo, se recomienda que sigue los pasos indicados en el [ejemplo de código de paquete opcional](https://github.com/AppInstaller/OptionalPackageSample) en GitHub para obtener una descripción práctica de paquetes opcionales cómo y relacionadas con conjuntos de trabajo dentro de Visual Studio.
+Además de este artículo, te recomendamos que eches un vistazo a la [muestra de código del paquete opcional](https://github.com/AppInstaller/OptionalPackageSample) en GitHub para obtener un ejemplo práctico del funcionamiento de los paquetes opcionales y los conjuntos relacionados en Visual Studio.
 
 ## <a name="optional-packages"></a>Paquetes opcionales
-Para crear un paquete opcional en Visual Studio, tendrás que:
-1. Asegúrate de que la **Versión mínima de plataforma de destino** de la aplicación se establece en: 10.0.15063.0 o superior.
-2. Desde el proyecto de **paquete principal** , abre el `Package.appxmanifest` archivo. Ve a la pestaña "Empaquetado" y toma nota de tu **nombre de familia de paquete**, que es todo antes del carácter "_".
-3. Desde el proyecto de **paquete opcional** , haz clic en el `Package.appxmanifest` y seleccione **Abrir con > Editor XML (texto)**.
-4. Busca el `<Dependencies>` elemento en el archivo. Agrega lo siguiente:
+Para crear un paquete opcional en Visual Studio, deberás realizar los siguientes pasos:
+1. Asegúrese de que la aplicación **versión mínima de plataforma de destino** está establecido en: 10.0.15063.0 o superior.
+2. En el proyecto del **paquete principal**, abre el archivo `Package.appxmanifest`. Ve a la pestaña "Empaquetado" y apunta el **nombre de familia de paquete**, que es todo el contenido que hay antes del carácter "_".
+3. En el proyecto del **paquete opcional**, haz clic con el botón derecho en `Package.appxmanifest` y selecciona **Abrir con > Editor XML (texto)**.
+4. Busca el elemento `<Dependencies>` en el archivo. Agrega lo siguiente:
 
 ```XML
 <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
 ```
 
-Reemplazar `[MainPackageDependency]` por el **nombre de familia de paquete** del paso 2. Esto se especifica que el **paquete opcional** depende de su **paquete principal**.
+Reemplaza `[MainPackageDependency]` con el **nombre de familia de paquete** del paso 2. Esto permitirá especificar que el **paquete opcional** depende del **paquete principal**.
 
-Una vez que tengas las dependencias del paquete configurar de los pasos 1 a 4, puedes seguir desarrollando como de costumbre. Si quieres cargar código desde el paquete opcional en el paquete principal, tendrás que crear un conjunto relacionado. Consulta la sección [establece relacionado](#related_sets) para obtener más detalles.
+Cuando configures las dependencias de los paquetes del paso 1 al 4, podrás seguir desarrollando con normalidad. Si quieres cargar el código desde el paquete opcional en el paquete principal, deberás crear un conjunto relacionado. Consulta la sección [Conjuntos relacionados](#related_sets) para obtener más información.
 
-Visual Studio puede configurarse para volver a implementar el paquete principal cada vez que se implementa un paquete opcional. Para establecer la dependencia de compilación de Visual Studio, debes:
+Puedes configurar Visual Studio para que vuelva a implementar el paquete principal cada vez que implementes un paquete opcional. Para establecer la dependencia de compilación en Visual Studio, haz lo siguiente:
 
-- Haz clic en el proyecto de paquete opcional y selecciona **dependencias de compilación > dependencias del proyecto …**
-- Comprobar el proyecto de paquete principal y selecciona "Aceptar". 
+- Haz clic con el botón derecho en el proyecto del paquete opcional y selecciona **Dependencias de compilación > Dependencias del proyecto...**
+- Selecciona el proyecto del paquete principal y "Aceptar". 
 
-Ahora, cada vez que se escribe F5 o compilar un proyecto de paquete opcional, Visual Studio se compila el proyecto de paquete principal en primer lugar. Esto garantiza que el proyecto principal y opcionales proyectos están sincronizados.
+Una vez hecho esto, cada vez que pulses F5 o compiles un proyecto de paquete opcional, Visual Studio compilará primero el proyecto del paquete principal. Gracias a ello, te asegurarás de que tanto el proyecto principal como el opcional están sincronizados.
 
 ## Conjuntos relacionados<a name="related_sets"></a>
 
-Si quieres cargar código desde un paquete opcional en el paquete principal, tendrás que crear un conjunto relacionado. Para crear un conjunto relacionado, el paquete principal y un paquete opcional deben estar estrechamente relacionados. Los metadatos de conjuntos relacionados se especifican en el archivo .appxbundle o .msixbundle del paquete principal. Visual Studio te ayuda a obtener los metadatos correcto de los archivos. Para configurar la solución de aplicación para conjuntos relacionados, usa los siguientes pasos:
+Si quieres cargar el código desde un paquete opcional en el paquete principal, deberás crear un conjunto relacionado. Para crear un conjunto relacionado, los paquetes principal y opcional deben estar estrechamente acoplados. Los metadatos de conjuntos relacionados se especifican en el archivo .appxbundle o .msixbundle del paquete principal. Visual Studio te ayudará a obtener los metadatos correctos en los archivos. Para configurar la solución de la aplicación para conjuntos relacionados, realiza los siguientes pasos:
 
-1. Haz clic en el proyecto de paquete principal, selecciona **Agregar > nuevo elemento …**
-2. En la ventana, busca las plantillas instaladas para ".txt" y agrega un nuevo archivo de texto.
+1. Haz clic con el botón derecho en el proyecto del paquete principal y selecciona **Agregar > Nuevo elemento...**
+2. En la ventana que aparecerá, busca ".txt" en las plantillas instaladas y agrega un nuevo archivo de texto.
 > [!IMPORTANT]
-> El nuevo archivo de texto debe renombrarse: `Bundle.Mapping.txt`.
+> El nuevo archivo de texto debe llamarse: `Bundle.Mapping.txt`.
 
-3. En el `Bundle.Mapping.txt` archivo que especifique las rutas de acceso relativas a los proyectos de paquete opcional o paquetes externos. Un ejemplo de `Bundle.Mapping.txt` archivo debe ser similar al siguiente:
+3. En el archivo `Bundle.Mapping.txt` tendrás que especificar las rutas de acceso relativas a los proyectos de paquete opcional o a los paquetes externos. Un archivo `Bundle.Mapping.txt` debería tener este aspecto:
 
 ```syntax
 [OptionalProjects]
@@ -74,10 +74,10 @@ Si quieres cargar código desde un paquete opcional en el paquete principal, ten
 "..\ActivatableOptionalPackage1\x86\Release\ActivatableOptionalPackage3_1.1.1.0\ ActivatableOptionalPackage3_1.1.1.0.appx"
 ```
 
-Cuando la solución está configurada de esta forma, Visual Studio creará un manifiesto de paquete para el paquete principal con todos los metadatos necesarios para conjuntos relacionados. 
+Cuando configures la solución de este modo, Visual Studio creará un manifiesto de paquete para el paquete principal, que contendrá todos los metadatos que necesitarán los conjuntos relacionados. 
 
-Ten en cuenta que como paquetes opcionales, un `Bundle.Mapping.txt` archivo para conjuntos relacionados solo funcionará en Windows 10, versión 1703 o superior. Además, la versión de Min de plataforma de destino de la aplicación debe establecerse en 10.0.15063.0 o superior.
+Tenga en cuenta que, como paquetes opcionales, un `Bundle.Mapping.txt` archivo para conjuntos relacionados solo funcionará en Windows 10, versión 1703 o posterior. Además, la versión de Min de plataforma de destino de la aplicación debe establecerse en 10.0.15063.0 o superior.
 
 ## Problemas conocidos<a name="known_issues"></a>
 
-Actualmente no se admite la depuración de un proyecto opcional de conjuntos relacionados en Visual Studio. Para evitar este problema, puedes implementar e iniciar la activación (Ctrl + F5) y asociar manualmente el depurador a un proceso. Para asociar al depurador, ve el menú "Debug" en Visual Studio, selecciona "Asociar al proceso …" y asociar al depurador al **proceso de la aplicación principal**.
+Actualmente no se puede depurar un proyecto opcional de conjunto relacionado en Visual Studio. Para evitar este problema, puedes implementar e iniciar la activación (Ctrl + F5) y asociar manualmente el depurador a un proceso. Para adjuntar el depurador, ve al menú "Depurar" en Visual Studio, selecciona "Adjuntar al proceso..." y adjunta el depurador al **proceso de aplicación principal**.

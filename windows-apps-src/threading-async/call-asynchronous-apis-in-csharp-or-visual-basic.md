@@ -1,23 +1,23 @@
 ---
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: Llamar a API asincrónicas en C# o Visual Basic
-description: La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que tu aplicación tenga capacidad de respuesta mientras realiza trabajos que pudieran llevar algún tiempo.
+description: La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que la aplicación tenga capacidad de respuesta mientras realiza trabajos que puedan llevar algún tiempo.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, C#, Visual Basic, asincrónica
 ms.localizationpriority: medium
 ms.openlocfilehash: 899af2ffd26419d4c8906d703d6708d202f8c150
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940951"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632620"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Llamar a API asincrónicas en C# o Visual Basic
 
 
 
-La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que tu aplicación tenga capacidad de respuesta mientras realiza trabajos que pudieran llevar algún tiempo. En este tema se describe cómo usar métodos asincrónicos desde la UWP en C# o Microsoft Visual Basic.
+La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que la aplicación tenga capacidad de respuesta mientras realiza trabajos que puedan llevar algún tiempo. En este tema se describe cómo usar métodos asincrónicos desde la UWP en C# o Microsoft Visual Basic.
 
 Las API asincrónicas evitan que la aplicación tenga que esperar a que finalicen las grandes operaciones antes de continuar con la ejecución. Por ejemplo, una aplicación que descarga información de Internet probablemente destine varios segundos a esperar que la información llegue. Si usas un método sincrónico para recuperar la información, la aplicación se bloquea hasta que el método vuelve. La aplicación no responderá a la interacción del usuario, y como parece que tarda en responder, es posible que esto provoque cierta frustración en el usuario. Gracias a las API asincrónicas, UWP ayuda a garantizar que tu aplicación continúe respondiendo al usuario mientras realiza operaciones largas.
 
@@ -38,7 +38,7 @@ En este ejemplo se obtienen las listas de entradas de un blog llamando al métod
 
 Hay un par de aspectos importantes acerca de este ejemplo. En primer lugar, la línea `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa el operador **await** con la llamada al método asincrónico [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Puedes considerar que el operador **await** indica al compilador que estás llamando a un método asincrónico, que hace que el compilador haga cierto trabajo extra para que no tengas que hacerlo. A continuación, la declaración del controlador de eventos incluye la palabra clave **async**. Debes incluir esta palabra clave en la declaración de cualquier método en el que uses el operador **await**.
 
-En este tema no entraremos en muchos detalles sobre lo que hace el compilador con el operador **await**, pero examinemos qué hace la aplicación para ser asincrónica y tener capacidad de respuesta. Ten en cuenta lo que sucede cuando usas un código sincrónico. Por ejemplo, supongamos que existe un método llamado `SyndicationClient.RetrieveFeed` que es sincrónico. (No hay ningún método de este tipo, pero imagina que lo hay). Si tu aplicación incluyó la línea `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, en lugar de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, la ejecución de la aplicación se detendrá hasta que el valor devuelto de `RetrieveFeed` esté disponible. Mientras la aplicación espera a que el método se complete, no puede responder a ningún otro evento como, por ejemplo, otro evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). Es decir, tu aplicación estaría bloqueada hasta que se devuelva `RetrieveFeed`.
+En este tema no entraremos en muchos detalles sobre lo que hace el compilador con el operador **await**, pero examinemos qué hace la aplicación para ser asincrónica y tener capacidad de respuesta. Ten en cuenta lo que sucede cuando usas un código sincrónico. Por ejemplo, supongamos que existe un método llamado `SyndicationClient.RetrieveFeed` que es sincrónico. (No hay ningún método de este tipo, pero imagine que hay). Si la aplicación incluye la línea `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, en lugar de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, podría detener la ejecución de la aplicación hasta que el valor devuelto de `RetrieveFeed` está disponible. Mientras la aplicación espera a que el método se complete, no puede responder a ningún otro evento como, por ejemplo, otro evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). Es decir, tu aplicación estaría bloqueada hasta que se devuelva `RetrieveFeed`.
 
 Pero si llamas a `client.RetrieveFeedAsync`, el método inicia la recuperación y vuelve de inmediato. Si usas **await** con [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), la aplicación sale temporalmente del controlador de eventos. Después puede procesar otros eventos mientras **RetrieveFeedAsync** se ejecuta asincrónicamente. Esto hace que la aplicación responda al usuario. Cuando **RetrieveFeedAsync** se completa y [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485) se encuentra disponible, la aplicación vuelve a entrar en el controlador de eventos de donde salió, después de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, y finaliza el resto del método.
 
@@ -66,7 +66,7 @@ En esta tabla se proporcionan ejemplos de métodos asincrónicos y se indican el
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
 | [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **void**                                          |
 | [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **void**                                          |
-| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), una clase de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
+| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), personalizada da como resultado la clase que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
  
 
@@ -79,7 +79,7 @@ Cuando uses el operador **await** para recuperar tus resultados de un método as
 
 Cuando los métodos asincrónicos llaman a otros métodos asincrónicos, cualquier método asincrónico que dé origen a una excepción se propagará a los métodos externos. Esto significa que puedes poner un bloque **try/catch** en el método más externo para capturar los errores de los métodos asincrónicos anidados. Una vez más, esto es similar al modo en que capturas excepciones para los métodos sincrónicos. Sin embargo, no puedes usar **await** en el bloque **catch**.
 
-**Sugerencia**partir de C# en Microsoft Visual Studio2005, puedes usar **await** en el bloque **catch** .
+**Sugerencia**  a partir de C# en Microsoft Visual Studio 2005, puede usar **await** en el **catch** bloque.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 

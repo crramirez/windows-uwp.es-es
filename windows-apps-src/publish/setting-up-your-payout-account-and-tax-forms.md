@@ -1,5 +1,5 @@
 ---
-Description: In order to receive money from app sales in the Microsoft Store, you need to set up your payout account and fill out the necessary tax forms.
+Description: Para recibir el dinero de ventas de la aplicación en la Microsoft Store, deberá configurar la cuenta de pago y rellene los formularios de impuestos es necesario.
 title: Configurar la cuenta de pago y los formularios fiscales
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 ms.date: 12/14/2017
@@ -7,29 +7,29 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dff4e3b37be14729abdc3262d484745a0245776
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641010"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
 
-Para poder recibir dinero ventas de aplicaciones en Microsoft Store, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios en [El centro de partners](https://partner.microsoft.com/dashboard).
+Para recibir el dinero de ventas desde la aplicación en la Microsoft Store, deberá configurar la cuenta de pago y rellene los formularios de impuestos es necesario en [centro de partners](https://partner.microsoft.com/dashboard).
 
-Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (o complementos), puedes configurar tu cuenta de pago y rellenar formularios fiscales en ese momento. No podrás enviar aplicaciones ni complementos de pago hasta que no hayas completado tu cuenta de pago y tu perfil fiscal.
+Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambia de opinión más adelante y decide que desea vender aplicaciones (o complementos), puede configurar la cuenta de pago y rellene los formularios de impuestos en ese momento. No podrás enviar aplicaciones ni complementos de pago hasta que no hayas completado tu cuenta de pago y tu perfil fiscal.
 
 > [!NOTE]
 > En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores solo pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
 
-Una vez que tengas que [configurar tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer antes de que puedes vender aplicaciones (o complementos) en Microsoft Store:
+Una vez haya [configurar su cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debe hacer antes de vender las aplicaciones (o complementos) en la Microsoft Store:
 
--   [Configurar tu cuenta de pago](#payout-account)
--   [Completar los formularios fiscales](#tax-forms)
+-   [Configuración de la cuenta de pago](#payout-account)
+-   [Rellene los formularios de impuestos](#tax-forms)
 
 > [!NOTE]
-> Para obtener más información sobre cómo te pagaremos el dinero recaudado mediante tus aplicaciones, consulta [Proceso de pago](getting-paid-apps.md).
+> Para realizar los detalles acerca de cómo y cuándo se pagará por el dinero sus aplicaciones, consulte [Introducción pago](getting-paid-apps.md).
  
 
 ## <a name="payout-account"></a>Cuenta de pago
@@ -40,10 +40,10 @@ Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por 
 > En algunos mercados, puede usarse PayPal para tu cuenta de pago. Consulta [Tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) para averiguar si PayPal es compatible con un mercado específico y lee la [Información de PayPal](#paypal-info) a continuación para obtener más detalles.
 
  
-**Para configurar tu cuenta de pago**
+**Para configurar la cuenta de pago**
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje de **configuración** en la esquina superior derecha y luego selecciona la **Configuración del desarrollador**.
-2.  En el menú de navegación izquierdo de la página de configuración, selecciona la **cuenta de pago**.
+1.  En [centro de partners](https://partner.microsoft.com/dashboard), seleccione el **configuración** icono en la esquina superior derecha de engranaje y, después, seleccione **opciones del desarrollador**.
+2.  En el menú de navegación izquierdo de la página Configuración, seleccione **cuenta de pago**.
 
    > [!NOTE]
    > Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
@@ -70,10 +70,10 @@ En ciertos países y regiones, puedes crear una cuenta de pago con tu informaci�
 
 Preguntas comunes acerca del uso de PayPal como método de pago:
 
--   **¿Qué configuración de PayPal se necesita para recibir pagos?** Debes asegurarte de que tu cuenta de PayPal no bloquea los pagos con cheque electrónico (eCheck). Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal. Consulta la [página de configuración de la cuenta de PayPal](https://go.microsoft.com/fwlink/p/?linkid=513139) para obtener más información.
--   **¿Se puede usar en mi país o región?** Consulta [Tipos de cuenta, ubicaciones y precios](account-types-locations-and-fees.md) para averiguar dónde se admite PayPal como método de pago.
--   **¿Mi cuenta de PayPal tiene que estar registrado en el mismo país o región que mi cuenta del centro de partners?** No. Cuando configuras una cuenta de PayPal, puedes aceptar la configuración predeterminada. No deberías tener ningún problema con otros países o regiones y divisas, a menos que hayas bloqueado el pago con ciertas divisas. Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal.
--   **¿Tengo que aceptar los pagos de PayPal manualmente?** No. Las cuentas de PayPal están configuradas de forma predeterminada para requerir que los usuarios acepten los pagos manualmente, lo que significa que si no se acepta el pago antes de 30 días, se devuelve. Puedes cambiar esta configuración si desactivas “Preguntarme” en la página Más opciones de PayPal.
+-   **¿Qué opciones de PayPal es necesario tener para recibir pagos?** Debes asegurarte de que tu cuenta de PayPal no bloquea los pagos con cheque electrónico (eCheck). Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal. Consulta la [página de configuración de la cuenta de PayPal](https://go.microsoft.com/fwlink/p/?linkid=513139) para obtener más información.
+-   **¿Es compatible con mi país o región?** Consulta [Tipos de cuenta, ubicaciones y precios](account-types-locations-and-fees.md) para averiguar dónde se admite PayPal como método de pago.
+-   **¿Mi cuenta PayPal tiene que estar registrado en el mismo país o región como mi cuenta de centro de partners?** No. Cuando configuras una cuenta de PayPal, puedes aceptar la configuración predeterminada. No deberías tener ningún problema con otros países o regiones y divisas, a menos que hayas bloqueado el pago con ciertas divisas. Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal.
+-   **¿Es necesario aceptar los pagos de PayPal manualmente?** No. Las cuentas de PayPal están configuradas de forma predeterminada para requerir que los usuarios acepten los pagos manualmente, lo que significa que si no se acepta el pago antes de 30 días, se devuelve. Puedes cambiar esta configuración si desactivas “Preguntarme” en la página Más opciones de PayPal.
 
 
 ### <a name="specific-requirements-for-certain-countriesregions"></a>Requisitos específicos para determinados países o regiones
@@ -97,9 +97,9 @@ Si eres un desarrollador que vive en Rusia, puede que tengas que proporcionar do
 
 Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
 
--   El **nombre del titular de la cuenta** especificada para tu cuenta de pago del centro de partners debe ser exactamente igual al nombre asociado a tu cuenta bancaria. Por ejemplo, si en el nombre de tu cuenta bancaria está incluido un segundo nombre, escribe dicho segundo nombre en el **nombre de la cuenta bancaria**.
+-   El **nombre del titular de la cuenta** especificado para la cuenta de pago en el centro de partners debe ser exactamente el mismo nombre asociado con su cuenta bancaria. Por ejemplo, si en el nombre de tu cuenta bancaria está incluido un segundo nombre, escribe dicho segundo nombre en el **nombre de la cuenta bancaria**.
 -   Los pagos se abonan directamente de Microsoft a tu cuenta bancaria en rublos (RUB).
--   La información introducida en el centro de partners en caracteres latinos se translitera a caracteres cirílicos.
+-   Información bancaria especificado en el centro de partners en caracteres latinos se traduce a caracteres cirílico.
 -   Los pagos se efectuarán a una cuenta bancaria y no a una tarjeta bancaria.
 
 #### <a name="ukraine"></a>Ucrania
@@ -114,28 +114,28 @@ Microsoft proporciona los tres documentos con el primer pago. En los pagos poste
 
 Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
 
--   El **nombre del titular de la cuenta** especificada para tu cuenta de pago del centro de partners debe ser exactamente igual al nombre asociado a tu cuenta bancaria. Por ejemplo, si en el nombre de tu cuenta bancaria está incluido un segundo nombre, escribe dicho segundo nombre en el **nombre de la cuenta bancaria**.
+-   El **nombre del titular de la cuenta** especificado para la cuenta de pago en el centro de partners debe ser exactamente el mismo nombre asociado con su cuenta bancaria. Por ejemplo, si en el nombre de tu cuenta bancaria está incluido un segundo nombre, escribe dicho segundo nombre en el **nombre de la cuenta bancaria**.
 -   Los pagos se abonan directamente de Microsoft a tu cuenta bancaria en USD.
--   La información introducida en el centro de partners en caracteres latinos se translitera a caracteres cirílicos.
+-   Información bancaria especificado en el centro de partners en caracteres latinos se traduce a caracteres cirílico.
 
 
 ## <a name="tax-forms"></a>Formularios fiscales
 
-Después de que tienes que [registrar una cuenta de desarrollador](opening-a-developer-account.md) y configurar tu [cuenta de pago](#payout-account), puedes crear tu *perfil fiscal* para Microsoft Store siguiendo los pasos siguientes:
+Una vez haya [registrado para una cuenta de desarrollador](opening-a-developer-account.md) y configuraré su [cuenta de pago](#payout-account), puede crear su *perfil fiscal* para la Microsoft Store siguiendo pasos siguientes:
 
 -   Especifica tu país o región de residencia y nacionalidad.
 -   Completar los formularios fiscales correspondientes.
 
-Puedes completar y enviar los formularios fiscales vía en el centro de partners; en la mayoría de los casos, no es necesario imprimir y enviar los formularios.
+Puede completar y enviar los formularios de impuestos electrónicamente en el centro de partners; en la mayoría de los casos, no es necesario imprimir y enviar todos los formularios.
 
 > [!IMPORTANT]
-> Diferentes países y regiones tienen distintos requisitos fiscales. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, es posible que las ganancias por las ventas de aplicaciones estén sujetas a impuestos como ingresos. Te recomendamos que hagas en contacto con la autoridad correspondiente de tu país o región que mejor te permite determinar la información fiscal correcta para tus actividades de desarrollador de Microsoft Store.
+> Diferentes países y regiones tienen distintos requisitos fiscales. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, es posible que las ganancias por las ventas de aplicaciones estén sujetas a impuestos como ingresos. Le recomendamos que ponerse en contacto con la autoridad para su país o región que mejor le permitirá determinar la información de impuestos adecuada para sus actividades de desarrollador de Microsoft Store.
 
  
-**Completar tu perfil fiscal**
+**Para completar su perfil de impuestos**
 
-1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), selecciona el icono de **configuración de la cuenta** en la esquina superior derecha y luego selecciona la **Configuración del desarrollador**.
-2.  En el menú de navegación izquierdo, selecciona el **perfil fiscal**.
+1.  En [centro de partners](https://partner.microsoft.com/dashboard), seleccione el **configuración de la cuenta** , a continuación, seleccione el icono en la esquina superior derecha, **opciones del desarrollador**.
+2.  En el menú de navegación izquierdo, seleccione **perfil fiscal**.
 
    > [!NOTE]
    > Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
@@ -144,7 +144,7 @@ Puedes completar y enviar los formularios fiscales vía en el centro de partners
 4.  Responde a las preguntas sobre residencia y nacionalidad estadounidense y haz clic en **Siguiente**.
 5.  Si se muestra la información de tu nombre y dirección, confirma dicha información para la declaración de impuestos.
 
-A continuación verás versiones electrónicas de los formularios fiscales que debes completar. Independientemente de su país o región de residencia o nacionalidad, debes rellenar formularios fiscales de los Estados Unidos para vender cualquier aplicación o complementos a través de Microsoft Store. Los desarrolladores que cumplan con ciertos requisitos de residencia de los Estados Unidos deben completar un formulario IRS W-9. Otros desarrolladores que se encuentran fuera de los Estados Unidos deben completar un formulario IRS W-8. Puedes completar estos formularios en línea mientras completas tu perfil fiscal.
+A continuación verás versiones electrónicas de los formularios fiscales que debes completar. Independientemente de su país de residencia o ciudadanía, rellene los formularios de impuestos de los Estados Unidos para vender las aplicaciones o los complementos en la Microsoft Store. Los desarrolladores que cumplan con ciertos requisitos de residencia de los Estados Unidos deben completar un formulario IRS W-9. Otros desarrolladores que se encuentran fuera de los Estados Unidos deben completar un formulario IRS W-8. Puedes completar estos formularios en línea mientras completas tu perfil fiscal.
 
 No es necesario contar con un Número de Identificación del contribuyente individual (o ITIN) de los Estados Unidos para recibir pagos de Microsoft ni para reclamar beneficios por tratado fiscal.
 
@@ -154,7 +154,7 @@ La información proporcionada en los formularios fiscales determina la tasa de r
 
 ### <a name="tax-treaty-benefits"></a>Beneficios por tratado fiscal
 
-Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios por tratado fiscal. Estos beneficios varían de un país a otro y es posible que te permiten reducir la cantidad de impuestos retenidos por Microsoft Store. Para reclamar beneficios por tratado fiscal, completa la Parte II del formulario W-8BEN. Te recomendamos que te comuniques con los recursos correspondientes de tu país o región para determinar si estos beneficios se aplican en tu caso.
+Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios por tratado fiscal. Estas ventajas varían de un país a otro y es posible que le permiten reducir la cantidad de los impuestos que retiene la Microsoft Store. Para reclamar beneficios por tratado fiscal, completa la Parte II del formulario W-8BEN. Te recomendamos que te comuniques con los recursos correspondientes de tu país o región para determinar si estos beneficios se aplican en tu caso.
 
  
 
