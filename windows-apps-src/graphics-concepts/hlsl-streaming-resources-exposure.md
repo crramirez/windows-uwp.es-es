@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 00d6c16ecaa64abf7d83154fdb864671dbff3eae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936287"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643490"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposición de recursos de streaming de HLSL
 
@@ -21,7 +21,7 @@ Se necesita una sintaxis específica del lenguaje High Level Shader Language (HL
 
 La sintaxis HLSL para Shader Model 5 solo se admite en dispositivos con compatibilidad con recursos de streaming. Cada método HLSL pertinente para los recursos de streaming de la siguiente tabla acepta un parámetro opcional adicional (comentarios) o dos (restricción y comentarios en este orden). Por ejemplo, un método **Sample** es:
 
-**Sample(sampler, location \[, offset \[, clamp \[, feedback\] \] \])**
+**Ejemplo (muestra, ubicación \[, desplazamiento \[, abrazadera \[, comentarios\] \] \])**
 
 Un ejemplo de método **Sample** es [**Texture2D.Sample(S,float,int,float,uint)**](https://msdn.microsoft.com/library/windows/desktop/dn393787).
 
@@ -35,7 +35,7 @@ Esta es la sintaxis de [**CheckAccessFullyMapped**](https://msdn.microsoft.com/l
 
 **bool CheckAccessFullyMapped(in uint FeedbackVar);**
 
-[**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta el valor de *FeedbackVar* y devuelve true si se asignaron todos los datos accedidos en el recurso; de lo contrario, **CheckAccessFullyMapped** devuelve false.
+[**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta el valor de *FeedbackVar* y devuelve true si todos los datos que se obtiene acceso se ha asignado en el recurso; de lo contrario, **CheckAccessFullyMapped**devuelve false.
 
 Si hay el parámetro de restricción o comentarios, el compilador emite una variante de la instrucción básica. Por ejemplo, la muestra de un recurso de streaming genera la instrucción `sample_cl_s`.
 
@@ -113,7 +113,7 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Canalización de acceso a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

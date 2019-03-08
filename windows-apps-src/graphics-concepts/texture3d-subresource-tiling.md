@@ -1,27 +1,27 @@
 ---
-title: Organización en mosaico de los subrecursos Texture3D
+title: Mosaico de subrecurso Texture3D
 description: Esta tabla muestra cómo los subrecursos Texture3D se organizan en mosaico.
 ms.assetid: 210D03E4-CF12-47E0-BA2F-C8D059B17D3E
 keywords:
-- Organización en mosaico de los subrecursos Texture3D
+- Mosaico de subrecurso Texture3D
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c9c232bc60bbbb3cccc16618d82ec23452c58ee8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933189"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645960"
 ---
-# <a name="texture3d-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture3D
+# <a name="texture3d-subresource-tiling"></a>Mosaico de subrecurso Texture3D
 
 
 Esta tabla muestra cómo los subrecursos [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) se organizan en mosaico. Los valores de esta tabla no cuentan el empaquetado de MIP de cola.
 
 Esta tabla toma la organización en mosaico de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525), divide las dimensiones x/y por 4 y agrega 16 capas de profundidad. Todos los mosaicos del primer plano (plano 2D del mosaicos que definen las primeras 16 capas de profundidad) aparecen antes que los planos posteriores.
 
-**Nota** Soporte técnico de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) en los recursos de streaming no se expone en la implementación inicial de los recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
+**Nota** En la implementación inicial de los recursos de streaming no se expone la compatibilidad de   [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) con dichos recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
 
  
 
@@ -37,12 +37,12 @@ Esta tabla toma la organización en mosaico de [**Texture2D**](https://msdn.micr
 
  
 
-Los recuentos de bits de formato no admitidos con los recursos de streaming son los formatos de 96 bpp, los formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM y DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
+Recuentos de bits de formato no compatibles con los recursos de streaming son 96 formatos bpp, formatos de vídeo, DXGI\_formato\_R1\_UNORM, DXGI\_formato\_R8G8\_B8G8\_UNORM, y DXGI\_formato\_R8R8\_G8B8\_UNORM.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cómo se organiza en mosaico el área de un recurso de streaming](how-a-streaming-resource-s-area-is-tiled.md)
+[¿Cómo se coloca en mosaico de área de un recurso de transmisión por secuencias](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

@@ -1,26 +1,26 @@
 ---
-Description: Listing your app in the right category and subcategory helps customers find your app and understand more about it.
-title: Tabla de categorías y subcategorías
+Description: Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
+title: Tabla de categoría y subcategoría
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, categoría, subcategoría, género, categorías, géneros
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c28db9b0ca4437579e98ae156392c7b7b383ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935819"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653650"
 ---
-# <a name="category-and-subcategory-table"></a>Tabla de categorías y subcategorías
+# <a name="category-and-subcategory-table"></a>Tabla de categoría y subcategoría
 
 
 Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
 
 Debes elegir la categoría que mejor describa la aplicación. También puedes elegir una subcategoría, si está disponible. Si no estás seguro de qué categoría o subcategoría usar o no puedes encontrar una que se ajuste a la aplicación, elige una que creas que los clientes tengan más probabilidades de mirar al buscar aplicaciones como la tuya.
 
-Si decides **juegos** para la categoría, debe seleccionar al menos una subcategoría (denominada *género* para juegos). Puedes elegir tantos géneros adecuados para tu juego como quieras. Ten en cuenta que para poder publicar un juego para los clientes de Xbox, debes habilitar el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) o seguir el proceso de [aprobación de concepto](../gaming/concept-approval.md)). 
+Si elige **juegos** para la categoría, debe seleccionar al menos una subcategoría (llamado *género* para juegos). Puedes elegir tantos géneros adecuados para tu juego como quieras. Ten en cuenta que para poder publicar un juego para los clientes de Xbox, debes habilitar el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) o seguir el proceso de [aprobación de concepto](../gaming/concept-approval.md)). 
 
 > [!IMPORTANT] 
 > Si publicas la aplicación en la categoría **Juegos**, no podrás elegir una categoría diferente en un nuevo envío; debe seguir publicada en la categoría **Juegos** (aunque puedes cambiar las selecciones de género en un nuevo envío). De igual modo, no puedes elegir la categoría **Juegos** al actualizar una aplicación que hayas publicado anteriormente en una categoría diferente.
@@ -46,12 +46,12 @@ Microsoft Store organiza las aplicaciones en las siguientes categorías y subcat
     <td>Lector de libros electrónicos <br> Ficción <br> No ficción <br> Referencia</td>
   </tr>
   <tr>
-    <td>Negocios</td>
+    <td>Empresa</td>
     <td>Contabilidad y finanzas <br> Colaboración <br> CRM <br> Datos y análisis <br> Administración de archivos <br> Inventario y logística <br> Legal y Recursos Humanos <br> Administración de proyectos <br> Escritorio remoto <br> Ventas y marketing <br> Tiempo y gastos</td>
   </tr>
   <tr>
     <td>Herramientas de desarrollo</td>
-    <td>Base de datos <br> Herramientas de diseño <br> Kits de desarrollo <br> Redes <br> Referencia y aprendizaje <br> Servidores <br> Utilidades <br> Hospedaje web</td>
+    <td>Base de datos <br> Herramientas de diseño <br> Kits de desarrollo <br> Funciones de red <br> Referencia y aprendizaje <br> Servidores <br> Utilidades <br> Hospedaje web</td>
   </tr>
   <tr>
     <td>Educación</td>
@@ -67,7 +67,7 @@ Microsoft Store organiza las aplicaciones en las siguientes categorías y subcat
   </tr>
   <tr>
     <td>Juegos</td>
-    <td>Acción y aventura <br> Juegos de mesa <br> Casino <br> Clásicos <br> Educativos <br> Familia y niños <br> Lucha <br> Campo de batalla en línea para varios jugadores <br> Música <br> Otros <br> Plataformas <br> Puzles y curiosidades <br> Carreras y vuelo <br> Juego de rol <br> Disparos <br> Simulación <br> Deportes <br> Estrategia <br> Herramientas <br> Word</td>
+    <td>Acción y aventura <br> Juegos de mesa <br> Casino <br> Clásicos <br> Educativos <br> Familia y niños <br> Lucha <br> Campo de batalla en línea para varios jugadores <br> Música <br> Otras <br> Plataformas <br> Puzles y curiosidades <br> Carreras y vuelo <br> Juego de rol <br> Disparos <br> Simulation <br> Deportes <br> Estrategia <br> Herramientas <br> Word</td>
   </tr>
   <tr>
     <td>Gobierno y política</td>
@@ -103,14 +103,14 @@ Microsoft Store organiza las aplicaciones en las siguientes categorías y subcat
   </tr>
   <tr>
     <td>Noticias y tiempo</td>
-    <td>Noticias <br> Clima</td>
+    <td>Noticias <br> El Tiempo</td>
   </tr>
   <tr>
     <td>Finanzas personales</td>
     <td>Banca e inversiones <br> Presupuestos e impuestos</td>
   </tr>
   <tr>
-    <td>Personalización</td>
+    <td>Personalization</td>
     <td>Tonos y sonidos <br> Temas <br> Fondos de pantalla y pantallas de bloqueo</td>
   </tr>
   <tr>
@@ -149,5 +149,5 @@ Microsoft Store organiza las aplicaciones en las siguientes categorías y subcat
 </table>
 
 > [!NOTE] 
-> Es posible que algunas de las categorías y subcategorías usadas en Store para clientes con Windows8.x, Windows Phone 8.x y versiones anteriores se muestren de forma distinta que las categorías indicadas anteriormente. 
+> Es posible que algunas de las categorías y subcategorías usadas en Store para clientes con Windows 8.x, Windows Phone 8.x y versiones anteriores se muestren de forma distinta que las categorías indicadas anteriormente. 
 

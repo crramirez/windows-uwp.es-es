@@ -1,30 +1,30 @@
 ---
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Usa estos métodos en la API de envío de Microsoft Store para administrar envíos de complementos para las aplicaciones que están registradas en tu cuenta del centro de partners.
-title: Administrar envíos de complementos
+description: Utilice estos métodos en la API de envío de Microsoft Store para administrar los envíos de complemento para las aplicaciones que están registrados en su cuenta del centro de partners.
+title: Manage add-on submissions (Administrar envíos de complemento)
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submissions, envíos de complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944556"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647220"
 ---
-# <a name="manage-add-on-submissions"></a>Administrar envíos de complementos
+# <a name="manage-add-on-submissions"></a>Manage add-on submissions (Administrar envíos de complemento)
 
 La API de envío de Microsoft Store proporciona métodos que puedes usar para administrar envíos de complementos (también llamados productos en aplicación o IAP) para tus aplicaciones. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Si usas la API de envío de Microsoft Store para crear un envío de un complemento, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de realizar cambios en el centro de partners. Si usas el centro de partners para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
+> Si usa la API de envío de Microsoft Store para crear una presentación para un complemento, asegúrese de realizar más cambios en el envío solo por mediante la API, en lugar de realizar cambios en el centro de partners. Si usa el centro de partners para cambiar un envío que creó originalmente mediante la API, ya no podrá cambiar o confirmar ese envío mediante la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>Métodos para administrar envíos de complementos
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de complemento. Antes de poder usar estos métodos, el complemento ya debe existir en tu cuenta del centro de partners. Puedes crear un complemento en el centro de partners mediante la [definición de su tipo de producto y el Id. del producto](../publish/set-your-add-on-product-id.md) o mediante el uso de los métodos de API de envío de Microsoft Store en descritas en [Administrar complementos](manage-add-ons.md).
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de complemento. Para poder usar estos métodos, el complemento debe existir en la cuenta del centro de partners. Puede crear un complemento en el centro de partners por [definir su tipo de producto y el Id. de producto](../publish/set-your-add-on-product-id.md) o mediante los métodos de API de envío de Microsoft Store en que se describen en [administrar complementos](manage-add-ons.md).
 
 <table>
 <colgroup>
@@ -48,22 +48,22 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status</td>
-<td align="left"><a href="get-status-for-an-add-on-submission.md">Obtener el estado de un envío de complemento existente</a></td>
+<td align="left"><a href="get-status-for-an-add-on-submission.md">Obtener el estado de presentación de un complemento existente</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
-<td align="left"><a href="create-an-add-on-submission.md">Crear un nuevo envío de complemento</a></td>
+<td align="left"><a href="create-an-add-on-submission.md">Crear una nueva presentación de complemento</a></td>
 </tr>
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="update-an-add-on-submission.md">Actualizar un envío de complemento existente</a></td>
+<td align="left"><a href="update-an-add-on-submission.md">Actualizar la presentación de un complemento existente</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-an-add-on-submission.md">Confirmar un envío de complemento nuevo o actualizado</a></td>
+<td align="left"><a href="commit-an-add-on-submission.md">Confirme el envío de un complemento nuevo o actualizado</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
@@ -79,9 +79,9 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 
 Para crear un envío de un complemento, sigue este proceso.
 
-1. Si no lo ha hecho aún, completa los requisitos previos se describen en [crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluida la asociación de una aplicación de Azure AD con tu cuenta del centro de partners y obtener su cliente identificador y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
+1. Si aún no lo ha hecho, complete los requisitos previos se describen en [crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluida la asociación de una aplicación de Azure AD con su cuenta de centro de partners y obtener su Id. de cliente y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
 
-2. [Obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 3. Ejecuta el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado. Para obtener más información, consulta [Crear un envío de complemento](create-an-add-on-submission.md).
 
@@ -92,7 +92,7 @@ Para crear un envío de un complemento, sigue este proceso.
     El cuerpo de la respuesta contiene un recurso [envío de complemento](#add-on-submission-object) que incluye el identificador del nuevo envío, el URI de firma de acceso compartido (SAS) para cargar los iconos de complemento para el envío a Azure Blob Storage y todos los datos del nuevo envío (como las descripciones y la información sobre precios).
 
     > [!NOTE]
-    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob Storage, consulta [Shared Access Signatures, Part 1: Understanding the SAS model (Firmas de acceso compartido, parte 1: información sobre el modelo SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) y [Firmas de acceso compartido, Parte 2: Creación y uso de una SAS con Almacenamiento de blobs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Si estás agregando nuevos iconos para el envío, [prepara los iconos](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon) y agrégalos a un archivo ZIP.
 
@@ -107,8 +107,8 @@ Para crear un envío de un complemento, sigue este proceso.
 4. Si estás agregando nuevos iconos para el envío, carga el archivo ZIP en [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando el URI de SAS que se proporcionó en el cuerpo de la respuesta del método POST que llamaste anteriormente. Hay varias bibliotecas de Azure, que puedes usar para hacer esto en una variedad de plataformas, como:
 
     * [Biblioteca de cliente de Azure Storage para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [Azure Storage SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [Azure Storage SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [Almacenamiento de Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Almacenamiento de Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
     En el siguiente ejemplo de código C# se muestra cómo cargar el archivo ZIP en Azure Blob Storage usando la clase [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) en la biblioteca de cliente de Azure Storage para. NET. En este ejemplo se supone que el archivo ZIP ya se ha escrito en un objeto de secuencia.
 
@@ -119,7 +119,7 @@ Para crear un envío de un complemento, sigue este proceso.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Ejecuta el siguiente método para confirmar el envío. Esta acción avisará centro de partners que hayas terminado con el envío y que las actualizaciones ahora deben aplicarse a tu cuenta. Para obtener más información, consulta [Confirmar un envío de complemento](commit-an-add-on-submission.md).
+5. Ejecuta el siguiente método para confirmar el envío. Se enviará una alerta centro de partners que haya terminado con el envío y que ahora se deben aplicar las actualizaciones a su cuenta. Para obtener más información, consulta [Confirmar un envío de complemento](commit-an-add-on-submission.md).
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Para crear un envío de un complemento, sigue este proceso.
 
     Para confirmar el estado del envío, revisa el valor de *status* en el cuerpo de la respuesta. Este valor debe cambiar de **CommitStarted** a **PreProcessing** si la solicitud se realiza correctamente o a **CommitFailed** si hay errores en la solicitud. Si hay errores, el campo *statusDetails* contendrá más detalles sobre el error.
 
-7. Después de completarse correctamente la confirmación, el envío se remite a la Store para su ingesta. Puedes seguir supervisar el progreso del envío mediante el método anterior, o visitando el centro de partners.
+7. Después de completarse correctamente la confirmación, el envío se remite a la Tienda para su ingesta. Puede continuar supervisar el progreso de envío mediante el método anterior, o visitando el centro de partners.
 
 <span/>
 
@@ -141,9 +141,9 @@ Para crear un envío de un complemento, sigue este proceso.
 
 En los siguientes artículos se proporcionan ejemplos de código detallados que muestran cómo crear un envío de complemento en varios lenguajes de programación:
 
-* [Ejemplos de código de C#](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [C#ejemplos de código](csharp-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
-* [Ejemplos de código Python](python-code-examples-for-the-windows-store-submission-api.md)
+* [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
 
 ## <a name="storebroker-powershell-module"></a>Módulo de StoreBroker PowerShell
 
@@ -230,20 +230,20 @@ Este recurso tiene los siguientes valores.
 
 | Valor      | Tipo   | Descripción        |
 |------------|--------|----------------------|
-| id            | string  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md), [obtener todos los complementos](get-all-add-ons.md) y [obtener un complemento](get-an-add-on.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
+| id            | string  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md), [obtener todos los complementos](get-all-add-ons.md) y [obtener un complemento](get-an-add-on.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 | contentType           | string  |  [Tipo de contenido](../publish/enter-add-on-properties.md#content-type) que se proporciona en el complemento. Puede ser uno de los valores siguientes: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | keywords           | array  | Matriz de cadenas que contienen hasta 10 [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento. Gracias a estas palabras clave, la aplicación puede consultar complementos.   |
 | lifetime           | string  |  Duración del complemento. Puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  Diccionario de pares clave-valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es un [recurso de lista](#listing-object) que contiene la información de lista del complemento.  |
 | pricing           | object  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para el complemento.   |
-| targetPublishMode           | cadena  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
-| tag           | cadena  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
+| tag           | string  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
 | visibility  | string  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
-| status  | string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| status  | string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Publicación</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. |
 | fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de complemento](#create-an-add-on-submission).  |
-| friendlyName  | string  |  El nombre descriptivo del envío, como se muestra en el centro de partners. Generas este valor cuando creas el envío.  |
+| friendlyName  | string  |  El nombre descriptivo del envío, tal como se muestra en el centro de partners. Generas este valor cuando creas el envío.  |
 
 <span id="listing-object" />
 
@@ -254,7 +254,7 @@ Este recurso contiene la [información de lista de un complemento](../publish/cr
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|------|
 |  description               |    string     |   Descripción de la lista de complementos.   |     
-|  icon               |   object      |Un [recurso de icono](#icon-object) que contiene los datos para el icono de la lista de complementos.    |
+|  icono               |   object      |Un [recurso de icono](#icon-object) que contiene los datos para el icono de la lista de complementos.    |
 |  title               |     string    |   Título de la lista de complementos.   |  
 
 <span id="icon-object" />
@@ -266,7 +266,7 @@ Este recurso contiene los datos de iconos de una lista de complementos. Este rec
 | Valor           | Tipo    | Descripción     |
 |-----------------|---------|------|
 |  fileName               |    string     |   Nombre del archivo de icono en el archivo ZIP que cargaste para el envío. El icono debe ser un archivo .png que mida exactamente 300 x 300 píxeles.   |     
-|  fileStatus               |   string      |  Estado del archivo de icono. Puede ser uno de los valores siguientes: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
+|  fileStatus               |   string      |  Estado del archivo de icono. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
 
 <span id="pricing-object" />
 
@@ -278,8 +278,8 @@ Este recurso contiene información sobre precios del complemento. Este recurso t
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.     |     
 |  sales               |   array      |  **En desuso**. Una matriz de [recursos de venta](#sale-object) que contienen información de ventas del complemento.     |     
-|  priceId               |   string      |  Una [franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) del complemento.    |    
-|  isAdvancedPricingModel               |   booleano      |  Si está en **true**, tu cuenta de desarrollador tiene acceso al conjunto expandido de franjas de precios de 0,99USD a 1999,99USD. Si está en **false**, tu cuenta de desarrollador tiene acceso al conjunto original de franjas de precios de 0,99USD a 999,99USD. Para obtener más información sobre las diferentes franjas de precios, consulta [franjas de precios](#price-tiers).<br/><br/>**Nota**&nbsp;&nbsp;este campo es de solo lectura.   |
+|  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) del complemento.    |    
+|  isAdvancedPricingModel               |   boolean      |  Si está en **true**, tu cuenta de desarrollador tiene acceso al conjunto expandido de franjas de precios de 0,99 USD a 1999,99 USD. Si está en **false**, tu cuenta de desarrollador tiene acceso al conjunto original de franjas de precios de 0,99 USD a 999,99 USD. Para obtener más información sobre las diferentes franjas de precios, consulta [franjas de precios](#price-tiers).<br/><br/>**Nota**&nbsp;&nbsp;este campo es de solo lectura.   |
 
 
 <span id="sale-object" />
@@ -290,8 +290,8 @@ Este recurso contiene información de venta de un complemento.
 
 > [!IMPORTANT]
 > El recurso **Sale** ya no se admite y actualmente no se pueden obtener ni modificar los datos de ventas del envío de un complemento mediante la API de envío de Microsoft Store. En el futuro, actualizaremos la API de envío de Microsoft Store para incorporar una nueva forma de acceder mediante programación a la información de ventas de los envíos de complementos.
->    * Después de llamar al [método GET para obtener un envío de complemento](get-an-add-on-submission.md), el valor de *sales* estará vacío. Seguir usando el centro de partners para obtener los datos de ventas de tu envío de complemento.
->    * Cuando se llama al [método PUT para actualizar un envío de complemento](update-an-add-on-submission.md), la información del valor de *sales* se omite. Puedes seguir utilizando el centro de partners para modificar los datos de ventas para el envío de complemento.
+>    * Después de llamar al [método GET para obtener un envío de complemento](get-an-add-on-submission.md), el valor de *sales* estará vacío. Aún puede usar el centro de partners para obtener los datos de venta para el envío de complemento.
+>    * Cuando se llama al [método PUT para actualizar un envío de complemento](update-an-add-on-submission.md), la información del valor de *sales* se omite. Puede seguir usar el centro de partners para cambiar los datos de venta para el envío de complemento.
 
 Este recurso tiene los siguientes valores.
 
@@ -334,8 +334,8 @@ Este recurso proporciona acceso a los datos del informe de certificación de un 
 
 | Valor           | Tipo    | Descripción               |
 |-----------------|---------|------|
-|     date            |    string     |  La fecha y hora que se generó el informe, en formato ISO 8601.    |
-|     reportUrl            |    cadena     |  Dirección URL en la que puedes acceder al informe.    |
+|     fecha            |    string     |  La fecha y hora que se generó el informe, en formato ISO 8601.    |
+|     reportUrl            |    string     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 ## <a name="enums"></a>Enumeraciones
 
@@ -352,7 +352,7 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 |  Base               |   No se establece la franja de precios; usa el precio base para el complemento.      |     
 |  NotAvailable              |   El complemento no está disponible en la región especificada.    |     
 |  Free              |   El complemento es gratuito.    |    
-|  Tier*xxxx*               |   Una cadena que especifica la franja de precios del complemento, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de precio niveles que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **precios y disponibilidad** para cualquiera de los envíos de aplicaciones en el centro de partners y Haz clic en el vínculo **Ver la tabla** en la sección **mercados y precios personalizados** (para algunas cuentas de desarrollador, este vínculo está en la sección **precio** ).     |
+|  Tier*xxxx*               |   Una cadena que especifica la franja de precios del complemento, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de los niveles de precios que están disponibles para la cuenta de desarrollador, incluidos los precios específicos del mercado que están asociados con cada nivel, vaya a la **precios y disponibilidad** página para cualquiera de los envíos de aplicaciones en Centro de asociados y haga clic en el **ver tabla** vincular en el **mercados y precios personalizados** sección (de algunas cuentas de desarrollador, este vínculo se encuentra en la **precios** sección).     |
 
 <span id="submission-status-code" />
 
@@ -362,7 +362,7 @@ Los valores siguientes representan el código de estado de un envío.
 
 | Valor           |  Descripción      |
 |-----------------|---------------|
-|  None            |     No se especificó ningún código.         |     
+|  Ninguno            |     No se especificó ningún código.         |     
 |      InvalidArchive        |     El archivo ZIP que contiene el paquete no es válido o tiene un formato de archivo no reconocido.  |
 | MissingFiles | El archivo ZIP no tiene todos los archivos que se enumeran en los datos del envío o estos se encuentran en una ubicación incorrecta en el archivo. |
 | PackageValidationFailed | Uno o varios paquetes de tu envío no se pudieron validar. |
@@ -374,13 +374,13 @@ Los valores siguientes representan el código de estado de un envío.
 | ListingOptOutWarning | El desarrollador quitó una descripción de un envío anterior o no incluyó la información de descripción que admitía el paquete. |
 | ListingOptInWarning  | El desarrollador agregó una lista. |
 | UpdateOnlyWarning | El desarrollador está intentando insertar algo que solo presenta soporte técnico de actualizaciones. |
-| Other  | El envío presenta un estado no reconocido o sin clasificar. |
+| Otras  | El envío presenta un estado no reconocido o sin clasificar. |
 | PackageValidationWarning | El proceso de validación del paquete genera una advertencia. |
 
 <span/>
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar complementos mediante la API de envío de Microsoft Store](manage-add-ons.md)
-* [Envíos de complementos en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
+* [Envíos de complemento en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)

@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use custom audio on your toast notifications.
+Description: Obtenga información sobre cómo usar audio personalizada en las notificaciones del sistema.
 title: Audio personalizado en notificaciones del sistema
 label: Custom audio on toasts
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, audio personalizado, notificación, audio, sonido
 ms.localizationpriority: medium
 ms.openlocfilehash: 982340901d13f17945c1e7ffa11099f52732f619
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944704"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644070"
 ---
 # <a name="custom-audio-on-toasts"></a>Audio personalizado en notificaciones del sistema
 
@@ -27,7 +27,7 @@ Instala [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Mic
 
 ## <a name="add-namespace-declarations"></a>Agregar declaraciones de espacios de nombres
 
-`Windows.UI.Notifications` incluye las API de notificaciones del sistema e iconos. `Microsoft.Toolkit.Uwp.Notifications` incluye la biblioteca de notificaciones.
+`Windows.UI.Notifications` incluye el icono y la API del sistema. `Microsoft.Toolkit.Uwp.Notifications` incluye la biblioteca de notificaciones.
 
 ```csharp
 using Microsoft.Toolkit.Uwp.Notifications;
@@ -54,7 +54,7 @@ ToastContent toastContent = new ToastContent()
 
 Windows Mobile siempre ha admitido audio personalizado en las notificaciones del sistema. Sin embargo, Escritorio solo ha agregado compatibilidad para audio personalizado en la versión 1511 (compilación 10586). Si envías una notificación del sistema que contenga audio personalizado a un dispositivo de escritorio anterior a la versión 1511, se silenciará la notificación del sistema. Por lo tanto, para Escritorio versión preliminar 1511, NO debes incluir el audio personalizado en la notificación del sistema, para que la notificación del sistema use al menos el sonido de la notificación predeterminado.
 
-**Problema conocido**: Si estás usando Escritorio versión 1511, el audio personalizado de la notificación del sistema solo funcionará si tu aplicación se ha instalado a través de la Store. Eso significa que no puedes probar localmente tu audio personalizado en Escritorio antes de enviarlo a la Store, pero el audio funcionará correctamente una vez instalado desde la Store. Hemos corregido esto en la Actualización de aniversario, de manera que el audio personalizado desde tu aplicación implementada localmente funcionará correctamente.
+**Problema conocido**: Si usa Desktop versión 1511, el audio del sistema personalizada solo funcionará si la aplicación se instala mediante el Store. Eso significa que no puedes probar localmente tu audio personalizado en Escritorio antes de enviarlo a la Store, pero el audio funcionará correctamente una vez instalado desde la Store. Hemos corregido esto en la Actualización de aniversario, de manera que el audio personalizado desde tu aplicación implementada localmente funcionará correctamente.
 
 ```csharp
 ?
@@ -102,6 +102,6 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
+- [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
 - [Enviar una notificación del sistema local](send-local-toast.md)
-- [Documentación del contenido de la notificación del sistema](adaptive-interactive-toasts.md)
+- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)

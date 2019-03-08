@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
 ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934620"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649640"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 
-Con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), puedes llamar a Windows en tiempo de ejecución APIs con tipos de cadena de caracteres anchos de la biblioteca estándar de C++ como **std:: wstring** (Nota: no con tipos de cadena de caracteres estrechos como **std:: String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
+Con [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), puede llamar a usar como tipos de cadena de caracteres anchos de biblioteca estándar de C++ de Windows en tiempo de ejecución APIs **std:: wstring** (Nota: no, con caracteres estrechos tipos de cadena como **std::String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
 
-Hay muchos tipos de cadena en C++. Las variantes existen en muchas bibliotecas además de **std::basic_string** de la biblioteca estándar de C++. C++17 tiene utilidades de conversión de cadena y **std::basic_string_view** para enlazar las separaciones entre todos los tipos de cadena.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) proporciona convertibilidad con **std::wstring_view** para proporcionar la interoperabilidad para la que se ha diseñado **std::basic_string_view**.
+Hay muchos tipos de cadena en C++. Las variantes existen en muchas bibliotecas además de **std::basic_string** de la biblioteca estándar de C++. C++17 tiene utilidades de conversión de cadena y **std::basic_string_view** para enlazar las separaciones entre todos los tipos de cadena.  [**winrt::hstring** ](/uwp/cpp-ref-for-winrt/hstring) proporciona conversión de varianza con **std::wstring_view** para proporcionar la interoperabilidad que **std::basic_string_view** se diseñó para.
 
-## <a name="using-stdwstring-and-optionally-winrthstring-with-uri"></a>Con **std:: wstring** (y opcionalmente **winrt::hstring**) con **Uri**
-[**Windows::Foundation::URI**](/uwp/api/windows.foundation.uri) se ha construido a partir de un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring).
+## <a name="using-stdwstring-and-optionally-winrthstring-with-uri"></a>Uso de **std:: wstring** (y, opcionalmente, **winrt::hstring**) con **Uri**
+[**Windows::Foundation::URI** ](/uwp/api/windows.foundation.uri) se construye a partir un [ **winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring).
 
 ```cppwinrt
 public:
@@ -172,6 +172,6 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
 ```
 
 ## <a name="important-apis"></a>API importantes
-* [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [función winrt:: to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)
-* [función winrt:: to_string](/uwp/cpp-ref-for-winrt/to-string)
+* [struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
+* [función winrt::to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)
+* [función winrt::to_string](/uwp/cpp-ref-for-winrt/to-string)

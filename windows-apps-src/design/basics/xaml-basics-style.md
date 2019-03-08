@@ -1,25 +1,25 @@
 ---
-title: Crear estilos personalizados.
+title: Crear estilos personalizados
 description: Este artículo describe los conceptos básicos del diseño de elementos de interfaz de usuario en XAML
 keywords: XAML, UWP, Introducción
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926905"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592960"
 ---
-# <a name="tutorial-create-custom-styles"></a>Tutorial: Crear tus propios estilos personalizados
+# <a name="tutorial-create-custom-styles"></a>Tutorial: Crear estilos personalizados
 
 Este tutorial muestra cómo personalizar la interfaz de usuario de nuestra aplicación XAML. Advertencia: este tutorial podría o no podría implicar a un unicornio. (¡Lo hace!)  
 
 ## <a name="prerequisites"></a>Requisitos previos
 * [Visual Studio 2017 y el SDK de Windows 10 (10.0.15063.468 o posterior)](https://developer.microsoft.com/windows/downloads)
 
-## <a name="part-0-get-the-code"></a>Parte 0: obtener el código
+## <a name="part-0-get-the-code"></a>Parte 0: Obtener el código
 El punto de partida de este laboratorio se encuentra en el repositorio de ejemplos PhotoLab, en la [carpeta xaml-basics-starting-points/style/](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/style). Después de clonar o descargar el repositorio, puedes editar el proyecto abriendo PhotoLab.sln con Visual Studio 2017.
 
 La aplicación PhotoLab tiene dos páginas principales:
@@ -30,7 +30,7 @@ La aplicación PhotoLab tiene dos páginas principales:
 **DetailPage.xaml:** Muestra una sola foto después de que se haya seleccionado. Un menú de edición flotante permite modificar la foto, cambiar su nombre y guardarla.
 ![DetailPage](../basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-create-a-fancy-slider-control"></a>Parte 1: Crear un control deslizante elegante  
+## <a name="part-1-create-a-fancy-slider-control"></a>1ª parte: Crear un control deslizante elaborados  
 
 La Plataforma universal de Windows (UWP) proporciona varias maneras de personalizar la apariencia de la aplicación. Desde la configuración de fuentes y tipografía hasta los colores y gradientes de efectos de degradado, tienes muchas opciones. 
 
@@ -38,7 +38,7 @@ Para la primera parte del tutorial, vamos a animar algunos de nuestros controles
 
 <figure>
     <img src="../basics/images/xaml-basics/slider-start.png" />
-    <figure>*Un sencillo control deslizante con el estilo predeterminado.*</figure>
+    <figure>*Un control deslizante humilde con estilo predeterminado.*</figure>
 </figure>
 
 Estos controles deslizantes son útiles, hacen todas las cosas que debiera hacer un control deslizante, pero no son muy decorativos. Vamos a solucionarlo. 
@@ -60,9 +60,9 @@ El control deslizante de exposición ajusta la exposición de la imagen: lléval
 
     El [espacio de nombres Windows.XAML.Ui.Shapes](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes) proporciona siete formas para elegir. Hay una elipse, un rectángulo y un elemento denominado Trayecto, que puede hacer cualquier tipo de forma: ¡sí, hasta un unicornio! 
     
-    <!-- TODO reduce size --> ![Un unicornio](../basics/images/xaml-basics/unicorn.png)
+    <!-- TODO reduce size --> ![Unicornio](../basics/images/xaml-basics/unicorn.png)
     
-    > **Obtén información sobre esto:** el artículo [dibujar formas](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) explica todo lo que necesitas saber acerca de las formas XAML. 
+    > **Lea sobre ello:** El [dibujar formas](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) artículo explica todo lo que necesita saber acerca de las formas XAML. 
     
     Queremos crear un widget con aspecto de triángulo, algo parecido a la forma que verías en el control de volumen de un equipo de música estéreo.
     
@@ -79,7 +79,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: lléval
     * Dale al **Polígono** un relleno con degradado lineal.     
     * En el control deslizante de exposición, establece la propiedad **Primer plano** en "Transparente", para que puedas ver el polígono. 
 
-    **Antes**
+    **Antes de**
     ```xaml
     <Slider Header="Exposure"
         Grid.Row="2"
@@ -87,7 +87,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: lléval
         Minimum="-2"
         Maximum="2" />
     ```
-    **Después**
+    **Después de**
     ```xaml
     <Polygon Grid.Row="2" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -121,7 +121,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: lléval
 
     Vamos a utilizar otro polígono para esta forma en segundo plano con las mismas dimensiones que el anterior, pero esta vez pondremos como relleno un degradado de azul a amarillo en lugar de blanco y negro. 
 
-    **Antes**
+    **Antes de**
     ```xaml
     <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -134,7 +134,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: lléval
             Minimum="-1"
             Maximum="1" />
     ```
-    **Después**
+    **Después de**
     ```xaml
     <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -175,7 +175,7 @@ Enhorabuena, has completado la parte 1. Si te quedaste bloqueado o quieres ver l
 
  
     
-## <a name="part-2-create-basic-styles"></a>Parte 2: crear estilos básicos
+## <a name="part-2-create-basic-styles"></a>2ª parte: Crear estilos básicos
 
 Una de las ventajas de los estilos XAML es que pueden reducir considerablemente la cantidad de código que tienes que escribir, y puede hacer mucho más fácil actualizar el aspecto de la aplicación.
 
@@ -244,7 +244,7 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
     ```
 3. Crea un estilo para un **TextBlock** que establezca su **Margen** en "10,8,0,0", su **VerticalAlignment** en "Centro" y su **Relleno** en "0".
 
-    **Antes**
+    **Antes de**
     ```XAML
         <Grid.Resources>
             <Style TargetType="Slider">
@@ -262,7 +262,7 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
         </Grid.Resources>
     ```
 
-    **Después**
+    **Después de**
     ```XAML
         <Grid.Resources>
             <Style TargetType="Slider">
@@ -290,7 +290,7 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
 
 4. Vamos a hacer que esto sea un estilo con nombre, para que se puede especificar a que controles **TextBlock** se aplica. Establece la propiedad del estilo **x:Key** en "ValueTextBox". 
 
-    **Antes**
+    **Antes de**
     ```XAML
             <Style TargetType="TextBlock">
                 <Setter Property="Margin"
@@ -302,7 +302,7 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
             </Style>                            
     ```    
 
-    **Después**
+    **Después de**
     ```XAML
             <Style TargetType="TextBlock"
                    x:Key="ValueTextBox">
@@ -317,7 +317,7 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
 
 5. Para cada **TextBlock**, quita sus propiedades **Margen**, **VerticalAlignment** y **Relleno** y establece su propiedad **estilo** en "{StaticResource ValueTextBox}".
 
-    **Antes**
+    **Antes de**
     ```XAML
      <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -325,7 +325,7 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
                 Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />   
     ```
 
-    **Después**
+    **Después de**
     ```XAML
      <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -337,11 +337,10 @@ Mira los demás bloques de texto, ten en cuenta que las mismas propiedades se es
 
 6. Compilar y ejecutar la aplicación. Debería tener... el mismo aspecto. Sin embargo, debes sentir ese maravilloso sentido de satisfacción y logro que llega al escribir código eficaz y fácil de mantener.
 
-<!-- TODO add new start/end points -->
-¡Enhorabuena, has completado la parte 2!
+<!-- TODO add new start/end points --> Enhorabuena, ha completado parte 2.
 
 
-## <a name="part-3-use-a-control-template-to-make-a-fancy-slider"></a>Parte 3: usar una plantilla de control para crear un control deslizante decorativo
+## <a name="part-3-use-a-control-template-to-make-a-fancy-slider"></a>Parte 3: Usar una plantilla de control para realizar un control deslizante elaborado
 
 ¿Recuerdas cómo, en la parte 1, agregamos una forma por detrás del control deslizante para darle un aspecto atractivo?
 
@@ -632,7 +631,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
 
 5.  Crea un polígono que sea simplemente como el polígono que creaste para el control deslizante de exposición en la parte 1. Agrega el polígono tras la etiqueta de cierre **Grid.RowDefinitions**. Establece **Grid.Row** en "0", **Grid.RowSpan** en "3" y **Grid.ColumnSpan** en "3". 
 
-    **Antes**
+    **Antes de**
     ```XAML
     <Grid x:Name="HorizontalTemplate" MinHeight="44">
         <Grid.ColumnDefinitions>
@@ -647,7 +646,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
         </Grid.RowDefinitions>        
     ```
 
-    **Después**
+    **Después de**
     ```XAML
     <Grid x:Name="HorizontalTemplate" MinHeight="44">
         <Grid.ColumnDefinitions>
@@ -676,7 +675,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
 
 6. Quita la configuración **Polygon.Fill**. Establece **Rellenar** en "{TemplateBinding Background}". Esto hace que al establecer la propiedad **Fondo** del deslizador se determine la propiedad **Rellenar** del polígono. 
 
-    **Antes**
+    **Antes de**
     ```XAML
         <Polygon Grid.Row="0" Grid.RowSpan="3"  Grid.ColumnSpan="3" Stretch="Fill"
                     Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -692,7 +691,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
         </Polygon>           
     ```
     
-    **Después**
+    **Después de**
     ```XAML
         <Polygon Grid.Row="0" Grid.RowSpan="3"  Grid.ColumnSpan="3" Stretch="Fill"
                     Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -703,7 +702,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
 
 7. Justo después del polígono que hayas agregado, está un rectángulo denominado **HorizontalTrackRect**. Quita la configuración **Rellenar** del rectángulo, de manera que el rectángulo no sea visible y no bloquee la forma del polígono. (No conviene quitar completamente el rectángulo porque la plantilla de control también lo usa para los elementos visuales para interacción, como el movimiento del ratón).
 
-    **Antes**
+    **Antes de**
     ```XAML
         <Rectangle x:Name="HorizontalTrackRect"
                     Fill="{TemplateBinding Background}"
@@ -712,7 +711,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
                     Grid.ColumnSpan="3" />          
     ```
     
-    **Después**
+    **Después de**
     ```XAML
         <Rectangle x:Name="HorizontalTrackRect"
                     Height="{ThemeResource SliderTrackThemeHeight}"
@@ -729,7 +728,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
     * Establece el fondo del control deslizante en un degradado lineal que cambie de negro a blanco.
     * Quita el polígono de fondo que creamos en la parte 1.
         
-    **Antes**
+    **Antes de**
     ```XAML
     <Polygon Grid.Row="2" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -751,7 +750,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
             Template="{StaticResource FancySliderControlTemplate}"/>    
     ```
     
-    **Después**
+    **Después de**
     ```XAML
     <Slider Header="Exposure" 
             Grid.Row="2"  Foreground="Transparent"
@@ -771,7 +770,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
     ```        
 9. Realiza las mismas actualizaciones en el control deslizante de temperatura.
 
-    **Antes**
+    **Antes de**
     ```XAML
     <Polygon Grid.Row="3" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -792,7 +791,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
             Maximum="1" />
     ```
     
-    **Después**
+    **Después de**
     ```XAML
     <Slider Header="Temperature"
             Grid.Row="3" Foreground="Transparent"
@@ -813,7 +812,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
 
 10. Realiza las mismas actualizaciones al control de tinte.
 
-    **Antes**
+    **Antes de**
     ```XAML
     <Polygon Grid.Row="4" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -834,7 +833,7 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
             Maximum="1" />
     ```
     
-    **Después**
+    **Después de**
     ```XAML
     <Slider Header="Tint"
             Grid.Row="4" Foreground="Transparent"
@@ -853,11 +852,10 @@ Bien, el trabajo ya está hecho, pero hay una mejor manera de lograr el mismo ef
     </Slider>
     ```        
 
-11. Compila y ejecuta la aplicación. 
+11. Compilar y ejecutar la aplicación. 
 
     ![Son los mejores controles deslizantes del mundo](../basics/images/xaml-basics/style-sliders-templates.png)
     
     Como puedes ver, las actualizaciones mejoraron el posicionamiento del polígono; ahora, la parte inferior del polígono se alinea con la parte inferior de la miniatura del control deslizante.
     
-<!-- TODO correct folder -->
-¡Felicidades, has finalizado el tercer tutorial! Si te quedaste bloqueado y quieres ver la solución final, puedes encontrar el ejemplo completo en el [repositorio de ejemplos de aplicaciones UWP](https://github.com/Microsoft/Windows-universal-samples).
+<!-- TODO correct folder --> Enhorabuena, ha finalizado el tutorial. Si te quedaste bloqueado y quieres ver la solución final, puedes encontrar el ejemplo completo en el [repositorio de ejemplos de aplicaciones UWP](https://github.com/Microsoft/Windows-universal-samples).

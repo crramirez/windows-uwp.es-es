@@ -1,9 +1,9 @@
 ---
-title: Modos de direccionamiento de las texturas
+title: Modos de direccionamiento de texturas
 description: La aplicación de Direct3D puede asignar coordenadas de textura a todos los vértices de cualquier primitivo.
 ms.assetid: 925E8F2E-43EC-404E-8870-03E39155F697
 keywords:
-- Modos de direccionamiento de las texturas
+- Modos de direccionamiento de texturas
 - Modo de direccionamiento de las texturas Wrap
 - Modo de direccionamiento de las texturas Mirror
 - Modo de direccionamiento de las texturas Clamp
@@ -12,36 +12,36 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e263876f414e5683ffc8a5645a12e5031b3d6fb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660190"
 ---
-# <a name="texture-addressing-modes"></a>Modos de direccionamiento de las texturas
+# <a name="texture-addressing-modes"></a>Modos de direccionamiento de texturas
 
 
 La aplicación de Direct3D puede asignar coordenadas de textura a todos los vértices de cualquier primitivo. Por lo general, las coordenadas de textura u y v que se asignan a un vértice se encuentran en el intervalo de 0.0 a 1.0, ambos incluidos. Sin embargo, si se asignan coordenadas de textura fuera de ese intervalo, puedes crear determinados efectos especiales de texturas. .
 
-Lo que hace Direct3D con las coordenadas de textura que se encuentran fuera del intervalo \[0.0, 1.0\] se controla estableciendo el modo de direccionamiento de las texturas. Por ejemplo, puedes hacer que tu aplicación establezca el modo de direccionamiento de las texturas de manera que una textura se coloque en mosaico en un primitivo.
+Controlar lo que Direct3D que se hace con las coordenadas de textura que están fuera de la \[0.0, 1.0\] intervalo estableciendo el modo de direccionamiento de textura. Por ejemplo, puedes hacer que tu aplicación establezca el modo de direccionamiento de las texturas de manera que una textura se coloque en mosaico en un primitivo.
 
 Direct3D permite que las aplicaciones realicen el ajuste de la textura. Consulta [Ajuste de texturas](texture-wrapping.md).
 
-Si se habilita el ajuste de la textura de forma efectiva, las coordenadas de textura situadas fuera del intervalo \[0.0, 1.0\] no son válidas y el comportamiento para rasterizar estas coordenadas de textura no válidas no está definido en este caso. Cuando se habilita el ajuste de las texturas, no se usan modos de direccionamiento de las texturas. Ten cuidado para que la aplicación no especifique coordenadas de textura inferiores a 0.0 ni superiores a 1.0 cuando el ajuste de las texturas esté habilitado.
+Habilitar ajuste de forma eficaz de la textura hace que las coordenadas de textura fuera el \[0.0, 1.0\] intervalo no es válido y el comportamiento de la rasterización estas coordenadas de textura delictivos no está definida en este caso. Cuando se habilita el ajuste de las texturas, no se usan modos de direccionamiento de las texturas. Ten cuidado para que la aplicación no especifique coordenadas de textura inferiores a 0.0 ni superiores a 1.0 cuando el ajuste de las texturas esté habilitado.
 
-## <a name="span-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspansummary-of-the-texture-addressing-modes"></a><span id="Summary_of_the_texture_addressing_modes"></span><span id="summary_of_the_texture_addressing_modes"></span><span id="SUMMARY_OF_THE_TEXTURE_ADDRESSING_MODES"></span>Resumen de los modos de direccionamiento de las texturas
+## <a name="span-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspansummary-of-the-texture-addressing-modes"></a><span id="Summary_of_the_texture_addressing_modes"></span><span id="summary_of_the_texture_addressing_modes"></span><span id="SUMMARY_OF_THE_TEXTURE_ADDRESSING_MODES"></span>Resumen de la modos de direccionamiento de textura
 
 
 | Modo de direccionamiento de las texturas | Descripción                                                                                                                           |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Wrap                    | Repite la textura en la unión de cada entero.                                                                                        |
-| Mirror                  | Refleja la textura en el límite de cada entero.                                                                                        |
-| Clamp                   | Comprime las coordenadas de la textura en el intervalo \[0.0, 1.0\]; el modo Clamp aplica la textura una vez y luego difumina el color de los píxeles de los bordes. |
+| Reflejada                  | Refleja la textura en el límite de cada entero.                                                                                        |
+| Clamp                   | Garras coordina la textura a la \[0.0, 1.0\] intervalo; Modo de bloqueo aplica la textura de una vez y luego difuminar el color de los píxeles del borde. |
 | Border Color            | Usa un *color del borde* arbitrario para todas las coordenadas de textura situadas fuera del intervalo de 0.0 a 1.0, ambos inclusive.                         |
 
  
 
-## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de las texturas Wrap
+## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Ajustar el modo de direccionamiento de textura
 
 
 El modo de direccionamiento de las texturas Wrap hace que Direct3D repita la textura en la unión de cada entero.
@@ -52,7 +52,7 @@ Supongamos, por ejemplo, que la aplicación crea un primitivo cuadrado y especif
 
 Esto contrasta con el **modo de direccionamiento de las texturas Mirror**, que se muestra a continuación.
 
-## <a name="span-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanmirror-texture-address-mode"></a><span id="Mirror_texture_address_mode"></span><span id="mirror_texture_address_mode"></span><span id="MIRROR_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de las texturas Mirror
+## <a name="span-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanmirror-texture-address-mode"></a><span id="Mirror_texture_address_mode"></span><span id="mirror_texture_address_mode"></span><span id="MIRROR_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de textura de reflejo
 
 
 El modo de direccionamiento de las textura Mirror hace que Direct3D refleje la textura en el límite de cada entero.
@@ -63,10 +63,10 @@ Supongamos, por ejemplo, que la aplicación crea un primitivo cuadrado y especif
 
 Esto contrasta esto con el **modo de direccionamiento de las texturas Wrap**.
 
-## <a name="span-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanclamp-texture-address-mode"></a><span id="Clamp_texture_address_mode"></span><span id="clamp_texture_address_mode"></span><span id="CLAMP_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de las texturas Clamp
+## <a name="span-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanclamp-texture-address-mode"></a><span id="Clamp_texture_address_mode"></span><span id="clamp_texture_address_mode"></span><span id="CLAMP_TEXTURE_ADDRESS_MODE"></span>Fijar el modo de direccionamiento de textura
 
 
-El modo de direccionamiento de las texturas Clamp hace que Direct3D comprima las coordenadas de textura en el intervalo \[0.0, 1.0\]; el modo Clamp aplica la textura una vez y luego difumina el color de los píxeles de los bordes.
+Hace que el modo de direccionamiento abrazadera textura Direct3D a fijar sus coordenadas de textura a la \[0.0, 1.0\] intervalo; Modo de bloqueo aplica la textura de una vez y luego difuminar el color de los píxeles del borde.
 
 Imaginemos que la aplicación crea un primitivo cuadrado y asigna unas coordenadas de textura de (0.0,0.0), (0.0,3.0), (3.0,3.0) y (3.0,0.0) a los vértices de dicho primitivo. Si el modo de direccionamiento de la textura se establece en "Clamp", la textura se aplica una sola vez. Los colores de los píxeles en la parte superior de las columnas y al final de las filas se extienden hasta la parte superior y la parte derecha del primitivo, respectivamente.
 
@@ -74,7 +74,7 @@ La siguiente ilustración muestra una textura comprimida.
 
 ![Ilustración de una textura y una textura comprimida](images/clamp.png)
 
-## <a name="span-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanborder-color-texture-address-mode"></a><span id="Border_Color_texture_address_mode"></span><span id="border_color_texture_address_mode"></span><span id="BORDER_COLOR_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de las texturas Border Color
+## <a name="span-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanborder-color-texture-address-mode"></a><span id="Border_Color_texture_address_mode"></span><span id="border_color_texture_address_mode"></span><span id="BORDER_COLOR_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de textura de Color del borde
 
 
 El modo de dirección de textura Border Color hace que Direct3D use un color arbitrario, conocido como *color del borde*, para todas las coordenadas de textura situadas fuera del intervalo de 0.0 a 1.0, ambos inclusive.
@@ -83,7 +83,7 @@ En la siguiente ilustración, la aplicación especifica que la textura se apliqu
 
 ![Ilustración de una textura y una textura con un borde rojo.](images/border.png)
 
-## <a name="span-iddevicelimitationsspanspan-iddevicelimitationsspanspan-iddevicelimitationsspandevice-limitations"></a><span id="Device_Limitations"></span><span id="device_limitations"></span><span id="DEVICE_LIMITATIONS"></span>Limitaciones del dispositivo
+## <a name="span-iddevicelimitationsspanspan-iddevicelimitationsspanspan-iddevicelimitationsspandevice-limitations"></a><span id="Device_Limitations"></span><span id="device_limitations"></span><span id="DEVICE_LIMITATIONS"></span>Limitaciones de los dispositivos
 
 
 Aunque normalmente el sistema permite las coordenadas de textura fuera del intervalo de 0.0 y 1.0, ambos inclusive, a menudo las limitaciones de hardware afectan a lo fuera de ese intervalo que pueden estar las coordenadas de textura. Un dispositivo de representación comunica el límite del intervalo completo de coordenadas de textura permitido por el dispositivo cuando se recuperan las funcionalidades del dispositivo.
@@ -95,7 +95,7 @@ Las limitaciones de repetición de textura pueden depender del tamaño de la tex
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Texturas](textures.md)
+[Textures](textures.md)
 
  
 

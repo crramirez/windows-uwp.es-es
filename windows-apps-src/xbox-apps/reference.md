@@ -1,17 +1,17 @@
 ---
 title: API de REST del Portal de dispositivos para Xbox
-description: Referencia de API de UWP en Xbox One.
+description: Referencia de API para UWP en Xbox One.
 ms.date: 10/25/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
 ms.localizationpriority: medium
 ms.openlocfilehash: d8fdcf01d7d1f72624d73acf2d10ce28dfb75e04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945837"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657000"
 ---
 # <a name="xbox-device-portal-rest-api"></a>API de REST del Portal de dispositivos para Xbox
 
@@ -35,7 +35,7 @@ Esta sección contiene temas de referencia para la API de REST del Portal de dis
 |[/ext/xbox/info](wdp-xboxinfo-api.md)| Proporciona información acerca del dispositivo Xbox One. |
 |[/ext/xboxlive/sandbox](wdp-sandbox-api.md)| Administra tu espacio aislado de Xbox Live. |
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [UWP en Xbox One](index.md)
-- [Portal de dispositivos Windows](../debug-test-perf/device-portal.md)
+- [Windows Device Portal](../debug-test-perf/device-portal.md)

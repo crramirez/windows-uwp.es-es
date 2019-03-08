@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 6517241826d06b63fd88b45237552acffbdc62da
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922326"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651240"
 ---
 # <a name="macs-hashes-and-signatures"></a>MAC, hash y firmas
 
@@ -27,7 +27,7 @@ El cifrado ayuda a impedir que personas no autorizadas puedan leer un mensaje, p
 
 -   Roberto y Alicia comparten una clave secreta y se ponen de acuerdo para usar una función MAC.
 -   Roberto crea un mensaje y suministra el mensaje y la clave secreta a la función MAC para obtener un valor MAC.
--   Después Roberto envía el mensaje \[sin cifrar\] y el valor MAC a Alicia a través de una red.
+-   Roberto envía el \[sin cifrar\] valoran mensaje y el equipo MAC a Alice a través de una red.
 -   Alicia usa la clave secreta y el mensaje como entrada de la función MAC. Compara el valor MAC generado con el valor MAC enviado por Roberto. Si coinciden, significa que no se manipuló el mensaje durante el tránsito.
 
 Eva, que interceptó la conversación de Roberto y Alicia, no puede manipular el mensaje. Eva no tiene acceso a la clave privada y, por lo tanto, no puede crear un valor MAC que pueda hacer que el mensaje manipulado para Alicia parezca genuino.
@@ -125,14 +125,14 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## <a name="hashes"></a>Hash
+## <a name="hashes"></a>Hashes
 
 
 Una función hash criptográfica toma un bloque de datos de una longitud arbitraria y devuelve una cadena de bits de tamaño fijo. Las funciones hash se suelen usar al firmar datos. Como la mayoría de las operaciones de firma con clave pública requieren realizar cálculos intensivos, suele ser más eficiente firmar (cifrar) un hash de mensaje que firmar el mensaje original. El siguiente procedimiento representa un escenario frecuente (aunque simplificado):
 
 -   Roberto y Alicia comparten una clave secreta y se ponen de acuerdo para usar una función MAC.
 -   Roberto crea un mensaje y suministra el mensaje y la clave secreta a la función MAC para obtener un valor MAC.
--   Después Roberto envía el mensaje \[sin cifrar\] y el valor MAC a Alicia a través de una red.
+-   Roberto envía el \[sin cifrar\] valoran mensaje y el equipo MAC a Alice a través de una red.
 -   Alicia usa la clave secreta y el mensaje como entrada de la función MAC. Compara el valor MAC generado con el valor MAC enviado por Roberto. Si coinciden, significa que no se manipuló el mensaje durante el tránsito.
 
 Ten en cuenta que Alicia envió un mensaje sin cifrar. Lo que cifró fue el hash. Este procedimiento solo garantiza que no se manipuló el mensaje original y, mediante la clave pública de Alicia, que alguien con acceso a la clave privada de Alicia (probablemente Alicia) firmó el hash de mensaje.

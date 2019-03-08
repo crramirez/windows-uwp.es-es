@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aae797db890c6bee141c3b4a79a6a85a55a6b512
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938380"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653750"
 ---
 # <a name="triangle-lists"></a>Listas de triángulos
 
 
 Una lista de triángulos es una lista de triángulos aislados. Los triángulos aislados podrían o no estar próximos entre sí. Una lista de triángulos debe tener al menos tres vértices, y el número total de vértices debe ser divisible por tres.
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Por ejemplo:
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
 Usa listas de triángulos para crear un objeto que se compone de partes desligadas. Por ejemplo, una forma de crear una pared de fuerza de campo en un juego 3D es especificar una larga lista de triángulos pequeños, desconectados. A continuación, aplica un material y textura que parece emitir luz a la lista de triángulos. Cada triángulo de la pared parece brillante. La escena detrás de la pared puede verse parcialmente a través de los espacios entre los triángulos, como un jugador podría esperar cuando mira un campo de fuerza.
@@ -63,7 +63,7 @@ d3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 2 );
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Primitivos](primitives.md)
+[Tipos primitivos](primitives.md)
 
  
 

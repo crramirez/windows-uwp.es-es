@@ -1,22 +1,22 @@
 ---
 title: Nombres de esquema de URI y archivo reservados
-description: En este tema se enumeran los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación.
+description: En este tema se enumeran los nombres de esquema de URI y archivo reservados que no están disponibles para la aplicación.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 81bd9f699e899f895d55b2b2132681824ed40b7b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921863"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650630"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>Nombres de esquema de URI y archivo reservados
 
 
-Puedes usar las asociaciones de URI para iniciar automáticamente la aplicación cuando otra aplicación inicie un esquema de URI específico. No obstante, hay algunas asociaciones de URI que no se pueden usar porque están reservadas. Si la aplicación se registra para una asociación reservada, se omitirá el registro. Este tema enumera los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación.
+Puedes usar las asociaciones de URI para iniciar automáticamente la aplicación cuando otra aplicación inicie un esquema de URI específico. No obstante, hay algunas asociaciones de URI que no se pueden usar porque están reservadas. Si la aplicación se registra para una asociación reservada, se omitirá el registro. En este tema se enumeran los nombres de esquema de URI y archivo reservados que no están disponibles para la aplicación.
 
 ## <a name="reserved-file-types"></a>Tipos de archivo reservados
 

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, games, juegos, input, entrada, raw game controller, dispositivo de juego sin procesar
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5f4d49ad49cf9f9065fe17788456e9dd2a4a4e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946801"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644630"
 ---
 # <a name="raw-game-controller"></a>Dispositivo de juego sin procesar
 
 En esta página se describen los conceptos básicos de programación para casi cualquier tipo de dispositivo de juego mediante [Windows.Gaming.Input.RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller) y las API relacionadas para la Plataforma universal de Windows (UWP).
 
-En esta página encontrarás información sobre lo siguiente:
+En esta página encontrarás información sobre:
 
 * Cómo obtener una lista de los dispositivos de juego sin procesar conectados y sus usuarios
 * Cómo detectar que se ha agregado o quitado un dispositivo de juego sin procesar
@@ -28,7 +28,7 @@ En esta página encontrarás información sobre lo siguiente:
 
 Un dispositivo de juego sin procesar es una representación genérica de un dispositivo de juego, con entradas que se encuentran en muchos tipos diferentes de dispositivos de juego comunes. Estas entradas se exponen como matrices simples de botones, modificadores y ejes sin nombre. Con un dispositivo de juego sin procesar, puedes permitir a los clientes crear asignaciones de entrada personalizadas independientemente de qué tipo de controlador estén usando.
 
-La clase [RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller), en realidad, está pensada para escenarios en los que las otras clases de entrada ([ArcadeStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestick), [FlightStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick) y así sucesivamente) no satisfacen tus necesidades&mdash;si quieres algo más genérico, porque sabes que los clientes usarán varios tipos diferentes de dispositivos de juego, entonces esta clase es para ti.
+La clase [RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller), en realidad, está pensada para escenarios en los que las otras clases de entrada ([ArcadeStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestick), [FlightStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick) y así sucesivamente) no satisfacen tus necesidades; si quieres algo más genérico, anticipando que los clientes usarán varios tipos diferentes de dispositivos de juego, entonces esta clase es para TI.
 
 ## <a name="detect-and-track-raw-game-controllers"></a>Detectar y hacer un seguimiento de los dispositivos de juego sin procesar
 
@@ -168,7 +168,7 @@ for (uint32_t i = 0; i < buttonCount; i++)
 }
 ```
 
-A veces, es posible que quieras determinar si se suelta un botón que está presionado o si se presiona un botón que no lo estaba, si se presionan o sueltan varios botones o si un conjunto de botones tiene una disposición determinada; algunos presionados y otros no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detección de transiciones de botón](input-practices-for-games.md#detecting-button-transitions) y [Detección de disposiciones de botones complejas](input-practices-for-games.md#detecting-complex-button-arrangements).
+A veces, es posible que quieras determinar si se suelta un botón que está presionado o si se presiona un botón que no lo estaba, si se presionan o sueltan varios botones o si un conjunto de botones tiene una disposición determinada; algunos presionados y otros no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detecting button transitions (Detección de transiciones de botón)](input-practices-for-games.md#detecting-button-transitions) y [Detecting complex button arrangements (Detección de disposiciones de botones complejas)](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 Los valores de modificador se proporcionan como una matriz de [GameControllerSwitchPosition](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerswitchposition). Dado que esta propiedad es un campo de bits, se usan máscaras bit a bit para aislar la dirección del modificador.
 
@@ -207,7 +207,7 @@ float rightTrigger = currentAxisReading[5];
 
 Al leer los valores del mando analógico, verás que no producen una lectura neutra confiable de 0,5 cuando el mando está en reposo en la posición central; en su lugar, se producen diferentes valores próximos a 0,5 cada vez que se mueve el mando analógico y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten.
 
-Una manera de implementar una zona muerta es determinar la distancia que se ha desplazado el mando desde el centro y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos (no es exacta porque las lecturas del mando analógico son básicamente valores polares, no planos) simplemente con el teorema de Pitágoras. Esto genera una zona muerta radial.
+Una manera de implementar una zona muerta es determinar la distancia que se ha desplazado el mando desde el centro y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos (no es exacta porque las lecturas del mando analógico son básicamente valores polares, no planos) simplemente con el teorema de Pitágoras. Esto genera un zona muerta radial.
 
 En el siguiente ejemplo se muestra una zona muerta radial básica mediante el teorema de Pitágoras:
 
@@ -231,11 +231,11 @@ if ((oppositeSquared + adjacentSquared) < deadzoneSquared)
 
 The [RawGameControllerUWP sample (GitHub)](TODO: Link) demonstrates how to use raw game controllers. TODO: More information-->
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
-* [Entrada para juegos](input-for-games.md)
-* [Prácticas de entrada para juegos](input-practices-for-games.md)
+* [La entrada para juegos](input-for-games.md)
+* [Prácticas recomendadas de entrada para juegos](input-practices-for-games.md)
 * [Espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Clase Windows.Gaming.Input.RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller)
 * [Interfaz Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Interfaz Windows.Gaming.Input.IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo)
+* [Windows.Gaming.Input.IGameControllerBatteryInfo interface](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo)

@@ -1,5 +1,5 @@
 ---
-title: Herramientas de Visual Studio para programación de juegos
+title: Herramientas de Visual Studio para la programación de juegos
 description: Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, visual studio, herramientas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653480"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 
@@ -19,7 +19,7 @@ ms.locfileid: "8924649"
 
 **Resumen**
 
--   [Crear un proyecto de juego DirectX con una plantilla](user-interface.md)
+-   [Crear un proyecto de juego DirectX desde una plantilla](user-interface.md)
 -   Visual Studio tools para programación de juegos DirectX
 
 
@@ -45,7 +45,7 @@ Crea [archivos de personalizaciones de compilación](#build-customizations-for-3
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Nota**el Editor de imágenes no está pensado para reemplazar una aplicación de edición de imágenes de completo de características, pero es apropiado para escenarios de edición y visualización simple muchos.
+> **Tenga en cuenta**  no pretende ser un reemplazo para una aplicación de edición de imágenes de todas las características del Editor de imágenes, pero es adecuado para escenarios de edición y visualización sencilla muchos.
 
  
 
@@ -64,7 +64,7 @@ Esta es la captura de pantalla de un modelo en el editor con iluminación aplica
 
 Para obtener más información, consulta [Trabajar con modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Nota**el Editor de modelos no está pensado para reemplazar una aplicación de edición de modelos de completo de características, pero es apropiado para escenarios de edición y visualización simple muchos.
+> **Tenga en cuenta**  el Editor de modelos no pretende ser un sustituto para un modelo completo de características Editar aplicación, pero es adecuado para escenarios de edición y visualización sencilla muchos.
 
  
 
@@ -116,7 +116,7 @@ Para obtener más información, consulta [Trabajar con sombreadores](https://msd
 
 Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. A continuación, puedes cargar los activos en tu aplicación y usarlos al crear y llenar recursos de DirectX tal como lo harías en cualquier otra aplicación de DirectX.
 
-Para agregar una personalización de compilación, haz clic en el proyecto en el **Explorador de soluciones** y selecciona la **Compilación personalizaciones**. Puedes agregar los siguientes tipos de personalizaciones de compilación al proyecto.
+Para agregar una personalización de compilación, haz clic con el botón secundario en el proyecto del **Explorador de soluciones** y selecciona **Personalizaciones de compilación...**. Puedes agregar los siguientes tipos de personalizaciones de compilación a tu proyecto.
 
 -   La canalización de contenido de imagen toma archivos de imagen como entrada y muestra archivos de DirectDraw Surface (.dds) como salida.
 -   La canalización de contenido de malla toma archivos de malla (como .fbx) y muestra archivos de malla .cmo como salida.

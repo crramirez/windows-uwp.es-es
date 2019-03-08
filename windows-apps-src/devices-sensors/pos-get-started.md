@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 518529fecff9f25a83a03847b1623bf9f09a8145
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116005"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661160"
 ---
 # <a name="getting-started-with-point-of-service"></a>Tareas iniciales con punto de servicio
 
@@ -152,7 +152,7 @@ catch (Exception ex)
 ```
 
 ### <a name="retaining-the-device"></a>Conservar el dispositivo
-Al usar un dispositivo de punto de servicio mediante una red o la conexión Bluetooth, puedes compartir el dispositivo con otras aplicaciones de la red. (Para obtener más información, consulta [Compartir dispositivos](#sharing-a-device-between-apps)). En otros casos, puedes mantener este dispositivo para un uso prolongado. Este ejemplo muestra cómo conservar un escáner de códigos de barras reclamado, después de que otra aplicación haya solicitado que se libere el dispositivo.
+Al usar un dispositivo de punto de servicio mediante una red o la conexión Bluetooth, puedes compartir el dispositivo con otras aplicaciones de la red. (Para obtener más información acerca de esto, consulte [compartir dispositivos](#sharing-a-device-between-apps).) En otros casos, desea mantener el dispositivo para su uso prolongado. Este ejemplo muestra cómo conservar un escáner de códigos de barras reclamado, después de que otra aplicación haya solicitado que se libere el dispositivo.
 
 ```Csharp
 claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
@@ -207,10 +207,10 @@ if (claimedBarcodeScanner != null)
 > [!NOTE]
 > Tanto las clases de dispositivos de punto de servicio reclamados como los que no implementan la [interfaz IClosable](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable). Si un dispositivo está conectado a una aplicación a través de Bluetooth o de la red, tantos los objetos reclamados como los que no deben eliminarse antes de que otra aplicación pueda conectarse.
 
-## <a name="see-also"></a>Consulta también
-+ [Ejemplo de escáner de códigos de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
-+ [Ejemplo de caja registradora]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
-+ [Ejemplo de visualización de líneas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
-+ [Ejemplo de lector de bandas magnéticas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
-+ [Ejemplo de impresora de punto de servicio](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
+## <a name="see-also"></a>Consulte también
++ [Ejemplo de escáner de código de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
++ [Ejemplo de cajón de caja]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
++ [Ejemplo de línea para mostrar](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
++ [Ejemplo de lector de banda magnética](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
++ [Ejemplo de POSPrinter](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
 

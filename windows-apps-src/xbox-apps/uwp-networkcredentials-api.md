@@ -5,22 +5,22 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: ac30d8db830c51ee40653feb49b443ed44502617
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659220"
 ---
 # <a name="network-credentials-api-reference"></a>Referencia de API de credenciales de red
-Puedes agregar, quitar o actualizar las credenciales de red almacenado en el Kit de desarrollo con esta API de REST.
+Puedes agregar, quitar o actualizar las credenciales de red almacenadas en el kit de desarrollo con esta API de REST.
 
 ## <a name="get-existing-credentials"></a>Obtener las credenciales existentes
 
-**Solicitud**
+**Request**
 
-Puedes obtener una lista de los recursos compartidos almacenados junto con el nombre de usuario del usuario que tenga credenciales de ese recurso compartido de red.
+Puedes obtener una lista de los recursos compartidos almacenados junto con el nombre de usuario del usuario que tiene credenciales para ese recurso compartido de red.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/networkcredential
 <br />
@@ -40,12 +40,12 @@ GET | /ext/networkcredential
 
 - Matriz JSON en el siguiente formato:
 * Credenciales
-  * NetworkPath - la ruta de acceso al recurso compartido de red.
-  * Nombre de usuario: el nombre de usuario que se almacena las credenciales.
+  * NetworkPath: La ruta de acceso al recurso compartido de red.
+  * Username: El nombre de usuario que tiene credenciales almacenadas.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -55,9 +55,9 @@ Código de estado HTTP      | Descripción
 
 ## <a name="add-or-update-stored-credentials-for-a-user"></a>Agregar o actualizar las credenciales almacenadas para un usuario
 
-**Solicitud**
+**Request**
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /ext/networkcredential
 <br />
@@ -67,7 +67,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
-| NetworkPath        | Estás agregando credenciales para acceder a la ruta de acceso de red al recurso compartido. |
+| NetworkPath        | La ruta de red al recurso compartido al que vas a agregar credenciales para acceder. |
 <br>
 
 **Encabezados de solicitud**
@@ -77,9 +77,9 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 **Cuerpo de la solicitud**
 
 - Los siguientes elementos JSON:
-* NetworkPath - la ruta de acceso al recurso compartido de red.
-* Nombre de usuario: el nombre de usuario para almacenar las credenciales en.
-* Contraseña: la contraseña nueva o actualizada para este usuario.
+* NetworkPath: La ruta de acceso al recurso compartido de red.
+* Username: El nombre de usuario donde se almacenarán las credenciales.
+* Password: La contraseña nueva o actualizada para este usuario.
 
 **Respuesta**   
 
@@ -87,7 +87,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -95,11 +95,11 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## <a name="remove-stored-credentials-for-a-share"></a>Quitar las credenciales almacenadas para un recurso compartido.
+## <a name="remove-stored-credentials-for-a-share"></a>Quita las credenciales almacenadas para un recurso compartido.
 
-**Solicitud**
+**Request**
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /ext/networkcredential
 <br />
@@ -109,7 +109,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
-| NetworkPath        | La ruta de acceso de red al recurso compartido que va a quitar las credenciales almacenadas. |
+| NetworkPath        | La ruta de red al recurso compartido del que vas a quitar las credenciales almacenadas. |
 <br>
 
 **Encabezados de solicitud**
@@ -126,7 +126,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

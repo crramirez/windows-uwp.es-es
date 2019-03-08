@@ -3,15 +3,15 @@ title: Convertir un servicio de aplicaciones para que se ejecute en el mismo pro
 description: Puedes convertir el código de servicio de aplicaciones que se ejecutaba en un proceso en segundo plano independiente en un código que se ejecute en el mismo proceso que el proveedor de servicios de aplicaciones.
 ms.date: 11/03/2017
 ms.topic: article
-keywords: Windows 10, uwp, servicio de aplicaciones
+keywords: Windows 10, uwp, servicio de aplicación
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a976ac69d289a5582c2f3546227adba707ac5297
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927117"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643420"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host
 
@@ -38,13 +38,13 @@ La conversión de un App Service de modelo fuera del proceso a un modelo dentro 
 >   </Applications>
 > ```
 
-Quitar el `EntryPoint` atributo desde el `<Extension>` elemento porque ahora [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) es el punto de entrada que se usará cuando se invoca el servicio de aplicaciones.
+Quitar el `EntryPoint` atributo desde el `<Extension>` elemento porque ahora [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) es el punto de entrada que se usará cuando se invoca el servicio de aplicación.
 
 El segundo cambio consiste en mover la lógica de servicio de su proyecto de tarea en segundo plano independiente a métodos que se puedan llamar desde **OnBackgroundActivated()**.
 
 Ahora, tu aplicación puede ejecutar directamente el Servicio de aplicaciones. Por ejemplo, en App.xaml.cs:
 
-[!NOTE] El siguiente código es diferente del que proporcionan por ejemplo 1 (servicio fuera de proceso). El siguiente código se proporciona solo con fines de ilustración y no debe usarse como parte de ejemplo 2 (servicio dentro del proceso).  Para continuar con la transición del artículo del ejemplo 1 (servicio fuera de proceso) en el ejemplo 2 (servicio dentro del proceso) seguir usando el código proporcionado por ejemplo 1 en lugar del siguiente código ilustrativo.
+[!NOTE] El código siguiente es diferente del que se proporcionaron para el ejemplo 1 (servicio de fuera de proceso). El código siguiente se proporciona únicamente por motivos ilustrativos y no debe usarse como parte del ejemplo 2 (servicio en curso).  Para continuar con la transición del artículo del ejemplo 1 (servicio de fuera de proceso) en el ejemplo 2 (servicio en proceso) seguirán utilizando el código proporcionado por el ejemplo 1 en lugar del código ilustrativo siguiente.
 
 ``` cs
 using Windows.ApplicationModel.AppService;

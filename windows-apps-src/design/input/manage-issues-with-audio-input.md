@@ -1,5 +1,5 @@
 ---
-Description: Learn how to manage issues with speech-recognition accuracy caused by audio-input quality.
+Description: Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio.
 title: Administrar los problemas con la entrada de audio
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d2c80fd30d158f0890ed70311cdf83dce2058e5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644910"
 ---
 # <a name="manage-issues-with-audio-input"></a>Administrar los problemas con la entrada de audio
 
@@ -107,8 +107,8 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 * [Interacciones de voz](speech-interactions.md)
 
-**Muestras**
-* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+**Ejemplos**
+* [Reconocimiento de voz y ejemplo de síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

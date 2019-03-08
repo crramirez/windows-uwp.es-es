@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d2ea6ce4060957ade5dd1007389be51176440f04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936330"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593580"
 ---
 # <a name="vertex-and-index-buffers"></a>Búferes de vértices e índices
 
@@ -43,7 +43,7 @@ La flexibilidad de los búferes de vértices los convierte en puntos de parada i
 <td align="left"><p>Un recurso de búfer es una colección de datos completos, agrupados en elementos. Los búferes almacenan datos, como coordenadas de textura en un <em>búfer de vértices</em>, índices en una <em>búfer de índices</em>, datos de constantes del sombreador en un <em>búfer de constantes</em>, vectores de posición, vectores normales o el estado del dispositivo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="index-buffers.md">Búferes de índices</a></p></td>
+<td align="left"><p><a href="index-buffers.md">Búferes de índice</a></p></td>
 <td align="left"><p>Los <em>búferes de índices</em> son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos.</p></td>
 </tr>
 </tbody>

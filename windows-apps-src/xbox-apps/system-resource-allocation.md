@@ -1,17 +1,17 @@
 ---
 title: Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
-description: Recursos del sistema de UWP en Xbox
+description: UWP en recursos del sistema de Xbox
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
 ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048372"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647330"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
 
@@ -21,24 +21,24 @@ Las aplicaciones para UWP que se ejecutan en Xbox One comparten recursos con el 
     * Aplicaciones: 1 GB
     * Juegos: 5 GB
 
-La memoria máxima disponible para una aplicación que se ejecute en segundo plano es de 128MB. El modo en segundo plano solo se aplica a aplicaciones simultáneas, como reproductores de música en segundo plano.  Los juegos se suspenderán y terminarán en segundo plano.
+La memoria máxima disponible para una aplicación que se ejecute en segundo plano es de 128 MB. El modo en segundo plano solo se aplica a aplicaciones simultáneas, como reproductores de música en segundo plano.  Los juegos se suspenderán y terminarán en segundo plano.
 
-Superar estas limitaciones provocará fallos en la asignación de memoria. Para obtener más información acerca de la supervisión de uso de memoria, consulta la referencia de la clase [MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx).
+Superar estas limitaciones provocará fallos en la asignación de memoria. Para obtener más información acerca de la supervisión de memoria usa, consulta la referencia de la clase [MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx).
     
     > [!NOTE]
     > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
 
 * CPU
     * Aplicaciones: comparte de 2 a 4 núcleos de CPU según el número de aplicaciones y juegos que se ejecutan en el sistema.
-    * Juegos: 4 núcleos exclusivos y 2 de CPU compartidos.
+    * Juegos: 4 2 y exclusivo compartido núcleos de CPU.
 
 * GPU
     * Aplicaciones: comparte el 45% de GPU según el número de aplicaciones y juegos que se ejecutan en el sistema.
     * Juegos: acceso total a ciclos de GPU disponibles.
 
 * Compatibilidad con DirectX
-    * Aplicaciones: nivel de características 10 de DirectX 11 Feature.
-    * Juegos: nivel de características 10 de DirectX 12 y DirectX 11.
+    * Aplicaciones: DirectX 11 Feature Level 10.
+    * Juegos: DirectX 12 y el nivel de características de DirectX 11 10.
 
 * Todas las aplicaciones y juegos deben tener como destino la arquitectura x64 para su desarrollo o su envío a la Store para Xbox.  
 
@@ -52,8 +52,8 @@ Para obtener más información acerca de los recursos del sistema para aplicacio
 </br>
 <iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developing-xbox-one-applications-16860/Video-What-s-Unique--vk0fOPf9C_2006218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 - [UWP en Xbox One](index.md)
-- [Introducción al Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
+- [Empezar a trabajar con el programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
 - [DirectX y UWP en Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
 

@@ -1,29 +1,29 @@
 ---
-Description: When submitting an add-on, the info you provide in the Store listings step will be displayed to your customers.
-title: Crear descripciones de Store de los complementos
+Description: Cuando envíes un complemento, la información que proporciones en las descripciones de la Tienda se mostrará a tus clientes.
+title: Creación de descripciones de la Tienda de los complementos
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a8b32abae4938081610db2cfc2ded25adadab95d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650960"
 ---
-# <a name="create-add-on-store-listings"></a>Crear descripciones de la Tienda de los complementos
+# <a name="create-add-on-store-listings"></a>Creación de descripciones de la Tienda de los complementos
 
-Cuando envías un complemento en [El centro de partners](https://partner.microsoft.com/dashboard), la información proporcionada en el paso de **descripciones de la tienda** se mostrará a los clientes cuando vean la opción para adquirir tu complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
+Al enviar un complemento de [centro de partners](https://partner.microsoft.com/dashboard), la información que se proporciona en el **Store anuncios** paso se mostrará a los clientes cuando ve la opción para adquirir el complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
 
 > [!TIP]
-> También puedes [Importar y exportar las descripciones de la tienda](import-and-export-store-listings.md) para el complemento si quieres escribir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el centro de partners. Esto puede ser especialmente útil al crear descripciones en varios idiomas. Sin embargo, siempre puedes escribir tu información directamente en [El centro de partners](https://partner.microsoft.com/dashboard) en lugar de usar la característica de importar o exportar.
+> También puede [importar y exportar listas Store](import-and-export-store-listings.md) para su complemento si desea escribir la información de anuncio sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el centro de partners. Esto puede ser especialmente útil al crear descripciones en varios idiomas. Sin embargo, siempre puede escribir la información directamente en [centro de partners](https://partner.microsoft.com/dashboard) en lugar de usar la característica de importación y exportación.
 
 
 ## <a name="store-listing-languages"></a>Idiomas de la descripción de la Tienda
 
-Antes de escribir la información de la descripción de la Tienda, debes especificar uno o más [idiomas](supported-languages.md). Debes completar la página **Descripción de la Tienda** para al menos un idioma. Te recomendamos que admite la creación de descripciones de la tienda para cada idioma en la aplicación.
+Antes de escribir la información de la descripción de la Tienda, debes especificar uno o más [idiomas](supported-languages.md). Debes completar la página **Descripción de la Tienda** para al menos un idioma. Se recomienda crear la aplicación de listados de Store para cada idioma admite.
 
 En la sección **Descripción de la Tienda** del envío de tu complemento, haz clic en **Agregar/eliminar idiomas** y luego haz clic en **Administración de idiomas** en la página siguiente. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas de descripción de la Tienda** de la página.
 
@@ -41,7 +41,7 @@ Aquí debes proporcionar un título, que es el nombre que verán los clientes pa
 
 Si quieres mostrar más información que solo un título, puedes escribir hasta 200 caracteres aquí. Este campo es opcional.
 
-## <a name="icon"></a>Icono
+## <a name="icon"></a>Icon
 
 También tienes la opción de proporcionar una imagen que se puede mostrar al cliente. Este icono debe ser un archivo .png que mida exactamente 300 x 300 píxeles.
 

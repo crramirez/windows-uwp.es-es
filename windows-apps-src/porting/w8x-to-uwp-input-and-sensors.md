@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5847553bed563b724bb142f7abe62403fa8ec097
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922336"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645190"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 
@@ -32,16 +32,16 @@ Para obtener más información, consulta [Ciclo de vida de la aplicación](https
 ## <a name="background-audio"></a>Audio en segundo plano
 
 
-Para la propiedad [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) , **ForegroundOnlyMedia** y **BackgroundCapableMedia** están en desuso para las aplicaciones de Windows 10. En su lugar, usa el modelo de aplicaciones de la Tienda de Windows Phone. Para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
+Para el [ **MediaElement.AudioCategory** ](https://msdn.microsoft.com/library/windows/apps/br227352) propiedad **ForegroundOnlyMedia** y **BackgroundCapableMedia** están en desuso para Aplicaciones de Windows 10. En su lugar, usa el modelo de aplicaciones de la Tienda de Windows Phone. Para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>Detección de la plataforma en la que se está ejecutando la aplicación
 
 
-La forma de concebir destinada a la aplicación cambia con Windows 10. El nuevo modelo conceptual consiste en que una aplicación tiene como objetivo la Plataforma universal de Windows (UWP) y se ejecuta en todos los dispositivos Windows. A continuación, puede optar por dar a conocer funciones exclusivas de familias de dispositivos en particular. Si es necesario, la aplicación también tiene la opción de limitarse a orientarse a una o más familias de dispositivos específicamente. Para obtener más información sobre qué son las familias de dispositivos —y cómo decidir qué familia de dispositivos establecer como destino— consulta la [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+La manera de pensar acerca de los cambios de compatibilidad de aplicaciones con Windows 10. El nuevo modelo conceptual consiste en que una aplicación tiene como objetivo la Plataforma universal de Windows (UWP) y se ejecuta en todos los dispositivos Windows. A continuación, puede optar por dar a conocer funciones exclusivas de familias de dispositivos en particular. Si es necesario, la aplicación también tiene la opción de limitarse a orientarse a una o más familias de dispositivos específicamente. Para obtener más información sobre qué son las familias de dispositivos —y cómo decidir qué familia de dispositivos establecer como destino— consulta la [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Si tienes código en tu aplicación Universal 8.1 que detecta el sistema operativo en el que se está ejecutando, es posible que necesites cambiarlo en función del motivo de la lógica. Si la aplicación está pasando el valor y no actúa en él, podrás continuar recopilando la información del sistema operativo.
 
-**Nota**  te recomendamos que uses no del sistema operativo o la familia de dispositivos para detectar la presencia de características. Identificar el sistema operativo actual o la familia de dispositivos normalmente no es la mejor manera de determinar si una función concreta de la familia de dispositivos o del sistema operativo está presente. En lugar de detectar el sistema operativo o la familia de dispositivos (y el número de versión), prueba la presencia de la propia funcion (consulta [Compilación condicional y código adaptable](w8x-to-uwp-porting-to-a-uwp-project.md)). Si debes requerir un sistema operativo determinado o una familia de dispositivos, asegúrate de usarlo como una versión compatible mínima, en lugar de diseñar la prueba solamente para esa versión.
+**Tenga en cuenta**    le recomendamos que use no del sistema operativo o familia de dispositivos para detectar la presencia de características. Identificar el sistema operativo actual o la familia de dispositivos normalmente no es la mejor manera de determinar si una función concreta de la familia de dispositivos o del sistema operativo está presente. En lugar de detectar el sistema operativo o la familia de dispositivos (y el número de versión), prueba la presencia de la propia funcion (consulta [Compilación condicional y código adaptable](w8x-to-uwp-porting-to-a-uwp-project.md)). Si debes requerir un sistema operativo determinado o una familia de dispositivos, asegúrate de usarlo como una versión compatible mínima, en lugar de diseñar la prueba solamente para esa versión.
 
  
 
@@ -69,7 +69,7 @@ Consulta también [Compilación condicional y código adaptable](w8x-to-uwp-port
 ## <a name="location"></a>Ubicación
 
 
-Cuando una aplicación que declara la funcionalidad de ubicación en su manifiesto del paquete de aplicación se ejecuta en Windows 10, el sistema pedirá al usuario final su consentimiento. Esto es true si la aplicación es una aplicación de Windows Phone Store o una aplicación de Windows 10. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
+Cuando una aplicación que declara la capacidad de ubicación de sus ejecuciones de manifiesto del paquete de aplicación en Windows 10, el sistema le pedirá su consentimiento al usuario final. Esto es cierto si la aplicación es una aplicación de Windows Phone Store o una aplicación de Windows 10. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado, o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
 
  
 

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 973091926ddff312b20002f7b535d34a3b7d2bc4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919603"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650340"
 ---
 # <a name="fingerprint-biometrics"></a>Biometría de huellas digitales
 
 
 
 
-En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP). Al incluir una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta, se aumenta la seguridad de su aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) del espacio de nombres [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).
+En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP). La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) del espacio de nombres [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).
 
 ## <a name="check-the-device-for-a-fingerprint-reader"></a>Comprueba si el dispositivo tiene un lector de huellas digitales
 

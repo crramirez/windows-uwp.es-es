@@ -1,22 +1,22 @@
 ---
-Description: Learn how Fluent motion uses timing and easing functions.
+Description: Obtenga información sobre cómo Fluent usos de movimiento agotar el tiempo y funciones de aceleración.
 title: 'Sincronización y aceleración: animación en las aplicaciones para UWP'
 label: Timing and easing
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945496"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645270"
 ---
 # <a name="timing-and-easing"></a>Sincronización y aceleración
 
@@ -32,11 +32,11 @@ La temporización es un elemento importante para hacer que el movimiento resulte
 
 ## <a name="timing-in-fluent-motion"></a>Temporización en movimiento de Fluent
 
-La temporización de movimiento en Fluent usa 500milisegundos (o medio segundo) como línea base porque es el tiempo máximo que un usuario percibe como instante.
+La temporización de movimiento en Fluent usa 500 milisegundos (o medio segundo) como línea base porque es el tiempo máximo que un usuario percibe como instante.
 
 ![imagen principal](images/time.gif)
 
-### <a name="150ms-exit"></a>**150milisegundos** (Salir)
+### <a name="150ms-exit"></a>**150 milisegundos** (Salir)
 
 :::row:::
     :::column:::
@@ -48,7 +48,7 @@ La temporización de movimiento en Fluent usa 500milisegundos (o medio segundo) 
     :::column-end:::
 :::row-end:::
 
-### <a name="300ms-enter"></a>**300milisegundos** (Entrar)
+### <a name="300ms-enter"></a>**300 milisegundos** (Entrar)
 
 :::row:::
     :::column:::
@@ -60,7 +60,7 @@ La temporización de movimiento en Fluent usa 500milisegundos (o medio segundo) 
     :::column-end:::
 :::row-end:::
 
-### <a name="500ms-move"></a>**≤500milisegundos** (Mover)
+### <a name="500ms-move"></a>**≤500 milisegundos** (Mover)
 
 :::row:::
     :::column:::
@@ -204,5 +204,5 @@ CubicBezierEasingFunction standard =
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Introducción al movimiento](index.md)
+- [Información general del movimiento](index.md)
 - [Direccionalidad y gravedad](directionality-and-gravity.md)

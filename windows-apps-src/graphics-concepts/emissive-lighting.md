@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ba112e04518d3e1ee05e7ee8e23e633d4cf59748
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599180"
 ---
 # <a name="emissive-lighting"></a>Luz de emisión
 
@@ -23,7 +23,7 @@ La iluminación de emisión se describe con un único término.
 
 Luz de emisión = Cₑ
 
-donde:
+Donde:
 
 | Parámetro | Valor predeterminado | Tipo                                                                 | Descripción     |
 |-----------|---------------|----------------------------------------------------------------------|-----------------|
@@ -33,7 +33,7 @@ donde:
 
 El valor de Cₑ es el color 1 o el 2. Si no se proporciona el color de vértice, se usa el color de emisión material.
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Por ejemplo:
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
 En este ejemplo, el objeto se colorea con la luz ambiente de la escena y un color ambiente del material.
@@ -51,7 +51,7 @@ En la siguiente ilustración se muestra cómo la luz de emisión se combina con 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cálculos de iluminación](mathematics-of-lighting.md)
+[Matemáticas de iluminación](mathematics-of-lighting.md)
 
  
 

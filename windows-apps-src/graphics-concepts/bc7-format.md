@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c55a12dfa7757a48874b6857c95af592e818c2b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939575"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590770"
 ---
 # <a name="bc7-format"></a>Formato BC7
 
@@ -21,20 +21,20 @@ El formato BC7 es un formato de compresión de texturas usado para la compresió
 
 Para obtener información sobre los modos de bloques del formato BC7, consulta [Referencia al modo de formato BC7](https://msdn.microsoft.com/library/windows/desktop/hh308954).
 
-## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>Acerca de BC7/DXGI\_FORMAT\_BC7
+## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>Acerca de BC7/DXGI\_formato\_BC7
 
 
-BC7 se especifica mediante los siguientes valores de enumeración DXGI\_FORMAT:
+BC7 especificado por el siguiente DXGI\_valores de enumeración de formato:
 
--   **DXGI\_FORMAT\_BC7\_TYPELESS**.
+-   **DXGI\_FORMATO\_BC7\_TYPELESS**.
 -   **DXGI\_FORMAT\_BC7\_UNORM**.
 -   **DXGI\_FORMAT\_BC7\_UNORM\_SRGB**.
 
 El formato BC7 puede usarse para los recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
 
-BC7 usa un tamaño de bloque fijo de 16bytes (128bits) y un tamaño de mosaico fijo de elementos de textura de 4×4. Al igual que con los formatos de BC anteriores, las imágenes de textura mayores que el tamaño de mosaico compatible (4×4) se comprimen mediante el uso de varios bloques. Esta identidad de direccionamiento también se aplica a imágenes tridimensionales, mapas MIP, mapas de cubo y matrices de texturas. Todos los mosaicos de imágenes deben tener el mismo formato.
+BC7 usa un tamaño de bloque fijo de 16 bytes (128 bits) y un tamaño de mosaico fijo de elementos de textura de 4×4. Al igual que con los formatos de BC anteriores, las imágenes de textura mayores que el tamaño de mosaico compatible (4×4) se comprimen mediante el uso de varios bloques. Esta identidad de direccionamiento también se aplica a imágenes tridimensionales, mapas MIP, mapas de cubo y matrices de texturas. Todos los mosaicos de imágenes deben tener el mismo formato.
 
-BC7 comprime tanto imágenes de datos de punto fijo de tres canales (RGB) como de cuatro canales (RGBA). Por lo general, los datos de origen tienen 8bits por componente de color (canal), aunque el formato es capaz de codificar datos de origen con mayor cantidad de bits por componente de color. Todos los mosaicos de imágenes deben tener el mismo formato.
+BC7 comprime tanto imágenes de datos de punto fijo de tres canales (RGB) como de cuatro canales (RGBA). Por lo general, los datos de origen tienen 8 bits por componente de color (canal), aunque el formato es capaz de codificar datos de origen con mayor cantidad de bits por componente de color. Todos los mosaicos de imágenes deben tener el mismo formato.
 
 El descodificador BC7 realiza la descompresión antes de que se aplique un filtro de texturas.
 
@@ -43,23 +43,23 @@ El hardware de descompresión BC7 debe ser precisa en cuanto a los bits; es deci
 ## <a name="span-idbc7-implementationspanspan-idbc7-implementationspanspan-idbc7-implementationspanbc7-implementation"></a><span id="BC7-Implementation"></span><span id="bc7-implementation"></span><span id="BC7-IMPLEMENTATION"></span>Implementación de BC7
 
 
-Una implementación de BC7 puede especificar uno de 8 modos, donde el modo se especifica en el bit menos significativo del bloque de 16bytes (128bits). El modo se codifica mediante cero o más bits con un valor de 0, seguido de un 1.
+Una implementación de BC7 puede especificar uno de 8 modos, donde el modo se especifica en el bit menos significativo del bloque de 16 bytes (128 bits). El modo se codifica mediante cero o más bits con un valor de 0, seguido de un 1.
 
-Un bloque BC7 puede contener varios pares de extremos. El conjunto de índices que corresponden a un par de extremos puede denominase "subconjunto". Además, en algunos modos de bloque, la representación del extremo se codifica en una forma que se puede denominar "RBGP", donde el bit "P" representa un bit compartido menos significativo para los componentes de color del extremo. Por ejemplo, si la representación de extremo para el formato es "RGB5.5.5.1", el extremo se interpreta como un valor RGB6.6.6, donde el estado del bit P define el bit menos significativo de cada componente. Del mismo modo, para los datos de origen con un canal alfa, si la representación para el formato es "RGBAP5.5.5.5.1", el extremo se interpreta como RGBA6.6.6.6. Según el modo del bloque, puedes especificar el bit compartido menos significativo para cualquiera de ambos extremos de un subconjunto individualmente (2 bits P por subconjunto), o compartido entre los extremos de un subconjunto (1 bit P por subconjunto).
+Un bloque BC7 puede contener varios pares de extremos. El conjunto de índices que corresponden a un par de extremos puede denominase "subconjunto". Además, en algunos modos de bloque, la representación del extremo se codifica en una forma que se puede denominar "RBGP", donde el bit "P" representa un bit compartido menos significativo para los componentes de color del extremo. Por ejemplo, si la representación de extremo para el formato es "RGB 5.5.5.1", el extremo se interpreta como un valor RGB 6.6.6, donde el estado del bit P define el bit menos significativo de cada componente. Del mismo modo, para los datos de origen con un canal alfa, si la representación para el formato es "RGBAP 5.5.5.5.1", el extremo se interpreta como RGBA 6.6.6.6. Según el modo del bloque, puedes especificar el bit compartido menos significativo para cualquiera de ambos extremos de un subconjunto individualmente (2 bits P por subconjunto), o compartido entre los extremos de un subconjunto (1 bit P por subconjunto).
 
 Para los bloques BC7 que no codifican de forma explícita el componente alfa, un bloque BC7 consta de bits de modo, bits de partición, extremos comprimidos, índices comprimidos y un bit P opcional. En estos bloques, los extremos tienen una representación solo RGB y el componente alfa se descodifica como 1.0 para todos los elementos de textura en los datos de origen.
 
 Para los bloques BC7 donde se han combinado los componentes de color y alfa, un bloque consiste en bits de modo, extremos comprimidos, índices comprimidos, bits de partición opcionales y un bit P. En estos bloques, los colores de extremo se expresan en formato RGBA, y los valores de los componentes alfa se interpolan junto con los valores de los componentes de color.
 
-Para los bloques BC7 que tienen componentes de color y alfa independientes, un bloque consta de bits de modo, bits de rotación, extremos comprimidos, índices comprimidos y un bit selector de índice opcional. Estos bloques tienen un vector RGB eficaz \[R, G, B\] y un canal alfa escalar \[A\] codificado por separado.
+Para los bloques BC7 que tienen componentes de color y alfa independientes, un bloque consta de bits de modo, bits de rotación, extremos comprimidos, índices comprimidos y un bit selector de índice opcional. Estos bloques tienen un vector RGB efectivo \[R, G, B\] y un canal alfa escalar \[A\] codificada por separado.
 
 La siguiente tabla enumera los componentes de cada tipo de bloque.
 
 | El bloque BC7 contiene...     | bits de modo | bits de rotación | bit selector de índice | bits de partición | extremos comprimidos | bit P    | índices comprimidos |
 |---------------------------|-----------|---------------|--------------------|----------------|----------------------|----------|--------------------|
-| solo componentes de color     | obligatorio  | N/C           | N/C                | obligatorio       | obligatorio             | opcional | obligatorio           |
-| color y alfa combinados    | obligatorio  | N/C           | N/C                | opcional       | obligatorio             | opcional | obligatorio           |
-| color y alfa separados | obligatorio  | obligatorio      | opcional           | N/C            | obligatorio             | N/C      | obligatorio           |
+| solo componentes de color     | necesarias  | N/D           | N/D                | necesarias       | necesarias             | opcional | necesarias           |
+| color y alfa combinados    | necesarias  | N/D           | N/D                | opcional       | necesarias             | opcional | necesarias           |
+| color y alfa separados | necesarias  | necesarias      | opcional           | N/D            | necesarias             | N/D      | necesarias           |
 
  
 
@@ -70,7 +70,7 @@ Para cada subconjunto de índices que corresponde a un par de extremos, el codif
 ## <a name="span-iddecoding-the-bc7-formatspanspan-iddecoding-the-bc7-formatspanspan-iddecoding-the-bc7-formatspandecoding-the-bc7-format"></a><span id="Decoding-the-BC7-Format"></span><span id="decoding-the-bc7-format"></span><span id="DECODING-THE-BC7-FORMAT"></span>Descodificar el formato BC7
 
 
-El siguiente seudocódigo detalla los pasos para descomprimir el píxel en (x,y), dado el bloque BC7 de 16bytes.
+El siguiente seudocódigo detalla los pasos para descomprimir el píxel en (x,y), dado el bloque BC7 de 16 bytes.
 
 ``` syntax
 decompress_bc7(x, y, block)
@@ -123,7 +123,7 @@ decompress_bc7(x, y, block)
 }
 ```
 
-El seudocódigo siguiente describe los pasos para descodificar completamente los componentes de color y alfa del extremo para cada subconjunto, dado un bloque BC7 de 16bytes.
+El seudocódigo siguiente describe los pasos para descodificar completamente los componentes de color y alfa del extremo para cada subconjunto, dado un bloque BC7 de 16 bytes.
 
 ``` syntax
 fully_decode_endpoints(endpoint_array, mode, block)
@@ -201,7 +201,7 @@ UINT8 interpolate(UINT8 e0, UINT8 e1, UINT8 index, UINT8 indexprecision)
 }
 ```
 
-El seudocódigo siguiente ilustra cómo extraer los índices y los números de bits para los componentes de color y alfa. Los bloques con color y alfa independientes también tienen dos conjuntos de datos de índice: uno para el canal vectorial y otro para el canal escalar. Para el modo 4, estos índices tienen anchos diferentes (2 o 3bits) y hay un selector de un bit que especifica si los datos vectoriales o escalares usan los índices de 3bits. (Extraer el número de bits de alfa es similar a extraer el número de bits de color, pero con el comportamiento inverso según el bit **idxMode**).
+El seudocódigo siguiente ilustra cómo extraer los índices y los números de bits para los componentes de color y alfa. Los bloques con color y alfa independientes también tienen dos conjuntos de datos de índice: uno para el canal vectorial y otro para el canal escalar. Para el modo 4, estos índices tienen anchos diferentes (2 o 3 bits) y hay un selector de un bit que especifica si los datos vectoriales o escalares usan los índices de 3 bits. (Extraer el número de bits de alfa es similar a extraer el número de bits de color, pero con el comportamiento inverso según el bit **idxMode**).
 
 ``` syntax
 bitcount get_color_bitcount(block, mode)
@@ -224,12 +224,12 @@ bitcount get_color_bitcount(block, mode)
 }
 ```
 
-## <a name="span-idbc7-format-mode-referencespanspan-idbc7-format-mode-referencespanspan-idbc7-format-mode-referencespanbc7-format-mode-reference"></a><span id="BC7-format-mode-reference"></span><span id="bc7-format-mode-reference"></span><span id="BC7-FORMAT-MODE-REFERENCE"></span>Referencia del modo de formato BC7
+## <a name="span-idbc7-format-mode-referencespanspan-idbc7-format-mode-referencespanspan-idbc7-format-mode-referencespanbc7-format-mode-reference"></a><span id="BC7-format-mode-reference"></span><span id="bc7-format-mode-reference"></span><span id="BC7-FORMAT-MODE-REFERENCE"></span>Referencia al modo BC7 formato
 
 
 En esta sección se incluye una lista de los 8 modos de bloque y las asignaciones de bits para los bloques de formato de compresión de texturas BC7.
 
-Los colores para cada subconjunto dentro de un bloque se representan mediante dos colores de extremo explícitos y un conjunto de colores interpolados entre ellos. Según la precisión del índice del bloque, cada subconjunto puede tener 4, 8 o 16colores posibles.
+Los colores para cada subconjunto dentro de un bloque se representan mediante dos colores de extremo explícitos y un conjunto de colores interpolados entre ellos. Según la precisión del índice del bloque, cada subconjunto puede tener 4, 8 o 16 colores posibles.
 
 ### <a name="span-idmode-0spanspan-idmode-0spanspan-idmode-0spanmode-0"></a><span id="Mode-0"></span><span id="mode-0"></span><span id="MODE-0"></span>Modo 0
 
@@ -294,7 +294,7 @@ El Modo 4 de BC7 tiene las siguientes características:
 
 ![diseño del modo de 4 bits](images/bc7-mode4.png)
 
-### <a name="span-idmode-5spanspan-idmode-5spanspan-idmode-5spanmode-5"></a><span id="Mode-5"></span><span id="mode-5"></span><span id="MODE-5"></span>Modo 5
+### <a name="span-idmode-5spanspan-idmode-5spanspan-idmode-5spanmode-5"></a><span id="Mode-5"></span><span id="mode-5"></span><span id="MODE-5"></span>Modo de 5
 
 El Modo 5 de BC7 tiene las siguientes características:
 
@@ -319,7 +319,7 @@ El Modo 6 de BC7 tiene las siguientes características:
 
 ![diseño del modo de 6 bits](images/bc7-mode6.png)
 
-### <a name="span-idmode-7spanspan-idmode-7spanspan-idmode-7spanmode-7"></a><span id="Mode-7"></span><span id="mode-7"></span><span id="MODE-7"></span>Modo 7
+### <a name="span-idmode-7spanspan-idmode-7spanspan-idmode-7spanmode-7"></a><span id="Mode-7"></span><span id="mode-7"></span><span id="MODE-7"></span>Modo de 7
 
 El Modo 7 de BC7 tiene las siguientes características:
 
@@ -331,7 +331,7 @@ El Modo 7 de BC7 tiene las siguientes características:
 
 ![diseño del modo de 7 bits](images/bc7-mode7.png)
 
-### <a name="span-idremarksspanspan-idremarksspanspan-idremarksspanremarks"></a><span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Observaciones
+### <a name="span-idremarksspanspan-idremarksspanspan-idremarksspanremarks"></a><span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Comentarios
 
 El modo de 8 (el byte menos significativo se establece en 0x00) es reservado. No lo uses en el codificador. Si pasas este modo al hardware, se devuelve un bloque inicializado con todos ceros.
 
@@ -339,18 +339,18 @@ En BC7, puedes codificar el componente alfa en una de las siguientes maneras:
 
 -   Tipos de bloque sin codificación explícita del componente alfa. En estos bloques, los extremos de color tienen codificación solo RGB, y el componente alfa está decodificado en 1.0 par todos los elementos de textura.
 -   Tipos de bloque con componentes de color y alfa combinados. En estos bloques, los valores de color del extremo se especifican en el formato RGBA, y los valores de los componentes alfa se interpolan junto con los valores de color.
--   Tipos de bloque con componentes de color y alfa separados. En estos bloques, los valores de color y alfa se especifican por separado, cada uno con su propio conjunto de índices. Como resultado, tienen un vector eficaz y un canal escalar codificados por separado, donde el vector habitualmente especifica los canales de color \[R, G, B\] y el escalar especifica el canal alfa \[A\]. Para admitir este enfoque, se proporciona un campo de 2 bits independiente con la codificación, lo que permite la especificación de la codificación del canal independiente como valor escalar. Como consecuencia, el bloque puede tener una de las diferentes cuatro representaciones siguientes de esta codificación de alfa (como se indica en el campo de 2 bits):
+-   Tipos de bloque con componentes de color y alfa separados. En estos bloques, los valores de color y alfa se especifican por separado, cada uno con su propio conjunto de índices. Como resultado, tienen un vector de eficaces y un canal escalar codificada por separado, donde el vector normalmente especifica los canales de color \[R, G, B\] y el valor escalar especifica el canal alfa \[A\]. Para admitir este enfoque, se proporciona un campo de 2 bits independiente con la codificación, lo que permite la especificación de la codificación del canal independiente como valor escalar. Como consecuencia, el bloque puede tener una de las diferentes cuatro representaciones siguientes de esta codificación de alfa (como se indica en el campo de 2 bits):
     -   RGB|A: canal alfa independiente
     -   AGB|R: canal de color "rojo" independiente
     -   RAB|G: canal de color "verde" independiente
     -   RGA|B: canal de color "azul" independiente
 
-    El descodificador reordena el orden de canal nuevamente en RGBA después de la descodificación, por lo que el formato del bloque interno es invisible para el desarrollador. Los negros con componentes de color y alfa independientes también tienen dos conjuntos de datos de índice: uno para el conjunto de vectores de canales y otro para el canal escalar. (En el caso del Modo 4, estos índices tienen anchos diferentes \[2 o 3 bits\]. El Modo 4 también contiene un selector de 1 bit que especifica si el vector o el canal escalar usa los índices de 3 bits).
+    El descodificador reordena el orden de canal nuevamente en RGBA después de la descodificación, por lo que el formato del bloque interno es invisible para el desarrollador. Los negros con componentes de color y alfa independientes también tienen dos conjuntos de datos de índice: uno para el conjunto de vectores de canales y otro para el canal escalar. (En el caso de modo 4, estos índices son de distintas anchuras \[2 o 3 bits\]. El Modo 4 también contiene un selector de 1 bit que especifica si el vector o el canal escalar usa los índices de 3 bits).
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Compresión de bloques de texturas](texture-block-compression.md)
+[Compresión de bloques de textura](texture-block-compression.md)
 
  
 

@@ -1,30 +1,30 @@
 ---
-title: Escalado y superposiciones de cadenas de intercambio
-description: Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y usa también cadenas de intercambio (si las hay) para mejorar la calidad visual.
+title: Intercambiar escalado y superposiciones de cadenas
+description: Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, intercambiar escalado de cadenas, superposiciones, directx, games, swap chain scaling, overlays
 ms.localizationpriority: medium
 ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943790"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644200"
 ---
-# <a name="swap-chain-scaling-and-overlays"></a>Escalado y superposiciones de cadenas de intercambio
+# <a name="swap-chain-scaling-and-overlays"></a>Intercambiar escalado y superposiciones de cadenas
 
 
 
 Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual.
 
-## <a name="swap-chains-in-directx-112"></a>Cadenas de intercambio en DirectX11.2
+## <a name="swap-chains-in-directx-112"></a>Cadenas de intercambio en DirectX 11.2
 
 
-En Direct3D11.2 se pueden crear aplicaciones para la Plataforma universal de Windows (UWP) con cadenas de intercambio con escala desde resoluciones no nativas (reducidas), por lo que la velocidad de relleno es más rápida. Direct3D11.2 también incluye API para poder realizar representaciones con superposiciones de hardware, lo que permite que puedas mostrar UI en otra cadena de intercambio en resolución nativa. Gracias a ello, tu juego puede dibujar una interfaz de usuario en una resolución nativa completa y a una gran velocidad de fotogramas, con lo cual estarás sacando el máximo partido a los dispositivos móviles y a las pantallas con valores altos de PPP (como 3840 x 2160). En este artículo te enseñamos a usar la superposición de cadenas de intercambio.
+En Direct3D 11.2 se pueden crear aplicaciones para la Plataforma universal de Windows (UWP) con cadenas de intercambio con escala desde resoluciones no nativas (reducidas), por lo que la velocidad de relleno es más rápida. Direct3D 11.2 también incluye API para poder realizar representaciones con superposiciones de hardware, lo que permite que puedas mostrar UI en otra cadena de intercambio en resolución nativa. Gracias a ello, tu juego puede dibujar una interfaz de usuario en una resolución nativa completa y a una gran velocidad de fotogramas, con lo cual estarás sacando el máximo partido a los dispositivos móviles y a las pantallas con valores altos de PPP (como 3840 x 2160). En este artículo te enseñamos a usar la superposición de cadenas de intercambio.
 
-Direct3D11.2 incluye también una característica nueva para reducir la latencia en las cadenas de intercambio de modelo de volteo. Consulta [Reducir la latencia con cadenas de intercambio DXGI1.3](reduce-latency-with-dxgi-1-3-swap-chains.md).
+Direct3D 11.2 incluye también una característica nueva para reducir la latencia en las cadenas de intercambio de modelo de volteo. Consulta [Reducir la latencia con cadenas de intercambio DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md).
 
 ## <a name="use-swap-chain-scaling"></a>Usar el escalado de cadenas de intercambio
 
@@ -82,7 +82,7 @@ Cuando tu juego se ejecuta en hardware de bajo nivel (o en hardware optimizado p
 
 2.  Después, elige una subregión de esa cadena para ajustar la escala, estableciendo para ello el tamaño del origen en una resolución reducida.
 
-    En la muestra de cadenas de intercambio en primer plano deDX, este tamaño reducido se calcula según un porcentaje:
+    En la muestra de cadenas de intercambio en primer plano de DX, este tamaño reducido se calcula según un porcentaje:
 
     ```cpp
     m_d3dRenderSizePercentage = percentage;
@@ -123,7 +123,7 @@ Cuando se usa el escalado de cadenas de intercambio, existe un inconveniente car
 
 Realiza los siguientes pasos para crear una cadena de intercambio en primer plano que use la funcionalidad de superposición de hardware. Estos pasos son los que se efectúan después de crear por primera vez una cadena de intercambio para contenido de juego en tiempo real, como se ha descrito anteriormente.
 
-1.  En primer lugar, comprueba si el adaptador de DXGI admite las superposiciones. Para ello, obtén el adaptador de salida deDXGI de la cadena de intercambio:
+1.  En primer lugar, comprueba si el adaptador de DXGI admite las superposiciones. Para ello, obtén el adaptador de salida de DXGI de la cadena de intercambio:
 
     ```cpp
     ComPtr<IDXGIAdapter> outputDxgiAdapter;
@@ -148,15 +148,15 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Nota**  si el adaptador DXGI admite las superposiciones, continúa con el paso siguiente. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
+    > **Tenga en cuenta**    si el adaptador DXGI admite superposiciones, continúe con el paso siguiente. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
 
      
 
-2.  Crea la cadena de intercambio en primer plano con [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559). Las siguientes opciones deben estar establecidas en la estructura [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528) que suministraste al parámetro *pDesc*:
+2.  Crea la cadena de intercambio en primer plano con [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559). Se deben establecer las siguientes opciones el [ **DXGI\_intercambiar\_cadena\_DESC1** ](https://msdn.microsoft.com/library/windows/desktop/hh404528) proporcionado a la *pDesc* parámetro:
 
-    -   Especifica la marca de cadena de intercambio [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) de forma que señale a una cadena de intercambio en primer plano.
-    -   Usa la marca de modo alfa [**DXGI\_ALPHA\_MODE\_PREMULTIPLIED**](https://msdn.microsoft.com/library/windows/desktop/hh404496). Las cadenas de intercambio en primer plano siempre se multiplican de antemano.
-    -   Establece la marca [**DXGI\_SCALING\_NONE**](https://msdn.microsoft.com/library/windows/desktop/hh404526). Las cadenas de intercambio en primer plano siempre se ejecutan en una resolución nativa.
+    -   Especifique el [ **DXGI\_intercambio\_cadena\_marca\_FOREGROUND\_capa** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) intercambiar la marca de la cadena para indicar una cadena de intercambio de primer plano.
+    -   Use la [ **DXGI\_alfa\_modo\_PREMULTIPLICADO** ](https://msdn.microsoft.com/library/windows/desktop/hh404496) marca de modo alfa. Las cadenas de intercambio en primer plano siempre se multiplican de antemano.
+    -   Establecer el [ **DXGI\_ESCALADO\_NONE** ](https://msdn.microsoft.com/library/windows/desktop/hh404526) marca. Las cadenas de intercambio en primer plano siempre se ejecutan en una resolución nativa.
 
     ```cpp
      foregroundSwapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER;
@@ -164,7 +164,7 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Nota**  establecer el [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) de nuevo cada vez que se cambie el tamaño de la cadena de intercambio.
+    > **Tenga en cuenta**    establecer el [ **DXGI\_intercambiar\_cadena\_marca\_FOREGROUND\_capa** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) nuevo cada tiempo que se cambia el tamaño de la cadena de intercambio.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
@@ -199,7 +199,7 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
 
 4.  Las cadenas de intercambio en primer plano siempre usan un alfa premultiplicado. Por lo tanto, se espera que los valores de color de cada píxel ya estén multiplicados por el valor de alfa antes de que el fotograma se muestre. Por ejemplo, un píxel BGRA 100% blanco en un alfa del 50% se establecerá en (0,5, 0,5, 0,5, 0,5).
 
-    El paso para multiplicar de antemano el elemento alfa se puede realizar en la fase de fusión de salida, aplicando para ello un estado de mezcla de la aplicación (consulta [**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349)) con el campo **SrcBlend** de la estructura [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200) establecido como **D3D11\_SRC\_ALPHA**. También se pueden usar activos con valores de alfa multiplicados de antemano.
+    El paso premultiplication alfa puede realizarse en la fase de fusión de salida aplicando un estado de la mezcla de aplicación (consulte [ **ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349)) con el [ **D3D11\_ REPRESENTAR\_destino\_BLEND\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476200) la estructura **SrcBlend** campo establecido en **D3D11\_SRC\_Alfa**. También se pueden usar activos con valores de alfa multiplicados de antemano.
 
     Si el paso de premultiplicación del alpha no se lleva a cabo, los colores de la cadena de intercambio en primer plano serán más brillantes de lo previsto.
 

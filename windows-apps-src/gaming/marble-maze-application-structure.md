@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, muestra, directx, estructura, games, sample, structure
 ms.localizationpriority: medium
 ms.openlocfilehash: 55b933db7f9b26de2caa3877bde445f96c08d561
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653730"
 ---
 # <a name="marble-maze-application-structure"></a>Estructura de la aplicación Marble Maze
 
@@ -105,14 +105,14 @@ Además, la clase **App** configura los controladores de eventos para los evento
 ## <a name="loading-game-assets-in-the-background"></a>Cargar activos del juego en segundo plano
 
 
-Para asegurase de que el juego responda a los eventos de ventana en menos de 5 segundos después de su inicio, recomendamos que cargues los activos del juego asincrónicamente en segundo plano. A medida que los activos se cargan en segundo plano, el juego puede responder a los eventos de ventana.
+Para asegurase de que el juego responda a los eventos de ventana en menos de 5 segundos después de su inicio, recomendamos que cargues los activos del juego asincrónicamente en segundo plano. Mientras los activos se cargan en segundo plano, el juego puede responder a los eventos de la ventana.
 
 > [!NOTE]
 > También puedes mostrar el menú principal cuando esté listo y permitir que los activos restantes sigan cargándose en segundo plano. Si el usuario selecciona una opción del menú antes de que se hayan cargado todos los recursos, puedes indicar que los recursos de la escena siguen cargándose mostrando una barra de progreso, por ejemplo.
 
  
 
-Incluso si el juego contiene relativamente pocos activos, es recomendable cargarlos asincrónicamente por dos razones. Una razón es que es difícil garantizar que todos los recursos se cargarán rápidamente en todos los dispositivos y con todas las configuraciones. Además, al incorporar pronto la carga asíncrona, el código está listo para escalarse a medida que agregas funcionalidades.
+Incluso si el juego contiene relativamente pocos activos, es recomendable cargarlos asincrónicamente por dos razones. Una razón es que es difícil garantizar que todos los recursos se cargarán rápidamente en todos los dispositivos y con todas las configuraciones. Además, al incorporar pronto la carga asincrónica, el código está listo para escalarse a medida que agregas funcionalidades.
 
 La carga asíncrona de activos comienza con el método **App::Load**. Este método usa la clase [tarea](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class) para cargar activos del juego en segundo plano.
 
@@ -123,9 +123,9 @@ La carga asíncrona de activos comienza con el método **App::Load**. Este méto
     });
 ```
 
-La clase **MarbleMazeMain** define la marca *m\_deferredResourcesReady* para indicar que se ha completado la carga asíncrona. El método **MarbleMazeMain::LoadDeferredResources** carga los recursos del juego y después establece esta marca. Las fases de actualización (**MarbleMazeMain::Update**) y representación (**MarbleMazeMain::Render**) de la aplicación comprueban esta marca. Cuando se establece esta marca, el juego continúa de forma normal. Si la marca no está aún establecida, el juego muestra la pantalla de carga.
+El **MarbleMazeMain** clase define la *m\_deferredResourcesReady* marca para indicar que la carga asincrónica ha finalizado. El método **MarbleMazeMain::LoadDeferredResources** carga los recursos del juego y después establece esta marca. Las fases de actualización (**MarbleMazeMain::Update**) y representación (**MarbleMazeMain::Render**) de la aplicación comprueban esta marca. Cuando se establece esta marca, el juego continúa de forma normal. Si la marca no está aún establecida, el juego muestra la pantalla de carga.
 
-Para más información sobre la programación asíncronade las aplicaciones para UWP, consulta [Programación asíncrona en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Para obtener más información sobre la programación asincrónica de las aplicaciones para UWP, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 > [!TIP]
 > Si escribes código del juego que forma parte de una biblioteca C++ de Windows Runtime (es decir, una DLL), podrías leer [Creación de operaciones asíncronas en C++ para aplicaciones de UWP](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps) para aprender a crear operaciones asincrónicas que pueden ser consumidas por aplicaciones y otras bibliotecas.
@@ -195,7 +195,7 @@ enum class GameState
 };
 ```
 
-Por ejemplo, el estado **MainMenu** define que aparezca el menú principal y que el juego no esté activo. Por el contrario, el estado **InGameActive** define que el juego esté activo y que no aparezca el menú. La clase **MarbleMazeMain** define la variable de miembro **m\_gameState** para mantener el estado activo del juego.
+Por ejemplo, el estado **MainMenu** define que aparezca el menú principal y que el juego no esté activo. Por el contrario, el estado **InGameActive** define que el juego esté activo y que no aparezca el menú. El **MarbleMazeMain** clase define la **m\_gameState** variable miembro que contiene el estado activo del juego.
 
 Los métodos **MarbleMazeMain::Update** y **MarbleMazeMain::Render** usan instrucciones de conmutador para ejecutar la lógica del estado actual. El siguiente ejemplo muestra el aspecto que podría tener una instrucción de conmutador para el método **MarbleMazeMain::Update** (los detalles se han quitado para resaltar la estructura).
 
@@ -285,7 +285,7 @@ m_persistentState->Initialize(
     "MarbleMaze");
 ```
 
-Marble Maze guarda su estado cuando la canica pasa por un punto de control o por el objetivo (en el método **MarbleMazeMain::Update**) y cuando la ventana pierde el enfoque (en el método **MarbleMazeMain::OnFocusChange**). Si tu juego contiene una gran cantidad de datos de estado, recomendamos que guardes ocasionalmente el estado en el almacenamiento persistente de un modo similar porque solo tendrás unos pocos segundos para responder a la notificación de suspensión. Por lo tanto, cuando la aplicación reciba una notificación de suspensión, solo tiene que guardar los datos de estado que hayan cambiado.
+Marble Maze guarda su estado cuando la canica pasa por un punto de control o por el objetivo (en el método **MarbleMazeMain::Update**) y cuando la ventana pierde el enfoque (en el método **MarbleMazeMain::OnFocusChange**). Si tu juego contiene una gran cantidad de datos de estado, recomendamos que guardes ocasionalmente el estado en el almacenamiento persistente de un modo similar porque solo tendrás unos pocos segundos para responder a la notificación de suspensión. Por lo tanto, cuando la aplicación reciba una notificación de suspensión, solo tiene que guardar los datos de estado que han cambiado.
 
 Para responder a las notificaciones de suspensión y reanudación, la clase **MarbleMazeMain** define los métodos **SaveState** y **LoadState**, a los que se llama al suspender y reanudar. El método **MarbleMazeMain::OnSuspending** controla el evento de suspensión y el método **MarbleMazeMain::OnResuming** controla el evento de reanudación.
 
@@ -414,7 +414,7 @@ void MarbleMazeMain::LoadState()
 > [!IMPORTANT]
 > Marble Maze no distingue entre el inicio en frío (es decir, iniciar por primera vez sin un evento de suspensión anterior) y la reanudación desde un estado suspendido. Este diseño es el recomendado para todas las aplicaciones para UWP.
 
-Para más información sobre los datos de aplicación, consulta [Almacenar y recuperar la configuración y otros datos de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt299098).
+Para más información sobre los datos de aplicación, consulta [Almacenar y recuperar la configuración y otros datos de aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098).
 
 ##  <a name="next-steps"></a>Pasos siguientes
 
@@ -423,9 +423,9 @@ Lee [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
-* [Conceptos básicos sobre la muestra de Marble Maze](marble-maze-sample-fundamentals.md)
-* [Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [Agregar contenido visual al ejemplo Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
+* [Elementos fundamentales del ejemplo de Marble Maze](marble-maze-sample-fundamentals.md)
+* [Desarrollar Marble Maze, un juego para UWP en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

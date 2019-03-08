@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, experimental, api
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d6e236368134086081141e220088358f4897033
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927471"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657950"
 ---
 # <a name="experimental-apis"></a>API experimentales
 
@@ -29,6 +29,6 @@ Para habilitar estas API para experimentación, usa el [complemento de caracter�
 
 La documentación de una API experimental determinada depende del equipo al que pertenece.
 
-## <a name="providing-feedback"></a>Opiniones
+## <a name="providing-feedback"></a>Comentarios
 
 Si has probado una API experimental y deseas dar tu opinión, usa la categoría **Plataforma de desarrollador** en el [Centro de opiniones sobre Windows](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).

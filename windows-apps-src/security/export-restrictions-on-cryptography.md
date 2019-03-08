@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d445e5164d542a7e10f136a5fb238c575f35c2d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048815"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656020"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 
@@ -19,13 +19,13 @@ ms.locfileid: "9048815"
 
 Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Microsoft Store.
 
-La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Microsoft Store deben cumplir estas leyes y reglamentos, porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Microsoft Store, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
+La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Microsoft Store deben cumplir estas leyes y reglamentos, porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir con estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Microsoft Store, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
 
-> **Nota**la información proporcionada aquí orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en Microsoft Store para asegurarte de que la aplicación cumple con todas las leyes y normativas aplicables.
+> **Tenga en cuenta**  la información proporcionada aquí proporciona algunas instrucciones, pero es su responsabilidad como desarrollador de la aplicación que publica las aplicaciones en la Microsoft Store para asegurarse de que la aplicación cumpla con todas las leyes y normativas.
 
  
 
-Para obtener más información sobre la Oficina de Industria y Seguridad y el Departamento de Comercio de Estados Unidos, consulta la página [acerca de la Oficina de Industria y Seguridad](https://go.microsoft.com/fwlink/p/?LinkID=245644).
+Para obtener más información acerca de la Oficina de Industria y Seguridad y el Departamento de Comercio de Estados Unidos, consulta la página [About the Bureau of Industry and Security (Acerca de la Oficina de Industria y Seguridad)](https://go.microsoft.com/fwlink/p/?LinkID=245644).
 
 Para obtener información sobre la Normativa de la Administración de Exportaciones (EAR) que regula la exportación de tecnología que incluya cifrado, consulta la página [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
@@ -33,7 +33,7 @@ Para obtener información sobre la Normativa de la Administración de Exportacio
 
 En primer lugar, determina si tu aplicación usa un tipo de criptografía que esté regulada por la Normativa de la Administración de Exportaciones. La pregunta incluye los ejemplos que se muestran en esta lista, pero recuerda que esta lista no incluye cada aplicación de criptografía posible.
 
-> **Importante**considera la posibilidad de no solo el código que ha escrito para la aplicación, pero también todas las bibliotecas de software, utilidades y componentes del sistema operativo que incluye la aplicación o vincula a.
+> **Importante**  considere la posibilidad de no solo el código que escribió para la aplicación, pero también todas las bibliotecas de software, utilidades y los componentes del sistema operativo que incluye la aplicación o un vínculo a.
 
 -   Todo uso de firmas digitales, como autenticaciones o controles de integridad
 -   Cifrado de cualquier dato o archivos que la aplicación usa o a los que accede
@@ -51,7 +51,7 @@ Ten en cuenta que algunas de las aplicaciones de criptografía no están restrin
 
 -   Cifrado de contraseñas
 -   Protección de copias
--   Autenticación
+-   Authentication
 -   Administración de derechos digitales
 -   Uso de firmas digitales
 

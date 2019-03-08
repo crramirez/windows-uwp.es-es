@@ -4,14 +4,14 @@ title: Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 description: Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
 ms.date: 06/18/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927004"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661440"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 
@@ -22,7 +22,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 ## <a name="prerequisites"></a>Requisitos previos
 
 
--   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
+-   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
@@ -32,7 +32,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 
     -   **Biblioteca de música**
     -   **Biblioteca de imágenes**
-    -   **Biblioteca de vídeos**
+    -   **Videos Library**
 
     Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
@@ -173,7 +173,7 @@ En dispositivos en los que la cámara guarda dos imágenes por cada foto, una en
 
 El Álbum de cámara y la carpeta Imágenes guardadas no admiten consultas profundas.
 
-**Abrir una foto en la aplicación que la capturó**
+**Abrir una foto en la aplicación que se capturaron**
 
 Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la capturó, puedes guardar el **CreatorAppId** con los metadatos de la foto; usa para ello un código similar al del ejemplo siguiente. En este ejemplo, **testPhoto** es un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 

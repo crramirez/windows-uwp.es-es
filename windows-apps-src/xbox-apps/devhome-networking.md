@@ -1,26 +1,26 @@
 ---
 ms.assetid: 5aeb009c-1f2f-7c04-4477-cbe92c473174
-title: Página de red (Dev Home)
-description: Proporciona información sobre la página de red de la aplicación Dev Home para Xbox One.
+title: Página Redes (Dev Home)
+description: Proporciona información sobre la página Redes de la aplicación Dev Home para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943680"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646350"
 ---
-# <a name="networking-page-dev-home"></a>Página de red (Dev Home)
+# <a name="networking-page-dev-home"></a>Página Redes (Dev Home)
    
   
-La página de **redes** de Dev Home simula distintas condiciones de redes para solucionar problemas. También permite iniciar un seguimiento de paquetes de red.   
- ![Página de red de Dev Home](images/devhome_networking.png)   
+La pagina **Redes** de Dev Home simula varias condiciones de conexión de red con fines de solución de problemas. También te permite iniciar un seguimiento de paquetes de red.   
+ ![Página de redes de desarrollo principal](images/devhome_networking.png)   
   
-La página de **redes** contiene los paneles siguientes:   
+La página **Redes** contiene los siguientes paneles:   
  
    *  [Simulación de red](#ID4EEB)  
    *  [XBTrace (netcap)](#ID4EOB)  
@@ -30,10 +30,10 @@ La página de **redes** contiene los paneles siguientes:
 
    
 
-## <a name="network-simulation"></a>Simulación de red  
+## <a name="network-simulation"></a>Network simulation  
    
   
-El panel de **simulación de red** ejecuta una simulación de red para probar frente a varios perfiles de ancho de banda.   
+El panel **Network simulation** ejecuta una simulación de red para probar distintos perfiles de ancho de banda.   
   
 <a id="ID4EOB"></a>
 
@@ -42,13 +42,13 @@ El panel de **simulación de red** ejecuta una simulación de red para probar fr
 ## <a name="xbtrace-netcap"></a>XBTrace (netcap)  
    
   
-El panel de **XBTrace (netcap)** se inicia o detiene el seguimiento de paquetes de red.   
+El panel **XBTrace (netcap)** inicia o detiene un seguimiento de paquetes de red.   
   
 <a id="ID4E2B"></a>
 
    
 
-## <a name="see-also"></a>Ver también  
- [Inicio del desarrollador en la consola (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte también  
+ [Página principal de desarrolladores en la consola (página principal de desarrollo)](dev-home.md)
 
   

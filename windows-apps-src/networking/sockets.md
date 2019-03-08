@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdad8f3405420e0548974c734ad23bfd44f2c6b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046761"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648830"
 ---
 # <a name="sockets"></a>Sockets
 Los sockets son una tecnología de transferencia de datos de bajo nivel en cuya parte superior se implementan muchas protocolos de red. UWP ofrece las clases de socket TCP y UDP de cliente-servidor o aplicaciones de punto a punto, si las conexiones son de larga duración o una conexión establecida no es necesaria.
@@ -1002,9 +1002,9 @@ Puedes usar al agente de socket y controlar los desencadenadores de canal, para 
 ## <a name="batched-sends"></a>Envíos por lotes
 Siempre que escribas en la secuencia asociada con un socket, se produce una transición del modo de usuario (tu código) al modo kernel (donde está la pila de red). Si estás escribiendo muchos búferes en un momento, estas transiciones repetidas se componen en una sobrecarga considerable. Procesar por lotes tus envíos es una forma para enviar varios búferes de datos juntos y evitar esa sobrecarga. Es especialmente útil si tu aplicación está usando VoIP, VPN u otras tareas que implican mover una gran cantidad de datos de la manera más eficaz posible.
 
-Esta sección muestra un par de técnicas de envío por lotes que se puede usar con un [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) o un [**DatagramSocket **](/uwp/api/Windows.Networking.Sockets.DatagramSocket) conectado.
+Esta sección muestra un par de técnicas de envío por lotes que se puede usar con un [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) o un [**DatagramSocket** ](/uwp/api/Windows.Networking.Sockets.DatagramSocket) conectado.
 
-Para obtener un punto de partida, veamos cómo enviar un gran número de búferes de forma eficaz. Aquí se incluye una demostración mínima utilizando un **StreamSocket **.
+Para obtener un punto de partida, veamos cómo enviar un gran número de búferes de forma eficaz. Aquí se incluye una demostración mínima utilizando un **StreamSocket** .
 
 ```csharp
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -1202,7 +1202,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-El siguiente ejemplo es apropiado para cualquier idioma UWP, no solo para C# (pero se muestra aquí en C#. Se basa en el comportamiento en [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) y [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que se envían juntos por lotes. La técnica llama [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) en esa secuencia de salida que, a partir de Windows 10, se garantiza que solo una vez completan todas las operaciones del flujo de salida.
+El siguiente ejemplo es apropiado para cualquier idioma UWP, no solo para C# (pero se muestra aquí en C#. Se basa en el comportamiento en [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) y [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que se envían juntos por lotes. Las llamadas técnica [ **FlushAsync** ](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) en ese flujo de salida que, a partir de Windows 10, se garantiza para devolver sólo después de que se hayan completado todas las operaciones en el flujo de salida.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.
@@ -1276,14 +1276,14 @@ Existen algunas limitaciones importantes impuestas mediante el uso de envíos po
 
 -   No se puede modificar el contenido de las instancias de **IBuffer** que se escriben hasta que se complete la escritura asincrónica.
 -   El patrón **FlushAsync** solo funciona en **StreamSocket.OutputStream** y **DatagramSocket.OutputStream**.
--   El patrón de **FlushAsync** solo funciona en Windows 10 y en adelante.
+-   El **FlushAsync** patrón solo funciona en Windows 10 y en adelante.
 -   En otros casos, usa [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___) en vez del patrón **FlushAsync**.
 
 ## <a name="port-sharing-for-datagramsocket"></a>Uso compartido de puertos para DatagramSocket
 Puedes configurar un [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para que coexista con otros sockets de multidifusión de Win32 o UWP enlazados a la misma dirección y puerto. Se hace estableciendo [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly) en `true` antes de enlazar o conectar el socket. Se accede a una instancia de **DatagramSocketControl** desde el propio objeto **DatagramSocket** a través de su propiedad [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control).
 
 ## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Proporcionar un certificado de cliente con la clase StreamSocket
-[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) admite el uso de SSL/TLS para autenticar el servidor con el que se comunica la aplicación del cliente. En algunos casos, la aplicación de cliente debe autenticarse en el servidor mediante un certificado de cliente SSL/TLS. Puedes proporcionar un certificado de cliente con la propiedad [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes de enlazar o conectar el socket (se debe establecer antes de que se inicie el protocolo de enlace SSL/TLS). Se accede a una instancia de **StreamSocketControl** desde el propio objeto **StreamSocket** a través de su propiedad [**StreamSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Si el servidor solicita el certificado de cliente, Windows responderá con el certificado del cliente proporcionado.
+[**StreamSocket** ](/uwp/api/Windows.Networking.Sockets.StreamSocket) admite el uso de SSL/TLS para autenticar el servidor que está hablando con la aplicación cliente. En algunos casos, la aplicación de cliente debe autenticarse en el servidor mediante un certificado de cliente SSL/TLS. Puedes proporcionar un certificado de cliente con la propiedad [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes de enlazar o conectar el socket (se debe establecer antes de que se inicie el protocolo de enlace SSL/TLS). Se accede a una instancia de **StreamSocketControl** desde el propio objeto **StreamSocket** a través de su propiedad [**StreamSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Si el servidor solicita el certificado de cliente, Windows responderá con el certificado del cliente proporcionado.
 
 Usa una invalidación de [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) que toma un [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel), como se muestra en este ejemplo de código mínimo.
 
@@ -1379,9 +1379,9 @@ El constructor [**HostName**](/uwp/api/Windows.Networking.HostName) puede arroja
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Comunicación entre aplicaciones](/windows/uwp/app-to-app/index)
-* [Operaciones simultáneas y asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [Cómo establecer las funcionalidades de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)
-* [Windows Sockets 2 (Winsock)](https://msdn.microsoft.com/library/windows/desktop/ms740673)
+* [Simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
+* [Cómo establecer las capacidades de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)
+* [Windows Sockets (Winsock) 2](https://msdn.microsoft.com/library/windows/desktop/ms740673)
 
 ## <a name="samples"></a>Muestras
-* [Muestra de StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)
+* [Ejemplo de StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)

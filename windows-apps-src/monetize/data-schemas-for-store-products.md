@@ -1,20 +1,20 @@
 ---
-description: Describe el esquema de datos JSON extendido para productos de la Store en el espacio de nombres Windows.Services.Store.
+description: Describe el esquema de datos JSON extendido para productos de la Tienda en el espacio de nombres Windows.Services.Store.
 title: Esquemas de datos para productos de la Store
 ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp, ExtendedJsonData, productos de Microsoft Store, esquema
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f51f0fffae3fa8e9a54214f78aa93fe39eab080
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656110"
 ---
-# <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de Microsoft Store
+# <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de la Store
 
-Cuando envías un producto como una aplicación o un complemento a la Store, esta mantiene un conjunto completo de datos para el producto y sus licencias. En el código de la aplicación, puedes obtener acceso mediante programación a algunos de estos datos con las propiedades del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Por ejemplo, puedes recuperar la descripción y el precio de la aplicación actual o un complemento de la aplicación actual mediante las propiedades [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) y [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price).
+Cuando envías un producto como una aplicación o un complemento a la Tienda, esta mantiene un conjunto completo de datos para el producto y sus licencias. En el código de la aplicación, puedes obtener acceso mediante programación a algunos de estos datos con las propiedades del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Por ejemplo, puedes recuperar la descripción y el precio de la aplicación actual o un complemento de la aplicación actual mediante las propiedades [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) y [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price).
 
 Sin embargo, muchos de los datos de productos de la Store no se exponen por las propiedades predefinidas en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Para obtener acceso a los datos completos de un producto en tu código, puedes usar las siguientes propiedades generales en su lugar:
 
@@ -71,9 +71,9 @@ El esquema siguiente describe la cadena con formato JSON devuelta por [StorePurc
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
-* [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
-* [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
+* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Habilitar complemento consumibles compras](enable-consumable-add-on-purchases.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)

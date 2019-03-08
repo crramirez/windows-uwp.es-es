@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, suspensión, suspend, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b588d6bf6e7cbf43651d94a7fd46e9a767c6f09
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656040"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>Cómo suspender una aplicación (DirectX y C++)
 
@@ -41,7 +41,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="save-any-app-data-before-suspending"></a>Guarda los datos de la aplicación antes de la suspensión
 
 
-Cuando la aplicación controla el evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), tiene la oportunidad de guardar sus datos de aplicación importantes en la función de controlador. La aplicación debe utilizar la API de almacenamiento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para guardar datos de aplicación simples de manera sincrónica. Si vas a desarrollar un juego, guarda toda la información de estado sobre el juego que sea importante. No olvides suspender el procesamiento de audio.
+Cuando la aplicación controla el evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), tiene la oportunidad de guardar sus datos de aplicación importantes en la función de controlador. La aplicación debe usar la API de almacenamiento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para guardar los datos de aplicación simples de manera sincrónica. Si vas a desarrollar un juego, guarda toda la información de estado sobre el juego que sea importante. No olvides suspender el procesamiento de audio.
 
 A continuación, implementa la devolución de llamada. Guarda los datos de la aplicación en este método.
 
@@ -97,7 +97,7 @@ void App::Run()
 ## <a name="call-trim"></a>Llamar a Trim()
 
 
-A partir de Windows8.1, todas las aplicaciones de DirectX de UWP deben llamar a [**idxgidevice3:: Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows8.1.
+A partir de Windows 8.1, todas las aplicaciones DirectX UWP deben llamar a [ **IDXGIDevice3::Trim** ](https://msdn.microsoft.com/library/windows/desktop/dn280346) cuando la suspensión. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Se trata de un requisito de certificación para Windows 8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -139,9 +139,9 @@ Cuando la aplicación controla el evento [**CoreApplication::Suspending**](https
 
 El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano
 
-El sistema intenta mantener la aplicación y sus datos en memoria mientras está suspendida. No obstante, si el sistema no tiene los recursos necesarios para mantener la aplicación en memoria, finalizará su ejecución. Cuando el usuario vuelve a una aplicación suspendida que se ha cerrado, el sistema envía un evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) y debe restaurar sus datos de aplicación en su controlador para el evento **CoreApplicationView::Activated**.
+El sistema intenta mantener la aplicación y sus datos en la memoria mientras está suspendida. No obstante, si el sistema no tiene los recursos necesarios para mantener la aplicación en memoria, finalizará su ejecución. Cuando el usuario vuelve a una aplicación suspendida que se ha cerrado, el sistema envía un evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) y debe restaurar sus datos de aplicación en su controlador para el evento **CoreApplicationView::Activated**.
 
-El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos cuando se suspenda, y restaurarlos cuando vuelva a activarse.
+El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos cuando se suspenda y restaurarlos cuando vuelva a activarse.
 
 ## <a name="related-topics"></a>Temas relacionados
 

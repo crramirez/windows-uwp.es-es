@@ -1,30 +1,30 @@
 ---
-Description: This tutorial walks through how to create a basic application user interface. It explains and demonstrates the use of Grid and StackPanel, two of the most common XAML elements.
+Description: Este tutorial le guía a través de la creación de una interfaz de usuario de la aplicación básica. Aquí se explica y se muestra el uso de Grid y StackPanel, dos de los elementos XAML más comunes.
 title: Usa Grid y StackPanel para crear una aplicación meteorológica sencilla.
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b221220d417df5b70927984ac65eff93fae54a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931254"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646540"
 ---
-# <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: usa Grid y StackPanel para crear una aplicación meteorológica sencilla.
+# <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Use Grid y StackPanel para crear una aplicación meteorológica simple
 
-Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows10. Este tutorial dura entre 10 y 20minutos.
+Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows 10. Este tutorial dura entre 10 y 20 minutos.
 
-> **API importantes**: [Clase Grid](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [Clase StackPanel](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **API importantes**: [Grid (clase)](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [clase StackPanel](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Requisitos previos
-- Windows 10 y Microsoft Visual Studio 2015 o posterior. (Más reciente de Visual Studio para la seguridad y desarrollo actual de las actualizaciones recomendadas) [Haz clic aquí para aprender a configurar la aplicación con Visual Studio](../../get-started/get-set-up.md).
+- Windows 10 y Microsoft Visual Studio 2015 o posterior. (Más reciente de Visual Studio para la seguridad y desarrollo actual de las actualizaciones recomendadas) [Haga clic aquí para obtener información sobre cómo configurar la aplicación con Visual Studio](../../get-started/get-set-up.md).
 - Conocimientos acerca de cómo crear una aplicación de "Hello World" básica mediante XAML y C#. Si aún no los tienes, [haz clic aquí para aprender a crear una aplicación "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="step-1-create-a-blank-app"></a>Paso 1: Crear una aplicación en blanco
+## <a name="step-1-create-a-blank-app"></a>Paso 1: Creación de una aplicación en blanco
 1. En el menú de Visual Studio, selecciona **Archivo** > **Nuevo proyecto**.
 2. En el panel izquierdo del cuadro de diálogo **Nuevo proyecto**, selecciona **Visual C#** > **Windows** > **Universal** o **Visual C++** > **Windows** > **Universal**.
 3. En el panel central, selecciona **Aplicación vacía**.
@@ -49,13 +49,13 @@ Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Ex
 </Grid>
 ```
 
-El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el diseño de la interfaz de la aplicación. La primera columna tiene un **Width** (ancho) de "3\*", mientras que el segundo tiene "5\*", lo que divide el espacio horizontal entre las 2 columnas en una proporción de 3:5. Del mismo modo, las 2 filas tienen **Height** (alto) de "3\*" y "\*" respectivamente, por lo tanto, el elemento **Grid** asigna el doble de espacio a la primera fila que a la segunda ("\*" equivale a "1\*"). Estas relaciones se mantienen incluso si se cambia el tamaño de la ventana o se cambia el dispositivo.
+El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el diseño de la interfaz de la aplicación. La primera columna tiene un **ancho** de "3\*", mientras que el segundo tiene "5\*", al dividir el espacio horizontal entre las dos columnas en una proporción de 3:5. En la misma manera, las dos filas tienen un **alto** de "2\*"y"\*", respectivamente, por lo que la **cuadrícula** asigna dos veces más espacio para la primera fila en cuanto a la segunda ("\*"es igual a" 1\*"). Estas relaciones se mantienen incluso si se cambia el tamaño de la ventana o se cambia el dispositivo.
 
 Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 
 Si ejecutas la aplicación ahora, no verás nada,excepto una página en blanco, porque ninguna de las áreas de **Grid** tienen ningún contenido. Para mostrar el elemento **Grid**, vamos a asignarle el color.
 
-## <a name="step-3-color-the-grid"></a>Paso 3: Dar color a la cuadrícula
+## <a name="step-3-color-the-grid"></a>Paso 3: Color de la cuadrícula
 Para dar color al elemento **Grid**, agregamos tres elementos **Border**, cada uno con un color de fondo diferente. Cada uno de ellos también se asigna a una fila y columna en el elemento primario **Grid** mediante el uso de los atributos **Grid.Row** y **Grid.Column**. De forma predeterminada, los valores de estos atributos son 0, por lo que no tienes que asignarlos al primer elemento **Border**. Agrega el siguiente código al elemento **Grid** después de las definiciones de fila y columna.
 
 ```xml
@@ -70,7 +70,7 @@ Si ejecutas la aplicación, el resultado será similar al siguiente.
 
 ![Colorear la cuadrícula](images/grid-weather-1.png)
 
-## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>Paso 4: Organizar el contenido mediante elementos StackPanel
+## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>Paso 4: Organizar el contenido mediante el uso de los elementos StackPanel
 **StackPanel** es el segundo elemento de la interfaz de usuario que usaremos para crear nuestra aplicación meteorológica. El elemento **StackPanel** es una parte fundamental de muchos diseños de aplicación básicos, que permite apilar los elementos vertical u horizontalmente.
 
 En el siguiente código, crearemos dos elementos **StackPanel** y los rellenaremos con tres **TextBlocks**. Agrega estos elementos **StackPanel** al elemento **Grid** debajo de los elementos **Border** del paso 3. Esto hace que los elementos **TextBlock** se representen en la parte superior de elemento **Grid** coloreado que hemos creado anteriormente.
@@ -103,7 +103,7 @@ Descarga la siguiente imagen y guárdala como un archivo PNG denominado "partial
 
 ![Parcialmente nuboso](images/partially-cloudy.PNG)
 
-En el **Explorador de soluciones**, haz clic en la carpeta **Assets** y selecciona **Agregar** -> **Elemento existente...**. Busca partially-cloudy.png en el explorador que se muestra, selecciónalo y haz clic en **Agregar**.
+En el **el Explorador de soluciones**, haga clic en el **activos** carpeta y seleccione **agregar** -> **elemento existente...** Buscar parcialmente cloudy.png en el explorador que se abre, selecciónelo y haga clic en **agregar**.
 
 A continuación, en **MainPage.xaml**, agrega el siguiente elemento **Image** debajo de los elementos StackPanel del paso 4.
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655740"
 ---
 # <a name="camera-space-transformations"></a>Transformaciones del espacio de cámara
 
@@ -41,15 +41,15 @@ L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
 
 Para una luz puntual y un foco de luz, la dirección a la luz se calcula como sigue:
 
-L<sub>dir</sub> = norm(V \* Lₚ), donde los parámetros se definen en la siguiente tabla.
+L<sub>dir</sub> = normal (V \* Lₚ), donde los parámetros se definen en la tabla siguiente.
 
 | Parámetro       | Valor predeterminado | Tipo                                          | Descripción                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
-| L<sub>dir</sub> | N/A           | Vector 3D (valores de punto flotante x, y, z) | Vector de dirección de los vértices del objeto a la luz          |
-| V               | N/C           | Vector 3D (valores de punto flotante x, y, z) | Posición del vértice en el espacio de cámara                           |
+| L<sub>dir</sub> | N/D           | Vector 3D (valores de punto flotante x, y, z) | Vector de dirección de los vértices del objeto a la luz          |
+| V               | N/D           | Vector 3D (valores de punto flotante x, y, z) | Posición del vértice en el espacio de cámara                           |
 | wvMatrix        | Identidad      | Matriz de 4×4 de valores de punto flotante           | Matriz compuesto que contiene las transformaciones global y de vista |
-| N               | N/A           | Vector 3D (valores de punto flotante x, y, z) | Normal de los vértices                                             |
-| Lₚ              | N/C           | Vector 3D (valores de punto flotante x, y, z) | Posición de la luz en el espacio de cámara                            |
+| N               | N/D           | Vector 3D (valores de punto flotante x, y, z) | Normal del vértice                                             |
+| Lₚ              | N/D           | Vector 3D (valores de punto flotante x, y, z) | Posición de la luz en el espacio de cámara                            |
 | vMatrix         | Identidad      | Matriz de 4×4 de valores de punto flotante           | Matriz que contiene la transformación de vista                      |
 
  
@@ -57,7 +57,7 @@ L<sub>dir</sub> = norm(V \* Lₚ), donde los parámetros se definen en la siguie
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cálculos de iluminación](mathematics-of-lighting.md)
+[Matemáticas de iluminación](mathematics-of-lighting.md)
 
  
 

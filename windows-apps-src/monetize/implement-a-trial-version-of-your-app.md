@@ -7,15 +7,15 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646170"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 
-Si [configuras la aplicación como una prueba gratuita en el centro de partners](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación de forma gratuita durante un período de prueba, animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
+Si se [configuración de la aplicación como una evaluación gratuita en el centro de partners](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación de forma gratuita durante un período de prueba, puede conseguir que sus clientes para actualizar a la versión completa de la aplicación mediante la exclusión o limitación de algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua que solo se muestren durante la prueba antes de que el cliente compre la aplicación.
 
 En este artículo se muestra cómo usar miembros de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar si el usuario tiene una licencia de prueba para tu aplicación y recibir una notificación si cambia el estado de la licencia mientras se ejecuta la aplicación. 
 
@@ -32,20 +32,20 @@ Piensa en el tipo de aplicación que estás haciendo y cuál sería la mejor est
 
 Para la mayoría de las aplicaciones que no sean juegos, definir una fecha de expiración funciona bien, porque los usuarios pueden familiarizarse con la aplicación completa. Estos son algunos escenarios de expiración habituales y las opciones para tratarlos.
 
--   **La licencia de prueba expira cuando se está ejecutando la aplicación**
+-   **Licencia de evaluación expira mientras se está ejecutando la aplicación**
 
     Si la prueba expira mientras se está ejecutando la aplicación, esta puede:
 
     -   No hacer nada.
     -   Mostrar un mensaje al cliente.
-    -   Cerrarse.
+    -   Cierre.
     -   Pedir al cliente que compre la aplicación.
 
     El procedimiento recomendado es mostrar un mensaje pidiendo que se compre la aplicación y, si el cliente la compra, permitirle usarla con todas las características habilitadas. Si el usuario decide no comprar la aplicación, ciérrela o recuérdeles que compren la aplicación a intervalos regulares.
 
--   **La licencia de prueba expira antes de que se inicie la aplicación**
+-   **Licencia de evaluación expira antes de inicia la aplicación**
 
-    Si la prueba expira antes de que el usuario inicie la aplicación, esta no se iniciará. En lugar de ello, aparecerá un cuadro de diálogo y los usuarios tendrán la posibilidad de comprar tu aplicación en la Store Windows.
+    Si la prueba expira antes de que el usuario inicie la aplicación, esta no se iniciará. En lugar de ello, aparecerá un cuadro de diálogo y los usuarios tendrán la posibilidad de comprar tu aplicación en la Tienda Windows.
 
 -   **El cliente compra la aplicación mientras se está ejecutando**
 
@@ -61,12 +61,12 @@ Explica cómo se comportará la aplicación durante el período de prueba gratui
 
 Este ejemplo tiene los siguientes requisitos previos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Has creado una aplicación en el centro de partners que está configurada como una [prueba gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) con ningún límite de tiempo y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Ha creado una aplicación en el centro de partners está configurado como un [gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sin límite de tiempo y esta aplicación se publica en el Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 
 El código de este ejemplo supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
-* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
+* La aplicación es una de usuario único que se ejecuta solamente en el contexto del usuario que la inició. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
 > [!NOTE]
 > Si tienes una aplicación de escritorio que usa el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), puede que tengas que agregar código adicional que no se muestra en este ejemplo para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
@@ -80,13 +80,13 @@ En este punto, si el usuario compró la aplicación, se recomienda proporcionar 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
-Para una aplicación de muestra completa, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
-* [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
-* [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
-* [Muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Habilitar complemento consumibles compras](enable-consumable-add-on-purchases.md)
+* [Ejemplo de Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 208a61b565c0522d3e9ce88f3938f57dfa1fbddd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945200"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644850"
 ---
 # <a name="variable-photo-sequence"></a>Secuencia de fotos variable
 
@@ -40,12 +40,12 @@ Después de inicializar tu objeto [MediaCapture](capture-photos-and-video-with-m
 
 [!code-cs[IsVPSSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsVPSSupported)]
 
-Obtén un objeto [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) desde el controlador de secuencia fotográfica variable. Este objeto tiene una propiedad para cada configuración que pueda configurarse por fotograma de una secuencia de fotos. Estas son:
+Obtén un objeto [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) desde el controlador de secuencia fotográfica variable. Este objeto tiene una propiedad para cada configuración que pueda configurarse por fotograma de una secuencia de fotos. Entre ellos se incluyen los siguientes:
 
--   [**Exposure**](https://msdn.microsoft.com/library/windows/apps/dn652552)
+-   [**Exposición**](https://msdn.microsoft.com/library/windows/apps/dn652552)
 -   [**ExposureCompensation**](https://msdn.microsoft.com/library/windows/apps/dn652560)
 -   [**Flash**](https://msdn.microsoft.com/library/windows/apps/dn652566)
--   [**Focus**](https://msdn.microsoft.com/library/windows/apps/dn652570)
+-   [**Foco**](https://msdn.microsoft.com/library/windows/apps/dn652570)
 -   [**IsoSpeed**](https://msdn.microsoft.com/library/windows/apps/dn652574)
 -   [**PhotoConfirmation**](https://msdn.microsoft.com/library/windows/apps/dn652578)
 
@@ -93,8 +93,8 @@ Cuando hayas terminado de capturar secuencias de fotos variables o la aplicació
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

@@ -1,21 +1,21 @@
 ---
-Description: This topic lists the fonts available for UWP apps that are localized into languages other than U.S. English.
+Description: Este tema enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
 title: Fuentes internacionales
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
-keywords: windows 10, uwp, globalización, localizabilidad, localización
+keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046658"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601140"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
-En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU.
+Este tema enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
 
 En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) del idioma. Para ver una lista de etiquetas de idioma que se admiten específicamente en la Microsoft Store, consulta [Idiomas admitidos](../../publish/supported-languages.md).
 
@@ -103,7 +103,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Serbio (cirílico, Bosnia-Herzegovina) | sr-Cyrl-BA | Segoe UI |
 | Serbio (cirílico, Serbia) | sr-Cyrl-CS | Segoe UI |
 | Serbio (latino) | sr-Latn-CS | Segoe UI |
-| Sesotho sa Leboa | nso-ZA | Segoe UI |
+| Sesotho sa leboa | nso-ZA | Segoe UI |
 | Setsuana | tn-ZA | Segoe UI |
 | Sindhi (árabe) | sd-Arab-PK | Segoe UI |
 | Sinhala | si-LK | Nirmala UI |
@@ -133,7 +133,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 
 La fuente Meiryo UI se usa en Windows. Windows incluye Yu Gothic y Yu Mincho, dos familias de fuentes para admitir la edición y visualización de documentos en japonés. No se recomienda Yu Gothic para la interfaz de usuario de la aplicación.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Etiqueta de idioma de BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Idiomas admitidos](../../publish/supported-languages.md)

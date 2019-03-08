@@ -1,19 +1,19 @@
 ---
-Description: This article is an overview of the concepts and technologies related to accessibility scenarios for Universal Windows Platform (UWP) apps.
+Description: Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
-title: Información general sobre la accesibilidad
+title: Información general sobre accesibilidad
 label: Accessibility overview
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046578"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649740"
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad  
 
@@ -53,7 +53,7 @@ Compatibilidad de la accesibilidad viene principalmente de la compatibilidad int
 ## <a name="assistive-technology"></a>Tecnología de asistencia  
 Muchas de las necesidades de accesibilidad del usuario se satisfacen a través de productos de tecnología de asistencia instalados por este o por herramientas y de la configuración proporcionada por el sistema operativo. Esto incluye funciones como lectores de pantalla, ampliación de pantalla y configuración de contraste alto.
 
-Los productos de tecnología de asistencia incluyen una variedad de software y hardware. Estos productos funcionan a través de los marcos de accesibilidad y la interfaz de teclado estándar que proporcionan información acerca del contenido y la estructura de una interfaz de usuario a los lectores de pantalla y otras tecnologías de asistencia. A continuación, se incluyen algunos ejemplos de productos de tecnología de asistencia:
+Los productos de tecnología de asistencia incluyen una gran variedad de software y hardware. Estos productos funcionan a través de los marcos de accesibilidad y la interfaz de teclado estándar que proporcionan información acerca del contenido y la estructura de una interfaz de usuario a los lectores de pantalla y otras tecnologías de asistencia. A continuación, se incluyen algunos ejemplos de productos de tecnología de asistencia:
 
 * El teclado en pantalla, que permite a las personas usar un puntero en lugar de un teclado para escribir texto.
 * Software de reconocimiento de voz, que convierte las palabras habladas en texto escrito.
@@ -192,7 +192,7 @@ No se puede acceder de manera predeterminada al contenido de Microsoft DirectX h
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
-* [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [Diseño para mejorar la accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Accesibilidad](accessibility.md)
-* [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
+* [Empezar a trabajar con Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

@@ -1,6 +1,6 @@
 ---
-Description: In a Universal Windows Platform (UWP) app, command elements are the interactive UI elements that enable the user to perform actions, such as sending an email, deleting an item, or submitting a form.
-title: Conceptos básicos sobre el diseño de comandos para las aplicaciones para la Plataforma universal de Windows (UWP)
+Description: En una aplicación de la Plataforma universal de Windows (UWP), los elementos de comandos son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario.
+title: Conceptos básicos sobre el diseño de comandos de aplicaciones de la Plataforma universal de Windows (UWP)
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
@@ -8,25 +8,25 @@ op-migration-status: ready
 ms.author: mijacobs
 ms.date: 11/01/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ac2bd55d1cea25359c3c609148c7098532d76c46
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117595"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654060"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
 
-En una aplicación de plataforma Universal de Windows (UWP), *los elementos de comandos* son los elementos interactivos de la interfaz de usuario que permiten a los usuarios realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario. *Interfaces de comando* se componen de elementos de comandos comunes, las superficies de comandos que alojarán, las interacciones que admiten y las experiencias que proporcionan.
+En una aplicación plataforma Universal de Windows (UWP), *comando elementos* son elementos de interfaz de usuario interactiva que permiten a los usuarios realizar acciones como enviar un correo electrónico, eliminación de un elemento o enviar un formulario. *Interfaces de comandos* están formados por elementos de comando comunes, las superficies de comando que hospedan, las interacciones que admiten y las experiencias que proporcionan.
 
 ## <a name="provide-the-best-command-experience"></a>Proporcionar la mejor experiencia de comando
 
-El aspecto más importante de una interfaz de comandos es lo que estás intentando permitir al usuario realizar. Cuando se planea la funcionalidad de la aplicación, considera la posibilidad de los pasos necesarios para realizar esas tareas y las experiencias de usuario que quieras habilitar. Una vez que hayas completado un borrador inicial de estas experiencias, a continuación, puedes tomar decisiones sobre las herramientas y las interacciones para implementarlos.
+El aspecto más importante de una interfaz de comandos es lo que está intentando permitir que los usuarios a realizar. Cuando planee la funcionalidad de la aplicación, considere la posibilidad de los pasos necesarios para realizar esas tareas y las experiencias de usuario que desea habilitar. Una vez haya completado un borrador inicial de estas experiencias, a continuación, se puede tomar decisiones sobre las herramientas y las interacciones para implementarlos.
 
-Estas son algunas experiencias de comandos comunes:
+Estas son algunas experiencias de comando comunes:
 
 - Enviar información
 - Seleccionar la configuración y las opciones
@@ -34,7 +34,7 @@ Estas son algunas experiencias de comandos comunes:
 - Abrir, guardar y eliminar archivos
 - Editar y crear contenido
 
-Sé creativo con el diseño de sus experiencias de comando. Elige qué dispositivos de entrada es la aplicación admite, y cómo responde la aplicación a cada dispositivo. Al admitir la gama más amplia de capacidades y preferencias que tu aplicación como utilizable, portátil y accesible como sea posible (consulta el [Diseño de comandos para las aplicaciones de la plataforma Universal de Windows (UWP)](../controls-and-patterns/commanding.md) para obtener más detalles).
+Sea creativo con el diseño de sus experiencias de comando. Elija qué dispositivos de entrada la aplicación admite, y cómo responde la aplicación para cada dispositivo. Proporcionando la gama más amplia de funcionalidades y las preferencias de hacer la aplicación "utilizable", portátiles y es accesible como sea posible (vea [comandos de diseño para aplicaciones de plataforma Universal de Windows (UWP)](../controls-and-patterns/commanding.md) para obtener más detalles).
 
 
 
@@ -42,9 +42,9 @@ Sé creativo con el diseño de sus experiencias de comando. Elige qué dispositi
 When designing a command interface, the most important decision is choosing what a user can do. To plan the right type of interactions, focus on your app - consider the user experiences you want to enable, and what steps users will need to take. Once you decide what you want users to accomplish, then you can provide them the tools to do so.
 -->
 
-## <a name="choose-the-right-command-elements"></a>Elige los elementos de comandos adecuado
+## <a name="choose-the-right-command-elements"></a>Elija los elementos de un comando correcto
 
-Uso de los elementos adecuados en una interfaz de comandos puede marcar la diferencia entre una aplicación intuitiva y fácil de usar y una aplicación difícil, confusa. Un completo conjunto de elementos de comandos están disponibles en la plataforma Universal de Windows (UWP). Esta es una lista de algunos de los elementos de comandos más habituales de UWP.
+Uso de los elementos adecuados en una interfaz de comandos puede marcar la diferencia entre una aplicación, intuitiva y fácil de usar y una aplicación difícil y confusa. Un conjunto completo de elementos de comandos están disponibles en la plataforma Universal de Windows (UWP). Presentamos una lista de algunos de los elementos más comunes de comando UWP.
 
 :::row:::
     :::column:::
@@ -96,15 +96,15 @@ Uso de los elementos adecuados en una interfaz de comandos puede marcar la difer
         Provides suggestions as users type, such as when entering data or performing queries. Examples include <a href="../controls-and-patterns/auto-suggest-box.md">auto-suggest box</a>.<br>
 :::row-end:::
 
-Para obtener una lista completa, consulta [Controles y elementos de la interfaz de usuario](../controls-and-patterns/index.md).
+Para obtener una lista completa, consulta [Controles y elementos de la interfaz de usuario](../controls-and-patterns/index.md)
 
 ## <a name="place-commands-on-the-right-surface"></a>Colocar los comandos en la superficie correcta
 
-Puedes colocar elementos de comandos en un número de superficies de tu aplicación, como el lienzo de la aplicación o contenedores de comandos especiales, como una barra de comandos, el control flotante de barra de comandos, la barra de menús o el cuadro de diálogo.
+Puede colocar los elementos de comando en un número de dispositivos Surface en su aplicación, incluido el lienzo de la aplicación o los contenedores de comandos especial, como una barra de comandos, control flotante de barra de comandos, barra de menús o cuadro de diálogo.
 
-Siempre tratar de permitir a los usuarios puedan manipular directamente el contenido en lugar de a través de los comandos que actúan sobre el contenido, como arrastrar y colocar para reorganizar los elementos de lista, en lugar de botones de comando arriba y abajo. 
+Siempre intenta permiten a los usuarios manipular contenido directamente en lugar de a través de comandos que actúan en el contenido, como arrastrar y colocar para reorganizar los elementos de lista en lugar de botones de comando arriba y abajo. 
 
-Sin embargo, esto es posible que no sea posible con determinados dispositivos de entrada, o cuando la adaptación preferencias y habilidades de usuario específico. En estos casos, proporciona prestaciones de comandos tantos como sea posible y colocar estos elementos de comandos en una superficie de comando de la aplicación.
+Sin embargo, esto puede no ser posible con determinados dispositivos de entrada, o al acomodar las preferencias y habilidades específicas del usuario. En estos casos, proporcionar factibilidad comandos tantos como sea posible y coloque estos elementos de comando en una superficie de comando en la aplicación.
 
 A continuación se incluye una lista de algunas de las superficies de comandos más habituales.
 
@@ -144,10 +144,10 @@ A continuación se incluye una lista de algunas de las superficies de comandos m
 
 ## <a name="provide-command-feedback"></a>Proporcionar comentarios de comando 
 
-Comentarios de comando se comunica a los usuarios que se detectó una interacción o un comando, cómo se interpretan y se controla el comando y si el comando tuvo éxito o no. Esto ayuda a los usuarios a comprender qué han hecho y qué pueden hacer a continuación. Lo ideal es que los comentarios se integren de forma natural en la interfaz de usuario, para que los usuarios no sufran interrupciones ni tengan que realizar acciones adicionales a menos que sea absolutamente necesario.
+Comentarios de comando se comunica a los usuarios que se ha detectado un comando o la interacción, cómo se interpreta y controla el comando, y si el comando fue correcto o no. Esto ayuda a los usuarios a entender lo ha hecho y qué puede hacer a continuación. Lo ideal es que los comentarios se integren de forma natural en la interfaz de usuario, para que los usuarios no sufran interrupciones ni tengan que realizar acciones adicionales a menos que sea absolutamente necesario.
 
 > [!NOTE]
-> Proporcionar comentarios solo cuando sea necesario y solo si no está disponible en otro lugar. Mantener la aplicación de la interfaz de usuario ordenada y organizada a menos que vas a agregar valor.
+> Proporcionar comentarios solo cuando sea necesario y solo si no está disponible en otro lugar. Mantenga la interfaz de usuario de la aplicación limpio y despejado, a menos que se va a agregar valor.
 
 Estas son algunas maneras de proporcionar comentarios en tu aplicación.
 
@@ -168,7 +168,7 @@ Estas son algunas maneras de proporcionar comentarios en tu aplicación.
     :::column span="2":::
         <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Los controles flotantes</a> son elementos emergentes contextuales ligeros que se puedan descartar tocando o haciendo clic en algún lugar fuera del control flotante.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Menús emergentes</a> son elementos emergentes contextuales ligeras que se pueden descartar punteando o haciendo clic en algún lugar fuera de la ventana flotante.
 :::row-end:::
 
 :::row:::
@@ -187,7 +187,7 @@ Estas son algunas maneras de proporcionar comentarios en tu aplicación.
 
 ### <a name="when-to-confirm-or-undo-actions"></a>Cuándo se deben confirmar o deshacer acciones
 
-Independientemente de lo bien diseñada es la interfaz de usuario de la aplicación, todos los usuarios realizan una acción que desearían. La aplicación puede ayudar en estas situaciones, solicitando confirmación de una acción o proporcionando una manera de deshacer acciones recientes.
+Independientemente de cómo de bien diseñada es la interfaz de usuario de la aplicación, todos los usuarios realizan una acción que desean que no se habían. Puede ayudar su aplicación en estas situaciones al requerir confirmación de una acción, o proporcionando una manera de deshacer acciones recientes.
 
 :::row:::
     :::column:::
@@ -210,7 +210,7 @@ Independientemente de lo bien diseñada es la interfaz de usuario de la aplicaci
         -   Renaming a file
 :::row-end:::
 
-##  <a name="optimize-for-specific-input-types"></a>optimizar determinados tipos de entradas
+##  <a name="optimize-for-specific-input-types"></a>Optimización para determinados tipos de entradas
 
 Consulta la [Información básica de interacción](../input/index.md) para obtener más información sobre la optimización de las experiencias de usuario en torno a un dispositivo o tipo de entrada.
 

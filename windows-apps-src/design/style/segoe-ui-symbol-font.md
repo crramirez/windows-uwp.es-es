@@ -1,5 +1,5 @@
 ---
-Description: This article lists and provides usage guidance for the glyphs that come with the Segoe MDL2 Assets font.
+Description: En este artículo se enumeran y se proporcionan las instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets.
 Search.Refinement.TopicID: 184
 title: Directrices para iconos de Segoe MDL2
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934820"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649060"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
@@ -22,11 +22,11 @@ ms.locfileid: "8934820"
 
 Este artículo enumera los iconos que proporciona la fuente Segoe MDL2 Assets. 
 
-> **API importantes**: [**Enumeración Symbol**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol), [**Clase FontIcon**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
+> **API importantes**: [**Enumeración de símbolos**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol), [ **FontIcon clase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 ## <a name="about-segoe-mdl2-assets"></a>Acerca de Segoe MDL2 Assets
 
-Con el lanzamiento de Windows 10, la fuente Segoe MDL2 Assets reemplaza la fuente de iconos Segoe UI Symbol de Windows 8/8.1. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** seguirá estando disponible como recurso "heredado", pero se recomienda actualizar la aplicación para usar la nueva **Segoe MDL2 Assets**).
+Con el lanzamiento de Windows 10, la fuente Segoe MDL2 Assets reemplaza la fuente de iconos Segoe UI Symbol de Windows 8/8.1. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** seguirá estando disponible como un recurso "heredado", pero se recomienda actualizar la aplicación para usar el nuevo **Segoe MDL2 activos**.)
 
 La mayor parte de los iconos y controles de interfaz de usuario incluidos en la fuente **Segoe MDL2 Assets** están asignados a un área de uso privado (PUA) de Unicode. El PUA permite que los desarrolladores de fuentes asignen valores de Unicode privados a glifos que no se asignan a puntos de código existentes. Esto es útil al crear una fuente de símbolos, pero genera un problema de interoperabilidad. Si la fuente no está disponible, no se mostrarán los glifos. Usa estos glifos solamente cuando puedas especificar la fuente **Segoe MDL2 Assets** .
 
@@ -43,7 +43,7 @@ Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y
 Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
 ## <a name="using-the-icons"></a>Usar los iconos
-Si vas a desarrollar una aplicación en C# / VB/C++ y XAML, puedes usar los glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Si está desarrollando una aplicación en C#/VB/C++ y XAML, puede usar los glifos especificados de Segoe MDL2 activos con el [símbolos enumeración](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -55,15 +55,15 @@ Si quieres usar un glifo de la fuente **Segoe MDL2 Assets** que no está incluid
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-También puedes usar el recurso estático `SymbolThemeFontFamily` para acceder a **Segoe MDL2 Assets**, en lugar de especificar la fuente por nombre:
+También puede usar el recurso estático `SymbolThemeFontFamily` para tener acceso a **Segoe MDL2 activos**, en lugar de especificar la fuente por nombre:
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
 
 
 ## <a name="how-do-i-get-this-font"></a>¿Cómo se puede obtener esta fuente?
-* En Windows 10: No hay nada que necesitas hacer, la fuente se incluye con Windows.
-* En un equipo Mac, debes descargar e instalar la fuente: <a href="https://aka.ms/SegoeFonts">obtener el Segoe UI y MDL2 fuentes de icono</a>
+* En Windows 10: No es necesario hacer nada, la fuente viene con Windows.
+* En un equipo Mac, deberá descargar e instalar a la fuente: <a href="https://aka.ms/SegoeFonts">Obtener las fuentes de icono Segoe UI y MDL2</a>
 
 ## <a name="icon-list"></a>Lista de iconos
 Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de los que podemos mostrar aquí. Muchos de los iconos están pensados para efectos especializados y no suelen usarse para otra cosa.
@@ -118,7 +118,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E70A.png" width="32" height="32" alt="Tablet" /></td>
   <td>E70A</td>
-  <td>Tableta</td>
+  <td>Tablet</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E70B.png" width="32" height="32" alt="QuickNote" /></td>
   <td>E70B</td>
@@ -138,7 +138,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E70F.png" width="32" height="32" alt="Edit" /></td>
   <td>E70F</td>
-  <td>Editar</td>
+  <td>Edita</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E710.png" width="32" height="32" alt="Add" /></td>
   <td>E710</td>
@@ -210,7 +210,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E721.png" width="32" height="32" alt="Search" /></td>
   <td>E721</td>
-  <td>Búsqueda</td>
+  <td>Buscar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E722.png" width="32" height="32" alt="Camera" /></td>
   <td>E722</td>
@@ -262,7 +262,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E72E.png" width="32" height="32" alt="Lock" /></td>
   <td>E72E</td>
-  <td>Bloquear</td>
+  <td>Lock</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E730.png" width="32" height="32" alt="ReportHacked" /></td>
   <td>E730</td>
@@ -282,7 +282,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E737.png" width="32" height="32" alt="Favicon" /></td>
   <td>E737</td>
-  <td>Dirección</td>
+  <td>Favicon</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E738.png" width="32" height="32" alt="Remove" /></td>
   <td>E738</td>
@@ -614,7 +614,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E793.png" width="32" height="32" alt="Light" /></td>
   <td>E793</td>
-  <td>Luz</td>
+  <td>Claro</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E799.png" width="32" height="32" alt="AspectRatio" /></td>
   <td>E799</td>
@@ -658,7 +658,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E7B8.png" width="32" height="32" alt="Package" /></td>
   <td>E7B8</td>
-  <td>Paquete</td>
+  <td>Empaquetar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7BA.png" width="32" height="32" alt="Warning" /></td>
   <td>E7BA</td>
@@ -850,7 +850,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E80F.png" width="32" height="32" alt="Home" /></td>
   <td>E80F</td>
-  <td>Casa</td>
+  <td>Inicio</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E811.png" width="32" height="32" alt="ParkingLocation" /></td>
   <td>E811</td>
@@ -1342,7 +1342,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E896.png" width="32" height="32" alt="Download" /></td>
   <td>E896</td>
-  <td>Descargar</td>
+  <td>Descarga</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E897.png" width="32" height="32" alt="Help" /></td>
   <td>E897</td>
@@ -1422,7 +1422,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AB.png" width="32" height="32" alt="Switch" /></td>
   <td>E8AB</td>
-  <td>Cambiar</td>
+  <td>Conmutador</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AC.png" width="32" height="32" alt="Rename" /></td>
   <td>E8AC</td>
@@ -1430,7 +1430,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AD.png" width="32" height="32" alt="Go" /></td>
   <td>E8AD</td>
-  <td>Ir</td>
+  <td>Go</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AE.png" width="32" height="32" alt="SurfaceHub" /></td>
   <td>E8AE</td>
@@ -1438,11 +1438,11 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AF.png" width="32" height="32" alt="Remote" /></td>
   <td>E8AF</td>
-  <td>Remoto</td>
+  <td>Control remoto</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B0.png" width="32" height="32" alt="Click" /></td>
   <td>E8B0</td>
-  <td>Clic</td>
+  <td>Haz clic</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B1.png" width="32" height="32" alt="Shuffle" /></td>
   <td>E8B1</td>
@@ -1482,7 +1482,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BA.png" width="32" height="32" alt="Caption" /></td>
   <td>E8BA</td>
-  <td>Subtítulos</td>
+  <td>Título</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BB.png" width="32" height="32" alt="ChromeClose" /></td>
   <td>E8BB</td>
@@ -1754,7 +1754,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FE.png" width="32" height="32" alt="Scan" /></td>
   <td>E8FE</td>
-  <td>Examinar</td>
+  <td>Digitalización</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FF.png" width="32" height="32" alt="Preview" /></td>
   <td>E8FF</td>
@@ -1762,7 +1762,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E902.png" width="32" height="32" alt="Group" /></td>
   <td>E902</td>
-  <td>Group</td>
+  <td>Grupo</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E904.png" width="32" height="32" alt="ZeroBars" /></td>
   <td>E904</td>
@@ -1878,7 +1878,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E927.png" width="32" height="32" alt="Swipe" /></td>
   <td>E927</td>
-  <td>Deslizar el dedo</td>
+  <td>Deslizar rápidamente</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E928.png" width="32" height="32" alt="Fingerprint" /></td>
   <td>E928</td>
@@ -2054,7 +2054,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E95E.png" width="32" height="32" alt="Health" /></td>
   <td>E95E</td>
-  <td>Mantenimiento</td>
+  <td>Salud</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E960.png" width="32" height="32" alt="Webcam2" /></td>
   <td>E960</td>
@@ -2362,7 +2362,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D5.png" width="32" height="32" alt="CheckList" /></td>
   <td>E9D5</td>
-  <td>Lista de comprobación</td>
+  <td>lista de verificación</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D9.png" width="32" height="32" alt="Diagnostic" /></td>
   <td>E9D9</td>
@@ -2382,7 +2382,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E9F9.png" width="32" height="32" alt="ReportDocument" /></td>
   <td>E9F9</td>
-  <td>Objeto ReportDocument</td>
+  <td>ReportDocument</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA0C.png" width="32" height="32" alt="VideoSolid" /></td>
   <td>EA0C</td>
@@ -2394,7 +2394,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EA18.png" width="32" height="32" alt="Shield" /></td>
   <td>EA18</td>
-  <td>Escudo</td>
+  <td>Icono de escudo</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA1F.png" width="32" height="32" alt="Info2" /></td>
   <td>EA1F</td>
@@ -2678,11 +2678,11 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EB3C.png" width="32" height="32" alt="Design" /></td>
   <td>EB3C</td>
-  <td>Diseñar</td>
+  <td>Diseño</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB41.png" width="32" height="32" alt="Website" /></td>
   <td>EB41</td>
-  <td>Website</td>
+  <td>Sitio web</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB42.png" width="32" height="32" alt="Drop" /></td>
   <td>EB42</td>
@@ -2690,7 +2690,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EB44.png" width="32" height="32" alt="Radar" /></td>
   <td>EB44</td>
-  <td>Radial</td>
+  <td>Radar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB47.png" width="32" height="32" alt="BusSolid" /></td>
   <td>EB47</td>
@@ -3178,7 +3178,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EC1B.png" width="32" height="32" alt="Badge" /></td>
   <td>EC1B</td>
-  <td>Notificación</td>
+  <td>Insignia</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EC1E.png" width="32" height="32" alt="SignalRoaming" /></td>
   <td>EC1E</td>
@@ -3426,7 +3426,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/ECA5.png" width="32" height="32" alt="Tiles" /></td>
   <td>ECA5</td>
-  <td>Ventanas</td>
+  <td>Iconos</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ECA7.png" width="32" height="32" alt="PartyLeader" /></td>
   <td>ECA7</td>
@@ -3974,7 +3974,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3B.png" width="32" height="32" alt="Replay" /></td>
   <td>EF3B</td>
-  <td>Reproducción</td>
+  <td>reproducción</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3C.png" width="32" height="32" alt="Eyedropper" /></td>
   <td>EF3C</td>
@@ -4013,7 +4013,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
   <td>Voz</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F000.png" width="32" height="32" alt="KnowledgeArticle" /></td>
-  <td>OCULTA F000</td>
+  <td>F000</td>
   <td>KnowledgeArticle</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F003.png" width="32" height="32" alt="Relationship" /></td>
@@ -4742,7 +4742,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/F540.png" width="32" height="32" alt="Safe" /></td>
   <td>F540</td>
-  <td>Zona segura</td>
+  <td>Safe</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F552.png" width="32" height="32" alt="LaptopSecure" /></td>
   <td>F552</td>
@@ -5166,8 +5166,8 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Directrices sobre iconos](../style/icons.md)
-* [Enumeración Symbol](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [Directrices para iconos](../style/icons.md)
+* [Enumeración de Symbol](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
 * [Clase FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 

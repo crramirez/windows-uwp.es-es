@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use notification mirroring on your toast notifications.
+Description: Obtenga información sobre cómo utilizar el reflejo de la notificación en sus notificaciones del sistema.
 title: Reflejo de notificaciones
 label: Notification mirroring
 template: detail.hbs
@@ -8,24 +8,24 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, reflejo de notificaciones, notificación, en todos los dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: dc870601159a80bc6d03a287fd19f082e968e09e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937879"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657320"
 ---
 # <a name="notification-mirroring"></a>Reflejo de notificaciones
 
 El reflejo de notificaciones, con tecnología del Centro de actividades en la nube, te permite ver las notificaciones del teléfono en tu PC.
 
 > [!IMPORTANT]
-> **Requiere la Actualización de aniversario**: Debes estar ejecutando la compilación 14393 o superior para ver el trabajo de reflejo de notificaciones. Si quieres que tu aplicación no participe en el reflejo de notificaciones, debe estar destinada al SDK 14393 para tener acceso a las API de creación de reflejos.
+> **Requiere la actualización de aniversario de**: Debe ejecutar compilación 14393 o superior para ver la notificación de trabajo de creación de reflejo. Si quieres que tu aplicación no participe en el reflejo de notificaciones, debe estar destinada al SDK 14393 para tener acceso a las API de creación de reflejos.
 
 Con el reflejo de notificaciones y Cortana, los usuarios pueden recibir y actuar sobre las notificaciones de su teléfono (Windows Mobile y Android) desde la comodidad de su PC. Como desarrollador, no tienes que hacer nada para habilitar el reflejo de notificaciones, ya que funciona automáticamente. Hacer clic en botones de la notificación del sistema reflejada, como respuestas rápidas a mensajes, se enrutará hacia el teléfono, invocando tu tarea en segundo plano o iniciando tu aplicación en primer plano.
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Los desarrolladores obtienen dos grandes ventajas del reflejo de notificaciones: las notificaciones dan lugar más interacción del usuario con el servicio, y también ayudan a los usuarios descubrir tu aplicación de escritorio de Microsoft Store. Incluso es posible que tus usuarios no sepan que cuentas con una fantástica aplicación para UWP disponible para su escritorio de Windows 10. Cuando los usuarios reciben la notificación reflejada desde su teléfono, los usuarios hacer clic en la notificación del sistema para ir a la Microsoft Store, donde pueden instalar la aplicación de escritorio para UWP.
+Los desarrolladores obtención dos grandes ventajas de la creación de reflejo de notificación: Las notificaciones reflejadas como resultado más interacción del usuario con el servicio y también ayudan a los usuarios descubrir su aplicación de escritorio de Microsoft Store. Incluso es posible que tus usuarios no sepan que cuentas con una fantástica aplicación para UWP disponible para su escritorio de Windows 10. Cuando los usuarios reciben la notificación reflejada desde su teléfono, los usuarios hacer clic en la notificación del sistema para ir a la Microsoft Store, donde puede instalar la aplicación de escritorio para UWP.
 
 El reflejo funciona tanto con Windows Phone como con Android. Los usuarios deben haber iniciado sesión en Cortana tanto en el teléfono como en el escritorio para que funcione el reflejo de notificaciones.
 
@@ -52,7 +52,7 @@ Los usuarios, las empresas y los desarrolladores de la aplicaciones para UWP pue
 
 En ocasiones, es posible que tengas una notificación específica de dispositivo que no quieras que se refleje en otros dispositivos. Para impedir que se refleje una notificación específica, establece la propiedad **Mirroring** en la notificación del sistema. Actualmente, esta propiedad de reflejo solo se puede establecer en notificaciones locales (no se puede especificar al enviar una notificación de inserción WNS).
 
-**Problema conocido**: la recuperación de la propiedad Reflejo a través de las API de `ToastNotificationHistory.GetHistory()` siempre devolverá el valor predeterminado (**Allowed**) en lugar de la opción que especificaste. No te preocupes, todo es funcional; solo se trata de recuperar el valor que se ha roto.
+**Problema conocido**: Al recuperar la propiedad de la creación de reflejo mediante el `ToastNotificationHistory.GetHistory()` API siempre devolverá el valor predeterminado (**permitido**) en lugar de la opción especificada. No te preocupes, todo es funcional; solo se trata de recuperar el valor que se ha roto.
 
 ```csharp
 var toast = new ToastNotification(xml)
@@ -67,7 +67,7 @@ ToastNotificationManager.CreateToastNotifier().Show(toast);
 
 ### <a name="as-a-developer-opt-out-completely"></a>Como desarrollador, opta por no participar por completo
 
-Algunos desarrolladores pueden elegir no participar por completo en el reflejo de notificaciones. Aunque creemos que todas las aplicaciones se beneficiarían del reflejo, facilitamos la no participación. Solo tienes que llamar al siguiente método una vez y tu aplicación no participará. Por ejemplo, puedes hacer esta llamada en el constructor de tu aplicación dentro de `App.xaml.cs`...
+Algunos desarrolladores pueden elegir no participar por completo en el reflejo de notificaciones. Aunque creemos que todas las aplicaciones se beneficiarían de la creación de reflejo, es muy fácil optar por no participar. Llamar simplemente al método siguiente una vez y dejará de la aplicación. Por ejemplo, puede colocar esta llamada de constructor de la aplicación dentro de `App.xaml.cs`...
 
 ```csharp
 public App()

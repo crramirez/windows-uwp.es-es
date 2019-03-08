@@ -1,25 +1,25 @@
 ---
-title: Franjas de triángulos
-description: Una serie de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo.
+title: Series de triángulos
+description: Una franja de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo.
 ms.assetid: BACC74C5-14E5-4ECC-9139-C2FD1808DB82
 keywords:
-- Franjas de triángulos
+- Series de triángulos
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a420ed5ed8f498eb9c900cbacb1b766c4a01214
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945907"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599290"
 ---
-# <a name="triangle-strips"></a>Franjas de triángulos
+# <a name="triangle-strips"></a>Series de triángulos
 
 
-Una serie de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo. Por ejemplo, solo necesitas siete vértices para definir la franja de triángulos siguiente.
+Una franja de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo. Por ejemplo, solo necesitas siete vértices para definir la franja de triángulos siguiente.
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Por ejemplo:
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
 ![Ilustración de una franja de triángulos con siete vértices](images/tristrip.png)
@@ -77,7 +77,7 @@ También puedes usar los triángulos para crear primitivos cuyas superficies par
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Primitivos](primitives.md)
+[Tipos primitivos](primitives.md)
 
  
 

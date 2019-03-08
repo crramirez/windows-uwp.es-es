@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: fe01a01dc97b67c339d015a260288176a5ba57da
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642150"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 
@@ -75,4 +75,4 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplos de publicidad de GitHub](https://aka.ms/githubads)
+* [Muestras de publicidad en GitHub](https://aka.ms/githubads)

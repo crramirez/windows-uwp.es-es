@@ -8,11 +8,11 @@ keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648820"
 ---
 # <a name="title-bar-customization"></a>Personalización de la barra de título
 
@@ -20,7 +20,7 @@ ms.locfileid: "8923455"
 
 Cuando la aplicación se ejecuta en una ventana del escritorio, puedes personalizar las barras de título para que coincidan con la personalidad de tu aplicación. La personalización de la barra de título de la API te permite especificar colores para elementos de la barra de título, o ampliar el contenido de tu aplicación en el área de la barra de título y tomar el control completo de la misma.
 
-> **API importantes**: [ propiedad ApplicationView.TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [clase ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [clase CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **API importantes**: [Propiedad ApplicationView.TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [ApplicationViewTitleBar clase](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar clase](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>Cuánto se puede personalizar la barra de título
 
@@ -166,7 +166,7 @@ Puedes dibujar contenido debajo de la superficie de control de subtítulo defini
 
 Puedes controlar el evento [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) para responder a cambios en el tamaño de los botones de título. Por ejemplo, esto puede suceder cuando se muestra o se oculta el botón Atrás del sistema. Controle este evento para comprobar y actualizar la posición de los elementos de la interfaz de usuario que dependen del tamaño de la barra de título.
 
-En este ejemplo se muestra cómo ajustar el diseño de la barra de título para tener en cuenta cambios como el botón Atrás del sistema que se muestran u ocultan. `AppTitleBar`, `LeftPaddingColumn` y `RightPaddingColumn` se declaran en el código XAML que se ha mostrado anteriormente.
+En este ejemplo se muestra cómo ajustar el diseño de la barra de título para tener en cuenta cambios como el botón Atrás del sistema que se muestran u ocultan. `AppTitleBar`, `LeftPaddingColumn`, y `RightPaddingColumn` se declaran en el XAML que se mostró anteriormente.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -275,7 +275,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->El modo _pantalla completa_ solo se puede especificar si lo admite la app. Consulta [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obtener más información. [_Modo tableta_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) es una opción de usuario en hardware compatible, por lo que un usuario puede optar por ejecutar cualquier app en el modo tableta.
+>El modo _pantalla completa_ solo se puede especificar si lo admite la app. Consulta [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obtener más información. [_Modo de Tablet PC_ ](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) es una opción de usuario en hardware compatible, por lo que un usuario puede elegir ejecutar cualquier aplicación en modo de tablet PC.
 
 ## <a name="full-customization-example"></a>Ejemplo de personalización completa
 
@@ -373,7 +373,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 }
 ```
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 - Lo que se debe hacer es obvio cuando la ventana está activa o inactiva. Como mínimo, cambia el color del texto, los iconos y los botones en la barra de título.
 - Define una región arrastrable en el borde superior del lienzo de la app. La coincidencia con la colocación de las barras de título del sistema facilita que los usuarios la encuentren.
@@ -381,5 +381,5 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Acrylic](../style/acrylic.md)
+- [Acrílico](../style/acrylic.md)
 - [Color](../style/color.md)

@@ -1,5 +1,5 @@
 ---
-Description: Your app can load image resource files containing images tailored for display scale factor, theme, high contrast, and other runtime contexts.
+Description: La aplicación puede cargar archivos de recursos de imagen que contengan imágenes adaptadas para factor de escala de visualización, tema, contraste alto y otros contextos de tiempo de ejecución.
 title: Cargar imágenes y recursos adaptados a escala, tema, contraste alto y otros
 template: detail.hbs
 ms.date: 10/10/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f4749b8560624ed58f43b33fe3373d909919347
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592030"
 ---
-# <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Cargar imágenes y activos adaptados a escala, tema, contraste alto y otros
+# <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Cargar imágenes y recursos adaptados a escala, tema, contraste alto y otros
 La aplicación puede cargar archivos de recursos de imagen (u otros archivos de activos) adaptados para [factor de escala de visualización](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, contraste alto y otros contextos de tiempo de ejecución. Estas imágenes pueden referenciarse desde código imperativo o desde marcado XAML, por ejemplo como la propiedad **Origen** de una **Imagen**. También pueden aparecer en el archivo de origen del manifiesto del paquete de la aplicación (el archivo `Package.appxmanifest`), por ejemplo, como el valor de icono de la aplicación en la pestaña de activos visuales del Diseñador de manifiestos de Visual Studio en los iconos y notificaciones del sistema. Con calificadores en los nombres de archivo de las imágenes y, opcionalmente, cargándolas dinámicamente con ayuda de un [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), puedes hacer que se cargue el archivo de imagen más adecuado que coincida mejor con la configuración de tiempo de ejecución del usuario en lo relativo a escala de la pantalla, tema, contraste alto, idioma y otros contextos.
 
 Un recurso de imagen se encuentra en un archivo de recursos de imagen. También puedes pensar en la imagen como un activo, y el archivo que lo contiene como un archivo de activo; y puedes encontrar estos tipos de archivos de recursos en la carpeta \Assets del proyecto. Para información general sobre cómo usar calificadores en los nombres de los archivos de recursos de imagen, consulta [Adaptar los recursos de idioma, escala y otros calificadores](tailor-resources-lang-scale-contrast.md).
@@ -153,7 +153,7 @@ this.myXAMLImageElement.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(n
 ```
 
 ## <a name="updating-images-in-response-to-qualifier-value-change-events"></a>Actualización de imágenes en respuesta a eventos de cambio de valor de calificador
-La aplicación en ejecución puede responder a cambios en la configuración del sistema que afectan a los valores de calificador en el contexto de recursos predeterminado. Cualquiera de estas opciones de configuración del sistema invocan al evento [**MapChanged**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live) en [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
+La aplicación en ejecución puede responder a cambios en la configuración del sistema que afectan a los valores de calificador en el contexto de recursos predeterminado. Cualquiera de estas opciones de configuración del sistema invoca al evento [**MapChanged**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live) en [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
 
 En respuesta a este evento, puedes volver a cargar tus imágenes con ayuda del **ResourceContext** predeterminado, que usa de forma predeterminada [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live).
 
@@ -195,10 +195,10 @@ private void RefreshUIImages()
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Adaptar los recursos al idioma, escala y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
+* [Adaptar los recursos de idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](localize-strings-ui-manifest.md)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
-* [Compatibilidad de ventanas y notificaciones del sistema para idioma, escala y contraste alto.](tile-toast-language-scale-contrast.md)
-* [Elementos de manifiesto localizables](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
-* [Creación de imágenes reflejadas](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md#mirroring-images)
+* [Icono y notificaciones del sistema compatibilidad con lenguaje, escala y contraste alto](tile-toast-language-scale-contrast.md)
+* [Elementos localizables de manifiesto](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
+* [Creación de reflejo de imágenes](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md#mirroring-images)
 * [Globalización y localización](../design/globalizing/globalizing-portal.md)

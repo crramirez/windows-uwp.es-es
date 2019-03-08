@@ -1,5 +1,5 @@
 ---
-Description: If your app doesn't have resources that match the particular settings of a customer device, then the app's default resources are used. This topic explains how to specify what those default resources are.
+Description: Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan recursos predeterminados de la aplicación. Este tema explica cómo especificar cuáles son esos recursos predeterminados.
 title: Especificar los recursos predeterminados que la aplicación usa
 template: detail.hbs
 ms.date: 11/14/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048908"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593990"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar los recursos predeterminados que la aplicación usa
 
@@ -100,8 +100,8 @@ Guarda, cierra y recompila el proyecto.
 
 **Nota** En cualquier momento que cambies el valor de `Language=`, debes sincronizar ese cambio con el idioma predeterminado de la aplicación en el diseñador del manifiesto (abriendo `Package.appxmanifest`).
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Adaptar los recursos al idioma, escala, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [Etiqueta de idioma de BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

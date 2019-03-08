@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8126ac8fa738a2b8a9680d215179fe23f77c5d44
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659300"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Atenuación y factor de foco de luz
 
@@ -24,7 +24,7 @@ Los componentes de iluminación difusa y especular de la ecuación global de ilu
 
 La atenuación de una luz depende del tipo de luz y de la distancia entre la luz y la posición del vértice. Para calcular la atenuación, usa una de las ecuaciones siguientes.
 
-Atten = 1/( att0<sub>i</sub> + att1<sub>i</sub> \* d + att2<sub>i</sub> \* d²)
+Atten = 1 / (att0<sub></sub> + att1<sub></sub> \* d + att2<sub></sub> \* d²)
 
 Donde:
 
@@ -33,7 +33,7 @@ Donde:
 | att0<sub>i</sub> | 0.0           | Punto flotante | Factor de atenuación constante                     | De 0 a +infinito |
 | att1<sub>i</sub> | 0.0           | Punto flotante | Factor de atenuación lineal                       | De 0 a +infinito |
 | att2<sub>i</sub> | 0.0           | Punto flotante | Factor de atenuación cuadrática                    | De 0 a +infinito |
-| d                | N/C           | Punto flotante | Distancia desde la posición del vértice hasta la posición de la luz | N/C            |
+| d                | N/D           | Punto flotante | Distancia desde la posición del vértice hasta la posición de la luz | N/D            |
 
  
 
@@ -42,13 +42,13 @@ Donde:
 
 La distancia entre la luz y la posición del vértice siempre es positiva.
 
-d. = | L<sub>dir</sub> |
+d = | L<sub>dir</sub> |
 
 Donde:
 
 | Parámetro       | Valor predeterminado | Tipo                                             | Descripción                                                 |
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
-| L<sub>dir</sub> | N/C           | Vector 3D con valores de punto flotante x, y, z | Vector de dirección desde la posición del vértice hasta la posición de la luz |
+| L<sub>dir</sub> | N/D           | Vector 3D con valores de punto flotante x, y, z | Vector de dirección desde la posición del vértice hasta la posición de la luz |
 
  
 
@@ -58,7 +58,7 @@ Las constantes de atenuación actúan como coeficientes en la fórmula: puedes g
 
 La atenuación en el intervalo máximo de la luz no es 0.0. Para evitar que aparezcan luces repentinamente cuando estén en el intervalo de la luz, una aplicación puede aumentar el intervalo de la luz. O bien, la aplicación puede configurar constantes de atenuación para que el factor de atenuación sea cercano a 0,0 en el intervalo de la luz. El valor de la atenuación se multiplica por los componentes rojo, verde y azul del color de la luz para escalar la intensidad de la luz como factor de la distancia que recorre la luz hasta un vértice.
 
-## <a name="span-idspotlight-factorspanspan-idspotlight-factorspanspan-idspotlight-factorspanspotlight-factor"></a><span id="Spotlight-Factor"></span><span id="spotlight-factor"></span><span id="SPOTLIGHT-FACTOR"></span>Factor de foco de luz
+## <a name="span-idspotlight-factorspanspan-idspotlight-factorspanspan-idspotlight-factorspanspotlight-factor"></a><span id="Spotlight-Factor"></span><span id="spotlight-factor"></span><span id="SPOTLIGHT-FACTOR"></span>Factor de Spotlight
 
 
 La siguiente ecuación especifica el factor de foco de luz.
@@ -67,8 +67,8 @@ La siguiente ecuación especifica el factor de foco de luz.
 
 | Parámetro         | Valor predeterminado | Tipo           | Descripción                              | Intervalo                    |
 |-------------------|---------------|----------------|------------------------------------------|--------------------------|
-| rho<sub>i</sub>   | N/C           | Punto flotante | coseno(ángulo) para el foco de luz i            | N/C                      |
-| phi<sub>i</sub>   | 0.0           | Punto flotante | Ángulo de penumbra del foco de luz i en radianes | \[theta<sub>i</sub>, pi) |
+| rho<sub>i</sub>   | N/D           | Punto flotante | coseno(ángulo) para el foco de luz i            | N/D                      |
+| phi<sub>i</sub>   | 0.0           | Punto flotante | Ángulo de penumbra del foco de luz i en radianes | \[Zeta<sub></sub>, pi) |
 | theta<sub>i</sub> | 0.0           | Punto flotante | Ángulo de umbra del foco de luz i en radianes    | \[0, pi)                 |
 | falloff           | 0.0           | Punto flotante | Factor de disminución                           | (-infinito, +infinito)   |
 
@@ -82,8 +82,8 @@ y:
 
 | Parámetro       | Valor predeterminado | Tipo                                             | Descripción                                                 |
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
-| L<sub>dcs</sub> | N/C           | Vector 3D con valores de punto flotante x, y, z | El valor negativo de la dirección de la luz en el espacio de la cámara         |
-| L<sub>dir</sub> | N/C           | Vector 3D con valores de punto flotante x, y, z | Vector de dirección desde la posición del vértice hasta la posición de la luz |
+| L<sub>dcs</sub> | N/D           | Vector 3D con valores de punto flotante x, y, z | El valor negativo de la dirección de la luz en el espacio de la cámara         |
+| L<sub>dir</sub> | N/D           | Vector 3D con valores de punto flotante x, y, z | Vector de dirección desde la posición del vértice hasta la posición de la luz |
 
  
 
@@ -92,7 +92,7 @@ Tras calcular la atenuación de la luz, para calcular los componentes de difusi�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Cálculos de iluminación](mathematics-of-lighting.md)
+[Matemáticas de iluminación](mathematics-of-lighting.md)
 
  
 

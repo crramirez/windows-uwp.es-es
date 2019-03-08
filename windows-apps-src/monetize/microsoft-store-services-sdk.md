@@ -1,5 +1,5 @@
 ---
-Description: The Microsoft Store Services SDK provides libraries and tools that you can use to add features to your apps that help you make more money and gain customers.
+Description: Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a tus aplicaciones y que te ayudan a obtener más dinero y a ganar clientes.
 title: Conectar con clientes con Microsoft Store Services SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ms.date: 08/21/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044306"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594990"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
-Microsoft Store Services SDK proporciona características que te ayudarán a atraer a clientes en las aplicaciones de la plataforma Universal de Windows (UWP), por ejemplo, enviar notificaciones dirigidas a las aplicaciones y ejecutar experimentos A/b en tus aplicaciones. Este SDK es una extensión de Visual Studio 2015 y versiones posteriores de Visual Studio.
+La de Microsoft Store Services SDK proporciona las características que le ayudarán a ponerse en contacto con los clientes en sus aplicaciones de plataforma Universal de Windows (UWP), como enviar notificaciones dirigidas a las aplicaciones y ejecutar un / B experimentos en sus aplicaciones. Este SDK es una extensión de Visual Studio 2015 y versiones posteriores de Visual Studio.
 
 > [!NOTE]
 > Para mostrar anuncios en tus aplicaciones para UWP, usa el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) en lugar del Microsoft Store Services SDK. Se han movido las bibliotecas de publicidad desde el Microsoft Store Services SDK al SDK de Microsoft Advertising. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md).
@@ -28,10 +28,10 @@ En este momento, Microsoft Store Services SDK es compatible con los siguientes e
 
 |  Escenario  |  Descripción   |
 |------------|----------------|
-|  [Ejecutar experimentos con pruebas A/B en tu aplicación para UWP](run-app-experiments-with-a-b-testing.md)    |  Ejecuta pruebas A/B en la aplicación para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el centro de partners, usa la clase [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obtener las variaciones del experimento en tu aplicación, usa estos datos para modificar el comportamiento de la característica que estás probando y, a continuación, usar el [LogForVariation ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)método para enviar eventos de vista y conversión al centro de partners. Por último, usa el centro de partners para ver los resultados y administrar el experimento.  |
-|  [Iniciar el Centro de opiniones desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra esta información en el [informe de comentarios](../publish/feedback-report.md) en el centro de partners. |
-|  [Configurar la aplicación para UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Usa la clase [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) en tu aplicación para UWP para registrar la aplicación para recibir notificaciones push dirigidas que envíes a tus clientes mediante el centro de partners.  |
-|   [Registrar eventos personalizados en la aplicación para UWP para el informe de uso del centro de partners](log-custom-events-for-dev-center.md)   |  Usa la clase [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) en tu aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revisar el total de repeticiones para los eventos personalizados en la sección de **eventos personalizados** del [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del centro de partners.  |
+|  [Ejecutar experimentos en la aplicación para UWP con un pruebas A/b](run-app-experiments-with-a-b-testing.md)    |  Ejecuta pruebas A/B en la aplicación para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el centro de partners, utilice el [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) clase para obtener las variaciones para el experimento en la aplicación, use estos datos para modificar el comportamiento de la característica que se está probando y, a continuación, use el [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) método envíe eventos de vista y los eventos de conversión al centro de partners. Por último, use el centro de partners para ver los resultados y administrar el experimento.  |
+|  [Iniciar el centro de comentarios desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administrar estos comentarios en el [informes de comentarios](../publish/feedback-report.md) en el centro de partners. |
+|  [Configurar la aplicación UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Use la [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) clase en la aplicación UWP para registrar la aplicación para recibir notificaciones de inserción de destino que se envían a sus clientes mediante el centro de partners.  |
+|   [Registrar eventos personalizados en su aplicación para UWP para el informe de uso en el centro de partners](log-custom-events-for-dev-center.md)   |  Use la [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) clase en su aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revise las apariciones totales para los eventos personalizados en el **eventos personalizados** sección de la [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el centro de partners.  |
 
 <span id="prerequisites" />
 
@@ -40,7 +40,7 @@ En este momento, Microsoft Store Services SDK es compatible con los siguientes e
 El Microsoft Store Services SDK requiere lo siguiente:
 
 * Visual Studio 2015 o una versión posterior.
-* Visual Studio Tools para aplicaciones universales de Windows que se instalan con la versión de Visual Studio.
+* Visual Studio Tools para aplicaciones universales de Windows instalados con tu versión de Visual Studio.
 
 <span id="install" />
 
@@ -95,11 +95,11 @@ Para instalar las bibliotecas de Microsoft Store Services SDK mediante NuGet:
     > [!NOTE]
     > Si tu proyecto ya incluye referencias a bibliotecas de una instalación MSI anterior del SDK, elimina esas referencias del proyecto. Esas referencias tendrán iconos de advertencia junto a ellas, porque las bibliotecas a las que hacen referencia se han eliminado en los pasos anteriores.
 
-4. En VisualStudio, haz clic en **Proyecto** y en **Administrar paquetes de NuGet**.
+4. En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
 
 5. En el cuadro de búsqueda, escribe **Microsoft.Services.Store.Engagement** e instala el paquete Microsoft.Services.Store.Engagement. Cuando el paquete se haya instalado, guarda la solución.
     > [!NOTE]
-    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor ```repositoryPath``` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta. El problema también podría deberse a la ruta de acceso de paquetes global demasiado larga. En este caso, agrega el ```globalPackagesFolder``` valor en el archivo nuget.config.
+    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor ```repositoryPath``` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta. El problema podría deberse también a la ruta de acceso de paquetes global es demasiado larga. En este caso, agregue el ```globalPackagesFolder``` valor en el archivo nuget.config.
 
 6. Cierra la solución de Visual Studio que contiene el proyecto y, a continuación, volver a abrir la solución.
 
@@ -121,7 +121,7 @@ Después de instalar Microsoft Store Services SDK a través del instalador MSI o
 
 3. En el **Administrador de referencias**, expande **Windows Universal**, haz clic en **Extensiones** y luego selecciona la casilla junto a **Microsoft Engagement Framework**. Esto te permite usar las API en el espacio de nombres [Microsoft.Services.Store.Engagement](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement).
 
-3. Haz clic en **Aceptar**.
+3. Haga clic en **Aceptar**.
 
 > [!NOTE]
 > Si instalaste las bibliotecas del SDK a través de NuGet, el proyecto contendrá una referencia **Microsoft.Services.Store.Engagement**. La referencia **Microsoft.Services.Store.Engagement** representa el paquete de NuGet (en lugar de las bibliotecas que contiene) y puedes omitirla.
@@ -134,12 +134,12 @@ La biblioteca Microsoft.Services.Store.Engagement.dll en Microsoft Store Service
 
 Dado que esta biblioteca es un paquete de marcos, después de que un usuario instale una versión de tu aplicación que use esta biblioteca, esta se actualizará automáticamente en su dispositivo a través de Windows Update cada vez que publiquemos una nueva versión de la biblioteca con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que tus clientes tengan siempre instalada en sus dispositivos la versión más reciente de la biblioteca.
 
-Si publicamos una nueva versión del SDK que incorpore nuevas API o características en esta biblioteca, tendrás que instalar la versión más reciente del SDK para usar dichas características. En este escenario, también necesitarás publicar la aplicación actualizada en la Store.
+Si publicamos una nueva versión del SDK que incorpore nuevas API o características en esta biblioteca, tendrás que instalar la versión más reciente del SDK para usar dichas características. En este escenario, también necesitarás publicar la aplicación actualizada en la Tienda.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Microsoft Store Services SDK API reference (Referencia de las API de Microsoft Store Services SDK)](https://docs.microsoft.com/uwp/api/overview/engagement)
+* [Referencia de la API de Microsoft Store Services SDK](https://docs.microsoft.com/uwp/api/overview/engagement)
 * [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 * [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md)
 * [Configurar la aplicación para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)
-* [Registrar eventos personalizados para el Centro de partners](log-custom-events-for-dev-center.md)
+* [Registrar eventos personalizados para el centro de partners](log-custom-events-for-dev-center.md)

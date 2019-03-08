@@ -1,27 +1,27 @@
 ---
-Description: The Pivot control enables touch-swiping between a small set of content sections.
-title: Dinámica
+Description: El control Pivot permite pasar a la interacción entre un pequeño conjunto de secciones de contenido.
+title: Pivot
 template: detail.hbs
 ms.date: 06/19/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 pm-contact: yulikl
 design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 56079bc51d3efa8f7ecaaee21379a6e9caf7d440
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036897"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642930"
 ---
-# <a name="pivot"></a>Dinámica
+# <a name="pivot"></a>Pivot
 
-El control [dinámico](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite pasar a la entrada táctil entre un conjunto reducido de las secciones de contenido.
+El [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) control permite pasar a la interacción entre un pequeño conjunto de secciones de contenido.
 
-> **API importantes**: [clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [clase NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **API importantes**: [Clase de tabla dinámica](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [clase del control NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>Ejemplos
 
@@ -30,35 +30,35 @@ El control [dinámico](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contro
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación de la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> , haz clic aquí para <a href="xamlcontrolsgallery:/item/Pivot">Abrir la aplicación y ver el control dinámico en acción</a>.</p>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/Pivot">abra la aplicación y ver el control Pivot en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-El control dinámico, al igual que [NavigationView](navigationview.md), subraya el elemento seleccionado.
+Controlar la dinamización, al igual que [NavigationView](navigationview.md), subraya el elemento seleccionado.
 
 ![El foco predeterminado subraya el encabezado seleccionado](images/pivot_focus_selectedHeader.png)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Para lograr la navegación superior comunes y patrones de pestañas, se recomienda usar [NavigationView](navigationview.md), que se adapta a diferentes tamaños de pantalla y permite la personalización mayor automáticamente.
+Para lograr la navegación superior común y patrones de pestañas, se recomienda usar [NavigationView](navigationview.md), que automáticamente se adapta a diferentes tamaños de pantalla y permite la mayor personalización.
 
-Sin embargo, si la navegación requiere Deslizar rápidamente la entrada táctil, se recomienda usar control dinámico.
+Sin embargo, si la navegación requiere Deslizar rápidamente el toque, se recomienda usar Pivot.
 
-Las principales diferencias entre los controles de NavigationView y controles dinámicos son el comportamiento de desbordamiento predeterminada y la API de navegación:
+Las otras diferencias clave entre los controles NavigationView y dinámica son el comportamiento de desbordamiento predeterminado y la API de exploración:
 
-- Desbordamiento carruseles elementos, mientras que NavigationView usa un menú desplegable de desbordamiento para que los usuarios pueden ver todos los elementos de control dinámico.
-- Control dinámico controla la navegación entre las secciones de contenido, mientras que NavigationView permite tener más control sobre el comportamiento de navegación.
+- Desbordamiento carruseles elementos, mientras que NavigationView usa una lista desplegable del menú de desbordamiento para que los usuarios puedan ver todos los elementos de tabla dinámica.
+- Pivot controla la navegación entre las secciones de contenido, mientras que el control NavigationView permite más control sobre el comportamiento de navegación.
 
-## <a name="use-navigationview-instead-of-pivot"></a>Usar NavigationView en lugar de control dinámico
+## <a name="use-navigationview-instead-of-pivot"></a>Use el control NavigationView en lugar de Pivot
 
-Si la interfaz de usuario de la aplicación usa el control dinámico, a continuación, puedes convertir dinámica a NavigationView con el siguiente código.
+Si la interfaz de usuario de la aplicación usa el control Pivot, puede convertir Pivot en NavigationView con el código siguiente.
 
-Este código XAML crea un NavigationView con 3 secciones de contenido, como en el ejemplo de control dinámico en [crear un control dinámico](#create-a-pivot-control).
+Este XAML crea un control NavigationView con 3 secciones de contenido, como en el ejemplo Pivot en [crear un control pivot](#create-a-pivot-control).
 
 ```xaml
 <NavigationView x:Name="rootNavigationView" Header="Category Title"
@@ -83,7 +83,7 @@ Este código XAML crea un NavigationView con 3 secciones de contenido, como en e
 </Page>
 ```
 
-NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el código XAML anterior, utilice el siguiente código subyacente:
+Control NavigationView proporciona más control sobre la personalización de la navegación y requiere de código subyacente correspondiente. Para acompañar el XAML anterior, use el siguiente código:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -112,11 +112,11 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia de deslizar rápidamente táctil entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y funcionalidades de la pila.
+Este código simula la experiencia de navegación integrada del control Pivot, menos la experiencia de deslizar rápidamente la interacción entre las secciones de contenido. Sin embargo, como puede ver, también puede personalizar varios puntos, incluida la transición animado, parámetros de navegación y las capacidades de la pila.
 
 ## <a name="create-a-pivot-control"></a>Crear un control dinámico
 
-Este código crea un control dinámico básico con 3 secciones de contenido.
+Este código crea un control Pivot básico con 3 secciones de contenido.
 
 ```xaml
 <Pivot x:Name="rootPivot" Title="Category Title">
@@ -175,7 +175,7 @@ El control tiene dos modos:
 **Inmóvil**
 
 - Los controles dinámicos están inmóviles cuando todos los encabezados de control dinámico caben en el espacio permitido.
-- Al tocar una etiqueta de control dinámico, se navega a la página correspondiente, aunque el propio control dinámico no se moverá. La tabla dinámica activa se destacará.
+- Al tocar una etiqueta de control dinámico, se navega a la página correspondiente, aunque el propio control dinámico no se moverá. El control dinámico activo se destacará.
 
 **Carrusel**
 
@@ -193,7 +193,7 @@ El control tiene dos modos:
 
 - [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-- [Clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot)
-- [Conceptos básicos de diseño de la navegación](../basics/navigation-basics.md)
+- [Clase dinámica](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot)
+- [Conceptos básicos del diseño de navegación](../basics/navigation-basics.md)

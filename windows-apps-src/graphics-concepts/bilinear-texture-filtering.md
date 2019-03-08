@@ -1,20 +1,20 @@
 ---
-title: Filtrado bilineal de texturas
+title: Filtrado de texturas bilineales
 description: El filtrado bilineal calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo.
 ms.assetid: 0851AD28-8246-4547-A663-47884DDDFC3E
 keywords:
-- Filtrado bilineal de texturas
+- Filtrado de texturas bilineales
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 437650883b4782ca02c0daf24cc8ebed01d954f6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932934"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651260"
 ---
-# <a name="bilinear-texture-filtering"></a>Filtrado bilineal de texturas
+# <a name="bilinear-texture-filtering"></a>Filtrado de texturas bilineales
 
 
 El *filtrado bilineal* calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo. Este enfoque filtrado es más precisos y común que el filtrado por punto más cercano. Este enfoque es eficaz, porque está implementado en el hardware de gráficos moderno.
@@ -27,7 +27,7 @@ Las texturas siempre se direccionan linealmente desde (0,0, 0,0) en la esquina s
 
 ![ilustración de una textura de 4×4 con bloques sólido de colores](images/bilinear-fig7a.png)
 
-Normalmente, las texturas se representan como si estuvieran formadas por bloques sólidos de color, pero en realidad es más correcto pensar en las texturas de la misma manera en que pensarías en la pantalla de trama: cada elemento de textura se define en el centro exacto de una celda de una cuadrícula, como se muestra en la siguiente ilustración.
+Las texturas normalmente se representan como si se han formado de bloques sólidos del color, pero es realmente más correcto pensar texturas en la misma manera que se debe considerar la visualización de mapa de bits: Cada elemento de textura se define exactamente en el centro de una celda de cuadrícula, como se muestra en la siguiente ilustración.
 
 ![ilustración de textura de 4×4 con elementos de textura definidos en el centro de las celdas de la cuadrícula](images/bilinear-fig7b.png)
 
@@ -89,7 +89,7 @@ Compara estos cálculos con la siguiente ilustración, que muestra lo que sucede
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Filtrado de texturas](texture-filtering.md)
+[Filtrado de textura](texture-filtering.md)
 
  
 

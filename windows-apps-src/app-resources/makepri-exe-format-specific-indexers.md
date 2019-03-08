@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the format-specific indexers used by the MakePri.exe tool to generate its index of resources.
+Description: En este tema se describen los indizadores específicos de formato usados por la herramienta MakePri.exe para generar su índice de recursos.
 title: Indizadores específicos de formato de MakePri.exe
 template: detail.hbs
 ms.date: 10/18/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044632"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645880"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indizadores específicos de formato de MakePri.exe
 
 Este tema describe los indizadores específicos de formato usados por la herramienta [MakePri.exe](compile-resources-manually-with-makepri.md) para generar su índice de recursos.
 
 > [!NOTE]
-> MakePri.exe se instala al comprobar la opción de **SDK de Windows administra las aplicaciones para UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (también en carpetas con el nombre para el resto de arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> Se instala MakePri.exe al comprobar la **Windows SDK para aplicaciones de UWP administradas** opción al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las demás arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 MakePri.exe se suele usar con los comandos `new`, `versioned` o `resourcepack`. Consulta [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md). En esos casos indexa los archivos de origen para generar un índice de recursos. MakePri.exe usa diversos indizadores individuales para leer distintos archivos de recursos de origen o contenedores de recursos. El indexador más sencillo es el indizador de carpeta, que indiza el contenido de una carpeta, como imágenes `.jpg` o `.png`.
 
@@ -282,7 +282,7 @@ El indizador ResFiles se identifica por un atributo `type` de RESFILES. Indiza e
 </xs:schema>\
 ```
 
-Un archivo `.resfiles` es un archivo de texto que contiene una sencilla lista de rutas de archivos. Un archivo `.resfiles` puede contener comentarios "//". Aquí tienes un ejemplo.
+Un archivo `.resfiles` es un archivo de texto que contiene una sencilla lista de rutas de archivos. Un archivo `.resfiles` puede contener comentarios "//". A continuación te mostramos un ejemplo.
 
 ```
 Strings\component1\fr\elements.resjson
@@ -317,7 +317,7 @@ Las propiedades de JSON con nombres que comiencen por guión bajo ("_") no se co
 
 El archivo también puede contener comentarios "//" que se omiten durante el análisis.
 
-El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial anteponiéndolo al nombre del recurso. Normalmente esto lo usarías al indizar recursos a de bibliotecas de clases. La opción predeterminada es estar en blanco.
+El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial anteponiéndolo al nombre del recurso. Normalmente esto lo usarías al indizar recursos a de bibliotecas de clases. La opción predeterminada es blank.
 
 ## <a name="resw"></a>ResW
 
@@ -393,11 +393,11 @@ Un archivo `.resw` es un archivo XML que se ajusta al siguiente esquema.
 
 El atributo `convertDotsToSlashes` convierte todos los caracteres de punto (".") encontrados en los nombres de recursos (atributos de nombre de elemento de datos) en una barra diagonal "/", excepto cuando los caracteres de punto se encuentran entre "[" y "]".
 
-El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial anteponiéndolo al nombre del recurso. Normalmente esto lo usarías al indizar recursos de bibliotecas de clases. La opción predeterminada es estar en blanco.
+El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial anteponiéndolo al nombre del recurso. Normalmente esto lo usarías al indizar recursos de bibliotecas de clases. La opción predeterminada es blank.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md)
-* [Archivo de configuración de MakePri.exe](makepri-exe-configuration.md)
-* [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt)
+* [Opciones de línea de comandos MakePri.exe](makepri-exe-command-options.md)
+* [Archivo de configuración MakePri.exe](makepri-exe-configuration.md)
+* [Tipo de medio de la aplicación/json para JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

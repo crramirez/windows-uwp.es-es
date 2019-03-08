@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 490e2148026719f562b5fd17761546c4244850dc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596130"
 ---
 # <a name="blending-stages"></a>Fases de combinación
 
@@ -22,7 +22,7 @@ Una fase de combinación es un conjunto de operaciones con texturas y sus argume
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Combinación de texturas](texture-blending.md)
+[Mezcla de texturas](texture-blending.md)
 
  
 

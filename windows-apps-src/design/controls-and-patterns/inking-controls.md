@@ -1,5 +1,5 @@
 ---
-Description: Ink tools described
+Description: Herramientas de lápiz que se describen
 title: Controles de entrada manuscrita
 label: Inking Controls
 template: detail.hbs
@@ -9,24 +9,24 @@ keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650900"
 ---
 # <a name="inking-controls"></a>Controles de entrada manuscrita
 
 
 
-Hay dos controles diferentes que facilitan la entrada manuscrita en aplicaciones para la Plataforma universal de Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) y [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Hay dos tipos de controles que facilitan la tinta en aplicaciones de la plataforma Universal de Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) y [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 El control InkCanvas representa la entrada manuscrita como un trazo de lápiz (con la configuración predeterminada de color y espesor) o un trazo de borrado. Este control es una superposición transparente que no incluye ninguna interfaz de usuario integrada para cambiar las propiedades de trazo de lápiz predeterminadas.
 
 > [!NOTE]
 > InkCanvas se puede configurar para admitir funcionalidades similares para la entrada del mouse y táctil.
 
-Dado que el control InkCanvas no ofrece soporte para cambiar la configuración de trazo de lápiz predeterminada, se puede emparejar con un control InkToolbar. El control InkToolbar contiene una colección personalizable y ampliable de botones que activan características relacionadas con las entradas de lápiz en un control InkCanvas asociado.
+Dado que el control InkCanvas no ofrece soporte para cambiar la configuración de trazo de lápiz predeterminada, se puede emparejar con un control InkToolbar. El control InkToolbar contiene una colección personalizable y extensible de botones que activan características relacionadas con las entradas de lápiz en un control InkCanvas asociado.
 
 De manera predeterminada, el control InkToolbar incluye botones para dibujar, borrar, resaltar y mostrar una regla. Dependiendo de la característica, en un control flotante se proporcionan otros comandos y opciones de configuración, como los destinados a definir el color y el grosor del trazo o a borrar todas las entradas de lápiz.
 
@@ -35,7 +35,7 @@ De manera predeterminada, el control InkToolbar incluye botones para dibujar, bo
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **API importantes**: [Clase InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [Clase InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [Clase InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Clase Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **API importantes**: [Clase InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [InkToolbar clase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [clase InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
@@ -58,22 +58,22 @@ Empareja el control InkCanvas con un control InkToolbar para proporcionar una in
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/InkCanvas">abrir la aplicación y ver InkCanvas en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-**MicrosoftEdge**
+**Microsoft Edge**
 
 Microsoft Edge usa los controles InkCanvas e InkToolbar para las **notas web**.  
-![El control InkCanvas se usa para la entrada de lápiz en Microsoft Edge](images/ink-tools-edge.png)
+![InkCanvas se usa para la tinta en Microsoft Edge](images/ink-tools-edge.png)
 
-**Área de trabajo de Windows Ink**
+**El área de trabajo de Windows Ink**
 
 Los controles InkCanvas e InkToolbar también se usan para las opciones **Bloc de bocetos** y **Anotación en captura de pantalla** en el **Área de trabajo de Windows Ink**.  
-![Control InkToolbar en el Área de trabajo de Windows Ink](images/ink-tools-ink-workspace.png)
+![InkToolbar en el área de trabajo de Windows Ink](images/ink-tools-ink-workspace.png)
 
 ## <a name="create-an-inkcanvas-and-inktoolbar"></a>Crear un control InkCanvas y un control InkToolbar
 
@@ -137,7 +137,7 @@ Dependiendo de la aplicación y de la funcionalidad de entrada manuscrita necesa
 - Alternancia personalizada: establece el estado de una característica definida por la aplicación en activado o desactivado. Cuando se activa, la característica funciona junto con la herramienta activa.
 
 > [!NOTE]
-> No puedes cambiar el orden de visualización de los botones integrados. El orden de visualización predeterminado es: bolígrafo, lápiz, marcador de resaltado, borrador y regla. Los lápices personalizados se agregan al último lápiz predeterminado, los botones de la herramienta personalizada se agregan entre el último botón del lápiz y el botón de borrador, y los botones de alternancia personalizada se agregan detrás del botón de regla. (Los botones personalizados se agregan en el orden en que se especifican).
+> No puedes cambiar el orden de visualización de los botones integrados. El orden de presentación predeterminada es: Bolígrafo, lápiz, resaltado, borrador y regla. Los lápices personalizados se agregan al último lápiz predeterminado, los botones de la herramienta personalizada se agregan entre el último botón del lápiz y el botón de borrador, y los botones de alternancia personalizada se agregan detrás del botón de regla. (Los botones personalizados se agregan en el orden en que se especifican).
 
 Si bien el control InkToolbar puede ser un elemento de nivel superior, por lo general se expone a través de un comando o botón "Entrada manuscrita". Se recomienda usar el glifo EE56 de la fuente Segoe MDL2 Assets como un icono de nivel superior.
 
@@ -148,11 +148,11 @@ Todos los botones de lápiz y herramienta integrados incluyen un menú de contro
 El control flotante se muestra cuando se selecciona de nuevo el botón de una herramienta activa. Cuando se cambia el color o el tamaño, el control flotante se descarta automáticamente y se puede reanudar la entrada manuscrita. Las herramientas y los lápices personalizados pueden usar el control flotante predeterminado o especificar un control flotante personalizado.
 
 El borrador también tiene un control flotante que proporciona el comando **Borrar todas las entradas de lápiz**.  
-![InkToolbar con el control flotante de borrador invocado](images/ink-tools-erase-all-ink.png)
+![InkToolbar con ventana flotante de borrador invoca](images/ink-tools-erase-all-ink.png)
 
  Para obtener información sobre la personalización y la extensibilidad, echa un vistazo a la [muestra de SimpleInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk).
 
-## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 - El control InkCanvas, y la entrada manuscrita en general, funcionan mejor con un lápiz activo. Sin embargo, se recomienda admitir la entrada manuscrita con la entrada del mouse y táctil (incluido el lápiz pasivo) si tu aplicación lo requiere.
 - Usa un control InkToolbar con el control InkCanvas para proporcionar la configuración y las características de entrada manuscrita básicas. Ambos controles InkCanvas e InkToolbar pueden personalizarse mediante programación.
@@ -170,6 +170,6 @@ El borrador también tiene un control flotante que proporciona el comando **Borr
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Interacciones de pluma y lápiz en aplicaciones para UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [Reconocer trazos de lápiz](https://windowsstyleguide/input/convert-ink-to-text/)
-- [Almacenar y recuperar trazos de lápiz](https://windowsstyleguide/input/save-and-load-ink/)
+- [Interacciones del lápiz y el lápiz óptico en aplicaciones para UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [Reconocer trazos de tinta](https://windowsstyleguide/input/convert-ink-to-text/)
+- [Store y recuperar los trazos de tinta](https://windowsstyleguide/input/save-and-load-ink/)

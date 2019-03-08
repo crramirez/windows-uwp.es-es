@@ -1,40 +1,40 @@
 ---
 title: Informe de campaña publicitaria
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: El informe campaña publicitaria en el centro de partners te permite ver el rendimiento de tus campañas de anuncios de promoción de aplicación.
+description: El informe de campaña de Ad en el centro de partners le permite ver el funcionan de sus campañas de anuncios de promoción de aplicación.
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b798abf88805ef3c693149149be958ba0cc1de9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653550"
 ---
-# <a name="ad-campaign-report"></a>Informe Campaña publicitaria
+# <a name="ad-campaign-report"></a>Informe de campaña publicitaria
 
-El informe **campaña publicitaria** en [El centro de partners](https://partner.microsoft.com/dashboard) te permite ver el rendimiento de la promoción de aplicación [campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
+El **campaña de publicidad** notificar en [centro de partners](https://partner.microsoft.com/dashboard) le permite ver cómo la promoción de la aplicación [campañas publicitarias](create-an-ad-campaign-for-your-app.md) está realizando. Para ver el informe, expanda **atraiga** en el menú de navegación izquierdo y seleccione **campañas publicitarias**.
 
 ## <a name="definitions"></a>Definiciones
 
 Este informe muestra datos de los siguientes elementos:
 
--   **Impresiones**: número de veces que se ha mostrado tu anuncio a los clientes.
--   **Clics**: número de veces que un cliente ha hecho clic en el anuncio.
--   **Conversiones**: si el objetivo de la campaña es aumentar las instalaciones de la aplicación, una conversión es el número de veces que alguien ha visto el anuncio y ha instalado la aplicación durante las 24 horas siguientes. Si el objetivo de la campaña es aumentar la actividad en la aplicación, una conversión es el número de veces que alguien ha visto el anuncio y ha abierto la aplicación durante las 24 horas siguientes. Consulta a continuación la información sobre el seguimiento de instalaciones y la medición de conversiones.
--   **Gasto**: cantidad de dinero que has gastado en cada campaña.
+-   **Impresiones**: El número de veces que la instancia de ad ha demostrado que los clientes.
+-   **Haga clic en**: El número de veces que un cliente hace clic en la instancia de ad.
+-   **Las conversiones**: Si su objetivo de la campaña es aumentar las instalaciones de la aplicación, una conversión es el número de veces que alguien ve su instancia de ad y, a continuación, instala la aplicación dentro de 24 horas. Si el objetivo de la campaña es aumentar la actividad en la aplicación, una conversión es el número de veces que alguien ha visto el anuncio y ha abierto la aplicación durante las 24 horas siguientes. Consulta a continuación la información sobre el seguimiento de instalaciones y la medición de conversiones.
+-   **Gasto**: La cantidad de dinero que ha empleado en cada campaña.
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
 En la parte superior del informe, puedes usar los **Filtros de sección** para ajustar el ámbito de los datos mostrados en el informe:
 
--   **Fecha**: la selección predeterminada es **Últimos 30 días**, pero puedes mostrar datos durante 3, 6 o 12 meses.
--   **Objetivo de la campaña**: puedes mostrar todas las campañas o limitar los datos para mostrar solo aquellos cuyo objetivo es **Instalaciones de la aplicación** o **Interacción de la aplicación**.
--   **Nombre de la aplicación**: la selección predeterminada es **Todos**, pero puedes mostrar las campañas de solo una aplicación específica.
--   **Tipo de campaña**: puedes mostrar todos los tipos de campañas o limitar los datos para mostrar solo las campañas de anuncios de la comunidad, internos o de pago.
--   **Estado**: la selección predeterminada es **Todos**, pero puedes mostrar los datos solo de las campañas que pertenecen a un estado determinado (**Activo**, **Borrador**, **En pausa**, **Finalizado** o **Requiere atención**).
+-   **Fecha**: La selección predeterminada es **últimos 30 días**, pero puede elegir mostrar los datos durante 3, 6 o 12 meses.
+-   **El objetivo de campaña**: Puede mostrar todas las campañas, o limitar los datos para mostrar solo aquellos cuyo objetivo es **aplicación instala** o **interacción con la aplicación**.
+-   **Nombre de la aplicación**: La selección predeterminada es **todas**, pero puede optar por mostrar campañas para sólo una aplicación específica.
+-   **Tipo de campaña**: Puede mostrar todos los tipos de campaña o limitar los datos para mostrar solo de pago, casa o campañas de anuncios de la Comunidad.
+-   **Estado**: La selección predeterminada es **todas**, pero puede optar por mostrar únicamente datos de campañas que se encuentran en un estado determinado (**Active**, **borrador**, **en pausa**, **Terminado**, o **necesita atención**).
 
 
 ## <a name="ad-campaign-metrics"></a>Métricas de campañas publicitarias
@@ -48,7 +48,7 @@ Puedes mostrar datos de rendimiento de hasta seis campañas publicitarias a la v
 
 ## <a name="install-tracking"></a>Seguimiento de instalaciones
 
-Ejecutar una campaña publicitaria de instalaciones a través del centro de partners proporciona una exposición muy necesaria para anunciar las aplicaciones. Las impresiones de anuncios se muestran a los clientes que probablemente están más interesados en la aplicación, y estos clientes pueden hacer clic en el anuncio e instalar la aplicación desde la Tienda. Antes, era difícil distinguir entre instalaciones que procedían de una campaña publicitaria frente a las instalaciones procedentes de otras fuentes.
+La ejecución de una campaña de publicidad de instalación a través del centro de partners proporciona exposición muy necesaria para anunciar las aplicaciones. Las impresiones de anuncios se muestran a los clientes que probablemente están más interesados en la aplicación, y estos clientes pueden hacer clic en el anuncio e instalar la aplicación desde la Tienda. Antes, era difícil distinguir entre instalaciones que procedían de una campaña publicitaria frente a las instalaciones procedentes de otras fuentes.
 
 Este informe te muestra cuántas instalaciones has ganado mediante la ejecución de campañas publicitarias. Esto solo representa las descargas que son un resultado directo de las campañas publicitarias y no incluye las descargas de otras fuentes.
 
@@ -67,7 +67,7 @@ Una instalación se sigue en la Tienda por teléfono, tableta, PC y otros dispos
 2.  El cliente ha iniciado sesión con una cuenta Microsoft.
 3.  El cliente cumple los requisitos [COPPA](https://go.microsoft.com/fwlink?LinkId=536558) (no se puede hacer un seguimiento de los clientes que no los cumplen).
 
-En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Ten en cuenta que puede ver el número total de instalaciones de una aplicación (a través de campañas y de lo contrario) en el informe de [adquisiciones](acquisitions-report.md) en el centro de partners.
+En consecuencia, es posible que el seguimiento de instalaciones de la aplicación informe de una cantidad inferior al número real de instalaciones generadas por una campaña publicitaria. Tenga en cuenta que puede ver el número total de instalaciones para una aplicación (a través de las campañas y de lo contrario) en el [adquisiciones](acquisitions-report.md) informe en el centro de partners.
 
 
 ## <a name="account-billing-history"></a>Historial de facturación de la cuenta
@@ -80,7 +80,7 @@ Puedes descargar el historial de facturación de la cuenta como un documento de 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
+* [Crear una campaña de publicidad para la aplicación](create-an-ad-campaign-for-your-app.md)
 
  
 

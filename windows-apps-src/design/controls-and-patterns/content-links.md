@@ -1,21 +1,21 @@
 ---
-Description: Use content links to embed rich data in your text controls.
+Description: Usar vínculos de contenido para incrustar datos enriquecidos en los controles de texto.
 title: Enlaces de contenido en controles de texto
 label: Content links
 template: detail.hbs
 ms.date: 03/07/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946453"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648540"
 ---
 # <a name="content-links-in-text-controls"></a>Enlaces de contenido en controles de texto
 
@@ -23,10 +23,10 @@ Los nuevos vínculos de contenido proporcionan una forma de insertar datos enriq
 
 Cuando el usuario agrega un prefijo a una entrada con un símbolo de Y comercial (@) en un RichEditBox, aparece una lista de sugerencias de contactos o lugares que coincidan con la entrada. A continuación, por ejemplo, cuando el usuario elige un lugar, se inserta un ContentLink para dicho lugar en el texto. Cuando el usuario invoca el vínculo de contenido de RichEditBox, se muestra un control flotante con un mapa y la información adicional sobre el lugar.
 
-> **API importantes**: [clase ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [clase ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [clase RichEditTextRange](/uwp/api/windows.ui.text.richedittextrange)
+> **API importantes**: [Clase ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [ContentLinkInfo clase](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange clase](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> La API de vínculos de contenido se expanden en los siguientes espacios de nombres: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents y Windows.UI.Text.
+> Las API de vínculos de contenido se reparten entre los espacios de nombres siguientes: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents y Windows.UI.Text.
 
 
 
@@ -39,12 +39,12 @@ Hay dos maneras diferentes de usar vínculos de contenido:
 
 Este es el aspecto predeterminado de los vínculos de contenido en un RichEditBox y en un TextBlock.
 
-![vínculo de contenido en cuadro de edición enriquecido](images/content-link-default-richedit.png)
-![vínculo de contenido en bloque de texto](images/content-link-default-textblock.png)
+![content link in rich edit box](images/content-link-default-richedit.png)
+![content link in text block](images/content-link-default-textblock.png)
 
 Las diferencias de uso, representación y comportamiento se tratan en detalle en las siguientes secciones. En esta tabla encontrarás una breve comparación de las diferencias principales entre un vínculo de contenido en un RichEditBox y un bloque de texto.
 
-| Función   | RichEditBox | bloque de texto |
+| Característica   | RichEditBox | bloque de texto |
 | --------- | ----------- | ---------- |
 | Uso | Instancia de ContentLinkInfo | Elemento de texto ContentLink |
 | Cursor | Determinado por el tipo de vínculo de contenido, no se puede cambiar | Determinado por la propiedad del Cursor, **null** de manera predeterminada |
@@ -129,7 +129,7 @@ El objeto ContentLinkInfo contiene la información que se usa para mostrar, invo
 - **SecondaryText**: esta cadena se muestra en la información sobre herramientas de un vínculo de contenido representado.
   - En el vínculo de contenido de un lugar creado por el selector, contiene la dirección de la ubicación, si está disponible.
 - **Uri**: el vínculo para obtener más información sobre el tema del vínculo del contenido. Este Uri puede abrir una aplicación instalada o un sitio Web.
-- **Id**: se trata de un contador de solo lectura, según el control, creado por el control de RichEditBox. Sirve para realizar un seguimiento de esta ContentLinkInfo durante acciones como eliminar o editar. Si se corta y se pega la ContentLinkInfo de nuevo en el control, recibirá un nuevo Id. Los valores de Id son incrementales.
+- **Id**: se trata de un contador de solo lectura, según el control, creado por el control de RichEditBox. Sirve para realizar un seguimiento de esta ContentLinkInfo durante acciones como eliminar o editar. Si el ContentLinkInfo cortar y pegar de nuevo en el control, obtendrá un nuevo identificador. Los valores de identificador son incrementales.
 - **LinkContentKind**: una cadena que describe el tipo de vínculo de contenido. Los tipos de contenido integrados son _Lugares_ y _Contactos_. El valor distingue mayúsculas de minúsculas.
 
 #### <a name="link-content-kind"></a>Tipo de contenido de vínculo
@@ -162,7 +162,7 @@ El selector de contactos crea un ContentLinkInfo con un Uri que usa el protocolo
 - Si LinkContentKind no es "Contactos", se abrirá la aplicación **Contactos**. Por ejemplo, esto puede suceder si se ha modificado el LinkContentKind en el controlador de eventos ContentLinkChanged.
 
 > [!TIP]
-> Para obtener más información acerca de cómo abrir otras aplicaciones y sitios Web desde la aplicación, consulta los temas en [iniciar una aplicación con un Uri](/windows/uwp/launch-resume/launch-app-with-uri).
+> Para obtener más información acerca de cómo abrir otras aplicaciones y sitios Web desde su aplicación, vea los temas bajo [iniciar una aplicación con un Uri](/windows/uwp/launch-resume/launch-app-with-uri).
 
 #### <a name="invoked"></a>Invocado
 

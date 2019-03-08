@@ -4,20 +4,20 @@ description: En este tema se describe el esquema de URI ms-people. La aplicació
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014710"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595570"
 ---
 # <a name="launch-the-people-app"></a>Iniciar la aplicación Contactos
 
-En este tema se describe el esquema de URI **ms-people:**. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
+Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
 
-## <a name="ms-people-uri-scheme-reference"></a>Referencia del esquema de URI ms-people:
+## <a name="ms-people-uri-scheme-reference"></a>ms-people: Referencia de esquema URI
 
 <table>
 <colgroup>
@@ -26,21 +26,21 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Resultados</th>
+<th align="left">Results</th>
 <th align="left">Esquema de URI</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Permite que otras aplicaciones inicien la página principal de la aplicación Contactos.</td>
+<td align="left">Permite que otras aplicaciones inicien la página principal de la aplicación Personas.</td>
 <td align="left">ms-people:</td>
 </tr>
 <tr class="even">
-<td align="left">Permite que otras aplicaciones inicien la página de configuración de la aplicación Contactos.</td>
+<td align="left">Permite que otras aplicaciones inicien la página de configuración de la aplicación Personas.</td>
 <td align="left">ms-people:settings</td>
 </tr>
 <tr class="odd">
-<td align="left">Permite que otras aplicaciones proporcionen una cadena de búsqueda que iniciará la aplicación Contactos con la página de resultados de la búsqueda.
+<td align="left">Permite que otras aplicaciones proporcionen una cadena de búsqueda que iniciará la aplicación Personas con la página de resultados de la búsqueda.
 <div class="alert">
 <p>Los parámetros distinguen mayúsculas de minúsculas.</p>
 <p>Si no especificas la sintaxis correctamente o falta el valor de cadena de búsqueda, el comportamiento predeterminado es devolver una lista completa de los contactos sin ningún filtro.</p>
@@ -50,7 +50,7 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 <td align="left">ms-people:search?SearchString=&lt;contactsearchinfo&gt;</td>
 </tr>
 <tr class="even">
-<td align="left">Se inicia en una tarjeta de contacto existente, si se encuentra el contacto. O bien, se inicia en una tarjeta de contacto temporal, si no se encuentra ningún contacto. Si no se proporciona ningún parámetro de entrada, se iniciará la aplicación Contactos con una lista de contactos.
+<td align="left">Se inicia en una tarjeta de contacto existente, si se encuentra el contacto. O bien, se inicia en una tarjeta de contacto temporal, si no se encuentra ningún contacto. Si no se proporciona ningún parámetro de entrada, se iniciará la aplicación Personas con una lista de contactos.
 <div class="alert">
 <p>Los parámetros distinguen mayúsculas de minúsculas.</p>
 <p>No importa el orden de los parámetros.</p>
@@ -58,7 +58,7 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 </div>
 <div> 
 </div></td>
-<td align="left">MS-people: viewcontact?ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;correo electrónico =&lt;correo electrónico&gt;&amp;ContactName =&lt;nombre&gt;&amp;Contact =&lt;contactobj&gt;</td>
+<td align="left">ms-people:viewcontact?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Se inicia en una página de guardado de contactos en la aplicación Contactos para guardar el contacto determinado con la dirección de correo electrónico o el número de teléfono proporcionados.
@@ -213,7 +213,7 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><b>Company</b></td>
+<td align="left"><b>Empresa</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Nombre de la compañía del contacto.</p></td>
 
@@ -285,13 +285,13 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Nickname</b></td>
+<td align="left"><b>alias</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Alias del contacto.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>Notes</b></td>
+<td align="left"><b>Notas de la</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Notas acerca del contacto.</p></td>
 </tr>
@@ -321,7 +321,7 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Website</b></td>
+<td align="left"><b>Sitio Web</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Sitio web del contacto.</p></td>
 </tr>

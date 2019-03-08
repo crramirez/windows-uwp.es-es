@@ -1,19 +1,19 @@
 ---
-Description: The App properties page of the app submission process lets you define your app's category and indicate hardware preferences or other declarations.
-title: Introducir las propiedades de la aplicación
+Description: La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones.
+title: Especificar las propiedades de la aplicación
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, configuración de juegos, modo de presentación, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado, directiva de privacidad, información de contacto de soporte técnico, sitio web de aplicaciones, información de soporte técnico
 ms.localizationpriority: medium
 ms.openlocfilehash: 80220f8402b225691a2e4eb3202f1f04d48e06b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923033"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643250"
 ---
-# <a name="enter-app-properties"></a>Introducir las propiedades de la aplicación
+# <a name="enter-app-properties"></a>Especificar las propiedades de la aplicación
 
 La página **Propiedades** del [proceso de envío de aplicaciones](app-submissions.md) es donde defines la categoría de la aplicación y especificas otra información y declaraciones. Asegúrate de proporcionar detalles completos y precisos sobre tu aplicación en esta página.
 
@@ -46,7 +46,7 @@ Para ayudarte a determinar si la aplicación requiere una directiva de privacida
 
 ### <a name="website"></a>Sitio web
 
-Escribe la dirección URL de la página web de tu aplicación. La dirección URL debe llevar a una página de tu propio sitio web y no a la descripción web de la aplicación de Store. Este campo es opcional, pero recomendado.
+Escribe la dirección URL de la página web de tu aplicación. La dirección URL debe llevar a una página de tu propio sitio web y no a la descripción web de la aplicación en la Tienda. Este campo es opcional, pero recomendado.
 
 ### <a name="support-contact-info"></a>Información de contacto de soporte técnico
 
@@ -58,14 +58,14 @@ Introduce la dirección URL de la página web o una dirección de correo electr�
 
 ## <a name="game-settings"></a>Configuración del juego
 
-Esta sección solo aparecerán si seleccionaste **Juegos** como la categoría de tu producto. Aquí puedes especificar qué características son compatibles con el juego. La información que proporcionas en esta sección se mostrará en la tienda del producto de la descripción.
+Esta sección solo aparecerán si seleccionaste **Juegos** como la categoría de tu producto. Aquí puedes especificar qué características son compatibles con el juego. La información que se proporciona en esta sección se mostrará en Store del producto en la lista.
 
 Si tu juego es compatible con cualquiera de las opciones multijugador, asegúrate de indicar el número mínimo y máximo de jugadores para una sesión. No se pueden especificar más de 1000 jugadores como mínimo o como máximo.
 
 **Opción jugador multiplataforma** significa que el juego admite sesiones de varios jugadores entre jugadores en equipos con Windows 10 y Xbox.
 
 
-## <a name="display-mode"></a>Modo de presentación
+## <a name="display-mode"></a>Modo de pantalla
 
 Esta sección te permite indicar si tu producto está diseñado para ejecutarse en una vista envolvente (no una vista 2D) para [Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality) en equipos o dispositivos HoloLens. Si indicas que lo está, también deberás:
 - Seleccionar **Minimum hardware** o **Hardware recomendado** para **Windows Mixed Reality immersive headset** en la sección [Requisitos del sistema](#system-requirements) que aparece más abajo en la página **Propiedades**.
@@ -98,7 +98,7 @@ El comportamiento para los clientes dependerá de los requisitos específicos y 
 - **Para los clientes de versiones anteriores de Windows 10:**
      - Para la mayoría de los clientes, todos los requisitos de hardware mínimos y recomendados se mostrarán en la descripción de la Tienda (aunque los clientes que visualicen una versión anterior de cliente de la Tienda solo verán los requisitos mínimos de hardware).
      - La Tienda intentará comprobar los elementos que designes como **Requisitos mínimos de hardware**, con la excepción de **Memoria**, **DirectX**, **Memoria de vídeo**, **Gráficos** y **Procesador**. Estos no se comprobarán y los clientes no verán ninguna advertencia en los dispositivos que no cumplan estos requisitos. 
-- **Para los clientes de Windows 8.x y versiones anteriores, o de Windows Phone 8.x y versiones anteriores:**
+- **Para los clientes de Windows 8.x y versiones anteriores o Windows Phone 8.x y versiones anteriores:**
      - Si activas la casilla **Requisitos mínimos de hardware** para **Pantalla táctil**, este requisito se mostrará en la descripción de la Tienda de la aplicación y los clientes con dispositivos sin pantalla táctil verán una advertencia si intentan descargar la aplicación. No se comprobarán otros requisitos ni se mostrarán en la descripción de la Tienda.
 
 También recomendamos agregar a la aplicación comprobaciones en tiempo de ejecución para el hardware especificado, dado que la Tienda no siempre puede detectar si al dispositivo de un cliente le faltan las características seleccionadas. De todos modos, el cliente podrá descargar la aplicación, aunque se le muestre una advertencia. Si quieres evitar completamente que tu aplicación para UWP se descargue en un dispositivo que no cumpla con los requisitos mínimos de memoria o nivel de DirectX, puedes designar los requisitos mínimos en un [archivo XML de StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root).

@@ -4,14 +4,14 @@ title: Transferencias en segundo plano
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 ms.date: 03/23/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 20662a562e67ee836feb1da73a71c76228a550cb
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058686"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643820"
 ---
 # <a name="background-transfers"></a>Transferencias en segundo plano
 Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red. La API de transferencia en segundo plano proporciona funciones de carga y descarga avanzadas que se ejecutan en segundo plano durante la suspensión de la aplicación y que persisten tras la finalización de esta. La API supervisa el estado de red, y suspende y reanuda automáticamente las transferencias cuando se pierde la conexión. Además, las transferencias son compatibles con el sensor de datos y el de batería, lo que significa que la actividad de descarga se ajusta según la conectividad y el estado de la batería actuales del dispositivo. La API es ideal para cargar y descargar archivos grandes mediante HTTP(S). También se admite FTP, pero solo para descargas.
@@ -28,7 +28,7 @@ Cuando una aplicación usa una transferencia en segundo plano para iniciar una t
 > [!NOTE]
 > Debido a restricciones de recursos por aplicación, una aplicación no debe tener más de 200 transferencias (DownloadOperations + UploadOperations) en cualquier momento. La superación de ese límite puede dejar la cola de transferencia de la aplicación en un estado irrecuperable.
 
-Cuando se inicia una aplicación, debe llamar a [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos existentes de [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation) y [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadoperation) . No hacer esto hará que la pérdida de transferencias ya completado y finalmente representará el uso de la característica de transferencia en segundo plano sea inútil.
+Cuando se inicia una aplicación, debe llamar a [ **AttachAsync** ](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) existente todas [ **DownloadOperation** ](/uwp/api/windows.networking.backgroundtransfer.downloadoperation) y [  **UploadOperation** ](/uwp/api/windows.networking.backgroundtransfer.uploadoperation) objetos. Esto no provocará la pérdida de las transferencias ya completado y finalmente representarán el uso de la característica de transferencia en segundo plano inútil.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Realización de solicitudes de archivos autenticadas con la transferencia en segundo plano
 La transferencia en segundo plano proporciona métodos que admiten credenciales básicas de proxy y servidor, así como el uso de encabezados HTTP personalizados (mediante [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) para cada operación de transferencia.
@@ -36,11 +36,11 @@ La transferencia en segundo plano proporciona métodos que admiten credenciales 
 ### <a name="how-does-this-feature-adapt-to-network-status-changes-or-unexpected-shutdowns"></a>¿Cómo se adapta esta característica a los cambios de estado de red o apagados inesperados?
 Cuando se producen cambios en el estado de la red, la transferencia en segundo plano mantiene una experiencia coherente para cada operación de transferencia, ya que saca provecho de manera inteligente de la información sobre el estado de la conectividad y el plan de datos del operador, que se proporciona con la característica [Conectividad](https://msdn.microsoft.com/library/windows/apps/hh452990). Para definir el comportamiento en distintos escenarios de red, una aplicación establece una directiva de coste para cada operación usando los valores que [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) define.
 
-Por ejemplo, la directiva de coste definida para una operación puede indicar que se debe pausar automáticamente la operación cuando el dispositivo está usando una red de uso medido. La transferencia se reanudará (o reiniciará) de forma automática cuando se establezca una conexión a una red "sin restricciones". Para obtener más información sobre cómo se definen las redes por coste, consulta [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292).
+Por ejemplo, la directiva de costo definida para una operación puede indicar que se debe pausar automáticamente la operación cuando el dispositivo está usando una red de uso medido. La transferencia se reanudará (o reiniciará) de forma automática cuando se establezca una conexión a una red "sin restricciones". Para obtener más información sobre cómo se definen las redes por coste, consulta [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292).
 
 Aunque la característica de transferencia en segundo plano tiene sus propios mecanismos para controlar los cambios de estado de la red, hay otras consideraciones generales sobre conectividad que debes tener en cuenta en relación con las aplicaciones conectadas a la red. Si quieres obtener más información, lee el tema [Aprovechamiento de la información de conexión de red disponible](https://msdn.microsoft.com/library/windows/apps/hh452983).
 
-> **Nota**para las aplicaciones que se ejecutan en dispositivos móviles, existen características que permiten al usuario supervisar y restringir la cantidad de datos que se transfieren en función del tipo de conexión, el estado de itinerancia y plan los datos del usuario. Por este motivo, las transferencias en segundo plano se pueden pausar en el teléfono, incluso cuando la [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que la transferencia debe proseguir.
+> **Tenga en cuenta**  para aplicaciones que se ejecutan en dispositivos móviles, hay características que permiten al usuario supervisar y restringir la cantidad de datos que se transfieren en función del tipo de conexión, itinerancia de estado, y plan los datos del usuario. Por este motivo, las transferencias en segundo plano se pueden pausar en el teléfono, incluso cuando la [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que la transferencia debe proseguir.
 
 En esta tabla puedes ver cuándo se permiten transferencias en segundo plano en el teléfono para cada valor de [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) según el estado actual del teléfono. Puedes usar la clase [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) para determinar el estado actual del teléfono.
 
@@ -60,7 +60,7 @@ En los siguientes ejemplos, te explicaremos cómo crear e inicializar una carga 
 ### <a name="uploading-a-single-file"></a>Carga de un solo archivo
 La creación de una carga comienza con [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140). Esta clase se usa para proporcionar los métodos que permiten a tu aplicación configurar la carga antes de crear la [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) resultante. En el siguiente ejemplo se muestra cómo realizar esto con los objetos [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) y [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) necesarios.
 
-**Identificar el archivo y el destino de la carga**
+**Identificar el archivo y el destino para la carga**
 
 Antes de comenzar la creación de una [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), debemos identificar el URI de la ubicación en la que se va a realizar la carga y el archivo que se cargará. En el siguiente ejemplo, el valor *uriString* se rellena mediante una cadena de entrada de UI y el valor *file* mediante el objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) devuelto por una operación [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275).
 
@@ -85,7 +85,7 @@ promise = upload.startAsync().then(complete, error, progress);
 La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta el tema [Programación asincrónica en JavaScript con promesas](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="uploading-multiple-files"></a>Carga de varios archivos
-**Identificar los archivos y el destino de la carga**
+**Identificar los archivos y el destino para la carga**
 
 En un escenario en el que se transfieran varios archivos con una sola [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), el proceso comienza como lo hace normalmente, proporcionando primero el URI de destino requerido y la información del archivo local. Al igual que en el ejemplo de la sección anterior, el usuario final proporciona el URI como una cadena y [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) se puede usar para ofrecer la capacidad de indicar archivos en la interfaz de usuario. Sin embargo, en este escenario la aplicación debería llamar en su lugar al método [**PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) para permitir la selección de varios archivos mediante la interfaz de usuario.
 
@@ -199,7 +199,7 @@ Después de finalizada o cancelada una [**DownloadOperation**](https://msdn.micr
 1.  Ahora puedes usar la lista rellenada para reiniciar las operaciones pendientes.
 
 ## <a name="post-processing"></a>Posprocesamiento
-Una nueva característica de Windows 10 es la capacidad para ejecutar código de la aplicación tras la finalización de una transferencia en segundo plano, incluso cuando no se está ejecutando la aplicación. Por ejemplo, puede que la aplicación quiera actualizar una lista de películas disponibles una vez finalizada la descarga, en lugar de que la aplicación busque películas nuevas cada vez que se inicie. O puede que la aplicación quiera administrar una transferencia de archivos errónea intentando usar de nuevo un servidor o puerto diferentes. Se invoca un posprocesamiento para transferencias correctas y fallidas, de modo que pueda usarlo para implementar el control de errores y la lógica de reintentos personalizados.
+Una nueva característica de Windows 10 es la capacidad para ejecutar código de la aplicación al finalizar una transferencia en segundo plano incluso cuando no se está ejecutando la aplicación. Por ejemplo, puede que la aplicación quiera actualizar una lista de películas disponibles una vez finalizada la descarga, en lugar de que la aplicación busque películas nuevas cada vez que se inicie. O puede que la aplicación quiera administrar una transferencia de archivos errónea intentando usar de nuevo un servidor o puerto diferentes. Se invoca un posprocesamiento para transferencias correctas y fallidas, de modo que pueda usarlo para implementar el control de errores y la lógica de reintentos personalizados.
 
 El posprocesamiento usa la infraestructura de tareas en segundo plano existente. Creas una tarea en segundo plano y la asocias con tus transferencias antes de iniciarlas. Después, se ejecutan las transferencias en segundo plano y, una vez completadas, se llama a la tarea en segundo plano para realizar un posprocesamiento.
 
@@ -260,14 +260,14 @@ Son dos los escenarios principales relacionados con el tiempo de espera de la co
 
 -   Después de establecer una conexión, se cancelará el mensaje de solicitud HTTP que no haya recibido una respuesta transcurridos dos minutos.
 
-> **Nota**en ambos escenarios, y suponiendo que haya conectividad a Internet, transferencia en segundo plano reintentará una solicitud hasta tres veces automáticamente. Si no se detecta una conexión a Internet, las solicitudes adicionales esperarán hasta que se establezca la conexión.
+> **Tenga en cuenta**  en cualquier caso, suponiendo que no hay conectividad a Internet, transferencia en segundo plano volverá a intentar una solicitud hasta tres veces automáticamente. Si no se detecta una conexión a Internet, las solicitudes adicionales esperarán hasta que se establezca la conexión.
 
 ## <a name="debugging-guidance"></a>Guía para la depuración
 Detener una sesión de depuración en Microsoft Visual Studio se puede comparar a cerrar una aplicación. Las cargas PUT se pausan y las cargas POST se finalizan. Incluso durante la depuración, tu aplicación debe enumerar y reiniciar o cancelar todas las cargas que persisten. Por ejemplo, tu aplicación puede cancelar operaciones de carga persistentes al iniciar la aplicación, si no hay ningún interés por operaciones anteriores para la sesión de depuración.
 
 Mientras se enumeran las cargas y descargas al iniciarse una aplicación durante una sesión de depuración, puedes hacer que tu aplicación las cancele si, en esa sesión de depuración, no se tiene ningún interés por las operaciones anteriores. Ten en cuenta que si hay actualizaciones de proyectos de Visual Studio, como cambios en el manifiesto de la aplicación, y la aplicación se desinstala y se vuelve a instalar, [**GetCurrentUploadsAsync**](https://msdn.microsoft.com/library/windows/apps/hh701149) no podrá enumerar las operaciones creadas con la implementación de aplicación anterior.
 
-Cuando uses la transferencia en segundo plano durante el desarrollo, es posible que las memorias caché internas de las operaciones de transferencia activas y finalizadas dejen de estar sincronizadas. Esto puede provocar que no puedas iniciar nuevas operaciones de transferencia ni interactuar con operaciones existentes y objetos [**BackgroundTransferGroup**](https://msdn.microsoft.com/library/windows/apps/dn279030). En algunos casos, intentar interactuar con operaciones ya existentes puede producir un bloqueo. Este resultado puede producirse si la propiedad [**TransferBehavior**](https://msdn.microsoft.com/library/windows/apps/dn279033) se establece en **Parallel**. Este problema se produce únicamente en determinados escenarios, durante el desarrollo, y no se aplica a los usuarios finales de tu aplicación.
+Cuando uses la transferencia en segundo plano durante el desarrollo, es posible que las memorias caché internas de las operaciones de transferencia activas y finalizadas dejen de estar sincronizadas. Esto puede provocar que no puedas iniciar nuevas operaciones de transferencia ni interactuar con operaciones existentes y objetos de [**BackgroundTransferGroup**](https://msdn.microsoft.com/library/windows/apps/dn279030). En algunos casos, intentar interactuar con operaciones ya existentes puede producir un bloqueo. Este resultado puede producirse si la propiedad [**TransferBehavior**](https://msdn.microsoft.com/library/windows/apps/dn279033) se establece en **Parallel**. Este problema se produce únicamente en determinados escenarios, durante el desarrollo, y no se aplica a los usuarios finales de tu aplicación.
 
 Cuatro escenarios en los que se usa Visual Studio pueden producir este problema:
 
@@ -282,7 +282,7 @@ Para evitar este problema, desinstala completamente todas las versiones de la ap
 ## <a name="exceptions-in-windowsnetworkingbackgroundtransfer"></a>Excepciones en Windows.Networking.BackgroundTransfer
 Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998).
 
-**.NET:** El tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) aparece como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
+**.NET:** El [ **Windows.Foundation.Uri** ](https://msdn.microsoft.com/library/windows/apps/br225998) tipo aparece como [ **System.Uri** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
 
 En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) para probar la cadena recibida del usuario de la aplicación antes de que se cree el URI.
 
@@ -292,7 +292,7 @@ El espacio de nombres [**Windows.Networking.backgroundTransfer**](https://msdn.m
 
 Un error encontrado en un método asincrónico en el espacio de nombres [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) se devuelve como un valor **HRESULT**. El método [**BackgroundTransferError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701093) se usa para convertir un error de red de una operación de transferencia en segundo plano en un valor de enumeración [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818). La mayoría de los valores de enumeración **WebErrorStatus** corresponden a un error devuelto por la operación de cliente HTTP o FTP nativa. Una aplicación puede filtrar según valores **WebErrorStatus** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**.
+Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetro, el **HRESULT** devuelto es **E\_INVALIDARG**.
 
 ## <a name="important-apis"></a>API importantes
 * [**Windows.Networking.BackgroundTransfer**](/uwp/api/windows.networking.backgroundtransfer)

@@ -1,5 +1,5 @@
 ---
-Description: Displays images in a collection, such as photos in an album or items in a product details page, one image at a time.
+Description: Muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto.
 title: Directrices para controles de vista invertida
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
@@ -12,19 +12,19 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ac4e5bb7c761ad6661647cb88f831ffa652b6241
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048805"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662430"
 ---
-# <a name="flip-view"></a>Vista invertida
+# <a name="flip-view"></a>Inversión de la vista
 
  
 
 Usa la vista invertida para explorar una a una las imágenes u otros elementos de una colección, como las fotos de un álbum o los elementos de una página con los detalles de un producto. Si usas dispositivos táctiles, puedes desplazarte por la colección deslizando el dedo por los elementos. En cambio, si usas un mouse, aparecerán botones de navegación al pasar el mouse por encima. En el caso del teclado, te puedes desplazar por la colección con las teclas de dirección.
 
-> **API importantes**: [Clase FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [Propiedad ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [Propiedad ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
+> **API importantes**: [Clase FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [propiedad ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [propiedad ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
@@ -40,7 +40,7 @@ La vista invertida es ideal para examinar imágenes de colecciones pequeñas o m
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/FlipView">abrir la aplicación y ver FlipView en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -61,7 +61,7 @@ La clase FlipView forma parte de [ItemsControl](https://msdn.microsoft.com/libra
 
 De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Para especificar exactamente cómo se muestran los elementos en la vista invertida, puedes crear una clase [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx) para definir el diseño de los controles que se usan para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. A continuación, asigna la clase DataTemplate a la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de la clase FlipView.
 
-### <a name="add-items-to-the-items-collection"></a>Agregar elementos a la colección "Items"
+### <a name="add-items-to-the-items-collection"></a>Agregar elementos a la colección Items
 
 Puedes agregar elementos a la colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) mediante lenguaje XAML o código. Normalmente, los elementos se agregan de esta forma si tienes un pequeño número de elementos que no cambian y que se definen fácilmente en XAML, o si generas los elementos en el código en tiempo de ejecución. Esta es una vista invertida con elementos definidos en línea.
 
@@ -126,7 +126,7 @@ En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource*
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Nota**&nbsp;&nbsp;Puedes llenar una vista invertida agregando elementos a su colección Items o definiendo su propiedad ItemsSource, pero no puedes usar ambos métodos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableciste la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
+>**Nota**&nbsp;&nbsp;Puedes llenar una vista invertida agregando elementos a su colección Items o definiendo su propiedad ItemsSource, pero no puedes usar ambos métodos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableces la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
 
 ### <a name="specify-the-look-of-the-items"></a>Especificar el aspecto de los elementos
 
@@ -206,7 +206,7 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 Para obtener un ejemplo de código que muestre cómo agregar un indicador de contexto a FlipView, consulta [Muestra de FlipView XAML](https://go.microsoft.com/fwlink/p/?LinkID=311760).
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 -   Las vistas invertidas funcionan mejor en colecciones de hasta 25 elementos aproximadamente.
 -   Evita el uso de un control de vista para alternar para colecciones más grandes, ya que el movimiento repetitivo de desplazamiento entre los elementos puede ser tedioso. Una excepción serían los álbumes de fotos, que a menudo tienen cientos o miles de imágenes. Los álbumes de fotos casi siempre cambian a una vista para alternar una vez que se ha seleccionado una foto en el diseño de la vista de cuadrícula. Para otras colecciones grandes, considera la posibilidad de usar una [vista de lista o de cuadrícula](lists.md).
@@ -231,5 +231,5 @@ Para obtener un ejemplo de código que muestre cómo agregar un indicador de con
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Directrices sobre listas](lists.md)
+- [Directrices para las listas](lists.md)
 - [**Clase FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)

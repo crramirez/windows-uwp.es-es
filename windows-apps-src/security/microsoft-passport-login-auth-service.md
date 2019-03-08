@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: de4d8fc797efe2a0dde7340f42208a97bccf0b10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927991"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645110"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Crear un servicio de inicio de sesión de Windows Hello
 
@@ -22,11 +22,11 @@ Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. Tambi�
 ## <a name="exercise-1-server-side-logic"></a>Ejercicio 1: Lógica del lado servidor
 
 
-En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la primera práctica y crearás un servidor y una base de datos ficticios locales. Esta práctica de laboratorio está diseñada para enseñar cómo podría integrarse Windows Hello en un sistema existente. Al usar un servidor y una base de datos ficticios, se elimina gran parte de la configuración no relacionada. En tus propias aplicaciones deberás reemplazar los objetos ficticios por servicios y bases de datos reales.
+En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la primera práctica y crearás un servidor y una base de datos ficticios locales. Esta práctica de laboratorio está diseñada para enseñar cómo podría integrarse Windows Hello en un sistema existente. Al usar un servidor y una base de datos ficticios se elimina gran parte de la configuración no relacionada. En tus propias aplicaciones deberás reemplazar los objetos ficticios por servicios y bases de datos reales.
 
 -   Para comenzar, abre la solución PassportLogin de la primera práctica de laboratorio de Passport.
 -   Para comenzar deberás implementar el servidor y la base de datos ficticios. Crea una nueva carpeta denominada "AuthService". En el Explorador de soluciones, haz clic con el botón secundario en la solución "PassportLogin (Universal Windows)" y selecciona Agregar -> Nueva carpeta.
--   Crea las clases UserAccount y PassportDevices que actuarán como modelos para los datos que se guardarán en la base de datos ficticia. La clase UserAccount será similar al modelo de usuario implementado en un servidor de autenticación tradicional. Haz clic con el botón derecho en la carpeta AuthService y agrega una nueva clase llamada "UserAccount.cs".
+-   Crea las clases UserAccount y PassportDevices que actuarán como modelos para los datos que se guardarán en la base de datos ficticia. La clase UserAccount será similar al modelo de usuario implementado en un servidor de autenticación tradicional. Haz clic con el botón secundario en la carpeta AuthService y agrega una nueva clase denominada "UserAccount.cs".
 
     ![Crear carpeta con autorización de Windows Hello](images/passport-auth-1.png)
 
@@ -358,7 +358,7 @@ En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la 
     }
     ```
 
-- En la clase MockStore agrega un método que agregará información relacionada con Windows Hello a una clase UserAccount existente. Este método se llamará PassportUpdateDetails y usará parámetros para identificar al usuario y los detalles de Windows Hello. Se quitó la marca de comentario de KeyAttestationResult al crear un PassportDevice, que en una aplicación real sería obligatoria.
+- En la clase MockStore agrega un método que agregará información relacionada con Windows Hello a una clase UserAccount existente. Este método se llamará PassportUpdateDetails y usará parámetros para identificar al usuario y los detalles de Windows Hello. Se quitó la marca de comentario de KeyAttestationResult al crear un PassportDevice, que en una aplicación real sería necesaria.
 
     ```cs
     using Windows.Security.Credentials;
@@ -804,7 +804,7 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Dado que usarás la clase AuthService al quitar una cuenta, la referencia a la clase AccountHelper en el método Button\_Forget\_User\_Click se puede quitar. El método debería ser ahora similar al siguiente.
+-   Como va a usar el AuthService al quitar una cuenta de la referencia a la AccountHelper en el botón\_olvidar\_usuario\_se puede quitar el método de clic. El método debería ser ahora similar al siguiente.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -984,7 +984,7 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Compila y ejecuta la aplicación (F5). Inicia sesión en la cuenta de usuario de muestra, con las credenciales "sampleUsername" y "samplePassword". En la pantalla de inicio de sesión, puedes observar que aparece el botón de olvidar dispositivo, aunque no se muestra ningún dispositivo. Al crear o migrar un usuario para trabajar con Windows Hello, la información de Passport no se inserta en la clase AuthService.
+-   Compila y ejecuta la aplicación (F5). Inicia sesión en la cuenta de usuario de muestra, con las credenciales "sampleUsername" y "samplePassword". En la página de bienvenida, puedes observar que aparece el botón de olvidar dispositivo aunque no se muestra ningún dispositivo. Al crear o migrar un usuario para trabajar con Windows Hello, la información de Passport no se inserta en la clase AuthService.
 
     ![Pantalla de inicio de sesión de Windows Hello](images/passport-auth-3.png)
 
@@ -1060,7 +1060,7 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Habrás observado en el método GetKeyAttestationAsync que acabas de agregar que la última línea estaba comentada. Esta última línea será un método nuevo que crearás que enviará toda la información de Windows Hello a AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
+-   Habrás observado que, en el método GetKeyAttestationAsync que acabas de agregar, la última línea estaba comentada. La última línea será un nuevo método que crees, que enviará toda la información de Windows Hello a la clase AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;
@@ -1173,5 +1173,5 @@ A modo de ejercicio, te dejamos los detalles sobre cómo implementar la autentic
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Windows Hello](microsoft-passport.md)
-* [Aplicación de inicio de sesión de Windows Hello](microsoft-passport-login.md)
+* [Windows Hello](microsoft-passport.md)
+* [Aplicación de inicio de sesión Windows Hello](microsoft-passport-login.md)

@@ -1,19 +1,19 @@
 ---
-Description: This topic describes best practices for accessibility of text in an app, by assuring that colors and backgrounds satisfy the necessary contrast ratio.
+Description: En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria.
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: Requisitos de texto accesible
 label: Accessible text requirements
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f474ec0c3017c3834d3eadb6f1caa989fc188a7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050748"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653340"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto accesible  
 
@@ -28,7 +28,7 @@ En este tema se describen los procedimientos recomendados sobre accesibilidad de
 ## <a name="contrast-ratios"></a>Relaciones de contraste  
 Aunque los usuarios siempre tienen la opción de cambiar a un modo de contraste alto, el diseño de la aplicación para el texto debe considerar esa opción como último recurso. Un procedimiento mucho más recomendable es asegurarse de que el texto de la aplicación cumpla con ciertos criterios establecidos para el nivel de contraste entre el texto y su fondo. La evaluación del nivel de contraste se basa en técnicas deterministas que no tienen en cuenta el matiz del color. Por ejemplo, si hay texto rojo sobre un fondo verde, es posible que un usuario daltónico no pueda leer el texto. Si se comprueba y corrige la relación de contraste, se puede evitar este tipo de problemas de accesibilidad.
 
-Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](https://go.microsoft.com/fwlink/p/?linkid=221823). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
+Las recomendaciones de contraste del texto explica en este artículo se basan en una accesibilidad web estándar, [G18: Asegurarse de que una relación de contraste de al menos existe 4.5: 1 entre el texto (y las imágenes de texto) y en segundo plano detrás del texto](https://go.microsoft.com/fwlink/p/?linkid=221823). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
 
 Para considerarse accesible, el texto visible debe tener una relación de contraste de luminosidad mínima de 4.5:1 si se lo compara con el fondo. Algunas excepciones son los logotipos y el texto ocasional, como el texto que forma parte de un componente inactivo de la interfaz de usuario.
 
@@ -46,10 +46,10 @@ Usa herramientas de contraste de color para comprobar que la relación de contra
 ## <a name="text-element-roles"></a>Roles de elementos de texto  
 Una aplicación para UWP puede usar estos elementos predeterminados (comúnmente denominados *elementos de texto* o *controles de textedit*):
 
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): El rol es [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182).
-* [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): El rol es [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182).
-* [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) (y la clase de desbordamiento [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): El rol es [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182),
-* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): El rol es [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182).
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): rol es [ **texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**Cuadro de texto**](https://msdn.microsoft.com/library/windows/apps/BR209683): rol es [ **editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**RichTextBlock** ](https://msdn.microsoft.com/library/windows/apps/BR227565) (clase de desbordamiento y [ **RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): rol es [ **texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): rol es [ **editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 
 Cuando un control notifica que tiene un rol [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182), las tecnologías de asistencia suponen que los usuarios tienen mecanismos para cambiar los valores. Por tanto, si pones texto estático en un elemento [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), provocarás que se malinterprete el rol y, por consiguiente, la estructura de la aplicación para el usuario de accesibilidad.
 
@@ -86,13 +86,13 @@ En un nivel alto, existen 2 tipos de experiencias de sugerencias automáticas.
 Si se realiza una selección predeterminada en la lista, Narrador busca un evento [**UIA_SelectionItem_ElementSelectedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223) en una aplicación de escritorio o que se genere el evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) en una aplicación para UWP. Cada vez que cambia la selección, cuando el usuario escribe otra letra y las sugerencias se actualizan o cuando un usuario navega por la lista, debería activarse el evento **ElementSelected**.
 
 ![Lista con una selección predeterminada](images/autosuggest-default-selection.png)<br/>
-_Ejemplo en el que existe una selección predeterminada_
+_Ejemplo donde hay una selección predeterminada_
 
-**Ninguna selección predeterminada**  
+**No hay nada seleccionado de forma predeterminada**  
 Si no hay ninguna selección predeterminada, como en el cuadro de ubicación de la aplicación El Tiempo, Narrador busca que cada vez que se actualice la lista, en dicha lista se genere el evento [**UIA_LayoutInvalidatedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223 ) en una aplicación de escritorio o el evento [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) en una aplicación para UWP.
 
-![Lista sin ninguna selección predeterminada](images/autosuggest-no-default-selection.png)<br/>
-_Ejemplo en el que no existe ninguna selección predeterminada_
+![Lista sin ninguna selección predeterminado](images/autosuggest-no-default-selection.png)<br/>
+_Ejemplo donde no hay ninguna selección predeterminado_
 
 ### <a name="xaml-implementation"></a>Implementación de XAML  
 Si se utiliza la clase XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) predeterminada, todo está ya enlazado de forma automática. Si vas a crear tu propia experiencia de sugerencias automáticas con una clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox) y una lista, tendrás que establecer la lista como [**AutomationProperties.ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) en la clase **TextBox**. Debes activar el evento **AutomationPropertyChanged** para la propiedad [**ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) cada vez que agregues o quites esta propiedad y también activar tus propios eventos [**SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) o [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) según el tipo de escenario, algo que se explica anteriormente en este mismo artículo.
@@ -122,23 +122,23 @@ Siempre que sea posible, evita incluir texto en un gráfico. Por ejemplo, las te
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
 
-## <a name="text-font-size-and-scale"></a>Escala y el tamaño de fuente de texto
+## <a name="text-font-size-and-scale"></a>Escala y el tamaño de fuente del texto
 
-Los usuarios pueden tener dificultades para leer el texto de una aplicación cuando los usos de fuentes son simplemente demasiado pequeño, por lo tanto, asegúrate de que cualquier texto en la aplicación tiene un tamaño razonable en primer lugar.
+Los usuarios pueden tener dificultades para leer texto en una aplicación cuando los usos de las fuentes son simplemente es demasiado pequeña, así que asegúrese de que cualquier texto de la aplicación tiene un tamaño razonable en primer lugar.
 
-Una vez que hayas hecho lo obvio, Windows incluye varias herramientas de accesibilidad y opciones de configuración que los usuarios pueden sacar provecho de y ajustar a sus propias necesidades y preferencias para leer texto. Estos son:
+Después de hacer lo obvio, Windows incluyen varias herramientas de accesibilidad y la configuración que los usuarios pueden aprovechar y ajustarse a sus propias necesidades y preferencias para la lectura de texto. Entre ellos se incluyen los siguientes:
 
-* La herramienta Lupa, lo que aumenta el tamaño de un área seleccionada de la interfaz de usuario. Debes asegurarte del que diseño del texto en la aplicación no lo hace difícil de usar lupa para la lectura.
-* Configuración global de escala y la resolución en **configuración->System->Display->Scale y el diseño**. Las opciones de tamaño que están disponibles pueden variar, esto depende de las capacidades del dispositivo de pantalla.
-* Configuración de tamaño de texto en **configuración->Ease de acceso >Display**. Ajustar la configuración de **texto más grande** para especificar únicamente el tamaño del texto para admitir controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el texto escala experiencia sin necesidad de personalización o plantillas). 
+* La herramienta Ampliador, que aumenta el tamaño de un área seleccionada de la interfaz de usuario. Debe asegurarse el diseño del texto en la aplicación no hacen que sea difícil utilizar el Ampliador para leerlo.
+* Configuración global de escala y la resolución en **configuración -> sistema -> Mostrar -> escala y el diseño**. Exactamente qué opciones de ajuste de tamaño están disponibles pueden variar en función depende de las capacidades de la pantalla.
+* Configuración de tamaño de texto en **facilidad de acceso de -> Configuración -> Mostrar**. Ajustar el **agrandar el texto** configuración para especificar solo el tamaño del texto en la compatibilidad con controles en todas las aplicaciones y las pantallas (todos los controles de texto UWP admiten el escalado experiencia sin ninguna personalización o la creación de plantillas de texto). 
 > [!NOTE]
-> La configuración de **hacer todo más grande** permite al usuario especificar su tamaño preferido para el texto y las aplicaciones en general en solo su pantalla principal.
+> El **asegurarse todo mayor** configuración permite a los usuarios especificar su tamaño preferido de texto y las aplicaciones en general en su pantalla principal solo.
 
-Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Cuando **es true**, el tamaño del texto de ese elemento se pueden escalar. El ajuste de escala afecta al texto que tiene un pequeño **FontSize** a un mayor grado de afecta a texto que tiene un gran **FontSize**. Puedes deshabilitar el cambio de tamaño automático estableciendo la propiedad de un elemento **IsTextScaleFactorEnabled** en **false**. 
+Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Cuando **true**, se puede escalar el tamaño del texto de ese elemento. El escalado afecta al texto que tiene una pequeña **FontSize** en mayor medida que afecta al texto que tiene un gran **FontSize**. Puede deshabilitar el cambio de tamaño automático estableciendo un elemento **IsTextScaleFactorEnabled** propiedad **false**. 
 
-Para obtener más información, consulte la [escala de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) .
+Consulte [texto escalado](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) para obtener más detalles.
 
-Agrega el siguiente marcado a una aplicación y ejecutarlo. Ajustar la configuración de **tamaño de texto** y ver lo que sucede con cada **TextBlock**.
+Agregue el siguiente marcado para una aplicación y ejecutarla. Ajustar el **el tamaño del texto** configuración y vea Qué sucede a cada **TextBlock**.
 
 XAML
 ```xml
@@ -169,23 +169,23 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-El valor de **TextScaleFactor** es doble en el intervalo de \[1,2.25\]. El texto más pequeño se aumenta según esta cantidad. El valor se podría usar para, por ejemplo, escalar elementos gráficos para que vayan a tono con el texto. Recuerda, de todas formas, que no todo el texto escala mediante el mismo factor. En términos generales, el texto más grande es el que menos se ve afectado por el ajuste de escala.
+El valor de **TextScaleFactor** es un tipo double en el intervalo \[1,2.25\]. El texto más pequeño se aumenta según esta cantidad. El valor se podría usar para, por ejemplo, escalar elementos gráficos para que vayan a tono con el texto. Recuerda, de todas formas, que no todo el texto escala mediante el mismo factor. En términos generales, el texto más grande es el que menos se ve afectado por el ajuste de escala.
 
 Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
-* [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) y clases derivadas
+* [**Control** ](https://msdn.microsoft.com/library/windows/apps/BR209390) y sus clases derivadas
 * [**FontIcon**](https://msdn.microsoft.com/library/windows/apps/Dn279514)
 * [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)
 * [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)
-* [**TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) y clases derivadas
+* [**TextElement** ](https://msdn.microsoft.com/library/windows/apps/BR209967) y sus clases derivadas
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Temas relacionados  
 
-* [Ajuste de escala de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
+* [Texto escalado](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Accesibilidad](accessibility.md)
-* [Información básica de accesibilidad](basic-accessibility-information.md)
-* [Muestra de visualización de texto en XAML](https://go.microsoft.com/fwlink/p/?linkid=238579)
-* [Muestra de edición de texto en XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Muestra de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [Información de accesibilidad básico](basic-accessibility-information.md)
+* [Ejemplo de presentación de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579)
+* [Ejemplo de edición de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
+* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 

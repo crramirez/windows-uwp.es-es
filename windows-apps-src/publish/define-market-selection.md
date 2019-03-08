@@ -1,24 +1,24 @@
 ---
-Description: The Microsoft Store reaches customers in over 200 countries and regions around the world.
+Description: La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo.
 title: Definir la selección del mercado
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows10, uwp, mercados, países, regiones
+keywords: windows 10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: 980dc41303a2689c0f86415beb6ba9adb44fe39c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646250"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
 
 La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
 
-Para que obtener información ayudar a hacer que la aplicación adecuada para los clientes de todo el mundo, consulta [directrices para globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que la aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
+Para que obtener información ayudar a mejorar la aplicación adecuada para los clientes en todo el mundo, consulte [directrices para la globalización de](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que su aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Aunque este tema hace referencia a las aplicaciones, la selección del mercado para envíos de complementos utiliza el mismo proceso.
@@ -34,19 +34,19 @@ De manera predeterminada, se seleccionan todos los mercados. Puedes anular la se
 Ten en cuenta que estas selecciones se aplican solo a las nuevas adquisiciones; si alguien que ya tenga la aplicación en un mercado determinado y más adelante lo quita, las personas que ya tienen la aplicación en dicho mercado pueden seguir usándola, pero no obtendrán las actualizaciones que envíes y ningún cliente nuevo puede conseguir la aplicación en ese mercado.
 
 > [!IMPORTANT]
-> Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el centro de partners.
+> Es su responsabilidad cumplir requisitos legales locales, incluso si esos requisitos no aparezcan aquí o en el centro de partners.
 
-Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) para más información.
+Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) Para obtener más información.
 
 > [!NOTE]
-> Para las aplicaciones publicada anteriormente que incluyen paquetes destinados a Windows8 o Windows8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Para las aplicaciones publicadas anteriormente que incluyen los paquetes destinados a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un solo mercado de "Rest World". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 También verás una casilla que te permitirá indicar si ofreces tu aplicación en cualquier mercado que la Tienda pueda agregar en un futuro. Si dejas esta casilla marcada y, a más adelante, añadimos nuevos mercados, el precio base y la fecha de disponibilidad general de tu envío se usarán para tu aplicación en estos mercados. Si no quieres que esto ocurra, puedes desactivar esta casilla y, en ese caso, no mostraremos tu aplicación en los futuros mercados (aunque siempre puedes agregarlos más tarde).
  
 
-## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidores de Microsoft Store
+## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidor de Microsoft Store
 
-Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco compatibles con Microsoft Store en Xbox One; podrás ver **Xbox** junto a sus nombres en la ventana emergente de **selección del mercado** .
+Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco admiten la Microsoft Store en Xbox One; verá **Xbox** junto a sus nombres en el **mercado selección** ventana emergente.
 
 
 <table>
@@ -205,7 +205,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Islandia</td>
     <td>India *</td>
     <td>Indonesia</td>
-    <td>Iraq</td>
+    <td>Irak</td>
   </tr>
   <tr>
     <td>Irlanda *</td>
@@ -313,11 +313,11 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Islas Pitcairn</td>
     <td>Polonia *</td>
     <td>Portugal *</td>
-    <td>Qatar</td>
+    <td>Catar</td>
   </tr>
   <tr>
     <td>Reunión</td>
-    <td>Rumanía</td>
+    <td>Rumania</td>
     <td>Rusia *</td>
     <td>Ruanda</td>
   </tr>
@@ -388,8 +388,8 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Tuvalu</td>
   </tr>
   <tr>
-    <td>Islas menores alejadas de los EE. UU.</td>
-    <td>Islas Vírgenes de los Estados Unidos de América</td>
+    <td>ESTADOS UNIDOS Islas menores alejadas</td>
+    <td>ESTADOS UNIDOS Islas Vírgenes</td>
     <td>Uganda</td>
     <td>Ucrania</td>
   </tr>
@@ -430,55 +430,55 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 | País o región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
-| Argentina            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Australia            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Austria              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Bélgica              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Brasil               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Canadá               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Chile                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| China                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Colombia             | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| República Checa       | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Dinamarca              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Finlandia              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Francia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Alemania              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Grecia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Hong Kong            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Hungría              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| India                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Irlanda              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Israel               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Italia                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Japón                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| México               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Países Bajos          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Nueva Zelanda          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Polonia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Portugal             | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Rusia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Arabia Saudí         | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Singapur            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Eslovaquia             | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Sudáfrica         | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Corea del Sur          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| España                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Suecia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Suiza          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Taiwán               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Turquía               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Reino Unido       | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Estados Unidos        | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Austria              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Bélgica              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Brasil               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Canadá               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| República Checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Francia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Alemania              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| India                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Israel               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Italia                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Japón                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| México               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Países Bajos          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Polonia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Portugal             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Rusia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Arabia Saudí         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Singapur            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Eslovaquia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Sudáfrica         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Corea del Sur          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| España                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Suecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Suiza          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Taiwán               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Turquía               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Reino Unido       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Estados Unidos        | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 
  
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto del mundo" para Windows 8.x
 
-Si la aplicación publicada anteriormente incluye paquetes destinados a Windows 8.x, es importante tener en cuenta que una serie de mercados se trata como un mercado único "resto del mundo" para los clientes que usen la tienda en Windows 8.x, incluso aunque se muestren como mercados individuales en el centro de partners.
+Si la aplicación publicada previamente incluye los paquetes destinados a Windows 8.x, es importante tener en cuenta que los mercados se tratan como un mercado único "resto del mundo" para los clientes que usan el Store en Windows 8.x, incluso después de que se muestran como mercados individuales en el centro de partners.
 
-Si dejas la selección de mercado predeterminada al enviar la aplicación, no tienes que preocuparte de esto y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si quieres excluir determinados mercados, ten en cuenta que la exclusión de solo uno de estos mercados "Resto del mundo" significa que la aplicación no estará disponible en *cualquier* de los mercados "Resto del mundo" para los clientes de Windows8 o Windows8.1.
+Si deja la selección de mercado de forma predeterminada al enviar la aplicación, no tiene que preocuparse por esto, y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si desea excluir algunos mercados, tenga en cuenta que excepto incluso uno de estos medios de mercados de "Rest World" que la aplicación no estará disponible en *cualquier* del "Resto del mundo" mercados para los clientes de Windows 8 o Windows 8.1.
 
 Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los siguientes:
 
@@ -714,8 +714,8 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Tuvalu</td>
     <td>Uganda</td>
-    <td>Islas menores alejadas de los EE. UU.</td>
-    <td>Islas Vírgenes de los Estados Unidos de América</td>
+    <td>ESTADOS UNIDOS Islas menores alejadas</td>
+    <td>ESTADOS UNIDOS Islas Vírgenes</td>
   </tr>
   <tr>
     <td>Uzbekistán</td>
@@ -738,4 +738,4 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 </table>
 
 > [!NOTE]
-> Para una lista de países y regiones en los que puedas registrarte para una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](account-types-locations-and-fees.md).
+> Para obtener una lista de los países y regiones en los que puede registrarse para una cuenta de desarrollador, consulte [cuenta tipos, ubicaciones y precios](account-types-locations-and-fees.md).

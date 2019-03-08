@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 751cda36fc58d0e6add9204327a74ec947c9fc53
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930596"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660920"
 ---
 # <a name="xfieldmodifier-attribute"></a>Atributo x:FieldModifier
 
@@ -30,11 +30,11 @@ El [atributo x:Name](x-name-attribute.md) también debe proporcionarse en el mis
 
 ## <a name="remarks"></a>Observaciones
 
-El valor del atributo **x:FieldModifier** variará según el lenguaje de programación. Los valores válidos son **private**, **public**, **protected**, **internal** o **friend**. Las extensiones de componentes de C#, Microsoft Visual Basic o VisualC ++ (C++ / CX), puedes proporcionar a la cadena de valor "public" o "Public"; el analizador no mayúsculas y minúsculas en este valor de atributo.
+El valor del atributo **x:FieldModifier** variará según el lenguaje de programación. Los valores válidos son **private**, **public**, **protected**, **internal** o **friend**. Para C#, extensiones de componentes de Microsoft Visual Basic o Visual C++ (C++ / c++ / CX), puede proporcionar la cadena de valor "public" o "Público". el analizador no obliga a mayúsculas y minúsculas en el valor de este atributo.
 
 El acceso **Private** es el valor predeterminado.
 
 **x:FieldModifier** solo es relevante para elementos con el [atributo x:Name](x-name-attribute.md), ya que ese nombre se usa para hacer referencia al campo una vez que se hace público.
 
-**Nota**XAML de Windows Runtime no es compatible con **x: ClassModifier** o **x: Subclass**.
+**Tenga en cuenta**  no es compatible con Windows en tiempo de ejecución XAML **x: ClassModifier** o **x: Subclass**.
 

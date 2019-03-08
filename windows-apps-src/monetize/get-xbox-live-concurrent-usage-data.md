@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, concurrent usage, uso simultáneo
 ms.localizationpriority: medium
 ms.openlocfilehash: 40d35b45065566db22aef791a94faa1cc0fa5c62
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937643"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655660"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Obtener datos de uso simultáneo de Xbox Live
 
@@ -25,14 +25,14 @@ Usa este método en la API de análisis de Microsoft Store para obtener datos de
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de solicitud       |
+| Método | URI de la solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
@@ -41,19 +41,19 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 
-| Parámetro        | Tipo   |  Descripción      |  Necesario  
+| Parámetro        | Tipo   |  Descripción      |  Requerido  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de uso simultáneo de Xbox Live.  |  Sí  |
-| metricType | cadena | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **concurrency**.  |  Sí  |
+| applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de uso simultáneo de Xbox Live.  |  Sí  |
+| metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **concurrency**.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
-| aggregationLevel | cadena | Especifica el intervalo de tiempo para el que se van a recuperar los datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **day**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minute**: los últimos 60 registros de datos disponibles.</li><li>**hour**: los últimos 24 registros de datos disponibles.</li><li>**day**: los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minute**: hasta 1440 registros (24 horas de datos).</li><li>**hour**: hasta 720 registros (30 días de datos).</li><li>**day**: hasta 60 registros (60 días de datos).</li></ul>  |  No  |
+| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minute**: Los últimos 60 registros de datos disponibles.</li><li>**hora**: Los últimos 24 registros de datos disponibles.</li><li>**day**: Los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minute**: Registros de hasta 1440 (24 horas de datos).</li><li>**hora**: Hasta 720 registros (30 días de datos).</li><li>**day**: Hasta 60 registros (60 días de datos).</li></ul>  |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -72,8 +72,8 @@ El cuerpo de respuesta contiene una matriz de objetos que contienen un conjunto 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
 | Número      | número  | El promedio de clientes que reproducen tu juego habilitado para Xbox Live durante el minuto, hora o día especificados. <p/><p/>**Nota**&nbsp;&nbsp;Un valor de 0 indica que no hay usuarios simultáneos durante el intervalo especificado, o que se produjo un error durante la recopilación de datos de usuarios simultáneos para el juego durante el intervalo especificado. |
-| Date  | cadena | La fecha y la hora que especifica el minuto, hora o día durante el cual se han producido los datos de uso simultáneo.  |
-| SeriesName | cadena    | Este tiene siempre el valor **UserConcurrency**. |
+| Fecha  | string | La fecha y la hora que especifica el minuto, hora o día durante el cual se han producido los datos de uso simultáneo.  |
+| SeriesName | string    | Este tiene siempre el valor **UserConcurrency**. |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -105,12 +105,12 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 ]
 ```
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
 * [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
 * [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos del hub de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
-* [Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)
-* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Obtener datos del centro de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
+* [Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)
+* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)

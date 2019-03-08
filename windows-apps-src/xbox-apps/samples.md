@@ -3,19 +3,19 @@ title: UWP en muestras de Xbox One
 description: Ejemplos y bibliotecas para ayudarte a crear fantásticas experiencias de Xbox One y televisión.
 ms.date: 10/26/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
 ms.openlocfilehash: b0f793dfb1c261ed967e79ab2a64e09306a57917
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919311"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659820"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>UWP en muestras de Xbox One
 
-Hay varios ejemplos UWP entre plataformas que se han optimizado para Xbox One cuando se ejecuta en esa plataforma. Puedes examinar el código en GitHub, lee el archivo de Léame y del wiki y clonar los proyectos en el equipo.
+Hay varios ejemplos UWP multiplataforma que se han optimizado para Xbox One cuando se ejecuta en esa plataforma. Puede examinar el código en GitHub, lea el archivo de Léame y del wiki y clonar los proyectos en el equipo.
 
 ## <a name="tvhelpers"></a>TVHelpers
 
@@ -27,16 +27,16 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 
 ## <a name="the-news-experience"></a>La experiencia de noticias
 
-[La experiencia de noticias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café cuarto, es una aplicación de noticias de muestra que funciona entre el escritorio, teléfono y Xbox One y ofrece una experiencia de premium que aprovecha las ventajas de las ventajas de cada dispositivo. En Xbox, que está optimizado para el controlador para juegos, la interfaz de usuario se adapte a la experiencia de 10 pies y mantiene contenido en el área segura del Televisor, entre otras optimizaciones. Consulta [la entrada de blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obtener más información.
+[La experiencia de noticias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), Fourth Coffee, es una aplicación de noticias de ejemplo que funciona a través de escritorio, teléfono y Xbox One y ofrece una experiencia premium que aprovecha las ventajas de cada dispositivo. En Xbox, está optimizado para el controlador para juegos, la interfaz de usuario se adapta a la experiencia de 10 pies y mantiene contenido en la zona segura de TV, entre otras optimizaciones. Consulte [la entrada de blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obtener más información.
 
 ![La experiencia de noticias](images/samples-1.png)
 
-## <a name="gamepad-style-navigation-xaml-sample"></a>Muestra de controlador para juegos de estilo de navegación (XAML)
+## <a name="gamepad-style-navigation-xaml-sample"></a>Ejemplo de navegación (XAML) del estilo de gamepad
 
-La [muestra de controlador para juegos de estilo de navegación (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) es un ejemplo UWP que muestra formas de mejorar la navegación direccional en la aplicación. Aunque también es aplicable a las aplicaciones de escritorio, donde un cliente quiere para que puedan usar un teclado para navegar por la aplicación, es especialmente importante para aplicaciones de Xbox, donde el principal método de entrada es controlador para juegos o control remoto.
+El [ejemplo de navegación (XAML) del estilo de Gamepad](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) es un ejemplo UWP que muestra formas de mejorar la navegación direccional en su aplicación. Aunque esto también es aplicable a las aplicaciones de escritorio, donde un cliente puede querer que pueda usar un teclado para navegar por la aplicación, es especialmente relevante para las aplicaciones Xbox, donde el método de entrada principal es gamepad o el control remoto.
 
-![Muestra de plataforma de Windows universal: cambiar el tamaño de la vista de la aplicación](images/samples-2.png)
+![Ejemplo de plataforma de Windows universal: Cambiar el tamaño de la vista de aplicación](images/samples-2.png)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 - [UWP en Xbox One](index.md)

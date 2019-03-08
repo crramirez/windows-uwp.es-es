@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925236"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597230"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
@@ -31,21 +31,21 @@ La primera vez que te conectes al Portal de dispositivos, se te solicitará un c
 
 ![Configuración de la detección de dispositivos en el modo de desarrollador](images/device-portal/mob-dev-mode-pairing.png)
 
-Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y a través de la red local (incluye VPN y tethering).
+Puede elegir entre 3 formas de conectarse al Portal de dispositivo: USB, el host local y a través de la red local (incluida la VPN y tethering).
 
-**Para conectarte al Portal de dispositivos**
+**Para conectarse al Portal de dispositivo**
 
 1. En el explorador, escribe la dirección que se muestra aquí para el tipo de conexión que estás usando.
 
-    - USB:  `http://127.0.0.1:10080`
+    - USB: `http://127.0.0.1:10080`
 
     Usa esta dirección cuando el teléfono esté conectado a un equipo a través de una conexión USB. Ambos dispositivos deben tener Windows 10, versión 1511 o posterior.
     
-    - Host local: `http://127.0.0.1`
+    - Host local:`http://127.0.0.1`
 
     Usa esta dirección para ver Device Portal localmente en el teléfono, mediante Microsoft Edge para Windows 10 Mobile.
     
-    - Red local:  `https://<The IP address or hostname of the phone>`
+    - Red local: `https://<The IP address or hostname of the phone>`
 
     Usa esta dirección para conectarte a través de una red local.
 
@@ -57,9 +57,9 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
 4. (Opcional) Activa la casilla Recordar mi equipo en el navegador para recordar este emparejamiento en el futuro.
 
-A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en WindowsPhone.
+A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en Windows Phone.
 
-![Configuración de Portal de dispositivos](images/device-portal/mob-dev-mode-portal.png)
+![Configuración de Device Portal](images/device-portal/mob-dev-mode-portal.png)
 
 Si usas el Portal de dispositivos en un entorno protegido, como un laboratorio de pruebas, en el que confías en todos los usuarios de la red local, no tienes información personal en el dispositivo y existen requisitos únicos, puedes deshabilitar la autenticación. Esto permite la comunicación sin cifrar y que cualquier persona que tenga la dirección IP del teléfono lo controle.
 
@@ -79,9 +79,9 @@ Device Portal en dispositivos móviles proporciona el conjunto estándar de pág
 - Seguimiento de eventos para Windows (ETW)
 - Seguimiento del rendimiento (WPR) 
 - Dispositivos
-- Redes
+- Funciones de red
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
-* [Introducción al Portal de dispositivos Windows](device-portal.md)
-* [Referencia de API principales del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Información general de Windows Device Portal](device-portal.md)
+* [Núcleo de Portal de dispositivo referencia de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

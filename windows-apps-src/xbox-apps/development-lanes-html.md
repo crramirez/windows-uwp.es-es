@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
 ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660330"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Llevar los juegos HTML a UWP en Xbox
 Xbox One es una excelente plataforma para juegos HTML 5. Los juegos HTML 5 se ejecutan en el motor del explorador [Edge](https://developer.microsoft.com/microsoft-edge/). Edge es rápido y totalmente compatible con las características de HTML 5 y CSS 3, como WebGL y Canvas.
@@ -31,6 +31,6 @@ Este vídeo profundiza más sobre las aplicaciones web empaquetadas y las aplica
 
 Para comenzar, descarga el motor elegido y busca las instrucciones de las aplicaciones de Windows 10. También debes leer la [guía de introducción](getting-started.md) para obtener información sobre cómo convertir la consola en un kit de desarrollo y cómo realizar la implementación desde Visual Studio.
 
-## <a name="see-also"></a>Consulta también
-- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
+## <a name="see-also"></a>Consulte también
+- [Volver a poner existentes juegos para Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 24b2885597599607ca405e858a9f713f5a6af4c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938537"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644880"
 ---
 # <a name="display-the-camera-preview"></a>Mostrar la vista previa de la cámara
 
@@ -22,9 +22,9 @@ Para obtener información sobre cómo escribir una aplicación de cámara que ca
 
 ## <a name="add-capability-declarations-to-the-app-manifest"></a>Agregar declaraciones de funcionalidades al manifiesto de la aplicación
 
-Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes declarar que esta usa las funcionalidades *cámara web* y *micrófono* del dispositivo. 
+Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes declarar que esta usa las funcionalidades *webcam* y *microphone* del dispositivo. 
 
-**Agregar funcionalidades al manifiesto de la aplicación**
+**Agregar capacidades al manifiesto de aplicación**
 
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
@@ -38,7 +38,7 @@ Usa una clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/ap
 
 
 
-## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar MediaCapture para iniciar la emisión de vista previa
+## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar MediaCapture para iniciar el flujo de vista previa
 
 El objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) es la interfaz de la aplicación para la cámara del dispositivo. Esta clase es un miembro del espacio de nombres Windows.Media.Capture. En el ejemplo de este artículo también se usan las API de los espacios de nombres [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) y [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx), además de las que se incluyen con la plantilla de proyecto predeterminada.
 
@@ -71,7 +71,7 @@ Como se indicó en la sección anterior, **StartPreviewAsync** producirá una ex
 
 [!code-cs[ExclusiveControlStatusChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetExclusiveControlStatusChanged)]
 
-## <a name="shut-down-the-preview-stream"></a>Apagar la emisión de vista previa
+## <a name="shut-down-the-preview-stream"></a>Apagar la secuencia de vista previa
 
 Cuando termines de usar la secuencia de vista previa, debes apagar siempre esa secuencia y deshacerte correctamente de los recursos asociados para garantizar la disponibilidad de la cámara para otras aplicaciones del dispositivo. Los pasos necesarios para cerrar la secuencia de vista previa son:
 
@@ -87,7 +87,7 @@ Debes apagar la secuencia de vista previa cuando el usuario abandone la página.
 
 [!code-cs[OnNavigatedFrom](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
-También debes apagar la emisión de vista previa correctamente cuando la aplicación se suspenda. Para ello, registra un controlador para el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) en el constructor de la página.
+También debes apagar el flujo de vista previa correctamente cuando la aplicación se suspenda. Para ello, registra un controlador para el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) en el constructor de la página.
 
 [!code-cs[RegisterSuspending](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRegisterSuspending)]
 
@@ -98,6 +98,6 @@ En el controlador de eventos **Suspending**, comprueba primero que la página es
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Obtener un fotograma de vista previa](get-a-preview-frame.md)

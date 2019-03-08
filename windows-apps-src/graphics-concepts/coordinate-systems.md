@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f85bf490bd1dd68e2d0ba31335f2fc0f89fe27b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655800"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
 
 Por lo general, las aplicaciones de gráficos 3D usan uno de dos tipos de sistemas de coordenadas cartesianas: diestro o zurdo. En ambos sistemas de coordenadas, el eje x positivo apunta a la derecha y el eje y positivo apunta arriba.
 
-## <a name="span-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanleft-and-right-handed-coordinates"></a><span id="Left_and_right_handed_coordinates"></span><span id="left_and_right_handed_coordinates"></span><span id="LEFT_AND_RIGHT_HANDED_COORDINATES"></span>Coordenadas zurdas y diestras
+## <a name="span-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanleft-and-right-handed-coordinates"></a><span id="Left_and_right_handed_coordinates"></span><span id="left_and_right_handed_coordinates"></span><span id="LEFT_AND_RIGHT_HANDED_COORDINATES"></span>Coordenadas de mano derecha e izquierda
 
 
 Para recordar en qué dirección apunta el eje z positivo, apunta con los dedos de la mano izquierda o derecha en la dirección x positiva y dóblalos en la dirección y positiva. La dirección a la que apunta el pulgar (acercándose o alejándose de ti) es la dirección que el eje z positivo apunta para ese sistema de coordenadas. La siguiente ilustración muestra estos dos sistemas de coordenadas.
@@ -28,7 +28,7 @@ Para recordar en qué dirección apunta el eje z positivo, apunta con los dedos 
 
 Direct3D usa un sistema de coordenadas zurdo. Aunque los sistemas de coordenadas zurdo y diestro son los más comunes, hay una variedad de otros sistemas de coordenadas que se usan en software 3D. Por ejemplo, no es raro que las aplicaciones de modelado 3D usen un sistema de coordenadas en el que el eje y se acerque o se aleje del espectador y el eje z apunte hacia arriba.
 
-## <a name="span-idverticesandvectorsspanspan-idverticesandvectorsspanspan-idverticesandvectorsspanvertices-and-vectors"></a><span id="Vertices_and_vectors"></span><span id="vertices_and_vectors"></span><span id="VERTICES_AND_VECTORS"></span>Vértices y vectores
+## <a name="span-idverticesandvectorsspanspan-idverticesandvectorsspanspan-idverticesandvectorsspanvertices-and-vectors"></a><span id="Vertices_and_vectors"></span><span id="vertices_and_vectors"></span><span id="VERTICES_AND_VECTORS"></span>Los vértices y vectores
 
 
 Dado el sistema de coordenadas, las coordenadas x, y, z pueden definir un punto en el espacio (un "vértice") o una dirección 3D (un "vector").
@@ -39,18 +39,18 @@ Las operaciones esenciales que se realizan en las mallas definidas en un sistema
 
 Cuando se combinan estas operaciones, los resultados no son conmutativos; el orden en el que se multiplican las matrices es importante.
 
-## <a name="span-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanporting-from-a-right-handed-coordinate-system"></a><span id="Porting_from_a_right-handed_coordinate_system"></span><span id="porting_from_a_right-handed_coordinate_system"></span><span id="PORTING_FROM_A_RIGHT-HANDED_COORDINATE_SYSTEM"></span>Migrar de un sistema de coordenadas diestro
+## <a name="span-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanporting-from-a-right-handed-coordinate-system"></a><span id="Porting_from_a_right-handed_coordinate_system"></span><span id="porting_from_a_right-handed_coordinate_system"></span><span id="PORTING_FROM_A_RIGHT-HANDED_COORDINATE_SYSTEM"></span>Migrar de un sistema de coordenadas para diestros
 
 
 Si vas a migrar una aplicación que se basa en un sistema de coordenadas diestro, debes hacer dos cambios en los datos que se pasan a Direct3D:
 
 -   Invierte el orden de los vértices del triángulo, de modo que el sistema los recorra en el sentido de las agujas del reloj desde el frente. En otras palabras, si los vértices son v0, v1, v2, pásalos a Direct3D como v0 v2, v1.
--   Usa la matriz de vista para escalar el espacio global por -1 en la dirección z. Para ello, invierte el signo del miembro \_31, \_32, \_33 y \_34 de la estructura matricial que usas para la matriz de vista.
+-   Usa la matriz de vista para escalar el espacio global por -1 en la dirección z. Para ello, invertir el signo de la \_31, \_32, \_33, y \_34 miembro de la estructura de matriz que utilizará para la matriz de vista.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas y geometry](coordinate-systems-and-geometry.md)
 
  
 

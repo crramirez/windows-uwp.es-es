@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b4ff9443c40cf44e171bf898b627de3e2819034
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939933"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656470"
 ---
 # <a name="getting-started-with-point-of-service"></a>Tareas iniciales con punto de servicio
 
@@ -20,31 +20,31 @@ Esta sección contiene temas que son comunes a todas las categorías de disposit
 
 |Tema |Descripción |
 |------|------------|
-| [Declaración de funcionalidad](pos-basics-capability.md)      | Obtén información sobre cómo agregar la funcionalidad **pointOfService** al manifiesto de aplicación.  Esta funcionalidad es necesaria para usar el espacio de nombres Windows.Devices.PointOfService.  |
-| [Enumeración de dispositivos](pos-basics-enumerating.md)        | Aprende cómo definir un selector de dispositivos que se usa para consultar los dispositivos disponibles para el sistema y cómo usar este selector para enumerar los dispositivos de punto de servicio.  |
-| [Crear un objeto de dispositivo](pos-basics-deviceobject.md)  | Obtén información sobre cómo crear un objeto de dispositivo PointOfService que te proporcionará acceso a las propiedades de solo lectura del periférico y reclamará el periférico para uso exclusivo. |
-| [Habilitar y notificación ](pos-basics-claim.md)  | Aprende a reservar un periférico PointOfService para uso exclusivo y habilitar para las operaciones de E/S.  |
-| [Compartir dispositivos periféricos con otras personas](pos-basics-sharing.md) | Obtén información sobre cómo compartir la red o periféricos Bluetooth conectado con otros equipos en un entorno donde varios equipos dependen de periféricos compartidos en lugar de dedicada periféricos conectados a cada equipo.
-| [Principio a fin de PointOfService](pos-get-started.md)  | Este es un ejemplo de principio a fin de cómo interactuar con dispositivos periféricos de PointOfService para uso de los ejemplos anteriores. |
+| [Declaración de capacidad](pos-basics-capability.md)      | Obtén información sobre cómo agregar la funcionalidad **pointOfService** al manifiesto de aplicación.  Esta funcionalidad es necesaria para usar el espacio de nombres Windows.Devices.PointOfService.  |
+| [Enumerar dispositivos](pos-basics-enumerating.md)        | Aprende cómo definir un selector de dispositivos que se usa para consultar los dispositivos disponibles para el sistema y cómo usar este selector para enumerar los dispositivos de punto de servicio.  |
+| [Creación de un objeto de dispositivo](pos-basics-deviceobject.md)  | Obtén información sobre cómo crear un objeto de dispositivo PointOfService que te proporcionará acceso a las propiedades de solo lectura del periférico y reclamará el periférico para uso exclusivo. |
+| [Notificación y habilitar ](pos-basics-claim.md)  | Obtenga información sobre cómo reservar un PointOfService periférico para uso exclusivo y habilitar para las operaciones de E/S.  |
+| [Periféricos de uso compartido con otros usuarios](pos-basics-sharing.md) | Obtenga información sobre cómo compartir periféricos Bluetooth conectado o red con otros equipos en un entorno donde varios PC dependen de periféricos compartidos en lugar de dedicado periférico adjunto a cada equipo.
+| [To-end PointOfService](pos-get-started.md)  | Se trata de un ejemplo completo de cómo interactuar con los periféricos PointOfService utilizando los ejemplos anteriores. |
 |
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 | Tema   | Descripción |
 |:--------|:------------|
-| [Distribución de la aplicación](../publish/distribute-lob-apps-to-enterprises.md) | Obtén información sobre las opciones para distribuir la aplicación a los clientes de empresa. |
-| [Ciclo de vida de aplicación](../launch-resume/app-lifecycle.md) | Obtén información sobre el ciclo de vida de una aplicación para UWP y lo que sucede cuando Windows inicia, suspende y reanuda la aplicación. |
-| [Recursos de la aplicación](../app-resources/index.md) | Obtén información sobre cómo crear, empaquetar y consumir los recursos de archivo, imagen y cadena de la aplicación. |
-| [Enlace de datos](../data-binding/index.md) | Aprende a usar el enlace de datos para mostrar los datos en la interfaz de usuario de la aplicación. |
-| [Enumeración de dispositivos](enumerate-devices.md) | Obtén información sobre técnicas de enumeración de uso avanzado para buscar los periféricos.|
-| [Aplicaciones adaptables de versión](../debug-test-perf/version-adaptive-apps.md) | Obtenga información sobre cómo diseñar la aplicación para que se ejecuta en varias versiones de Windows 10.|
+| [Distribución de la aplicación](../publish/distribute-lob-apps-to-enterprises.md) | Obtenga información sobre las opciones para distribuir la aplicación a los clientes empresariales. |
+| [Ciclo de vida de aplicación](../launch-resume/app-lifecycle.md) | Obtenga información sobre el ciclo de vida de una aplicación de UWP y lo que sucede cuando Windows se inician, suspenden y reanuda la aplicación. |
+| [Recursos de la aplicación](../app-resources/index.md) | Aprenda a crear, paquete y usar la cadena de la aplicación, imagen y los recursos de archivos. |
+| [Enlace de datos](../data-binding/index.md) | Obtenga información sobre cómo usar el enlace de datos para mostrar los datos en la interfaz de usuario de la aplicación. |
+| [Enumeración de dispositivos](enumerate-devices.md) | Obtenga información sobre técnicas de enumeración de uso avanzada para encontrar los periféricos.|
+| [Aplicaciones adaptables de versión](../debug-test-perf/version-adaptive-apps.md) | Obtenga información sobre cómo diseñar la aplicación para que se ejecute en varias versiones de Windows 10.|
 |
 
 
-## <a name="sample-code"></a>Código de muestra
-+ [Ejemplo de escáner de códigos de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
-+ [Ejemplo de caja registradora]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
-+ [Ejemplo de visualización de líneas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
-+ [Ejemplo de lector de bandas magnéticas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
-+ [Ejemplo de impresora de punto de servicio](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
+## <a name="sample-code"></a>Código de ejemplo
++ [Ejemplo de escáner de código de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
++ [Ejemplo de cajón de caja]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
++ [Ejemplo de línea para mostrar](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
++ [Ejemplo de lector de banda magnética](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
++ [Ejemplo de POSPrinter](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
 

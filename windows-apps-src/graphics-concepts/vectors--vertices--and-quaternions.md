@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8942e53b7372e2e8b3cf4ed05f89b4187bdfc4be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926414"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599870"
 ---
 # <a name="vectors-vertices-and-quaternions"></a>Vectores, vértices y cuaterniones
 
 
 En Direct3D, los vértices describen la posición y la orientación. Cada vértice de un primitivo se describe mediante un vector que proporciona la posición, el color, las coordenadas de textura y un vector normal que da su orientación.
 
-Los cuaterniones agregan un cuarto elemento a los valores \[x, y, z\] que definen un vector de tres componentes. Los cuaterniones son una alternativa a los métodos de matriz que se usan normalmente para rotaciones 3D. Un cuaternión representa un eje en el espacio 3D y una rotación alrededor de ese eje. Por ejemplo, un cuaternión puede representar un eje (1,1,2) y una rotación de 1 radián. Los cuaterniones llevan información valiosa, pero su verdadera energía proviene de las dos operaciones que se pueden realizar en ellos: composición e interpolación.
+Los cuaterniones agregan un cuarto elemento a la \[x, y, z\] valores que definen un vector de componentes de tres. Los cuaterniones son una alternativa a los métodos de matriz que se usan normalmente para rotaciones 3D. Un cuaternión representa un eje en el espacio 3D y una rotación alrededor de ese eje. Por ejemplo, un cuaternión puede representar un eje (1,1,2) y una rotación de 1 radián. Los cuaterniones llevan información valiosa, pero su verdadera energía proviene de las dos operaciones que se pueden realizar en ellos: composición e interpolación.
 
 Realizar composición en cuaterniones es similar a combinarlos. La composición de dos valores de cuaternión se expresa como en la siguiente ilustración.
 
@@ -34,7 +34,7 @@ Cuando usas composición e interpolación juntas, proporcionan una forma sencill
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas y geometry](coordinate-systems-and-geometry.md)
 
  
 

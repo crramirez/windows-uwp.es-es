@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 962002d635c3e6edbf1f9581a4cbc57fbd5b1d96
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931684"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646300"
 ---
 # <a name="coordinate-systems-and-geometry"></a>Sistemas de coordenadas y geometría
 
@@ -39,19 +39,19 @@ Es necesario estar familiarizado con el trabajo con principios geométricos 3D p
 <td align="left"><p>Por lo general, las aplicaciones de gráficos 3D usan uno de dos tipos de sistemas de coordenadas cartesianas: diestro o zurdo. En ambos sistemas de coordenadas, el eje x positivo apunta a la derecha y el eje y positivo apunta arriba.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="primitives.md">Primitivos</a></p></td>
+<td align="left"><p><a href="primitives.md">Tipos primitivos</a></p></td>
 <td align="left"><p>Un <em>primitivo</em> 3D es una colección de vértices que forma una sola entidad 3D.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="face-and-vertex-normal-vectors.md">Vectores normales de caras y vértices</a></p></td>
-<td align="left"><p>Cada cara de una malla tiene un vector normal a la unidad. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.</p></td>
+<td align="left"><p><a href="face-and-vertex-normal-vectors.md">Vectores normales de cara y del vértice</a></p></td>
+<td align="left"><p>Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="rectangles.md">Rectángulos</a></p></td>
 <td align="left"><p>En la programación de Direct3D y Windows, se hace referencia a los objetos de la pantalla en términos de rectángulos delimitadores. Los lados de un rectángulo delimitador siempre son paralelos a los lados de la pantalla, por lo que se puede describir el rectángulo por dos puntos, la esquina superior izquierda y la esquina inferior derecha.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="triangle-interpolation.md">Interpolación de triángulos</a></p></td>
+<td align="left"><p><a href="triangle-interpolation.md">Interpolación de triángulo</a></p></td>
 <td align="left"><p>Durante la representación, la canalización interpola los datos de vértices en cada triángulo. Los datos de vértice pueden ser una amplia variedad de datos y pueden incluir, entre otros, color, color especular, alfa difuso (opacidad del triángulo), alfa especular y un factor de niebla.</p></td>
 </tr>
 <tr class="even">
@@ -63,7 +63,7 @@ Es necesario estar familiarizado con el trabajo con principios geométricos 3D p
 <td align="left"><p>La parte de Direct3D que inserta geometría a través de la canalización de geometría de función fija es el motor de la transformación. Localiza el modelo y el visor en el mundo, proyecta vértices para mostrar en la pantalla y sujeta vértices a la ventanilla. El motor de transformación también realiza cálculos de iluminación para determinar los componentes de difusión y resaltados especulares en cada vértice.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="viewports-and-clipping.md">Ventanillas y recortes</a></p></td>
+<td align="left"><p><a href="viewports-and-clipping.md">Puntos de visión y el recorte</a></p></td>
 <td align="left"><p>Una <em>ventanilla</em> es un rectángulo bidimensional (2D) en el que se proyecta una escena 3D. En Direct3D, el rectángulo existe como coordenadas dentro de una superficie de Direct3D que el sistema usa como destino de representación. La transformación de proyección convierte los vértices en el sistema de coordenadas usado para la ventanilla. Una ventanilla también se usa para especificar el intervalo de valores de profundidad en una superficie de destino de representación en la que se representará una escena (normalmente 0,0 a 1,0).</p></td>
 </tr>
 </tbody>

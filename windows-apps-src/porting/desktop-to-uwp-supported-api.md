@@ -1,18 +1,18 @@
 ---
-Description: Packaged desktop apps can use a wide range of Universal Windows Platform (UWP) APIs, even if they have not fully transitioned to a UWP app. This article lists the available classes your packaged app can use.
+Description: Las aplicaciones de escritorio empaquetadas pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), incluso si no se realizó la transición a una aplicación para UWP. En este artículo se enumeran las clases disponibles que puede usar tu aplicación empaquetada.
 Search.Product: eADQiWindows 10XVcnh
 title: API de UWP disponibles para una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 ms.date: 10/27/2017
 ms.topic: article
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: c3131207c04b421a6d8ab6aeeb16aa3107bbf21d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048855"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644720"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>API de UWP disponibles para una aplicación de escritorio empaquetada
 
@@ -26,7 +26,7 @@ La mayoría de las API de UWP funcionan bien en aplicaciones de escritorio empaq
 <tr><td>Tareas en segundo plano</td><td>Mientras que las aplicaciones empaquetadas pueden registrar tareas en segundo plano, solo las aplicaciones que sean completamente para UWP se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">muestra de tarea en segundo plano en GitHub</a>.</td></tr>
 <tr><td>Bluetooth</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Chat y llamadas de teléfono</td><td>Las aplicaciones empaquetadas no se pueden ejecutar en dispositivos móviles hasta que se porten completamente a UWP.</td></tr>
-<tr><td>Activación del contrato</td><td>Solo las aplicaciones UWP completas pueden activarse mediante un contrato.</td></tr>
+<tr><td>Activación del contrato</td><td>Solo las aplicaciones UWP completas se pueden activar por un contrato.</td></tr>
 <tr><td>Criptografía</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Geolocalización</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Selectores de archivos y carpetas</td><td>Las aplicaciones empaquetadas tienen acceso completo al sistema de archivos y no necesitas selectores de UWP.</td></tr>
@@ -1048,10 +1048,10 @@ Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a tus preguntas**
+**Encuentre respuestas a sus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
-**Enviar comentarios o realizar sugerencias acerca de las características**
+**Proporcionar comentarios o hacer sugerencias**
 
 Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

@@ -1,19 +1,19 @@
 ---
-Description: Design an instructional user interface (UI) that teaches users how to work with your UWP app.
+Description: Diseñar una interfaz de usuario con instrucciones (UI) que enseña a los usuarios a trabajar con su aplicación para UWP.
 title: Directrices para diseñar una interfaz de usuario informativa
 label: Instructional UI
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
 ms.localizationpriority: medium
 ms.openlocfilehash: b39507fb1333fdb642601c6b4828c3d160c6ceb5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940414"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656440"
 ---
 # <a name="instructional-ui-guidelines"></a>Directrices para una interfaz de usuario informativa
 
@@ -25,7 +25,7 @@ En ocasiones puede resultar útil informar al usuario acerca de las funciones de
 
 La interfaz de usuario informativa debe usarse con cuidado. Cuando se abusa de ella, es fácil pasarla por alto o puede resultar molesta para el usuario, lo que hará que pierda su eficacia.
 
-La interfaz de usuario informativa debería usarse para ayudar al usuario a descubrir características de aplicación importantes y que no son evidentes, como los gestos táctiles o configuración en la que podrían estar interesados. También puede usarse para informar a los usuarios sobre características nuevas o cambios en la aplicación que, de lo contrario, pueden pasar desapercibidos.
+La interfaz de usuario informativa debería usarse para ayudar al usuario a descubrir características importantes de aplicación que no son evidentes, como los gestos táctiles o ajustes que podrían interesarles. También puede usarse para informar a los usuarios sobre características nuevas o cambios en la aplicación que, de lo contrario, pueden pasar desapercibidos.
 
 A menos que la aplicación dependa de los gestos táctiles, la interfaz de usuario informativa no debe usarse para enseñar al usuario las características fundamentales de la aplicación.
 
@@ -33,35 +33,35 @@ A menos que la aplicación dependa de los gestos táctiles, la interfaz de usuar
 
 Una buena interfaz de usuario informativa es pertinente y educativa para el usuario y mejora su experiencia. Debe ser:
 
--   **Simple:** los usuarios no quieren que su experiencia se vea interrumpida con información complicada
--   **Memorable:** los usuarios no quieren ver las mismas instrucciones cada vez que intentan realizar una tarea, por lo que estas deben ser fáciles de recordar.
--   **Pertinente de manera inmediata:** si la interfaz de usuario informativa no informa a los usuarios sobre algo que quieren hacer inmediatamente, estos no tendrán ningún motivo para prestarle atención.
+-   **Simple:** Los usuarios no desean que su experiencia se interrumpa con información complicada
+-   **Fácil de recordar:** Los usuarios no desean ver las mismas instrucciones cada vez que intente realizar una tarea, por lo que deben ser algo que recordará instrucciones.
+-   **Inmediatamente relevante:** Si la interfaz de usuario con instrucciones no enseña un usuario sobre algo que desean hacer inmediatamente, no tienen un motivo para prestar atención a él.
 
 Evita el uso excesivo de la interfaz de usuario informativa y asegúrate de elegir los temas correctos. No incluyas la siguiente información:
 
--   **Características fundamentales:** si los usuarios necesitan instrucciones para usar la aplicación, considera la posibilidad de crear un diseño de aplicación más intuitivo.
--   **Características obvias:** la interfaz de usuario informativa no debe interferir en los casos en que los usuarios puedan descubrir el funcionamiento de una característica por sí solos.
--   **Características complejas:** la interfaz de usuario informativa debe ser concisa, además, los usuarios interesados en características complejas normalmente están dispuestos a buscar instrucciones, por lo que no es necesario proporcionarlas directamente.
+-   **Características fundamentales:** Si un usuario necesita instrucciones para usar la aplicación, considere la posibilidad de realizar el diseño de aplicaciones más intuitiva.
+-   **Características obvias:** Si un usuario puede descubrir una característica por sí solos sin una instrucción, la interfaz de usuario con instrucciones sólo obtendrá de la forma.
+-   **Características complejas:** La interfaz de usuario con instrucciones debe ser conciso y los usuarios interesados en características complejas normalmente dispuestos a buscan instrucciones y no es necesario que se les han concedido.
 
-Evita molestar a los usuarios con la interfaz de usuario informativa. No hagas lo siguiente:
+Evita que la interfaz de usuario informativa suponga una molestia para los usuarios. No hagas lo siguiente:
 
--   **Ocultar información importante:** la interfaz de usuario informativa nunca debería obstaculizar otras características de la aplicación.
--   **Obligar a los usuarios a participar:** los usuarios deben tener la posibilidad de omitir la interfaz de usuario informativa y avanzar en la aplicación.
--   **Mostrar información repetida:** no agobies al usuario con la interfaz de usuario informativa, aunque la pase por alto la primera vez. La mejor solución es agregar una opción de configuración para volver a mostrar la interfaz de usuario informativa.
+-   **Información importante poco claros:** Nunca debe obtener la interfaz de usuario con instrucciones obstáculo otras características de la aplicación.
+-   **Forzar a los usuarios participar:** Usuarios deben ser capaces de ignorar la interfaz de usuario con instrucciones y todavía el progreso a través de la aplicación.
+-   **Mostrar información de repetición:** No acosar al usuario con la interfaz de usuario con instrucciones, aunque ignorarla por primera vez. La mejor solución es agregar una opción de configuración para volver a mostrar la interfaz de usuario informativa.
 
 ## <a name="examples-of-instructional-ui"></a>Ejemplos de interfaz de usuario informativa
 
 Aquí te mostramos algunos ejemplos en los que la interfaz de usuario informativa puede ayudar a los usuarios:
 
--   **Ayudar a los usuarios a descubrir interacciones táctiles.** En la siguiente captura de pantalla se muestra la interfaz de usuario informativa en la que se enseña a un jugador a usar los gestos táctiles en el juego Cut the Rope.
+-   **Ayuda a los usuarios descubrir las interacciones táctiles.** En la siguiente captura de pantalla se muestra la interfaz de usuario informativa en la que se enseña a un jugador a usar los gestos táctiles en el juego Cut the Rope.
 
-    ![Captura de pantalla de juego que muestra un mensaje de la UI informativa, "Slide across to cut the rope" (Desliza el dedo para cortar la cuerda).](images/in-game-controls-3.png)
+    ![Captura de pantalla del juego que muestra un mensaje de la UI informativa, "Slide across to cut the rope" (Desliza el dedo para cortar la cuerda).](images/in-game-controls-3.png)
 
--   **Causar una excelente primera impresión.** Cuando la aplicación Momentos especiales se inicia por primera vez, la interfaz de usuario informativa pide al usuario que comience a crear películas sin obstaculizar su experiencia.
+-   **Realizar una primera impresión excelente.** Cuando la aplicación Momentos especiales se inicia por primera vez, la interfaz de usuario informativa pide al usuario que comience a crear películas sin obstaculizar su experiencia.
 
-    ![Pantalla Inicio de la aplicación Momentos especiales](images/instructional-ui-movie.png)
+    ![Pantalla de inicio de la aplicación Momentos especiales](images/instructional-ui-movie.png)
 
--   **Guiar a los usuarios para que den el siguiente paso en una tarea complicada.** En la aplicación Correo de Windows, una sugerencia en la parte inferior de la bandeja de entrada dirige a los usuarios a **Configuración** para acceder a mensajes más antiguos.
+-   **Guiar a los usuarios para avanzar al paso siguiente en una tarea complicada.** En la aplicación Correo de Windows, una sugerencia en la parte inferior de la bandeja de entrada dirige a los usuarios a **Configuración** para acceder a los mensajes más antiguos.
 
     ![Captura de pantalla recortada de la aplicación Correo de Windows que muestra un mensaje de la interfaz de usuario informativa](images/instructional-ui-mail-inbox.png)
 
@@ -73,4 +73,4 @@ Aquí te mostramos algunos ejemplos en los que la interfaz de usuario informativ
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
+* [Directrices para obtener ayuda de la aplicación](guidelines-for-app-help.md)

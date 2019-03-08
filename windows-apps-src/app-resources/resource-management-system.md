@@ -1,5 +1,5 @@
 ---
-Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
+Description: Al compilar, el sistema de administración de recursos crea un índice de todas las diferentes variantes de los recursos que se empaquetan con tu aplicación. En tiempo de ejecución, el sistema detecta el usuario y la configuración de la máquina que están en vigor y carga los recursos que son la mejor coincidencia para esa configuración.
 title: Sistema de administración de recursos
 template: detail.hbs
 ms.date: 10/20/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598630"
 ---
 # <a name="resource-management-system"></a>Sistema de administración de recursos
 El sistema de administración de recursos tiene funciones de tiempo de compilación y de tiempo de ejecución. Al compilar, el sistema crea un índice de todas las diferentes variantes de los recursos que se empaquetan con tu aplicación. Este índice es el índice de recursos del paquete, o PRI, y también se incluye en el paquete de la aplicación. En tiempo de ejecución, el sistema detecta el usuario y la configuración de la máquina que están en vigor, consulta la información del PRI y carga automáticamente los recursos que son la mejor coincidencia para esa configuración.
@@ -26,7 +26,7 @@ Cada paquete de la aplicación debería contener un índice binario de los recur
 - Para el desarrollo habitual de aplicaciones no necesitarás MakePRI.exe, porque ya está integrado en el flujo de trabajo de compilación de Visual Studio. Además, Visual Studio admite la edición de archivos PRI en una interfaz de usuario dedicada. Sin embargo, es posible que los localizadores y las herramientas que usen se basen en MakePRI.exe.
 - Cada archivo PRI contiene una colección de recursos con nombre, denominada mapa de recursos. Cuando se carga un archivo PRI desde un paquete, se comprueba si el nombre del mapa de recursos coincide con el nombre de identidad del paquete.
 - Los archivos PRI solo contienen datos, por lo que no usan el formato portable ejecutable (PE). Están diseñados específicamente para que solo contengan datos como el formato de recursos de Windows. Reemplazan a los recursos contenidos en las DLL del modelo de aplicaciones de Win32.
-- El límite de tamaño de un archivo PRI es de 64kilobytes.
+- El límite de tamaño de un archivo PRI es de 64 kilobytes.
 
 ## <a name="uwp-api-access-to-app-resources"></a>Acceso a las API de UWP para recursos de la aplicación
 
@@ -42,7 +42,7 @@ Un objeto [**ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.co
 
 Los recursos disponibles para una aplicación se almacenan en colecciones jerárquicas, a las que puedes tener acceso con un objeto [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live). La clase **ResourceManager** proporciona acceso a las diversas instancias **ResourceMap** de nivel superior que usa la aplicación, que se corresponden con los diversos paquetes para la aplicación. El valor [**MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap) corresponde al mapa de recursos del paquete de la aplicación actual y excluye cualquier paquete de marcos de referencia. Cada **ResourceMap** se denomina según el nombre de paquete que se especifica en el manifiesto del paquete. Dentro de un **ResourceMap** existen subárboles (consulta [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)), que contienen además objetos **NamedResource**. Los subárboles suelen corresponder a los archivos de recursos que contienen el recurso. Para obtener más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Cargar imágenes y activos adaptados a la escala, tema, contraste alto y otros](images-tailored-for-scale-theme-contrast.md).
 
-Aquí tienes un ejemplo.
+A continuación te mostramos un ejemplo.
 
 ```csharp
 // using Windows.ApplicationModel.Resources.Core;
@@ -66,5 +66,5 @@ Los candidatos de recursos se eligen en función de un [**ResourceContext**](/uw
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
-* [Cargar imágenes y activos adaptados a la escala, el tema, el contraste alto y otros](images-tailored-for-scale-theme-contrast.md)
+* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](localize-strings-ui-manifest.md)
+* [Cargar imágenes y los recursos adaptados para escala, tema, contraste alto etc.](images-tailored-for-scale-theme-contrast.md)

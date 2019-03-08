@@ -7,15 +7,15 @@ keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formula
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 45c4acda953808a85363d1cec7c623dd79cc08f1
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058536"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656450"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
-Si vas a crear una aplicación que requiere que los usuarios introduzcan una gran cantidad de información, lo más probable es que desees crear un formulario para que lo cumplimenten. En este artículo mostraremos lo que necesitas saber para crear un formulario que sea útil y eficaz.
+Si va a crear una aplicación que requiere que los usuarios a una cantidad significativa de información de entrada, lo más probable es que desea crear un formulario para que rellenen. En este artículo le mostrará lo que necesita saber para crear un formulario que sea útil y sólida.
 
 Este no es un tutorial. Si quieres uno, consulta nuestro [tutorial de diseño adaptativo](../design/basics/xaml-basics-adaptive-layout.md), que te proporcionará una experiencia paso a paso guiada.
 
@@ -45,9 +45,9 @@ Lee [esta documentación sobre paneles de diseño](../design/layout/layout-panel
 
 ## <a name="what-goes-in-a-form"></a>Qué se incluye en un formulario
 
-Tendrás que rellenar tu formulario con una gran variedad de [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Probablemente ya estás familiarizado con ellos, pero puedes consultar la información si necesitas ponerte al día. En concreto, querrás controles que permiten al usuario escribir texto o elegir de una lista de valores. Esta es una lista básica de opciones que puedes agregar; no es necesario leer todo sobre ellas, solo lo suficiente para comprender su aspecto y funcionamiento.
+Tendrás que rellenar tu formulario con una gran variedad de [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Probablemente ya estás familiarizado con ellos, pero puedes consultar la información si necesitas ponerte al día. En concreto, querrás controles que permiten al usuario escribir texto o elegir de una lista de valores. Se trata de una lista de opciones que puede agregar básica: no es necesario leer todo sobre ellos, simplemente lo suficientemente para comprender su aspecto y funcionamiento.
 
-* [TextBox](../design/controls-and-patterns/text-box.md) permite a un texto de entrada de usuario en la aplicación.
+* [Cuadro de texto](../design/controls-and-patterns/text-box.md) permite un texto de entrada de usuario a la aplicación.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite al usuario elegir entre dos opciones.
 * [DatePicker](../design/controls-and-patterns/date-picker.md) permite al usuario seleccionar un valor de fecha.
 * [TimePicker](../design/controls-and-patterns/time-picker.md) permite al usuario seleccionar un valor de hora.
@@ -133,7 +133,7 @@ Cuando vayas a crear diseños más complejos con más elementos visuales, puedes
 
 ## <a name="going-further"></a>Ir más allá
 
-Aunque hayas creado un formulario, los conceptos de diseños y controles son aplicables en todas las interfaces de usuario de XAML que puedas crear. No dudes en volver a través de los documentos te hemos vinculado y experimenta con el formulario que tienes, agregando nuevas funcionalidades de la interfaz de usuario y refinando la experiencia del usuario. Si quieres obtener instrucciones paso a paso a través de las características de diseño más detalladas, consulta nuestro [tutorial de diseño adaptativo](../design/basics/xaml-basics-adaptive-layout.md)
+Aunque hayas creado un formulario, los conceptos de diseños y controles son aplicables en todas las interfaces de usuario de XAML que puedas crear. No dude en volver a través de los documentos que se haya vinculado le y experimentar con el formulario que tiene, agregar nuevas características de interfaz de usuario y refinar aún más la experiencia del usuario. Si desea instrucciones paso a paso a través de las características de diseño más detalladas, consulte nuestro [tutorial sobre el diseño adaptable](../design/basics/xaml-basics-adaptive-layout.md)
 
 Los formularios tampoco tienen que existir en vacío: podrías ir un paso más allá e incrustar los tuyos dentro de un [patrón principal/de detalles](../design/controls-and-patterns/master-details.md) o un [control dinámico](../design/controls-and-patterns/pivot.md). O si quieres ponerte a trabajar en el código subyacente de tu formulario, es posible que quieras empezar con nuestra [introducción a eventos](../xaml-platform/events-and-routed-events-overview.md).
 
@@ -145,8 +145,8 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 
 | API | Descripción |
 |------|---------------|
-| [Controles útiles para formularios](../design/controls-and-patterns/forms.md#input-controls) | Una lista de controles de entrada útiles para crear formularios y pautas básicas de dónde utilizarlos. |
-| [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | Un panel para organizar elementos en diseños de varias filas y varias columnas. |
+| [Controles útiles para los formularios](../design/controls-and-patterns/forms.md#input-controls) | Una lista de controles de entrada útiles para crear formularios y pautas básicas de dónde utilizarlos. |
+| [Cuadrícula](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | Un panel para organizar elementos en diseños de varias filas y varias columnas. |
 | [RelativePanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | Un panel para organizar elementos en relación con otros elementos y los límites del panel. |
 | [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | Un panel para organizar elementos en una sola línea horizontal o vertical. |
 | [VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) | Permite establecer el aspecto de los elementos de la interfaz de usuario cuando están en estados concretos. |
@@ -155,22 +155,22 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 
 | Tema | Descripción |
 |-------|----------------|
-| [Información general sobre la accesibilidad](../design/accessibility/accessibility-overview.md) | Una introducción amplia de las opciones de accesibilidad en aplicaciones. |
+| [Información general sobre accesibilidad](../design/accessibility/accessibility-overview.md) | Una introducción amplia de las opciones de accesibilidad en aplicaciones. |
 | [Lista de comprobación de accesibilidad](../design/accessibility/accessibility-checklist.md) | Una práctica lista de comprobación para asegurarte de que la aplicación cumple con los estándares de accesibilidad. |
-| [Introducción a los eventos](../xaml-platform/events-and-routed-events-overview.md) | Detalles sobre cómo agregar y estructurar eventos para controlar acciones de la interfaz de usuario. |
+| [Información general sobre eventos](../xaml-platform/events-and-routed-events-overview.md) | Detalles sobre cómo agregar y estructurar eventos para controlar acciones de la interfaz de usuario. |
 | [Formularios](../design/controls-and-patterns/forms.md) | Instrucciones generales para crear formularios. |
 | [Paneles de diseño](../design/layout/layout-panels.md) | Proporciona una descripción general de los tipos de paneles de diseño y dónde usarlos. |
 | [Patrón de maestro y detalles](../design/controls-and-patterns/master-details.md) | Un modelo de diseño que se puede implementar alrededor de uno o varios formularios. |
-| [Control dinámico](../design/controls-and-patterns/pivot.md) | Un control que puede contener uno o varios formularios. |
-| [Diseño adaptativo](../design/layout/responsive-design.md) | Una descripción general de los principios de diseño adaptativo a gran escala. | 
-| [Diseños adaptativos con XAML](../design/layout/layouts-with-xaml.md) | Información específica sobre los estados visuales y otras implementaciones de diseño adaptativo. |
-| [Tamaños de pantalla para diseño adaptativo](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | Instrucciones sobre qué ámbitos deben cubrirse para los tamaños de pantalla para diseños adaptativos. |
+| [Control Pivot](../design/controls-and-patterns/pivot.md) | Un control que puede contener uno o varios formularios. |
+| [Diseño dinámico](../design/layout/responsive-design.md) | Una descripción general de los principios de diseño adaptativo a gran escala. | 
+| [Diseños con capacidad de respuesta con XAML](../design/layout/layouts-with-xaml.md) | Información específica sobre los estados visuales y otras implementaciones de diseño adaptativo. |
+| [Tamaños de pantalla de diseño dinámico](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | Instrucciones sobre qué ámbitos deben cubrirse para los tamaños de pantalla para diseños adaptativos. |
 
 ## <a name="useful-code-samples"></a>Muestras de código útiles
 
 | Ejemplo de código | Descripción |
 |-----------------|---------------|
-| [Tutorial de diseño adaptativo](../design/basics/xaml-basics-adaptive-layout.md) | Una experiencia guiada paso a paso a través de los diseños adaptativos y el diseño con capacidad de respuesta. | 
-| [Base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Consulta el diseño y los formularios en acción en un ejemplo empresarial de varias páginas. |
-| [Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery) | Consulta una selección de controles XAML y cómo se implementan. |
+| [Tutorial sobre el diseño adaptable](../design/basics/xaml-basics-adaptive-layout.md) | Una experiencia guiada paso a paso a través de los diseños adaptativos y el diseño con capacidad de respuesta. | 
+| [Base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Consulta el diseño y los formularios en acción en un ejemplo empresarial de varias páginas. |
+| [Galería de controles de XAML](https://github.com/Microsoft/Xaml-Controls-Gallery) | Consulta una selección de controles XAML y cómo se implementan. |
 | [Ejemplos de código adicionales](https://developer.microsoft.com//windows/samples) | Elige **Controles, diseño y texto** en la lista desplegable de categoría para ver ejemplos de código relacionados. |

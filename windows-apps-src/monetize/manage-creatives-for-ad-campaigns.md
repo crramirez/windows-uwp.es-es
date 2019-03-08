@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934540"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658470"
 ---
 # <a name="manage-creatives"></a>Administrar creativos
 
@@ -27,7 +27,7 @@ Para obtener más información sobre la relación entre los creativos y las camp
 Para usar estos métodos, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 
 ## <a name="request"></a>Solicitud
@@ -47,7 +47,7 @@ Estos métodos tienen los siguientes URI.
 
 | Encabezado        | Tipo   | Descripción         |
 |---------------|--------|---------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
 
@@ -113,17 +113,17 @@ Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [creativo]
 
 Los cuerpos de solicitud y respuesta para estos métodos contienen los siguientes campos. En esta tabla se muestran los campos que son de solo lectura (es decir, no se pueden cambiar en el método PUT) y los campos que son obligatorios en el cuerpo de la solicitud para el método POST.
 
-| Campo        | Tipo   |  Descripción      |  Solo lectura  | Valor predeterminado  |  Obligatorio para POST |  
+| Campo        | Tipo   |  Descripción      |  Solo lectura  | Predeterminado  |  Obligatorio para POST |  
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número entero   |  El id. del creativo.     |   Sí    |      |    No   |       
-|  name   |  cadena   |   El nombre del creativo.    |    No   |      |  Sí     |       
-|  content   |  cadena   |  El contenido de la imagen de creativo, en formato codificado en Base64.<br/><br/>**Nota**&nbsp;&nbsp;El tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.     |  No     |      |   Sí    |       
-|  height   |  entero   |   La altura del creativo.    |    No    |      |   Sí    |       
-|  width   |  entero   |  El ancho del creativo.     |  No    |     |    Sí   |       
-|  landingUrl   |  cadena   |  Si usas un servicio de seguimiento de campañas como Kochava, AppsFlyer o Tune para medir el análisis de instalación de la aplicación, asigna la dirección URL de seguimiento en este campo al llamar el método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |       
-|  format   |  cadena   |   El formato del anuncio. Actualmente, el único valor admitido es **Banner**.    |   No    |  Pancarta   |  No     |       
+|  name   |  string   |   El nombre del creativo.    |    No   |      |  Sí     |       
+|  content   |  string   |  El contenido de la imagen de creativo, en formato codificado en Base64.<br/><br/>**Nota**&nbsp;&nbsp;El tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.     |  No     |      |   Sí    |       
+|  height   |  número entero   |   La altura del creativo.    |    No    |      |   Sí    |       
+|  width   |  número entero   |  El ancho del creativo.     |  No    |     |    Sí   |       
+|  landingUrl   |  string   |  Si usas un servicio de seguimiento de campañas como Kochava, AppsFlyer o Tune para medir el análisis de instalación de la aplicación, asigna la dirección URL de seguimiento en este campo al llamar el método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |       
+|  format   |  string   |   El formato del anuncio. Actualmente, el único valor admitido es **Banner**.    |   No    |  Banner   |  No     |       
 |  imageAttributes   | [ImageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
-|  storeProductId   |  cadena   |   El [id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Store para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
+|  storeProductId   |  string   |   El [id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Store para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
 
 
 <span id="image-attributes"/>
@@ -132,13 +132,13 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 
 | Campo        | Tipo   |  Descripción      |  Solo lectura  | Valor predeterminado  | Obligatorio para POST |  
 |--------------|--------|---------------|------|-------------|------------|
-|  imageExtension   |   cadena  |   Uno de los siguientes valores: **PNG** o **JPG**.    |    No   |      |   Sí    |       |
+|  imageExtension   |   string  |   Uno de los siguientes valores: **PNG** o **JPG**.    |    No   |      |   Sí    |       |
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
+* [Ejecutar campañas de anuncios mediante servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Administrar campañas de anuncios](manage-ad-campaigns.md)
-* [Administración de las líneas de entrega de las campañas publicitarias](manage-delivery-lines-for-ad-campaigns.md)
-* [Administrar perfiles de destino de las campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)
-* [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
+* [Administrar las líneas de entrega para campañas de anuncios](manage-delivery-lines-for-ad-campaigns.md)
+* [Administrar perfiles de destinatarios para campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)
+* [Obtener datos de rendimiento de campaña de anuncio](get-ad-campaign-performance-data.md)

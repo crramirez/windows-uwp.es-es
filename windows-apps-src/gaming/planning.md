@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, planning, planeamiento, accessibility, accesibilidad, cloud, nube, monetize, monetizar, package, paquete, technology, tecnología, concept, concepto, approval, aprobación
 ms.localizationpriority: medium
 ms.openlocfilehash: 47f613ff814788df947ee39590af0e01b7e3622f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653780"
 ---
 # <a name="planning-for-uwp-games"></a>Planeamiento de juegos para UWP
 
@@ -30,7 +30,7 @@ En esta sección se proporciona información sobre cómo planear tu juego para U
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="game-development-platform-guide.md">Tecnologías de juego</a></p></td>
+<td align="left"><p><a href="game-development-platform-guide.md">Tecnologías de juegos</a></p></td>
 <td align="left"><p>Una lista de tecnologías que te ayudarán a desarrollar juegos.</p></td>
 </tr>
 <tr class="even">
@@ -38,7 +38,7 @@ En esta sección se proporciona información sobre cómo planear tu juego para U
 <td align="left"><p>Aprende a hacer que los juegos sean más accesibles.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="cloud-for-games.md">Nube para juegos</a></p></td>
+<td align="left"><p><a href="cloud-for-games.md">En la nube para juegos</a></p></td>
 <td align="left"><p>Usa la nube para juegos.</p></td>
 </tr>
 <tr class="even">
@@ -46,11 +46,11 @@ En esta sección se proporciona información sobre cómo planear tu juego para U
 <td align="left"><p>Formas para monetizar tu juego.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="package-your-windows-store-directx-game.md">Empaquetar el juego</a></p></td>
+<td align="left"><p><a href="package-your-windows-store-directx-game.md">Empaqueta el juego</a></p></td>
 <td align="left"><p>Prepara el paquete del juego para Microsoft Store.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="concept-approval.md">Aprobación del concepto</a></p></td>
+<td align="left"><p><a href="concept-approval.md">Aprobación de concepto</a></p></td>
 <td align="left"><p>Obtén la aprobación de tu concepto de juego.</p></td>
 </tr>
 </tbody>

@@ -1,19 +1,19 @@
 ---
-Description: If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.
+Description: Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla.
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Accesibilidad de teclado
 label: Keyboard accessibility
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602070"
 ---
 # <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
@@ -52,7 +52,7 @@ XAML
 </Grid>
 ```
 
-Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop **](https://msdn.microsoft.com/library/windows/apps/BR209422)**false**.
+Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop** ](https://msdn.microsoft.com/library/windows/apps/BR209422)**false**.
 
 Todos los elementos que pueden tener foco suelen estar en el orden de tabulación de manera predeterminada. La excepción es que es posible que ciertos tipos de presentación de texto como [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) tengan foco con el fin de que el portapapeles pueda acceder a ellos para seleccionar texto; sin embargo, no se encuentran en el orden de tabulación porque no se espera que los elementos de texto estático estén en el orden de tabulación. No suelen ser interactivos (pueden invocarse y no requieren entrada de texto, pero no admiten el [patrón de control de texto](https://msdn.microsoft.com/library/windows/desktop/Ee671194) que admite la búsqueda y el ajuste de puntos de selección en el texto). El texto no debe dar a entender que, si se coloca el foco en él, pueda existir la posibilidad de realizar alguna actividad. Las tecnologías de asistencia seguirán detectando los elementos de texto y los lectores de pantalla los leerán en voz alta, pero esto dependerá de otro tipo de técnicas que no tienen que ver con encontrar estos elementos en el orden de tabulación práctico.
 
@@ -93,7 +93,7 @@ XAML
 <span id="keyboard_shortcuts"/>
 <span id="KEYBOARD_SHORTCUTS"/>
 
-## <a name="keyboard-shortcuts"></a>Métodos abreviados de teclado  
+## <a name="keyboard-shortcuts"></a>Accesos rápidos de teclado  
 Además de implementar la navegación por teclado y la activación para tu aplicación, una práctica recomendada es implementar métodos abreviados para la funcionalidad de la aplicación. La navegación mediante tabulación proporciona un buen nivel básico de compatibilidad con teclado, pero con formas complejas, probablemente también quieras agregar compatibilidad para teclas de método abreviado. Esto puede hacer que el uso de tu aplicación sea más eficiente, incluso para aquellos que usan tanto dispositivos de puntero como un teclado.
 
 Un *método abreviado* es una combinación de teclas que mejora la productividad al proporcionar al usuario una forma eficaz de acceder a las funciones de la aplicación. Existen dos tipos de métodos abreviados:
@@ -175,7 +175,7 @@ Por lo general, para implementar un control de teclas personalizado para control
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Un ejemplo de un estado visual para un indicador de foco  
 Ya hemos mencionado que los controles personalizados que el usuario habilite para que tengan el foco deben tener un indicador de foco visual. Normalmente, ese indicador de foco es tan simple como dibujar un rectángulo justo alrededor del rectángulo de límite normal del control. La clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) del foco visual es un elemento del mismo nivel que el resto de la composición del control en una plantilla de control, pero se establece inicialmente con un valor [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) en **Collapsed** porque el control aún no tiene el foco. Después, cuando el control obtiene el foco, se invoca un estado visual que establece específicamente el valor de **Visibility** en **Visible**. Cuando el foco se mueve a otro lugar, se llama a otro estado visual y **Visibility** pasa a ser **Collapsed**.
 
-Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay distintos aspectos potenciales según el tema seleccionado por el usuario (en especial si el usuario usa un modo de contraste alto). Si usas los controles XAML en la interfaz de usuario y no reemplazas las plantillas de control, no tienes que hacer nada más para obtener indicadores de foco visual en los controles que se comportan y se muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
+Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay busca potencialmente diferente según el tema del usuario seleccionado el (especialmente si el usuario está utilizando un modo de contraste alto). Si usa los controles XAML en la interfaz de usuario y no reemplazar las plantillas de control, no es necesario hacer nada más para obtener indicadores de foco visuales de los controles que se comportan y se muestren correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
 
 Aquí incluimos un código XAML de ejemplo que procede de la plantilla XAML predeterminada de una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) .
 
@@ -238,8 +238,8 @@ Ten en cuenta que solo uno de los estados con nombre ajusta la propiedad [**Visi
 <span id="keyboard_accessibility_and_windows_phone"/>
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
 
-## <a name="keyboard-accessibility-and-windows-phone"></a>Accesibilidad de teclado y WindowsPhone
-Por lo general, un dispositivo de WindowsPhone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
+## <a name="keyboard-accessibility-and-windows-phone"></a>Accesibilidad de teclado y Windows Phone
+Por lo general, un dispositivo de Windows Phone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
 
 Los métodos abreviados de teclado no suelen ser relevantes para las aplicaciones Windows Phone, puesto que un SIP carece de teclas Control o ALT.
 
@@ -248,6 +248,6 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 ## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
-* [Muestra de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Muestra de accesibilidad en XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Ejemplo de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
+* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

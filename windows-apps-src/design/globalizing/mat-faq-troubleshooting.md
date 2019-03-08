@@ -1,5 +1,5 @@
 ---
-Description: This topic provides answers to frequently-asked questions and issues related to the Multilingual App Toolkit (MAT) 4.0.
+Description: Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0.
 title: Solución de problemas y preguntas más frecuentes sobre el kit de herramientas para aplicaciones multilingües
 template: detail.hbs
 ms.date: 11/13/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e27256fbf19ed31a7b087e94dea9e5514db516f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050598"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648270"
 ---
-# <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Solución de problemas y preguntas más frecuentes sobre el kit de herramientas para aplicaciones multilingües 4.0
+# <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Preguntas frecuentes y solución de problemas del kit de herramientas para aplicaciones multilingües 4.0
 
-Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el kit de herramientas para aplicaciones multilingües (MAT) 4.0.
+Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0.
 
 Consulta también [Utilizar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
 
@@ -140,9 +140,9 @@ msbuild /t:rebuild <project-name>
 
 El proceso de importación realiza una validación básica antes de la importación. Esto garantiza que la información de referencia cultural de destino en los archivos que se están importando coincida con la de los archivos .xlf existentes. Abre el archivo .xlf en el editor multilingüe y asegúrate de que la información de referencia cultural coincide.
 
-## <a name="what-if-my-translator-doesnt-have-windows-10-andor-visual-studio-andor-the-multilingual-app-toolkit-installed"></a>¿Qué sucede si el traductor no tiene instalado Windows10, Visual Studio o el kit de herramientas para aplicaciones multilingües?
+## <a name="what-if-my-translator-doesnt-have-windows-10-andor-visual-studio-andor-the-multilingual-app-toolkit-installed"></a>¿Qué sucede si el traductor no tiene instalado Windows 10, Visual Studio o el kit de herramientas para aplicaciones multilingües?
 
-Al seleccionar **Salida: destinatario de correo** en el cuadro de diálogo Exportar recursos de cadena, el correo electrónico incluirá un vínculo para descargar e instalar el kit de herramientas para aplicaciones multilingües (MAT) 4.0. El traductor puede instalar la herramienta independiente Editor multilingüe de MAT 4.0 incluso sin Windows 10 ni Visual Studio.
+Al seleccionar **salida: Destinatario de correo** en el cuadro de diálogo de recursos de cadena de exportación, el correo electrónico incluye un vínculo para descargar e instalar multilingüe aplicación Kit de herramientas (MAT) 4.0. El traductor puede instalar la herramienta independiente Editor multilingüe de MAT 4.0 incluso sin Windows 10 ni Visual Studio.
 
 Para obtener más detalles, consulta [Cómo usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
 
@@ -177,6 +177,6 @@ Antes de iniciar el proceso de certificación de Microsoft Store, debes excluir 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Usar el Kit de herramientas para aplicaciones multilingües 4.0](use-mat.md)
+* [Usar el Kit de herramientas de la aplicación multilingüe 4.0](use-mat.md)
 * [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
-* [Opciones de línea de comandos de MakePri.exe](../../app-resources/makepri-exe-command-options.md)
+* [Opciones de línea de comandos MakePri.exe](../../app-resources/makepri-exe-command-options.md)

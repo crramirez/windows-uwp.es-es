@@ -3,25 +3,25 @@ title: Referencia de API de controladoras del Portal de dispositivos
 description: Aprende cómo obtener el número de controladoras físicas conectadas y desactivarlas mediante programación.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5061f9193d78d4ff23f5fa707b0bea67a10f98
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929840"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657010"
 ---
 # <a name="controller-api-reference"></a>Referencia de API de controladora   
 Puedes obtener el número de controladoras físicas conectadas y desactivarlas con esta API REST.
 
 ## <a name="determine-the-number-of-attached-physical-controllers"></a>Determinar el número de controladoras físicas conectadas
 
-**Solicitud**
+**Request**
 
 Puedes comprobar el número de controladoras físicas conectadas en el dispositivo con la siguiente solicitud.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/remoteinput/controllers
 <br />
@@ -43,7 +43,7 @@ GET | /ext/remoteinput/controllers
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -53,11 +53,11 @@ Código de estado HTTP      | Descripción
 
 ## <a name="disconnect-all-physical-controllers-on-the-devkit"></a>Desconectar todos los controladores físicos del kit de desarrollo
 
-**Solicitud**
+**Request**
 
 Puedes desconectar todos las controladoras del dispositivo con la siguiente solicitud.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /ext/remoteinput/controllers
 <br />
@@ -79,7 +79,7 @@ DELETE | /ext/remoteinput/controllers
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

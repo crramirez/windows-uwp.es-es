@@ -1,33 +1,33 @@
 ---
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
-title: Página de configuración (Dev Home)
-description: Proporciona información sobre la página de configuración de la aplicación Dev Home para Xbox One.
+title: Página Settings (Dev Home)
+description: Proporciona información sobre la página Configuración de la aplicación Dev Home para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942161"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654210"
 ---
-# <a name="settings-page-dev-home"></a>Página de configuración (Dev Home)
+# <a name="settings-page-dev-home"></a>Página Settings (Dev Home)
    
   
-La página de **configuración** de la página principal de desarrollo proporciona acceso a diversas opciones de configuración para la consola de desarrollo.   
- ![Página de configuración de Dev Home](images/devhome_settings.png)   
+La página **Configuración** de Dev Home da acceso a las distintas opciones de configuración de la consola de desarrollo.   
+ ![Página de configuración de desarrollo principal](images/devhome_settings.png)   
   
-La página de **configuración** contiene los paneles siguientes:   
+La página **Configuración** contiene los siguientes paneles:   
  
    *  [Configuración de la consola](#ID4EEB)  
-   *  [Configuración de actualización de recuperación del sistema operativo](#ID4EOB)  
+   *  [Configuración de actualización de la recuperación del sistema operativo](#ID4EOB)  
    *  [Visual Studio](#ID4EYB)  
    *  [Configuración de depuración](#ID4ECC)  
    *  [Configuración de script de instalación desatendida](#ID4EMC)  
-   *  [Experiencia principal predeterminada](#ID4E3C)  
+   *  [Experiencia de inicio predeterminada](#ID4E3C)  
 
  
 <a id="ID4EEB"></a>
@@ -37,16 +37,16 @@ La página de **configuración** contiene los paneles siguientes:
 ## <a name="console-settings"></a>Configuración de la consola  
    
   
-El panel de **configuración de la consola** proporciona una vista "un vistazo" de la configuración de la consola y la información. Puedes usar estas herramientas para ver y editar el nombre de host, espacio aislado y configuración de teclas de acceso de seguridad de la consola.   
+El panel **Console settings** ofrece una vista resumida de la configuración de la consola y de la información. Puedes usar estas herramientas para ver y editar el nombre de host, el espacio aislado y la configuración de claves de acceso de seguridad de la consola.   
   
 <a id="ID4EOB"></a>
 
    
 
-## <a name="os-recovery-update-settings"></a>Configuración de actualización de recuperación del sistema operativo  
+## <a name="os-recovery-update-settings"></a>OS recovery update settings  
    
   
-El panel de **recuperación del sistema operativo actualizar la configuración** configura las opciones de actualización automática de la consola. Ten en cuenta que los cambios en estas opciones de configuración puede tardar hasta 24 horas surta efecto.   
+El panel **OS recovery update settings** configura las opciones de actualización automática de la consola. Ten en cuenta que los cambios en estas opciones pueden tardar hasta 24 horas en surtir efecto.   
   
 <a id="ID4EYB"></a>
 
@@ -55,40 +55,40 @@ El panel de **recuperación del sistema operativo actualizar la configuración**
 ## <a name="visual-studio"></a>Visual Studio  
    
   
-El panel de **Visual Studio** utilizado para emparejar la consola con Visual Studio. También puedes quitar todas las instancias de Visual Studio emparejadas.   
+El panel **Visual Studio** sirve para sincronizar la consola con Visual Studio. También puedes quitar todas las instancias sincronizadas de Visual Studio.   
   
 <a id="ID4ECC"></a>
 
    
 
-## <a name="debug-settings"></a>Configuración de depuración  
+## <a name="debug-settings"></a>Debug settings  
    
   
-Se usa el panel de **configuración de depuración** para ver y alternar comunes configuración de depuración.   
+El panel **Debug settings** sirve para ver y alternar las opciones de depuración habituales.   
   
 <a id="ID4EMC"></a>
 
    
 
-## <a name="unattended-script-configuration"></a>Configuración de script de instalación desatendida  
+## <a name="unattended-script-configuration"></a>Unattended script configuration  
    
   
-El panel de **configuración desatendida la secuencia de comandos** administra los scripts de instalación de consolas Xbox One.   
+El panel **Unattended script configuration** administra los scripts de configuración para consolas Xbox One.   
   
 <a id="ID4E3C"></a>
 
    
 
-## <a name="default-home-experience"></a>Experiencia principal predeterminada  
+## <a name="default-home-experience"></a>Default Home Experience  
    
   
-El panel **Predeterminado experiencia Home** determina si se muestra la pantalla de inicio de la versión comercial o de la pantalla de [Inicio del desarrollador en la consola (Dev Home)](dev-home.md) cuando se inicia la consola.   
+El panel **Default Home Experience** determina si la pantalla Home comercial o la pantalla [Inicio del desarrollador en la consola (Dev Home)](dev-home.md) aparecen cuando se inicia la consola.   
   
 <a id="ID4EJD"></a>
 
    
 
-## <a name="see-also"></a>Ver también  
- [Inicio del desarrollador en la consola (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte también  
+ [Página principal de desarrolladores en la consola (página principal de desarrollo)](dev-home.md)
 
   

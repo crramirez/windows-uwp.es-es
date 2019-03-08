@@ -7,22 +7,22 @@ keywords: windows 10, Windows 10, uwp, UWP, sample code, código de muestra, cod
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598540"
 ---
 # <a name="get-uwp-app-samples"></a>Obtener muestras de aplicaciones para UWP
 
 Las muestras de aplicaciones para la Plataforma universal de Windows (UWP) están disponibles en los repositorios de GitHub. Consulta [Muestras](https://developer.microsoft.com/windows/samples "Muestras del Centro de desarrollo") para una lista categorizada que permite búsquedas, o examina el repositorio [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "Universal Windows Platform app samples GitHub repository"), que contiene ejemplos que demuestran todas las características de UWP y sus patrones de uso de API.  
-![Repositorio de muestras de UWP de GitHub](images/GitHubUWPSamplesPage.png)
+![Repositorio de ejemplo de GitHub UWP](images/GitHubUWPSamplesPage.png)
 
 ## <a name="download-the-code"></a>Descarga del código
 
 Para descargar las muestras, dirígete al [repositorio](https://github.com/Microsoft/Windows-universal-samples "Repositorio de GitHub de muestras de aplicaciones de la Plataforma universal de Windows"), selecciona **Clone or download** y **Download ZIP**. O bien, haz clic [aquí](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "Descarga de archivos ZIP de muestras de aplicaciones de la Plataforma universal de Windows").
 
-El archivo ZIP siempre incluirá las muestras más recientes. No necesitas una cuenta de GitHub para descargarlo. Si se publica una actualización SDK o si quieres aprovechar adiciones o cambios recientes, vuelve a descargar el archivo zip más reciente.
+El archivo zip siempre incluirá las muestras más recientes. No necesitas una cuenta de GitHub para descargarlo. Si se publica una actualización SDK o si quieres aprovechar adiciones o cambios recientes, vuelve a descargar el archivo zip más reciente.
 
 ![Descarga de muestras](images/SamplesDownloadButton.png)
 
@@ -45,7 +45,7 @@ Cuando hayas descargado el archivo zip, abre las muestras en Visual Studio:
 
     ![Carpetas de idioma](images/SamplesUnzip3.png)
 
-4.  Selecciona el idioma que quieres usar, por ejemplo, CS para C\#, y verás un archivo de la solución Visual Studio que puedes abrir en Visual Studio.
+4.  Seleccione el idioma que le gustaría utilizar, como CS para C\#, y verá un archivo de solución de Visual Studio, que puede abrir en Visual Studio.
 
     ![Solución VS](images/SamplesUnzip4.png)
 

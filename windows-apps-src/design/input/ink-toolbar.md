@@ -1,5 +1,5 @@
 ---
-Description: Add a default InkToolbar to a Universal Windows Platform (UWP) inking app, add a custom pen button to the InkToolbar, and bind the custom pen button to a custom pen definition.
+Description: Agrega un valor predeterminado InkToolbar a una aplicación de entrada de lápiz de la Plataforma universal de Windows (UWP), agrega un botón de lápiz personalizado a InkToolbar y enlaza el botón de lápiz personalizado con una definición de lápiz personalizado.
 title: Agregar un control InkToolbar a una aplicación para la Plataforma universal de Windows (UWP)
 label: Add an InkToolbar to a Universal Windows Platform (UWP) app
 template: detail.hbs
@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
 ms.openlocfilehash: 77bb78fe9509936fec5267162deab382bafffb61
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650580"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Agregar un control InkToolbar a una aplicación para la Plataforma universal de Windows (UWP)
 
 
 
-Hay dos controles diferentes que facilitan la entrada manuscrita en aplicaciones para la Plataforma universal de Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Hay dos tipos de controles que facilitan la tinta en aplicaciones de la plataforma Universal de Windows (UWP): [**InkCanvas** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) y [ **InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 El control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) proporciona la funcionalidad básica de Windows Ink. Úsalo para representar la entrada manuscrita como un trazo de lápiz (con la configuración predeterminada de color y espesor) o como un trazo de borrado.
 
@@ -35,7 +35,7 @@ Como una superposición completamente transparente, el control InkCanvas no prop
 
   El control InkToolbar se describe en este tema.
 
-> **API importantes**: [**InkCanvas class**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [**InkToolbar class**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [**InkPresenter class**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **API importantes**: [**Clase InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [ **InkToolbar clase**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [ **clase InkPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="default-inktoolbar"></a>Control InkToolbar predeterminado
 
@@ -87,10 +87,10 @@ Al agregar una barra de herramientas de Ink a tu aplicación, puedes aceptar la 
 
 Especifica de forma explícita la ubicación y orientación de la barra de herramientas a través de sus propiedades [VerticalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.VerticalAlignment), [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment) y [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar?branch=rs3.Orientation).
 
-| Predeterminadas | Explícitas |
+| Predeterminado | Explícitas |
 | --- | --- |
 | ![Ubicación y orientación de la barra de herramientas de Ink predeterminadas](./images/ink/location-default-small.png) | ![Ubicación y orientación de la barra de herramientas de Ink explícitas](./images/ink/location-explicit-small.png) |
-| *Ubicación y orientación predeterminadas de la barra de herramientas de Windows Ink* | *Ubicación y orientación explícitas de la barra de herramientas de Windows Ink* |
+| *Orientación y la ubicación predeterminada de barra de herramientas de Windows Ink* | *Orientación y la ubicación explícita de barra de herramientas de Windows Ink* |
 
 Este es el código para establecer de forma explícita la ubicación y orientación de la barra de herramientas de Ink en XAML.
 ```xaml
@@ -101,16 +101,16 @@ Este es el código para establecer de forma explícita la ubicación y orientaci
     TargetInkCanvas="{x:Bind inkCanvas}" />
 ```
 
-**Inicializar en función de las preferencias del usuario o el estado del dispositivo**
+**A partir de las preferencias del usuario o el estado del dispositivo**
 
 En algunos casos, es posible que quieras establecer la ubicación y orientación de la barra de herramientas de Ink en función de la preferencia del usuario o el estado del dispositivo. En el siguiente ejemplo se muestra cómo establecer la ubicación y orientación de la barra de herramientas de Ink en función de las preferencias de escritura con la mano izquierda o derecha especificadas a través de **Configuración > Dispositivos > Lápiz y Windows Ink > Lápiz > Elige la mano con la que escribes**.
 
-![Ajuste de mano dominante](./images/ink/location-handedness-setting.png)  
-*Ajuste de mano dominante*
+![Configuración de la mano dominante](./images/ink/location-handedness-setting.png)  
+*Configuración de la mano dominante*
 
 Puedes consultar este ajuste a través de la propiedad HandPreference de Windows.UI.ViewManagement y establecer la propiedad [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment) en función del valor devuelto. En este ejemplo, encontramos la barra de herramientas en el lado izquierdo de la aplicación para una persona zurda y en el lado derecho para una persona diestra.
 
-**Descargar este ejemplo de [Ejemplo de ubicación y orientación (básicas) de la barra de herramientas de Ink](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)**
+**Descargar este ejemplo de [tinta barra de herramientas ubicación y orientación de ejemplo (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)**
 
 ```csharp
 public MainPage()
@@ -127,11 +127,11 @@ public MainPage()
 }
 ```
 
-**Ajustar de forma dinámica al estado del dispositivo o usuario**
+**Ajustar de forma dinámica al estado de usuario o dispositivo**
 
 También puedes usar el enlace para encargarte de las actualizaciones de la interfaz de usuario en función de los cambios en las preferencias del usuario, la configuración o los estados del dispositivo. En el siguiente ejemplo, expandimos el ejemplo anterior y mostramos cómo posicionar de forma dinámica la barra de herramientas de Ink en función de la orientación del dispositivo con enlaces, un objeto ViewMOdel y la interfaz [INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged). 
 
-**Descargar este ejemplo de [Ejemplo de ubicación y orientación (dinámicas) de la barra de herramientas de Ink](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
+**Descargar este ejemplo de [tinta barra de herramientas ubicación y orientación de ejemplo (dinámica)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
 
 1. En primer lugar, vamos a agregar nuestro ViewModel.
     1. Agrega una nueva carpeta a tu proyecto y llámala **ViewModels**.
@@ -170,7 +170,7 @@ También puedes usar el enlace para encargarte de las actualizaciones de la inte
         }
         ```
 
-    1. Agrega dos propiedades bool a la clase InkToolbarSnippetHostViewModel: **LeftHandedLayout** (misma funcionalidad que el ejemplo de solo XAML anterior) y **PortraitLayout** (orientación del dispositivo).
+    1. Agregue dos propiedades de bool a la clase InkToolbarSnippetHostViewModel: **LeftHandedLayout** (misma funcionalidad que el ejemplo anterior solo XAML) y **PortraitLayout** (orientación del dispositivo).
         >[!NOTE] 
         > La propiedad PortraitLayout se puede establecer e incluye la definición para el evento [PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged).
 

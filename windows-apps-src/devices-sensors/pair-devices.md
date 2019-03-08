@@ -4,14 +4,14 @@ title: Emparejar dispositivos
 description: Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres Windows.Devices.Enumeration admite tres modos de emparejar dispositivos.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050438"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653390"
 ---
 # <a name="pair-devices"></a>Emparejar dispositivos
 
@@ -27,7 +27,7 @@ Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio 
 -   Emparejamiento básico
 -   Emparejamiento personalizado
 
-**Sugerencia**algunos dispositivos no necesitan emparejarse para poder usarlos. Esto se explica en la sección de emparejamiento automático.
+**Sugerencia**  algunos dispositivos no es necesario para que se emparejen para poder usarse. Esto se explica en la sección de emparejamiento automático.
 
  
 

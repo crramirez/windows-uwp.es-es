@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use Notification Listener to access all of the user's notifications.
+Description: Aprende a usar el agente de escucha de notificación para acceder a todas las notificaciones del usuario.
 title: Agente de escucha de notificaciones
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tiles
@@ -9,21 +9,21 @@ ms.topic: article
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942267"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649620"
 ---
-# <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
+# <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificación: Obtener acceso a todas las notificaciones
 
-El agente de escucha de notificación permite acceder a las notificaciones de un usuario. Los relojes inteligentes y otros dispositivos transportables pueden usar el agente de escucha de notificaciones para enviar las notificaciones del teléfono al dispositivo transportable. Las aplicaciones de automatización domésticas pueden usar el agente de escucha de notificación para realizar acciones específicas cuando se reciben notificaciones, como hacer que parpadeen las luces cuando se recibe una llamada. 
+El agente de escucha de notificación permite acceder a las notificaciones de un usuario. Los relojes inteligentes y otros dispositivos transportables pueden usar el agente de escucha de notificaciones para enviar las notificaciones del teléfono al dispositivo transportable. Las aplicaciones de automatización del hogar pueden usar el agente de escucha de notificaciones para realizar acciones específicas cuando se reciben las notificaciones, como hacer que parpadean cuando reciba una llamada. 
 
 > [!IMPORTANT]
-> **Requiere la Actualización de aniversario**: Debes utilizar el SDK 14393 y estar ejecutando la compilación 14393 o superior para usar el agente de escucha de notificaciones.
+> **Requiere la actualización de aniversario de**: Debe tener como destino el SDK 14393 y se ejecuta la compilación 14393 o posterior para usar el agente de escucha de notificación.
 
 
-> **API importantes**: [clase UserNotificationListener](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [clase UserNotificationChangedTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
+> **API importantes**: [Clase UserNotificationListener](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger clase](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
 
 
 ## <a name="enable-the-listener-by-adding-the-user-notification-capability"></a>Habilitar el agente de escucha con el añadido de la capacidad Notificaciones de usuario 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-El usuario puede revocar el acceso en cualquier momento a través de la Configuración de Windows. Por lo tanto, la aplicación siempre debe comprobar el estado del acceso a través del método [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) antes de ejecutar código que use el agente de escucha de notificación. Si el usuario revoca el acceso, las API tendrán un error de forma silenciosa en lugar de generar una excepción (por ejemplo, la API para obtener todas las notificaciones simplemente devolverá una lista vacía).
+El usuario puede revocar el acceso en cualquier momento a través de la Configuración de Windows. Por lo tanto, la aplicación siempre debería comprobar el estado de acceso a través de la [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) método antes de ejecutar el código que usa el agente de escucha de notificación. Si el usuario revoca el acceso, las API tendrán un error de forma silenciosa en lugar de generar una excepción (por ejemplo, la API para obtener todas las notificaciones simplemente devolverá una lista vacía).
 
 
 ## <a name="access-the-users-notifications"></a>Acceder a las notificaciones del usuario
@@ -138,7 +138,7 @@ await appLogo.SetSourceAsync(await appLogoStream.OpenReadAsync());
 
 El contenido de la propia notificación, como el texto de la notificación, se encuentra en la propiedad [Notification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.usernotification.Notification). Esta propiedad contiene la parte visual de la notificación. (Si conoces el envío de notificaciones en Windows, observarás que las propiedades [Visual](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification.Visual) y [Visual.Bindings](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationvisual.Bindings) del objeto [Notification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification) se corresponden a lo que los desarrolladores envían al sacar una notificación).
 
-Queremos buscar el enlace de la notificación del sistema (para el código sea a prueba de errores, debes comprobar que el enlace no sea null). Desde el enlace puedes obtener los elementos de texto. Puedes elegir mostrar todos los elementos de texto que quieras. (Lo ideal es que muestres todos). Puedes elegir tratar los elementos de texto de manera diferente; por ejemplo, tratar el primer elemento como el texto del título y los posteriores como el texto del cuerpo.
+Queremos buscar el enlace de la notificación del sistema (para el código sea a prueba de errores, debes comprobar que el enlace no sea null). Desde el enlace puedes obtener los elementos de texto. Puedes elegir mostrar todos los elementos de texto que quieras. (Idealmente, se deben mostrar todas ellas.) Puede elegir tratar los elementos de texto de forma distinta; Por ejemplo, tratar la primera de ellas como texto del título y elementos posteriores como texto del cuerpo.
 
 ```csharp
 // Get the toast binding, if present
@@ -229,7 +229,7 @@ protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs
 
 La tarea en segundo plano es simplemente una "llamada de atención": no proporciona ninguna información sobre qué notificación específica se ha agregado o quitado. Cuando se desencadene la tarea en segundo plano, debes sincronizar las notificaciones en el dispositivo transportable para que reflejen las notificaciones en la plataforma. Esto garantiza que si se produce un error en la tarea en segundo plano, las notificaciones en el dispositivo transportable se pueden recuperar la próxima vez que se ejecute la tarea en segundo plano.
 
-`SyncNotifications` es un método que implementas; la siguiente sección muestra cómo hacerlo. 
+`SyncNotifications` es un método que implementa; la siguiente sección se muestra cómo. 
 
 
 ## <a name="determining-which-notifications-were-added-and-removed"></a>Determinar qué notificaciones se han agregado o quitado
@@ -277,9 +277,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento en primer plano para una notificación agregada/descartada
 
 > [!IMPORTANT] 
-> Problema conocido: el evento en primer plano provocará un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. NO uses el evento en primer plano. En una actualización próximas de Windows, se corrige esto.
+> Problema conocido: El evento de primer plano provocará un bucle de CPU en las versiones recientes de Windows y no ha funcionado anteriormente antes de. No utilice el evento de primer plano. En una próxima actualización para Windows, esto se solucionará.
 
-En lugar de usar el evento en primer plano, usa el código que se muestra anteriormente para una tarea en segundo plano de [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . La tarea en segundo plano, también podrás recibir notificaciones evento cambio mientras la aplicación está cerrada o se está ejecutando.
+En lugar de usar el evento de primer plano, use el código mostrado anteriormente para una [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) tarea en segundo plano. La tarea en segundo plano, también podrá recibir notificaciones eventos cambio mientras la aplicación está cerrada o se está ejecutando.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -292,6 +292,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>Cómo fixdelays en la tarea en segundo plano
+## <a name="howto-fixdelays-in-the-background-task"></a>Cómo corregir los retrasos en la tarea en segundo plano
 
-Al probar la aplicación, es posible que observes que la tarea en segundo plano a veces se retrasa y no se desencadena durante varios minutos. Para corregir el retraso, símbolo del sistema la togo de usuario para la configuración del sistema -> sistema -> batería -> uso de batería por aplicación, busca la aplicación en la lista, selecciónalo y lo establecerán en "siempre permitido en segundo plano".Una vez hecho esto, la tarea en segundo plano debe desencadenarse siempre dentro de un segundo de recibirse la notificación.
+Al probar la aplicación, es posible que tenga en cuenta que la tarea en segundo plano a veces se retrasa y no se activa durante varios minutos. Para corregir el retraso, pedir al usuario que vaya a la configuración del sistema -> sistema -> batería -> uso de la batería por aplicación, busque la aplicación en la lista, selecciónelo y establézcalo como "Siempre permitido en segundo plano". Una vez hecho esto, la tarea en segundo plano debe activarse siempre dentro de alrededor de un segundo de la notificación que recibe.

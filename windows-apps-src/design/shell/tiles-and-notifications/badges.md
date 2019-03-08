@@ -1,6 +1,6 @@
 ---
-Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
-title: Notificaciones de distintivo para aplicaciones para UWP
+Description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
+title: Notificaciones para aplicaciones para UWP
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b41069f1ca964f978ba0cff73f5c34a9db133a10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920290"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649090"
 ---
-# <a name="badge-notifications-for-uwp-apps"></a>Notificaciones de distintivo para aplicaciones para UWP
+# <a name="badge-notifications-for-uwp-apps"></a>Notificaciones para aplicaciones para UWP
 
  
 
@@ -35,7 +35,7 @@ Las notificaciones aparecen en el icono de barra de tareas de la aplicación y e
 <table>
     <tr>
         <th>Valor</th>
-        <th>Notificación</th>
+        <th>Insignia</th>
         <th>XML</th>
     </tr>
     <tr>
@@ -128,7 +128,7 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
 
 ## <a name="create-a-badge"></a>Crear una notificación
 
-Estos ejemplos muestran cómo crear una actualización de notificación.
+Estos ejemplos muestran cómo crear una actualización de notificaciones.
 
 ### <a name="create-a-numeric-badge"></a>Crear una notificación numérica
 
@@ -196,7 +196,7 @@ private void clearBadge()
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-* [Muestra de notificaciones](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Muestra cómo crear iconos dinámicos, enviar actualizaciones de notificación y mostrar notificaciones del sistema. 
+* [Ejemplo de notificaciones](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Muestra cómo crear iconos dinámicos, enviar actualizaciones de notificación y mostrar notificaciones del sistema. 
 
 ## <a name="related-articles"></a>Artículos relacionados
 

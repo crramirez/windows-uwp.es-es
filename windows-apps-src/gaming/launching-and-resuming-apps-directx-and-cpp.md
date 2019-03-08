@@ -1,23 +1,23 @@
 ---
 title: Iniciar y reanudar aplicaciones (DirectX y C++)
-description: Obtén información sobre cómo iniciar, suspender y reanudar tu aplicación DirectX para la Plataforma universal de Windows (UWP).
+description: Aprende a iniciar, suspender y reanudar tu aplicación DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, iniciar, reanudar, games, launching, resuming
 ms.localizationpriority: medium
 ms.openlocfilehash: ac2f7e70d813ea3314d897eedb5e245d781ce412
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924994"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662220"
 ---
 # <a name="launching-and-resuming-apps-directx-and-c"></a>Iniciar y reanudar aplicaciones (DirectX y C++)
 
 
 
-Aprende a iniciar, suspender y reanudar tu aplicación DirectX de la Plataforma universal de Windows (UWP).
+Aprende a iniciar, suspender y reanudar tu aplicación DirectX para la Plataforma universal de Windows (UWP).
 
 | Tema | Descripción |
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|

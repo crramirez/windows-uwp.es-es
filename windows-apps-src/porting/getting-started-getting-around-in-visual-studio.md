@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 82cb45dae1a4b9b1a9db8fabc044edf8157f1eb1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646340"
 ---
-# <a name="getting-started-getting-around-in-visual-studio"></a>Tareas iniciales: desplazamiento por Visual Studio
+# <a name="getting-started-getting-around-in-visual-studio"></a>Introducción: Desplazamiento por Visual Studio
 
 
-## <a name="getting-around-in-microsoft-visual-studio"></a>Desplazamiento por MicrosoftVisual Studio
+## <a name="getting-around-in-microsoft-visual-studio"></a>Desplazamiento por Microsoft Visual Studio
 
 Volvamos al proyecto que creamos antes: te mostraremos cómo desplazarte por el entorno de desarrollo integrado (IDE) Microsoft de Visual Studio.
 
@@ -24,7 +24,7 @@ Si eres desarrollador de Xcode, deberías estar familiarizado con la vista prede
 
 ![entorno de desarrollo de xcode](images/ios-to-uwp/xcode-ide.png)
 
-MicrosoftVisual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
+Microsoft Visual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
 
 ![entorno de desarrollo de visual studio](images/ios-to-uwp/vs-ide.png)
 
@@ -70,7 +70,7 @@ Visual Studio es similar. En la esquina superior derecha de **Propiedades** hay 
 
 ![lista de eventos del botón en visual studio](images/ios-to-uwp/vs-button-event.png)
 
-Para agregar código para el evento de clic del botón, primero selecciona el botón en el panel **Diseño**. A continuación, haz clic en el botón del rayo y haz doble clic en el cuadro vacío situado junto al nombre **Click**. Visual Studio agrega el evento "myButton\_Click" al cuadro **Click** y después agrega y muestra el controlador de eventos correspondiente en el archivo MainPage.xaml.cs, como se indica a continuación.
+Para agregar código para el evento de clic del botón, primero selecciona el botón en el panel **Diseño**. A continuación, haz clic en el botón del rayo y haz doble clic en el cuadro vacío situado junto al nombre **Click**. Visual Studio, a continuación, agrega el evento "myButton\_haga clic en" a la **haga clic en** cuadro y, a continuación, agrega y muestra el controlador de eventos correspondiente en el archivo MainPage.xaml.cs, similar al siguiente.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -98,7 +98,7 @@ En Visual Studio, no necesitas asociar el control, ya que esto se hace automáti
 
 ![ventana de propiedades de la etiqueta en visual studio](images/ios-to-uwp/vs-label-properties.png)
 
-A continuación, agregaremos código al evento Click del botón. Para ello, pulsa en el archivo MainPage.xaml.cs y agrega el código siguiente al controlador de eventos myButton\_Click.
+A continuación, agregaremos código al evento Click del botón. Para ello, puntee en el archivo MainPage.xaml.cs y agregue el código siguiente a la myButton\_haga clic en el controlador de eventos.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -120,9 +120,9 @@ Por último, para ejecutar la aplicación, selecciona el menú **Depurar** y des
 
 ![resultados de ejecutar el primer tutorial: hola a todos](images/ios-to-uwp/vs-hello-world.png)
 
-Para salir de la aplicación, vuelve a VisualStudio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús+F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
+Para salir de la aplicación, vuelve a Visual Studio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús + F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Introducción: controles habituales](getting-started-common-controls.md)
+[Introducción: Controles comunes](getting-started-common-controls.md)
 

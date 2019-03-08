@@ -1,17 +1,17 @@
 ---
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: En este artículo se describe el proceso para agregar streaming adaptable de contenido multimedia con protección de contenido de Microsoft PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
+description: En este artículo se describe el proceso para agregar streaming adaptable de contenido multimedia con protección de contenido de Microsoft PlayReady a una aplicación para Plataforma universal de Windows (UWP).
 title: Streaming adaptable con PlayReady
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36cd006b4608d82999281ebd407fd32e168ae38b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933265"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650470"
 ---
 # <a name="adaptive-streaming-with-playready"></a>Streaming adaptable con PlayReady
 
@@ -295,7 +295,7 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 Puedes llamar a esta función en cualquier evento que controle el inicio del streaming adaptable, por ejemplo, en un evento Click de botón.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [DRM de PlayReady](playready-client-sdk.md)
 
 

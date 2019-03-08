@@ -1,6 +1,6 @@
 ---
-Description: Secondary tiles allow users to pin specific content and deep links from your app onto their Start menu, providing easy future access to the content within your app.
-title: Iconos secundarios
+Description: Los iconos secundarios permiten a los usuarios anclar determinado contenido y vínculos profundos de la aplicación en su menú Inicio, lo que proporciona un fácil acceso en el futuro al contenido de la aplicación.
+title: Ventanas secundarias
 label: Secondary tiles
 template: detail.hbs
 ms.date: 05/25/2017
@@ -8,13 +8,13 @@ ms.topic: article
 keywords: windows 10, uwp, iconos secundarios
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f95699fd6eb0803824c9bcdea46d275ab4383ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653190"
 ---
-# <a name="secondary-tiles"></a>Iconos secundarios
+# <a name="secondary-tiles"></a>Ventanas secundarias
 
 
 Los iconos secundarios permiten a los usuarios anclar determinado contenido y vínculos profundos de la aplicación en su menú Inicio, lo que proporciona un fácil acceso en el futuro al contenido de la aplicación.
@@ -31,9 +31,9 @@ Al agregar iconos secundarios a la aplicación, estás ayudando al usuario a int
 
 | Artículo | Descripción |
 | --- | --- |
-| [Instrucciones sobre los iconos secundarios](secondary-tiles-guidance.md) | Obtén información sobre cuándo y dónde debes usar los iconos secundarios. |
-| [Anclar iconos secundarios](secondary-tiles-pinning.md) | Obtén información sobre cómo anclar un icono secundario. |
-| [Anclar desde una aplicación de escritorio](secondary-tiles-desktop-pinning.md) | Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al Puente de dispositivo de escritorio. |
+| [Orientación sobre los iconos secundarios](secondary-tiles-guidance.md) | Obtén información sobre cuándo y dónde debes usar los iconos secundarios. |
+| [Iconos secundarios de PIN](secondary-tiles-pinning.md) | Obtén información sobre cómo anclar un icono secundario. |
+| [Anclar desde la aplicación de escritorio](secondary-tiles-desktop-pinning.md) | Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al Puente de dispositivo de escritorio. |
 
 
 ## <a name="secondary-tiles-in-relation-to-primary-tiles"></a>Iconos secundarios en relación con los iconos principales
@@ -66,9 +66,9 @@ Sin embargo, los iconos secundarios difieren de los iconos principales en alguno
 * Los usuarios pueden eliminar los iconos secundarios en cualquier momento, sin necesidad de eliminar la aplicación principal.
 * Los iconos secundarios se pueden crear en tiempo de ejecución. Los iconos de la aplicación se pueden crear solo durante la instalación.
 * Un control flotante solicita al usuario confirmación antes de agregar un icono secundario.
-* No pueden seleccionarse mediante programación para la pantalla de bloqueo a través de una solicitud al usuario. El usuario debe agregar manualmente el icono secundario a través de la página Personalizar en la configuración del equipo.
+* No pueden seleccionarse mediante programación para la pantalla de bloqueo a través de una solicitud al usuario. El usuario debe agregar manualmente el icono secundario a través de la página Personalizar configuración de PC.
 
-Para enviar notificaciones, se proporcionan métodos específicos para los actualizadores de iconos y notificaciones y los canales de notificaciones de inserción que se usan con los iconos secundarios. Las versiones van paralelas a las usadas con los iconos primarios. Por ejemplo, CreateBadgeUpdaterForApplication frente a CreateBadgeUpdaterForSecondaryTile.
+Para enviar notificaciones, se proporcionan métodos específicos para los actualizadores de iconos y notificaciones y los canales de notificaciones de inserción que se usan con los iconos secundarios. Las versiones van paralelas a las usadas con los iconos primarios. Por ejemplo, CreateBadgeUpdaterForApplication vs. CreateBadgeUpdaterForSecondaryTile.
 
 
 ## <a name="guidance-on-secondary-tiles"></a>Instrucciones sobre los iconos secundarios

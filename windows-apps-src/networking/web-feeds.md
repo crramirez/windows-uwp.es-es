@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b5312614c7060118fdb4678aa80ae51d6734486
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921330"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660310"
 ---
 # <a name="rssatom-feeds"></a>Fuentes RSS y Atom
 
@@ -44,7 +44,7 @@ El aislamiento de red permite al desarrollador definir el ámbito de acceso a la
 
 El aislamiento de red afecta a todos los elementos de clase en los espacios de nombres [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) y [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609) que intentan obtener acceso a la red. Windows aplica de manera activa el aislamiento de red. Si no se habilita la funcionalidad de red que corresponde, una llamada a un elemento de clase de los espacios de nombres **Windows.Web.Syndication** o **Windows.Web.AtomPub** que implique el acceso a la red puede presentar errores debido al aislamiento de red.
 
-Las funcionalidades de red para una aplicación se configuran en su manifiesto al crear la aplicación. Las funcionalidades de red suelen agregarse con Microsoft Visual Studio2015 al desarrollar la aplicación. Las funcionalidades de red también pueden establecerse de forma manual en el archivo de manifiesto de la aplicación mediante el uso de un editor de texto.
+Las funcionalidades de red para una aplicación se configuran en su manifiesto al crear la aplicación. Las capacidades de red normalmente se agregan con Microsoft Visual Studio 2015 al desarrollar la aplicación. Las funcionalidades de red también pueden establecerse de forma manual en el archivo de manifiesto de la aplicación mediante el uso de un editor de texto.
 
 Para obtener más información sobre las funcionalidades de red y el aislamiento de red, consulta la sección "Funcionalidades" del tema [Conceptos básicos de redes](networking-basics.md).
 
@@ -56,7 +56,7 @@ En esta sección se muestra cómo recuperar y mostrar una fuente web mediante cl
 
 Para asegurarte de que la aplicación para UWP está lista para la red, debes establecer las funcionalidades de red necesarias en el archivo **Package.appxmanifest** del proyecto. Si la aplicación necesita conectarse a servicios remotos de Internet como cliente, se necesitará la funcionalidad **internetClient**. Para obtener más información, consulta la sección "Funcionalidades" del tema [Conceptos básicos de redes](networking-basics.md).
 
-**Recuperación del contenido sindicado de una fuente web**
+**Recuperar contenido sindicado desde una fuente web**
 
 Ahora revisaremos el código que demuestra cómo recuperar una fuente y luego mostraremos cada elemento en particular de la fuente. Para poder configurar y enviar la solicitud, definiremos algunas variables que usaremos durante la operación e inicializaremos una instancia de [**SyndicationClient**](https://msdn.microsoft.com/library/windows/apps/br243456), que define los métodos y las propiedades para recuperar y mostrar la fuente.
 

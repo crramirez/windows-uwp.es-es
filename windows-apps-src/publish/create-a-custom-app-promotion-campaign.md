@@ -7,27 +7,27 @@ ms.topic: article
 keywords: Windows 10, UWP, personalizada, aplicación, promoción, campaña
 ms.localizationpriority: medium
 ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934172"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653740"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Crear una campaña de promoción de la aplicación personalizada
 
 Además de crear una [campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md) que se ejecutará en aplicaciones de Windows, también puedes promocionar tu aplicación en otros canales. Por ejemplo, puedes promocionarla mediante proveedores de marketing para aplicaciones, o publicar vínculos a la aplicación en sitios de redes sociales. Estas actividades se denominan *campañas personalizadas*.
 
-Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic a la campaña personalizada correspondiente y tendrás estos datos disponibles en [El centro de partners](https://partner.microsoft.com/dashboard).
+Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecutan Windows 10, haga clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia la haga clic en la campaña correspondiente personalizada y hace que estos datos estén disponibles para usted en [centro de partners](https://partner.microsoft.com/dashboard).
 
 > [!IMPORTANT]
-> Estos datos se solo realiza un seguimiento de los clientes en Windows 10. Los clientes que usen otros sistemas operativos pueden seguir el vínculo a la descripción de la aplicación, pero no se incluirán los datos acerca de sus actividades.
+> Solo se realiza el seguimiento de estos datos para los clientes en Windows 10. Los clientes que usen otros sistemas operativos pueden seguir el vínculo a la descripción de la aplicación, pero no se incluirán los datos acerca de sus actividades.
 
-Hay dos tipos principales de datos asociados a las campañas personalizadas: las *vistas de página* de la descripción de Store de la aplicación y las *conversiones*. Una conversión es una adquisición de la aplicación producida porque un cliente ha visto la página de la descripción de la Tienda de la aplicación desde una dirección URL que incluye un identificador de campaña personalizada. Para obtener más información acerca de las conversiones, consulta [Qué adquisiciones de la aplicación se califican como conversiones](#understanding-how-acquisitions-qualify-as-conversions) en este tema.
+Hay dos tipos principales de datos asociados a las campañas personalizadas: las *vistas de página* de la descripción de la Tienda de la aplicación y las *conversiones*. Una conversión es una adquisición de la aplicación producida porque un cliente ha visto la página de la descripción de la Tienda de la aplicación desde una dirección URL que incluye un identificador de campaña personalizada. Para obtener más información acerca de las conversiones, consulta [Qué adquisiciones de la aplicación se califican como conversiones](#understanding-how-acquisitions-qualify-as-conversions) en este tema.
 
 Puedes recuperar los datos de rendimiento de una campaña personalizada para tu aplicación de las siguientes maneras:
 
-* Para ver los datos sobre las vistas de página y conversiones de la aplicación o complemento desde los gráficos de **vistas de página y conversiones por identificador de campaña** y **conversiones de campaña Total** en el [informe de adquisiciones](acquisitions-report.md).
-* Si es una aplicación de la Plataforma universal de Windows (UWP), puedes usar las API del WindowsSDK para recuperar mediante programación el identificador de campaña personalizada que resultó en una conversión.
+* Puede ver datos sobre las vistas de página y las conversiones para su aplicación o un complemento de la **vistas de página de aplicación y conversiones por Id. de campaña** y **Total de las conversiones de campaña** gráficos en el [adquisiciones informe](acquisitions-report.md).
+* Si es una aplicación de la Plataforma universal de Windows (UWP), puedes usar las API del Windows SDK para recuperar mediante programación el identificador de campaña personalizada que resultó en una conversión.
 
 ## <a name="example-custom-campaign-scenario"></a>Ejemplo de escenario de campaña personalizada
 
@@ -35,9 +35,9 @@ Imagina a una desarrolladora de juegos que ha terminado su última creación y q
 
 Para realizar un seguimiento del éxito de cada uno de estos canales de promoción, la desarrolladora crea dos variantes de la dirección URL de la descripción de Store del juego.
 
-* La dirección URL que publica en la página de Facebook incluye el id. de campaña personalizada . `my-facebook-campaign`
+* La dirección URL que se publicará en su página de Facebook incluye el identificador de campaña personalizado `my-facebook-campaign`
 
-* La dirección URL que publica en Twitter incluye el id. de campaña personalizada. `my-twitter-campaign`
+* La dirección URL que se publicará en Twitter incluye el identificador de campaña personalizado `my-twitter-campaign`
 
 A medida que sus seguidores en Facebook y Twitter usen las direcciones URL, Microsoft irá registrando cada clic y lo asociará a la campaña personalizada correspondiente. Si cumplen las condiciones, las posteriores adquisiciones del juego y de cualquier complemento se asociarán a las campañas personalizadas y se notificarán como conversiones.
 
@@ -45,9 +45,9 @@ A medida que sus seguidores en Facebook y Twitter usen las direcciones URL, Micr
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>Qué adquisiciones se califican como conversiones
 
-Una *conversión* de una campaña personalizada es una adquisición producida porque el cliente ha hecho clic en una URL promocionada mediante una campaña personalizada. Existen diferentes escenarios para que se califique como conversión para los gráficos de **vistas de página y conversiones por identificador de campaña** y **conversiones de campaña Total** en el [informe de adquisiciones](acquisitions-report.md) y para que se califique como conversión para [ el identificador de campaña se recupere mediante programación](#programmatically).
+Una *conversión* de una campaña personalizada es una adquisición producida porque el cliente ha hecho clic en una URL promocionada mediante una campaña personalizada. Hay diferentes escenarios para calificar como una conversión para el **vistas de página de aplicación y conversiones por Id. de campaña** y **Total de las conversiones de campaña** gráficos en el [informe de adquisiciones ](acquisitions-report.md) y para calificar como una conversión para [mediante programación al recuperar el Id. de campaña](#programmatically).
 
-### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Conversiones calificadas el informe de adquisiciones
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Calificar las conversiones en el informe de adquisiciones
 
 Las siguientes situaciones califican como conversión para los gráficos **Vistas de página y conversiones de la aplicación por identificador de campaña** y **Total de conversiones de campaña** en el [Informe Adquisiciones](acquisitions-report.md):
 
@@ -62,9 +62,9 @@ Las siguientes situaciones califican como conversión para los gráficos **Vista
 
 Para considerar que existe conversión al recuperar mediante programación el identificador de campaña asociado con la aplicación, deben cumplirse las siguientes condiciones:
 
-* En un dispositivo que ejecuta **Windows10, versión 1607 o una versión posterior**: un cliente (que inicie sesión o no en una cuenta de Microsoft reconocida) hace clic en una dirección URL que contiene un identificador de campaña y se le redirige a la página de la descripción de la Tienda de la aplicación. El cliente adquiere la aplicación al ver la descripción de la Tienda como resultado de hacer clic en la dirección URL.
+* En un dispositivo que ejecuta **Windows 10, versión 1607 o posterior**: Un cliente (ya sea con signo a una cuenta de Microsoft reconocida o no) hace clic en una dirección URL que contiene un identificador de campaña personalizado y se le redirige a la página de listado de Store para la aplicación. El cliente adquiere la aplicación al ver la descripción de la Tienda como resultado de hacer clic en la dirección URL.
 
-* En un dispositivo que ejecuta **Windows10, versión 1511 o una versión anterior**: un cliente (que debe iniciar sesión con una cuenta de Microsoft reconocida) hace clic en una dirección URL que contiene un identificador de campaña y se le redirige a la página de la descripción de la Tienda de la aplicación. El cliente adquiere la aplicación al ver la descripción de la Tienda como resultado de hacer clic en la dirección URL. En estas versiones de Windows10, el usuario debe iniciar sesión con una cuenta de Microsoft reconocida para que la adquisición se certifique como conversión cuando el identificador de campaña se recupere mediante programación.
+* En un dispositivo que ejecuta **versión 1511 o versiones anterior de Windows 10**: Un cliente (que debe iniciar sesión con una cuenta de Microsoft reconocida) hace clic en una dirección URL que contiene un identificador de campaña personalizado y se le redirige a la página de listado de Store para la aplicación. El cliente adquiere la aplicación al ver la descripción de la Tienda como resultado de hacer clic en la dirección URL. En estas versiones de Windows 10, el usuario debe iniciar sesión con una cuenta de Microsoft reconocida para que la adquisición se certifique como conversión cuando el identificador de campaña se recupere mediante programación.
 
 > [!NOTE]
 > Si el cliente abandona la página de la descripción de la Tienda, pero vuelve a la página dentro de las 24 horas siguientes (en el mismo dispositivo o en un dispositivo diferente pero con la misma cuenta de Microsoft) y adquiere la aplicación, esto **calificará** como conversión en los gráficos **Vistas de página y conversiones de la aplicación por identificador de campaña** y **Total de conversiones de campaña** en el [Informe adquisiciones](acquisitions-report.md). Sin embargo, **no** calificará como conversión si recuperas mediante programación el identificador de campaña.
@@ -86,9 +86,9 @@ Para crear una dirección URL de la página de Microsoft Store de tu aplicación
 
 3.  Anexa la siguiente cadena al final de la dirección URL de la aplicación:
 
-    * Para una dirección URL en formato HTML, anexa **`?cid=*my custom campaign ID*`**. Por ejemplo, si Skype presenta un identificador de campaña con el valor **custom\_campaign**, la nueva dirección URL que incluye el identificador de campaña sería: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`.
+    * Para una dirección URL en formato HTML, anexa **`?cid=*my custom campaign ID*`**. Por ejemplo, si Skype introduce un Id. de campaña con el valor **personalizado\_campaña**, la nueva dirección URL incluyendo la campaña identificador podría ser: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`.
 
-    * Para una dirección URL en formato de protocolo, anexa **`&cid=*my custom campaign ID*`**. Por ejemplo, si Skype presenta un identificador de campaña con el valor **custom\_campaign**, la nueva dirección URL de protocolo que incluye el identificador de campaña sería: `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`.
+    * Para una dirección URL en formato de protocolo, anexa **`&cid=*my custom campaign ID*`**. Por ejemplo, si Skype introduce un Id. de campaña con el valor **personalizado\_campaña**, incluida la campaña identificador podría ser la nueva dirección URL de protocolo: `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`.
 
 <span id="programmatically" />
 
@@ -100,16 +100,16 @@ Estas API devolverán una cadena con el id. de campaña solo si el cliente hizo 
 
 Puedes usar distintas API en función de la versión de Windows 10 a la que se dirige tu aplicación:
 
-* Windows 10, versión 1607 o posterior: usa la clase [**StoreContext**](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) del espacio de nombres **Windows.Services.Store**. Al usar esta API, puedes recuperar identificadores de campaña personalizados para todas las [conversiones calificadas](#conversions), independientemente de si el usuario ha iniciado sesión con una cuenta de Microsoft reconocida.
+* Windows 10, versión 1607 o posterior: Use la [ **StoreContext** ](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) clase en el **Windows.Services.Store** espacio de nombres. Al usar esta API, puedes recuperar identificadores de campaña personalizados para todas las [conversiones calificadas](#conversions), independientemente de si el usuario ha iniciado sesión con una cuenta de Microsoft reconocida.
 
-* Windows 10, versión 1511 o anterior: usa la clase [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) del espacio de nombres **Windows.ApplicationModel.Store**. Al usar esta API, solo puedes recuperar identificadores de campaña personalizados para las [conversiones calificadas](#conversions) en las que el usuario ha iniciado sesión en una cuenta de Microsoft reconocida.
+* Windows 10, versión 1511 o versiones anterior: Use la [ **CurrentApp** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) clase en el **Windows.ApplicationModel.Store** espacio de nombres. Al usar esta API, solo puedes recuperar identificadores de campaña personalizados para las [conversiones calificadas](#conversions) en las que el usuario ha iniciado sesión en una cuenta de Microsoft reconocida.
 
 > [!NOTE]
-> Aunque el espacio de nombres **Windows.ApplicationModel.Store** está disponible en todas las versiones de Windows10, recomendamos que uses las API del espacio de nombres **Windows.Services.Store** si tu aplicación se dirige a Windows10, versión 1607 o versiones posteriores. Para más información sobre las diferencias entre estos espacios de nombres, consulta [Pruebas y compras desde la aplicación](../monetize/in-app-purchases-and-trials.md#choose-namespace). En el siguiente ejemplo de código se muestra cómo estructurar el código para que use ambas API en el mismo proyecto.
+> Aunque el espacio de nombres **Windows.ApplicationModel.Store** está disponible en todas las versiones de Windows 10, recomendamos que uses las API del espacio de nombres **Windows.Services.Store** si tu aplicación se dirige a Windows 10, versión 1607 o versiones posteriores. Para obtener más información sobre las diferencias entre estos espacios de nombres, consulta [Pruebas y compras desde la aplicación](../monetize/in-app-purchases-and-trials.md#choose-namespace). En el siguiente ejemplo de código se muestra cómo estructurar el código para que use ambas API en el mismo proyecto.
 
 ### <a name="code-example"></a>Ejemplo de código
 
-En el siguiente ejemplo de código se muestra cómo recuperar el identificador de campaña personalizado. En este ejemplo se usan ambos conjuntos de API en los espacios de nombres **Windows.Services.Store** y **Windows.ApplicationModel.Store** mediante [código adaptativo para versiones](../debug-test-perf/version-adaptive-code.md). Al seguir este proceso, tu código podrá ejecutarse en cualquier versión de Windows 10. Para usar este código, la versión del SO de destino de tu proyecto debe ser **Windows10AnniversaryEdition (10.0; compilación14394)** o posterior, aunque la versión mínima del SO puede ser una versión anterior.
+En el siguiente ejemplo de código se muestra cómo recuperar el identificador de campaña personalizado. En este ejemplo se usan ambos conjuntos de API en los espacios de nombres **Windows.Services.Store** y **Windows.ApplicationModel.Store** mediante [código adaptativo para versiones](../debug-test-perf/version-adaptive-code.md). Al seguir este proceso, tu código podrá ejecutarse en cualquier versión de Windows 10. Para usar este código, la versión del SO de destino de tu proyecto debe ser **Windows 10 Anniversary Edition (10.0; compilación 14394)** o posterior, aunque la versión mínima del SO puede ser una versión anterior.
 
 ``` csharp
 // This example assumes the code file has using statements for
@@ -193,4 +193,4 @@ Antes de que promociones la dirección URL de una campaña personalizada, te rec
 
 3.  Haz clic en la dirección URL varias veces más y cierra la aplicación para UWP o la página del navegador después de cada visita a la página de tu aplicación. Durante **una** de las visitas a la página de tu aplicación, adquiere la aplicación para generar una conversión. Cuenta el número total de veces que has hecho clic en la dirección URL.
 
-4. Confirma si las conversiones y vistas de página esperadas aparecen en los gráficos de **vistas de página y conversiones por identificador de campaña** y **Total de conversiones de campaña** en el [informe de adquisiciones](acquisitions-report.md)y probar el código de la aplicación para confirmar si es posible recuperar correctamente el identificador de campaña con las API que se ha descrito anteriormente.
+4. Confirme si las vistas de página esperado y conversiones aparecen en la **vistas de página de aplicación y conversiones por Id. de campaña** y **Total de las conversiones de campaña** gráficos en el [informe de adquisiciones ](acquisitions-report.md)y probar el código de la aplicación para confirmar si puede recuperar correctamente el identificador de campaña mediante las API se ha descrito anteriormente.

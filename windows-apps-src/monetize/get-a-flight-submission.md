@@ -1,19 +1,19 @@
 ---
 ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: Usa este método en la API de envío de Microsoft Store para obtener datos para un envío existente de paquete piloto.
-title: Obtener un envío de paquete piloto
+title: Get a package flight submission (Obtener un envío de paquete piloto)
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fcbdaa90f09ba1a813612d6104268c4930c9a6d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935640"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656520"
 ---
-# <a name="get-a-package-flight-submission"></a>Obtener un envío de paquete piloto
+# <a name="get-a-package-flight-submission"></a>Get a package flight submission (Obtener un envío de paquete piloto)
 
 Usa este método en la API de envío de Microsoft Store para obtener datos para un envío existente de paquete piloto. Para obtener más información acerca del proceso de creación de un envío de paquete piloto mediante la API de envío de Microsoft Store, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
 
@@ -22,14 +22,14 @@ Usa este método en la API de envío de Microsoft Store para obtener datos para 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un envío de paquete piloto para una aplicación en el centro de partners. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método [crea un envío de paquete piloto](create-a-flight-submission.md) .
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Crear una presentación de vuelos de paquete para una aplicación en el centro de partners. Puede hacerlo en el centro de partners, o puede hacerlo mediante el uso de la [crear una presentación de vuelo paquete](create-a-flight-submission.md) método.
 
 ## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de solicitud                                                      |
+| Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions{submissionId}``` |
 
@@ -38,16 +38,16 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el envío de paquete piloto que quieres obtener. Para obtener más información sobre el Id. de la Store, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | cadena | Obligatorio. El Id. del paquete piloto que contiene el envío que quieres obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.  |
-| submissionId | cadena | Obligatorio. El identificador del envío que se va a obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
+| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío de paquete piloto que quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | string | Obligatorio. El Id. del paquete piloto que contiene el envío que quieres obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un vuelo en el que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de vuelos en el centro de partners.  |
+| submissionId | string | Obligatorio. El identificador del envío que se va a obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -56,7 +56,7 @@ No incluyas un cuerpo de la solicitud para este método.
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-En el siguiente ejemplo se muestra cómo obtener un envío de paquete piloto para una aplicación que tiene el Id. de la Store 9WZDNCRD91MD.
+En el siguiente ejemplo se muestra cómo obtener un envío de paquete piloto para una aplicación que tiene el Id. de la Tienda 9WZDNCRD91MD.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions/1152921504621243649 HTTP/1.1
@@ -65,7 +65,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>Respuesta
 
-En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada correcta a este método. El cuerpo de la respuesta contiene información sobre el envío especificado. Para obtener más información acerca de los valores del cuerpo de la respuesta, consulta [Recurso de envío del paquete piloto](manage-flight-submissions.md#flight-submission-object).
+En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada satisfactoria a este método. El cuerpo de la respuesta contiene información sobre el envío especificado. Para obtener más información acerca de los valores que se encuentran en el cuerpo de la respuesta, consulta [Package flight submission resource (Recurso de envío del paquete piloto)](manage-flight-submissions.md#flight-submission-object).
 
 ```json
 {
@@ -113,14 +113,14 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el envío de paquete piloto. |
-| 409  | El envío de paquete piloto no pertenece del paquete piloto especificado o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | El envío de vuelos de paquete no pertenece a la caja de paquete especificado, o la aplicación usa una característica del centro de partners que está [no compatible actualmente con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
-* [Crear un envío de paquete piloto](create-a-flight-submission.md)
-* [Confirmar un envío de paquete piloto](commit-a-flight-submission.md)
-* [Actualizar un envío de paquete piloto](update-a-flight-submission.md)
-* [Eliminar un envío de paquete piloto](delete-a-flight-submission.md)
+* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de vuelos de paquete](manage-flight-submissions.md)
+* [Crear una presentación de vuelos de paquete](create-a-flight-submission.md)
+* [Confirme el envío de un vuelo de paquetes](commit-a-flight-submission.md)
+* [Envío de vuelo de un paquete de actualización](update-a-flight-submission.md)
+* [Eliminar el envío de un vuelo de paquetes](delete-a-flight-submission.md)

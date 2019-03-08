@@ -7,13 +7,13 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919331"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644470"
 ---
-# <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Device Portal
+# <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Portal de dispositivos
 
 Obtén información sobre cómo escribir una aplicación para UWP que usa Windows Device Portal para hospedar una página web y proporcionar información de diagnóstico.
 
@@ -108,7 +108,7 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-Hay dos eventos que deben controlarse con la aplicación para completar la solicitud de control de bucle: **cerrado**, para cada vez que el servicio Device Portal se apaga y [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), lo que expone HTTP entrante solicita y proporciona la principal funcionalidad del proveedor de Device Portal. 
+Hay dos eventos que deben controlarse mediante la aplicación para completar la solicitud de control de bucle: **Cerrado**, para cada vez que el servicio de Portal de dispositivo se apaga, y [ **RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), superficies solicitudes HTTP entrante y proporciona la funcionalidad principal del Portal del dispositivo proveedor. 
 
 ## <a name="handle-the-requestreceived-event"></a>Controlar el evento RequestReceived
 El evento **RequestReceived** se lanzará una vez para cada HTTP solicitud que se realice en la ruta de controlador especificado del complemento. El bucle de control de la solicitud para los proveedores de Device Portal es similar al de NodeJS Express: los objetos de solicitud y respuesta se proporcionan juntos con el evento y el controlador responde rellenando el objeto de respuesta. En los proveedores de Device Portal, el evento **RequestReceived** y sus controladores usan objetos [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) y [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage).   
@@ -188,7 +188,7 @@ Para depurar la tarea en segundo plano, tienes que cambiar la forma en que Visua
 2.  En la pestaña Depurar, en la sección Acción de inicio, selecciona No iniciar, pero depurar mi código al empezar.  
 ![Colocar el complemento en modo de depuración](images/device-portal/plugin-debug-mode.png)
 3.  Establece un punto de interrupción en la función de controlador RequestReceived.
-![Punto de interrupción en el controlador RequestReceived](images/device-portal/plugin-requestreceived-breakpoint.png)
+![punto de interrupción en el controlador requestreceived](images/device-portal/plugin-requestreceived-breakpoint.png)
 > [!NOTE] 
 > Asegúrate de que la arquitectura de la compilación coincida exactamente con la arquitectura de destino. Si estás usando un PC de 64 bits, debes realizar la implementación usando una compilación de AMD64. 
 4.  Presionar F5 para implementar la aplicación
@@ -196,7 +196,7 @@ Para depurar la tarea en segundo plano, tienes que cambiar la forma en que Visua
 6.  En el explorador, accede al espacio de nombres del proveedor y debería activarse el punto de interrupción.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Introducción a Windows Device Portal](device-portal.md)
-* [Crear y usar un servicio de aplicación](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Información general de Windows Device Portal](device-portal.md)
+* [Crear y consumir un servicio de aplicaciones](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 

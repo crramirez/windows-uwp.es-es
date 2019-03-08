@@ -4,14 +4,14 @@ title: Optimizar el marcado XAML
 description: El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación.
 ms.date: 08/10/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ec88af01e46788ea9f24760af7f9a3b81281ba8d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593130"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
@@ -36,10 +36,10 @@ Aquí vamos a ver algunas otras maneras de reducir el número de elementos que l
 
 Si el marcado XAML contiene elementos que no muestran inmediatamente, puedes posponer la carga de esos elementos hasta que se muestren. Por ejemplo, puedes retrasar la creación de contenido no visible, como una pestaña secundaria en una interfaz de usuario similar a una pestaña. O bien, puedes mostrar elementos en una vista de cuadrícula de forma predeterminada, pero debes proporcionar una opción para que el usuario pueda ver los datos en una lista. Puedes retrasar la carga de la lista hasta que se necesite.
 
-Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) en lugar de la propiedad [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility) para controlar cuándo se muestra un elemento. Cuando la visibilidad de un elemento se marca como **Contraído**, se omitirá durante el pase de representación, pero todavía pagas los costos de la instancia del objeto en la memoria. Si usas x:Load en su lugar, el marco no creará la instancia del objeto hasta que se necesite, por lo que los costos de memoria son más bajos aún. El inconveniente es el costo de una pequeña sobrecarga de memoria (unos 600bytes) cuando no se puede cargar la interfaz de usuario.
+Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) en lugar de la propiedad [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility) para controlar cuándo se muestra un elemento. Cuando la visibilidad de un elemento se marca como **Contraído**, se omitirá durante el pase de representación, pero todavía pagas los costos de la instancia del objeto en la memoria. Si usas x:Load en su lugar, el marco no creará la instancia del objeto hasta que se necesite, por lo que los costos de memoria son más bajos aún. El inconveniente es el costo de una pequeña sobrecarga de memoria (unos 600 bytes) cuando no se puede cargar la interfaz de usuario.
 
 > [!NOTE]
-> Puedes retrasar la carga de elementos mediante el atributo [x:Load](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md). El atributo x:Load está disponible a partir de Windows10 Creators Update (versión 1703, compilación de SDK 15063). Para poder usar x:Load, la versión mínima del proyecto de Visual Studio debe ser *Windows10 Creators Update (10.0, compilación 15063)*. Para seleccionar versiones anteriores, usa x:DeferLoadStrategy.
+> Puedes retrasar la carga de elementos mediante el atributo [x:Load](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md). El atributo x:Load está disponible a partir de Windows 10 Creators Update (versión 1703, compilación de SDK 15063). Para poder usar x:Load, la versión mínima del proyecto de Visual Studio debe ser *Windows 10 Creators Update (10.0, compilación 15063)*. Para seleccionar versiones anteriores, usa x:DeferLoadStrategy.
 
 Los siguientes ejemplos muestran la diferencia en el recuento de elementos y el uso de memoria cuando se usan técnicas diferentes para ocultar elementos de la interfaz de usuario. Los controles ListView y GridView que contienen elementos idénticos se colocan en la Grid de la página de la raíz. La ListView no está visible pero se muestra la GridView. El código XAML en cada uno de estos ejemplos produce la misma interfaz de usuario en la pantalla. Usamos las herramientas de Visual Studio [de generación de perfiles y rendimiento](tools-for-profiling-and-performance.md) para comprobar el uso de memoria y el recuento de elementos.
 
@@ -126,7 +126,7 @@ ListView y sus elementos secundarios no se cargan en la memoria.
 
 Los paneles de diseño tienen una propiedad [Background](https://msdn.microsoft.com/library/windows/apps/BR227512), por lo tanto, no es necesario colocar una clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) delante de un panel solo para colorearlo.
 
-**Ineficaz**
+**Inefficient**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -234,7 +234,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Page>
 ```
 
-La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a _SecondPage.xaml_ y mover `ThirdPageTextBrush` a _ThirdPage.xaml_. `InitialPageTextBrush` puede permanecer en _App.xaml_ porque los recursos de la aplicación deben analizarse en el inicio de la aplicación en cualquier caso.
+La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a _SecondPage.xaml_ y mover `ThirdPageTextBrush` a _ThirdPage.xaml_. `InitialPageTextBrush` puede permanecer en _App.xaml_ porque los recursos de la aplicación deben analizarse durante el inicio de la aplicación en cualquier caso.
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolidar varios pinceles que tengan el mismo aspecto en un recurso
 
@@ -417,7 +417,7 @@ Ten en cuenta el uso de [CacheMode](https://msdn.microsoft.com/library/windows/a
 
 ## <a name="use-xbf2"></a>Usar XBF2
 
-XBF2 es una representación binaria de marcado XAML que evita todos los costos de análisis de texto en tiempo de ejecución. También optimiza el código binario para la creación de la carga y el árbol, además de permitir rutas de acceso rápido para que los tipos XAML mejoren los costos de creación de montones y objetos, por ejemplo VSM, ResourceDictionary, Styles, etc. Se asigna completamente a la memoria, por lo que no se necesita superficie de montones para la carga y lectura de una página XAML. Además, reduce la superficie de disco de las páginas XAML almacenadas en un appx. XBF2 es una representación más compacta y puede reducir en hasta un 50% la superficie de disco de los archivos XAML/XBF1 comparativos. Por ejemplo, la aplicación integrada Fotos vio una reducción de un 60% tras la conversión a XBF, de aproximadamente 1MB de activos XBF1 a 400kB de activos XBF2. También hemos visto aplicaciones que reducen el uso de la CPU entre un 15% y un 20% y del montón de Win32 entre un 10% y un 15%.
+XBF2 es una representación binaria de marcado XAML que evita todos los costos de análisis de texto en tiempo de ejecución. También optimiza el código binario para la creación de la carga y el árbol, además de permitir rutas de acceso rápido para que los tipos XAML mejoren los costos de creación de montones y objetos, por ejemplo VSM, ResourceDictionary, Styles, etc. Se asigna completamente a la memoria, por lo que no se necesita superficie de montones para la carga y lectura de una página XAML. Además, reduce la superficie de disco de las páginas XAML almacenadas en un appx. XBF2 es una representación más compacta y puede reducir en hasta un 50 % la superficie de disco de los archivos XAML/XBF1 comparativos. Por ejemplo, la aplicación integrada Fotos vio una reducción de un 60 % tras la conversión a XBF, de aproximadamente 1 MB de activos XBF1 a 400 kB de activos XBF2. También hemos visto aplicaciones que reducen el uso de la CPU entre un 15 % y un 20 % y del montón de Win32 entre un 10 % y un 15 %.
 
 Los controles y diccionarios integrados de XAML que proporciona el marco ya están totalmente habilitados para XBF2. Para tu propia aplicación, asegúrate de que el archivo de proyecto declare TargetPlatformVersion 8.2 o posterior.
 
@@ -425,7 +425,7 @@ Para comprobar si tienes XBF2, abre la aplicación en un editor de código binar
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md)
-- [Optimizar el diseño XAML](optimize-your-xaml-layout.md)
+- [Procedimientos recomendados para el rendimiento de inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md)
+- [Optimiza tu diseño XAML](optimize-your-xaml-layout.md)
 - [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md)
-- [Herramientas de creación de perfiles y rendimiento](tools-for-profiling-and-performance.md)
+- [Herramientas de generación de perfiles y rendimiento](tools-for-profiling-and-performance.md)

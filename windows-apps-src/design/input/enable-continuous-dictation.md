@@ -1,5 +1,5 @@
 ---
-Description: Learn how to capture and recognize long-form, continuous dictation speech input.
+Description: Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración.
 title: Habilitar el dictado continuo
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0865b229faad646901ab76f46982e738b2830035
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046648"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606260"
 ---
 # <a name="continuous-dictation"></a>Dictado continuo
 
@@ -26,7 +26,7 @@ En el [Reconocimiento de voz](speech-recognition.md) aprendiste a capturar y rec
 Para las sesiones de reconocimiento de voz más largas y continuas, como el dictado o el envío de correos electrónicos, puedes usar la propiedad [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913) de la clase [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) para obtener un objeto [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896).
 
 > [!NOTE]
-> Compatibilidad de idiomas de dictado depende en el [dispositivo](https://docs.microsoft.com/windows/uwp/design/devices/) donde se ejecuta la aplicación. Para PC y portátiles, se reconocen solo en-US, mientras que Xbox y teléfonos pueden reconocer todos los idiomas compatibles con el reconocimiento de voz. Para obtener más información, vea [especificar el idioma del reconocedor de voz](specify-the-speech-recognizer-language.md).
+> Compatibilidad con idiomas de dictado depende el [dispositivo](https://docs.microsoft.com/windows/uwp/design/devices/) donde se ejecuta la aplicación. Para equipos y portátiles, se reconocen sólo en-US, mientras que Xbox y teléfonos pueden reconocer todos los idiomas compatibles con el reconocimiento de voz. Para obtener más información, consulte [especificar el idioma del reconocedor de voz](specify-the-speech-recognizer-language.md).
 
 ## <a name="set-up"></a>Configuración
 
@@ -68,12 +68,12 @@ Durante la inicialización del reconocimiento de voz continuo, debes:
 - Obtener el distribuidor del subproceso de interfaz de usuario si actualizas la interfaz de usuario de la aplicación en los controladores de eventos de reconocimiento continuo.
 - Inicializar el reconocedor de voz.
 - Compilar la gramática de dictado integrada.
-    **Nota**  el reconocimiento de voz requiere al menos una restricción para definir un vocabulario reconocible. Si no se especifica ninguna restricción, se usa una gramática de dictado predefinida. Consulta la información sobre [Reconocimiento de voz](speech-recognition.md)
+    **Tenga en cuenta**    el reconocimiento de voz requiere al menos una restricción para definir un vocabulario reconocible. Si no se especifica ninguna restricción, se usa una gramática de dictado predefinida. Consulta la información sobre [Reconocimiento de voz](speech-recognition.md)
 - Configura las escuchas de eventos para eventos de reconocimiento.
 
 En este ejemplo, inicializamos el reconocimiento de voz en el evento de página [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508).
 
-1. Como los eventos generados por el reconocedor de voz se producen en un subproceso en segundo plano, se crea una referencia al distribuidor para efectuar actualizaciones en el subproceso de interfaz de usuario. [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) siempre se invoca en el subproceso de interfaz de usuario.
+1. Como los eventos generados por el reconocedor de voz se producen en un subproceso en segundo plano, se crea una referencia al distribuidor para efectuar actualizaciones en el subproceso de interfaz de usuario. [**OnNavigatedTo** ](https://msdn.microsoft.com/library/windows/apps/br227508) siempre se invoca en el subproceso de interfaz de usuario.
 ```csharp
 this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
 ```
@@ -105,15 +105,15 @@ A continuación, usamos la propiedad [**ContinuousRecognitionSession**](https://
 
 En particular, hay dos eventos que son fundamentales:
 
-- [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900), que se crea cuando el reconocedor genera algunos resultados.
-- [**Completed**](https://msdn.microsoft.com/library/windows/apps/dn913899), que se crea cuando finaliza la sesión de reconocimiento continua.
+- [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900), que se produce cuando el reconocedor ha generado algunos resultados.
+- [**Completado**](https://msdn.microsoft.com/library/windows/apps/dn913899), que se produce cuando ha finalizado la sesión de reconocimiento continua.
 
 El evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) se genera a medida que el usuario habla. El reconocedor escucha continuamente al usuario y genera periódicamente un evento que pasa un fragmento de entrada de voz. Debes examinar la entrada de voz mediante la propiedad [**Result**](https://msdn.microsoft.com/library/windows/apps/dn913895) del argumento del evento y realizar las acciones correspondientes en el controlador de eventos como, por ejemplo, agregar el texto a un objeto StringBuilder.
 
 Como instancia de [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432), la propiedad [**Result**](https://msdn.microsoft.com/library/windows/apps/dn913895) es útil para determinar si quieres aceptar la entrada de voz: Una clase [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) proporciona dos propiedades para esto:
 
-- [**Status**](https://msdn.microsoft.com/library/windows/apps/dn631440) indica si el reconocimiento se realizó correctamente. Recuerda que el reconocimiento puede crear un error por diversos motivos.
-- [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434) indica la confianza relativa en que el reconocedor comprendió las palabras correctas.
+- [**Estado** ](https://msdn.microsoft.com/library/windows/apps/dn631440) indica si el reconocimiento se realizó correctamente. Recuerda que el reconocimiento puede crear un error por diversos motivos.
+- [**Confianza** ](https://msdn.microsoft.com/library/windows/apps/dn631434) indica la confianza relativa que el reconocedor entiende las palabras correctas.
 
 Estos son los pasos básicos para admitir el reconocimiento continuo:  
 
@@ -125,7 +125,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  Igualmente, comprobamos la propiedad [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434). Si el valor de la propiedad Confidence es [**medio**](https://msdn.microsoft.com/library/windows/apps/dn631409) o mejor, anexamos el texto a StringBuilder. También actualizaremos la interfaz de usuario a medida que recopilemos entradas.
 
-    **Nota**se genera el evento de [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si un controlador necesita actualizar la interfaz de usuario (igual que lo hace la opción [\Muestra de voz y TTS\]), debes enviar las actualizaciones al subproceso de interfaz de usuario a través del método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) del distribuidor.
+    **Tenga en cuenta**  el [ **ResultGenerated** ](https://msdn.microsoft.com/library/windows/apps/dn913900) evento se provoca en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si necesita un controlador actualizar la interfaz de usuario (como el \[muestra de voz y TTS\] does), debe enviar las actualizaciones al subproceso de interfaz de usuario a través de la [ **RunAsync** ](https://msdn.microsoft.com/library/windows/apps/hh750317) método del distribuidor.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -165,7 +165,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  El controlador de eventos comprueba la propiedad Status para determinar si el reconocimiento se realizó correctamente. También controla el caso en el que el usuario ha dejado de hablar. A menudo, el elemento [**TimeoutExceeded**](https://msdn.microsoft.com/library/windows/apps/dn631433) se considera como un reconocimiento correcto, ya que significa que el usuario ha terminado de hablar. Debes controlar este caso en el código para obtener una buena experiencia.
 
-    **Nota**se genera el evento de [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si un controlador necesita actualizar la interfaz de usuario (igual que lo hace la opción [\Muestra de voz y TTS\]), debes enviar las actualizaciones al subproceso de interfaz de usuario a través del método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) del distribuidor.
+    **Tenga en cuenta**  el [ **ResultGenerated** ](https://msdn.microsoft.com/library/windows/apps/dn913900) evento se provoca en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si necesita un controlador actualizar la interfaz de usuario (como el \[muestra de voz y TTS\] does), debe enviar las actualizaciones al subproceso de interfaz de usuario a través de la [ **RunAsync** ](https://msdn.microsoft.com/library/windows/apps/hh750317) método del distribuidor.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,
@@ -244,8 +244,8 @@ if (speechRecognizer.State == SpeechRecognizerState.Idle)
 
 El reconocimiento puede detenerse de dos maneras:
 
--   [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/dn913908) permite completar los eventos de reconocimiento pendientes (ten en cuenta que [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) continúa generándose hasta que se completan todas las operaciones de reconocimiento pendientes).
--   [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) finaliza la sesión de reconocimiento inmediatamente y descarta los resultados pendientes.
+-   [**StopAsync** ](https://msdn.microsoft.com/library/windows/apps/dn913908) permite pendiente completa de eventos de reconocimiento ([**ResultGenerated** ](https://msdn.microsoft.com/library/windows/apps/dn913900) continúa aumentando hasta que todas las pendientes reconocimiento se completen las operaciones).
+-   [**CancelAsync** ](https://msdn.microsoft.com/library/windows/apps/dn913898) termina inmediatamente la sesión de reconocimiento y descarta cualquier resultado pendiente.
 
 Después de comprobar el estado del reconocedor de voz, finalizamos la sesión mediante una llamada al método [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) de la propiedad [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913) del reconocedor de voz.
 
@@ -268,8 +268,8 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 
 * [Interacciones de voz](speech-interactions.md)
 
-**Muestras**
-* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+**Ejemplos**
+* [Reconocimiento de voz y ejemplo de síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

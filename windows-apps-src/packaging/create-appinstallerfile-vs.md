@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, app installer, instalador de aplicaciones, AppInstaller, sideload, realizar instalación de prueba
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa7622fe408fcbc1f8da4c0fe0c6b8d54dd2cd6
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115779"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648490"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Crear un archivo de Instalador de aplicación con Visual Studio
 
-A partir de Windows 10, versión 1803 y Visual Studio 2017, Update 15.7, las aplicaciones pueden configurarse para recibir actualizaciones automáticas con una `.appinstaller` archivo. Visual Studio admite la habilitación de estas actualizaciones.
+A partir de Windows 10, versión 1803 y Visual Studio 2017, versión 15.7 de actualización, las aplicaciones se pueden configurar para recibir las actualizaciones automáticas mediante una `.appinstaller` archivo. Visual Studio admite la habilitación de estas actualizaciones.
 
 ## <a name="app-installer-file-location"></a>Ubicación del archivo del Instalador de aplicación
 El archivo `.appinstaller` puede estar alojado en una ubicación compartida como un extremo HTTP o una carpeta UNC compartida e incluye la ruta de acceso para buscar los paquetes de aplicaciones que se van a instalar. Los usuarios instalan la aplicación desde la ubicación compartida y habilitan comprobaciones periódicas de nuevas actualizaciones. 
@@ -25,16 +25,16 @@ El archivo `.appinstaller` puede estar alojado en una ubicación compartida como
 Puedes configurar la propiedad `TargetPlatformMinVersion` al crear el proyecto o cambiarla más adelante desde las propiedades del proyecto. 
 
 >[!IMPORTANT]
-> El archivo de instalador de aplicación es solo genera cuando el `TargetPlatformMinVersion` es Windows 10, versión 1803 o posterior.
+> El archivo de instalador de aplicación solo está generado cuando el `TargetPlatformMinVersion` es Windows 10, versión 1803 o posterior.
 
 
 ### <a name="create-packages"></a>Crear paquetes
 
-Para distribuir una aplicación a través de la instalación de prueba, debes crear un paquete de la aplicación (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) y publicarlo en una ubicación compartida.
+Para distribuir una aplicación a través de la instalación de prueba, debe crear un paquete de aplicación (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) y publicarlo en una ubicación compartida.
 
 Para ello, usa el asistente **Crear paquetes de aplicaciones** en Visual Studio con los siguientes pasos.
 
-1. Haz clic con el botón derecho en el proyecto y elige **Store** -> **Crear paquetes de aplicaciones**.  
+1. Haz clic con el botón derecho en el proyecto y elige **Tienda** -> **Crear paquetes de aplicaciones**.  
 
 ![Menú contextual con navegación para crear paquetes de aplicaciones](images/packaging-screen2.jpg)   
 

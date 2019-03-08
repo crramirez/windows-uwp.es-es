@@ -6,13 +6,13 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649870"
 ---
-# <a name="pull-to-refresh-with-source-modifiers"></a>Extracción de actualización con modificadores de origen
+# <a name="pull-to-refresh-with-source-modifiers"></a>Extracción de actualización con modificadores de origen (SourceModifiers)
 
 En este artículo analizaremos más a fondo cómo usar la característica de SourceModifier de un InteractionTracker y mostraremos su uso mediante la creación de un control personalizado de extracción de actualización (Pull-to-Refresh).
 
@@ -20,9 +20,9 @@ En este artículo analizaremos más a fondo cómo usar la característica de Sou
 
 En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
 
-- [Animaciones controladas por entradas](input-driven-animations.md)
-- [Experiencias de manipulación personalizadas con InteractionTracker](interaction-tracker-manipulations.md)
-- [Animaciones basadas en relaciones](relation-animations.md)
+- [Animaciones de entrada](input-driven-animations.md)
+- [Experiencias de manipulación personalizado con InteractionTracker](interaction-tracker-manipulations.md)
+- [Animaciones en función de relación](relation-animations.md)
 
 ## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>¿Qué es un SourceModifier y por qué resultan útiles?
 
@@ -67,7 +67,7 @@ ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsScrollInertiaEnabled="F
 </StackPanel>
 ```
 
-Dado que ListView (`ThumbnailList`) es un control XAML que ya desplaza, necesitas que el desplazamiento se encadene a su elemento principal(`ContentPanel`) cuando alcance el elemento más alto y no se pueda desplazar más. (Los modificadores de origen se aplicarán en ContentPanel). Para ello debes establecer ScrollViewer.IsVerticalScrollChainingEnabled como **true** en el marcado de ListView. También deberás establecer el modo de encadenamiento de VisualInteractionSource en **Always**.
+Dado que ListView (`ThumbnailList`) es un control XAML que ya desplaza, necesitas que el desplazamiento se encadene a su elemento principal(`ContentPanel`) cuando alcance el elemento más alto y no se pueda desplazar más. (ContentPanel es donde se aplicarán los modificadores de origen). Para ello deberá establecer ScrollViewer.IsVerticalScrollChainingEnabled **true** en el marcado de ListView. También deberás establecer el modo de encadenamiento de VisualInteractionSource en **Always**.
 
 Debes establecer el controlador PointerPressedEvent con el parámetro _handledEventsToo_ en **true**. Sin esta opción, PointerPressedEvent no se encadenará a ContentPanel, ya que el control ListView marcará esos eventos como controlados y no se enviarán a la cadena visual.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046165"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649560"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
@@ -20,9 +20,9 @@ ms.locfileid: "9046165"
 
 La [aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
 
-**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente del [repositorio Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub:
+**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga el ejemplo siguiente del [repositorio de ejemplos de la plataforma universal de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub:
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Ejemplo de asignación de universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>Obtener una clave
 
@@ -31,7 +31,7 @@ Usa el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal
 
 Para crear una nueva clave
 
-1.  En el explorador, ve al centro de desarrollo de mapas de Bing ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  En el explorador, navegue hasta el Centro para desarrolladores de Bing Maps ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
 
 2.  Si se te pide que inicies sesión, escribe tu cuenta de Microsoft y haz clic en **Iniciar sesión**.
 
@@ -45,10 +45,10 @@ Para crear una nueva clave
 
 7.  Rellena el formulario **Crear clave** y, después, haz clic en **Crear**.
 
-    -   **Nombre de la aplicación:** El nombre de tu aplicación.
-    -   **Dirección URL de la aplicación (opcional):** La dirección URL de tu aplicación.
-    -   **Tipo de clave:** Selecciona **Básica** o **Empresa**.
-    -   **Tipo de aplicación:** Selecciona **Aplicación universal de Windows** para usarla en tu aplicación universal de Windows.
+    -   **Nombre de la aplicación:** El nombre de la aplicación.
+    -   **Dirección URL de aplicación (opcional):** La dirección URL de la aplicación.
+    -   **Tipo de clave:** Seleccione **básica** o **Enterprise**.
+    -   **Tipo de aplicación:** Seleccione **aplicación Universal de Windows** para su uso en la aplicación Windows Universal.
 
     A continuación se muestra un ejemplo del aspecto del formulario.
 
@@ -89,8 +89,8 @@ Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https:/
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Ejemplo de aplicación de tráfico de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Centro para desarrolladores de Bing Maps](https://www.bingmapsportal.com/)
+* [Ejemplo de asignación de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Instrucciones de diseño de mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Compilación 2015 vídeo: Aprovechamiento de mapas y ubicación en el teléfono, tableta y PC en sus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación UWP tráfico](https://go.microsoft.com/fwlink/p/?LinkId=619982)

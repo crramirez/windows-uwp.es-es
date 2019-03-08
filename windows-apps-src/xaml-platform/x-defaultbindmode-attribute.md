@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c8917b09f04206a5466797f48414defeb35baf5e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929563"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647610"
 ---
 # <a name="xdefaultbindmode-attribute"></a>Atributo x:DefaultBindMode
 
@@ -24,10 +24,10 @@ En un marcado XAML, especifica un modo predeterminado para x:Bind.
 <object x:DefaultBindMode="OneTime \| OneWay \| TwoWay" .../>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 [x:Bind](x-bind-markup-extension.md) tiene un modo predeterminado de **OneTime**. Esto se escogió por motivos de rendimiento, ya que usar **OneWay** provocará que se genere más código para enlazar y gestionar la detección del cambio. Puedes usar **x:DefaultBindMode** para cambiar el modo predeterminado de x:Bind para un segmento específico del árbol de marcado. El modo especificado ser aplica a las expresiones de x:Bind en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Extensión de marcado x:Bind](x-bind-markup-extension.md)
+* [extensión de marcado x: Bind](x-bind-markup-extension.md)

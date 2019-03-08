@@ -1,5 +1,5 @@
 ---
-Description: This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.
+Description: En este tema del centro se describe un panorama completo de desarrollador sobre cómo Windows Information Protection (WIP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada.
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -10,11 +10,11 @@ keywords: windows 10, uwp, Windows Information Protection, datos empresariales, 
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
 ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595480"
 ---
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
@@ -41,9 +41,9 @@ Si los usuarios anulan la inscripción de su dispositivo del sistema MDM de la o
 
 ![Ciclo de vida de WIP](images/wip-lifecycle.png)
 
-> **Más información sobre WIP** <br>
+> **Obtenga más información acerca de WIP** <br>
 * [Introducción a Windows Information Protection](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [Protege los datos de tu empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+* [Proteger los datos de empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
 
 Si la aplicación está en la lista de aplicaciones permitidas, todos los datos generados por la aplicación están sujetos a las restricciones de la directiva. Esto significa que si los administradores revocan el acceso del usuario a los datos de empresa, dichos usuarios perderán el acceso a todos los datos de la aplicación que has creado.
 
@@ -61,11 +61,11 @@ Por ejemplo, si la directiva permite a los usuarios pegar datos de empresa en un
 
 Si estás listo para optimizar tu aplicación, consulta una de estas guías:
 
-**Para las aplicaciones de la plataforma Universal de Windows (UWP) que crees mediante C#**
+**Para las aplicaciones de plataforma Universal de Windows (UWP) que se crean mediante el uso deC#**
 
 [Guía para desarrolladores sobre Windows Information Protection (WIP)](wip-dev-guide.md).
 
-**Para aplicaciones de escritorio creadas con C++**
+**Para aplicaciones de escritorio que se crean mediante el uso de C++**
 
 [Guía para desarrolladores sobre Windows Information Protection (WIP)](https://go.microsoft.com/fwlink/?LinkId=822192).
 

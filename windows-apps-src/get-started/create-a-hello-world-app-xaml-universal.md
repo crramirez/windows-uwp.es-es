@@ -1,54 +1,54 @@
 ---
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Aprender a crear una aplicación "Hola mundo" (XAML)
-description: Usar el lenguaje de marcado de aplicaciones Extensible (XAML) con C# para crear una sencilla aplicación Hello world la plataforma Universal de Windows (UWP) de Windows 10.
+description: Usar el lenguaje de marcado de aplicaciones Extensible (XAML) con C# para crear un sencillo aplicación Hello, world que tenga como destino la plataforma Universal de Windows (UWP) en Windows 10.
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, hola mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941082"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642160"
 ---
-# <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
+# <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hello, world" (XAML)
 
-Este tutorial te enseña a usar XAML y C# para crear una sencilla "Hello, world" aplicación para la plataforma Universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes crear una aplicación que se ejecuta en cualquier dispositivo Windows 10.
+Este tutorial le enseña a usar de XAML y C# para crear una sencilla "Hello, world" app para la plataforma Universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puede crear una aplicación que se ejecuta en cualquier dispositivo Windows 10.
 
 Aquí aprenderás a:
 
--   Crear un nuevo proyecto de **Visual Studio 2017** destinado a **Windows 10** y la **UWP**.
--   Escribir XAML para cambiar la interfaz de usuario en la página de inicio.
+-   Cree un nuevo **Visual Studio 2017** proyecto cuyo destino sea **Windows 10** y **UWP**.
+-   Escribe XAML para cambiar la interfaz de usuario en la página de inicio.
 -   Ejecutar el proyecto en el escritorio local de Visual Studio.
--   Usar un SpeechSynthesizer para que la aplicación hable al presionar un botón.
+-   Usa un SpeechSynthesizer para que la aplicación hable al presionar un botón.
 
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
--   [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
+-   [¿Qué es una aplicación Universal Windows?](universal-application-platform-guide.md)
 -   [Descarga Visual Studio 2017 (y Windows 10)](https://developer.microsoft.com/windows/downloads). Si necesitas un poco de ayuda, aprende a [prepararte](get-set-up.md).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
 > [!NOTE]
 > En este tutorial se usa Visual Studio Community 2017. Si usas otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
-## <a name="video-summary"></a>Vídeo resumen
+## <a name="video-summary"></a>Resumen en vídeo
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 
 
-## <a name="step-1-create-a-new-project-in-visual-studio"></a>Paso 1: Creación de un nuevo proyecto en Visual Studio.
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Paso 1: Cree un nuevo proyecto en Visual Studio.
 
 1.  Inicia Visual Studio 2017.
 
-2.  En el menú **archivo** , selecciona **Nuevo > proyecto** para abrir el cuadro de diálogo *Nuevo proyecto* .
+2.  Desde el **archivo** menú, seleccione **nuevo > proyecto** para abrir el *nuevo proyecto* cuadro de diálogo.
 
-3.  En la lista de plantillas de la izquierda, elige **instalado > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
+3.  En la lista de plantillas de la izquierda, elija **instalado > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
 
-    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulta [Prepárate](get-set-up.md)).
+    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulte [configurar](get-set-up.md).)
 
     ![Cómo repetir el proceso de instalación](images/win10-cs-install.png)
 
@@ -78,12 +78,12 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 > [!NOTE]
 > ¿Qué es XAML? El lenguaje de marcado de aplicaciones extensible (XAML) es el lenguaje que se usa para definir la interfaz de usuario de la aplicación. Puede especificarse manualmente, o crearse con las herramientas de diseño de Visual Studio. Un archivo .xaml tiene un archivo de código subyacente .xaml.cs que contiene la lógica. Juntos, el XAML y el código subyacente forman una clase completa. Para obtener más información, consulta [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 
-*App.xaml y App.xaml.cs*
+*App.XAML y App.xaml.cs*
 
 -   App.xaml es donde declaras recursos que se usan en la aplicación.
 -   App.xaml.cs es el archivo de código subyacente de App.xaml. Como todas las páginas de código subyacente, contiene un constructor que llama al método `InitializeComponent`. Tú no escribes el método `InitializeComponent`. Lo genera Visual Studio, y su principal propósito es inicializar los elementos declarados en el archivo XAML.
 -   App.xaml.cs es el punto de entrada para la aplicación.
--   App.Xaml.cs también contiene métodos para controlar la [activación](../launch-resume/activate-an-app.md) y la [suspensión](../launch-resume/suspend-an-app.md) de la aplicación.
+-   App.Xaml.cs también contiene métodos para controlar [activación](../launch-resume/activate-an-app.md) y [suspensión](../launch-resume/suspend-an-app.md) de la aplicación.
 
 *MainPage.xaml*
 
@@ -93,20 +93,20 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 
 *Package.appxmanifest*
 -   Un archivo de manifiesto que describe tu aplicación: su nombre, descripción, icono, página de inicio, etc.
--   Incluye una lista de dependencias, recursos y los archivos que contiene la aplicación.
+-   Incluye una lista de dependencias, recursos y archivos que contiene la aplicación.
 
-*Conjunto de imágenes de logotipo*
--   Assets/Square150x150Logo.scale-200.png y Wide310x150Logo.scale 200.png representan la aplicación (tamaño medio o todo) en el menú Inicio.
+*Un conjunto de imágenes de logotipo*
+-   Assets/Square150x150Logo.scale-200.png y Wide310x150Logo.scale 200.png representan tu aplicación (tamaño medio o todo) en el menú Inicio.
 -   Assets/Square44x44Logo.png representa la aplicación en la lista de aplicaciones del menú Inicio, barra de tareas y el Administrador de tareas.
 -   Assets/StoreLogo.png representa tu aplicación en Microsoft Store.
 -   Assets/SplashScreen.scale-200.png es la pantalla de presentación que se muestra cuando se inicia la aplicación.
 -   Assets/LockScreenLogo.scale-200.png puede usarse para representar la aplicación en la pantalla de bloqueo cuando el sistema está bloqueado.
 
-## <a name="step-2-adding-a-button"></a>Paso 2: Adición de un botón
+## <a name="step-2-adding-a-button"></a>Paso 2: Agregar un botón
 
 ### <a name="using-the-designer-view"></a>Uso de la vista de diseñador
 
-Vamos a agregar un botón a nuestra página. En este tutorial, trabajas con solo algunos de los archivos enumerados anteriormente: App.xaml, MainPage.xaml y MainPage.xaml.cs.
+Vamos a agregar un botón a nuestra página. En este tutorial, trabajará con solo algunos de los archivos mencionados anteriormente: App.XAML, MainPage.xaml y MainPage.xaml.cs.
 
 1.  Haz doble clic en **MainPage.xaml** para abrirlo en la vista de Diseño.
 
@@ -140,7 +140,7 @@ Observa cómo se muestra el botón en las actualizaciones del lienzo de diseño 
 
 ![La ventana de Explorador de soluciones](images/win10-cs-07.png)
 
-## <a name="step-3-start-the-app"></a>Paso 3: Inicio de la aplicación
+## <a name="step-3-start-the-app"></a>Paso 3: Iniciar la aplicación
 
 
 En este punto, has creado una aplicación muy sencilla. Este es un buen momento para compilar, implementar e iniciar tu aplicación para ver su aspecto. Puedes depurar la aplicación en el equipo local, en un simulador, un emulador o en un dispositivo remoto. Este es el menú del dispositivo de destino de Visual Studio.
@@ -151,20 +151,20 @@ En este punto, has creado una aplicación muy sencilla. Este es un buen momento 
 
 De forma predeterminada, la aplicación se ejecuta en el equipo local. El menú del dispositivo de destino proporciona varias opciones para depurar la aplicación en dispositivos de la familia de dispositivos de escritorio.
 
--   **Simulador**
--   **Equipo local**
+-   **Simulator**
+-   **Máquina local**
 -   **Equipo remoto**
 
-**Para empezar la depuración en el equipo local**
+**Para iniciar la depuración en el equipo local**
 
 1.  En el menú del dispositivo de destino (![menú Iniciar depuración](images/startdebug-full.png)) de la barra de herramientas **Estándar**, asegúrate de que **Equipo local** esté seleccionado. (Es la selección predeterminada).
 2.  Haz clic en el botón **Iniciar depuración** (![botón Iniciar depuración](images/startdebug-sm.png)) en la barra de herramientas.
 
-   O bien
+   -o bien-
 
    En el menú **Depurar**, haz clic en **Iniciar depuración**.
 
-   O bien
+   -o bien-
 
    Presiona F5.
 
@@ -182,11 +182,11 @@ No hace muchas cosas (todavía), pero te felicitamos, has compilado tu primera a
 
    Haz clic en el botón **Detener depuración** (![botón Detener depuración](images/stopdebug.png)) en la barra de herramientas.
 
-   O bien
+   -o bien-
 
    En el menú **Depurar**, haz clic en **Detener depuración**.
 
-   O bien
+   -o bien-
 
    Cierra la ventana de la aplicación.
 
@@ -222,7 +222,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Asegúrese de que la firma del método ahora incluye la **palabra** clave, o se producirá un error al intentar ejecutar la aplicación.
+Asegúrese de que la firma del método ahora incluye la **async** palabra clave u obtendrá un error al intentar ejecutar la aplicación.
 
 ### <a name="what-did-we-just-do"></a>¿Qué acabamos de hacer?
 
@@ -233,15 +233,15 @@ Cuando ejecutes la aplicación y hagas clic en el botón, tu equipo (o teléfono
 
 ## <a name="summary"></a>Resumen
 
-Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP.
+Enhorabuena, ha creado su primera aplicación para Windows 10 y UWP.
 
 Para aprender a usar XAML para diseñar los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../design/layout/grid-tutorial.md), o salta directamente a los [pasos siguientes](learn-more.md).
 
 ## <a name="see-also"></a>Consulta también
 
-* [Tu primera aplicación](your-first-app.md)
-* [Publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
-* [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
-* [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
-* [Registrarse para obtener una cuenta de Windows](sign-up.md)
+* [La primera aplicación](your-first-app.md)
+* [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
+* [Artículos de procedimientos sobre el desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Ejemplos de código para los desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
+* [¿Qué es una aplicación Universal Windows?](universal-application-platform-guide.md)
+* [Registrarse para la cuenta de Windows](sign-up.md)

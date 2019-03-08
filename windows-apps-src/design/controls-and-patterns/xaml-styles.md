@@ -11,11 +11,11 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f0bed73a3b0d21329c5195be0772538f3a99bdcd
-ms.sourcegitcommit: e83f30486d899401debc782de891c388ba5fc03b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "9062467"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648430"
 ---
 # <a name="xaml-styles"></a>Estilos XAML
 
@@ -143,7 +143,7 @@ El estilo base apunta a [ContentControl](https://msdn.microsoft.com/library/wind
 
 ## <a name="use-tools-to-work-with-styles-easily"></a>Usar herramientas para trabajar con estilos fácilmente
 
-Una manera rápida de aplicar estilos a los controles es hacer clic con el botón derecho en un control de la superficie de diseño XAML de Microsoft Visual Studio y seleccionar **Editar estilo** o **Editar plantilla** (según el control en el que estás haciendo clic con el botón derecho). Después, puedes aplicar un estilo existente si seleccionas **Aplicar recurso** o definir un estilo nuevo si seleccionas **Crear vacío**. Si creas un estilo vacío, tienes la opción de definirlo en la página, en el archivo App.xaml o en un diccionario de recursos independiente.
+Una manera rápida de aplicar estilos a los controles es hacer clic con el botón secundario en un control de la superficie de diseño XAML de Microsoft Visual Studio y seleccionar **Editar estilo** o **Editar plantilla** (según el control en el que estás haciendo clic con el botón secundario). Después, puedes aplicar un estilo existente si seleccionas **Aplicar recurso** o definir un estilo nuevo si seleccionas **Crear vacío**. Si creas un estilo vacío, tienes la opción de definirlo en la página, en el archivo App.xaml o en un diccionario de recursos independiente.
 
 ## <a name="lightweight-styling"></a>Estilos ligeros
 
@@ -165,7 +165,7 @@ En general, los pinceles del sistema se reemplazan al nivel de página o aplicac
 </Page.Resources>
 ```
 
-Para estados como PointerOver (se sitúa el mouse sobre el botón), **PointerPressed** (se ha invocado el botón), o Disabled (el botón no es interactivos). Estos finales se anexan a los nombres de estilo ligero originales: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc.. Al modificar esos pinceles, tus controles tendrán colores homogéneos en el tema de la aplicación.
+Para estados como PointerOver (se sitúa el mouse sobre el botón), **PointerPressed** (se ha invocado el botón), o Disabled (el botón no es interactivos). Estas finales se anexan los nombres de estilo ligera original: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etcetera. Los modificación de pinceles, también se asegurará de que los controles están coloreados de forma coherente al tema de la aplicación.
 
 Al colocar estos reemplazos de pincel en el nivel de **recursos de la aplicación**, se modificarán todos los botones de toda la aplicación, en lugar de en una sola página.
 

@@ -6,21 +6,21 @@ ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645320"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novedades de la documentación de los desarrolladores de Windows de diciembre de 2017
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre directrices para los desarrolladores y muestras que están a tu disposición después del lanzamiento de Fall Creators Update y contienen información nueva y actualizada para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
-### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: Guía para entusiastas
+### <a name="windows-mixed-reality-enthusiasts-guide"></a>Realidad mixta de Windows: Guía de entusiastas
 
 Con los entusiastas de la tecnología como objetivo para animarles a que se adentren en el mundo de la realidad mixta, la [Guía para entusiastas](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/) responde a las principales preguntas que la gente tiene sobre Windows Mixed Reality. 
 
@@ -46,7 +46,7 @@ En dispositivos que admiten interacciones táctiles, agrega la funcionalidad de 
 
 El portal Microsoft Collaborate ofrece herramientas y servicios para optimizar la colaboración de ingeniería en el ecosistema de Microsoft al habilitar el uso compartido de elementos de trabajo de sistemas de ingeniería (errores, solicitudes de funciones, etc.) y la distribución de contenido (compilación, documentos, especificaciones). [Más información](https://docs.microsoft.com/en-us/collaborate).
 
-![Microsoft Collaborate en el centro de partners](images/microsoft_collaborate_screenshot.PNG)
+![Microsoft colaborar en el centro de partners](images/microsoft_collaborate_screenshot.PNG)
 
 ### <a name="package-desktop-applications-with-uwp-projects"></a>Empaquetar aplicaciones de escritorio con proyectos UWP
 
@@ -58,15 +58,15 @@ Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Los complementos de suscripción ahora están disponibles para los desarrolladores en el Programa Insider del Centro de desarrollo de Windows
 
-Todos los desarrolladores que han participado en el Programa Insider del Centro de desarrollo ahora pueden usar complementos de suscripción para vender productos digitales en sus aplicaciones (por ejemplo, características de la aplicación o contenido digital) con períodos de facturación periódicos. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
+Todos los desarrolladores que se han unido al programa Dev Center Insider ahora pueden usar complementos de suscripción para vender productos digitales en su aplicación de aplicaciones (por ejemplo, las características de aplicaciones o contenido digital) con períodos de facturación periódicos automatizados. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
 ### <a name="color"></a>Color
 
-Hemos agregado algunas nuevas instrucciones sobre cómo usar el color en tus aplicaciones para la mejor experiencia del usuario posible. Esto incluye los escenarios de uso de API, así como instrucciones generales sobre la accesibilidad y el diseño de IU. También hemos actualizado la lista de colores de énfasis del usuario disponibles en Xbox. [Consulta el artículo de Color actualizado aquí.](../design/style/color.md)
+Hemos agregado algunas nuevas instrucciones sobre cómo usar el color en tus aplicaciones para la mejor experiencia del usuario posible. Esto incluye los escenarios de uso de API, así como instrucciones generales sobre la accesibilidad y el diseño de IU. También hemos actualizado la lista de colores de énfasis del usuario disponibles en Xbox. [Consulte el artículo de Color actualizado aquí.](../design/style/color.md)
 
-![paleta de colores de windows universales](../design/basics/images/colors.png)
+![paleta de colores universales de Windows](../design/basics/images/colors.png)
 
 ### <a name="data-access-guides"></a>Guías de acceso a datos
 
@@ -80,10 +80,10 @@ Hemos agregado un nuevo artículo en [cómo construir formularios en tus aplicac
 
 ### <a name="intro-to-app-design"></a>Introducción al diseño de aplicaciones
 
-Las instrucciones sobre diseño de la Plataforma universal de Windows (UWP) son un recurso que te ayudan a diseñar y crear fantásticas aplicaciones. [Nuestra nueva introducción](../design/basics/design-and-ui-intro.md) proporciona una descripción general de las características de diseño universal que se incluyen en cada aplicación para UWP y cómo puedes usar los documentos para crear interfaces de usuario (IU) que se distribuyen con elegancia en una amplia gama de dispositivos.
+Las instrucciones sobre diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayudan a diseñar y crear fantásticas aplicaciones. [Nuestra nueva introducción](../design/basics/design-and-ui-intro.md) proporciona una descripción general de las características de diseño universal que se incluyen en cada aplicación para UWP y cómo puedes usar los documentos para crear interfaces de usuario (IU) que se distribuyen con elegancia en una amplia gama de dispositivos.
 
 
-### <a name="request-ratings-and-reviews"></a>Solicitar valoraciones y opiniones
+### <a name="request-ratings-and-reviews"></a>Solicitar calificaciones y opiniones
 
 Hemos agregado un nuevo artículo en el que se muestra cómo se puede [solicitar valoraciones y opiniones de tu aplicación](../monetize/request-ratings-and-reviews.md). Puedes mostrar una clasificación y revisar el cuadro de diálogo en el contexto de la aplicación, o puedes abrir la clasificación y revisar la página de la aplicación en Store.
 

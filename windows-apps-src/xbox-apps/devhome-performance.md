@@ -1,26 +1,26 @@
 ---
 ms.assetid: d40056bc-76bc-c123-4d36-973ec46d11fc
-title: Página rendimiento (Dev Home)
-description: Proporciona información acerca de la página de rendimiento de la aplicación Dev Home para Xbox One.
+title: Página Rendimiento (Dev Home)
+description: Proporciona información sobre la página Rendimiento de la aplicación Dev Home para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 589084a7da23b037fe61ea5e4c9e52dffb1c29be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646320"
 ---
-# <a name="performance-page-dev-home"></a>Página rendimiento (Dev Home)
+# <a name="performance-page-dev-home"></a>Página Rendimiento (Dev Home)
    
   
-La página de **rendimiento** de Dev Home simula varias actividad del disco y condiciones de uso de CPU para solucionar problemas.   
- ![Página de rendimiento de Dev Home](images/devhome_performance.png)   
+La página **Rendimiento** de Dev Home simula varias condiciones de uso de la CPU y de actividad de disco con fines de solución de problemas.   
+ ![Página de rendimiento de la página principal de desarrollo](images/devhome_performance.png)   
   
-La página de **rendimiento** contiene los paneles siguientes:   
+La página **Rendimiento** contiene los siguientes paneles:   
  
    *  [Simulación de disco](#ID4EEB)  
    *  [Simulación de CPU](#ID4EOB)  
@@ -30,25 +30,25 @@ La página de **rendimiento** contiene los paneles siguientes:
 
    
 
-## <a name="disk-simulation"></a>Simulación de disco  
+## <a name="disk-simulation"></a>Disk simulation  
    
   
-El panel de **simulación de disco** simula la actividad del disco del sistema o de otras aplicaciones.   
+El panel **Disk simulation** simula la actividad de disco del sistema o de otras aplicaciones.   
   
 <a id="ID4EOB"></a>
 
    
 
-## <a name="cpu-simulation"></a>Simulación de CPU  
+## <a name="cpu-simulation"></a>CPU Simulation  
    
   
-El panel de **Simulación de CPU** simula la actividad en CPU6 (el núcleo compartido).   
+El panel **CPU Simulation** simula la actividad en CPU6 (el núcleo compartido).   
   
 <a id="ID4EYB"></a>
 
    
 
-## <a name="see-also"></a>Ver también  
- [Inicio del desarrollador en la consola (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte también  
+ [Página principal de desarrolladores en la consola (página principal de desarrollo)](dev-home.md)
 
   

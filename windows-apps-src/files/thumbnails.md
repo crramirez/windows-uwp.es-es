@@ -1,18 +1,18 @@
 ---
-Description: How to use thumbnail images to help users preview files in UWP apps.
+Description: Cómo usar imágenes en miniatura para ayudar a los usuarios de vista previa de archivos en aplicaciones para UWP.
 title: Directrices para las imágenes en miniatura en aplicaciones para UWP
 label: Thumbnail images
 template: detail.hbs
 ms.date: 12/19/2018
 ms.topic: article
-keywords: windows10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642010"
 ---
 # <a name="thumbnail-images"></a>Imágenes en miniatura
 
@@ -66,16 +66,16 @@ Usa miniaturas para:
 <tr>
 <td> Imágenes<br /> Vídeos </td>
 <td> PicturesView <br />VideosView </td>
-<td> <b>Tamaño:</b> medio, preferiblemente con un mínimo de 190 (si el tamaño de la imagen es de 190 x 130) <br />
-<b>Relación de aspecto:</b> uniforme, relación de aspecto amplia de aproximadamente 0,7 (190 x 130 si el tamaño es 190) <br />
+<td> <b>Tamaño</b>: Mediana, preferiblemente al menos 190 (si el tamaño de la imagen es de 190 x 130) <br />
+<b>Relación de aspecto</b>: Relación de aspecto uniforme, amplia de aproximadamente.7 (190 x 130 si el tamaño es de 190) <br />
 Recortado para vistas previas. <br /> 
 Adecuada para alinear imágenes en una cuadrícula por su relación de aspecto uniforme.  </td>
 </tr>
 <tr>
 <td> Documentos<br />Música </td>
 <td> DocumentsView <br />MusicView <br /> ListView</td>
-<td> <b>Tamaño:</b> pequeña, preferiblemente de 40 x 40 píxeles como mínimo <br />
-<b>Relación de aspecto:</b> uniforme, relación de aspecto cuadrada  <br />
+<td> <b>Tamaño</b>: Pequeño, preferiblemente de al menos 40 x 40 píxeles <br />
+<b>Relación de aspecto</b>:  Relación de aspecto uniforme, cuadrado  <br />
 Adecuada para obtener una vista previa de la carátula del álbum debido a la relación de aspecto cuadrado. <br /> 
 Los documentos tienen el mismo aspecto que tendrían en una ventana de selector de archivos (usa los mismos iconos). </td>
 </tr>
@@ -83,8 +83,8 @@ Los documentos tienen el mismo aspecto que tendrían en una ventana de selector 
 <tr>
 <td> Cualquier elemento individual (independientemente del tipo de archivo) </td>
 <td> SingleItem </td>
-<td> <b>Tamaño:</b> pequeña, preferiblemente de 40 x 40 píxeles como mínimo <br />
-<b>Relación de aspecto:</b> uniforme, relación de aspecto cuadrada  <br />
+<td> <b>Tamaño</b>: Pequeño, preferiblemente de al menos 40 x 40 píxeles <br />
+<b>Relación de aspecto</b>:  Relación de aspecto uniforme, cuadrado  <br />
 Adecuada para obtener una vista previa de la carátula del álbum debido a la relación de aspecto cuadrado. <br /> 
 Los documentos tienen el mismo aspecto que tendrían en una ventana de selector de archivos (usa los mismos iconos). </td>
 </tr>
@@ -151,9 +151,9 @@ De lo contrario, no se recupera ninguna miniatura.</td>
 <tr>
 <td>Grupo de archivos</td>
 <td>Si hay un archivo de imagen en la carpeta, se usa la miniatura de la imagen.<br />
-<img src="images/thumbnail-grp-picvid-modes.png" alt="File group thumbnail in picture or video mode"/> <br /> De lo contrario, no se recupera ninguna imagen en miniatura. </td>
+<img src="images/thumbnail-grp-picvid-modes.png" alt="File group thumbnail in picture or video mode"/> <br /> De lo contrario, no se recupera ninguna miniatura. </td>
 <td>Si hay un archivo que tiene una carátula de álbum entre los archivos del grupo, la miniatura es la carátula del álbum. <br />
-<img src="images/thumbnail-grp-doclistmusic-modes.png" alt="File group thumbnail in documents, music or list mode"/> <br />De lo contrario, no se recupera ninguna imagen en miniatura. </td>
+<img src="images/thumbnail-grp-doclistmusic-modes.png" alt="File group thumbnail in documents, music or list mode"/> <br />De lo contrario, no se recupera ninguna miniatura. </td>
 <td>Si hay un archivo que tiene una carátula de álbum entre los archivos del grupo, la miniatura es la carátula del álbum y usa la relación de aspecto original del archivo. <br />
 <img src="images/thumbnail-grp1-single-mode.png" alt="File group thumbnail in picture or video mode"/> <br />En otro caso, la miniatura es un icono que representa un grupo de archivos. <br />
 <img src="images/thumbnail-grp2-single-mode.png" alt="File group icon in single mode"/> 
@@ -162,9 +162,9 @@ De lo contrario, no se recupera ninguna miniatura.</td>
 </table>
 </div>
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 - [Enumeración ThumbnailMode](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 - [Clase StorageItemThumbnail](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
-- [Clase StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
-- [Muestra de miniatura de archivo y carpeta (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
-- [Vista de lista y de cuadrícula](../design/controls-and-patterns/lists.md)
+- [Clase de StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
+- [Ejemplo de miniatura archivos y carpetas (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
+- [Vista de lista y cuadrícula](../design/controls-and-patterns/lists.md)

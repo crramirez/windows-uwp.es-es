@@ -1,5 +1,5 @@
 ---
-Description: Use the reposition animation to move an element or elements into a new position.
+Description: Usa la animación de reposición para mover uno o varios elementos a otra posición.
 title: Animaciones de reposición en aplicaciones para UWP
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
 label: Motion--Reposition
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e2a96169f44802c62f341029b9bc1c5eb7e31de
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647730"
 ---
 # <a name="reposition-animations"></a>Animaciones de reposición
 
@@ -21,9 +21,9 @@ ms.locfileid: "8920475"
 
 Usa la animación de reposición para mover uno o varios elementos a otra posición.
 
-> **API importantes**: [**clase RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421), [**clase RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210429)
+> **API importantes**: [**Clase RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421), [ **RepositionThemeTransition clase**](https://msdn.microsoft.com/library/windows/apps/br210429)
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 -   Si muestras u ocultas la interfaz de usuario en el borde, usa [Animaciones de interfaz de usuario en el borde](motion-edgebased.md). La interfaz de usuario en el borde es un elemento o contenedor que está anclado en un borde de la pantalla.
@@ -31,9 +31,9 @@ Usa la animación de reposición para mover uno o varios elementos a otra posici
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animación de reposiciones](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Vuelve a colocar la animación](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421)
 * [**Clase RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210429)
 

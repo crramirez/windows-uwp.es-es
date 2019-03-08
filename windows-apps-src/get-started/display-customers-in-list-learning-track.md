@@ -7,11 +7,11 @@ keywords: introducción, uwp, windows 10, pista de aprendizaje, enlace de datos,
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651380"
 ---
 # <a name="display-customers-in-a-list"></a>Mostrar clientes en una lista
 
@@ -32,8 +32,8 @@ Cada enlace de datos tiene dos partes:
 
 Para implementar un enlace de datos, tendrás que agregar código a su origen que proporciona datos para el enlace. También tendrás que agregar una de las dos extensiones de marcado en XAML para especificar las propiedades de origen de datos. Esta es la diferencia principal entre las dos:
 
-* [**x: Bind**](../xaml-platform/x-bind-markup-extension.md) está encarecidamente tipificado y genera código en tiempo de compilación para un mejor rendimiento. x: Bind se establece de forma predeterminada de un enlace puntual, que se optimiza para la visualización rápida de datos de solo lectura que no cambian.
-* [**Binding**](../xaml-platform/binding-markup-extension.md) está poco tipificada y se ensambla en tiempo de ejecución. El resultado es rendimiento más pobre que con x:Bind. En casi todos los casos, debes usar x:Bind en lugar de Binding. Sin embargo, es probable que los encuentres en código anterior. Binding se establece de forma predeterminada en transferencia de datos unidireccional, que se optimiza para datos de solo lectura que pueden cambiar en el origen.
+* [**x: Bind** ](../xaml-platform/x-bind-markup-extension.md) están fuertemente tipadas y genera el código en tiempo de compilación para mejorar el rendimiento. x: Bind se establece de forma predeterminada de un enlace puntual, que se optimiza para la visualización rápida de datos de solo lectura que no cambian.
+* [**Enlace** ](../xaml-platform/binding-markup-extension.md) es débilmente tipados y ensamblar en tiempo de ejecución. El resultado es rendimiento más pobre que con x:Bind. En casi todos los casos, debes usar x:Bind en lugar de Binding. Sin embargo, es probable que los encuentres en código anterior. Binding se establece de forma predeterminada en transferencia de datos unidireccional, que se optimiza para datos de solo lectura que pueden cambiar en el origen.
 
 Te recomendamos que uses **x: Bind** siempre que sea posible y lo mostraremos en los fragmentos de código de este artículo. Para obtener más información sobre las diferencias, consulta [Comparación de características de {x:Bind} y {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
 
@@ -104,9 +104,9 @@ No dudes en volver a examinar en los documentos de la [vista de lista](../design
 
 Has mostrado los clientes en una lista, pero los datos B=binding permiten hacer más. ¿Qué ocurriría si pudieras editar los datos directamente desde la interfaz de usuario? Para ello, primero hablemos sobre los tres modos de enlace de datos:
 
-* *One-Time*: este enlace de datos solo se activa una vez y no reacciona ante cambios.
-* *One-Way*: este enlace de datos actualizará la interfaz de usuario con los cambios realizados en el origen de datos.
-* *Two-Way*: este enlace de datos actualizará la interfaz de usuario con los cambios realizados en el origen de datos y también actualizará los datos con los cambios realizados en la interfaz de usuario.
+* *Un solo uso*: Este enlace de datos solo se activa una vez y no reacciona a los cambios.
+* *Unidireccional*: Este enlace de datos se actualizará la interfaz de usuario con los cambios realizados en el origen de datos.
+* *Bidireccional*: Este enlace de datos actualizará la interfaz de usuario con los cambios realizados en el origen de datos y también se actualizan los datos con los cambios realizados en la interfaz de usuario.
 
 Si has seguido los fragmentos de código anteriores, el enlace realizado usa x:Bind y no especifica un modo, lo que hace que sea un enlace puntual. Si quieres editar tus clientes directamente desde la interfaz de usuario, deberás cambiarlo a un enlace bidireccional, para que los cambios de los datos se pasen a los objetos de cliente. Consulta [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) para más información.
 
@@ -167,7 +167,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 |------|---------------|
 | [Plantilla de datos](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | Describe la estructura visual de un objeto de datos, lo que permite la visualización de elementos específicos de la interfaz de usuario. |
 | [x:Bind](../xaml-platform/x-bind-markup-extension.md) | Documentación sobre la extensión de marcado x:Bind recomendada. |
-| [Binding](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
+| [enlace](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Un control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Un control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |
 | [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) | La interfaz para hacer que los datos sean observables, proporcionándolos a un enlace de datos. |
@@ -178,7 +178,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | Tema | Descripción |
 |-------|----------------|
 | [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) | Una introducción básica de los principios de enlace de datos |
-| [Introducción al enlace de datos](../data-binding/data-binding-quickstart.md) | Información conceptual detallada sobre el enlace de datos. |
+| [Información general sobre el enlace de datos](../data-binding/data-binding-quickstart.md) | Información conceptual detallada sobre el enlace de datos. |
 | [Vista de lista](../design/controls-and-patterns/listview-and-gridview.md) | Información sobre cómo crear y configurar una ListView, incluida la implementación de una **DataTemplate** |
 
 ## <a name="useful-code-samples"></a>Muestras de código útiles

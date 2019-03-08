@@ -1,5 +1,5 @@
 ---
-Description: List animations let you insert or remove single or multiple items from a collection, such as a photo album or a list of search results.
+Description: Las animaciones de listas te permiten insertar o quitar uno o varios elementos de una colección, como un álbum de fotos o una lista de resultados de búsqueda.
 title: Agregar y eliminar animaciones en aplicaciones para UWP
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7ca332b73aba067c2ae003d458e8d0d97c7a7e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642840"
 ---
 # <a name="add-and-delete-animations"></a>Agregar y eliminar animaciones
 
@@ -21,10 +21,10 @@ ms.locfileid: "8942891"
 
 Las animaciones de listas te permiten insertar o quitar uno o varios elementos de una colección, como un álbum de fotos o una lista de resultados de búsqueda.
 
-> **API importantes**: [**clase AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
+> **API importantes**: [**Clase AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 -   Usa animaciones de listas para agregar un solo elemento nuevo a un conjunto de elementos existente. Por ejemplo, úsalas cuando llega un nuevo correo electrónico o cuando se importa una fotografía nueva a un conjunto existente.
@@ -38,9 +38,9 @@ Las animaciones de listas te permiten insertar o quitar uno o varios elementos d
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animación de incorporaciones y eliminaciones de listas](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Animar lista adiciones y eliminaciones](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
  

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bf23926a1c17615db5ef838d21f9a46a8921c8c
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114671"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655790"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
 
@@ -54,7 +54,7 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Si la lógica de negocios principal está escrita en C++, en lugar de Objective-C o Swift, a menudo se puede usar este código con solo cambios menores en el proyecto. Después puede usar XAML para definir la interfaz de usuario, como con otras aplicaciones de Windows y llamar al código de C++ cuando sea necesario.
 
--   [Uso de ANGLE para ejecutar OpenGL ES en Windows](https://go.microsoft.com/fwlink/p/?linkid=618387)
+-   [Usar ángulo para ejecutar OpenGL ES en Windows](https://go.microsoft.com/fwlink/p/?linkid=618387)
 
     Un paso intermedio para migrar el proyecto de OpenGL ES 2.0 es usar ANGLE. ANGLE te permite ejecutar contenido de OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES en llamadas a la API de DirectX 11.
 

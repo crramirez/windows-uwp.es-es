@@ -1,31 +1,31 @@
 ---
-Description: Used to select or deselect action items. Can be used for a single list item or for multiple list items.
+Description: Se usa para seleccionar o anular la selección de elementos de acción. Se puede usar para un solo elemento de lista o varios elementos de lista.
 title: Casillas
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 pm-contact: kisai
 design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a13c0c3d0e91a3932b4f9a26e564fbf364e5551
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037127"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648900"
 ---
 # <a name="check-boxes"></a>Casillas
 
  
 
-Una casilla se usa para seleccionar o anular la selección de elementos de acción. Puede usarse para un solo elemento o para una lista de varios elementos que un usuario puede elegir. El control tiene tres estados de selección: no seleccionado, seleccionado e indeterminado. Usa el estado indeterminado cuando una colección de opciones secundarias tienen los estados seleccionado y no seleccionado.
+Una casilla se usa para seleccionar o anular la selección de elementos de acción. Puede usarse para un solo elemento o para una lista de varios elementos que un usuario puede elegir. El control tiene tres estados de selección: no seleccionado, seleccionado e indeterminado. Usa el estado indeterminado cuando una colección de opciones secundarias presente los estados seleccionado y no seleccionado.
 
-> **API importantes**: [Clase CheckBox](https://msdn.microsoft.com/library/windows/apps/br209316), [Evento Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [Propiedad IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+> **API importantes**: [Clase de casilla de verificación](https://msdn.microsoft.com/library/windows/apps/br209316), [evento activado](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [propiedad IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
 
 ![Ejemplo de los estados de una casilla](images/templates-checkbox-states-default.png)
 
@@ -58,7 +58,7 @@ Ambos controles **Casilla** y **Botón de radio** permiten que el usuario pueda 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CheckBox">abrir la aplicación y ver CheckBox en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -189,7 +189,7 @@ Estado | Propiedad | Valor
 ------|----------|------
 activado | IsChecked | **true** 
 sin activar | IsChecked | **false** 
-indeterminado | IsChecked | **nulo** 
+indeterminado | IsChecked | **null** 
 
 Para que la casilla notifique el estado indeterminado, debes establecer la propiedad [IsThreeState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx) como **true**. 
 
@@ -277,12 +277,12 @@ private void SetCheckedState()
 }
 ```
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 -   Asegúrate de que esté claro el objetivo y el estado actual de la casilla.
 -   Limita el contenido textual de la casilla a dos líneas como máximo.
 -   Redacta la etiqueta de la casilla como una declaración que sea cierta si se marca la casilla y falsa si no se marca.
--   Usa la fuente predeterminada salvo que se indique lo contrario en las directrices de tu marca.
+-   Utiliza la fuente predeterminada salvo que se indique lo contrario en las directrices de tu marca.
 -   Si el contenido es dinámico, analiza cómo se reajustará el tamaño del control y qué sucederá con los elementos visuales que lo rodean.
 -   Si hay dos o más opciones mutuamente exclusivas entre las que se debe elegir, considera la posibilidad de usar [botones de radio](radio-button.md).
 -   No coloques dos grupos de casillas juntos. Usa etiquetas de grupo para separar los grupos.
@@ -294,9 +294,9 @@ private void SetCheckedState()
 
     ![Casilla indeterminada](images/checkbox4_spicy.png)
 
-    En su lugar, usa un grupo de botones de radio con tres opciones: Sin picante, Picante y Muy picante.
+    En su lugar, use un grupo de botones de radio que tiene tres opciones: No picantes, picantes y adicional picantes.
 
-    ![Grupo de botones de radio con tres opciones: Sin picante, Picante y Muy picante.](images/spicyoptions.png)
+    ![Grupo de botones de radio con tres opciones: No picantes, picantes y adicional picantes](images/spicyoptions.png)
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
@@ -304,6 +304,6 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase CheckBox](https://msdn.microsoft.com/library/windows/apps/br209316) 
+- [Clase de casilla de verificación](https://msdn.microsoft.com/library/windows/apps/br209316) 
 - [Botones de radio](radio-button.md)
 - [Modificador para alternar](toggles.md)

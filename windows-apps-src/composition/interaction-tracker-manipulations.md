@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d2c965bcfbf81efe73ce8aff93cdb8b31163fbd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653850"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>Experiencias de manipulación personalizadas con InteractionTracker
 
@@ -20,8 +20,8 @@ En este artículo mostraremos cómo usar las API InteractionTracker para crear e
 
 En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
 
-- [Animaciones controladas por entradas](input-driven-animations.md)
-- [Animaciones basadas en relaciones](relation-animations.md)
+- [Animaciones de entrada](input-driven-animations.md)
+- [Animaciones en función de relación](relation-animations.md)
 
 ## <a name="why-create-custom-manipulation-experiences"></a>¿Por qué crear experiencias de manipulación personalizadas?
 
@@ -42,7 +42,7 @@ A continuación mostramos algunos ejemplos de cuándo se podría crear una exper
 InteractionTracker se introdujo en el espacio de nombres Windows.UI.Composition.Interactions en la versión 10586 del SDK. InteractionTracker permite:
 
 - **Una completa flexibilidad** : Queremos que puedas personalizar y adaptar todos los aspectos de una experiencia de manipulación; en concreto, los movimientos exactos que se producen durante una entrada o en respuesta a esta. Al crear una experiencia de manipulación personalizada con InteractionTracker, todas las herramientas que necesitas están a tu disposición.
-- **Rendimiento óptimo** : Una de las dificultades de las experiencias de manipulación es que su rendimiento depende del subproceso de la interfaz de usuario. Esto puede afectar negativamente al cualquier experiencia de manipulación si la interfaz de usuario está ocupada. InteractionTracker se creó para aprovechar el nuevo motor de animación, que funciona en un subproceso independiente a 60FPS, lo que produce un movimiento optimizado.
+- **Rendimiento óptimo** : Una de las dificultades de las experiencias de manipulación es que su rendimiento depende del subproceso de la interfaz de usuario. Esto puede afectar negativamente al cualquier experiencia de manipulación si la interfaz de usuario está ocupada. InteractionTracker se creó para aprovechar el nuevo motor de animación, que funciona en un subproceso independiente a 60 FPS, lo que produce un movimiento optimizado.
 
 ## <a name="overview-interactiontracker"></a>Información general: InteractionTracker
 
@@ -59,12 +59,12 @@ Como máquina de estado, las propiedades de InteractionTracker se pueden control
 
 ### <a name="interactiontracker-state-machine"></a>Máquina de estado InteractionTracker
 
-Como se mencionó anteriormente, InteractionTracker es una máquina de estado con 4 estados, cada una de ellas puede realizar una transición a cualquiera de los otros fourstates. (Para obtener más información acerca de cómo realiza InteractionTracker una transición entre estos estados, consulta la documentación de la clase [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker)).
+Como se mencionó anteriormente, InteractionTracker es una máquina de Estados con 4 estados, cada uno de los cuales puede realizar la transición a cualquiera de los cuatro estados. (Para obtener más información acerca de cómo realiza InteractionTracker una transición entre estos estados, consulta la documentación de la clase [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker)).
 
 | Estado | Descripción |
 |-------|-------------|
 | Inactivo | No hay activa ninguna animación ni entrada de control. |
-| Interactuando | Se ha detectado una entrada del usuario activo. |
+| Interactuar | Se ha detectado una entrada del usuario activo. |
 | Inercia | Movimiento activo como resultado de una entrada activa o una velocidad debida a programación. |
 | CustomAnimation | Un movimiento activo producto de una animación personalizada. |
 
@@ -78,7 +78,7 @@ Para que InteractionTracker se controle mediante entradas (Input), debe conectar
 
 1. La región de pruebas de posicionamiento en la que se realizará el seguimiento de la entrada y el espacio de coordenadas en el que se detectan los gestos.
 1. Las configuraciones de las entradas que se detectarán y se enrutarán, como, por ejemplo:
-    - Gestos detectables: Posición de X e Y (movimiento panorámico horizontal y vertical), escala (gesto de reducir).
+    - Detectables gestos: Posición X e Y (vertical y horizontal panorámica), escala (acercar los dedos)
     - Inercia
     - Guías y encadenamiento
     - Modos de redirección: Qué datos de entrada se redirigen automáticamente a InteractionTracker
@@ -121,7 +121,7 @@ var opacityExp = -_tracker.GetReference().Position;
 > [!NOTE]
 > Al hacer referencia a la posición de InteractionTracker en una expresión, debes invalidar el valor de la expresión resultante para moverlo en la dirección correcta. Esto se debe al progreso de InteractionTracker desde el origen en un gráfico y te permite pensar sobre el progreso de InteractionTracker en coordenadas del "mundo real", por ejemplo, la distancia desde su origen.
 
-## <a name="get-started"></a>Introducción
+## <a name="get-started"></a>Comenzar
 
 Para empezar a usar InteractionTracker para crear experiencias de manipulación personalizadas:
 
@@ -168,4 +168,4 @@ private void InteractionTrackerSetup(Compositor compositor, Visual hitTestRoot)
 Para los usos más avanzados de InteractionTracker, recomendamos consultar los siguientes artículos:
 
 - [Creación de puntos de acoplamiento con InertiaModifiers](inertia-modifiers.md)
-- [Extracción de actualización con SourceModifiers](source-modifiers.md)
+- [Incorporación de cambios para actualizar con SourceModifiers](source-modifiers.md)

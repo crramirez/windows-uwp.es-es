@@ -1,31 +1,31 @@
 ---
-Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
+Description: Esta guía explica cómo configurar la solución de Visual Studio para editar, depurar y empaquetar aplicación de escritorio.
 Search.Product: eADQiWindows 10XVcnh
-title: Empaquetar una aplicación de escritorio mediante Visual Studio
+title: Empaquetar una aplicación de escritorio con Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a16b5e824621b0e7f32c8cb012db326f591d48
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048262"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655970"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio mediante Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio con Visual Studio
 
-Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. A continuación, puedes publicar que el paquete a la Microsoft Store o la instalación de prueba en uno o más equipos.
+Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. A continuación, puede publicar ese paquete a la Microsoft Store o transferirla localmente a uno o varios de los equipos.
 
-La versión más reciente de Visual Studio proporciona una nueva versión del proyecto de empaquetado que elimina todos los pasos manuales se solían ser necesarios para empaquetar tu aplicación. Tan solo tienes que agregar un proyecto de empaquetado, hacer referencia al proyecto de escritorio y luego presionar F5 para depurar la aplicación. No es necesario realizar ajustes manuales. Esta nueva experiencia optimizada es una gran mejora de la experiencia que estaba disponible en la versión anterior de Visual Studio.
+La versión más reciente de Visual Studio proporciona una nueva versión del proyecto de empaquetado que elimina todos los pasos manuales se solían ser necesarios para empaquetar tu aplicación. Tan solo tienes que agrear un proyecto de empaquetado, hacer referencia al proyecto de escritorio y luego presionar F5 para depurar la aplicación. No es necesario realizar ajustes manuales. Esta nueva experiencia optimizada es una gran mejora de la experiencia que estaba disponible en la versión anterior de Visual Studio.
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (también conocida como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para su aplicación de escritorio (conocido también como el puente de escritorio) se introdujo en Windows 10, versión 1607, y solo puede usarse en proyectos que tienen como destino Windows 10 Anniversary Update (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
+Revise a esta guía antes de empezar a crear un paquete para la aplicación: [Preparar empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -58,13 +58,13 @@ Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Prepa
 
    ![Establecer punto de entrada](images/desktop-to-uwp/entry-point-set.png)
 
-6. Compila el proyecto de empaquetado para garantizar que no aparece ningún error.  Si recibes errores, abre el **Administrador de configuración** y asegúrate de que tus proyectos destinados a la misma plataforma.
+6. Compila el proyecto de empaquetado para garantizar que no aparece ningún error.  Si recibe errores, abra **Configuration Manager** y asegúrese de que los proyectos de la misma plataforma de destino.
 
    ![Administrador de configuración](images/desktop-to-uwp/config-manager.png)
 
 7. Usa el asistente [Crear paquetes de aplicaciones](../packaging/packaging-uwp-apps.md) para generar un archivo appxupload.
 
-   Puedes cargar dicho archivo directamente a la tienda.
+   Puede cargar ese archivo directamente en el Store.
 
 **Vídeo**
 
@@ -73,26 +73,26 @@ Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Prepa
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a tus preguntas**
+**Encuentre respuestas a sus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
-**Enviar comentarios o realizar sugerencias acerca de las características**
+**Proporcionar comentarios o hacer sugerencias**
 
 Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
-**Ejecutar, depurar o probar la aplicación de escritorio**
+**Ejecutar, depurar o probar su aplicación de escritorio**
 
-Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md)
+Consulte [ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md)
 
-**Mejorar tu aplicación de escritorio agregando las API de UWP**
+**Mejore su aplicación de escritorio mediante la adición de las API de UWP**
 
 Consulta [Mejorar tu aplicación de escritorio para Windows 10](desktop-to-uwp-enhance.md).
 
-**Ampliar la aplicación de escritorio agregando proyectos UWP y componentes de Windows Runtime**
+**Ampliar su aplicación de escritorio mediante la adición de proyectos de UWP y componentes de Windows en tiempo de ejecución**
 
 Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](desktop-to-uwp-extend.md).
 
 **Distribuir la aplicación**
 
-Consulta [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-distribute.md)
+Consulte [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-distribute.md)

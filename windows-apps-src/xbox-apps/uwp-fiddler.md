@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: fae6caf73cb8a5b569193a17e65e5d8b4f582ff2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57652230"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Cómo usar Fiddler con Xbox One al desarrollar para la UWP
 
@@ -32,15 +32,15 @@ Sigue estos pasos para instalar y habilitar Fiddler para supervisar el tráfico 
 4. Haz clic en **OK** (Aceptar) para aceptar el cambio en la configuración. Verás un cuadro de diálogo que indicará que Fiddler debe reiniciarse para que el cambio surta efecto y que es posible que debas configurar el firewall manualmente. Haz clic en **OK** (Aceptar) en este cuadro de diálogo, pero *no reinicies Fiddler aún*.
 5. Configura la regla de firewall necesaria para permitir a los equipos remotos conectarse. Iniciar el applet del Panel de Control del Firewall de Windows. Haz clic en **Configuración avanzada** y después en **Regla de entrada**. Busca la regla denominada "FiddlerProxy" y desplázate hacia la derecha, para comprobar que todas de las configuraciones de la siguiente tabla aparecen para esa regla.
   
-  | Configuración           | Valor preferido                |
+  | Valor           | Valor preferido                |
   | ----              | ----                           |
   | Nombre              | FiddlerProxy                   |
-  | Grupo             | *Sin valor* |
-  | Perfil           | Todo                            |
+  | Grupo             | *Ningún valor* |
+  | Perfil           | Todos                            |
   | Habilitado           | Sí                            |
   | Acción            | Permitir                          |
   | Invalidar          | No                             |
-  | Programa           | *Ruta de acceso a fiddler.exe*          |
+  | Programa           | *ruta de acceso a fiddler.exe*          |
   | LocalAddress      | Cualquiera                            |
   | RemoteAddress     | Cualquiera                            |
   | Protocolo          | TCP                            |
@@ -59,22 +59,22 @@ Sigue estos pasos para instalar y habilitar Fiddler para supervisar el tráfico 
 
 ### <a name="to-configure-a-dev-kit-to-use-fiddler-as-its-proxy-to-the-internet"></a>Para configurar un kit de desarrollo para que use Fiddler como su proxy de Internet
 
-1. Dirígete a la herramienta **Red** en la interfaz de usuario de Device Portal para Xbox.
+1. Dirígete a la herramienta **Red** en la interfaz de usuario de Xbox Device Portal.
 2. Busca el certificado raíz de Fiddler que has exportado al escritorio. 
 3. Escribe la dirección IP o el nombre de host del equipo de desarrollo que ejecuta Fiddler.
 4. Escribe el número de puerto en el que está escuchando Fiddler (de forma predeterminada, Fiddler usa el puerto 8888). 
-5. Haz clic en **Habilitar**. Esto reiniciará el kit de desarrollo.
+5. Haga clic en **Habilitar**. Esto reiniciará el kit de desarrollo.
 
 ### <a name="to-stop-using-fiddler"></a>Dejar de usar Fiddler
 Para dejar de usar Fiddler como proxy de Internet (y hacer que Fiddler deje de seguir todo el tráfico de red del kit de desarrollo), haz lo siguiente:
 
 1. Dirígete a la herramienta **Red** en la interfaz de usuario de Xbox Device Portal.
-2. Haz clic en **Deshabilitar**.
+2. Haga clic en **Deshabilitar**.
 
 > [!NOTE]
 > Cada equipo con Fiddler instalado usa un certificado raíz de Fiddler diferente. Si tienes más de un equipo que pueda usarse para proporcionar un proxy de Fiddler para el kit de desarrollo, tendrás seleccionar el nuevo certificado raíz al cambiar entre ellos. Si usas un único equipo, tendrás que seleccionar el certificado raíz solo la primera vez que habilites Fiddler. Debes especificar la dirección IP y el puerto.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [Referencia de API de configuración de Fiddler](wdp-fiddler-api.md)
 - [Preguntas más frecuentes](frequently-asked-questions.md)
 - [UWP en Xbox One](index.md)

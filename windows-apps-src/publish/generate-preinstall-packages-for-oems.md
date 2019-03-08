@@ -1,5 +1,5 @@
 ---
-Description: If your developer account has been granted the appropriate permissions, you can generate and download preinstall packages so that an OEM can include your app in their OS image.
+Description: Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y descargar paquetes de preinstalación para que un OEM pueda incluir tu aplicación en su imagen de SO.
 title: Generar paquetes preinstalados para OEM
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ab17adc80a643c04ac7793945486c3ff975fde5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947385"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643140"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>Generar paquetes preinstalados para OEM
 
@@ -20,7 +20,7 @@ Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y des
 
 ## <a name="important-preinstall-policy--limitations"></a>Directivas y limitaciones de preinstalación importantes
 
-Las aplicaciones de preinstalación deben estar certificadas a través del [Centro de partners](https://partner.microsoft.com/dashboard) con la licencia más reciente de la tienda para que pueden conectarse a la tienda y recibir actualizaciones de la aplicación.
+Deben estar certificadas preinstalar aplicaciones a través de [centro de partners](https://partner.microsoft.com/dashboard) tener la licencia de Store más reciente para que sean capaces de conectarse a la Store y recibir actualizaciones de aplicaciones.
 
 Las aplicaciones que estén preinstaladas deben ser y permanecer gratuitas en todos los mercados.
 
@@ -29,7 +29,7 @@ Las aplicaciones que estén preinstaladas deben ser y permanecer gratuitas en to
 
 Una vez que se habilite una cuenta con permisos de preinstalación, completa los siguientes pasos:
 
-1.  En el centro de partners, ve a la aplicación que se va a preinstalar.
+1.  En el centro de partners, vaya a la aplicación que se esté preinstalado.
 2.  En el menú de navegación izquierdo, expande **Administración de aplicaciones** y selecciona **Paquetes actuales**.
 3.  En la sección **Solicitar paquetes para la preinstalación del SO**, selecciona **Habilitar los paquetes descargables**.
 4.  En el cuadro de diálogo de confirmación, selecciona **Habilitar**.
@@ -43,9 +43,9 @@ Una vez que se habilite una cuenta con permisos de preinstalación, completa los
 Después puedes proporcionar el archivo .zip al OEM para que lo incluya en su imagen de SO.
 
 
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte
 
-Si tienes más preguntas sobre la generación de paquetes de preinstalación, envía un correo electrónico a <partnerops@microsoft.com>.
+Si tiene más preguntas sobre la generación de paquetes de preinstalación, envíe un correo electrónico <partnerops@microsoft.com>.
 
  
 

@@ -4,21 +4,21 @@ title: Optimizar la suspensión y reanudación
 description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que optimicen el uso del sistema del ciclo de vida de los procesos, para reanudarlo de forma eficaz tras su suspensión o finalización.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06af6241bdd75efdd3ff71e02f74252d60540669
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947433"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653660"
 ---
 # <a name="optimize-suspendresume"></a>Optimizar la suspensión y reanudación
 
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) que optimicen el uso del sistema del ciclo de vida de los procesos, para reanudarlo de forma eficaz tras su suspensión o finalización.
 
-## <a name="launch"></a>Ejecución
+## <a name="launch"></a>Iniciar
 
 Al volver a activar una aplicación después de su suspensión o finalización, comprueba si ha transcurrido mucho tiempo. Si es así, considera la posibilidad de volver a la página de aterrizaje principal de la aplicación en lugar de mostrar los datos de usuario obsoletos. Esto también resultará en un inicio más rápido.
 
@@ -34,7 +34,7 @@ Sin embargo, debes encontrar un buen equilibrio entre el guardado incremental y 
 
 No uses los eventos de ventana Activated o VisibilityChanged para decidir cuándo guardar el estado. Cuando el usuario abandone la aplicación, la ventana se desactiva, pero el sistema espera un período breve de tiempo (aproximadamente 10 segundos) antes de suspender la aplicación. Esto es para ofrecer una experiencia con mayor capacidad de respuesta en caso de que el usuario vuelva a la aplicación rápidamente. Espera al evento de suspensión antes de ejecutar la lógica de suspensión.
 
-## <a name="suspend"></a>Suspensión
+## <a name="suspend"></a>Suspender
 
 Durante la suspensión, reduce la superficie de la aplicación. Si la aplicación usa menos memoria cuando está suspendida, el sistema global tendrá mayor capacidad de respuesta y finalizará un menor número de aplicaciones (incluida la tuya). Sin embargo, sopesa esto con la necesidad de reanudar rápidamente: no reduzcas la superficie tanto que la reanudación se ralentiza considerablemente mientras la aplicación vuelve a cargar una gran cantidad de datos en la memoria.
 
@@ -42,7 +42,7 @@ En el caso de las aplicaciones administradas, el sistema ejecutará una recolecc
 
 En teoría, la aplicación finalizará con la lógica de suspensión en menos de 1 segundo. Cuanto más rápido se puede suspender, mejor. Esto resultará en una experiencia de usuario más ágil para otras aplicaciones y componentes del sistema. Si es necesario, la lógica de suspensión puede tardar hasta 5 segundos en dispositivos de escritorio o 10 segundos en dispositivos móviles. Si se superan esos tiempos, la aplicación finalizará repentinamente. Esto no es algo deseado, ya que, su sucede, cuando el usuario vuelva a la aplicación, se iniciará un nuevo proceso y la experiencia dará la sensación de ser mucho más lenta en comparación con la reanudación de una aplicación suspendida.
 
-## <a name="resume"></a>Reanudación
+## <a name="resume"></a>Reanudar
 
 La mayoría de las aplicaciones no necesita hacer nada especial cuando se reanudan, por lo que normalmente no tendrás que controlar este evento. Algunas aplicaciones usan la reanudación para restaurar las conexiones cerradas durante la suspensión o para actualizar los datos posiblemente obsoletos. En lugar de hacer este tipo de trabajo, diseña tu aplicación de modo que inicie estas actividades a petición. De este modo, se producirá una experiencia más rápida cuando el usuario vuelva a una aplicación suspendida y solo harás el trabajo que el usuario realmente necesita.
 
@@ -64,7 +64,7 @@ Las opciones disponibles en cuanto a la tecnología de serialización para aplic
 
 Desde el punto de vista del rendimiento, te recomendamos usar la clase [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx). La clase **XmlSerializer** cuenta con los tiempos más bajos de serialización y deserialización, y mantiene una superficie de memoria baja. Asimismo, **XmlSerializer** tiene menos dependencias en .NET Framework. Esto significa que, en comparación con otras tecnologías de serialización, deben cargarse menos módulos en la aplicación para usar **XmlSerializer**.
 
-[**DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) facilita la serialización de clases personalizadas, aunque supone un mayor impacto en el rendimiento que **XmlSerializer**. Si necesitas mejorar el rendimiento, considera cambiar de opciones. En general, no debes cargar más de un serializador y te recomendamos que uses **XmlSerializer**, a menos que necesites usar las características de otro serializador.
+[**DataContractSerializer** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) resulta más fácil serializar las clases personalizadas, aunque tiene un mayor impacto de rendimiento que **XmlSerializer**. Si necesitas mejorar el rendimiento, considera cambiar de opciones. En general, no debes cargar más de un serializador y te recomendamos que uses **XmlSerializer**, a menos que necesites usar las características de otro serializador.
 
 ### <a name="reduce-memory-footprint"></a>Reducir la superficie de memoria
 
@@ -85,7 +85,7 @@ La mayoría de las aplicaciones no necesitan controlar el evento [**Resuming**](
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/Hh465088)
+* [Directrices para la aplicación, suspensión y reanudar](https://msdn.microsoft.com/library/windows/apps/Hh465088)
  
 
  

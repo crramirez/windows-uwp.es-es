@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0336054b99e5aae6739e22afd29ee344aad3d42c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946558"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662130"
 ---
 # <a name="depth-and-stencil-buffers"></a>Búferes de profundidad y de galerías de símbolos
 
@@ -39,7 +39,7 @@ Un *búfer de profundidad* almacena la información de profundidad para controla
 <td align="left"><p>Un <em>búfer de profundidad</em>, o <em>búfer Z</em>, almacena la información de profundidad para controlar qué áreas de polígonos se representan y no se ocultan de la vista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="stencil-buffers.md">Búferes de galerías de símbolos</a></p></td>
+<td align="left"><p><a href="stencil-buffers.md">Búferes de la Galería de símbolos</a></p></td>
 <td align="left"><p>Un <em>búfer de galería de símbolos</em> se usa para enmascarar píxeles en una imagen a fin de producir efectos especiales. La máscara controla si el píxel se dibuja o no. Entre los efectos especiales se incluyen la composición, el calcado, la disolución, la atenuación, el barrido; contornos y siluetas; o la galería de símbolos a doble cara.</p></td>
 </tr>
 </tbody>

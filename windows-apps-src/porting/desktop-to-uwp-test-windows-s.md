@@ -1,5 +1,5 @@
 ---
-Description: Test your app for Windows 10 in S mode.
+Description: Pruebe su aplicación para Windows 10 en modo S.
 Search.Product: eADQiWindows 10XVcnh
 title: Probar la aplicación de Windows en Windows 10 S
 ms.date: 05/11/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cf442da9344f37525bf3c17e4a62a319b9c04044
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655950"
 ---
 # <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Consulta Probar la aplicación de Windows 10 en modo S
 
@@ -33,7 +33,7 @@ Descarga las directivas de integridad de código de Device Guard [aquí](https:/
 
 A continuación, elige la que más te convenga. Aquí te mostramos resumen de cada directiva.
 
-|Directiva |Cumplimiento |Certificado de firma |Nombre del archivo |
+|Directiva |Cumplimiento |Certificado de firma |Nombre de archivo |
 |--|--|--|--|
 |Directiva del modo de auditoría |Registra los problemas / no se bloquea |Tienda |SiPolicy_Audit.p7b |
 |Directiva del modo de producción |Sí |Tienda |SiPolicy_Enforced.p7b |
@@ -46,7 +46,7 @@ Aquí tienes un poco más de información acerca de cada directiva.
 ### <a name="audit-mode-policy"></a>Directiva del modo de auditoría
 Con este modo, la aplicación se ejecuta incluso si realiza tareas que no se admiten en Windows 10 S. Windows registra los archivos ejecutables que se habrían bloqueado en los registros de eventos de integridad de código.
 
-Para encontrar estos registros, abre el **Visor de eventos** y, a continuación, navega hasta esta ubicación: Registros de aplicaciones y servicios->Microsoft->Windows->CodeIntegrity->Operativo.
+Puede encontrar esos registros abriendo el **Visor de eventos**y, a continuación, vaya a esta ubicación: Registros de aplicaciones y servicios -> Microsoft -> Windows -> CodeIntegrity -> operativa.
 
 ![code-integrity-event-logs](images/desktop-to-uwp/code-integrity-logs.png)
 
@@ -55,7 +55,7 @@ Este modo es seguro y no impedirá que el sistema se inicie.
 #### <a name="optional-find-specific-failure-points-in-the-call-stack"></a>(Opcional) Encontrar puntos de error específicos en la pila de llamadas
 Para buscar puntos específicos en la pila de llamadas dónde se producen los problemas de bloqueo, tienes que agrega esta clave del Registro y luego [configurar un entorno de depuración del modo kernel](https://docs.microsoft.com/windows-hardware/drivers/debugger/getting-started-with-windbg--kernel-mode-#span-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanset-up-a-kernel-mode-debugging).
 
-|Clave|Nombre|Tipo|Valor|
+|Tecla|Nombre|Tipo|Valor|
 |--|---|--|--|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurentControlSet\Control\CI| DebugFlags |REG_DWORD | 1 |
 
@@ -76,7 +76,7 @@ Te recomendamos que apliques estas directivas a una máquina virtual, ya que est
 
 Si quieres aplicar estas directivas en el equipo local, es mejor comenzar con la directiva del modo de auditoría. Con esta directiva, puedes revisar los registros de eventos de integridad de código para garantizar que nada importante se bloquee en la directiva aplicada.
 
-Cuando estés listo para aplicar una directiva, busca el archivo .P7B de la directiva que hayas elegido, denomínalo **SIPolicy.P7B** y, a continuación, guárdalo en esta ubicación del sistema: **C:\Windows\System32\CodeIntegrity\\**.
+Cuando esté listo para aplicar una directiva, busque el. Archivo p7b para la directiva que haya elegido, cambie su nombre a **SIPolicy.P7B**y, a continuación, guarde el archivo en esta ubicación en el sistema: **C:\Windows\System32\CodeIntegrity\\**.
 
 A continuación, reinicia el sistema.
 
@@ -85,18 +85,18 @@ A continuación, reinicia el sistema.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a tus preguntas**
+**Encuentre respuestas a sus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
-**Enviar comentarios o realizar sugerencias acerca de las características**
+**Proporcionar comentarios o hacer sugerencias**
 
 Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
-**Revisar un artículo de blog detallado que publicó nuestro equipo de consultas de aplicaciones**
+**Revise un artículo de blog detallados que se registró por nuestro equipo de aplicación consulte**
 
 Consulta [Portar y probar sus aplicaciones de escritorio clásicas en Windows 10 S con el Puente de dispositivo de escritorio](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
 
-**Obtener información acerca de las herramientas que facilitan las pruebas para Windows en modo S**
+**Obtenga información sobre herramientas que facilitan la prueba de Windows en modo S**
 
 Consulta [Desempaquetar, modificar, volver a empaquetar, firmar un APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).

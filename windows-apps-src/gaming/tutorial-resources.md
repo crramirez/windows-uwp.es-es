@@ -6,24 +6,24 @@ ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cb1c9f9cf6cbc6cce0c5d4547ed503bb9a06e56
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941710"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660120"
 ---
-# <a name="extend-the-game-sample"></a>Amplía el juego de ejemplo
+# <a name="extend-the-game-sample"></a>Extender la muestra de juego
 
 Llegados a este punto, ya hemos hablado de los componentes clave de un juego 3D DirectX para la Plataforma universal de Windows (UWP). Puedes establecer el marco para un juego, incluida la canalización de representación y el proveedor de vista, e implementar un bucle de juego básico. También puedes crear una superposición de interfaz de usuario básica, incorporar sonidos e implementar controles. Estás a punto de crear un juego propio, pero si necesitas más ayuda e información, échale un vistazo a estos recursos.
 
 -   [Gráficos y juegos DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)
--   [Introducción a Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
--   [Referencia de Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
+-   [Direct3D 11 Overview](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+-   [Direct3D 11 referencia](https://msdn.microsoft.com/library/windows/desktop/ff476147)
 
 ## <a name="using-xaml-for-the-overlay"></a>Uso de XAML para la superposición
 
 
-Una opción que no hemos tratado en profundidad es el uso de XAML en lugar de [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) para la superposición. XAML presenta muchas ventajas con respecto a Direct2D para dibujar elementos de interfaz de usuario. La ventaja más importante es que facilita mucho incorporar la apariencia de Windows 10 en tu juego DirectX. Muchos de los elementos, estilos y comportamientos comunes que definen a una aplicación para UWP están estrechamente integrados en el modelo XAML, por lo que implementarlos supone mucho menos trabajo para el desarrollador del juego. Si tu diseño de juego tiene una interfaz de usuario complicada, piensa en la posibilidad de usar XAML en lugar de Direct2D.
+Una opción que no hemos tratado en profundidad es el uso de XAML en lugar de [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) para la superposición. XAML presenta muchas ventajas con respecto a Direct2D para dibujar elementos de interfaz de usuario. La ventaja más importante es que permite incorporar la apariencia de Windows 10 en su juego DirectX más cómodo. Muchos de los elementos, estilos y comportamientos comunes que definen a una aplicación para UWP están estrechamente integrados en el modelo XAML, por lo que implementarlos supone mucho menos trabajo para el desarrollador del juego. Si tu diseño de juego tiene una interfaz de usuario complicada, piensa en la posibilidad de usar XAML en lugar de Direct2D.
 
 Con XAML, podemos hacer una interfaz de juego similar a la de Direct2D hecha anteriormente.
 
@@ -35,7 +35,7 @@ Con XAML, podemos hacer una interfaz de juego similar a la de Direct2D hecha ant
 
 Aunque los resultados finales son similares, hay una serie de diferencias entre la implementación de interfaces Direct2D y XAML.
 
-Función | XAML| Direct2D
+Característica | XAML| Direct2D
 :----------|:----------- | :-----------
 Superposición de definición | Definido en un archivo XAML, `\*.xaml`. Al entender XAML, crear y configurar superposiciones más complicadas es más sencillo que con Direct2D.| Definida como una colección de primitivos Direct2D y cadenas [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) colocadas y escritas manualmente en un búfer de destino Direct2D. 
 Elemento de la interfaz de usuario | Los elementos de la interfaz de usuario XAML proceden de elementos estandarizados que forman parte de las API XAML de Windows Runtime, incluidos [**Windows::UI::Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) y [**Windows::UI::Xaml::Controls**](https://msdn.microsoft.com/library/windows/apps/br227716). El código que controla el comportamiento de los elementos de interfaz de usuario XAML se define en un archivo de código subyacente: Main.xaml.cpp. | Es posible dibujar formas simples como rectángulos y puntos suspensivos.
@@ -130,7 +130,7 @@ El siguiente fragmento de [**DX::DeviceResources::CreateWindowSizeDependentResou
     }
 ```
 
-Para obtener más información sobre este proceso, consulta el tema sobre [Interoperabilidad de DirectX y XAML](directx-and-xaml-interop.md).
+Para obtener más información sobre este proceso, consulta el tema sobre [interoperación entre DirectX y XAML](directx-and-xaml-interop.md).
 
 ## <a name="sample"></a>Muestra
 

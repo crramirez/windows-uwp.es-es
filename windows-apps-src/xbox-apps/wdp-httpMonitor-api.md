@@ -5,26 +5,26 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645680"
 ---
 # <a name="http-monitor-api-reference"></a>Referencia de API del supervisor de HTTP   
 Puede acceder al tráfico de HTTP en tiempo real para la aplicación centrada mediante esta API si se ha habilitado el supervisor de HTTP en la consola Xbox, activando la casilla en Dev Home.
 
 ## <a name="get-if-the-http-monitor-is-enabled"></a>Obtener si el supervisor de HTTP está habilitado
 
-**Solicitud**
+**Request**
 
 Puedes obtener si se ha habilitado el supervisor de HTTP en Dev Home.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/httpmonitor/sessions
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -43,7 +43,7 @@ Un objeto JSON con los siguientes campos:
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -52,15 +52,15 @@ Código de estado HTTP      | Descripción
 5XX | Códigos de error
 
 ## <a name="get-http-traffic-from-the-focused-app"></a>Obtener el tráfico de HTTP desde la aplicación centrada
-**Solicitud**
+**Request**
 
 Obtén en tiempo real el tráfico de HTTP desde la aplicación centrada en Xbox, siempre que no sea una aplicación de sistema, si se ha habilitado el supervisor de HTTP desde Dev Home.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 Websocket | /ext/httpmonitor/sessions
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -89,7 +89,7 @@ Un objeto JSON con los siguientes campos:
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

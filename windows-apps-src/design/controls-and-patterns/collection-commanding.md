@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658600"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuales para colecciones y listas
 
@@ -25,7 +25,7 @@ ms.locfileid: "8925617"
 
 Muchas aplicaciones contienen colecciones de contenido en forma de listas, cuadrículas y árboles que los usuarios pueden manipular. Por ejemplo, es posible que los usuarios puedan eliminar, cambiar el nombre, marcar o actualizar elementos. En este artículo se muestra cómo usar los comandos contextuales para implementar estos tipos de acciones de manera que proporcione la mejor experiencia posible para todos los tipos de entrada.  
 
-> **API importantes**: [Interfaz ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [Propiedad UIElement.ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [Interfaz INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
+> **API importantes**: [Interfaz ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [UIElement.ContextFlyout propiedad](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [interfaz INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
 
 ![Usa una variedad de entradas para ejecutar el comando Favorito](images/ContextualCommand_AddFavorites.png)
 
@@ -43,9 +43,9 @@ En esta tabla se muestran algunos comandos de colección típicos y formas de ex
 | Marcar como favorito un elemento | Menú contextual   | Botón interactivo      | F, Ctrl+S            | Deslizar el dedo para favorito |
 
 
-* **En general, debes crear todos los comandos para un elemento disponible en el [menú contextual](menus.md) del elemento.** Los menús contextuales son accesibles para los usuarios independientemente del tipo de entrada y deben contener todos los comandos contextuales que el usuario puede realizar.
+* **En general, debe realizar todos los comandos de un elemento disponible en el elemento [menú contextual](menus.md).** Los menús contextuales son accesibles para los usuarios independientemente del tipo de entrada y deben contener todos los comandos contextuales que el usuario puede realizar.
 
-* **Para los comandos a los que se accede con frecuencia, piensa en la posibilidad de usar aceleradores de entrada.** Los aceleradores de entrada permiten al usuario realizar acciones rápidamente, en función de su dispositivo de entrada. Entre los aceleradores de entrada se incluyen:
+* **Para los comandos que se accede con frecuencia, considere el uso de los aceleradores de entrada.** Los aceleradores de entrada permiten al usuario realizar acciones rápidamente, en función de su dispositivo de entrada. Entre los aceleradores de entrada se incluyen:
     - Deslizar el dedo para la acción (acelerador táctil)
     - Extraer para actualizar datos (acelerador táctil)
     - Métodos abreviados de teclado (acelerador de teclado)
@@ -55,7 +55,7 @@ En esta tabla se muestran algunos comandos de colección típicos y formas de ex
 > [!NOTE]
 > Los usuarios deben poder acceder a todos los comandos desde cualquier tipo de dispositivo. Por ejemplo, si los comandos de la aplicación solo se exponen a través de los aceleradores de puntero de botones interactivos, los usuarios táctiles no podrán obtener acceso a ellos. Como mínimo, usa un menú contextual para proporcionar acceso a todos los comandos.  
 
-## <a name="example-the-podcastobject-data-model"></a>Ejemplo: el modelo de datos de PodcastObject
+## <a name="example-the-podcastobject-data-model"></a>Por ejemplo: El modelo de datos PodcastObject
 
 Para demostrar nuestras recomendaciones de comandos, este artículo crea una lista de podcasts para una aplicación de podcasts. El código de ejemplo muestra cómo permitir al usuario marcar como "favorito" un podcast concreto en una lista.
 
@@ -140,7 +140,7 @@ favoriteCommand.Execute(PodcastObject);
 
 Cuando tienes una lista de elementos y cada uno de estos elementos debe responder a varias entradas, puedes simplificar el código mediante la definición de un [UserControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) para el elemento y usarlo para definir los controladores de eventos y el menú contextual de los elementos. 
 
-Para crear un UserControl en VisualStudio:
+Para crear un UserControl en Visual Studio:
 1. En el Explorador de soluciones, haz clic con el botón derecho en el proyecto. Aparece un menú contextual.
 2. Selecciona **Agregar > Nuevo elemento...**. <br />Se abre el cuadro de diálogo **Agregar nuevo elemento**. 
 3. Selecciona UserControl en la lista de elementos. Asígnale el nombre que quieras y haz clic en **Agregar**. Visual Studio generará un UserControl de código auxiliar para ti. 
@@ -236,13 +236,13 @@ El usuario puede invocar menús contextuales con estas "acciones contextuales":
 
 | Entrada    | Acción de contexto                          |
 | -------- | --------------------------------------- |
-| Ratón    | Hacer clic con el botón derecho                             |
+| Mouse    | Hacer clic con el botón derecho                             |
 | Teclado | Mayús + F10, botón de menú                  |
 | Función táctil    | Presión larga en el elemento                      |
 | Lápiz      | Presión en el botón de menú contextual, presión larga en el elemento |
 | Controlador para juegos  | Botón de menú                             |
 
-**Dado que el usuario puede abrir un menú contextual independientemente del tipo de entrada, el menú contextual debe contener todos los comandos contextuales disponibles para el elemento de lista.**
+**Puesto que el usuario puede abrir un menú contextual, independientemente del tipo de entrada, el menú contextual debe contener todos los comandos contextuales disponibles para el elemento de lista.**
 
 ### <a name="contextflyout"></a>ContextFlyout
 
@@ -370,13 +370,13 @@ Los botones que se muestran en el estado de movimiento solo serán accesibles me
 
 ### <a name="touch-accelerators"></a>Aceleradores de entrada táctil
 
-#### <a name="swipe"></a>Deslizar el dedo
+#### <a name="swipe"></a>Deslizar rápidamente
 
 ![Deslizar el dedo por un elemento para mostrar el comando](images/ContextualCommand_Swipe.png)
 
 El comando de deslizar el dedo es un acelerador táctil que permite a los usuarios de dispositivos táctiles realizar acciones secundarias habituales con la entrada táctil. Deslizar el dedo permite a los usuarios táctiles interactuar de manera rápida y natural con el contenido, con acciones comunes, como Deslizar el dedo para eliminar o Deslizar el dedo para invocar. Consulta el artículo de los [comandos de deslizar el dedo](swipe.md) para obtener más información.
 
-Para poder integrar la acción de deslizar el dedo en tu colección, necesitas dos componentes: SwipeItems, que hospeda los comandos y un SwipeControl, que ajusta el elemento y permite la interacción de deslizar el dedo.
+Para integrar pasar el dedo en la colección, tiene dos componentes: SwipeItems, que hospeda los comandos; y un SwipeControl, que contiene el elemento y permite la interacción de deslizar rápidamente.
 
 Se puede definir a SwipeItems como recurso en el PodcastUserControl. En este ejemplo, el SwipeItems contiene un comando para marcar como favorito un elemento.
 
@@ -443,7 +443,7 @@ El tipo de entrada de lápiz proporciona la precisión de la entrada de puntero.
 Para optimizar la aplicación para la entrada de lápiz, consulta el artículo de [interacciones de pluma y lápiz](../input/pen-and-stylus-interactions.md).
 
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 * Asegúrate de que los usuarios pueden acceder a todos los comandos de todos los tipos de dispositivos UWP.
 * Incluye un menú contextual que proporcione acceso a todos los comandos disponibles para un elemento de la colección. 
@@ -453,7 +453,7 @@ Para optimizar la aplicación para la entrada de lápiz, consulta el artículo d
 ## <a name="related-topics"></a>Temas relacionados
 * [Interfaz ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
 * [Menús y menús contextuales](menus.md)
-* [Deslizar rápidamente](swipe.md)
-* [Extraer para actualizar](pull-to-refresh.md)
-* [Interacción de pluma y lápiz](../input/pen-and-stylus-interactions.md)
-* [Adaptar tu aplicación para el controlador para juegos y Xbox](../devices/designing-for-tv.md)
+* [Swipe](swipe.md)
+* [Deslizar para actualizar](pull-to-refresh.md)
+* [Interacción del lápiz y del lápiz](../input/pen-and-stylus-interactions.md)
+* [Personalizar la aplicación de controlador para juegos y Xbox](../devices/designing-for-tv.md)

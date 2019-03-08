@@ -1,26 +1,26 @@
 ---
 title: Soporte técnico y comentarios
-description: Soporte técnico y comentarios incluyen los archivos
+description: Archivo de inclusión de comentarios y soporte técnico
 ms.date: 06/12/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 869ee88eea6161f8d308f2e5cd72773dc7162b0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8948072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643960"
 ---
 ## <a name="support-and-feedback"></a>Soporte técnico y comentarios
 
 ### <a name="find-answers-to-your-questions"></a>Encuentra respuestas a tus preguntas
 
-¿Tienes alguna pregunta? Pregúntanos en [Stack Overflow](https://aka.ms/pos-stackoverflow) o [Foro de MSDN para UWP](https://aka.ms/pos-msdn-uwpforum)
+¿Tienes alguna pregunta? Pedirnos en cualquiera [Stack Overflow](https://aka.ms/pos-stackoverflow) o [foro de MSDN para UWP](https://aka.ms/pos-msdn-uwpforum)
 
-Ayudar a encontrar tus preguntas:
-- Agregar la etiqueta de [pointofservice](https://aka.ms/pos-stackoverflow) a tu pregunta en Stack Overflow. 
-- Incluir el término ["pointofservice"](https://aka.ms/pos-msdn-uwpforum) en su publicación en el foro de MSDN para UWP
+Ayudar a localizar sus preguntas:
+- Agregar el [pointofservice](https://aka.ms/pos-stackoverflow) etiqueta a su pregunta en Stack Overflow. 
+- Incluir el ["pointofservice"](https://aka.ms/pos-msdn-uwpforum) término en la publicación en el foro de MSDN para UWP
 
-### <a name="make-feature-suggestions-or-give-feedback"></a>Realizar sugerencias o enviar comentarios
-Consulta [UserVoice de comentarios de desarrollador](https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=202594).
+### <a name="make-feature-suggestions-or-give-feedback"></a>Hacer sugerencias o comentarios
+Consulte [desarrollador comentarios UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=202594).

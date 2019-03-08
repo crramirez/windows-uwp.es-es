@@ -4,19 +4,19 @@ description: La canalización del proceso de Direct3D está diseñada para contr
 ms.assetid: 355B66C6-C0DF-47BA-A9C9-7AFA50B5B614
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651120"
 ---
 # <a name="compute-pipeline"></a>Canalización del proceso
 
 
-\[Parte de la información hace referencia a la versión preliminar del producto, que puede sufrir modificaciones importantes antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, respecto a la información que se ofrece aquí.\]
+\[Parte de la información está relacionada con productos preliminares que pueden modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa ni implícita, con respecto a la información proporcionada aquí.\]
 
 
 La canalización del proceso de Direct3D está diseñada para controlar los cálculos que se pueden llevar a cabo principalmente en paralelo con la canalización de gráficos. La canalización del proceso solo incluye unos pocos pasos, donde los datos fluyen de la entrada a la salida a través de la fase del sombreador de cálculo programable.

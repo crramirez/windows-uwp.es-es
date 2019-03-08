@@ -1,7 +1,7 @@
 ---
-Description: Learn to develop accessible Windows 10 UWP apps that include keyboard navigation, color and contrast settings, and support for assistive technologies.
+Description: Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
-title: Desarrollo de aplicaciones inclusivas de Windows10
+title: Desarrollo de aplicaciones inclusivas de Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 58e9ab90115566059fb79220b7b8c0b9c5ce677e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047972"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649730"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desarrollo de aplicaciones inclusivas de Windows  
 
@@ -43,7 +43,7 @@ Al diseñar la navegación por teclado, examina tu interfaz de usuario y piensa 
     * En caso afirmativo, ¿contienen esos grupos otro nivel de grupos?
 *   Entre los controles del mismo nivel, ¿se debe navegar mediante tabulación, a través de una navegación especial (tales como las teclas de dirección) o ambas?
 
-El objetivo es ayudar al usuario a entender cómo se dispone la interfaz de usuario e identificar los controles que requieren acción. Si encuentra que hay que hacer demasiadas tabulaciones antes de que el usuario complete el bucle de navegación, considere la posibilidad de agrupar controles relacionados. Algunos de los controles que están relacionados, tales como un control híbrido, pueden tener que abordarse en esta fase temprana de exploración. Después de comenzar a desarrollar tu producto, es difícil de rediseñar la navegación por teclado, por lo tanto, ¡planea cuidadosamente y durante una fase temprana!  
+El objetivo es ayudar al usuario a entender cómo se dispone la interfaz de usuario e identificar los controles que se puedan accionar. Si encuentra que hay que hacer demasiadas tabulaciones antes de que el usuario complete el bucle de navegación, considere la posibilidad de agrupar controles relacionados. Algunos de los controles que están relacionados, tales como un control híbrido, pueden tener que abordarse en esta fase temprana de exploración. Después de comenzar a desarrollar tu producto, es difícil de rediseñar la navegación por teclado, por lo tanto, ¡planea cuidadosamente y durante una fase temprana!  
 
 Para obtener más información sobre la navegación por teclado entre elementos de la interfaz de usuario, consulta [Accesibilidad del teclado](keyboard-accessibility.md).  
 
@@ -64,16 +64,16 @@ Para obtener más información, consulta [Temas de contraste alto](high-contrast
 
 Si decides usar tu propio tema de color en lugar de los colores del sistema, ten en cuenta estas directrices:  
 
-**Relación de contraste de color:** La sección 508 actualizada de la Ley sobre Estadounidenses con Discapacidades (ADA), al igual que otras legislaciones, requieren que el contraste de color predeterminado entre el texto y su fondo sea de 5:1. Para el texto grande (tamaños de 18 puntos o de 14 puntos y en negrita), el contraste necesario predeterminado es de 3:1.  
+**Relación de contraste del color** – La sección 508 actualizada de la Ley estadounidense sobre la discapacidad, al igual que otras legislaciones, requieren que el contraste de color predeterminado entre el texto y su fondo sea de 5:1. Para el texto grande (tamaños de 18 puntos o de 14 puntos y en negrita), el contraste necesario predeterminado es de 3:1.  
 
-**Combinaciones de colores:** Aproximadamente el 7% de los hombres (y menos del 1% de las mujeres) padecen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
+**Combinaciones de colores** – aproximadamente el 7 por ciento de los hombres (y menos del 1 por ciento de las mujeres) tienen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
 
 ## <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad  
 La siguiente es una versión abreviada de la lista de comprobación de accesibilidad:
 
 1. Establece el nombre accesible (obligatorio) y la descripción accesible (opcional) para los elementos de la interfaz de usuario interactivos y de contenido de la aplicación.
 2. Implementa la accesibilidad de teclado.
-3. Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se presenten correctamente en los temas de contraste alto y que los colores se usen correctamente.
+3. Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se representen correctamente en los temas de contraste alto y que los colores se usen correctamente.
 4. Ejecuta herramientas de accesibilidad, soluciona problemas notificados y comprueba la experiencia de lectura de pantalla. (Consulta el tema sobre pruebas de accesibilidad).
 5. Asegúrate de que la configuración del manifiesto de la aplicación siga las instrucciones de accesibilidad.
 6. Declara que tu aplicación es accesible en Microsoft Store. (Consulta el tema [Accesibilidad en la tienda](accessibility-in-the-store.md).)
@@ -83,7 +83,7 @@ Para obtener más información, consulta el tema completo [Lista de comprobació
 ## <a name="related-topics"></a>Temas relacionados  
 * [Diseño de software inclusivo](designing-inclusive-software.md)  
 * [Diseño inclusivo](https://design.microsoft.com/inclusive)
-* [Procedimientos de accesibilidad que deben evitarse](practices-to-avoid.md)
-* [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Centro de Microsoft para desarrolladores de accesibilidad](https://msdn.microsoft.com/enable)
+* [Procedimientos recomendados de accesibilidad para evitar](practices-to-avoid.md)
+* [Ingeniería Software para mejorar la accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Centro de desarrollo de accesibilidad de Microsoft](https://msdn.microsoft.com/enable)
 * [Accesibilidad](accessibility.md)

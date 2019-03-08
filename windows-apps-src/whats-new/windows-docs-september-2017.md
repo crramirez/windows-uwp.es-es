@@ -6,25 +6,25 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a296cc877279292f73b591a86ede9136b0d9758
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044173"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645200"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novedades de la documentación de los desarrolladores de Windows de septiembre de 2017
 
-La documentación de los desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre directrices para los desarrolladores y muestras que están a tu disposición desde hace poco y contienen información nueva y actualizada para los desarrolladores de Windows.
+La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general sobre directrices para los desarrolladores y muestras que están a tu disposición desde hace poco y contienen información nueva y actualizada para los desarrolladores de Windows.
 
 Por supuesto, la actualización Fall Creators Update está a la vuelta de la esquina, así que permanece atento para obtener gran cantidad de documentación que llegará el próximo mes.
 
-[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
-### <a name="xbox-live-creators-program"></a>Programa de creadores de XboxLive
+### <a name="xbox-live-creators-program"></a>Programa de creadores de Xbox Live
 
-El Programa de creadores de XboxLive ahora es dinámico, lo que te permite crear y publicar juegos para UWP que pueden ejecutarse en equipos Windows10 y consolas XboxOne. Para obtener más información, consulta [Introducción al Programa de creadores de XboxLive](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+El Programa de creadores de Xbox Live ahora es dinámico, lo que te permite crear y publicar juegos para UWP que pueden ejecutarse en equipos Windows 10 y consolas Xbox One. Para obtener más información, consulta [Introducción al Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
@@ -36,10 +36,10 @@ Hemos redactado cuatro [tutoriales de conceptos básicos de XAML](https://docs.m
 
 Este es un resumen de los artículos nuevos:
 
-+ [**Crear interfaces de usuario**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) muestra cómo crear la interfaz básica de la galería de fotos.
-+ [**Crear enlaces de datos**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) muestra cómo agregar enlaces de datos a la galería fotográfica, rellenándola con datos de imágenes reales.
-+ [**Crear estilos personalizados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) muestra cómo agregar estilos personalizados decorativos al menú de edición de fotos.
-+ [**Crear diseños adaptativos**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) muestra cómo hacer que el diseño de la galería sea adaptable, de manera que quede bien en todos los dispositivos y tamaños de pantalla.
++ [**Crear interfaces de usuario** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) se muestra cómo crear la interfaz de la Galería fotográfica básica.
++ [**Crear enlaces de datos** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) muestra cómo agregar enlaces de datos a la Galería fotográfica, rellenarlo con datos de la imagen real.
++ [**Crear estilos personalizados** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) muestra cómo agregar estilos personalizados elaborados para el menú de edición de fotos.
++ [**Crear diseños adaptables** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) se muestra cómo realizar el diseño de la Galería adaptable, por lo que parece bueno sobre el tamaño de cada dispositivo y la pantalla.
 
 ### <a name="get-started-tutorials"></a>Tutoriales de introducción
 
@@ -47,9 +47,9 @@ La sección Introducción de los documentos para UWP se ha actualizado con una [
 
 ### <a name="voice-and-tone"></a>Voz y tono
 
-Hemos agregado nuevas [instrucciones sobre la voz y el tono de las aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/in-app-help/voice-and-tone) para ofrecerte asesoramiento para escribir un texto en la aplicación. Independientemente de lo que crees, es importante que el lenguaje que uses sea cercano, sencilla e informativo.
+Hemos agregado nuevas [instrucciones sobre la voz y el tono de las aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/in-app-help/voice-and-tone) para ofrecerte asesoramiento para escribir un texto en la aplicación. Independientemente de lo que crees, es importante que el lenguaje que uses sea cercano, sencillo e informativo.
 
-## <a name="samples"></a>Ejemplos
+## <a name="samples"></a>Muestras
 
 ### <a name="photolab-sample"></a>Ejemplo PhotoLab
 

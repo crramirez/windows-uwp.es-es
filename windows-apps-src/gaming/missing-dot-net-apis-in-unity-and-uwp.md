@@ -1,5 +1,5 @@
 ---
-title: API de .NET que no están en Unity y UWP
+title: Falta de API de .NET en Unity y UWP
 description: Obtén información sobre las API de .NET que faltan al compilar juegos de UWP en Unity y las soluciones de problemas comunes.
 ms.assetid: 28A8B061-5AE8-4CDA-B4AB-2EF0151E57C1
 ms.date: 02/21/2018
@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, .net, unity
 ms.localizationpriority: medium
 ms.openlocfilehash: 247761f47b578099bf8672d9e1b2469e6506682e
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116084"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641790"
 ---
-# <a name="missing-net-apis-in-unity-and-uwp"></a>API de .NET que faltan en Unity y UWP
+# <a name="missing-net-apis-in-unity-and-uwp"></a>Falta de API de .NET en Unity y UWP
 
 Al crear un juego para UWP con. NET, es posible que algunas API que podrías usar, en el editor de Unity o para un juego de PC independiente, no estén presentes para UWP. Eso es porque .NET para aplicaciones para UWP incluye un subconjunto de los tipos proporcionados en el conjunto completo de .NET Framework para cada espacio de nombres.
 
-Además, algunos motores de juego usan distintos tipos de .NET que no son totalmente compatibles con .NET para UWP, como Mono de Unity. Por lo tanto, cuando estás escribiendo tu juego, todo podría funcionar bien en el editor, pero cuando vayas a compilar para UWP, es posible que obtengas errores como este: **El tipo o el espacio de nombres 'Formateadores' no existen en el espacio de nombres 'System.Runtime.Serialization' (¿tal vez te falta una referencia de ensamblado?)**
+Además, algunos motores de juego usan distintos tipos de .NET que no son totalmente compatibles con .NET para UWP, como Mono de Unity. Por lo que al escribir su juego, todo lo que podría funcionar bien en el editor, pero cuando vaya a compilar para UWP, podría obtener errores como este: **El tipo o espacio de nombres 'formateadores' no existe en el espacio de nombres 'System.Runtime.Serialization' (¿falta una referencia de ensamblado?)**
 
-Afortunadamente, Unity proporciona algunas de estas API que faltan como métodos de extensión y tipos de sustitución, que se describen en [Plataforma Universal de Windows: tipos de .NET que faltan en el back-end de scripting de . NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). Sin embargo, si la funcionalidad que necesitas no está aquí, [Introducción a .NET para aplicaciones de Windows 8.x](https://msdn.microsoft.com/library/windows/apps/br230302) describe formas de convertir el código para usar WinRT o .NET para API de UWP. (Trata de Windows 8, pero también es aplicable a las aplicaciones para UWP de Windows 10).
+Afortunadamente, Unity ofrece algunas de estas API que faltan como métodos de extensión y los tipos de reemplazo, que se describen en [plataforma Universal de Windows: Faltan los tipos de .NET en secuencias de comandos de back-end de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). Sin embargo, si la funcionalidad que necesitas no está aquí, [Introducción a .NET para aplicaciones de Windows 8.x](https://msdn.microsoft.com/library/windows/apps/br230302) describe formas de convertir el código para usar WinRT o .NET para API de UWP. (Trata de Windows 8, pero también es aplicable a las aplicaciones para UWP de Windows 10).
 
 ## <a name="net-standard"></a>.NET estándar
 
@@ -43,7 +43,7 @@ Por último, debes establecer el **Nivel de compatibilidad de api** a la versió
 
 En general, para **Versión de tiempo de ejecución de scripting** y **Nivel de compatibilidad de api**, debes seleccionar la versión más reciente disponible con el fin de tener mayor compatibilidad con .NET Framework y, por lo tanto, tener la posibilidad de usar más API de .NET.
 
-![Configuración: Versión de tiempo de ejecución de scripting; Back-end de scripting; Nivel de compatibilidad de api](images/missing-dot-net-apis-in-unity-1.png)
+![Configuración: Versión de tiempo de ejecución de secuencias de comandos; Scripting de back-end; Nivel de compatibilidad de API](images/missing-dot-net-apis-in-unity-1.png)
 
 ## <a name="platform-dependent-compilation"></a>Compilación dependiente de la plataforma
 
@@ -60,7 +60,7 @@ Usa las siguientes directivas para compilar solo el código solo cuando se ejecu
 ```
 
 > [!NOTE]
-> `NETFX_CORE` solamente están destinadas a comprobar si estás compilando código C# con el back-end de scripting .NET. Si estás usando un back-end de scripting diferente, como IL2CPP, usa en su lugar `UNITY_WSA_10_0`.
+> `NETFX_CORE` solo está pensado para comprobar si se está compilando C# código comparándolo con el backend .NET de secuencias de comandos. Si estás usando un back-end de scripting diferente, como IL2CPP, usa en su lugar `UNITY_WSA_10_0`.
 
 Para obtener una lista completa de directivas de compilación dependientes de la plataforma, consulta [Compilación dependiente de la plataforma](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
 
@@ -136,14 +136,14 @@ private async void GetCertificatesAsync(string certStoreName)
 
 Para obtener más información acerca de las API de seguridad WinRT, consulta [Seguridad](https://docs.microsoft.com/windows/uwp/security/).
 
-### <a name="networking"></a>Redes
+### <a name="networking"></a>Funciones de red
 
 Algunos de los espacios de nombres **System&period;Net.***, como [System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0), tampoco están disponibles al compilar un juego Unity para UWP. Para la mayoría de estas API, usa las correspondientes API **Windows.Networking.*** y **Windows.Web.*** WinRT para obtener una funcionalidad similar. Consulta [Servicios web y redes](https://docs.microsoft.com/windows/uwp/networking/) para obtener más información.
 
 En el caso de **System.Net.Mail**, usa el espacio de nombres [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email). Consulta [Enviar correo electrónico](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para obtener más información.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
-* [Plataforma universal de Windows: Tipos de .NET que faltan en el back-end de scripting de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
-* [.NET para introducción de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br230302)
-* [Guías para portar juegos de Unity UWP](https://unity3d.com/partners/microsoft/porting-guides)
+* [Plataforma universal de Windows: Tipos de .NET que faltan en secuencias de comandos de back-end de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
+* [.NET para información general de aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/br230302)
+* [Guías de migración de UWP de Unity](https://unity3d.com/partners/microsoft/porting-guides)

@@ -1,25 +1,25 @@
 ---
-title: Objetos de estado
+title: Objetos de estados
 description: El estado del dispositivo se agrupa en objetos de estado, que reducen en gran medida el coste de los cambios de estado. Existen varios objetos de estado, y cada uno de ellos está diseñado para inicializar un conjunto de estados para una fase concreta de la canalización . Los objetos de estado varían según la versión de Direct3D.
 ms.assetid: D998745C-2B75-4E59-9923-AD1A17A92E05
 keywords:
-- Objetos de estado
+- Objetos de estados
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3437119979073a5cec27948fc90f954e06c2fc93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596090"
 ---
-# <a name="state-objects"></a>Objetos de estado
+# <a name="state-objects"></a>Objetos de estados
 
 
 El estado del dispositivo se agrupa en objetos de estado, que reducen en gran medida el coste de los cambios de estado. Existen varios objetos de estado, y cada uno de ellos está diseñado para inicializar un conjunto de estados para una fase concreta de la canalización . Los objetos de estado varían según la versión de Direct3D.
 
-## <a name="span-idinputlayoutspanspan-idinputlayoutspanspan-idinputlayoutspaninput-layout-state"></a><span id="Input_Layout"></span><span id="input_layout"></span><span id="INPUT_LAYOUT"></span>Estado del diseño de entrada
+## <a name="span-idinputlayoutspanspan-idinputlayoutspanspan-idinputlayoutspaninput-layout-state"></a><span id="Input_Layout"></span><span id="input_layout"></span><span id="INPUT_LAYOUT"></span>Estado de diseño de entrada
 
 
 Este grupo de estado determina la forma en la que la [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) lee datos de los búferes de entrada y los ensambla para que los use el sombreador de vértices. Esto incluye el estado, como el número de elementos en el búfer de entrada y la firma de los datos de entrada. La fase del ensamblador de entrada (IA) transmite primitivos de la memoria a la canalización.
@@ -29,17 +29,17 @@ Este grupo de estado determina la forma en la que la [fase del ensamblador de en
 
 Este grupo de estado inicializa la [fase del rasterizador (RS)](rasterizer-stage--rs-.md). Este objeto incluye el estado, como los modos de relleno o de eliminación, la habilitación de un rectángulo de tijera para el recorte y la configuración de los parámetros de muestreo múltiple. Esta fase rasteriza primitivos en píxeles, realizando operaciones como el recorte y la asignación de primitivos a la ventanilla.
 
-## <a name="span-iddepthstencilspanspan-iddepthstencilspanspan-iddepthstencilspandepth-stencil-state"></a><span id="DepthStencil"></span><span id="depthstencil"></span><span id="DEPTHSTENCIL"></span>Estado de la profundidad y la galería de símbolos
+## <a name="span-iddepthstencilspanspan-iddepthstencilspanspan-iddepthstencilspandepth-stencil-state"></a><span id="DepthStencil"></span><span id="depthstencil"></span><span id="DEPTHSTENCIL"></span>Estado de la Galería de símbolos de profundidad
 
 
 Este grupo de estado inicializa la parte de la profundidad y la galería de símbolos de la [fase de fusión de salida (OM)](output-merger-stage--om-.md). Más concretamente, este objeto inicializa las pruebas de profundidad y de la galería de símbolos.
 
-## <a name="span-idblendspanspan-idblendspanspan-idblendspanblend-state"></a><span id="Blend"></span><span id="blend"></span><span id="BLEND"></span>Estado de fusión
+## <a name="span-idblendspanspan-idblendspanspan-idblendspanblend-state"></a><span id="Blend"></span><span id="blend"></span><span id="BLEND"></span>Estado de mezcla
 
 
 Este grupo de estado inicializa la parte de la fusión de la [fase de fusión de salida (OM)](output-merger-stage--om-.md).
 
-## <a name="span-idsamplerspanspan-idsamplerspanspan-idsamplerspansampler-state"></a><span id="Sampler"></span><span id="sampler"></span><span id="SAMPLER"></span>Estado de muestra
+## <a name="span-idsamplerspanspan-idsamplerspanspan-idsamplerspansampler-state"></a><span id="Sampler"></span><span id="sampler"></span><span id="SAMPLER"></span>Estado de la muestra
 
 
 Este grupo de estado Inicializa un objeto de muestra. Un objeto de muestra lo usan las fases del sombreador para filtrar las texturas en la memoria.

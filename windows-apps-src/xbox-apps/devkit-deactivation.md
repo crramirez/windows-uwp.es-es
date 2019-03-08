@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 5606a8fa6db5b439aa71f5d72b34c0f519d7eea9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947306"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651780"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Desactivación del modo de desarrollador de Xbox One
 
@@ -70,11 +70,11 @@ Para restablecer la consola, realiza los siguientes pasos:
    
     ![Restablecer y quitar todo](images/devkit-deactivation-4.png)
 
-## <a name="deactivate-your-console-using-partner-center"></a>Desactivar la consola con el centro de partners
+## <a name="deactivate-your-console-using-partner-center"></a>Desactivación de la consola mediante el centro de partners
 
-Si no puedes acceder a la consola por cualquier motivo, también puedes desactivar el modo de desarrollador en la consola mediante el centro de partners.
+Si no puede tener acceso a la consola por cualquier motivo, también puede desactivar el modo de desarrollador en la consola mediante el uso de centro de partners.
 
-1. Ve a la página [administrar consolas Xbox One](https://partner.microsoft.com/xboxdevices) en el centro de partners. Se te pedirá que inicie sesión.
+1. Navegue hasta la [consolas Xbox One administrar](https://partner.microsoft.com/xboxdevices) página en el centro de partners. Se le pedirá que inicie sesión.
 
 2. Busca la consola que quieras desactivar en la lista de consolas, comparando el número de serie, el identificador de la consola o el identificador de dispositivo.  
 
@@ -84,6 +84,6 @@ Si no puedes acceder a la consola por cualquier motivo, también puedes desactiv
 
 Si anteriormente no has vuelto a definir el modo comercial a la consola Xbox One, hazlo ahora como se describe en [Cambiar al modo comercial](#switch-to-retail-mode).
 
-## <a name="see-also"></a>Ver también
-- [Activación del modo de desarrollador de Xbox One](devkit-activation.md)
+## <a name="see-also"></a>Consulte también
+- [Activación de un modo de programador Xbox](devkit-activation.md)
 - [UWP en Xbox One](index.md)

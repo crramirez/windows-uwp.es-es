@@ -4,14 +4,14 @@ description: En este artículo se muestra cómo reducir el uso de memoria cuando
 title: Reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 28c21b3d3b3e53def2181e96a58b53998ee0f04a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046608"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660730"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
@@ -25,7 +25,7 @@ Cuando la aplicación pasa al estado de segundo plano, pueden cambiar las restri
 
 ### <a name="events-for-controlling-your-apps-memory-usage"></a>Eventos para controlar el uso de memoria de la aplicación
 
-El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024MB a 128MB.  
+El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024 MB a 128 MB.  
 Este es el evento más importante que se debe controlar para evitar que la plataforma suspenda o finalice la aplicación.
 
 El evento [MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) se genera cuando el consumo de memoria de la aplicación ha aumentado a un valor superior en la enumeración [AppMemoryUsageLevel](https://msdn.microsoft.com/library/windows/apps/windows.system.appmemoryusagelevel.aspx). Por ejemplo, de **Low** a **Medium**. Si bien controlar este evento es opcional, se recomienda hacerlo porque la aplicación sigue siendo responsable de mantenerse por debajo del límite.
@@ -40,7 +40,7 @@ Dado que la ejecución en segundo plano reducirá los recursos de memoria que la
 
 [!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-Cuando se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground), establece la variable de seguimiento para indicar que actualmente se está ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
+Cuando se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
 
 [!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
 

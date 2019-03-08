@@ -3,15 +3,15 @@ title: Responder a los comentarios de los clientes
 description: Puedes responder directamente a los comentarios que los clientes dejan en el Centro de opiniones.
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
 ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047570"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645080"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 
@@ -22,7 +22,7 @@ Puedes usar el [informe de comentarios](feedback-report.md) para revisar los com
 
 Para proporcionar una respuesta a cualquier comentario, haz clic en el vínculo **Responder a los comentarios** que aparece junto al comentario en tu **informe de comentarios**.
 
-[El centro de partners](https://partner.microsoft.com/dashboard) admite tres opciones para responder a los clientes que proporcionan comentarios sobre la aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
+[Centro de partners](https://partner.microsoft.com/dashboard) admite tres opciones para responder a los clientes que proporcionan comentarios sobre la aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
 
 ## <a name="public-comments-in-feedback-hub"></a>Comentarios públicos del Centro de opiniones
 
@@ -44,9 +44,9 @@ Una tercera opción para una respuesta pública es establecer el estado de un co
 
 Para usar esta opción, selecciona el botón de radio **Actualizar estado**. A continuación, selecciona una de las siguientes opciones:
 
-- **Investigando**: eres consciente de un problema y lo estás investigando.
-- **Trabajando en ello**: estás en proceso de solución de un problema o agregando una característica solicitada.
-- **Completado**: has publicado una actualización para solucionar el problema o agregar una característica solicitada.
+- **Investigar**: Esté al tanto de un problema y busca en él.
+- **Trabajando en ello**: Está en el proceso de solucionar un problema o agregar una característica solicitada.
+- **Completado**: Ha publicado una actualización para corregir el problema o agregar la característica solicitada.
 
 Junto con la actualización de estado, puedes escribir un comentario para proporcionar más información, como una estimación de cuándo crees que se habrá solucionado un problema o más información sobre los últimos cambios. Esta descripción aparecerá en la parte superior de la lista de comentarios (y el informe de comentarios mostrará el estado actual y la descripción).
 

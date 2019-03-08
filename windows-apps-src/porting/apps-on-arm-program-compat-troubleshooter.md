@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, always connected, siempre conectado, compatibility troubleshooter, solucionador de problemas de conectividad, windows on ARM, windows en ARM
 ms.localizationpriority: medium
 ms.openlocfilehash: 763b00a5790274d81b6daa2838ef926936e458db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946373"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647620"
 ---
 # <a name="program-compatibility-troubleshooter-on-arm"></a>Solucionador de problemas de compatibilidad de programas en ARM
 La emulación para admitir aplicaciones x86 es una nueva funcionalidad creada para Windows 10 en ARM64. A veces la emulación realiza optimizaciones que no proporcionan la mejor experiencia. Puedes usar el Solucionador de problemas de compatibilidad de programas para activar o desactivar la configuración de emulación para tu aplicación x86, reduciendo las optimizaciones predeterminadas y aumentando posiblemente la compatibilidad.
@@ -22,7 +22,7 @@ El [Solucionador de problemas de compatibilidad de programas](https://support.mi
 
 Si haces clic en **Programa de solución de problemas** aparecerá con las opciones siguientes.
 
-![Captura de pantalla de la opción para solucionar problemas de compatibilidad](images/arm/Capture5.png)
+![Captura de pantalla de la opción Solucionar problemas de compatibilidad](images/arm/Capture5.png)
 
 Todas las opciones habilitan la configuración aplicable y aplicada en todos los equipos de escritorio de Windows 10. Además, las opciones primera, segunda y cuarta aplican la configuración de emulación [Deshabilitar la memoria caché de aplicaciones](#disable-app-cache) y [Deshabilitar el modo de ejecución híbrida](#disable-hybrid-exec-mode).
 
@@ -32,7 +32,7 @@ Todas las opciones habilitan la configuración aplicable y aplicada en todos los
 
 Puedes alternar la configuración de emulación haciendo clic con el botón derecho en el archivo ejecutable y seleccionando **Propiedades**.
 
-En ARM, una sección titulada **Windows 10 en ARM** estará disponibles en la pestaña **Compatibilidad**. Haga clic en **Cambiar la configuración de emulación** para iniciar una segunda ventana como aquí.
+En ARM, una sección titulada **Windows 10 en ARM** estará disponible en el **compatibilidad** ficha. Haga clic en **cambiar la configuración de emulación** para iniciar una segunda ventana como aquí.
 
 ![Pantalla de cambio de la configuración de emulación](images/arm/Capture.png)
 

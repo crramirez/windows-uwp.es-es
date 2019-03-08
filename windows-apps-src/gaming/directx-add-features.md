@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, xaml, XAML, screen rotation, rotación de pantalla, input, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 432e7716363f6a51254e1476dac38f713c94fb69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930008"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599510"
 ---
 # <a name="add-features-to-directx-games"></a>Agregar características a juegos DirectX
 
@@ -44,7 +44,7 @@ En el tema sobre la compatibilidad de la orientación de la pantalla se describe
 <td align="left"><p>Agrega métodos de entrada a tu juego.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="supporting-screen-rotation-directx-and-cpp.md">Compatibilidad de la orientación de la pantalla</a></p></td>
+<td align="left"><p><a href="supporting-screen-rotation-directx-and-cpp.md">Compatibilidad con la orientación de pantalla</a></p></td>
 <td align="left"><p>Agrega compatibilidad de orientación de la pantalla.</p></td>
 </tr>
 </tbody>

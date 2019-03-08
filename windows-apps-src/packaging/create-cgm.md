@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, asignación de grupo de contenido, instalación en streaming, instalación en streaming de la app para uwp, asignación de grupo de contenido de origen
 ms.localizationpriority: medium
 ms.openlocfilehash: 882db0a6a97c5ee203a072156ca3eb82615607bb
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115872"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647950"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crear y convertir una asignación de grupo de contenido de origen
 
@@ -23,7 +23,7 @@ Tendrás que crear un archivo `SourceAppxContentGroupMap.xml` y, a continuación
 
 Veamos un sencillo escenario en el cual resulta de utilidad la instalación en streaming de la aplicación para UWP. 
 
-Supongamos que has creado un juego para UWP, pero el tamaño de la aplicación final es de más de 100GB. Que se va a tardar mucho tiempo en descargar desde la Microsoft Store, podría resultar poco práctico. Si decides usar la instalación en streaming de la aplicación para UWP, puedes especificar en qué orden se descargarán los archivos de la aplicación. Si indicas a la Tienda que se deben descargar primero los archivos esenciales, el usuario podrá interactuar con tu aplicación mucho antes, mientras que los archivos no esenciales se descargan en segundo plano.
+Supongamos que has creado un juego para UWP, pero el tamaño de la aplicación final es de más de 100 GB. Que se va a tardar mucho tiempo en descargarse desde la Microsoft Store, que puede ser un problema. Si decides usar la instalación en streaming de la aplicación para UWP, puedes especificar en qué orden se descargarán los archivos de la aplicación. Si indicas a la Tienda que se deben descargar primero los archivos esenciales, el usuario podrá interactuar con tu aplicación mucho antes, mientras que los archivos no esenciales se descargan en segundo plano.
 
 > [!NOTE]
 > Recuerda que usar la instalación en streaming de aplicaciones para UWP depende totalmente de la organización de archivos de la aplicación. A la hora de realizar la instalación en streaming de la aplicación para UWP, te recomendamos que tengas en cuenta cuanto antes el diseño del contenido de la aplicación, para que puedas distribuir los archivos de la misma de una manera más sencilla.
@@ -71,7 +71,7 @@ Este es el fragmento de código del archivo de ejemplo original `SourceAppxConte
 
 Estos son algunos puntos importantes que tienes que tener en cuenta:
 
-- El elemento `<ContentGroup>` que se encuentra en `<Required>` **debe** denominarse "Required". Este nombre está reservado únicamente para el grupo de contenido necesario y no puede usarse con ningún otro elemento `<ContentGroup>` de la asignación de grupo de contenido final.
+- El elemento `<ContentGroup>` que se encuentra en `<Required>`**debe** denominarse "Required". Este nombre está reservado únicamente para el grupo de contenido necesario y no puede usarse con ningún otro elemento `<ContentGroup>` de la asignación de grupo de contenido final.
 - Solo hay un elemento `<ContentGroup>`. Esto es intencionado, ya que debe haber un solo grupo de archivos esenciales.
 - El archivo de este ejemplo es un único archivo `.exe`. Un grupo de contenido necesario no se limita a un solo archivo, sino que puede haber varios. 
 
@@ -166,4 +166,4 @@ Para obtener más información sobre las opciones que puedes usar con **MakeAppx
 MakeAppx convertCGM /?
 ```
 
-Eso es todo lo que tendrás que hacer para que el último archivo `AppxContentGroupMap.xml` esté listo en la aplicación. No hay aún más que hacer antes de que la aplicación esté totalmente lista en Microsoft Store. Para obtener más información sobre el proceso completo de la instalación en streaming de aplicaciones para UWP, consulta [esta entrada de blog](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+Eso es todo lo que tendrás que hacer para que el último archivo `AppxContentGroupMap.xml` esté listo en la aplicación. No hay todavía más antes de la aplicación esté totalmente preparada para la Microsoft Store. Para obtener más información sobre el proceso completo de la instalación en streaming de aplicaciones para UWP, consulta [esta entrada de blog](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).

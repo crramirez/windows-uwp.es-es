@@ -1,32 +1,32 @@
 ---
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: Crear un saludo Hello World en C++ / CX (Windows 10)
-description: Con Microsoft Studio2017 Visual, puedes usar C++ / CX para desarrollar una aplicación que se ejecuta en Windows 10, incluidos los teléfonos que ejecutan Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje de marcado de aplicaciones extensibles (XAML).
+title: Crear un Hello World app en C++ / c++ / CX (Windows 10)
+description: Con Microsoft Visual Studio 2017, puede usar C++ / c++ / CX para desarrollar una aplicación que se ejecuta en Windows 10, incluidos en los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje de marcado de aplicaciones extensibles (XAML).
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7acf2715ff4b6328beaae017722fc58d5788fe1d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047869"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648860"
 ---
-# <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++ / CX
+# <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++ / c++ / CX
 
 > [!IMPORTANT]
-> Este tutorial usa C++ / CX. Microsoft ha publicado C++ / WinRT: una moderna C ++ 17 proyección de lenguaje estándar para API de Windows Runtime. Para obtener más información sobre este idioma, consulta [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
+> Este tutorial utiliza C++ / c++ / CX. Microsoft ha lanzado C++ / c++ / WinRT: una totalmente moderna C ++ 17 proyección del lenguaje estándar de Windows en tiempo de ejecución (WinRT) API. Para obtener más información sobre este lenguaje, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
 
-Con Microsoft Studio2017 Visual, puedes usar C++ / CX para desarrollar una aplicación que se ejecuta en Windows 10 con una interfaz de usuario que se define en lenguaje de marcado de aplicaciones Extensible (XAML).
+Con Microsoft Visual Studio 2017, puede usar C++ / c++ / CX para desarrollar una aplicación que se ejecuta en Windows 10 con una interfaz de usuario que se define en lenguaje de marcado de aplicaciones Extensible (XAML).
 
 > [!NOTE]
 > Este tutorial usa Visual Studio Community 2017. Si usas otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
 ## <a name="before-you-start"></a>Antes de empezar
 
--   Para completar este tutorial, debes usar Visual StudioCommunity 2017 o una de las versiones de la Comunidad que no sean de Studio2017 Visual, en un equipo que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](https://go.microsoft.com/fwlink/p/?LinkId=532666)
--   Damos por hecho que tienes un conocimiento básico de C++ / CX, XAML y los conceptos en la [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
+-   Para completar este tutorial, debe usar Visual Studio Community 2017, o una de las versiones no Comunidad de Visual Studio 2017, en un equipo que ejecuta Windows 10. Para su descarga, consulta [Obtener las herramientas](https://go.microsoft.com/fwlink/p/?LinkId=532666)
+-   Se supone que tiene un conocimiento básico de C++ / c++ / CX, XAML y los conceptos de la [información general XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Se supone que estás usando el diseño de ventana predeterminado en Visual Studio. Para restablecer el diseño predeterminado, en la barra de menús, elige **Ventana** > **Restablecer diseño de la ventana**.
 
 ## <a name="comparing-c-desktop-apps-to-windows-apps"></a>Comparación de aplicaciones de escritorio C++ con aplicaciones de Windows
@@ -35,7 +35,7 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 ### <a name="whats-the-same"></a>¿Qué es igual?
 
--   Puedes usar la STL, la CRT (salvo algunas excepciones) y cualquier otra biblioteca de C++ siempre que el código solo llama a las funciones de Windows que son accesibles desde el entorno de Windows Runtime.
+-   Puede usar la STL, CRT (con algunas excepciones) y cualquier otra biblioteca de C++ siempre que el código solo llama a funciones de Windows que son accesibles desde el entorno en tiempo de ejecución de Windows.
 
 -   Si estás acostumbrado a los diseñadores visuales, puedes seguir usando el diseñador integrado en Microsoft Visual Studio o puedes usar Blend for Visual Studio, que es una herramienta más completa. Si estás acostumbrado a codificar la interfaz de usuario a mano, puedes codificar a mano tu XAML.
 
@@ -43,7 +43,7 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 -   Continúas usando el depurador, generador de perfiles y otras herramientas de desarrollo de Visual Studio.
 
--   Sigues creando aplicaciones que se compilan en el código máquina nativo mediante el compilador de Visual C++. Las aplicaciones para UWP en C++ / CX no se ejecutan en un entorno de tiempo de ejecución administrado.
+-   Sigues creando aplicaciones que se compilan en el código máquina nativo mediante el compilador de Visual C++. Aplicaciones para UWP en C++ / c++ / CX no se ejecutan en un entorno de tiempo de ejecución administrado.
 
 ### <a name="whats-new"></a>Novedades
 
@@ -59,19 +59,19 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 -   En Microsoft Store y la Store de Windows Phone, se comprueba que la aplicación sea segura mediante un proceso de certificación y se hace que millones de clientes potenciales puedan detectarla.
 
-## <a name="hello-world-store-app-in-ccx"></a>Aplicación Hello World de la tienda en C++ / CX
+## <a name="hello-world-store-app-in-ccx"></a>App Store de Hello World en C / c++ / CX
 
-Nuestra primera aplicación es una presentación para el mundo ("Hello World") que demuestra algunas características básicas de interactividad, diseño y estilos. Vamos a crear una aplicación desde la plantilla de proyecto de aplicación universal de Windows. Si las aplicaciones que ha desarrollado para Windows8.1 y Windows Phone 8.1 antes, es posible que recuerda que debía tener tres proyectos en Visual Studio, uno para la aplicación de Windows, uno para la aplicación de teléfono y otro con código compartido. La plataforma Universal de Windows (UWP) de Windows 10 hace posible tener solo un proyecto, que se ejecute en todos los dispositivos, incluidos los equipos de escritorio y portátiles que ejecutan Windows 10, dispositivos como tabletas, teléfonos móviles, dispositivos de realidad virtual y así sucesivamente.
+Nuestra primera aplicación es una presentación para el mundo ("Hello World") que demuestra algunas características básicas de interactividad, diseño y estilos. Vamos a crear una aplicación desde la plantilla de proyecto de aplicación universal de Windows. Si ha desarrollado aplicaciones para Windows 8.1 y Windows Phone 8.1 antes, es posible que recuerde que había que tiene tres proyectos en Visual Studio, uno para la aplicación de Windows, uno para la aplicación de teléfono y otro con código compartido. La plataforma Universal de Windows de Windows 10 (UWP) hace posible tiene solo un proyecto, que se ejecuta en todos los dispositivos, incluidos los equipos de escritorio y portátiles que ejecutan Windows 10, dispositivos como tabletas, teléfonos móviles, dispositivos de realidad virtual y así sucesivamente.
 
 Empezaremos por los conceptos básicos:
 
--   Cómo crear un proyecto de Universal de Windows en Studio2017 Visual.
+-   Cómo crear un proyecto de Windows Universal en Visual Studio 2017.
 
 -   Cómo comprender los proyectos y los archivos que se crean.
 
--   Cómo comprender las extensiones en extensiones de componentes VisualC ++ (C++ / CX) y cuándo usarlas.
+-   Cómo entender las extensiones en extensiones de componentes de Visual C++ (C++ / c++ / CX) y cuándo utilizarlas.
 
-**Lo primero: crear una solución en Visual Studio**
+**En primer lugar, cree una solución en Visual Studio**
 
 1.  En la barra de menús de Visual Studio, elige **Archivo** > **Nuevo** > **Proyecto**.
 
@@ -86,7 +86,7 @@ Empezaremos por los conceptos básicos:
 
 4.  Escribe un nombre para el proyecto. Lo llamaremos HelloWorld.
 
- ![C++ / plantillas de proyecto CX en el cuadro de diálogo nuevo proyecto ](images/vs2017-uwp-01.png)
+ ![C++ / c++ / plantillas de proyecto CX en el cuadro de diálogo nuevo proyecto ](images/vs2017-uwp-01.png)
 
 5.  Elige el botón **Aceptar**.
 
@@ -101,23 +101,23 @@ Antes de continuar, veamos qué hay en la solución.
 
 ### <a name="about-the-project-files"></a>Sobre los archivos de proyecto
 
-Cada archivo .xaml de una carpeta de proyecto tiene asociados un archivo .xaml.h y otro archivo .xaml.cpp en la misma carpeta, y un archivo .g y otro archivo .g.hpp en la carpeta Archivos generados, que está en el disco pero no forma parte del proyecto. Modifica los archivos XAML para crear elementos de la interfaz de usuario y conéctalos a orígenes de datos (DataBinding). Modifica los archivos .h y .cpp files para agregar lógica personalizada para controladores de eventos. Los archivos autogenerados representan la transformación del marcado XAML en C++ / CX. No modifiques estos archivos, pero puedes estudiarlos para comprender mejor cómo funciona el código que se esconde tras ellos. Básicamente, el archivo generado contiene una definición de clase parcial para un elemento raíz de XAML; esta clase es la misma clase que modificas en los archivos \*.xaml.h y .cpp. Los archivos generados declaran los elementos secundarios de la interfaz de usuario de XAML como miembros de clase para que puedas hacer referencia a ellos en el código que escribas. Durante la compilación, el código generado y tu código se combinan en una definición de clase completa y, después, se compilan.
+Cada archivo .xaml de una carpeta de proyecto tiene asociados un archivo .xaml.h y otro archivo .xaml.cpp en la misma carpeta, y un archivo .g y otro archivo .g.hpp en la carpeta Archivos generados, que está en el disco pero no forma parte del proyecto. Modifica los archivos XAML para crear elementos de la interfaz de usuario y conéctalos a orígenes de datos (DataBinding). Modifica los archivos .h y .cpp files para agregar lógica personalizada para controladores de eventos. Los archivos generados automáticamente representan la transformación del marcado XAML en C++ / c++ / CX. No modifiques estos archivos, pero puedes estudiarlos para comprender mejor cómo funciona el código que se esconde tras ellos. Básicamente, el archivo generado contiene una definición de clase parcial para un elemento raíz XAML; Esta clase es la misma clase que modifica en el \*. archivos xaml.h y. cpp. Los archivos generados declaran los elementos secundarios de la interfaz de usuario de XAML como miembros de clase para que puedas hacer referencia a ellos en el código que escribas. Durante la compilación, el código generado y tu código se combinan en una definición de clase completa y, después, se compilan.
 
 Veamos primero los archivos del proyecto.
 
--   **App.xaml, App.xaml.h, App.xaml.cpp:** representan el objeto Application, que es un punto de entrada de la aplicación. App.xaml no contiene marcado de interfaz de usuario de la página, pero puedes agregar estilos de interfaz de usuario y otros elementos a los que desees que se pueda acceder desde cualquier página. Los archivos de código subyacente contienen controladores para los eventos **OnLaunched** y **OnSuspending**. Por lo general, aquí tienes que agregar código personalizado para que inicialice tu aplicación cuando se inicie y realice la limpieza cuando se suspenda o finalice.
+-   **App.xaml, App.xaml.h, App.xaml.cpp:** Representa el objeto de aplicación, que es el punto de entrada de una aplicación. App.xaml no contiene marcado de interfaz de usuario de la página, pero puedes agregar estilos de interfaz de usuario y otros elementos a los que desees que se pueda acceder desde cualquier página. Los archivos de código subyacente contienen controladores para los eventos **OnLaunched** y **OnSuspending**. Por lo general, aquí tienes que agregar código personalizado para que inicialice tu aplicación cuando se inicie y realice la limpieza cuando se suspenda o finalice.
 -   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** contienen el marcado XAML y el código subyacente para la página de "inicio" predeterminada de una aplicación. No dispone de compatibilidad de navegación ni de controles integrados.
--   **pch.h, pch.cpp:** un archivo de encabezado precompilado y el archivo que lo incluye en tu proyecto. En pch.h, puedes incluir cualquier encabezado que no cambie a menudo y que se incluyan en otros archivos de la solución.
--   **Package.appxmanifest:** un archivo XML que describe las capacidades del dispositivo que requiere tu aplicación, así como la información de versión de la aplicación y otros metadatos. Para abrir este archivo en el **Diseñador de manifiestos**, solo tienes que hacer doble clic en él.
+-   **pch.h, pch.cpp:** Un archivo de encabezado precompilado y el archivo que se incluye en el proyecto. En pch.h, puedes incluir cualquier encabezado que no cambie a menudo y que se incluyan en otros archivos de la solución.
+-   **Package.appxmanifest:** Un archivo XML que describe las capacidades de dispositivo que requiere la aplicación, y la información de versión de la aplicación y otros metadatos. Para abrir este archivo en el **Diseñador de manifiestos**, solo tienes que hacer doble clic en él.
 -   **HelloWorld\_TemporaryKey.pfx:** una clave que permite la implementación de la aplicación en este equipo desde Visual Studio.
 
 ## <a name="a-first-look-at-the-code"></a>Un primer vistazo al código
 
 Si examinas el código de App.xaml.h, App.xaml.cpp en el proyecto compartido, verás que prácticamente todo es código C++ bastante familiar. Sin embargo, algunos elementos de sintaxis pueden no resultar tan familiares si estás comenzando con las aplicaciones de Windows en tiempo de ejecución o has trabajado con C++ o CLI. A continuación, te mostramos los elementos de sintaxis no estándares más comunes que verás en C++/CX:
 
-**Clases de referencia**
+**clases ref**
 
-Prácticamente todas las clases de Windows Runtime, en las que se incluyen todos los tipos de la API de Windows (XAML de Windows, las páginas de tu aplicación, la propia clase App, todos los objetos de red y dispositivo, todos los tipos de contenedor), se declaran como **clase ref**. (Algunos tipos de Windows son **clase de valor** o **estructura de valor**). Una clase de referencia se puede consumir desde cualquier lenguaje. En C++ / CX, la duración de estos tipos está regulada por automático de referencias (no la recolección) para que nunca de forma explícita eliminar estos objetos. También puedes crear tus propias clases de referencia.
+Prácticamente todas las clases de Windows Runtime, en las que se incluyen todos los tipos de la API de Windows (XAML de Windows, las páginas de tu aplicación, la propia clase App, todos los objetos de red y dispositivo, todos los tipos de contenedor), se declaran como **clase ref**. (Algunos tipos de Windows son **clase de valor** o **estructura de valor**). Una clase de referencia se puede consumir desde cualquier lenguaje. En C / c++ / CX, la duración de estos tipos se rige por recuento (no la colección de elementos no utilizados) para que nunca de forma explícita eliminar estos objetos de referencias automático. También puedes crear tus propias clases de referencia.
 
 ```cpp
 namespace HelloWorld
@@ -209,7 +209,7 @@ MainPage::MainPage()
 
 Vamos a agregar algo de contenido a la aplicación.
 
-**Paso 1: Modificar tu página de inicio**
+**Paso 1: Modificar la página de inicio**
 
 1.  En el **Explorador de soluciones**, abre MainPage.xaml.
 2.  Crea controles para la interfaz de usuario agregando el siguiente código XAML a la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), justo antes de su etiqueta de cierre. Contiene [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) con [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) que pregunta el nombre del usuario, un elemento [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) que acepta el nombre del usuario, un elemento [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) y otro elemento **TextBlock**.
@@ -228,7 +228,7 @@ Vamos a agregar algo de contenido a la aplicación.
 
 3.  En este punto, has creado una aplicación universal de Windows muy básica. Para ver la apariencia de la aplicación para UWP, presiona F5 para compilar, implementar y ejecutar la aplicación en modo de depuración.
 
-Primero aparece la pantalla de presentación predeterminada. Muestra una imagen (Assets\\SplashScreen.scale-100.png) y un color de fondo que se especifican en el archivo de manifiesto de la aplicación. Para aprender a personalizar la pantalla de presentación, consulta [Agregar una pantalla de presentación](https://msdn.microsoft.com/library/windows/apps/Hh465332).
+Primero aparece la pantalla de presentación predeterminada. Tiene una imagen, activos\\SplashScreen.scale-100.png—and un color de fondo que se especifican en el archivo de manifiesto de la aplicación. Para aprender a personalizar la pantalla de presentación, consulta [Agregar una pantalla de presentación](https://msdn.microsoft.com/library/windows/apps/Hh465332).
 
 Cuando desaparezca la pantalla de presentación, aparecerá tu aplicación. Muestra la página principal de la aplicación.
 
@@ -246,7 +246,7 @@ En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com
 
 1.  En MainPage.xaml, en la vista de diseño o XAML, selecciona el [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) "Saluda" del [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) que agregaste anteriormente.
 2.  Abre la **Ventana de propiedades** presionando F4 y después elige el botón Eventos (![Botón Eventos](images/eventsbutton.png)).
-3.  Encuentra el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). En su cuadro de texto, escribe el nombre de la función que controla el evento **Click**. Para este ejemplo, escribe "Button\_Click".
+3.  Encuentra el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). En su cuadro de texto, escribe el nombre de la función que controla el evento **Click**. En este ejemplo, escriba "botón\_haga clic en".
 
     ![Ventana de propiedades, vista Eventos](images/xaml-hw-event.png)
 
@@ -262,7 +262,7 @@ En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com
 
    El diseñador no se puede cargar si se produce una excepción no controlada durante la representación. La representación en el diseñador implica ejecutar una versión en tiempo de diseño de la página. Puede ser útil deshabilitar la ejecución de código de usuario. Puedes hacerlo cambiando la configuración en el cuadro de diálogo **Herramientas, Opciones**. En **Diseñador XAML**, desactiva la casilla **Ejecutar código del proyecto en el diseñador XAML (si se admite)**.
 
-5.  En MainPage.xaml.cpp, agrega el siguiente código al controlador de eventos **Button\_Click** que acabas de crear. Este código recupera el nombre de usuario del control `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y lo usa para crear un saludo. El `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) muestra el resultado.
+5.  En MainPage.xaml.cpp, agregue el código siguiente a la **botón\_haga clic en** controlador de eventos que acaba de crear. Este código recupera el nombre del usuario desde el `nameInput` [ **TextBox** ](https://msdn.microsoft.com/library/windows/apps/BR209683) controlar y lo usa para crear un saludo. El `greetingOutput` [ **TextBlock** ](https://msdn.microsoft.com/library/windows/apps/BR209652) muestra el resultado.
 
     ```cpp
     void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
@@ -275,13 +275,13 @@ En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com
 
 ![Pantalla de la aplicación mostrando un mensaje](images/xaml-hw-app4.png)
 
-## <a name="step-3-style-the-start-page"></a>Paso 3: Otorgar estilo a la página de inicio
+## <a name="step-3-style-the-start-page"></a>Paso 3: Estilo de la página de inicio
 
 ### <a name="choosing-a-theme"></a>Elección de un tema
 
 Es fácil personalizar la apariencia de tu aplicación. De manera predeterminada, tu aplicación usa recursos con un estilo claro. Los recursos del sistema también incluyen un tema claro. Vamos a probarlo y ver cómo es.
 
-**Para cambiar al tema oscuro**
+**Para cambiar el tema oscuro**
 
 1.  Abre App.xaml.
 2.  En la etiqueta de apertura [**Aplicación**](https://msdn.microsoft.com/library/windows/apps/BR242324), edita la propiedad [**RequestedTheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme) y establece su valor en **Oscuro**:
@@ -307,7 +307,7 @@ Es fácil personalizar la apariencia de tu aplicación. De manera predeterminada
 
 ¿Qué tema deberías usar? El que más te guste. Esta es nuestra perspectiva: te recomendamos que uses el tema oscuro para las aplicaciones que muestren principalmente imágenes o vídeo y el tema claro para las aplicaciones que contengan mucho texto. Si vas a usar un esquema de colores personalizado, usa el tema que mejor se ajuste a la apariencia de la aplicación. En el resto de este tutorial, usaremos el tema claro en las capturas de pantalla.
 
-**Nota**el tema se aplica cuando se inicia la aplicación y no se puede cambiar mientras se ejecuta la aplicación.
+**Tenga en cuenta**  el tema se aplica cuando la aplicación se inicia y no se puede cambiar mientras se está ejecutando la aplicación.
 
 ### <a name="using-system-styles"></a>Usar estilos del sistema
 
@@ -322,7 +322,7 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 5.  Expande el grupo **Varios** y busca la propiedad **Style**.
 6.  Haz clic en el marcador de propiedad (el cuadro verde situado a la derecha de la propiedad **Style**) y después, en el menú, elige **Recurso del sistema** > **BaseTextBlockStyle**.
 
-     **BaseTextBlockStyle** es un recurso que se define en el objeto [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) en <root>\\Archivos de programa\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml.
+     **BaseTextBlockStyle** es un recurso que se define en el [ **ResourceDictionary** ](https://msdn.microsoft.com/library/windows/apps/BR208794) en <root> \\archivos de programa\\Windows Kits\\10\\Include\\winrt\\xaml\\diseño\\generic.xaml.
 
     ![Ventana de propiedades, vista Propiedades](images/xaml-hw-style-cpp.png)
 
@@ -334,7 +334,7 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 
 7.  Repite el proceso para establecer el tamaño de fuente y asignar **BaseTextBlockStyle** al elemento `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
 
-    **Sugerencia**aunque no hay ningún texto en este [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), cuando se mueve el puntero sobre la superficie de diseño XAML, un contorno azul muestra dónde está para que puedas seleccionarlo.  
+    **Sugerencia**  aunque no hay ningún texto en este [ **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), cuando mueva el puntero sobre la superficie de diseño XAML, se muestra en un contorno azul sea por lo que puede seleccionarla.  
 
     Tu XAML ahora tiene esta apariencia:
 
@@ -353,7 +353,7 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 
 ![Pantalla de la aplicación con el texto más grande](images/xaml-hw-app5.png)
 
-### <a name="step-4-adapt-the-ui-to-different-window-sizes"></a>Paso 4: adaptar la interfaz de usuario a diferentes tamaños de ventana
+### <a name="step-4-adapt-the-ui-to-different-window-sizes"></a>Paso 4: Adaptar la interfaz de usuario para distintos tamaños de ventana
 
 Ahora haremos que la interfaz de usuario se adapte a diferentes tamaños de pantalla para que se vea correctamente en los dispositivos móviles. Para ello, agrega [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) y establece las propiedades que se aplican a diferentes estados visuales.
 
@@ -392,7 +392,7 @@ Si has usado [**VisualStateManager**](https://msdn.microsoft.com/library/windows
 
 El [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) llamado `wideState` tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 641. Esto significa que el estado se aplicará únicamente cuando el ancho de la ventana no sea inferior al mínimo de 641 DIP. Para este estado no definas ningún objeto [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) a fin de que se usen las propiedades de diseño definidas en el XAML para el contenido de la página.
 
-El segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 0. Este estado se aplica cuando el ancho de la ventana es mayor que 0, pero inferior a 641 DIP. (En 641 DIP, se aplica `wideState`). En este estado, defines algunos objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para cambiar las propiedades de diseño de los controles de la interfaz de usuario:
+El segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 0. Este estado se aplica cuando el ancho de la ventana es mayor que 0, pero inferior a 641 DIP. (En 641 DIP, el `wideState` se aplica.) En este estado, definir algunas [ **establecedor** ](https://msdn.microsoft.com/library/windows/apps/BR208817) objetos para cambiar las propiedades de diseño de controles en la interfaz de usuario:
 
 -   Reduce el margen izquierdo del elemento `contentPanel` de 120 a 20.
 -   Cambias [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation) del elemento `inputPanel` desde **Horizontal** a **Vertical**.
@@ -404,7 +404,7 @@ Felicidades, has completado el primer tutorial. En él aprendiste cómo se agreg
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si tienes un proyecto de aplicación Universal de Windows que está destinada a Windows8.1 o Windows Phone 8.1, portarlo a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](https://go.microsoft.com/fwlink/p/?LinkId=619525).
+Si tiene una aplicación Universal de Windows del proyecto que tiene como destino Windows 8.1 o Windows Phone 8.1, puede portar a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](https://go.microsoft.com/fwlink/p/?LinkId=619525).
 
-Si tienes código C++ que desees integrar con una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: usar código C++ existente en una aplicación universal de la plataforma Windows](https://go.microsoft.com/fwlink/p/?LinkId=619623).
+Si tiene código C++ existente que desee integrar con una aplicación para UWP, como para crear una nueva UI UWP para una aplicación existente, vea [Cómo: Usar código C++ existente en un proyecto de Windows Universal](https://go.microsoft.com/fwlink/p/?LinkId=619623).
 

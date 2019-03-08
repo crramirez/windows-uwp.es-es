@@ -1,27 +1,27 @@
 ---
-Description: Describes the requirements for declaring your Universal Windows Platform (UWP) app as accessible in the Microsoft Store.
+Description: Describe los requisitos para declarar que tu aplicación para la Plataforma universal de Windows (UWP) es accesible en la Microsoft Store.
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
-title: Accesibilidad en la Store
+title: Accesibilidad en la Tienda
 label: Accessibility in the Store
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a9991cd4a0a3fce630b1c7be64650c79daf74e6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936426"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597410"
 ---
-# <a name="accessibility-in-the-store"></a>Accesibilidad en la Store  
+# <a name="accessibility-in-the-store"></a>Accesibilidad en la Tienda  
 
 
 
 Describe los requisitos para declarar que tu aplicación para la Plataforma universal de Windows (UWP) es accesible en la Microsoft Store.
 
-Al enviar tu aplicación a la Microsoft Store para su certificación, puedes declarar que es accesible. Con ello, haces que sea más fácil que los usuarios que estén interesados en aplicaciones accesibles la descubran, como aquellos que tienen discapacidades visuales. Los usuarios descubren las aplicaciones accesibles mediante el uso del filtro **Accesible** mientras buscan en la Microsoft Store. Al declarar que tu aplicación es accesible, también agregas la etiqueta **Accesible** a su descripción.
+Al enviar tu aplicación a la Microsoft Store para su certificación, puedes declarar que es accesible. Con ello, haces que sea más fácil que los usuarios que estén interesados en aplicaciones accesibles la descubran, como aquellos que tienen discapacidades visuales. Los usuarios descubren las aplicaciones accesibles mediante el uso del filtro **Accesible** mientras buscan en la Microsoft Store. Al declarar tu aplicación como accesible también agregas la etiqueta **Accesible** a su descripción.
 
 Al declarar tu aplicación como accesible, estás comunicando que cumple la [información de accesibilidad básica](basic-accessibility-information.md) que necesitan los usuarios en escenarios principales en alguno o varios de los siguientes elementos:
 

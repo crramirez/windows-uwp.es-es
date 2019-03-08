@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, templates, plantillas, tools, herramientas, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: a272c579fb3ead676fe76f16c33b70f557de4ed8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941178"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653770"
 ---
 # <a name="project-templates-and-tools-for-games"></a>Plantillas de proyectos y herramientas para juegos
 
@@ -25,7 +25,7 @@ En primer lugar, necesitarás Visual Studio.
 ## <a name="get-visual-studio"></a>Obtener Visual Studio
 
 
-[Descargar e instalar Microsoft Visual Studio2015](https://www.visualstudio.com/vs-2015-product-editions).
+[Descargue e instale Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -40,15 +40,15 @@ En primer lugar, necesitarás Visual Studio.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="user-interface.md">Plantillas de proyectos de juegos DirectX</a></p></td>
+<td align="left"><p><a href="user-interface.md">Plantillas de proyecto de juego de DirectX</a></p></td>
 <td align="left"><p>Obtén información acerca de las plantillas para crear un juego para UWP y DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="set-up-visual-studio-for-game-development.md">Herramientas de Visual Studio para la programación de juegos</a></p></td>
+<td align="left"><p><a href="set-up-visual-studio-for-game-development.md">Visual Studio tools para la programación de juegos</a></p></td>
 <td align="left"><p>Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md">Herramientas de diagnóstico de elementos gráficos</a></p></td>
+<td align="left"><p><a href="use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md">Herramientas de diagnóstico de gráficos</a></p></td>
 <td align="left"><p>Obtén información sobre cómo obtener y usar las características de diagnóstico de elementos gráficos como, por ejemplo, el uso de la GPU, los análisis de fotogramas de gráficos y la depuración de elementos gráficos en Visual Studio.</p></td>
 </tr>
 </tbody>
@@ -59,15 +59,15 @@ En primer lugar, necesitarás Visual Studio.
 ## <a name="next-steps"></a>Pasos siguientes
 
 
-Si estás vas a portar un juego existente, consulta los siguientes temas.
+Si estás migrando un juego existente, consulta los siguientes temas.
 
--   [Migrar desde OpenGL ES2.0 a DirectX11](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [Migrar desde DirectX 9 a UWP](porting-your-directx-9-game-to-windows-store.md)
+-   [Portar de OpenGL ES 2.0 a DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Puerto de DirectX 9 a UWP](porting-your-directx-9-game-to-windows-store.md)
 
 Si estás creando un nuevo juego DirectX, consulta los siguientes temas.
 
 -   [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-uwp-directx-game.md)
--   [Desarrollo de Marble Maze, un juego para la Plataforma universal de Windows en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [Desarrollar Marble Maze, un juego de plataforma Universal de Windows en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

@@ -4,14 +4,14 @@ title: Procedimientos recomendados para mejorar el rendimiento del inicio de la 
 description: Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051108"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644540"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
@@ -32,7 +32,7 @@ Evidentemente, debes realizar mediciones representativas de la experiencia que t
 
 En el siguiente procedimiento se describe cómo ejecutar Ngen.exe para precompilar la aplicación.
 
-**Instrucciones para ejecutar Ngen.exe**
+**Para ejecutar Ngen.exe**
 
 1.  Ejecuta la aplicación una vez, como mínimo, para asegurarte de que Ngen.exe la detecte.
 2.  Realiza una de las siguientes acciones para abrir el **Programador de tareas**:
@@ -97,7 +97,7 @@ Mantén tu ruta de acceso de al código de inicio libre de todo lo que no se nec
 
 ### <a name="reduce-element-count"></a>Reducir el número de elementos
 
-El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1ms.
+El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1 ms.
 
 -   Las plantillas que se usan en los controles de elementos pueden tener el mayor impacto, ya que se repiten varias veces. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 -   Los objetos UserControl y las plantillas de controles se ampliarán, por lo que también deberían tenerse en cuenta.
@@ -269,7 +269,7 @@ Existen varias razones por las cuales se activa una aplicación, cada una de las
 
 Las aplicaciones que muestran una página de carga en el controlador de activación comienzan la tarea de creación de la interfaz de usuario en segundo plano. Una vez creado ese elemento, se produce su evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). En el controlador de eventos, se reemplaza el contenido de la ventana (que actualmente es la pantalla de carga) con la página principal recién creada.
 
-Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) durante los 15segundos posteriores al inicio del proceso de activación.
+Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) durante los 15 segundos posteriores al inicio del proceso de activación.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -357,7 +357,7 @@ En el objeto PageStackEntry también se incluye el parámetro que se pasó al m�
 
 Por lo tanto, se recomienda que los parámetros de navegación tengan un tamaño pequeño y que se limite el tamaño del objeto BackStack. El objeto BackStack es un vector estándar (IList en C#, Platform::Vector en C++/CX), por lo que se puede recortar mediante la eliminación de entradas.
 
-**Almacenamiento en caché de páginas**. De manera predeterminada, cuando navegas a una página con el método Frame.Navigate, se crea una nueva instancia de la página. Del mismo modo, si luego vuelves a navegar a la página anterior con el método Frame.GoBack, se asigna una nueva instancia de la página anterior.
+**Almacenamiento en caché de una página**. De manera predeterminada, cuando navegas a una página con el método Frame.Navigate, se crea una nueva instancia de la página. Del mismo modo, si luego vuelves a navegar a la página anterior con el método Frame.GoBack, se asigna una nueva instancia de la página anterior.
 
 Sin embargo, el objeto Frame ofrece una memoria caché de página opcional que puede evitar esta creación de instancias. Para que una página se almacene en la memoria caché, usa la propiedad Page.NavigationCacheMode. Si se establece ese modo en Required, se forzará el almacenamiento en caché de la página. Si lo estableces en Enabled, se permitirá su almacenamiento en caché. De manera predeterminada, el tamaño de caché es de 10 páginas, pero esto se puede reemplazar con la propiedad Frame.CacheSize. Todas las páginas con el modo Required se almacenarán en caché y si hay menos de páginas con el modo Required que las que se indican en la propiedad CacheSize, también se pueden almacenar en caché las páginas con el modo Enabled.
 

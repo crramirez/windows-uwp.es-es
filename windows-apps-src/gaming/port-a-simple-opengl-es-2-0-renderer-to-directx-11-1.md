@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d 11, port, portar
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b6d06ff168f778c87e46fa399775492a3cebcaa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594220"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 
@@ -25,9 +25,9 @@ Para este ejercicio de migración, empezaremos con algo básico: llevar un repre
 -   Usar la semántica básica de HLSL en el desarrollo de sombreador de Direct3D
 -   Portar GLSL simple a HLSL
 
-Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX11 para la Plataforma universal de Windows [UWP])](user-interface.md).
+Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX 11 para la Plataforma universal de Windows [UWP])](user-interface.md).
 
-El proyecto creado a partir de alguno de estos vínculos tiene todo el código preparado para la infraestructura de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345). Puedes empezar a migrar el representador de Open GL ES 2.0 a Direct3D 11 inmediatamente.
+El proyecto creado a partir de alguno de estos vínculos tiene todo el código preparado para la infraestructura de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345). Puedes empezar a portar el representador de Open GL ES 2.0 a Direct3D 11 inmediatamente.
 
 En este tema se analizan dos rutas de código que realizan las mismas tareas gráficas básicas: mostrar un cubo de vértice sombreado giratorio en una ventana. En ambos casos, el código cubre el siguiente proceso:
 
@@ -80,7 +80,7 @@ typedef struct
 
 Esta estructura tiene una sola instancia y contiene todos los componentes necesarios para representar una malla muy simple de vértices sombreados.
 
-> **Nota**OpenGL ES 2.0 cualquier código de este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
+> **Tenga en cuenta**  OpenGL ES 2.0 cualquier código de este tema se basa en la implementación de la API de Windows proporcionada por el grupo Khronos y usa la sintaxis de programación de C de Windows.
 
  
 
@@ -112,15 +112,15 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="port-the-shader-config.md">Portar objetos de sombreador</a></p></td>
+<td align="left"><p><a href="port-the-shader-config.md">Migrar objetos de sombreador</a></p></td>
 <td align="left"><p>Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">Portar datos y búferes de vértices</a></p></td>
+<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">Migrar datos y búferes de vértices</a></p></td>
 <td align="left"><p>En este paso, definirás los búferes de vértices que contendrán las mallas, y los búferes de índices que permitirán a los sombreadores recorrer los vértices en un orden especificado.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="port-the-glsl.md">Portar GLSL</a></p></td>
+<td align="left"><p><a href="port-the-glsl.md">Migrar GLSL</a></p></td>
 <td align="left"><p>Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código a esos sombreadores: del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.</p></td>
 </tr>
 <tr class="even">
@@ -135,9 +135,9 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 ## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Recursos adicionales
 
 
--   [Preparar el entorno para el desarrollo de un juego DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
--   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D11](map-concepts-and-infrastructure.md)
+-   [Preparar el entorno de desarrollo para el desarrollo de juegos de DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
+-   [Cree un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
+-   [Asignar la infraestructura y los conceptos de OpenGL ES 2.0 a Direct3D 11](map-concepts-and-infrastructure.md)
 
  
 

@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c72af86edd3d0a20ab8a0f062b5e0ccf8608e8a9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050798"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653440"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
 
 
 
-**Nota**el grado al que necesite datos de muestra, y cuánto le ayudará a: depende de si tus enlaces usan la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) o la [extensión de marcado {x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), por lo que solo son apropiadas para la extensión **{Binding}**. Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
+**Tenga en cuenta**  el grado al que se necesita muestrear los datos, y cuánto le servirá de ayuda: depende de si utiliza los enlaces el [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) o el [extensión de marcado {x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), por lo que solo son apropiadas para la extensión **{Binding}**. Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
 
 Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio. Para hacer que los controles se rellenen con datos (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales.
 
-**Aplicaciones de muestra que muestran {Binding}**
+**Aplicaciones de ejemplo que muestran {Binding}**
 
 -   Descarga la aplicación [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950).
 -   Descarga la aplicación [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952).
@@ -44,7 +44,7 @@ Al hacerlo, la página no presenta tantas posibilidades de diseño. El motivo es
 
 ![Interfaz de usuario de diseño dispersa.](images/displaying-data-in-the-designer-01.png)
 
-La primera solución es intentar evitar que se ejecute la asignación de **DataContext** y, en su lugar, establecer la propiedad **DataContext** en el marcado de página. De este modo, los datos dinámicos aparecen tanto en tiempo de diseño como en tiempo de ejecución. Para hacerlo, abre primero la página XAML. A continuación, en la ventana **Esquema del documento**, haz clic en el elemento raíz que se puede diseñar (normalmente tiene la etiqueta **\[Page]\**) para seleccionarlo. En la ventana **Propiedades**, busca la propiedad **DataContext** (dentro de la categoría Common) y, a continuación, haz clic en **Nueva**. Haz clic en el tipo de modelo de vista del cuadro de diálogo **Seleccionar objeto** y, después, en **Aceptar**.
+La primera solución es intentar evitar que se ejecute la asignación de **DataContext** y, en su lugar, establecer la propiedad **DataContext** en el marcado de página. De este modo, los datos dinámicos aparecen tanto en tiempo de diseño como en tiempo de ejecución. Para hacerlo, abre primero la página XAML. A continuación, en el **esquema del documento** ventana, haga clic en el elemento raíz puede diseñar (normalmente con la etiqueta  **\[página\]**) para seleccionarlo. En la ventana **Propiedades**, busca la propiedad **DataContext** (dentro de la categoría Common) y, a continuación, haz clic en **Nueva**. Haz clic en el tipo de modelo de vista del cuadro de diálogo **Seleccionar objeto** y, después, en **Aceptar**.
 
 ![Interfaz de usuario para establecer DataContext.](images/displaying-data-in-the-designer-02.png)
 
@@ -99,7 +99,7 @@ Las distintas declaraciones xmlns que aparecen indican que los atributos con el 
 
 El atributo **d:DataContext** y todos los demás atributos en tiempo de diseño, se documentan en el tema [Atributos en tiempo de diseño](https://go.microsoft.com/fwlink/p/?LinkId=272504), que sigue siendo válido para las aplicaciones para la Plataforma universal de Windows (UWP).
 
-[**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) no tiene una propiedad **DataContext**, pero sí una propiedad **Source**. En consecuencia, existe una propiedad **d:Source** que puedes usar para establecer datos de muestra solo en tiempo de diseño en una clase **CollectionViewSource**.
+[**CollectionViewSource** ](https://msdn.microsoft.com/library/windows/apps/BR209833) no tiene un **DataContext** propiedad, pero tienen un **origen** propiedad. En consecuencia, existe una propiedad **d:Source** que puedes usar para establecer datos de muestra solo en tiempo de diseño en una clase **CollectionViewSource**.
 
 ``` xaml
     <Page.Resources>
@@ -139,7 +139,7 @@ Hasta ahora, hemos usado **d:DesignData** para cargar datos de muestra en tiempo
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-La propiedad **IsDesignTimeCreatable** indica que la herramienta de diseño debe crear una instancia de la clase, lo que implica que la clase tiene un constructor predeterminado público y que se rellena automáticamente con datos (de ejemplo o reales). Si no estableces **IsDesignTimeCreatable** (o si lo estableces en **False**), no se mostrarán datos de ejemplo en la superficie de diseño. Todo lo que la herramienta de diseño hace en ese caso es analizar la clase para las propiedades enlazables y mostrarlas en el panel de **datos** y en el cuadro de diálogo **Crear enlace de datos** .
+La propiedad **IsDesignTimeCreatable** indica que la herramienta de diseño debe crear una instancia de la clase, lo que implica que la clase tiene un constructor predeterminado público y que se rellena automáticamente con datos (de ejemplo o reales). Si no estableces **IsDesignTimeCreatable** (o si lo estableces en **False**), no se mostrarán datos de ejemplo en la superficie de diseño. Todas la herramienta de diseño hace que es el caso analizar la clase para sus propiedades enlazables y mostrar estas opciones en el **datos** panel y en el **crear enlace de datos** cuadro de diálogo.
 
 <a name="sample-data-for-prototyping"></a>Datos de ejemplo para la creación de prototipos
 --------------------------------------------------------

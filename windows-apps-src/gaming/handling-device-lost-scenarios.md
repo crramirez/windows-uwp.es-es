@@ -1,5 +1,5 @@
 ---
-title: Controlar escenarios cuando se quitan dispositivos en Direct3D11
+title: Controlar escenarios cuando se quitan dispositivos en Direct3D 11
 description: En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica.
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 ms.date: 02/08/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: Windows 10, uwp, juegos, games, directx 11, dispositivo perdido, device lost
 ms.localizationpriority: medium
 ms.openlocfilehash: c11bbf7657644fbf616590f50d75d93f62ed993e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646610"
 ---
-# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar escenarios cuando se quitan dispositivos en Direct3D11
+# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar los escenarios de dispositivo quitado en Direct3D 11
 
 
 
@@ -26,13 +26,13 @@ En DirectX9, las aplicaciones podrían encontrarse con la condición "[dispositi
 -   El dispositivo gráfico deja de responder y se restablece.
 -   Se conecta o se quita una tarjeta gráfica físicamente.
 
-Cuando se dan estas circunstancias, DXGI devuelve un código de error que indica que el dispositivo de Direct3D debe reinicializarse y que los recursos de dispositivo deben recrearse. Este tutorial explica de qué manera las aplicaciones y juegos de Direct3D11 pueden detectar cualquier circunstancia y responder ante esta cuando se restablece, quita o cambia la tarjeta gráfica. Se proporcionan ejemplos de código de la plantilla DirectX 11 App (Universal Windows) que se incluye con Microsoft Visual Studio2015.
+Cuando se dan estas circunstancias, DXGI devuelve un código de error que indica que el dispositivo de Direct3D debe reinicializarse y que los recursos de dispositivo deben recrearse. Este tutorial explica de qué manera las aplicaciones y juegos de Direct3D 11 pueden detectar cualquier circunstancia y responder ante esta cuando se restablece, quita o cambia la tarjeta gráfica. Se proporcionan ejemplos de código de la plantilla de aplicación de DirectX 11 (Windows Universal) proporcionada con Microsoft Visual Studio 2015.
 
 ## <a name="instructions"></a>Instrucciones
 
 ### <a name="spanspanstep-1"></a><span></span>Paso 1:
 
-Agrega una comprobación para el error de dispositivo quitado en el bucle de representación. Presenta el marco con una llamada a [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (o [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), etc.). Luego, comprueba si devolvió [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) o **DXGI\_ERROR\_DEVICE\_RESET**.
+Agrega una comprobación para el error de dispositivo quitado en el bucle de representación. Presenta el marco con una llamada a [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (o [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), etc.). A continuación, compruebe si devuelven [ **DXGI\_ERROR\_dispositivo\_quitado** ](https://msdn.microsoft.com/library/windows/desktop/bb509553) o **DXGI\_ERROR\_dispositivo \_Restablecer**.
 
 Primero, la plantilla almacena el valor HRESULT que devuelve la cadena de intercambio de DXGI:
 
@@ -57,7 +57,7 @@ else
 
 ### <a name="step-2"></a>Paso 2:
 
-Además, incluye una comprobación para el error de dispositivo quitado cuando responde a cambios en el tamaño de la ventana. Este es un buen lugar para comprobar [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) o **DXGI\_ERROR\_DEVICE\_RESET** por varios motivos:
+Además, incluye una comprobación para el error de dispositivo quitado cuando responde a cambios en el tamaño de la ventana. Esto es un buen lugar para que busque [ **DXGI\_ERROR\_dispositivo\_quitado** ](https://msdn.microsoft.com/library/windows/desktop/bb509553) o **DXGI\_ERROR\_dispositivo\_ RESTABLECER** por varias razones:
 
 -   Cuando se cambia el tamaño de la cadena de intercambio, es necesaria una llamada al adaptador DXGI subyacente, que puede devolver un error de dispositivo quitado.
 -   La aplicación podría haberse movido a un monitor conectado a un dispositivo gráfico diferente.
@@ -92,7 +92,7 @@ else
 
 ### <a name="step-3"></a>Paso 3:
 
-Cada vez que la aplicación recibe el error [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553), debe reinicializar el dispositivo de Direct3D y recrear todos los recursos dependientes del dispositivo. Libera todas las referencias a los recursos de dispositivos gráficos que se crearan con el dispositivo anterior de Direct3D (esos recursos ya no tienen validez) y libera todas las referencias a la cadena de intercambio para poder crear una nueva.
+Siempre que la aplicación recibe el [ **DXGI\_ERROR\_dispositivo\_quitado** ](https://msdn.microsoft.com/library/windows/desktop/bb509553) error, se debe reinicializar el dispositivo Direct3D y volver a crear cualquier dependiente del dispositivo recursos. Libera todas las referencias a los recursos de dispositivos gráficos que se crearan con el dispositivo anterior de Direct3D (esos recursos ya no tienen validez) y libera todas las referencias a la cadena de intercambio para poder crear una nueva.
 
 El método HandleDeviceLost libera la cadena de intercambio y notifica a los componentes de la aplicación que liberen recursos de dispositivo:
 
@@ -140,14 +140,14 @@ Cuando el método HandleDeviceLost finaliza, el control vuelve al bucle de repre
 
 Los problemas repetitivos con errores de dispositivo quitado de DXGI pueden indicar que el código de gráficos está creando condiciones no válidas durante una rutina de dibujo. También puede indicar un error de hardware o un error en el controlador de gráficos. Para investigar la causa de los errores de dispositivo quitado, llama a [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) antes de liberar el dispositivo de Direct3D. Este método devuelve uno de seis códigos de error de DXGI posibles, indicando la razón del error de dispositivo quitado:
 
--   **DXGI\_ERROR\_DEVICE\_HUNG**: el controlador de gráficos dejó de responder por una combinación de comandos de gráficos no válida que envió la aplicación. Si obtienes este error en repetidas ocasiones, puede indicar que la aplicación provocó que el dispositivo dejase de responder y necesita depurarse.
--   **DXGI\_ERROR\_DEVICE\_REMOVED**: el dispositivo gráfico se quitó físicamente, se apagó o se realizó una actualización del controlador. Esto sucede de manera ocasional y es normal; la aplicación o el juego debe recrear recursos de dispositivo como se describe en este tema.
--   **DXGI\_ERROR\_DEVICE\_RESET**: error en el dispositivo gráfico debido a un comando con formato incorrecto. Si obtienes este error en repetidas ocasiones, puede significar que el código está enviando comandos de dibujo no válidos.
--   **DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: el controlador de gráficos encontró un error y restableció el dispositivo.
--   **DXGI\_ERROR\_INVALID\_CALL**: la aplicación proporcionó datos de parámetros no válidos. Si obtienes este error aunque sea una sola vez, significa que el código provocó la condición de dispositivo quitado y debe depurarse.
--   **S\_OK**: se devuelve cuando un dispositivo gráfico se habilitó, deshabilitó o restableció sin reemplazar el dispositivo gráfico actual. Por ejemplo, este código de error puede devolverse si una aplicación está usando [Windows Advanced Rasterization Platform (WARP)](https://msdn.microsoft.com/library/windows/desktop/gg615082) y un adaptador de hardware se vuelve disponible.
+-   **DXGI\_ERROR\_DISPOSITIVO\_HUNG**: El controlador de gráficos dejó de responder debido a una combinación no válida de los comandos de gráficos enviados por la aplicación. Si obtienes este error en repetidas ocasiones, puede indicar que la aplicación provocó que el dispositivo dejase de responder y necesita depurarse.
+-   **DXGI\_ERROR\_DISPOSITIVO\_QUITADO**: El dispositivo de gráficos se ha quitado físicamente, se ha desactivado, o se ha producido una actualización del controlador. Esto sucede de manera ocasional y es normal; la aplicación o el juego debe recrear recursos de dispositivo como se describe en este tema.
+-   **DXGI\_ERROR\_DISPOSITIVO\_RESTABLECER**: El dispositivo de gráficos no pudo debido a un comando con formato incorrecto. Si obtienes este error en repetidas ocasiones, puede significar que el código está enviando comandos de dibujo no válidos.
+-   **DXGI\_ERROR\_CONTROLADOR\_INTERNO\_ERROR**: El controlador de gráficos encontró un error y reinicie el dispositivo.
+-   **DXGI\_ERROR\_VÁLIDO\_LLAMAR A**: La aplicación proporciona datos de parámetros no válidos. Si obtienes este error aunque sea una sola vez, significa que el código provocó la condición de dispositivo quitado y debe depurarse.
+-   **S\_ACEPTAR**: Se devuelve cuando un dispositivo de gráficos se ha habilitado, deshabilitado o restablecer sin invalidar el dispositivo de gráficos actual. Por ejemplo, este código de error puede devolverse si una aplicación está usando [Windows Advanced Rasterization Platform (WARP)](https://msdn.microsoft.com/library/windows/desktop/gg615082) y un adaptador de hardware se vuelve disponible.
 
-El siguiente código recuperará el código de error [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) y lo imprimirá en la consola de depuración. Inserta este código al comienzo del método HandleDeviceLost.
+El código siguiente recuperará el [ **DXGI\_ERROR\_dispositivo\_quitado** ](https://msdn.microsoft.com/library/windows/desktop/bb509553) error de código e imprimirlo en la consola de depuración. Inserta este código al comienzo del método HandleDeviceLost.
 
 ```cpp
     HRESULT reason = m_d3dDevice->GetDeviceRemovedReason();
@@ -160,10 +160,10 @@ El siguiente código recuperará el código de error [**DXGI\_ERROR\_DEVICE\_REM
 #endif
 ```
 
-Para obtener más detalles, consulta [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) y [**DXGI_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).
+Para obtener más información, consulte [ **GetDeviceRemovedReason** ](https://msdn.microsoft.com/library/windows/desktop/ff476526) y [ **DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).
 
 ### <a name="testing-device-removed-handling"></a>Probar el control de dispositivo quitado
 
-El símbolo del sistema para desarrolladores de Visual Studio admite una herramienta de línea de comandos, 'dxcap', para la captura y reproducción de eventos de Direct3D relacionados con el diagnóstico de gráficos de Visual Studio. Puedes usar la opción de la línea de comandos "-forcetdr" mientras se ejecuta la aplicación, lo que forzará un evento de detección del tiempo de espera y recuperación de la GPU, que desencadenará DXGI\_ERROR\_DEVICE\_REMOVED y te permitirá probar el código de control de errores.
+El símbolo del sistema para desarrolladores de Visual Studio admite una herramienta de línea de comandos, 'dxcap', para la captura y reproducción de eventos de Direct3D relacionados con el diagnóstico de gráficos de Visual Studio. Puede usar la opción de línea de comandos "-forcetdr" mientras ejecuta la aplicación que forzará un evento de detección de tiempo de espera de GPU y recuperación, lo que desencadenó DXGI\_ERROR\_dispositivo\_eliminadas y lo que permite que el error de prueba código de control.
 
-> **Nota** DXCap y sus DLL de soporte se instalan en system32/syswow64 como parte de las Herramientas de gráficos de Windows 10, que ya no se distribuyen vía Windows SDK. En su lugar, se proporcionan a través de la característica de herramientas de gráficos a petición que es un componente opcional del sistema operativo, y que debe instalarse para poder habilitar y usar las herramientas de gráficos en Windows 10. Puede encontrar más información sobre cómo instalar las herramientas de gráficos para Windows 10 aquí: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
+> **Nota** DXCap y sus DLL de soporte se instalan en system32/syswow64 como parte de las Herramientas de gráficos de Windows 10, que ya no se distribuyen vía Windows SDK. En su lugar, se proporcionan a través de la característica de herramientas de gráficos a petición que es un componente opcional del sistema operativo, y que debe instalarse para poder habilitar y usar las herramientas de gráficos en Windows 10. Para obtener más información sobre cómo instalar las herramientas de gráficos para Windows 10 puede encontrarse aquí: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>

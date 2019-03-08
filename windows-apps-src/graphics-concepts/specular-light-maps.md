@@ -1,6 +1,6 @@
 ---
 title: Mapas de luces especulares
-description: Cuando se iluminan por una fuente de luz, los objetos brillantes que usen materiales muy reflectantes reciben resaltados especulares.
+description: Cuando una fuente de luz los ilumina, los objetos brillantes que usan materiales muy reflectantes reciben resaltados especulares.
 ms.assetid: 9B3AC5EC-DDAA-4671-BC81-0E3C79D87A81
 keywords:
 - Mapas de luces especulares
@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d88989be04704395c056f1bae058e2aefd1a2a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940437"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591290"
 ---
 # <a name="specular-light-maps"></a>Mapas de luces especulares
 
@@ -24,7 +24,7 @@ Para realizar la asignación de luz especular, agrega el mapa de luz especular a
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Mapas de luz con texturas](light-mapping-with-textures.md)
+[Asignación clara con texturas](light-mapping-with-textures.md)
 
  
 
