@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6be1680d1ce843c1fbe7105dc2027e764095495a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933311"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635660"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>Control manual de los controles de transporte de contenido multimedia del sistema
 
@@ -74,7 +74,7 @@ Los controles de transporte del sistema muestran información acerca de la escal
 
 -   Debes proporcionar un valor para los objetos [**StartTime**](https://msdn.microsoft.com/library/windows/apps/mt218751), [**EndTime**](https://msdn.microsoft.com/library/windows/apps/mt218747) y [**Posición**](https://msdn.microsoft.com/library/windows/apps/mt218755) para que de los controles del sistema muestren una escala de tiempo para el elemento que se reproduce.
 
--   [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) y [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) te permiten especificar el intervalo de tiempo dentro del cual el usuario puede buscar contenidos. Un escenario típico sobre esto es permitir que los proveedores de contenido incluyan pausas de anuncios en sus elementos multimedia.
+-   [**MinSeekTime** ](https://msdn.microsoft.com/library/windows/apps/mt218749) y [ **MaxSeekTime** ](https://msdn.microsoft.com/library/windows/apps/mt218748) le permiten especificar el intervalo dentro de la escala de tiempo que el usuario puede buscar. Un escenario típico sobre esto es permitir que los proveedores de contenido incluyan pausas de anuncios en sus elementos multimedia.
 
     Debes establecer [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) y [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) para que se genere [**PositionChangeRequest**](https://msdn.microsoft.com/library/windows/apps/mt218755).
 
@@ -110,9 +110,9 @@ Las aplicaciones que usan el nuevo modelo de un solo proceso de audio en segundo
 Para obtener más información sobre la reproducción de audio en segundo plano, consulta [Audio en segundo plano](background-audio.md).
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Reproducción de contenido multimedia](media-playback.md)
-* [Integrar con los controles de transporte de contenido multimedia del sistema](integrate-with-systemmediatransportcontrols.md) 
-* [Muestra de transporte de contenido multimedia del sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
+* [Reproducción de multimedia](media-playback.md)
+* [Integrar con los medios del sistema de controles de transporte](integrate-with-systemmediatransportcontrols.md) 
+* [Ejemplo de transporte de medios del sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 3512d47c8b3e689b0baadec26c1d8f0f510e03ef
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931406"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639930"
 ---
 # <a name="pointer-based-animations"></a>Animaciones basadas en puntero
 
@@ -20,8 +20,8 @@ Este artículo muestra cómo usar la posición de un puntero para crear experien
 
 En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
 
-- [Animaciones controladas por entradas](input-driven-animations.md)
-- [Animaciones basadas en relaciones](relation-animations.md)
+- [Animaciones de entrada](input-driven-animations.md)
+- [Animaciones en función de relación](relation-animations.md)
 
 ## <a name="why-create-pointer-position-driven-experiences"></a>Por qué crear experiencias controladas por la posición del puntero
 
@@ -29,7 +29,7 @@ En el lenguaje de diseño Fluent Design, las entradas táctiles no son la única
 
 Las experiencias controladas por la posición del puntero te permiten aprovechar la posición en pantalla de una modalidad de entrada de puntero para crear movimientos y experiencias de la interfaz de usuario adicionales para tu aplicación. Estas experiencias a menudo pueden proporcionar un contexto adicional y comentarios a los usuarios finales sobre el comportamiento y la estructura de la interfaz de usuario. La experiencia ya no es una secuencia unidireccional, sino que empieza a ser una corriente bidireccional en la que el usuario final proporciona entradas con su modalidad de entrada y interfaz de usuario de la aplicación puede responder a ellas.
 
-Algunos ejemplos incluyen:
+Entre algunos ejemplos se incluyen:
 
 - Animación de la posición de un foco de luz para seguir el cursor
 
@@ -43,7 +43,7 @@ Algunos ejemplos incluyen:
 
 Puede crear estas experiencias mediante PointerPositionPropertySet. Este PropertySet se crea para que un UIElement mantenga la posición del puntero mientras UIElement se somete a pruebas de posicionamiento. El valor de posición es relativo al espacio de coordenadas del UIElement (una posición de < 0,0 > es la esquina superior izquierda del UIElement). Luego puedes aprovechar este conjunto de propiedades en una animación para controlar el movimiento de otra propiedad.
 
-Para cada una de las diferentes modalidades de entrada de puntero hay diversos estados de entrada en los que la entrada podría estar donde cambia la posición: Hover (Mantener el puntero), Pressed (Presionado) y and Pressed & Moved (Presionado y movido). PointerPositionPropertySet solo mantiene la posición del puntero en los estados de movimiento del ratón y el lápiz Hover, Pressed y Pressed and Moved.
+Para cada una de las modalidades de entrada de puntero diferentes, hay un número de Estados de entrada que podría ser la entrada de donde se cambia la posición: Mantenga presionado, presionado y mover. PointerPositionPropertySet solo mantiene la posición del puntero en los estados de movimiento del ratón y el lápiz Hover, Pressed y Pressed and Moved.
 
 Pasos generales para empezar:
 

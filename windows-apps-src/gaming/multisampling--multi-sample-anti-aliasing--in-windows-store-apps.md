@@ -1,19 +1,19 @@
 ---
 title: Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
-description: Obtén información sobre cómo usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D.
+description: Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610860"
 ---
-# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
+# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> El muestreo múltiple en Universal Windows Platform (UWP) aplicaciones
 
 
 
@@ -28,11 +28,11 @@ Las aplicaciones para UWP con DirectX deben usar cadenas de intercambio en el mo
 
 Los niveles de característica de Direct3D garantizan la compatibilidad con funciones mínimas y específicas para el recuento de muestras y garantizan la disponibilidad de ciertos formatos de búfer que admitirán el muestreo múltiple. Los dispositivos de gráficos, por lo general, admiten una mayor variedad de formatos y recuentos de muestras que la cantidad mínima requerida. La compatibilidad con el muestreo múltiple se puede determinar en tiempo de ejecución. Para ello, debes comprobar la compatibilidad de las características con el muestreo múltiple en formatos DXGI específicos y, a continuación, debes comprobar los recuentos de muestras que se pueden usar con cada formato admitido.
 
-1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. Tanto el destino de representación como el destino de resolución deben usar el mismo formato, por lo tanto, comprueba [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) y **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
+1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. El destino de representación y el destino de la resolución debe usar el mismo formato, así que compruebe para ambos [ **D3D11\_formato\_soporte\_MULTIMUESTRA\_RENDERTARGET** ](https://msdn.microsoft.com/library/windows/desktop/ff476134) y **D3D11\_formato\_soporte\_MULTIMUESTRA\_resolver**.
 
-    **Nivel de característica 9:** Aunque el nivel de característica 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestras múltiples](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no se garantiza la compatibilidad con destinos garantizan. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
+    **La característica de nivel de 9:  ** Aunque la característica de nivel 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestreo múltiple](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no se garantiza la compatibilidad para destinos de resolución de muestreo múltiple. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
 
-    El siguiente código comprueba la compatibilidad del muestreo múltiple en todos los valores DXGI\_FORMAT:
+    El código siguiente comprueba el muestreo múltiple de soporte técnico para todos lo DXGI\_valores de formato:
 
     ```cpp
     // Determine the format support for multisampling.
@@ -82,11 +82,11 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Nota**  uso [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) en su lugar, si es necesario comprobar la compatibilidad con multimuestra en mosaico búferes de recursos.
+    > **Tenga en cuenta**    Use [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://msdn.microsoft.com/library/windows/desktop/dn280494) en su lugar si necesita comprobar compatibilidad de muestreo múltiple para los búferes de recursos en mosaico.
 
      
 
-3.  Crea un búfer y una vista de destino de representación con el recuento de muestras deseado. Usa el mismo formato DXGI\_FORMAT y el ancho y el alto de la cadena de intercambio, pero especifica un recuento mayor que 1 y usa una dimensión de texturas de varias muestras (por ejemplo, **D3D11\_RTV\_DIMENSION\_TEXTURE2DMS**). Si es necesario, puedes volver a crear la cadena de intercambio mediante una configuración nueva que sea adecuada para el muestreo múltiple.
+3.  Crea un búfer y una vista de destino de representación con el recuento de muestras deseado. Usar el mismo DXGI\_formato, ancho y alto que la cadena de intercambio, pero especifique un número de muestras mayor que 1 y usar una dimensión de textura de muestreo múltiple (**D3D11\_RTV\_dimensión\_TEXTURE2DMS** por ejemplo). Si es necesario, puedes volver a crear la cadena de intercambio mediante una configuración nueva que sea adecuada para el muestreo múltiple.
 
     El siguiente código crea un destino de representación de muestras múltiples:
 

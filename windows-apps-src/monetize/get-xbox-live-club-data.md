@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, clubs
 ms.localizationpriority: medium
 ms.openlocfilehash: dbf9d06f96632237c10de0fe3b6c4723a2501254
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633180"
 ---
 # <a name="get-xbox-live-club-data"></a>Obtener datos del club de Xbox Live
 
@@ -24,14 +24,14 @@ Usa este método en la API de análisis de Microsoft Store para obtener datos de
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de solicitud       |
+| Método | URI de la solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
@@ -40,18 +40,18 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 
-| Parámetro        | Tipo   |  Descripción      |  Necesario  
+| Parámetro        | Tipo   |  Descripción      |  Requerido  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de club de Xbox Live.  |  Sí  |
-| metricType | cadena | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagerclub**.  |  Sí  |
+| applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de club de Xbox Live.  |  Sí  |
+| metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagerclub**.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de club que se han de recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de club que se han de recuperar. El valor siempre es la fecha actual. |  No  |
+| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de club que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 
@@ -69,8 +69,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | matriz  | Una matriz que contiene un objeto [ProductData](#productdata) que contiene los datos para clubs relacionadas con tu juego y un objeto [XboxwideData](#xboxwidedata) que contiene datos de club para todos los clientes de Xbox Live. Estos datos se incluyen para compararlos con los datos de tu juego.  |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de la consulta. |
+| Valor      | array  | Una matriz que contiene un objeto [ProductData](#productdata) que contiene los datos para clubs relacionadas con tu juego y un objeto [XboxwideData](#xboxwidedata) que contiene datos de club para todos los clientes de Xbox Live. Estos datos se incluyen para compararlos con los datos de tu juego.  |
+| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de la consulta. |
 | TotalCount | entero    | El número total de filas del resultado de datos de la consulta. |
 
 
@@ -80,11 +80,11 @@ Este recurso contiene datos de club para tu juego.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-| fecha            |  cadena |   La fecha de los datos de club.   |
-|  applicationId               |    cadena     |  El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que has recuperado los datos de club.   |
-|  clubsWithTitleActivity               |    int     |  El número de clubs que están implicados socialmente en tu juego.   |     
-|  clubsExclusiveToGame               |   int      |  El número de clubs que están implicados socialmente exclusivamente en tu juego.   |     
-|  clubFacts               |   matriz      |   Contiene uno o más objetos [ClubFacts](#clubfacts) sobre cada uno de lo clubs socialmente implicados en el juego.   |
+| fecha            |  string |   La fecha de los datos de club.   |
+|  applicationId               |    string     |  El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que has recuperado los datos de club.   |
+|  clubsWithTitleActivity               |    entero     |  El número de clubs que están implicados socialmente en tu juego.   |     
+|  clubsExclusiveToGame               |   entero      |  El número de clubs que están implicados socialmente exclusivamente en tu juego.   |     
+|  clubFacts               |   array      |   Contiene uno o más objetos [ClubFacts](#clubfacts) sobre cada uno de lo clubs socialmente implicados en el juego.   |
 
 
 ### <a name="xboxwidedata"></a>XboxwideData
@@ -93,11 +93,11 @@ Este recurso contiene datos medios del club en todos los clientes de Xbox Live.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-| fecha            |  cadena |   La fecha de los datos de club.   |
-|  applicationId  |    cadena     |   En el objeto **XboxwideData**, esta cadena es siempre el valor **XBOXWIDE**.  |
-|  clubsWithTitleActivity               |   int     |  De media, el número de clubs con clientes socialmente implicados en el juego habilitado para Xbox Live.    |     
-|  clubsExclusiveToGame               |   int      |  De media, el número de clubs con clientes socialmente implicados exclusivamente en el juego habilitado para Xbox Live.   |     
-|  clubFacts               |   objeto      |  Contiene un objeto [ClubFacts](#clubfacts). Este objeto no tiene sentido en el contexto del objeto **XboxwideData** y tiene los valores predeterminados.  |
+| fecha            |  string |   La fecha de los datos de club.   |
+|  applicationId  |    string     |   En el objeto **XboxwideData**, esta cadena es siempre el valor **XBOXWIDE**.  |
+|  clubsWithTitleActivity               |   entero     |  De media, el número de clubs con clientes socialmente implicados en el juego habilitado para Xbox Live.    |     
+|  clubsExclusiveToGame               |   entero      |  De media, el número de clubs con clientes socialmente implicados exclusivamente en el juego habilitado para Xbox Live.   |     
+|  clubFacts               |   object      |  Contiene un objeto [ClubFacts](#clubfacts). Este objeto no tiene sentido en el contexto del objeto **XboxwideData** y tiene los valores predeterminados.  |
 
 
 ### <a name="clubfacts"></a>ClubFacts
@@ -106,9 +106,9 @@ En el objeto **ProductData**, este objeto contiene datos de un club específico 
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|--------------------|
-|  name            |  cadena  |   En el objeto **ProductData**, este es el nombre del club. En el objeto **XboxwideData**, este es siempre el valor **XBOXWIDE**.           |
-|  memberCount               |    int     | En el objeto **ProductData**, este es el número de miembros en el club, salvo los que no son miembros y que simplemente están visitando el club. En el objeto **XboxwideData**, este es siempre 0.    |
-|  titleSocialActionsCount               |    int     |  En el objeto **ProductData**, este es el número de acciones sociales realizadas por miembros del club relacionadas con tu juego. En el objeto **XboxwideData**, este es siempre 0   |
+|  name            |  string  |   En el objeto **ProductData**, este es el nombre del club. En el objeto **XboxwideData**, este es siempre el valor **XBOXWIDE**.           |
+|  memberCount               |    entero     | En el objeto **ProductData**, este es el número de miembros en el club, salvo los que no son miembros y que simplemente están visitando el club. En el objeto **XboxwideData**, este es siempre 0.    |
+|  titleSocialActionsCount               |    entero     |  En el objeto **ProductData**, este es el número de acciones sociales realizadas por miembros del club relacionadas con tu juego. En el objeto **XboxwideData**, este es siempre 0   |
 |  isExclusiveToGame               |    Booleano     |  En el objeto **ProductData**, este indica si el club actual está socialmente comprometido exclusivamente con tu juego. En el objeto **XboxwideData**, este es siempre true.  |
 
 
@@ -171,11 +171,11 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 }
 ```
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
 * [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
 * [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos del hub de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
-* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Obtener datos del centro de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
+* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)

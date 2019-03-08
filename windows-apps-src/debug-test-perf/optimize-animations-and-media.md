@@ -1,19 +1,19 @@
 ---
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
 title: Optimizar las animaciones, multimedia e imágenes.
-description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas, y capturas multimedia y reproducciones de alto rendimiento.
+description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas y capturas multimedia y reproducciones de alto rendimiento.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b26274dd005813fe5c8ced2d90f6380e4d7f21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946529"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640800"
 ---
-# <a name="optimize-animations-media-and-images"></a>Optimizar las animaciones, multimedia e imágenes
+# <a name="optimize-animations-media-and-images"></a>Optimizar las animaciones, multimedia e imágenes.
 
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas y capturas multimedia y reproducciones de alto rendimiento.
@@ -37,7 +37,7 @@ Está garantizado que todos estos tipos de animaciones son independientes:
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
     -   [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)
-    -   [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
+    -   [**Proyección**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
     -   [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 
 Las animaciones dependientes afectan al diseño y, por tanto, no se pueden calcular sin una entrada adicional desde el subproceso de interfaz de usuario. Asimismo, las animaciones dependientes incluyen modificaciones en propiedades como [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) y [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height). De manera predeterminada, las animaciones dependientes no se ejecutan y requieren que el desarrollador de la aplicación decida usarlas. Cuando se habilitan, se ejecutan de manera fluida si el subproceso de interfaz de usuario permanece desbloqueado, pero comienzan a trastabillar si el marco o la aplicación están realizando una gran cantidad de trabajo adicional en el suproceso de interfaz de usuario.
@@ -54,7 +54,7 @@ El marco XAML no representa directamente el contenido web de un control [**WebVi
 
 Tampoco es buena idea animar una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Además de la disminución del rendimiento, puede causar la desactivación u otras anomalías en las imágenes del vídeo que se reproduzca.
 
-> **Nota**  las recomendaciones de este artículo para **MediaPlayerElement** también se aplican a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** solo está disponible en Windows10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
+> **Tenga en cuenta**    las recomendaciones de este artículo para **MediaPlayerElement** también se aplican a [ **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** solo está disponible en Windows 10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
 
 ### <a name="use-infinite-animations-sparingly"></a>Usar las aplicaciones infinitas moderadamente
 
@@ -66,7 +66,7 @@ La adición de un controlador de [**CompositionTarget.Rendering**](https://msdn.
 
 El espacio de nombres [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) incluye una biblioteca de alto rendimiento y animaciones suaves que tienen una apariencia coherente con otras animaciones de Windows. Las clases relevantes tienen "Tema" en el nombre, y se describen en [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/Mt187350) Esta biblioteca admite muchos escenarios habituales de animación, como la animación de la primera vista de la aplicación y la creación de transiciones de estado y de contenido. Te recomendamos que uses esta biblioteca de animaciones siempre que te sea posible, para mejorar el rendimiento y la coherencia de la interfaz de usuario de las aplicaciones para UWP.
 
-> **Nota**  la biblioteca de animaciones no puede animar todas las propiedades posibles. Para escenarios XAML en los que no se aplica la biblioteca de animaciones, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Tenga en cuenta**    la biblioteca de animaciones no puede animar todas las propiedades posibles. Para escenarios XAML en los que no se aplica la biblioteca de animaciones, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>Animar propiedades CompositeTransform3D de forma independiente
@@ -127,7 +127,7 @@ Al establecer [**MediaplayerElement.PosterSource**](https://msdn.microsoft.com/l
 
 Siempre es difícil que las plataformas multimedia logren que el arrastre del cabezal de reproducción tenga una verdadera capacidad de respuesta. Por lo general, los usuarios lo logran cambiando el valor de un control deslizante. A continuación, te ofrecemos algunos consejos para que realices esta tarea con la mayor eficacia posible:
 
--   Actualiza el valor de [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) en función de un temporizador que consulte la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Asegúrate de usar una frecuencia de actualización razonable para el temporizador. La propiedad **Position** solo se actualiza cada 250milisegundos durante la reproducción.
+-   Actualiza el valor de [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) en función de un temporizador que consulte la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Asegúrate de usar una frecuencia de actualización razonable para el temporizador. La propiedad **Position** solo se actualiza cada 250 milisegundos durante la reproducción.
 -   El tamaño de la frecuencia de los pasos de la clase Slider debe escalarse con la longitud del vídeo.
 -   Suscríbete a los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) del control deslizante para establecer la propiedad [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) en 0 cuando el usuario arrastre el control de posición del control deslizante.
 -   En el controlador de eventos [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx), establece de forma manual la posición multimedia en el valor de la posición del control deslizante para ajustar el control de posición óptimo al arrastrar el cabezal de reproducción.
@@ -149,7 +149,7 @@ Cuando incluyas efectos de audio breves de latencia baja (por ejemplo, en juegos
 
 ### <a name="scale-images-to-the-appropriate-size"></a>Escalar imágenes al tamaño adecuado
 
-Las imágenes se capturan en resoluciones muy altas, lo que puede provocar un mayor uso de la CPU por parte de las aplicaciones cuando descodifican los datos de imagen y más memoria después de que se hayan descargado del disco. Pero no tiene sentido descodificar y guardar una imagen de alta resolución en la memoria si se va a mostrar únicamente en un tamaño menor que su tamaño nativo. En su lugar, crea una versión de la imagen que tenga el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) y [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241).
+Las imágenes se capturan en resoluciones muy altas, lo que puede provocar un mayor uso de la CPU por parte de las aplicaciones cuando descodifican los datos de imagen y de más memoria tras su descarga del disco. Pero no tiene sentido descodificar y guardar una imagen de alta resolución en la memoria si se va a mostrar únicamente en un tamaño menor que su tamaño nativo. En su lugar, crea una versión de la imagen que tenga el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) y [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241).
 
 No realices lo siguiente:
 
@@ -190,14 +190,14 @@ En caso de que no establezcas un tamaño de descodificación explícito, el leng
 -   La imagen se oculta al establecer la propiedad [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) en 0 o [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility) en **Collapsed** en el elemento de imagen host, en el pincel o en cualquier elemento primario.
 -   El control o el pincel de la imagen usan una enumeración [**Stretch**](https://msdn.microsoft.com/library/windows/apps/BR242968) establecida en **None**.
 -   La imagen se usa como una propiedad [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756).
--   `CacheMode="BitmapCache"` Se establece en el elemento de imagen o en cualquier elemento primario.
+-   Se establece `CacheMode="BitmapCache"` en el elemento de imagen o en cualquier elemento primario.
 -   El pincel de la imagen no es rectangular (como cuando se aplica a una forma o a un texto).
 
 En los escenarios anteriores, la única forma de conseguir ahorrar memoria es establecer un tamaño de descodificación explícito.
 
-Te recomendamos que asocies siempre una clase [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) al árbol activo antes de establecer el origen. Este será el caso que se aplique cada vez que especifiques un elemento o pincel de imagen en el marcado. A continuación, se proporcionan ejemplos bajo el título "Ejemplos de árbol activo". Evita usar [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255) y, en su lugar, usa [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) cuando establezcas un origen de la secuencia. También es una buena idea evitar ocultar el contenido de imagen (ya sea con opacidad cero o con visibilidad contraída) mientras esperas a que se genere el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx). Esta es una decisión importante: no podrás aprovecharte de la descodificación automática al tamaño correcto si haces esto. Si la aplicación debe ocultar el contenido de imagen en un principio, entonces procura que establezca el tamaño de descodificación explícitamente si es posible.
+Te recomendamos que asocies siempre una clase [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) al árbol activo antes de establecer el origen. Esto sucederá siempre que especifiques un elemento o pincel de imagen en el marcado. A continuación, se proporcionan ejemplos bajo el título "Ejemplos de árbol activo". Evita usar [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255) y, en su lugar, usa [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) cuando establezcas un origen de la secuencia. También es una buena idea evitar ocultar el contenido de imagen (ya sea con opacidad cero o con visibilidad contraída) mientras esperas a que se genere el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx). Esta es una decisión importante: no podrás aprovecharte de la descodificación automática al tamaño correcto si haces esto. Si la aplicación debe ocultar el contenido de imagen en un principio, entonces procura que establezca el tamaño de descodificación explícitamente si es posible.
 
-**Ejemplos de árbol activo**
+**Ejemplos de árbol en vivo**
 
 Ejemplo 1 (bueno): Se especifica el identificador uniforme de recursos (URI) en el marcado.
 
@@ -219,7 +219,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Ejemplo 2; código subyacente (malo): establecer UriSource de BitmapImage antes de conectarlo al árbol.
+Ejemplo 2 de código subyacente (malo): configuración UriSource del BitmapImage antes de conectarlo al árbol.
 
 ```csharp
 var bitmapImage = new BitmapImage();
@@ -243,14 +243,14 @@ Por lo tanto, deberías tratar de usar paneles virtualizados modernos para hospe
 
 ### <a name="software-rasterized-images"></a>Imágenes de rasterización de software
 
-Cuando usas una imagen para un pincel no rectangular o para una propiedad [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756), la imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como de hardware. Por ejemplo, si se usa una imagen como el pincel de una elipse, entonces la imagen potencialmente grande y al completo, se almacenará internamente dos veces. Al usar **NineGrid** o un pincel no rectangular, la aplicación deberá escalar previamente sus imágenes para alcanzar, aproximadamente, el tamaño en el que se presentarán.
+Cuando usas una imagen para un pincel no rectangular o para una propiedad [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756), la imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como en la de hardware. Por ejemplo, si se usa una imagen como el pincel de una elipse, entonces la imagen potencialmente grande y al completo, se almacenará internamente dos veces. Al usar **NineGrid** o un pincel no rectangular, la aplicación deberá escalar previamente sus imágenes para alcanzar, aproximadamente, el tamaño en el que se presentarán.
 
 ### <a name="background-thread-image-loading"></a>Carga de imágenes de subproceso en segundo plano
 
 El XAML tiene una optimización interna que le permite descodificar el contenido de una imagen de forma asincrónica en una superficie de memoria de hardware sin la necesidad de una superficie en la memoria de software intermedia. Esto reduce el uso máximo de memoria y la latencia de representación. Esta característica se deshabilitará si se cumple cualquiera de las siguientes condiciones.
 
 -   La imagen se usa como una propiedad [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756).
--   `CacheMode="BitmapCache"` Se establece en el elemento de imagen o en cualquier elemento primario.
+-   Se establece `CacheMode="BitmapCache"` en el elemento de imagen o en cualquier elemento primario.
 -   El pincel de la imagen no es rectangular (como cuando se aplica a una forma o a un texto).
 
 ### <a name="softwarebitmapsource"></a>SoftwareBitmapSource
@@ -263,7 +263,7 @@ La aplicación debería usar [**SoftwareBitmap**](https://msdn.microsoft.com/lib
 
 ### <a name="use-getthumbnailasync-for-thumbnails"></a>Usar GetThumbnailAsync para las miniaturas
 
-Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien puedes usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) y [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para proporcionar versiones pequeñas de las imágenes, la plataforma universal de Windows (UWP) ofrece API aún más eficaces para la recuperación de miniaturas. [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) proporciona las miniaturas de las imágenes que ya tienen el sistema de archivos almacenado en caché. Esto proporciona un rendimiento incluso mejor que las API de XAML porque no es necesario abrir o descodificar la imagen.
+Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien puedes usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) y [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para proporcionar versiones pequeñas de las imágenes, la plataforma universal de Windows (UWP) ofrece API aún más eficaces para la recuperación de miniaturas. [**GetThumbnailAsync** ](https://msdn.microsoft.com/library/windows/apps/BR227210) proporciona las vistas en miniatura para las imágenes que tienen el sistema de archivos ya almacenado en caché. Esto proporciona un rendimiento incluso mejor que las API de XAML porque no es necesario abrir o descodificar la imagen.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

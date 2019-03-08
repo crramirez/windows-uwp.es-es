@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, java
 ms.localizationpriority: medium
 ms.openlocfilehash: 974bbc4c864edb9450f9ba677c60349b5e1f8ece
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641060"
 ---
 # <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Muestra de Java: envío de aplicación con opciones de juego y tráileres
 
@@ -18,7 +18,7 @@ En este artículo se proporcionan ejemplos de código Java que muestran cómo us
 
 * Obtén un token de acceso de Azure AD para usarlo con la API de envío de Microsoft Store.
 * Crear un envío de aplicación
-* Configura los datos de la descripción de la Store para el envío de aplicación, incluida las opciones de descripciones avanzadas de [juegos](manage-app-submissions.md#gaming-options-object) y [tráileres](manage-app-submissions.md#trailer-object).
+* Configura los datos de la descripción de la Tienda para el envío de aplicación, incluida las opciones de descripciones avanzadas de [juegos](manage-app-submissions.md#gaming-options-object) y [tráileres](manage-app-submissions.md#trailer-object).
 * Carga el archivo ZIP que contiene los paquetes, las imágenes de descripciones y los archivos de tráileres para el envío de aplicación.
 * Confirma el envío de aplicación.
 
@@ -28,7 +28,7 @@ En este artículo se proporcionan ejemplos de código Java que muestran cómo us
 
 La clase ```CreateAndSubmitSubmissionExample``` implementa un programa ```main``` que llama a otros métodos de ejemplo para usar la API de envío de Microsoft Store para crear y confirmar un envío de aplicación que contiene opciones de juego y un tráiler. Para adaptar este código a tu propio uso:
 
-* Asigna la variable ```tenantId``` al identificador de inquilino para tu aplicación y asigna las variables ```clientId``` y ```clientSecret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, consulta [cómo asociar una aplicación de Azure AD con tu cuenta del centro de partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Asigna la variable ```tenantId``` al identificador de inquilino para tu aplicación y asigna las variables ```clientId``` y ```clientSecret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, vea [cómo asociar una aplicación de Azure AD con su cuenta de centro de partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Asigna la variable ```applicationId``` al [Id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la cual quieres crear un envío.
 
 > [!div class="tabbedCodeSnippets"]
@@ -36,7 +36,7 @@ La clase ```CreateAndSubmitSubmissionExample``` implementa un programa ```main``
 
 <span id="token" />
 
-## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de AzureAD
+## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de Azure AD
 
 La clase ```DevCenterAccessTokenClient``` define un método auxiliar que usa tus valores ```tenantId```, ```clientId``` y ```clientSecret``` para crear un token de acceso de Azure AD para usarlo con la API de envío de Microsoft Store.
 
@@ -54,4 +54,4 @@ La clase ```DevCenterClient``` define métodos auxiliares que invocan una varied
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

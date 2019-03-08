@@ -6,11 +6,11 @@ ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114551"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641160"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continuar la actividad del usuario, incluso en diferentes dispositivos
 
@@ -26,7 +26,7 @@ De igual modo, vincular el teléfono a tu PC Windows te permite continuar lo que
 
 Considera una **UserActivity** como algo específico en lo que ha estado trabajando el usuario en la aplicación. Por ejemplo, si estás usando un lector RSS, una **UserActivity** podría ser la fuente que estás leyendo. Si estás jugando a un juego, la **UserActivity** podría ser el nivel al que estás jugando. Si estás escuchando música con una aplicación de música, la **UserActivity** podría ser la lista de reproducción que estás escuchando. Si estás trabajando en un documento, la **UserActivity** podría ser el punto donde dejaste de trabajar en él, y así sucesivamente.  En resumen, una **UserActivity** representa un destino dentro de la aplicación que permite al usuario reanudar lo que estaba haciendo.
 
-Cuando interactúas con una **UserActivity** llamando a [UserActivity.CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), el sistema crea un registro del historial que indica el tiempo de inicio y finalización de esa **UserActivity **. Cuando interactúas con esa **UserActivity** a lo largo del tiempo, se registran varios registros de historial para ella.
+Cuando interactúas con una **UserActivity** llamando a [UserActivity.CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), el sistema crea un registro del historial que indica el tiempo de inicio y finalización de esa **UserActivity** . Cuando interactúas con esa **UserActivity** a lo largo del tiempo, se registran varios registros de historial para ella.
 
 ## <a name="add-user-activities-to-your-app"></a>Agregar actividades de usuario a la aplicación
 
@@ -39,8 +39,8 @@ Una [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.u
 Para agregar una **UserActivity** a la aplicación:
 
 1. Genera objetos de **UserActivity** cuando cambie el contexto del usuario en la aplicación (por ejemplo, la navegación de una página, un nuevo nivel de juego, etc.)
-2. Rellena los objetos de **UserActivity** con el conjunto mínimo de campos obligatorios: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri) y [UserActivity.VisualElements.DisplayText ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
-3. Agrega un controlador de esquema personalizado a tu aplicación para que se pueda volver a activar mediante una **UserActivity **.
+2. Rellenar **UserActivity** objetos con el conjunto mínimo de los campos obligatorios: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri), y [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
+3. Agrega un controlador de esquema personalizado a tu aplicación para que se pueda volver a activar mediante una **UserActivity** .
 
 Una **UserActivity** puede integrarse en una aplicación con tan solo unas pocas líneas de código. Por ejemplo, vamos a suponer que tenemos este código de MainPage.xaml.cs dentro de la clase MainPage (nota: se da por hecho `using Windows.ApplicationModel.UserActivities;`):
 
@@ -68,12 +68,12 @@ private async Task GenerateActivityAsync()
 La primera línea del método `GenerateActivityAsync()`anterior obtiene de un [UserActivityChannel ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel) del usuario. Esta es la fuente en la que se publicarán las actividades de la aplicación. La siguiente línea consulta el canal de una actividad denominada `MainPage`.
 
 * La aplicación debe asignar nombres a las actividades de tal forma que se genere el mismo identificador cada vez que el usuario esté en una ubicación en particular en la aplicación. Por ejemplo, si la aplicación está basada en páginas, usa un identificador para la página. Si está basada en documentos, usa el nombre del documento (o un hash del nombre).
-* Si hay una actividad en la fuente con el mismo identificador, se devolverá esa actividad desde el canal con `UserActivity.State` establecido en [Publicado](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitystate)). Si no hay ninguna actividad con ese nombre, se devuelve una nueva actividad con `UserActivity.State` establecido en **Nueva **.
+* Si hay una actividad en la fuente con el mismo identificador, se devolverá esa actividad desde el canal con `UserActivity.State` establecido en [Publicado](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitystate)). Si no hay ninguna actividad con ese nombre, se devuelve una nueva actividad con `UserActivity.State` establecido en **Nueva** .
 * Las actividades tienen el ámbito de la aplicación. No es necesario preocuparse por que el identificador de la actividad entre en conflicto con los identificadores de otras aplicaciones.
 
 Después de obtener o crear la **UserActivity**, especifica los otros dos campos necesarios: `UserActivity.VisualElements.DisplayText` y `UserActivity.ActivationUri`.
 
-A continuación, guarda los metadatos de **UserActivity** mediante una llamada a [SaveAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.saveasync) y finalmente [CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), que devuelve una [UserActivitySession ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitysession). La **UserActivitySession** es el objeto que podemos usar para administrar cuando el usuario está realizando la **UserActivity **. Por ejemplo, deberíamos llamar a `Dispose()`en la **UserActivitySession** cuando el usuario abandona la página. En el ejemplo anterior, llamamos también a `Dispose()` en `_currentActivity` antes de llamar a `CreateSession()`. Esto es porque hemos convertido a `_currentActivity` en un campo miembro de nuestra página y queremos detener cualquier actividad existente antes de empezar una nueva (nota: la `?` es el operador [nulo condicional](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators) que comprueba si hay valores nulos antes de realizar el acceso del miembro).
+A continuación, guarda los metadatos de **UserActivity** mediante una llamada a [SaveAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.saveasync) y finalmente [CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), que devuelve una [UserActivitySession ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitysession). La **UserActivitySession** es el objeto que podemos usar para administrar cuando el usuario está realizando la **UserActivity** . Por ejemplo, deberíamos llamar a `Dispose()`en la **UserActivitySession** cuando el usuario abandona la página. En el ejemplo anterior, llamamos también a `Dispose()` en `_currentActivity` antes de llamar a `CreateSession()`. Esto es porque hemos convertido a `_currentActivity` en un campo miembro de nuestra página y queremos detener cualquier actividad existente antes de empezar una nueva (nota: la `?` es el operador [nulo condicional](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators) que comprueba si hay valores nulos antes de realizar el acceso del miembro).
 
 Dado que, en este caso, el `ActivationUri`es un esquema personalizado, también necesitamos registrar el protocolo en el manifiesto de la aplicación. Esto se realiza en el archivo XML Package.appmanifest o mediante el diseñador.
 
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Lo que hace este código es detectar si la aplicación se ha activado mediante un protocolo. Si es así, comprueba qué debe hacer la aplicación para reanudar la tarea para la que se está activando. Si es una aplicación sencilla, la única actividad que reanuda esta aplicación es colocar en la página secundaria cuando aparece la aplicación.
+Lo que hace este código es detectar si la aplicación se ha activado mediante un protocolo. Si es así, comprueba qué debe hacer la aplicación para reanudar la tarea para la que se está activando. Que se va a una aplicación sencilla, la única actividad que esta aplicación se reanuda es colocar, en la página secundaria cuando aparezca la aplicación.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Usar tarjetas adaptables para mejorar la experiencia de la línea de tiempo
 
@@ -155,7 +155,7 @@ Una vez que la aplicación o el servicio se autentica con una cuenta de Microsof
 ## <a name="summary"></a>Resumen
 
 Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) para que tu aplicación aparezca en la línea de tiempo y Cortana.
-* Obtener más información sobre la [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* Obtenga más información sobre la [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Echa un vistazo al [código de ejemplo](https://github.com/Microsoft/project-rome).
 * Consulta [tarjetas adaptables más sofisticadas](https://adaptivecards.io/).
 * Publicar una **UserActivity** de iOS, Android o el servicio web a través de [Microsoft Graph](https://developer.microsoft.com/graph/).
@@ -165,11 +165,11 @@ Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.app
 
 * [Espacio de nombres UserActivities](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Actividades del usuario (documentos de Project Rome)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Actividades del usuario (docs Roma del proyecto)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/)
-* [Visualizador de tarjetas adaptables, muestras](https://adaptivecards.io/)
-* [Administración de la activación de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-* [Interactuar con los clientes en cualquier plataforma con Microsoft Graph, fuentes de actividades y tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
+* [Visualizador de las tarjetas adaptables, ejemplos](https://adaptivecards.io/)
+* [Activación de identificador URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [Interactuar con sus clientes en cualquier plataforma mediante Microsoft Graph, fuente de actividades y las tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

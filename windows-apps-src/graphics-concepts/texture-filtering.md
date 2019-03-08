@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 449a31d92235efc50119bcd0db11b3532f523cd2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930874"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633730"
 ---
 # <a name="texture-filtering"></a>Filtrado de texturas
 
@@ -27,7 +27,7 @@ Direct3D simplifica el proceso complejo de filtrado de texturas. Te ofrece tres 
 
 Cada tipo de filtrado de texturas tiene ventajas y desventajas. Por ejemplo, el filtrado de texturas lineal puede producir bordes escalonados o un aspecto grueso en la imagen final. Sin embargo, es un método con baja sobrecarga de filtrado de texturas desde el punto de vista computacional. El filtrado con mapas MIP generalmente produce los mejores resultados, en especial si se combina con el filtrado anisotrópico. Sin embargo, es la técnica que requiere más memoria de las admitidas por Direct3D.
 
-## <a name="span-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspantypes-of-texture-filtering"></a><span id="Types-of-texture-filtering"></span><span id="types-of-texture-filtering"></span><span id="TYPES-OF-TEXTURE-FILTERING"></span>Tipos de filtrado de texturas
+## <a name="span-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspantypes-of-texture-filtering"></a><span id="Types-of-texture-filtering"></span><span id="types-of-texture-filtering"></span><span id="TYPES-OF-TEXTURE-FILTERING"></span>Tipos de filtrado de textura
 
 
 Direct3D admite los siguientes métodos de filtrado de texturas.
@@ -48,19 +48,19 @@ Direct3D admite los siguientes métodos de filtrado de texturas.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="nearest-point-sampling.md">Muestreo de punto más cercano</a></p></td>
-<td align="left"><p>Las aplicaciones no tienen que usar el filtrado de texturas. Direct3D puede establecerse para que calcule la dirección de los elementos de textura, que a menudo no evalúa como enteros, y copia el color del elemento de textura con la dirección del número entero más cercano. Este proceso se denomina <em>muestreo de punto más cercano</em>.</p></td>
+<td align="left"><p><a href="nearest-point-sampling.md">Más próximo al punto de muestreo</a></p></td>
+<td align="left"><p>Las aplicaciones no tienen que usar el filtrado de textura. Direct3D puede establecerse para que calcule la dirección de elementos de textura, que a menudo no se evalúa como enteros, y para que copie el color del elemento de textura con la dirección de entero más próxima. Este proceso se denomina <em>muestreo de punto más cercano</em>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="bilinear-texture-filtering.md">Filtrado de texturas bilineal</a></p></td>
-<td align="left"><p>El <em>filtrado bilineal</em> calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo. Este enfoque filtrado es más precisos y común que el filtrado por punto más cercano. Este método es eficaz, porque se implementa en el hardware gráfico actual.</p></td>
+<td align="left"><p><a href="bilinear-texture-filtering.md">Filtrado bilineal de textura</a></p></td>
+<td align="left"><p>El <em>filtrado bilineal</em> calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo. Este enfoque filtrado es más precisos y común que el filtrado por punto más cercano. Este enfoque es eficaz, porque está implementado en el hardware de gráficos moderno.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="anisotropic-texture-filtering.md">Filtrado de texturas anisotrópico</a></p></td>
-<td align="left"><p>La <em>anisotropía</em> es la distorsión visible en los elementos de textura de un objeto 3D cuya superficie está orientada en un ángulo con respecto al plano de la pantalla. Cuando un píxel de un primitivo anisotrópico se asigna a elementos de textura, su forma se distorsiona.</p></td>
+<td align="left"><p><a href="anisotropic-texture-filtering.md">Filtrado anisotrópico de textura</a></p></td>
+<td align="left"><p>La <em>anisotropía</em> es la distorsión visible en los elementos de textura de un objeto 3D cuya superficie está orientada en un ángulo con respecto al plano de la pantalla. Cuando un píxel de un primitivo anisotrópico se asigna a los elementos de textura, se distorsiona su forma.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="texture-filtering-with-mipmaps.md">Filtrado de texturas con mapas MIP</a></p></td>
+<td align="left"><p><a href="texture-filtering-with-mipmaps.md">Textura de filtrado de mapas MIP</a></p></td>
 <td align="left"><p>Un <em>mapa MIP</em> es una secuencia de texturas, cada una de las cuales es una representación de la misma imagen con una resolución progresivamente inferior. El alto y ancho de cada imagen, o nivel, en el mapa MIP es una potencia de dos inferior al nivel anterior.</p></td>
 </tr>
 </tbody>
@@ -71,7 +71,7 @@ Direct3D admite los siguientes métodos de filtrado de texturas.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Texturas](textures.md)
+[Textures](textures.md)
 
  
 

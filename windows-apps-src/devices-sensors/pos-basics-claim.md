@@ -1,29 +1,29 @@
 ---
-title: Dispositivo PointOfService reclamar y habilitar modelo
-description: Obtén información sobre la notificación de PointOfService y habilitar el modelo
+title: Dispositivo PointOfService de notificación y habilitar el modelo
+description: Obtenga información acerca de la notificación PointOfService y habilitar el modelo
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e7d60c0b612a8067ac4c225dff9da5da428f1a1
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117655"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639320"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio de notificación y habilitar modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio de notificación y habilitar el modelo
 
-## <a name="claiming-for-exclusive-use"></a>Reclamar para uso exclusivo
+## <a name="claiming-for-exclusive-use"></a>Reclamar para su uso exclusivo
 
 Después de haber creado un objeto de dispositivo PointOfService correctamente, debes reclamarlo mediante el método de notificación adecuado para el tipo de dispositivo para poder usar el dispositivo para la entrada o salida.  La notificación concede a la aplicación acceso exclusivo a muchas de las funciones del dispositivo para garantizar que una aplicación no interfiere con el uso del dispositivo por parte de otra aplicación.  Solo una aplicación puede reclamar un dispositivo PointOfService para uso exclusivo cada vez. 
 
 > [!Note]
-> La acción de notificación establece un bloqueo exclusivo para un dispositivo, pero no se coloca en un estado operativo.  Para obtener más información, consulta [Habilitar el dispositivo para las operaciones de E/S](#enable-device-for-io-operations) .
+> La acción de notificación establece un bloqueo exclusivo en un dispositivo, pero no ponerlo en un estado operativo.  Consulte [habilitar dispositivos para las operaciones de E/S](#enable-device-for-io-operations) para obtener más información.
 
-### <a name="apis-used-to-claim--release"></a>Las API que se usan para reclamar / versión
+### <a name="apis-used-to-claim--release"></a>Las API que se usan para la notificación / versión
 
-|Dispositivo|Notificación | Lanzamiento | 
+|Dispositivo|Notificación | Publicación | 
 |-|:-|:-|
 |BarcodeScanner | [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
 |CashDrawer | [CashDrawer.ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
@@ -34,11 +34,11 @@ Después de haber creado un objeto de dispositivo PointOfService correctamente, 
 
 ## <a name="enable-device-for-io-operations"></a>Habilitar el dispositivo para las operaciones de E/S
 
-La acción de notificación simplemente establece un derechos exclusivos en el dispositivo, pero no se coloca en un estado operativo.  Debes habilitar el dispositivo mediante **EnableAsync**para recibir eventos o realizar operaciones de salida.  Por el contrario, puedes llamar a **DisableAsync** para dejar de escuchar los eventos desde el dispositivo o la realización de salida.  También puedes usar **IsEnabled** para determinar el estado del dispositivo.
+La acción de notificación simplemente establece un derechos exclusivos para el dispositivo, pero no ponerlo en un estado operativo.  Con el fin de recibir eventos o realizar operaciones de salida debe habilitar el dispositivo mediante **EnableAsync**.  Por el contrario, puede llamar a **DisableAsync** deje de escuchar los eventos desde el dispositivo o la realización de salida.  También puede usar **IsEnabled** para determinar el estado del dispositivo.
 
 ### <a name="apis-used-enable--disable"></a>API que se usan habilitar / deshabilitar
 
-| Dispositivo | Habilitar | Deshabilitar | ¿IsEnabled? |
+| Dispositivo | Habilitar | Deshabilitar | IsEnabled? |
 |-|:-|:-|:-|
 |ClaimedBarcodeScanner | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isenabled) | 
 |ClaimedCashDrawer | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.isenabled) |
@@ -47,9 +47,9 @@ La acción de notificación simplemente establece un derechos exclusivos en el d
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-Visualización de líneas ¹ no requieren que habilitar el dispositivo para las operaciones de E/S de manera explícita.  Habilitar se realiza automáticamente por las APIs de LineDisplay PointOfService que realizan E/S.
+¹ visualización de la línea no requiere que habilite explícitamente el dispositivo para las operaciones de E/S.  Habilitar la realiza automáticamente el PointOfService LineDisplay APIs que realizar operaciones de E/S.
 
-## <a name="code-sample-claim-and-enable"></a>Ejemplo de código: reclamar y habilitar
+## <a name="code-sample-claim-and-enable"></a>Ejemplo de código: notificación y habilitar
 
 Este ejemplo muestra cómo reclamar un dispositivo de escáner de códigos de barras después de haber creado correctamente un objeto de escáner de códigos de barras.
 
@@ -93,7 +93,7 @@ Cuando una segunda aplicación del mismo equipo solicita una notificación para 
 
 Si la aplicación con la notificación activa no responde con **RetainDevice** al instante, se supone que la aplicación se ha suspendido o que no necesita el dispositivo y la notificación se revoca y se da a la nueva aplicación. 
 
-El primer paso es crear un controlador de eventos que responda al evento **ReleaseDeviceRequested** con **RetainDevice**.  
+El primer paso es crear un controlador de eventos que responde a la **ReleaseDeviceRequested** eventos con **RetainDevice**.  
 
 ```Csharp
     /// <summary>
@@ -107,7 +107,7 @@ El primer paso es crear un controlador de eventos que responda al evento **Relea
     }
 ```
 
-A continuación, registrar el controlador de eventos en asociación con el dispositivo reclamado
+A continuación, registrar el controlador de eventos en asociación con el dispositivo de asignación
 
 ```Csharp
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);

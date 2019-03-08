@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4426cbc2e2d3c6e7d980b0733b6deb5178025abb
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114621"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624100"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar el sensor de orientación
 
@@ -22,18 +22,18 @@ ms.locfileid: "9114621"
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
 -   [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)
 
-**Muestras**
+**Ejemplos**
 
--   [Muestra de sensor de orientación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
--   [Muestra de sensor de orientación simple](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
+-   [Ejemplo del sensor de orientación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
+-   [Ejemplo del sensor de orientación simple](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
 
 Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.
 
-Existen dos tipos diferentes de API sensor de orientación que se incluyen en el espacio de nombres [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408): [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) y [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399). Si bien ambos sensores son sensores de orientación, ese término está sobrecargado y se usan para fines muy diferentes. Sin embargo, dado que ambos son sensores de orientación, se tratan en este artículo.
+Hay dos tipos diferentes de las API que se incluyen en el sensor de orientación del [ **Windows.Devices.Sensors** ](https://msdn.microsoft.com/library/windows/apps/BR206408) espacio de nombres: [**OrientationSensor** ](https://msdn.microsoft.com/library/windows/apps/BR206371) y [ **SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399). Si bien ambos sensores son sensores de orientación, ese término está sobrecargado y se usan para fines muy diferentes. Sin embargo, dado que ambos son sensores de orientación, se tratan en este artículo.
 
-La API de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se usa para aplicaciones 3D para obtener un cuaternión y una matriz de rotación. Un cuaternión puede entenderse como una rotación de un punto \[x,y,z\] sobre un eje arbitrario (en contraste con la matriz de rotación, que representa rotaciones sobre tres ejes). Las operaciones matemáticas en torno a los cuaterniones son bastante complejas, ya que implican las propiedades geométricas de números complejos y las propiedades matemáticas de números imaginarios. Sin embargo, es fácil trabajar con ellas y son compatibles con marcos como DirectX. Una aplicación compleja en 3D puede usar el sensor de orientación para ajustar la perspectiva del usuario. Este sensor combina los datos de entrada del acelerómetro, el girómetro y la brújula.
+La API de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se usa para aplicaciones 3D para obtener un cuaternión y una matriz de rotación. Un cuaternión puede entender más fácilmente como un giro de un punto de \[x, y, z\] alrededor de un eje arbitrario (contrastar con una matriz de rotación, que representa las rotaciones en torno a tres ejes). Las operaciones matemáticas en torno a los cuaterniones son bastante complejas, ya que implican las propiedades geométricas de números complejos y las propiedades matemáticas de números imaginarios. Sin embargo, es fácil trabajar con ellas y son compatibles con marcos como DirectX. Una aplicación compleja en 3D puede usar el sensor de orientación para ajustar la perspectiva del usuario. Este sensor combina los datos de entrada del acelerómetro, el girómetro y la brújula.
 
-La API de [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) se usa para determinar la orientación actual del dispositivo en cuanto a las definiciones, como vertical hacia arriba, vertical hacia abajo, horizontal hacia la izquierda y horizontal hacia la derecha. También puede detectar si un dispositivo está boca arriba o boca abajo. En lugar de devolver propiedades como "vertical hacia arriba" u "horizontal hacia la izquierda", este sensor devuelve un valor de rotación: "Not rotated", "Rotated90DegreesCounterclockwise", etc. En la siguiente tabla, se asignan las propiedades de orientación comunes a la lectura del sensor correspondiente.
+La API de [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) se usa para determinar la orientación actual del dispositivo en cuanto a las definiciones, como vertical hacia arriba, vertical hacia abajo, horizontal hacia la izquierda y horizontal hacia la derecha. También puede detectar si un dispositivo está boca arriba o boca abajo. En lugar de devolver propiedades como "vertical arriba" u "horizontal izquierda", este sensor devuelve un valor de rotación: "No gira", "Rotated90DegreesCounterclockwise" y así sucesivamente. En la siguiente tabla, se asignan las propiedades de orientación comunes a la lectura del sensor correspondiente.
 
 | Orientación     | Lectura del sensor correspondiente      |
 |-----------------|-----------------------------------|
@@ -44,7 +44,7 @@ La API de [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/app
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
+Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
 
 El dispositivo o emulador que estés usando debe tener un sensor de orientación.
 
@@ -181,7 +181,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -327,7 +327,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 
@@ -346,7 +346,7 @@ _simpleorientation.OrientationChanged += new TypedEventHandler<SimpleOrientation
 SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
 ```
 
-Estos nuevos valores se escriben en un TextBlock que se encuentra en el código XAML del proyecto.
+Estos nuevos valores se escriben en un bloque de texto que se encuentra en el código XAML del proyecto.
 
 ```csharp
 <TextBlock HorizontalAlignment="Left" Height="24" Margin="8,8,0,0" TextWrapping="Wrap" Text="Current Orientation:" VerticalAlignment="Top" Width="101" Foreground="#FFF8F7F7"/>

@@ -1,5 +1,5 @@
 ---
-Description: A tile is an app's representation on the Start menu. Every app has a tile. When you create a new Universal Windows Platform (UWP) app project in Microsoft Visual Studio, it includes a default tile that displays your app's name and logo.
+Description: Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.
 title: Iconos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e46d73c91f54b1bb74a70990a238f13ccd47645d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634440"
 ---
 # <a name="tiles-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
  
 
-Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
+Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación. Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
 
 ## <a name="configure-the-default-tile"></a>Configurar el icono predeterminado
 
@@ -47,15 +47,15 @@ Para editar el icono, haz doble clic en el archivo **Package.appxmanifest** del 
 
 Hay algunos elementos que deberías actualizar:
 
--   DisplayName: reemplaza este valor por el nombre que quieras que aparezca en el icono.
--   ShortName: dado que no hay espacio limitado para que el nombre para mostrar quepa en los iconos, recomendamos que especifiques un ShortName también, para asegurarte de que el nombre de la aplicación no se trunca.
+-   DisplayName: Reemplace este valor por el nombre que desea mostrar en el icono.
+-   Nombre corto: Porque no hay espacio limitado para su nombre para mostrar para que quepa en los iconos, se recomienda que no se trunquen especificar un nombre corto, para asegurarse de que el nombre de la aplicación.
 -   Imágenes de logotipo:
 
     Debes cambiar estas imágenes por las tuyas, Tienes la opción de proporcionar imágenes para diferentes escalas visuales, pero no tienes que proporcionarlas todas. Para garantizar que tu aplicación se ve bien en una gran variedad de dispositivos, te recomendamos que ofrezcas versiones de escala de 100 %, 200 % y 400 % de cada imagen. Consulta [activos de ventana e icono](app-assets.md) para obtener más información sobre la generación de estos activos.
 
     Las imágenes a escala siguen esta convención de nomenclatura:
     
-    *&lt;nombre de imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;* 
+    *&lt;nombre de la imagen&gt;*.scale -*&lt;factor de escala&gt;*. *&lt;extensión de archivo de imagen&gt;* 
 
     Por ejemplo: SplashScreen.scale-100.png
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 866a3b02d67409d03fccf427663de65cc94919b2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919764"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618100"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a>Controlar la orientación del dispositivo con MediaCapture
 Cuando la aplicación captura una foto o un vídeo para su visualización en otra ubicación (por ejemplo, si se guarda en un archivo en el dispositivo del usuario o se comparte en línea), es importante codificar la imagen con los metadatos de orientación correctos para que, cuando la imagen se muestre en otro dispositivo o aplicación, su orientación sea correcta. Determinar los datos de orientación correctos que se deben incluir en un archivo multimedia puede ser una tarea compleja, ya que hay que tener en cuenta distintas variables, incluida la orientación del chasis del dispositivo, la orientación de la pantalla y la colocación de la cámara en el chasis (si es una cámara frontal o posterior). 
@@ -61,11 +61,11 @@ Para iniciar la vista previa de cámara, llama a [**MediaCapture.StartPreviewAsy
 
 [!code-cs[StartPreviewWithRotationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewWithRotationAsync)]
 
-Establecemos la rotación de la vista previa en un método separado para que se pueda actualizar cuando la orientación del teléfono cambie sin reinicializar la secuencia de vista previa. Si la cámara es externa al dispositivo, no se realiza ninguna acción. De lo contrario, se llama al método de **CameraRotationHelper** **GetCameraPreviewOrientation**, que devuelve la orientación correcta para la secuencia de vista previa. 
+Establecemos la rotación de la vista previa en un método separado para que se pueda actualizar cuando la orientación del teléfono cambie sin reinicializar la secuencia de vista previa. Si la cámara es externa al dispositivo, no se realiza ninguna acción. De lo contrario, se llama al método de **CameraRotationHelper****GetCameraPreviewOrientation**, que devuelve la orientación correcta para la secuencia de vista previa. 
 
 Para establecer los metadatos, las propiedades de secuencia de vista previa se recuperan llamando a [**VideoDeviceController.GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.VideoDeviceController.GetMediaStreamProperties). A continuación, crea un GUID que represente el atributo de Media Foundation Transform (MFT) para la rotación de la secuencia de vídeo. En C++, puedes usar la constante [**MF_MT_VIDEO_ROTATION**](https://msdn.microsoft.com/library/windows/desktop/hh162880.aspx), pero en C#, debes especificar manualmente el valor GUID. 
 
-Agrega un valor de propiedad al objeto de propiedades de secuencia, y especifica el GUID como la clave y la rotación de la vista previa como el valor. Esta propiedad espera que los valores estén en unidades de grados en sentido contrario a las agujas del reloj, por lo que el método de **CameraRotationHelper** **ConvertSimpleOrientationToClockwiseDegrees** se usa para convertir el valor de orientación simple. Por último, llama a [**SetEncodingPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.SetEncodingPropertiesAsync(Windows.Media.Capture.MediaStreamType,Windows.Media.MediaProperties.IMediaEncodingProperties,Windows.Media.MediaProperties.MediaPropertySet)) para aplicar la nueva propiedad de rotación a la secuencia.
+Agrega un valor de propiedad al objeto de propiedades de secuencia, y especifica el GUID como la clave y la rotación de la vista previa como el valor. Esta propiedad espera que los valores estén en unidades de grados en sentido contrario a las agujas del reloj, por lo que el método de **CameraRotationHelper****ConvertSimpleOrientationToClockwiseDegrees** se usa para convertir el valor de orientación simple. Por último, llama a [**SetEncodingPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.SetEncodingPropertiesAsync(Windows.Media.Capture.MediaStreamType,Windows.Media.MediaProperties.IMediaEncodingProperties,Windows.Media.MediaProperties.MediaPropertySet)) para aplicar la nueva propiedad de rotación a la secuencia.
 
 [!code-cs[SetPreviewRotationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSetPreviewRotationAsync)]
 
@@ -110,8 +110,8 @@ Los siguientes métodos pueden usarse para obtener los valores de orientación r
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

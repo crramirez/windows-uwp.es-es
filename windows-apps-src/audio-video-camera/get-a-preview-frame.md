@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7faa018dad336b6e22dd236e57585cade38f8a94
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622520"
 ---
 # <a name="get-a-preview-frame"></a>Obtener un fotograma de vista previa
 
@@ -19,7 +19,7 @@ ms.locfileid: "8921935"
 En este tema se muestra cómo obtener un solo fotograma de vista previa de la secuencia de vista previa de captura multimedia.
 
 > [!NOTE] 
-> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. Para usar el código de este artículo, se presupone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente y una clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) con una secuencia de vista previa de vídeo activa.
+> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. Para usar el código de este artículo, se presupone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente y una clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) con una secuencia de vista previa de vídeo activa.
 
 Además de los espacios de nombres necesarios para realizar la captura multimedia básica, necesitarás el siguiente espacio de nombres para capturar un marco de vista previa.
 
@@ -54,10 +54,10 @@ Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su m
 
 [!code-cs[CleanUpPreviewFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpPreviewFrame)]
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

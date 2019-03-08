@@ -1,19 +1,19 @@
 ---
-Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
-title: Especificar las propiedades de los complementos
+Description: Cuando envías un complemento, las opciones de la página Propiedades te ayudan a determinar el comportamiento que tendrá el complemento al ofrecerlo a los clientes.
+title: Especificar las propiedades de complemento
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
+keywords: windows 10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 17025282aec18da01f14431996a3942ffdd90312
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925829"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629680"
 ---
-# <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
+# <a name="enter-add-on-properties"></a>Especificar las propiedades de complemento
 
 Cuando envías un complemento, las opciones de la página **Propiedades** te ayudan a determinar el comportamiento que tendrá el complemento al ofrecerlo a los clientes.
 
@@ -29,7 +29,7 @@ Los campos que ves en esta página variarán, en función del tipo de producto d
 
 ## <a name="product-lifetime"></a>Duración del producto
 
-Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La opción predeterminada de **Duración del producto** para un complemento duradero es **Para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefieres, puedes cambiar la **duración del producto** para que el complemento expire tras un período establecido (con opciones de 1 a 365 días).
+Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefiere, puede cambiar el **vigencia del producto** para que el complemento expira tras una duración establecida (con las opciones de 1 a 365 días).
 
 
 ## <a name="quantity"></a>Cantidad
@@ -39,13 +39,13 @@ Si seleccionaste **Consumible administrado por la Tienda** para el tipo de produ
 
 ## <a name="subscription-period"></a>Período de suscripción
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puedes seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
+Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**, o **de24meses**.
 
 > [!IMPORTANT]
 > Después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.
 
 
-## <a name="free-trial"></a>Evaluación gratuita
+## <a name="free-trial"></a>Prueba gratuita
 
 Si seleccionaste **Suscripción** para el tipo de producto, aquí también se muestra la opción **Evaluación gratuita**. La opción predeterminada es **Sin prueba gratuita**. Si lo prefieres, puedes permitir que los clientes usen el complemento de forma gratuita durante un período de tiempo establecido (ya sea **1 semana** o **1 mes**). 
 
@@ -84,7 +84,7 @@ Tienes la opción de proporcionar hasta diez palabras clave de hasta 30 caracter
 Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
 
 > [!NOTE]
-> Palabras clave no están disponibles para su uso en paquetes destinados a Windows8 y Windows8.1.
+> Palabras clave no están disponibles para su uso en los paquetes destinados a Windows 8 y Windows 8.1.
 
 <span id="custom-developer-data" />
 
@@ -97,7 +97,7 @@ Por ejemplo, supongamos que tienes un juego y que vendes un complemento que perm
 Para consultar este campo, usa la propiedad [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag)).
 
 > [!NOTE]
-> El campo de **datos del desarrollador personalizados** no está disponible para su uso en paquetes destinados a Windows8 y Windows8.1.
+> El **datos del programador personalizado** campo no está disponible para su uso en los paquetes destinados a Windows 8 y Windows 8.1.
 
  
 

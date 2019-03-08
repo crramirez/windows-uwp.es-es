@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049183"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641070"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
 En este tema se muestran los problemas conocidos con la versión actual del SDK de Microsoft Advertising. Para obtener una guía sobre la solución de problemas, consulta los temas siguientes.
 
-* [Guía de solución de problemas de HTML y JavaScript](html-and-javascript-troubleshooting-guide.md)
-* [Guía de solución de problemas de XAML y C#](xaml-and-c-troubleshooting-guide.md)
+* [Guía de solución de JavaScript y HTML](html-and-javascript-troubleshooting-guide.md)
+* [XAML y C# Guía de solución de problemas](xaml-and-c-troubleshooting-guide.md)
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>Interfaz de AdControl desconocida en XAML
 
@@ -40,13 +40,13 @@ Si has creado un anuncio recientemente (menos de un día), podría no estar disp
 
 Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entre otros motivos se incluyen:
 
-* Seleccionar una unidad de anuncios del centro de partners con un tamaño que sea mayor o menor que el tamaño de **AdControl** en el código de la aplicación.
+* Seleccionar una unidad de anuncio en el centro de partners con un tamaño que sea mayor o menor que el tamaño de la **elemento AdControl** en el código de la aplicación.
 
 * Los anuncios no aparecerán si usas un [valor del modo de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para tu identificador de unidad de anuncio cuando se ejecuta una aplicación dinámica.
 
 * Si has creado un nuevo identificador de unidad de anuncio en última media hora, puede que no veas un anuncio hasta que los servidores propaguen nuevos datos a través del sistema. Los identificadores existentes que han mostrado anuncios antes deberían mostrar anuncios de inmediato.
 
-Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://developer.microsoft.com/en-us/windows/support). En esa página, elige **en contacto con nosotros**.
+Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://developer.microsoft.com/en-us/windows/support). En la página, elija **póngase en contacto con nosotros**.
 
 También puedes publicar una pregunta en el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).
 
@@ -58,7 +58,7 @@ Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos.
 
 * Las aplicaciones de prueba o las aplicaciones que se ejecutan en el emulador no mostrará anuncios dinámicos.
 
-Cuando una unidad de anuncios dinámicos envía anuncios de prueba, el estado de la unidad de anuncios muestra **Active and serving anuncios de prueba** en el centro de partners. Esto no corresponde actualmente a las aplicaciones para teléfonos.
+Cuando una unidad de anuncios en directo está atendiendo a los anuncios de prueba, se muestra el estado de la unidad del anuncio **activo y los servidores de prueba anuncios** en el centro de partners. Esto no corresponde actualmente a las aplicaciones para teléfonos.
 
 
 <span id="reference_errors"/>

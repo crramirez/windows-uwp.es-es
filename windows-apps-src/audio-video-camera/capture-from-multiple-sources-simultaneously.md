@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura, vídeo
 ms.localizationpriority: medium
 ms.openlocfilehash: c474221769bf3aec6e32c80f21386ac1ca2620ea
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636620"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>Captura desde varios orígenes con MediaFrameSourceGroup
 
@@ -56,7 +56,7 @@ El siguiente ejemplo muestra cómo inicializar un objeto **TimedMetadataStreamDe
 
 [!code-cs[GetStreamDescriptor](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetStreamDescriptor)]
 
-Llamar a [**MediaEncodingProfile.SetTimedMetadataTracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) para agregar el descriptor de secuencia de metadatos en el perfil de codificación. En el siguiente ejemplo se muestra un método auxiliar que toma dos descriptores de secuencia de vídeo, un descriptor de secuencia de audio y un descriptor de secuencia de metadatos temporizado, y devuelve un **MediaEncodingProfile** que se puede usar para codificar las secuencias.
+Llame a [ **MediaEncodingProfile.SetTimedMetadataTracks** ](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) para agregar el descriptor de la secuencia de metadatos para el perfil de codificación. En el siguiente ejemplo se muestra un método auxiliar que toma dos descriptores de secuencia de vídeo, un descriptor de secuencia de audio y un descriptor de secuencia de metadatos temporizado, y devuelve un **MediaEncodingProfile** que se puede usar para codificar las secuencias.
 
 [!code-cs[GetMediaEncodingProfile](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetMediaEncodingProfile)]
 
@@ -69,10 +69,10 @@ Una vez completada la operación, se habrá creado un archivo de vídeo que cont
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
-* [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Realiza un seguimiento, listas de reproducción y elementos multimedia](media-playback-with-mediasource.md)
 
 
  

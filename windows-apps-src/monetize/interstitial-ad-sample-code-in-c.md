@@ -7,24 +7,24 @@ ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, c#, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
 ms.openlocfilehash: 075d98d49ba7e878abc7e800af84984bdb93e3a2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045091"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640990"
 ---
-# <a name="interstitial-ad-sample-code-in-c"></a>Código de ejemplo de anuncios intersticiales en C\# #  
+# <a name="interstitial-ad-sample-code-in-c"></a>Código de ejemplo ad intersticial en C\# #  
 
-En este tema se proporciona un código de muestra completo para una aplicación básica para la Plataforma universal de Windows (UWP) en C# y XAML que muestra un anuncio intersticial. Para instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://aka.ms/githubads).
+En este tema se proporciona un código de muestra completo para una aplicación básica para la Plataforma universal de Windows (UWP) en C# y XAML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://aka.ms/githubads).
 
 ## <a name="code-example"></a>Ejemplo de código
 
 En esta sección se muestra el contenido de los archivos MainPage.xaml y MainPage.xaml.cs en una aplicación básica que muestra un anuncio intersticial. Para usar estos ejemplos, copia el código en un proyecto de **aplicación vacía (Windows universal)** de Visual C# en Visual Studio.
 
-Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Reemplaza los valores de la ```myAppId``` y ```myAdUnitId``` campos por valores dinámicos del centro de partners antes de enviar la aplicación a la tienda. Para más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Reemplace los valores de la ```myAppId``` y ```myAdUnitId``` campos con valores en vivo desde el centro de partners antes de enviar la aplicación a la Store. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
-> Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **AdType.Display** al primer parámetro del método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) en lugar de **AdType.Video**. Para más información, consulta [Anuncios intersticiales](interstitial-ads.md).
+> Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **AdType.Display** al primer parámetro del método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) en lugar de **AdType.Video**. Para obtener más información, consulta [Anuncios intersticiales](interstitial-ads.md).
 
 ### <a name="mainpagexaml"></a>MainPage.xaml
 
@@ -37,7 +37,7 @@ Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar 
 [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#CompleteSample)]
 
  
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplos de publicidad de GitHub](https://aka.ms/githubads)
+* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
  

@@ -8,28 +8,28 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3c6958491092498451743085af38b2d0fa6bdf8a
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634660"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Crear un paquete de la aplicación con la herramienta MakeAppx.exe
 
 
-**MakeAppx.exe** crea paquetes de aplicación (.msix o .appx) y aplicación lotes de paquetes (.msixbundle o .appxbundle). **MakeAppx.exe** también extrae los archivos de un paquete de aplicaciones o un lote y cifra o descifra los paquetes de aplicaciones y lotes. Esta herramienta se incluye en el SDK de Windows 10 y puede usarse desde un símbolo del sistema o un archivo de script.
+**MakeAppx.exe** crea paquetes de aplicaciones (.msix o .appx) y aplicación de lotes de paquetes (.msixbundle o .appxbundle). **MakeAppx.exe** también extrae los archivos de un paquete de aplicaciones o un lote y cifra o descifra los paquetes de aplicaciones y lotes. Esta herramienta se incluye en el SDK de Windows 10 y puede usarse desde un símbolo del sistema o un archivo de script.
 
 > [!IMPORTANT]
 > Si usaste Visual Studio para desarrollar tu aplicación, es recomendable usar el Asistente de Visual Studio para crear el paquete de la aplicación. Para más información, consulta [Empaquetado de aplicaciones para UWP con Visual Studio](packaging-uwp-apps.md).
 
 > [!IMPORTANT]
-> Ten en cuenta que **MakeAppx.exe** no crea un [paquete de la aplicación carga el archivo (.appxupload o .msixupload)](packaging-uwp-apps.md#types-of-app-packages), que es el tipo de paquete de aplicación válido para [envíos al centro de partners](../publish/upload-app-packages.md)recomendado. El archivo de carga del paquete de aplicación suele ser [creado como parte del proceso de empaquetado de Visual Studio](packaging-uwp-apps.md#create-an-app-package-upload-file), aunque también pueden crearse manualmente.
+> Tenga en cuenta que **MakeAppx.exe** no crea un [archivo de carga del paquete de aplicación (.appxupload o .msixupload)](packaging-uwp-apps.md#types-of-app-packages), que es el tipo de paquete de aplicación válida para recomendada [envíos al centro de partners ](../publish/upload-app-packages.md). El archivo de carga del paquete de aplicación suele [creado como parte del proceso de empaquetado de Visual Studio](packaging-uwp-apps.md#create-an-app-package-upload-file), aunque también pueden crearse manualmente.
 
 ## <a name="using-makeappxexe"></a>Uso de MakeAppx.exe
 
 En función de la ruta de acceso de instalación del SDK, aquí es donde está **MakeAppx.exe** en tu equipo Windows 10:
-- x86: C:\Program Files (x86) \Windows Kits\10\bin\\&lt;número de compilación&gt;\x86\makeappx.exe
-- x64: C:\Program Files (x86) \Windows Kits\10\bin\\&lt;número de compilación&gt;\x64\makeappx.exe
+- x86: C:\Program archivos (x86) kits\10\bin\\&lt;número de compilación&gt;\x86\makeappx.exe
+- x64: C:\Program archivos (x86) kits\10\bin\\&lt;número de compilación&gt;\x64\makeappx.exe
 
 No hay ninguna versión ARM de esta herramienta.
 
@@ -43,7 +43,7 @@ MakeAppx <command> [options]
 
 La siguiente tabla describe los comandos de **MakeAppx.exe**.
 
-| **Comando**   | **Descripción**                       |
+| **Command**   | **Descripción**                       |
 |---------------|---------------------------------------|
 | pack          | Crea un paquete.                    |
 | unpack        | Extrae todos los archivos del paquete especificado en el directorio de salida especificado. |
@@ -71,33 +71,33 @@ Esta lista de opciones se aplica a todos los comandos:
 
 La siguiente lista contiene posibles argumentos:
 
-| **Argumento**                          | **Descripción**                       |
+| **argumento**                          | **Descripción**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;output package name&gt;           | El nombre del paquete creado. Este es el nombre de archivo con .msix o .appx anexado. |
-| &lt;encrypted output package name&gt; | El nombre del paquete cifrado creado. Este es el nombre de archivo con .emsix o .eappx anexado. |
-| &lt;input package name&gt;            | El nombre del paquete. Este es el nombre de archivo con .msix o .appx anexado. |
-| &lt;encrypted input package name&gt;  | El nombre del paquete cifrado. Este es el nombre de archivo con .emsix o .eappx anexado. |
-| &lt;output bundle name&gt;            | El nombre del lote creado. Este es el nombre de archivo con .msixbundle o .appxbundle anexado. |
-| &lt;encrypted output bundle name&gt;  | El nombre del lote cifrado creado. Este es el nombre de archivo con .emsixbundle o .eappxbundle anexado. |
-| &lt;input bundle name&gt;             | El nombre del lote. Este es el nombre de archivo con .msixbundle o .appxbundle anexado. |
-| &lt;encrypted input bundle name&gt;   | El nombre del lote cifrado. Este es el nombre de archivo con .emsixbundle o .eappxbundle anexado. |
+| &lt;output package name&gt;           | El nombre del paquete creado. Este es el nombre de archivo anexado con .msix o .appx. |
+| &lt;encrypted output package name&gt; | El nombre del paquete cifrado creado. Este es el nombre de archivo anexado con .emsix o .eappx. |
+| &lt;input package name&gt;            | Nombre del paquete. Este es el nombre de archivo anexado con .msix o .appx. |
+| &lt;encrypted input package name&gt;  | El nombre del paquete cifrado. Este es el nombre de archivo anexado con .emsix o .eappx. |
+| &lt;output bundle name&gt;            | El nombre del lote creado. Este es el nombre de archivo anexado con .msixbundle o. appxbundle. |
+| &lt;encrypted output bundle name&gt;  | El nombre del lote cifrado creado. Este es el nombre de archivo anexado con .emsixbundle o .eappxbundle. |
+| &lt;input bundle name&gt;             | El nombre del lote. Este es el nombre de archivo anexado con .msixbundle o. appxbundle. |
+| &lt;encrypted input bundle name&gt;   | El nombre del lote cifrado. Este es el nombre de archivo anexado con .emsixbundle o .eappxbundle. |
 | &lt;content directory&gt;             | La ruta de acceso del contenido de paquete de aplicación o el lote. |
 | &lt;mapping file&gt;                  | El nombre de archivo que especifica el origen del paquete y el destino. |
 | &lt;output directory&gt;              | La ruta de acceso al directorio de los paquetes y lotes de salida. |
 | &lt;key file&gt;                      | El nombre del archivo que contiene una clave para el cifrado o el descifrado. |
-| &lt;algorithm ID&gt;                  | Los algoritmos usados al crear una asignación de bloques. Los algoritmos válidos son: SHA256 (predeterminado), SHA384 y SHA512. |
+| &lt;algorithm ID&gt;                  | Los algoritmos usados al crear una asignación de bloques. Los algoritmos válidos son: SHA256 (predeterminado), SHA384, SHA512. |
 
 
 ### <a name="create-an-app-package"></a>Crear un paquete de la aplicación
 
-Un paquete de aplicación es un conjunto completo de archivos de la aplicación empaquetado en un archivo de paquete .appx o de .msix. Para crear un paquete de aplicación mediante el comando **pack**, debes proporcionar un directorio de contenido o un archivo de asignación de la ubicación del paquete. También puedes cifrar un paquete mientras lo creas. Si deseas cifrar el paquete, debes usar /ep y especificar si estás usando un archivo de clave (/kf) o la clave de prueba global (/kt). Para obtener más información sobre cómo crear un paquete cifrado, consulta [Cifrar o descifrar un paquete o lote](#encrypt-or-decrypt-a-package-or-bundle).
+Un paquete de aplicación es un conjunto completo de archivos de la aplicación empaquetados en un archivo de paquete .msix o .appx. Para crear un paquete de aplicación mediante el comando **pack**, debes proporcionar un directorio de contenido o un archivo de asignación de la ubicación del paquete. También puedes cifrar un paquete mientras lo creas. Si deseas cifrar el paquete, debes usar /ep y especificar si estás usando un archivo de clave (/kf) o la clave de prueba global (/kt). Para obtener más información sobre cómo crear un paquete cifrado, consulta [Cifrar o descifrar un paquete o lote](#encrypt-or-decrypt-a-package-or-bundle).
 
 Opciones específicas del comando **pack**:
 
 | **Opción**    | **Descripción**                       |
 |---------------|---------------------------------------|
 | /f            | Especifica el archivo de asignación.           |
-| /h            | Especifica el algoritmo hash que usar al crear la asignación de bloques. Solo puede usarse con el comando pack. Los algoritmos válidos son: SHA256 (predeterminado), SHA384 y SHA512. |
+| /h            | Especifica el algoritmo hash que usar al crear la asignación de bloques. Solo puede usarse con el comando pack. Los algoritmos válidos son: SHA256 (predeterminado), SHA384, SHA512. |
 | /m            | Especifica la ruta de acceso a un manifiesto de aplicación de entrada que se usará como base para generar el manifiesto del paquete de salida de la aplicación o del paquete de recursos.  Si usas esta opción, también debes emplear /f e incluir una sección [ResourceMetadata] en el archivo de asignación para especificar las dimensiones de los recursos que se incluirán en el manifiesto generado.|
 | /nc           | Evita la compresión de los archivos del paquete. De manera predeterminada, los archivos se comprimen en función del tipo de archivo detectado. |
 | /r            | Crea un paquete de recursos. Debe usarse junto con /m e implica el uso de la opción /l. |  
@@ -133,7 +133,7 @@ Opciones específicas del comando **bundle**:
 
 | **Opción**    | **Descripción**                       |
 |---------------|---------------------------------------|
-| /bv           | Especifica el número de versión del lote. El número de versión debe estar en cuatro partes separadas por puntos con la forma: &lt;Principal&gt;.&lt;Secundaria&gt;.&lt;Compilación&gt;.&lt;Revisión&gt;. |
+| /bv           | Especifica el número de versión del lote. El número de versión debe ser de cuatro partes separadas por puntos en el formulario: &lt;Principales&gt;.&lt; Menores&gt;.&lt; Compilar&gt;.&lt; Revisión&gt;. |
 | /f            | Especifica el archivo de asignación.           |
 
 Ten en cuenta que si no se especifica la versión del paquete, o si se establece en "0.0.0.0", el lote se crea con la fecha y la hora actuales.
@@ -224,7 +224,7 @@ MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile
 
 ## <a name="key-files"></a>Archivos de clave
 
-Los archivos de clave deben comenzar con una línea que contenga la cadena "[Keys]" seguida de líneas que describan las claves con las que cifrar cada paquete. Cada clave se representa mediante un par de cadenas entre comillas, separadas por espacios o tabuladores. La primera cadena representa el Id. de clave de 32bits codificado en base64, y la segunda representa la clave de cifrado de 32bits codificada en base64. Un archivo de clave debe ser un archivo de texto sencillo.
+Los archivos de clave deben comenzar con una línea que contenga la cadena "[Keys]" seguida de líneas que describan las claves con las que cifrar cada paquete. Cada clave se representa mediante un par de cadenas entre comillas, separadas por espacios o tabuladores. La primera cadena representa el Id. de clave de 32 bits codificado en base64, y la segunda representa la clave de cifrado de 32 bits codificada en base64. Un archivo de clave debe ser un archivo de texto sencillo.
 
 Ejemplo de un archivo de clave:
 
@@ -268,6 +268,6 @@ Ejemplo de un archivo de asignaciones (con la opción /m):
 Esta validación garantiza que:
 - Todos los archivos a los que se hace referencia en el manifiesto del paquete se incluyen en el paquete de la aplicación.
 - Una aplicación no tiene dos claves idénticas.
-- Una aplicación no se registra para un protocolo prohibido de esta lista: SMB, FILE, MS-WWA-WEB, MS-WWA.
+- No registrar una aplicación para un protocolo prohibido en esta lista: SMB, ARCHIVO, MS-WEB-WWA, MS-WWA.
 
 No es una validación semántica completa, ya que solo está diseñada para detectar errores comunes. No se garantiza que los paquetes creados por **MakeAppx.exe** puedan instalarse.

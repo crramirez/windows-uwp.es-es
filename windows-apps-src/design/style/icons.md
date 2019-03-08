@@ -1,5 +1,5 @@
 ---
-Description: Good icons harmonize with typography and with the rest of the design language. They don’t mix metaphors, and they communicate only what’s needed, as speedily and simply as possible.
+Description: Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible.
 title: Iconos
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
@@ -12,11 +12,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947578"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612450"
 ---
 # <a name="icons-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
@@ -81,7 +81,7 @@ Los iconos pueden ahorrar espacio, pero ¿cuándo deberías usarlos?
 
 ## <a name="using-the-right-type-of-icon"></a>Usar el tipo correcto de icono
 
-Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos como Segoe MDL2 Assets. Podrías crear tu propia imagen basado en vectores. Incluso puedes usar una imagen de mapa de bits, aunque no lo recomendamos. Este es un resumen de las distintas formas en que puedes agregar un icono a la aplicación. 
+Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos como Segoe MDL2 Assets. Podría crear su propia imagen basada en vectores. Incluso puedes usar una imagen de mapa de bits, aunque no lo recomendamos. Este es un resumen de las distintas formas en que puedes agregar un icono a la aplicación. 
 
 ### <a name="use-a-predefined-icon"></a>Usa un icono predefinido.
 :::row:::
@@ -136,7 +136,7 @@ Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos com
 
 ## <a name="make-the-icon-do-something"></a>Hacer que el icono haga algo
 
-Una vez que tengas un icono, el siguiente paso es conseguir que hacer algo asociándolo con el comando o una acción de navegación. La mejor manera de hacerlo es agregar el icono a un botón o una barra de comandos. 
+Una vez que tenga un icono, el siguiente paso es lo que haga algo al asociarlo con el comando o una acción de navegación. La mejor manera de hacerlo es agregar el icono a un botón o una barra de comandos. 
 
 ![Imagen de la barra de comandos](images/icons/app-bar-desktop.svg)
 
@@ -221,4 +221,4 @@ Para obtener información sobre las comandos, consulta el [artículo de la barra
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Directrices sobre los activos de icono y de ventanas](../shell/tiles-and-notifications/app-assets.md)
+* [Directrices para los recursos de icono y el icono](../shell/tiles-and-notifications/app-assets.md)

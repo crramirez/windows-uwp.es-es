@@ -1,5 +1,5 @@
 ---
-Description: Special tile templates are unique templates that are either animated, or just allow you to do things that aren't possible with adaptive tiles.
+Description: Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables.
 title: Plantillas de iconos especiales
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 template: detail.hbs
@@ -8,33 +8,33 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944336"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619810"
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
  
 
-Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que se ha actualizado para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
+Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de icono especial se ha diseñado específicamente para Windows 10, excepto para la plantilla de icono icónico, una plantilla de clásica especial que se ha actualizado para Windows 10. En este artículo se trata tres plantillas de icono especial: Icónico, fotos y las personas.
 
 ## <a name="iconic-tile-template"></a>Plantillas de iconos icónicas
 
 
-La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 admite la plantilla en el teléfono y tableta y escritorio.
+La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 es compatible con la plantilla en el teléfono y de escritorio o tableta.
 
 ![iconos de correo pequeños y medianos](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>Cómo crear un icono de iconos
 
-Los siguientes pasos incluyen todo lo que necesitas saber para crear un icono de iconos para Windows 10. En un nivel alto, necesitas el activo de imagen icónico, a continuación envías una notificación al icono con la plantilla icónica y, finalmente, envías una notificación de distintivos que proporcione el número que debe mostrarse en el icono.
+Los siguientes pasos abarcan todo lo que necesita saber para crear un icono icónico para Windows 10. En un nivel alto, necesitas el activo de imagen icónico, a continuación envías una notificación al icono con la plantilla icónica y, finalmente, envías una notificación de distintivos que proporcione el número que debe mostrarse en el icono.
 
 ![flujo de desarrolladores del icono de iconos](images/iconic-template-dev-flow.png)
 
-**Paso 1: crear tus activos de imagen en formato PNG**
+**Paso 1: Cree sus activos de imagen en formato PNG**
 
-Crear los activos de icono para tu icono y situarlos en tus recursos del proyecto con tus otros activos. Como mínimo, crea un icono de 200 x 200 píxeles, que funcione tanto para iconos pequeños como medianos en teléfonos y en el escritorio. Para proporcionar la mejor experiencia de usuario, crea un icono para cada tamaño. Estos activos no requieren relleno. Consulta los detalles de ajuste de tamaño en la imagen que viene a continuación.
+Crear los activos de icono para tu icono y situarlos en tus recursos del proyecto con tus otros activos. Como mínimo, crea un icono de 200 x 200 píxeles, que funcione tanto para iconos pequeños como medianos en teléfonos y en el escritorio. Para proporcionar la mejor experiencia de usuario, crea un icono para cada tamaño. Estos activos no requieren relleno. Consulta los detalles de ajuste de tamaño en la imagen a continuación.
 
 Guarda activos de iconos en formato PNG y con transparencia. En Windows Phone, se muestra cada píxel no transparente en blanco (RGB 255, 255, 255). Por razones de coherencia y simplicidad, usar el blanco también para los iconos de escritorio.
 
@@ -54,11 +54,11 @@ Para activos no cuadrados, se produce el centrado horizontal o vertical automát
 
 ![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26b.png)
 
-**Paso 2: crear el icono de base**
+**Paso 2: Creación de su mosaico base**
 
 Puedes usar la plantilla icónica tanto en el icono principal como en los secundarios. Si estás usándola en un icono secundario, primero tendrás que crear el icono secundario o usar un icono secundario ya anclado. Los iconos principales están anclados implícitamente y siempre se les puede enviar notificaciones.
 
-**Paso 3: enviar una notificación a tu icono**
+**Paso 3: Enviar una notificación a su mosaico**
 
 Aunque este paso puede variar en función de si la notificación se envía de forma local o a través de inserción del servidor, la carga de XML que envíes se mantiene. Para enviar una notificación de icono local, crea [**TileUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater) para tu icono (icono principal o secundario) y después envía una notificación al icono que usa la plantilla de iconos icónica tal como se muestra a continuación. En teoría, también debes incluir enlaces para tamaños de icono grande y ancho con [plantillas de iconos adaptables](create-adaptive-tiles.md).
 
@@ -82,7 +82,7 @@ Este es un código de muestra para la carga de XML:
 
 Esta carga de XML de plantilla de iconos icónica usa un elemento de imagen que apunta a la imagen que creaste en el paso 1. Ahora tu icono está listo para mostrar el distintivo junto a tu icono; lo único que queda es enviar las notificaciones de los distintivos.
 
-**Paso 4: enviar una notificación de distintivo a tu icono**
+**Paso 4: Enviar una notificación informativa a su mosaico**
 
 Del mismo modo que en el paso 3, este paso puede variar en función de si la notificación se envía de forma local o a través de inserción del servidor, pero la carga de XML que envíes sigue siendo la misma. Para enviar una notificación local, crea un [**BadgeUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater) para tu icono (ya sea un icono principal o secundario) y después envía una notificación con tu valor deseado (o borra el distintivo).
 
@@ -94,7 +94,7 @@ Este es un código de muestra para la carga de XML:
 
 El distintivo del icono se actualizará acordemente.
 
-**Paso 5: implementación**
+**Paso 5: En resumen**
 
 La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada uno de los aspectos de la plantilla de iconos icónica. Una [notificación de icono](https://msdn.microsoft.com/library/windows/apps/hh779724) (que contenga esos elementos &lt;binding&gt;) se usa para especificar la plantilla icónica y el activo de imagen; una [notificación de distintivo](https://msdn.microsoft.com/library/windows/apps/hh779719) especifica el valor numérico; las propiedades del icono controlan el nombre para mostrar, el color y otros datos de tu icono.
 
@@ -184,7 +184,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>Plantilla de iconos de contactos
 
 
-La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
+La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de mosaico ha estado disponible desde Windows 10 compilar 10572 y cualquier persona es Bienvenido a usarlo en su aplicación.
 
 Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 
@@ -272,11 +272,11 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
-* [Biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+* [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
+* [Biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [Iconos, distintivos y notificaciones](index.md)
 * [Crear iconos adaptables](create-adaptive-tiles.md)
-* [Esquema de contenido de ventana](../tiles-and-notifications/tile-schema.md)
+* [Esquema de contenido de mosaico](../tiles-and-notifications/tile-schema.md)
  
 
  

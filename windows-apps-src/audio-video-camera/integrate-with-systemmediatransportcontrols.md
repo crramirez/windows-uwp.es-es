@@ -4,18 +4,18 @@ description: En este artículo se muestra cómo interactuar con los controles de
 title: Integrar con los controles de transporte de contenido multimedia del sistema
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c89a1901d15d00c7c102157c8f44d6ab96272ef0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617910"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
-En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema (SMTC). Los SMTC son un conjunto de controles comunes para todos los dispositivos de Windows10 que proporcionan un modo coherente para que los usuarios controlen la reproducción multimedia de todas las aplicaciones en ejecución que usan [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para la reproducción.
+En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema (SMTC). Los SMTC son un conjunto de controles comunes para todos los dispositivos de Windows 10 que proporcionan un modo coherente para que los usuarios controlen la reproducción multimedia de todas las aplicaciones en ejecución que usan [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para la reproducción.
 
 Para obtener una muestra completa que demuestre la integración con los SMTC, consulta la [muestra de controles de transporte multimedia del sistema en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
                     
@@ -76,10 +76,10 @@ Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostra
 
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Reproducción de contenido multimedia](media-playback.md)
+* [Reproducción de multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Control manual de los controles de transporte de multimedia del sistema](system-media-transport-controls.md)
-* [Muestra de controles de transporte multimedia del sistema en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+* [Control manual de los controles de transporte de medios del sistema](system-media-transport-controls.md)
+* [Ejemplo de controles de transporte de medios del sistema en github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
  
 
  

@@ -1,19 +1,19 @@
 ---
-Description: You create the UI for your app by using controls such as buttons, text boxes, and combo boxes to display data and get user input. Here, we show you how to add controls to your app.
+Description: Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación.
 title: Introducción a los controles y patrones
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ff3f89887235fc9c8d9d7afbbdea3d79bace810
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630800"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
@@ -21,7 +21,7 @@ En el desarrollo de aplicaciones para UWP, un *control* es un elemento de la int
 
 > **API importantes**: [Espacio de nombres Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón de [maestro y detalles](master-details.md) es una forma que puedes usar un control [SplitView](split-view.md) para la navegación de la aplicación. Del mismo modo, puedes personalizar la plantilla de un control de [NavigationView](navigationview.md) para implementar el patrón de tabulación.
+Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el [principal-detalle](master-details.md) patrón es una forma que puede usar un [SplitView](split-view.md) control para la navegación de la aplicación. De forma similar, puede personalizar la plantilla de un [NavigationView](navigationview.md) control para implementar el patrón de ficha.
 
 En muchos casos, puedes usar el control tal cual. Sin embargo, los controles de XAML separan la función de la estructura y la apariencia, por lo que puedes realizar varios niveles de modificaciones que se adapten a tus necesidades. En la sección [Estilo](../style/index.md), aprenderás cómo usar [Estilos XAML](xaml-styles.md) y [plantillas de control](control-templates.md) para modificar un control.
 
@@ -50,7 +50,7 @@ También puedes arrastrar el control desde el Cuadro de herramientas hasta el di
 
 ## <a name="set-the-name-of-a-control"></a>Establecer el nombre de un control
 
-Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de VisualStudio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades.
+Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de Visual Studio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades.
 
 Para definir el nombre de un control
 1. Selecciona el elemento que quieras denominar.
@@ -83,7 +83,7 @@ Puedes establecer las propiedades del control en la ventana Propiedades, en XAML
 
 ![Selector de colores en el diseñador de Visual Studio](images/add-controls-foreground-designer.png)
 
-Así se establece la propiedad Foreground en el editor XAML. Observa la ventana IntelliSense de VisualStudio que se abre para ayudarte con la sintaxis. 
+Así se establece la propiedad Foreground en el editor XAML. Observa la ventana IntelliSense de Visual Studio que se abre para ayudarte con la sintaxis. 
 
 ![IntelliSense en la parte 1 de XAML](images/add-controls-foreground-xaml.png)
 
@@ -105,7 +105,7 @@ Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 
 ## <a name="create-an-event-handler"></a>Crear un controlador de eventos 
 
-Cada control tiene eventos que te permiten responder a acciones del usuario u otros cambios en la aplicación. Por ejemplo, un control Button contiene un evento Click que se genera cuando un usuario hace clic en Button. Creas un método, llamado controlador de eventos, para controlar el evento. Puedes asociar el evento de un control con un método del controlador de eventos en la ventana Propiedades, en XAML o en el código. Para más información acerca de los eventos, consulta el tema de [introducción a los eventos y eventos enrutados](../../xaml-platform/events-and-routed-events-overview.md).
+Cada control tiene eventos que te permiten responder a acciones del usuario u otros cambios en la aplicación. Por ejemplo, un control Button contiene un evento Click que se genera cuando un usuario hace clic en Button. Creas un método, llamado controlador de eventos, para controlar el evento. Puedes asociar el evento de un control con un método del controlador de eventos en la ventana Propiedades, en XAML o en el código. Para más información acerca de los eventos, consulta el tema de [Introducción a los eventos y eventos enrutados](../../xaml-platform/events-and-routed-events-overview.md).
 
 Para crear un controlador de eventos, selecciona el control y después haz clic en la pestaña Eventos en la parte superior de la ventana Propiedades. En la ventana Propiedades, aparecen todos los eventos disponibles para ese control. Estos son algunos de los eventos para un Button.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>Temas relacionados
 
 -   [Índice de controles por función](controls-by-function.md)
--   [Espacio de nombre de Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Espacio de nombres Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 -   [Diseño](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Facilidad de uso](../usability/index.md)

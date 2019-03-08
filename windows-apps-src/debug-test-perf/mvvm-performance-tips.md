@@ -4,14 +4,14 @@ title: Sugerencias de rendimiento de MVVM y lenguaje
 description: En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9027362eccfb8130b181bee26a57f13ce1e1af66
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621770"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Sugerencias de rendimiento de MVVM y lenguaje
 
@@ -29,8 +29,8 @@ El patrón Model-View-ViewModel (MVVM) es común en muchas aplicaciones XAML. (M
 Hay varias definiciones concretas del patrón MVVM y marcos de terceros que ayudan a implementarlo. Sin embargo, una adherencia estricta a cualquier variación del patrón puede resultar en aplicaciones con mucha más sobrecarga que se pueda justificar.
 
 -   Los enlaces de datos XAML (la extensión de marcado {Binding}) se diseñaron en parte para habilitar los patrones de modelos y vistas. Sin embargo, {Binding} aporta un conjunto de trabajo no trivial y la sobrecarga de la CPU. La creación de un elemento {Binding} provoca una serie de asignaciones, y la actualización de un destino de enlace puede provocar reflejos y conversiones boxing. Estos problemas se han solucionado con la extensión de marcado {x:Bind}, que compila los enlaces en tiempo de compilación. **Recomendación:** usa {x:Bind}.
--   Es común en MVVM conectar Button.Click al modelo de vista con un objeto ICommand, tales como las aplicaciones auxiliares comunes DelegateCommand o RelayCommand. Sin embargo, estos comandos son asignaciones adicionales, incluido el agente de escucha de eventos CanExecuteChanged, lo que agrega al conjunto de trabajo y al tiempo de inicio o navegación de la página. **Recomendación:** como alternativa al uso de la cómoda interfaz ICommand, puedes tener en cuenta la posibilidad de colocar los controladores de eventos en el código subyacente, adjuntarlos a los eventos de vista y llamar a un comando en el modelo de vista cuando se generen los eventos. También tendrás que agregar código adicional para deshabilitar el elemento Button cuando el comando no está disponible.
--   Es común en MVVM crear una página con todas las configuraciones posibles de la interfaz de usuario y luego contraer partes del árbol enlazando la propiedad Visibility a las propiedades en la máquina virtual. Esto agrega tiempo de inicio innecesariamente y posiblemente al conjunto de trabajo (ya que algunas partes del árbol quizás nunca se hagan visibles). **Recomendaciones:** usa la función [x:Load attribute](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy attribute](../xaml-platform/x-deferloadstrategy-attribute.md) para aplazar del inicio las partes innecesarias del árbol. Además, crea controles de usuario separados para los diferentes modos de la página y usa el código subyacente para mantener cargados solo los controles necesarios.
+-   Es común en MVVM conectar Button.Click al modelo de vista con un objeto ICommand, tales como las aplicaciones auxiliares comunes DelegateCommand o RelayCommand. Sin embargo, estos comandos son asignaciones adicionales, incluido el agente de escucha de eventos CanExecuteChanged, lo que agrega al conjunto de trabajo y al tiempo de inicio o navegación de la página. **Recomendación:** Como alternativa al uso de la cómoda interfaz ICommand, considere la posibilidad de colocar los controladores de eventos en el código subyacente y adjuntarlos a los eventos de vista y llamar a un comando en el modelo de vista cuando se producen esos eventos. También tendrás que agregar código adicional para deshabilitar el elemento Button cuando el comando no está disponible.
+-   Es común en MVVM crear una página con todas las configuraciones posibles de la interfaz de usuario y luego contraer partes del árbol enlazando la propiedad Visibility a las propiedades en la máquina virtual. Esto agrega tiempo de inicio innecesariamente y posiblemente al conjunto de trabajo (ya que algunas partes del árbol quizás nunca se hagan visibles). **Recomendaciones:** Use la [atributo x: Load](../xaml-platform/x-load-attribute.md) o [atributo x: deferloadstrategy al mismo en tiempo](../xaml-platform/x-deferloadstrategy-attribute.md) característica aplazar partes innecesarias del árbol de inicio. Además, crea controles de usuario separados para los diferentes modos de la página y usa el código subyacente para mantener cargados solo los controles necesarios.
 
 ## <a name="ccx-recommendations"></a>Recomendaciones para C++/CX
 

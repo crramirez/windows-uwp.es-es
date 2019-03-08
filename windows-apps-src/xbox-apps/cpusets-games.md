@@ -5,11 +5,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
 ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945016"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625670"
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets para el desarrollo de juegos
 
@@ -21,7 +21,7 @@ La Plataforma universal de Windows (UWP) es el núcleo de una amplia gama de dis
 
 La API de CPUSets proporciona control sobre los conjuntos de CPU que están disponibles para los subprocesos en los que se realizará la programación. Existen dos funciones disponibles para controlar dónde se programan los subprocesos:
 - **SetProcessDefaultCpuSets**: esta función puede usarse para especificar los nuevos subprocesos de conjuntos de CPU que pueden ejecutarse si no se asignan a determinados conjuntos de CPU.
-- **SetThreadSelectedCpuSets**: esta función permite limitar los conjuntos de CPU que puede ejecutar un subproceso específico.
+- **SetThreadSelectedCpuSets**: esta función permite limitar los conjuntos de CPU que los que se puede ejecutar un subproceso específico.
 
 Si la función **SetProcessDefaultCpuSets** nunca se ha usado, los subprocesos recién creados se pueden programar en cualquier conjunto de CPU disponible para el proceso. En esta sección se explican los conceptos básicos de la API de CPUSets.
 
@@ -49,11 +49,11 @@ La información de cada instancia de esta estructura de datos que devuelve **Get
 
  **Tabla 1. Miembros de datos útiles para el desarrollo de juegos.**
 
-| Nombre del miembro  | Tipo de datos | Descripción |
+| Nombre de miembro  | Tipo de datos | Descripción |
 | ------------- | ------------- | ------------- |
 | Tipo  | CPU_SET_INFORMATION_TYPE  | Tipo de información de la estructura. Si su valor no es **CpuSetInformation**, debe omitirse.  |
 | Id  | unsigned long  | Identificador de conjunto de CPU especificado. Este es el identificador que debe usarse con las funciones de conjunto de CPU como **SetThreadSelectedCpuSets**.  |
-| Group  | unsigned short  | Especifica el "grupo de procesadores" del conjunto de CPU. Los grupos de procesadores permiten que un equipo tenga más de 64 núcleos lógicos, así como el intercambio directo de las CPU mientras se ejecuta el sistema. Es poco común ver un equipo que no es un servidor con más de un grupo. A menos que escribas aplicaciones destinadas a ejecutarse en servidores grandes o granjas de servidores, es mejor usar conjuntos de CPU en un solo grupo porque la mayoría de equipos de consumo solo tienen un grupo de procesadores. Todos los demás valores de esta estructura guardan relación con el miembro Group.  |
+| Grupo  | unsigned short  | Especifica el "grupo de procesadores" del conjunto de CPU. Los grupos de procesadores permiten que un equipo tenga más de 64 núcleos lógicos, así como el intercambio directo de las CPU mientras se ejecuta el sistema. Es poco común ver un equipo que no es un servidor con más de un grupo. A menos que escribas aplicaciones destinadas a ejecutarse en servidores grandes o granjas de servidores, es mejor usar conjuntos de CPU en un solo grupo porque la mayoría de equipos de consumo solo tienen un grupo de procesadores. Todos los demás valores de esta estructura guardan relación con el miembro Group.  |
 | LogicalProcessorIndex  | unsigned char  | Índice relativo de grupo del conjunto de CPU.  |
 | CoreIndex  | unsigned char  | Índice relativo de grupo del núcleo de la CPU física donde se encuentra el conjunto de CPU.  |
 | LastLevelCacheIndex  | unsigned char  | Índice relativo de grupo de la última memoria caché asociada a este conjunto de CPU. Esta es la memoria caché más lenta, a menos que el sistema use nodos NUMA, normalmente la caché L2 o L3.  |
@@ -64,15 +64,15 @@ Los otros miembros de datos proporcionan información que es bastante improbable
 
 A continuación se incluyen algunos ejemplos del tipo de información recopilada de las aplicaciones para UWP que se ejecutan en distintos tipos de hardware.
 
-**Tabla 2. Información devuelta de una aplicación para UWP que se ejecuta en Microsoft Lumia 950. Este es un ejemplo de un sistema que tiene varias cachés de último nivel. El Lumia 950 incluye un procesador Qualcomm 808 Snapdragon que contiene una CPU ARM Cortex A57 de doble núcleo y una CPU ARM Cortex A53 de cuatro núcleos.**
+**Tabla 2. Información devuelta de una aplicación para UWP que se ejecuta en Microsoft Lumia 950. Este es un ejemplo de un sistema que tiene varias cachés de último nivel. El Lumia 950 incluye un proceso de Qualcomm 808 Snapdragon que contenga un doble núcleo ARM Cortex A57 y cuatro núcleos de CPU de ARM Cortex A53.**
 
   ![Tabla 2](images/cpusets-table2.png)
 
-**Tabla 3. Información devuelta de una aplicación para UWP que se ejecuta en un equipo típico. Este es un ejemplo de un sistema que usa hyperthreading; cada núcleo físico tiene dos núcleos lógicos en los que se pueden programar subprocesos. En este caso, el sistema contiene una CPU Intel Xeon E5-2620.**
+**Tabla 3. Información devuelta de una aplicación para UWP que se ejecuta en un equipo típico. Este es un ejemplo de un sistema que usa hyperthreading; cada núcleo físico tiene dos núcleos lógicos en los que se pueden programar subprocesos. En este caso, el sistema contenía un Intel xenón CPU E5-2620.**
 
   ![Tabla 3](images/cpusets-table3.png)
 
-**Tabla 4. Información devuelta de una aplicación para UWP en un dispositivo Microsoft Surface Pro 4 de cuatro núcleos. Este sistema tenía una CPU Intel Core i5-6300.**
+**Tabla 4. Información devuelta de una aplicación para UWP en un dispositivo Microsoft Surface Pro 4 de cuatro núcleos. Este sistema tenía una CPU de Intel Core i5-6300.**
 
   ![Tabla 4](images/cpusets-table4.png)
 
@@ -138,7 +138,7 @@ Un ejemplo de organización de subprocesos basada en núcleos físicos puede enc
 
 La coherencia de caché es el concepto en que la memoria caché es la misma en varios recursos de hardware que actúan en los mismos datos. Si los subprocesos se programan en diferentes núcleos, pero que funcionan en los mismos datos, es posible que estén funcionando en copias independientes de los datos en memorias caché diferentes. Para obtener los resultados correctos, estas cachés deben mantenerse coherentes entre sí. Mantener la coherencia entre varias cachés es relativamente costoso, pero es necesario para que cualquier sistema de varios núcleos funcione. Además, está completamente fuera del control del código de cliente; el sistema subyacente funciona independientemente para mantener las memorias caché actualizadas mediante el acceso a los recursos de memoria compartidos entre núcleos.
 
-Si el juego tiene varios subprocesos que comparten una cantidad considerable de datos, puedes reducir al mínimo el costo de la coherencia de caché. Para ello, asegúrate de que estén programados en conjuntos de CPU que comparten una caché de último nivel. La caché de último nivel es la más lenta disponible para un núcleo en sistemas que no usan nodos NUMA. Es extremadamente raro que un equipo de juegos use nodos NUMA. Si los núcleos no comparten una caché de último nivel, mantener la coherencia requerirá acceder a recursos de memoria de mayor nivel y, por tanto, más lentos. El bloqueo de dos subprocesos para separar conjuntos de CPU que comparten una caché y un núcleo físico puede proporcionar un rendimiento aún mayor que su programación en núcleos físicos independientes si no requieren más del 50% del tiempo en un fotograma determinado. 
+Si el juego tiene varios subprocesos que comparten una cantidad considerable de datos, puedes reducir al mínimo el costo de la coherencia de caché. Para ello, asegúrate de que estén programados en conjuntos de CPU que comparten una caché de último nivel. La caché de último nivel es la más lenta disponible para un núcleo en sistemas que no usan nodos NUMA. Es extremadamente raro que un equipo de juegos use nodos NUMA. Si los núcleos no comparten una caché de último nivel, mantener la coherencia requerirá acceder a recursos de memoria de mayor nivel y, por tanto, más lentos. El bloqueo de dos subprocesos para separar conjuntos de CPU que comparten una caché y un núcleo físico puede proporcionar un rendimiento aún mayor que su programación en núcleos físicos independientes si no requieren más del 50 % del tiempo en un fotograma determinado. 
 
 Este ejemplo de código muestra cómo determinar si los subprocesos que se comunican con frecuencia pueden compartir una caché de último nivel.
 
@@ -182,7 +182,7 @@ for (size_t i = 0; i < count; ++i)
 
 El diseño de caché que se muestra en la figura 1 es un ejemplo del tipo de diseño que se puede ver de un sistema. Esta figura es una ilustración de las cachés de un Microsoft Lumia 950. La comunicación entre subprocesos que se produce entre la CPU 256 y la CPU 260 supondría una sobrecarga significativa porque requeriría que el sistema mantuviese la coherencia de sus cachés L2.
 
-**Figura 1. Arquitectura de caché que se encuentra en un dispositivo Microsoft Lumia 950.**
+**Figura 1. Arquitectura de memoria caché se encuentra en un dispositivo de Microsoft Lumia 950.**
 
 ![Caché del Lumia 950](images/cpusets-lumia950cache.png)
 
@@ -192,6 +192,6 @@ La API de CPUSets disponible para el desarrollo de UWP proporciona una cantidad 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 - [Conjuntos de CPU (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
-- [Muestra de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [Ejemplo de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [UWP en Xbox One](index.md)
 

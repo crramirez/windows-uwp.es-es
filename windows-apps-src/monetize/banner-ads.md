@@ -3,20 +3,20 @@ description: Obtén información sobre cómo usar anuncios de banner en tu aplic
 title: Anuncios de banner
 ms.date: 08/23/2017
 ms.topic: article
-keywords: Windows 10, uwp, anuncios, publicidad, AdControl, anuncios de banner
+keywords: windows 10, uwp, anuncios, publicidad, AdControl, anuncios de banner
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9045883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627250"
 ---
 # <a name="banner-ads"></a>Anuncios de banner
 
-Los artículos de esta sección muestra cómo usar la clase [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) en el SDK de Microsoft Advertising para agregar anuncios de banner a tu aplicación para UWP.
+Los artículos de esta sección muestran cómo usar la clase [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) en el SDK de Microsoft Advertising para agregar anuncios de banner a tu aplicación para UWP.
 
-Anuncios de banner son anuncios de visualización estática que usan una parte rectangular de una página en la aplicación para mostrar contenido promocional. Estos anuncios se pueden actualizar automáticamente a intervalos regulares. Este es un buen punto de partida si estás empezando a usar la publicidad en tu aplicación.
+Los anuncios de banner son los anuncios de visualización estática que usan una parte rectangular de una página en la aplicación para mostrar contenido promocional. Estos anuncios se pueden actualizar automáticamente a intervalos regulares. Este es un buen punto de partida si estás empezando a usar la publicidad en tu aplicación.
 
 ![addreferences](images/banner-ad.png)
 
@@ -24,12 +24,12 @@ Anuncios de banner son anuncios de visualización estática que usan una parte r
 
 |  Tema    | Descripción |               
 |----------|-------|
-| [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)     | Agrega un anuncio en banner a la aplicación XAML o .NET.        |
-| [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md)     | Agrega un anuncio en banner a la aplicación HTML5 o JavaScript.        |
-| [Tamaños admitidos de anuncios de banner](supported-ad-sizes-for-banner-ads.md)    |  Revisa los tamaños admitidos para anuncios de banner en aplicaciones para UWP.        |
+| [Elemento AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)     | Agrega un anuncio en banner a la aplicación XAML o .NET.        |
+| [Elemento AdControl en HTML 5 y Javascript](adcontrol-in-html-5-and-javascript.md)     | Agrega un anuncio en banner a la aplicación HTML5 o JavaScript.        |
+| [Tamaños de anuncio de banner admitidos](supported-ad-sizes-for-banner-ads.md)    |  Revisa los tamaños admitidos para los anuncios de banner en aplicaciones para UWP.        |
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplos de publicidad de GitHub](https://aka.ms/githubads)
-* [Configurar unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)
+* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
+* [Configurar las unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)

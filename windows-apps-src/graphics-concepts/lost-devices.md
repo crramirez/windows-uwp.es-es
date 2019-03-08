@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f0b42a10c2cdd61aef84e08d6bd4f6408a978c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922085"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617320"
 ---
 # <a name="lost-devices"></a>Dispositivos perdidos
 
@@ -24,7 +24,7 @@ De manera predeterminada, no se especifica el conjunto completo de los escenario
 Se garantiza que todos los métodos que derivan de [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) funcionarán después de que el dispositivo esté en estado perdido. Por lo general, después de que el dispositivo esté en estado perdido, cada función tiene las tres opciones siguientes:
 
 -   Error de "dispositivo perdido": significa que la aplicación debe reconocer que el dispositivo está en estado perdido, por lo que la aplicación identifica que algo no ocurre según lo esperado.
--   Error silencioso, que devuelve S\_OK o cualquier otro código de retorno: si una función produce un error silencioso, por lo general, la aplicación no puede distinguir entre un resultado "correcto" y un "error silencioso".
+-   Un error silenciosamente, devolver S\_Aceptar o cualquier otro código de retorno - si una función no funciona en modo silencioso, la aplicación por lo general no puede distinguir entre el resultado de "¡success" y "error silencioso".
 -   Devuelve un código de retorno.
 
 ## <a name="span-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanresponding-to-a-lost-device"></a><span id="Responding_to_a_Lost_Device"></span><span id="responding_to_a_lost_device"></span><span id="RESPONDING_TO_A_LOST_DEVICE"></span>Responder a un dispositivo perdido
@@ -36,7 +36,7 @@ Si no se puede restaurar el dispositivo, la aplicación prepara el dispositivo m
 
 Para la mayor parte, las llamadas de alta frecuencia de Direct3D no devuelven información sobre si el dispositivo está en estado perdido. La aplicación puede continuar llamando a los métodos de representación sin recibir ninguna notificación de dispositivo perdido. Internamente, estas operaciones se descartan hasta que se restablece el dispositivo al estado operativo.
 
-## <a name="span-idlockingoperationsspanspan-idlockingoperationsspanspan-idlockingoperationsspanlocking-operations"></a><span id="Locking_Operations"></span><span id="locking_operations"></span><span id="LOCKING_OPERATIONS"></span>Operaciones de bloqueo
+## <a name="span-idlockingoperationsspanspan-idlockingoperationsspanspan-idlockingoperationsspanlocking-operations"></a><span id="Locking_Operations"></span><span id="locking_operations"></span><span id="LOCKING_OPERATIONS"></span>Operaciones de bloqueos
 
 
 Internamente, Direct3D hace lo suficiente para garantizar que una operación de bloqueo será correcta después de que un dispositivo pase a estado perdido. Sin embargo, no se garantiza que los datos de los recursos de memoria de vídeo sean precisos durante la operación de bloqueo. Se garantiza que no se devolverá ningún código de error. Esto permite escribir en las aplicaciones sin tener que preocuparse por la pérdida del dispositivo durante una operación de bloqueo.

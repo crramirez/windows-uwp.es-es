@@ -1,5 +1,5 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
+Description: Los cuadros de diálogo y los controles flotantes muestran elementos transitorios de la interfaz de usuario que aparecen cuando el usuario los solicita o cuando sucede algo que requiere notificación o aprobación.
 title: Controles de cuadro de diálogo
 label: Dialogs
 template: detail.hbs
@@ -13,26 +13,26 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116104"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621840"
 ---
 # <a name="dialog-controls"></a>Controles de cuadro de diálogo
 
-Los controles de cuadro de diálogo son superposiciones modales en la interfaz de usuario que proporcionan información sobre la aplicación contextuales. Bloquean las interacciones con la ventana de la aplicación hasta que se descartan de forma explícita. A menudo solicitan algún tipo de acción por parte del usuario.
+Controles de cuadro de diálogo son superposiciones de interfaz de usuario modales que proporcionan información de la aplicación contextuales. Las interacciones con la ventana de la aplicación bloquean hasta que se va a descartar explícitamente. A menudo solicitan algún tipo de acción por parte del usuario.
 
 ![Ejemplo de un cuadro de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
 
-> **API importantes**: [clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+> **API importantes**: [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa los cuadros de diálogo para notificar a los usuarios información importante o para solicitar información adicional o confirmación para completar una acción.
 
-Para obtener recomendaciones sobre cuándo usar un cuadro de diálogo frente a cuándo usar un control flotante (un control similar), consulta [los cuadros de diálogo y controles flotantes](index.md). 
+Para obtener recomendaciones sobre cuándo usar un cuadro de diálogo frente a cuándo se debe usar un control flotante (un control similar), vea [menús emergentes y cuadros de diálogo](index.md). 
 
 ## <a name="examples"></a>Ejemplos
 
@@ -43,7 +43,7 @@ Para obtener recomendaciones sobre cuándo usar un cuadro de diálogo frente a c
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> o <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -60,7 +60,7 @@ Para obtener recomendaciones sobre cuándo usar un cuadro de diálogo frente a c
 -   El contenido del cuadro de diálogo contiene el texto descriptivo y es obligatorio.
     -   Presenta el mensaje, el error o la pregunta de bloqueo de la manera más sencilla posible.
     -   Si se usa un cuadro de diálogo, usa el área de contenido para proporcionar más detalles o definir terminología. No repitas el título con otras palabras ligeramente distintas.
--   Debe aparecer al menos un botón de cuadro de diálogo.
+-   Al menos debe aparecer un botón de cuadro de diálogo.
     -   Asegúrate de que el cuadro de diálogo tiene al menos un botón correspondiente a una acción segura y no destructiva como "Entendido", "Cerrar" o "Cancelar". Usa la API de CloseButton para agregar este botón.
     -   Usa respuestas específicas al contenido o a la instrucción principal como texto del botón. Un ejemplo sería: "¿Quieres permitir que nombreDeAplicación acceda a tu ubicación?", seguido de los botones "Permitir" y "Bloquear". Cuando las respuestas son específicas, se comprenden con mayor rapidez y la toma de decisiones resulta eficaz.
     - Asegúrate de que el texto de los botones de acción sea conciso. Las cadenas cortas permiten al usuario realizar una selección de manera rápida y segura.
@@ -118,8 +118,8 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>Proporcionar una acción segura
-Dado que los cuadros de diálogo bloquean la interacción del usuario, y que los botones son el mecanismo principal para que los usuarios descarten el cuadro de diálogo, asegúrate de que el diálogo contiene al menos un botón "seguro" y un botón no destructivo como "Cerrar" o "Entendido". **Todos los cuadros de diálogo deben contener al menos un botón de acción segura para cerrar el cuadro de diálogo.** Esto garantiza que el usuario puede cerrar con confianza el cuadro de diálogo sin realizar una acción.<br>![Un cuadro de diálogo con un botón](../images/dialogs/dialog_RS2_one_button.png)
+## <a name="provide-a-safe-action"></a>Proporcionar una acción de prueba de errores
+Dado que los cuadros de diálogo bloquean la interacción del usuario, y que los botones son el mecanismo principal para que los usuarios descarten el cuadro de diálogo, asegúrate de que el diálogo contiene al menos un botón "seguro" y un botón no destructivo como "Cerrar" o "Entendido". **Todos los diálogos deben contener al menos un botón de acción segura para cerrar el cuadro de diálogo.** Esto garantiza que el usuario puede cerrar con confianza el cuadro de diálogo sin realizar una acción.<br>![Un cuadro de diálogo de un botón](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -248,7 +248,7 @@ Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de a
     </li>
 </ul>
 
-> Algunas plataformas colocan el botón de afirmación a la derecha en lugar de a la izquierda. Entonces, ¿por qué recomendamos colocarlo a la izquierda?  Si se supone que la mayoría de los usuarios son diestros y sostienen el teléfono con esa mano, en realidad es más cómodo presionar el botón de afirmación cuando está a la izquierda, porque es más probable que el botón esté dentro del arco del pulgar del usuario. Para los botones a la derecha de la pantalla, el usuario tiene que plegar el pulgar hacia dentro en una posición más incómoda.
+> Algunas plataformas colocan el botón de afirmación a la derecha en lugar de a la izquierda. Entonces, ¿por qué recomendamos colocarlo a la izquierda?  Si supones que la mayoría de los usuarios son diestros y sujetan su teléfono con esa mano, realmente resulta más cómodo presionar el botón de afirmación cuando está a la izquierda, porque es más probable que el botón esté dentro del arco del pulgar del usuario. Los botones situados en el lado derecho de la pantalla requerirán que el usuario cambie la posición de su pulgar hacia dentro a una posición menos cómoda.
 
 
 
@@ -260,6 +260,6 @@ Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de a
 
 ## <a name="related-articles"></a>Artículos relacionados
 - [Información sobre herramientas](../tooltips.md)
-- [Menús y menús contextuales](../menus.md)
-- [Clase Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Los menús y el menú contextual](../menus.md)
+- [Clase de ventana flotante](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d1907be029254d99be9e6158c93c179baea1fb0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641090"
 ---
 # <a name="introduction-to-rasterization-rules"></a>Introducción a las reglas de rasterización
 
@@ -21,7 +21,7 @@ A menudo, los puntos especificados para los vértices no coinciden con precisió
 
 Esto es una introducción simplificada a las reglas de rasterización. Para obtener más información, consulta [Reglas de rasterización](rasterization-rules.md). Consulta también [Fase del rasterizador (RS)](rasterizer-stage--rs-.md).
 
-## <a name="span-idtrianglerasterizationrulesspanspan-idtrianglerasterizationrulesspanspan-idtrianglerasterizationrulesspantriangle-rasterization-rules"></a><span id="Triangle_Rasterization_Rules"></span><span id="triangle_rasterization_rules"></span><span id="TRIANGLE_RASTERIZATION_RULES"></span>Reglas de rasterización de triángulo
+## <a name="span-idtrianglerasterizationrulesspanspan-idtrianglerasterizationrulesspanspan-idtrianglerasterizationrulesspantriangle-rasterization-rules"></a><span id="Triangle_Rasterization_Rules"></span><span id="triangle_rasterization_rules"></span><span id="TRIANGLE_RASTERIZATION_RULES"></span>Triángulo rasterización reglas
 
 
 Direct3D usa una convención de relleno de la parte superior izquierda para rellenar la geometría. Es la misma convención que se usa para los rectángulos en GDI y OpenGL. En Direct3D, el centro del píxel es el punto decisivo. Si el centro está dentro de un triángulo, el píxel es parte del triángulo. Los centros de píxeles están en coordenadas de enteros.
@@ -52,14 +52,14 @@ Para ambos rectángulos, los mismos píxeles se ven afectados, como se muestra e
 
 ![píxeles afectados por los dos cuadrados numerados anteriores](images/samepix.png)
 
-## <a name="span-idpointandlinerulesspanspan-idpointandlinerulesspanspan-idpointandlinerulesspanpoint-and-line-rules"></a><span id="Point_and_Line_Rules"></span><span id="point_and_line_rules"></span><span id="POINT_AND_LINE_RULES"></span>Reglas de punto y línea
+## <a name="span-idpointandlinerulesspanspan-idpointandlinerulesspanspan-idpointandlinerulesspanpoint-and-line-rules"></a><span id="Point_and_Line_Rules"></span><span id="point_and_line_rules"></span><span id="POINT_AND_LINE_RULES"></span>Reglas de línea y punto
 
 
 Los puntos se representan igual que los sprites de punto, ambos se representan como cuadriláteros alineados a la pantalla y, por consiguiente, cumplen las mismas reglas que la representación de polígonos.
 
 Las reglas de representación de líneas sin suavizado de contorno son exactamente las mismas que para las [líneas GDI](https://msdn.microsoft.com/library/windows/desktop/dd145027).
 
-## <a name="span-idpointspriterulesspanspan-idpointspriterulesspanspan-idpointspriterulesspanpoint-sprite-rules"></a><span id="Point_Sprite_Rules"></span><span id="point_sprite_rules"></span><span id="POINT_SPRITE_RULES"></span>Reglas de sprites de punto
+## <a name="span-idpointspriterulesspanspan-idpointspriterulesspanspan-idpointspriterulesspanpoint-sprite-rules"></a><span id="Point_Sprite_Rules"></span><span id="point_sprite_rules"></span><span id="POINT_SPRITE_RULES"></span>Reglas de Sprite punto
 
 
 Los sprites de punto y los primitivos de revisión se rasterizan como si los primitivos encajaran primero en triángulos y se rasterizaran los triángulos resultantes.
@@ -69,9 +69,9 @@ Los sprites de punto y los primitivos de revisión se rasterizan como si los pri
 
 [Dispositivos](devices.md)
 
-[Fase del rasterizador (RS)](rasterizer-stage--rs-.md)
+[Etapa del rasterizador (RS)](rasterizer-stage--rs-.md)
 
-[Reglas de rasterización](rasterization-rules.md)
+[Rasterización reglas](rasterization-rules.md)
 
  
 

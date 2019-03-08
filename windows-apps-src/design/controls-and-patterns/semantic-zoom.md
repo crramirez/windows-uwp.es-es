@@ -1,5 +1,5 @@
 ---
-Description: A semantic zoom control allows the user to zoom between two different semantic views of the same data set.
+Description: Un control de zoom semántico permite que el usuario haga zoom entre dos vistas semánticas distintas del mismo conjunto de datos.
 title: Zoom semántico
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
@@ -12,11 +12,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 210cca8a4b17b77e8c1f9cb490a79bcd1a53b6c7
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627620"
 ---
 # <a name="semantic-zoom"></a>Zoom semántico
 
@@ -29,9 +29,9 @@ El zoom semántico permite que el usuario cambie entre dos vistas distintas del 
 
 Por ejemplo, al ver una libreta de direcciones, el usuario puede alejarse para pasar rápidamente a la letra "W" y ampliar para ver los nombres con esa letra. 
 
-> **API importantes**: [Clase SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601), [Clase ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
+> **API importantes**: [Clase SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601), [clase ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [clase GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
 
-**Características**:
+**Funciones**:
 
 -   El tamaño de la vista alejada está restringido por los límites del control del zoom semántico.
 -   Al pulsar en un encabezado de grupo, se alterna entre las vistas. Se puede habilitar el gesto de reducir como una forma de alternar entre las vistas.
@@ -52,14 +52,14 @@ No confundas el zoom semántico con el zoom óptico. Aunque comparten la misma i
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SemanticZoom">abrir la aplicación y ver SemanticZoom en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-**Aplicación Fotos**
+**Aplicación de fotos**
 
 Este es un zoom semántico usado en la aplicación Fotos. Las fotos se agrupan por mes. Al seleccionar un encabezado de mes en la vista de cuadrícula predeterminada, se aleja a la vista de lista de mes para obtener una navegación más rápida.
 
@@ -80,9 +80,9 @@ Los 3 elementos que necesitas para un zoom semántico son:
 - Una vista ampliada que muestre los datos a nivel de elemento.
 - Una vista alejada que muestre los datos a nivel de grupo.
 
-Antes de usar el zoom semántico, debes saber cómo usar una vista de lista con los datos agrupados. Para obtener más información, consulta la [vista de lista y vista de cuadrícula](listview-and-gridview.md). 
+Antes de usar el zoom semántico, debes saber cómo usar una vista de lista con los datos agrupados. Para obtener más información, consulte [vista de lista y vista de cuadrícula](listview-and-gridview.md). 
 
-> **Nota**&nbsp;&nbsp;Para definir la vista ampliada y la vista alejada del control SemanticZoom, puedes usar cualquiera de los dos controles que implementan la interfaz [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). El marco XAML proporciona 3 controles que implementan esta interfaz: ListView, GridView y Hub.
+> **Nota**&nbsp;&nbsp;Para definir la vista ampliada y la vista alejada del control SemanticZoom, puedes usar cualquiera de los dos controles que implementan la interfaz [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). El marco XAML proporciona 3 controles que implementan esta interfaz: ListView, GridView y concentrador.
  
  Este XAML muestra la estructura del control SemanticZoom. Puedes asignar otros controles a las propiedades ZoomedOutView y ZoomedInView.
  
@@ -98,9 +98,9 @@ Antes de usar el zoom semántico, debes saber cómo usar una vista de lista con 
 </SemanticZoom>
  ```
  
-Estos ejemplos se han tomado de la página SemanticZoom del [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?LinkId=619992). Puedes descargar el ejemplo para ver el código completo, incluyendo el origen de datos. El zoom semántico usa un control GridView para proporcionar la vista ampliada y un control ListView para la vista alejada.
+Estos ejemplos se han tomado de la página SemanticZoom de la [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?LinkId=619992). Puedes descargar el ejemplo para ver el código completo, incluyendo el origen de datos. El zoom semántico usa un control GridView para proporcionar la vista ampliada y un control ListView para la vista alejada.
   
-**Definición de la vista ampliada**
+**Definir la vista ampliada**
 
 Este es el control GridView para la vista ampliada. La vista ampliada muestra los elementos de datos individuales en grupos. En este ejemplo se muestra cómo visualizar los elementos en una cuadrícula con una imagen y texto. 
 
@@ -200,9 +200,9 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Conceptos básicos de diseño de la navegación](../basics/navigation-basics.md)
+- [Conceptos básicos del diseño de navegación](../basics/navigation-basics.md)
 - [Vista de lista y vista de cuadrícula](listview-and-gridview.md)
-- [Plantillas y contenedores de elementos](item-containers-templates.md)
+- [Las plantillas y los contenedores de elementos](item-containers-templates.md)
 
 
 

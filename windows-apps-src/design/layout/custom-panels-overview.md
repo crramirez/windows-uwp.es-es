@@ -1,5 +1,5 @@
 ---
-Description: You can define custom panels for XAML layout by deriving a custom class from the Panel class.
+Description: Se pueden definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase Panel.
 MS-HAID: dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -10,14 +10,14 @@ template: detail.hbs
 op-migration-status: ready
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9999ebb121916a7804546784ea98ac4e0f4222e5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926011"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620350"
 ---
 # <a name="xaml-custom-panels-overview"></a>Introducción a los paneles personalizados de XAML
 
@@ -26,7 +26,7 @@ ms.locfileid: "8926011"
 Un *panel* es un objeto que ofrece un comportamiento de diseño para los elementos secundarios que contiene, cuando el diseño del sistema de lenguaje XAML se ejecuta y se representa la interfaz de usuario de tu aplicación. 
 
 
-> **API importantes**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+> **API importantes**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [ **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), [ **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
 
 Se pueden definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). De igual modo, el comportamiento del panel se proporciona reemplazando los métodos [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) y [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y suministrando una lógica que mida y organice los elementos secundarios.
 
@@ -81,18 +81,18 @@ Muchas propiedades y valores influyen en el modo de funcionamiento de la lógica
 
 El diseño candidato debe caber en la ventana actual de la aplicación o algunas partes de la interfaz de usuario se recortarán. Los paneles suelen ser el lugar donde se determina la lógica del recorte. La lógica del panel puede determinar qué tamaño está disponible desde la implementación de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730), y puede tener que forzar restricciones de tamaño en los elementos secundarios y dividir el espacio entre los elementos secundarios para que todo quepa lo mejor posible. El resultado ideal del diseño es aquel que usa varias propiedades de todas las partes del diseño pero que al mismo tiempo cabe dentro de la ventana de la aplicación. Eso requiere una buena implementación de la lógica de diseño de los paneles, así como un diseño razonable de la interfaz de usuario en la parte de cualquier código de la aplicación que cree una interfaz de usuario que use ese panel. Ningún diseño de panel se verá bien si el diseño general de la interfaz de usuario incluye más elementos secundarios de los que puedan caber en la aplicación.
 
-Lo que en gran parte hace que el sistema de diseño funcione es que cualquier elemento basado en [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) ya tiene algo de su comportamiento inherente cuando actúa como elemento secundario en un contenedor. Por ejemplo, hay varias API de **FrameworkElement** que informan del comportamiento de diseño o que son necesarias para realizar el trabajo de diseño. Estos son:
+Lo que en gran parte hace que el sistema de diseño funcione es que cualquier elemento basado en [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) ya tiene algo de su comportamiento inherente cuando actúa como elemento secundario en un contenedor. Por ejemplo, hay varias API de **FrameworkElement** que informan del comportamiento de diseño o que son necesarias para realizar el trabajo de diseño. Entre ellos se incluyen los siguientes:
 
--   [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) (en realidad es una propiedad [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911))
--   [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
--   [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)
+-   [**TamañoDeseado** ](https://msdn.microsoft.com/library/windows/apps/br208921) (realmente un [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/br208911) propiedad)
+-   [**ActualHeight** ](https://msdn.microsoft.com/library/windows/apps/br208707) y [ **ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
+-   [**Alto** ](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [ **ancho**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)
 -   [**Margen**](https://msdn.microsoft.com/library/windows/apps/br208724)
--   Evento [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)
--   [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) y [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
--   Métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
--   Métodos [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) y [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952): estos tienen implementaciones nativas definidas en el nivel de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) que controlan la acción de diseño en el nivel de elemento.
+-   [**LayoutUpdated** ](https://msdn.microsoft.com/library/windows/apps/br208722) eventos
+-   [**HorizontalAlignment** ](https://msdn.microsoft.com/library/windows/apps/br208720) y [ **VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+-   [**ArrangeOverride** ](https://msdn.microsoft.com/library/windows/apps/br208711) y [ **MeasureOverride** ](https://msdn.microsoft.com/library/windows/apps/br208730) métodos
+-   [**Organizar** ](https://msdn.microsoft.com/library/windows/apps/br208914) y [ **medida** ](https://msdn.microsoft.com/library/windows/apps/br208952) métodos: estas tienen implementaciones nativas que se definen en el [ **FrameworkElement** ](https://msdn.microsoft.com/library/windows/apps/br208706) nivel, que controlan la acción de nivel de elemento de diseño
 
-## **<a name="measureoverride"></a>MeasureOverride**
+## <a name="measureoverride"></a>**MeasureOverride**
 
 
 El método [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) tiene un valor devuelto que el sistema de diseño usa como valor inicial de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) para el propio panel cuando su elemento primario en el diseño llama al método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) para el panel. Las opciones de la lógica dentro del método son tan importantes como lo que devuelve, y la lógica suele influir en el valor que se devuelve.
@@ -119,7 +119,7 @@ protected override Size MeasureOverride(Size availableSize)
 
 Los elementos suelen tener un tamaño natural en el momento en que están listos para el diseño. Después del pase de medición, [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) podría indicar ese tamaño natural si el valor de *availableSize* que se pasó para [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) era menor. Si el tamaño natural es mayor que el valor *availableSize* que se pasó para **Measure**, **DesiredSize** se reduce a *availableSize*. Así se comporta la implementación interna de **Measure** y tus invalidaciones de diseño deben tener en cuenta ese comportamiento.
 
-Algunos elementos no tienen un tamaño natural porque tienen valores **Auto** para [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width). Esos elementos usan el valor completo de *availableSize*, porque eso es lo que representa un valor **Auto**: dimensionar un elemento con el máximo tamaño disponible, que el elemento primario inmediato de diseño comunica con una llamada a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) con *availableSize*. En la práctica, una interfaz de usuario siempre se dimensiona en alguna medida (aunque sea la ventana de nivel superior). Finalmente, el pase de medición resuelve todos los valores **Auto** en las restricciones de los elementos primarios y todos los elementos con un valor **Auto** obtienen mediciones reales (que puedes obtener comprobando [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) y [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707), una vez terminado el diseño).
+Algunos elementos no tienen un tamaño natural porque tienen valores **Auto** para [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width). Esos elementos usan el valor completo de *availableSize*, porque eso es lo que representa un valor **Auto**: dimensionar un elemento con el máximo tamaño disponible, que el elemento primario inmediato de diseño comunica con una llamada a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) con *availableSize*. En la práctica, siempre hay alguna medida que una interfaz de usuario tiene un tamaño (incluso si es la ventana de nivel superior). Finalmente, el paso de medida resuelve todos los **automática** valores a las restricciones del elemento primario y todos los **automática** elementos de valor obtención medidas reales (que se puede obtener mediante la comprobación de [  **ActualWidth** ](https://msdn.microsoft.com/library/windows/apps/br208709) y [ **ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707), una vez completada de diseño).
 
 Está permitido pasar un tamaño a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) que tenga al menos una dimensión infinita, para indicar que el panel puede intentar dimensionarse a sí mismo para ajustarse a la medida de su contenido. Todos los elementos secundarios que se miden establecen su valor [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) con su tamaño natural. Después, durante el pase de organización, el panel normalmente se organiza usando ese tamaño.
 
@@ -138,7 +138,7 @@ El valor devuelto [**MeasureOverride**](https://msdn.microsoft.com/library/windo
 -   Los propios paneles pueden insertar espacio reservado para el espaciado entre los elementos. Si lo haces, debes exponer las medidas como una propiedad distinta a [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) o cualquier propiedad **Padding**.
 -   Los elementos podrían tener valores para sus propiedades [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) y [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) basadas en un pase de diseño anterior. Si los valores cambian, el código de la interfaz de usuario de la aplicación puede colocar controladores para [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) en los elementos si hay una lógica especial para ejecutar, pero la lógica del panel normalmente no necesita comprobar los cambios con control de eventos. El sistema de diseño ya determina cuándo volver a ejecutar el diseño porque una propiedad relacionada con el diseño ha cambiado de valor, y se llama automáticamente a los métodos [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) o [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) de un panel en las circunstancias apropiadas.
 
-## **<a name="arrangeoverride"></a>ArrangeOverride**
+## <a name="arrangeoverride"></a>**ArrangeOverride**
 
 
 El método [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) tiene un valor devuelto [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) que el sistema de diseño usa para representar el panel cuando su elemento primario en el diseño llama al método [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) para el panel. Es habitual que el valor *finalSize* de entrada y el valor **ArrangeOverride** devuelto de **Size** sean iguales. Si no lo son, significa que el panel está intentando dimensionarse con un tamaño diferente del que los demás participantes del diseño aseguran que está disponible. El tamaño final se obtiene después de haber ejecutado previamente el pase de medición del diseño por todo el código del panel, por lo que no es habitual que se devuelva un tamaño diferente: significa que has pasado por alto la lógica deliberadamente.
@@ -176,7 +176,7 @@ Además de lo que puedes controlar y pasar directamente a [**Arrange**](https://
 
 Evita colocar funcionalidad en un panel personalizado que debería crearse en su lugar como un control personalizado. El rol de un panel es presentar el contenido de los elementos secundarios que pueda haber en él, como una función de diseño que se produce automáticamente. El panel podría agregar decoraciones al contenido (de forma similar al modo en que [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) agrega el borde alrededor del elemento que presenta), o bien realizar otros ajustes relacionados con el diseño, como el espaciado. En cualquier caso, eso es lo más que deberías ampliar el resultado del árbol visual aparte de notificar y usar la información del elemento secundario.
 
-Si hay alguna interacción que sea accesible para el usuario, debes escribir un control personalizado, no un panel. Por ejemplo, un panel no debe agregar ventanillas de desplazamiento para el contenido que presenta, aunque el objetivo sea evitar el recorte, porque las barras de desplazamiento y las miniaturas, entre otras, son partes de control interactivo. (Después de todo, el contenido podría tener barras de desplazamiento, pero debes dejar eso a la lógica del elemento secundario. No lo fuerces agregando desplazamiento como una operación de diseño). Podrías crear un control y escribir también un panel personalizado que juegue un papel importante en el árbol visual de ese control cuando se trate de presentar contenido en dicho control. Pero el control y el panel deben ser objetos de código distintos.
+Si hay alguna interacción que sea accesible para el usuario, debes escribir un control personalizado, no un panel. Por ejemplo, un panel no debe agregar ventanillas de desplazamiento para el contenido que presenta, aunque el objetivo sea evitar el recorte, porque las barras de desplazamiento y las miniaturas, entre otras, son partes de control interactivo. (Después de todo, el contenido podría tener barras de desplazamiento, pero debes dejar eso a la lógica del elemento secundario. No forzar mediante la adición de desplazamiento como una operación de diseño.) Puede crear un control y también escribir un panel personalizado que desempeña un papel importante en el árbol visual de ese control, en cuanto a presentar el contenido en ese control. Pero el control y el panel deben ser objetos de código distintos.
 
 Un motivo por el que la distinción entre control y panel es importante, es la automatización de la interfaz de usuario de Microsoft y la accesibilidad. Los paneles proporcionan un comportamiento de diseño visual, no lógico. Normalmente, la apariencia visual de un elemento de la interfaz de usuario no es algo importante en escenarios de accesibilidad. La accesibilidad consiste en mostrar las partes de una aplicación que son importantes desde un punto de vista lógico para entender una interfaz de usuario. Cuando se necesita interacción, los controles deben exponer las posibilidades de interacción a la infraestructura de automatización de la interfaz de usuario. Para obtener más información, consulta [Personalizar sistemas de automatización del mismo nivel](https://msdn.microsoft.com/library/windows/apps/mt297667).
 
@@ -185,9 +185,9 @@ Un motivo por el que la distinción entre control y panel es importante, es la a
 
 Hay otras API que forman parte del sistema de diseño, pero no se declaran mediante [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Pueden usarse en una implementación de panel o en un control personalizado que use paneles.
 
--   [**UpdateLayout**](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930) e [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929) son métodos que inician un pase de diseño. Es posible que **InvalidateArrange** no inicie un pase de medición, pero los otros dos sí lo hacen. No llames nunca a estos métodos desde la invalidación de un método de diseño porque provocarán un bucle de diseño casi con total seguridad. Normalmente, el código de control tampoco necesita llamarlos. La mayoría de los aspectos de diseño se inician automáticamente cuando se detectan cambios en las propiedades de diseño definidas por el entorno, como [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) y otras.
--   [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) es un evento que se activa cuando cambia algún aspecto del elemento. No es específico de los paneles; el evento se define mediante [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
--   [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742) es un evento que se activa solo cuando finalizan los pases de diseño e indica que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) o [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) han cambiado como resultado. Este es otro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Hay casos en los que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) se activa, pero **SizeChanged** no. Por ejemplo, puede que el contenido interno se reorganice, pero que el tamaño del elemento no cambie.
+-   [**UpdateLayout**](https://msdn.microsoft.com/library/windows/apps/br208989), [ **InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930), y [ **InvalidateArrange** ](https://msdn.microsoft.com/library/windows/apps/br208929) son métodos que iniciar un paso de diseño. Es posible que **InvalidateArrange** no inicie un pase de medición, pero los otros dos sí lo hacen. No llames nunca a estos métodos desde la invalidación de un método de diseño porque provocarán un bucle de diseño casi con total seguridad. Normalmente, el código de control tampoco necesita llamarlos. La mayoría de los aspectos de diseño se inician automáticamente cuando se detectan cambios en las propiedades de diseño definidas por el entorno, como [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) y otras.
+-   [**LayoutUpdated** ](https://msdn.microsoft.com/library/windows/apps/br208722) es un evento que se desencadena cuando ha cambiado algún aspecto del diseño del elemento. No es específico de los paneles; el evento se define mediante [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
+-   [**SizeChanged** ](https://msdn.microsoft.com/library/windows/apps/br208742) es un evento que se activa una vez se finalizan pase de diseño e indica que [ **ActualHeight** ](https://msdn.microsoft.com/library/windows/apps/br208707) o [ **ActualWidth**  ](https://msdn.microsoft.com/library/windows/apps/br208709) han cambiado como resultado. Este es otro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Hay casos en los que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) se activa, pero **SizeChanged** no. Por ejemplo, puede que el contenido interno se reorganice, pero que el tamaño del elemento no cambie.
 
 
 ## <a name="related-topics"></a>Temas relacionados
@@ -198,4 +198,4 @@ Hay otras API que forman parte del sistema de diseño, pero no se declaran media
 * [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **Conceptos**
-* [Alineación, margen y espaciado](alignment-margin-padding.md)
+* [Alineación, márgenes y relleno](alignment-margin-padding.md)

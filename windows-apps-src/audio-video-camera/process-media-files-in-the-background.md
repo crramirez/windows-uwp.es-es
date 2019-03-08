@@ -4,14 +4,14 @@ description: En este artículo se muestra cómo usar la clase MediaProcessingTri
 title: Procesar archivos multimedia en segundo plano
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0194ccba43e2ba5270b9ff8eacf045ca140af6cb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611910"
 ---
 # <a name="process-media-files-in-the-background"></a>Procesar archivos multimedia en segundo plano
 
@@ -24,8 +24,8 @@ La aplicación de ejemplo descrita en este artículo permite al usuario seleccio
 Para obtener información más detallada sobre las diferentes características de la aplicación universal de Windows que se usa en esta muestra, consulta:
 
 -   [Transcodificar archivos multimedia](transcode-media-files.md)
--   [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
--   [Distintivos de mosaico y notificaciones](https://msdn.microsoft.com/library/windows/apps/mt185606)
+-   [Iniciar tareas en segundo plano y reanudación](https://msdn.microsoft.com/library/windows/apps/mt227652)
+-   [Las notificaciones y notificaciones de iconos](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
 ## <a name="create-a-media-processing-background-task"></a>Crear una tarea en segundo plano de procesamiento de multimedia
 
@@ -34,9 +34,9 @@ Para agregar una tarea en segundo plano a la solución existente en Microsoft Vi
 1.  En el menú **Archivo**, selecciona **Agregar** y luego **Nuevo proyecto...**.
 2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)**.
 3.  Escribe un nombre para el nuevo proyecto de componente. En este ejemplo usaremos el nombre de proyecto **MediaProcessingBackgroundTask**.
-4.  Haz clic en Aceptar.
+4.  Haga clic en Aceptar.
 
-En el **Explorador de soluciones**, haz clic con el botón derecho en el icono del archivo "Class1.cs", que se crea de forma predeterminada, y selecciona **Cambiar nombre**. Cambia el nombre del archivo a "MediaProcessingTask.cs". Cuando Visual Studio te pregunte si deseas cambiar el nombre de todas las referencias a esta clase, haz clic en **Sí**.
+En el **Explorador de soluciones**, haz clic con el botón secundario en el icono del archivo "Class1.cs" que se crea de forma predeterminada, y selecciona **Cambiar nombre**. Cambia el nombre del archivo a "MediaProcessingTask.cs". Cuando Visual Studio te pregunte si deseas cambiar el nombre de todas las referencias a esta clase, haz clic en **Sí**.
 
 En el archivo de clase que ha cambiado de nombre, agrega las siguientes directivas de tipo **using** para incluir estos espacios de nombres en el proyecto.
                                   
@@ -124,13 +124,13 @@ Registra la tarea en segundo plano llamando al método [**Register**](https://ms
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Una aplicación típica registra su tarea en segundo plano cuando la aplicación iniciada inicialmente, por ejemplo, al igual que en el evento **OnNavigatedTo** .
+Una aplicación típica registrará su tarea en segundo plano cuando la aplicación es inicialmente iniciada, como en el **OnNavigatedTo** eventos.
 
 Inicia la tarea en segundo plano llamando al método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) del objeto **MediaProcessingTrigger**. El objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) que devuelve este método te permitirá saber si la tarea en segundo plano se inició correctamente y, si no es así, te permitirá saber el por qué. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
 
-Una aplicación típica iniciará la tarea en segundo plano en respuesta a la interacción del usuario, como en el evento **Click** de un control de la interfaz de usuario.
+Una aplicación típica iniciará la tarea en segundo plano en respuesta a la interacción del usuario, como en el **haga clic en** eventos de un control de interfaz de usuario.
 
 Se llama al controlador de eventos **OnProgress** cuando la tarea en segundo plano actualiza el progreso de la operación. Puedes usar esta oportunidad para actualizar la interfaz de usuario con la información de progreso.
 

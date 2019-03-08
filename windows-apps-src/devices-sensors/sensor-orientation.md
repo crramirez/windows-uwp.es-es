@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a4c7f1ad75e1e0544486049f9bd721d8a82edf03
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941545"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623060"
 ---
 # <a name="sensor-orientation"></a>Orientación del sensor
 
@@ -46,7 +46,7 @@ Los fabricantes producen dispositivos tanto con orientación horizontal predeter
 | Orientación | Con orientación horizontal predeterminada | Con orientación vertical predeterminada |
 |-------------|-----------------|----------------|
 | **Landscape** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1.PNG) |
-| **Portrait** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3.PNG) |
+| **Vertical** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3.PNG) |
 | **LandscapeFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7.PNG) |
 
@@ -63,10 +63,10 @@ El encabezado de brújula depende de los ejes de referencia, de modo que cuando 
 
 | Orientación de la pantalla | Eje de referencia y encabezado de brújula | Encabezado de brújula de API al mirar al norte (landscape-first) | Encabezado de brújula de API al mirar al norte (portrait-first) |Compensación del encabezado de brújula (landscape-first) | Compensación del encabezado de brújula (portrait-first) |
 |---------------------|------------------------------------|---------------------------------------------------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------|
-| Horizontal           | -Z | 0   | 270 | Encabezado               | (Encabezado+90) % 360  |
-| Retrato            |  Y | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
+| Landscape           | -Z | 0   | 270 | Encabezado               | (Encabezado+90) % 360  |
+| Portrait            |  esté | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
 | LandscapeFlipped    |  Z | 180 | 90  | (Encabezado+180) % 360 | (Encabezado+270) % 360 |
-| PortraitFlipped     |  Y | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
+| PortraitFlipped     |  esté | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
 
 Modifica el encabezado de brújula como se indica en la tabla para que dicho encabezado se muestre correctamente. En el siguiente fragmento de código, se muestra cómo hacerlo.
 
@@ -107,10 +107,10 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 
 Esta tabla convierte los datos de acelerómetro y girómetro para los datos de la pantalla.
 
-| Ejes de referencia        |  X |  Y | Z |
+| Ejes de referencia        |  X |  esté | Z |
 |-----------------------|----|----|---|
-| **Landscape**         |  X |  Y | Z |
-| **Portrait**          |  Y | -X | Z |
+| **Landscape**         |  X |  esté | Z |
+| **Vertical**          |  esté | -X | Z |
 | **LandscapeFlipped**  | -X | -Y | Z |
 | **PortraitFlipped**   | -Y |  X | Z |
 
@@ -173,7 +173,7 @@ En la expresión anterior, los datos de sensor devuelven el objeto absoluto.
 | Orientación de la pantalla  | Giro en el sentido contrario a las agujas del reloj en torno a Z | Cuaternión de referencia (giro inverso) | Matriz de giro de referencia (giro inverso) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
 | **Landscape**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
-| **Portrait**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
+| **Vertical**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1  0 0<br/> 0  0 1]             |
 

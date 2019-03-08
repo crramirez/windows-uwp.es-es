@@ -1,17 +1,17 @@
 ---
 title: Código completo para BasicLoader
-description: Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos del sombreador.
+description: Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos de sombreador.
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, BasicLoader
 ms.localizationpriority: medium
 ms.openlocfilehash: cfcec2550455df8afe5870f9b760e1f7225f847c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637260"
 ---
 # <a name="complete-code-for-basicloader"></a>Código completo para BasicLoader
 

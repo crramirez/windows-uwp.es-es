@@ -4,14 +4,14 @@ description: Las transformaciones matriciales controlan muchos de los cálculos 
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928074"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640150"
 ---
 # <a name="transform-overview"></a>Introducción a las transformaciones
 
@@ -38,7 +38,7 @@ Puedes transformar coordenadas entre espacio de modelo, espacio del mundo y espa
 -   [Transformación de vista](view-transform.md): convierte de espacio del mundo en espacio de vista.
 -   [Transformación de proyección](projection-transform.md): convierte un espacio de vista en un espacio de proyección.
 
-## <a name="span-idmatrixtransformsspanspan-idmatrixtransformsspanspan-idmatrixtransformsspanmatrix-transforms"></a><span id="Matrix_Transforms"></span><span id="matrix_transforms"></span><span id="MATRIX_TRANSFORMS"></span>Transformaciones matriciales
+## <a name="span-idmatrixtransformsspanspan-idmatrixtransformsspanspan-idmatrixtransformsspanmatrix-transforms"></a><span id="Matrix_Transforms"></span><span id="matrix_transforms"></span><span id="MATRIX_TRANSFORMS"></span>Transformaciones de matriz
 
 
 En las aplicaciones que funcionan con gráficos 3D, puedes usar transformaciones geométricas para hacer lo siguiente:
@@ -72,7 +72,7 @@ D3DMATRIX scale = {
 };
 ```
 
-## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>Trasladar
+## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>Translate
 
 
 La siguiente ecuación traslada el punto (x, y, z) a un nuevo punto (x', y', z').
@@ -135,7 +135,7 @@ El siguiente código muestra una función para controlar la rotación alrededor 
 }
 ```
 
-## <a name="span-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanconcatenating-matrices"></a><span id="Concatenating_Matrices"></span><span id="concatenating_matrices"></span><span id="CONCATENATING_MATRICES"></span>Concatenación de matrices
+## <a name="span-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanconcatenating-matrices"></a><span id="Concatenating_Matrices"></span><span id="concatenating_matrices"></span><span id="CONCATENATING_MATRICES"></span>Concatenación de Matrices
 
 
 Una ventaja de usar matrices es que se pueden combinar los efectos de dos o más matrices multiplicándolas. Esto significa que, para girar un modelo y después trasladarlo a alguna ubicación, no es necesario aplicar dos matrices. En su lugar, se multiplican las matrices de rotación y traslación para generar una matriz compuesta que contiene todos los efectos. Este proceso, denominado concatenación de matriz, se puede escribir en la siguiente ecuación.

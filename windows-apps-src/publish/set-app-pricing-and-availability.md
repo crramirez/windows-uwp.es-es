@@ -1,5 +1,5 @@
 ---
-Description: The Pricing and availability page of the app submission process lets you determine how much your app will cost, whether you'll offer a free trial, and how, when, and where it will be available to customers.
+Description: La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes.
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.date: 10/31/2018
@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp, precio, disponible, descubrible, prueba gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5fa6c3e23516a5255f8bd3252f6ded233101625
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922098"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640170"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
 
-La página **Precios y disponibilidad** del [proceso de envío de la aplicación](app-submissions.md) permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes. A continuación, te guiaremos a través de las opciones de esta página y todo lo que debes tener en cuenta al escribir la información.
+La página **Precios y disponibilidad** del [proceso de envío de la aplicación](app-submissions.md) permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes. A continuación, te guiaremos por las opciones de esta página y lo que debes tener en cuenta al escribir la información.
 
 
 ## <a name="markets"></a>Mercados
@@ -33,7 +33,7 @@ La sección **Visibilidad** te permite establecer restricciones sobre cómo tu a
 Para obtener más información, consulta [Elegir opciones de visibilidad](choose-visibility-options.md).
 
 
-## <a name="schedule"></a>Programación
+## <a name="schedule"></a>Programa
 
 De manera predeterminada (a menos que hayas seleccionado una de la opciones **Hacer disponible esta aplicación, pero no descubrible, en Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability), la aplicación estará disponible para todos los clientes tan pronto como supere la certificación y complete el proceso de publicación. Para elegir otras fechas, seleccione **Mostrar opciones** para expandir la sección. 
 
@@ -49,15 +49,15 @@ Para obtener más información, consulta [Establecer y programar los precios de 
 
 ## <a name="free-trial"></a>Prueba gratuita
 
-Muchos desarrolladores eligen permitir que los clientes prueben su aplicación de forma gratuita con la funcionalidad de prueba proporcionada por la Store. De manera predeterminada, **Sin prueba gratuita** está seleccionada, y no habrá ninguna versión de prueba de la aplicación. Si quieres ofrecer una versión de prueba, puedes seleccionar un valor en la lista desplegable **Evaluación gratuita**.
+Muchos desarrolladores eligen permitir que los clientes prueben su aplicación de forma gratuita con la funcionalidad de prueba proporcionada por la Tienda. De manera predeterminada, **Sin prueba gratuita** está seleccionada, y no habrá ninguna versión de prueba de la aplicación. Si quieres ofrecer una versión de prueba, puedes seleccionar un valor en la lista desplegable **Evaluación gratuita**.
 
 Hay dos tipos de prueba que puedes elegir y tienes la opción para configurar la fecha y hora en las que la versión de prueba empieza y acaba.
 
 ### <a name="time-limited"></a>Límite de tiempo
 
-Elige **Límite de tiempo** para permitir que los clientes prueben tu aplicación gratis durante un determinado número de días: **1 día**, **7 días**, **15 días**, o **30 días**. Puedes limitar características agregando código para [excluir o limitar funciones en la versión de prueba](../monetize/in-app-purchases-and-trials.md), o puedes permitir que los clientes accedan a toda las funcionalidades durante ese período de tiempo. 
+Elija **tiempo limitado** para permitir que los clientes probar la aplicación de forma gratuita durante un determinado número de días: **1 día**, **7 días**, **15 días**, o **30 días**. Puedes limitar características agregando código para [excluir o limitar funciones en la versión de prueba](../monetize/in-app-purchases-and-trials.md), o puedes permitir que los clientes accedan a toda las funcionalidades durante ese período de tiempo. 
 > [!NOTE]
-> Las versiones de prueba con tiempo limitado no se muestran a los clientes con Windows 10, compilación 10.0.10586 o versiones anteriores o a clientes con Windows Phone 8.1 y versiones anteriores.
+> No se muestran las evaluaciones de tiempo limitado a los clientes en Windows 10, compilación 10.0.10586 anteriormente o a los clientes en Windows Phone 8.1 y versiones anteriores.
 
 ### <a name="unlimited"></a>Sin límite
 
@@ -70,7 +70,7 @@ De manera predeterminada, la versión de prueba estará disponible en cuanto se 
 >[!NOTE]
 > Estas fechas solo se aplican para los clientes de Windows 10 (incluida la Xbox). Si la aplicación está disponible para los clientes con versiones anteriores del sistema operativo, se ofrecerá la prueba a estos clientes siempre que tu producto esté disponible. 
 
-Para establecer las fechas de cuándo se debe ofrecer la prueba a los clientes en Windows 10, cambia el menú desplegable **Comienza en** o **finaliza en** a **hasta** y, a continuación, elige la fecha y la hora. Si lo haces, puede elegir **UTC** para que el tiempo que selecciones sea el Horario universal coordinado (UTC), o elige **Local** para que estas horas se usen en cada zona asociada a un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, la zona horario se usa). Puedes seleccionar **personalización para mercados específicos** si deseas establecer fechas diferentes en cualquier mercado.
+Para establecer las fechas de cuándo se debe ofrecer la prueba a los clientes en Windows 10, cambia el menú desplegable **Comienza en** o **finaliza en** a **hasta** y, a continuación, elige la fecha y la hora. Si lo haces, puede elegir **UTC** para que el tiempo que selecciones sea el Horario universal coordinado (UTC), o elige **Local** para que estas horas se usen en cada zona asociada a un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, se usará la zona horario del Este). Puede seleccionar **personalizar para mercados específicos** si desea establecer fechas diferentes para los mercados.
 
 
 ## <a name="sale-pricing"></a>Precio de oferta

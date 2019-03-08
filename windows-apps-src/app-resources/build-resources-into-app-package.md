@@ -1,5 +1,5 @@
 ---
-Description: Some kinds of apps (multilingual dictionaries, translation tools, etc.) need to override the default behavior of an app bundle, and build resources into the app package instead of having them in separate resource packages. This topic explains how to do that.
+Description: Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan reemplazar el comportamiento predeterminado de una recopilación de aplicación y crear recursos en el lote de aplicaciones en lugar de tenerlos en paquetes de recursos independientes. En este tema se explica cómo hacerlo.
 title: Crear recursos en el paquete de aplicación, en lugar de en un paquete de recursos
 template: detail.hbs
 ms.date: 11/14/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf2d34bc3dae20750f66c9116499a17444b798c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938498"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627290"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Crear recursos en el paquete de aplicación, en lugar de en un paquete de recursos
 
@@ -99,4 +99,4 @@ Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de cal
 
 * [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Especificar los recursos predeterminados que la aplicación usa](specify-default-resources-installed.md)
+* [Especificar los recursos predeterminados que usa su aplicación](specify-default-resources-installed.md)

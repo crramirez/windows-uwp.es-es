@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630570"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -23,7 +23,7 @@ Las notificaciones de Mis allegados proporcionan una nueva forma para que los us
 + Windows 10 y Microsoft Visual Studio 2017. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 Como alternativa a las notificaciones del sistema genéricas, ahora puedes enviar notificaciones a través de la función Mis allegados para proporcionar una experiencia más personal a los usuarios. Se trata de un nuevo tipo de notificación del sistema, que se envía desde un contacto anclado a la barra de tareas del usuario con la función Mis allegados. Al recibir la notificación, la imagen del contacto del remitente se animará en la barra de tareas y se reproducirá un sonido, lo que indicará que se está iniciando la notificación de Mis allegados. Se mostrará la animación o imagen especificada en la carga durante 5 segundos (o bien, si la carga es una animación que dura menos de 5 segundos, se repetirá hasta que transcurra este tiempo).
 
@@ -52,11 +52,11 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 + **src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local.
 + **spritesheet-src**
-    + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesario para animaciones de spritesheet.
+    + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesaria para animaciones de spritesheet.
 + **spritesheet-height**
     + Altura del fotograma (en píxeles). Solo es necesaria para animaciones de spritesheet.
 + **spritesheet-fps**
-    + Fotogramas por segundo (FPS). Solo es necesario para animaciones de spritesheet. Solo se admiten los valores 1-120.
+    + Fotogramas por segundo (FPS). Solo es necesaria para animaciones de spritesheet. Solo se admiten los valores 1-120.
 + **spritesheet-startingFrame**
     + Número de fotogramas para comenzar la animación. Solo se usa para animaciones de spritesheet y, de no facilitarse, su valor predeterminado es 0.
 + **alt**
@@ -71,7 +71,7 @@ Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint
     + P. ej. mailto:johndoe@mydomain.com
 + **Número de teléfono** 
     + P. ej. tel:888-888-8888
-+ **ID remoto** 
++ **Id. remoto** 
     + P. ej. remoteid:1234
 
 > [!NOTE]
@@ -150,8 +150,8 @@ No obstante, hay algunos casos en los que una notificación de Mis allegados se 
 
 Si una notificación de Mis allegados vuelve a ser notificación del sistema, se omite el segundo enlace específico de Mis allegados, y solo se usa el primer enlace para visualizar la notificación del sistema. Por eso es fundamental proporcionar una carga de reserva en el primer enlace de notificación del sistema.
 
-## <a name="see-also"></a>Ver también
-+ [Ejemplo de notificaciones de Mis allegados](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
-+ [Agregar compatibilidad con Mis allegados](my-people-support.md)
-+ [Notificaciones del sistema adaptables](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
+## <a name="see-also"></a>Consulte también
++ [Mi ejemplo de notificaciones de personas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
++ [Admitir agregar personas de mi](my-people-support.md)
++ [Notificaciones del sistema adaptable](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
 + [Clase ToastNotification](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d680f7d4a3510f66cba74d1c8b30d8883b07369a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926065"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627210"
 ---
 # <a name="dynamic-adaptive-streaming-over-http-dash-profile-support"></a>Compatibilidad con los perfiles Dynamic Adaptive Streaming over HTTP (DASH)
 
@@ -21,9 +21,9 @@ En la tabla siguiente se enumeran los perfiles DASH que se admiten en las aplica
 
 |Etiqueta | Tipo de manifiesto | Notas|Versión de julio de Windows 10|Windows 10, versión 1511|Windows 10, versión 1607 |Windows 10, versión 1607 |Windows 10, versión 1703|
 |----------------|------|-------|-----------|--------------|---------|-------|--------|
-|urn:mpeg&#58;dash:profile:isoff-live:2011 | Estático |     |Se admite            |  Se admite              | Se admite        |Se admite| Compatible|
-|urn:mpeg&#58;dash:profile:isoff-main:2011 |        | Mejor esfuerzo | Se admite            |  Se admite              | Se admite        |Se admite| Compatible|
-|urn:mpeg&#58;dash:profile:isoff-live:2011 | Dinámico | $Time$ se admite, pero $Number$ no se admite en las plantillas de segmento | No se admite            | No se admite              | No se admite        |No se admite| Compatible|
+|urn:mpeg&#58;dash:profile:isoff-live:2011 | Estático |     |Se admite            |  Se admite              | Se admite        |Se admite| Se admite|
+|urn:mpeg&#58;dash:profile:isoff-main:2011 |        | Mejor esfuerzo | Se admite            |  Se admite              | Se admite        |Se admite| Se admite|
+|urn:mpeg&#58;dash:profile:isoff-live:2011 | Dinámico | $Time$ se admite, pero $Number$ no se admite en las plantillas de segmento | No se admite            | No se admite              | No se admite        |No se admite| Se admite|
 
 
 ## <a name="unsupported-dash-profiles"></a>Perfiles DASH no compatibles
@@ -37,8 +37,8 @@ Los perfiles que no figuran en la tabla anterior no se admiten, incluidos, sin l
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Reproducción de contenido multimedia](media-playback.md)
-* [Streaming adaptable](adaptive-streaming.md)
+* [Reproducción de multimedia](media-playback.md)
+* [Transmisión por secuencias adaptativa](adaptive-streaming.md)
  
 
  

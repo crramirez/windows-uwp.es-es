@@ -4,14 +4,14 @@ title: Calibrar los sensores
 description: Es probable que sea necesario calibrar los sensores basados en el magnetómetro de un dispositivo, es decir, la brújula, el inclinómetro y el sensor de orientación, debido a factores ambientales.
 ms.date: 03/22/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a93d59a00630c240e74049a9fd98d50f285b0dd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946853"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634680"
 ---
 # <a name="calibrate-sensors"></a>Calibrar los sensores
 
@@ -29,7 +29,7 @@ La enumeración [**MagnetometerAccuracy**](https://msdn.microsoft.com/library/wi
 
 | Valor           | Descripción    |
 | ----------------- | ------------------- |
-| **Desconocido**     | El controlador del sensor no puede informar la precisión actual. Esto no necesariamente significa que el dispositivo esté fuera de calibración. Será la aplicación la que decida el mejor curso de acción si se devuelve el valor **Unknown**. Si la aplicación depende de una lectura de sensor precisa, quizás quieras solicitarle al usuario que calibre el dispositivo. |
-| **No confiable**  | Actualmente hay un alto grado de imprecisión en el magnetómetro. La aplicación siempre debe solicitar la calibración por parte del usuario cuando este valor se devuelve primero. |
+| **Unknown**     | El controlador del sensor no puede informar la precisión actual. Esto no necesariamente significa que el dispositivo no esté calibrado. Será la aplicación la que decida el mejor curso de acción si se devuelve el valor **Unknown**. Si la aplicación depende de una lectura de sensor precisa, quizás quieras solicitarle al usuario que calibre el dispositivo. |
+| **Unreliable**  | Actualmente hay un alto grado de imprecisión en el magnetómetro. La aplicación siempre debe solicitar la calibración por parte del usuario cuando este valor se devuelve primero. |
 | **Aproximado** | Los datos son lo suficientemente precisos para algunas aplicaciones. Una aplicación de realidad virtual puede continuar sin calibración cuando solo necesita saber si el usuario movió el dispositivo hacia arriba o abajo, o hacia la derecha o izquierda. Las aplicaciones que necesitan un encabezado absoluto; por ejemplo, una aplicación que debe saber hacia dónde te estás moviendo para poder dar direcciones, necesitan pedir la calibración. |
-| **Alto**        | Los datos son precisos. No se necesita calibración, ni siquiera para las aplicaciones que deben conocer un encabezado absoluto como, por ejemplo, las aplicaciones de navegación o de realidad aumentada. |
+| **Alta**        | Los datos son precisos. No se necesita calibración, ni siquiera para las aplicaciones que deben conocer un encabezado absoluto como, por ejemplo, las aplicaciones de navegación o de realidad aumentada. |

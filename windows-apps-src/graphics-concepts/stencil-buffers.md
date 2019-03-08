@@ -8,22 +8,22 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934710"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629470"
 ---
 # <a name="stencil-buffers"></a>Búferes de galerías de símbolos
 
 
-Un *búfer de galería de símbolos* se usa para enmascarar píxeles en una imagen a fin de producir efectos especiales. La máscara controla si el píxel se dibuja o no. Estos efectos especiales incluyen la composición, el calco, las disoluciones, los fundidos y los deslizamientos, los contornos y las siluetas, y la galería de símbolos de dos caras. A continuación se muestran algunas de los efectos más habituales.
+Un *búfer de galería de símbolos* se usa para enmascarar píxeles en una imagen a fin de producir efectos especiales. La máscara controla si el píxel se dibuja o no. Entre los efectos especiales se incluyen la composición, el calcado, la disolución, la atenuación, el barrido; contornos y siluetas; o la galería de símbolos a doble cara. A continuación se muestran algunas de los efectos más habituales.
 
 El búfer de la galería de símbolos habilita o deshabilita el dibujo en la superficie de destino de representación píxel a píxel. En su nivel más básico, permite que las aplicaciones enmascaren secciones de la imagen representada para que no se muestren. A menudo, las aplicaciones usan búferes de galerías de símbolos para efectos especiales, como disoluciones, calco y contornos.
 
 La información del búfer de la galería de símbolos se inserta en los datos del búfer z.
 
-## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>Cómo funciona el búfer de la galería de símbolos
+## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>Cómo funciona el búfer de galería de símbolos
 
 
 Direct3D realiza una prueba del contenido del búfer de la galería de símbolos píxel a píxel. Para cada píxel de la superficie de destino, realiza una prueba empleando el valor correspondiente del búfer de la galería de símbolos, un valor de referencia de la galería de símbolos y un valor de máscara de la galería de símbolos. Si se pasa la prueba, Direct3D realiza una acción. La prueba se realiza mediante los siguientes pasos.
@@ -44,7 +44,7 @@ Los pasos anteriores se muestran en la siguiente línea de código:
 -   StencilBufferValue es el contenido del búfer de la galería de símbolos para el píxel actual.
 -   El símbolo & representa la operación AND bit a bit.
 
-El píxel actual se escribe en la superficie de destino si se supera la prueba de la galería de símbolos y se omite en caso contrario. El comportamiento predeterminado de la comparación es escribir el píxel, independientemente de cómo cada operación bit a bit. Puedes cambiar este comportamiento cambiando el valor de un tipo enumerado para identificar la función de comparación deseada.
+El píxel actual se escribe en la superficie de destino si se supera la prueba de la galería de símbolos y se omite en caso contrario. El comportamiento predeterminado de la comparación es escribir el píxel, independientemente de cómo resulte cada operación bit a bit. Puedes cambiar este comportamiento si modificas el valor de un tipo enumerado para identificar la función de comparación deseada.
 
 La aplicación puede personalizar la operación del búfer de la galería de símbolos. Puede establecer la función de comparación, la máscara de la galería de símbolos y el valor de referencia de la galería de símbolos. También puede controlar la acción que realiza Direct3D cuando pasa se supera o se suspende la prueba de la galería de símbolos.
 
@@ -55,18 +55,18 @@ La aplicación puede usar el búfer de la galería de símbolos para componer im
 
 A menudo, los juegos componen varias escenas 3D juntas. Por ejemplo, los juegos de coches suelen mostrar un espejo retrovisor. El espejo contiene la vista de la escena 3D detrás del conductor. En esencia, es una segunda escena 3D compuesta con la vista hacia delante del conductor.
 
-## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Calco
+## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decaling
 
 
 Las aplicaciones Direct3D usan el calco para controlar qué píxeles de una imagen primitiva determinada se dibujan en la superficie de destino de representación. Las aplicaciones aplican los calcos a las imágenes de primitivos para permitir que los polígonos coplanares se representen correctamente.
 
 Por ejemplo, al aplicar las marcas de rueda y líneas amarillas a una carretera, las marcas deben aparecer directamente en la parte superior de la carretera. Sin embargo, los valores z de las marcas y de la carretera son los mismos. Por lo tanto, el búfer de profundidad podría no producir una separación clara entre las dos. Algunos píxeles del primitivo trasero pueden representarse sobre el primitivo frontal y viceversa. La imagen resultante parece relucir de un fotograma a otro. Este efecto se denomina *rivalidad z* o *disputa*.
 
-Para resolver este problema, usa una galería de símbolos para enmascarar la sección del primitivo trasero donde va a aparecer el calco. Desactiva el búfer z y representa la imagen del primitivo frontal en el área enmascarada de la superficie de destino de representación.
+Para resolver este problema, usa una galería de símbolos para enmascarar la sección del primitivo trasero donde va a aparecer el calco. Desactiva el búfer z y representa la imagen del primitivo frontal en el área con máscara de la superficie de destino de representación.
 
 Aunque puede usarse la combinación de texturas múltiples para solucionar este problema, hacer eso limita el número de otros efectos especiales que puede generar la aplicación. El uso del búfer de la galería de símbolos para aplicar calcos libera fases de combinación de texturas para otros efectos.
 
-## <a name="span-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspandissolves-fades-and-swipes"></a><span id="Dissolves__fades__and_swipes"></span><span id="dissolves__fades__and_swipes"></span><span id="DISSOLVES__FADES__AND_SWIPES"></span>Disoluciones, fundidos y deslizamientos
+## <a name="span-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspandissolves-fades-and-swipes"></a><span id="Dissolves__fades__and_swipes"></span><span id="dissolves__fades__and_swipes"></span><span id="DISSOLVES__FADES__AND_SWIPES"></span>Deslizamientos, fundidos y disoluciones
 
 
 Cada vez más, las aplicaciones emplean efectos especiales que se usan habitualmente en películas y vídeo, como disoluciones, deslizamientos y fundidos.
@@ -86,25 +86,25 @@ Un deslizamiento es un poco más complejo que una disolución, ya que la aplicac
 ## <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanoutlines-and-silhouettes"></a><span id="Outlines_and_silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span>Contornos y siluetas
 
 
-Puedes usar el búfer de la galería de símbolos para efectos más abstractos, como los contornos y las siluetas.
+Puedes usar el búfer de la galería de símbolos para efectos más abstractos, como para crear contornos y siluetas.
 
-Si la aplicación aplica una máscara de la galería de símbolos a la imagen de un primitivo que tiene la misma forma pero es ligeramente más pequeña, la imagen resultante contiene únicamente el contorno del primitivo. Luego la aplicación puede llenar el área de la imagen enmascarada por la galería de símbolos con un color sólido, lo que da al primitivo un aspecto de relieve.
+Si la aplicación aplica una máscara de la galería de símbolos a la imagen de un primitivo que tiene la misma forma pero es ligeramente más pequeña, la imagen resultante contiene únicamente el contorno del primitivo. La aplicación luego puede llenar el área con máscara de la galería de símbolos de la imagen con un color sólido, lo que da al primitivo una apariencia en relieve.
 
-Si la máscara de la galería de símbolos tiene el mismo tamaño y forma que el primitivo que estás representando, la imagen resultante contiene un hueco donde debería estar el primitivo. Luego la aplicación puede rellenar el espacio con color negro para producir una silueta del primitivo.
+Si la máscara de la galería de símbolos tiene el mismo tamaño y forma que el primitivo que estás representando, la imagen resultante contiene un hueco donde debería estar el primitivo. La aplicación luego puede rellenar el agujero con negro para producir una silueta del primitivo.
 
-## <a name="span-idtwo-sidedstencilspanspan-idtwo-sidedstencilspanspan-idtwo-sidedstencilspantwo-sided-stencil"></a><span id="Two-sided_stencil"></span><span id="two-sided_stencil"></span><span id="TWO-SIDED_STENCIL"></span>Galería de símbolos de dos caras
+## <a name="span-idtwo-sidedstencilspanspan-idtwo-sidedstencilspanspan-idtwo-sidedstencilspantwo-sided-stencil"></a><span id="Two-sided_stencil"></span><span id="two-sided_stencil"></span><span id="TWO-SIDED_STENCIL"></span>Galería de símbolos a dos caras
 
 
-Los volúmenes de sombras se usan para dibujar sombras con el búfer de la galería de símbolos. La aplicación calcula los volúmenes de sombra que genera la geometría que tapa la luz; para ello, calcula los bordes de las siluetas y los extruye desde la luz hasta un conjunto de volúmenes 3D. Luego estos volúmenes se representan dos veces en el búfer de la galería de símbolos.
+Los volúmenes de sombra se usan para dibujar sombras con el búfer de la galería de símbolos. La aplicación calcula los volúmenes de sombra que genera la geometría que tapa la luz; para ello, calcula los bordes de las siluetas y los extruye desde la luz hasta un conjunto de volúmenes 3D. Luego estos volúmenes se representan dos veces en el búfer de la galería de símbolos.
 
-La primera representación dibuja polígonos orientados hacia el frente y aumenta los valores del búfer de la galería de símbolos. La segunda representación dibuja los polígonos orientados hacia atrás del volumen de sombra y reduce los valores del búfer de la galería de símbolos. Normalmente, todos los valores incrementados y reduce aumentados. Sin embargo, la escena ya estaba representada con la geometría normal, por lo que algunos píxeles no supera la prueba de búfer z a medida que se representa el volumen de sombra. Los valores que quedan en el búfer de la galería de símbolos corresponden a los píxeles que se encuentran en la sombra. Estos contenidos del búfer de la galería de símbolos que quedan se usan como máscara, para la combinación alfa de un cuadrado negro grande, que abarca todo en la escena. Con el búfer de la galería de símbolos como máscara, el resultado es oscurecer los píxeles que se encuentran en las sombras.
+La primera representación dibuja polígonos orientados hacia el frente y aumenta los valores del búfer de la galería de símbolos. La segunda representación dibuja los polígonos orientados hacia atrás del volumen de sombra y reduce los valores del búfer de la galería de símbolos. Por lo general, todos los valores aumentados y disminuidos se cancelan entre sí. Sin embargo, la escena ya estaba representada con la geometría normal, por lo que algunos píxeles no superan la prueba de búfer z a medida que se representa el volumen de sombra. Los valores que quedan en el búfer de la galería de símbolos corresponden a los píxeles que se encuentran en la sombra. Estos contenidos del búfer de la galería de símbolos que quedan se usan como máscara, para la combinación alfa de un cuadrado negro grande, que abarca todo en la escena. Con el búfer de la galería de símbolos como máscara, el resultado es oscurecer los píxeles que se encuentran en las sombras.
 
-Esto significa que la geometría de las sombras se dibuja dos veces por fuente de luz, lo que ejerce presión en el rendimiento de vértices de la GPU. La característica de galería de símbolos a doble cara se ha diseñado para mitigar esta situación. En este enfoque, existen dos conjuntos de estado de la galería de símbolos (nombrados a continuación), un conjunto cada uno para los triángulos orientados al frente y otro para los triángulos orientados hacia atrás. De esta forma, solo se dibuja un paso por volumen de sombra y por luz.
+Esto significa que la geometría de las sombras se dibuja dos veces por fuente de luz, lo que ejerce presión en el rendimiento de vértices de la GPU. La característica de galería de símbolos a doble cara se ha diseñado para mitigar esta situación. En este enfoque, existen dos conjuntos de estado de la galería de símbolos (nombrados a continuación), un conjunto cada uno para los triángulos orientados al frente y otro para los triángulos orientados hacia atrás. De esta forma, solo se dibuja una única pasada por volumen de sombra, por luz.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Búferes de profundidad y de galerías de símbolos](depth-and-stencil-buffers.md)
+[Búferes de profundidad y Galería de símbolos](depth-and-stencil-buffers.md)
 
  
 

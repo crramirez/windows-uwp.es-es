@@ -4,16 +4,16 @@ description: Este artículo muestra cómo sacar provecho de las características
 title: Características de la interfaz de usuario de la cámara para dispositivos móviles
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bf27de9c9b1bce2b35918b2a9d1357d2f3ba20b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0c0da215cad867a498527b475422c4026cc65ce3
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942871"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640700"
 ---
-#<a name="camera-ui-features-for-mobile-devices"></a>Características de la interfaz de usuario de la cámara para dispositivos móviles
+# <a name="camera-ui-features-for-mobile-devices"></a>Características de la interfaz de usuario de la cámara para dispositivos móviles
 
 Este artículo muestra cómo sacar provecho de las características especiales de la interfaz de usuario de la cámara que solo están presentes en los dispositivos móviles. 
 
@@ -21,7 +21,7 @@ Este artículo muestra cómo sacar provecho de las características especiales d
 
 Para usar estas características, debes agregar una referencia al SDK de extensión móvil de Microsoft para la plataforma de aplicación universal al proyecto.
 
-**Para agregar una referencia al SDK de extensión móvil para admitir el soporte del botón de cámara hardware**
+**Para agregar una referencia a la extensión mobile SDK para la compatibilidad con botón de cámara de hardware**
 
 1.  En el **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia**.
 
@@ -57,8 +57,8 @@ Cuando se cierra la aplicación o el usuario abandona la página de captura mult
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 
 
 

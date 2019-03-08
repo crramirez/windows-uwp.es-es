@@ -1,5 +1,5 @@
 ---
-Description: Navigation in Universal Windows Platform (UWP) apps is based on a flexible model of navigation structures, navigation elements, and system-level features.
+Description: La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema.
 title: Conceptos básicos de navegación para las aplicaciones para UWP
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
@@ -7,15 +7,15 @@ template: detail.hbs
 op-migration-status: ready
 ms.date: 07/16/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636100"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -49,13 +49,13 @@ Aunque no hay ningún diseño de navegación único que funcione para todas las 
 
 Empecemos con los principios básicos de diseño de buena navegación:
 
-- **Coherencia**: satisface las expectativas del usuario.
-- **Simplicidad**: no hagas más de lo que necesites hacer.
-- **Claridad**: proporciona opciones y rutas claras.
+- **Coherencia:** Cumplir las expectativas del usuario.
+- **Simplicidad:** No más de lo necesario.
+- **Mayor claridad:** Proporcionar opciones y trayectorias claras.
 
-### <a name="consistency"></a>Coherencia
+### <a name="consistency"></a>Consistency
 
-La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Uso de [controles estándar](#use-the-right-controls) que los usuarios siguientes y está familiarizadas con convenciones estándar para los iconos, ubicación, y estilo hará navegación predecible e intuitiva para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -96,7 +96,7 @@ Ahora vamos a tomar nuestros principios de diseño, coherencia, simplicidad y cl
 
 1. Piensa en tus usuarios. Traza rutas habituales que podrían tomar en la aplicación, y en cada página, piensa en por qué está ahí el usuario y dónde podría querer ir.
 
-2. Evita las jerarquías de navegación detallado. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
+2. Evite las jerarquías de exploración profunda. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
 
 3. Evita el "pogo-sticking". El "pogo-sticking" se produce cuando hay contenido relacionado, pero navegar hasta él requiere que el usuario suba un nivel y después vuelva a bajar.
 
@@ -115,7 +115,7 @@ Ahora que ya conoces los principios generales de navegación, ¿cómo deberías 
 
         We recommend using a flat structure when:
 
-        - Las páginas se pueden ver en cualquier orden.
+        - las páginas se pueden ver en cualquier orden;
         - las páginas son claramente distintas entre sí y no tienen una relación primaria-secundaria obvia.
         - Hay menos de 8 páginas en el grupo. <br>
         (Si hay más páginas, a los usuarios les puede resultar difícil comprender el modo en que las páginas son únicas o entender su ubicación actual dentro del grupo. Si no crees que eso es un problema para tu aplicación, organiza las páginas como elementos del mismo nivel. De lo contrario, piensa en la posibilidad de usar una estructura jerárquica para separar las páginas en dos o más grupos pequeños).
@@ -184,14 +184,14 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         
         Use top navigation when:
 
-        - Quieres mostrar todas las opciones de exploración en la pantalla.
+        - Desea mostrar todas las opciones de navegación en la pantalla.
         - Desean más espacio para el contenido de la aplicación.
-        - Iconos claramente no describen las categorías de navegación.
+        - Los iconos no pueden describir claramente las categorías de exploración.
         
-        Usa pestañas cuando:
+        Use las pestañas cuando:
 
         - Desea conservar el estado de página y el historial de navegación.
-        - Espera que los usuarios cambien entre las pestañas con frecuencia.
+        - Se espera que los usuarios cambiar entre pestañas con frecuencia.
 
 :::row-end:::
 
@@ -204,7 +204,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
         Displays a vertical list of links to top-level pages. Use when:
         
-        - Las páginas existen en el nivel superior.
+        - Las páginas existan en el nivel superior.
         - Hay muchos elementos de navegación (más de 5)
         - No se espera que los usuarios cambien entre las páginas con frecuencia.
         
@@ -219,7 +219,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
         
-        - Se espera que los usuarios cambien entre elementos secundarios con frecuencia;
+        - no se espera que los usuarios cambien entre elementos secundarios con frecuencia;
         - si desea permitir al usuario realizar operaciones de alto nivel, como eliminar u ordenar, en elementos individuales o grupos de elementos, y también quieres que el usuario pueda ver o actualizar los detalles de cada elemento.
 
         El patrón de maestro y detalles es ideal para las bandejas de entrada de correo electrónico, las listas de contactos y la entrada de datos.
@@ -235,6 +235,6 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::
 
-## <a name="next-add-navigation-code-to-your-app"></a>A continuación: agrega código de navegación a la aplicación
+## <a name="next-add-navigation-code-to-your-app"></a>Siguiente: Agregue el código de navegación a la aplicación
 
 En el siguiente artículo, [Implementación de la navegación básica](navigate-between-two-pages.md), se muestra el código necesario para usar un control Frame para habilitar en tu aplicación la navegación básica entre dos páginas.

@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6efe7aa27721f519ba93052abf2d0e8189f58941
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933725"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622320"
 ---
-# <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Uso de valores generados por el sistema
+# <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Con los valores generados por el sistema
 
 
 La [fase del ensamblador de entrada (IA](input-assembler-stage--ia-.md) genera valores generados por el sistema (basándose en la [semantics](https://msdn.microsoft.com/library/windows/desktop/bb509647) de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un id. de instancia (visible para la [fase del sombreador de vértices (VS)](vertex-shader-stage--vs-.md)), un id. de vértice (visible para VS) o un id. de primitivo (visible para la [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md)/[fase del sombreador de píxeles (PS)](pixel-shader-stage--ps-.md)), una fase del sombreador posterior puede ver estos valores del sistema para optimizar el procesamiento en esa fase.
@@ -48,7 +48,7 @@ Un identificador de instancia se usa en cada fase del sombreador para identifica
 
 La [fase de ensamblador de entrada (IA)](input-assembler-stage--ia-.md) agregará un identificador de instancia a cada vértice si la declaración de entrada del sombreador de vértices incluye la semántica del identificador de instancia. Para cada llamada de dibujo indexada, el identificador de instancia se incrementa en 1. Toaos las demás llamadas de dibujos no cambian el valor del identificador de instancia. Si el identificador de instancia se desborda (supera 2³²– 1), se ajusta a 0.
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Por ejemplo:
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
 La siguiente ilustración muestra cómo adjuntar valores del sistema a una franja de triángulos de instancias en la [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md).
@@ -98,7 +98,7 @@ La [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) genera 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md)
+[Etapa del ensamblador de entrada (IA)](input-assembler-stage--ia-.md)
 
  
 

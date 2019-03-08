@@ -1,5 +1,5 @@
 ---
-Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
+Description: Las plantillas de icono Adaptive son una característica nueva en Windows 10, lo que le permite diseñar su propio contenido de la notificación de mosaico con un lenguaje de marcado simple y flexible que se adapte a las densidades de pantalla diferentes.
 title: Crear iconos adaptables
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
@@ -9,24 +9,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945532"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639610"
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
 
-Plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapte a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](../tiles-and-notifications/tile-schema.md).
+Las plantillas de icono Adaptive son una característica nueva en Windows 10, lo que le permite diseñar su propio contenido de la notificación de mosaico con un lenguaje de marcado simple y flexible que se adapte a las densidades de pantalla diferentes. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](../tiles-and-notifications/tile-schema.md).
 
-(Si lo deseas, puedes seguir usar las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones de Windows 10.)
+(Si lo desea, todavía puede usar las plantillas preestablecidas desde el [catálogo de plantillas de icono de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows 10.)
 
 
 ## <a name="getting-started"></a>Introducción
 
-**Instalar la biblioteca de notificaciones.** Si quieres usar C# en lugar de XML para generar notificaciones, instala el paquete de NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (buscar "notificaciones para UWP"). Los ejemplos de C# proporcionados en este artículo usan la versión 1.0.0 del paquete NuGet.
+**Instale la biblioteca de notificaciones.** Si quieres usar C# en lugar de XML para generar notificaciones, instala el paquete de NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (buscar "notificaciones para UWP"). Los ejemplos de C# proporcionados en este artículo usan la versión 1.0.0 del paquete NuGet.
 
-**Instala Notifications Visualizer** Al igual que la vista de editor o de diseño XAML de Visual Studio, esta aplicación para UWP gratuita te ayuda a diseñar iconos dinámicos adaptables proporcionando una vista previa visual instantánea del icono a medida que lo editas. Consulta [Notifications Visualizer](notifications-visualizer.md) para obtener más información o bien, [descargar Notifications Visualizer de la Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**Instale el visualizador de notificaciones.** Al igual que la vista de editor o de diseño XAML de Visual Studio, esta aplicación para UWP gratuita te ayuda a diseñar iconos dinámicos adaptables proporcionando una vista previa visual instantánea del icono a medida que lo editas. Consulta [Notifications Visualizer](notifications-visualizer.md) para obtener más información o bien, [descargar Notifications Visualizer de la Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
 ## <a name="how-to-send-a-tile-notification"></a>Cómo enviar una notificación de icono
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 Puedes controlar la personalización de marca en la parte inferior de un icono dinámico (el nombre para mostrar y el logotipo de esquina) mediante el atributo de personalización de marca de la carga de notificación. Puedes elegir mostrar "none", solo "name", solo "logo" o ambos con "nameAndLogo".
 
-**Nota**Windows Mobile no admite el logotipo de esquina, por lo que "logo" y "nameAndLogo" predeterminada en "name" en Mobile.
+**Tenga en cuenta**  Windows Mobile no es compatible con el logotipo de la esquina, por lo que "logotipo" y predeterminado de "nameAndLogo" en "name" en el dispositivo móvil.
 
  
 
@@ -274,22 +274,22 @@ TileContent content = new TileContent()
 };
 ```
 
-**Resultado predeterminado de la personalización de marca:**
+**Valor predeterminado de personalización de marca de resultado:**
 
 ![personalización de marca predeterminada en iconos](images/adaptive-tiles-defaultbranding.png)
 
 Si no especificas la personalización de marca en la carga de notificaciones, las propiedades del icono base determinarán la personalización de marca. Si en el icono base se muestra el nombre para mostrar, a continuación, la personalización de marca se definirá de manera predeterminada en "name". De lo contrario, la personalización de marca se definirá de manera predeterminada en "none" si no se muestra el nombre para mostrar.
 
-**Nota**  se trata de un cambio respecto a Windows8.x, en el que la personalización de marca predeterminada era "logo".
+**Tenga en cuenta**    se trata de un cambio con respecto a Windows 8.x, en los que la personalización de marca predeterminada era "logotipo".
 
  
 
 ## <a name="display-name"></a>Nombre para mostrar
 
 
-Para invalidar el nombre para mostrar de una notificación, escribe la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual), que afecta a toda la carga de notificaciones, o en el elemento [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding), que solo afecta a iconos individuales.
+Puedes invalidar el nombre para mostrar de una notificación escribiendo la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual), que afecta a toda la carga de notificaciones, o en el elemento [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding), que solo afecta a iconos individuales.
 
-**Problema conocido** En Windows Mobile, si especificas un ShortName para Tile, no se usará el nombre para mostrar proporcionado en la notificación (ShortName se muestra siempre). 
+**Problema conocido**  En Windows Mobile, si especifica un ShortName para Tile, no se usará el nombre para mostrar proporcionado en la notificación (ShortName se muestra siempre). 
 
 ```xml
 <tile>
@@ -335,7 +335,7 @@ TileContent content = new TileContent()
 
 ![nombre para mostrar de los iconos adaptables](images/adaptive-tiles-displayname.png)
 
-## <a name="text"></a>Texto
+## <a name="text"></a>Text
 
 
 El elemento [AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) se usa para mostrar texto. Puedes usar sugerencias para modificar la apariencia del texto.
@@ -381,7 +381,7 @@ new AdaptiveText()
 ## <a name="text-styles"></a>Estilos de texto
 
 
-Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60% y que, por lo general, hace que el color del texto tenga un tono gris claro.
+Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60 % y que, por lo general, hace que el color del texto tenga un tono gris claro.
 
 ```xml
 <text hint-style="base">Header content</text>
@@ -406,26 +406,26 @@ new AdaptiveText()
 
 ![estilos de texto de iconos adaptables](images/adaptive-tiles-textstyles.png)
 
-**Nota**el estilo de forma predeterminada en modo de subtítulo si no se especifica ninguna sugerencia de estilo.
+**Tenga en cuenta**  el estilo tiene como valor predeterminado para el título si no se especifica el estilo de la sugerencia.
 
  
 
-**Estilos de texto básicos**
+**Estilos de texto básica**
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
 | &lt;text hint-style="\*" /&gt; | Alto de fuente               | Espesor de la fuente |
-| subtítulo                        | 12 píxeles efectivos (epx) | Regular     |
-| body                           | 15epx                    | Regular     |
-| base                           | 15epx                    | Semibold    |
-| subtitle                       | 20epx                    | Regular     |
-| title                          | 24epx                    | Semilight   |
-| subheader                      | 34epx                    | Light       |
-| header                         | 46epx                    | Light       |
+| subtítulo                        | 12 píxeles efectivos (epx) | Normal     |
+| body                           | 15 epx                    | Normal     |
+| base                           | 15 epx                    | Semibold    |
+| subtitle                       | 20 epx                    | Normal     |
+| title                          | 24 epx                    | Semilight   |
+| subheader                      | 34 epx                    | Claro       |
+| header                         | 46 epx                    | Claro       |
 
  
 
-**Variaciones de estilo de texto numérico**
+**Variaciones de estilo de números de texto**
 
 Estas variaciones reducen el alto de línea para que el contenido de la parte superior e inferior se aproxime más al texto.
 
@@ -439,7 +439,7 @@ Estas variaciones reducen el alto de línea para que el contenido de la parte su
 
 **Variaciones de estilo de texto sutiles**
 
-Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60% que, por lo general, hace que el color del texto tenga un tono gris claro.
+Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60 % que, por lo general, hace que el color del texto tenga un tono gris claro.
 
 |                        |
 |------------------------|
@@ -485,7 +485,7 @@ Los grupos permiten declarar semánticamente que el contenido dentro del grupo e
 
 Con el fin de obtener la mejor experiencia en los dispositivos y las pantallas, proporciona varios grupos. El hecho de tener varios grupos permite que el icono se adapte a las pantallas más grandes.
 
-**Nota**el único elemento secundario válido de un grupo es un subgrupo.
+**Tenga en cuenta**  secundario solo es válido de un grupo es un subgrupo.
 
  
 
@@ -592,22 +592,22 @@ El atributo **hint-weight** te permite controlar el ancho de las columnas. El va
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25%</td>
+<td align="left">25 %</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25%</td>
+<td align="left">25 %</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25%</td>
+<td align="left">25 %</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25%</td>
+<td align="left">25 %</td>
 </tr>
 <tr class="even">
-<td align="left">Espesor total: 4</td>
+<td align="left">Peso total: 4</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -631,14 +631,14 @@ Para hacer que una columna sea dos veces más grande que otra columna, asigna a 
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">33,3%</td>
+<td align="left">33,3 %</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
-<td align="left">66,7%</td>
+<td align="left">66,7 %</td>
 </tr>
 <tr class="even">
-<td align="left">Espesor total: 3</td>
+<td align="left">Peso total: 3</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -648,7 +648,7 @@ Para hacer que una columna sea dos veces más grande que otra columna, asigna a 
 
 ![subgrupos, una columna que duplica el tamaño de otra](images/adaptive-tiles-subgroups02.png)
 
-Si quieres que la primera columna ocupe un 20% del ancho total y que la segunda columna ocupe un 80% del ancho total, asigna el espesor de la primera en 20 y el de la segunda en 80. Si los valores totales del espesor suman 100, actúan como porcentajes.
+Si quieres que la primera columna ocupe un 20 % del ancho total y que la segunda columna ocupe un 80 % del ancho total, asigna el espesor de la primera en 20 y el de la segunda en 80. Si los valores totales del espesor suman 100, actúan como porcentajes.
 
 <table>
 <colgroup>
@@ -662,14 +662,14 @@ Si quieres que la primera columna ocupe un 20% del ancho total y que la segunda 
 </tr>
 <tr class="even">
 <td align="left">20</td>
-<td align="left">20%</td>
+<td align="left">20 %</td>
 </tr>
 <tr class="odd">
 <td align="left">80</td>
-<td align="left">80%</td>
+<td align="left">80 %</td>
 </tr>
 <tr class="even">
-<td align="left">Espesor total: 100</td>
+<td align="left">Peso total: 100</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -679,7 +679,7 @@ Si quieres que la primera columna ocupe un 20% del ancho total y que la segunda 
 
 ![subgrupos, con espesores que suman 100](images/adaptive-tiles-subgroups03.png)
 
-**Nota**un margen de 8 píxeles se agrega automáticamente entre las columnas.
+**Tenga en cuenta**  se agrega automáticamente un margen de 8 píxeles entre las columnas.
 
  
 
@@ -793,7 +793,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 El elemento &lt;image&gt; se usa para mostrar imágenes en la notificación de icono. Las imágenes pueden colocarse alineadas dentro del contenido del icono (valor predeterminado), como una imagen de fondo detrás del contenido o como una animación de imagen que aparezca desde la parte superior de la notificación.
 
 > [!NOTE]
-> Pueden usarse imágenes del paquete de la aplicación, del almacenamiento local de la aplicación o de la Web. A partir de la actualización de Fall Creators Update, las imágenes web pueden tener un tamaño de hasta 3MB, en conexiones normales y de 1MB en conexiones de uso medido. En dispositivos que no ejecutan aún la actualización de Fall Creators Update, el tamaño de las imágenes web no debe ser superior a los 200KB.
+> Pueden usarse imágenes del paquete de la aplicación, del almacenamiento local de la aplicación o de la Web. A partir de la actualización de Fall Creators Update, las imágenes web pueden tener un tamaño de hasta 3 MB, en conexiones normales y de 1 MB en conexiones de uso medido. En dispositivos que no ejecutan aún la actualización de Fall Creators Update, el tamaño de las imágenes web no debe ser superior a los 200 KB.
 
  
 
@@ -1179,7 +1179,7 @@ TileWide = new TileBinding()
 
 ![ejemplos de imágenes que aparecen](images/adaptive-tiles-imagepeeking.png)
 
-**Recorte por círculo para imágenes que aparecen e imágenes de fondo**
+**Recorte de círculo para inspección e imágenes de fondo**
 
 Usa el atributo "hint-crop" en imágenes que aparecen e imágenes de fondo para hacer un recorte por círculo:
 
@@ -1199,7 +1199,7 @@ El resultado tendrá el siguiente aspecto:
 
 ![recorte por círculo para imagen que aparece e imagen de fondo](images/circlecrop-image.png)
 
-**Usar una imagen que aparece y una imagen de fondo al mismo tiempo**
+**Usar imagen peek y en segundo plano**
 
 Para usar tanto una imagen que aparece como una imagen de fondo en una notificación de icono, especifica una imagen que aparece y una imagen de fondo en la carga de notificación.
 
@@ -1212,9 +1212,9 @@ El resultado tendrá el siguiente aspecto:
 
 Puedes establecer una superposición negra en la imagen de fondo y la imagen que aparece con **hint-overlay**, que acepta valores enteros de 0 a 100, en los que 0 no supone ninguna superposición y 100 es una superposición completa de color negro. Puedes usar la superposición para garantizar que el texto en el icono puede leerse.
 
-**Usar el atributo "hint-overlay" en una imagen de fondo**
+**Usar una sugerencia de cubierta en una imagen de fondo**
 
-La imagen de fondo tendrá como valor predeterminado un 20% de superposición mientras tengas algunos elementos de texto en la carga (de lo contrario el valor predeterminado de superposición será de un 0%).
+La imagen de fondo tendrá como valor predeterminado un 20 % de superposición mientras tengas algunos elementos de texto en la carga (de lo contrario el valor predeterminado de superposición será de un 0 %).
 
 ```xml
 <binding template="TileWide">
@@ -1239,11 +1239,11 @@ TileWide = new TileBinding()
 }
 ```
 
-**Resultado de la sugerencia de superposición:**
+**Resultado de la superposición de sugerencia:**
 
 ![ejemplo de una superposición de sugerencia de imagen](images/adaptive-tiles-image-hintoverlay.png)
 
-**Usar el atributo hint-overlay en una imagen que aparece**
+**Usar una sugerencia de cubierta en una imagen de peek**
 
 En la versión 1511 de Windows 10, también se admite una superposición de la imagen que aparece, similar a la imagen de fondo. Especifica el atributo "hint-overlay" en el elemento de la imagen aparece como un número entero de 0 a 100. La superposición de forma predeterminada para las imágenes que aparecen es 0 (no hay superposición alguna).
 
@@ -1269,7 +1269,7 @@ TileMedium = new TileBinding()
 }
 ```
 
-En este ejemplo se muestra una imagen que aparece con una opacidad del 20% (izquierda) y una opacidad del 0% (derecha):
+En este ejemplo se muestra una imagen que aparece con una opacidad del 20 % (izquierda) y una opacidad del 0 % (derecha):
 
 ![Atributo hint-overlay en una imagen que aparece](images/hintoverlay.png)
 
@@ -1390,10 +1390,10 @@ TileWide = new TileBinding()
 ```
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Esquema de contenido de ventana](../tiles-and-notifications/tile-schema.md)
+* [Esquema de contenido de mosaico](../tiles-and-notifications/tile-schema.md)
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)
 * [Plantillas de iconos especiales](special-tile-templates-catalog.md)
-* [Kit de herramientas de la comunidad de UWP: notificaciones](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [UWP Community Toolkit - notificaciones](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [Notificaciones de Windows en GitHub](https://github.com/WindowsNotifications)
 
  

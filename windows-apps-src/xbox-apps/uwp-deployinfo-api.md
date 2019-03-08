@@ -5,21 +5,21 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 7543b41c6ee1d9c07f4540012f84dccc10bb4d76
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922785"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638010"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Solicita la información de implementación para uno o más paquetes instalados.
 
-**Solicitud**
+**Request**
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :------
 POST | /ext/app/deployinfo
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
  - Ninguno
 
@@ -37,7 +37,7 @@ Una matriz JSON en el siguiente formato:
 
 ###<a name="response"></a>Respuesta
 
-**Cuerpo de la respuesta**
+**Cuerpo de respuesta**
 
 Una matriz JSON con el siguiente formato (algunos campos son opcionales):
 
@@ -51,7 +51,7 @@ Una matriz JSON con el siguiente formato (algunos campos son opcionales):
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----

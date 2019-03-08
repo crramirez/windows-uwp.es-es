@@ -1,5 +1,5 @@
 ---
-Description: Learn to write code for a custom Panel class, implementing ArrangeOverride and MeasureOverride methods, and using the Children property.
+Description: Aprende a escribir código para una clase Panel personalizada, con la implementación de métodos ArrangeOverride y MeasureOverride, y el uso de la propiedad Children.
 MS-HAID: dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -13,11 +13,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42b62e46c8adea771a1b7719d24e99f77f765039
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940351"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620130"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, un ejemplo de panel personalizado
 
@@ -25,7 +25,7 @@ ms.locfileid: "8940351"
 
 Aprende a escribir código para una clase [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) personalizada, con la implementación de métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730), y el uso de la propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514). 
 
-> **API importantes**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 
+> **API importantes**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [ **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711),[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 
 
 En el código de ejemplo se muestra la implementación de un panel personalizado, pero no nos detenemos demasiado en explicar los conceptos de diseño que influyen en la forma en que un panel se puede personalizar para distintos escenarios de diseño. Si quieres más información sobre estos conceptos de diseño y su aplicación a escenarios concretos, consulta [Introducción a los paneles personalizados de XAML](custom-panels-overview.md).
 
@@ -87,7 +87,7 @@ public class BoxPanel : Panel
 
 A partir de aquí, te enseñaremos una definición de miembro cada vez, ya sea una invalidación de método o algo auxiliar, como una propiedad de dependencia. Estos elementos se pueden agregar al esqueleto anterior en cualquier orden, y no volveremos a mostrar las instrucciones **using** o la definición del ámbito de la clase en los fragmentos de código hasta que mostremos el código final.
 
-## **<a name="measureoverride"></a>MeasureOverride**
+## <a name="measureoverride"></a>**MeasureOverride**
 
 
 ```CSharp
@@ -134,7 +134,7 @@ La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su 
 Este panel se puede usar cuando el componente de altura de *availableSize* no esté enlazado. Si esto es así, el panel no tiene una altura conocida que dividir. En este caso, la lógica del paso de medición informa a cada elemento secundario de que todavía carece de una altura enlazada, y lo hace pasando un elemento [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) a la llamada de [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) de los elementos secundarios en los que [**Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910) es infinito. Esto puede hacerse. Cuando se llama a **Measure**, la lógica consiste en que [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) se establece en el mínimo de lo siguiente: lo que se pasó a **Measure**, o bien el tamaño natural de dicho elemento de factores como [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) expresamente definidos.
 
 > [!NOTE]
-> La lógica interna de [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) presenta el mismo comportamiento: **StackPanel** pasa un valor de dimensión infinito a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en los elementos secundarios, lo que indica que no hay ninguna limitación en ellos en cuanto a dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
+> La lógica interna de [ **StackPanel** ](https://msdn.microsoft.com/library/windows/apps/br209635) también tiene este comportamiento: **StackPanel** pasa un valor infinito de dimensión y [ **medida** ](https://msdn.microsoft.com/library/windows/apps/br208952) en elementos secundarios, que indica que no hay ninguna restricción en los elementos secundarios en la dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
 
 Sin embargo, el panel en sí no puede devolver un objeto [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) con un valor infinito de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730); esto generaría una excepción durante el diseño. Por lo tanto, parte de la lógica irá dirigida a averiguar la altura máxima que cada elemento secundario necesita para, luego, usar esa altura como altura de celda en caso de que esta no se haya obtenido ya de las propias limitaciones de tamaño del panel. Aquí te mostramos la función auxiliar `LimitUnboundedSize` a la que se hizo referencia en el código anterior, que toma la altura de celda máxima y la usa para dar al panel una altura finita que devolver, al tiempo que garantiza que `cellheight` sea un número finito antes de que se inicie el paso de organización:
 
@@ -155,7 +155,7 @@ Size LimitUnboundedSize(Size input)
 }
 ```
 
-## **<a name="arrangeoverride"></a>ArrangeOverride**
+## <a name="arrangeoverride"></a>**ArrangeOverride**
 
 ```CSharp
 protected override Size ArrangeOverride(Size finalSize)
@@ -213,13 +213,13 @@ El escenario particular para `BoxPanel` es un panel en el que uno de los princip
 
 Pero, ¿y si el número de elementos secundarios es dinámico? Es totalmente factible: el código de tu aplicación puede agregar elementos a colecciones, como respuesta a cualquier condición de tiempo de ejecución dinámica que consideres que sea lo suficientemente importante como para actualizar la interfaz de usuario. Si usas enlaces de datos a objetos de negocios/colecciones de respaldo, la obtención de esas actualizaciones y la actualización de la interfaz de usuario se controla automáticamente, de modo que esta es a menudo la técnica preferida (consulta el tema de [Introducción al enlace de datos](https://msdn.microsoft.com/library/windows/apps/mt210946)).
 
-Sin embargo, no todos los escenarios de aplicaciones se prestan al enlace de datos. A veces, es necesario crear elementos de interfaz de usuario en el tiempo de ejecución y hacerlos visibles. `BoxPanel`  corresponde a este escenario. Un número variable de elementos secundarios no es un problema para `BoxPanel`, dado que usa el recuento de elementos secundarios en sus cálculos y ajusta los elementos secundarios tanto nuevos como existentes en un nuevo diseño para que todos tengan cabida.
+Sin embargo, no todos los escenarios de aplicaciones se prestan al enlace de datos. A veces, es necesario crear elementos de interfaz de usuario en el tiempo de ejecución y hacerlos visibles. `BoxPanel` corresponde a este escenario. Un número variable de elementos secundarios no es un problema para `BoxPanel`, dado que usa el recuento de elementos secundarios en sus cálculos y ajusta los elementos secundarios tanto nuevos como existentes en un nuevo diseño para que todos tengan cabida.
 
-Un escenario avanzado para extender más aún `BoxPanel` (no se muestra aquí) sería incluir los elementos secundarios dinámicos y usar un [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) de un elemento secundario como factor principal para asignar el tamaño de las celdas individuales. Este escenario podría usar tamaños de fila o columna variables o formas que no sean de cuadrícula para que el espacio "desperdiciado" sea menor. Esto requiere una estrategia que permita contener en un solo rectángulo varios rectángulos de diversos tamaños y relaciones de aspecto para lograr el tamaño mínimo y un resultado estético. `BoxPanel`  no hace eso, sino que usa una técnica más sencilla para dividir el espacio. `BoxPanel`La técnica consiste en averiguar el mínimo cuadrado que sea mayor que el recuento de elementos secundarios. Así, por ejemplo, nueve elementos encajarían en un cuadrado de 3x3, 10 elementos necesitan un cuadrado de 4x4. No obstante, con frecuencia se pueden ajustar elementos y, al mismo tiempo, quitar una fila o una columna del cuadrado inicial para ahorrar espacio. En el ejemplo del recuento=10, esto encaja en un rectángulo de 4x3 o de 3x4.
+Un escenario avanzado para extender más aún `BoxPanel` (no se muestra aquí) sería incluir los elementos secundarios dinámicos y usar un [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) de un elemento secundario como factor principal para asignar el tamaño de las celdas individuales. Este escenario podría usar tamaños de fila o columna variables o formas que no sean de cuadrícula para que el espacio "desperdiciado" sea menor. Esto requiere una estrategia que permita contener en un solo rectángulo varios rectángulos de diversos tamaños y relaciones de aspecto para lograr el tamaño mínimo y un resultado estético. `BoxPanel` no hace eso, sino que usa una técnica más sencilla para dividir el espacio. La técnica de `BoxPanel` consiste en averiguar el mínimo cuadrado que sea mayor que el recuento de elementos secundarios. Así, por ejemplo, nueve elementos encajarían en un cuadrado de 3x3, 10 elementos necesitan un cuadrado de 4x4. No obstante, con frecuencia se pueden ajustar elementos y, al mismo tiempo, quitar una fila o una columna del cuadrado inicial para ahorrar espacio. En el ejemplo del recuento=10, esto encaja en un rectángulo de 4x3 o de 3x4.
 
 Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya que así el número de elementos encajaría a la perfección. Pero, en la práctica, los paneles tienen forma de rectángulos que rara vez presentan una relación de aspecto con una orientación muy marcada. La técnica de los mínimos cuadrados es una forma de influir en la lógica de tamaño para que funcione correctamente con las formas de diseño típicas y no fomentar los cambios de tamaño cuando las formas de celda presentan relaciones de aspecto extrañas.
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Referencia**
 
@@ -229,4 +229,4 @@ Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya q
 
 **Conceptos**
 
-* [Alineación, margen y espaciado](alignment-margin-padding.md)
+* [Alineación, márgenes y relleno](alignment-margin-padding.md)

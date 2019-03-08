@@ -1,5 +1,5 @@
 ---
-Description: Incorporate speech into your apps using Cortana voice commands, speech recognition, and speech synthesis.
+Description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
 title: Interacciones de voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 09787d5a83415b65b8946860edb5b7cad09a5846
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050818"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637080"
 ---
 # <a name="speech-interactions"></a>Interacciones de voz
 
@@ -157,7 +157,7 @@ Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de
 Una gramática personalizada se ha diseñado y creado por el usuario y se instala con la aplicación. El reconocimiento de voz con una restricción personalizada se realiza en el dispositivo.
 
 -   Las restricciones de lista mediante programación ofrecen un enfoque ligero para la creación de gramáticas sencillas como, por ejemplo, una lista de palabras o frases. Una restricción de lista es efectiva para reconocer frases cortas y distintas. Especificar explícitamente todas las palabras en una gramática también mejora la precisión del reconocimiento, porque el motor de reconocimiento de voz debe procesar la voz únicamente para confirmar una coincidencia. La lista también se puede actualizar mediante programación.
--   Una gramáticaSRGS es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
+-   Una gramática SRGS es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
 
     Estas son algunas sugerencias para crear gramáticas SRGS:
 
@@ -179,7 +179,7 @@ Para una pequeña lista de palabras y frases, o una lista de palabras o frases p
 
 En el caso de listas de palabras y frases más largas, o palabras o frases usadas con frecuencia, puedes crear documentos de lexicón de pronunciación independiente. Consulta [Acerca de los lexicones y los alfabetos fonéticos](https://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx) para obtener más información.
 
-## <a name="testing"></a>Pruebas
+## <a name="testing"></a>Probándose
 
 Prueba la precisión del reconocimiento de voz y la interfaz de usuario compatible con el público objetivo de la aplicación. Esta es la mejor manera de determinar la eficacia de la funcionalidad de interacción de voz en la aplicación. Por ejemplo, ¿los usuarios obtienen resultados de reconocimiento inexactos porque la aplicación no puede escuchar una frase común?
 
@@ -220,7 +220,7 @@ Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin 
 
  **Ejemplos**
 
-* [Muestra de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconocimiento de voz y ejemplo de síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

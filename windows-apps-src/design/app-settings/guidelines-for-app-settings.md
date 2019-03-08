@@ -1,5 +1,5 @@
 ---
-Description: This article describes best practices for creating and displaying app settings.
+Description: En este artículo se describen los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
 title: Directrices para la configuración de una aplicación
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a31464d208e8d9abe68703560552c99e5d957463
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049140"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638240"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
@@ -28,7 +28,7 @@ Estos son ejemplos de opciones de la aplicación que pertenecen a una página de
 
 -   Las opciones de configuración que afectan al comportamiento de la aplicación y que no se ajustan con frecuencia, como cuando eliges entre Celsius o Fahrenheit como unidades de temperatura predeterminadas en una aplicación del tiempo, cuando cambias la configuración de una cuenta para una aplicación de correo, la configuración de las notificaciones o las opciones de accesibilidad.
 -   Opciones que dependen de las preferencias del usuario, como música, efectos de sonido o temas de colores.
--   La información sobre la aplicación a la que no se tiene acceso muy a menudo, como la política de privacidad, la ayuda, la versión de la aplicación o la información de copyright.
+-   La información sobre la aplicación a la que no se tiene acceso muy a menudo, como la directiva de privacidad, la ayuda, la versión de la aplicación o la información de copyright.
 
 Los comandos que forman parte del flujo de trabajo habitual de la aplicación (por ejemplo, cambiar el tamaño del pincel en una aplicación de dibujo) no deben estar en una página de configuración. Para obtener información sobre la colocación de los comandos, consulta los [Conceptos básicos del diseño de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433).
 
@@ -36,7 +36,7 @@ Los comandos que forman parte del flujo de trabajo habitual de la aplicación (p
 
 
 -   Simplificar las páginas de configuración y hacer uso de los controles binarios (encendido/apagado). Un [modificador para alternar](../controls-and-patterns/toggles.md) suele ser el mejor control para una configuración binaria.
--   Para una configuración que permita a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes, usa [botones de radio](../controls-and-patterns/radio-button.md).
+-   Para ofrecer una configuración que permita a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes, usa [botones de radio](../controls-and-patterns/radio-button.md).
 -   Crea un punto de entrada para todas las configuraciones de tu página de configuración de la aplicación.
 -   Haz que tu configuración sea sencilla. Define valores predeterminados inteligentes y reduce el número de configuraciones tanto como sea posible.
 -   Cuando un usuario cambia una opción de configuración, la aplicación debería reflejar el cambio inmediatamente.
@@ -53,13 +53,13 @@ Para el diseño del panel de navegación, el elemento Configuración de la aplic
 
 ![punto de entrada de la configuración de la aplicación para el panel de navegación](images/appsettings-entrypoint-navpane.png)
 
-**Barra de aplicaciones**
+**Barra de la aplicación**
 
 Si estás usando la [barra de aplicaciones](../controls-and-patterns/app-bars.md) o la barra de herramientas, coloca el punto de entrada de configuración como el último elemento en el menú de desbordamiento "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, colócalo directamente en la barra de aplicaciones y no en el desbordamiento.
 
-![punto de entrada de la configuración de la aplicación para la barra de aplicaciones](images/appsettings-entrypoint-tabs.png)
+![punto de entrada de la configuración de la aplicación para la barra de la aplicación](images/appsettings-entrypoint-tabs.png)
 
-**Concentrador**
+**Hub**
 
 Si estás usando un diseño de navegación centralizada, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
 
@@ -67,7 +67,7 @@ Si estás usando un diseño de navegación centralizada, el punto de entrada de 
 
 Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
 
-**Panel maestro y detalles**
+**Master-details**
 
 En lugar de esconder el punto de entrada de la configuración de la aplicación en lo más profundo de un panel de detalles maestro, conviértelo en el último elemento anclado en el nivel superior del panel maestro.
 
@@ -78,7 +78,7 @@ Tanto en las plataformas móviles como de escritorio, la ventana de configuraci�
 
 Escritorio:
 
-![diseño de la página de configuración de la aplicación en el escritorio](images/appsettings-layout-navpane-desktop.png)
+![diseño de la página de configuración de la aplicación en un equipo de escritorio](images/appsettings-layout-navpane-desktop.png)
 
 Móvil:
 
@@ -115,12 +115,12 @@ En un subtítulo "Condiciones de uso", coloca los "Términos de uso" y la "Decla
 ## <a name="recommended-page-content"></a>Contenido de la página recomendado
 
 
-Cuando tengas una lista de los elementos que quieras incluir en la página de configuración de la aplicación, ten en cuenta las siguientes directrices:
+Cuando tengas una lista de elementos que quieras incluir en la página de configuración de la aplicación, ten en cuenta las siguientes directrices:
 
 -   Agrupar opciones relacionadas o similares en una etiqueta de configuración.
 -   Intenta limitar el número total de opciones de configuración a un máximo de cuatro o cinco.
 -   Muestra las mismas opciones de configuración sin importar el contexto de la aplicación. Si algunas opciones de configuración no son relevantes en un determinado contexto, deshabilítalas en el control flotante de la configuración de la aplicación.
--   Usa etiquetas descriptivas, de una sola palabra para la configuración. Por ejemplo, denomina a la configuración "Cuentas" en lugar de "Configuración de cuentas" en el caso de la configuración relacionada con la cuenta. Si solo quieres una opción para la configuración y las opciones no se prestan para una etiqueta descriptiva, usa "Opciones" o "Valores predeterminados".
+-   Usa etiquetas descriptivas de una sola palabra para la configuración. Por ejemplo, denomina a la configuración "Cuentas" en lugar de "Configuración de cuentas" en el caso de la configuración relacionada con la cuenta. Si solo quieres una opción para la configuración y las opciones no se prestan para una etiqueta descriptiva, usa "Opciones" o "Valores predeterminados".
 -   Si una opción de configuración vincula directamente a la web en lugar de a un control flotante, házselo saber al usuario con una pista visual, como, "Ayuda (en línea)" o "Foros Web" con estilo de [hipervínculo](../controls-and-patterns/hyperlinks.md). Contempla agrupar varios vínculos de la Web en un control flotante con una sola opción de configuración. Por ejemplo, una opción de configuración "Acerca de" podría abrir un control flotante con vínculos a los términos de uso, la política de privacidad y el soporte técnico de la aplicación.
 -   Combina las opciones menos usadas en una sola entrada para que las opciones más habituales puedan tener su propia entrada. Coloca el contenido o los vínculos que solo contienen información en la opción de configuración "Acerca de".
 -   No dupliques la funcionalidad en el panel "Permisos". Windows proporciona este panel de forma predeterminada y no puedes modificarlo.
@@ -129,15 +129,15 @@ Cuando tengas una lista de los elementos que quieras incluir en la página de co
 -   Presenta el contenido de arriba a abajo en una sola columna, desplazable si fuera necesario. Limita el desplazamiento a un máximo del doble del alto de pantalla.
 -   Usa los controles siguientes para la configuración de la aplicación:
 
-    -   [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
-    -   [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
-    -   [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    -   [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
-    -   [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante Configuración actual.
+    -   [Alternar conmutadores](../controls-and-patterns/toggles.md): Para permitir que los usuarios establece valores on u off.
+    -   [Los botones de radio](../controls-and-patterns/radio-button.md): Para permitir que los usuarios elijan un elemento de un conjunto de hasta 5 mutuamente exclusivas, las opciones relacionadas con.
+    -   [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): Para permitir que los usuarios escribir texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
+    -   [Hyperlinks](../controls-and-patterns/hyperlinks.md): Para llevar al usuario a otra página dentro de la aplicación o a un sitio Web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    -   [Botones](../controls-and-patterns/buttons.md): Para permitir que los usuarios iniciar una acción inmediata sin descartar el control flotante configuración actual.
 -   Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 -   Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) o [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288), con un desplazamiento izquierdo de 100 píxeles.
 -   Usa encabezados de sección, párrafos y etiquetas para ayudar a organizar y aclarar el contenido, si fuera necesario.
--   Si necesitas repetir la configuración, usa un nivel adicional de interfaz de usuario o un modelo de expandir/contraer, pero evita las jerarquías que contienen más de dos niveles. Por ejemplo, una aplicación sobre el clima que proporciona una configuración por ciudad podría enumerar las ciudades y permitir que el usuario pulse sobre la ciudad para abrir un control flotante nuevo o expandirse para mostrar las opciones de configuración.
+-   Si necesitas repetir la configuración, usa un nivel adicional de interfaz de usuario o un modelo de expandir/contraer, pero evita las jerarquías de más de dos niveles. Por ejemplo, una aplicación sobre el clima que proporciona una configuración por ciudad podría enumerar las ciudades y permitir que el usuario pulse sobre la ciudad para abrir un control flotante nuevo o expandirse para mostrar las opciones de configuración.
 -   Si la carga de controles o de contenido web tarda, usa un control de progreso indeterminado para indicar al usuario que se está cargando la información. Para obtener más información, consulta [Directrices sobre controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469).
 -   No uses botones para la navegación o para confirmar cambios. Usa hipervínculos para ir a otras páginas y, en lugar de usar un botón para confirmar los cambios, guárdalos automáticamente en la configuración de la aplicación cuando el usuario descarte el control flotante de configuración.
 
@@ -145,7 +145,7 @@ Cuando tengas una lista de los elementos que quieras incluir en la página de co
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Conceptos básicos del diseño de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Directrices sobre los controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
-* [Almacenar y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
+* [Conceptos básicos del diseño de comando](https://msdn.microsoft.com/library/windows/apps/dn958433)
+* [Directrices sobre controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
+* [Store y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)

@@ -1,25 +1,25 @@
 ---
-title: Fase del sombreador de geometría (GS)
+title: Fase de sombreador de geometría (GS)
 description: 'La fase del sombreador de geometría (GS) procesa primitivos completos: triángulos, líneas y puntos, junto con sus vértices adyacentes.'
 ms.assetid: 8A1350DD-B006-488F-9DAF-14CD2483BA4E
 keywords:
-- Fase del sombreador de geometría (GS)
+- Fase de sombreador de geometría (GS)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 63c678f4b2dde1a5e35c0131b5154493c9703951
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623380"
 ---
-# <a name="geometry-shader-gs-stage"></a>Fase del sombreador de geometría (GS)
+# <a name="geometry-shader-gs-stage"></a>Fase de sombreador de geometría (GS)
 
 
 La fase del sombreador de geometría (GS) procesa primitivos completos: triángulos, líneas y puntos, junto con sus vértices adyacentes. Resulta útil para los algoritmos, como Point Sprite Expansion, Dynamic Particle Systems y Shadow Volume Generation. Admite la amplificación y la desamplificación geométrica.
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Finalidad y usos
+## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Propósito y usos
 
 
 La fase del sombreador de geometría procesa primitivos completos: triángulos (3 vértices con un máximo de 3 vértices adyacentes), líneas (2 vértices con un máximo de 2 vértices adyacentes) y puntos (1 vértice).
@@ -40,12 +40,12 @@ La fase del sombreador de geometría es adecuada para algoritmos como los siguie
 -   Per-Primitive Material Swapping
 -   Per-Primitive Material Setup: esta funcionalidad incluye la generación de coordenadas baricéntricas como datos primitivos para que un sombreador de píxeles pueda realizar la interpolación del atributo personalizado.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
-La fase del sombreador de geometría ejecuta código de sombreador específico de la aplicación con primitivos completos como entrada y la capacidad de generar vértices de salida. A diferencia de los sombreadores de vértices, que trabajan en un solo vértice, las entradas del sombreador de geometría son los vértices de un primitivo completo (tres vértices para triángulos, dos vértices para líneas o un solo vértice para el punto). Los sombreadores de geometría también pueden incorporar los datos de vértice de los primitivos de bordes adyacentes como entrada (tres adicionales para un triángulo, dos vértices adicionales para una línea).
+La fase del sombreador de geometría ejecuta código de sombreador específico de la aplicación con primitivos completos como entrada y la capacidad de generar vértices de salida. A diferencia de los sombreadores de vértices, que trabajan en un solo vértice, las entradas del sombreador de geometría son los vértices para un primitivo completo (tres vértices para triángulos, dos vértices para líneas o un solo vértice para el punto). Los sombreadores de geometría también pueden incorporar los datos de vértice de los primitivos de bordes adyacentes como entrada (tres adicionales para un triángulo, dos vértices adicionales para una línea).
 
-La fase del sombreador de geometría puede consumir el valor generado por el sistema **SV\_PrimitiveID** que se genera automáticamente en la [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md). Esto permite capturar o calcular los datos de cada primitivo si se quiere.
+La etapa del sombreador de geometría puede consumir el **SV\_PrimitiveID** valor generado por el sistema que es generado automáticamente por el [etapa del ensamblador de entrada (IA)](input-assembler-stage--ia-.md). Esto permite capturar o calcular los datos de cada primitivo si se quiere.
 
 Cuando un sombreador de geometría está activo, se invoca una vez para cada primitivo que se pasa por la canalización o se genera antes de ella. Cada invocación del sombreador de geometría considera como entrada los datos del primitivo que se invoca, ya sea un punto único, una sola línea o un solo triángulo. Una franja de triángulos anterior en la canalización produciría una invocación del sombreador de geometría para cada triángulo individual en la franja (como si la franja se expandiera en una lista de triángulos). Todos los datos de entrada de cada vértice del primitivo individual están disponibles (es decir, 3 vértices por triángulo), además de los datos del vértice adyacente, si corresponde y estos están disponibles.
 
@@ -70,9 +70,9 @@ La salida del sombreador de geometría puede alimentarse en la fase del rasteriz
 
 Un sombreador de geometría devuelve datos de un vértice cada vez anexando vértices a un objeto de secuencia de salida. La topología de las secuencias se determina mediante una declaración fija, al elegir **TriangleStream**, **LineStream** y **PointStream** como el resultado de la fase de GS.
 
-Hay tres tipos de objetos de secuencia disponibles: **TriangleStream**, **LineStream** y **PointStream**, todos procedentes de plantillas. La topología de la salida viene determinada por su tipo de objeto correspondiente, mientras que el formato de los vértices que se anexa a la secuencia está determinado por el tipo de plantilla.
+Hay tres tipos de objetos de secuencia: **TriangleStream**, **LineStream** y **PointStream**, que son objetos con todas las plantillas. La topología de la salida viene determinada por su tipo de objeto correspondiente, mientras que el formato de los vértices que se anexa a la secuencia está determinado por el tipo de plantilla.
 
-Cuando una salida del sombreador de geometría se identifica como un valor interpretado por el sistema (por ejemplo, **SV\_RenderTargetArrayIndex** o **SV\_Position**), el hardware examina estos datos y realiza algún tipo de comportamiento dependiente del valor y, además, es capaz de pasar los datos a la siguiente fase del sombreador para la entrada. Cuando esa salida de datos del sombreador de geometría tiene significado para el hardware en función del primitivo (como **SV\_RenderTargetArrayIndex** o **SV\_ViewportArrayIndex**), en lugar de en función del vértice (como **SV\_ClipDistance\ [n\]** o **SV\_Position**), los datos de cada primitivo se toman desde el vértice principal emitido para el primitivo.
+Cuando una salida del sombreador de geometría se identifica como un valor interpretado de sistema (por ejemplo, **SV\_RenderTargetArrayIndex** o **SV\_posición**), hardware examina estos datos y realiza algún comportamiento depende del valor, además de poder pasar los propios datos a la siguiente etapa del sombreador para la entrada. Cuando estos los datos producidos por el sombreador de geometría tienen un significado para el hardware en una base por primitiva (como **SV\_RenderTargetArrayIndex** o **SV\_ViewportArrayIndex**), en lugar de en una base de vértice (como **SV\_ClipDistance\[n\]**  o **SV\_posición**), los datos de primitivas procedente del vértice inicial emitido para el tipo primitivo.
 
 El sombreador de geometría podría generar los primitivos completados parcialmente si el sombreador de geometría termina y el primitivo está incompleto. Los primitivos incompletos se descartan de forma automática. Esto es similar a la manera en que IA trata los primitivos parcialmente completados.
 

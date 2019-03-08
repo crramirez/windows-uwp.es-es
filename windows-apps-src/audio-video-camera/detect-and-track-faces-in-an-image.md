@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fdeb3f18e6500cc0a907e725f34c0eb96d33876e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640840"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Detectar rostros en imágenes o vídeos
 
 
 
-\[Parte de la información hace referencia a la versión preliminar del producto, la cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
+\[Parte de la información está relacionada con productos preliminares que pueden modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa ni implícita, con respecto a la información proporcionada aquí.\]
 
 Este tema muestra cómo usar el [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) para detectar los rostros de una imagen El [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo.
 
@@ -95,11 +95,11 @@ Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/a
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Análisis de la escena para la captura multimedia](scene-analysis-for-media-capture.md)
-* [Ejemplo de detección de rostro básica](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [Ejemplo de seguimiento facial básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
-* [Cámara](camera.md)
-* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Reproducción de contenido multimedia](media-playback.md)
+* [Análisis de la escena para captura de medios](scene-analysis-for-media-capture.md)
+* [Ejemplo básico de detección de caras](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
+* [Ejemplo básico de seguimiento de caras](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [Camera](camera.md)
+* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Reproducción de multimedia](media-playback.md)

@@ -1,20 +1,20 @@
 ---
-Description: How to create app icons/logos that represent your app in the Start menu, app tiles, the taskbar, the Microsoft Store, and more.
+Description: Cómo crear iconos o logotipos de la aplicación que representan tu aplicación en el menú Inicio, los iconos de aplicación, la barra de tareas, la Microsoft Store y mucho más.
 title: Logotipos e iconos de aplicaciones
 template: detail.hbs
 ms.date: 04/17/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b755e8d165d58ce4303d9fefe6d051abce6c9765
-ms.sourcegitcommit: 3433d0c7e70e00df0418887f71c2d094e9c30476
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "8973946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622460"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -22,7 +22,7 @@ Todas las aplicaciones tienen un icono o logotipo que lo representa y ese icono 
 
 :::row:::
     :::column:::
-        * La barra de título de la ventana de la aplicación
+        * La barra de título de la ventana de aplicación
         * La lista de aplicaciones en el menú Inicio
         * El Administrador de tareas y la barra de tareas
         * Iconos de la aplicación
@@ -34,30 +34,30 @@ Todas las aplicaciones tienen un icono o logotipo que lo representa y ese icono 
     :::column-end:::
 :::row-end:::
 
-En este artículo describe los conceptos básicos de creación de iconos de aplicación, cómo usar Visual Studio para administrarlos y cómo administrar manualmente, si es necesario.
+En este artículo se trata los aspectos básicos de la creación de iconos de aplicación, cómo usar Visual Studio para administrarlos y cómo administrarlos manualmente, si es necesario.
  
-(En este artículo es específicamente para iconos que representan la aplicación en Sí; para obtener instrucciones generales de icono, consulta el artículo de [iconos](icons.md) ).
+(En este artículo es específica para los iconos que representan la propia aplicación; para obtener instrucciones generales de icono, vea el [iconos](icons.md) artículo.)
 
 ## <a name="icon-types-locations-and-scale-factors"></a>Tipos de icono, ubicaciones y factores de escala
 
-De manera predeterminada, Visual Studio almacena los activos de icono en un subdirectorio de activos. Esta es una lista de los distintos tipos de iconos, donde aparecen, y su nombre. 
+De forma predeterminada, Visual Studio almacena los recursos de icono en un subdirectorio de activos. Esta es una lista de los diferentes tipos de iconos, dónde aparecen, y se llama. 
 
-| Nombre del icono | Aparece en | Nombre de archivo de activos |
+| Nombre del icono | Aparece en | Nombre de archivo activo |
 | ---      | ---        | --- |
-| Ventana pequeña | Menú Inicio |  SmallTile.png  |
-| Icono mediano |Menú de inicio, Microsoft Store listing\ *  |  Square150x150Logo.png |
+| Icono pequeño | Menú Inicio |  SmallTile.png  |
+| Icono mediano |Menú Inicio, el anuncio de Microsoft Store\*  |  Square150x150Logo.png |
 | Icono ancho  | Menú Inicio   | Wide310x150Logo.png |
-| Icono grande   | Menú de inicio, Microsoft Store listing\ * |  LargeTile.png  |
+| Icono grande   | Menú Inicio, el anuncio de Microsoft Store\* |  LargeTile.png  |
 | Icono de la aplicación | Lista de aplicaciones en el menú Inicio, barra de tareas, el Administrador de tareas | Square44x44Logo.png |
 | Pantalla de presentación | Pantalla de presentación de la aplicación | SplashScreen.png  |
-| Logotipo del distintivo | Iconos de la aplicación | BadgeLogo.png  |
-| Logotipo de la tienda o logotipo de paquete | Instalador de aplicación, el centro de partners, la opción "Informar de una aplicación" en la tienda, la opción "Escribir una opinión" en la tienda | StoreLogo.png  |
+| Logotipo de distintivo | Iconos de la aplicación | BadgeLogo.png  |
+| Logotipo de paquete logotipo/Store | Instalador de aplicaciones, centro de partners, la opción "Una aplicación de informes" en el Store, la opción "Escribir una opinión" en el Store | StoreLogo.png  |
 
-\ * Se usa a menos que elijas para [Mostrar solo carga imágenes en la tienda](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store). 
+\* Usar a menos que elija [mostrar sólo carga imágenes en el Store](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store). 
 
-Para garantizar que estos iconos se ven nítidos en cada pantalla, puedes crear varias versiones del mismo icono para mostrar diferentes factores de escala. 
+Para asegurarse de que estos iconos muestran nítidos en cada pantalla, puede crear varias versiones del mismo icono para mostrar diferentes factores de escala. 
 
-El factor de escala determina el tamaño de los elementos de la interfaz de usuario, como texto. Intervalo de factores de escala del 100% y 400%. Los valores más grandes crean elementos de interfaz de usuario más grandes, lo que facilita su consulta en pantallas con valores altos de PPP. 
+El factor de escala determina el tamaño de los elementos de interfaz de usuario, como texto. Intervalo de factores de escala de 100% al 400%. Los valores mayores crean elementos de interfaz de usuario más grandes, haciéndolos más fácil de ver en alta resolución. 
 
 :::row:::
     :::column:::
@@ -71,19 +71,19 @@ El factor de escala determina el tamaño de los elementos de la interfaz de usua
 :::row-end:::  
 
 
-Dado que los activos de icono de aplicación son mapas de bits y mapas de bits no se escalan bien, te recomendamos que proporciones una versión de cada recurso de icono para cada factor de escala: 100%, 125%, 150%, 200% y 400%. Es una gran cantidad de iconos. Afortunadamente, Visual Studio proporciona una herramienta que facilita el proceso generar y actualizar estos iconos. 
+Debido a los recursos de iconos de aplicación son mapas de bits y mapas de bits no se escalan bien, le recomendamos que proporcione una versión de cada recurso de icono para cada factor de escala: 100%, 125%, 150%, 200% y 400%. Eso es una gran cantidad de iconos. Afortunadamente, Visual Studio proporciona una herramienta que facilita la tarea generar y actualizar estos iconos. 
 
-## <a name="microsoft-store-listing-image"></a>Imagen de la descripción de Microsoft Store
+## <a name="microsoft-store-listing-image"></a>Imagen del anuncio de Microsoft Store
 
-"¿Cómo especifica imágenes para la descripción de la mi aplicación en Microsoft Store?"
+"¿Cómo puedo especificar las imágenes de la lista de mi aplicación en la Microsoft Store?"
 
-De manera predeterminada, usamos algunas de las imágenes de los paquetes en la tienda, tal como se describe en la tabla en la parte superior de esta página (junto con otras [imágenes que proporciones durante el proceso de envío](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)). Sin embargo, tienes la opción de evitar que Store utilice las imágenes de logotipo en los paquetes de la aplicación al mostrar la descripción a los clientes de Windows 10 (incluyendo Xbox) y en su lugar, hacer que Store utilice solo las imágenes que cargues. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas por todo Store. (Ten en cuenta que si tu producto es compatible con versiones anteriores del sistema operativo, los clientes pueden seguirán viendo las imágenes de los paquetes, incluso si usas esta opción.) Puedes hacerlo en la sección de **logotipos de la tienda** del paso del proceso de envío de la **Descripción de Store** .
+De forma predeterminada, utilizamos algunas de las imágenes de los paquetes en el Store, como se describe en la tabla en la parte superior de esta página (junto con otros [imágenes que proporciona durante el proceso de envío](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)). Sin embargo, tiene la opción para impedir que el Store usando las imágenes de logotipo en los paquetes de la aplicación al mostrar la lista de los clientes en Windows 10 (incluidos Xbox) y en su lugar tiene el Store usar solo las imágenes que se cargan. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas en toda la Tienda. (Tenga en cuenta que si su producto es compatible con versiones anteriores del sistema operativo, los clientes todavía pueden ver las imágenes de los paquetes, incluso si usa esta opción.) Puede hacerlo en el **Store logotipos** sección de la **lista Store** paso del proceso de envío.
 
-![Especificación de logotipos de la tienda durante el proceso de envío de aplicación](images/app-icons/storelogodisplay.png)
+![Especificar los logotipos de Store durante el proceso de envío](images/app-icons/storelogodisplay.png)
 
-Al marcar esta casilla, aparecerá una nueva sección denominada **Store mostrar imágenes** . Aquí, puedes cargar 3 tamaños de imagen que la tienda usará en lugar de las imágenes de logotipos de tus paquetes de aplicaciones: 71 x 71, 150 x 150 y 300 x 300 píxeles. Solo el tamaño de 300 x 300 es obligatorio, aunque se recomienda proporcionar todos los tamaños de 3.
+Cuando activa esta casilla, se llama una nueva sección **mostrar imágenes de Store** aparece. En este caso, puede cargar 3 tamaños de imagen que utilizará el Store en lugar de imágenes de logotipo de paquetes de la aplicación: 71 x 71, 150 x 150 y 300 x 300 píxeles. Solo el tamaño de 300 x 300 es obligatorio, aunque le recomendamos que proporcione todos los tamaños de 3.
 
-Para obtener más información, consulta la [pantalla solo carga las imágenes del logotipo de la tienda](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
+Para obtener más información, consulte [mostrar sólo carga imágenes de logotipo en el Store](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
 
 <!-- ### Fallback images for the Store
 
@@ -101,11 +101,11 @@ The Store may also use your app's tile and other images that you include in your
 For more information, see [App screenshots, images, and trailers in the Microsoft Store](/windows/uwp/publish/app-screenshots-and-images). -->
 
 
-## <a name="managing-app-icons-with-the-visual-studio-manifest-designer"></a>Administración de los iconos de la aplicación con el Diseñador de manifiestos de Visual Studio
+## <a name="managing-app-icons-with-the-visual-studio-manifest-designer"></a>Administrar iconos de aplicación con el Diseñador de manifiestos de Visual Studio
 
-Visual Studio proporciona una herramienta muy útil para la administración de los iconos de la aplicación llamados el **Diseñador de manifiestos**. 
+Visual Studio proporciona una herramienta muy útil para administrar los iconos de aplicación denominado el **Diseñador de manifiestos**. 
 
-> Si aún no tienes Visual Studio 2017, existen varias versiones disponibles, incluida una versión gratuita, (Visual Studio 2017 Community Edition), y las otras versiones ofrecen evaluaciones gratuitas. Se pueden descargar aquí:[https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
+> Si aún no tiene Visual Studio 2017, hay varias versiones disponibles, incluida una versión gratuita, (Visual Studio 2017 Community Edition), y las demás versiones ofrecen evaluaciones gratuitas. Puede descargarlos aquí: [https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
 
 
 Para iniciar el Diseñador de manifiestos:
@@ -124,7 +124,7 @@ Para iniciar el Diseñador de manifiestos:
 
 :::row:::
     :::column:::
-        1. Usa Visual Studio para abrir un proyecto de UWP.
+        1. Use Visual Studio para abrir un proyecto de UWP.
     :::column-end:::
     :::column:::
         
@@ -132,7 +132,7 @@ Para iniciar el Diseñador de manifiestos:
 :::row-end:::
 :::row:::
     :::column:::
-        2. En el **Explorador de soluciones**, haz doble clic en el archivo Package.appmxanifest.
+        2. En el **el Explorador de soluciones**, haga doble clic en el archivo Package.appmxanifest.
     :::column-end:::
     :::column:::
         ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
@@ -148,62 +148,62 @@ Para iniciar el Diseñador de manifiestos:
 :::row-end:::    
 :::row:::
     :::column:::
-        3. Haz clic en la pestaña de **Activos visuales** .
+        3. Haga clic en el **activos visuales** ficha.
     :::column-end:::
     :::column:::
         ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 
-## <a name="generating-all-assets-at-once"></a>Generar todos los activos a la vez
+## <a name="generating-all-assets-at-once"></a>Generar todos los recursos a la vez
 
-El primer elemento de menú en la pestaña de **Activos visuales** , **Todos los activos visuales**, hace lo que sugiere su nombre: genera cada activo visual que necesite tu aplicación con la presión de un botón.
+El primer elemento de menú en el **activos visuales** ficha, **todos los activos visuales**, hace exactamente lo que sugiere su nombre: genera todos los activos visual necesita la aplicación con la acción de presionar un botón.
 
 ![Generar todos los activos visuales en Visual Studio](images/app-icons/all-visual-assets.png)
 
-Todo lo que necesitas hacer es proporcionar una sola imagen y Visual Studio generará el icono pequeño icono mediano, icono grande, icono ancho, icono grande, icono de la aplicación, pantalla de presentación y el paquete de activos de logotipo para cada factor de escala.
+Todo lo que necesita hacer es proporcionar una sola imagen, y Visual Studio generará el icono pequeño, icono mediano, icono grande, mosaico amplio, icono grande, icono de la aplicación, pantalla de presentación y empaquetar los activos de logotipo para cada factor de escala.
 
-Para generar todos los activos a la vez:
-1. Haga clic en el **** junto al campo **origen** y seleccionar la imagen que quieras usar. Si estás usando una imagen de mapa de bits, asegúrate de que está al menos 400 por 400 píxeles para que Obtén resultados nítidos. Imágenes basado en vectores funcionan mejor; Visual Studio te permite usar AI (Adobe Illustrator) y archivos PDF. 
-2. (Opcional). En la sección de **Configuración de pantalla** , configurar estas opciones:
+Para generar todos los recursos a la vez:
+1. Haga clic en el **...**  junto a la **origen** campo y seleccione la imagen que desea utilizar. Si usa una imagen de mapa de bits, asegúrese de que es al menos de 400 x 400 píxeles de modo que se obtienen resultados sharp. Imágenes vectoriales funcionan mejor; Visual Studio le permite usar inteligencia artificial (Adobe Illustrator) y archivos PDF. 
+2. (Opcional). En el **configuración de pantalla** sección, configure estas opciones:
 
-    a.  **Nombre corto**: especificar un nombre corto de la aplicación.
+    a.  **Nombre corto**:  Especifique un nombre corto para la aplicación.
 
-    b.  **Mostrar el nombre**: indicar si quieres mostrar el nombre corto en los iconos de medio, ancha o grande. 
+    b.  **Mostrar nombre**: Indicar si desea mostrar el nombre corto en mosaicos de medio, ancho o grandes. 
 
-    c. **Icono en segundo plano**: especifica el valor hexadecimal o un nombre de color para el color de fondo del icono. Por ejemplo, `#464646`. El valor predeterminado es `transparent`.
+    c. **Fondo de mosaico**: Especifique el valor hexadecimal o un nombre de color para el color de fondo de mosaico. Por ejemplo, `#464646`. El valor predeterminado es `transparent`.
 
-    d. **Fondo de pantalla Spash**: especifica el nombre de valor o color hexadecimal para el fondo de pantalla spash. 
+    d. **Fondo de pantalla de presentación**: Especifique el nombre de color o el valor hexadecimal para el fondo de pantalla de presentación. 
 
-3. Haz clic en **Generar**. 
+3. Haga clic en **generar**. 
 
-Visual Studio genera los archivos de imagen y agrega al proyecto. Si quieres cambiar tus activos, solo tienes que repetir el proceso. 
+Visual Studio genera los archivos de imagen y agrega al proyecto. Si desea cambiar sus activos, basta con repetir el proceso. 
 
-Activos de icono a escala siguen esta convención de nomenclatura de archivo:
+Recursos de iconos de escala siguen esta convención de nomenclatura de archivos:
 
-*nombre de archivo*- scale -*factor de escala*.png
+*nombre de archivo*- escala -*factor de escala*.png
 
-Por ejemplo:
+Por ejemplo,
 
-Square150x150Logo-scale-100.png, Square150x150Logo-escala-200.png, Square150x150Logo-escala-400.png
+Escalado-Square150x150Logo-100.png, Square150x150Logo-escala-200.png, Square150x150Logo-escala-400.png
 
-Ten en cuenta que Visual Studio no genera un logotipo del distintivo de manera predeterminada. Eso es porque el logotipo del distintivo es único y probablemente no debe coincidir con los iconos de otra aplicación. Para obtener más información, consulta las [notificaciones para el artículo de las aplicaciones para UWP](/windows/uwp/design/shell/tiles-and-notifications/badges). 
+Tenga en cuenta que Visual Studio no genera un logotipo de distintivo de forma predeterminada. Eso es porque su logotipo de distintivo es único y probablemente no debería coincidir con los otros iconos de aplicación. Para obtener más información, consulte el [distintivo de notificaciones para el artículo de las aplicaciones UWP](/windows/uwp/design/shell/tiles-and-notifications/badges). 
 
 
-## <a name="more-about-app-icon-assets"></a>Más información sobre los activos de icono de aplicación
-Visual Studio generará todos los activos de icono de aplicación necesarios para el proyecto, pero si quieres personalizarlas, ayuda a comprender cómo están diferentes de otros activos de la aplicación. 
+## <a name="more-about-app-icon-assets"></a>Más información acerca de los recursos de icono de aplicación
+Visual Studio genera todos los recursos de icono de aplicación necesarios para su proyecto, pero si desea personalizar, es importante para comprender cómo son diferentes de otros activos de la aplicación. 
 
-El activo de icono de la aplicación aparece en una gran cantidad de lugares: la barra de tareas de Windows, la vista de tareas, ALT+TAB y la esquina inferior derecha de los iconos de inicio. Dado que el activo de icono de la aplicación aparece en muchos lugares, tiene alguna variación de tamaño adicional y placas opciones no tienen los otros activos: activos "tamaño de destino" y "sin placa" activos. 
+El recurso de icono de la aplicación aparece en muchos lugares: la barra de tareas de Windows, la vista de tareas, ALT + TAB y la esquina inferior derecha de los iconos de inicio. Dado que el recurso de icono de la aplicación aparece en muchos lugares, tiene algún ajuste de tamaño adicional y placas de opciones no tiene el resto de recursos: activos de "tamaño de destino" y "sin placa" activos. 
 
-### <a name="target-size-app-icon-assets"></a>Activos de icono de la aplicación de tamaño de destino
-Además de los tamaños de factor de escala estándar ("Square44x44Logo.scale-400.png"), también recomendamos crear activos "tamaño de destino". Llamamos a estas tamaño de destino de recursos porque tienen como destino tamaños específicos, como 16 píxeles, en lugar de factores de escala específica, como 400. Activos de tamaño de destino son las superficies que no usan el sistema de nivel predefinido de escalado:
+### <a name="target-size-app-icon-assets"></a>Recursos de icono de aplicación de tamaño de destino
+Además de los tamaños de factor de escala estándar ("Square44x44Logo.scale-400.png"), también se recomienda crear recursos de "tamaño de destino". Llamamos a estos recursos: tamaño de destino porque afectan a tamaños específicos, como 16 píxeles, en lugar de los factores de escala específica, como 400. Son activos de tamaño de destino para las superficies que no usan el sistema meseta escalado:
 
 * Lista de accesos directos de Inicio (escritorio)
 * Inicio en esquina inferior del icono (escritorio)
 * Accesos directos (escritorio)
 * Panel de control (escritorio)
 
-Esta es la lista de los recursos de tamaño de destino:
+Esta es la lista de activos de tamaño de destino:
 
 
 | Tamaño del activo | Ejemplo de nombre de archivo                  |
@@ -211,7 +211,7 @@ Esta es la lista de los recursos de tamaño de destino:
 | 16x16\*    | Square44x44Logo.targetsize-16.png  |
 | 24x24\*    | Square44x44Logo.targetsize-24.png  |
 | 32x32\*    | Square44x44Logo.targetsize-32.png  |
-| 48x48\*    | Square44x44Logo.targetsize-48.png  |
+| 48 x 48\*    | Square44x44Logo.targetsize-48.png  |
 | 256x256\*  | Square44x44Logo.targetsize-256.png |
 | 20x20      | Square44x44Logo.targetsize-20.png  |
 | 30x30      | Square44x44Logo.targetsize-30.png  |
@@ -223,7 +223,7 @@ Esta es la lista de los recursos de tamaño de destino:
 | 80x80      | Square44x44Logo.targetsize-80.png  |
 | 96x96      | Square44x44Logo.targetsize-96.png  |
 
-\ * Como mínimo, te recomendamos que proporciones estos tamaños. 
+\* Como mínimo, le recomendamos que proporcione estos tamaños. 
 
 No tienes que agregar espaciado interno a estos recursos porque Windows lo hará si es necesario. Estos recursos deberían contar con una superficie mínima de 16 píxeles. 
 
@@ -231,49 +231,49 @@ Te mostramos un ejemplo de dichos recursos tal como se muestran en los iconos de
 
 ![recursos de la barra de tareas de Windows](images/assetguidance21.png)
 
-### <a name="unplated-assets"></a>Activos sin placa
-De manera predeterminada, Windows usa un recurso basado en destino en la parte superior trasera de color de manera predeterminada. Si quieres, puedes proporcionar un recurso basado en destino sin placa. "Sin placa" significa que el activo se mostrará en un fondo transparente. Ten en cuenta que estos activos aparecerá a través de una variedad de colores de fondo. 
+### <a name="unplated-assets"></a>Sin placa activos
+De forma predeterminada, Windows usa un recurso basado en el destino sobre una placa posterior coloreado de forma predeterminada. Si lo desea, puede proporcionar un recurso sin placa basada en destino. "Sin placa" significa que el recurso se mostrará en un fondo transparente. Tenga en cuenta que va a aparecer estos recursos a través de una variedad de colores de fondo. 
 
 ![activos con y sin placa](images/assetguidance22.png)
 
-Estas son las superficies que usan activos de icono de la aplicación sin placa:
+Estas son las superficies que utilizan recursos de icono de aplicación sin placa:
 * Barra de tareas y miniatura de la barra de tareas (escritorio)
 * Accesos directos de la barra de tareas
 * Vista de tareas
 * ALT+TAB
 
 
-### <a name="target-and-unplated-sizing"></a>Destino y sin placa de la variación de tamaño
+### <a name="target-and-unplated-sizing"></a>Destino y el tamaño sin placa
 
-Estas son las recomendaciones de tamaño para los activos basados en destino, a una escala del 100%:
+Estas son las recomendaciones de tamaño para los recursos en función de destino, en la escala al 100%:
 
 ![target-based asset sizing at 100 % scale](images/assetguidance23.png)
 
 
-## <a name="more-about-splash-screen-assets"></a>Más información sobre los activos de la pantalla de presentación
-Para obtener más información acerca de pantallas de presentación, consulta el [artículo de pantallas de presentación UWP](/windows/uwp/launch-resume/splash-screens).
+## <a name="more-about-splash-screen-assets"></a>Más información acerca de los activos de la pantalla de presentación
+Para obtener más información acerca de las pantallas de presentación, consulte el [artículo de las pantallas de presentación UWP](/windows/uwp/launch-resume/splash-screens).
 
-## <a name="more-about-badge-logo-assets"></a>Más información sobre los activos de logotipo del distintivo
+## <a name="more-about-badge-logo-assets"></a>Más información acerca de los activos de logotipo de distintivo
 
-Al usar el generador de activos para generar todos los activos que necesitas, hay una razón por qué, no generará distintivo logotipos de manera predeterminada: son muy diferentes de otros activos de la aplicación. El logotipo del distintivo es una imagen de estado que aparece en las notificaciones y los iconos de la aplicación. 
+Cuando se utiliza el generador de activos para generar todos los recursos que necesita, hay un motivo por qué no genere los logotipos de notificación de forma predeterminada: son muy diferentes de otros activos de la aplicación. El logotipo de distintivo es una imagen de estado que aparece en las notificaciones y los iconos de la aplicación. 
 
-Para obtener más información, consulta las [notificaciones para el artículo de las aplicaciones para UWP](/windows/uwp/design/shell/tiles-and-notifications/badges).
+Para obtener más información, consulte el [distintivo de notificaciones para el artículo de las aplicaciones UWP](/windows/uwp/design/shell/tiles-and-notifications/badges).
 
 
-## <a name="customizing-asset-padding"></a>Personalización de espaciado interno de activos
+## <a name="customizing-asset-padding"></a>Personalización de relleno de activos
 
-De manera predeterminada, generador de activos de Visual Studio aplica espaciado recomendada a cualquier imagen. Si tus imágenes ya contienen el espaciado interno o quieres las imágenes de bordes que se extienden hasta el final de la ventana, desactivar esta característica desactivando la casilla de verificación **Aplicar recomendada espaciado interno** . 
+De forma predeterminada, generador de activos de Visual Studio aplica relleno recomendado a cualquier imagen. Si sus imágenes ya contienen el relleno o si desean que las imágenes de sangrado completo que se extienden hasta el final del icono, puede desactivar esta característica para ello, desactive la **aplicar recomendada relleno** casilla de verificación. 
 
-### <a name="tile-padding-recommendations"></a>Recomendaciones de espaciado interno de icono
-Si quieres proporcionar tu propia espaciado interno, estas son nuestras recomendaciones para los iconos. 
+### <a name="tile-padding-recommendations"></a>Recomendaciones de relleno del icono
+Si desea proporcionar su propio relleno, estas son nuestras recomendaciones para los iconos. 
 
-Existen 4 tamaños de icono: pequeño (71 x 71), medio (150 x 150), todo el (310 x 150) y grandes (310 x 310). 
+Hay 4 tamaños de icono: pequeño (71 x 71), mediano (150 x 150), todo (310 x 150) y grande (310 x 310). 
 
 Cada recurso de ventana es del mismo tamaño que la ventana en la que se coloca.
 
-![Bordes de icono que muestra](images/app-icons/tile-assets1.png)
+![Sangrado completo que muestra de icono](images/app-icons/tile-assets1.png)
 
-Si no quieres que tu icono para ampliar hasta el borde de la ventana, puedes usar píxeles transparentes en el activos para crear el relleno. 
+Si no desea que su icono ampliar hasta el borde del icono, puede usar los píxeles transparentes en el recurso para crear el relleno. 
 
 ![placa trasera e icono](images/assetguidance05.png)
 
@@ -297,7 +297,7 @@ Algunos iconos están diseñados para una orientación horizontal o vertical, mi
 
 ![tres iconos centrados](images/assetguidance13.png)
 
-Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16% del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
+Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16 % del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
 
 ![icono sin bordes con márgenes](images/assetguidance14.png)
 

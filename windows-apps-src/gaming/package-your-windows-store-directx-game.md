@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, package, paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938035"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635410"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 
-Los juegos para la Plataforma universal de Windows UWP de gran tamaño, especialmente aquellos que admiten varios idiomas con activos específicos de alguna región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar tu aplicación para que los clientes solamente reciban los recursos que de verdad necesitan.
+Los juegos para la Plataforma universal de Windows UWP de gran tamaño, especialmente aquellos que admiten varios idiomas con activos específicos de alguna región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar tu aplicación de modo que los clientes solamente reciban los recursos que de verdad necesitan.
 
-Además del modelo de paquete de la aplicación, Windows 10 admite lotes de aplicaciones que reúnen dos tipos de paquetes:
+Además del modelo de paquete de aplicación, Windows 10 es compatible con los paquetes de aplicación que agrupan los dos tipos de módulos:
 
 -   Paquetes de la aplicación que contienen bibliotecas y ejecutables específicos de la plataforma. Generalmente, un juego para UWP puede tener hasta tres paquetes de la aplicación: uno para cada una de las siguientes arquitecturas de x86, x64 y CPU ARM. Todo el código y los datos específicos de esa plataforma de hardware deben incluirse en su paquete de la aplicación. Dicho paquete también debe contener todos los activos clave para que el juego se ejecute con un nivel de línea base de fidelidad y rendimiento.
 -   Los paquetes de recursos contienen datos expandidos u opcionales independientes de la plataforma, como activos de juegos (texturas, redes, sonido, texto). Un juego para UWP puede tener uno o más paquetes de recursos, incluidos paquetes de recursos para texturas o activos de alta definición, recursos de nivel de característica 11+ de DirectX o recursos y activos específicos del idioma.
@@ -43,28 +43,28 @@ Los candidatos de contenido para paquetes de recursos de juego son, entre otros:
 
 Todo esto se define en el package.appxmanifest que forma parte de tu proyecto de UWP, y en la estructura de directorios del paquete final. Debido a la nueva interfaz de usuario de Visual Studio, si sigues el proceso descrito en este documento, no necesitarás editarlo manualmente.
 
-> **Importante**  la carga y la administración de estos recursos se controlan mediante el **Windows.ApplicationModel.Resources**\ * API. Si usas estas API de recursos del modelo de aplicaciones para cargar el archivo correcto de una configuración regional, factor de escalado o nivel de características de DirectX, no necesitas cargar los activos mediante rutas de archivo explícitas. En su lugar, debes proporcionar las API de recursos con el nombre de archivo del activo generalizado que quieres, y permitir que el sistema de administración de recursos obtenga la variante correcta del recurso para la plataforma actual del usuario y su configuración regional (que también puedes especificar directamente con estas mismas API).
+> **Importante**    la carga y la administración de estos recursos se administran a través de la **Windows.ApplicationModel.Resources** \* API. Si usas estas API de recursos del modelo de aplicaciones para cargar el archivo correcto de una configuración regional, factor de escalado o nivel de características de DirectX, no necesitas cargar los activos mediante rutas de archivo explícitas. En su lugar, debes proporcionar las API de recursos con el nombre de archivo del activo generalizado que quieres, y permitir que el sistema de administración de recursos obtenga la variante correcta del recurso para la plataforma actual del usuario y su configuración regional (que también puedes especificar directamente con estas mismas API).
 
  
 
 Los recursos para el empaquetado de recursos se especifican de una de dos maneras básicas:
 
--   Los archivos de activos tienen el mismo nombre de archivo y las versiones específicas del paquete de recursos se encuentran en directorios con nombres específicos. El sistema reserva estos nombres de directorio. Por ejemplo, \\en-us, \\scale-140, \\dxfl-dx11.
--   Los archivos de activos se almacenan en carpetas con nombres arbitrarios, pero los nombres de los archivos en sí tienen una etiqueta común que se anexa a las cadenas que el sistema reserva para indicar el idioma u otro calificador. En concreto, la cadena calificadora se une al nombre de archivo generalizado tras un carácter de subrayado (“\_”). Por ejemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. También puedes combinar estas cadenas. Por ejemplo, \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Nota**  cuando se usa en un nombre de archivo en lugar de forma independiente en un nombre de directorio, un calificador de idioma debe tomar el formato "lang -<tag>", por ejemplo, "lang-en-us" como se describe en [adaptar los recursos de idioma, escala y otros calificadores](../app-resources/tailor-resources-lang-scale-contrast.md).
+-   Los archivos de activos tienen el mismo nombre de archivo y las versiones específicas del paquete de recursos se encuentran en directorios con nombres específicos. El sistema reserva estos nombres de directorio. Por ejemplo, \\en-us, \\-140, sin escala \\dxfl dx11.
+-   Los archivos de activos se almacenan en carpetas con nombres arbitrarios, pero los nombres de los archivos en sí tienen una etiqueta común que se anexa a las cadenas que el sistema reserva para indicar el idioma u otro calificador. En concreto, las cadenas de calificador se anexa al nombre de archivo generalizado después de un carácter de subrayado ("\_"). Por ejemplo, \\activos\\menú\_opción1\_en us.png lang, \\activos\\menú\_opción1\_140.png de escala, \\activos\\coolsign\_dxfl dx11.dds. También puedes combinar estas cadenas. Por ejemplo, \\activos\\menú\_opción1\_escala 140\_lang-en-us.png.
+    > **Tenga en cuenta**    cuando se utiliza en un nombre de archivo en lugar de por sí solo en un nombre de directorio, un calificador de idioma debe tener el formato "lang -<tag>", por ejemplo, "lang-en-us" como se describe en [adaptar los recursos de idioma, escala, y otros calificadores](../app-resources/tailor-resources-lang-scale-contrast.md).
 
      
 
-Puedes combinar los nombres de directorio de una especificidad adicional en el empaquetado de recursos. No obstante, no pueden ser redundantes. Por ejemplo, \\en-us\\menu\_option1\_lang-en-us.png es redundante.
+Puedes combinar los nombres de directorio de una especificidad adicional en el empaquetado de recursos. No obstante, no pueden ser redundantes. Por ejemplo, \\en-us\\menú\_opción1\_lang-en-us.png es redundante.
 
-Puedes especificar cualquier nombre de subdirectorio no reservado que necesites debajo de un directorio de recursos, siempre y cuando la estructura del directorio sea idéntica en cada directorio de recursos. Por ejemplo, \\dxfl-dx10\\assets\\textures\\coolsign.dds. Cuando se carga un activo o se hace referencia a él, el nombre de ruta de acceso debe ser generalizado; esto es, se debe quitar cualquier calificador de idioma, escala o nivel de características de DirectX, independientemente de si están en nodos de carpeta o en los nombres de archivo. Así, por ejemplo, para referirse al código de un activo en el que una de las variantes es \\dxfl-dx10\\assets\\textures\\coolsign.dds, usa \\assets\\textures\\coolsign.dds. De igual modo, para referirse a un activo con una variante \\images\\background\_scale-140.png, usa \\images\\background.png.
+Puedes especificar cualquier nombre de subdirectorio no reservado que necesites debajo de un directorio de recursos, siempre y cuando la estructura del directorio sea idéntica en cada directorio de recursos. Por ejemplo, \\dxfl dx10\\activos\\texturas\\coolsign.dds. Cuando se carga un activo o se hace referencia a él, el nombre de ruta de acceso debe ser generalizado; esto es, se debe quitar cualquier calificador de idioma, escala o nivel de características de DirectX, independientemente de si están en nodos de carpeta o en los nombres de archivo. Por ejemplo hacer referencia en el código a un recurso para cada una de las variantes es \\dxfl dx10\\activos\\texturas\\coolsign.dds, use \\activos\\texturas\\ coolsign.DDS. Del mismo modo, para hacer referencia a un recurso con una variante \\imágenes\\en segundo plano\_140.png de escalado, use \\imágenes\\background.png.
 
 He aquí los siguientes nombres de directorio y prefijos de carácter de subrayado de nombre de archivo reservados:
 
 | Tipo de activo                   | Nombre de directorio del paquete de recursos                                                                                                                  | Sufijo del nombre de archivo del paquete de recursos                                                                                                    |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Activos localizados             | Todos los idiomas posibles, o las combinaciones de configuración regional e idioma, de Windows 10. (El prefijo de calificador "lang-" no es necesario en un nombre de carpeta). | Un "\_" seguido del especificador de idioma, configuración regional o idioma y configuración regional. Por ejemplo, "\_en", "\_us", o "\_en-us", respectivamente. |
-| Activos de factores de escalado        | scale-100, scale-140, scale-180. Estos son para los factores de escalado de interfaz de usuario de 1.0x, 1.4x y 1.8x, respectivamente.                                     | Un "\_" seguido de "scale-100", "scale-140" o "scale-180".                                                                    |
+| Activos localizados             | Todas las posibles idiomas, o combinaciones de idioma y configuración regional, para Windows 10. (El prefijo de calificador "lang-" no es necesario en un nombre de carpeta). | Un "\_" seguido por el especificador de idioma, configuración regional o configuración regional de idioma. Por ejemplo, "\_en","\_nos", o "\_en-us", respectivamente. |
+| Activos de factores de escalado        | scale-100, scale-140, scale-180. Estos son para los factores de escalado de interfaz de usuario de 1.0x, 1.4x y 1.8x, respectivamente.                                     | Un "\_" seguido por "escala 100", "escala 140" o "escala 180".                                                                    |
 | Activos de nivel de característica de DirectX | dxfl-dx9, dxfl-dx10 y dxfl-dx11. Estos son para los niveles de característica 9, 10 y 11 de DirectX respectivamente.                                     | Un "\_" seguido de "dxfl-dx9", "dxfl-dx10" o "dxfl-dx11".                                                                     |
 
  
@@ -78,39 +78,39 @@ Cuando configures tu aplicación para admitir activos localizados para múltiple
 
 -   Crea un subdirectorio de aplicación (o de la versión del archivo) para cada idioma y configuración regional que admitirás (por ejemplo, en-us, jp-jp, zh-cn, fr-fr, etc.).
 -   Durante el desarrollo, coloca copias de TODOS los activos (como gráficos de menú, texturas y archivos de audio localizado) en el correspondiente subdirectorio de configuración regional e idioma, incluso si no son diferentes en los distintos idiomas y configuraciones regionales. Para que la experiencia del usuario sea la mejor, asegúrate de que este sepa si no obtuvo un paquete de recursos de idioma disponible para su configuración regional si existiera uno (o si accidentalmente lo eliminó después la descarga y la instalación).
--   Asegúrate de que cada archivo de recursos de cadena o activo (.resw) tenga el mismo nombre en cada directorio. Por ejemplo, el archivo menu\_option1.png debe tener el mismo nombre en ambos directorios \\en-us y \\jp-jp, incluso si el contenido del archivo corresponde a un idioma diferente. En ese caso, los verás como \\en-us\\menu\_option1.png y \\jp-jp\\menu\_option1.png.
-    > **Nota**  , opcionalmente, puede anexar la configuración regional al nombre de archivo y almacenarlo en el mismo directorio; Por ejemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png.
+-   Asegúrate de que cada archivo de recursos de cadena o activo (.resw) tenga el mismo nombre en cada directorio. Por ejemplo, un menú\_option1.png debe tener el mismo nombre tanto en el \\en-us y \\jp-jp directorios incluso si el contenido del archivo es para un idioma diferente. En este caso, verá como \\en-us\\menú\_option1.png y \\jp-jp\\menú\_option1.png.
+    > **Tenga en cuenta**    , opcionalmente, puede anexar la configuración regional para el nombre de archivo y almacenarlos en el mismo directorio; por ejemplo, \\activos\\menú\_opción1\_lang-en-us.png, \\activos\\menú\_opción1\_lang-jp-jp.png.
 
      
 
 -   Usa las API en [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) y [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para especificar y cargar los recursos específicos de la configuración regional de tu aplicación. De igual modo, usa referencias de activo que no incluyan una configuración regional específica, ya que estas API determinan la configuración regional adecuada según la configuración del usuario, para recuperar a continuación el recurso apropiado para dicho usuario.
--   En Microsoft Studio2015 Visual, selecciona **proyecto -> tienda -> Crear paquete de la aplicación …** y crea el paquete.
+-   En Microsoft Visual Studio 2015, seleccione **Store en proyecto -> -> Crear paquete de aplicación...**  y crear el paquete.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>Definir paquetes de recursos de factor de escalado
 
 
-Windows 10 proporciona tres factores de escalado de la interfaz de usuario: 1.0 x 1.4 x y 1.8X x. Los valores de ajuste de escala de cada pantalla se establecen durante la instalación en función de una serie de factores combinados: el tamaño de la pantalla, la resolución de esta y el promedio de distancia asumida del usuario respecto de la pantalla. El usuario también puede ajustar los factores de escala para mejorar la legibilidad. El juego debe ser compatible con el reconocimiento de PPP y con el factor de escalado para que la experiencia sea la mejor posible. Parte de esta compatibilidad significa crear versiones de activos visuales críticos para cada uno de los tres factores de escalado. Esto también incluye interacción del puntero y prueba de acceso.
+Windows 10 proporciona tres factores de escala de interfaz de usuario: 1.0 x 1.4 x y 1.8 x. Los valores de ajuste de escala de cada pantalla se establecen durante la instalación en función de una serie de factores combinados: el tamaño de la pantalla, la resolución de esta y el promedio de distancia asumida del usuario respecto de la pantalla. El usuario también puede ajustar los factores de escala para mejorar la legibilidad. El juego debe ser compatible con el reconocimiento de PPP y con el factor de escalado para que la experiencia sea la mejor posible. Parte de esta compatibilidad significa crear versiones de activos visuales críticos para cada uno de los tres factores de escalado. Esto también incluye interacción del puntero y prueba de acceso.
 
 Cuando configures tu aplicación para que admita paquetes de recursos de diferentes factores de escalado de aplicaciones para UWP, debes hacer lo siguiente:
 
 -   Crea un subdirectorio de aplicaciones (o versión de archivo) para cada factor de escalado que admitirás (scale-100, scale-140 y scale-180).
 -   Durante el desarrollo, coloca copias apropiadas para el factor de escalado de TODOS los archivos en cada directorio de recursos de factor de escalado, incluso si no son diferentes entre dichos factores.
--   Asegúrate de que cada activo tenga el mismo nombre en cada directorio. Por ejemplo, el archivo menu\_option1.png debe tener el mismo nombre en ambos directorios \\scale-100 y \\scale-180, incluso si el contenido del archivo es diferente. En ese caso, los verás como \\scale-100\\menu\_option1.png y \\scale-140\\menu\_option1.png.
-    > **Nota**  de nuevo, puedes, opcionalmente, anexa el sufijo de factor de escalado al nombre de archivo y almacenarlo en el mismo directorio; Por ejemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png.
+-   Asegúrate de que cada activo tenga el mismo nombre en cada directorio. Por ejemplo, un menú\_option1.png debe tener el mismo nombre tanto en el \\escala 100 y \\escala 180 directorios incluso si el contenido del archivo es diferente. En este caso, verá como \\escala 100\\menú\_option1.png y \\escala 140\\menú\_option1.png.
+    > **Tenga en cuenta**    nuevo, puede anexar el sufijo de factor de escala para el nombre de archivo y almacenarlos en el mismo directorio; por ejemplo, \\activos\\menú\_opción1\_ escalado-100.png \\activos\\menú\_opción1\_140.png de escala.
 
      
 
 -   Usa las API en [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para cargar los activos. Las referencias a activos deben ser generalizadas (sin sufijos) y dejar fuera la variación de escala específica. El sistema recuperará el activo de escala adecuado de acuerdo con la pantalla y la configuración de usuario.
--   En Visual Studio2015, selecciona **proyecto -> tienda -> Crear paquete de la aplicación …** y crea el paquete.
+-   En Visual Studio 2015, seleccione **Store en proyecto -> -> Crear paquete de aplicación...**  y crear el paquete.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>Definir paquetes de recursos de nivel de característica de DirectX
 
 
 Los niveles de características de DirectX corresponden a conjuntos de características de GPU para versiones anteriores o actuales de DirectX (específicamente, Direct3D). Estos incluyen funcionalidades y especificaciones de modelo de sombreador, compatibilidad con el idioma del sombreador, compatibilidad con la compresión de textura y características de canalización de gráficos generales.
 
-El paquete de la aplicación de línea base debe usar los formatos de compresión de textura de línea base: BC1, BC2 o BC3. Cualquier dispositivo para UWP puede usarlos: desde plataformas de ARM de gama baja hasta equipos multimedia y estaciones de trabajo de múltiples GPU exclusivas.
+El paquete de aplicación de línea de base debe usar los formatos de compresión de textura de línea de base: BC1, BC2 o BC3. Cualquier dispositivo para UWP puede usarlos: desde plataformas de ARM de gama baja hasta equipos multimedia y estaciones de trabajo de múltiples GPU exclusivas.
 
-La compatibilidad de formato de textura en el nivel de característica 10 o superior de DirectX debe agregarse a un paquete de recursos para conservar el ancho de banda de descarga y el espacio del disco local. Esto permite usar los esquemas de compresión más avanzados para11, como BC6H y BC7. (Para ver más detalles, consulta [Texture block compression in Direct3D 11 (Compresión de bloques de textura en Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/hh308955)). Estos formatos son más eficientes para los activos de textura de resolución alta admitidos por los GPU modernos y su uso mejora los requisitos de espacio, rendimiento y apariencia del juego en plataformas de gama alta.
+La compatibilidad de formato de textura en el nivel de característica 10 o superior de DirectX debe agregarse a un paquete de recursos para conservar el ancho de banda de descarga y el espacio del disco local. Esto permite usar los esquemas de compresión más avanzados para 11, como BC6H y BC7. (Para obtener más información, consulte [compresión de bloques de textura en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh308955).) Estos formatos son más eficaces para los activos de alta resolución textura compatibles con GPU modernas y utilizarlas mejora el diseño, rendimiento y los requisitos de espacio de su juego en plataformas de gama altas.
 
 | Nivel de característica de DirectX | Compresión de textura admitida |
 |-----------------------|-------------------------------|
@@ -122,14 +122,14 @@ La compatibilidad de formato de textura en el nivel de característica 10 o supe
 
 Además, cada nivel de característica de DirectX admite diferentes versiones de modelo de sombreador. Se pueden crear recursos de sombreador compilados en una base de nivel por característica, y se los puede incluir en paquetes de recursos de nivel de característica de DirectX. Además, algunos modelos de sombreador de versiones posteriores pueden usar activos, como mapas normales, que las versiones de modelo de sombreador anteriores no pueden. Estos activos específicos del modelo de sombreador también deben incluirse en un paquete de recursos del nivel de característica de DirectX.
 
-El mecanismo de recurso se centra principalmente en los formatos de textura admitidos para los activos, para que admita solamente los tres niveles de característica generales. Si necesitas tener sombreadores individuales para subniveles (versiones de punto) como DX9\_1 en comparación con DX9\_3, el código de representación y administración de activos deberá controlarlos explícitamente.
+El mecanismo de recurso se centra principalmente en los formatos de textura admitidos para los activos, para que admita solamente los tres niveles de característica generales. Si necesita tener sombreadores independientes para los subniveles (versiones de punto) como DX9\_vs 1 DX9\_3, el código de representación y la administración de activos debe controlar explícitamente.
 
 Cuando configures tu aplicación para que admita paquetes de recursos para diferentes niveles de característica de DirectX, debes realizar lo siguiente:
 
 -   Crea un subdirectorio de aplicaciones (o versión de archivo) para cada nivel de característica de DirectX que admitirás (dxfl-dx9, dxfl-dx10 y dxfl-dx11).
--   Durante el desarrollo, coloca activos específicos del nivel de característica en cada directorio de recursos de nivel de característica. A diferencia de los factores de escalado y configuraciones regionales, probablemente tengas diferentes ramas de código de representación para cada nivel de característica de tu juego, y si tienes texturas, sombreadores compilados u otros activos que solamente se usan en un nivel de característica admitido o en un subconjunto de estos, coloca los activos correspondientes solamente en los directorios para los niveles de característica que los usan. Para los activos que se cargan en todos los diferentes niveles de característica, asegúrate de que cada directorio de recursos de nivel de característica tenga una versión de estos con el mismo nombre. Por ejemplo, en la textura independiente del nivel de características llamada "coolsign.dds", coloca la versión que comprimió BC3 en el directorio \\dxfl-dx9 y la versión que comprimió BC7 en el directorio \\dxfl-dx11.
--   Asegúrate de que cada activo (si está disponible para varios niveles de características) tenga el mismo nombre en cada directorio. Por ejemplo, coolsign.dds debe tener el mismo nombre en ambos directorios \\dxfl-dx9 y \\dxfl-dx11, incluso si el contenido del archivo es diferente. En ese caso, los verás como \\dxfl-dx9\\coolsign.dds y \\dxfl-dx11\\coolsign.dds.
-    > **Nota**  de nuevo, puedes, opcionalmente, anexa el sufijo de nivel de característica al nombre de archivo y almacenarlo en el mismo directorio; Por ejemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.dds.
+-   Durante el desarrollo, coloca activos específicos del nivel de característica en cada directorio de recursos de nivel de característica. A diferencia de los factores de escalado y configuraciones regionales, probablemente tengas diferentes ramas de código de representación para cada nivel de característica de tu juego, y si tienes texturas, sombreadores compilados u otros activos que solamente se usan en un nivel de característica admitido o en un subconjunto de estos, coloca los activos correspondientes solamente en los directorios para los niveles de característica que los usan. Para los activos que se cargan en todos los diferentes niveles de característica, asegúrate de que cada directorio de recursos de nivel de característica tenga una versión de estos con el mismo nombre. Por ejemplo, para una denominada "coolsign.dds" de la textura independientes nivel de característica, coloque la versión BC3 comprimidos en el \\dxfl dx9 directorio y la versión BC7 comprimidos en el \\directorio dxfl dx11.
+-   Asegúrate de que cada activo (si está disponible para varios niveles de características) tenga el mismo nombre en cada directorio. Por ejemplo, coolsign.dds debe tener el mismo nombre tanto en el \\dxfl dx9 y \\dxfl dx11 directorios incluso si el contenido del archivo es diferente. En este caso, verá como \\dxfl dx9\\coolsign.dds y \\dxfl dx11\\coolsign.dds.
+    > **Tenga en cuenta**    nuevo, puede anexar el sufijo de nivel de característica para el nombre de archivo y almacenarlos en el mismo directorio; por ejemplo, \\texturas\\coolsign\_dxfl-dx9.dds \\ las texturas\\coolsign\_dxfl dx11.dds.
 
      
 
@@ -187,7 +187,7 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
         ResourceContext::SetGlobalQualifierValue(L"DXFeatureLevel", dxFeatureLevel);
     ```
 
-    > **Nota**en el código, carga la textura directamente por su nombre (o la ruta de acceso debajo del directorio de nivel de característica). No incluyas ni el nombre del directorio de niveles de características ni el sufijo. Por ejemplo, carga "textures\\coolsign.dds", no "dxfl-dx11\\textures\\coolsign.dds" ni "textures\\coolsign_dxfl-dx11.dds".
+    > **Tenga en cuenta**  en el código, cargue la textura directamente por nombre (o ruta de acceso debajo del directorio de nivel de característica). No incluyas ni el nombre del directorio de niveles de características ni el sufijo. Por ejemplo, cargar "texturas\\coolsign.dds", no "dxfl dx11\\texturas\\coolsign.dds" o "texturas\\coolsign\_dxfl dx11.dds".
 
      
 
@@ -210,15 +210,15 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
     Platform::String^ resourceName = possibleResource->ValueAsString;
     ```
 
--   En Visual Studio2015, selecciona **proyecto -> tienda -> Crear paquete de la aplicación …** y crea el paquete.
+-   En Visual Studio 2015, seleccione **Store en proyecto -> -> Crear paquete de aplicación...**  y crear el paquete.
 -   Asegúrate de habilitar los lotes de aplicaciones en la configuración del manifiesto package.appxmanifest.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Definir los recursos de una aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
+* [Definir recursos de la aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
 * [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969)
-* [App packager (MakeAppx.exe) (Empaquetador de aplicaciones [MakeAppx.exe])](https://msdn.microsoft.com/library/windows/desktop/hh446767)
+* [Empaquetador de aplicaciones (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767)
 
  
 

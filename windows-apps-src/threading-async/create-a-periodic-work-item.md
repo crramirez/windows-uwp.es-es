@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 05ed3b4bc4fa6dbe1119dca40d22107e94cea576
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636910"
 ---
 # <a name="create-a-periodic-work-item"></a>Crear un elemento de trabajo periódico
 
@@ -27,11 +27,11 @@ Obtén información sobre cómo crear un elemento de trabajo que se repita peri�
 
 Usa el método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para crear un elemento de trabajo periódico. Envía un lambda que realice el trabajo y usa el parámetro *period* para especificar el intervalo entre los envíos. El período se especifica con una estructura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996). El elemento de trabajo se volverá a enviar cada vez que transcurra el período, de manera que debes asegurarte de que el período sea lo suficientemente largo como para que se complete el trabajo.
 
-[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) devuelve un objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Almacena este objeto en caso de que se deba cancelar el temporizador.
+[**CreateTimer** ](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) devuelve un [ **ThreadPoolTimer** ](https://msdn.microsoft.com/library/windows/apps/BR230587) objeto. Almacena este objeto en caso de que se deba cancelar el temporizador.
 
-> **Nota**evita especificar un valor de cero (o cualquier valor inferior a 1 milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
+> **Tenga en cuenta**  evitar especificar un valor de cero (o cualquier valor inferior a un milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
 
-> **Nota** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) puedes usar para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta una vez cada 60 segundos:
 

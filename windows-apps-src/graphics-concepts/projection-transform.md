@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f0806c0aa7a130a080457f4361d17f64451846f9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931221"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634550"
 ---
 # <a name="projection-transform"></a>Transformación de proyección
 
@@ -29,7 +29,7 @@ La matriz de visualización traslada la cámara al origen mediante la traslació
 
 ![Ilustración de la matriz de traslación](images/projmat2.png)
 
-La multiplicación de la matriz de traslación por la matriz de proyección (T\*P) da como resultado la matriz de proyección compuesta, como se muestra en la siguiente ilustración.
+Multiplicar la matriz de traslación por la matriz de proyección (T\*P) proporciona la matriz de proyección compuestas, tal como se muestra en la siguiente ilustración.
 
 ![Ilustración de la matriz de proyección compuesta](images/projmat3.png)
 
@@ -55,7 +55,7 @@ En estas fórmulas, Zₙ representa la posición del plano de recorte cercano y 
 
 Independientemente de la fórmula que decidas utilizar, asegúrate de establecer Zₙ en el valor más alto posible, ya que los valores z muy cercanos a la cámara no varían mucho. Esto dificulta un poco las comparaciones de profundidad con búferes Z de 16 bits.
 
-## <a name="span-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspana-w-friendly-projection-matrix"></a><span id="A_W_Friendly_Projection_Matrix"></span><span id="a_w_friendly_projection_matrix"></span><span id="A_W_FRIENDLY_PROJECTION_MATRIX"></span>Una matriz de proyección para w
+## <a name="span-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspana-w-friendly-projection-matrix"></a><span id="A_W_Friendly_Projection_Matrix"></span><span id="a_w_friendly_projection_matrix"></span><span id="A_W_FRIENDLY_PROJECTION_MATRIX"></span>Una matriz de proyección w-friendly
 
 
 Direct3D puede usar el componente w de un vértice transformado por las matrices de mundo, vista y proyección para realizar cálculos basados en profundidad en el búfer de profundidad o efectos de niebla. Los cálculos de este tipo requieren que la matriz de proyección normalice w para que sea equivalente a z del espacio del mundo. En resumen, si la matriz de proyección incluye un coeficiente (3,4) distinto de 1, debes escalar todos los coeficientes por la inversa del coeficiente (3,4) para crear una matriz adecuada. Si no proporcionas una matriz compatible, el almacenamiento en búfer de profundidad y los efectos de niebla no se aplicarán correctamente.

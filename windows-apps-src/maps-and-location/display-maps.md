@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, control de mapa, map control, vistas de mapa, map views
 ms.localizationpriority: medium
 ms.openlocfilehash: 41d44f75c80e10123c21fc310bff46371ede0fca
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116387"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641180"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Mostrar mapas con vistas 2D, 3D y Streetside
 
@@ -137,14 +137,14 @@ pageGrid.Children.Add(MapControl2);
 
 ### <a name="get-and-set-a-maps-authentication-key"></a>Obtener y establecer una clave de autenticación de mapas
 
-Para poder usar la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa, debes especificar la clave de autenticación de mapas como el valor de la propiedad [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036). En los ejemplos anteriores, reemplaza `EnterYourAuthenticationKeyHere` por la clave que obtuviste en [Bing Maps Developer Center](https://www.bingmapsportal.com/). El texto **Advertencia: no se especificó el elemento MapServiceToken** seguirá apareciendo debajo del control hasta que se especifique la clave de autenticación de mapas. Para obtener más información sobre cómo obtener y establecer una clave de autenticación de mapas, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
+Para poder usar la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa, debes especificar la clave de autenticación de mapas como el valor de la propiedad [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036). En los ejemplos anteriores, reemplaza `EnterYourAuthenticationKeyHere` por la clave que obtuviste en [Bing Maps Developer Center](https://www.bingmapsportal.com/). El texto **advertencia: MapServiceToken no se especifica** sigue apareciendo debajo del control hasta que se especifique la clave de autenticación de asignaciones. Para obtener más información sobre cómo obtener y establecer una clave de autenticación de mapas, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
 ## <a name="set-the-location-of-a-map"></a>Establecer la ubicación de un mapa
 Señala en el mapa cualquier ubicación que desees o usa la ubicación actual del usuario.  
 
 ### <a name="set-a-starting-location-for-the-map"></a>Establecer una ubicación inicial para el mapa
 
-Para establecer la ubicación que se debe mostrar en el mapa, especifica la propiedad [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) de [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) en el código o enlaza la propiedad en el marcado XAML. En el siguiente ejemplo se muestra un mapa con la ciudad de Seattle en su centro.
+Para establecer la ubicación que se debe mostrar en el mapa, especifica la propiedad [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) de [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) en el código o enlaza la propiedad en el marcado XAML. El siguiente ejemplo muestra un mapa con la ciudad de Seattle en su centro.
 
 > [!NOTE]
 > Dado que no se puede convertir una cadena a la clase [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675), no se puede especificar un valor para la propiedad [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) en el marcado XAML, a menos que se use el enlace de datos. (Esta limitación se aplica también a la propiedad adjunta [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264)).
@@ -168,7 +168,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ### <a name="set-the-current-location-of-the-map"></a>Establecer la ubicación actual del mapa
 
-Para poder acceder a la ubicación del usuario, la aplicación debe llamar al método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152). En ese momento, la aplicación debe estar en primer plano y se debe llamar a **RequestAccessAsync** desde el subproceso de la interfaz de usuario. Ten en cuenta que la aplicación no puede acceder a los datos de ubicación del usuario, hasta que este le conceda permiso para obtenerlos.
+Para poder acceder a la ubicación del usuario, la aplicación debe llamar al método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152). En ese momento, la aplicación debe estar en primer plano y se debe llamar a **RequestAccessAsync** desde el subproceso de la interfaz de usuario. La aplicación no puede tener acceso a los datos de ubicación hasta que el usuario conceda permiso.
 
 Usa el método [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) de la clase [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) para obtener la ubicación actual del dispositivo (si está disponible). Para obtener el [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) correspondiente, usa la propiedad [**Point**](https://msdn.microsoft.com/library/windows/apps/dn263665) de las coordenadas geográficas de la posición geográfica. Para obtener más información, consulta [Obtener la ubicación actual](get-location.md).
 
@@ -222,7 +222,7 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 
 Puedes usar también JSON para definir estilos personalizados y luego usar ese JSON para crear un objeto [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet).
 
-Hoja de estilo de JSON puede crearse mediante la aplicación de [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) de forma interactiva.
+Hoja de estilos JSON se puede crear interactivamente mediante el [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) aplicación.
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
@@ -323,7 +323,7 @@ Para mostrar una vista de Streetside
 
 Este ejemplo indica cómo mostrar una vista de Streetside similar a la imagen anterior.
 
-**Nota**el mapa general no aparecerá si el tamaño del control de mapa es demasiado pequeño.
+**Tenga en cuenta**  el mapa general no aparecerá si el control de mapa tiene un tamaño demasiado pequeño.
 
  
 
@@ -421,10 +421,10 @@ private async void display3DLocation()
 
 Para obtener información sobre las ubicaciones en el mapa, llama a los siguientes métodos de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
--   Método de [**TryGetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) : obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control de mapa.
--   [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018): gracias a este método, puedes obtener el punto especificado en la ventanilla del control de mapa correspondiente a la ubicación geográfica especificada.
--   [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022): gracias a este método, puedes determinar si la ubicación geográfica especificada está actualmente visible en la ventanilla del control de mapa.
--   [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014): gracias a este método, puedes obtener los elementos del mapa ubicados en el punto que se especificó en la ventanilla del control de mapa.
+-   [**TryGetLocationFromOffset** ](https://msdn.microsoft.com/library/windows/apps/dn637016) método - Get, la ubicación geográfica que se corresponde con el punto especificado en la ventanilla del control de mapa.
+-   [**GetOffsetFromLocation** ](https://msdn.microsoft.com/library/windows/apps/dn637018) método - Get, el punto en la ventanilla del control de mapa que corresponde a la ubicación geográfica especificada.
+-   [**IsLocationInView** ](https://msdn.microsoft.com/library/windows/apps/dn637022) método - determinar si la ubicación geográfica especificada está actualmente visible en la ventanilla del control de mapa.
+-   [**FindMapElementsAtOffset** ](https://msdn.microsoft.com/library/windows/apps/dn637014) método - Get, los elementos en el mapa situados en el punto especificado en la ventanilla del control de mapa.
 
 ## <a name="handle-interaction-and-changes"></a>Controlar la interacción y los cambios
 
@@ -454,11 +454,11 @@ Puedes controlar los siguientes eventos de la clase [**MapControl**](https://msd
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Centro para desarrolladores de Bing Maps](https://www.bingmapsportal.com/)
+* [Ejemplo de asignación de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Obtener la ubicación actual](get-location.md)
-* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Instrucciones de diseño de aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Instrucciones de diseño de mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Compilación 2015 vídeo: Aprovechamiento de mapas y ubicación en el teléfono, tableta y PC en sus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación UWP tráfico](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)

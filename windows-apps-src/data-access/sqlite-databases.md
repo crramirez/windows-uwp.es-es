@@ -6,24 +6,24 @@ ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
 ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075148"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635670"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
 
 ## <a name="some-benefits-of-using-sqlite-for-local-storage"></a>Algunas ventajas de usar SQLite para el almacenamiento local
 
-: heavy_check_mark: SQLite es ligero y autocontenido. Se trata de una biblioteca de código sin ninguna otra dependencia. No hay que configurar nada.
+:heavy_check_mark: SQLite es ligera e independiente. Se trata de una biblioteca de código sin ninguna otra dependencia. No hay que configurar nada.
 
-: heavy_check_mark: No hay ningún servidor de bases de datos. El cliente y el servidor se ejecutan en el mismo proceso.
+:heavy_check_mark: No hay ningún servidor de base de datos. El cliente y el servidor se ejecutan en el mismo proceso.
 
-: heavy_check_mark: SQLite es de dominio público, por lo que puedes utilizarlo y distribuirlo libremente con tu aplicación.
+:heavy_check_mark: SQLite es de dominio público, por lo que puede usar libremente y lo distribuya con su aplicación.
 
-: heavy_check_mark: SQLite funciona en diversas plataformas y arquitecturas.
+:heavy_check_mark: SQLite funciona en múltiples plataformas y arquitecturas.
 
 Puedes leer más sobre SQLite [aquí](https://sqlite.org/about.html).
 
@@ -83,13 +83,13 @@ Hay un par de ventajas si elevas la versión mínima de tu proyecto para UWP a l
 
 En primer lugar, puedes usar las bibliotecas de .NET Standard 2.0 en lugar de bibliotecas de clases normales. Esto significa que puedes compartir el código de acceso a datos con cualquier otra aplicación basada .NET, como aplicaciones WPF, Windows Forms, Android, iOS o ASP.NET.
 
-En segundo lugar, la aplicación no tiene que empaquetar bibliotecas de SQLite. En su lugar, la aplicación puede usar la versión de SQLite que viene instalada con Windows. Esto te ayudará de varias maneras.
+En segundo lugar, la aplicación no tiene que empaquete las bibliotecas de SQLite. En su lugar, la aplicación puede usar la versión de SQLite que viene instalada con Windows. Esto te ayudará de varias maneras.
 
-: heavy_check_mark: Reduce el tamaño de la aplicación porque no es necesario que descargues el archivo binario de SQLite y luego lo empaquetes como parte de la aplicación.
+:heavy_check_mark: Reduce el tamaño de la aplicación ya no es necesario que descargar el binario de SQLite y empaquetarlo como parte de la aplicación.
 
-: heavy_check_mark: Evita que tengas que enviar una nueva versión de la aplicación a los usuarios en caso de que SQLite publique correcciones críticas para errores y vulnerabilidades de seguridad de SQLite. Microsoft mantiene la versión de Windows de SQLite en coordinación con SQLite.org.
+:heavy_check_mark: No es necesario que insertar una nueva versión de la aplicación a los usuarios en caso de que SQLite publica correcciones críticas para los errores y las vulnerabilidades de seguridad en SQLite. Microsoft mantiene la versión de Windows de SQLite en coordinación con SQLite.org.
 
-: heavy_check_mark: El tiempo de carga de la aplicación tiene el potencial de ser más rápido porque, muy probablemente, la versión del SDK de SQLite ya estará cargada en la memoria.
+:heavy_check_mark: Tiempo de carga de la aplicación tiene el potencial de ser más rápido porque probablemente, la versión del SDK de SQLite ya se cargan en memoria.
 
 Empecemos por agregar a la solución una biblioteca de clases de .NET Standard 2.0. No es necesario que uses una biblioteca de clases para contener el código de acceso a datos, pero vamos a utilizar una en nuestro ejemplo. Llamaremos a la biblioteca **DataAccessLibrary** y llamaremos a la clase de la biblioteca **DataAccess**.
 
@@ -125,15 +125,15 @@ No tienes que hacer esto. Pero si tienes un motivo para incluir una versión esp
 
 Haremos lo siguiente:
 
-:one: Preparar la clase de acceso a datos.
+: uno: Preparación de la clase de acceso a datos.
 
 :two: Inicializar la base de datos de SQLite.
 
-:three: Insertar datos en la base de datos de SQLite.
+: tres: Insertar datos en la base de datos de SQLite.
 
-:four: Recuperar datos de la base de datos de SQLite.
+: cuatro: Recuperar datos de la base de datos de SQLite.
 
-:five: Agregar una interfaz de usuario básica.
+: cinco: Agregar una interfaz de usuario básica.
 
 ### <a name="prepare-the-data-access-class"></a>Preparar la clase de acceso a datos
 
@@ -163,7 +163,7 @@ namespace DataAccessLibrary
 
 ```
 
-Agrega las siguientes instrucciones using a la parte superior de este archivo.
+Agregue las siguientes instrucciones using a la parte superior de este archivo.
 
 ```csharp
 using Microsoft.Data.Sqlite;
@@ -317,14 +317,14 @@ Eso es todo. Explora [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/a
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Conectar tu aplicación directamente a una base de datos de SQL Server**
+**Conecte su aplicación directamente a una base de datos de SQL Server**
 
 Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](sql-server-databases.md).
 
-**Compartir código entre diferentes aplicaciones de distintas plataformas**
+**Compartir código entre diferentes aplicaciones en diferentes plataformas**
 
 Consulta [Compartir código entre una aplicación de escritorio y una aplicación para UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
 
-**Agregar páginas de detalles maestras con back-ends SQL de Azure**
+**Agregar páginas de maestro/detalle con servidores back-end de SQL Azure**
 
 Consulta [Muestra de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database).

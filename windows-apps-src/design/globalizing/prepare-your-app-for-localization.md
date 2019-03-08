@@ -1,5 +1,5 @@
 ---
-Description: A localized app is one that can be localized to other markets, languages, or regions without uncovering any functional defects in the app. The most essential property of a localizable app is that its executable code has been cleanly separated from its localizable resources.
+Description: Una aplicación localizada es aquella que puede localizarse a otros mercados, idiomas o regiones sin descubrir defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables.
 title: Hacer que tu aplicación sea localizable
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
@@ -8,13 +8,13 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: fb16f682e5e1f57196737a6e15a9ffbadbfd0e84
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626990"
 ---
-# <a name="make-your-app-localizable"></a>Haz que tu aplicación sea localizable
+# <a name="make-your-app-localizable"></a>Hacer que tu aplicación sea localizable
 
 Una aplicación localizada es aquella que puede localizarse para otros mercados, idiomas o regiones sin descubrir defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables. Por lo tanto, debes determinar qué recursos de la aplicación deben localizarse. Pregúntate qué tiene que cambiarse si tu aplicación debe localizarse para otros mercados.
 
@@ -22,7 +22,7 @@ También recomendamos familiarizarse con las [Directrices para la globalización
 
 ## <a name="put-your-strings-into-resources-files-resw"></a>Coloca las cadenas en archivos de recursos (.resw)
 
-No literales de cadena de disco duro de código en el código imperativo, el marcado XAML, ni en el manifiesto del paquete de aplicación. En su lugar, coloca las cadenas en archivos de recursos (.resw) para que se puedan adaptar a diferentes mercados locales, independientemente de los binarios integrados de la aplicación. Para más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación](../../app-resources/localize-strings-ui-manifest.md).
+No literales de cadena de codificar de forma rígida en el código imperativo, marcado XAML, ni en el manifiesto del paquete de aplicación. En su lugar, coloca las cadenas en archivos de recursos (.resw) para que se puedan adaptar a diferentes mercados locales, independientemente de los binarios integrados de la aplicación. Para más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación](../../app-resources/localize-strings-ui-manifest.md).
 
 Este tema también muestra cómo agregar comentarios a los archivos de recursos predeterminados (.resw). Por ejemplo, si adoptas una voz o tono informal, a continuación, asegúrate de explicarlo en los comentarios. Además, para reducir los gastos, confirma que solo las cadenas que deben traducirse se entregan a los traductores.
 
@@ -46,13 +46,13 @@ Usar cadenas de tamaño apropiado. Las cadenas cortas son más fáciles de tradu
 
 Pero, en tensión con esta directriz, está el riesgo de volver a usar una cadena en contextos diferentes. Incluso las palabras más simples como &quot;activado&quot; y &quot;desactivado&quot; pueden traducirse de manera diferente según el contexto. En inglés "on" y "off" pueden usarse para alternar entre el modo de vuelo, la red Bluetooth y los dispositivos. No obstante, en italiano, la traducción depende del contexto de lo que se activa o desactiva. Debes crear un par de cadenas para cada contexto. Puedes volver a usar las cadenas si dos contextos son iguales. Por ejemplo, puedes volver a usar la cadena "Volume" tanto para el volumen de los efectos de sonido como para el volumen de la música porque ambos hacen referencia a la intensidad del sonido. En cambio, no debes volver a usar la misma cadena cuando hagas referencia a "Volume" cuando se refiera al disco duro, porque el contexto y el significado son diferentes y la palabra puede traducirse de manera diferente.
 
-Igualmente, una cadena como "text" o "fax" puede usarse tanto como verbo como sustantivo en inglés, lo que puede causar confusión en el proceso de traducción. En su lugar, crea una cadena separada para el formato de verbo y el de sustantivo. Cuando no estés seguro de si el contexto es el mismo, por si acaso, usa una cadena diferente.
+Igualmente, una cadena como "text" o "fax" puede usarse tanto como verbo como sustantivo en inglés, lo que puede causar confusión en el proceso de traducción. En su lugar, crea una cadena separada para el formato de verbo y el de sustantivo. Cuando no estés seguro de si el contexto es el mismo, por si acaso usa una cadena diferente.
 
 En resumen, factorizar las cadenas en las partes que funcionan en todos los contextos. Habrá casos donde una cadena deberá ser una oración completa.
 
-Ten en cuenta la siguiente cadena: "el {0} no pudo sincronizarse."
+Tenga en cuenta la siguiente cadena: "El {0} no se pudo sincronizar."
 
-Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "task" o "documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
+Una variedad de palabras podría reemplazar {0}, como "cita", "tareas" o "documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
 
 | Inglés                                    | Alemán                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -60,7 +60,7 @@ Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "task"
 | No pudo sincronizarse la tarea.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | No pudo sincronizarse el documento.    | Das Dokument konnte nicht synchronisiert werden. |
 
-Como otro ejemplo, considera la posibilidad de la frase "Remind me en {0} Minute (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
+Como otro ejemplo, considere la posibilidad de la frase "Recordármelo en {0} minuto (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
 
 Para resolver este problema, localiza toda la oración en lugar de una única palabra. Aunque hacer esto parezca demandar trabajo extra y que no sea una solución elegante, es la mejor solución porque:
 
@@ -78,30 +78,30 @@ Usar una voz o tono informal en las cadenas es una opción válida. Puedes usar 
 
 ## <a name="pseudo-localization"></a>Pseudolocalización
 
-Pseudolocaliza tu aplicación para descubrir los problemas de localización. Pseudolocalización es un tipo de localización de ejecución en seco o prueba de divulgación. Se produce un conjunto de recursos que no están traducidos realmente, solo lo parecen. Por ejemplo, las cadenas son aproximadamente un 40% más largas que en el idioma predeterminado y tienen delimitadores para que puedas ver de un solo vistazo si se han truncado en la interfaz de usuario.
+Pseudolocaliza tu aplicación para descubrir los problemas de localización. Pseudolocalización es un tipo de localización de ejecución en seco o prueba de divulgación. Se produce un conjunto de recursos que no están traducidos realmente, solo lo parecen. Por ejemplo, las cadenas son aproximadamente un 40 % más largas que en el idioma predeterminado y tienen delimitadores para que puedas ver de un solo vistazo si se han truncado en la interfaz de usuario.
 
 ## <a name="deployment-considerations"></a>Consideraciones de implementación
 
-Cuando se instala una aplicación que contiene datos de idioma localizado, es posible que solo el idioma predeterminado está disponible para la aplicación, aunque se incluyen inicialmente recursos para varios idiomas. Esto es porque el proceso de instalación se ha optimizado para instalar solo los recursos de idioma que coincidan con el idioma actual y la referencia cultural del dispositivo. Por lo tanto, si el dispositivo está configurado para en-US, solo los recursos de idioma en-US se instalan con la aplicación.
+Cuando se instala una aplicación que contiene los datos del idioma localizado, es posible que sólo el idioma predeterminado está disponible para la aplicación, aunque inicialmente se incluyen recursos para varios idiomas. Esto es porque se optimiza el proceso de instalación para instalar solo los recursos de idioma que coincide con el idioma actual y la referencia cultural del dispositivo. Por lo tanto, si el dispositivo está configurado para en-US, solo los recursos de idioma en-US se instalan con la aplicación.
 
 > [!NOTE]
-> No es posible instalar la compatibilidad de idioma adicional para la aplicación tras la instalación inicial. Si cambias el idioma predeterminado después de instalar una aplicación, la aplicación continúa usando solo los recursos de idioma original.
+> No es posible instalar compatibilidad con idiomas adicionales para la aplicación tras la instalación inicial. Si cambia el idioma predeterminado después de instalar una aplicación, la aplicación sigue usando solo los recursos de idioma original.
 
-Si quieres asegurarte de que todos los recursos de idioma están disponibles tras la instalación, crea un archivo de configuración de la aplicación que especifica que ciertos recursos no sean necesarios durante la instalación (incluidos los recursos de idioma). Esta característica de instalación optimizado se habilita automáticamente cuando .appxbundle la aplicación se genera durante el empaquetado. Para obtener más información, consulta [garantiza que los recursos estén instalados en un dispositivo, independientemente de si un dispositivo requiere](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
+Si desea asegurarse de que todos los recursos de idioma están disponibles después de la instalación, cree un archivo de configuración para el paquete de aplicación que especifica que determinados recursos son necesarios durante la instalación (incluidos los recursos de idioma). Esta característica de instalación optimizada se habilita automáticamente cuando se genera .appxbundle la aplicación durante el empaquetado. Para obtener más información, consulte [asegurarse de que los recursos están instalados en un dispositivo independientemente de si el dispositivo los necesita](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
 
-Opcionalmente garantizar que todos los recursos estén instalados (no solo un subconjunto), puede deshabilitar la generación de .appxbundle al empaquetar la aplicación. Esto no se recomienda sin embargo, puede aumentar el tiempo de instalación de la aplicación.
+Si lo desea, para asegurarse de que todos los recursos están instalado (no solo un subconjunto), puede deshabilitar la generación de .appxbundle al empaquetar la aplicación. Sin embargo no se recomienda que puede aumentar el tiempo de instalación de la aplicación.
 
-Deshabilitar la generación automática de la .appxbundle estableciendo el atributo "Generar la recopilación de aplicación" en "nunca":
+Deshabilitar la generación automática de la .appxbundle estableciendo el atributo "Generar lote de aplicaciones" a "nunca":
 
-1. En Visual Studio, haz clic en el nombre del proyecto
-2. Seleccionar **almacén** -> **crear paquetes de aplicación …**
-3. En el cuadro de diálogo **Crear los paquetes** , seleccione **quiero crear paquetes para cargarlos en la Microsoft Store con un nuevo nombre de la aplicación** y, a continuación, haz clic en **siguiente**.
-4. En el cuadro de diálogo **Seleccionar un nombre de aplicación** , selecciona o crear una aplicación nombre para el paquete.
-5. En el cuadro de diálogo **Seleccionar y configurar paquetes** , establece **Crear lote de aplicaciones** en **nunca**.
+1. En Visual Studio, haga clic en el nombre del proyecto
+2. Seleccione **Store** -> **crear paquetes de aplicaciones...**
+3. En el **crear paquetes** cuadro de diálogo, seleccione **quiero crear paquetes para cargarlos en la Microsoft Store con un nuevo nombre de aplicación** y, a continuación, haga clic en **siguiente**.
+4. En el **seleccione un nombre de aplicación** cuadro de diálogo, seleccione o cree un nombre de aplicación para el paquete.
+5. En el **seleccionar y configurar paquetes** cuadro de diálogo, establezca **generar grupo de aplicaciones** a **nunca**.
 
 ## <a name="geopolitical-awareness"></a>Reconocimiento geopolítico
 
-Evita agresiones políticas en mapas o cuando hagas referencia a regiones. Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier interfaz de usuario usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Colocar un territorio en disputa en una lista llamada &quot;países&quot;, como en un formulario de direcciones, puede generarte problemas.
+Evita agresiones políticas en mapas o cuando hagas referencia a regiones. Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier UI usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Colocar un territorio en disputa en una lista llamada &quot;países&quot;, como en un formulario de direcciones, puede generarte problemas.
 
 ## <a name="language--and-region-changed-events"></a>Eventos de cambio de idioma y región
 
@@ -115,7 +115,7 @@ No supongas que todos los idiomas expresan los parámetros en el mismo orden. Po
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-La cadena de formato de este ejemplo funciona para el inglés (Estados Unidos). Pero no es apropiado para el alemán (Alemania), por ejemplo, donde el día y el mes se muestran en orden inverso. Asegúrate de que el traductor sepa el propósito de cada uno de los parámetros para que pueda invertir el orden de los elementos de formato de la cadena de formato (por ejemplo, "{1} {0}") según sea adecuado para el idioma de destino.
+La cadena de formato de este ejemplo funciona para el inglés (Estados Unidos). Pero no es apropiado para el alemán (Alemania), por ejemplo, donde el día y el mes se muestran en orden inverso. Asegúrese de que el traductor conoce el propósito de cada uno de los parámetros para que puede invertir el orden de los elementos de formato en la cadena de formato (por ejemplo, "{1} {0}") según corresponda para el lenguaje de destino.
 
 ## <a name="dont-over-localize"></a>No localices en exceso.
 
@@ -130,24 +130,24 @@ Incluir la etiqueta `<link>` en el archivo de recursos (.resw) significa que, ad
 
 ## <a name="choose-an-appropriate-translation-approach"></a>Elegir un enfoque de traducción apropiado
 
-Después de que las cadenas se separen en archivos de recursos, pueden traducirse. El momento ideal para traducir cadenas es después de que se finalizan las cadenas de un proyecto, que generalmente sucede hacia el final de éste. Puedes abordar el proceso de traducción de diferentes maneras, según el volumen de cadenas por traducir, el número de idiomas por traducir y el modo en que se realizará la traducción (como internamente en contraposición a mediante la contratación de un proveedor externo).
+Después de que las cadenas se separan en archivos de recursos, pueden traducirse. El momento ideal para traducir cadenas es después de que se finalizan las cadenas de un proyecto, que generalmente sucede hacia el final de éste. Puedes abordar el proceso de traducción de diferentes maneras, según el volumen de cadenas por traducir, el número de idiomas por traducir y el modo en que se realizará la traducción (como internamente en contraposición a mediante la contratación de un proveedor externo).
 
 Ten en cuenta estas opciones.
 
-- **Puedes traducir los archivos de recursos abriéndolos directamente en el proyecto.** Este enfoque funciona correctamente en un proyecto que tenga un pequeño volumen de cadenas que tengan que traducirse a dos o tres idiomas. Puede ser apropiado para un escenario en el que un desarrollador habla más de un idioma y quiere controlar el proceso de traducción. Este enfoque es beneficioso ya que es rápido, no requiere herramientas y minimiza el riesgo de malas traducciones. Pero no es escalable. En particular, los recursos de diferentes idiomas pueden perder la sincronización con facilidad, lo que causa malas experiencias de usuario y dolores de cabeza en el mantenimiento.
-- **El formato del texto de los archivos de recursos de cadena es de tipo XML o ResJSON, así que puedes traducirlos mediante cualquier editor de texto. Una vez hecho esto, los archivos que hayas traducido se copiarán en el proyecto.** Debes tener en cuenta que, si los traductores usan este método, es posible que acaben traduciendo por accidente las etiquetas XML, pero podrán trabajar en un entorno que no sea el proyecto Microsoft Visual Studio. Puedes usar este método para aquellos proyectos que debas traducir en unos pocos idiomas. El formato XLIFF es un formato XML que se diseñó específicamente para la localización, y que es compatible con varias de herramientas y proveedores de localización. Asimismo, puedes usar el [Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) para crear archivos XLIFF a partir de otros archivos de recursos como, por ejemplo, .resw o .resjson.
+- **Los archivos de recursos se pueden traducir abriéndolos directamente en el proyecto.** Este enfoque funciona correctamente en un proyecto que tenga un pequeño volumen de cadenas que tengan que traducirse a dos o tres idiomas. Puede ser apropiado para un escenario en el que un desarrollador habla más de un idioma y quiere controlar el proceso de traducción. Este enfoque es beneficioso ya que es rápido, no requiere herramientas y minimiza el riesgo de malas traducciones. Pero no es escalable. En particular, los recursos de diferentes idiomas pueden perder la sincronización con facilidad, lo que causa malas experiencias de usuario y dolores de cabeza en el mantenimiento.
+- **Los archivos de recursos de cadena son XML o ResJSON en formato de texto, por lo que se puede manejar de traducción con cualquier editor de texto. A continuación, se copian los archivos traducidos al proyecto.** Debes tener en cuenta que, si los traductores usan este método, es posible que acaben traduciendo por accidente las etiquetas XML, pero podrán trabajar en un entorno que no sea el proyecto Microsoft Visual Studio. Puedes usar este método para aquellos proyectos que debas traducir en unos pocos idiomas. El formato XLIFF es un formato XML que se diseñó específicamente para la localización, y que es compatible con varias de herramientas y proveedores de localización. Asimismo, puedes usar el [Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) para crear archivos XLIFF a partir de otros archivos de recursos como, por ejemplo, .resw o .resjson.
 
 > [!NOTE]
-> Localización también puede ser necesaria para otros activos, como imágenes y archivos de audio.
+> Localización también podría ser necesaria para otros recursos, incluidas las imágenes y archivos de audio.
 
-También deberías considerar lo siguiente:
+También debe considerar lo siguiente:
 
-- **Herramientas de localización** Una serie de herramientas de localización está disponible para analizar archivos de recursos y permitir que solo las cadenas traducibles los traductores editen. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es un buen recurso para organizar proyectos que tengan un gran volumen de cadenas pero que solo necesiten traducirse a una pequeña cantidad de idiomas. Para obtener más información, consulta [Cómo usar el kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
-- **Proveedores de localización** Considera la posibilidad de usar un proveedor de localización si la aplicación contiene un amplio cadenas que deben traducirse a un gran número de idiomas. Un proveedor de localizaciones puede darte consejo sobre las herramientas y los procesos, así como traducir tus archivos de recursos. Esta es una solución ideal, pero también la opción más costosa y puede aumentar los tiempos de entrega para el contenido traducido.
+- **Herramientas de localización** está disponible para analizar archivos de recursos y permitir sólo las cadenas traducibles traductores editen una serie de herramientas de localización. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es un buen recurso para organizar proyectos que tengan un gran volumen de cadenas pero que solo necesiten traducirse a una pequeña cantidad de idiomas. Para obtener más información, consulta el artículo acerca de [Cómo usar el Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+- **Los proveedores de localización** considere el uso de un proveedor de localización si la aplicación contiene una amplia cadenas que se deben traducir en un gran número de idiomas. Un proveedor de localizaciones puede darte consejo sobre las herramientas y los procesos, así como traducir tus archivos de recursos. Esta es una solución ideal, pero también la opción más costosa, y puede aumentar los tiempos de entrega para el contenido traducido.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Mantener la coherencia de las claves de acceso y las etiquetas
 
-Es todo un desafío sincronizar las claves de acceso que se usan en los métodos de accesibilidad con el modo de visualizar las claves de acceso localizadas, ya que los dos recursos de cadena se clasifican en dos secciones separadas. Asegúrate de proporcionar comentarios para la cadena de etiqueta, como: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
+Es todo un desafío sincronizar las claves de acceso que se usan en los métodos de accesibilidad con el modo de visualizar las claves de acceso localizadas, ya que los dos recursos de cadena se clasifican en dos secciones separadas. Asegúrate de proporcionar comentarios para la cadena de etiquetas, como: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
 ## <a name="support-furigana-for-japanese-strings-that-can-be-sorted"></a>Admitir furigana para las cadenas en japonés que puedan ordenarse
 
@@ -166,12 +166,12 @@ Los caracteres en kanji japonés tienen la propiedad de tener más de una lectur
             Resources.resw
     ```
 
-3. En el elemento Resources.resw de la capeta ja-JP general: agrega un recurso de cadena para el elemento Appname "希蒼"
-4. En el elemento Resources.altform-msft-phonetic.resw de los recursos de japonés en furigana: agrega el valor furigana del elemento AppName "のあ"
+3. En Resources.resw para ja-JP general: Agregar un recurso de cadena para "希蒼" Appname
+4. En Resources.altform-msft-phonetic.resw para japonés furigana recursos: Agregar valor furigana para AppName "のあ"
 
 De esta manera, el usuario puede buscar el nombre de la aplicación "希蒼" usando tanto el valor furigana "のあ" (noa) como el valor fonético (mediante la función **GetPhonetic** del Editor de métodos de entrada (IME)) "まれあお" (mare-ao).
 
-El método de ordenación sigue el formato del **Panel de control regional**:
+El método de ordenación sigue el formato del **panel de control regional**:
 
 - En una configuración regional del usuario en japonés,
   - Si está habilitado el furigana, "希蒼" se ordena conforme a "の".
@@ -180,14 +180,14 @@ El método de ordenación sigue el formato del **Panel de control regional**:
   - Si está habilitado el furigana, "希蒼" se ordena conforme a "の".
   - Si falta el furigana, "希蒼" se ordena conforme a "漢字".
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-- [Directrices sobre globalización](guidelines-and-checklist-for-globalizing-your-app.md)
-- [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación](../../app-resources/localize-strings-ui-manifest.md)
-- [Adaptar los recursos al idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
-- [Ajustar el diseño y las fuentes y admitir la escritura de derecha a izquierda](adjust-layout-and-fonts--and-support-rtl.md)
-- [Actualización de imágenes en respuesta a eventos de cambio de valor de calificador](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
+- [Directrices para la globalización](guidelines-and-checklist-for-globalizing-your-app.md)
+- [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](../../app-resources/localize-strings-ui-manifest.md)
+- [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+- [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](adjust-layout-and-fonts--and-support-rtl.md)
+- [Los eventos de cambio de la actualización de imágenes en respuesta al valor de calificador](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 
-## <a name="samples"></a>Ejemplos
+## <a name="samples"></a>Muestras
 
-- [Ejemplo de recursos de aplicación y localización](https://go.microsoft.com/fwlink/p/?linkid=254478)
+- [Ejemplo de localización y recursos de la aplicación](https://go.microsoft.com/fwlink/p/?linkid=254478)

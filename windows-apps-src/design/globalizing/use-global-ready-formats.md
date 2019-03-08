@@ -1,20 +1,20 @@
 ---
-Description: Design your app to be global-ready by appropriately formatting dates, times, numbers, phone numbers, and currencies. You'll then be able later to adapt your app for additional cultures, regions, and languages in the global market.
+Description: Diseña una aplicación que todo el mundo pueda usar empleando el formato adecuado en fechas, horas, números de teléfono y divisas. Así podrás adaptar la aplicación más adelante a otras culturas, regiones e idiomas del mercado global.
 title: Globalizar los formatos de fecha/hora/número
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
-keywords: windows 10, uwp, globalización, localizabilidad, localización
+keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: d641bcff48b830c56a1d03ee861ec2a4c5f433b6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048612"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634140"
 ---
-# <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha y hora o número
+# <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha/hora/número
 
 Diseña una aplicación que todo el mundo pueda usar empleando el formato adecuado en fechas, horas, números de teléfono y divisas. Así podrás adaptar la aplicación más adelante a otras culturas, regiones e idiomas del mercado global.
 
@@ -24,7 +24,7 @@ Al crear la aplicación, si piensas en más que un solo idioma y una sola cultur
 
 Las diferentes regiones y culturas usan diferentes formatos de fecha y hora. Incluyen convenciones distintas para el orden del mes y el día en la fecha, para la separación de horas y minutos en la hora e, incluso, para el separador usado. Además, las fechas se pueden mostrar en varios formatos largos ("Miércoles, 28 de marzo, 2012") o cortos ("28/3/12"), lo que varía de una cultura a otra. Y, por supuesto, los nombres y las abreviaturas de los días de la semana y los meses del año varían según cada idioma.
 
-Puedes obtener una vista previa de los formatos utilizados para los diferentes idiomas. Ve a **Configuración** > **Hora e idioma** > **Región e idioma** y haz clic en **Opciones adicionales de fecha, hora y configuración regional** > **Cambiar formatos de fecha, hora o número**. En la pestaña **Formatos** selecciona un idioma de la lista desplegable **Formato** y obtendrás una vista previa de los formatos en **Ejemplos **.
+Puedes obtener una vista previa de los formatos utilizados para los diferentes idiomas. Ve a **Configuración** > **Hora e idioma** > **Región e idioma** y haz clic en **Opciones adicionales de fecha, hora y configuración regional** > **Cambiar formatos de fecha, hora o número**. En la pestaña **Formatos** selecciona un idioma de la lista desplegable **Formato** y obtendrás una vista previa de los formatos en **Ejemplos** .
 
 Este tema usa los términos "Lista de idiomas del perfil del usuario", "Lista de idiomas de manifiesto de la aplicación" y "Lista de idiomas del tiempo de ejecución de la aplicación". Para obtener información detallada sobre el significado exacto de esos términos y cómo acceder a sus valores, consulta [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](manage-language-and-region.md).
 
@@ -52,7 +52,7 @@ Si tienes que mostrar fechas u horas, puedes usar la clase [**DateTimeFormatter*
 Puedes probar el código anterior en tu propio PC así.
 
 - Asegúrate de que los archivos de recursos en el proyecto estén calificados para "en-US" y "de-DE" (consulta [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)).
-- Cambia la lista de idiomas de perfil de usuario en **Configuración** > **Hora e idioma** > **Región e idioma** > **Idiomas **. Agrega Alemán (Alemania), márcalo como el valor predeterminado y vuelve a ejecutar el código.
+- Cambia la lista de idiomas de perfil de usuario en **Configuración** > **Hora e idioma** > **Región e idioma** > **Idiomas** . Agrega Alemán (Alemania), márcalo como el valor predeterminado y vuelve a ejecutar el código.
 
 ## <a name="format-dates-and-times-for-the-user-profile-language-list"></a>Dar formato a fechas y horas para la lista de idiomas del perfil de usuario
 
@@ -70,7 +70,7 @@ Si por cualquier motivo quieres dar formato a las fechas u horas solo según la 
     var results = "Short Date: " + shortDateFormatter.Format(DateTime.Now);
 ```
 
-## <a name="format-numbers-and-currencies-appropriately"></a>Dar un formato adecuado a los números y a las monedas
+## <a name="format-numbers-and-currencies-appropriately"></a>Da un formato adecuado a los números y a las monedas
 
 Las diferentes culturas dan un formato distinto a los números. Entre esas diferencias de formato podemos encontrar la cantidad de decimales para mostrar, los caracteres usados como separadores decimales y el símbolo de moneda que se va a usar. Usa las clases del espacio de nombres [**NumberFormatting**](/uwp/api/windows.globalization.numberformatting?branch=live) para mostrar decimales, porcentajes o tantos por mil y monedas. La mayoría de las veces, querrás que estas clases de formateador usen el mejor formato para el perfil de usuario. Pero también puedes usar los formateadores para mostrar una moneda para cualquier región o un formato.
 
@@ -104,9 +104,9 @@ Este ejemplo muestra cómo mostrar monedas según el perfil de usuario y para un
                     "Formatted Euro (fr-FR defaults): " + currencyValueEuroFR;
 ```
 
-Puedes probar el código anterior en tu PC cambiando el país o región en **Configuración** > **Hora e idioma** > **Región e idioma** > **País o región **. Elige un país o región (quizás Islandia) y vuelve a ejecutar el código.
+Puedes probar el código anterior en tu PC cambiando el país o región en **Configuración** > **Hora e idioma** > **Región e idioma** > **País o región** . Elige un país o región (quizás Islandia) y vuelve a ejecutar el código.
 
-## <a name="use-a-culturally-appropriate-calendar"></a>Usar un calendario apropiado culturalmente
+## <a name="use-a-culturally-appropriate-calendar"></a>Usa un calendario apropiado culturalmente
 
 El calendario difiere según las regiones y los idiomas. Ten en cuenta que el calendario gregoriano no es el predeterminado de todas las regiones. Los usuarios de algunas regiones pueden elegir calendarios alternativos, como el calendario de la era japonesa o el calendario lunar árabe. Las fechas y horas en el calendario se basan en diferentes zonas horarias y el horario de verano.
 
@@ -116,9 +116,9 @@ Para asegurarte de que se emplee el formato de calendario preferido, puedes usar
 
 Los números de teléfono tienen un formato diferente según la región. El número de dígitos, cómo se agrupan esos dígitos y el significado de determinadas partes del número de teléfono varían de un país a otro. A partir de la versión 1607 de Windows 10, puedes usar las clases en el espacio de nombres [**PhoneNumberFormatting**](/uwp/api/windows.globalization.phonenumberformatting?branch=live) para dar el formato adecuado a los números de teléfono de la región actual.
 
-[**PhoneNumberInfo**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) analiza una cadena de dígitos y te permite: determinar si esos dígitos pertenecen a un número de teléfono válido de la región, comparar dos números de teléfonos para ver si son iguales y extraer las diferentes partes funcionales del número de teléfono (por ejemplo, el código del país o el código del área geográfica).
+[**PhoneNumberInfo** ](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) analiza una cadena de dígitos y le permite: determinar si los dígitos son un número de teléfono válido en la región actual; comparar dos números para la igualdad; y para extraer las distintas partes funcionales del teléfono número, como código de país o código de área geográfica.
 
-[**PhoneNumberFormatter**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) da formato a una cadena de dígitos o al elemento **PhoneNumberInfo** que se mostrará, incluso si la cadena de dígitos representa un número de teléfono parcial. Puedes usar este formato de número parcial para dar formato a un número a medida que el usuario lo esté escribiendo.
+[**PhoneNumberFormatter** ](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) formatos de cadena de dígitos u **PhoneNumberInfo** para su presentación, incluso cuando la cadena de dígitos representa un número de teléfono parcial. Puedes usar este formato de número parcial para dar formato a un número a medida que el usuario lo esté escribiendo.
 
 El siguiente ejemplo muestra cómo usar **PhoneNumberFormatter** para dar formato a un número de teléfono a medida que un usuario lo vaya escribiendo. Cada vez que el texto cambia en un elemento **TextBox** denominado phoneNumberInputTextBox, se usa la región actual predeterminada para dar formato al contenido del cuadro de texto y mostrarlo en un **TextBlock** denominado phoneNumberOutputTextBlock. A modo de ejemplo, se da formato a la cadena mediante la región correspondiente a Nueva Zelanda y se muestra en un TextBlock denominado phoneNumberOutputTextBlockNZ.
   
@@ -151,7 +151,7 @@ El siguiente ejemplo muestra cómo usar **PhoneNumberFormatter** para dar format
     }
 ```    
 
-Puedes probar el código anterior en tu PC cambiando el país o región en **Configuración** > **Hora e idioma** > **Región e idioma** > **País o región **. Elige un país o región (quizás Nueva Zelanda para confirmar que coinciden los formatos) y vuelve a ejecutar el código. Para los datos de prueba, puedes hacer una búsqueda web del número de teléfono de un negocio en Nueva Zelanda.
+Puedes probar el código anterior en tu PC cambiando el país o región en **Configuración** > **Hora e idioma** > **Región e idioma** > **País o región** . Elige un país o región (quizás Nueva Zelanda para confirmar que coinciden los formatos) y vuelve a ejecutar el código. Para los datos de prueba, puedes hacer una búsqueda web del número de teléfono de un negocio en Nueva Zelanda.
 
 ## <a name="the-users-language-and-cultural-preferences"></a>Las preferencias de idioma y culturales del usuario
 
@@ -165,15 +165,15 @@ En los escenarios en los que quieras ofrecer funcionalidades diferentes solo seg
 * [PhoneNumberFormatting](/uwp/api/windows.globalization.phonenumberformatting?branch=live)
 * [GlobalizationPreferences](/uwp/api/windows.system.userprofile.globalizationpreferences?branch=live)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Calendario, controles de fecha y hora](../controls-and-patterns/date-and-time.md)
-* [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](manage-language-and-region.md)
-* [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Calendario, fecha y controles de tiempo](../controls-and-patterns/date-and-time.md)
+* [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](manage-language-and-region.md)
+* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>Muestras
 
-* [Detalles del calendario y ejemplo matemático](https://go.microsoft.com/fwlink/p/?linkid=231636)
-* [Ejemplo de formato de fecha y hora](https://go.microsoft.com/fwlink/p/?linkid=231618)
-* [Ejemplo de preferencias de globalización](https://go.microsoft.com/fwlink/p/?linkid=231608)
-* [Ejemplo de análisis y formato de números](https://go.microsoft.com/fwlink/p/?linkid=231620)
+* [Ejemplo de matemáticas y detalles del calendario](https://go.microsoft.com/fwlink/p/?linkid=231636)
+* [Formato de ejemplo de fecha y hora](https://go.microsoft.com/fwlink/p/?linkid=231618)
+* [Ejemplo de las preferencias de globalización](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Ejemplo de análisis y formato de número](https://go.microsoft.com/fwlink/p/?linkid=231620)

@@ -1,28 +1,28 @@
 ---
 ms.assetid: 94bb7ad9-cf50-61a8-ad42-48b9bdb9ed36
-title: Página principal (Dev Home)
-description: Proporciona información sobre la página principal de la aplicación Dev Home para Xbox One.
+title: Página Inicio (Dev Home)
+description: Proporciona información sobre la página Inicio de la aplicación Dev Home para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932469"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618420"
 ---
-# <a name="home-page-dev-home"></a>Página principal (Dev Home)
+# <a name="home-page-dev-home"></a>Página Inicio (Dev Home)
    
   
-La página **principal** de Dev Home proporciona acceso rápido a las tareas que se realizan de forma rutinaria en una consola de desarrollo.   
- ![Página principal de Dev Home](images/devhome_home.png)   
+La página **principal** de Dev Home proporciona acceso rápido a las tareas que se realizan de forma habitual en una consola de desarrollo.   
+ ![Página principal de desarrollo principal](images/devhome_home.png)   
   
-La página **principal** contiene los paneles siguientes:   
+La página **Inicio** contiene los siguientes paneles:   
  
-   *  [Quick actions](#ID4EEB)  
+   *  [Acciones rápidas](#ID4EEB)  
    *  [Juegos y aplicaciones](#ID4EPC)  
    *  [Cuentas de prueba](#ID4EQD)  
    *  [Conectar con el explorador](#ID4EFE)  
@@ -32,17 +32,17 @@ La página **principal** contiene los paneles siguientes:
 
    
 
-## <a name="quick-actions"></a>Quick actions  
+## <a name="quick-actions"></a>Acciones rápidas  
    
   
-El panel de **acciones rápidas** contiene los siguientes botones que proporcionan acceso rápido a las acciones realizadas con frecuencia:   
+El panel **Acciones rápidas** contiene los siguientes botones que proporcionan acceso rápido a las acciones que se realizan con frecuencia:   
  
-   *  **Pin mostrar Visual Studio:** Muestra un código que puedes usar para emparejar la consola de desarrollo con la instalación de Visual Studio en el equipo.   
-   *  **Espacio aislado de cambio:** Te permite cambiar qué espacio aislado de la consola está en.   
-   *  **Consola de reinicio:** Reinicia la consola de desarrollo.   
-   *  **Leave Dev Mode:** Devuelve la consola al modo comercial y reinicia la consola.   
-   *  **Principal de inicio:** Inicia la pantalla de inicio de la versión comercial.   
-   *  **Registrar un juego desde una ubicación compartida de red:** Registra un juego desde una ubicación de red compartida.   
+   *  **Mostrar pin de Visual Studio:** Muestra un código que puede utilizar para emparejar la consola de desarrollo con la instalación de Visual Studio en el equipo.   
+   *  **Cambiar el espacio aislado:** Permite cambiar el espacio aislado de la consola es de.   
+   *  **Reinicie la consola:** Reinicia la consola de desarrollo.   
+   *  **Salir del modo de desarrollo:** Devuelve la consola al modo de venta directa y reinicia la consola.   
+   *  **Página principal de inicio:** Inicia la pantalla de inicio de venta directa.   
+   *  **Registrar un juego desde una ubicación de red compartida:** Registra un juego desde una ubicación de red compartida.   
 
   
 <a id="ID4EPC"></a>
@@ -52,12 +52,12 @@ El panel de **acciones rápidas** contiene los siguientes botones que proporcion
 ## <a name="games--apps"></a>Juegos y aplicaciones   
    
   
-El panel de **juegos y aplicaciones** puede usarse para realizar las siguientes acciones:   
+El panel **Juegos y aplicaciones** pude usarse para realizar las siguientes acciones:   
  
-   *  Ver la lista de juegos y aplicaciones instaladas en la consola de desarrollo.  
-   *  Iniciar rápidamente aplicaciones y juegos.  
-   *  Ver el estado PLM de juegos y aplicaciones.  
-   *  Cambiar los Estados PLM desde un menú contextual.  
+   *  Ver la lista de juegos y aplicaciones instalados en la consola de desarrollo.  
+   *  Iniciar rápidamente juegos y aplicaciones.  
+   *  Ver el estado de PLM de juegos y aplicaciones.  
+   *  Cambiar los estados de PLM desde un menú contextual.  
    *  Registrar y ejecutar un título desde un recurso compartido de red remota.
 
   
@@ -68,28 +68,28 @@ El panel de **juegos y aplicaciones** puede usarse para realizar las siguientes 
 ## <a name="test-accounts"></a>Cuentas de prueba  
    
   
-El panel de **cuentas de prueba** puede usarse para realizar las siguientes acciones:   
+El panel **Cuentas de prueba** pude usarse para realizar las siguientes acciones:   
  
-   *  Ver la lista de los usuarios registrados en la consola.  
-   *  Inicia sesión un usuario o cerrar con un solo clic.  
-   *  Agregar usuarios y las cuentas de invitado.  
-   *  Ver los detalles de los usuarios y las cuentas de invitado.  
+   *  Ver la lista de usuarios registrados en la consola.  
+   *  Iniciar o cerrar la sesión de un usuario con un solo clic.  
+   *  Agregar cuentas de usuarios y invitados.  
+   *  Ver detalles de las cuentas de usuarios y de invitados.  
 
   
 <a id="ID4EFE"></a>
 
    
 
-## <a name="connect-with-your-browser"></a>Conectar con el explorador  
+## <a name="connect-with-your-browser"></a>Connect with your browser  
    
   
-El panel de **Conectar con el explorador** muestra la dirección IP y el puerto en el que puedes usar para administrar la consola desde un explorador web.   
+El panel **Connect with your browser** muestra la dirección IP y puerto que puedes usar para administrar la consola desde un explorador web.   
   
 <a id="ID4EPE"></a>
 
    
 
-## <a name="see-also"></a>Ver también  
- [Inicio del desarrollador en la consola (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte también  
+ [Página principal de desarrolladores en la consola (página principal de desarrollo)](dev-home.md)
 
   

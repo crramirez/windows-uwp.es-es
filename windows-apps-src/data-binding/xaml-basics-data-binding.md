@@ -6,17 +6,17 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 21a053934d7391d12f7cd987026524b9ff4c279d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923122"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639990"
 ---
 # <a name="create-data-bindings"></a>Crear enlaces de datos
 
 Imagina que has implementado una interfaz de usuario de buen aspecto rellena con imágenes de marcadores de posición, un texto "lorem ipsum" repetitivo y controles que por ahora no hacen nada. A continuación, querrás conectarlo a datos reales y transformarlo desde un prototipo de diseño en una aplicación viva. 
 
-En este tutorial, aprenderás cómo sustituir tu esquema repetitivo por enlaces de datos y crear otros vínculos directos entre la interfaz de usuario y los datos. También aprenderás a dar formato o convertir los datos para visualizarlos y a mantener sincronizados los datos y la interfaz de usuario. Al completar este tutorial, podrás mejorar la simplicidad y la organización del código XAML y C#, agregando facilidad de mantenimiento y ampliación.
+En este tutorial, aprenderás cómo sustituir tu esquema repetitivo por enlaces de datos y crear otros vínculos directos entre la interfaz de usuario y los datos. También aprenderá a dar formato o convertir los datos para su presentación y mantener la interfaz de usuario y los datos sincronizados. Al completar este tutorial, podrá mejorar la simplicidad y la organización del XAML y C# código, lo que facilita mantener y ampliar.
 
 Empezaremos con una versión simplificada del ejemplo PhotoLab. Esta versión para principiantes incluye los diseños completos de la capa de datos y el XAML básico, dejando muchas funciones para hacer más fácil examinar el código. Este tutorial no crea aplicaciones completas, así que asegúrate de echar un vistazo a la versión final para ver funciones como las animaciones personalizadas y la compatibilidad con teléfonos. Puedes encontrar la versión final en la carpeta raíz del repositorio [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 
 
@@ -35,13 +35,13 @@ La aplicación PhotoLab tiene dos páginas principales:
 **DetailPage.xaml:** Muestra una sola foto después de que se haya seleccionado. Un menú de edición flotante permite modificar la foto, cambiar su nombre y guardarla.
 ![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-replace-the-placeholders"></a>Parte 1: Reemplazar los marcadores de posición
+## <a name="part-1-replace-the-placeholders"></a>1ª parte: Reemplace los marcadores de posición
 
 Aquí crearás enlaces de un solo uso en el XAML de la plantilla de datos para mostrar imágenes reales y metadatos de imágenes en lugar del contenido de los marcadores de posición. 
 
 Los enlaces de un solo uso son para datos de solo lectura, que no cambian, lo que significa que son de alto rendimiento y fáciles de crear, lo que te permite mostrar grandes conjuntos de datos en controles **GridView** y **ListView**. 
 
-**Reemplazar los marcadores de posición por enlaces de un solo uso**
+**Reemplace los marcadores de posición por los enlaces de un solo uso**
 
 1. Abre la carpeta xaml-basics-starting-points\data-binding e inicia el archivo PhotoLab.sln. 
 
@@ -60,7 +60,7 @@ Los enlaces de un solo uso son para datos de solo lectura, que no cambian, lo qu
 
 4. Agrega un valor **x:DataType** a la plantilla. 
 
-    **Después:**
+    **Después de:**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -79,7 +79,7 @@ Los enlaces de un solo uso son para datos de solo lectura, que no cambian, lo qu
            Stretch="Uniform" />
     ```
     
-    **Después:**
+    **Después de:**
     ```xaml
     <Image x:Name="ItemImage" 
            Source="{x:Bind ImageSource}" 
@@ -105,7 +105,7 @@ Los enlaces de un solo uso son para datos de solo lectura, que no cambian, lo qu
     <telerikInput:RadRating Value="3" ... />
     ```
     
-    **Después:**
+    **Después de:**
     ```xaml
     <TextBlock Text="{x:Bind ImageTitle}" ... />
     <StackPanel ... >
@@ -122,7 +122,7 @@ Ejecuta la aplicación para ver el aspecto que va teniendo. No hay más marcador
 > [!Note]
 > Si deseas experimentar más, intenta agregar un nuevo TextBlock a la plantilla de datos y usa el truco de IntelliSense x: Bind para encontrar una propiedad para mostrar. 
 
-## <a name="part-2-use-binding-to-connect-the-gallery-ui-to-the-images"></a>Parte 2: usar los enlaces para conectar la interfaz de usuario de la galería a las imágenes
+## <a name="part-2-use-binding-to-connect-the-gallery-ui-to-the-images"></a>2ª parte: Usar el enlace para conectarse a la Galería de la interfaz de usuario a las imágenes
 
 Aquí, crearás de enlaces de una vez en la página XAML, para conectar la vista de galería a la colección de imágenes, reemplazando el código de procedimiento existente que realiza esta tarea en el código subyacente. También crearás un botón **Eliminar** para ver cómo cambia la vista de galería cuando se quitan las imágenes de la colección. Al mismo tiempo, aprenderás cómo enlazar eventos a controladores de eventos, para una mayor flexibilidad que la que ofrecen los controladores de eventos tradicionales. 
 
@@ -132,7 +132,7 @@ Las expresiones **x: Bind** de fuera de las plantillas de datos siempre están e
 
 En el ejemplo PhotoLab, un uso de un enlace como este es conectar el control principal **GridView** directamente a la colección de imágenes, en lugar de hacerlo en el código subyacente. Más adelante, podrás ver otros ejemplos. 
 
-**Enlazar el control principal GridView a la colección de imágenes**
+**Enlazar el control GridView principal a la colección de imágenes**
 
 1. En MainPage.xaml.cs, busca el método **OnNavigatedTo** y quita el código que establece **ItemsSource**.
 
@@ -141,7 +141,7 @@ En el ejemplo PhotoLab, un uso de un enlace como este es conectar el control pri
     ImageGridView.ItemsSource = Images;
     ```
 
-    **Después:**
+    **Después de:**
     ```c#
     // Replaced with XAML binding:
     // ImageGridView.ItemsSource = Images;
@@ -154,13 +154,13 @@ En el ejemplo PhotoLab, un uso de un enlace como este es conectar el control pri
     <GridView x:Name="ImageGridView" 
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <GridView x:Name="ImageGridView" 
               ItemsSource="{x:Bind Images}" 
     ```
 
-    La propiedad **Imágenes** es de tipo **ObservableCollection\<ImageFileInfo\>**, de modo que los elementos individuales mostrados en la **GridView** son del tipo **ImageFileInfo**. Esto coincide con el valor **x:DataType** descrito en la parte 1. 
+    El **imágenes** propiedad es de tipo **ObservableCollection\<ImageFileInfo\>**, por lo que muestran los elementos individuales en el **GridView** son de tipo **ImageFileInfo**. Esto coincide con el valor **x:DataType** descrito en la parte 1. 
 
 Todos los enlaces que hemos visto hasta ahora son enlaces de una vez, de solo lectura, que es el comportamiento predeterminado de expresiones **x:Bind** sencillas. Los datos se cargan solo durante la inicialización, lo que conviene para enlaces de alto rendimiento: perfectos para dar soporte a varias vistas complejas de grandes conjuntos de datos. 
 
@@ -171,9 +171,9 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     = new ObservableCollection<ImageFileInfo>();
 ```
 
-El valor de la propiedad **Imágenes** nunca cambia pero, dado que la propiedad es de tipo **ObservableCollection\<T\>**, el *contenido* de la colección puede cambiar y el enlace notará automáticamente los cambios y actualizará la interfaz de usuario. 
+El **imágenes** nunca cambia el valor de propiedad, pero dado que la propiedad es de tipo **ObservableCollection\<T\>**, el *contenido* de la puede cambiar la colección, y el enlace automáticamente observará los cambios y actualizar la interfaz de usuario. 
 
-Para probar esto, vamos a agregar temporalmente un botón que elimina la imagen seleccionada actualmente. Este botón no está en la versión final porque seleccionar una imagen te llevaría a una página de detalles. Sin embargo, el comportamiento de **ObservableCollection\<T\>** sigue siendo importante en la muestra final de PhotoLab, porque el código XAML se inicializa en el constructor de página (a través de la llamada al método **InitializeComponent**), pero la colección **Images** se rellena más adelante en el método **OnNavigatedTo**. 
+Para probar esto, vamos a agregar temporalmente un botón que elimina la imagen seleccionada actualmente. Este botón no está en la versión final porque seleccionar una imagen te llevaría a una página de detalles. Sin embargo, el comportamiento de **ObservableCollection\<T\>**  sigue siendo importante en el ejemplo PhotoLab final porque el XAML se inicializa en el constructor de la página (a través de la  **InitializeComponent** llamada al método), pero la **imágenes** rellena colección más adelante en el **OnNavigatedTo** método. 
 
 **Agregar un botón Eliminar**
 
@@ -198,20 +198,20 @@ Para probar esto, vamos a agregar temporalmente un botón que elimina la imagen 
 
     Este método simplemente elimina la imagen seleccionada de la colección **Imágenes**. 
 
-Ahora ejecuta la aplicación y usa el botón para eliminar unas pocas imágenes. Como podrás ver, la interfaz de usuario se actualiza automáticamente, gracias a los enlaces de datos y el tipo **ObservableCollection\<T\>**. 
+Ahora ejecuta la aplicación y usa el botón para eliminar unas pocas imágenes. Como puede ver, la interfaz de usuario se actualiza automáticamente, gracias al enlace de datos y el **ObservableCollection\<T\>**  tipo. 
 
 > [!Note]
 > Como desafío, intenta agregar dos botones que muevan la imagen seleccionada hacia arriba o hacia abajo de la lista y, a continuación, realiza un x:Bind entre sus eventos Clic y dos nuevos métodos similares a DeleteSelectedImage.
  
-## <a name="part-3-set-up-the-zoom-slider"></a>Parte 3: configurar el control deslizante de zoom 
+## <a name="part-3-set-up-the-zoom-slider"></a>Parte 3: Configurar el control deslizante del zoom 
 
 En esta parte, crearás enlaces unidireccionales desde un control de la plantilla de datos al control deslizante de zoom, que está fuera de la plantilla. También aprenderás que puedes usar el enlace de datos con muchas propiedades de control, no solo con las más obvias, como **TextBlock.Text** e **Image.Source**. 
 
-**Enlazar la plantilla de datos de imagen al control deslizante de zoom**
+**Enlazar la plantilla de datos de imagen para el control deslizante del zoom**
 
 * Busca la **DataTemplate** denominada **ImageGridView_DefaultItemTemplate** y reemplaza los valores de **Altura** y **Anchura** del control **Rejilla** de la parte superior de la plantilla.
 
-    **Antes**
+    **Antes de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -220,7 +220,7 @@ En esta parte, crearás enlaces unidireccionales desde un control de la plantill
               Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **Después**
+    **Después de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -249,13 +249,13 @@ Ejecuta la aplicación y usa el control deslizante para cambiar las dimensiones 
 > [!NOTE]
 > Como desafío, intenta enlazar otras propiedades de la interfaz de usuario a la propiedad **Valor** del control deslizante de zoom, o a otros controles deslizantes que agregues después del control deslizante de zoom. Por ejemplo, puedes enlazar la propiedad **FontSize** del **TitleTextBlock** a un nuevo control deslizante con un valor predeterminado de **24**. Asegúrate de establecer unos valores mínimos y máximos razonables.
 
-## <a name="part-4-improve-the-zoom-experience"></a>Parte 4: mejorar la experiencia de zoom 
+## <a name="part-4-improve-the-zoom-experience"></a>Parte 4: Mejorar la experiencia de zoom 
 
 En esta parte, agregarás una propiedad personalizada **ItemSize** al código subyacente y crearás enlaces unidireccionales desde la plantilla de imagen a la nueva propiedad. El valor **ItemSize** se actualizará con el control deslizante de zoom y otros factores como la alternancia **Ajustar a la pantalla** y el tamaño de ventana, con lo que se obtendrá una experiencia más refinada. 
 
 A diferencia de las propiedades de controles integrados, tus propiedades personalizadas no actualizan automáticamente la interfaz de usuario, incluso con enlaces unidireccionales y bidireccionales. Funcionan bien con enlaces de una **vez**, pero si quieres que los cambios de propiedad realmente aparezcan en la interfaz de usuario, deberás realizar algún trabajo. 
 
-**Crear la propiedad ItemSize que actualice la interfaz de usuario**
+**Crear la propiedad ItemSize por lo que actualiza la interfaz de usuario**
 
 1. En MainPage.xaml.cs, cambia la firma de la clase **MainPage** para que implemente la interfaz **INotifyPropertyChanged**.
 
@@ -264,7 +264,7 @@ A diferencia de las propiedades de controles integrados, tus propiedades persona
     public sealed partial class MainPage : Page
     ```
 
-    **Después:**
+    **Después de:**
     ```c#
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     ```
@@ -303,7 +303,7 @@ A diferencia de las propiedades de controles integrados, tus propiedades persona
 
 4. En MainPage.xaml, busca la **DataTemplate** denominada **ImageGridView_DefaultItemTemplate** y reemplaza los valores de **Altura** y **Anchura** del control **Rejilla** de la parte superior de la plantilla. (Si hiciste el enlace de control a control en la parte anterior de este tutorial, los únicos cambios son reemplazar **Valor** con **ItemSize** y **ZoomSlider** con **página**. ¡Asegúrate de hacer esto tanto para Altura como para Anchura!)
 
-    **Antes**
+    **Antes de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -312,7 +312,7 @@ A diferencia de las propiedades de controles integrados, tus propiedades persona
             Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **Después**
+    **Después de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -323,7 +323,7 @@ A diferencia de las propiedades de controles integrados, tus propiedades persona
 
 Ahora que la interfaz de usuario puede responder a los cambios de **ItemSize**, necesitas realmente realizar algunos cambios. Como se mencionó anteriormente, el valor **ItemSize** se calcula a partir del estado actual de diversos controles de interfaz de usuario, pero el cálculo debe realizarse siempre que estos controles cambien el estado. Para ello, usarás el enlace de eventos, para que determinados cambios de la interfaz de usuario llamen a un método auxiliar que actualiza **ItemSize**. 
 
-**Actualizar el valor de la propiedad ItemSize**
+**Actualice el valor de propiedad ItemSize**
 
 1. Agrega el método **DetermineItemSize** a MainPage.xaml.cs.
 
@@ -375,7 +375,7 @@ Ahora que la interfaz de usuario puede responder a los cambios de **ItemSize**, 
     <Page x:Name="page"  
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <Page x:Name="page" 
           SizeChanged="{x:Bind DetermineItemSize}"
@@ -388,7 +388,7 @@ Ahora que la interfaz de usuario puede responder a los cambios de **ItemSize**, 
     <Slider x:Name="ZoomSlider"
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <Slider x:Name="ZoomSlider"
             ValueChanged="{x:Bind DetermineItemSize}"
@@ -401,7 +401,7 @@ Ahora que la interfaz de usuario puede responder a los cambios de **ItemSize**, 
     <ToggleSwitch x:Name="FitScreenToggle"
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <ToggleSwitch x:Name="FitScreenToggle"
                   Toggled="{x:Bind DetermineItemSize}"
@@ -415,7 +415,7 @@ Ejecuta la aplicación y usa el control deslizante de zoom y la alternancia **Aj
 > Como desafío, intenta agregar un **TextBlock** después de **ZoomSlider** y enlazar la propiedad **Texto** a la propiedad **ItemSize**. Dado que no está en una plantilla de datos, puedes usar **x:Bind** en lugar de **Enlace** al igual que en los anteriores enlaces **ItemSize**.  
 }
 
-## <a name="part-5-enable-user-edits"></a>Parte 5: Habilitar ediciones del usuario
+## <a name="part-5-enable-user-edits"></a>Parte 5: Habilitar las modificaciones del usuario
 
 Aquí, crearás enlaces bidireccionales para permitir que los usuarios actualicen valores, como el título de la imagen, la clasificación y varios efectos visuales. 
 
@@ -423,19 +423,19 @@ Para lograrlo, actualizarás la **DetailPage** existente, que proporciona un vis
 
 En primer lugar, sin embargo, deberás adjuntar la **DetailPage** para que la aplicación vaya a ella cuando el usuario haga clic en una imagen de la vista de galería.
 
-**Adjuntar la DetailPage**
+**Adjuntar el DetailPage**
 
 1. En MainPage.xaml, busca la **GridView** denominada **ImageGridView** y agrega un valor **ItemClick**. 
 
     > [!TIP] 
-    > Si escribes el cambio que viene a continuación, en lugar de copiar y pegar, verás una ventana emergente de IntelliSense que diga "\<Controlador de nuevo evento\>". Si presionas la tecla tabulador, se rellenará el valor con un nombre de controlador de método predeterminado y automáticamente se cerrará el método mostrado en el siguiente paso. A continuación, puedes presionar F12 para navegar al método en el código subyacente. 
+    > Si escribe en el cambio siguiente en lugar de copiar y pegar, verá una ventana emergente de IntelliSense que dice "\<nuevo controlador de eventos\>". Si presionas la tecla tabulador, se rellenará el valor con un nombre de controlador de método predeterminado y automáticamente se cerrará el método mostrado en el siguiente paso. A continuación, puedes presionar F12 para navegar al método en el código subyacente. 
 
     **Antes:**
     ```xaml
     <GridView x:Name="ImageGridView"
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <GridView x:Name="ImageGridView"
               ItemClick="ImageGridView_ItemClick"
@@ -463,7 +463,7 @@ Como puedes ver, el cuadro de texto de título muestra el título y te permite e
 
 Todos los controles ya están enlazados con las expresiones **x:Bind** sencillas que se trataron en la parte 1. Si recuerdas, esto significa que todos son enlaces de una vez, lo que explica por qué no se registran los cambios en los valores. Para corregir esto, todo lo que tenemos que hacer es convertirlos en enlaces bidireccionales. 
 
-**Hacer que los controles de edición sean interactivos**
+**Hacer que los controles de edición interactiva**
 
 1. En DetailPage.xaml, busca el **TextBlock** denominado **TitleTextBlock** y el control **RadRating** después, y actualiza sus expresiones **x:Bind** para incluir **Mode=TwoWay**.
 
@@ -476,7 +476,7 @@ Todos los controles ya están enlazados con las expresiones **x:Bind** sencillas
                             ... >
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <TextBlock x:Name="TitleTextBlock" 
                Text="{x:Bind item.ImageTitle, Mode=TwoWay}" 
@@ -502,7 +502,7 @@ Como los enlaces unidireccionales tratados anteriormente, estos enlaces bidirecc
 
 Ejecuta la aplicación y prueba los controles de edición. Como puedes ver, cuando realizas un cambio, ahora afecta a los valores de imagen y los cambios persisten al volver a la página principal. 
 
-## <a name="part-6-format-values-through-function-binding"></a>Parte 6: valores de formato mediante el enlace de función
+## <a name="part-6-format-values-through-function-binding"></a>Parte 6: Dar formato a valores a través del enlace de función
 
 Queda un último problema. Cuando mueves los controles deslizantes de efecto, siguen sin cambiar las etiquetas junto a ellos. 
 
@@ -510,9 +510,9 @@ Queda un último problema. Cuando mueves los controles deslizantes de efecto, si
 
 La parte final de este tutorial es para agregar enlaces que dan formato a los valores de control deslizante a mostrar.
 
-**Enlazar las etiquetas de control deslizante de efecto y dar formato a los valores de pantalla**
+**Enlazar las etiquetas del control deslizante el efecto y dar formato a los valores para mostrar**
 
-1. Busca la **TextBlock** después del control deslizante **Exposición** y sustituye el valor **Texto** por la expresión de enlace que se muestra aquí.
+1. Buscar el **TextBlock** después de la **exposición** control deslizante y reemplace el **texto** valor con la expresión de enlace que se muestra aquí.
 
     **Antes:**
     ```xaml
@@ -520,7 +520,7 @@ La parte final de este tutorial es para agregar enlaces que dan formato a los va
     <TextBlock ... Text="0.00" />
     ```
 
-    **Después:**
+    **Después de:**
     ```xaml
     <Slider Header="Exposure" ... />
     <TextBlock ... Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />
@@ -561,7 +561,7 @@ Ahora, cuando ejecutas la aplicación, todo funciona, incluidas las etiquetas de
 
 Este tutorial te habrá dado una idea del enlace de datos y te habrá permitido ver algunas de las funciones disponibles. Una palabra de advertencia antes de resumir: no todo el contenido se puede enlazar y, a veces los valores con que intentas conectar no son compatibles con las propiedades que intentas enlazar. Hay una gran cantidad de flexibilidad en el enlace, pero no funcionará en todas las situaciones.
 
-Un ejemplo de un problema que no contempla el enlace es cuando un control no tiene propiedades adecuadas a donde enlazar, como la función de zoom de página de detalles. Este control deslizante de zoom debe interactuar con el **ScrollViewer** que muestra la imagen, pero **ScrollViewer** solo puede actualizarse a través de su método **ChangeView**. En este caso, usamos controladores de eventos convencionales para mantener el **ScrollViewer** y el control deslizante de zoom en sincronización; consulta los métodos **DetailPage** **ZoomSlider_ValueChanged** y **MainImageScroll_ViewChanged** para obtener más información.
+Un ejemplo de un problema que no contempla el enlace es cuando un control no tiene propiedades adecuadas a donde enlazar, como la función de zoom de página de detalles. Este control deslizante de zoom debe interactuar con el **ScrollViewer** que muestra la imagen, pero **ScrollViewer** solo puede actualizarse a través de su método **ChangeView**. En este caso, usamos los controladores de eventos convencional para mantener la **ScrollViewer** y el control deslizante del zoom en sincronizar; vea la **DetailPage** **ZoomSlider_ValueChanged** y **MainImageScroll_ViewChanged** métodos para obtener más información.
 
 No obstante, el enlace es una forma eficaz y flexible de simplificar el código y separar la lógica de interfaz de usuario de la lógica de datos. Esto hará que te resulte mucho más fácil ajustar cualquier lado de esta división a la vez que se reduce el riesgo de introducir errores en el otro lado. 
 
@@ -595,5 +595,5 @@ Como habrás notado, si cambias el nivel de zoom en la página de detalles, se r
     
 Tienes toda la información que necesitas en este tutorial pero, si necesitas más información, los documentos de enlace de datos están a solo un clic de distancia. Comienza por aquí:
 
-+ [Extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
++ [extensión de marcado {x: Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
 + [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)

@@ -1,19 +1,19 @@
 ---
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: Usa este método en la API de envío de Microsoft Store para actualizar un envío ya existente de un paquete piloto.
-title: Actualizar un envío de paquete piloto
+title: Actualización de un envío de paquete piloto
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto, update, actualizar
 ms.localizationpriority: medium
 ms.openlocfilehash: fe1e88383d6562526d77aea8c75891216cd75ade
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934404"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639030"
 ---
-# <a name="update-a-package-flight-submission"></a>Actualizar un envío de paquete piloto
+# <a name="update-a-package-flight-submission"></a>Actualización de un envío de paquete piloto
 
 
 Usa este método en la API de envío de Microsoft Store para actualizar un envío ya existente de un paquete piloto. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-a-flight-submission.md) para su ingesta y publicación.
@@ -25,8 +25,8 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un envío de paquete piloto para una de las aplicaciones. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método [crea un envío de paquete piloto](create-a-flight-submission.md) .
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Crear una presentación de vuelos de paquete para una de las aplicaciones. Puede hacerlo en el centro de partners, o puede hacerlo mediante el uso de la [crear una presentación de vuelo paquete](create-a-flight-submission.md) método.
 
 ## <a name="request"></a>Solicitud
 
@@ -41,16 +41,16 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. Id. de la Store de la aplicación para la cual quieres actualizar un envío de paquete piloto. Para obtener más información sobre el identificador de la Store, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | cadena | Obligatorio. Id. del paquete piloto para el cual quieres actualizar un envío. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.  |
-| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
+| applicationId | string | Obligatorio. Id. de la Tienda de la aplicación para la cual quieres actualizar un envío de paquete piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | string | Obligatorio. Id. del paquete piloto para el cual quieres actualizar un envío. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un vuelo en el que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de vuelos en el centro de partners.  |
+| submissionId | string | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -59,11 +59,11 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightPackages           | array  | Contiene los objetos que proporcionan detalles acerca de cada paquete del envío. Para obtener más información acerca de los valores que se encuentran en el cuerpo de respuesta, consulta [Flight package resource (Recurso del paquete piloto)](manage-flight-submissions.md#flight-package-object). Al llamar a este método para actualizar un envío de aplicación, solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de esos objetos son necesarios en el cuerpo de la solicitud. Los demás valores se encarga de rellenar el centro de partners. |
-| packageDeliveryOptions    | objeto  | Contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria del envío. Para obtener más información, consulta [Package delivery options object](manage-flight-submissions.md#package-delivery-options-object) (Objeto de opciones de entrega de paquete).  |
-| targetPublishMode           | cadena  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| flightPackages           | array  | Contiene los objetos que proporcionan detalles acerca de cada paquete del envío. Para obtener más información acerca de los valores que se encuentran en el cuerpo de respuesta, consulta [Flight package resource (Recurso del paquete piloto)](manage-flight-submissions.md#flight-package-object). Al llamar a este método para actualizar un envío de aplicación, solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de esos objetos son necesarios en el cuerpo de la solicitud. Los demás valores se rellenan con el centro de partners. |
+| packageDeliveryOptions    | object  | Contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria del envío. Para obtener más información, consulta [Package delivery options object](manage-flight-submissions.md#package-delivery-options-object) (Objeto de opciones de entrega de paquete).  |
+| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
-| notesForCertification           | string  |  Proporciona información adicional de los evaluadores de certificación como, por ejemplo, las credenciales de la cuenta de prueba y los pasos para obtener acceso y comprobar las características. Para obtener más información, consulta [Notes for certification (Notas de certificación)](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
+| notesForCertification           | string  |  Proporciona información adicional de los evaluadores de certificación como, por ejemplo, las credenciales de la cuenta de prueba y los pasos para obtener acceso y comprobar las características. Para obtener más información, consulta [Notas para la certificación](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -149,15 +149,15 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo actualizar el envío del paquete piloto porque la solicitud no es válida. |
-| 409  | No se pudo actualizar el envío de paquete piloto debido al estado actual de la aplicación o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo actualizar el envío de vuelos de paquete debido al estado actual de la aplicación o la aplicación usa una característica del centro de partners que está [no compatible actualmente con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
-* [Obtener un envío de paquete piloto](get-a-flight-submission.md)
-* [Crear un envío de paquete piloto](create-a-flight-submission.md)
-* [Confirmar un envío de paquete piloto](commit-a-flight-submission.md)
-* [Delete a package flight submission (Eliminar un envío de paquete piloto)](delete-a-flight-submission.md)
-* [Get the status of a package flight submission (Obtener el estado de un envío de paquete piloto)](get-status-for-a-flight-submission.md)
+* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de vuelos de paquete](manage-flight-submissions.md)
+* [Obtener el envío de un vuelo de paquetes](get-a-flight-submission.md)
+* [Crear una presentación de vuelos de paquete](create-a-flight-submission.md)
+* [Confirme el envío de un vuelo de paquetes](commit-a-flight-submission.md)
+* [Eliminar el envío de un vuelo de paquetes](delete-a-flight-submission.md)
+* [Obtener el estado de envío de vuelo de un paquete](get-status-for-a-flight-submission.md)

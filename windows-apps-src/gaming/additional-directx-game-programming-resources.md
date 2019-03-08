@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, programación
 ms.localizationpriority: medium
 ms.openlocfilehash: 84d5068c2f474af22d789dea6428f911087f9ff0
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639220"
 ---
 # <a name="game-programming-resources"></a>Recursos de programación de juegos
 
@@ -29,48 +29,48 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 ## <a name="game-design-guidance"></a>Guía de diseño de juegos
 
 
--   [Índice de las directrices para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Instrucciones de índice de experiencia de usuario para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>Blogs
 
 
 -   [Juegos para Windows y el SDK de DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288873)
--   [Blog para desarrolladores de DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
+-   [Blog de desarrolladores de DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
 -   [Blog de Shawn Hargreaves]( https://go.microsoft.com/fwlink/p/?LinkID=288872) (información sobre juegos XNA).
 
 ## <a name="toolkits"></a>Kits de herramientas
 
 
--   [Kit de herramientas de DirectX](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
+-   [Kit de herramientas DirectX](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
 -   [Biblioteca de procesamiento de texturas de DirectXTex](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   [Diagnóstico de gráficos](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx) de Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D): Una API de Windows Runtime fácil de usar para la representación de elementos gráficos 2D de modo inmediato con aceleración de GPU.
--   [ANGLE para Microsoft Store](https://go.microsoft.com/fwlink/p/?linkid=618387) : ejecuta contenido OpenGL ES en Windows mediante la traducción de llamadas de API de OpenGL ES a llamadas de API de DirectX 11.
+-   [ÁNGULO para Microsoft Store](https://go.microsoft.com/fwlink/p/?linkid=618387) -contenido ejecuciones OpenGL ES en Windows mediante la traducción de la API de OpenGL ES que las llamadas a las llamadas de API de DirectX 11.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos de las sesiones de GDC 2015 sobre el desarrollo de juegos
 
 
--   [The Future of Gaming Across the Microsoft Ecosystem](https://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) (El futuro de los juegos en el ecosistema de Microsoft), por Phil Spencer
--   [Developing Games for Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) (Desarrollo de juegos para Windows10): Chris Tector, Don Xbox
--   [Advanced DirectX 12 Graphics and Performance](https://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) (Rendimiento y gráficos avanzados de DirectX 12): Max McMullen
--   [Gaming Consumer Experience on Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) (Experiencia del consumidor de juegos en Windows10): Bill Schiefelbein
+-   [The Future of Gaming Across the Microsoft Ecosystem](https://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) (El futuro de los juegos en el ecosistema de Microsoft): Phil Spencer
+-   [Desarrollo de juegos para Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10): Chris Tector, Don Xbox
+-   [Advanced DirectX 12 Graphics and Performance](https://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) (Rendimiento y elementos gráficos avanzados de DirectX12): Max McMullen
+-   [Experiencia de juego del consumidor en Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10): Bill Schiefelbein
 -   [New Opportunities for Independent Developers](https://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) (Nuevas oportunidades para los desarrolladores independientes): Chris Charla
--   [Developing with Xbox Live for Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) (Desarrollo con Xbox Live para Windows 10): Vijay Gajjala, Brian Tyler
--   [Xbox Live Multiplayer: Introducing services for cross-platform matchmaking and gameplay](https://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) (Modo multijugador de Xbox Live: Introducción a los servicios de matchmaking y juego entre plataformas): Ferdinand Schober
--   [Fable Legends: Cross-device Gameplay with Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) (Fable Legends: Juego entre dispositivos con Xbox Live): Raymond Arifianto, Julian Davis
+-   [Developing with Xbox Live for Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) (Desarrollo con Xbox Live para Windows 10): Vijay Gajjala, Brian Tyler
+-   [Multijugador de Xbox Live: Introducción a servicios para contactos multiplataforma y juegos](https://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) – Ferdinand Schober
+-   [Leyendas Fable: Juego de dispositivo cruzado con Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) – Raymond Arifianto, juliano Davis
 -   [Best Practices for Leveraging Cloud-Based User Stats and Achievements in Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) (Prácticas recomendadas para aprovechar las estadísticas y los logros del usuario basados en la nube en Xbox Live): Cierra McDonald
--   [Solve the Tough Graphics Problems with Your Game Using DirectX Tools](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools) (Soluciona los problemas de gráficos rígidos de los juegos mediante el uso de herramientas de DirectX): Rudolph Balaz, Rong Lu, Jason Strayer
--   [Better Power, Better Performance: Your Game on DirectX 12](https://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) (Más eficacia, mayor rendimiento: Tu juego en DirectX 12): Bennett Sorbo
--   [Sustained Gaming Performance in multi-core mobile devices](https://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices) (Rendimiento de los juegos mantenido en dispositivos móviles de varios núcleos): Julian Calinov
--   [Designing Games for a Windows Core World](https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) (Diseño de juegos para un mundo de Windows Core): Todd Williams, Shai Hinitz
--   [PC Games for Windows10](https://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) (Juegos de PC para Windows10): Chuck Walbourn
+-   [Soluciona los problemas de gráficos rígidos de los juegos mediante el uso de herramientas de DirectX](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools): Rudolph Balaz, Rong Lu, Jason Strayer
+-   [Mejor eficacia, mejor rendimiento: Su juego en DirectX 12](https://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) – Bennett Sorbo
+-   [Rendimiento de los juegos mantenido en dispositivos móviles de varios núcleos](https://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices): Julian Calinov
+-   [Designing Games for a Windows Core World](https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) (Diseño de juegos para el mundo esencial de Windows), por Todd Williams, Shai Hinitz
+-   [PC Games for Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) (Juegos de PC para Windows 10): Chuck Walbourn
 
 ## <a name="build-2015-session-videos"></a>//vídeos de sesiones de build 2015
 
 
--   [Introducing Win2D: DirectX-Powered Drawing in C#](https://channel9.msdn.com/Events/Build/2015/2-631) (Presentación de Win2D: Dibujo con tecnología DirectX en C#): Simon Tao
--   [ANGLE: Running OpenGL ES 2.0 Graphics Code on Windows](https://channel9.msdn.com/Events/Build/2015/3-686) (ANGLE: Ejecución de código de gráficos de OpenGL ES 2.0 en Windows): Tony Balogh
--   [Advanced DirectX12 Graphics and Performance](https://channel9.msdn.com/Events/Build/2015/3-673) (Gráficos avanzados de DirectX12 y rendimiento): Max McMullen
+-   [Introducción a Win2D: Dibujar con tecnología de DirectX en C# ](https://channel9.msdn.com/Events/Build/2015/2-631) – Simon Tao
+-   [ÁNGULO DE: Ejecuta el código de OpenGL ES 2.0 gráficos en Windows](https://channel9.msdn.com/Events/Build/2015/3-686) – Tony Balogh
+-   [Advanced DirectX12 Graphics and Performance](https://channel9.msdn.com/Events/Build/2015/3-673) (Rendimiento y elementos gráficos avanzados de DirectX12): Max McMullen
 
 ## <a name="other-resources"></a>Otros recursos
 

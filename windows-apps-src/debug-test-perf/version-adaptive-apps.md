@@ -1,22 +1,22 @@
 ---
 title: Aplicaciones adaptables para versiones
-description: Aprende a sacar partido de las nuevas API mientras mantienes la compatibilidad con versiones anteriores
+description: Aprende a aprovechar las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 ms.date: 09/17/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944956"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631660"
 ---
-# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables para versiones: Usa las nuevas API mientras mantienes la compatibilidad con versiones anteriores
+# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables de versión: Usar las nuevas API y mantener la compatibilidad con versiones anteriores
 
-Cada versión del SDK de Windows10 agrega nuevas y emocionantes funcionalidades, y querrás aprovecharlas. Sin embargo, no todos los clientes actualizarán sus dispositivos a la última versión de Windows10 al mismo tiempo y quieres asegurarte de que tu aplicación funciona en la gama más amplia posible de dispositivos. Aquí te mostramos cómo diseñar la aplicación para que se ejecute en versiones anteriores de Windows10, pero que también aproveche las ventajas de las nuevas funciones cuando la aplicación se ejecute en un dispositivo que tenga instalada la actualización más reciente.
+Cada versión del SDK de Windows 10 agrega nuevas y emocionantes funcionalidades, y querrás aprovecharlas. Sin embargo, no todos los clientes actualizarán sus dispositivos a la última versión de Windows 10 al mismo tiempo y quieres asegurarte de que tu aplicación funciona en la gama más amplia posible de dispositivos. Aquí te mostramos cómo diseñar la aplicación para que se ejecute en versiones anteriores de Windows 10, pero que también aproveche las ventajas de las nuevas funciones cuando la aplicación se ejecute en un dispositivo que tenga instalada la actualización más reciente.
 
-Es necesario llevar a cabo 3 pasos para asegurarse de que la aplicación admite la gama más amplia posible de dispositivos Windows10.
+Es necesario llevar a cabo 3 pasos para asegurarse de que la aplicación admite la gama más amplia posible de dispositivos Windows 10.
 
 - En primer lugar, configura el proyecto de Visual Studio para orientarlo a las API más recientes. Esto afecta a lo que sucede cuando se compila la aplicación.
 - En segundo lugar, realiza comprobaciones en tiempo de ejecución para asegurarte de llamar únicamente a las API que estén presentes en el dispositivo en el que se ejecute la aplicación.
@@ -26,8 +26,8 @@ Es necesario llevar a cabo 3 pasos para asegurarse de que la aplicación admite 
 
 El primer paso para admitir varias versiones de Windows 10 es especificar las versiones *de destino* y *mínimas* del sistema operativo/SDK que se admiten en el proyecto de Visual Studio.
 
-- *Destino*: es la versión del SDK en la que Visual Studio compila el código de la aplicación y ejecuta todas las herramientas. Todas las API y todos los recursos de esta versión del SDK están disponibles en el código de la aplicación en el momento de la compilación.
-- *Mínima*: es la versión del SDK que admite la versión más antigua del sistema operativo en la que se puede ejecutar la aplicación (y que la Tienda implementará) y la versión para la que Visual Studio compila el código de marcado de la aplicación. 
+- *Destino*: La versión del SDK que Visual Studio compila el código de aplicación y ejecutar todas las herramientas contra. Todas las API y todos los recursos de esta versión del SDK están disponibles en el código de la aplicación en el momento de la compilación.
+- *Mínimo*: La versión del SDK que admite la versión de SO más antigua que la aplicación se puede ejecutar en (y se implementará en el almacén) y la versión de Visual Studio compila el código de marcado de la aplicación contra. 
 
 Durante el tiempo de ejecución, la aplicación se ejecutará para la versión del sistema operativo para la que se implemente, por lo que la aplicación generará excepciones si usas recursos o llamas a API que no estén disponibles en esa versión. Más adelante en este artículo te mostramos cómo usar las comprobaciones en tiempo de ejecución para llamar a las API correctas.
 
@@ -60,7 +60,7 @@ Como referencia, la siguiente tabla muestra los números de compilación de cada
 
 Puedes descargar cualquier versión publicada del SDK desde [Windows SDK y el archivo del emulador](https://developer.microsoft.com/downloads/sdk-archive). Puedes descargar el Windows Insider Preview SDK más reciente desde la sección para desarrolladores del sitio [Windows Insider](https://insider.windows.com/Home/BuildWithWindows).
 
- Para obtener más información acerca de las actualizaciones de Windows 10, consulta la [información de versión de Windows 10](https://technet.microsoft.com/windows/release-info). Para obtener información importante acerca de Windows 10 admiten el ciclo de vida, consulte la [hoja de datos de ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+ Para obtener más información acerca de las actualizaciones de Windows 10, consulte [información de versión de Windows 10](https://technet.microsoft.com/windows/release-info). Para obtener información importante sobre el ciclo de vida de soporte técnico de Windows 10, consulte el [hoja de información del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="perform-api-checks"></a>Realizar comprobaciones de API
 
@@ -83,7 +83,7 @@ Los tipos relacionados lógicamente se agrupan en un contrato de API y, a partir
 El contrato de API más grande y más comúnmente usado es el **Windows.Foundation.UniversalApiContract**. Contiene la mayoría de las API en la Plataforma universal de Windows. La documentación de los [contratos de API y el SDK de extensión de la familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/) describe la variedad de contratos de API disponibles. Verás que la mayoría de ellos representa un conjunto de API relacionados funcionalmente.
 
 > [!NOTE]
-> Si tienes una vista previa del Kit de desarrollo de software de Windows (SDK) que no está documentada todavía, también podrás encontrar información sobre el soporte de contrato de API en el archivo de 'Platform.xml' ubicado en la carpeta de instalación de SDK en ‘\(Program Files (x86))\Windows Kits\10\Platforms\<platform>\<SDK version>\Platform.xml’.
+> Si tiene una vista previa de Windows Software Development Kit (SDK) instalado que no está documentada todavía, también puede encontrar información sobre la compatibilidad de contrato de API en el archivo 'Platform.xml' ubicado en la carpeta de instalación de SDK en '\(archivos de programa (x86)) \ Windows Kits\10\Platforms\<plataforma >\<versión SDK > \Platform.xml'.
 
 ### <a name="version-adaptive-code-and-conditional-xaml"></a>Código adaptativo para versiones y XAML condicional
 
@@ -104,6 +104,6 @@ Para obtener más información sobre la depuración remota, consulta [Implementa
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Qué es una aplicación para UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [¿Qué es una aplicación para UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [Detectar dinámicamente las características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo de compilación de 2015)

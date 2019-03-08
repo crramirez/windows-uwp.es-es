@@ -1,19 +1,19 @@
 ---
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: Usa este método en la API de envío de Microsoft Store para actualizar un envío de complemento ya existente.
-title: Actualizar un envío de complemento
+title: Actualización de un envío de complemento
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, update, actualizar, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: fd0bb8df9b9fc36216da72e4ad01ebd2e650ad1a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939063"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620620"
 ---
-# <a name="update-an-add-on-submission"></a>Actualizar un envío de complemento
+# <a name="update-an-add-on-submission"></a>Actualización de un envío de complemento
 
 
 Usa este método en la API de envío de Microsoft Store para actualizar un envío de complemento (también conocido como producto desde la aplicación o IAP) ya existente. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-an-add-on-submission.md) para su ingesta y publicación.
@@ -25,8 +25,8 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crear un envío de complemento para una de las aplicaciones. Puedes hacerlo en el centro de partners, o puedes hacerlo mediante el método de [crear un envío de complemento](create-an-add-on-submission.md) .
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Creación de un envío de complemento de uno de sus aplicaciones. Puede hacerlo en el centro de partners, o puede hacerlo mediante el uso de la [crear una presentación de complemento](create-an-add-on-submission.md) método.
 
 ## <a name="request"></a>Solicitud
 
@@ -41,15 +41,15 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | cadena | Obligatorio. Id. de la Store del complemento para el cual deseas actualizar un envío. El identificador de la tienda está disponible en el centro de partners y se incluye en los datos de respuesta de las solicitudes para [crear un complemento](create-an-add-on.md) u [obtener detalles de complementos](get-all-add-ons.md).  |
-| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
+| inAppProductId | string | Obligatorio. Id. de la Tienda del complemento para el cual deseas actualizar un envío. El identificador de Store está disponible en el centro de partners, y se incluye en los datos de respuesta para las solicitudes a [crear un complemento](create-an-add-on.md) o [obtener los detalles del complemento](get-all-add-ons.md).  |
+| submissionId | string | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -63,9 +63,9 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 | lifetime           | string  |  Duración del complemento. Puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  | Objeto que contiene la información de la descripción del complemento. Para obtener más información, consulta [Listing resource (Recurso de descripción)](manage-add-on-submissions.md#listing-object).  |
 | pricing           | object  | Objeto que contiene la información del precio del complemento. Para obtener más información, consulta [Pricing resource (Recurso de precio)](manage-add-on-submissions.md#pricing-object).  |
-| targetPublishMode           | cadena  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
-| tag           | cadena  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
+| tag           | string  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
 | visibility  | string  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 
 
@@ -189,15 +189,15 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo actualizar el envío porque la solicitud no es válida. |
-| 409  | No se pudo actualizar el envío debido al estado actual del complemento o el complemento usa una característica de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo actualizar la presentación debido al estado actual del complemento o el complemento utiliza una característica de centro de partners que es [no compatible actualmente con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complemento](manage-add-on-submissions.md)
-* [Obtener un envío de complemento](get-an-add-on-submission.md)
-* [Create an add-on submission (Crear un envío de complemento)](create-an-add-on-submission.md)
-* [Commit an add-on submission (Confirmar un envío de complemento)](commit-an-add-on-submission.md)
-* [Delete an add-on submission (Eliminar un envío de complemento)](delete-an-add-on-submission.md)
-* [Get the status of an add-on submission (Obtener el estado de un envío de complemento)](get-status-for-an-add-on-submission.md)
+* [Obtener la presentación de un complemento](get-an-add-on-submission.md)
+* [Crear una presentación de complemento](create-an-add-on-submission.md)
+* [Confirmar la presentación de un complemento](commit-an-add-on-submission.md)
+* [Eliminar un envío de complemento](delete-an-add-on-submission.md)
+* [Obtener el estado del envío de un complemento](get-status-for-an-add-on-submission.md)
