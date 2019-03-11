@@ -1,5 +1,5 @@
 ---
-Description: Share code between a desktop application and a UWP app
+Description: Compartir código entre una aplicación de escritorio y una aplicación para UWP
 Search.Product: eADQiWindows 10XVcnh
 title: Compartir código entre una aplicación de escritorio y una aplicación para UWP
 ms.date: 10/03/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 151584f15013c9d4ab7d9566e175b957a7a84149
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9045744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644350"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Compartir código entre una aplicación de escritorio y una aplicación para UWP
 
@@ -61,9 +61,9 @@ Si el código no es compatible con el estándar, considera otras maneras en las 
 
 Parte del código será específico de la plataforma y deberá permanecer en el proyecto de la aplicación de escritorio.
 
-### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Ejemplo: Migración del código de acceso a datos a una biblioteca de .NET Standard 2.0
+### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Por ejemplo: Migrar código de acceso a datos en una biblioteca de .NET Standard 2.0
 
-Supongamos que tenemos una aplicación de Windows Forms muy básica que muestra a los clientes desde nuestra base de datos de muestra Northwind.
+Supongamos que tenemos una aplicación de Windows Forms muy básica que se muestra a los clientes de nuestra base de datos de ejemplo Northwind.
 
 ![Aplicación de Windows Forms](images/desktop-to-uwp/win-forms-app.png)
 
@@ -225,7 +225,7 @@ Encontrarás estas plantillas en el cuadro de diálogo **Agregar nuevo proyecto*
 ![Aplicaciones Xamarin](images/desktop-to-uwp/xamarin-projects.png)
 
 >[!NOTE]
->Los proyectos multiplataforma son excelentes para aplicaciones con poca funcionalidad específica de plataforma. Puedes usarlos para crear una interfaz de usuario basada en XAML nativo que se ejecute en iOS, Android y Windows. Puedes obtener más información [aquí](https://www.xamarin.com/forms).
+>Los proyectos multiplataforma son excelentes para aplicaciones con poca funcionalidad específica de plataforma. Puedes usarlos para crear una interfaz de usuario basada en XAML nativo que se ejecute en iOS, Android y Windows. Obtenga más información [aquí](https://www.xamarin.com/forms).
 
 A continuación, desde tu proyecto Android, iOS o multiplataforma, agrega una referencia al proyecto de biblioteca de clases.
 
@@ -268,10 +268,10 @@ Para comenzar con proyectos Android, iOS y multiplataforma, consulta el [portal 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a tus preguntas**
+**Encuentre respuestas a sus preguntas**
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
-**Enviar comentarios o realizar sugerencias acerca de las características**
+**Proporcionar comentarios o hacer sugerencias**
 
 Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

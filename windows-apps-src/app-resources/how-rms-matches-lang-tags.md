@@ -1,5 +1,5 @@
 ---
-Description: The previous topic (How the Resource Management System matches and chooses resources) looks at qualifier-matching in general. This topic focuses on language-tag-matching in more detail.
+Description: El tema anterior (Cómo compara y elige recursos el sistema de administración de recursos) se ocupa de la coincidencia de calificadores en general. Este tema se centra en la coincidencia de etiqueta de idiomas con más detalle.
 title: Cómo el sistema de administración de recursos compara etiquetas de idioma
 template: detail.hbs
 ms.date: 11/02/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: ccbfa5f06d336604160f98dd44c27cc0cf1b0aed
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050588"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659150"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Cómo el sistema de administración de recursos compara etiquetas de idioma
 
-El tema anterior (Cómo compara y elige recursos el sistema de administración de recursos[](how-rms-matches-and-chooses-resources.md)) se ocupa de la coincidencia de calificadores en general. Este tema se centra en la coincidencia de etiqueta de idiomas con más detalle.
+El tema anterior ([Cómo compara y elige recursos el sistema de administración de recursos](how-rms-matches-and-chooses-resources.md)) se ocupa de la coincidencia de calificadores en general. Este tema se centra en la coincidencia de etiqueta de idiomas con más detalle.
 
 ## <a name="introduction"></a>Introducción
 
@@ -70,7 +70,7 @@ Las etiquetas coinciden en las subetiquetas de idioma, de script, de región y d
 
 ### <a name="partial-matches"></a>Coincidencias parciales
 
-Las etiquetas coinciden en las subetiquetas de idioma y de script, pero difieren en la región o en alguna otra subetiqueta. Por ejemplo, en-US coincide con en o en-US coincide con en-\*.
+Las etiquetas coinciden en las subetiquetas de idioma y de script, pero difieren en la región o en alguna otra subetiqueta. Por ejemplo, en-US coincide con en, o coincide con en-US - en\*.
 
 #### <a name="macro-region-match"></a>Coincidencia de macrorregión
 
@@ -131,9 +131,9 @@ Cuando la lista de idiomas contiene dos o más variantes regionales con las mism
 - Lista de idiomas (en orden): "pt-PT" (portugués de Portugal), "en-US" (inglés de Estados Unidos), pt-BR (portugués de Brasil).
 - Recursos: "en-US", "pt-BR".
 - Recurso con la puntuación más alta: "en-US".
-- Descripción: la comparación comienza con "pt-PT", pero no encuentra una coincidencia exacta. Debido a la presencia de "pt-BR" en la lista de idiomas del usuario, la coincidencia parcial se pospone hasta la comparación con "pt-BR". La siguiente comparación de idiomas es "en-US", que tiene coincidencia exacta. De esta manera, el recurso prioritario es "en-US".
+- Descripción: La comparación comienza con "pt-PT," pero no encuentra a una coincidencia exacta. Debido a la presencia de "pt-BR" en la lista de idiomas del usuario, la coincidencia parcial se pospone hasta la comparación con "pt-BR". La siguiente comparación de idiomas es "en-US", que tiene coincidencia exacta. De esta manera, el recurso prioritario es "en-US".
 
-O
+O bien,
 
 - Lista de idiomas (en orden): "es-MX" (español de México), "es-HO" (español de Honduras).
 - Recursos: "en-ES", "es-HO".
@@ -141,26 +141,26 @@ O
 
 ## <a name="undetermined-language-und"></a>Idioma sin determinar ("und")
 
-La etiqueta de idioma "und" puede usarse para especificar un recurso que coincidirá con cualquier idioma en ausencia de una mejor coincidencia. Puede considerarse similar a la gama de idiomas de BCP-47 "*" or "*-&lt;script&gt;". Aquí tienes un ejemplo.
+La etiqueta de idioma "und" puede usarse para especificar un recurso que coincidirá con cualquier idioma en ausencia de una mejor coincidencia. Puede considerarse similar a la gama de idiomas de BCP-47 "*" or "*-&lt;script&gt;". A continuación te mostramos un ejemplo.
 
 - Lista de idiomas: "en-US", "zh-Hans-CN".
 - Recursos: "zh-Hans-CN", "und".
 - Recurso con la puntuación más alta: "und".
-- Descripción: La comparación comienza con "en-US" pero no encuentra una coincidencia basada en "en" (parcial o mejor). Dado que hay un recurso etiquetado con "und", lo usará el algoritmo de coincidencia.
+- Descripción: La comparación comienza con "en-US", pero no encuentra a una coincidencia en función de "es-es" (parcial o superior). Dado que hay un recurso etiquetado con "und", lo usará el algoritmo de coincidencia.
 
 La etiqueta "und" permite que varios idiomas compartan un único recurso y que los idiomas individuales se traten como excepciones. Por ejemplo.
 
 - Lista de idiomas: "zh-Hans-CN", "en-US".
 - Recursos: "zh-Hans-CN", "und".
 - Recurso con la puntuación más alta: "zh-Hans-CN".
-- Descripción: La comparación encuentra una coincidencia exacta para el primer elemento y, por lo tanto, no comprueba el recurso etiquetado como "und".
+- Descripción: La comparación encuentra a una coincidencia exacta para el primer elemento y, por lo que no comprueba el recurso con la etiqueta "und".
 
 Puedes usar "und" con una etiqueta de script para filtrar recursos por script. Por ejemplo.
 
 - Lista de idiomas: "ru".
 - Recursos: "und-Latn", "und-Cyrl", "und-Arab".
 - Recurso con la puntuación más alta: "und-Cyrl".
-- Descripción: la comparación no encuentra una coincidencia para "ru" (parcial o mejor) y, por lo tanto, coincide con la etiqueta de idioma "und". El valor de script de supresión "Cyrl" asociado con la etiqueta de idioma "ru" coincide con el recurso "und-Cyrl".
+- Descripción: La comparación no encuentra a una coincidencia para "ru" (parcial o superior) y, por lo que coincide con la etiqueta de idioma "und". El valor de script de supresión "Cyrl" asociado con la etiqueta de idioma "ru" coincide con el recurso "und-Cyrl".
 
 ## <a name="orthographic-regional-affinity"></a>Afinidad ortográfica regional
 
@@ -170,7 +170,7 @@ Cuando dos etiquetas de idioma con diferencias de subetiqueta de región se comp
 
 Determinados idiomas tienen amplias comunidades de hablantes en distintas regiones que usan variedades diferentes de dicho idioma: lenguajes como el inglés, el francés y el español, que están entre los más compatibles con aplicaciones multilingües. Las diferencias regionales pueden incluir diferencias ortográficas (por ejemplo, "color" frente a "colour") o diferencias dialécticas, como el vocabulario (por ejemplo, "truck" frente a "lorry").
 
-Estos idiomas con variantes regionales significativas presentan algunos desafíos durante la creación de una aplicación internacional: "¿Cuántas variantes regionales distintas deberían admitirse?" "¿Cuáles?" "¿Cuál es la forma más rentable de administrar estos activos de variantes regionales para mi aplicación?" Responder a estas cuestiones va más allá del ámbito de este tema. Sin embargo, los mecanismos de coincidencia de idiomas de Windows sí que proporcionan capacidades que te ayudan en el manejo de las variantes regionales.
+Estos lenguajes con variantes regionales importante presentan algunos desafíos al realizar una aplicación de uso internacional: "¿Cuántos diferentes variaciones regionales deben ser compatible?" "¿Cuáles?" "¿Cuál es la forma más rentable de administrar estos activos de variantes regionales para mi aplicación?" Responder a estas cuestiones va más allá del ámbito de este tema. Sin embargo, los mecanismos de coincidencia de idiomas de Windows sí que proporcionan capacidades que te ayudan en el manejo de las variantes regionales.
 
 Las aplicaciones suelen admitir una única variedad de un determinado idioma. Supongamos que una aplicación tiene recursos para una sola variedad de inglés que se supone que usarán los anglófonos, sea cual sea su región de procedencia. En este caso, la etiqueta "en" sin subetiqueta de región, reflejaría tales expectativas. Pero puede ser que en el pasado las aplicaciones hayan usado una etiqueta como "en-US", que incluye una subetiqueta de región. En este caso, lo anterior también funcionará, ya que la aplicación usa una sola variedad de inglés y Windows controla de manera adecuada la coincidencia entre un recurso con una etiqueta de variante regional y una preferencia de idioma del usuario para una variante regional distinta.
 
@@ -184,11 +184,11 @@ Veamos otro ejemplo: supongamos que quieres proporcionar localizaciones en espa�
 
 Las etiquetas de idioma independientes de la región y las subetiquetas de macrorregión pueden ser muy eficaces si quieres admitir diversas variedades regionales. Para minimizar el número de activos separados necesarios, puedes calificar un determinado activo de modo que tenga la mayor cobertura de aplicación posible. Luego puedes complementar un activo de aplicación extensa con una variante más específica si es necesario. Un activo con un calificador de idioma independiente de la región se utilizará para usuarios de cualquier variedad regional, a menos que haya otro activo con un calificador de región más específico aplicable a ese usuario. Por ejemplo, un activo "en" coincidirá para un usuario de inglés australiano, pero un activo con "en-053" (inglés usado en Australia o Nueva Zelanda) será una coincidencia mejor para ese usuario, mientras que un activo con "en-AU" será la mejor coincidencia posible.
 
-El inglés es un caso aparte. Si una aplicación agrega localización para dos variedades de inglés, probablemente serán el inglés de Estados Unidos y el del Reino Unido, o el inglés "internacional". Como se indicó anteriormente, determinadas regiones de fuera de Estados Unidos siguen las convenciones ortográficas de Estados Unidos y la coincidencia de idiomas de Windows lo tiene en cuenta. En este escenario, no se recomienda usar la etiqueta independiente de la región "en" para una de las variantes, sino utilizar "en-GB" y "en-US". (Sin embargo, si un determinado recurso no requiere variantes separadas, puede usarse "en"). Si se reemplaza "en-GB" o "en-US" por "en", eso interferirá en la afinidad regional ortográfica proporcionada por Windows. Si se agrega una tercera localización en inglés, se puede usar una subetiqueta de macrorregión o específica para las variantes adicionales (por ejemplo, "en-CA", "en-AU" o "en-053"), pero se debe seguir usando "en-GB" y "en-US".
+El inglés es un caso aparte. Si una aplicación agrega localización para dos variedades de inglés, probablemente serán el inglés de Estados Unidos y el del Reino Unido, o el inglés "internacional". Como se indicó anteriormente, determinadas regiones de fuera de Estados Unidos siguen las convenciones ortográficas de Estados Unidos y la coincidencia de idiomas de Windows lo tiene en cuenta. En este escenario, no se recomienda usar la etiqueta independiente de la región "en" para una de las variantes, sino utilizar "en-GB" y "en-US". (Si un recurso determinado no requiere las variantes independientes, sin embargo, "es-es" pueden utilizarse.) Si se reemplaza "en-GB" o "en-US" por "es-es", que interferirá con la afinidad regional ortográfica proporcionada por Windows. Si se agrega una tercera localización en inglés, se puede usar una subetiqueta de macrorregión o específica para las variantes adicionales (por ejemplo, "en-CA", "en-AU" o "en-053"), pero se debe seguir usando "en-GB" y "en-US".
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cómo compara y elige recursos el sistema de administración](how-rms-matches-and-chooses-resources.md)
+* [Cómo el sistema de administración de recursos coincide con y elige los recursos](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](../design/globalizing/manage-language-and-region.md)
-* [Composición de regiones macrogeográficas (continentales), subregiones geográficas, grupos económicos seleccionados y otras agrupaciones.](https://go.microsoft.com/fwlink/p/?LinkId=247929)
+* [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](../design/globalizing/manage-language-and-region.md)
+* [Composición de regiones geográficas (continental) de macro, subregiones geográficas y agrupaciones económicas y otras seleccionadas](https://go.microsoft.com/fwlink/p/?LinkId=247929)

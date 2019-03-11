@@ -1,5 +1,5 @@
 ---
-Description: Create Universal Windows Platform (UWP) apps with intuitive and distinctive user interaction experiences that are optimized for touchpad but are functionally consistent across input devices.
+Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para el panel táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
 title: Interacciones del panel táctil
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -9,16 +9,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593910"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
 
-Diseña tu aplicación de modo que los usuarios puedan interactuar con ella a través de un panel táctil. Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos menores de las aplicaciones de productividad.
+Diseña tu aplicación de modo que los usuarios puedan interactuar con ella a través de un panel táctil. Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos de menor tamaño de las aplicaciones de productividad.
 
  
 
@@ -55,11 +55,11 @@ Los usuarios pueden establecer muchos más comportamientos de interacción y ges
 
 ![configuración del panel táctil estándar](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configuración\\ del panel táctil\\ estándar</sup>
+<sup>Estándar\\ panel táctil\\ configuración</sup>
 
 ![configuración del panel táctil de precisión de Windows](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configuración\\ del panel táctil\\ de precisión\\ de Windows</sup>
+<sup>Windows\\ precisión\\ panel táctil\\ configuración</sup>
 
 Estos son algunos ejemplos de gestos optimizados para panel táctil para realizar tareas comunes.
 
@@ -152,18 +152,18 @@ Si necesitas personalizar el cursor del mouse:
 ## <a name="related-articles"></a>Artículos relacionados
 
 
-* [Controlar la entrada de puntero](handle-pointer-input.md)
+* [Control de la entrada con puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 **Muestras**
-* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Muestra de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Focus visuals sample (Muestra de elementos visuales de foco)](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Muestras de archivo**
-* [Entrada: muestra de funcionalidades del dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: muestra de eventos de entrada de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Los gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 

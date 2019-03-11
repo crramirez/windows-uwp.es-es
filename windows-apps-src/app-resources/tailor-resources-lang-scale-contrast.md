@@ -1,5 +1,5 @@
 ---
-Description: This topic explains the general concept of qualifiers, how to use them, and the purpose of each of the qualifier names.
+Description: Este tema explica el concepto general de calificadores, cómo usarlos y la finalidad de cada uno de los nombres de calificador.
 title: Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
 template: detail.hbs
 ms.date: 10/10/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608140"
 ---
-# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, alto contraste y otros calificadores
+# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
 
 Este tema explica el concepto general de calificadores de recursos, cómo usarlos y la finalidad de cada uno de los nombres de calificador. Consulta [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para ver una tabla de referencia de todos los valores de calificador posibles.
 
@@ -29,7 +29,7 @@ Un nombre de calificador es una clave que se asigna a un conjunto de valores de 
 | :--------------- | :--------------- | :--------------- |
 | Configuración de contraste alto | contraste | estándar, alto, negro y blanco |
 
-Combina un nombre de calificador con un valor de calificador, para formar un calificador. `<qualifier name>-<qualifier value>` es el formato de un calificador. `contrast-standard` es un ejemplo de calificador.
+Combina un nombre de calificador con un valor de calificador, para formar un calificador. `<qualifier name>-<qualifier value>` es el formato de un calificador. `contrast-standard` es un ejemplo de un calificador.
 
 Por lo tanto, para contraste alto, el conjunto de calificadores es `contrast-standard`, `contrast-high`, `contrast-black` y `contrast-white`. Los nombres de calificador y los valores de calificador no distinguen mayúsculas de minúsculas. Por ejemplo, `contrast-standard` y `Contrast-Standard` son el mismo calificador.
 
@@ -124,7 +124,7 @@ Es poco probable que necesites el nombre de calificador `configuration`. Puede u
 
 El calificador `configuration` se usa para cargar un recurso que coincida en la mayor medida posible con el valor de la variable de entorno `MS_CONFIGURATION_ATTRIBUTE_VALUE`. Por tanto, puedes poner la variable al valor de la cadena que se ha asignado a los recursos relevantes, por ejemplo `designer` o `test`.
 
-## <a name="contrast"></a>Contraste
+## <a name="contrast"></a>Compare
 
 El calificador `contrast` se usa para proporcionar recursos que se ajusten mejor a la configuración de contraste alto.
 
@@ -254,7 +254,7 @@ El calificador `targetsize` se usa principalmente para especificar los [iconos d
 
 Puedes definir activos que representen varios tamaños de valor de calificador `targetsize` para el icono de la aplicación (`/Assets/Square44x44Logo.png`) en la pestaña de activos visuales del diseñador de manifiesto de paquete de la aplicación.
 
-Para obtener información sobre la calificación de un recurso tanto para `scale` como para `targetsize`, consulta [Qualify an image resource for targetsize](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
+Para obtener información sobre la calificación de un recurso tanto para `scale` como para `targetsize`, consulta [Calificar un recurso de imagen para targetsize](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
 ## <a name="theme"></a>Tema
 
@@ -267,13 +267,13 @@ El calificador `theme` se usa para proporcionar recursos que coincidan mejor con
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Píxeles efectivos y factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Los píxeles efectivos y el factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [Sistema de administración de recursos](resource-management-system.md)
-* [Cómo prepararse para la localización](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
-* [Detección de la plataforma en la que se está ejecutando la aplicación](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Información general de familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-* [Localizar las cadenas de interfaz de usuario](localize-strings-ui-manifest.md)
+* [Preparación para la localización](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
+* [Detectar la plataforma de la aplicación se ejecuta](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+* [Localizar sus cadenas de interfaz de usuario](localize-strings-ui-manifest.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Composición M49 de códigos de regiones de la División de estadística de las Naciones Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)
-* [Registro de subetiquetas de idiomas IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
+* [M49 de división de estadística de las Naciones Unidas de composición de los códigos de región](https://go.microsoft.com/fwlink/p/?linkid=247929)
+* [Registro de subetiquetas del lenguaje IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, ofertas dirigidas
 ms.localizationpriority: medium
 ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615690"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Administrar ofertas dirigidas usando los servicios de la Store
 
-Si creas una *oferta de destino* en la página **incurrir > ofertas de destino** de la aplicación en el centro de partners, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayudará a implementar la experiencia de aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Si crea un *oferta destino* en el **interactuar > destino ofertas** página de la aplicación en el centro de partners, use el *ofrece una API de Microsoft Store como destino* en el código de la aplicación para recuperar la información que le ayuda a implementar la experiencia en aplicación de la oferta de destino. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 La API de ofertas dirigidas es una API REST simple que puedes utilizar para obtener las ofertas dirigidas que están disponibles para el usuario actual, en función de si el usuario es parte del segmento de cliente para la oferta dirigida o no. Para usar esta API en el código de tu aplicación, sigue estos pasos:
 
@@ -63,7 +63,7 @@ Este ejemplo requiere la biblioteca [Json.NET](https://www.newtonsoft.com/json) 
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
-* [Obtener ofertas dirigidas](get-targeted-offers.md)
+* [Usar ofertas de destino para maximizar la contratación y conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
+* [Obtener ofertas de destino](get-targeted-offers.md)

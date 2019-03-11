@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
 ms.openlocfilehash: 96e308793e60c0367c712fb93a5d25a056397568
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653240"
 ---
 # <a name="customize-the-print-workflow"></a>Personalizar el flujo de trabajo de impresión
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 Los desarrolladores pueden personalizar la experiencia del flujo de trabajo de impresión mediante el uso de una aplicación de flujo de trabajo de impresión. Las aplicaciones de flujo de trabajo de impresión son aplicaciones para UWP que expanden las funciones de las [aplicaciones para dispositivos de Microsoft Store (WSDA)](https://docs.microsoft.com/windows-hardware/drivers/devapps/), de modo que es útil tener ciertos conocimientos sobre las WSDAs antes de continuar. 
 
 Al igual que sucede con las WSDA, cuando el usuario de una aplicación de origen opta por imprimir algo y se desplaza por el cuadro de diálogo de impresión, el sistema comprueba si hay una aplicación de flujo de trabajo asociada con la impresora. Si es así, se inicia dicha aplicación de flujo de trabajo de impresión (principalmente como una tarea en segundo plano; encontrarás más información sobre este tema más adelante). Una aplicación de flujo de trabajo es capaz de alterar tanto el vale de impresión (el documento XML que configura las opciones de la impresora para la tarea de impresión actual) como el contenido XPS real que va a imprimirse. Como opción, puede exponer esta funcionalidad al usuario iniciando una interfaz de usuario en mitad del proceso. Tras realizar su trabajo, pasa al controlador el contenido de impresión y el vale de impresión.
@@ -104,7 +104,7 @@ Es importante tener en cuenta que es en el control de **SetupRequested** donde l
 
 ## <a name="do-foreground-work-on-the-print-job-optional"></a>Realización de trabajo en primer plano en el trabajo de impresión (opcional)
 
-Si SetRequiresUI se ha llamado al método **[](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsetuprequestedeventargs.SetRequiresUI)**, el sistema de impresión examinará el archivo de manifiesto en busca del punto de entrada para la aplicación en primer plano. El elemento `Application/Extensions` de tu archivo *package.appxmanifest* debe tener las siguientes líneas. Sustituya el valor de `EntryPoint` por el nombre de la aplicación en primer plano.
+Si **[SetRequiresUI](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsetuprequestedeventargs.SetRequiresUI)** se ha llamado al método, el sistema de impresión examinará el archivo de manifiesto en busca del punto de entrada para la aplicación en primer plano. El elemento `Application/Extensions` de tu archivo *package.appxmanifest* debe tener las siguientes líneas. Sustituya el valor de `EntryPoint` por el nombre de la aplicación en primer plano.
 
 ```xml
 <uap:Extension Category="windows.printWorkflowForegroundTask"  
@@ -240,9 +240,9 @@ La diferencia es que mientras que las WSDA se activan automáticamente para el u
 
 ### <a name="set-the-workflow-apps-policy"></a>Establecimiento de la directiva de la aplicación de flujo de trabajo
 La directiva de la aplicación de flujo de trabajo se establece con comandos de Powershell en el dispositivo que ejecutará dicha aplicación. Se modificarán los comandos Set-Printer, Add-Printer (puerto existente) y Add-Printer (puerto nuevo de WSD) para permitir que se establezcan directivas de flujo de trabajo. 
-* `Disabled`: Las aplicaciones de flujo de trabajo no se activarán.
-* `Uninitialized`: Las aplicaciones de flujo de trabajo se activarán si el DCA del flujo de trabajo está instalado en el sistema. La impresión seguirá adelante aunque la aplicación no esté instalada. 
-* `Enabled`: El contrato de flujo de trabajo se activará si el DCA del flujo de trabajo está instalado en el sistema. Si la aplicación no está instalada, la impresión no se realizará. 
+* `Disabled`: Las aplicaciones de flujo de trabajo no se activará.
+* `Uninitialized`: Las aplicaciones de flujo de trabajo se activará si el flujo de trabajo de DCA se instala en el sistema. La impresión seguirá adelante aunque la aplicación no esté instalada. 
+* `Enabled`: Si el flujo de trabajo de DCA se instala en el sistema, se activará el contrato de flujo de trabajo. Si la aplicación no está instalada, la impresión no se realizará. 
 
 El siguiente comando hace que la aplicación de flujo de trabajo sea necesaria en la impresora especificada.
 ```Powershell
@@ -251,9 +251,9 @@ Set-Printer –Name "Microsoft XPS Document Writer" -WorkflowPolicy On
 
 Un usuario local puede ejecutar esta directiva en una impresora local o, en el caso de su implementación empresarial, el administrador de la impresora puede ejecutar esta directiva en el servidor de impresión. Luego la directiva se sincronizará con todas las conexiones de cliente. El administrador de la impresora puede usar esta directiva siempre que se agregue una nueva impresora.
 
-## <a name="see-also"></a>Véase también
+## <a name="see-also"></a>Consulte también
 
-[Aplicación de flujo de trabajo de ejemplo](https://github.com/Microsoft/print-oem-samples)
+[Ejemplo de aplicación de flujo de trabajo](https://github.com/Microsoft/print-oem-samples)
 
 [Espacio de nombres Windows.Graphics.Printing.Workflow](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow)
 
