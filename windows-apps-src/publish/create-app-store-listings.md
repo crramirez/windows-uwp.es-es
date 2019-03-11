@@ -1,59 +1,59 @@
 ---
-Description: The Store listings section of the app submission process is where you provide the text and images that customers will see when viewing your app's listing in the Microsoft Store.
-title: Creación de descripciones de Store de aplicaciones
+Description: La sección de anuncios de Store del proceso de envío es donde debe proporcionar el texto y las imágenes que los clientes verán al ver que la aplicación de la lista en la Microsoft Store.
+title: Creación de descripciones de la Tienda de aplicaciones
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: medium
 ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601860"
 ---
-# <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
+# <a name="create-app-store-listings"></a>Creación de descripciones de la Tienda de aplicaciones
 
 
 La sección **Descripciones de Store** del [proceso de envío de aplicaciones](app-submissions.md) es donde proporcionas el texto y las [imágenes](app-screenshots-and-images.md) que los clientes verán al consultar la descripción dela aplicación en Microsoft Store.
 
-Muchos de los campos de una **descripción de Store** son opcionales, pero recomendamos proporcionar varias imágenes y tanta información como sea posible para que tu descripción destaque. El mínimo necesario para considerar finalizado el paso **Descripciones de Store** es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md#screenshots).
+Muchos de los campos de una **Descripción de la tienda** son opcionales, pero se recomienda proporcionar varias imágenes y tanta información como sea posible para que la lista destaque. El mínimo necesario para que el paso **Descripciones de la Tienda** se considere completado es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md#screenshots).
 
 > [!TIP]
-> Opcionalmente, puedes [Importar y exportar las descripciones de la tienda](import-and-export-store-listings.md) si prefieres introducir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar información y cargar archivos directamente en el centro de partners. Usar la opción Importar y exportar puede ser especialmente conveniente si tienes descripciones en varios lenguajes, ya que te permite hacer varias actualizaciones a la vez. 
+> Opcionalmente puede [importar y exportar listas Store](import-and-export-store-listings.md) si prefiere escribir la información de anuncio sin conexión en un archivo .csv, en lugar de proporcionar información y cargar archivos directamente en el centro de partners. Usar la opción Importar y exportar puede ser especialmente conveniente si tienes descripciones en varios lenguajes, ya que te permite hacer varias actualizaciones a la vez. 
 
-Si la aplicación publicada anteriormente admite Windows 8.x o Windows Phone 8.x o versiones anteriores, puedes [crear descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para mostrar a esos clientes. 
+Si la aplicación publicada previamente admite Windows 8.x y Windows Phone 8.x o versiones anteriores, puede [crear anuncios de Store específicos de la plataforma](create-platform-specific-store-listings.md) para mostrarlos a los clientes. 
 
-## <a name="store-listing-languages"></a>Idiomas de la descripción de la Store
+## <a name="store-listing-languages"></a>Idiomas de la descripción de la Tienda
 
-Debes completar la página **Descripción de la Store** para al menos un idioma. Te recomendamos que proporciones una descripción de la Store en cada idioma que admiten los paquetes, pero que dispongas de flexibilidad para eliminar idiomas para los que no quieres proporcionar una descripción de la Store. También puedes crear descripciones de la Store en otros idiomas que no son compatibles con los paquetes.
+Debes completar la página **Descripción de la Tienda** para al menos un idioma. Te recomendamos que proporciones una descripción de la Tienda en cada idioma que admiten los paquetes, pero que dispongas de flexibilidad para eliminar idiomas para los que no quieres proporcionar una descripción de la Tienda. También puedes crear descripciones de la Tienda en otros idiomas que no son compatibles con los paquetes.
 
 > [!NOTE]
 > Si tu envío ya incluye paquetes, te mostraremos los [idiomas](supported-languages.md) compatibles para tus paquetes en la página de descripción del envío (a menos que quites alguno).
 
 Para agregar o eliminar idiomas para tus descripciones de la Store, haz clic en **Agregar/eliminar idiomas** desde la página de información general de envíos. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
 
-En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Store**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
+En la sección **Idiomas de descripción de la Tienda adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Tienda**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío. 
 
-## <a name="add-and-edit-store-listing-info"></a>Agregar y editar la descripción de la tienda
+## <a name="add-and-edit-store-listing-info"></a>Agregar y editar información de inscripción de Store
 
-Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío. Debes editar cada idioma por separado, a menos que elijas exportar las descripciones de Store y funcione sin conexión y, a continuación, importar todos los datos de la descripción a la vez. Para obtener más información acerca de cómo funciona, consulta [Importar y exportar descripciones de Store](import-and-export-store-listings.md).
+Para editar un listado de Store, seleccione el nombre del idioma de la página de información general de envío. Debe modificar cada idioma por separado, a menos que elija Exportar los anuncios de Store y trabajar sin conexión y, a continuación, importar todos los datos de lista a la vez. Para obtener más información acerca de cómo funciona esto, consulte [importar y exportar listas Store](import-and-export-store-listings.md).
 
-A continuación se describen los campos disponibles.
+Los campos disponibles se describen a continuación.
 
 ## <a name="product-name"></a>Nombre del producto
 
-Este cuadro de lista desplegable te permite especificar el nombre que debe usarse en la descripción de la tienda (si lo ha reservado más de un nombre de la aplicación).
+Este cuadro de lista desplegable le permite especificar el nombre que debe usarse en la lista de Store (si lo ha reservado más de un nombre de la aplicación).
 
-Si has cargado los paquetes en el mismo idioma que la tienda de la descripción están trabajando en, se seleccionará el nombre usado en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente cuando se crea un nuevo envío, después de haber cargado los paquetes que usan el nuevo nombre.
+Si ha cargado los paquetes en el mismo idioma que el Store en la lista están trabajando, se seleccionará el nombre usado en esos paquetes. Si necesita [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que ya se ha publicado, puede seleccionar un nombre reservado diferente cuando se crea un nuevo envío después de cargar los paquetes que utilizan el nuevo nombre.
 
-Si no has cargado paquetes para el idioma que estás trabajando y has reservado más de un nombre, tendrás que seleccionar uno de los nombres de aplicación reservado, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre.
+Si no ha cargado los paquetes para el idioma que está trabajando y ha reservado más de un nombre, deberá seleccionar uno de los nombres reservados de aplicación, ya que no hay un paquete asociado en ese idioma desde el que se va a extraer el nombre.
 
 > [!NOTE]
-> El **nombre del producto** que se selecciona solo se aplica a la descripción de la tienda en el lenguaje que estás trabajando. No afecta el nombre que aparece cuando un usuario instala la aplicación; ese nombre procedente del manifiesto del paquete que se instala. Para evitar confusiones, te recomendamos que los paquetes y descripción de la tienda de cada idioma usen el mismo nombre.
+> El **nombre de producto** seleccione solo se aplica a la lista de Store en el idioma que está trabajando. No afecta el nombre que aparece cuando un cliente instala la aplicación; ese nombre procede del manifiesto del paquete que se instala. Para evitar confusiones, se recomienda que cada lenguaje paquetes y anuncios de Store usan el mismo nombre.
 
 ## <a name="description"></a>Descripción
 
@@ -65,20 +65,20 @@ Para obtener consejos para que la descripción destaque, consulta [Escribir una 
 
 ## <a name="whats-new-in-this-version"></a>Novedades de esta versión
 
-Si es la primera vez que envías la aplicación, deja este campo en blanco. Para una actualización de una aplicación existente, esto es donde puedes permitir que los clientes sepan qué ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres. (Anteriormente, este campo se denominaba **Notas de la versión**).
+Si es la primera vez que envías la aplicación, deja este campo en blanco. Para obtener una actualización a una aplicación existente, esto es donde puede permitir a los clientes saber qué se ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres. (Anteriormente, este campo se denominaba **Notas de la versión**).
 
 ## <a name="product-features"></a>Características del producto
 
-Se trata de breves resúmenes de las funciones clave de la aplicación. Se muestran al cliente como lista de viñetas, en la sección **Funciones** de la descripción de Store de la aplicación, junto con la **descripción**. Hazlas breves, con solo unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
+Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al cliente como lista de viñetas, en la sección **Funciones** de la descripción de Store de la aplicación, junto con la **descripción**. Hazlas breves, con unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
 
 > [!NOTE]
-> Estas características aparecerán con viñetas en la descripción de Store, así que no agregues tus propias viñetas.
+> Estas características aparecerán con viñetas en la lista de Store, por lo que no agregue sus propias viñetas.
 
-## <a name="screenshots"></a>Capturas de pantalla
+## <a name="screenshots"></a>Las capturas de pantalla
 
-Es necesaria una captura de pantalla para poder enviar la aplicación. Recomendamos proporcionar al menos cuatro capturas de pantalla para cada tipo de dispositivos que admita la aplicación, para que las personas puedan ver el aspecto que la aplicación tendrá en sus tipos de dispositivo.
+Es necesaria una captura de pantalla para enviar la aplicación. Recomendamos proporcionar al menos cuatro capturas de pantalla para cada tipo de dispositivos que admita la aplicación, para que las personas puedan ver el aspecto que la aplicación tendrá en sus tipos de dispositivo.
 
-Para obtener más información, consulta [capturas de pantalla e imágenes de aplicaciones](app-screenshots-and-images.md#screenshots).
+Para obtener más información, consulta [capturas de pantalla e imágenes de la aplicación](app-screenshots-and-images.md#screenshots).
 
 
 ## <a name="store-logos"></a>Logotipos de la Store 
@@ -91,11 +91,11 @@ Los logotipos de la Store son imágenes opcionales que puedes subir para mejorar
 Para obtener más información, consulta [Logotipos de la Store](app-screenshots-and-images.md#store-logos).
 
 
-## <a name="trailers-and-additional-assets"></a>Tráileres y activos adicionales
+## <a name="trailers-and-additional-assets"></a>Recursos adicionales y finalizadores
 
-Puedes enviar a activos adicionales para tu producto, incluyendo los tráileres de vídeo e imágenes promocionales. Son todos opcionales, pero te recomendamos que tengas en cuenta subir como tantos como sea posible. Estas imágenes pueden ayudar a ofrecer una mejor idea de tu producto y una descripción más tentadora.
+Puede enviar a los recursos adicionales para su producto, incluidos los finalizadores de vídeo e imágenes promocionales. Son todos opcionales, pero te recomendamos que tengas en cuenta subir como tantos como sea posible. Estas imágenes pueden ayudar a ofrecer una mejor idea de tu producto y una descripción más tentadora.
 
-Para obtener más información, consulta [Tráileres y activos adicionales](app-screenshots-and-images.md#trailers-and-additional-assets).
+Para obtener más información, consulte [recursos adicionales y finalizadores](app-screenshots-and-images.md#trailers-and-additional-assets).
 
 <a id="supplemental-information" />
 
@@ -130,14 +130,14 @@ Una descripción más corta y pegadizo que se puede usar en la parte superior de
 
 Para los juegos, la descripción corta también puede aparecer en la sección Información del Hub de juegos de Xbox One.
 
-Para obtener mejores resultados, mantener la descripción breve en 270 caracteres. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán únicamente los caracteres en primer lugar 270 (con un vínculo para ver el resto de la descripción breve).
+Para obtener mejores resultados, mantenga la descripción breve en 270 caracteres. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán solo los primeros 270 caracteres (con un vínculo disponible para ver el resto de la descripción breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionales del sistema
 
-Si es necesario, puedes describir las configuraciones de hardware que requiere tu aplicación para funcionar correctamente (más allá de la información que proporcionaste en la sección **Requisitos del sistema** en las [Propiedades de la aplicación](enter-app-properties.md#system-requirements). Esto es especialmente importante, si la aplicación requiere hardware que quizás no esté disponible en todos los equipos. Por ejemplo, si tu aplicación solo funciona correctamente con hardware USB externo, como una impresora 3D o un microcontrolador, se recomienda especificarlo aquí. La información que introduzcas se mostrará a los clientes que consulten la descripción de Store de la aplicación en Windows 10, versión 1607 o posterior (incluyendo Xbox), junto con los requisitos que indicaste en la página de propiedades del producto. 
+Si es necesario, puedes describir las configuraciones de hardware que requiere tu aplicación para funcionar correctamente (más allá de la información que proporcionaste en la sección **Requisitos del sistema** en las [Propiedades de la aplicación](enter-app-properties.md#system-requirements). Esto es especialmente importante, si la aplicación requiere hardware que quizás no esté disponible en todos los equipos. Por ejemplo, si tu aplicación solo funcionará correctamente con hardware USB externo, como una impresora 3D o un microcontrolador, se recomienda especificarlo aquí. La información que introduzcas se mostrará a los clientes que consulten la descripción de Store de la aplicación en Windows 10, versión 1607 o posterior (incluyendo Xbox), junto con los requisitos que indicaste en la página de propiedades del producto. 
 
-Puedes introducir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado**. Estas se muestran al cliente en una lista con viñetas en la descripción de Microsoft Store. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres).
+Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado**. Estas se muestran al cliente en una lista con viñetas en la descripción de Microsoft Store. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres).
 
 > [!NOTE]
 > Los requisitos adicionales del sistema aparecerán con viñetas en la descripción de Store, por lo que no debes agregar tus propias viñetas.
@@ -153,7 +153,7 @@ Los elementos que se describen a continuación ayudan a los clientes a descubrir
 
 Los términos de búsqueda (anteriormente conocidos como palabras clave) son palabras simples o frases cortas que no se muestran a los clientes, pero pueden ayudar a hacer descubrible tu aplicación en Store cuando los clientes busquen usando estos términos. Puedes incluir hasta 7 términos de búsqueda con un máximo de 30 caracteres cada una y usar palabras no más de 21 entre todos los términos de búsqueda.
 
-Al agregar términos de búsqueda, piensa en las palabras que los clientes podrían usar al buscar aplicaciones como la tuya, especialmente si no forman parte del nombre de la aplicación. Asegúrate de no usar ningún término de búsqueda que no sea ciertamente relevante para tu aplicación.
+Al agregar términos de búsqueda, piensa en las palabras que los clientes podrían usar al buscar aplicaciones como la tuya, especialmente si no forman parte del nombre de la aplicación. Asegúrate de no usar cualquier término que no sea relevante para tu aplicación.
 
 ### <a name="copyright-and-trademark-info"></a>Información de copyright y marca comercial
 

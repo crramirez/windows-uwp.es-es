@@ -1,31 +1,31 @@
 ---
-title: Creación de una aplicación compleja de plataforma Universal de Windows (UWP)
+title: Creación de una aplicación compleja de la Plataforma universal de Windows (UWP)
 description: 'En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.'
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f4c80ca1d031c69f5f70cdf85e90ea1d5887830
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605670"
 ---
-#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Creación de una aplicación compleja de plataforma Universal de Windows (UWP)
+#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Creación de una aplicación compleja de la Plataforma universal de Windows (UWP)
 
 En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.
 
 ## <a name="concept"></a>Concepto
 
-**Concreta tu aplicación**
+**Centrarse en la aplicación**
 
 A la hora de planear tu aplicación para la Plataforma universal de Windows (UWP), no solo debes determinar qué es lo que hará tu aplicación y a quién estará destinada, sino también aquello en lo que tu aplicación va a ser genial. En el corazón de toda buena aplicación reside un concepto sólido que proporciona una base resistente.
 
 Supongamos que deseas crear una aplicación de fotografía. Pensando en los motivos por los que los usuarios trabajan con sus fotografías, las guardan y las comparten, te das cuenta de que quieren revivir recuerdos, conectar con otras personas a través de las fotos y conservar las fotos en un lugar seguro. Por tanto, esas son las cosas que te interesa que sean los puntos fuertes de la aplicación y utilizas esos objetivos de experiencia del usuario para guiarte durante el resto del proceso de diseño.
 
-**¿En qué consiste la aplicación?** Empieza con un concepto amplio y enumera todo lo que quieras que los usuarios puedan hacer con la aplicación.
+**¿Qué es la aplicación sobre?** Empieza con un concepto amplio y enumera todo lo que quieras que los usuarios puedan hacer con la aplicación.
 
 Imagina que quieres crear una aplicación que ayude a las personas a planear sus viajes. Aquí te presentamos algunas ideas que bien podrías haber anotado en una servilleta:
 
@@ -38,7 +38,7 @@ Imagina que quieres crear una aplicación que ayude a las personas a planear sus
 
 ![diseño de una aplicación de viajes](images/ux-triptracker-tab-phone-700.png)
 
-**¿En qué se destaca tu aplicación?** Da un paso atrás y examina la lista de ideas para ver si algún escenario en particular te llama la atención. Acepta el reto de reducir la lista a un solo escenario en el que quieras centrarte. En el proceso puede que descartes muchas ideas buenas, pero hacerlo es fundamental a fin de lograr un solo escenario excepcional.
+**¿Qué es ideal para su aplicación?** Da un paso atrás y examina la lista de ideas para ver si algún escenario en particular te llama la atención. Acepta el reto de reducir la lista a un solo escenario en el que quieras centrarte. En el proceso puede que descartes muchas ideas buenas, pero hacerlo es fundamental a fin de lograr un solo escenario excepcional.
 
 Después de elegir un solo escenario, decide cómo explicarías a una persona normal los motivos por los que tu aplicación es excelente, y escríbelos en una sola frase. Por ejemplo:
 
@@ -59,19 +59,19 @@ El término "embudo" se debe a su forma. En la parte ancha del embudo entran muc
 ## <a name="structure"></a>Estructura
 
 
-**La organización hace que todo sea más sencillo**
+**Organización hace que todo sea más fácil**
 
 ![la organización hace que todo sea más sencillo](images/ux-vision-and-process-organization.png)
 
 Cuando estés contento con tu concepto, estarás preparado para la siguiente etapa: crear el plano de la aplicación. La arquitectura de información (AI) proporciona al contenido la integridad estructural que necesita. Te ayudará a definir el modelo de navegación de la aplicación y, en última instancia, la identidad de la aplicación. Si planeas la organización de tu contenido y cómo descubrirán los usuarios dicho contenido, podrás hacerte una idea más aproximada del modo en que los usuarios usarán tu aplicación.
 
-Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](https://go.microsoft.com/fwlink/p/?LinkID=268089) , por ejemplo, se inicia directamente en un concentrador que proporciona acceso a la biblioteca, tienda, noticias y estadísticas del usuario. La experiencia se centra, por lo que los usuarios pueden obtener y disfrutar concretado rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
+Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](https://go.microsoft.com/fwlink/p/?LinkID=268089), por ejemplo, se inicia directamente en un concentrador que proporciona acceso a las estadísticas, noticias, tienda y biblioteca del usuario. La experiencia se ha concretado con el fin de que los usuarios puedan obtener libros sonoros y disfrutar de ellos rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
 
 Para obtener directrices relacionadas, consulta [Patrones de diseño básicos](../design/basics/navigation-basics.md).
 
 ## <a name="dynamics"></a>Dynamics
 
-**Ejecutar el concepto**
+**Ejecute su concepto**
 
 Si la etapa de concepto consiste en definir el objetivo de tu aplicación, la etapa de dinámica consiste en cumplir dicho objetivo. Esto puede lograrse de muchas maneras como, por ejemplo, usando una representación esquemática para elaborar un boceto de los flujos de las páginas (esto es, cómo vas de un sitio a otro dentro de la aplicación para lograr sus objetivos) y planeando la voz de la aplicación y las palabras que se usarán en toda la interfaz de usuario de la misma. Las tramas de alambre son una herramienta rápida y de baja fidelidad que te ayuda a tomar decisiones críticas sobre el flujo de usuarios de tu aplicación.
 
@@ -79,11 +79,11 @@ El flujo de tu aplicación debe estar estrechamente relacionado con el enunciado
 
 Técnicas habituales para ayudarte con este paso:
 
--   Explicar el flujo: ¿Qué es lo primero, qué sigue?
--   Presentación gráfica del flujo: ¿Cómo deben desplazarse los usuarios por la interfaz de usuario para completar el flujo?
--   Prototipo: probar el flujo con un prototipo rápido.
+-   Describir el flujo: ¿Qué ocurre en primer lugar, ¿qué ocurre después?
+-   El flujo de guión gráfico: ¿Cómo deben mover los usuarios a través de la interfaz de usuario para completar el flujo?
+-   Prototipo: Probar el flujo con un prototipo rápido.
 
-**¿Qué deben poder hacer los usuarios?** Por ejemplo, la aplicación de viajes es "excelente para crear itinerarios de forma colaborativa para viajes en grupo". Confeccionemos una lista de los flujos que queremos habilitar:
+**¿Qué usuarios debería hacer?** Por ejemplo, la aplicación de viajes es "excelente para crear itinerarios de forma colaborativa para viajes en grupo". Confeccionemos una lista de los flujos que queremos habilitar:
 
 -   Crear un viaje con información general.
 -   Invitar a amigos a sumarse al viaje.
@@ -93,9 +93,9 @@ Técnicas habituales para ayudarte con este paso:
 -   Modificar y comentar los destinos y las actividades que agregaron los amigos.
 -   Compartir itinerarios para que puedan seguirlos amigos y familiares.
 
-## <a name="visual"></a>Elementos visuales
+## <a name="visual"></a>Visual
 
-**Habla sin pronunciar ni una palabra**
+**Hable sin palabras**
 
 ![diseño de una aplicación de creador de cócteles](images/ux-cocktailcreator-tab-phone.png)
 
@@ -105,11 +105,11 @@ Todas las aplicaciones tienen su propia identidad única, de modo que explora la
 
 ## <a name="prototype"></a>Prototipo
 
-**Refina tu obra maestra**
+**Refinar su obra maestra**
 
 La creación del prototipo es una etapa del *embudo de diseño*, que es una técnica sobre la que hablamos anteriormente, y en la que el artefacto que representa tu idea evoluciona hasta convertirse en algo más que un boceto, pero que es, al mismo tiempo, menos complicado que una aplicación completa. Un prototipo puede ser un flujo de pantallas dibujadas a mano mostradas a un usuario. La persona que realiza la prueba puede responder a indicaciones del usuario colocando diferentes pantallas o superponiendo o quitando pequeñas partes de la interfaz de usuario sobre las páginas con el fin de simular una aplicación en ejecución. Un prototipo también podría ser una aplicación muy sencilla que simule algunos flujos de trabajo, siempre que el operador se ciña a un guión establecido y pulse los botones adecuados. En esta etapa tus ideas comienzan realmente a cobrar vida y tu trabajo es sometido a pruebas de manera determinada. Cuando crees el prototipo de áreas de tu aplicación, toma el tiempo necesario para esculpir y refinar los componentes que más lo necesiten.
 
-No nos cansamos de decírselo a los nuevos desarrolladores: la creación de aplicaciones de gran calidad es un proceso iterativo. Te recomendamos que crees los prototipos lo antes posible y de manera frecuente. Al igual que sucede con cualquier trabajo creativo, las mejores aplicaciones son el resultado de un proceso intensivo de ensayo y error.
+Para los nuevos desarrolladores, no se puede subrayar suficientemente: Crear aplicaciones fabulosas es un proceso iterativo. Te recomendamos que crees los prototipos lo antes posible y de manera frecuente. Al igual que sucede con cualquier trabajo creativo, las mejores aplicaciones son el resultado de un proceso intensivo de ensayo y error.
 
 ## <a name="decide-what-features-to-include"></a>Decide qué funciones incluirás
 
@@ -118,54 +118,54 @@ Cuando sepas qué es lo que buscan los usuarios y cómo puedes ayudarlos a encon
 
 Técnicas comunes:
 
--   Investigación sobre la plataforma: descubre qué funciones ofrece la plataforma y cómo puedes usarlas.
--   Diagramas de asociación: conecta los flujos con las funciones.
--   Prototipo: prueba las funciones para asegurarte de que hacen lo que necesitas.
+-   Investigación de plataforma: Descubra qué características de las ofertas de plataforma y cómo usarlos.
+-   Diagramas de asociación: Conectar los flujos con características.
+-   Prototipo: Probar las características para asegurarse de que lo hagan lo que necesita.
 
-**Contratos entre aplicaciones**la aplicación puede participar en contratos entre aplicaciones que permiten tener flujos amplios entre aplicaciones y características de usuarios.
+**Contratos de aplicación**  la aplicación puede participar en los contratos de aplicación que permiten a los flujos de usuario amplia, entre aplicaciones, entre características.
 
--   **Compartir**permite que los usuarios compartan contenido desde la aplicación con otras personas a través de otras aplicaciones y también permite recibir contenido de otras personas y aplicaciones.
--   **Reproducir en**permite que los usuarios disfruten la transmisión de audio, vídeo o imágenes de la aplicación a otros dispositivos de la red doméstica.
--   **Selector de archivos y extensiones de selector de archivos** Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, dispositivos de almacenamiento conectados, grupo hogar o incluso otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
+-   **Compartir**  permiten a los usuarios compartir el contenido de la aplicación con otras personas a través de otras aplicaciones y recibe el contenido que se puede compartir de otras personas y aplicaciones, demasiado.
+-   **Reproducir en**  permiten que los usuarios disfrutar de audio, vídeo o imágenes que se transmite desde su aplicación a otros dispositivos en su red doméstica.
+-   **Selector de archivos y extensiones de selector de archivos**   permiten a los usuarios cargaron y guardan los archivos de sistema de archivos local, los dispositivos de almacenamiento conectado, grupo hogar o incluso otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
 
 Para más información, consulta el tema sobre las [extensiones y los contratos entre aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh464906).
 <!-- Win 8 page. Should have replacement. -->
 
-**Diferentes vistas, factores de forma y configuraciones de hardware**Windows pone a los usuarios en la aplicación en primer plano y cargos. Seguramente quieres que la interfaz de usuario de la aplicación se destaque en cualquier dispositivo, modo de entrada, orientación, configuración de hardware y en cualquier circunstancia en la que el usuario decida usarla.
+**Vistas diferentes factores de forma y las configuraciones de hardware**  Windows coloca a los usuarios en costo y la aplicación en primer plano. Seguramente quieres que la interfaz de usuario de la aplicación se destaque en cualquier dispositivo, modo de entrada, orientación, configuración de hardware y en cualquier circunstancia en la que el usuario decida usarla.
 
-**Táctil**Windows ofrece una experiencia táctil única e incomparable que hace mucho más que simplemente emular la funcionalidad del mouse.
+**Táctiles**  Windows proporciona una experiencia táctil único y distintiva que algo más que emulan la funcionalidad del mouse.
 
 Por ejemplo, un zoom semántico es un modo optimizado para funcionalidad táctil que permite navegar por un conjunto extenso de contenido. Los usuarios pueden desplazarse de lado a lado o de arriba a abajo por las categorías del contenido y acercar la vista de las categorías para ver más información y con más detalle. Puedes usarlo para presentar el contenido de una manera más táctil, visual e informativa que con los modelos tradicionales de navegación y diseño, como las pestañas.
 
 Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar el dedo, etc. Obtén más información sobre [Función táctil y otras interacciones de usuario](../design/input/input-primer.md).
 
-**Atractiva y original**Asegúrate de que la aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
+**Nuevas y atractivas**  Asegúrese de que la aplicación se siente fresca y atraiga a los usuarios con estas experiencias estándares:
 
--   **Las animaciones**usa nuestra biblioteca de animaciones para que la aplicación rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
--   **Notificaciones del sistema**informa a los usuarios saber sobre sujeto a limitación temporal contenido personalmente importante o a través de las notificaciones del sistema, atraerlos a la aplicación incluso cuando se cierra la aplicación. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
--   **Iconos de la aplicación**ofrece actualizaciones renovadas y relevantes para atraer a los usuarios volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../design/shell/tiles-and-notifications/creating-tiles.md).
+-   **Las animaciones**  usar nuestra biblioteca de animaciones para mejorar su aplicación rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
+-   **Notificaciones del sistema**  permiten a los usuarios saber sobre el contenido dependiente del tiempo o personal relevante a través de las notificaciones del sistema e invitación a su aplicación incluso cuando se cierra la aplicación. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
+-   **Los iconos de aplicación**  proporcionar actualizaciones actualizadas y pertinentes para convencer a los usuarios en la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalización**
 
--   **Configuración**permite que los usuarios puedan crear la experiencia que quieran guardar la configuración de la aplicación. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/app-settings-and-data.md).
--   **Itinerancia**crea una experiencia continua entre dispositivos mediante la itinerancia de datos que permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia de usuario que les interesa más, con independencia del dispositivo que están usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
--   **Los iconos de usuario**  hacer que la aplicación más personal a los usuarios: carga su imagen de icono de usuario, o permitir que los usuarios establezcan contenido de la aplicación como su icono personal en Windows.
+-   **Configuración de**  permiten a los usuarios crean la experiencia que desean guardando la configuración de la aplicación. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/app-settings-and-data.md).
+-   **Itinerancia**  crear una experiencia continua en todos los dispositivos mediante la movilidad de datos que permite a los usuarios recoger un derecho de la tarea donde lo dejó y conserva la experiencia del usuario que más le interese, independientemente del dispositivo están usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Los iconos del usuario**    que la aplicación más personal al cargar su imagen de icono de usuario para los usuarios o permitir que los usuarios establecer contenido de la aplicación como su icono personal a lo largo de Windows.
 
-**Funcionalidades del dispositivo**Asegúrate de que la aplicación aproveche al máximo las funcionalidades de dispositivos de hoy en día.
+**Capacidades de dispositivo**  Asegúrese de que la aplicación aprovecha al máximo las capacidades de dispositivos de hoy en día.
 
--   **Gestos de proximidad**permite que los usuarios conecten sus dispositivos a otros usuarios que son físicamente cercanos tocándolos físicamente a los dispositivos entre sí (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Cámaras y dispositivos de almacenamiento externos**conecta a los usuarios con sus cámaras integradas o conectado para charlando y conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo alrededor de ellos, o cualquier actividad de la aplicación es excelente. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
--   **Acelerómetros y otros sensores**   Los dispositivos vienen con diversos sensores hoy en día. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
--   **Ubicación geográfica**usa la información de ubicación geográfica datos web estándar o sensores de ubicación geográfica para ayudar a los usuarios, encontrar su posición en un mapa u obtener avisos sobre personas, actividades y destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
+-   **Los gestos de proximidad**  permitan a los usuarios conectar dispositivos con otros usuarios que están físicamente cerca, punteando físicamente los dispositivos juntos (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   **Cámaras y dispositivos de almacenamiento externo**  conectarse a los usuarios a sus cámaras integradas o enchufado para charlar y conferencias, grabación vlogs, tomando fotos de perfil, documentar el mundo en torno a ellas, o cualquier actividad de la aplicación es ideal. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Acelerómetros y otros sensores**     dispositivos vienen con un número de sensores en la actualidad. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
+-   **Geolocalización**  usar información de ubicación geográfica de datos web estándar o de los sensores de ubicación geográfica para ayudar a los usuarios sortear, buscar su posición en un mapa u obtener avisos usuarios cercanos, actividades y destinos. Obtén más información sobre la [ubicación geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una excelente ayuda a un grupo de amigos que quieren crear de forma conjunta los itinerarios de viajes en grupo, podrías usar algunas de estas funciones, por mencionar algunas:
 
--   Compartir: los usuarios comparten sus próximos viajes e itinerarios en diferentes redes sociales para compartir el entusiasmo previo al viaje con amigos y familiares.
--   Buscar: los usuarios buscan y encuentran actividades o destinos en los itinerarios compartidos o públicos de otras personas que pueden incluir en sus propios viajes.
--   Notificaciones: los usuarios reciben una notificación cuando sus compañeros de viaje actualizan los itinerarios.
--   Configuración: los usuarios configuran la aplicación según su preferencia, por ejemplo, qué viaje debe generar notificaciones o qué grupos sociales tienen permitido buscar los itinerarios de los usuarios.
--   Zoom semántico: los usuarios se desplazan por la escala de tiempo del itinerario y acercan la vista para ver con más detalle la larga lista de actividades que planearon.
--   Imágenes de usuario: los usuarios eligen la imagen que quieren que aparezca cuando comparten su viaje con amigos.
+-   Acción: Los usuarios compartir próximos de carreras y sus itinerarios a varias redes sociales para compartir el entusiasmo de ida y vuelta previa con sus amigos y familiares.
+-   Buscar: Los usuarios buscan y encontrar las actividades o destinos de otros usuarios compartida o pública itinerarios que pueden incluir en sus viajes.
+-   Notificaciones: Los usuarios reciben notificaciones cuando los compañeros de viaje actualización sus itinerarios.
+-   Configuración: Los usuarios configurar la aplicación a sus preferencias, como qué grupos de redes sociales o qué ida y vuelta debe poner las notificaciones se permiten para buscar los itinerarios de los usuarios.
+-   Zoom semántico: Los usuarios navegar por la escala de tiempo de su itinerario y acercar para ver más detalles de una larga lista de actividades que han planeado.
+-   Iconos del usuario: Los usuarios elegir la imagen que deseen que aparezca cuando comparten su viaje con amigos.
 
 ## <a name="decide-how-to-monetize-your-app"></a>Decide cómo rentabilizar tu aplicación
 
@@ -175,13 +175,13 @@ Cuentas con muchas opciones para ganar dinero con tu aplicación. Si decides usa
 
 Se trata de comprender correctamente los aspectos fundamentales. Ahora que sabes cuáles son los puntos fuertes de tu aplicación y ya pensaste en los flujos que quieres admitir, puedes comenzar a pensar en los aspectos fundamentales del diseño de la experiencia de usuario.
 
-**¿Cómo se debe organizar el contenido de la interfaz de usuario?**   La mayor parte del contenido de la aplicación se puede organizar en algún tipo de grupos o jerarquías. Lo que elijas como grupo de nivel superior del contenido debe coincidir con el objetivo del enunciado de puntos fuertes.
+**¿Cómo se debe organizar el contenido de la interfaz de usuario?**   Más contenido de la aplicación se puede organizar en alguna forma de agrupaciones o jerarquías. Lo que elijas como grupo de nivel superior del contenido debe coincidir con el objetivo del enunciado de puntos fuertes.
 
 Por ejemplo, en la aplicación para viajes existen varias formas de agrupar los itinerarios. Si el objetivo de la aplicación fuese descubrir destinos interesantes, podrías agruparlos según los intereses, como aventuras, diversión bajo el sol o escapadas románticas. Sin embargo, como el objetivo de la aplicación es planear viajes con amigos, tiene más sentido organizar los itinerarios en función de círculos sociales, como familia, amigos o trabajo.
 
 Elegir cómo quieres agrupar el contenido te ayuda a decidir qué páginas o vistas necesitas en la aplicación. Para obtener más información, consulta los conceptos básicos de la interfaz de usuario.
 
-**¿Cómo deberías presentar el contenido de la interfaz de usuario?** Una vez que hayas decidido cómo organizar la interfaz de usuario, puedes definir objetivos de experiencia de usuario que especifiquen la manera en que se crea y se presenta dicha interfaz al usuario. En cualquier escenario, lo que te interesa es asegurarte de que el usuario pueda seguir usando la aplicación y disfrutando de ella lo antes posible. Para ello decide qué partes de la interfaz de usuario deben presentarse primero y asegúrate de que esas partes estén completas antes de dedicar tiempo a crear partes que no sean esenciales.
+**¿Cómo se debe presentar el contenido de la interfaz de usuario?** Una vez que hayas decidido cómo organizar la interfaz de usuario, puedes definir objetivos de experiencia de usuario que especifiquen la manera en que se crea y se presenta dicha interfaz al usuario. En cualquier escenario, lo que te interesa es asegurarte de que el usuario pueda seguir usando la aplicación y disfrutando de ella lo antes posible. Para ello decide qué partes de la interfaz de usuario deben presentarse primero y asegúrate de que esas partes estén completas antes de dedicar tiempo a crear partes que no sean esenciales.
 
 En la aplicación de viaje, lo más probable es que lo primero que el usuario quiera hacer sea encontrar un itinerario de viaje específico. Para presentar esta información lo más rápido posible, deberías mostrar primero la lista de viajes mediante un control **ListView**.
 
@@ -189,7 +189,7 @@ En la aplicación de viaje, lo más probable es que lo primero que el usuario qu
 
 Después de mostrar la lista de viajes, podrías empezar a cargar otras funciones como, por ejemplo, una fuente de noticias acerca de los viajes de los amigos del usuario.
 
-**¿Qué comandos y superficies de interfaz de usuario necesitas?**   Revisa los flujos que identificaste anteriormente. Para cada flujo, crea una descripción general de los pasos que deben dar los usuarios.
+**¿Qué comandos y las superficies de la interfaz de usuario es necesario?**   Revise los flujos que identificó anteriormente. Para cada flujo, crea una descripción general de los pasos que deben dar los usuarios.
 
 Examinemos el flujo "Compartir itinerarios para que los sigan amigos y familiares". Vamos a suponer que el usuario ya ha creado un viaje. Compartir un itinerario de viaje podría requerir estos pasos:
 
@@ -205,18 +205,18 @@ Durante este proceso, comienzas a ver qué interfaz de usuario necesitas crear y
 
 Para obtener información detallada sobre cómo usar superficies distintas, consulta <!--[Command design basics](../design/basics/commanding-basics.md)-->.
 
-**¿Cómo debería ser el flujo?** Una vez que hayas definido los pasos que seguirá el usuario, puedes convertir ese flujo en objetivos de rendimiento. Para obtener más información, consulta [Planear el rendimiento](../debug-test-perf/planning-and-measuring-performance.md).
+**¿Qué debe parecer el flujo?** Una vez que hayas definido los pasos que seguirá el usuario, puedes convertir ese flujo en objetivos de rendimiento. Para obtener más información, consulta [Planear el rendimiento](../debug-test-perf/planning-and-measuring-performance.md).
 
-**¿Cómo deberías organizar los comandos?** Usa el esquema de los pasos del flujo para identificar posibles comandos que necesites diseñar. A continuación, piensa dónde se utilizarán esos comandos en la aplicación.
+**¿Cómo se deben organizar comandos?**    Usar el esquema de los pasos de flujo para identificar posibles comandos que necesita para el diseño. A continuación, piensa dónde se utilizarán esos comandos en la aplicación.
 
--   **Trata siempre de usar el contenido.** Siempre que sea posible, permite que los usuarios manipulen directamente el contenido en el lienzo de la aplicación, en lugar de agregar comandos que actúan sobre el contenido. Por ejemplo, en la aplicación para viajes, permite que los usuarios reorganicen el itinerario arrastrando y colocando las actividades de una lista en el Canvas, en lugar de seleccionar la actividad y usar los botones de comandos Arriba o Abajo.
--   **Si no puedes usar el contenido.** Coloca comandos en una de estas superficies de la interfaz de usuario si no puedes usar el contenido:
+-   **Siempre intenta utilizar el contenido.**    Siempre que sea posible, permiten a los usuarios manipular directamente el contenido en el lienzo de la aplicación, en lugar de agregar comandos que actúan en el contenido. Por ejemplo, en la aplicación para viajes, permite que los usuarios reorganicen el itinerario arrastrando y colocando las actividades de una lista en el Canvas, en lugar de seleccionar la actividad y usar los botones de comandos Arriba o Abajo.
+-   **Si no se puede usar el contenido.** Coloca comandos en una de estas superficies de la interfaz de usuario si no puedes usar el contenido:
 
-    -   En la [barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302): debes colocar la mayoría de los comandos en la barra de comandos, que generalmente permanece oculta hasta que el usuario toca la pantalla para que se muestre.
-    -   En el lienzo de la aplicación: si el usuario se encuentra en una página o vista que tiene un solo propósito, puedes ofrecerle comandos para ese propósito directamente en el lienzo. Debería haber muy pocos de estos comandos.
-    -   En un [menú contextual](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): puedes usar los menús contextuales para acciones del Portapapeles (como cortar, copiar y pegar) o para comandos que se aplican al contenido y que no se pueden seleccionar (como agregar un alfiler de anotación en una ubicación sobre el mapa).
+    -   En el [barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302): Debe colocar la mayoría de los comandos en la barra de comandos, que normalmente se oculta hasta que el usuario puntea para que sea visible.
+    -   En el lienzo de la aplicación: Si el usuario está en una página o vista que tiene un propósito único, puede proporcionar los comandos para ese propósito directamente en el lienzo. Debería haber muy pocos de estos comandos.
+    -   En un [menú contextual](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): Puede usar los menús contextuales de acciones del Portapapeles (por ejemplo, cortar, copiar y pegar), o para los comandos que se aplican a contenido no se pueden seleccionar (como agregar un pin de inserción a una ubicación en un mapa).
 
-**Decide cómo diseñar la aplicación en cada vista.** Windows admite orientaciones horizontales y verticales permite cambiar el tamaño de las aplicaciones a cualquier ancho: desde la pantalla completa hasta un ancho mínimo. Te interesa que tu aplicación tenga un funcionamiento y un aspecto perfectos en cualquier tamaño, pantalla y orientación, para ello tendrás que planear el diseño de los elementos de la interfaz de usuario para distintos tamaños y vistas. Al hacerlo, la interfaz de usuario de la aplicación cambia de forma fluida para satisfacer las necesidades y preferencias del usuario.
+**Decidir cómo distribuir la aplicación en cada vista.**    Windows es compatible con orientación horizontal y vertical y permite cambiar el tamaño de las aplicaciones a cualquier ancho, desde la pantalla completa para un ancho mínimo. Te interesa que tu aplicación tenga un funcionamiento y un aspecto perfectos en cualquier tamaño, pantalla y orientación, para ello tendrás que planear el diseño de los elementos de la interfaz de usuario para distintos tamaños y vistas. Al hacerlo, la interfaz de usuario de la aplicación cambia de forma fluida para satisfacer las necesidades y preferencias del usuario.
 
 ![Diseños de una aplicación para PC y móvil](images/ux-budgettracker1-md-notablet.png)
 
@@ -226,16 +226,16 @@ Para obtener más información sobre cómo diseñar para diferentes tamaños de 
 
 Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicien por primera vez la aplicación. Vuelve a consultar el enunciado de puntos fuertes. Aunque no tengas la oportunidad de decir a los usuarios en persona para qué es excelente la aplicación, puedes transmitirles el mensaje con tu primera impresión. Aprovecha lo siguiente:
 
-**Iconos y notificaciones**  El icono es la cara de la aplicación. Entre todas las aplicaciones que el usuario pueda tener en su pantalla Inicio, ¿qué es lo que hará que quiera iniciar la tuya? Asegúrate de que el icono resalte la marca de tu aplicación y muestre sus puntos fuertes. Usa las notificaciones de icono para que la aplicación siempre tenga una apariencia renovada y relevante, lo que hará que el usuario vuelva a ella una y otra vez.
+**Iconos y notificaciones**    el mosaico es la cara de la aplicación. Entre todas las aplicaciones que el usuario pueda tener en su pantalla Inicio, ¿qué es lo que hará que quiera iniciar la tuya? Asegúrate de que el icono resalte la marca de tu aplicación y muestre sus puntos fuertes. Usa las notificaciones de icono para que la aplicación siempre tenga una apariencia renovada y relevante, lo que hará que el usuario vuelva a ella una y otra vez.
 
-**Pantalla de presentación**la pantalla de presentación debe cargarse lo más rápido posible y permanecer en la pantalla solo, siempre debes inicializar el estado de la aplicación. Lo que muestres en la pantalla de presentación debe expresar la personalidad de la aplicación.
+**Pantalla de presentación**  la pantalla de presentación debe cargar tan rápido como sea posible y permanecen en la pantalla solo, siempre debe inicializar el estado de la aplicación. Lo que muestres en la pantalla de presentación debe expresar la personalidad de la aplicación.
 
-**Primer inicio**antes de que los usuarios registrarse en el servicio, iniciar sesión en su cuenta o agregar su propio contenido, ¿qué verán? Intenta demostrar el valor de la aplicación antes de solicitar información a los usuarios. Considera la posibilidad de ofrecer una muestra del contenido que el usuario pueda manipular para que comprenda lo que hace tu aplicación antes de pedirle que se comprometa.
+**¿Primero inicie**  antes de que los usuarios suscribirse a su servicio, inicie sesión en su cuenta o agregar su propio contenido, lo verá? Intenta demostrar el valor de la aplicación antes de solicitar información a los usuarios. Considera la posibilidad de ofrecer una muestra del contenido que el usuario pueda manipular para que comprenda lo que hace tu aplicación antes de pedirle que se comprometa.
 
-**Página principal**la página principal es que verán los usuarios cada vez que inicien la aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
+**Página principal**  la página principal es donde se incorpora a los usuarios cada vez que inicie la aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
 
 ## <a name="validate-your-design"></a>Valida tu diseño
 
-Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función tiene un conjunto de directrices de experiencia del usuario que te ayudarán a pulir la aplicación y un conjunto de requisitos de la tienda que se deben cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
+Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada característica tiene un conjunto de directrices de experiencia de usuario que le ayudarán a perfeccionar la aplicación y un conjunto de requisitos de Store que se deben cumplir para publicar la aplicación en la Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
 Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analizar el rendimiento de cada uno de los escenarios de la aplicación.

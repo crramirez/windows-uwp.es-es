@@ -4,19 +4,19 @@ description: En este artículo se muestra cómo usar la clase MediaSource, que p
 title: Elementos multimedia, listas de reproducción y pistas
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c3929c2b3765bd90dbe0be687834e94b4f222fc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594880"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Elementos multimedia, listas de reproducción y pistas
 
 
- En este artículo se muestra cómo usar la clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear listas de reproducción de uno o más elementos de reproducción de contenido multimedia.
+ En este artículo se muestra cómo usar la clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [**MediaPlaybackList** ](https://msdn.microsoft.com/library/windows/apps/dn930955) le permite crear listas de reproducción desde un medio de uno o varios elementos de la reproducción.
 
 
 ## <a name="create-and-play-a-mediasource"></a>Crear y reproducir un objeto MediaSource
@@ -120,7 +120,7 @@ Similar a las pistas de audio y vídeos, las pistas de metadatos temporizadas de
 
 [!code-cs[TimedMetadataTrackschanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedMetadataTrackschanged)]
 
-Dado que puede haber más de una pista de metadatos activa a la vez, no se establece simplemente el índice activo de la lista de pistas de metadatos. En cambio, llama al método [**SetPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn986977) del objeto **MediaPlaybackItem**, pasando el índice de la pista que quieras cambiar y luego proporcionando un valor de la enumeración [**TimedMetadataTrackPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn987016). El modo de presentación que elijas depende de la implementación de la aplicación. En este ejemplo, la pista de metadatos se establece en **PlatformPresented** cuando está habilitada. Para las pistas basadas en texto, esto significa que el sistema mostrará automáticamente las indicaciones de texto en la pista. Cuando se desactiva el botón de alternancia, el modo de presentación se establece en **Disabled**, lo que significa que se muestra ningún texto y no se genera ningún evento de indicación. Los eventos de indicación se describen más adelante en este artículo.
+Dado que puede haber más de una pista de metadatos activa a la vez, no se establece simplemente el índice activo de la lista de pistas de metadatos. En cambio, llama al método [**SetPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn986977) del objeto **MediaPlaybackItem**, pasando el índice de la pista que quieras cambiar y luego proporcionando un valor de la enumeración [**TimedMetadataTrackPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn987016). El modo de presentación que elijas depende de la implementación de la aplicación. En este ejemplo, la pista de metadatos se establece en **PlatformPresented** cuando está habilitada. Para las pistas basadas en texto, esto significa que el sistema mostrará automáticamente las indicaciones de texto de la pista. Cuando se desactiva el botón de alternancia, el modo de presentación se establece en **Disabled**, lo que significa que no se muestra ningún texto y no se genera ningún evento de indicación. Los eventos de indicación se describen más adelante en este artículo.
 
 [!code-cs[ToggleChecked](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetToggleChecked)]
 
@@ -129,7 +129,7 @@ Dado que puede haber más de una pista de metadatos activa a la vez, no se estab
 Mientras se procesan las pistas de metadatos, puedes acceder al conjunto de indicaciones de la pista mediante el acceso a las propiedades [**Cues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.Cues) o [**ActiveCues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.ActiveCues). Puedes hacerlo para actualizar la interfaz de usuario con el fin de mostrar las ubicaciones de indicación de un elemento multimedia.
 
 ## <a name="handle-unsupported-codecs-and-unknown-errors-when-opening-media-items"></a>Controlar errores desconocidos y códecs no admitidos al abrir elementos multimedia
-A partir de Windows 10, versión 1607, puedes comprobar si el códec necesario para la reproducción de un elemento multimedia se admite parcial o totalmente en el dispositivo en el que se ejecuta la aplicación. En el controlador de eventos para los eventos cambiados por pistas **MediaPlaybackItem**, como [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracksChanged), comprueba primero si el cambio de la pista es una inserción de una pista nueva. Si es así, puede obtener una referencia a la pista que se va a insertar utilizando el índice pasado en el parámetro **IVectorChangedEventArgs.Index** con la colección de pistas adecuada del parámetro **MediaPlaybackItem**, como la colección [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracks).
+A partir de Windows 10, versión 1607, puedes comprobar si el códec necesario para la reproducción de un elemento multimedia se admite parcial o totalmente en el dispositivo en el que se ejecuta la aplicación. En el controlador de eventos correspondiente a los eventos de cambio de pistas de **MediaPlaybackItem**, como [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracksChanged), primero comprueba si el cambio de pista es una inserción de una pista nueva. Si es así, puedes obtener una referencia a la pista que se va a insertar usando el índice pasado en el parámetro **IVectorChangedEventArgs.Index** con la colección de pistas adecuada del parámetro **MediaPlaybackItem**, por ejemplo, la colección [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracks).
 
 Una vez que tengas una referencia a la pista insertada, comprueba el valor de [**DecoderStatus**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrackSupportInfo.DecoderStatus) de la propiedad [**SupportInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.SupportInfo) de la pista. Si el valor es [**FullySupported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), entonces el códec adecuado que se necesita para reproducir la pista está presente en el dispositivo. Si el valor es [**Degraded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), el sistema puede reproducir la pista, pero la reproducción se degradará de alguna manera. Por ejemplo, una pista de audio 5.1 puede reproducirse como estéreo de dos canales. Si este es el caso, quizás quieras actualizar tu interfaz de usuario para alertar al usuario sobre la degradación. Si el valor es [**UnsupportedSubtype**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus) o [**UnsupportedEncoderProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), la pista no se puede reproducir en absoluto con los códecs actuales del dispositivo. Quizás quieras alertar al usuario y omitir la reproducción del elemento o implementar la interfaz de usuario para que el usuario pueda descargar el códec correcto. El método [**GetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.GetEncodingProperties) de la pista puede usarse para determinar el códec necesario para la reproducción.
 
@@ -162,7 +162,7 @@ Registra todos los objetos **TimedTextSource** en el objeto **MediaSource** agre
 
 [!code-cs[TimedTextSource](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSource)]
 
-En el controlador del evento [**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540), comprueba la propiedad **Error** del objeto [**TimedTextSourceResolveResultEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn965537) que se pasó al controlador para determinar si se produjo un error al intentar cargar los datos de texto temporizado. Si el elemento se resolvió correctamente, puedes usar este controlador para actualizar las propiedades adicionales de la pista resuelta. En este ejemplo se agrega una etiqueta para cada pista basada en el URI almacenado anteriormente en el **Dictionary**.
+En el controlador del evento [**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540), comprueba la propiedad **Error** del objeto [**TimedTextSourceResolveResultEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn965537) que se pasó al controlador para determinar si se produjo un error al intentar cargar los datos de texto temporizado. Si el elemento se resolvió correctamente, puedes usar este controlador para actualizar las propiedades adicionales de la pista resuelta. En este ejemplo se agrega una etiqueta para cada pista en función del URI almacenado anteriormente en el objeto **Dictionary**.
 
 [!code-cs[TimedTextSourceResolved](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSourceResolved)]
 
@@ -172,7 +172,7 @@ Puedes crear pistas de metadatos personalizadas dinámicamente en el código y a
 
 Crea un nuevo objeto [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580) con una llamada al constructor y especificando el identificador, el identificador de idioma y un valor de la enumeración [**TimedMetadataKind**](https://msdn.microsoft.com/library/windows/apps/dn956578). Registra los controladores para los eventos [**CueEntered**](https://msdn.microsoft.com/library/windows/apps/dn956583) y [**CueExited**](https://msdn.microsoft.com/library/windows/apps/dn956584). Estos eventos se generan cuando se alcanza el tiempo de inicio para una identificación y cuando la duración de una identificación ha expirado, respectivamente.
 
-Crea un nuevo objeto de indicación, apropiado para el tipo de pista de metadatos que has creado, y establece el id., la hora de inicio y la duración de la pista. En este ejemplo se crea una pista de datos, por lo que se genera un conjunto de objetos [**DataCue**](https://msdn.microsoft.com/library/windows/apps/dn930892) y se proporciona un búfer que contiene datos específicos de la aplicación. Para registrar la pista nueva, agrégala a la colección [**ExternalTimedMetadataTracks**](https://msdn.microsoft.com/library/windows/apps/dn930915) del objeto **MediaSource**.
+Crea un nuevo objeto de indicación, apropiado para el tipo de pista de metadatos creado, y establece el identificador, la hora de inicio y la duración de la pista. En este ejemplo se crea una pista de datos, por lo que se genera un conjunto de objetos [**DataCue**](https://msdn.microsoft.com/library/windows/apps/dn930892) y se proporciona para cada cola un búfer que contiene datos específicos de la aplicación. Para registrar la pista nueva, agrégala a la colección [**ExternalTimedMetadataTracks**](https://msdn.microsoft.com/library/windows/apps/dn930915) del objeto **MediaSource**.
 
 A partir de Windows 10, versión 1703, la propiedad **DataCue.Properties** expone un objeto [**PropertySet**](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset) que puedes usar para almacenar las propiedades personalizadas en pares de clave o datos que se pueden recuperar en los eventos **CueEntered** y **CueExited**.  
 
@@ -192,7 +192,7 @@ En este ejemplo se agrega una pista de texto personalizado al especificar **Time
 
 El objeto [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear una lista de reproducción de elementos multimedia, que se representan con objetos **MediaPlaybackItem**.
 
-**Nota**elementos en una [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) se representan mediante la reproducción sin pausas. El sistema usará los metadatos proporcionados en archivos codificados MP3 o AAC para determinar la compensación del retraso o el espaciado interno necesaria para la reproducción sin pausas. Si los archivos codificados MP3 o AAC no proporcionan estos metadatos, el sistema determina el retraso o el espaciado interno de forma heurística. Para los formatos sin pérdida, como PCM, FLAC o ALAC, el sistema no realiza ninguna acción porque estos codificadores no introducen ningún retraso ni espaciado interno.
+**Tenga en cuenta**  los elementos de un [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) se representan mediante la reproducción huecos. El sistema usará los metadatos proporcionados en archivos codificados MP3 o AAC para determinar la compensación del retraso o el espaciado interno necesaria para la reproducción sin pausas. Si los archivos codificados MP3 o AAC no proporcionan estos metadatos, el sistema determina el retraso o el espaciado interno de forma heurística. Para los formatos sin pérdida, como PCM, FLAC o ALAC, el sistema no realiza ninguna acción porque estos codificadores no introducen ningún retraso ni espaciado interno.
 
 Para empezar, declara una variable para almacenar el objeto **MediaPlaybackList**.
 
@@ -260,8 +260,8 @@ A partir de Windows 10, versión 1703, puedes proporcionar un objeto [**Adaptive
 
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Reproducción de contenido multimedia](media-playback.md)
+* [Reproducción de multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md)
-* [Reproducir elementos multimedia en segundo plano](background-audio.md)
+* [Integrar con los controles de transporte de medios del sistema](integrate-with-systemmediatransportcontrols.md)
+* [Reproducir archivos multimedia en segundo plano](background-audio.md)
 

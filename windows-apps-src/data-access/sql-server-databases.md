@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, SQL Server, base de datos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
-ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976932"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621160"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar una base de datos de SQL Server en una aplicación para UWP
 Tu aplicación puede conectarse directamente a una base de datos de SQL Server y a continuación almacenar y recuperar datos mediante las clases del espacio de nombres [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
@@ -29,7 +29,7 @@ Para conectar tu aplicación directamente a una base de datos de SQL Server, ase
 
 Abre el archivo **Package.appxmanifest** de tu proyecto para la UWP en el diseñador de manifiestos.
 
-En la pestaña **funcionalidades** , selecciona la casilla de verificación de **Autenticación de empresa** si estás usando la autenticación de Windows para la autenticación de SQL Server.
+En el **capacidades** ficha, seleccione el **autenticación empresarial** casilla de verificación si usa la autenticación de Windows para la autenticación de SQL Server.
 
 ![Funcionalidad Autenticación empresarial](images/enterprise-authentication.png)
 
@@ -39,15 +39,15 @@ En la pestaña **funcionalidades** , selecciona la casilla de verificación de *
 
 En esta sección, haremos lo siguiente:
 
-:one: Agregar una cadena de conexión.
+: uno: Agregar una cadena de conexión.
 
-:two: Crear una clase para contener los datos de productos.
+:two: Cree una clase para contener datos de productos.
 
-:three: Recuperar productos de la base de datos de SQL Server.
+: tres: Recuperar los productos de la base de datos de SQL Server.
 
-:four: Agregar una interfaz de usuario básica.
+: cuatro: Agregar una interfaz de usuario básica.
 
-:five: Rellenar la interfaz de usuario con productos.
+: cinco: Rellenar la interfaz de usuario con los productos.
 
 >[!NOTE]
 > Esta sección muestra una manera de organizar el código de acceso a los datos. Está concebida únicamente para proporcionar un ejemplo de cómo puedes usar [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) para almacenar y recuperar datos de una base de datos de SQL Server. Puedes organizar tu código de la manera que tenga más sentido para el diseño de la aplicación.
@@ -226,7 +226,7 @@ Explora el espacio de nombres [System.Data.SqlClient](https://msdn.microsoft.com
 
 ## <a name="trouble-connecting-to-your-database"></a>¿Tienes problemas para conectarte a tu base de datos?
 
-En la mayoría de los casos, es necesario cambiar algún aspecto de la configuración de SQL Server. Si puedes conectarte a tu base de datos desde otro tipo de aplicación de escritorio como una aplicación WPF o Windows Forms, asegúrate de que has habilitado TCP/IP para SQL Server. Puedes hacerlo en la consola de **Administración de equipos**.
+En la mayoría de los casos, es necesario cambiar algún aspecto de la configuración de SQL Server. Si puedes conectarte a tu base de datos desde otro tipo de aplicación de escritorio como una aplicación WPF o Windows Forms, asegúrate de que has habilitado TCP/IP para SQL Server. Puedes hacerlo en la consola de **Administración de equipos** .
 
 ![Administración de equipos](images/computer-management.png)
 
@@ -238,12 +238,12 @@ A continuación, asegúrate de que se está ejecutando el servicio de SQL Server
 
 **Usar una base de datos ligera para almacenar datos en el dispositivo del usuario**
 
-Consulta [Usar una base de datos de SQLite en una aplicación para UWP.](sqlite-databases.md).
+Consulta [Usar una base de datos de SQLite en una aplicación para UWP](sqlite-databases.md).
 
-**Compartir código entre diferentes aplicaciones de distintas plataformas**
+**Compartir código entre diferentes aplicaciones en diferentes plataformas**
 
 Consulta [Compartir código entre una aplicación de escritorio y una aplicación para UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
 
-**Agregar páginas de detalles maestras con back-ends SQL de Azure**
+**Agregar páginas de maestro/detalle con servidores back-end de SQL Azure**
 
 Consulta [Muestra de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database).
