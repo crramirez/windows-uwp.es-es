@@ -630,7 +630,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>ERY de Macedonia</td>
+    <td>Macedonia del Norte</td>
     <td>200 USD</td>
     <td>Transferencia bancaria</td>
     <td>N/D</td>
@@ -1692,7 +1692,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>ERY de Macedonia</td>
+    <td>Macedonia del Norte</td>
     <td>50 USD</td>
     <td>Transferencia bancaria</td>
     <td>N/D</td>
@@ -2747,7 +2747,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>ERY de Macedonia</td>
+    <td>Macedonia del Norte</td>
     <td>200 USD</td>
     <td>Transferencia bancaria</td>
     <td>N/D</td>
@@ -3752,7 +3752,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>ERY de Macedonia</td>
+    <td>Macedonia del Norte</td>
     <td>200 USD</td>
     <td>Transferencia bancaria</td>
     <td>N/D</td>

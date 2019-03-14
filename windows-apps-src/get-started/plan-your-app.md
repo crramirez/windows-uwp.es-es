@@ -40,7 +40,7 @@ Imagina que quieres crear una aplicación que ayude a las personas a planear sus
 
 **¿Qué es ideal para su aplicación?** Da un paso atrás y examina la lista de ideas para ver si algún escenario en particular te llama la atención. Acepta el reto de reducir la lista a un solo escenario en el que quieras centrarte. En el proceso puede que descartes muchas ideas buenas, pero hacerlo es fundamental a fin de lograr un solo escenario excepcional.
 
-Después de elegir un solo escenario, decide cómo explicarías a una persona normal los motivos por los que tu aplicación es excelente, y escríbelos en una sola frase. Por ejemplo:
+Después de elegir un solo escenario, decide cómo explicarías los motivos por los que tu aplicación es excelente, y escríbelos en una sola frase. Por ejemplo:
 
 -   Mi aplicación para viajes es excelente para crear itinerarios de forma conjunta para viajes en grupo.
 -   Mi aplicación de gimnasia es excelente para permitir a los amigos realizar un seguimiento de su progreso y compartir sus logros.
@@ -207,7 +207,7 @@ Para obtener información detallada sobre cómo usar superficies distintas, cons
 
 **¿Qué debe parecer el flujo?** Una vez que hayas definido los pasos que seguirá el usuario, puedes convertir ese flujo en objetivos de rendimiento. Para obtener más información, consulta [Planear el rendimiento](../debug-test-perf/planning-and-measuring-performance.md).
 
-**¿Cómo se deben organizar comandos?**    Usar el esquema de los pasos de flujo para identificar posibles comandos que necesita para el diseño. A continuación, piensa dónde se utilizarán esos comandos en la aplicación.
+**¿Cómo se deben organizar comandos?**  Usar el esquema de los pasos de flujo para identificar posibles comandos que necesita para el diseño. A continuación, piensa dónde se utilizarán esos comandos en la aplicación.
 
 -   **Siempre intenta utilizar el contenido.**    Siempre que sea posible, permiten a los usuarios manipular directamente el contenido en el lienzo de la aplicación, en lugar de agregar comandos que actúan en el contenido. Por ejemplo, en la aplicación para viajes, permite que los usuarios reorganicen el itinerario arrastrando y colocando las actividades de una lista en el Canvas, en lugar de seleccionar la actividad y usar los botones de comandos Arriba o Abajo.
 -   **Si no se puede usar el contenido.** Coloca comandos en una de estas superficies de la interfaz de usuario si no puedes usar el contenido:

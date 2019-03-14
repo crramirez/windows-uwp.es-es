@@ -1,22 +1,16 @@
 ---
 layout: LandingPage
-Description: See how to publish your Windows apps to the Microsoft Store.
+Description: "Consulta cómo publicar tus aplicaciones de Windows en Microsoft\_Store."
 title: Publicar aplicaciones de Windows
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, publicación, publicar, venta, vender, distribuir, distribución, store, dashboard, panel
+keywords: 'windows 10, uwp, publishing, publish, selling, sell, distribute, distributing, store, dashboard'
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980313"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicaciones y juegos de Windows  
  
-Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) para publicar tus aplicaciones y juegos en Microsoft Store. <a href="//developer.microsoft.com/store/register">¡Regístrate hoy!</a>
+Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) para publicar tus aplicaciones y juegos en Microsoft Store. <a href="//developer.microsoft.com/store/register">Regístrate hoy</a>.
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -32,9 +26,9 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                         <h3>Envíos de aplicaciones</h3>
                         <p>Descubre lo que necesitas para crear un envío y obtener la certificación de la aplicación.</p>
                         <ul>
-                        <li><a href="app-submissions.md">Lista de comprobación de envío de aplicaciones</a></li>
+                        <li><a href="app-submissions.md">Lista de comprobación de envíos de aplicaciones</a></li>
                         <li><a href="the-app-certification-process.md">Proceso de certificación</a></li>                      
-                        <li><a href="//docs.microsoft.com/legal/windows/agreements/store-policies">Directivas de Microsoft Store</a></li>   
+                        <li><a href="//docs.microsoft.com/legal/windows/agreements/store-policies">Directivas de Microsoft Store</a></li>   
                     </ul>
                     </div>
                 </div>
@@ -55,7 +49,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                     <p>Personaliza la disponibilidad de la aplicación con la programación y el precio de cada mercado, las opciones de visibilidad, el precio de venta y mucho más.</p>
                     <ul>
                         <li><a href="define-pricing-and-market-selection.md">Elegir tus mercados</a></li>
-                        <li><a href="set-and-schedule-app-pricing.md">Establecer y programar los precios </a></li>
+                        <li><a href="set-and-schedule-app-pricing.md">Establecer y programar los precios</a></li>
                         <li><a href="configure-precise-release-scheduling.md">Configurar fechas de lanzamiento precisas</a></li>
                         <li><a href="set-app-pricing-and-availability.md">Ver todas las opciones de disponibilidad</a></li>
                     </ul>
@@ -79,7 +73,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                         <ul>
                             <li><a href="create-app-store-listings.md">Introducción a la descripción de Store</a></li>
                             <li><a href="app-screenshots-and-images.md">Capturas de pantalla, imágenes y tráileres</a></li>
-                              <li><a href="import-and-export-store-listings.md">Administrar descripciones en masa </a></li>
+                              <li><a href="import-and-export-store-listings.md">Administrar listados de forma masiva</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,8 +94,8 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                 </div>
                 <div class="cardText">
                     <h3>Pagos e informes</h3>                  
-                    <p><a href="getting-paid-apps.md">Recibir pagos</a></p>
-                    <p><a href="in-app-ads.md">Anuncios desde la aplicación</a></p>
+                    <p><a href="getting-paid-apps.md">Proceso de pago</a></p>
+                    <p><a href="in-app-ads.md">Anuncios en aplicaciones</a></p>
                     <p><a href="analytics.md">Informes analíticos</a></p>                   
                 </div>
             </div>
@@ -161,7 +155,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                 </div>
                 <div class="cardText">
                     <h3>Administrar cuentas de usuario</h3>                    
-                    <p><a href="associate-azure-ad-with-dev-center.md">Configurar Azure AD</a></p>
+                    <p><a href="associate-azure-ad-with-dev-center.md">Configurar Azure AD</a></p>
                     <p><a href="add-users-groups-and-azure-ad-applications.md">Agregar usuarios de la cuenta</a></p>
                     <p><a href="set-custom-permissions-for-account-users.md">Roles y permisos</a></p>                   
                 </div>
@@ -179,7 +173,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>Complementos (productos desde la aplicación)</h3>      
+                    <h3>Complementos (productos en la aplicación)</h3>      
                     <p><a href="add-on-submissions.md">Envíos de complementos</a></p>
                     <p><a href="../monetize/in-app-purchases-and-trials.md">Habilitar complementos en el código de la aplicación</a></p>
                 </div>
@@ -241,7 +235,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Distribución de LOB</h3>
+                                <h3>Distribución de línea de negocio</h3>
                             </div>
                         </div>
                     </div>
@@ -259,7 +253,7 @@ Puedes usar [El centro de partners](https://partner.microsoft.com/dashboard) par
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Acuerdo para desarrolladores de aplicaciones</h3>
+                                <h3>Acuerdo para Desarrolladores de Aplicaciones</h3>
                             </div>
                         </div>
                     </div>

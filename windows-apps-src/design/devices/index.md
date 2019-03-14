@@ -1,19 +1,13 @@
 ---
-Description: Getting to know the devices that support Universal Windows Platform (UWP) apps will help you offer the best user experience for each form factor.
-title: Información básica de dispositivos de aplicaciones para la plataforma universal de Windows (UWP)
+Description: Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
+title: Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
-keywords: dispositivo, entrada, interacción
+keywords: 'dispositivo, entrada, interacción'
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 127c01321c0341e7125e8c6da955c789c4c65f2f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049912"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)
 
@@ -21,7 +15,7 @@ ms.locfileid: "9049912"
 
 ![dispositivos de Windows](images/device-primer/device-primer-ramp.png)
 
-Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma. Al diseñar para un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo, dónde, cuándo y cómo se usará en el dispositivo y cómo interactuará el usuario con dicho dispositivo.
+Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma. Al diseñar un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo dónde, cuándo y cómo se usará la aplicación en el dispositivo y cómo interactuará el usuario con el dispositivo.
 
 ## <a name="pcs-and-laptops"></a>PC y portátiles
 
@@ -65,7 +59,7 @@ Tamaños de pantalla
 ![un dispositivo de tableta](images/device-primer/device-primer-tablet.png)
 
 Uso típico
--   Aproximadamente el 80% del uso de la tableta es por parte del propietario, mientras que el 20% restante del uso es compartido.
+-   Aproximadamente el 80 % del uso de la tableta es por parte del propietario, mientras que el 20 % restante del uso es compartido.
 -   Normalmente se usa en casa como un dispositivo complementario mientras se ve el televisor.
 -   Se usa durante períodos más prolongados que los teléfonos y tabléfonos.
 -   Se escribe texto en ráfagas cortas.
@@ -129,7 +123,7 @@ Funcionalidades típicas del dispositivo
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
 
-Con Continuum para teléfonos, una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431)).
+Con Continuum para teléfonos, una nueva experiencia para dispositivos móviles Windows 10 compatibles, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431)).
 
 Tamaños de pantalla
 -   Entre 4 y 5 pulgadas para teléfono

@@ -1,5 +1,5 @@
 items:
-- name: Documentos
+- name: Docs
   tocHref: /
   topicHref: /
   items:
@@ -14,7 +14,7 @@ items:
       - name: Novedades
         tocHref: /windows/uwp/whats-new/
         topicHref: /windows/uwp/whats-new/windows-10-version-latest
-      - name: Introducción
+      - name: Comenzar
         tocHref: /windows/uwp/get-started/
         topicHref: /windows/uwp/get-started/
       - name: Diseño e interfaz de usuario
@@ -36,7 +36,7 @@ items:
         - name: Movimiento
           tocHref: /windows/uwp/design/motion/
           topicHref: /windows/uwp/design/motion/index
-        - name: Controles
+        - name: Controls
           tocHref: /windows/uwp/design/controls-and-patterns/
           topicHref: /windows/uwp/design/controls-and-patterns/index
         - name: Entrada e interacciones
@@ -52,23 +52,23 @@ items:
           - name: Accesibilidad
             tocHref: /windows/uwp/design/accessibility/
             topicHref: /windows/uwp/design/accessibility/accessibility
-          - name: Configuración y datos de la aplicación
+          - name: Datos y configuración de la aplicación
             tocHref: /windows/uwp/design/app-settings/
             topicHref: /windows/uwp/design/app-settings/app-settings-and-data
           - name: Globalización y localización
             tocHref: /windows/uwp/design/globalizing/
             topicHref: /windows/uwp/design/globalizing/globalizing-portal
-          - name: Directrices de ayuda de aplicaciones
+          - name: Directrices para la ayuda de la aplicación
             tocHref: /windows/uwp/design/guidelines-for-app-help/
             topicHref: /windows/uwp/design/guidelines-for-app-help/index
         - name: Kits de herramientas de diseño
           tocHref: /windows/uwp/design/downloads/
           topicHref: /windows/uwp/design/downloads/index
-      - name: Desarrollar
+      - name: Desarrollo
         tocHref: /windows/uwp/develop/
         topicHref: /windows/uwp/develop/index
         items:
-        - name: Recursos de la aplicación
+        - name: Recursos de aplicación
           tocHref: /windows/uwp/app-resources/
           topicHref: /windows/uwp/app-resources/index
         - name: Comunicación entre aplicaciones
@@ -110,7 +110,7 @@ items:
         - name: Inicio, reanudación y tareas en segundo plano
           tocHref: /windows/uwp/launch-resume/
           topicHref: /windows/uwp/launch-resume/index
-        - name: Aprendizaje automático
+        - name: Machine Learning
           tocHref: /windows/uwp/machine-learning/
           topicHref: /windows/uwp/machine-learning/index
         - name: Mapas y ubicación
@@ -119,7 +119,7 @@ items:
         - name: Monetización, interacción y servicios de Store
           tocHref: /windows/uwp/monetize/
           topicHref: /windows/uwp/monetize/index
-        - name: Servicios de redes y web
+        - name: Servicios web y redes
           tocHref: /windows/uwp/networking/
           topicHref: /windows/uwp/networking/index
         - name: Empaquetado de aplicaciones
@@ -168,18 +168,18 @@ items:
         - name: Programación con DirectX
           tocHref: /windows/uwp/directx-programming/
           topicHref: /windows/uwp/directx-programming/index
-        - name: Guía de aprendizaje de elementos gráficos Direct3D
+        - name: Guía de aprendizaje de gráficos de Direct3D
           tocHref: /windows/uwp/graphics-concepts/
           topicHref: /windows/uwp/graphics-concepts/index
-        - name: XboxLive
+        - name: Xbox Live
           tocHref: /windows/uwp/xbox-live/
           topicHref: /windows/uwp/xbox-live/index
       - name: Publicar
         tocHref: /windows/uwp/publish/
         topicHref: /windows/uwp/publish/index
 ms.openlocfilehash: 1d79038daa4f2a50dd287da879fa8153ca3fb118
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962507"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583134"

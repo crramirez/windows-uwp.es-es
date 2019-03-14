@@ -1,24 +1,18 @@
 ---
-description: Aprende a usar el color, la tipografía y los iconos para definir la personalidad de tu aplicación para UWP con la guía de estilo de UWP.
-keywords: guía de estilo de UWP, guía de diseño, tipografía, movimiento, sonido, movimiento, desarrollo de aplicaciones
+description: 'Aprende a usar el color, la tipografía y los iconos para definir la personalidad de tu aplicación para UWP con la guía de estilo de UWP.'
+keywords: 'guía de estilo de UWP, guía de diseño, tipografía, movimiento, sonido, movimiento, desarrollo de aplicaciones'
 title: Estilo de aplicaciones para UWP
 ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946624"
 ---
 # <a name="style-for-uwp-apps"></a>Estilo de aplicaciones para UWP
 
 ![imagen principal](images/header-style.svg)
 
-El estilo es lo que hace que tu aplicación destaque. Las directrices de estilo de esta sección te ayudan a crear un diseño de Fluent Design a través de color, tipografía y nuevas características como material acrílico y mostrar resaltado.
+El estilo es lo que hace que tu aplicación destaque. Las instrucciones de estilo de esta sección te llevan por los pasos para crear un diseño Fluent Design mediante las características de color, tipografía y otras nuevas como material acrílico y revelar resaltado.
 
 :::row:::
     :::column:::
@@ -29,7 +23,7 @@ El estilo es lo que hace que tu aplicación destaque. Las directrices de estilo 
     :::column:::
         ![hero image](images/header-typography.svg)
         ### [Typography](typography.md)
-       Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. Las instrucciones siguientes se centran en cómo usar la tipografía para ayudar a los usuarios a comprender el contenido con facilidad. 
+       Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. Las siguientes instrucciones se centran en cómo usar la tipografía para ayudar a los usuarios a comprender fácilmente el contenido. 
     :::column-end:::
 :::row-end:::
 

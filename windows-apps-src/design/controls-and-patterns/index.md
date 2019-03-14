@@ -1,26 +1,20 @@
 ---
 description: Obtén instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP. Descubre más de 45 controles eficaces para su uso con la aplicación.
 title: 'Controles y patrones para UWP: desarrollo de aplicaciones de Windows'
-keywords: controles de UWP, interfaz de usuario, controles de la aplicación
+keywords: 'controles de UWP, interfaz de usuario, controles de la aplicación'
 label: Controls & patterns
 template: detail.hbs
 ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 417f9b72c5708a85fa570476de2829bf6217c165
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044286"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Controles y patrones para aplicaciones para UWP
  
 
-En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de interfaz de usuario que muestra contenido o permite interacción. Los controles son los elementos esenciales de la interfaz de usuario. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
+En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
 
-Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula.  Estos controles forman parte del sistema de diseño Fluent y pueden ayudarte a crear una interfaz de usuario llamativa y escalable que quede bien en todos los dispositivos y tamaños de pantalla. 
+Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula.  Estos controles forman parte de Fluent Design System y pueden ayudarte a crear una interfaz de usuario llamativa y escalable que quede bien en todos los dispositivos y tamaños de pantalla. 
 
 Los artículos de esta sección proporcionan instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP. 
 
@@ -34,13 +28,13 @@ Instrucciones generales y ejemplos de código para agregar y aplicar estilos a c
 Hay 3 pasos clave para agregar controles a la aplicación: agregar un control a la interfaz de usuario de la aplicación, establecer propiedades en el control y agregar código a los controladores de eventos del control para que realice una acción.</p>
     :::column-end:::
     :::column:::
-      <p><b><a href="xaml-styles.md">Controles de estilo</a></b> <br/>
-El marco XAML te permite personalizar la apariencia de tus aplicaciones de varias maneras. Los estilos te permiten establecer propiedades de control y reutilizar esa configuración para mantener un aspecto uniforme en varios controles.</p>
+      <p><b><a href="xaml-styles.md">Estilo de los controles</a></b> <br/>
+El marco XAML te permite personalizar la apariencia de tus aplicaciones de varias maneras. Los estilos te permiten establecer propiedades de control y reusar esa configuración para mantener un aspecto uniforme en varios controles.</p>
     :::column-end:::
 :::row-end:::
 
-## <a name="get-the-windows-ui-library"></a>Obtén la biblioteca de la interfaz de usuario de Windows
-Algunos controles solo están disponibles en la biblioteca de la interfaz de usuario de Windows. Para acceder a ella, consulta las [instrucciones de instalación y de la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
+## <a name="get-the-windows-ui-library"></a>Obtener la biblioteca de interfaz de usuario de Windows
+Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).
 
 ## <a name="alphabetical-index"></a>Índice alfabético 
 
@@ -54,7 +48,7 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="buttons.md">Botones</a></li>
 
-<li style="list-style-type: none;"><a href="checkbox.md">Casilla </a></li>
+<li style="list-style-type: none;"><a href="checkbox.md">Casilla</a></li>
 
 <li style="list-style-type: none;"><a href="color-picker.md">Selector de colores</a></li>
 
@@ -64,7 +58,7 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="dialogs-and-flyouts/index.md">Cuadros de diálogo y controles flotantes</a></li>
 
-<li style="list-style-type: none;"><a href="flipview.md">Vista invertida</a></li>
+<li style="list-style-type: none;"><a href="flipview.md">Vista para alternar</a></li>
 
 <li style="list-style-type: none;"><a href="forms.md">Formularios</a></li>
 
@@ -72,15 +66,15 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="images-imagebrushes.md">Imágenes y pinceles de imagen</a></li>
 
-<li style="list-style-type: none;"><a href="inking-controls.md">Controles de entrada de lápiz</a></li>
+<li style="list-style-type: none;"><a href="inking-controls.md">Controles de entrada manuscrita</a></li>
 
 <li style="list-style-type: none;"><a href="lists.md">Listas</a></li>
 
 <li style="list-style-type: none;"><a href="../../maps-and-location/controls-map.md">Control de mapa</a></li>
 
-<li style="list-style-type: none;"><a href="master-details.md">Panel de maestro y detalles</a></li>
+<li style="list-style-type: none;"><a href="master-details.md">Maestro/detalles</a></li>
 
-<li style="list-style-type: none;"><a href="media-playback.md">Reproducción de contenido multimedia</a></li>
+<li style="list-style-type: none;"><a href="media-playback.md">Reproducción de multimedia</a></li>
 
 <li style="list-style-type: none;"><a href="menus.md">Menús y menús contextuales</a></li>
 
@@ -88,7 +82,7 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="person-picture.md">Imagen de persona</a></li>
 
-<li style="list-style-type: none;"><a href="pivot.md">Dinámica</a></li>
+<li style="list-style-type: none;"><a href="pivot.md">Pivot</a></li>
 
 <li style="list-style-type: none;"><a href="progress-controls.md">Controles de progreso</a></li>
 
@@ -106,13 +100,13 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="slider.md">Control deslizante</a></li>
 
-<li style="list-style-type: none;"><a href="split-view.md">Vista en dos paneles</a></li>
+<li style="list-style-type: none;"><a href="split-view.md">Vista dividida</a></li>
 
 <li style="list-style-type: none;"><a href="text-controls.md">Controles de texto</a></li>
 
 
 <li style="list-style-type: none;"><a href="toggles.md">Alternancia</a></li>
-<li style="list-style-type: none;"><a href="tooltips.md">Información de herramientas</a></li>
+<li style="list-style-type: none;"><a href="tooltips.md">Información sobre herramientas</a></li>
 
 <li style="list-style-type: none;"><a href="tree-view.md">Vista de árbol</a></li>
 
@@ -120,11 +114,11 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 </ul>
 </div>
 
-## <a name="xaml-controls-gallery"></a>Galería de controles XAML
+## <a name="xaml-controls-gallery"></a>XAML Controls Gallery
 
-Obtén la aplicación _Galería de controles de XAML_ Microsoft Store para ver estos controles y el sistema Fluent Design en acción. La aplicación es un asistente interactivo para este sitio Web. Una vez instalado, puedes usar vínculos en las páginas de control individual para iniciar la aplicación y ver el control en acción.
+Obtén la aplicación _XAML Controls Gallery_ de Microsoft Store para ver en acción estos controles y Fluent Design System. La aplicación es un asistente interactivo para este sitio web. Una vez instalada, puedes usar los vínculos de las páginas de control individuales para iniciar la aplicación y ver el control en acción.
 
-<a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a>
+<a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a>
 
 <a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a>
 
@@ -132,6 +126,6 @@ Obtén la aplicación _Galería de controles de XAML_ Microsoft Store para ver e
 
 ## <a name="additional-controls"></a>Controles adicionales
 
-Los controles adicionales para el desarrollo de UWP están disponibles desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/products/uwp">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para empresas y desarrolladores de .NET, ya que mejora los controles del sistema estándar con controles y servicios personalizados.  
+Hay disponibles controles adicionales para el desarrollo para UWP desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/products/uwp">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.  
 
-Si estás interesado en obtener más información sobre estos controles, echa un vistazo a la muestra de la <a href="https://github.com/Microsoft/Windows-appsample-customers-orders-database">base de datos de pedidos de clientes</a> en GitHub. En este ejemplo, se usa el control de cuadrícula de datos y la validación de entrada de datos de Telerik, que forma parte de su interfaz de usuario para el conjunto UWP. La interfaz de usuario para el conjunto UWP es una colección de más de 20 controles que está disponible como proyecto de código abierto a través de .NET Foundation.
+Si estás interesado en saber más sobre estos controles, echa un vistazo al ejemplo de <a href="https://github.com/Microsoft/Windows-appsample-customers-orders-database">base de datos de pedidos de clientes</a> en GitHub. En este ejemplo, se usa el control de cuadrícula de datos y la validación de entrada de datos de Telerik, que forma parte de su interfaz de usuario para el conjunto de aplicaciones de UWP. La interfaz de usuario para el conjunto de aplicaciones de UWP es una colección de más de 20 controles que está disponible como proyecto de código abierto a través de .NET Foundation.

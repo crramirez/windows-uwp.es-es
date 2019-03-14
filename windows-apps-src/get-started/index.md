@@ -1,21 +1,15 @@
 ---
 layout: LandingPage
-description: Introducción a la Plataforma universal de Windows (UWP) y el desarrollo de aplicaciones para Windows 10.
+description: "Introducción a la Plataforma universal de Windows (UWP) y desarrollo de aplicaciones para Windows\_10."
 title: Introducción a la Plataforma universal de Windows (UWP)
 ms.date: 03/23/2018
 ms.topic: article
-keywords: introducción, windows 10, uwp, xaml, c#
+keywords: 'get started, windows 10, uwp, xaml, c#'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2a1452de6fe602c8fd21e510de070f49d806eec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934730"
 ---
-# <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10 
+# <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10 
  
-Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejora tus aplicaciones existentes con funciones nuevas y actualizadas.  
+Crea aplicaciones que funcionen en todos los dispositivos Windows 10 o mejora tus aplicaciones existentes con características nuevas y actualizadas.  
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -28,8 +22,8 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Más información sobre las aplicaciones de Windows10</h3>
-                        <p>Windows 10 y la Plataforma universal de Windows te permite crear aplicaciones que funcionan y tienen un magnífico aspecto en todos los tipos de dispositivos Windows, o actualizar aplicaciones existentes con funciones modernas.</p>
+                        <h3>Más información sobre las aplicaciones de Windows 10</h3>
+                        <p>Windows 10 y la Plataforma universal de Windows te permiten crear aplicaciones que funcionan perfectamente en todos los tipos de dispositivos Windows o actualizar aplicaciones existentes con modernas características.</p>
                         <ul>
                           <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">¿Qué es una aplicación para UWP?</a></li>
                         </ul>
@@ -48,8 +42,8 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                         </div>
                     </div>
                     <div class="cardText">
-                    <h3>Prepárate</h3>
-                    <p>Visual Studio Community y el SDK de Windows 10 te proporcionan todo lo necesario para crear magníficas aplicaciones, y son gratuitos.</p>
+                    <h3>Preparación</h3>
+                    <p>Visual Studio Community y el SDK de Windows 10 te proporcionan todo lo necesario para crear magníficas aplicaciones, y son gratuitos.</p>
                     <ul>
                         <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">Descargar las herramientas y el SDK</a></li>
                     </ul>
@@ -68,10 +62,10 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Empezar a programar</h3>
-                        <p>Tanto si eres un desarrollador experto como si solo quieres compilar tu primera aplicación, consigue una experiencia práctica con la plataforma y los documentos de Windows 10 .</p>
+                        <h3>Empezar a codificar</h3>
+                        <p>Tanto si eres un desarrollador experto como si solo quieres crear tu primera aplicación, consigue experiencia práctica con la plataforma y los documentos de Windows 10.</p>
                         <ul>
-                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Empezar a programar</a></li>
+                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Empezar a crear el código</a></li>
                         </ul>
                     </div>
                 </div>
@@ -113,12 +107,12 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                 </div>
                 <div class="cardText">
                     <h3>Muestras</h3>
-                    <p>Consigue una experiencia de primera mano con la plataforma de Windows 10 y mira cómo funcionan las API.</p>
+                    <p>Consigue una experiencia de primera mano con la plataforma Windows 10 y mira cómo funcionan las API.</p>
                     <br>
-                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Uso de muestras de aplicaciones para UWP</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Uso de ejemplos de aplicaciones para UWP</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-customers-orders-database">Base de datos de pedidos de clientes</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-remote-system-sessions">Juego de preguntas (Proyecto Roma)</a></p>
-                    <p><a href="//developer.microsoft.com/windows/samples">Portal de muestras de código de Windows</a></p>
+                    <p><a href="//developer.microsoft.com/windows/samples">Portal de ejemplos de código de Windows</a></p>
                 </div>
             </div>
         </div>
@@ -135,10 +129,10 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                 </div>
                 <div class="cardText">
                     <h3>Novedades</h3>
-                    <p>Expande tus horizontes y explora las adiciones más recientes a Windows 10.</p>
+                    <p>Expande tus horizontes y explora las últimas incorporaciones a Windows 10.</p>
                     <br>
-                    <p><a href="//developer.microsoft.com/windows/windows-10-for-developers">Novedades interesantes de la última versión de Windows 10</a></p>
-                    <p><a href="//docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest">Novedades para desarrolladores de Windows10</a></p>
+                    <p><a href="//developer.microsoft.com/windows/windows-10-for-developers">Novedades interesantes de la última versión de Windows 10</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest">Novedades de Windows 10 para desarrolladores</a></p>
                 </div>
             </div>
         </div>
@@ -214,7 +208,7 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                 <div class="card">
                     <div class="cardText">
                         <h3>Herramientas de desarrollo</h3>
-                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de herramientas de Comunidad Windows</a></p>
+                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de herramientas de la Comunidad Windows</a></p>
                         <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">Máquinas virtuales</a></p>
                         <p><a href="//docs.microsoft.com/windows/wsl/about">Bash de Ubuntu en Windows</a></p>
                         </div>
@@ -227,7 +221,7 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>¿Eres nuevo en el tema del desarrollo?</h3>
+                        <h3>¿Eres nuevo en el tema de desarrollo?</h3>
                         <p><a href="//mva.microsoft.com/training-topics/c-app-development">Microsoft Virtual Academy</a></p>
                         <p><a href="//www.linkedin.com/learning/learning-universal-windows-app-development/welcome">LinkedIn Learning</a></p>
                         </div>

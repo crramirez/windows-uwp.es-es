@@ -162,7 +162,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Lituania | 14 EUR | 75 EUR | EUR pagados al banco | No | 
 |  Luxemburgo | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
 |  RAE de Macao | 19 USD | 99 USD | Sin pago | No | 
-|  ERY de Macedonia | 19 USD | 99 USD | USD pagados al banco | No | 
+|  Macedonia del Norte | 19 USD | 99 USD | USD pagados al banco | No | 
 |  Madagascar | 19 USD | 99 USD | USD pagados al banco | No | 
 |  Malawi | 19 USD | 99 USD | MWK pagados al banco | No | 
 |  Malasia | 62 MYR | 300 MYR | USD pagados al banco | No | 

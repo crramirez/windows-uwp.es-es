@@ -8,7 +8,7 @@ keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fisca
 ms.localizationpriority: medium
 ms.openlocfilehash: e5ada027b835e852d1db728ef124a798540abdf7
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57607670"
@@ -153,7 +153,7 @@ Para comprender los impuestos consideraciones para la selección de precio y res
 | Lituania                        | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 21 % de impuestos) | Microsoft          |
 | Luxemburgo                       | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % del precio seleccionado menos el 17 % de impuestos | Microsoft          |
 | RAE de Macao                        | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
-| ERY de Macedonia                | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
+| Macedonia del Norte                | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Madagascar                       | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Malawi                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Malasia                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
@@ -204,7 +204,7 @@ Para comprender los impuestos consideraciones para la selección de precio y res
 | Rusia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 18 % de impuestos) | Microsoft          |
 | Ruanda                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | San Bartolomé                 | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
-| Santa Elena, Ascensión y Tristán de Acuña    | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
+| Santa Elena, Ascensión y Tristán da Cunha    | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | San Cristóbal y Nieves            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Santa Lucía                      | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | San Martín (parte francesa)       | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |

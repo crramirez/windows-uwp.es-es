@@ -38,7 +38,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Kurdo central (árabe) | ku-ARAB-IQ | Segoe UI |
 | Cheroqui (cheroqui) | chr-CHER-US | Gadugi |
 | Chino simplificado | zh-CN | MS YaHei UI |
-| Chino tradicional (Hong Kong) | zh-HK | MS JhengHei UI |
+| Chino tradicional (RAE de Hong Kong) | zh-HK | MS JhengHei UI |
 | Chino tradicional (Taiwán) | zh-TW | MS JhengHei UI |
 | Croata | hr-HR | Segoe UI |
 | Checo | cs-CZ | Segoe UI |

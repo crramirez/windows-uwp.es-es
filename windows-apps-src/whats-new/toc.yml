@@ -1,8 +1,8 @@
 items:
-- name: Novedades para desarrolladores en Windows 10, compilación 17763
+- name: Novedades para desarrolladores en Windows 10, compilación 17763
   href: ../whats-new/windows-10-build-17763.md
   items:
-  - name: Adiciones de API en Windows10, compilación 17763
+  - name: Adiciones de API en Windows 10, compilación 17763
     href: ../whats-new/windows-10-build-17763-api-diff.md
 - name: Novedades de los documentos de Windows, enero de 2019
   href: ../whats-new/windows-docs-january-2019.md
@@ -25,37 +25,37 @@ items:
     href: ../whats-new/windows-docs-august-2017.md
   - name: Novedades de los documentos de Windows, julio de 2017
     href: ../whats-new/windows-docs-july-2017.md
-- name: Versiones anteriores de Windows 10
+- name: Versiones anteriores de Windows 10
   items:
-  - name: Novedades para desarrolladores en Windows 10, compilación 17134
+  - name: Novedades para desarrolladores en Windows 10, compilación 17134
     href: ../whats-new/windows-10-build-17134.md
     items:
-    - name: Adiciones de API en Windows10, compilación 17134
+    - name: Adiciones de API en Windows 10, compilación 17134
       href: ../whats-new/windows-10-build-17134-api-diff.md
-  - name: Novedades para desarrolladores en Windows 10, compilación 16299
+  - name: Novedades para desarrolladores en Windows 10, compilación 16299
     href: ../whats-new/windows-10-build-16299.md
     items:
-    - name: Adiciones de API en Windows10, compilación 16299
+    - name: Adiciones de API en Windows 10, compilación 16299
       href: ../whats-new/windows-10-build-16299-api-diff.md
-  - name: Novedades de Windows 10, compilación 15063
+  - name: Novedades de Windows 10, compilación 15063
     href: ../whats-new/windows-10-build-15063.md
     items:
-    - name: Adiciones de API en Windows10, compilación 15063
+    - name: Adiciones de API en Windows 10, compilación 15063
       href: ../whats-new/windows-10-build-15063-api-diff.md
-  - name: Novedades de Windows 10, compilación 14393
+  - name: Novedades de Windows 10, compilación 14393
     href: ../whats-new/windows-10-build-14393.md
     items:
-    - name: Adiciones de API en Windows10, compilación 14393
+    - name: Adiciones de API en Windows 10, compilación 14393
       href: ../whats-new/windows-10-build-14393-api-diff.md
-  - name: Novedades de Windows 10, compilación 10586
+  - name: Novedades de Windows 10, compilación 10586
     href: ../whats-new/windows-10-build-10586.md
-  - name: Novedades de Windows 10, compilación 10240
+  - name: Novedades de Windows 10, compilación 10240
     href: ../whats-new/windows-10-build-10240.md
 - name: API experimentales
   href: ../whats-new/experimental-apis.md
 ms.openlocfilehash: 136c6bd34dd3358d3f089aa06a664029a446b368
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9013944"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582991"

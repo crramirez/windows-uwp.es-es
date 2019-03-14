@@ -1,17 +1,11 @@
 ---
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio.
-title: Audio, vídeo y cámara
+description: 'En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio.'
+title: 'Audio, vídeo y cámara'
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows10, uwp
+keywords: 'windows 10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: 6aecc5b9a43d6cb00b42b1535a196afd8a138af9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921486"
 ---
 # <a name="audio-video-and-camera"></a>Audio, vídeo y cámara
 
@@ -21,7 +15,7 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 | Tema                                                                                             | Descripción                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Cámara](camera.md) | Muestra las características de la cámara que están disponibles para las aplicaciones para UWP, así como vínculos a los artículos de procedimientos que muestran cómo usarlas. |
-| [Reproducción de contenido multimedia](media-playback.md) | Proporciona información sobre cómo crear aplicaciones para UWP que usan la reproducción de audio y vídeo. |
+| [Reproducción de multimedia](media-playback.md) | Proporciona información sobre cómo crear aplicaciones para UWP que usan la reproducción de audio y vídeo. |
 | [Detectar rostros en imágenes o vídeos](detect-and-track-faces-in-an-image.md) | Muestra cómo usar la clase [FaceTracker](https://msdn.microsoft.com/library/windows/apps/dn974150) para realizar el seguimiento de caras en el tiempo en una secuencia de fotogramas de vídeo. |
 | [Composiciones y edición multimedia](media-compositions-and-editing.md) | Muestra cómo usar las API en el espacio de nombres [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desarrollar rápidamente aplicaciones que permitan a los usuarios crear composiciones multimedia a partir de archivos de origen de audio y vídeo. |
 | [Efectos de vídeo personalizados](custom-video-effects.md) | Describe cómo crear un componente de Windows Runtime que implemente la interfaz **IBasicVideoEffect** para permitir crear efectos personalizados para las secuencias de vídeo. |
@@ -36,11 +30,11 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 | [Importar contenido multimedia desde un dispositivo](import-media-from-a-device.md) | Describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes multimedia disponibles, la importación de archivos como vídeos, fotos y archivos sidecar, y la eliminación de los archivos importados del dispositivo de origen. |
 | [Linterna independiente de la cámara](camera-independent-flashlight.md) | Muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de luz se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara. |
 | [Códecs admitidos](supported-codecs.md) | Enumera la compatibilidad con formatos y códecs de audio, vídeo e imagen para aplicaciones para UWP. |
-| [Consulta de códecs instalados](codec-query.md) | Se muestra cómo consultar los codificadores y descodificadores de audio y vídeo instalados en un dispositivo. |
-| [Captura de pantalla](screen-capture.md) | Describe cómo usar el [espacio de nombres Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture) para adquirir fotogramas desde una pantalla o ventana de aplicación, para crear secuencias de vídeo o instantáneas para crear experiencias interactivas y de colaboración. |
+| [Consulta de códecs instalados](codec-query.md) | Muestra cómo consultar los codificadores y descodificadores de audio y vídeo instalados en un dispositivo. |
+| [Captura de pantalla](screen-capture.md) | Describe cómo usar el [espacio de nombres Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture) para adquirir fotogramas de una pantalla o una ventana de aplicación, con el fin de elaborar secuencias de vídeo o instantáneas para crear experiencias interactivas y de colaboración. |
 
-## <a name="see-also"></a>Ver también
-- [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
+## <a name="see-also"></a>Consulte también
+- [Desarrollar aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
 
  
 

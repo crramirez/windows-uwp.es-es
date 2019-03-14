@@ -5,13 +5,13 @@ items:
     href: basics/index.md
   - name: Introducción al diseño de aplicaciones
     href: basics/design-and-ui-intro.md
-  - name: Sistema FluentDesign
+  - name: Sistema Fluent Design
     href: fluent-design-system/index.md
   - name: Conceptos básicos de navegación
     items:
     - name: Introducción
       href: basics/navigation-basics.md
-    - name: Implementación de la navegación básica
+    - name: Implementar la navegación básica
       href: basics/navigate-between-two-pages.md
     - name: Historial de navegación y navegación hacia atrás
       href: basics/navigation-history-and-backwards-navigation.md
@@ -41,7 +41,7 @@ items:
     href: layout/layouts-with-xaml.md
   - name: Mostrar varias vistas
     href: layout/show-multiple-views.md
-  - name: Alineación, margen y relleno
+  - name: Alineación, margen y espaciado
     href: layout/alignment-margin-padding.md
   - name: Paneles de diseño
     items:
@@ -61,13 +61,13 @@ items:
       href: layout/transforms.md
     - name: Efectos de perspectiva 3D
       href: layout/3-d-perspective-effects.md
-- name: Controles
+- name: Controls
   items:
   - name: Introducción
     href: controls-and-patterns/index.md
   - name: Introducción a los controles y eventos
     href: controls-and-patterns/controls-and-events-intro.md
-  - name: Introducción a comandos
+  - name: Introducción a los comandos
     href: controls-and-patterns/commanding.md
   - name: Índice de controles por función
     href: controls-and-patterns/controls-by-function.md
@@ -81,7 +81,7 @@ items:
       href: controls-and-patterns/combo-box.md
     - name: Hipervínculos
       href: controls-and-patterns/hyperlinks.md
-    - name: Botón de radio
+    - name: Botón de selección
       href: controls-and-patterns/radio-button.md
     - name: Control de clasificación
       href: controls-and-patterns/rating.md
@@ -93,16 +93,16 @@ items:
     items:
     - name: Introducción
       href: controls-and-patterns/lists.md
-    - name: Voltear vista
+    - name: Inversión de la vista
       href: controls-and-patterns/flipview.md
     - name: Vista de lista y vista de cuadrícula
       href: controls-and-patterns/listview-and-gridview.md
       items:
       - name: Plantillas y contenedores de elementos
         href: controls-and-patterns/item-containers-templates.md
-      - name: Plantillas de elemento para vista de lista
+      - name: Plantillas de elemento para vistas de lista
         href: controls-and-patterns/item-templates-listview.md
-      - name: Plantillas de elemento para vista de cuadrícula
+      - name: Plantillas de elemento para vistas de cuadrícula
         href: controls-and-patterns/item-templates-gridview.md
     - name: Listas invertidas
       href: controls-and-patterns/inverted-lists.md
@@ -112,7 +112,7 @@ items:
       href: controls-and-patterns/nested-ui.md
     - name: Comandos de colecciones
       href: controls-and-patterns/collection-commanding.md
-    - name: Deslizar el dedo
+    - name: Deslizar rápidamente
       href: controls-and-patterns/swipe.md
     - name: Vista de árbol
       href: controls-and-patterns/tree-view.md
@@ -144,17 +144,17 @@ items:
     items:
     - name: Barra de la aplicación y barra de comandos
       href: controls-and-patterns/app-bars.md
-    - name: Control flotante de barra de comandos
+    - name: Control flotante de la barra de comandos
       href: controls-and-patterns/command-bar-flyout.md
     - name: Menús y menús contextuales
       href: controls-and-patterns/menus.md
   - name: Navegación
     items:
-    - name: Master/detalles
+    - name: Panel de maestro y detalles
       href: controls-and-patterns/master-details.md
     - name: Vista de navegación
       href: controls-and-patterns/navigationview.md
-    - name: Dinámica
+    - name: Pivot
       href: controls-and-patterns/pivot.md
   - name: Contactos
     items:
@@ -182,7 +182,7 @@ items:
       href: controls-and-patterns/scroll-controls.md
     - name: Zoom semántico
       href: controls-and-patterns/semantic-zoom.md
-  - name: Búsqueda
+  - name: Buscar
     href: controls-and-patterns/search.md
   - name: Estado e información
     items:
@@ -190,7 +190,7 @@ items:
       href: controls-and-patterns/progress-controls.md
     - name: Información sobre herramientas
       href: controls-and-patterns/tooltips.md
-  - name: Texto
+  - name: Text
     items:
     - name: Introducción
       href: controls-and-patterns/text-controls.md
@@ -232,7 +232,7 @@ items:
     href: style/acrylic.md
   - name: Revelar resaltado
     href: style/reveal.md
-  - name: Reveal foco
+  - name: Revelar foco
     href: style/reveal-focus.md
   - name: Sonido
     href: style/sound.md
@@ -276,10 +276,10 @@ items:
       href: motion/key-frame-and-easing-function-animations.md
 - name: Shell
   items:
-  - name: Ventanas
+  - name: Iconos
     href: shell/tiles-and-notifications/creating-tiles.md
     items:
-    - name: Ventanas secundarias
+    - name: Iconos secundarios
       href: shell/tiles-and-notifications/secondary-tiles.md
       items:
       - name: Instrucciones
@@ -302,7 +302,7 @@ items:
       href: shell/tiles-and-notifications/chaseable-tile-notifications.md
     - name: API de icono principal
       href: shell/tiles-and-notifications/primary-tile-apis.md
-    - name: Icono, compatibilidad de notificación del sistema para idioma, escala, contraste
+    - name: Compatibilidad de iconos y notificaciones del sistema con idioma, escala y contraste
       href: shell/tiles-and-notifications/tile-toast-language-scale-contrast.md
   - name: Anclar la aplicación a la barra de tareas
     href: shell/pin-to-taskbar.md
@@ -312,13 +312,13 @@ items:
     items:
     - name: Notificaciones del sistema
       items:
-      - name: Instrucciones de experiencia del usuario
+      - name: Directrices sobre la experiencia de usuario
         href: shell/tiles-and-notifications/toast-ux-guidance.md
       - name: Contenido de notificaciones del sistema
         href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
-      - name: Esquema de contenido de las notificaciones del sistema
+      - name: Esquema de contenido de notificaciones del sistema
         href: shell/tiles-and-notifications/toast-schema.md
-      - name: Enviar notificaciones del sistema local
+      - name: Enviar notificaciones del sistema locales
         href: shell/tiles-and-notifications/send-local-toast.md
         items:
         - name: Aplicaciones de escritorio
@@ -344,9 +344,9 @@ items:
         href: shell/tiles-and-notifications/notification-listener.md
       - name: Reflejo de notificaciones
         href: shell/tiles-and-notifications/notification-mirroring.md
-      - name: Descartar universal
+      - name: Descartar Universal
         href: shell/tiles-and-notifications/universal-dismiss.md
-    - name: Notificaciones de rótulo informativo
+    - name: Notificaciones
       href: shell/tiles-and-notifications/badges.md
     - name: Visualizador de notificaciones
       href: shell/tiles-and-notifications/notifications-visualizer.md
@@ -362,9 +362,9 @@ items:
     - name: Servicios de notificaciones de inserción de Windows (WNS)
       href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
       items:
-      - name: Prioridades WNS
+      - name: Prioridades de WNS
         href: shell/tiles-and-notifications/wns-notification-priorities.md
-      - name: Código generado por el asistente para notificaciones de inserción
+      - name: Código generado por el Asistente para notificaciones de inserción
         href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
     - name: Notificaciones sin procesar
       href: shell/tiles-and-notifications/raw-notification-overview.md
@@ -376,12 +376,12 @@ items:
     href: input/input-primer.md
   - name: Entrada de puntero
     href: input/handle-pointer-input.md
-  - name: Mirada
+  - name: Mirar
     href: input/gaze-interactions.md
   - name: Lápiz y Windows Ink
     href: input/pen-and-stylus-interactions.md
     items:
-    - name: 'Tutorial: Agregar compatibilidad de entrada manuscrita para la aplicación'
+    - name: 'Tutorial: Agregar compatibilidad con entrada manuscrita a la aplicación'
       href: input/ink-walkthrough.md
     - name: Reconocer trazos de lápiz
       href: input/convert-ink-to-text.md
@@ -414,7 +414,7 @@ items:
     href: input/gamepad-and-remote-interactions.md
   - name: Panel táctil
     href: input/touchpad-interactions.md
-  - name: SurfaceDial
+  - name: Surface Dial
     href: input/windows-wheel-interactions.md
     items:
     - name: 'Tutorial: Agregar compatibilidad con Surface Dial a la aplicación'
@@ -461,7 +461,7 @@ items:
     href: input/custom-text-input.md
   - name: Ajuste de escala de texto
     href: input/text-scaling.md
-  - name: Arrastrar y soltar
+  - name: Arrastrar y colocar
     href: input/drag-and-drop.md
   - name: Zoom óptico y cambio de tamaño
     href: input/guidelines-for-optical-zoom.md
@@ -473,7 +473,7 @@ items:
     href: input/guidelines-for-textselection.md
   - name: Selección de destino
     href: input/guidelines-for-targeting.md
-  - name: Comentarios visuales
+  - name: Información visual
     href: input/guidelines-for-visualfeedback.md
 - name: Dispositivos
   items:
@@ -490,7 +490,7 @@ items:
   - name: Accesibilidad
     href: accessibility/accessibility.md
     items:
-    - name: Información general
+    - name: Introducción
       href: accessibility/accessibility-overview.md
     - name: Diseño de software inclusivo
       href: accessibility/designing-inclusive-software.md
@@ -514,7 +514,7 @@ items:
       href: accessibility/accessible-text-requirements.md
     - name: Procedimientos de accesibilidad que deben evitarse
       href: accessibility/practices-to-avoid.md
-    - name: Personalizar sistemas de automatización del mismo nivel
+    - name: Automatización del mismo nivel personalizada
       href: accessibility/custom-automation-peers.md
       items:
       - name: Interfaces y patrones de control
@@ -533,30 +533,30 @@ items:
       href: globalizing/guidelines-and-checklist-for-globalizing-your-app.md
     - name: Comprender los idiomas del manifiesto de aplicación y el perfil de usuario
       href: globalizing/manage-language-and-region.md
-    - name: Globalizar los formatos de fecha/hora/número
+    - name: Globalizar los formatos de fecha, hora y número
       href: globalizing/use-global-ready-formats.md
     - name: Usar plantillas y patrones para dar formato a fechas y horas
       href: globalizing/use-patterns-to-format-dates-and-times.md
-    - name: Ajustar el diseño y las fuentes, y compatibilidad con RTL
+    - name: Ajustar el diseño y las fuentes y admitir la escritura RTL
       href: globalizing/adjust-layout-and-fonts--and-support-rtl.md
     - name: Valores NumeralSystem
       href: globalizing/glob-numeralsystem-values.md
-    - name: Hacer que tu aplicación sea localizable
+    - name: Hacer que la aplicación sea localizable
       href: globalizing/prepare-your-app-for-localization.md
     - name: Fuentes internacionales
       href: globalizing/loc-international-fonts.md
-    - name: Diseñar la aplicación para el texto bidireccional
+    - name: Diseñar la aplicación para texto bidireccional
       href: globalizing/design-for-bidi-text.md
     - name: Usar el Kit de herramientas para aplicaciones multilingües 4.0
       href: globalizing/use-mat.md
-    - name: Preguntas frecuentes y solución de problemas del kit de herramientas para aplicaciones multilingües 4.0
+    - name: Preguntas frecuentes y solución de problemas del Kit de herramientas para aplicaciones multilingües 4.0
       href: globalizing/mat-faq-troubleshooting.md
     - name: Preparar la aplicación para el cambio de la era japonesa
       href: globalizing/japanese-era-change.md
-  - name: Directrices de ayuda de aplicaciones
+  - name: Directrices para la ayuda de la aplicación
     href: in-app-help/guidelines-for-app-help.md
     items:
-    - name: UI informativa
+    - name: Interfaz de usuario informativa
       href: in-app-help/instructional-ui.md
     - name: Ayuda desde la aplicación
       href: in-app-help/in-app-help.md
@@ -565,8 +565,8 @@ items:
 - name: Kits de herramientas de diseño
   href: downloads/index.md
 ms.openlocfilehash: b6430ee5f121d672282513fa524a50e7788f404c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
-ms.translationtype: MT
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583592"

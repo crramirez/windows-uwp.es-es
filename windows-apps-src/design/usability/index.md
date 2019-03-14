@@ -1,6 +1,6 @@
 ---
 description: Aprende a lograr que tu aplicación sea inclusiva y accesible para personas de todo el mundo.
-keywords: accesibilidad de las aplicaciones para UWP, globalización, diseñar aplicaciones inclusivas, requisitos de aplicaciones de accesibilidad
+keywords: 'accesibilidad de las aplicaciones para UWP, globalización, diseñar aplicaciones inclusivas, requisitos de aplicaciones de accesibilidad'
 title: 'Facilidad de uso para aplicaciones para UWP: desarrollo de aplicaciones de Windows'
 layout: LandingPage
 template: detail.hbs
@@ -8,12 +8,6 @@ ms.date: 10/18/2017
 ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937939"
 ---
 # <a name="usability-for-uwp-apps"></a>Facilidad de uso para aplicaciones para UWP
 
@@ -78,7 +72,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-in-the-store.md">Accesibilidad en la Tienda</a></b><br/>Describe los requisitos para declarar que tu aplicación para UWP es accesible en la Microsoft Store.</p>
+<p><b><a href="../accessibility/accessibility-in-the-store.md">Accesibilidad en Store</a></b><br/>Se describen los requisitos para declarar que tu aplicación para UWP es accesible en Microsoft Store.</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +149,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/custom-automation-peers.md">Automatización del mismo nivel personalizada</a></b><br/>Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada.</p>                    
+<p><b><a href="../accessibility/custom-automation-peers.md">Automatización del mismo nivel personalizado</a></b><br/>Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada.</p>                    
                     </div>
                 </div>
             </div>
@@ -177,7 +171,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
 
 ## <a name="globalization-and-localization"></a>Globalización y localización
 
-Windows se usa en todo el mundo, lo que incluye a personas con diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una variedad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema de idioma, región y referencia cultural. Aumenta el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
+Windows se usa en todo el mundo por personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una diversidad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones en la configuración del sistema para el idioma, la región y la referencia cultural. Diseña tu aplicación para que sea fácilmente adaptable mediante la *globalización* y la *localización* y así aumentar su mercado potencial.
 
 <a href="../globalizing/globalizing-portal.md">Portal de globalización y localización</a>
 

@@ -1,5 +1,5 @@
 items:
-- name: Tareas iniciales
+- name: Introducción
   href: ../gaming/getting-started.md
 - name: Guía de desarrollo de juegos para Windows 10
   href: ../gaming/e2e.md
@@ -17,9 +17,9 @@ items:
       href: ../gaming/cloud-for-games.md
     - name: Monetización para juegos
       href: ../gaming/monetization-for-games.md
-    - name: Aprobación de concepto
+    - name: Aprobación del concepto
       href: ../gaming/concept-approval.md
-    - name: Empaquetar el juego
+    - name: Empaquetar tu juego
       href: ../gaming/package-your-windows-store-directx-game.md
   - name: Programación para UWP
     href: ../gaming/uwp-programming.md
@@ -40,7 +40,7 @@ items:
         href: ../gaming/gamepad-and-vibration.md
       - name: Stick arcade
         href: ../gaming/arcade-stick.md
-      - name: Volante y fuerza de respuesta
+      - name: Volante y retroalimentación de fuerza
         href: ../gaming/racing-wheel-and-force-feedback.md
       - name: Palanca de mandos
         href: ../gaming/flight-stick.md
@@ -50,20 +50,20 @@ items:
         href: ../gaming/headset.md
       - name: Controlador de navegación de la interfaz de usuario
         href: ../gaming/ui-navigation-controller.md
-      - name: Prácticas de entrada para juegos
+      - name: Procedimientos de entrada para juegos
         href: ../gaming/input-practices-for-games.md
       - name: Datos del registro para dispositivos de juego
         href: ../gaming/registry-data-for-game-controllers.md
     - name: Falta de API de .NET en Unity y UWP
       href: ../gaming/missing-dot-net-apis-in-unity-and-uwp.md
-    - name: Redes para juegos
+    - name: Conexión en red de juegos
       href: ../gaming/work-with-networking-in-your-directx-game.md
   - name: Vídeos sobre el desarrollo de juegos
     href: ../gaming/game-development-videos.md
 - name: Programación con DirectX
   href: ../gaming/directx-programming.md
   items:
-  - name: Introducción
+  - name: Comenzar
     href: ../gaming/directx-getting-started.md
     items:
     - name: Objeto de aplicación
@@ -71,7 +71,7 @@ items:
     - name: Herramientas y plantillas de proyecto
       href: ../gaming/prepare-your-dev-environment-for-windows-store-directx-game-development.md
       items:
-      - name: Plantillas de proyecto para juego
+      - name: Plantillas de proyecto para juegos
         href: ../gaming/user-interface.md
       - name: Visual Studio Tools
         href: ../gaming/set-up-visual-studio-for-game-development.md
@@ -125,7 +125,7 @@ items:
         href: ../gaming/adding-input-and-interactivity-to-the-marble-maze-sample.md
       - name: Agregar audio
         href: ../gaming/adding-audio-to-the-marble-maze-sample.md
-  - name: Conceptos de gráficos de Direct3D.
+  - name: Conceptos de elementos gráficos Direct3D
     href: ../graphics-concepts/index.md
     items:
     - name: Sistemas de coordenadas y geometría
@@ -450,7 +450,7 @@ items:
         href: ../gaming/complete-code-for-basicreaderwriter.md
       - name: DDSTextureLoader
         href: ../gaming/complete-code-for-ddstextureloader.md
-  - name: Agregar funciones
+  - name: Agregar características
     href: ../gaming/directx-add-features.md
     items:
     - name: Interoperabilidad de DirectX y XAML
@@ -479,39 +479,39 @@ items:
       href: ../gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md
     - name: Reducir la latencia con cadenas de intercambio
       href: ../gaming/reduce-latency-with-dxgi-1-3-swap-chains.md
-    - name: Escalado y superposiciones de cadenas de intercambio
+    - name: Intercambiar escalado y superposiciones de cadenas
       href: ../gaming/multisampling--scaling--and-overlay-swap-chains.md
-  - name: Migrar de DirectX 9 a UWP
+  - name: Migrar de DirectX 9 a UWP
     href: ../gaming/porting-your-directx-9-game-to-windows-store.md
     items:
-    - name: DirectX 9 a DirectX 11.1
+    - name: DirectX 9 a DirectX 11.1
       href: ../gaming/porting-considerations.md
       items:
       - name: Planea tu migración
         href: ../gaming/plan-your-directx-port.md
       - name: Diferencias clave
         href: ../gaming/understand-direct3d-11-1-concepts.md
-      - name: Asignar funciones
+      - name: Asignar características
         href: ../gaming/feature-mapping.md
     - name: Tutorial sencillo
       href: ../gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md
       items:
-      - name: Inicializar Direct3D 11
+      - name: Inicializar Direct3D 11
         href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md
       - name: Convertir marco de representación
         href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.md
       - name: Migrar bucle de juego
         href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md
-    - name: Implementar volúmenes de sombra
+    - name: Implementar instantáneas de volumen
       href: ../gaming/implementing-depth-buffers-for-shadow-mapping.md
       items:
-      - name: Crear búfer de profundidad
+      - name: Crear un búfer de profundidad
         href: ../gaming/create-depth-buffer-resource--view--and-sampler-state.md
       - name: Representar mapa de sombras en búfer de profundidad
         href: ../gaming/render-the-shadow-map-to-the-depth-buffer.md
       - name: Representar escena con prueba de profundidad
         href: ../gaming/render-the-scene-with-depth-testing.md
-      - name: Compatibilidad de diversos hardware
+      - name: Compatibilidad con diverso hardware
         href: ../gaming/target-a-range-of-hardware.md
     - name: Preguntas más frecuentes
       href: ../gaming/directx-porting-faq.md
@@ -554,7 +554,7 @@ items:
     href: ../xbox-apps/whats-new.md
   - name: Activación del modo de desarrollador de Xbox One
     href: ../xbox-apps/devkit-activation.md
-  - name: Deshabilitación del modo de desarrollador en Xbox One
+  - name: Deshabilitar el modo de desarrollador en Xbox One
     href: ../xbox-apps/devkit-deactivation.md
   - name: Configuración del entorno de desarrollo
     href: ../xbox-apps/development-environment-setup.md
@@ -562,7 +562,7 @@ items:
     href: ../xbox-apps/samples.md
   - name: Problemas conocidos
     href: ../xbox-apps/known-issues.md
-  - name: Preguntas frecuentes
+  - name: Preguntas más frecuentes
     href: ../xbox-apps/frequently-asked-questions.md
   - name: Herramientas
     href: ../xbox-apps/introduction-to-xbox-tools.md
@@ -570,17 +570,17 @@ items:
     - name: Dev Home
       href: ../xbox-apps/dev-home.md
       items:
-      - name: Página Inicio
+      - name: Página principal
         href: ../xbox-apps/devhome-home.md
-      - name: Página Xbox Live
+      - name: Página de Xbox Live
         href: ../xbox-apps/devhome-live.md
-      - name: Página Configuración
+      - name: Página de configuración
         href: ../xbox-apps/devhome-settings.md
-      - name: Página Captura multimedia
+      - name: Página de captura multimedia
         href: ../xbox-apps/devhome-capture.md
-      - name: Página Red
+      - name: Página de red
         href: ../xbox-apps/devhome-networking.md
-      - name: Página Rendimiento
+      - name: Página de rendimiento
         href: ../xbox-apps/devhome-performance.md
     - name: Complemento del modo de desarrollo de Xbox
       href: ../xbox-apps/xbox-dev-mode-companion.md
@@ -589,9 +589,9 @@ items:
   - name: Procedimientos recomendados de Xbox
     href: ../xbox-apps/tailoring-for-xbox.md
     items:
-    - name: Cómo deshabilitar el modo de ratón
+    - name: Cómo deshabilitar el modo de mouse
       href: ../xbox-apps/how-to-disable-mouse-mode.md
-    - name: Cómo desactivar el ajuste de escala
+    - name: Cómo desactivar el escalado
       href: ../xbox-apps/disable-scaling.md
     - name: Cómo desactivar el sobrebarrido
       href: ../xbox-apps/turn-off-overscan.md
@@ -599,7 +599,7 @@ items:
     href: ../xbox-apps/system-resource-allocation.md
   - name: Introducción a las aplicaciones multiusuario
     href: ../xbox-apps/multi-user-applications.md
-  - name: Traer juegos existentes a Xbox
+  - name: Llevar los juegos existentes a Xbox
     href: ../xbox-apps/development-lanes-landing.md
     items:
     - name: C++ personalizado
@@ -608,7 +608,7 @@ items:
       href: ../xbox-apps/development-lanes-unity.md
     - name: HTML/JS
       href: ../xbox-apps/development-lanes-html.md
-  - name: API de REST del Portal de dispositivos para Xbox
+  - name: API REST del Portal de dispositivos para Xbox
     href: ../xbox-apps/reference.md
     items:
     - name: /api/app/packagemanager/register
@@ -641,11 +641,11 @@ items:
       href: ../xbox-apps/wdp-xboxinfo-api.md
     - name: /ext/xboxlive/sandbox
       href: ../xbox-apps/wdp-sandbox-api.md
-- name: XboxLive
+- name: Xbox Live
   href: ../xbox-live/TOC.md
 ms.openlocfilehash: 0d44f8286586f3019864097357051e43fa88fbae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962587"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583625"

@@ -244,7 +244,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>RAE de Macao</td>
   </tr>
   <tr>
-    <td>Macedonia (ERYM)</td>
+    <td>Macedonia del Norte</td>
     <td>Madagascar</td>
     <td>Malawi</td>
     <td>Malasia</td>
@@ -323,7 +323,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>San Bartolomé</td>
-    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
+    <td>Santa Elena, Ascensión y Tristán da Cunha</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
   </tr>
@@ -613,7 +613,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Liberia</td>
     <td>Liechtenstein</td>
     <td>RAE de Macao</td>
-    <td>Macedonia (ERYM)</td>
+    <td>Macedonia del Norte</td>
   </tr>
   <tr>
     <td>Madagascar</td>
@@ -671,7 +671,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>San Bartolomé</td>
-    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
+    <td>Santa Elena, Ascensión y Tristán da Cunha</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
   </tr>

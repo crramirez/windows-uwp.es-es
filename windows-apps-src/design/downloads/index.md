@@ -1,23 +1,17 @@
 ---
 description: Obtén las herramientas y las descargas más recientes para los diseños de la distribución y los controles de la interfaz de usuario de las aplicaciones para UWP.
-keywords: diseño de aplicaciones para UWP, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP
-title: Kits de herramientas de diseño y muestras para aplicaciones para UWP
+keywords: 'diseño de aplicaciones para UWP, IU, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP'
+title: Kits de herramientas de diseño y ejemplos de aplicaciones para UWP
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cbe17d8e7093a15c66e482acd935974bc57074ec
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050878"
 ---
-# <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
+# <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y ejemplos de aplicaciones para UWP
  
 
-Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones para UWP/diseño de Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
+Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones de Fluent Design o UWP. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de herramientas de diseño
@@ -67,7 +61,7 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
     :::column-end:::
 :::row-end:::
 
-## <a name="developer-toolkits-and-libraries"></a>Bibliotecas y kits de herramientas de desarrollador
+## <a name="developer-toolkits-and-libraries"></a>Bibliotecas y kits de herramientas para desarrolladores
 
 :::row:::
     :::column:::
@@ -98,35 +92,35 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
         <a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Generador de ventanas e iconos de Adobe Photoshop** Este conjunto de acciones para Adobe Photoshop genera los 68 activos de ventanas e iconos recomendados de solo 7 archivos. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">Descargar el generador de ventanas e iconos</a></p>
+      **Generador de iconos para Adobe Photoshop** Este conjunto de acciones de Adobe Photoshop genera los 68 activos de iconos recomendados a partir de solo 7 archivos. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">Descargar el generador de ventanas iconos</a></p>
     :::column-end:::
 :::row-end:::
 
     
 ## <a name="samples"></a>Muestras
 
-![Imagen de Editor de tema XAML Fluent](images/XamlThemeEditor_screenshot.png)
-**Fluent Editor de tema XAML**<br>
-El Editor de tema XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como es compatible con el proceso de desarrollo de la aplicación mediante la generación de marcado XAML de nuestro marco ResourceDictionary usado en las aplicaciones de la plataforma Universal de Windows (UWP).
-<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Descargar la muestra de herramienta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Echa un vistazo a la herramienta en GitHub</a>
+![Imagen del Editor de temas XAML de Fluent](images/XamlThemeEditor_screenshot.png)
+**Editor de temas XAML de Fluent**<br>
+El Editor de temas XAML Fluent es una herramienta que ayuda a demostrar la flexibilidad de Fluent Design System, así como a respaldar el proceso de desarrollo de aplicaciones mediante la generación de marcado XAML para nuestro marco ResourceDictionary usado en aplicaciones de la Plataforma universal de Windows (UWP).
+<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Descargar el ejemplo de la herramienta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Consultar la herramienta en GitHub</a>
 
 ![Imagen de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la próxima serie de Fluent Design System de Microsoft. Hace un uso considerable de la densidad mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para la administración y compran dispositivos IoT (en este caso, las luces).<br>
-<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Descargar la muestra de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Echa un vistazo a la muestra de VanArsdel en GitHub</a>
+La aplicación de ejemplo para UWP de un extremo a otro de Van Arsdel, Ltd. se ha diseñado para presentar la próxima ola de Microsoft Fluent Design System. Se basa en gran medida en la densidad mejorada y los nuevos controles de la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">biblioteca de interfaz de usuario de Windows</a>, así como en las poderosas características subyacentes del marco y la composición de la experiencia de usuario. En el ejemplo se muestra cómo puede crear una experiencia rica y productiva para administrar y comprar dispositivos IoT (en este caso, bombillas).<br>
+<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Descargar el ejemplo de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Consultar el ejemplo de VanArsdel en GitHub</a>
 
-![crear la imagen de conversión](images/buildcast.png)
+![imagen de buildcast](images/buildcast.png)
 **BuildCast**<br>
-BuildCast es una muestra de principio a fin integrada para presentar el sistema Fluent Design y UWP. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
-<a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar la muestra de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo a la muestra de BuildCast en GitHub</a>
+BuildCast es un ejemplo de un extremo a otro creado para presentar Fluent Design System y UWP. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluida una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología Windows. También incluye notas manuscritas, marcadores y reproducción remota. Este ejemplo se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia sobre cómo <a href="https://channel9.msdn.com/Events/Build/2017/B8034">crear aplicaciones increíbles con Fluent Design</a>. <br>
+<a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar el ejemplo de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo al ejemplo de BuildCast en GitHub</a>
 
-![Comer programador](images/lunchscheduler.png)
-**Programador de comidas**<br>
-Muestra de UWP que programa comidas con amigos y compañeros de trabajo. Crea una quedada para comer, invita a amigos a un restaurante de interés y la aplicación se encarga de la administración de la comida para todas las partes implicadas. Esta aplicación incorpora elementos del sistema Fluent Design en una aplicación para UWP, incluyendo animaciones acrílicas, de revelación y conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Descargar la muestra Programador de comidas</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Echa un vistazo a la muestra Programador de comidas en GitHub</a></p>  
+![Lunch Scheduler](images/lunchscheduler.png)
+**Lunch Scheduler**<br>
+Ejemplo de UWP que programa comidas con amigos y compañeros de trabajo. Crea una salida para comer, invita a amigos a un restaurante de interés y la aplicación se encarga de la administración de la comida para todas las partes implicadas. Esta aplicación incorpora elementos de Fluent Design System en una aplicación para UWP, como animaciones acrílicas, de revelación y conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Descargar el ejemplo Lunch Scheduler</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Echa un vistazo al ejemplo Lunch Scheduler en GitHub</a></p>  
 
-![Galería de controles XAML](images/xaml-controls-gallery.png)
-**Galería de controles XAML**<br>
-Esta muestra proporciona una demostración interactiva de todos los controles XAML. Muestra una variedad de diseños, de básico a adaptable, y muestra el marcado que se puede copiar en tu propio proyecto. Nota: El archivo de descarga y el repositorio de GitHub actualmente hacen referencia a esta aplicación de muestra como "Conceptos básicos de la interfaz de usuario de XAML". <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">Descarga la muestra Galería de controles de XAML</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Echa un vistazo a la muestra Galería de controles XAML en GitHub</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Descargar la aplicación Galería de controles XAML de Store</a></p>
+![XAML Controls Gallery](images/xaml-controls-gallery.png)
+**XAML Controls Gallery**<br>
+En este ejemplo se proporciona una demostración interactiva de todos los controles de XAML. Se muestra una variedad de diseños, de básico a adaptable, y el marcado que puedes copiar en tu propio proyecto. Nota: El archivo de descarga y el repositorio de GitHub actualmente hacen referencia a esta aplicación de ejemplo como "UI Basics (XAML)". <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">Descargar el ejemplo XAML Controls Gallery</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Echa un vistazo al ejemplo XAML Controls Gallery en GitHub</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Descargar la aplicación XAML Controls Gallery desde Store</a></p>
 
 ## <a name="want-more-code"></a>¿Quieres ver más código?
 

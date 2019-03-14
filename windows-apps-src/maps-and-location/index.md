@@ -1,17 +1,11 @@
 ---
 title: Introducción a ubicación y mapas
-description: En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
+description: 'En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.'
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services
+keywords: 'windows 10, uwp, map, location, map services'
 ms.localizationpriority: medium
-ms.openlocfilehash: 3482370719a658f303964204661f1fb5d69ae5b4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044815"
 ---
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
@@ -21,9 +15,9 @@ ms.locfileid: "9044815"
 En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
 
 > [!TIP]
-> Para obtener más información sobre el uso de mapas y ubicación de la aplicación, descargar las muestras siguientes desde el [repositorio de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub:
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
--   [Muestra de ubicación geográfica deUWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+> Para más información sobre el uso de mapas y la ubicación en tu aplicación, descarga los ejemplos siguientes del [repositorio Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub:
+-   [Ejemplo de mapa de la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Ejemplo de ubicación geográfica de UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 
  
 
@@ -51,7 +45,7 @@ Agrega rutas, indicaciones y funcionalidades de geocodificación a tu aplicació
 | [Mostrar puntos de interés en un mapa](display-poi.md) | Agrega puntos de interés a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
 | [Mostrar rutas e indicaciones](routes-and-directions.md) | Solicita rutas e indicaciones y muéstralas en tu aplicación. |
 | [Realizar geocodificación y geocodificación inversa](geocoding.md) | Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) del espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). |
-| [Buscar y descargar paquetes de mapa para poder usarlos sin conexión](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| En el pasado, la aplicación tenía dirigir a los usuarios a la aplicación configuración para descargar mapas sin conexión. Ahora, puedes usar las clases del espacio de nombres [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para encontrar los paquetes descargados en un área determinada (en función de un [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etcetera.). <br> Se puede también comprobar y escuchar el estado descargado de paquetes de mapa, así como iniciar una descarga sin requerir que el usuario deja la aplicación. <br> Encontrarás ejemplos de cómo hacer esto en el contenido de referencia y la [muestra de mapa de la plataforma Universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+| [Buscar y descargar paquetes de mapas para usarlos sin conexión](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| En el pasado, la aplicación debía dirigir a los usuarios a la aplicación Configuración para descargar mapas sin conexión. Ahora, puedes usar las clases del espacio de nombres [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para buscar los paquetes descargados en un área determinada (según una clase [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etc.). <br> También puedes comprobar y escuchar el estado descargado de los paquetes de mapas, así como iniciar una descarga sin necesidad de que el usuario abandone la aplicación. <br> Encontrarás ejemplos de cómo hacer esto en el contenido de referencia y en el [ejemplo de mapa de la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 ## <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
@@ -60,9 +54,9 @@ Obtén la ubicación actual del usuario y recibe notificaciones cuando la ubicac
 | Tema | Descripción |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación. |
-| [Directrices para aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md) | Directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario. |
+| [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md) | Directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario. |
 | [Obtener la ubicación del usuario](get-location.md) | Obtén acceso a la ubicación del usuario y luego recupérala. | 
-| [Directrices para usar seguimiento de visitas](guidelines-for-visits.md) | Obtén información sobre cómo usar la eficaz característica Visits Tracking para un seguimiento de ubicación más práctico. |
+| [Directrices para usar Visits tracking](guidelines-for-visits.md) | Aprende a usar la eficaz característica Visits Tracking para realizar cómodamente el seguimiento de la ubicación. |
 | [Guía de diseño de geovallas](guidelines-for-geofencing.md) | Directrices de rendimiento para las aplicaciones que usan la característica de geovalla. |
 | [Configurar una geovalla](set-up-a-geofence.md) | Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano. |
 
@@ -74,12 +68,12 @@ La aplicación puede iniciar la aplicación Mapas de Windows como aquí se indic
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Muestra de ubicación geográfica de UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
+* [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Ejemplo de ubicación geográfica de UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Obtener la ubicación actual](get-location.md)
-* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md)
+* [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md)
 * [Directrices de diseño para mapas](controls-map.md)
-* [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechar los mapas y la ubicación entre teléfonos, tabletas y equipos en tus aplicaciones Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Ejemplo de aplicación de tráfico de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Directrices de diseño para aplicaciones basadas en la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223)
+* Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
+* [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

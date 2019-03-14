@@ -1,25 +1,19 @@
 ---
-description: Windows Template Studio es una extensión de Visual Studio para crear rápidamente aplicaciones para UWP.
+description: Windows Template Studio es una extensión de Visual Studio para la creación rápida de aplicaciones para UWP.
 title: Windows Template Studio
 template: detail.hbs
 ms.date: 05/10/2018
 ms.topic: article
-keywords: Windows 10, UWP
+keywords: 'windows 10, uwp'
 pm-contact: clint.rutkas
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cfb593508ef6e366e133b04e7c47344e09d33dd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919344"
 ---
 # <a name="windows-template-studio"></a>Windows Template Studio
 
 ![imagen principal](images/wts1.png)
 
-Studio de plantilla de Windows (WTS) es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto UWP resultante es correcto y legible del código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados. Salteados en todo el código generado tenemos vínculos documentos, Stack Overflow y blogs para proporcionar información útil. WTS admite la creación de aplicaciones en C# o Visual Basic.
+Windows Template Studio (WTS) es una extensión de Visual Studio 2017 que acelera la creación de aplicaciones de la Plataforma universal de Windows (UWP) mediante una experiencia basada en asistentes. El proyecto UWP resultante es código legible, con el formato correcto, que incorpora las últimas características de Windows 10, al tiempo que se implementan patrones probados y procedimientos recomendados. Desperdigados por el código generado tenemos vínculos a documentos, Stack Overflow y blogs que proporcionan información útil. WTS admite la creación de aplicaciones en C# o Visual Basic.
 
-Para obtener más información, visita el [repositorio de project en GitHub](https://github.com/microsoft/windowsTemplateStudio).
+Para más información, visita el [repositorio de proyectos en GitHub](https://github.com/microsoft/windowsTemplateStudio).
 

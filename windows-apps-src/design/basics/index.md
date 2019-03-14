@@ -1,26 +1,26 @@
 ---
 description: Aprende a diseñar y codificar una aplicación para UWP en la que resulte fácil navegar y cuyo aspecto sea perfecto en varios dispositivos y tamaños de pantalla.
 title: Conceptos básicos de diseño
-keywords: 'diseño de aplicaciones para UWP, plataforma universal de windows, diseño de aplicaciones, interfaz'
+keywords: 'diseño de aplicaciones para UWP, Plataforma universal de Windows, diseño de aplicaciones, interfaz'
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ---
-# <a name="design-basics-for-uwp-apps"></a>Conceptos básicos de diseño para las aplicaciones para UWP
+# <a name="design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de las aplicaciones para UWP
 
 ![imagen principal](images/header-design-basics.svg)
 
-Las instrucciones sobre diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayudan a diseñar y crear fantásticas aplicaciones. No se trata de una lista de reglas prescriptivas: es un documento vivo, diseñado para adaptarse a la evolución de nuestro sistema Fluent Design, así como a las necesidades de nuestra comunidad de creación de aplicaciones. 
+Las instrucciones de diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayuda a diseñar y crear fantásticas aplicaciones. No se trata de una lista de reglas prescriptivas, sino de un documento dinámico, diseñado para adaptarse a la evolución de nuestra aplicación Fluent Design System, así como a las necesidades de nuestra comunidad de creación de aplicaciones. 
 
 ## <a name="overview"></a>Introducción
 
 [**Introducción al diseño de aplicaciones para UWP**](design-and-ui-intro.md)
 
-Introducción a las características para UWP combinada con procedimientos recomendados para crear aplicaciones que escalan a la perfección en todo tipo de dispositivos Windows.
+Introducción a las características de UWP combinada con procedimientos recomendados para crear aplicaciones que se escalan a la perfección en todo tipo de dispositivos diseñados para Windows.
 
-[**Sistema FluentDesign**](../fluent-design-system/index.md)
+[**Fluent Design System**](../fluent-design-system/index.md)
 
-El sistema Fluent Design presenta nuestros objetivos y principios para crear interfaces de usuario adaptables, comprensivas y atractivas.
+Fluent Design System presenta nuestros objetivos y principios para la creación de interfaces de usuario adaptables, comprensivas y atractivas.
 
 ## <a name="basics"></a>Conceptos básicos
 
@@ -34,11 +34,11 @@ Los elementos de comandos son los elementos interactivos de la interfaz de usuar
 
 [**Conceptos básicos de contenido**](content-basics.md)
 
-El propósito principal de cualquier aplicación es proporcionar acceso a contenido: en una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información acerca de los destinos de viaje son el contenido; y así sucesivamente. Este artículo proporciona recomendaciones para el diseño de contenido para los tres escenarios de contenido: consumo, creación e interacción.
+El propósito principal de cualquier aplicación es proporcionar acceso a contenido: en una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información acerca de los destinos de viaje son el contenido; y así sucesivamente. Este artículo proporciona recomendaciones de diseño de contenido para los tres escenarios de contenido: consumo, creación e interacción.
 
 ## <a name="tutorials"></a>Tutoriales
 
-Aprende a crear una aplicación de edición de fotos básica en XAML y C#.
+Aprende a crear una aplicación básica de edición de fotos en XAML y C#.
 <!-- <img src="images/landing-page/photolab-50.png" style="{height: 339px}" alt=" " /> -->
 
 [**1. Crear una interfaz de usuario básica**](xaml-basics-ui.md)

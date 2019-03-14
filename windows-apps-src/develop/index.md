@@ -1,15 +1,15 @@
 ---
-description: Obtén información sobre cómo desarrollar una aplicación para UWP.
-title: Desarrollo de aplicaciones para UWP
+description: Aprende a desarrollar una aplicación para UWP.
+title: Desarrollar aplicaciones para UWP
 layout: LandingPage
-keywords: los desarrolladores de desarrollo de UWP development subprocesos async plataforma Introducción a portal de la aplicación
+keywords: uwp app development threading async platform overview portal develop developers
 ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ---
 <div> 
-<h1>Desarrollo de aplicaciones para UWP</h1>
-<p>Artículos de procedimientos y el código para crear aplicaciones para UWP para Windows 10. </p> 
+<h1>Desarrollar aplicaciones para UWP</h1>
+<p>Artículos sobre procedimientos y código para crear aplicaciones para UWP en Windows 10. </p> 
 </div>
 
 <ul class="panelContent cardsH" style="margin-left: 1px">
@@ -24,8 +24,8 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Información general de la plataforma Universal de Windows</h3>
-                        <p>Una explicación de para qué UWP es, cómo funciona, y las características que proporciona.</p>
+                        <h3>Información general sobre la Plataforma universal de Windows</h3>
+                        <p>Una explicación de qué es UWP, cómo funciona y las características que ofrece.</p>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ ms.localizationpriority: medium
                     </div>                
                     <div class="cardText">
                         <h3>Guía de migración</h3>
-                        <p>Llevar tu existentes de Windows Forms, WPF, Android o aplicación de iOS a UWP. </p>
+                        <p>Lleva a UWP tus aplicaciones existentes de Windows Forms, WPF, Android o iOS. </p>
                     </div>
                 </div>
             </div>
@@ -62,8 +62,8 @@ ms.localizationpriority: medium
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Espacios de nombres UWP de Windows</h3>
-                        <p>Las clases, estructuras, interfaces, métodos, propiedades y eventos que conforman el tiempo de ejecución de Windows, organizados por el espacio de nombres.</p>
+                        <h3>Espacios de nombres de UWP de Windows</h3>
+                        <p>Las clases, estructuras, interfaces, métodos, propiedades y eventos que constituyen Windows Runtime, organizados por espacio de nombres.</p>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardText">
                         <h3>Esquemas para UWP</h3>
-                        <p>Especificaciones del esquema de archivo y XML para las aplicaciones de la plataforma Universal de Windows (UWP). </p>
+                        <p>Especificaciones de esquema de archivo y XML de las aplicaciones para la Plataforma universal de Windows (UWP). </p>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@ ms.localizationpriority: medium
                         <h3>Tipos de aplicaciones</h3>
                         <p style="display: block;"><a  href="/windows/uwp/apps-for-education/">Aplicaciones educativas</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/enterprise/">Aplicaciones empresariales</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/gaming/">Juegos y aplicaciones de DirectX</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/gaming/">Juegos y DirectX</a></p>
                         <p style="display: block;"><a  href="/microsoft-edge/progressive-web-apps">Aplicaciones web progresivas</a></p>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ ms.localizationpriority: medium
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>Interfaz de usuario de la aplicación</h3>
-                        <p><a href="https://developer.microsoft.com/windows/apps/design">Para los controles, diseño, tipografía, animación, facilidad de uso y diseño de la interfaz de usuario, consulta la sección de diseño e interfaz de usuario.</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/apps/design">Para información sobre controles, diseño, tipografía, animación, facilidad de uso y diseño de interfaz de usuario, consulta la sección Diseño e interfaz de usuario.</a></p>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@ ms.localizationpriority: medium
                     <div style="display:block" class="cardText">
                         <h3>Comunicación</h3>
                         <p><a style="display:block" href="/windows/uwp/app-to-app/">Comunicación entre aplicaciones</a></p>
-                        <p><a style="display:block" href="/windows/uwp/networking/">Servicios de redes y web</a></p>
+                        <p><a style="display:block" href="/windows/uwp/networking/">Servicios web y redes</a></p>
                     </div>
                 </div>
             </div>
@@ -204,9 +204,9 @@ ms.localizationpriority: medium
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/point-of-service">Punto de servicio</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/sensors">Sensores</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">Impresión</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">Impresión en 3D</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">Impresión 3D</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/nfc">NFC</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Información de batería</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Información de la batería</a></p>
                     </div>
                 </div>
             </div>
@@ -219,14 +219,14 @@ ms.localizationpriority: medium
                     <div style="display:block" class="cardText">
                         <h3>Migración</h3>
                         <p style="display:block"><a href="/windows/uwp/porting/">Introducción</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">Windows Phone Silverlight a UWP</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/w8x-to-uwp-root">Windows Runtime 8.x a UWP</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-root">Puente de dispositivo de escritorio</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">Migrar de Windows Phone Silverlight a UWP</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/w8x-to-uwp-root">Migrar de Windows Runtime 8.x a UWP</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-root">Puente de escritorio</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-migrate">Compartir código entre el escritorio y UWP</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/android-ios-uwp-map">Asignación del concepto para desarrolladores de Android e iOS</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/ios-to-uwp-root">Migrar de iOS a la UWP</a></p>
-                        <p style="display:block"><a href="/microsoft-edge/progressive-web-apps">Convertir tu aplicación web en una PWA</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/apps-on-arm">Windows10 en ARM</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/android-ios-uwp-map">Asignación de conceptos para desarrolladores de Android e iOS</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/ios-to-uwp-root">Migrar de iOS a UWP</a></p>
+                        <p style="display:block"><a href="/microsoft-edge/progressive-web-apps">Convertir la aplicación web en una PWA</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/apps-on-arm">Windows 10 en ARM</a></p>
                     </div>
                 </div>
             </div>
@@ -248,7 +248,7 @@ ms.localizationpriority: medium
 </ul>
 
 
- ## <a name="samples-and-tools"></a>Las herramientas y muestras
+ ## <a name="samples-and-tools"></a>Ejemplos y herramientas
 
  <ul class="panelContent cardsH" style="margin-left: 1px">
     <li>
@@ -262,8 +262,8 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Ejemplos</h3>
-                        <p> Obtén información sobre cómo compilar aplicaciones increíbles para Windows al experimentar con estas muestras. Estos ejemplos muestran cómo las características funcionan y ayudar a impulsar tus propias aplicaciones para UWP.</p>
+                        <h3>Muestras</h3>
+                        <p> Experimenta con nuestros ejemplos para aprender a crear aplicaciones fabulosas para Windows. Estos ejemplos te enseñan cómo funcionan las características y te ayudan a empezar a crear tus propias aplicaciones.</p>
                     </div>
                 </div>
             </div>
@@ -282,7 +282,7 @@ ms.localizationpriority: medium
                     </div>                
                     <div class="cardText">
                         <h3>Herramientas de desarrollo</h3>
-                        <p>Obtener Visual Studio 2017, el SDK de Windows 10 y otras herramientas de desarrollo.</p>
+                        <p>Obtén Visual Studio 2017, el SDK de Windows 10 y otras herramientas de desarrollo.</p>
                     </div>
                 </div>
             </div>
