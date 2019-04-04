@@ -6,9 +6,15 @@ title: 'Documentación de UWP: desarrollador de aplicaciones para UWP | Microsof
 ms.topic: landing-page
 ms.author: mijacobs
 ms.date: 08/4/2017
-keywords: 'windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp'
+keywords: windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
+ms.openlocfilehash: ce1923fa071344a848b4b0c4fab1ed6da6da48f7
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583712"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentación de la Plataforma universal de Windows
 La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows, como equipos, teléfonos, Xbox One, HoloLens y muchos más, y publicarlas en Microsoft Store.

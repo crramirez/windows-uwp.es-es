@@ -4,8 +4,14 @@ description: En esta sección se incluyen temas en los que se explica el marco X
 title: Plataforma XAML
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: b725a823f31309c2419bcdc5095a78994d1929c0
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583442"
 ---
 # <a name="xaml-platform"></a>Plataforma XAML
 

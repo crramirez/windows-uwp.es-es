@@ -1,15 +1,20 @@
 ---
 layout: LandingPage
 description: En esta página se proporciona la información necesaria para empezar a desarrollar aplicaciones para UWP y win32 ARM64.
-title: "Windows\_10 en ARM"
+title: Windows 10 en ARM
 author: msatranjr
 ms.author: misatran
 ms.date: 05/08/2018
 ms.localizationpriority: medium
 ms.topic: article
-keywords: 'Windows 10 on ARM, ARM, building win32 ARM64 apps, building ARM64 drivers'
+keywords: Windows 10 on ARM, ARM, building win32 ARM64 apps, building ARM64 drivers
+ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583359"
 ---
-
 # <a name="windows-10-on-arm"></a>Windows 10 en ARM
 Windows 10 funciona en equipos con procesadores ARM. En esta página se proporciona información para conocer más sobre la plataforma y comenzar a desarrollar aplicaciones. También te animamos a que nos des tu opinión mediante los vínculos que se encuentran al final de la página.
 

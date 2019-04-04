@@ -1,11 +1,17 @@
 ---
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
-description: 'Windows SDK, el SDK de Microsoft Advertising, Microsoft Store Services SDK y Microsoft Store proporcionan muchas características que permiten ganar más dinero con las aplicaciones y conseguir clientes gracias a la interacción con los usuarios.'
-title: 'Monetización, interacción y servicios de Store'
+description: Windows SDK, el SDK de Microsoft Advertising, Microsoft Store Services SDK y Microsoft Store proporcionan muchas características que permiten ganar más dinero con las aplicaciones y conseguir clientes gracias a la interacción con los usuarios.
+title: Monetización, interacción y servicios de Store
 ms.date: 11/29/2017
 ms.topic: article
-keywords: 'windows 10, uwp, monetize, engage, promote, Store services'
+keywords: windows 10, uwp, monetize, engage, promote, Store services
 ms.localizationpriority: medium
+ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583402"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de Store
 

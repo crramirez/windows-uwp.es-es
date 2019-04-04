@@ -1,7 +1,7 @@
 ---
-description: 'Optimiza la aplicación para entrada de lápiz, Surface Dial y de otro tipo.'
+description: Optimiza la aplicación para entrada de lápiz, Surface Dial y de otro tipo.
 title: Entrada e interacciones
-keywords: 'app inputs, customize UWP application'
+keywords: app inputs, customize UWP application
 label: Input and interactions
 layout: LandingPage
 template: detail.hbs
@@ -9,6 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
+ms.openlocfilehash: 4f66d808cafcc6fba89cebde352d191335068925
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583103"
 ---
 # <a name="input-and-interactions"></a>Entrada e interacciones
 

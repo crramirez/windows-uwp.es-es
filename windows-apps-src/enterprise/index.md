@@ -1,11 +1,17 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: "En esta guía básica se proporciona información general sobre las características empresariales fundamentales para las aplicaciones de Windows\_10 y de la Plataforma universal de Windows (UWP)."
+description: En esta guía básica se proporciona información general sobre las características empresariales fundamentales para las aplicaciones de Windows 10 y de la Plataforma universal de Windows (UWP).
 title: Empresas
 ms.date: 08/30/2018
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: fae4d5b57ac5cfb5c47fca1a2f3476cd16a56534
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583199"
 ---
 # <a name="enterprise"></a>Empresas
 

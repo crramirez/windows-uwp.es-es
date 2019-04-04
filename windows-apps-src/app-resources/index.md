@@ -1,12 +1,18 @@
 ---
-Description: 'En esta sección se muestra cómo crear, empaquetar y consumir los recursos de cadena, imagen y archivo de la aplicación.'
+Description: En esta sección se muestra cómo crear, empaquetar y consumir los recursos de cadena, imagen y archivo de la aplicación.
 title: Recursos de aplicación y el sistema de administración de recursos
 label: Intro
 template: detail.hbs
 ms.date: 10/20/2017
 ms.topic: article
-keywords: 'windows 10, uwp, resource, image, asset, MRT, qualifier'
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
+ms.openlocfilehash: a5af904c099b92e399f169221cae3122f358be19
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583007"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>Recursos de aplicación y el sistema de administración de recursos
 

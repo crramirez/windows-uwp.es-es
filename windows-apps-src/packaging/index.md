@@ -4,8 +4,14 @@ title: Empaquetado de aplicaciones
 description: Esta sección contiene o menciona artículos sobre los paquetes de aplicaciones para la Plataforma universal de Windows (UWP).
 ms.date: 09/30/2018
 ms.topic: article
-keywords: 'windows 10, uwp, packaging'
+keywords: windows 10, uwp, packaging
 ms.localizationpriority: medium
+ms.openlocfilehash: 04736c9ac4de5adf162d32191ff30f7a981d6a6f
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583615"
 ---
 # <a name="packaging-apps"></a>Empaquetado de aplicaciones
 

@@ -1,12 +1,18 @@
 ---
 description: Obtén las herramientas y las descargas más recientes para los diseños de la distribución y los controles de la interfaz de usuario de las aplicaciones para UWP.
-keywords: 'diseño de aplicaciones para UWP, IU, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP'
+keywords: diseño de aplicaciones para UWP, IU, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP
 title: Kits de herramientas de diseño y ejemplos de aplicaciones para UWP
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
+ms.openlocfilehash: cbe17d8e7093a15c66e482acd935974bc57074ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583605"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y ejemplos de aplicaciones para UWP
  

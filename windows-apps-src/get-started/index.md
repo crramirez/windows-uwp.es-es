@@ -1,11 +1,17 @@
 ---
 layout: LandingPage
-description: "Introducción a la Plataforma universal de Windows (UWP) y desarrollo de aplicaciones para Windows\_10."
+description: Introducción a la Plataforma universal de Windows (UWP) y desarrollo de aplicaciones para Windows 10.
 title: Introducción a la Plataforma universal de Windows (UWP)
 ms.date: 03/23/2018
 ms.topic: article
-keywords: 'get started, windows 10, uwp, xaml, c#'
+keywords: get started, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
+ms.openlocfilehash: a2a1452de6fe602c8fd21e510de070f49d806eec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583762"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10 
  

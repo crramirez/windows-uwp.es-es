@@ -1,12 +1,18 @@
 ---
 layout: LandingPage
-Description: "Consulta cómo publicar tus aplicaciones de Windows en Microsoft\_Store."
+Description: Consulta cómo publicar tus aplicaciones de Windows en Microsoft Store.
 title: Publicar aplicaciones de Windows
 ms.date: 10/31/2018
 ms.topic: article
-keywords: 'windows 10, uwp, publishing, publish, selling, sell, distribute, distributing, store, dashboard'
+keywords: windows 10, uwp, publishing, publish, selling, sell, distribute, distributing, store, dashboard
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
+ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583118"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicaciones y juegos de Windows  
  

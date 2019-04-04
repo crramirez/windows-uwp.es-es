@@ -1,12 +1,18 @@
 ---
-description: 'Aprende a usar el color, la tipografía y los iconos para definir la personalidad de tu aplicación para UWP con la guía de estilo de UWP.'
-keywords: 'guía de estilo de UWP, guía de diseño, tipografía, movimiento, sonido, movimiento, desarrollo de aplicaciones'
+description: Aprende a usar el color, la tipografía y los iconos para definir la personalidad de tu aplicación para UWP con la guía de estilo de UWP.
+keywords: guía de estilo de UWP, guía de diseño, tipografía, movimiento, sonido, movimiento, desarrollo de aplicaciones
 title: Estilo de aplicaciones para UWP
 ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
+ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583775"
 ---
 # <a name="style-for-uwp-apps"></a>Estilo de aplicaciones para UWP
 
