@@ -157,7 +157,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>Método '{0}'tiene un parámetro de tipo'{1}' en la firma. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. {2}</p>
-> **Tenga en cuenta**  para {2}, Winmdexp.exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System.Collections.Generic.List&lt;T&gt;' en la firma del método a uno de los siguientes tipos en lugar de: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+> **Tenga en cuenta**  para {2}, Winmdexp.exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System.Collections.Generic.List&lt;T&gt;' en la firma del método a uno de los siguientes tipos en lugar de: "System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
 <tr class="even">
@@ -250,5 +250,5 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Creación de componentes de Windows en tiempo de ejecución en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe (herramienta de exportación de metadatos en tiempo de ejecución de Windows)](https://msdn.microsoft.com/library/hh925576.aspx)

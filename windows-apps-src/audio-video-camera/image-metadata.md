@@ -84,7 +84,7 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Imaging](imaging.md)
+* [Creación de imágenes](imaging.md)
  
 
  

@@ -7,7 +7,7 @@ keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store a
 ms.localizationpriority: medium
 ms.openlocfilehash: 40d35b45065566db22aef791a94faa1cc0fa5c62
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57655660"
@@ -53,7 +53,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **concurrency**.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
-| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minute**: Los últimos 60 registros de datos disponibles.</li><li>**hora**: Los últimos 24 registros de datos disponibles.</li><li>**day**: Los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minute**: Registros de hasta 1440 (24 horas de datos).</li><li>**hora**: Hasta 720 registros (30 días de datos).</li><li>**day**: Hasta 60 registros (60 días de datos).</li></ul>  |  No  |
+| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minuto**: Los últimos 60 registros de datos disponibles.</li><li>**hora**: Los últimos 24 registros de datos disponibles.</li><li>**día**: Los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minuto**: Registros de hasta 1440 (24 horas de datos).</li><li>**hora**: Hasta 720 registros (30 días de datos).</li><li>**día**: Hasta 60 registros (60 días de datos).</li></ul>  |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud

@@ -30,7 +30,7 @@ Si todavía no tienes estos recursos en la máquina, sigue estos vínculos de de
 
  - [Generador Express](https://expressjs.com/en/starter/generator.html): después de instalar el nodo, instale Express mediante la ejecución `npm install express-generator -g`
 
- - [Visual Studio Code](https://code.visualstudio.com/)
+ - [Código de Visual Studio](https://code.visualstudio.com/)
 
 Si quieres completar los pasos finales del hospedaje del servicio de API y la aplicación de juego de memoria en Microsoft Azure, tendrás que [crear una cuenta gratuita de Azure](https://azure.microsoft.com/en-us/free/) si todavía no lo has hecho.
 
@@ -626,7 +626,7 @@ Enhorabuena. Has terminado de crear la aplicación web. Vamos a probarla.
 
     También puedes comparar tu código con el código proporcionado en la carpeta Final.
 
-4. Para detener el juego, en el símbolo del sistema, escriba: **Ctrl + C**, **Y**. 
+4. Para detener el juego, en el símbolo del sistema, escriba: **CTRL + C**, **Y**. 
 
 ### <a name="going-further"></a>Ir más allá
 

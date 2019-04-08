@@ -8,7 +8,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646170"
@@ -84,7 +84,7 @@ Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tie
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)

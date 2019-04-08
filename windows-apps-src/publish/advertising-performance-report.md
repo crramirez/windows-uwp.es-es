@@ -64,8 +64,8 @@ El informe **Rendimiento de publicidad** incluye los datos de las siguientes mé
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Anuncios en la aplicación](in-app-ads.md)
-* [Mostrar anuncios en su aplicación con el SDK de publicidad de Microsoft](../monetize/display-ads-in-your-app.md)
+* [Anuncios en aplicaciones](in-app-ads.md)
+* [Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising](../monetize/display-ads-in-your-app.md)
 * [Optimizar la capacidad de visualización de las unidades de ad](../monetize/optimize-ad-unit-viewability.md)
 
 

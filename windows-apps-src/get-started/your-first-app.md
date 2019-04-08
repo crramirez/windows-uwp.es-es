@@ -77,7 +77,7 @@ Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como las a
 
 ## <a name="see-also"></a>Consulta también
 
-* [Comience a codificar](create-uwp-apps.md)
+* [Empezar a crear el código](create-uwp-apps.md)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
 * [Prepárate](get-set-up.md)
 * [Registrarse para la cuenta de Windows](sign-up.md)

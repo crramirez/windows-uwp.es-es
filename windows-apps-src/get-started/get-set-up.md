@@ -54,7 +54,7 @@ Puedes empezar a desarrollar aplicaciones ahora, pero para poder enviarlas a la 
 
 Cuando hayas instalado las herramientas y habilitado el dispositivo para desarrollo, echa un vistazo a nuestras directrices acerca de cómo empezar a crear aplicaciones de Windows 10.
 
--   [Comience a codificar](create-uwp-apps.md)
+-   [Empezar a crear el código](create-uwp-apps.md)
 
 ## <a name="windows-development-setup-scripts"></a>Scripts de instalación de desarrollo de Windows
 

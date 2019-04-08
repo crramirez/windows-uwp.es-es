@@ -44,7 +44,7 @@ La aplicación recibe eventos de activación solo para las extensiones de archiv
 | Campo | Descripción |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Nombre para mostrar** | Especifica el nombre para mostrar de un grupo de tipos de archivo. El nombre para mostrar se usa para identificar el tipo de archivo en [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) en el **Panel de control**. |
-| **Logo** | Especifica el logotipo que se usa para identificar el tipo de archivo en el escritorio y en [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) en el **Panel de control**. Si no se especifica ningún logotipo, se usa el logotipo pequeño para la aplicación. |
+| **Logotipo de** | Especifica el logotipo que se usa para identificar el tipo de archivo en el escritorio y en [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) en el **Panel de control**. Si no se especifica ningún logotipo, se usa el logotipo pequeño para la aplicación. |
 | **Sugerencia de información** | Especifica la [Información sobre herramientas](https://msdn.microsoft.com/library/windows/desktop/cc144152) de un grupo de tipos de archivo. Este texto de información sobre herramientas aparece cuando el usuario mantiene el puntero sobre el icono de un archivo de este tipo. |
 | **Nombre** | Elige un nombre para un grupo de tipos de archivos que comparten el mismo nombre para mostrar, logotipo, información y marcas de edición. Elige un nombre de grupo que pueda continuar siendo el mismo a lo largo de las actualizaciones de la aplicación. **Nota**  El nombre debe estar completamente en minúsculas. |
 | **Tipo de contenido** | Especifica el tipo de contenido MIME, como **image/jpeg**, de un tipo de archivo concreto. **Nota importante acerca de los tipos de contenido permitidos:** Esta es una lista alfabética de los tipos de contenido MIME que no se puede escribir en el manifiesto del paquete porque está reservados o prohibidos: **/force-descargar la aplicación**, **application/octet-stream**, **aplicación o desconocido**, **application/x-msdownload**. |
@@ -145,7 +145,7 @@ Los archivos que recibes pueden provenir de un origen que no es de confianza. Se
 ### <a name="tasks"></a>Tareas
 
 * [Iniciar la aplicación predeterminada de un archivo](launch-the-default-app-for-a-file.md)
-* [Activación de identificador URI](handle-uri-activation.md)
+* [Controlar la activación de URI](handle-uri-activation.md)
 
 ### <a name="guidelines"></a>Instrucciones
 

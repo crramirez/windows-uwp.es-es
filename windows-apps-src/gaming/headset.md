@@ -15,7 +15,7 @@ ms.locfileid: "57627960"
 ---
 # <a name="headset"></a>Auriculares
 
-En esta página se describen los conceptos básicos de programación para auriculares que usan [Windows.Gaming.Input.Headset][headset] y las API relacionadas para la Plataforma universal de Windows (UWP).
+En esta página se describen los conceptos básicos de programación para auriculares que usan [Windows.Gaming.Input.Headset][auriculares] y las API relacionadas para la Plataforma universal de Windows (UWP).
 
 En esta página encontrarás información sobre:
 * Cómo obtener acceso a auriculares conectados a un dispositivo de entrada o de navegación
@@ -63,7 +63,7 @@ inputDevice.HeadsetDisconnected += ref new TypedEventHandler<IGameController^, H
 
 ## <a name="using-the-headset"></a>Uso de los auriculares
 
-La clase [Headset][] se compone de dos cadenas que representan identificadores de punto de conexión XAudio: uno para la captura de audio (grabación desde el micrófono de los auriculares) y otro para la representación de audio (reproducción a través del auricular de los auriculares).
+La clase [Auriculares][] se compone de dos cadenas que representan identificadores de punto de conexión XAudio: uno para la captura de audio (grabación desde el micrófono de los auriculares) y otro para la representación de audio (reproducción a través del auricular de los auriculares).
 
 Los detalles del trabajo con XAudio no se explican aquí; para obtener más información, consulta el [Guía de programación de XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) y [XAudio2 API reference (Referencia de API XAudio)](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).
 
@@ -73,4 +73,4 @@ Los detalles del trabajo con XAudio no se explican aquí; para obtener más info
 [igamecontroller.headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headset.aspx
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
-[headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
+[Auriculares]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx

@@ -76,7 +76,7 @@ Si quieres habilitar un permiso para el usuario, activa o desactiva la casilla c
 
 - **Sin acceso**: El usuario no tendrá el permiso indicado.
 - **De sólo lectura**: El usuario tendrá acceso para ver las características relacionadas con el área indicado, pero no podrá realizar cambios. 
-- **Read/write**: El usuario tendrá acceso para realizar cambios asociados con el área, así como para verlo.
+- **Lectura/escritura**: El usuario tendrá acceso para realizar cambios asociados con el área, así como para verlo.
 - **Mixto**: No se selecciona esta opción directamente, pero la **mixto** indicador mostrará si ha permitido una combinación de acceso para ese permiso. Por ejemplo, si concedes acceso de **Solo lectura** a **Precios y disponibilidad** para **Todos los productos**, pero luego concedes acceso de **Lectura y escritura** a **Precios y disponibilidad** para un producto específico, el indicador **Precios y disponibilidad** de **Todos los productos** se mostrará como mixto. Lo mismo sucede si algunos productos presentan **Sin acceso** para un permiso y otros, acceso de **Lectura y escritura** o de **Solo lectura**.
 
 En el caso de algunos permisos, como los relacionados con la visualización de datos analíticos, solo se puede conceder acceso de **Solo lectura**. Ten en cuenta que en la implementación actual algunos permisos no distinguen en absoluto entre acceso de **Solo lectura** y de **Lectura y escritura**. Revisa los detalles de cada permiso para comprender las capacidades específicas que concede el acceso de **Solo lectura** y de **Lectura y escritura**.

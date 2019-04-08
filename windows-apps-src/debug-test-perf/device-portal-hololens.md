@@ -90,11 +90,11 @@ La sesión de Device Portal se inicia en la página principal. Accede a otras p�
 
 La barra de herramientas de la parte superior de la página proporciona acceso al estado usado frecuentemente y a las características.
 - **En línea**: Indica si el dispositivo está conectado a Wi-Fi.
-- **Shutdown**: Desactiva el dispositivo.
-- **Restart**: Los ciclos de energía en el dispositivo.
+- **Apagado**: Desactiva el dispositivo.
+- **Reiniciar**: Los ciclos de energía en el dispositivo.
 - **Seguridad**: Abre la página seguridad del dispositivo.
 - **Genial**: Indica la temperatura del dispositivo.
-- **A/C**: Indica si el dispositivo está conectado y de carga.
+- **AIRE ACONDICIONADO**: Indica si el dispositivo está conectado y de carga.
 - **Ayudar a**: Se abre la página de documentación de la interfaz REST.
 
 En la página principal se muestra la siguiente información:

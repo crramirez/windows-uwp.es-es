@@ -33,14 +33,14 @@ En este tema se describen los siguientes esquemas de URI integrados en Windows:
 |[¿bingmaps:, ms-unidad-to: y ms-tutorial-to: ](#maps-app-uri-schemes) | Aplicación Mapas |
 |[http:](#http-uri-scheme) | Explorador web predeterminado |
 |[mailto:](#email-uri-scheme) | Aplicación de correo electrónico predeterminada |
-|[ms-call:](#call-app-uri-scheme) |  Aplicación de llamada |
-|[ms-chat:](#messaging-app-uri-scheme) | Aplicación Mensajes |
-|[ms-people:](#people-app-uri-scheme) | Aplicación Contactos |
-|[ms-photos:](#photos-app-uri-scheme) | Aplicación Fotos |
+|[llamada de MS:](#call-app-uri-scheme) |  Aplicación de llamada |
+|[MS-chat:](#messaging-app-uri-scheme) | Aplicación Mensajes |
+|[MS-personas:](#people-app-uri-scheme) | Aplicación Contactos |
+|[MS-fotos:](#photos-app-uri-scheme) | Aplicación Fotos |
 |[configuración de MS:](#settings-app-uri-scheme) | Aplicación Configuración |
-|[ms-store:](#store-app-uri-scheme)  | Aplicación de la Tienda |
-|[ms-tonepicker:](#tone-picker-uri-scheme) | Selector de tono |
-|[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicación de números cercanos |
+|[MS-store:](#store-app-uri-scheme)  | Aplicación de la Tienda |
+|[MS-tonepicker:](#tone-picker-uri-scheme) | Selector de tono |
+|[MS-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicación de números cercanos |
 |[msnweather:](#weather-app-uri-scheme) | Aplicación meteorológica |
 
 <br>
@@ -244,4 +244,4 @@ Use el **msnweather:** Esquema de URI para iniciar la aplicación del tiempo.
 
 | Esquema de URI | Results |
 |------------|---------|
-| msnweather://forecast?la=\[latitude\]&lo=\[longitude\] | Inicia la aplicación meteorológica en la página de previsión según un coordenadas de ubicación geográfica.<br>`latitude` hace referencia a la latitud de la ubicación.<br> `longitude` hace referencia a la longitud de la ubicación.<br> |
+| msnweather://Forecast?la=\[latitud\]& lo =\[longitud\] | Inicia la aplicación meteorológica en la página de previsión según un coordenadas de ubicación geográfica.<br>`latitude` hace referencia a la latitud de la ubicación.<br> `longitude` hace referencia a la longitud de la ubicación.<br> |

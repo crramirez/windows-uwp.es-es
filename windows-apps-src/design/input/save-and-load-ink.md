@@ -23,7 +23,7 @@ Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializ
 > [!NOTE]
 > El formato ISF es la representación más compacta y persistente de la entrada de lápiz. Puede incrustarse en un formato de documento binario, como un archivo GIF, o colocarse directamente en el Portapapeles.
 
-> **API importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **API importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="save-ink-strokes-to-a-file"></a>Guardar los trazos de lápiz en un archivo
 

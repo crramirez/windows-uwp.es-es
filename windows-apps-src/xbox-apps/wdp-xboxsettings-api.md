@@ -8,7 +8,7 @@ ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57598650"
@@ -18,7 +18,7 @@ Puede obtener acceso a la configuración de Xbox One que es útil para desarroll
 
 ## <a name="get-all-developer-settings-at-once"></a>Obtener todas las opciones de configuración del desarrollador al mismo tiempo
 
-**Request**
+**Solicitud**
 
 Puedes usar la siguiente solicitud para obtener todas las opciones de configuración de desarrollador en una única solicitud.
 
@@ -69,7 +69,7 @@ Código de estado HTTP      | Descripción
 ## <a name="get-settings-one-at-a-time"></a>Obtener las opciones de configuración de una en una
 Las opciones de configuración también se pueden recuperar individualmente.
 
-**Request**
+**Solicitud**
 
 Puedes usar la siguiente solicitud para obtener información acerca de una opción de configuración individual.
 
@@ -120,7 +120,7 @@ Código de estado HTTP      | Descripción
 ## <a name="set-the-value-of-a-setting"></a>Configurar el valor de una opción de configuración
 Puedes configurar el valor de una opción de configuración.
 
-**Request**
+**Solicitud**
 
 Puedes usar la siguiente solicitud para configurar el valor para una opción de configuración.
 

@@ -183,8 +183,8 @@ El método de ordenación sigue el formato del **panel de control regional**:
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Directrices para la globalización](guidelines-and-checklist-for-globalizing-your-app.md)
-- [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](../../app-resources/localize-strings-ui-manifest.md)
-- [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+- [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../app-resources/localize-strings-ui-manifest.md)
+- [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 - [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](adjust-layout-and-fonts--and-support-rtl.md)
 - [Los eventos de cambio de la actualización de imágenes en respuesta al valor de calificador](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 

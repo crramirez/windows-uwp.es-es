@@ -383,12 +383,12 @@ using namespace Windows::Web::Http;
 * [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)
 * [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)
 * [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)
-* [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
-* [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)
+* [**Windows::Web::http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
+* [**Windows::Networking::sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)
 
 **Ejemplos**
 
 * [Ejemplo de DatagramSocket](https://go.microsoft.com/fwlink/p/?LinkID=243037)
-* [HttpClient Sample]( https://go.microsoft.com/fwlink/p/?linkid=242550)
+* [Ejemplo de HttpClient]( https://go.microsoft.com/fwlink/p/?linkid=242550)
 * [Ejemplo de proximidad](https://go.microsoft.com/fwlink/p/?linkid=245082)
 * [Ejemplo de StreamSocket](https://go.microsoft.com/fwlink/p/?linkid=243037)

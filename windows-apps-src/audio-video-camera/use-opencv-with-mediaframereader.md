@@ -64,7 +64,7 @@ El evento **FrameArrived** se genera siempre que un nuevo fotograma esté dispon
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Camera](camera.md)
+* [Cámara](camera.md)
 * [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Mapas de bits de los procesos de software con OpenCV](process-software-bitmaps-with-opencv.md)

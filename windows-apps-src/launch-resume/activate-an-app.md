@@ -271,7 +271,7 @@ Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/w
 * [Windows.UI.Xaml.Application](https://msdn.microsoft.com/library/windows/apps/br242324)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Suspender el identificador de aplicación](suspend-an-app.md)
-* [Identificador de reanudar la aplicación](resume-an-app.md)
+* [Controlar la suspensión de aplicaciones](suspend-an-app.md)
+* [Controlar la reanudación de aplicaciones](resume-an-app.md)
 * [Directrices para la aplicación, suspensión y reanudar](https://msdn.microsoft.com/library/windows/apps/hh465088)
 * [Ciclo de vida de la aplicación](app-lifecycle.md)

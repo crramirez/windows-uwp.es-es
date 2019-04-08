@@ -124,6 +124,6 @@ En lugar de una sola línea de código para todos los idiomas, depende del tradu
 * [LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../app-resources/localize-strings-ui-manifest.md)
 * [Adaptar los recursos de idioma, la escala y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](manage-language-and-region.md)

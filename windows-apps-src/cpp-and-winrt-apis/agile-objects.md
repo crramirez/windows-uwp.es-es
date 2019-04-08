@@ -7,7 +7,7 @@ keywords: awndows 10, uwp, estándar, c++, cpp, winrt, proyección, ágil, objet
 ms.localizationpriority: medium
 ms.openlocfilehash: 2481396d9348250e14ebfc2d1f940b663b405f77
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639670"
@@ -117,12 +117,12 @@ La llamada [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agilerefget-fun
 
 * [Interfaz IAgileObject](https://msdn.microsoft.com/library/windows/desktop/hh802476)
 * [IMarshal (interfaz)](https://docs.microsoft.com/previous-versions/windows/embedded/ms887993)
-* [winrt::agile_ref struct template](/uwp/cpp-ref-for-winrt/agile-ref)
-* [winrt::implements struct template](/uwp/cpp-ref-for-winrt/implements)
+* [plantilla de estructura winrt::agile_ref](/uwp/cpp-ref-for-winrt/agile-ref)
+* [plantilla de estructura winrt::Implements](/uwp/cpp-ref-for-winrt/implements)
 * [plantilla de función winrt::make_agile](/uwp/cpp-ref-for-winrt/make-agile)
 * [winrt::non_agile marcador struct](/uwp/cpp-ref-for-winrt/non-agile)
-* [winrt::Windows::Foundation::IUnknown::as function](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
-* [winrt::Windows::Foundation::IUnknown::try_as function](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
+* [winrt::Windows::Foundation::IUnknown:: como función](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [función winrt::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
 
 ## <a name="related-topics"></a>Temas relacionados
 

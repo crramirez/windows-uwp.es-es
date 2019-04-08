@@ -148,7 +148,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | [Controles útiles para los formularios](../design/controls-and-patterns/forms.md#input-controls) | Una lista de controles de entrada útiles para crear formularios y pautas básicas de dónde utilizarlos. |
 | [Cuadrícula](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | Un panel para organizar elementos en diseños de varias filas y varias columnas. |
 | [RelativePanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | Un panel para organizar elementos en relación con otros elementos y los límites del panel. |
-| [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | Un panel para organizar elementos en una sola línea horizontal o vertical. |
+| [Elemento StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | Un panel para organizar elementos en una sola línea horizontal o vertical. |
 | [VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) | Permite establecer el aspecto de los elementos de la interfaz de usuario cuando están en estados concretos. |
 
 ### <a name="useful-docs"></a>Documentos útiles
@@ -171,6 +171,6 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | Ejemplo de código | Descripción |
 |-----------------|---------------|
 | [Tutorial sobre el diseño adaptable](../design/basics/xaml-basics-adaptive-layout.md) | Una experiencia guiada paso a paso a través de los diseños adaptativos y el diseño con capacidad de respuesta. | 
-| [Base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Consulta el diseño y los formularios en acción en un ejemplo empresarial de varias páginas. |
+| [Base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Consulta el diseño y los formularios en acción en un ejemplo empresarial de varias páginas. |
 | [Galería de controles de XAML](https://github.com/Microsoft/Xaml-Controls-Gallery) | Consulta una selección de controles XAML y cómo se implementan. |
 | [Ejemplos de código adicionales](https://developer.microsoft.com//windows/samples) | Elige **Controles, diseño y texto** en la lista desplegable de categoría para ver ejemplos de código relacionados. |

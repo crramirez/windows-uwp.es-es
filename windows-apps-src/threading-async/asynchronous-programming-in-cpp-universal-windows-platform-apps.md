@@ -292,7 +292,7 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 * [Referencia del lenguaje de Visual C++](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
 * [Programación asincrónica][AsyncProgramming]
 * [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism]
-* [concurrency::task](/cpp/parallel/concrt/reference/task-class)
+* [Concurrency:: Task](/cpp/parallel/concrt/reference/task-class)
 
 <!-- LINKS -->
 [AsyncProgramming]: <https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps> "AsyncProgramming"

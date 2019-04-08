@@ -3,7 +3,7 @@ title: Administrador de cuentas web
 description: En este artículo, se describe cómo usar AccountsSettingsPane para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las API de Administrador de cuentas web de Windows 10.
 ms.date: 12/06/2017
 ms.topic: article
-keywords: Windows 10, uwp, seguridad
+keywords: windows 10, uwp, security
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: a0a16ac9a2d810f7f4cbe2be403713b5cec4997b
@@ -428,7 +428,7 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 
 [Clase AccountsSettingsPane](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.accountssettingspane)
 
-[Agente de autenticación Web](web-authentication-broker.md)
+[Agente de autenticación web](web-authentication-broker.md)
 
 [Ejemplo de administración de cuenta de Web](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 

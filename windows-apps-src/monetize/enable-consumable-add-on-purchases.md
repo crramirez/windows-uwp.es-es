@@ -8,7 +8,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57636730"
@@ -86,7 +86,7 @@ En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingA
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)

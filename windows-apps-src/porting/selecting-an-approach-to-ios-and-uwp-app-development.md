@@ -68,7 +68,7 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Un entorno de creación de juegos.
 
--   [Titanium Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
+-   [Titanio Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
 
     Un entorno de creación de multiplataforma.
 

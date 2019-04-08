@@ -78,7 +78,7 @@ Para descargar un pedido completado de códigos promocionales y distribuirlos a 
     -   **Id. de pedido**: Un identificador único para el orden en el que se generó este código.
     -   **Dado a**: Un campo vacío que puede usar para realizar un seguimiento de qué cliente dio el código.
     -   **Disponible**: El número de veces que el código sigue estando disponible para canjear (en el momento en que se generó el archivo).
-    -   **Redeemed**: El número de veces que se ha canjeado el código (en el momento en que se generó el archivo).
+    -   **Canjeado**: El número de veces que se ha canjeado el código (en el momento en que se generó el archivo).
 
 4.  Distribuye las direcciones URL canjeables a los clientes mediante el formato de comunicación que prefieras (por ejemplo, notificaciones dirigidas, correo electrónico, mensaje SMS o tarjetas impresas). Te recomendamos que incluyas lo siguiente en la comunicación:
     -   Una explicación de para qué aplicación o complemento es el código promocional y, de forma opcional, una descripción de por qué el cliente recibe el código.

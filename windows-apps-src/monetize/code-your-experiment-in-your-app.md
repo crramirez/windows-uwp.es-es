@@ -8,7 +8,7 @@ keywords: windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experiment
 ms.localizationpriority: medium
 ms.openlocfilehash: edd0fbcf841dc9d8fa43873da95dc08b276a5418
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57636750"

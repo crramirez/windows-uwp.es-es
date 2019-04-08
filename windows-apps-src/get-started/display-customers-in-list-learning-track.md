@@ -166,7 +166,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | API | Descripción |
 |------|---------------|
 | [Plantilla de datos](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | Describe la estructura visual de un objeto de datos, lo que permite la visualización de elementos específicos de la interfaz de usuario. |
-| [x:Bind](../xaml-platform/x-bind-markup-extension.md) | Documentación sobre la extensión de marcado x:Bind recomendada. |
+| [x: Bind](../xaml-platform/x-bind-markup-extension.md) | Documentación sobre la extensión de marcado x:Bind recomendada. |
 | [enlace](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Un control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Un control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |

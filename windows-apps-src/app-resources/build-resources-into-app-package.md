@@ -97,6 +97,6 @@ Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de cal
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md)
+* [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Especificar los recursos predeterminados que usa su aplicación](specify-default-resources-installed.md)
+* [Especificar los recursos predeterminados que la aplicación usa](specify-default-resources-installed.md)

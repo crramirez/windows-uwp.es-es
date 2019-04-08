@@ -69,7 +69,7 @@ El objeto UserIdentity contiene los parámetros siguientes.
 |----------------------|--------|-------------------|----------|
 | identityType         | string | Especifica el valor de cadena **b2b**.    | Sí      |
 | identityValue        | string | La [clave de id. de Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.      | Sí      |
-| localTicketReference | string | El identificador solicitado para la respuesta devuelta. Se recomienda que use el mismo valor que el *userId*[notificación](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) en la clave de Id. de Microsoft Store.   | Sí      |
+| localTicketReference | string | El identificador solicitado para la respuesta devuelta. Se recomienda que use el mismo valor que el *userId*[notificación](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) en la clave de Id. de Microsoft Store. | Sí      |
 
 
 ### <a name="request-examples"></a>Ejemplos de solicitud

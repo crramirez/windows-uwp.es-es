@@ -27,8 +27,8 @@ El formato BC6H proporciona una compresión de alta calidad para imágenes que u
 BC6H especificado por el siguiente DXGI\_valores de enumeración de formato:
 
 -   **DXGI\_FORMATO\_BC6H\_TYPELESS**.
--   **DXGI\_FORMAT\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
--   **DXGI\_FORMAT\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
+-   **DXGI\_FORMATO\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
+-   **DXGI\_FORMATO\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
 
 **Tenga en cuenta**    el formato de punto de canales de color flotante de 16 bits a menudo se conoce como formato de punto flotante "medio". Este formato tiene el siguiente diseño de bits:
 |                       |                                                 |

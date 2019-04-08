@@ -21,7 +21,7 @@ ms.locfileid: "57638710"
 
 Las API de texto principales en el espacio de nombres [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) habilitan una aplicación de la Plataforma universal de Windows (UWP) para recibir una entrada de texto desde cualquier servicio de texto compatible con dispositivos Windows. Las API son similares a las API del [Text Services Framework](https://msdn.microsoft.com/library/windows/desktop/ms629032) en que no es necesario que la aplicación tenga información detallada sobre los servicios de texto. Esto permite que la aplicación reciba texto en cualquier idioma y de cualquier tipo de entrada, como el teclado, voz o lápiz.
 
-> **API importantes**: [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238), [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)
+> **API importantes**: [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238), [ **CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)
 
 ## <a name="why-use-core-text-apis"></a>¿Por qué usar API de texto principales?
 
@@ -56,8 +56,8 @@ Los intervalos y selecciones de texto se representan mediante la estructura [**C
 
 | Campo                  | Tipo de datos                                                                 | Descripción                                                                      |
 |------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| **StartCaretPosition** | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | La posición de inicio de un intervalo es la ACP inmediatamente anterior al primer carácter. |
-| **EndCaretPosition**   | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | La posición final del intervalo es la ACP inmediatamente posterior al último carácter.     |
+| **StartCaretPosition** | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **Int32** \[C++\] | La posición de inicio de un intervalo es la ACP inmediatamente anterior al primer carácter. |
+| **EndCaretPosition**   | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **Int32** \[C++\] | La posición final del intervalo es la ACP inmediatamente posterior al último carácter.     |
 
  
 
@@ -98,8 +98,8 @@ Por ejemplo, este es el estado de un control de edición antes que el usuario es
 
 ![diagrama de secuencia de texto de ejemplo](images/coretext/stream-3.png) cuando el usuario escribe "d", un [ **TextUpdating** ](https://msdn.microsoft.com/library/windows/apps/dn958176) evento se desencadena con los siguientes [ **CoreTextTextUpdatingEventArgs** ](https://msdn.microsoft.com/library/windows/apps/dn958229) datos:
 
--   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
--   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [**Intervalo**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
+-   [**Texto** ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
 -   [**NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
 En el control de edición, aplica los cambios especificados y establece [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) en **Succeeded**. A continuación te mostramos el estado del control después de que se apliquen los cambios.
