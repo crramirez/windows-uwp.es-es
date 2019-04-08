@@ -8,7 +8,7 @@ ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
 ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57647330"
@@ -37,7 +37,7 @@ Superar estas limitaciones provocará fallos en la asignación de memoria. Para 
     * Juegos: acceso total a ciclos de GPU disponibles.
 
 * Compatibilidad con DirectX
-    * Aplicaciones: DirectX 11 Feature Level 10.
+    * Aplicaciones: Nivel de características de DirectX 11 10.
     * Juegos: DirectX 12 y el nivel de características de DirectX 11 10.
 
 * Todas las aplicaciones y juegos deben tener como destino la arquitectura x64 para su desarrollo o su envío a la Store para Xbox.  

@@ -8,7 +8,7 @@ keywords: Windows 10, UWP, anuncios, publicidad, intersticial, c#, código de mu
 ms.localizationpriority: medium
 ms.openlocfilehash: 075d98d49ba7e878abc7e800af84984bdb93e3a2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57640990"

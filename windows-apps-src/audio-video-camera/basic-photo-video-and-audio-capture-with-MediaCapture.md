@@ -136,7 +136,7 @@ Llama a [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Camera](camera.md) [!code-cs[StopRecording](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStopRecording)]
+* [Cámara](camera.md) [!code-cs[StopRecording](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStopRecording)]
 
 Puedes llamar a **StartAsync** y **StopAsync** varias veces para grabar varios archivos de audio. Cuando hayas terminado de capturar audio, llama a [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.FinishAsync) para desechar la sesión de captura y limpiar los recursos asociados. Después de esta llamada, debes llamar a **PrepareLowLagRecordToStorageFileAsync** otra vez para reinicializar la sesión de captura antes de llamar a **StartAsync**.
 
@@ -163,6 +163,6 @@ El siguiente ejemplo de código muestra una implementación del controlador **So
 
 * [Captura de fotografías y vídeos con cámara integrada de Windows la interfaz de usuario](capture-photos-and-video-with-cameracaptureui.md)
 * [Controlar la orientación del dispositivo con MediaCapture](handle-device-orientation-with-mediacapture.md)
-* [Crear, editar y guardar las imágenes de mapa de bits](imaging.md)
+* [Crear, editar y guardar imágenes de mapa de bits](imaging.md)
 * [Archivos, carpetas y bibliotecas](https://msdn.microsoft.com/windows/uwp/files/index)
 

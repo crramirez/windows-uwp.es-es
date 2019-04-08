@@ -93,7 +93,7 @@ Cuando hayas terminado de capturar secuencias de fotos variables o la aplicació
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Camera](camera.md)
+* [Cámara](camera.md)
 * [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 

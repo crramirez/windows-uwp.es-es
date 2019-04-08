@@ -10,7 +10,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646060"
@@ -20,7 +20,7 @@ ms.locfileid: "57646060"
 
 La selección táctil del destino en Windows usa toda el área de contacto de cada dedo detectado por un digitalizador táctil. El conjunto más grande y más complejo de datos de entrada notificado por el digitalizador se usa para aumentar la precisión cuando se determina el destino previsto (o con más probabilidades) del usuario.
 
-> **API importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **API importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 En este tema se describe el uso de la geometría de contacto para la selección táctil del destino y se ofrecen procedimientos recomendados para la selección del destino en aplicaciones para UWP.
 

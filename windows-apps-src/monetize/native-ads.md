@@ -7,7 +7,7 @@ keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio na
 ms.localizationpriority: medium
 ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57628070"
@@ -131,5 +131,5 @@ Puedes usar varias colocaciones de anuncios nativos en una sola aplicación. En 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)
-* [Anuncios en la aplicación](../publish/in-app-ads.md)
+* [Anuncios en aplicaciones](../publish/in-app-ads.md)
 * [Configurar las unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)

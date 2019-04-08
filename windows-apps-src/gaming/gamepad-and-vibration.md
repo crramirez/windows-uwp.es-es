@@ -15,7 +15,7 @@ ms.locfileid: "57646930"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
-En esta página se describen los conceptos básicos de programación para controladores para juegos de Xbox One usando [Windows.Gaming.Input.Gamepad][gamepad] y las API relacionadas para la Plataforma universal de Windows (UWP).
+En esta página se describen los conceptos básicos de programación para controladores para juegos de Xbox One usando [Windows.Gaming.Input.Gamepad][controlador para juegos] y las API relacionadas para la Plataforma universal de Windows (UWP).
 
 En esta página encontrarás información sobre:
 
@@ -94,7 +94,7 @@ El sistema administra los controladores para juegos, por lo tanto, no tendrás q
 
 ### <a name="the-gamepads-list"></a>Lista de controladores para juegos
 
-La clase [Gamepad][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Porque es posible que solo está interesado en algunos de los controladores conectados, se recomienda que mantenga su propia colección, en lugar de tener acceso a ellos a través de la `Gamepads` propiedad.
+La clase [Controlador para juegos][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Porque es posible que solo está interesado en algunos de los controladores conectados, se recomienda que mantenga su propia colección, en lugar de tener acceso a ellos a través de la `Gamepads` propiedad.
 
 El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Tenga en cuenta que dado que otros subprocesos en segundo plano tendrá acceso a esta colección (en el [GamepadAdded][] y [GamepadRemoved][] eventos), tendrá que colocar un bloqueo en torno a cualquier código que lee o actualizaciones de la colección.
 
@@ -384,7 +384,7 @@ Los controladores para juegos de Xbox One están equipados con un total de cuatr
 
 ## <a name="using-vibration-and-impulse"></a>Uso de vibración e impulso
 
-La vibración del controlador para juegos se controla mediante la propiedad [Vibración][] de la clase [Gamepad][]. `Vibration` es una instancia de la [GamepadVibration][] estructura que se compone de cuatro flotante valores de punto; cada valor representa la intensidad de uno de los motores.
+La vibración del controlador para juegos se controla mediante la propiedad [Vibración][] de la clase [Controlador para juegos][]. `Vibration` es una instancia de la [GamepadVibration][] estructura que se compone de cuatro flotante valores de punto; cada valor representa la intensidad de uno de los motores.
 
 Aunque los miembros de la `Gamepad.Vibration` propiedad se puede modificar directamente, se recomienda que inicializar otra `GamepadVibration` instancia a los valores que desee y, a continuación, cópiela en el `Gamepad.Vibration` propiedad para cambiar la intensidad del motor real a la vez.
 
@@ -473,8 +473,8 @@ La [muestra de GamepadVibrationUWP _(github)_](https://github.com/Microsoft/Xbox
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx
 [Windows.Gaming.Input.IGameController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
-[gamepad]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
-[gamepads]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
+[Controlador para juegos]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
+[Gamepads]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
 [gamepadadded]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadadded.aspx
 [gamepadremoved]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadremoved.aspx
 [getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.getcurrentreading.aspx

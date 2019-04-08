@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4227a3ad77eadaa40e47420a5fdab6d65c875da5
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594010"
@@ -89,8 +89,8 @@ Mapa de bits de Word\_0 se distribuyen como sigue:
 | 5:4           | Elemento de textura\[0\]\[2\] |
 | 7:6           | Elemento de textura\[0\]\[3\] |
 | 9:8           | Elemento de textura\[1\]\[0\] |
-| 11:10         | Texel\[1\]\[1\] |
-| 13:12         | Texel\[1\]\[2\] |
+| 11:10         | Elemento de textura\[1\]\[1\] |
+| 13:12         | Elemento de textura\[1\]\[2\] |
 | 15:14 (MSB\*) | Elemento de textura\[1\]\[3\] |
 
  
@@ -102,13 +102,13 @@ Mapa de bits de Word\_1 se distribuyen como sigue:
 | Bits        | Elemento de textura           |
 |-------------|-----------------|
 | 1:0 (LSB)   | Elemento de textura\[2\]\[0\] |
-| 3:2         | Texel\[2\]\[1\] |
-| 5:4         | Texel\[2\]\[2\] |
+| 3:2         | Elemento de textura\[2\]\[1\] |
+| 5:4         | Elemento de textura\[2\]\[2\] |
 | 7:6         | Elemento de textura\[2\]\[3\] |
 | 9:8         | Elemento de textura\[3\]\[0\] |
-| 11:10       | Texel\[3\]\[1\] |
+| 11:10       | Elemento de textura\[3\]\[1\] |
 | 13:12       | Elemento de textura\[3\]\[2\] |
-| 15:14 (MSB) | Texel\[3\]\[3\] |
+| 15:14 (MSB) | Elemento de textura\[3\]\[3\] |
 
  
 

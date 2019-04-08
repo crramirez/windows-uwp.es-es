@@ -71,7 +71,7 @@ Windows realizará una conexión https a tu sitio web y buscará el archivo JSON
 
 El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los caracteres comodín permiten admitir una gran variedad de vínculos con menos líneas de código. La vinculación de web a aplicación admite dos tipos de caracteres comodín en el archivo JSON:
 
-| **Wildcard** | **Descripción**               |
+| **Carácter comodín** | **Descripción**               |
 |--------------|-------------------------------|
 | **\***       | Representa cualquier subcadena      |
 | **?**        | Representa un carácter único |
@@ -154,7 +154,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 Puedes probar la configuración de la aplicación y el sitio web mediante la ejecución de la herramienta de comprobador de registro de host de la aplicación, que está disponible en:
 
-%windir%\\system32\\**AppHostRegistrationVerifier.exe**
+% windir %\\system32\\**AppHostRegistrationVerifier.exe**
 
 Prueba la configuración de la aplicación y el sitio web mediante la ejecución de esta herramienta con los siguientes parámetros:
 

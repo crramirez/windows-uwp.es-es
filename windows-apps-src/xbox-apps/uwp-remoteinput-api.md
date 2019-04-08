@@ -14,7 +14,7 @@ ms.locfileid: "57595960"
 # <a name="remote-input-api-reference"></a>Referencia de API de entrada remota   
 Puedes enviar la entrada de mouse, teclado y controlador en tiempo real de manera remota mediante esta API.
 
-**Request**
+**Solicitud**
 
 Método      | URI de la solicitud
 :------     | :-----
@@ -28,7 +28,7 @@ Websocket | /ext/remoteinput
 
 - Ninguno
 
-**Request**
+**Solicitud**
 
 El websocket de una serie de mensajes de matriz de bytes. Para cada mensaje el formato es el siguiente:
 

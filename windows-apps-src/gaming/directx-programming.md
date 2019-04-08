@@ -30,7 +30,7 @@ En esta sección se proporciona información sobre el desarrollo de juegos para 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="directx-getting-started.md">Introducción a</a></p></td>
+<td align="left"><p><a href="directx-getting-started.md">Introducción</a></p></td>
 <td align="left"><p>Introducción a la programación con DirectX.</p></td>
 </tr>
 <tr class="even">
@@ -38,7 +38,7 @@ En esta sección se proporciona información sobre el desarrollo de juegos para 
 <td align="left"><p>Obtén información sobre DirectX a través de muestras de juegos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="directx-fundamentals.md">Fundamentals</a></p></td>
+<td align="left"><p><a href="directx-fundamentals.md">Aspectos básicos</a></p></td>
 <td align="left"><p>Explica los conceptos básicos de programación con DirectX.</p></td>
 </tr>
 <tr class="even">

@@ -28,7 +28,7 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 
 **Aplicaciones de ejemplo que muestran {x: Bind}**
 
--   [{x:Bind} sample](https://go.microsoft.com/fwlink/p/?linkid=619989)
+-   [ejemplo de {x: Bind}](https://go.microsoft.com/fwlink/p/?linkid=619989)
 -   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
 -   [Ejemplo de conceptos básicos de la interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=619992)
 
@@ -50,9 +50,9 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 |------|-------------|
 | _propertyPath_ | Una cadena que especifica la ruta de acceso de la propiedad para el enlace. Para obtener más información, consulta la sección [Ruta de acceso de propiedades](#property-path) que aparece más adelante. |
 | _bindingProperties_ |
-| _propName_=_value_\[, _propName_=_value_\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
+| _propName_=_valor_\[, _propName_=_valor_\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". |
-| _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-that-you-can-set-with-xbind) que se incluye más adelante. |
+| _Valor_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-that-you-can-set-with-xbind) que se incluye más adelante. |
 
 ## <a name="examples"></a>Ejemplos
 
@@ -135,14 +135,14 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 
 | Propiedad | Descripción |
 |----------|-------------|
-| **Path** | Consulta la sección [Ruta de acceso de propiedades](#property-path) anteriormente. |
+| **Ruta de acceso** | Consulta la sección [Ruta de acceso de propiedades](#property-path) anteriormente. |
 | **Convertidor de tipos** | Especifica el objeto convertidor que llama el motor de enlace. El convertidor puede establecerse en XAML, pero solo si se hace referencia a una instancia de objeto que hayas asignado en una referencia de [extensión de marcado {StaticResource}](staticresource-markup-extension.md) a ese objeto en el diccionario de recursos. |
 | **ConverterLanguage** | Especifica la referencia cultural que usará el convertidor. (Si está configurando **ConverterLanguage** también deben establecer **convertidor**.) La referencia cultural se establece como un identificador basado en estándares. Para obtener más información, consulta [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880). |
-| **ConverterParameter** | Especifica el parámetro del convertidor que se puede usar en la lógica del convertidor. (Si está configurando **ConverterParameter** también deben establecer **convertidor**.) La mayoría de los convertidores de tipos usar lógica sencilla que obtener toda la información que necesitan desde el valor pasado a convertir, y no es necesario un **ConverterParameter** valor. El parámetro **ConverterParameter** es para las implementaciones de convertidor moderadamente avanzado con más de una lógica que controla lo que se pasa en **ConverterParameter**. Puedes escribir un convertidor que use valores que no sean cadenas, aunque no es lo habitual. Consulta las observaciones de [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) para obtener más información. |
-| **FallbackValue** | Especifica un valor que se mostrará cuando no se pueda resolver el origen o la ruta de acceso. |
+| **converterParameter** | Especifica el parámetro del convertidor que se puede usar en la lógica del convertidor. (Si está configurando **ConverterParameter** también deben establecer **convertidor**.) La mayoría de los convertidores de tipos usar lógica sencilla que obtener toda la información que necesitan desde el valor pasado a convertir, y no es necesario un **ConverterParameter** valor. El parámetro **ConverterParameter** es para las implementaciones de convertidor moderadamente avanzado con más de una lógica que controla lo que se pasa en **ConverterParameter**. Puedes escribir un convertidor que use valores que no sean cadenas, aunque no es lo habitual. Consulta las observaciones de [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) para obtener más información. |
+| **fallbackValue** | Especifica un valor que se mostrará cuando no se pueda resolver el origen o la ruta de acceso. |
 | **Modo** | Especifica el modo de enlace como una de estas cadenas: "Una vez", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}**, que es "OneWay" en la mayoría de los casos. |
 | **TargetNullValue** | Especifica el valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
-| **BindBack** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. |
+| **Restablecimiento de enlace** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. |
 | **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox.Text es PropertyChanged; TextBox.Text es LostFocus.|
 
 > [!NOTE]

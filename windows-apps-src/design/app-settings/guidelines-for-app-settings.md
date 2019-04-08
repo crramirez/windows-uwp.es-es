@@ -67,7 +67,7 @@ Si estás usando un diseño de navegación centralizada, el punto de entrada de 
 
 Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
 
-**Master-details**
+**Detalles principales**
 
 En lugar de esconder el punto de entrada de la configuración de la aplicación en lo más profundo de un panel de detalles maestro, conviértelo en el último elemento anclado en el nivel superior del panel maestro.
 
@@ -132,7 +132,7 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
     -   [Alternar conmutadores](../controls-and-patterns/toggles.md): Para permitir que los usuarios establece valores on u off.
     -   [Los botones de radio](../controls-and-patterns/radio-button.md): Para permitir que los usuarios elijan un elemento de un conjunto de hasta 5 mutuamente exclusivas, las opciones relacionadas con.
     -   [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): Para permitir que los usuarios escribir texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    -   [Hyperlinks](../controls-and-patterns/hyperlinks.md): Para llevar al usuario a otra página dentro de la aplicación o a un sitio Web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    -   [Hipervínculos](../controls-and-patterns/hyperlinks.md): Para llevar al usuario a otra página dentro de la aplicación o a un sitio Web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
     -   [Botones](../controls-and-patterns/buttons.md): Para permitir que los usuarios iniciar una acción inmediata sin descartar el control flotante configuración actual.
 -   Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 -   Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) o [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288), con un desplazamiento izquierdo de 100 píxeles.

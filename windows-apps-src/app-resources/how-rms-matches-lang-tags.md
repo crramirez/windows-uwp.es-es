@@ -188,7 +188,7 @@ El inglés es un caso aparte. Si una aplicación agrega localización para dos v
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cómo el sistema de administración de recursos coincide con y elige los recursos](how-rms-matches-and-chooses-resources.md)
+* [Cómo el sistema de administración de recursos compara y elige recursos](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](../design/globalizing/manage-language-and-region.md)
 * [Composición de regiones geográficas (continental) de macro, subregiones geográficas y agrupaciones económicas y otras seleccionadas](https://go.microsoft.com/fwlink/p/?LinkId=247929)

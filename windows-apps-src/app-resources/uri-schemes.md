@@ -8,7 +8,7 @@ keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57632060"
@@ -271,6 +271,6 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 * [Empaquetado de aplicaciones](../packaging/index.md)
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
-* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](localize-strings-ui-manifest.md)
+* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
 * [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
 * [Icono y notificaciones del sistema compatibilidad con las notificaciones para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

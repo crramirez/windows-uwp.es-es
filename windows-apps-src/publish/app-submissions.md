@@ -40,10 +40,10 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Markets**                   | Default: Todos los mercados posibles  | [Definir la selección de mercado y precios](define-pricing-and-market-selection.md)         |
+| **Mercados**                   | Default: Todos los mercados posibles  | [Definir la selección de mercado y precios](define-pricing-and-market-selection.md)         |
 | **Audiencia**                | Default: Audiencia pública | [Audiencia](choose-visibility-options.md#audience) |
 | **Detectabilidad**                | Default: Hacer que esta aplicación disponible y pueda detectar en el Store | [Detectabilidad](choose-visibility-options.md#discoverability) |
-| **Schedule**                  | Default: Versión tan pronto como sea posible        | [Configurar la programación de la versión exacta](configure-precise-release-scheduling.md) |
+| **Programación**                  | Default: Versión tan pronto como sea posible        | [Configurar la programación de la versión exacta](configure-precise-release-scheduling.md) |
 | **Precio base**                | Requerido                                    | [Establecer y programar los precios de la aplicación](set-and-schedule-app-pricing.md)              |
 | **Prueba gratuita**                | Default: Sin prueba gratuita                      | [Prueba gratuita](set-app-pricing-and-availability.md#free-trial)              |
 | **Precio de oferta**              | Opcional                                    | [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)           |
@@ -97,9 +97,9 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | **Logotipos de Store**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
 | **Finalizadores**                  | Opcional                                    | [Finalizadores](app-screenshots-and-images.md#trailers)                | 
 | **Imagen de Windows 10 y Xbox (art héroe de 16:9)**     | Recomendado        | [10 de Windows y Xbox image (art héroe de 16:9)
-](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imágenes de Xbox**     | Necesario para la visualización adecuada si publica en Xbox        | [Imágenes de Xbox
-](app-screenshots-and-images.md#xbox-images) |
+] (#xbox-imágenes de aplicación capturas de pantalla y images.md) |
 | **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
 | **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |

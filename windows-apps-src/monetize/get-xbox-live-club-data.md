@@ -7,7 +7,7 @@ keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store a
 ms.localizationpriority: medium
 ms.openlocfilehash: dbf9d06f96632237c10de0fe3b6c4723a2501254
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57633180"

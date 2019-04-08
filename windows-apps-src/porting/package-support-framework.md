@@ -189,11 +189,11 @@ Siguiente es una guía para el esquema config.json:
 | matriz | key | Valor |
 |-------|-----------|-------|
 | applications | id |  Use el valor de la `Id` atributo de la `Application` elemento en el manifiesto del paquete. |
-| applications | executable | La ruta de acceso relativa del paquete al archivo ejecutable que desea iniciar. En la mayoría de los casos, puede obtener este valor desde el archivo de manifiesto del paquete antes de modificarlo. Es el valor de la `Executable` atributo de la `Application` elemento. |
-| applications | workingDirectory | (Opcional) Ruta de acceso relativa del paquete que se usará como el directorio de trabajo de la aplicación que se inicia. Si no establece este valor, el sistema operativo usa el `System32` directorio como directorio de trabajo de la aplicación. |
-| procesos | executable | En la mayoría de los casos, este será el nombre de la `executable` configurado anteriormente con la extensión de ruta de acceso y quitar. |
-| correcciones | dll | Ruta de acceso de paquete relativa a la corrección,.msix/.appx para cargar. |
-| correcciones | config | (Opcional) Controla cómo se comporta la lista de distribución de corrección. El formato exacto de este valor varía según una corrección mediante la corrección, como cada corrección puede interpretar este "blob" como desee. |
+| applications | ejecutable | La ruta de acceso relativa del paquete al archivo ejecutable que desea iniciar. En la mayoría de los casos, puede obtener este valor desde el archivo de manifiesto del paquete antes de modificarlo. Es el valor de la `Executable` atributo de la `Application` elemento. |
+| applications | WorkingDirectory | (Opcional) Ruta de acceso relativa del paquete que se usará como el directorio de trabajo de la aplicación que se inicia. Si no establece este valor, el sistema operativo usa el `System32` directorio como directorio de trabajo de la aplicación. |
+| procesos | ejecutable | En la mayoría de los casos, este será el nombre de la `executable` configurado anteriormente con la extensión de ruta de acceso y quitar. |
+| correcciones | archivo DLL | Ruta de acceso de paquete relativa a la corrección,.msix/.appx para cargar. |
+| correcciones | configuración | (Opcional) Controla cómo se comporta la lista de distribución de corrección. El formato exacto de este valor varía según una corrección mediante la corrección, como cada corrección puede interpretar este "blob" como desee. |
 
 El `applications`, `processes`, y `fixups` claves son matrices. Esto significa que puede usar el archivo config.json para especificar más de una aplicación, procesos y corrección de DLL.
 
@@ -402,11 +402,11 @@ Proporcione un valor para cada clave. Use esta tabla como guía.
 | matriz | key | Valor |
 |-------|-----------|-------|
 | applications | id |  Use el valor de la `Id` atributo de la `Application` elemento en el manifiesto del paquete. |
-| applications | executable | La ruta de acceso relativa del paquete al archivo ejecutable que desea iniciar. En la mayoría de los casos, puede obtener este valor desde el archivo de manifiesto del paquete antes de modificarlo. Es el valor de la `Executable` atributo de la `Application` elemento. |
-| applications | workingDirectory | (Opcional) Ruta de acceso relativa del paquete que se usará como el directorio de trabajo de la aplicación que se inicia. Si no establece este valor, el sistema operativo usa el `System32` directorio como directorio de trabajo de la aplicación. |
-| procesos | executable | En la mayoría de los casos, este será el nombre de la `executable` configurado anteriormente con la extensión de ruta de acceso y quitar. |
-| correcciones | dll | Ruta de acceso de paquete relativa a la corrección del archivo DLL para cargar. |
-| correcciones | config | (Opcional) Controla cómo se comporta la corrección del archivo DLL. El formato exacto de este valor varía según una corrección mediante la corrección, como cada corrección puede interpretar este "blob" como desee. |
+| applications | ejecutable | La ruta de acceso relativa del paquete al archivo ejecutable que desea iniciar. En la mayoría de los casos, puede obtener este valor desde el archivo de manifiesto del paquete antes de modificarlo. Es el valor de la `Executable` atributo de la `Application` elemento. |
+| applications | WorkingDirectory | (Opcional) Ruta de acceso relativa del paquete que se usará como el directorio de trabajo de la aplicación que se inicia. Si no establece este valor, el sistema operativo usa el `System32` directorio como directorio de trabajo de la aplicación. |
+| procesos | ejecutable | En la mayoría de los casos, este será el nombre de la `executable` configurado anteriormente con la extensión de ruta de acceso y quitar. |
+| correcciones | archivo DLL | Ruta de acceso de paquete relativa a la corrección del archivo DLL para cargar. |
+| correcciones | configuración | (Opcional) Controla cómo se comporta la corrección del archivo DLL. El formato exacto de este valor varía según una corrección mediante la corrección, como cada corrección puede interpretar este "blob" como desee. |
 
 Cuando haya terminado, su ``config.json`` archivo tendrá un aspecto algo parecido a esto.
 

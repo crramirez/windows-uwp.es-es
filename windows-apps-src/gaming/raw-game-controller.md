@@ -238,4 +238,4 @@ The [RawGameControllerUWP sample (GitHub)](TODO: Link) demonstrates how to use r
 * [Espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Clase Windows.Gaming.Input.RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller)
 * [Interfaz Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Windows.Gaming.Input.IGameControllerBatteryInfo interface](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo)
+* [Interfaz Windows.Gaming.Input.IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo)

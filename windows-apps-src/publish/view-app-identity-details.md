@@ -26,8 +26,8 @@ Para encontrar esta información, ve a una de las aplicaciones y expande **Admin
 Los valores siguientes deben incluirse en el manifiesto del paquete. Si [usas Microsoft Visual Studio para compilar los paquetes](../packaging/packaging-uwp-apps.md) y has iniciado sesión con la misma cuenta de Microsoft asociada a tu cuenta de desarrollador, los detalles se incluyen automáticamente. Si vas a compilar el paquete manualmente, debes agregar estos elementos:
 
 -   **/ Identidad/nombre del paquete**
--   **Package/Identity/Publisher**
--   **Package/Properties/PublisherDisplayName**
+-   **Paquete/identidad/publicador**
+-   **Paquete/propiedades/PublisherDisplayName**
 
 Para obtener más información, consulta [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en la [referencia del esquema del manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 

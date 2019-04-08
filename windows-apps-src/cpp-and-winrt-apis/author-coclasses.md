@@ -1,5 +1,5 @@
 ---
-description: C++ / c++ / WinRT puede ayudarle a crear componentes COM clásicos, tal como le ayuda a crear las clases de Windows en tiempo de ejecución.
+description: C++/WinRT puede ayudarte a crear componentes COM clásicos, igual que te ayuda a crear clases de Windows Runtime.
 title: Crear componentes COM con C++ / WinRT
 ms.date: 09/06/2018
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: e6b77f8be6c75070336ad48f0c6471fc0a824a4c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57616570"
@@ -527,9 +527,9 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [Interfaz IUnknown](https://msdn.microsoft.com/library/windows/desktop/ms680509)
-* [winrt::implements struct template](/uwp/cpp-ref-for-winrt/implements)
+* [plantilla de estructura winrt::Implements](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear las API con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir componentes COM con C++ / c++ / WinRT](consume-com.md)
+* [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [Consumir componentes COM con C++/WinRT](consume-com.md)
 * [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

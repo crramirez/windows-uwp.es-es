@@ -372,7 +372,7 @@ Este elemento contiene datos de la descripción de la aplicación. **ListingInfo
 
 |  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
-|  [App](#app-child-of-listinginformation)  |    Sí   |  1   |    Proporciona datos sobre la aplicación.         |
+|  [Aplicación](#app-child-of-listinginformation)  |    Sí   |  1   |    Proporciona datos sobre la aplicación.         |
 |  [Producto](#product-child-of-listinginformation)  |    No  |  0 o más   |      Describe un complemento de la aplicación.     |     |
 
 <span id="app-child-of-listinginformation"/>
@@ -405,13 +405,13 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 |  **Descripción**  |    Sí  |  1   |      La descripción de la aplicación para este país o región.       |
 |  **Precio**  |    Sí  |  1   |     El precio de la aplicación en este país o región.        |
 |  **CurrencySymbol**  |    Sí  |  1   |     El símbolo de la moneda que se usa en este país o región.        |
-|  **CurrencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  |
+|  **currencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  |
 
 **MarketData** tiene los atributos siguientes.
 
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
+|  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -425,7 +425,7 @@ Este elemento describe un complemento de la aplicación. **Product** es un eleme
 |-------------|------------|----------------|
 |  **ProductId**  |    Sí        |    Contiene la cadena usada por la aplicación para identificar el complemento.           |
 |  **LicenseDuration**  |    No        |    Indica el número de días durante los cuales la licencia será válida tras adquirir el artículo. La fecha de caducidad de la nueva licencia creada por la compra de un producto es la fecha de compra más la duración de la licencia. Este atributo se usa solo si el atributo **ProductType ofrece** atributo es **Durable**; este atributo se omite en el caso de complementos consumibles.           |
-|  **ProductType**  |    No        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
+|  **productType**  |    No        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
 
 <span id="marketdata-child-of-product"/>
 
@@ -440,17 +440,17 @@ Este elemento, proporciona información acerca del complemento para un país o u
 |  **Nombre**  |    Sí   |  1   |   El nombre del complemento en este país o región.        |
 |  **Precio**  |    Sí  |  1   |     El precio del complemento en este país o región.        |
 |  **CurrencySymbol**  |    Sí  |  1   |     El símbolo de la moneda que se usa en este país o región.        |
-|  **CurrencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  
+|  **currencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  
 |  **Descripción**  |    No  |   0 o 1   |      La descripción del complemento para este país o región.       |
-|  **Tag**  |    No  |   0 o 1   |      Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) (también denominados etiqueta) para el complemento.       |
+|  **Etiqueta**  |    No  |   0 o 1   |      Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) (también denominados etiqueta) para el complemento.       |
 |  **Palabras clave**  |    No  |   0 o 1   |      Contiene hasta 10 elementos **Keyword** que contienen las [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento.       |
-|  **ImageUri**  |    No  |   0 o 1   |      El [identificador URI de la imagen](../publish/create-add-on-store-listings.md#icon) en la descripción del complemento.           |  |
+|  **imageUri**  |    No  |   0 o 1   |      El [identificador URI de la imagen](../publish/create-add-on-store-listings.md#icon) en la descripción del complemento.           |  |
 
 **MarketData** tiene los atributos siguientes.
 
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
+|  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="licenseinformation"/>
 
@@ -462,7 +462,7 @@ Este elemento describe las licencias disponibles para esta aplicación y sus pro
 
 |  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
-|  [App](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
+|  [Aplicación](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
 |  [Producto](#product-child-of-licenseinformation)  |    No  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
 
 La tabla siguiente muestra cómo simular algunas condiciones comunes mediante la combinación de valores que estén en los elementos **App** y **Product**.

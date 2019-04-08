@@ -51,7 +51,7 @@ Estas son las reglas generales de esta sintaxis:
 -   Cada comando, excepto el de cierre, suele ir seguido de uno o varios números.
 -   Si un comando tiene varios números, sepáralos con comas o espacios.
 
-**\[**_fillRule_**\]** _moveCommand_ _drawCommand_ **\[**_drawCommand_**\*\]** **\[**_closeCommand_**\]**
+**\[**_fillRule_ **\]** _moveCommand_ _drawCommand_ **\[**  _drawCommand_ **\* \]** **\[** _closeCommand_**\]**
 
 Muchos de los comandos de dibujo usan puntos en los que puedes proporcionar un valor _x,y_. Siempre que vea un \* _puntos_ puede suponer el marcador de posición está dando a dos valores decimales para el _x, y_ valor de un punto.
 
@@ -71,11 +71,11 @@ Especifica el punto de inicio de una nueva figura.
 
 | Sintaxis |
 |--------|
-| `M ` _startPoint_ <br/>O bien<br/>`m` _startPoint_|
+| `M ` _punto inicial_ <br/>O bien<br/>`m` _punto inicial_|
 
 | Término | Descripción |
 |------|-------------|
-| _startPoint_ | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/>Es el punto de inicio de una nueva figura.|
+| _punto inicial_ | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/>Es el punto de inicio de una nueva figura.|
 
 Una **M** mayúscula indica que *startPoint* es una coordenada absoluta; en cambio, una **m** minúscula indica que *startPoint* es el desplazamiento de un punto anterior o (0,0) si no había punto anterior.
 
@@ -95,7 +95,7 @@ Crea una línea directa entre el punto actual y el extremo especificado. `l 20 3
 
 | Sintaxis |
 |--------|
-| `L` _endPoint_ <br/>O bien<br/>`l` _endPoint_ |
+| `L` _punto de conexión_ <br/>O bien<br/>`l` _punto de conexión_ |
 
 | Término | Descripción |
 |------|-------------|
@@ -107,7 +107,7 @@ Crea una línea horizontal entre el punto actual y la coordenada x especificada.
 
 | Sintaxis |
 |--------|
-| `H ` _x_ <br/> O bien <br/>`h ` _x_ |
+| `H ` _X_ <br/> O bien <br/>`h ` _X_ |
 
 | Término | Descripción |
 |------|-------------|
@@ -119,11 +119,11 @@ Crea una línea vertical entre el punto actual y la coordenada y especificada. `
 
 | Sintaxis |
 |--------|
-| `V ` _y_ <br/> O bien <br/> `v ` _y_ |
+| `V ` _Y_ <br/> O bien <br/> `v ` _Y_ |
 
 | Término | Descripción |
 |------|-------------|
-| *y* | [**Doble**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada y del extremo de la línea. |
+| *Y* | [**Doble**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada y del extremo de la línea. |
 
 **Comando de curva Bézier cúbica**
 
@@ -131,13 +131,13 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, 
 
 | Sintaxis |
 |--------|
-| `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> O bien <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
+| `C ` *Puntodecontrol1* *Puntodecontrol2* *punto de conexión* <br/> O bien <br/> `c ` *Puntodecontrol1* *Puntodecontrol2* *punto de conexión* |
 
 | Término | Descripción |
 |------|-------------|
-| *controlPoint1* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el primer punto de control de la curva, que determina la tangente del inicio de la curva. |
-| *controlPoint2* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el segundo punto de control de la curva, que determina la tangente del final de la curva. |
-| *endPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja la curva. | 
+| *Puntodecontrol1* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el primer punto de control de la curva, que determina la tangente del inicio de la curva. |
+| *Puntodecontrol2* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el segundo punto de control de la curva, que determina la tangente del final de la curva. |
+| *punto de conexión* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja la curva. | 
 
 **Comando de curva Bézier cuadrática**
 
@@ -145,12 +145,12 @@ Crea una curva Bézier cuadrática entre el punto actual y el extremo especifica
 
 | Sintaxis |
 |--------|
-| `Q ` *controlPoint endPoint* <br/> O bien <br/> `q ` *controlPoint endPoint* |
+| `Q ` *punto de conexión controlPoint* <br/> O bien <br/> `q ` *punto de conexión controlPoint* |
 
 | Término | Descripción |
 |------|-------------|
 | *controlPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto de control de la curva, que determina las tangentes de inicio y final de la curva. |
-| *endPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto en el que se dibuja la curva. |
+| *punto de conexión* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto en el que se dibuja la curva. |
 
 **Comando de curva Bézier cúbica suavizada**
 
@@ -158,12 +158,12 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado. 
 
 | Sintaxis |
 |--------|
-| `S` *controlPoint2* *endPoint* <br/> O bien <br/>`s` *punto de conexión Puntodecontrol2* |
+| `S` *Puntodecontrol2* *punto de conexión* <br/> O bien <br/>`s` *punto de conexión Puntodecontrol2* |
 
 | Término | Descripción |
 |------|-------------|
-| *controlPoint2* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto de control de la curva, que determina la tangente del final de la curva. |
-| *endPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto en el que se dibuja la curva. |
+| *Puntodecontrol2* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto de control de la curva, que determina la tangente del final de la curva. |
+| *punto de conexión* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto en el que se dibuja la curva. |
 
 **Comando de curva Bézier cuadrática suavizada**
 
@@ -171,12 +171,12 @@ Crea una curva Bézier cuadrática entre el punto actual y el extremo especifica
 
 | Sintaxis |
 |--------|
-| `T` *controlPoint* *endPoint* <br/> O bien <br/> `t` *controlPoint* *endPoint* |
+| `T` *controlPoint* *punto de conexión* <br/> O bien <br/> `t` *controlPoint* *punto de conexión* |
 
 | Término | Descripción |
 |------|-------------|
 | *controlPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto de control de la curva, que determina las tangentes de inicio y final de la curva. |
-| *endPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto en el que se dibuja la curva. |
+| *punto de conexión* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> Es el punto en el que se dibuja la curva. |
 
 **Comando de arco elíptico**
 
@@ -184,15 +184,15 @@ Crea un arco elíptico entre el punto actual y el extremo especificado. Define e
 
 | Sintaxis |
 |--------|
-| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> O bien <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *tamaño* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *punto de conexión* <br/> O bien <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | Término | Descripción |
 |------|-------------|
-| *size* | [**Tamaño**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>Es el radio x y el radio y del arco. |
+| *Tamaño* | [**Tamaño**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>Es el radio x y el radio y del arco. |
 | *rotationAngle* | [**Doble**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la rotación de la elipse, en grados. |
 | *isLargeArcFlag* | Se establece en 1 si el arco debe ser de 180 grados o mayor; de lo contrario, se establece en 0. |
 | *sweepDirectionFlag* | Se establece en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, se establece en 0. |
-| *endPoint* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja el arco.|
+| *punto de conexión* | [**punto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja el arco.|
  
 **Comando de cierre**
 
@@ -213,7 +213,7 @@ Describe las coordenadas x e y de un punto. Consulta también [**Point**](https:
 | Término | Descripción |
 |------|-------------|
 | *x* | [**Doble**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada x del punto. |
-| *y* | [**Doble**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada y del punto. |
+| *Y* | [**Doble**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada y del punto. |
 
 **Notas adicionales**
 

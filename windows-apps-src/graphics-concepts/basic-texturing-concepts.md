@@ -30,7 +30,7 @@ Si tu aplicación crea un dispositivo de capa de abstracción de hardware (HAL) 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)
 
  
 

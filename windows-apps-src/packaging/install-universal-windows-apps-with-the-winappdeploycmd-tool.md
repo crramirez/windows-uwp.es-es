@@ -60,7 +60,7 @@ Puedes instalar o desinstalar una aplicación en el dispositivo de destino, o bi
 La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 
 
-| **Command**  | **Descripción**                                                     |
+| **Comando**  | **Descripción**                                                     |
 |--------------|---------------------------------------------------------------------|
 | dispositivos      | Muestra la lista de dispositivos de red disponibles.                         |
 | instalar      | Instala un paquete de la aplicación para UWP en el dispositivo de destino.                     |
@@ -77,7 +77,7 @@ La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 
 
-| **Command**  | **Descripción**  |
+| **Comando**  | **Descripción**  |
 |--------------|------------------|
 | -h (-help)       | Muestra los comandos, las opciones y los argumentos. |
 | -ip              | Dirección IP del dispositivo de destino. |

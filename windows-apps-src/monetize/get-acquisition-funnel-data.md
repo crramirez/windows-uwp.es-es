@@ -61,9 +61,9 @@ Se admiten los siguientes campos de filtros. Ten en cuenta que en el parámetro 
 |---------------|-----------------|
 | campaignId | La cadena de identificador para una [campaña de promoción de la aplicación personalizada](../publish/create-a-custom-app-promotion-campaign.md) que está asociada a la adquisición. |
 | market | Es una cadena que contiene el código de país ISO 3166 del mercado donde se realizó la compra. |
-| deviceType | Una de las siguientes cadenas que especifica el tipo de dispositivo en el que se produjo la adquisición:<ul><li><strong>PC</strong></li><li><strong>Teléfono</strong></li><li><strong>Consola de</strong></li><li><strong>IoT</strong></li><li><strong>Holográfica</strong></li><li><strong>Unknown</strong></li></ul> |
-| ageGroup | Una de las cadenas siguientes que especifica el grupo de edad del usuario que ha completado la adquisición:<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 o superior</strong></li><li><strong>Unknown</strong></li></ul> |
-| gender | Una de las cadenas siguientes que especifica el sexo del usuario que ha completado la adquisición:<ul><li><strong>M</strong></li><li><strong>F</strong></li><li><strong>Unknown</strong></li></ul> |
+| deviceType | Una de las siguientes cadenas que especifica el tipo de dispositivo en el que se produjo la adquisición:<ul><li><strong>PC</strong></li><li><strong>Teléfono</strong></li><li><strong>Consola de</strong></li><li><strong>IoT</strong></li><li><strong>Holográfica</strong></li><li><strong>Desconocido</strong></li></ul> |
+| ageGroup | Una de las cadenas siguientes que especifica el grupo de edad del usuario que ha completado la adquisición:<ul><li><strong>0: 17</strong></li><li><strong>18 a 24</strong></li><li><strong>25: 34</strong></li><li><strong>35: 49</strong></li><li><strong>50 o superior</strong></li><li><strong>Desconocido</strong></li></ul> |
+| gender | Una de las cadenas siguientes que especifica el sexo del usuario que ha completado la adquisición:<ul><li><strong>M</strong></li><li><strong>F</strong></li><li><strong>Desconocido</strong></li></ul> |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -95,7 +95,7 @@ Los objetos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| MetricType                | string | Una de las siguientes cadenas que especifica el [tipo de datos del embudo](../publish/acquisitions-report.md#acquisition-funnel) que se incluye en este objeto:<ul><li><strong>PageView</strong></li><li><strong>Adquisición</strong></li><li><strong>Instalar</strong></li><li><strong>Usage</strong></li></ul> |
+| MetricType                | string | Una de las siguientes cadenas que especifica el [tipo de datos del embudo](../publish/acquisitions-report.md#acquisition-funnel) que se incluye en este objeto:<ul><li><strong>Vistas de página</strong></li><li><strong>Adquisición</strong></li><li><strong>Instalar</strong></li><li><strong>Uso de</strong></li></ul> |
 | UserCount       | string | El número de usuarios que realizó el paso de embudo especificado por el valor *MetricType*.             |
 
 

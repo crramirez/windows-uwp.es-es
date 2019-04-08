@@ -35,15 +35,15 @@ Los formularios de impuestos se enviará a usted, desde las siguientes direccion
 <table>
 <tr><th>Grupo de negocios</th><th>Entidad jurídica</th><th>Dirección</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond Washington 98052 EE. UU.</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE. UU.</td></tr>
+<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil carretera<br>Reno, NV 89511 EE. UU.</td></tr>
 <table> 
 
 **Ciudadanos de Estados Unidos:**
 <table>
 <tr><th>Grupo de negocios</th><th>Entidad jurídica</th><th>Dirección</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (pago se realiza por Microsoft Corporation a través de Microsoft Ireland que actúa como intermediario completo de Microsoft Corporation)</td><td>One Microsoft Place<br>Sur&nbsp;condado&nbsp;Business&nbsp;Park<br>Leopardstown, Dublín 18 Irlanda</td></tr>
-<tr><td>Anunciando *</td><td>Microsoft Ireland Operations Limited (pago se realiza por Microsoft Online Inc. a través de Microsoft Ireland que actúa como agente de pago de Microsoft Online Inc.)</td><td>One Microsoft Place<br>Sur&nbsp;condado&nbsp;Business&nbsp;Park<br>Leopardstown, Dublín 18 Irlanda</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE. UU.</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (pago se realiza por Microsoft Corporation a través de Microsoft Ireland que actúa como intermediario completo de Microsoft Corporation)</td><td>Una posición de Microsoft<br>Sur&nbsp;condado&nbsp;Business&nbsp;Park<br>Leopardstown, Dublín 18 Irlanda</td></tr>
+<tr><td>Anunciando *</td><td>Microsoft Ireland Operations Limited (pago se realiza por Microsoft Online Inc. a través de Microsoft Ireland que actúa como agente de pago de Microsoft Online Inc.)</td><td>Una posición de Microsoft<br>Sur&nbsp;condado&nbsp;Business&nbsp;Park<br>Leopardstown, Dublín 18 Irlanda</td></tr>
+<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil carretera<br>Reno, NV 89511 EE. UU.</td></tr>
 <tr><td colspan="3">* Se pagarán a los ciudadanos de los siguientes países a ganar los ingresos por publicidad a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, Isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, países bajos, Noruega, Polonia, Portugal, Rumania, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza, Reino Unido</td></tr>
 </table>
 
@@ -56,7 +56,7 @@ Los formularios de impuestos se enviará a usted, desde las siguientes direccion
   </tr>
   <tr> 
      <td valign="top">Tuve <b>ventas superiores a 200 aplicaciones</b> con un importe total de compra de estas ventas <b>superior a 20 000 USD</b> en el año fiscal aplicable (<b>sin</b> contar las ventas realizadas en Brasil y China a través de la Microsoft Store en Windows 10).</td>
-    <td valign="top"><b>1099-K</b>:<br>Filtro: Microsoft Corporation<br>EIN: *****4442<br><br><b>Importantes</b>: Contiene el formulario 1099-K <b>bruto compra</b> cantidades, no los pagos realizados para usted.</td>
+    <td valign="top"><b>1099-K</b>:<br>Filtro: Microsoft Corporation<br>EIN: *** 4442<br><br><b>Importantes</b>: Contiene el formulario 1099-K <b>bruto compra</b> cantidades, no los pagos realizados para usted.</td>
   </tr>
   <tr> 
      <td valign="top">Recibí <b>al menos 10 USD por pagos</b> de (i) ventas de aplicaciones realizadas en Brasil y China a través de la Microsoft Store en Windows 10 o (ii) ventas en el Minecraft Marketplace.<br>
@@ -64,7 +64,7 @@ Los formularios de impuestos se enviará a usted, desde las siguientes direccion
 <b>OR</b><br>
 <br>
 Recibí al menos 600 USD por pagos no relacionados con las ventas de aplicaciones de Microsoft en el año fiscal aplicable (por ejemplo, pagos de incentivos o pagos de un concurso o una promoción).</td>
-    <td valign="top"><b>1099-MISC</b>:<br>Pagador: Microsoft Corporation<br>EIN: *****4442<br><br><b>Importantes</b>: Ciertas entidades de negocio no recibirá formularios 1099-MISC independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>Pagador: Microsoft Corporation<br>EIN: *** 4442<br><br><b>Importantes</b>: Ciertas entidades de negocio no recibirá formularios 1099-MISC independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
   </tr>
   <tr>
     <td valign="top">No se aplica ninguna de las anteriores.</td>
@@ -80,7 +80,7 @@ Recibí al menos 600 USD por pagos no relacionados con las ventas de aplicacion
   </tr>
   <tr> 
      <td valign="top">Recibí <b>al menos 600 USD en pagos</b> provenientes de anuncios en aplicaciones en el año fiscal aplicable.</td>
-    <td valign="top"><b>1099-MISC</b>:<br>Pagador: Microsoft Online Inc<br>EIN: *****0505<br><br><b>Importantes</b>: Ciertas entidades de negocio no recibirá formularios 1099-MISC independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>Pagador: Microsoft Online Inc<br>EIN: *** 0505<br><br><b>Importantes</b>: Ciertas entidades de negocio no recibirá formularios 1099-MISC independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
   </tr>
   <tr> 
      <td valign="top">Recibí <b>menos de 600 USD en pagos</b> provenientes de anuncios en aplicaciones en el año fiscal aplicable.</td>

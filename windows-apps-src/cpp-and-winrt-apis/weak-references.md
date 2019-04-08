@@ -1,5 +1,5 @@
 ---
-description: El tiempo de ejecución de Windows es un sistema de recuento de referencias; y, en este sistema es importante conocer el significado de y la distinción entre, las referencias fuertes y débiles.
+description: Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas.
 title: Referencias débiles en C++/WinRT
 ms.date: 10/03/2018
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 507b3cee71819df1d0163380a494e6a15936109f
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57630820"
@@ -397,4 +397,4 @@ No importa dónde aparezca la estructura del marcador dentro del paquete de par�
 * [función Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [plantilla de función winrt::make_weak](/uwp/cpp-ref-for-winrt/make-weak)
 * [winrt::no_weak_ref marcador struct](/uwp/cpp-ref-for-winrt/no-weak-ref)
-* [winrt::weak_ref struct template](/uwp/cpp-ref-for-winrt/weak-ref)
+* [plantilla de estructura winrt::weak_ref](/uwp/cpp-ref-for-winrt/weak-ref)

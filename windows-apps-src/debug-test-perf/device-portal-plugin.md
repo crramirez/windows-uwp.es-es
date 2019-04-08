@@ -197,6 +197,6 @@ Para depurar la tarea en segundo plano, tienes que cambiar la forma en que Visua
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Información general de Windows Device Portal](device-portal.md)
-* [Crear y consumir un servicio de aplicaciones](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Crear y usar un servicio de aplicación](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 
