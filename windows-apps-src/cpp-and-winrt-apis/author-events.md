@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, autor, event
 ms.localizationpriority: medium
 ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57644490"
@@ -283,6 +283,6 @@ La firma de un delegado de controlador de eventos debe constar de dos parámetro
 Tenga en cuenta que estas instrucciones no se aplican necesariamente si va a diseñar una API interna. Aunque las API internas suelen ser públicas con el tiempo.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear las API con C++ / c++ / WinRT](author-apis.md)
-* [Consumo de API con C / c++ / WinRT](consume-apis.md)
+* [Crear API con C++/WinRT](author-apis.md)
+* [Consumir API con C++/WinRT](consume-apis.md)
 * [Controlar eventos mediante el uso de delegados en C / c++ / WinRT](handle-events.md)

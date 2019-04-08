@@ -40,7 +40,7 @@ La aplicación puede escribir directamente índices en un búfer de índices asi
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Búferes de vértices y de índices](vertex-and-index-buffers.md)
+[Búferes de vértices e índices](vertex-and-index-buffers.md)
 
  
 

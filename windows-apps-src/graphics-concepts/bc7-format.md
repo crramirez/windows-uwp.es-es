@@ -27,8 +27,8 @@ Para obtener información sobre los modos de bloques del formato BC7, consulta [
 BC7 especificado por el siguiente DXGI\_valores de enumeración de formato:
 
 -   **DXGI\_FORMATO\_BC7\_TYPELESS**.
--   **DXGI\_FORMAT\_BC7\_UNORM**.
--   **DXGI\_FORMAT\_BC7\_UNORM\_SRGB**.
+-   **DXGI\_FORMATO\_BC7\_UNORM**.
+-   **DXGI\_FORMATO\_BC7\_UNORM\_SRGB**.
 
 El formato BC7 puede usarse para los recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
 

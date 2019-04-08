@@ -95,18 +95,18 @@ En la siguiente tabla se resume cómo el _conjunto opcional_ de comandos de nave
 
 | Comando de navegación | Entrada del controlador para juegos          | Entrada del stick arcade | Entrada del volante    |
 | ------------------:| ---------------------- | ------------------ | --------------------- |
-|             PageUp | Gatillo izquierdo           | _No se admite_    | _varies_              |
-|           PageDown | Gatillo derecho          | _No se admite_    | _varies_              |
-|           PageLeft | Botón superior izquierdo            | _No se admite_    | _varies_              |
-|          PageRight | Botón superior derecho           | _No se admite_    | _varies_              |
-|           ScrollUp | Stick analógico derecho hacia arriba    | _No se admite_    | _varies_              |
-|         ScrollDown | Stick analógico derecho hacia abajo  | _No se admite_    | _varies_              |
-|         ScrollLeft | Stick analógico derecho hacia la izquierda  | _No se admite_    | _varies_              |
-|        ScrollRight | Stick analógico derecho hacia la derecha | _No se admite_    | _varies_              |
+|             PageUp | Gatillo izquierdo           | _No se admite_    | _Varía_              |
+|           PageDown | Gatillo derecho          | _No se admite_    | _Varía_              |
+|           PageLeft | Botón superior izquierdo            | _No se admite_    | _Varía_              |
+|          PageRight | Botón superior derecho           | _No se admite_    | _Varía_              |
+|           ScrollUp | Stick analógico derecho hacia arriba    | _No se admite_    | _Varía_              |
+|         ScrollDown | Stick analógico derecho hacia abajo  | _No se admite_    | _Varía_              |
+|         ScrollLeft | Stick analógico derecho hacia la izquierda  | _No se admite_    | _Varía_              |
+|        ScrollRight | Stick analógico derecho hacia la derecha | _No se admite_    | _Varía_              |
 |           Context1 | Botón X               | _No se admite_    | Botón X (_generalmente_) |
 |           Context2 | Botón Y               | _No se admite_    | Botón Y (_generalmente_) |
-|           Context3 | Presión del stick analógico izquierdo  | _No se admite_    | _varies_              |
-|           Context4 | Presión del stick analógico derecho | _No se admite_    | _varies_              |
+|           Context3 | Presión del stick analógico izquierdo  | _No se admite_    | _Varía_              |
+|           Context4 | Presión del stick analógico derecho | _No se admite_    | _Varía_              |
 
 
 ## <a name="detect-and-track-ui-navigation-controllers"></a>Detectar y realizar un seguimiento de los controladores de navegación de la interfaz de usuario

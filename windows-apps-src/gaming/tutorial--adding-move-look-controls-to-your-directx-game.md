@@ -182,7 +182,7 @@ Y, por último, usamos estos métodos y propiedades para inicializar, acceder y 
 -   **SetPosition**. Nuestra aplicación llama a este método para establecer las coordenadas (x, y y z) de nuestros controles en el espacio de la escena.
 -   **SetOrientation**. Nuestra aplicación llama a este método para establecer la rotación alrededor de los ejes X e Y de la cámara.
 -   **obtener\_posición**. Nuestra aplicación accede a esta propiedad para obtener la posición actual de la cámara en el espacio de la escena. Puedes usar esta propiedad como forma de comunicar la posición actual de la cámara a la aplicación.
--   **get\_LookPoint**. Nuestra aplicación accede a esta propiedad para obtener el punto actual hacia el que apunta la cámara del controlador.
+-   **obtener\_LookPoint**. Nuestra aplicación accede a esta propiedad para obtener el punto actual hacia el que apunta la cámara del controlador.
 -   **Update**. Lee el estado de los controladores de movimiento y vista y actualiza la posición de la cámara. Llamas a este método continuamente desde el bucle principal de la aplicación para actualizar los datos del controlador de cámara y la posición de la cámara en el espacio de la escena.
 
 Ahora ya tenemos todos los componentes necesarios para implementar tus controles de movimiento y vista. Por tanto, intentemos combinar todas las piezas.

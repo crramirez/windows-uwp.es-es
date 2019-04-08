@@ -4,7 +4,7 @@ title: Soluciona problemas de los eventos de Hacer un examen de Microsoft con el
 ms.assetid: 9218e542-f520-4616-98fc-b113d5a08e0f
 ms.date: 10/06/2017
 ms.topic: article
-keywords: Windows 10, uwp, educación
+keywords: windows 10, uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f4bdcf45c7dd37dd540a666d99b5fa2fd2d49f8
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f

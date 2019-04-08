@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, datos, tipos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b0b529bbf397b76acb1eb589095a84f5c85745c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57654290"
@@ -154,7 +154,7 @@ Aún puede usar el [Parallel Patterns Library (PPL)](/cpp/parallel/concrt/parall
 
 ## <a name="important-apis"></a>API importantes
 * [IVector&lt;T&gt; interfaz](/uwp/api/windows.foundation.collections.ivector_t_)
-* [winrt::array_view struct template](/uwp/cpp-ref-for-winrt/array-view)
+* [plantilla de estructura winrt::array_view](/uwp/cpp-ref-for-winrt/array-view)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Cadena de control en C++ / c++ / WinRT](strings.md)

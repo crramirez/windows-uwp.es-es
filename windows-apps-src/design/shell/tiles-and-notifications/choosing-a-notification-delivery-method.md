@@ -27,7 +27,7 @@ En este artículo se abordan las cuatro opciones de notificación (local, progra
 
 Existen cuatro mecanismos que puede usar una aplicación para entregar una notificación:
 
--   **Local**
+-   **local**
 -   **Programado**
 -   **Periódicas**
 -   **inserción**

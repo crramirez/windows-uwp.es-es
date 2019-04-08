@@ -122,7 +122,7 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 |  width   |  número entero   |  El ancho del creativo.     |  No    |     |    Sí   |       
 |  landingUrl   |  string   |  Si usas un servicio de seguimiento de campañas como Kochava, AppsFlyer o Tune para medir el análisis de instalación de la aplicación, asigna la dirección URL de seguimiento en este campo al llamar el método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |       
 |  format   |  string   |   El formato del anuncio. Actualmente, el único valor admitido es **Banner**.    |   No    |  Banner   |  No     |       
-|  imageAttributes   | [ImageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
+|  imageAttributes   | [imageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
 |  storeProductId   |  string   |   El [id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Store para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
 
 

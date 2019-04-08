@@ -3,7 +3,7 @@ title: Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hell
 description: Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales).
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, seguridad
+keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
 ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
@@ -642,7 +642,7 @@ Los mensajes de instrucciones y errores son los siguientes. El nombre del dispos
 - "Buscando *nombre del dispositivo*..."
 - "Conecta *nombre del dispositivo* en un puerto USB para iniciar sesión".
 
-**Errors**
+**Errores**
 
 - "Consulta *nombre del dispositivo* para obtener instrucciones de inicio de sesión".
 - "Activa el Bluetooth para usar *nombre del dispositivo* para iniciar sesión".

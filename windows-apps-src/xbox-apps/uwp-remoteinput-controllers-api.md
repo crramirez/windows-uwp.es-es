@@ -17,7 +17,7 @@ Puedes obtener el número de controladoras físicas conectadas y desactivarlas c
 
 ## <a name="determine-the-number-of-attached-physical-controllers"></a>Determinar el número de controladoras físicas conectadas
 
-**Request**
+**Solicitud**
 
 Puedes comprobar el número de controladoras físicas conectadas en el dispositivo con la siguiente solicitud.
 
@@ -53,7 +53,7 @@ Código de estado HTTP      | Descripción
 
 ## <a name="disconnect-all-physical-controllers-on-the-devkit"></a>Desconectar todos los controladores físicos del kit de desarrollo
 
-**Request**
+**Solicitud**
 
 Puedes desconectar todos las controladoras del dispositivo con la siguiente solicitud.
 

@@ -276,7 +276,7 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 * [Biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [Iconos, distintivos y notificaciones](index.md)
 * [Crear iconos adaptables](create-adaptive-tiles.md)
-* [Esquema de contenido de mosaico](../tiles-and-notifications/tile-schema.md)
+* [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md)
  
 
  

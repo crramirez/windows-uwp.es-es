@@ -8,7 +8,7 @@ keywords: windows 10, uwp, juegos, el programa de instalación, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608710"
@@ -38,7 +38,7 @@ Una plantilla de Visual Studio es una colección de configuraciones y archivos d
 La plantilla usada para este tutorial es la titulada **DirectX 11 App (Universal Windows)**. 
 
 Pasos para crear un proyecto de juego DirectX 11 en Visual Studio:
-1.  Seleccione **archivo...** &gt; **Nuevo** &gt; **proyecto...** 
+1.  Seleccione **archivo...** &gt; **Nuevo** &gt; **proyecto...**
 2.  En el panel izquierdo, seleccione **instalado** &gt; **plantillas** &gt; **Visual C++** &gt; **Universal de Windows**
 3.  En el panel central, selecciona **DirectX 11 App (Universal Windows)**
 4.  Da a tu proyecto un nombre y haz clic en **Aceptar**.

@@ -95,4 +95,4 @@ Cuando se complete la tarea en segundo plano, podrás iniciar la aplicación en 
 
 ## <a name="see-also"></a>Consulte también
 
-[Crear y registrar una tarea en segundo plano fuera de proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+[Crear y registrar una tarea en segundo plano fuera del proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)

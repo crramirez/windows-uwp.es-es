@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
 ms.openlocfilehash: 38fc73eb602c1307fdd345d02c621791feb89dc2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57652330"
@@ -182,11 +182,11 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     </tr>
     <tr>
         <td>Muestras de elementos gráficos de Direct3D 12</td>
-        <td><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX-Graphics-Samples</a></td>
+        <td><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">Ejemplos de gráficos de DirectX</a></td>
     </tr>
     <tr>
         <td>Muestras de elementos gráficos de Direct3D 11</td>
-        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-samples</a></td>
+        <td><a href="https://github.com/walbourn/directx-sdk-samples">ejemplos del sdk de DirectX</a></td>
     </tr>
     <tr>
         <td>Muestra de juego en primera persona en Direct3D 11</td>
@@ -206,11 +206,11 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     </tr>
     <tr>
         <td>Muestras públicas de Xbox Advanced Technology Group</td>
-        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-Samples</a></td>
+        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Ejemplos de ATG Xbox</a></td>
     </tr>
     <tr>
         <td>Muestras de Xbox Live.</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">Xbox-live-samples</a></td>
     </tr>
     <tr>
         <td>Muestras de juego para Xbox One (XGD)</td>
@@ -874,7 +874,7 @@ Si tienes un juego existente, hay muchos recursos y guías disponibles que te ay
     </colgroup>
     <tr>
         <td>Migrar una aplicación para Windows 8 a una aplicación para la Plataforma universal de Windows</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">Mover de Windows Runtime 8.x a UWP</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">Migrar de Windows Runtime 8.x a UWP</a></td>
     </tr>
     <tr>
         <td>Portar una aplicación para Windows 8 a una aplicación de la Plataforma universal de Windows (vídeo)</td>
@@ -910,7 +910,7 @@ Si tienes un juego existente, hay muchos recursos y guías disponibles que te ay
     </tr>
     <tr>
         <td>De OpenGL ES a Direct3D 11 mediante ANGLE</td>
-        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">ANGLE</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">ÁNGULO</a></td>
     </tr>
     <tr>
         <td>Equivalentes de API clásica de Windows en la UWP</td>
@@ -1259,7 +1259,7 @@ El kit de herramientas de DirectX, la biblioteca de procesamiento de texturas de
     </tr>
     <tr>
         <td>Obtén el kit de herramientas de DirectX 12.</td>
-        <td><a href="https://go.microsoft.com/fwlink/?LinkID=615561">DirectXTK 12</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/?LinkID=615561">12 DirectXTK</a></td>
     </tr>
     <tr>
         <td>Obtén la biblioteca de procesamiento de texturas de DirectX.</td>
@@ -1293,7 +1293,7 @@ A continuación se presenta documentación adicional de DirectX creada por partn
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Nvidia: Tarea DX12 y qué no (entrada de blog) </td>
+        <td>NVIDIA: Tarea DX12 y qué no (entrada de blog) </td>
         <td><a href="https://developer.nvidia.com/dx12-dos-and-donts-updated">DirectX 12 en GPU de Nvidia</a></td>
     </tr>
     <tr>
@@ -1343,7 +1343,7 @@ Un icono es una representación de tu juego en el menú Inicio. Los iconos y las
     </tr>
     <tr>
         <td>Aplicación de Windows 10 para desarrollar interactivamente plantillas de icono dinámico</td>
-        <td><a href="https://www.microsoft.com/store/apps/9nblggh5xsl1">Visualizador de notificaciones</a></td>
+        <td><a href="https://www.microsoft.com/store/apps/9nblggh5xsl1">Notifications Visualizer</a></td>
     </tr>
     <tr>
         <td>Extensión del generador de iconos de UWP para Visual Studio</td>
@@ -1375,7 +1375,7 @@ Un complemento (producto de la aplicación) es un artículo complementario que l
     </tr>
     <tr>
         <td>Envío y los detalles de complemento</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">Envíos de complemento</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">Envíos de complementos</a></td>
     </tr>
     <tr>
         <td>Ventas de complemento de monitor y datos demográficos para su juego</td>
@@ -1563,7 +1563,7 @@ Deberá usar [centro de partners](https://partner.microsoft.com/dashboard) para 
     </tr>
     <tr>
         <td>Crear paquetes opcionales como el contenido del juego DLC</td>
-        <td><a href="../packaging/optional-packages.md">Creación de un conjunto relacionado y paquetes opcionales</a></td>
+        <td><a href="../packaging/optional-packages.md">Creación de paquetes opcionales y conjuntos relacionados</a></td>
     </tr>
     <tr>
         <td>Empaquetar el juego UWP</td>
@@ -1607,7 +1607,7 @@ No dejes que los problemas de certificación retrasen el lanzamiento de tu juego
     </tr>
     <tr>
         <td>Directivas para publicar aplicaciones en Microsoft Store</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn764944">Directivas de Microsoft Store</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn764944">Directivas de Microsoft Store</a></td>
     </tr>
     <tr>
         <td>Cómo evitar algunos problemas de certificación comunes en las aplicaciones</td>

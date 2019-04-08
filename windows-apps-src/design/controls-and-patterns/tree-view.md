@@ -57,7 +57,7 @@ Las API TreeView admiten las siguientes características:
 <td>
     <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/TreeView">abra la aplicación y vea la vista de árbol en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -126,7 +126,7 @@ Consulte _mediante enlace de datos de vista de árbol_ la sección ejemplos para
 
 Si usa TreeView.ItemsSource, estas API están disponibles para obtener el nodo o elemento de datos desde el contenedor y viceversa.
 
-| **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
+| **[Elemento TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtiene el elemento de datos para el contenedor de TreeViewItem especificado. |
 | [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtiene el contenedor de TreeViewItem para el elemento de datos especificado. |
@@ -171,17 +171,17 @@ End Sub
 
 Estas API están disponibles para administrar la jerarquía de datos de su vista de árbol.
 
-| **[TreeView](/uwp/api/windows.ui.xaml.controls.treeview)** | |
+| **[Vista de árbol](/uwp/api/windows.ui.xaml.controls.treeview)** | |
 | - | - |
 | [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) | Una vista de árbol puede tener uno o varios nodos de raíz. Agrega un objeto TreeViewNode a la colección RootNodes para crear un nodo raíz. El **Parent** de un nodo raíz es siempre **null**. El valor de **Depth** de un nodo raíz es 0. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
-| [Children](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Agrega objetos TreeViewNode a la colección de elementos secundarios de un nodo primario para crear la jerarquía del nodo. Un nodo es el elemento **Parent** de todos los nodos en su colección **Children**. |
+| [Elementos secundarios](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Agrega objetos TreeViewNode a la colección de elementos secundarios de un nodo primario para crear la jerarquía del nodo. Un nodo es el elemento **Parent** de todos los nodos en su colección **Children**. |
 | [HasChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.haschildren) | **true** si el nodo ha realizado los elementos secundarios. **false** indica una carpeta vacía o un elemento. |
 | [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) | Usa esta propiedad si estás rellenando nodos cuando se expanden. Consulta _Rellenar un nodo cuando está en expansión_ más adelante en este artículo. |
 | [profundidad](/uwp/api/windows.ui.xaml.controls.treeviewnode.depth) | Indica a qué distancia está un nodo secundario del nodo raíz. |
-| [Parent](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtiene la TreeViewNode que posee la colección **Children** de la que forma parte este nodo. |
+| [Elemento primario](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtiene la TreeViewNode que posee la colección **Children** de la que forma parte este nodo. |
 
 La vista de árbol utiliza las propiedades **HasChildren** y **HasUnrealizedChildren** para determinar si se muestra el icono de expandir/contraer. Si cualquiera de estas propiedades es **true**, se muestra el icono; de lo contrario, no se muestra.
 

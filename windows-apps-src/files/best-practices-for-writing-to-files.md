@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8bed97e060015f92ff95c9f7d797bbcb83db431
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57605840"
@@ -75,12 +75,12 @@ Esta tabla presentan los códigos de error comunes que los desarrolladores de ap
 
 |  Error de nombre (valor)  |  Pasos  |  Causas  |  Soluciones  |
 |----------------------|---------|----------|-------------|
-|  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  El archivo original se podría marcar para su eliminación, posiblemente desde una operación anterior.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
-|  ERROR_SHARING_VIOLATION (0x80070020)  |  5  |  Se abre el archivo original por otra operación de escritura exclusivo.   |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  No se pudo reemplazar el archivo original (file.txt) porque está en uso. Otro proceso u operación obtenido acceso al archivo antes de que se reemplazarán.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
-|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  El modelo de transacción crea un archivo adicional, y Esto consume almacenamiento adicional.  |    |
+|  ERROR_ACCESS_DENIED (0 X 80070005)  |  5  |  El archivo original se podría marcar para su eliminación, posiblemente desde una operación anterior.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
+|  ERROR_SHARING_VIOLATION (0 X 80070020)  |  5  |  Se abre el archivo original por otra operación de escritura exclusivo.   |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19 – 20  |  No se pudo reemplazar el archivo original (file.txt) porque está en uso. Otro proceso u operación obtenido acceso al archivo antes de que se reemplazarán.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
+|  ERROR_DISK_FULL (0 X 80070070)  |  7, 14, 16, 20  |  El modelo de transacción crea un archivo adicional, y Esto consume almacenamiento adicional.  |    |
 |  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  Esto puede deberse a varias operaciones de E/S pendientes o tamaños de archivo grandes.  |  Un enfoque más granular mediante el control de la secuencia podría resolver el error.  |
-|  E_FAIL (0x80004005) |  Cualquiera  |  Varios  |  Vuelva a intentar la operación. Si sigue sin funcionar, podría ser un error de la plataforma y la aplicación debe finalizar porque está en un estado incoherente. |
+|  E_FAIL (0 X 80004005) |  Cualquiera  |  Varios  |  Vuelva a intentar la operación. Si sigue sin funcionar, podría ser un error de la plataforma y la aplicación debe finalizar porque está en un estado incoherente. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Otras consideraciones para los Estados de los archivos que podrían conducir a errores
 
@@ -194,4 +194,4 @@ El [Parallel Programming with .NET blog](https://blogs.msdn.microsoft.com/pfxtea
 
 ## <a name="see-also"></a>Consulte también
 
-* [Crear, escribir y leer un archivo](quickstart-reading-and-writing-files.md)
+* [Crear, escribir y leer archivos](quickstart-reading-and-writing-files.md)

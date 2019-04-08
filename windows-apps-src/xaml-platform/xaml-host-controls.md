@@ -81,24 +81,24 @@ En la mayor parte, todo se admite a menos que se mencione de manera explícita e
 
 ### <a name="whats-not-yet-supported"></a>Lo que no es compatible todavía
 
-:no_entry_sign: Herramientas de accesibilidad que funcionan perfectamente en la aplicación y hospedan los controles.
+: no_entry_sign: Herramientas de accesibilidad que funcionan perfectamente en la aplicación y hospedan los controles.
 
-:no_entry_sign: Contenido localizado en controles que se agregan a las aplicaciones que no contienen un paquete de aplicación de Windows.
+: no_entry_sign: Contenido localizado en controles que se agregan a las aplicaciones que no contienen un paquete de aplicación de Windows.
 
-:no_entry_sign: Referencias de recursos realizadas en XAML en las aplicaciones que no contienen un paquete de aplicación de Windows.
+: no_entry_sign: Referencias de recursos realizadas en XAML en las aplicaciones que no contienen un paquete de aplicación de Windows.
 
-:no_entry_sign: Controles de responder correctamente a los cambios de PPP y la escala.
+: no_entry_sign: Controles de responder correctamente a los cambios de PPP y la escala.
 
-:no_entry_sign: Agregar un **WebView** control a un control de usuario personalizado (en el subproceso, desactivar subproceso o fuera de proceso).
+: no_entry_sign: Agregar un **WebView** control a un control de usuario personalizado (en el subproceso, desactivar subproceso o fuera de proceso).
 
-:no_entry_sign: El [Mostrar resaltado](https://docs.microsoft.com/windows/uwp/design/style/reveal) Fluent efecto.
+: no_entry_sign: El [Mostrar resaltado](https://docs.microsoft.com/windows/uwp/design/style/reveal) Fluent efecto.
 
-:no_entry_sign: Inserción de entradas manuscritas en línea, @Places, y @People para los controles de entrada.
+: no_entry_sign: Inserción de entradas manuscritas en línea, @Places, y @People para los controles de entrada.
 
-:no_entry_sign: Asignar teclas de aceleración.
+: no_entry_sign: Asignar teclas de aceleración.
 
-:no_entry_sign: Controles de terceros basados en C++.
+: no_entry_sign: Controles de terceros basados en C++.
 
-:no_entry_sign: Hospedaje de controles de usuario personalizados.
+: no_entry_sign: Hospedaje de controles de usuario personalizados.
 
 Los elementos de esta lista cambiarán probablemente a medida que seguimos mejorando la experiencia de llevar Fluent al escritorio.  

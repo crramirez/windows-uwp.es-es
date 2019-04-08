@@ -210,10 +210,10 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 ## <a name="related-topics"></a>Temas relacionados
 * [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Registro de subetiquetas del lenguaje IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
-* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Idiomas admitidos](../../publish/supported-languages.md)
 * [Globalizar sus formatos de fecha/hora y números](use-global-ready-formats.md)
-* [Cómo coincide el sistema de administración de recursos con etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
+* [Cómo el sistema de administración de recursos compara etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>Muestras
 * [Ejemplo de localización y recursos de la aplicación](https://go.microsoft.com/fwlink/p/?linkid=231501)

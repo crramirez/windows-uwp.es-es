@@ -8,7 +8,7 @@ ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57603340"
@@ -18,7 +18,7 @@ Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de de
 
 ## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si el seguimiento de Fiddler está habilitado
 
-**Request**
+**Solicitud**
 
 Puedes comprobar para ver si el seguimiento de Fiddler está habilitado en el dispositivo con la siguiente solicitud.
 
@@ -54,7 +54,7 @@ Código de estado HTTP      | Descripción
 
 ## <a name="enable-fiddler-tracing"></a>Habilitar el seguimiento de Fiddler
 
-**Request**
+**Solicitud**
 
 Puedes habilitar el seguimiento de Fiddler para el kit de desarrollo con la siguiente solicitud.  Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
@@ -97,7 +97,7 @@ Código de estado HTTP      | Descripción
 
 ## <a name="disable-fiddler-tracing-on-the-devkit"></a>Deshabilitar el seguimiento de Fiddler en el kit de desarrollo
 
-**Request**
+**Solicitud**
 
 Puedes deshabilitar el seguimiento de Fiddler en el dispositivo con la siguiente solicitud. Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 

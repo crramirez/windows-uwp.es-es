@@ -70,7 +70,7 @@ La información sobre cómo usar la combinación de texturas de Direct3D para re
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)
 
  
 

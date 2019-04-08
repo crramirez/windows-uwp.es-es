@@ -77,7 +77,7 @@ La clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797)  
 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)  
-[**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799)  [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801)  
+[**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799)[**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801)  
 [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336)  
 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806)
 
@@ -215,10 +215,10 @@ En las plantillas de proyecto de Visual Studio se proporciona el código básico
 
 * [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)
 * [Directrices para la aplicación, suspensión y reanudar](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Controlar el inicio previo de la aplicación](handle-app-prelaunch.md)
-* [Identificador de activación de la aplicación](activate-an-app.md)
-* [Suspender el identificador de aplicación](suspend-an-app.md)
-* [Identificador de reanudar la aplicación](resume-an-app.md)
+* [Controlar el inicio previo de aplicaciones](handle-app-prelaunch.md)
+* [Controlar la activación de aplicaciones](activate-an-app.md)
+* [Controlar la suspensión de aplicaciones](suspend-an-app.md)
+* [Controlar la reanudación de aplicaciones](resume-an-app.md)
 * [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [Reproducir archivos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 

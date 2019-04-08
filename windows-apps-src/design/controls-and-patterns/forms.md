@@ -118,8 +118,8 @@ Control | Use | Ejemplo
 ### <a name="selection"></a>Selección
 Control | Use | Ejemplo
 - | - | - 
-| [CheckBox](checkbox.md) | Seleccione o anule la selección de uno o varios elementos de acción | Acepte los términos y condiciones, agregar elementos opcionales, todas las opciones aplicables seleccione
-[RadioButton](radio-button.md) | Seleccione una opción entre dos o más opciones | Elegir el tipo, método, etcetera de envío.
+| [Casilla de verificación](checkbox.md) | Seleccione o anule la selección de uno o varios elementos de acción | Acepte los términos y condiciones, agregar elementos opcionales, todas las opciones aplicables seleccione
+[Botón de opción](radio-button.md) | Seleccione una opción entre dos o más opciones | Elegir el tipo, método, etcetera de envío.
 [ToggleSwitch](toggles.md) | Elija una de las dos opciones mutuamente excluyentes | Activar/desactivar
 
 > **Nota**: Si hay cinco o más elementos de selección, utilice un control de lista.

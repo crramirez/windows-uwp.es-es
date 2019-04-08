@@ -8,7 +8,7 @@ keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, interstici
 ms.localizationpriority: medium
 ms.openlocfilehash: 9abf761aa141ef3d0c19d6d5401b6815542d4172
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57603920"
@@ -42,7 +42,7 @@ Ofrecemos dos tipos de anuncios intersticiales para usar en tus aplicaciones y j
 
 Para mostrar anuncios intersticiales en tu aplicación, sigue las instrucciones para el tipo de proyecto:
 
-* [XAML/.NET](#interstitialadsxaml10)
+* [XAML Y .NET](#interstitialadsxaml10)
 * [HTML/JavaScript](#interstitialadshtml10)
 * [C++ (interoperabilidad DirectX)](#interstitialadsdirectx10)
 

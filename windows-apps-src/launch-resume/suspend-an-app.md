@@ -149,8 +149,8 @@ Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
-* [Identificador de activación de la aplicación](activate-an-app.md)
-* [Identificador de reanudar la aplicación](resume-an-app.md)
+* [Controlar la activación de aplicaciones](activate-an-app.md)
+* [Controlar la reanudación de aplicaciones](resume-an-app.md)
 * [Directrices de experiencia de usuario para iniciar, suspender y reanudar](https://msdn.microsoft.com/library/windows/apps/dn611862)
 * [Ejecución ampliada](run-minimized-with-extended-execution.md)
 

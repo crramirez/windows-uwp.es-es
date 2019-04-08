@@ -42,8 +42,8 @@ Marble Maze permite que el usuario interacciones con el tablero del juego de var
 ## <a name="prerequisites"></a>Requisitos previos
 
 
--   Windows 10 Creators Update
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   Windows 10 Creators Update
+-   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
 -   Conocimientos de programación de C++
 -   Familiaridad con DirectX y terminología de DirectX
 -   Conocimientos básicos de COM

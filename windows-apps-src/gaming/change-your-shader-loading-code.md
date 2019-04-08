@@ -131,7 +131,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
+| glViewport    | [**CD3D11\_VENTANILLA**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [ **ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
  
 
@@ -201,10 +201,10 @@ Estas son algunas asignaciones para intrínsecos de sombreador comunes de OpenGL
 | Valor del sistema de OpenGL | Usa esta semántica de HLSL                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GL\_posición        | POSITION(n) para los datos del búfer de vértices. SV\_posición proporciona una posición de píxel al sombreador de píxeles y no se puede escribir la aplicación.                                        |
-| gl\_Normal          | NORMAL(n) para los datos normales proporcionados por el búfer de vértices.                                                                                                                 |
-| gl\_TexCoord\[n\]   | TEXCOORD(n) para los datos de coordenadas de la textura UV (ST en algunos documentos de OpenGL) suministrados a un sombreador.                                                                       |
-| gl\_FragColor       | COLOR(n) para los datos RGBA suministrados a un sombreador. Ten en cuenta que el trato es idéntico para los datos de coordenadas, la semántica simplemente te ayuda a identificar que son datos de color. |
-| gl\_FragData\[n\]   | SV\_destino\[n\] para la escritura de un sombreador de píxeles en una textura de destino o en otro búfer de píxeles.                                                                               |
+| GL\_Normal          | NORMAL(n) para los datos normales proporcionados por el búfer de vértices.                                                                                                                 |
+| GL\_TexCoord\[n\]   | TEXCOORD(n) para los datos de coordenadas de la textura UV (ST en algunos documentos de OpenGL) suministrados a un sombreador.                                                                       |
+| GL\_FragColor       | COLOR(n) para los datos RGBA suministrados a un sombreador. Ten en cuenta que el trato es idéntico para los datos de coordenadas, la semántica simplemente te ayuda a identificar que son datos de color. |
+| GL\_FragData\[n\]   | SV\_destino\[n\] para la escritura de un sombreador de píxeles en una textura de destino o en otro búfer de píxeles.                                                                               |
 
  
 

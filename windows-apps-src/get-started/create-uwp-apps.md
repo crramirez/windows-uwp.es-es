@@ -49,7 +49,7 @@ Si quieres un tutorial más detallado sobre los conceptos básicos de codificaci
 
 **Vídeos**
 
-* [Microsoft virtual academy](https://mva.microsoft.com/training-topics/c-app-development#!level=Beginner&lang=1033)
+* [Academia virtual de Microsoft](https://mva.microsoft.com/training-topics/c-app-development#!level=Beginner&lang=1033)
 * [LinkedIn Learning](https://www.linkedin.com/learning/learning-universal-windows-app-development/welcome)
 
 ## <a name="using-the-docs"></a>Utilización de documentos

@@ -33,7 +33,7 @@ Una bombilla es un buen ejemplo de una luz puntual. La atenuación y el interval
 
 Las luces direccionales tienen solo color y dirección, no posición. Emiten luz paralela. Esto significa que toda la luz que generan las luces direccionales viaja a través de una escena en la misma dirección. Imagina una luz direccional como una fuente de luz casi a distancia infinita, como el sol. La atenuación o el intervalo no afecta a las luces direccionales, por lo que la dirección y el color que especifiques son los únicos factores que se consideran cuando Direct3D calcula los colores de los vértices. Debido al pequeño número de factores de iluminación, estas luces son las menos intensivas a nivel de cálculo que se usan.
 
-## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>SpotLight
+## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>Contenido destacado
 
 
 Los focos de luz tienen color, posición y dirección en la que emiten luz. La luz que emite un foco de luz se compone de un cono interno brillante y un cono externo más grande, con menos intensidad de luz entre los dos, como se muestra en la siguiente ilustración.

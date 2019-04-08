@@ -127,22 +127,22 @@ Este es un resumen rápido de las API y otra documentación de utilidad que te a
 |-------|----------------|
 | [Windows.Storage Namespace](https://docs.microsoft.com/uwp/api/windows.storage) | Documentos de referencia de API. |
 | [Archivos, carpetas y bibliotecas](https://docs.microsoft.com/windows/uwp/files/) | Documentos conceptuales. |
-| [Crear, escribir y leer un archivo](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Cubre la creación, lectura y escritura de texto, datos binarios y secuencias. |
+| [Crear, escribir y leer archivos](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Cubre la creación, lectura y escritura de texto, datos binarios y secuencias. |
 | [Introducción introducción almacenar datos de la aplicación localmente](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Además de cubrir los procedimientos recomendados para guardar los datos locales, aborda el propósito de la carpeta LocalSettings y LocalCache. |
 | [Introducción a los datos de aplicación móvil](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Una serie de dos partes sobre cómo usar los datos de aplicaciones de roaming. |
 | [Directrices para los datos de aplicaciones móviles](https://msdn.microsoft.com/library/windows/apps/hh465094) | Sigue estas directrices de datos de roaming cuando diseñes tu aplicación. |
 | [Almacenar y recuperar la configuración y otros datos de aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Proporciona una visión general de varios almacenes de datos de aplicación, como las carpetas locales, de roaming y temporales. Consulta la sección [Datos de roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) para obtener directrices e información adicional acerca de la escritura de datos que se transfieren entre dispositivos. |
-| [Permisos de acceso de archivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Información sobre las ubicaciones del sistema de archivo a las que puede acceder tu aplicación. |
+| [Permisos de acceso a archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Información sobre las ubicaciones del sistema de archivo a las que puede acceder tu aplicación. |
 | [Abrir archivos y carpetas con un selector](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | Muestra cómo acceder a archivos y carpetas, permite al usuario decidir a través de una interfaz de usuario de selector. |
 | [Windows.Storage.Streams](https://docs.microsoft.com/uwp/api/windows.storage.streams) | Tipos usados para leer y escribir secuencias. |
-| [Archivos y carpetas en las bibliotecas de música, imágenes y vídeos](https://docs.microsoft.com/windows/uwp/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries) | Aborda cómo quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados. |
+| [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](https://docs.microsoft.com/windows/uwp/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries) | Aborda cómo quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados. |
 
 ## <a name="useful-code-samples"></a>Muestras de código útiles
 
 | Ejemplo de código | Descripción |
 |-----------------|---------------|
 | [Ejemplo de datos de aplicación](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | Muestra cómo almacenar y recuperar datos que son específicos de cada usuario utilizando las API de los datos de la aplicación. |
-| [Ejemplo de acceso de archivo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Muestra cómo crear, leer, escribir, copiar y eliminar un archivo. |
-| [Ejemplo del selector de archivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Muestra cómo acceder a archivos y carpetas, permitiéndole al usuario elegirlos con la interfaz de usuario y cómo guardar un archivo para que el usuario pueda especificar el nombre, el tipo de archivo y la ubicación de un archivo para guardar. |
+| [Ejemplo de acceso a archivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Muestra cómo crear, leer, escribir, copiar y eliminar un archivo. |
+| [Ejemplo de selector de archivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Muestra cómo acceder a archivos y carpetas, permitiéndole al usuario elegirlos con la interfaz de usuario y cómo guardar un archivo para que el usuario pueda especificar el nombre, el tipo de archivo y la ubicación de un archivo para guardar. |
 | [Ejemplo de JSON](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Muestra cómo codificar y descodificar objetos de notación de objetos JavaScript (JSON), matrices, cadenas, números y booleanos mediante el [Espacio de nombres Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
 | [Ejemplos de código adicionales](https://developer.microsoft.com//windows/samples) | Elige **Archivos, carpeta y bibliotecas** en la lista desplegable de categorías. |

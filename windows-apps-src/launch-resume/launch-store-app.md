@@ -25,7 +25,7 @@ En este ejemplo se muestra cómo abrir Microsoft Store a la página Juegos:
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: Referencia de esquema URI
+## <a name="ms-windows-store-uri-scheme-reference"></a>MS-windows-store: Referencia de esquema URI
 
 <table>
 <tr><th>Descripción</th><th></th><th>Esquema de URI</th></tr>

@@ -8,7 +8,7 @@ keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594990"
@@ -29,7 +29,7 @@ En este momento, Microsoft Store Services SDK es compatible con los siguientes e
 |  Escenario  |  Descripción   |
 |------------|----------------|
 |  [Ejecutar experimentos en la aplicación para UWP con un pruebas A/b](run-app-experiments-with-a-b-testing.md)    |  Ejecuta pruebas A/B en la aplicación para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el centro de partners, utilice el [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) clase para obtener las variaciones para el experimento en la aplicación, use estos datos para modificar el comportamiento de la característica que se está probando y, a continuación, use el [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) método envíe eventos de vista y los eventos de conversión al centro de partners. Por último, use el centro de partners para ver los resultados y administrar el experimento.  |
-|  [Iniciar el centro de comentarios desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administrar estos comentarios en el [informes de comentarios](../publish/feedback-report.md) en el centro de partners. |
+|  [Iniciar el centro de comentarios desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra estas opiniones en el [Informe de comentarios](../publish/feedback-report.md) del Centro de partners. |
 |  [Configurar la aplicación UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Use la [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) clase en la aplicación UWP para registrar la aplicación para recibir notificaciones de inserción de destino que se envían a sus clientes mediante el centro de partners.  |
 |   [Registrar eventos personalizados en su aplicación para UWP para el informe de uso en el centro de partners](log-custom-events-for-dev-center.md)   |  Use la [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) clase en su aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revise las apariciones totales para los eventos personalizados en el **eventos personalizados** sección de la [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el centro de partners.  |
 
@@ -141,5 +141,5 @@ Si publicamos una nueva versión del SDK que incorpore nuevas API o característ
 * [Referencia de la API de Microsoft Store Services SDK](https://docs.microsoft.com/uwp/api/overview/engagement)
 * [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 * [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md)
-* [Configurar la aplicación para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)
-* [Registrar eventos personalizados para el centro de partners](log-custom-events-for-dev-center.md)
+* [Configurar la aplicación para notificaciones de inserción dirigidas](configure-your-app-to-receive-dev-center-notifications.md)
+* [Registrar eventos personalizados para el Centro de partners](log-custom-events-for-dev-center.md)

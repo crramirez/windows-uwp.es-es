@@ -169,7 +169,7 @@ Puedes lograr que la animación ejecute varias iteraciones. Por ejemplo, un valo
 
 Para más información sobre los valores [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) y la sintaxis XAML, consulta [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411).
 
-### <a name="fillbehaviorstop"></a>**FillBehavior="Stop"**
+### <a name="fillbehaviorstop"></a>**FillBehavior = "Stop"**
 
 De manera predeterminada, cuando una animación finaliza, la animación deja el valor de la propiedad como el valor final **To** o el valor modificado **By**, incluso después de que se supere la duración. Pero, si estableces el valor de la propiedad [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) en [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306), el valor del valor animado se revierte al valor que estaba antes de que se aplique la animación o, más precisamente, al valor actual eficaz determinado por el sistema de propiedades de dependencia (para obtener más información sobre esta distinción, consulta [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583)).
 

@@ -29,7 +29,7 @@ Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventaj
 -   [Cree su primera aplicación para UWP mediante JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 
 **Tenga en cuenta**  para aplicaciones que usan gráficos 3D, los estándares de OpenGL y OpenGL ES no están disponibles de forma nativa para aplicaciones UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
--   [Angle](https://code.google.com/p/angleproject/)
+-   [ángulo](https://code.google.com/p/angleproject/)
 -   [Cree su primera aplicación UWP con DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Ejemplos de aplicaciones para UWP que usan DirectX](https://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [¿Dónde está el SDK de DirectX?](https://msdn.microsoft.com/library/windows/desktop/ee663275)

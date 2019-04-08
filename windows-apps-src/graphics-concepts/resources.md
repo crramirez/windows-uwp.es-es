@@ -17,7 +17,7 @@ ms.locfileid: "57631480"
 # <a name="resources"></a>Recursos
 
 
-Un recurso es una área en la memoria a la que puede obtener acceso la canalización de Direct3D. Para que la canalización pueda obtener acceso a la memoria de forma eficiente, los datos que se proporcionan a la canalización (por ejemplo, geometría de entrada, recursos del sombreador y texturas) deben almacenarse en un recurso. Hay dos tipos de recursos de los que derivan todos los recursos de Direct3D: un búfer o una textura. Se pueden activar hasta 128 recursos para cada fase de la canalización.
+Un recurso es una área en la memoria a la que puede obtener acceso la canalización de Direct3D. Para que la canalización pueda acceder a la memoria de forma eficiente, los datos que se proporcionan a la canalización (por ejemplo, geometría de entrada, recursos del sombreador y texturas) deben almacenarse en un recurso. Hay dos tipos de recursos de los que derivan todos los recursos de Direct3D: un búfer o una textura. Se pueden activar hasta 128 recursos para cada fase de la canalización.
 
 Por lo general, cada aplicación creará muchos recursos. Algunos ejemplos de recursos son: búferes de vértices, búfer de índices, búfer de constantes, texturas y recursos de sombreador. Existen varias opciones que determinan cómo se pueden utilizar los recursos. Puedes crear recursos fuertemente tipados o sin tipos; puedes controlar si los recursos tienen acceso de lectura y escritura; y puedes hacer que los recursos solo sean accesibles para la CPU, la GPU o ambas. Naturalmente, habrá compensación entre velocidad y funcionalidad: cuanta más funcionalidad permitas que tenga un recurso, menos rendimiento podrás esperar.
 

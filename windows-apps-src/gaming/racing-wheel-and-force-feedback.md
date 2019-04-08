@@ -66,18 +66,18 @@ Además, algunos volantes pueden asignar algún [conjunto opcional](ui-navigatio
 
 | Comando de navegación | Entrada del volante    |
 | ------------------:| --------------------- |
-|            Re Pág | _varies_              |
-|          Av Pág | _varies_              |
-|          Página a la izquierda | _varies_              |
-|         Página a la derecha | _varies_              |
-|          Desplazar hacia arriba | _varies_              |
-|        Desplazar hacia abajo | _varies_              |
-|        Desplazar a la izquierda | _varies_              |
-|       Desplazar a la derecha | _varies_              |
+|            Re Pág | _Varía_              |
+|          Av Pág | _Varía_              |
+|          Página a la izquierda | _Varía_              |
+|         Página a la derecha | _Varía_              |
+|          Desplazar hacia arriba | _Varía_              |
+|        Desplazar hacia abajo | _Varía_              |
+|        Desplazar a la izquierda | _Varía_              |
+|       Desplazar a la derecha | _Varía_              |
 |          Contexto 1 | Botón X (_habitualmente_) |
 |          Contexto 2 | Botón Y (_habitualmente_) |
-|          Contexto 3 | _varies_              |
-|          Contexto 4 | _varies_              |
+|          Contexto 3 | _Varía_              |
+|          Contexto 4 | _Varía_              |
 
 ## <a name="detect-and-track-racing-wheels"></a>Detectar y realizar un seguimiento de los volantes
 

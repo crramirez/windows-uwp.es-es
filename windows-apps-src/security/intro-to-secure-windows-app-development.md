@@ -4,7 +4,7 @@ description: Este artículo introductorio ayuda a los arquitectos de aplicacione
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, seguridad
+keywords: windows 10, uwp, security
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
@@ -463,22 +463,22 @@ Cuando los datos llegan al dispositivo, el modelo de aplicaciones de Windows ofr
 
 -   [Autenticación e identidad de usuario](authentication-and-user-identity.md)
 -   [Windows Hello](microsoft-passport.md)
--   [Caja de seguridad](credential-locker.md)
--   [Agente de autenticación Web](web-authentication-broker.md)
+-   [Caja de seguridad de credenciales](credential-locker.md)
+-   [Agente de autenticación web](web-authentication-broker.md)
 -   [Biométricas de huellas digitales](fingerprint-biometrics.md)
 -   [Tarjetas inteligentes](smart-cards.md)
 -   [Certificados compartidos](share-certificates.md)
 -   [Criptografía](cryptography.md)
 -   [Certificados](certificates.md)
 -   [Claves criptográficas](cryptographic-keys.md)
--   [protección de datos](data-protection.md)
--   [Equipos Mac, algoritmos hash y firmas](macs-hashes-and-signatures.md)
--   [Restricciones de exportación en la criptografía](export-restrictions-on-cryptography.md)
+-   [Protección de datos](data-protection.md)
+-   [MAC, hash y firmas](macs-hashes-and-signatures.md)
+-   [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md)
 -   [Tareas comunes de criptografía](common-cryptography-tasks.md)
 
 ### <a name="62-code-samples"></a>6.2 Muestras de código
 
--   [Caja de seguridad](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
+-   [Caja de seguridad de credenciales](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
 -   [Selector de credenciales](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
 -   [Bloqueo del dispositivo con inicio de sesión de Azure](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
 -   [Protección de datos empresariales](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)

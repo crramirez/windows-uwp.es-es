@@ -49,7 +49,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | applicationId | string | El [Store ID](in-app-purchases-and-trials.md#store-ids) de la aplicación para el que desea recuperar datos de insights. Si no especifica este parámetro, el cuerpo de respuesta contendrá datos de información para todas las aplicaciones registradas en su cuenta.  |  No  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es la fecha actual. |  No  |
-| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *Filtro = tipo de datos eq 'adquisición'*. <p/><p/>Puede especificar los campos de filtro siguientes:<p/><ul><li><strong>acquisition</strong></li><li><strong>health</strong></li><li><strong>usage</strong></li></ul> | No   |
+| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *Filtro = tipo de datos eq 'adquisición'*. <p/><p/>Puede especificar los campos de filtro siguientes:<p/><ul><li><strong>Adquisición</strong></li><li><strong>Estado</strong></li><li><strong>Uso de</strong></li></ul> | No   |
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -78,7 +78,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | El identificador de Store de la aplicación para el que va a recuperar datos de insights.     |
 | insightDate                | string | La fecha en la que hemos identificado que el cambio en una métrica específica. Esta fecha representa el final de la semana en que se detectó un aumento significativo o disminuir en una métrica en comparación con la semana anterior a éste. |
-| dataType     | string | Una de las siguientes cadenas que especifica el área de análisis general que describe esta información:<p/><ul><li><strong>acquisition</strong></li><li><strong>health</strong></li><li><strong>usage</strong></li></ul>   |
+| Tipo de datos     | string | Una de las siguientes cadenas que especifica el área de análisis general que describe esta información:<p/><ul><li><strong>Adquisición</strong></li><li><strong>Estado</strong></li><li><strong>Uso de</strong></li></ul>   |
 | insightDetail          | array | Uno o varios [InsightDetail valores](#insightdetail-values) que representan los detalles para obtener información actual.    |
 
 
@@ -86,9 +86,9 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Uno de los siguientes valores que indica la métrica que describe la información actual o la dimensión actual, según la **dataType** valor.<ul><li>Para **mantenimiento**, este valor es siempre **HitCount**.</li><li>Para **adquisición**, este valor es siempre **cantidad de adquisición**.</li><li>Para **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | string | Uno de los siguientes valores que indica la métrica que describe la información actual o la dimensión actual, según la **dataType** valor.<ul><li>Para **mantenimiento**, este valor es siempre **HitCount**.</li><li>Para **adquisición**, este valor es siempre **cantidad de adquisición**.</li><li>Para **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>dailyActiveUsers</strong></li><li><strong>engagementDurationMinutes</strong></li><li><strong>dailyActiveDevices</strong></li><li><strong>dailyNewUsers</strong></li><li><strong>dailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | array |  Uno o más objetos que describen una sola métrica para la perspectiva.   |
-| PercentChange            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
+| CambioPorcentual            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
 | DimensionName           | string |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **Grupo de edad** y **sexo**.   |
 | DimensionValue              | string | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, **DimensionValue** podría ser **bloqueo** o **bloqueo** .   |
 | FactValue     | string | El valor absoluto de la métrica en la fecha en que se ha detectado la recomendación.  |

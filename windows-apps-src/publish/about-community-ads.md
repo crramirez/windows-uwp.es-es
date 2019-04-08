@@ -42,5 +42,5 @@ No tienes que volver a publicar la aplicación después de realizar las seleccio
 
 ### <a name="related-topics"></a>Temas relacionados
 
-* [Anuncios en la aplicación](in-app-ads.md)
+* [Anuncios en aplicaciones](in-app-ads.md)
 * [Crear una campaña de publicidad para la aplicación](create-an-ad-campaign-for-your-app.md)

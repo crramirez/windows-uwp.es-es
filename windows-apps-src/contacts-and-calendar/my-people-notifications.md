@@ -51,15 +51,15 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 
 + **src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local.
-+ **spritesheet-src**
++ **spritesheet src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesaria para animaciones de spritesheet.
-+ **spritesheet-height**
++ **spritesheet alto**
     + Altura del fotograma (en píxeles). Solo es necesaria para animaciones de spritesheet.
-+ **spritesheet-fps**
++ **spritesheet fps**
     + Fotogramas por segundo (FPS). Solo es necesaria para animaciones de spritesheet. Solo se admiten los valores 1-120.
-+ **spritesheet-startingFrame**
++ **spritesheet startingFrame**
     + Número de fotogramas para comenzar la animación. Solo se usa para animaciones de spritesheet y, de no facilitarse, su valor predeterminado es 0.
-+ **alt**
++ **ALT**
     + Cadena de texto que se usa para la narración del lector de pantalla.
 
 > [!NOTE]

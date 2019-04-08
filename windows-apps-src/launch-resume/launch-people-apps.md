@@ -58,7 +58,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </div>
 <div> 
 </div></td>
-<td align="left">ms-people:viewcontact?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
+<td align="left">¿MS-viewcontact: las personas? ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;correo electrónico =&lt;correo electrónico &gt; &amp;ContactName =&lt;nombre&gt;&amp;contacto =&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Se inicia en una página de guardado de contactos en la aplicación Contactos para guardar el contacto determinado con la dirección de correo electrónico o el número de teléfono proporcionados.
@@ -219,7 +219,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 
 </tr>
 <tr class="even">
-<td align="left"><b>FirstName</b></td>
+<td align="left"><b>firstName</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Nombre del contacto.</p></td>
 </tr>
@@ -255,7 +255,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 
 </tr>
 <tr class="even">
-<td align="left"><b>HomePhone</b></td>
+<td align="left"><b>homePhone</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Teléfono particular del contacto.</p></td>
 </tr>
@@ -267,13 +267,13 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </tr>
 
 <tr class="even">
-<td align="left"><b>LastName</b></td>
+<td align="left"><b>Apellidos</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Apellidos del contacto.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>MiddleName</b></td>
+<td align="left"><b>middleName</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Segundo nombre del contacto.</p></td>
 </tr>
@@ -309,13 +309,13 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Suffix</b></td>
+<td align="left"><b>Sufijo</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Sufijo del contacto.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>Title</b></td>
+<td align="left"><b>Título</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Título del contacto.</p></td>
 </tr>
@@ -357,13 +357,13 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </tr>
 
 <tr class="odd">
-<td align="left"><b>WorkEmail</b></td>
+<td align="left"><b>Correo electrónico profesional</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Correo electrónico del trabajo del contacto.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>WorkPhone</b></td>
+<td align="left"><b>Teléfono trabajo</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Número de teléfono del trabajo del contacto.</p></td>
 </tr>

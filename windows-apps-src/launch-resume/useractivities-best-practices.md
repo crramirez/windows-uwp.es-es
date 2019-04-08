@@ -102,6 +102,6 @@ En el ejemplo siguiente, los metadatos de contenido JSON, siguiendo los estánda
 * [Actividades del usuario (docs Roma del proyecto)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/)
 * [Visualizador de las tarjetas adaptables, ejemplos](https://adaptivecards.io/)
-* [Activación de identificador URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [Controlar la activación de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Interactuar con sus clientes en cualquier plataforma mediante Microsoft Graph, fuente de actividades y las tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

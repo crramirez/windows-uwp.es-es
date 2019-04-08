@@ -36,7 +36,7 @@ Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar s
 
     El panel está oculto hasta que se abre. Cuando se abre, el panel se superpone al área de contenido.
 
--   **Inline**
+-   **en línea**
 
     El panel siempre está visible y no se superpone al área de contenido. Las áreas del panel y el contenido dividen la superficie disponible de la pantalla.
 
@@ -63,7 +63,7 @@ Si quieres crear un menú de navegación con un botón de expandir/contraer y un
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SplitView">abrir la aplicación y ver SplitView en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>

@@ -234,4 +234,4 @@ En este escenario, te mostramos cómo usar las [API de indexación de recursos d
 * [Indexación de referencia (PRI) de recursos del paquete](https://msdn.microsoft.com/library/windows/desktop/mt845690)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Sistemas de compilación de la indización de las API (PRI) y personalizada de recursos del paquete](pri-apis-custom-build-systems.md)
+* [API de indexación de recursos de paquetes (PRI) y sistemas de compilación personalizados](pri-apis-custom-build-systems.md)

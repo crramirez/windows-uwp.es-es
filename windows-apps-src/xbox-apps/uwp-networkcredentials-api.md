@@ -16,7 +16,7 @@ Puedes agregar, quitar o actualizar las credenciales de red almacenadas en el ki
 
 ## <a name="get-existing-credentials"></a>Obtener las credenciales existentes
 
-**Request**
+**Solicitud**
 
 Puedes obtener una lista de los recursos compartidos almacenados junto con el nombre de usuario del usuario que tiene credenciales para ese recurso compartido de red.
 
@@ -55,7 +55,7 @@ Código de estado HTTP      | Descripción
 
 ## <a name="add-or-update-stored-credentials-for-a-user"></a>Agregar o actualizar las credenciales almacenadas para un usuario
 
-**Request**
+**Solicitud**
 
 Método      | URI de la solicitud
 :------     | :-----
@@ -97,7 +97,7 @@ Código de estado HTTP      | Descripción
 
 ## <a name="remove-stored-credentials-for-a-share"></a>Quita las credenciales almacenadas para un recurso compartido.
 
-**Request**
+**Solicitud**
 
 Método      | URI de la solicitud
 :------     | :-----

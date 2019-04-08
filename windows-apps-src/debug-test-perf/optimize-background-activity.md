@@ -63,6 +63,6 @@ Asegúrate de probar tu aplicación en dispositivos reales para los escenarios d
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y registrar una tarea en segundo plano fuera de proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
+* [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [Planear el rendimiento](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
 

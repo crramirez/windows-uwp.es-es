@@ -1,6 +1,6 @@
 ---
 title: Crear componentes de Windows Runtime en C++
-description: En este tema se muestra cómo usar C++ / c++ / CX para crear un componente en tiempo de ejecución de Windows, que es un componente que se pueda llamar desde una aplicación Universal Windows compilada mediante C#, Visual Basic, C++ o Javascript.
+description: En este tema se muestra cómo usar C++/CX para crear un componente de Windows Runtime, que es un componente que se puede llamar desde una aplicación universal de Windows compilada mediante C#, Visual Basic, C++ o Javascript.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.date: 05/14/2018
 ms.topic: article
@@ -17,7 +17,7 @@ ms.locfileid: "57600870"
 > [!NOTE]
 > Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Para obtener información sobre cómo crear un componente de tiempo de ejecución de Windows con C++ / c++ / WinRT, consulte [crear eventos en C / c++ / WinRT](../cpp-and-winrt-apis/author-events.md).
 
-En este tema se muestra cómo usar C++ / c++ / CX para crear un componente en tiempo de ejecución de Windows, que es un componente que se pueda llamar desde una aplicación Universal Windows compilada mediante C#, Visual Basic, C++ o Javascript.
+En este tema se muestra cómo usar C++/CX para crear un componente de Windows Runtime, que es un componente que se puede llamar desde una aplicación universal de Windows compilada mediante C#, Visual Basic, C++ o Javascript.
 
 Hay varias razones para la creación de un componente de Windows en tiempo de ejecución.
 - Para obtener la ventaja de rendimiento de C++ en operaciones complejas o de computación intensivas.

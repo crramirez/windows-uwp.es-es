@@ -121,7 +121,7 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
 Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox correctamente.
 
 ## <a name="see-also"></a>Consulte también
-- [Activación de un modo de programador Xbox](devkit-activation.md)  
+- [Activación del modo de desarrollador de Xbox One](devkit-activation.md)  
 - [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads)  
 - [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md) 

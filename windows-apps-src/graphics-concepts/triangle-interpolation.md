@@ -35,7 +35,7 @@ El componente alfa de un color se trata como un valor interpolado diferente porq
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Sistemas de coordenadas y geometry](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
 
  
 

@@ -74,9 +74,9 @@ void App::Initialize(
 La escena de juego debe representarse cuando se inicia el juego. Las instrucciones para la representación empiezan en el método [__GameMain::Run__](#gamemainrun-method), tal y como se muestra a continuación.
 
 El flujo simple es:
-1. __Update__
-2. __Render__
-3. __Present__
+1. __Actualización de__
+2. __Representación__
+3. __Presente__
 
 ### <a name="gamemainrun-method"></a>Método GameMain::Run
 
@@ -491,7 +491,7 @@ La canalización de representación es el proceso en el que la información de l
 
 Para ayudarte a crear esta canalización, debes estar familiarizado con lo siguiente:
 * [HLSL](#HLSL). Se recomienda el uso de HLSL Shader Model 5.1 y superior para juegos DirectX de UWP.
-* [Shaders](#Shaders)
+* [Sombreadores](#Shaders)
 * [Los sombreadores de vértices y los sombreadores de píxeles](#vertext-shaders-pixel-shaders)
 * [Etapas del sombreador](#shader-stages)
 * [Varios formatos de archivo de sombreador](#various-shader-file-formats)

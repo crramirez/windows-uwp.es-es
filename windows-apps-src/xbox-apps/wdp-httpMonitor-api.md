@@ -6,7 +6,7 @@ ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645680"
@@ -16,7 +16,7 @@ Puede acceder al tráfico de HTTP en tiempo real para la aplicación centrada me
 
 ## <a name="get-if-the-http-monitor-is-enabled"></a>Obtener si el supervisor de HTTP está habilitado
 
-**Request**
+**Solicitud**
 
 Puedes obtener si se ha habilitado el supervisor de HTTP en Dev Home.
 
@@ -52,7 +52,7 @@ Código de estado HTTP      | Descripción
 5XX | Códigos de error
 
 ## <a name="get-http-traffic-from-the-focused-app"></a>Obtener el tráfico de HTTP desde la aplicación centrada
-**Request**
+**Solicitud**
 
 Obtén en tiempo real el tráfico de HTTP desde la aplicación centrada en Xbox, siempre que no sea una aplicación de sistema, si se ha habilitado el supervisor de HTTP desde Dev Home.
 

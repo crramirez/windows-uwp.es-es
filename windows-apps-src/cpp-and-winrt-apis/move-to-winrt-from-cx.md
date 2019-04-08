@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, miga
 ms.localizationpriority: medium
 ms.openlocfilehash: fe988bffbf024308fb5d43da7ed538e5330b58de
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57635080"
@@ -281,12 +281,12 @@ C++/CX proporciona varios tipos de datos en el espacio de nombres de **Plataform
 
 | C++/CX | C++/WinRT |
 | ---- | ---- |
-| **Platform::Agile\^** | [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
+| **Platform:: Agile\^** | [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
 | **Platform:: Array\^** | Consulte [puerto **Platform:: Array\^**](#port-platformarray) |
-| **Platform::Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
-| **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
-| **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
-| **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
+| **Platform:: Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
+| **Platform:: InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
+| **Platform:: Object\^** | **winrt::Windows::Foundation::IInspectable** |
+| **Platform:: String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
 ### <a name="port-platformagile-to-winrtagileref"></a>Puerto **Platform:: Agile\^**  a **winrt::agile_ref**
 El **Platform:: Agile\^**  tipo en C / c++ / CX representa una clase en tiempo de ejecución de Windows que se puede acceder desde cualquier subproceso. C++ / c++ / WinRT equivalente es [ **winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref).
@@ -415,18 +415,18 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 ```
 
 ## <a name="important-apis"></a>API importantes
-* [winrt::delegate struct template](/uwp/cpp-ref-for-winrt/delegate)
-* [winrt::hresult_error struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [plantilla de estructura winrt::Delegate](/uwp/cpp-ref-for-winrt/delegate)
+* [struct winrt::hresult_error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 * [struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [espacio de nombres de winrt](/uwp/cpp-ref-for-winrt/winrt)
+* [Espacio de nombres de winrt](/uwp/cpp-ref-for-winrt/winrt)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
 * [Crear eventos en C / c++ / WinRT](author-events.md)
 * [Simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](concurrency.md)
-* [Consumo de API con C / c++ / WinRT](consume-apis.md)
+* [Consumir API con C++/WinRT](consume-apis.md)
 * [Controlar eventos mediante el uso de delegados en C / c++ / WinRT](handle-events.md)
-* [Interoperabilidad entre C++ / c++ / WinRT y C / c++ / CX](interop-winrt-cx.md)
+* [Interoperabilidad entre C++/WinRT y C++/CX](interop-winrt-cx.md)
 * [Referencia de Microsoft 3.0 de lenguaje de definición de interfaz](/uwp/midl-3)
-* [Mover a C++ / c++ / WinRT de WRL](move-to-winrt-from-wrl.md)
+* [Migrar a C++/WinRT desde WRL](move-to-winrt-from-wrl.md)
 * [Cadena de control en C++ / c++ / WinRT](strings.md)

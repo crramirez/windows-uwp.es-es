@@ -37,7 +37,7 @@ Interfaz de usuario de la de la aplicación se define en la carpeta Views. Dado 
 > [!NOTE]
 > Es posible que tenga en cuenta que esta aplicación no tiene una MainPage. Eso es porque se especifica en **App.xaml.cs** que debe iniciar la aplicación **CustomerListPage** cuando inicie.
 
-### <a name="viewmodels"></a>ViewModels
+### <a name="viewmodels"></a>Modelos de vista
 
 Aunque esta aplicación sólo tiene una vista, tiene dos modelos de vista. ¿Por qué es esto?
 

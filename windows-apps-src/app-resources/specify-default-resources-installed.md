@@ -102,6 +102,6 @@ Guarda, cierra y recompila el proyecto.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](tailor-resources-lang-scale-contrast.md)
 * [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

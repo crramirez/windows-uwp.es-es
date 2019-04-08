@@ -34,7 +34,7 @@ La siguiente imagen muestra una barra de progreso determinada con todas sus prop
 
 | Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Title** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
+| **Título** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
 | **Valor** | doble o [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) o [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | falso | Obtiene o establece el valor de la barra de progreso. Admite el enlace de datos. El valor predeterminado es 0. Puede ser uno doble entre 0,0 y 1,0, `AdaptiveProgressBarValue.Indeterminate`, o `new BindableProgressBarValue("myProgressValue")`. |
 | **ValueStringOverride** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena opcional que se mostrará en lugar de la cadena de porcentaje predeterminada. Si no se proporciona, se mostrará algo similar a "70 %". |
 | **Estado** | cadena o [BindableString](toast-schema.md#bindablestring) | true | Obtiene o establece una cadena de estado (obligatoria), que se muestra debajo de la barra de progreso a la izquierda. Esta cadena debe reflejar el estado de la operación, como "Descargando…" o "Instalando..." |

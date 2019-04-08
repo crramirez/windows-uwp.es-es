@@ -37,7 +37,7 @@ Lₚ = Lₚ \* vMatrix
 
 La dirección a la luz en el espacio de cámara para una luz direccional se calcula multiplicando la dirección del origen de luz por la matriz de vista, normalizando y haciendo negativo el resultado.
 
-L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
+L<sub>dir</sub> = - norm (L<sub>dir</sub> \* wvMatrix)
 
 Para una luz puntual y un foco de luz, la dirección a la luz se calcula como sigue:
 

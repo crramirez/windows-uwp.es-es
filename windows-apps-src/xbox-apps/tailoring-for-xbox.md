@@ -58,10 +58,10 @@ Si quieres hacerte una idea de cómo aplicar estas prácticas a una aplicación 
 
 Las siguientes conversaciones que encontrarás en [Channel 9](https://channel9.msdn.com/) te serán de gran ayuda para crear aplicaciones sorprendentes en Xbox:
 
-- [Creación de aplicaciones de plataforma (UWP) de Windows Universal excelente para Xbox](https://channel9.msdn.com/Events/Build/2016/B883)
-- [Adapte su aplicación para Xbox One y TV](https://channel9.msdn.com/Events/Build/2016/T651-R1)
-- [Desarrollo de UWP 1: Creación de una interfaz de usuario adaptable](https://channel9.msdn.com/Events/Build/2016/L724-R1)
-- [Las aplicaciones de Web más allá del explorador: Cumple multiplataforma entre dispositivos](https://channel9.msdn.com/Events/Build/2016/B888)
+- [Building Great Universal Windows Platform (UWP) Apps for Xbox](https://channel9.msdn.com/Events/Build/2016/B883) (Crear excelentes aplicaciones para la Plataforma universal de Windows para Xbox)
+- [Adapt Your App for Xbox One and TV](https://channel9.msdn.com/Events/Build/2016/T651-R1) (Adapta tu aplicación para Xbox One y el televisor)
+- [UWP Development 1: Building an Adaptive UI](https://channel9.msdn.com/Events/Build/2016/L724-R1) (Desarrollo para UWP 1: Creación de una interfaz de usuario adaptable)
+- [Web Apps Beyond the Browser: Cross-Platform Meets Cross Device](https://channel9.msdn.com/Events/Build/2016/B888) (Aplicaciones web más allá del explorador: cómo se integra la multiplataforma en todos los dispositivos)
 
 ## <a name="app-dev-on-xbox"></a>Desarrollo de aplicaciones en Xbox
 
@@ -74,4 +74,4 @@ El **desarrollo de aplicaciones en Xbox** evento es un excelente punto de partid
 
 - [UWP en Xbox One](index.md)
 - [Diseño para Xbox y televisión](../design/devices/designing-for-tv.md)
-- [Aplicaciones Web progresiva para Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)
+- [Progressive Web Apps for Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations) (Aplicaciones web progresivas para Xbox One)

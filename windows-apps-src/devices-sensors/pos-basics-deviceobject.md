@@ -47,4 +47,4 @@ Puedes detectar cuándo se cierra un objeto por cualquier motivo con un controla
 > Consulta los temas siguientes para obtener más información acerca del ciclo de vida de la aplicación para la Plataforma universal de Windows (UWP) de Windows 10:
 > - [Ciclo de vida de aplicación de Windows 10 Universal Windows Platform (UWP)](../launch-resume/app-lifecycle.md)
 > - [Controlar la suspensión de la aplicación](../launch-resume/suspend-an-app.md)
-> - [Identificador de reanudar la aplicación](../launch-resume/resume-an-app.md)
+> - [Controlar la reanudación de aplicaciones](../launch-resume/resume-an-app.md)

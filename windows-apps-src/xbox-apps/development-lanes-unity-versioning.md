@@ -100,5 +100,5 @@ Para agregar dependencias a archivos DLL y WINMD, colócalos en la carpeta **Ass
 ***ScrapyardPhoenix (Universal Windows)*** es el proyecto al que agregarías una referencia; por ejemplo, el SDK de Xbox Live.
 
 ## <a name="see-also"></a>Consulte también
-- [Volver a poner existentes juegos para Xbox](development-lanes-landing.md)
+- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)

@@ -109,7 +109,7 @@ Si la interfaz de usuario de la lista con elementos anidados admite acciones com
 
 ![Partes de la interfaz de usuario anidada](images/nested-ui-navigation.png)
 
-**Gamepad**
+**Controlador para juegos**
 
 Cuando la entrada proviene de un controlador para juegos, proporciona esta experiencia del usuario:
 
@@ -167,7 +167,7 @@ Para conseguir esta interfaz de usuario, establece las siguientes propiedades en
 
 Cuando los elementos de lista no realizan ninguna acción, se recomienda seguir estas instrucciones para controlar la navegación con un controlador para juegos o un teclado.
 
-**Gamepad**
+**Controlador para juegos**
 
 Cuando la entrada proviene de un controlador para juegos, proporciona esta experiencia del usuario:
 

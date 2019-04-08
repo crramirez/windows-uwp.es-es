@@ -100,12 +100,12 @@ La transmisión en streaming es una forma de optimizar la forma en que se entreg
 
 ## <a name="see-also"></a>Consulta también
 
-[Crear y consumir un servicio de aplicaciones](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
+[Crear y usar un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [Introducción a los paquetes de activos](../packaging/asset-packages.md)  
 [Creación del paquete con el diseño de empaquetado](../packaging/packaging-layout.md)  
-[Creación de un conjunto relacionado y paquetes opcionales](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
+[Creación de paquetes opcionales y conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
 [Desarrollo con paquetes de activo y plegamiento de paquete](../packaging/package-folding.md)  
-[Instalación de Streaming de aplicación UWP](https://docs.microsoft.com/windows/uwp/packaging/streaming-install)  
+[Instalación en streaming de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/streaming-install)  
 [Paquetes de aplicación sin formato](../packaging/flat-bundles.md)  
-[Windows.ApplicationModel.AppService namespace](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)  
+[Espacio de nombres Windows.ApplicationModel.AppService](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)  
 [Espacio de nombres Windows.ApplicationModel.Extensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)  

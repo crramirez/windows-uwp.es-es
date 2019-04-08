@@ -14,7 +14,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57600900"
 ---
-# <a name="prepare-to-package-a-desktop-application"></a>Preparar empaquetar una aplicación de escritorio
+# <a name="prepare-to-package-a-desktop-application"></a>Preparación del empaquetado de una aplicación de escritorio
 
 En este artículo se enumeran los aspectos que debes tener en cuenta antes de empaquetar tu aplicación de escritorio. Puede que no tenga que hacer mucho para preparar la aplicación para el proceso de empaquetado, pero si cualquiera de los siguientes elementos se aplica a la aplicación, debe solucionarlo antes de empaquetar. Recuerda que Microsoft Store administra licencias y actualizaciones automáticas; por lo tanto, puedes quitar cualquier característica que relacione esas tareas del código base.
 

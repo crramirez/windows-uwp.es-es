@@ -1,5 +1,5 @@
 ---
-Description: Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato a devolver. Este tema describe con detalle ese proceso y proporciona ejemplos.
+Description: Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El sistema de administración de recursos analizará todos los candidatos y determinará el mejor candidato para devolver. Este tema describe con detalle ese proceso y proporciona ejemplos.
 title: Cómo compara y elige recursos el sistema de administración
 template: detail.hbs
 ms.date: 10/23/2017

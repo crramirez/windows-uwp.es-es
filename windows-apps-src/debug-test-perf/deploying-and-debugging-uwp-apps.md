@@ -242,5 +242,5 @@ Uno de los comandos más populares de WinDBG es `!analyze -v`, que se usa para r
 Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debugger Commands (Comandos del depurador)](https://msdn.microsoft.com/library/ff540507).
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Las pruebas y las herramientas de depuración para la administración de vigencia de procesos (PLM)](testing-debugging-plm.md)
+- [Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)](testing-debugging-plm.md)
 - [Depuración, pruebas y rendimiento](index.md)

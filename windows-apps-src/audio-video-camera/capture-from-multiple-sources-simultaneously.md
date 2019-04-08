@@ -69,7 +69,7 @@ Una vez completada la operación, se habrá creado un archivo de vídeo que cont
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Camera](camera.md)
+* [Cámara](camera.md)
 * [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Realiza un seguimiento, listas de reproducción y elementos multimedia](media-playback-with-mediasource.md)

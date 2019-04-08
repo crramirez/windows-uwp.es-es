@@ -29,7 +29,7 @@ Es importante comprobar si hay problemas de compatibilidad antes de que cambie l
 1. Ve a **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Calendars\Japanese\Eras**.
 2. Selecciona **Editar > Nuevo > Valor de cadena** y asígnale el nombre **2019 05 01**.
 3. Haz clic con el botón derecho en la clave y selecciona **Modificar**.
-4. ¿En el **datos del valor** , introduzca **?？\_？\_??????\_?** (puedes copiar y pegar desde aquí para que sea más fácil).
+4. ¿En el **datos del valor** , introduzca **?¿?\_?\_?????? \_?** (puedes copiar y pegar desde aquí para que sea más fácil).
 
 Consulta [Tratamiento de las eras del calendario japonés](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar) para obtener más información sobre el formato de estas claves del Registro.
 
@@ -69,7 +69,7 @@ Para comprobar que la aplicación funciona con la nueva era, debes adelantar el 
 
 ## <a name="test-your-application"></a>Probar la aplicación
 
-Ahora, prueba cómo la aplicación maneja la nueva era. Comprueba los lugares donde se muestra la fecha, como selectores de fecha y marcas de tiempo. ¿Asegúrese de que la era es correcta antes 1 de mayo de 2019 (Heisei, 平成) y después (?？).
+Ahora, prueba cómo la aplicación maneja la nueva era. Comprueba los lugares donde se muestra la fecha, como selectores de fecha y marcas de tiempo. ¿Asegúrese de que la era es correcta antes 1 de mayo de 2019 (Heisei, 平成) y después (?(?).
 
 ### <a name="gannen-"></a>*Gannen* (元年)
 
@@ -120,7 +120,7 @@ Se verán afectadas las API siguientes:
 
 ### <a name="win32"></a>Win32
 
-* [datetimeapi.h header](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
+* [encabezado datetimeapi.h](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
     * [Función GetDateFormatA](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata)
     * [Función GetDateFormatEx](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatex)
     * [Función GetDateFormatW](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatw)
@@ -132,7 +132,7 @@ Se verán afectadas las API siguientes:
     * [Función EnumDateFormatsW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsw)
     * [Función GetCalendarInfoA](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfoa)
     * [Función GetCalendarInfoEx](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfoex)
-    * [GetCalendarInfoW function](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfow)
+    * [Función GetCalendarInfoW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfow)
 
 ## <a name="see-also"></a>Consulte también
 

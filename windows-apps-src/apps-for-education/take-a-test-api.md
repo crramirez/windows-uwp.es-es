@@ -4,7 +4,7 @@ title: API de JavaScript "Hacer un examen".
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 ms.date: 08/08/2018
 ms.topic: article
-keywords: Windows 10, uwp, educación
+keywords: windows 10, uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
@@ -32,11 +32,11 @@ El espacio de nombres de seguridad le permite bloquear el dispositivo, compruebe
 
 | Método | Descripción   |
 |--------|---------------|
-|[lockDown](#lockDown) | Bloquea el dispositivo para pruebas. |
+|[bloqueo de seguridad](#lockDown) | Bloquea el dispositivo para pruebas. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | Determina si el contexto de bloqueo aún se aplica al dispositivo. |
 |[getDeviceInfo](#getDeviceInfo) | Obtén información acerca de la plataforma en el que se ejecuta la aplicación de prueba. |
 |[examineProcessList](#examineProcessList)|Obtiene la lista de procesos del usuario y del sistema en ejecución.|
-|[close](#close) | Cierra el explorador y se desbloquea el dispositivo. |
+|[Cerrar](#close) | Cierra el explorador y se desbloquea el dispositivo. |
 |[getPermissiveMode](#getPermissiveMode)|Comprueba si el modo permisivo está activado o desactivado.|
 |[setPermissiveMode](#setPermissiveMode)|Activa o desactiva el modo permisivo.|
 |[emptyClipBoard](#emptyClipBoard)|Borra el portapapeles del sistema.|
@@ -100,7 +100,7 @@ Obtén información acerca de la plataforma en el que se ejecuta la aplicación 
 
 **Parámetros**  
 * `callback` -La función que se va a llamar cuando se complete esta función. Debe tener la forma `Function(String infoObj)` donde `infoObj` es una cadena JSON que contiene varios campos. Se deben admitir los siguientes campos:
-    * `os` representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etc.)
+    * `os` representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etcetera.)
     * `name` representa el nombre de la versión del sistema operativo, si existe (por ejemplo: Sierra, Ubuntu).
     * `version` representa la versión del sistema operativo (por ejemplo: 10.1, 10 pro, etcetera.)
     * `brand` representa la personalización de marca de explorador segura (por ejemplo: OAKS, CA, SmarterApp, etcetera.)
@@ -221,7 +221,7 @@ Obtiene la hora en que se inició la aplicación de prueba.
 **Sintaxis**  
 `DateTime SecureBrowser.settings.getStartTime();`
 
-**Return**  
+**devolver**  
 Un objeto DateTime que indica la hora en que se inició la aplicación de prueba.
 
 **Requisitos**  

@@ -90,9 +90,9 @@ Una vez que envíes esta solicitud, la propiedad [Response](https://docs.microso
 
 |  Campo  |  Descripción  |
 |----------------------|---------------|
-|  *anonymous*                   |  Un valor booleano, donde **true** indica que la identidad del usuario o del dispositivo no estaba presente en la solicitud, y **false** indica que la identidad del usuario o del dispositivo estaba presente en la solicitud.  |
+|  *Anónimo*                   |  Un valor booleano, donde **true** indica que la identidad del usuario o del dispositivo no estaba presente en la solicitud, y **false** indica que la identidad del usuario o del dispositivo estaba presente en la solicitud.  |
 |  *name*                   |  Una cadena que contiene el nombre del grupo piloto de clasificación más alta a la que pertenecen el dispositivo o el usuario.  |
-|  *settings*                   |  Un diccionario de pares de clave/valor que contiene el nombre y el valor de las variables remotas que el desarrollador ha configurado para el grupo piloto.  |
+|  *Configuración*                   |  Un diccionario de pares de clave/valor que contiene el nombre y el valor de las variables remotas que el desarrollador ha configurado para el grupo piloto.  |
 
 En el siguiente ejemplo se muestra un valor devuelto para esta solicitud.
 

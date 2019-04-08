@@ -67,7 +67,7 @@ VES considera que un control útil si implementa uno de los siguientes patrones 
 
 - **InvokePattern** (p ej. Botón)-representa controles que inician o realizan una única acción inequívoca y no mantienen el estado cuando se activan.
 
-- **TogglePattern** (eg. Casilla de verificación): representa un control que puede recorrer en iteración un conjunto de Estados y mantener un estado una vez establecido.
+- **TogglePattern** (p ej. Casilla de verificación): representa un control que puede recorrer en iteración un conjunto de Estados y mantener un estado una vez establecido.
 
 - **SelectionItemPattern** (p ej. Cuadro combinado) - representa un control que actúa como contenedor para una colección de elementos secundarios seleccionables.
 

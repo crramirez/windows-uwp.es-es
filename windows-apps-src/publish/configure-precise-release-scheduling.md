@@ -46,7 +46,7 @@ En la lista desplegable de **Lanzamiento**, puedes establecer cuando quieres que
 
 Estas son las opciones que se puede configurar para la programación del **lanzamiento** de un producto:
 - **Tan pronto como sea posible**: El producto se lanzará en cuanto se certified y se publica. Esta es la opción predeterminada.
-- **at**: El producto se publicará en la fecha y hora que seleccione. Tienes dos opciones adicionales:
+- **en**: El producto se publicará en la fecha y hora que seleccione. Tienes dos opciones adicionales:
    - **UTC**: La hora que seleccione será el tiempo de hora Universal coordinada (UTC), para que las versiones de la aplicación al mismo tiempo en todas partes.
    - **Local**: La hora que seleccione se usará en cada zona horaria asociada con un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, se usará la zona horario del Este).
 - **no se ha programado**: La aplicación no estará disponible en el Store. Si eliges esta opción, puede realizar la aplicación disponible en la Store creando más tarde un nuevo envío y eligiendo una de las otras opciones.

@@ -33,7 +33,7 @@ Para obtener más información sobre el proyecto Rome en general, incluidos los 
 |-------|-------------|
 | [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md) | Aprende a iniciar una aplicación en un dispositivo remoto. Este tema aborda el caso de uso más simple y la instalación preliminar.  |
 | [Detectar dispositivos remotos](discover-remote-devices.md)  | Obtén información sobre cómo detectar dispositivos a los que te puedas conectar. |
-| [Comunicarse con un servicio de RemoteApp](communicate-with-a-remote-app-service.md) | Obtén información sobre cómo interactuar con una aplicación en un dispositivo remoto. |
-| [Conectar dispositivos a través de las sesiones remotas](remote-sessions.md) | Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota. |
-| [Continuar con la actividad del usuario, incluso a través de dispositivos](useractivities.md)| Ayudar a los usuarios reanudar lo que estabas haciendo en su aplicación, incluso en varios dispositivos.|
+| [Comunicarse con un servicio de aplicaciones remoto](communicate-with-a-remote-app-service.md) | Obtén información sobre cómo interactuar con una aplicación en un dispositivo remoto. |
+| [Conectar dispositivos mediante sesiones remotas](remote-sessions.md) | Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota. |
+| [Continuar la actividad del usuario, incluso en diferentes dispositivos](useractivities.md)| Ayudar a los usuarios reanudar lo que estabas haciendo en su aplicación, incluso en varios dispositivos.|
 | [Procedimientos recomendados de las actividades de usuario](useractivities-best-practices.md)| Obtenga información sobre los procedimientos recomendados para crear y actualizar las actividades del usuario.|

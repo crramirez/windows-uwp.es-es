@@ -8,14 +8,14 @@ ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf4d62f390a5d324952ef2852a76803f4619fdc
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57593810"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>Registrar una aplicación en una carpeta dinámica  
 
-**Request**
+**Solicitud**
 
 Puede registrar una aplicación en una carpeta dinámica mediante el siguiente formato de solicitud.
 

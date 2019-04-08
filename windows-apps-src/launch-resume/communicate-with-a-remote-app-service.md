@@ -88,6 +88,6 @@ Ahora que te has conectado a un servicio de aplicaciones en un dispositivo remot
 
 [Introducción (proyecto Roma) a aplicaciones y dispositivos conectado](connected-apps-and-devices.md)  
 [Inicie una aplicación remota](launch-a-remote-app.md)  
-[Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md)  
+[Crear y usar un servicio de aplicación](how-to-create-and-consume-an-app-service.md)  
 [Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

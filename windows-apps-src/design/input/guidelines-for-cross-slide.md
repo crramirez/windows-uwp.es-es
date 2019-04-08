@@ -69,7 +69,7 @@ Usa el deslizamiento transversal para listas y colecciones que se desplazan en u
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
-**Selecting**
+**Seleccionar**
 
 Seleccionar es el marcado de uno o más objetos sin que haya inicio o activación. Esta acción es similar a un único clic con el mouse o la tecla Mayús y un clic del mouse sobre uno o varios objetos.
 

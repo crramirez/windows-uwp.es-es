@@ -77,7 +77,7 @@ Puedes usar un objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/window
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
-* [Camera](camera.md)
+* [Cámara](camera.md)
 * [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Ejemplo de marcos de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de audio](audio-graphs.md)

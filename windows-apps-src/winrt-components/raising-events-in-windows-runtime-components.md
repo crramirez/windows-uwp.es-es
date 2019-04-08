@@ -279,7 +279,7 @@ El primer paso para crear un proxy y un código auxiliar para un componente, es 
 
 ## <a name="to-generate-guids-for-the-components-interfaces-c-and-other-net-languages"></a>Generar GUID para las interfaces del componente (C# y otros lenguajes. NET)
 
-En la barra de menús, elige Herramientas &gt; Crear GUID. En el cuadro de diálogo, selecciona 5. \[Guid(“xxxxxxxx-xxxx...xxxx)\]. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
+En la barra de menús, elige Herramientas &gt; Crear GUID. En el cuadro de diálogo, selecciona 5. \[GUID ("xxxxxxxx-xxxx... XXXX)\]. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
 
 ![herramienta del generador de GUID](./images/guidgeneratortool.png)
 
@@ -422,4 +422,4 @@ Ahora debería compilarse el proyecto. Ejecuta el proyecto y verifica que puedes
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear componentes de Windows en tiempo de ejecución en C++](creating-windows-runtime-components-in-cpp.md)
+* [Crear componentes de Windows Runtime en C++](creating-windows-runtime-components-in-cpp.md)

@@ -66,5 +66,5 @@ Los candidatos de recursos se eligen en función de un [**ResourceContext**](/uw
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](localize-strings-ui-manifest.md)
-* [Cargar imágenes y los recursos adaptados para escala, tema, contraste alto etc.](images-tailored-for-scale-theme-contrast.md)
+* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
+* [Cargar imágenes y recursos adaptados a escala, tema, contraste alto y otros](images-tailored-for-scale-theme-contrast.md)

@@ -59,7 +59,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.        | No       |
 | parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.      | No       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados. Para obtener más información, consulta la tabla siguiente.      | No       |
-| productTypes      | list&lt;string&gt;       | Especifica qué tipos de productos para devolver en los resultados de consulta. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
+| productTypes      | lista&lt;cadena&gt;       | Especifica qué tipos de productos para devolver en los resultados de consulta. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
 | validityType      | string       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | No       |
 
 

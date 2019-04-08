@@ -740,8 +740,8 @@ int main()
 ## <a name="important-apis"></a>API importantes
 * [clase Concurrency:: Task](/cpp/parallel/concrt/reference/task-class)
 * [Interfaz IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
-* [IAsyncActionWithProgress&lt;TProgress&gt; interface](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
-* [IAsyncOperation&lt;TResult&gt; interface](/uwp/api/windows.foundation.iasyncoperation_tresult_)
+* [IAsyncActionWithProgress&lt;TProgress&gt; interfaz](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
+* [IAsyncOperation&lt;TResult&gt; interfaz](/uwp/api/windows.foundation.iasyncoperation_tresult_)
 * [IAsyncOperationWithProgress&lt;TResult, TProgress&gt; interfaz](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [Clase SyndicationFeed](/uwp/api/windows.web.syndication.syndicationfeed)
@@ -751,4 +751,4 @@ int main()
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Controlar eventos mediante el uso de delegados en C / c++ / WinRT](handle-events.md)
-* [Tipos de datos estándar de C++ y C / c++ / WinRT](std-cpp-data-types.md)
+* [Tipos de datos de C++ estándar y C++/WinRT](std-cpp-data-types.md)

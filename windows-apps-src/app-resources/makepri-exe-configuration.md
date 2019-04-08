@@ -296,5 +296,5 @@ Aquí te mostramos algunas condiciones de error de ejemplo y el mensaje de error
 
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Opciones de línea de comandos MakePri.exe&mdash;createconfig comando](makepri-exe-command-options.md#createconfig-command)
-* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](tailor-resources-lang-scale-contrast.md)
 * [Sistema de administración de recursos&mdash;ResourceContext](resource-management-system.md#resourcecontext)

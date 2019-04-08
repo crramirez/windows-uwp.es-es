@@ -16,7 +16,7 @@ Puedes quitar todas las anclas SSH de confianza de tu kit de desarrollo con esta
 
 ## <a name="remove-trusted-ssh-pins"></a>Quitar anclas SSH de confianza
 
-**Request**
+**Solicitud**
 
 Método      | URI de la solicitud
 :------     | :-----

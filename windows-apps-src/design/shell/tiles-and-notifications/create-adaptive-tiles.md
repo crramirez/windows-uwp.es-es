@@ -414,7 +414,7 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;text hint-style="\*" /&gt; | Alto de fuente               | Espesor de la fuente |
+| &lt;texto de sugerencia-style = "\*" /&gt; | Alto de fuente               | Espesor de la fuente |
 | subtítulo                        | 12 píxeles efectivos (epx) | Normal     |
 | body                           | 15 epx                    | Normal     |
 | base                           | 15 epx                    | Semibold    |
@@ -1390,7 +1390,7 @@ TileWide = new TileBinding()
 ```
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Esquema de contenido de mosaico](../tiles-and-notifications/tile-schema.md)
+* [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md)
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)
 * [Plantillas de iconos especiales](special-tile-templates-catalog.md)
 * [UWP Community Toolkit - notificaciones](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

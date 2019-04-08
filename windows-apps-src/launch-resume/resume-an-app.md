@@ -127,5 +127,5 @@ En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](htt
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
-* [Identificador de activación de la aplicación](activate-an-app.md)
-* [Suspender el identificador de aplicación](suspend-an-app.md)
+* [Controlar la activación de aplicaciones](activate-an-app.md)
+* [Controlar la suspensión de aplicaciones](suspend-an-app.md)

@@ -126,7 +126,7 @@ ListView y sus elementos secundarios no se cargan en la memoria.
 
 Los paneles de diseño tienen una propiedad [Background](https://msdn.microsoft.com/library/windows/apps/BR227512), por lo tanto, no es necesario colocar una clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) delante de un panel solo para colorearlo.
 
-**Inefficient**
+**Ineficaz**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -198,7 +198,7 @@ Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictiona
 
 Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _App.xaml_ es una buena práctica y evita la duplicación. Sin embargo, _App.xaml_ se analiza en el inicio de la aplicación por lo tanto, cualquier recurso que se use en únicamente una página (a menos que esa página sea la página inicial) se debe colocar en los recursos locales de la página. Este ejemplo de contador muestra _App.xaml_ que contiene recursos usados en únicamente una página (que no es la página inicial). Esto aumenta innecesariamente el tiempo de inicio de la aplicación.
 
-**App.xaml**
+**App.Xaml**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->

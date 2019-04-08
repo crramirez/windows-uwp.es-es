@@ -32,7 +32,7 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 
--   **Add-on**: El filtro predeterminado es **todos los complementos**, pero puede limitar los datos a uno o varios de los complementos de la aplicación.
+-   **Complemento**: El filtro predeterminado es **todos los complementos**, pero puede limitar los datos a uno o varios de los complementos de la aplicación.
 -   **Mercado**: El filtro predeterminado es **todos los mercados**, pero puede limitar los datos a las adquisiciones en uno o varios mercados.
 -   **Tipo de dispositivo**: El valor predeterminado es **todos los dispositivos**. Si quieres mostrar datos de adquisiciones de un determinado tipo de dispositivo únicamente (como PC, consola o tableta), aquí puedes elegir uno específico.
 

@@ -53,8 +53,8 @@ Para obtener instrucciones específicas sobre la configuración del dispositivo,
 
 En la parte superior de la página de la barra de herramientas proporciona acceso a características más usadas.
 - **Power**: Opciones de energía de acceso.
-  - **Shutdown**: Desactiva el dispositivo.
-  - **Restart**: Los ciclos de energía en el dispositivo.
+  - **Apagado**: Desactiva el dispositivo.
+  - **Reiniciar**: Los ciclos de energía en el dispositivo.
 - **Ayudar a**: Se abre la página de ayuda.
 
 Usa los vínculos del panel de navegación en el lado izquierdo de la página para navegar a las herramientas de administración y supervisión disponibles del dispositivo.
@@ -131,7 +131,7 @@ La página de rendimiento muestra gráficos en tiempo real de la información de
 Estas son las métricas disponibles:
 - **CPU**: Porcentaje de utilización de CPU total disponible
 - **Memoria**: Total, en uso, disponibilidad y confirmado, paginada y no paginada
-- **I/O**: Cantidades de datos de lectura y escritura
+- **E/S**: Cantidades de datos de lectura y escritura
 - **Red**: Datos recibidos y enviados
 - **GPU**: Porcentaje de utilización de motor GPU total disponible
 

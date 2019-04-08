@@ -70,4 +70,4 @@ La más utilizadas son la fase del sombreador de vértices (VS) y la fase del so
 
 - [Guía de aprendizaje de gráficos de Direct3D](index.md)
 
-- [Proceso de canalización](compute-pipeline.md)
+- [Canalización del proceso](compute-pipeline.md)

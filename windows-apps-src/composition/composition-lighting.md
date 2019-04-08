@@ -38,7 +38,7 @@ Iluminación de composición es compatible con tres conceptos clave: **Luz**, **
 | [AmbientLight](/uwp/api/windows.ui.composition.ambientlight) | Una fuente de luz que emite luz no direccional que aparece se refleja en todos los elementos de la escena. |
 | [DistantLight](/uwp/api/windows.ui.composition.distantlight) | Una gran infinitamente fuente de luz distante que emite luz en una dirección única. Al igual que el sol. |
 | [PointLight](/uwp/api/windows.ui.composition.pointlight) | Punto de fuente de luz que emite luz en todas las direcciones. Al igual que una bombilla. |
-| [SpotLight](/uwp/api/windows.ui.composition.spotlight) | Una fuente de luz que emite conos internas y externas de la luz. Al igual que una linterna. |
+| [Contenido destacado](/uwp/api/windows.ui.composition.spotlight) | Una fuente de luz que emite conos internas y externas de la luz. Al igual que una linterna. |
 
 ## <a name="targets"></a>Destinos
 
@@ -87,7 +87,7 @@ Propiedad | Descripción
 **Dirección** | La dirección de la luz. Se especifica la dirección en la que señala la luz relativo a su [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) Visual.
 **Espacio de coordenadas** | Cada objeto Visual tiene un espacio de coordenadas 3D implícito. Dirección del eje X es de izquierda a derecha. Dirección del eje Y es de arriba a abajo. Dirección Z es un punto fuera del plano. El punto de estas coordenadas original es la esquina superior izquierda del objeto visual y la unidad es píxeles independientes de dispositivo (DIP). Desplazamiento de la luz definido en estas coordenadas.
 **Conos internas y externas** | Los focos de luz emiten un cono de luz que tiene dos partes: un cono interno brillante y un cono externo. Composición permite que controlar a través de color y los ángulos de cono interno y externo.
-**Offset** | Desplazamiento de la fuente de luz en relación con su espacio de coordenadas Visual.
+**Desplazamiento** | Desplazamiento de la fuente de luz en relación con su espacio de coordenadas Visual.
 
 > [!NOTE]
 > Cuando varios luces alcanza el mismo objeto Visual, o cada vez que el valor de color de la luz obtiene suficientemente grande como para superar 1.0, puede cambiar el color de la luz a causa de bloqueo de un canal de color de las luces.
@@ -120,8 +120,8 @@ Siga estos pasos generales para agregar las luces:
 Propiedad | Descripción
 --- | ---
 **Mapa normal** | NormalMaps crear un efecto de una textura donde un normal apuntando hacia la luz estarán más brillante e inmediatamente un señalando normal será tenue. Para agregar un NormalMap al destino visual uso un [CompositionSurfaceBrush](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) utilizando LoadedImageSurface para cargar un recurso NormalMap.
-**Ambient** | Las propiedades de ambiente se utilizan principalmente para controlar la reflexión de color general.
-**Specular** | Reflexión especular crea resaltes en objetos, haciéndolos aparecer brillante. Puede controlar el nivel de reflexión especular, así como el nivel de brillo.  Estas propiedades se manipulan para crear efectos materiales como shinny metales o papel satinado.
+**Ambiente** | Las propiedades de ambiente se utilizan principalmente para controlar la reflexión de color general.
+**Reflexión especular** | Reflexión especular crea resaltes en objetos, haciéndolos aparecer brillante. Puede controlar el nivel de reflexión especular, así como el nivel de brillo.  Estas propiedades se manipulan para crear efectos materiales como shinny metales o papel satinado.
 **Color difuso** | Reflexión difusa esparce la luz en todas las direcciones.
 **Modelo de reflectancia** | [Modelo de reflectancia](/uwp/api/windows.ui.composition.effects.scenelightingeffectreflectancemodel) le permite elegir entre [Blinn Phong](https://docs.microsoft.com/visualstudio/designers/how-to-create-a-basic-phong-shader) y basa Blinn Phong físicamente.  Elegiría físicamente en función Blinn Phong cuando desee ha condensado resaltes especulares.
 

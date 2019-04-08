@@ -37,13 +37,13 @@ Además de las aplicaciones UWP, Windows 10 en ARM también puede ejecutar su x8
 ## <a name="in-this-section"></a>En esta sección
 |Tema | Descripción |
 |-----|-----|
-|[Cómo funciona la emulación en ARM de x86](apps-on-arm-x86-emulation.md)|Una introducción que detalla cómo se emulan las aplicaciones x86 en ARM.|
-|[Solución de problemas de x86 aplicaciones en ARM](apps-on-arm-troubleshooting-x86.md)|Problemas comunes con aplicaciones x86 cuando se ejecutan en ARM y cómo solucionarlos. |
+|[Cómo funciona la emulación de x86 en ARM](apps-on-arm-x86-emulation.md)|Una introducción que detalla cómo se emulan las aplicaciones x86 en ARM.|
+|[Solución de problemas de aplicaciones x86 en ARM](apps-on-arm-troubleshooting-x86.md)|Problemas comunes con aplicaciones x86 cuando se ejecutan en ARM y cómo solucionarlos. |
 |[Solución de problemas de aplicaciones ARM en ARM](apps-on-arm-troubleshooting-arm32.md)|Problemas comunes con las aplicaciones de ARM32 y ARM64 cuando se ejecuta en ARM y cómo corregirlos. |
 |[Solucionador de problemas de compatibilidad de programas en ARM](apps-on-arm-program-compat-troubleshooter.md)|Instrucciones para ajustar la configuración de compatibilidad si la aplicación no funciona correctamente en ARM. |
 
 ## <a name="related-topics"></a>Temas relacionados
 |Tema | Descripción |
 |-----|-----|
-|[Creación de controladores ARM64 con el WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|Instrucciones para compilar un controlador ARM64. |
+|[Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|Instrucciones para compilar un controlador ARM64. |
 | [Depuración x86 aplicaciones en ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64) | Instrucciones para la depuración de aplicaciones x86 en ARM. |

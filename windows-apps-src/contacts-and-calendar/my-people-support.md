@@ -249,10 +249,10 @@ async Task PinMultipleContacts(Contact[] contacts)
 **Nota:** 
 
 ## <a name="see-also"></a>Consulte también
-+ [Mi personas compartir](my-people-sharing.md)
++ [Uso compartido de Mis allegados](my-people-sharing.md)
 + [Mis notificaciones de personas](my-people-notifications.md)
 + [Vídeo de Channel 9 sobre cómo agregar personas de mi soporte técnico a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
 + [Mi ejemplo de integración de las personas](https://aka.ms/mypeoplebuild2017)
 + [Póngase en contacto con el ejemplo de tarjeta](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentación de la clase PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [Conectar la aplicación para realizar acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [Conectar la aplicación a acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

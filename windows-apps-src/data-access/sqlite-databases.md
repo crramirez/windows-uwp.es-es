@@ -127,7 +127,7 @@ Haremos lo siguiente:
 
 : uno: Preparación de la clase de acceso a datos.
 
-:two: Inicializar la base de datos de SQLite.
+: dos: Inicializar la base de datos de SQLite.
 
 : tres: Insertar datos en la base de datos de SQLite.
 

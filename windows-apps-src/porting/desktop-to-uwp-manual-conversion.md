@@ -15,7 +15,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57651180"
 ---
-# <a name="package-a-desktop-application-manually"></a>Empaquetar manualmente una aplicación de escritorio
+# <a name="package-a-desktop-application-manually"></a>Empaquetado manual de una aplicación de escritorio
 
 Este tema muestra cómo empaquetar la aplicación sin usar herramientas como Visual Studio o Desktop App Converter (DAC).
 

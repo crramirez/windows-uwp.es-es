@@ -286,4 +286,4 @@ Quita todas las claves de firma de código privado (por ejemplo, archivos .pfx y
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)

@@ -69,7 +69,7 @@ En la lista de plantillas de definición de compilación, elige la plantilla *Pl
 
 Esta definición de compilación contiene las siguientes tareas de compilación:
 
-- NuGet restore **\*.sln
+- Restauración de NuGet **\*.sln
 - Compilar solución **\*.sln
 - Publicar símbolos
 - Publicar artefacto: drop
@@ -213,7 +213,7 @@ MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "A
 Este error aparece porque en el nivel de la solución, no está claro qué aplicación debería aparecer en el lote.
 Para resolver este problema, abre cada archivo de proyecto y agrega las siguientes propiedades al final del primer elemento `<PropertyGroup>`:
 
-|**Project**|**Propiedades**|
+|**proyecto**|**Propiedades**|
 |-------|----------|
 |Aplicación|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
@@ -358,7 +358,7 @@ A continuación, puedes usar la herramienta Pvk2Pfx para generar un archivo PFX 
 
 Proporciona estos certificados a cada rol del equipo:
 
-|**Máquina**|**Usage**|**Certificado**|**Certificate Store**|
+|**Máquina**|**Uso de**|**Certificado**|**Certificate Store**|
 |-----------|---------|---------------|---------------------|
 |Equipo de compilación o desarrollador|Firmar compilaciones|MyCert.PFX|Usuario actual/Personal|
 |Equipo de compilación o desarrollador|Ejecución|MyCert.cer|Equipo local/Personas de confianza|

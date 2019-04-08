@@ -85,5 +85,5 @@ Si no puede tener acceso a la consola por cualquier motivo, también puede desac
 Si anteriormente no has vuelto a definir el modo comercial a la consola Xbox One, hazlo ahora como se describe en [Cambiar al modo comercial](#switch-to-retail-mode).
 
 ## <a name="see-also"></a>Consulte también
-- [Activación de un modo de programador Xbox](devkit-activation.md)
+- [Activación del modo de desarrollador de Xbox One](devkit-activation.md)
 - [UWP en Xbox One](index.md)

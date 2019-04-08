@@ -94,13 +94,13 @@ Direct3D implementa varios esquemas de compresión; cada uno implementa un equil
 | Color y alfa de tres componentes | Color (5:6:5), alfa (1) o sin alfa  | [BC1](#bc1)                    |
 | Color y alfa de tres componentes | Color (5:6:5), alfa (4)              | [BC2](#bc2)                    |
 | Color y alfa de tres componentes | Color (5:6:5), alfa (8)              | [BC3](#bc3)                    |
-| Color de un componente             | Un componente (8)                     | [BC4](#bc4)                    |
+| Color de un componente             | Un componente (8)                     | [TEXTURAS BC4](#bc4)                    |
 | Color de dos componentes             | Dos componentes (8:8)                  | [BC5](#bc5)                    |
 
 - [BC1](#bc1)
 - [BC2](#bc2)
 - [BC3](#bc3)
-- [BC4](#bc4)
+- [TEXTURAS BC4](#bc4)
 - [BC5](#bc5)
 
 ### <a name="span-idbc1spanspan-idbc1spanbc1"></a><span id="BC1"></span><span id="bc1"></span>BC1
@@ -181,7 +181,7 @@ else
 }
 ```
 
-### <a name="span-idbc4spanspan-idbc4spanbc4"></a><span id="BC4"></span><span id="bc4"></span>BC4
+### <a name="span-idbc4spanspan-idbc4spanbc4"></a><span id="BC4"></span><span id="bc4"></span>TEXTURAS BC4
 
 Usa el formato BC4 para almacenar datos de color de un componente mediante 8 bits para cada color. Como resultado de la mayor precisión (en comparación con [BC1](#bc1)), las texturas BC4 es ideal para almacenar datos de punto flotante en el intervalo de \[0 a 1\] utilizando el DXGI\_formato\_las texturas BC4\_Formato UNORM y \[-1 a + 1\] utilizando el DXGI\_formato\_las texturas BC4\_formato SNORM. Si se supone una textura de 4×4 con el formato de datos más amplio posible, esta técnica de compresión reduce la memoria necesaria de 16 bytes (16 colores × 1 componentes/color × 1 byte/componente) a 8 bytes.
 
@@ -193,10 +193,10 @@ El algoritmo usa los índices de 3 bits para buscar los colores en una tabla de
 
 El algoritmo determina el número de valores de color interpolados tras examinar los dos valores de referencia. Si rojo\_0 es mayor que rojo\_1 y, a continuación, las texturas BC4 interpola 6 valores de color; en caso contrario, interpola 4. Cuando BC4 interpola solo 4 valores de color, establece dos valores de color adicionales (0.0f para totalmente transparente y 1.0f para totalmente opaco). Para comprimir los valores de alfa en el área de elementos de textura de 4×4, BC4 almacena el código de bits correspondiente a los valores de alfa interpolados que más se acerquen al alfa original para un elemento de textura determinado.
 
-- [BC4\_UNORM](#bc4-unorm)
-- [BC4\_SNORM](#bc4-snorm)
+- [LAS TEXTURAS BC4\_UNORM](#bc4-unorm)
+- [LAS TEXTURAS BC4\_SNORM](#bc4-snorm)
 
-### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>BC4\_UNORM
+### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>LAS TEXTURAS BC4\_UNORM
 
 La interpolación de los datos de componente único se logra como se muestra en el siguiente ejemplo de código.
 
@@ -227,7 +227,7 @@ else
 
 A los colores de referencia se les asignan índices de 3 bits (000–111, dado que hay 8 valores), que se guardarán en los bloques rojo "a" a rojo "p" durante la compresión.
 
-### <a name="span-idbc4snormspanspan-idbc4snormspanspan-idbc4-snormspanbc4snorm"></a><span id="BC4_SNORM"></span><span id="bc4_snorm"></span><span id="bc4-snorm"></span>BC4\_SNORM
+### <a name="span-idbc4snormspanspan-idbc4snormspanspan-idbc4-snormspanbc4snorm"></a><span id="BC4_SNORM"></span><span id="bc4_snorm"></span><span id="bc4-snorm"></span>LAS TEXTURAS BC4\_SNORM
 
 El DXGI\_formato\_las texturas BC4\_SNORM es exactamente igual, salvo que se codifican los datos en el intervalo SNORM y cuando 4 se interpolan los valores de color. La interpolación de los datos de componente único se logra como se muestra en el siguiente ejemplo de código.
 

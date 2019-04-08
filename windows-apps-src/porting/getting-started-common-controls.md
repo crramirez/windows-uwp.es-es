@@ -25,7 +25,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Control de iOS (clase/protocolo) | Control equivalente de UWP |
 |------------------------------|--------------------------------------|
 | Indicador de actividad (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Consulta también [Inicio rápido: agregar controles de progreso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
-| Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> Consulta también [Mostrar anuncios en tu aplicación](../monetize/display-ads-in-your-app.md) |
+| Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | [Elemento AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> Consulta también [Mostrar anuncios en tu aplicación](../monetize/display-ads-in-your-app.md) |
 | Botón (UIButton) | [Button](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Vea también [inicio rápido: Agregar controles de botón](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
 | Selector de fecha (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Vista de imagen (UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulta también [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |

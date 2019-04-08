@@ -63,7 +63,7 @@ La fase de Tessellator (TS) funciona en dos fases:
 
     | Tipo de particiones | Intervalo                       |
     |----------------------|-----------------------------|
-    | Fraccionarios\_impar      | \[1...63\]                  |
+    | Fraccionarios\_impar      | \[1.. 63\]                  |
     | Fraccionarios\_incluso     | Intervalo de TessFactor: \[2..64\] |
     | Enteros              | Intervalo de TessFactor: \[1..64\] |
     | Pow2                 | Intervalo de TessFactor: \[1..64\] |

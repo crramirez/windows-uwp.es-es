@@ -4,7 +4,7 @@ description: En estos artículos se ofrece código de ejemplo para tareas comune
 ms.assetid: 2DE094F4-28E2-4C5D-BF8C-617BD90AB119
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, seguridad
+keywords: windows 10, uwp, security
 ms.localizationpriority: medium
 ms.openlocfilehash: d52943ab28ba9cb7544db827528985746585e361
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f

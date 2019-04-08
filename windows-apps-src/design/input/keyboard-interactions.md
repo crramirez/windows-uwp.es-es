@@ -320,7 +320,7 @@ Considere la posibilidad de agregar compatibilidad con la navegación de teclas 
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>Botones del cuadro de diálogo</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>RadioButtons</sup></p>     
+      <p><sup>Botones de opción</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>
@@ -400,7 +400,7 @@ Consulte [Gamepad y control remoto interacciones](gamepad-and-remote-interaction
 
 A continuación se muestran algunas asignaciones clave entre el teclado, el controlador para juegos y el control remoto.
 
-| **Teclado**  | **Gamepad**                         | **Control remoto**  |
+| **Teclado**  | **Controlador para juegos**                         | **Control remoto**  |
 |---------------|-------------------------------------|---------------------|
 | Barra espaciadora         | Botón A                            | Botón de selección       |
 | Entrar         | Botón A                            | Botón de selección       |

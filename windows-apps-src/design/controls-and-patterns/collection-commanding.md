@@ -453,7 +453,7 @@ Para optimizar la aplicación para la entrada de lápiz, consulta el artículo d
 ## <a name="related-topics"></a>Temas relacionados
 * [Interfaz ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
 * [Menús y menús contextuales](menus.md)
-* [Swipe](swipe.md)
+* [Deslice el dedo](swipe.md)
 * [Deslizar para actualizar](pull-to-refresh.md)
 * [Interacción del lápiz y del lápiz](../input/pen-and-stylus-interactions.md)
 * [Personalizar la aplicación de controlador para juegos y Xbox](../devices/designing-for-tv.md)

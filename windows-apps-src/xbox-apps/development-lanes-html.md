@@ -32,5 +32,5 @@ Este vídeo profundiza más sobre las aplicaciones web empaquetadas y las aplica
 Para comenzar, descarga el motor elegido y busca las instrucciones de las aplicaciones de Windows 10. También debes leer la [guía de introducción](getting-started.md) para obtener información sobre cómo convertir la consola en un kit de desarrollo y cómo realizar la implementación desde Visual Studio.
 
 ## <a name="see-also"></a>Consulte también
-- [Volver a poner existentes juegos para Xbox](development-lanes-landing.md)
+- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)

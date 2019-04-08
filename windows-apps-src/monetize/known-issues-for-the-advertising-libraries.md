@@ -67,7 +67,7 @@ Cuando una unidad de anuncios en directo está atendiendo a los anuncios de prue
 
 Al usar el SDK de Microsoft Advertising, no puedes dirigirte a **Cualquier CPU** en tu proyecto. Si el proyecto se dirige a la plataforma **Cualquier CPU**, puede que veas una advertencia después de agregar la referencia similar a esta.
 
-![referenceerror\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
+![ReferenceError\-Explorador de soluciones](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
 Para quitar esta advertencia, actualiza el proyecto para usar una salida de compilación específica de la arquitectura (por ejemplo, **x86**). Usa **Configuration Manager** para establecer los destinos de la plataforma para configuraciones de depuración y lanzamiento.
 

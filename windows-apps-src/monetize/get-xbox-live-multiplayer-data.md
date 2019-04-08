@@ -7,7 +7,7 @@ keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store a
 ms.localizationpriority: medium
 ms.openlocfilehash: 74f1a64bde32fe68a51527527a0b049d811d0853
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57662040"
@@ -55,8 +55,8 @@ Para usar este método, primero debes hacer lo siguiente:
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de multijugador que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
-| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul> | No   |
-| groupby | string | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>date</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul><p/>Si especificas uno o más campos *groupby*, cualquier otro campo *groupby* que no especifiques tendrá el valor **All** en el cuerpo de respuesta. |  No  |
+| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>tipo de dispositivo</strong></li><li><strong>PackageVersion</strong></li><li><strong>mercado</strong></li><li><strong>SubscriptionName</strong></li></ul> | No   |
+| groupby | string | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>Fecha</strong></li><li><strong>tipo de dispositivo</strong></li><li><strong>PackageVersion</strong></li><li><strong>mercado</strong></li><li><strong>SubscriptionName</strong></li></ul><p/>Si especificas uno o más campos *groupby*, cualquier otro campo *groupby* que no especifiques tendrá el valor **All** en el cuerpo de respuesta. |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -89,7 +89,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores cuando solic
 | applicationName       | string |  El nombre del juego sobre la que estás recuperando los datos de multijugador.     |
 | market       | string | El código de país ISO 3166 de dos letras del mercado de donde proceden los datos de multijugador.       |
 | packageVersion     | string |  La versión del paquete de cuatro partes del juego.  |
-| deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo del que proceden los datos de multijugador:<p/><ul><li><strong>Consola de</strong></li><li><strong>PC</strong></li><li>**Unknown**</li></ul>  |
+| deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo del que proceden los datos de multijugador:<p/><ul><li><strong>Consola de</strong></li><li><strong>PC</strong></li><li>**Desconocido**</li></ul>  |
 | subscriptionName     | string |  El nombre de la suscripción usada para los datos de multijugador. Algunos valores incluyen **Xbox Game Pass** y **""** (para no suscripción).  |
 | dailySessionCount     | número |  El número de sesiones multijugador del juego en la fecha especificada.  |
 | engagementDurationMinutes     | número |  El número total de minutos que los clientes se conectaron en sesiones multijugador en el juego en la fecha especificada.  |
@@ -112,7 +112,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores cuando solic
 | applicationName       | string |  El nombre del juego sobre la que estás recuperando los datos de multijugador.     |
 | market       | string | El código de país ISO 3166 de dos letras del mercado de donde proceden los datos de multijugador.       |
 | packageVersion     | string |  La versión del paquete de cuatro partes del juego.  |
-| deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo del que proceden los datos de multijugador:<p/><ul><li><strong>Consola de</strong></li><li><strong>PC</strong></li><li>**Unknown**</li></ul>  |
+| deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo del que proceden los datos de multijugador:<p/><ul><li><strong>Consola de</strong></li><li><strong>PC</strong></li><li>**Desconocido**</li></ul>  |
 | subscriptionName     | string |  El nombre de la suscripción usada para los datos de multijugador. Algunos valores incluyen **Xbox Game Pass** y **""** (para no suscripción).  |
 | monthlySessionCount     | número |  El número de sesiones multijugador del juego durante el mes especificado.   |
 | engagementDurationMinutes     | número |  El número total de minutos que los clientes se conectaron en sesiones multijugador en el juego durante el mes especificado.  |

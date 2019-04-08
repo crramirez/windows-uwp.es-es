@@ -13,7 +13,7 @@ ms.locfileid: "57638010"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Solicita la información de implementación para uno o más paquetes instalados.
 
-**Request**
+**Solicitud**
 
 Método      | URI de la solicitud
 :------     | :------

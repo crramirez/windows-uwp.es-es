@@ -7,7 +7,7 @@ keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor d
 ms.localizationpriority: medium
 ms.openlocfilehash: 287c22cbd50f1b69f505bbddd445740fe9422c31
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57597020"
@@ -787,4 +787,4 @@ Esto generará un firmado `.appxbundle` archivo que contiene el paquete principa
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](tailor-resources-lang-scale-contrast.md)

@@ -58,7 +58,7 @@ Hemos agregado varios temas nuevos a la [WebVR documentación](https://docs.micr
 
 * [WebVR en WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Obtenga información sobre cómo agregar WebVR a un control WebView en una aplicación de Windows 10.
 
-* [WebVR demos](https://docs.microsoft.com/microsoft-edge/webvr/demos): Consulte algunas demostraciones WebVR mediante Microsoft Edge y auriculares Windows Mixed Reality envolventes.
+* [Demostraciones de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): Consulte algunas demostraciones WebVR mediante Microsoft Edge y auriculares Windows Mixed Reality envolventes.
 
 Además, hemos realizado algunas actualizaciones a las páginas existentes:
 

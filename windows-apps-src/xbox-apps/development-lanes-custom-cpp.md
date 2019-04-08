@@ -28,6 +28,6 @@ Para conocer cómo convertir la consola en un kit de desarrollo y cómo realizar
 
 
 ## <a name="see-also"></a>Consulte también
-- [Volver a poner existentes juegos para Xbox](development-lanes-landing.md)
+- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)
 
