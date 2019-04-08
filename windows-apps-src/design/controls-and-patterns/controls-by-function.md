@@ -28,7 +28,7 @@ Puedes ver muchos de los controles de interfaz de usuario de Windows si descarga
 <td>
     <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">abra la aplicación y ver el control NavigationView en acción</a> </p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -82,7 +82,7 @@ Barra de la aplicación especial que gestiona el cambio de tamaño de los elemen
     <AppBarButton Icon="Play" Label="Play" Click="AppBarButton_Click"/>
 </CommandBar>
 ```
-Referencia: [CommandBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx) 
+Referencia: [Barra de comandos](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx) 
 
 Diseño y procedimientos: [Guía de control de barra de la aplicación y la barra de comandos](app-bars.md)
 
@@ -264,7 +264,7 @@ Muestra un mensaje que requiere la intervención del usuario. (Al contrario que 
 </Flyout>
 ```
 
-Referencia: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
+Referencia: [Control flotante](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
 Diseño y procedimientos: [Menús emergentes](dialogs-and-flyouts/flyouts.md) 
 
@@ -293,7 +293,7 @@ Código de ejemplo: [Ejemplo de menú contextual de XAML](https://go.microsoft.c
 ### <a name="popup-menu"></a>Menú emergente
 Menú personalizado que presenta los comandos que especifiques.
 
-Referencia: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
+Referencia: [Menú emergente](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
 Diseño y procedimientos: [Cuadros de diálogo](dialogs-and-flyouts/dialogs.md) 
 
@@ -307,7 +307,7 @@ Ventana emergente que muestra información para un elemento.
         ToolTipService.ToolTip="Click to perform action" />
 ```
 
-Referencia: [ToolTip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltip.aspx), [ToolTipService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltipservice.aspx) 
+Referencia: [Información sobre herramientas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltip.aspx), [ToolTipService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltipservice.aspx) 
 
 Diseño y procedimientos: Directrices para información sobre herramientas 
 
@@ -373,7 +373,7 @@ Control de contenedor que dibuja un borde, fondo o ambos alrededor de otro objet
 </Border>
 ```
 
-Referencia: [Border](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.border.aspx)
+Referencia: [Borde](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.border.aspx)
 
 ### <a name="canvas"></a>Lienzo
 Panel de diseño que admite el posicionamiento absoluto de elementos secundarios relativos a la esquina superior izquierda del lienzo.
@@ -389,7 +389,7 @@ Panel de diseño que admite el posicionamiento absoluto de elementos secundarios
 </Canvas>
 ```
 
-Referencia: [Canvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
+Referencia: [Lienzo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
  
 ### <a name="grid"></a>Cuadrícula
 Un panel de diseño que permite reorganizar los elementos secundarios en filas y columnas.
@@ -435,7 +435,7 @@ Referencia: [RelativePanel](https://msdn.microsoft.com/library/windows/apps/xaml
 ### <a name="scroll-bar"></a>Barra de desplazamiento
 Consulta Visor de desplazamiento. (ScrollBar es un elemento de ScrollViewer. Generalmente, no lo usas como un control independiente).
 
-Referencia: [ScrollBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.scrollbar.aspx)
+Referencia: [Barra de desplazamiento](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.scrollbar.aspx)
  
 ### <a name="scroll-viewer"></a>Visor de desplazamiento
 Un control de contenedor que permite al usuario ver vistas panorámicas y acercar el contenido.
@@ -469,7 +469,7 @@ Panel de diseño en el que los elementos secundarios se organizan en una sola l�
 </StackPanel>
 ```
 
-Referencia: [StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)
+Referencia: [Elemento StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)
  
 ### <a name="variablesizedwrapgrid"></a>VariableSizedWrapGrid
 Un panel de diseño que permite reorganizar los elementos secundarios en filas y columnas. Cada elemento secundario puede abarcar varias filas y columnas.
@@ -553,7 +553,7 @@ Consulta Elemento multimedia
 
 Un contenedor adaptable y el modelo de navegación flexible que implementa el panel de navegación izquierdo, la navegación superior y el patrón de pestañas.
 
-Referencia: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
+Referencia: [Control NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
 Diseño y procedimientos: [Guía del control NavigationView](navigationview.md)
 
@@ -749,7 +749,7 @@ Control que un usuario puede activar y desactivar.
           Checked="CheckBox_Checked"/>
 ```
 
-Referencia: [CheckBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) 
+Referencia: [Casilla de verificación](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) 
 
 Diseño y procedimientos: [Guía de control de casilla de verificación](checkbox.md) 
 
@@ -785,7 +785,7 @@ Control que presenta una lista en línea de elementos entre los que puede selecc
 </ListBox>
 ```
 
-Referencia: [ListBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listbox.aspx) 
+Referencia: [Cuadro de lista](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listbox.aspx) 
 
 Diseño y procedimientos: [Listas](lists.md) 
 
@@ -803,7 +803,7 @@ Control que permite que el usuario seleccione una sola opción entre un grupo de
              Checked="RadioButton_Checked"/>
 ```
 
-Referencia: [RadioButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.radiobutton.aspx) 
+Referencia: [Botón de opción](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.radiobutton.aspx) 
 
 Diseño y procedimientos: [Guía de control de botón de radio](radio-button.md)
  

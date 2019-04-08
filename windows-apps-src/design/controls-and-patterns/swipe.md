@@ -46,7 +46,7 @@ Deben usarse los comandos de deslizar el dedo cuando haya un grupo de elementos 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SwipeControl">abrir la aplicación y ver SwipeControl en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -210,7 +210,7 @@ En este caso concreto, se quita el elemento de la lista, por lo que no es import
 - **Auto**
   - En el modo Ejecutar, el elemento de deslizar con el dedo abierto permanecerá abierto cuando se invoca.
   - En el modo Mostrar, el elemento de deslizar con el dedo abierto se contraerá cuando se invoca.
-- **Close**
+- **Cerrar**
   - Cuando se invoca el elemento, el control de deslizar con el dedo siempre se contraerá y volverá al estado normal, sin importar el modo.
 - **RemainOpen**
   - Cuando se invoca el elemento, el control de deslizar con el dedo siempre seguirá abierto, sin importar el modo.

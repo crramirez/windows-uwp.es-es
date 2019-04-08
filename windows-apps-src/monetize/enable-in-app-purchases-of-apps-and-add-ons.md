@@ -8,7 +8,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a64a52005221c418ea82e8fffa9ecf94b6d1bef3
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57661730"
@@ -57,7 +57,7 @@ Vea el vídeo siguiente para obtener información general de cómo implementar l
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar complemento consumibles compras](enable-consumable-add-on-purchases.md)

@@ -1,5 +1,5 @@
 ---
-title: Crear una aplicación de base de datos de cliente
+title: Crear una aplicación de base de datos de clientes
 description: Crear una aplicación de base de datos de clientes y obtenga información sobre cómo implementar funciones de aplicaciones empresariales básicos.
 keywords: cliente de empresa, tutorial, datos, crear autenticación de eliminación, REST, leer, actualizar
 ms.date: 05/07/2018
@@ -7,12 +7,12 @@ ms.topic: article
 ms.localizationpriority: med
 ms.openlocfilehash: 9c09e0fb73e42fd8a3d0c70bbb5396be32624387
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57623250"
 ---
-# <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Crear una aplicación de base de datos de cliente
+# <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Crear una aplicación de base de datos de clientes
 
 Este tutorial crea una aplicación sencilla para administrar una lista de clientes. De esta forma, presenta una selección de los conceptos básicos para aplicaciones empresariales en UWP. Aquí aprenderás a hacer lo siguiente:
 
@@ -45,7 +45,7 @@ Si ejecuta la aplicación inmediatamente después de abrirla, verá algunos boto
 * Un **RadDataGrid** para mostrar y editar sus clientes. 
 * Un **StackPanel** para establecer los valores iniciales de un cliente nuevo.
 
-### <a name="viewmodels"></a>ViewModels
+### <a name="viewmodels"></a>Modelos de vista
 
 **ViewModels\CustomerListPageViewModel.cs** es donde se encuentra la lógica fundamental de la aplicación. Cada acción del usuario realizada en la vista se pasarán a este archivo para su procesamiento. En este tutorial, deberá agregar determinado código nuevo e implementar los métodos siguientes:
 

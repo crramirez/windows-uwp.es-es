@@ -69,9 +69,9 @@ En la lista siguiente describe las nuevas características y los cambios realiza
 
 Se agregaron a la tecnología DRM de PlayReady las siguientes nuevas interfaces, clases y enumeraciones:
 
--   [**IPlayReadyLicenseAcquisitionServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986077) interface
--   [**IPlayReadyLicenseSession**](https://msdn.microsoft.com/library/windows/apps/dn986080) interface
--   [**IPlayReadySecureStopServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986090) interface
+-   [**IPlayReadyLicenseAcquisitionServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986077) interfaz
+-   [**IPlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986080) interfaz
+-   [**IPlayReadySecureStopServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986090) interfaz
 -   [**PlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986309) clase
 -   [**PlayReadySecureStopIterable** ](https://msdn.microsoft.com/library/windows/apps/dn986371) clase
 -   [**PlayReadySecureStopIterator** ](https://msdn.microsoft.com/library/windows/apps/dn986375) clase
@@ -397,7 +397,7 @@ En la siguiente tabla se describe la implementación de DRM de PlayReady para Wi
 
 Antes de empezar a crear la aplicación para UWP protegida con PlayReady, es necesario instalar el siguiente software en el sistema:
 
--   Windows 10.
+-   Windows 10.
 -   Si se está compilando aplicaciones para UWP cualquiera de los ejemplos de DRM de PlayReady, debe utilizar Microsoft Visual Studio 2015 o posterior para compilar los ejemplos. Todavía puede utilizar Microsoft Visual Studio 2013 para compilar cualquiera de los ejemplos de DRM de PlayReady para las aplicaciones de Windows 8.1 Store.
 
 <!--This is no longer available-->

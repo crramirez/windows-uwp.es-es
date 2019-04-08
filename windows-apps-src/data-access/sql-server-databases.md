@@ -41,7 +41,7 @@ En esta sección, haremos lo siguiente:
 
 : uno: Agregar una cadena de conexión.
 
-:two: Cree una clase para contener datos de productos.
+: dos: Cree una clase para contener datos de productos.
 
 : tres: Recuperar los productos de la base de datos de SQL Server.
 

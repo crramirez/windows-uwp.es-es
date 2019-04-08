@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608020"
@@ -44,7 +44,7 @@ Por motivos de eficiencia, coherencia y facilidad de uso, todas las funciones de
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Sistemas de coordenadas y geometry](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
 
  
 

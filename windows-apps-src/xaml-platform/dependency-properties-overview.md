@@ -203,7 +203,7 @@ Los aspectos de subprocesos de [**DependencyObject**](https://msdn.microsoft.com
 ### <a name="conceptual-material"></a>Material conceptual
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
-- [Información general sobre propiedades adjuntas](attached-properties-overview.md)
+- [Introducción a las propiedades adjuntas](attached-properties-overview.md)
 - [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)
 - [Animaciones amplía su información](https://msdn.microsoft.com/library/windows/apps/mt187354)
 - [Crear componentes de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)

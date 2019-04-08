@@ -43,7 +43,7 @@ MakeAppx <command> [options]
 
 La siguiente tabla describe los comandos de **MakeAppx.exe**.
 
-| **Command**   | **Descripción**                       |
+| **Comando**   | **Descripción**                       |
 |---------------|---------------------------------------|
 | pack          | Crea un paquete.                    |
 | unpack        | Extrae todos los archivos del paquete especificado en el directorio de salida especificado. |

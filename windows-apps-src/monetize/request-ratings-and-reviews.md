@@ -132,9 +132,9 @@ En la siguiente tabla se describen los campos en la cadena de datos con formato 
 
 | Campo          | Descripción                                                                                                                                   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| *status*       | Una cadena que indica si el cliente envió correctamente una calificación o reseña. Los valores admitidos son **success** y **aborted**. |
-| *data*         | Un objeto que contiene un valor booleano único denominado *updated*. Este valor indica si el cliente ha actualizado una calificación o reseña existente. El objeto *data* objeto solo se incluye en respuestas realizadas correctamente. |
-| *errorDetails* | Una cadena que contiene la información de errores de la solicitud.                                                                                     |
+| *Estado*       | Una cadena que indica si el cliente envió correctamente una calificación o reseña. Los valores admitidos son **success** y **aborted**. |
+| *Datos*         | Un objeto que contiene un valor booleano único denominado *updated*. Este valor indica si el cliente ha actualizado una calificación o reseña existente. El objeto *data* objeto solo se incluye en respuestas realizadas correctamente. |
+| *ErrorDetails* | Una cadena que contiene la información de errores de la solicitud.                                                                                     |
 
 ## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Iniciar la página de calificaciones y opiniones de la aplicación en la Store
 
@@ -155,5 +155,5 @@ Para analizar los datos de calificaciones y opiniones de los clientes, tienes va
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Enviar solicitudes a la Store](send-requests-to-the-store.md)
-* [Inicie la aplicación de Microsoft Store](../launch-resume/launch-store-app.md)
+* [Iniciar la aplicación de Microsoft Store](../launch-resume/launch-store-app.md)
 * [Informe Críticas](../publish/reviews-report.md)

@@ -118,10 +118,10 @@ Para garantizar que la aplicación universal de Windows continúe funcionando co
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
-* [Declare tareas en segundo plano en el manifiesto de aplicación](declare-background-tasks-in-the-application-manifest.md)
-* [Controlar una tarea cancelada en segundo plano](handle-a-cancelled-background-task.md)
-* [Supervisar el progreso de la tarea en segundo plano y de finalización](monitor-background-task-progress-and-completion.md)
+* [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)
+* [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
+* [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)

@@ -31,7 +31,7 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 | 4.3.2.4.  EXT-X-KEY |1|0|OPCIONAL|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp; MÉTODO|1|0|Atributo|"NONE, AES-128"|"NONE, AES-128"|"NONE, AES-128, SAMPLE-AES"|
 |&nbsp;&nbsp;&nbsp; IDENTIFICADOR URI|1|0|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp; IV|2|3|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp; VECTOR DE INICIALIZACIÓN|2|3|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp; KEYFORMAT|5|9|Atributo|No se admite|No se admite|No se admite|
 |&nbsp;&nbsp;&nbsp; KEYFORMATVERSIONS|5|9|Atributo|No se admite|No se admite|No se admite|
 | 4.3.2.5.  EXT-X-MAP |5|9|OPCIONAL|No se admite|No se admite|No se admite|
@@ -49,7 +49,7 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 | 4.3.4.1.  EXT-X-MEDIA |4|7|OPCIONAL|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  TIPO|4|7|Atributo|"AUDIO, VIDEO"|"AUDIO, VIDEO"|"AUDIO, VIDEO, SUBTITLES"|
 |&nbsp;&nbsp;&nbsp;  IDENTIFICADOR URI|4|7|Atributo|Se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  GROUP-ID|4|7|Atributo|Se admite|Se admite|Se admite|
+|&nbsp;&nbsp;&nbsp;  ID. DE GRUPO|4|7|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  IDIOMA|4|7|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  ASSOC-LANGUAGE|6|13|Atributo|No se admite|No se admite|No se admite|
 |&nbsp;&nbsp;&nbsp;  NOMBRE|4|7|Atributo|No se admite|No se admite|Se admite|
@@ -61,7 +61,7 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 | 4.3.4.2.  EXT-X-STREAM-INF  |1|0|OBLIGATORIA|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  ANCHO DE BANDA|1|0|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  IDENTIFICADOR DE PROGRAMA|1|0|Atributo|N/A|N/A|N/A|
-|&nbsp;&nbsp;&nbsp;  AVERAGE-BANDWIDTH|7|14|Atributo|No se admite|No se admite|No se admite|
+|&nbsp;&nbsp;&nbsp;  PROMEDIO DE ANCHO DE BANDA|7|14|Atributo|No se admite|No se admite|No se admite|
 |&nbsp;&nbsp;&nbsp;  CÓDECS|1|0|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  RESOLUCIÓN|2|3|Atributo|Se admite|Se admite|Se admite|
 |&nbsp;&nbsp;&nbsp;  VELOCIDAD DE FOTOGRAMAS|7|15|Atributo|N/A|N/A|N/A|

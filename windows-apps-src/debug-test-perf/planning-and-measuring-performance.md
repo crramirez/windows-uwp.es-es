@@ -79,7 +79,7 @@ Los objetivos de eficiencia apreciables específicos de la aplicación pueden in
 
 Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usando la aplicación de ejemplo de comidas, una vez que el usuario navega a la página de recetas, puedes elegir [actualizar elementos de forma incremental](optimize-gridview-and-listview.md#update-items-incrementally) para que el nombre de la receta se represente en primer lugar, la visualización de ingredientes se aplace y la visualización de imágenes se aplace aún más. Esto mantiene la capacidad de respuesta y una interfaz de usuario fluida en el movimiento panorámico y el desplazamiento, con una representación de fidelidad total una vez que la interacción se reduce a un ritmo que pueda seguir el subproceso de interfaz de usuario. A continuación se enumeran algunos otros aspectos que se deben tener en cuenta.
 
-**UI**
+**INTERFAZ DE USUARIO**
 
 -   Maximiza el tiempo de análisis y carga y la eficacia de la memoria para cada página de la interfaz de usuario de tu aplicación (sobre todo en la página inicial) al [optimizar el marcado XAML](optimize-xaml-loading.md). En pocas palabras, aplaza la carga de la interfaz de usuario y el código hasta que estos sean necesarios.
 -   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), haz que todos los elementos tengan el mismo tamaño y usen tantas [técnicas de optimización de ListView y GridView](optimize-gridview-and-listview.md) como sea posible.

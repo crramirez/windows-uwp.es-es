@@ -15,7 +15,7 @@ doc-status: ''
 ms.localizationpriority: medium
 ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610500"
@@ -105,7 +105,7 @@ Deberás tener varias cosas en cuenta en el momento de crear una aplicación par
 * Una aplicación 2D recibe automáticamente una [barra de la aplicación](https://developer.microsoft.com/windows/mixed-reality/app_bar_and_bounding_box) para dejar que el usuario se mueva y escale por el entorno virtual. Puede cambiarse el tamaño vertical de las vistas o bien cambiar el tamaño mantenimiento la misma relación de aspecto.
 
 
-## <a name="2d-app-design-considerations-uiux"></a>Consideraciones de diseño de Direct2D: UI/UX
+## <a name="2d-app-design-considerations-uiux"></a>Consideraciones de diseño de Direct2D: INTERFAZ DE USUARIO/EXPERIENCIA DE USUARIO
 
 * Controles de XAML que implementan el [sistema Fluent Design](https://docs.microsoft.com/windows/uwp/design/fluent-design-system/) como la [vista de navegación](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) y los efectos como [Acrylic](https://docs.microsoft.com/windows/uwp/design/style/acrylic) funcionan especialmente bien en aplicaciones 2D de realidad mixta.
 

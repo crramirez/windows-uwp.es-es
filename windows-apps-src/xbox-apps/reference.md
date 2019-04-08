@@ -19,23 +19,23 @@ Esta sección contiene temas de referencia para la API de REST del Portal de dis
 
 | URI        | Descripción |
 |------------|-------------|
-|[/api/app/packagemanager/register](wdp-loose-folder-register-api.md)| Registra una aplicación que se encuentre en una carpeta débil. |
-|[/api/app/packagemanager/upload](wdp-folder-upload.md)| Carga una carpeta completa a la consola. |
-|[/ext/app/sshpins](uwp-sshpins-api.md)| Borrar todas las anclas SSH de confianza SSH de manera remota. Será necesario realizar el emparejamiento de anclas de nuevo para el desarrollo de UWP de Visual Studio. |
-|[/ext/app/deployinfo](uwp-deployinfo-api.md)| Solicita la información de implementación para uno o más paquetes instalados. |
-|[/ext/fiddler](wdp-fiddler-api.md)| Habilitar y deshabilitar el seguimiento de la red de Fiddler. |
-|[/ext/httpmonitor/sessions](wdp-httpMonitor-api.md)| Obtiene el tráfico de HTTP desde la aplicación centrada en Xbox. |
-|[/ext/networkcredential](uwp-networkcredentials-api.md)| Agrega, quita o actualiza las credenciales de red. |
-|[/ext/remoteinput](uwp-remoteinput-api.md)| Envía de manera remota la entrada del mouse, del teclado o de la controladora a una Xbox. |
-|[/ext/remoteinput/controllers](uwp-remoteinput-controllers-api.md)| Obtiene el número de controladoras físicas conectadas o desactiva todas las controladoras físicas. |
-|[/ext/screenshot](wdp-media-capture-api.md)| Captura una representación de PNG de la pantalla que se muestra actualmente en la consola. |
-|[/ext/settings](wdp-xboxsettings-api.md)| Accede a la configuración del desarrollador de Xbox One. |
-|[/ext/smb/developerfolder](wdp-smb-api.md)| Accede a la carpeta de desarrollador en la consola a través del Explorador de archivos en el equipo de desarrollo. |
-|[/ext/user](wdp-user-management.md)| Administra los usuarios en la consola Xbox One. |
-|[/ext/xbox/info](wdp-xboxinfo-api.md)| Proporciona información acerca del dispositivo Xbox One. |
-|[/ext/xboxlive/sandbox](wdp-sandbox-api.md)| Administra tu espacio aislado de Xbox Live. |
+|[/API/App/PackageManager/Register](wdp-loose-folder-register-api.md)| Registra una aplicación que se encuentre en una carpeta débil. |
+|[/API/App/PackageManager/Upload](wdp-folder-upload.md)| Carga una carpeta completa a la consola. |
+|[/ext/App/sshpins](uwp-sshpins-api.md)| Borrar todas las anclas SSH de confianza SSH de manera remota. Será necesario realizar el emparejamiento de anclas de nuevo para el desarrollo de UWP de Visual Studio. |
+|[/ext/App/deployinfo](uwp-deployinfo-api.md)| Solicita la información de implementación para uno o más paquetes instalados. |
+|[/ ext/fiddler](wdp-fiddler-api.md)| Habilitar y deshabilitar el seguimiento de la red de Fiddler. |
+|[/ext/httpmonitor/Sessions](wdp-httpMonitor-api.md)| Obtiene el tráfico de HTTP desde la aplicación centrada en Xbox. |
+|[/ ext/networkcredential](uwp-networkcredentials-api.md)| Agrega, quita o actualiza las credenciales de red. |
+|[/ ext/remoteinput](uwp-remoteinput-api.md)| Envía de manera remota la entrada del mouse, del teclado o de la controladora a una Xbox. |
+|[/ext/remoteinput/Controllers](uwp-remoteinput-controllers-api.md)| Obtiene el número de controladoras físicas conectadas o desactiva todas las controladoras físicas. |
+|[captura de pantalla/ext /](wdp-media-capture-api.md)| Captura una representación de PNG de la pantalla que se muestra actualmente en la consola. |
+|[/ ext/configuración](wdp-xboxsettings-api.md)| Accede a la configuración del desarrollador de Xbox One. |
+|[/ext/SMB/developerfolder](wdp-smb-api.md)| Accede a la carpeta de desarrollador en la consola a través del Explorador de archivos en el equipo de desarrollo. |
+|[/ ext/usuario](wdp-user-management.md)| Administra los usuarios en la consola Xbox One. |
+|[/ext/Xbox/Info](wdp-xboxinfo-api.md)| Proporciona información acerca del dispositivo Xbox One. |
+|[/ext/xboxlive/Sandbox](wdp-sandbox-api.md)| Administra tu espacio aislado de Xbox Live. |
 
 ## <a name="see-also"></a>Consulte también
 
 - [UWP en Xbox One](index.md)
-- [Windows Device Portal](../debug-test-perf/device-portal.md)
+- [Portal de dispositivos Windows](../debug-test-perf/device-portal.md)

@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, miga
 ms.localizationpriority: medium
 ms.openlocfilehash: e81f82fe823ee0fdf81741c89576adf268940d91
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57630750"
@@ -210,10 +210,10 @@ HRESULT __stdcall DllCanUnloadNow(void)
 ```
 
 ## <a name="important-apis"></a>API importantes
-* [winrt::com_ptr struct template](/uwp/cpp-ref-for-winrt/com-ptr)
+* [plantilla de estructura winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
 * [struct winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Introducción a C++ / c++ / WinRT](intro-to-using-cpp-with-winrt.md)
-* [Mover a C++ / c++ / WinRT en C++ / c++ / CX](move-to-winrt-from-cx.md)
+* [Introducción a C++/WinRT](intro-to-using-cpp-with-winrt.md)
+* [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md)
 * [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl)

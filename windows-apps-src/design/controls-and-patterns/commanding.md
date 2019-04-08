@@ -8,7 +8,7 @@ ms.date: 11/01/2018
 ms.author: kbridge
 ms.openlocfilehash: 32d5005f9965b14d5080344832eb185f0e711689
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646530"
@@ -99,7 +99,7 @@ En este ejemplo, se muestra cómo mejorar un basic [ListView](listview-and-gridv
 > [!NOTE]
 > Este ejemplo requiere que el paquete de Microsoft.UI.Xaml.Controls NuGet, una parte de la [biblioteca de interfaz de usuario de Microsoft Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-**Xaml:**
+**XAML:**
 
 El ejemplo de interfaz de usuario incluye un [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de cinco elementos. La eliminación [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) está enlazado a un [MenuBarItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubaritem), un [SwipeItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.swipeitem), un [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), y [ Menú ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout).
 
@@ -225,7 +225,7 @@ El ejemplo de interfaz de usuario incluye un [ListView](https://docs.microsoft.c
 </Page>
 ```
 
-**Code-behind**
+**Código subyacente**
 
 1. En primer lugar, definimos un `ListItemData` clase que contiene una cadena de texto y ICommand de cada ListViewItem en nuestra ListView.
 
@@ -329,7 +329,7 @@ Muchos controles de plataforma utilizan las propiedades XamlUICommand en segundo
 > [!NOTE]
 > Este ejemplo requiere que el paquete de Microsoft.UI.Xaml.Controls NuGet, una parte de la [biblioteca de interfaz de usuario de Microsoft Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-**Xaml:**
+**XAML:**
 
 El ejemplo de interfaz de usuario incluye un [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de cinco elementos. Personalizado [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) Delete se enlaza a un [MenuBarItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubaritem), un [SwipeItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.swipeitem), un [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), y [ Menú ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout).
 
@@ -465,7 +465,7 @@ El ejemplo de interfaz de usuario incluye un [ListView](https://docs.microsoft.c
 </Page>
 ```
 
-**Code-behind**
+**Código subyacente**
 
 1. En primer lugar, definimos un `ListItemData` clase que contiene una cadena de texto y ICommand de cada ListViewItem en nuestra ListView.
 

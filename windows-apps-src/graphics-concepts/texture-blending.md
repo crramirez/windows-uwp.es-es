@@ -75,7 +75,7 @@ Si la aplicación varía la cantidad de fases que usa para diferentes situacione
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)
 
  
 

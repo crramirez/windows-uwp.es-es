@@ -17,7 +17,7 @@ ms.locfileid: "57630240"
 Aprende rápidamente a recopilar una lista de archivos y sus propiedades de una biblioteca y usa esas propiedades en una aplicación.  
 
 Requisitos previos 
-- **Programación de aplicaciones de plataforma Universal de Windows (UWP) asincrónica**   puede aprender a escribir aplicaciones asincrónicas C# o Visual Basic, vea [llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
+- **Programación de aplicaciones de plataforma Universal de Windows (UWP) asincrónica**   puede aprender a escribir aplicaciones asincrónicas C# o Visual Basic, vea [llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
 - **Permisos de acceso a las bibliotecas**   el código de estos ejemplos se requiere el **picturesLibrary** funcionalidad, pero la ubicación del archivo puede requerir una funcionalidad diferente, o ninguna funcionalidad en absoluto. Para más información, consulta [Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
 - **Enumeración de archivos simple**    este ejemplo se utiliza [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) establecer algunas propiedades avanzadas de enumeración. Para obtener más información sobre cómo obtener solo una simple lista de archivos para un directorio más pequeño, consulta [Enumerar y consultar archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 
@@ -116,7 +116,7 @@ Las aplicaciones pueden solicitar al usuario agregar la ubicación al índice me
  
 ## <a name="see-also"></a>Consulte también
 [Referencia de la API QueryOptions](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
-[Enumerar y consultar los archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
-[Permisos de acceso de archivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
+[Enumerar y consultar archivos y carpetas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
+[Permisos de acceso a archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
  
  

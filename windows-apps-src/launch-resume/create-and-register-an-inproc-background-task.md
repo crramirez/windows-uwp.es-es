@@ -113,14 +113,14 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 **Información detallada de la tarea temas informativos**
 
 * [Convertir una tarea en segundo plano fuera de proceso en una tarea en segundo plano en curso](convert-out-of-process-background-task.md)
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)
 * [Reproducir archivos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
-* [Uso de un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
-* [Controlar una tarea cancelada en segundo plano](handle-a-cancelled-background-task.md)
-* [Supervisar el progreso de la tarea en segundo plano y de finalización](monitor-background-task-progress-and-completion.md)
+* [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
+* [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 
 **Guía de tareas en segundo plano**

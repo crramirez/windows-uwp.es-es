@@ -51,7 +51,7 @@ Las asignaciones de desplazamiento las interpola el motor de teselación. Como e
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)
 
  
 

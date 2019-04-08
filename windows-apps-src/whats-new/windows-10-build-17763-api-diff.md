@@ -53,11 +53,11 @@ LearningModel <br> LearningModel.Author <br> LearningModel.Close <br> LearningMo
 
 #### <a name="learningmodelbindinghttpsdocsmicrosoftcomuwpapiwindowsaimachinelearninglearningmodelbinding"></a>[LearningModelBinding](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.learningmodelbinding)
 
-LearningModelBinding <br> LearningModelBinding.Bind <br> LearningModelBinding.Bind <br> LearningModelBinding.Clear <br> LearningModelBinding.First <br> LearningModelBinding.HasKey <br> LearningModelBinding.#ctor <br> LearningModelBinding.Lookup <br> LearningModelBinding.Size <br> LearningModelBinding.Split
+LearningModelBinding <br> LearningModelBinding.Bind <br> LearningModelBinding.Bind <br> LearningModelBinding.Clear <br> LearningModelBinding.First <br> LearningModelBinding.HasKey <br> #Ctor LearningModelBinding. <br> LearningModelBinding.Lookup <br> LearningModelBinding.Size <br> LearningModelBinding.Split
 
 #### <a name="learningmodeldevicehttpsdocsmicrosoftcomuwpapiwindowsaimachinelearninglearningmodeldevice"></a>[LearningModelDevice](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.learningmodeldevice)
 
-LearningModelDevice <br> LearningModelDevice.AdapterId <br> LearningModelDevice.CreateFromDirect3D11Device <br> LearningModelDevice.Direct3D11Device <br> LearningModelDevice.#ctor
+LearningModelDevice <br> LearningModelDevice.AdapterId <br> LearningModelDevice.CreateFromDirect3D11Device <br> LearningModelDevice.Direct3D11Device <br> #Ctor LearningModelDevice.
 
 #### <a name="learningmodeldevicekindhttpsdocsmicrosoftcomuwpapiwindowsaimachinelearninglearningmodeldevicekind"></a>[LearningModelDeviceKind](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.learningmodeldevicekind)
 
@@ -73,7 +73,7 @@ LearningModelFeatureKind
 
 #### <a name="learningmodelsessionhttpsdocsmicrosoftcomuwpapiwindowsaimachinelearninglearningmodelsession"></a>[LearningModelSession](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.learningmodelsession)
 
-LearningModelSession <br> LearningModelSession.Close <br> LearningModelSession.Device <br> LearningModelSession.Evaluate <br> LearningModelSession.EvaluateAsync <br> LearningModelSession.EvaluateFeatures <br> LearningModelSession.EvaluateFeaturesAsync <br> LearningModelSession.EvaluationProperties <br> LearningModelSession.#ctor <br> LearningModelSession.#ctor <br> LearningModelSession.Model
+LearningModelSession <br> LearningModelSession.Close <br> LearningModelSession.Device <br> LearningModelSession.Evaluate <br> LearningModelSession.EvaluateAsync <br> LearningModelSession.EvaluateFeatures <br> LearningModelSession.EvaluateFeaturesAsync <br> LearningModelSession.EvaluationProperties <br> #Ctor LearningModelSession. <br> #Ctor LearningModelSession. <br> LearningModelSession.Model
 
 #### <a name="mapfeaturedescriptorhttpsdocsmicrosoftcomuwpapiwindowsaimachinelearningmapfeaturedescriptor"></a>[MapFeatureDescriptor](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.mapfeaturedescriptor)
 
@@ -169,7 +169,7 @@ Clipboard.ClearHistory <br> Clipboard.DeleteItemFromHistory <br> Clipboard.GetHi
 
 #### <a name="clipboardcontentoptionshttpsdocsmicrosoftcomuwpapiwindowsapplicationmodeldatatransferclipboardcontentoptions"></a>[ClipboardContentOptions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboardcontentoptions)
 
-ClipboardContentOptions <br> ClipboardContentOptions.#ctor <br> ClipboardContentOptions.HistoryFormats <br> ClipboardContentOptions.IsAllowedInHistory <br> ClipboardContentOptions.IsRoamable <br> ClipboardContentOptions.RoamingFormats
+ClipboardContentOptions <br> #Ctor ClipboardContentOptions. <br> ClipboardContentOptions.HistoryFormats <br> ClipboardContentOptions.IsAllowedInHistory <br> ClipboardContentOptions.IsRoamable <br> ClipboardContentOptions.RoamingFormats
 
 #### <a name="clipboardhistorychangedeventargshttpsdocsmicrosoftcomuwpapiwindowsapplicationmodeldatatransferclipboardhistorychangedeventargs"></a>[ClipboardHistoryChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboardhistorychangedeventargs)
 
@@ -259,7 +259,7 @@ LimitedAccessFeatures <br> LimitedAccessFeatures.TryUnlockFeature
 
 LimitedAccessFeatureStatus
 
-#### <a name="packagehttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelpackage"></a>[Package](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package)
+#### <a name="packagehttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelpackage"></a>[Paquete](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package)
 
 Package.CheckUpdateAvailabilityAsync <br> Package.GetAppInstallerInfo
 
@@ -347,9 +347,9 @@ DisplayModeInfo <br> DisplayModeInfo.GetWireFormatSupportedBitsPerChannel <br> D
 
 DisplayModeQueryOptions
 
-#### <a name="displaypathhttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplaypath"></a>[DisplayPath](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displaypath)
+#### <a name="displaypathhttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplaypath"></a>[Mostrar ruta](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displaypath)
 
-DisplayPath <br> DisplayPath.ApplyPropertiesFromMode <br> DisplayPath.FindModes <br> DisplayPath.IsInterlaced <br> DisplayPath.IsStereo <br> DisplayPath.PresentationRate <br> DisplayPath.Properties <br> DisplayPath.Rotation <br> DisplayPath.Scaling <br> DisplayPath.SourcePixelFormat <br> DisplayPath.SourceResolution <br> DisplayPath.Status <br> DisplayPath.Target <br> DisplayPath.TargetResolution <br> DisplayPath.View <br> DisplayPath.WireFormat
+Mostrar ruta <br> DisplayPath.ApplyPropertiesFromMode <br> DisplayPath.FindModes <br> DisplayPath.IsInterlaced <br> DisplayPath.IsStereo <br> DisplayPath.PresentationRate <br> DisplayPath.Properties <br> DisplayPath.Rotation <br> DisplayPath.Scaling <br> DisplayPath.SourcePixelFormat <br> DisplayPath.SourceResolution <br> DisplayPath.Status <br> DisplayPath.Target <br> DisplayPath.TargetResolution <br> DisplayPath.View <br> DisplayPath.WireFormat
 
 #### <a name="displaypathscalinghttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplaypathscaling"></a>[DisplayPathScaling](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displaypathscaling)
 
@@ -365,7 +365,7 @@ DisplayPresentationRate
 
 #### <a name="displayprimarydescriptionhttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplayprimarydescription"></a>[DisplayPrimaryDescription](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displayprimarydescription)
 
-DisplayPrimaryDescription <br> DisplayPrimaryDescription.ColorSpace <br> DisplayPrimaryDescription.CreateWithProperties <br> DisplayPrimaryDescription.#ctor <br> DisplayPrimaryDescription.Format <br> DisplayPrimaryDescription.Height <br> DisplayPrimaryDescription.IsStereo <br> DisplayPrimaryDescription.MultisampleDescription <br> DisplayPrimaryDescription.Properties <br> DisplayPrimaryDescription.Width
+DisplayPrimaryDescription <br> DisplayPrimaryDescription.ColorSpace <br> DisplayPrimaryDescription.CreateWithProperties <br> #Ctor DisplayPrimaryDescription. <br> DisplayPrimaryDescription.Format <br> DisplayPrimaryDescription.Height <br> DisplayPrimaryDescription.IsStereo <br> DisplayPrimaryDescription.MultisampleDescription <br> DisplayPrimaryDescription.Properties <br> DisplayPrimaryDescription.Width
 
 #### <a name="displayrotationhttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplayrotation"></a>[DisplayRotation](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displayrotation)
 
@@ -429,7 +429,7 @@ DisplayView <br> DisplayView.ContentResolution <br> DisplayView.Paths <br> Displ
 
 #### <a name="displaywireformathttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplaywireformat"></a>[DisplayWireFormat](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displaywireformat)
 
-DisplayWireFormat <br> DisplayWireFormat.BitsPerChannel <br> DisplayWireFormat.ColorSpace <br> DisplayWireFormat.CreateWithProperties <br> DisplayWireFormat.#ctor <br> DisplayWireFormat.Eotf <br> DisplayWireFormat.HdrMetadata <br> DisplayWireFormat.PixelEncoding <br> DisplayWireFormat.Properties
+DisplayWireFormat <br> DisplayWireFormat.BitsPerChannel <br> DisplayWireFormat.ColorSpace <br> DisplayWireFormat.CreateWithProperties <br> #Ctor DisplayWireFormat. <br> DisplayWireFormat.Eotf <br> DisplayWireFormat.HdrMetadata <br> DisplayWireFormat.PixelEncoding <br> DisplayWireFormat.Properties
 
 #### <a name="displaywireformatcolorspacehttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaycoredisplaywireformatcolorspace"></a>[DisplayWireFormatColorSpace](https://docs.microsoft.com/uwp/api/windows.devices.display.core.displaywireformatcolorspace)
 
@@ -473,7 +473,7 @@ LampArrayBlinkEffect <br> LampArrayBlinkEffect.AttackDuration <br> LampArrayBlin
 
 #### <a name="lamparraycolorrampeffecthttpsdocsmicrosoftcomuwpapiwindowsdeviceslightseffectslamparraycolorrampeffect"></a>[LampArrayColorRampEffect](https://docs.microsoft.com/uwp/api/windows.devices.lights.effects.lamparraycolorrampeffect)
 
-LampArrayColorRampEffect <br> LampArrayColorRampEffect.Color <br> LampArrayColorRampEffect.CompletionBehavior <br> LampArrayColorRampEffect.#ctor <br> LampArrayColorRampEffect.RampDuration <br> LampArrayColorRampEffect.StartDelay <br> LampArrayColorRampEffect.ZIndex
+LampArrayColorRampEffect <br> LampArrayColorRampEffect.Color <br> LampArrayColorRampEffect.CompletionBehavior <br> #Ctor LampArrayColorRampEffect. <br> LampArrayColorRampEffect.RampDuration <br> LampArrayColorRampEffect.StartDelay <br> LampArrayColorRampEffect.ZIndex
 
 #### <a name="lamparraycustomeffecthttpsdocsmicrosoftcomuwpapiwindowsdeviceslightseffectslamparraycustomeffect"></a>[LampArrayCustomEffect](https://docs.microsoft.com/uwp/api/windows.devices.lights.effects.lamparraycustomeffect)
 
@@ -497,7 +497,7 @@ LampArrayRepetitionMode
 
 #### <a name="lamparraysolideffecthttpsdocsmicrosoftcomuwpapiwindowsdeviceslightseffectslamparraysolideffect"></a>[LampArraySolidEffect](https://docs.microsoft.com/uwp/api/windows.devices.lights.effects.lamparraysolideffect)
 
-LampArraySolidEffect <br> LampArraySolidEffect.Color <br> LampArraySolidEffect.CompletionBehavior <br> LampArraySolidEffect.Duration <br> LampArraySolidEffect.#ctor <br> LampArraySolidEffect.StartDelay <br> LampArraySolidEffect.ZIndex
+LampArraySolidEffect <br> LampArraySolidEffect.Color <br> LampArraySolidEffect.CompletionBehavior <br> LampArraySolidEffect.Duration <br> #Ctor LampArraySolidEffect. <br> LampArraySolidEffect.StartDelay <br> LampArraySolidEffect.ZIndex
 
 #### <a name="lamparrayupdaterequestedeventargshttpsdocsmicrosoftcomuwpapiwindowsdeviceslightseffectslamparrayupdaterequestedeventargs"></a>[LampArrayUpdateRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.lights.effects.lamparrayupdaterequestedeventargs)
 
@@ -991,7 +991,7 @@ SysSpatialInputDevice <br> SysSpatialInputDevice.Handedness <br> SysSpatialInput
 
 #### <a name="sysspatialinputdevicewatcherhttpsdocsmicrosoftcomuwpapiwindowssystemimplementationholographicsysspatialinputdevicewatcher"></a>[SysSpatialInputDeviceWatcher](https://docs.microsoft.com/uwp/api/windows.system.implementation.holographic.sysspatialinputdevicewatcher)
 
-SysSpatialInputDeviceWatcher <br> SysSpatialInputDeviceWatcher.Added <br> SysSpatialInputDeviceWatcher.EnumerationCompleted <br> SysSpatialInputDeviceWatcher.Removed <br> SysSpatialInputDeviceWatcher.Start <br> SysSpatialInputDeviceWatcher.Status <br> SysSpatialInputDeviceWatcher.Stop <br> SysSpatialInputDeviceWatcher.Stopped <br> SysSpatialInputDeviceWatcher.#ctor <br> SysSpatialInputDeviceWatcher.Updated
+SysSpatialInputDeviceWatcher <br> SysSpatialInputDeviceWatcher.Added <br> SysSpatialInputDeviceWatcher.EnumerationCompleted <br> SysSpatialInputDeviceWatcher.Removed <br> SysSpatialInputDeviceWatcher.Start <br> SysSpatialInputDeviceWatcher.Status <br> SysSpatialInputDeviceWatcher.Stop <br> SysSpatialInputDeviceWatcher.Stopped <br> #Ctor SysSpatialInputDeviceWatcher. <br> SysSpatialInputDeviceWatcher.Updated
 
 #### <a name="sysspatialinputdevicewatcherstatushttpsdocsmicrosoftcomuwpapiwindowssystemimplementationholographicsysspatialinputdevicewatcherstatus"></a>[SysSpatialInputDeviceWatcherStatus](https://docs.microsoft.com/uwp/api/windows.system.implementation.holographic.sysspatialinputdevicewatcherstatus)
 
@@ -1007,7 +1007,7 @@ SysSpatialStageBoundaryDisposition
 
 #### <a name="sysspatialstagemanagerhttpsdocsmicrosoftcomuwpapiwindowssystemimplementationholographicsysspatialstagemanager"></a>[SysSpatialStageManager](https://docs.microsoft.com/uwp/api/windows.system.implementation.holographic.sysspatialstagemanager)
 
-SysSpatialStageManager <br> SysSpatialStageManager.DoesAnyStageHaveBoundariesAsync <br> SysSpatialStageManager.GetBoundaryDisposition <br> SysSpatialStageManager.SetAndSaveNewStageAsync <br> SysSpatialStageManager.SetBoundaryEnabled <br> SysSpatialStageManager.#ctor <br> SysSpatialStageManager.UpdateStageAnchorAsync
+SysSpatialStageManager <br> SysSpatialStageManager.DoesAnyStageHaveBoundariesAsync <br> SysSpatialStageManager.GetBoundaryDisposition <br> SysSpatialStageManager.SetAndSaveNewStageAsync <br> SysSpatialStageManager.SetBoundaryEnabled <br> #Ctor SysSpatialStageManager. <br> SysSpatialStageManager.UpdateStageAnchorAsync
 
 ### <a name="windowssystempreviewhttpsdocsmicrosoftcomuwpapiwindowssystempreview"></a>[Windows.System.Preview](https://docs.microsoft.com/uwp/api/windows.system.preview)
 
@@ -1075,7 +1075,7 @@ RemoteSystemConnectionRequest.CreateForApp <br> RemoteSystemConnectionRequest.Re
 
 #### <a name="remotesystemwebaccountfilterhttpsdocsmicrosoftcomuwpapiwindowssystemremotesystemsremotesystemwebaccountfilter"></a>[RemoteSystemWebAccountFilter](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemwebaccountfilter)
 
-RemoteSystemWebAccountFilter <br> RemoteSystemWebAccountFilter.Account <br> RemoteSystemWebAccountFilter.#ctor
+RemoteSystemWebAccountFilter <br> RemoteSystemWebAccountFilter.Account <br> #Ctor RemoteSystemWebAccountFilter.
 
 ### <a name="windowssystemupdatehttpsdocsmicrosoftcomuwpapiwindowssystemupdate"></a>[Windows.System.Update](https://docs.microsoft.com/uwp/api/windows.system.update)
 
@@ -1117,7 +1117,7 @@ AssignedAccessSettings <br> AssignedAccessSettings.GetDefault <br> AssignedAcces
 
 #### <a name="appurihandlerhosthttpsdocsmicrosoftcomuwpapiwindowssystemappurihandlerhost"></a>[AppUriHandlerHost](https://docs.microsoft.com/uwp/api/windows.system.appurihandlerhost)
 
-AppUriHandlerHost <br> AppUriHandlerHost.#ctor <br> AppUriHandlerHost.#ctor <br> AppUriHandlerHost.Name
+AppUriHandlerHost <br> #Ctor AppUriHandlerHost. <br> #Ctor AppUriHandlerHost. <br> AppUriHandlerHost.Name
 
 #### <a name="appurihandlerregistrationhttpsdocsmicrosoftcomuwpapiwindowssystemappurihandlerregistration"></a>[AppUriHandlerRegistration](https://docs.microsoft.com/uwp/api/windows.system.appurihandlerregistration)
 
@@ -1127,7 +1127,7 @@ AppUriHandlerRegistration <br> AppUriHandlerRegistration.GetAppAddedHostsAsync <
 
 AppUriHandlerRegistrationManager <br> AppUriHandlerRegistrationManager.GetDefault <br> AppUriHandlerRegistrationManager.GetForUser <br> AppUriHandlerRegistrationManager.TryGetRegistration <br> AppUriHandlerRegistrationManager.User
 
-#### <a name="launcherhttpsdocsmicrosoftcomuwpapiwindowssystemlauncher"></a>[Launcher](https://docs.microsoft.com/uwp/api/windows.system.launcher)
+#### <a name="launcherhttpsdocsmicrosoftcomuwpapiwindowssystemlauncher"></a>[Iniciador](https://docs.microsoft.com/uwp/api/windows.system.launcher)
 
 Launcher.LaunchFolderPathAsync <br> Launcher.LaunchFolderPathAsync <br> Launcher.LaunchFolderPathForUserAsync <br> Launcher.LaunchFolderPathForUserAsync
 
@@ -1141,7 +1141,7 @@ ScreenReaderPositionChangedEventArgs <br> ScreenReaderPositionChangedEventArgs.I
 
 #### <a name="screenreaderservicehttpsdocsmicrosoftcomuwpapiwindowsuiaccessibilityscreenreaderservice"></a>[ScreenReaderService](https://docs.microsoft.com/uwp/api/windows.ui.accessibility.screenreaderservice)
 
-ScreenReaderService <br> ScreenReaderService.CurrentScreenReaderPosition <br> ScreenReaderService.ScreenReaderPositionChanged <br> ScreenReaderService.#ctor
+ScreenReaderService <br> ScreenReaderService.CurrentScreenReaderPosition <br> ScreenReaderService.ScreenReaderPositionChanged <br> #Ctor ScreenReaderService.
 
 ### <a name="windowsuicompositioninteractionshttpsdocsmicrosoftcomuwpapiwindowsuicompositioninteractions"></a>[Windows.UI.Composition.Interactions](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions)
 
@@ -1253,7 +1253,7 @@ SecurityAppKind
 
 #### <a name="securityappmanagerhttpsdocsmicrosoftcomuwpapiwindowsuishellsecurityappmanager"></a>[SecurityAppManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.securityappmanager)
 
-SecurityAppManager <br> SecurityAppManager.Register <br> SecurityAppManager.#ctor <br> SecurityAppManager.Unregister <br> SecurityAppManager.UpdateState
+SecurityAppManager <br> SecurityAppManager.Register <br> #Ctor SecurityAppManager. <br> SecurityAppManager.Unregister <br> SecurityAppManager.UpdateState
 
 #### <a name="securityappstatehttpsdocsmicrosoftcomuwpapiwindowsuishellsecurityappstate"></a>[SecurityAppState](https://docs.microsoft.com/uwp/api/windows.ui.shell.securityappstate)
 
@@ -1329,11 +1329,11 @@ AutomationPeer.IsDialog <br> AutomationPeer.IsDialogCore
 
 #### <a name="menubarautomationpeerhttpsdocsmicrosoftcomuwpapiwindowsuixamlautomationpeersmenubarautomationpeer"></a>[MenuBarAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.menubarautomationpeer)
 
-MenuBarAutomationPeer <br> MenuBarAutomationPeer.#ctor
+MenuBarAutomationPeer <br> #Ctor MenuBarAutomationPeer.
 
 #### <a name="menubaritemautomationpeerhttpsdocsmicrosoftcomuwpapiwindowsuixamlautomationpeersmenubaritemautomationpeer"></a>[MenuBarItemAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.menubaritemautomationpeer)
 
-MenuBarItemAutomationPeer <br> MenuBarItemAutomationPeer.Collapse <br> MenuBarItemAutomationPeer.Expand <br> MenuBarItemAutomationPeer.ExpandCollapseState <br> MenuBarItemAutomationPeer.Invoke <br> MenuBarItemAutomationPeer.#ctor
+MenuBarItemAutomationPeer <br> MenuBarItemAutomationPeer.Collapse <br> MenuBarItemAutomationPeer.Expand <br> MenuBarItemAutomationPeer.ExpandCollapseState <br> MenuBarItemAutomationPeer.Invoke <br> #Ctor MenuBarItemAutomationPeer.
 
 ### <a name="windowsuixamlautomationhttpsdocsmicrosoftcomuwpapiwindowsuixamlautomation"></a>[Windows.UI.Xaml.Automation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation)
 
@@ -1367,7 +1367,7 @@ MapTileUriRequestedEventArgs.FrameIndex
 
 #### <a name="commandbarflyoutcommandbarhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsprimitivescommandbarflyoutcommandbar"></a>[CommandBarFlyoutCommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.commandbarflyoutcommandbar)
 
-CommandBarFlyoutCommandBar <br> CommandBarFlyoutCommandBar.#ctor <br> CommandBarFlyoutCommandBar.FlyoutTemplateSettings
+CommandBarFlyoutCommandBar <br> #Ctor CommandBarFlyoutCommandBar. <br> CommandBarFlyoutCommandBar.FlyoutTemplateSettings
 
 #### <a name="commandbarflyoutcommandbartemplatesettingshttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsprimitivescommandbarflyoutcommandbartemplatesettings"></a>[CommandBarFlyoutCommandBarTemplateSettings](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.commandbarflyoutcommandbartemplatesettings)
 
@@ -1383,11 +1383,11 @@ FlyoutShowMode
 
 #### <a name="flyoutshowoptionshttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsprimitivesflyoutshowoptions"></a>[FlyoutShowOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutshowoptions)
 
-FlyoutShowOptions <br> FlyoutShowOptions.ExclusionRect <br> FlyoutShowOptions.#ctor <br> FlyoutShowOptions.Placement <br> FlyoutShowOptions.Position <br> FlyoutShowOptions.ShowMode
+FlyoutShowOptions <br> FlyoutShowOptions.ExclusionRect <br> #Ctor FlyoutShowOptions. <br> FlyoutShowOptions.Placement <br> FlyoutShowOptions.Position <br> FlyoutShowOptions.ShowMode
 
 #### <a name="navigationviewitempresenterhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsprimitivesnavigationviewitempresenter"></a>[NavigationViewItemPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.navigationviewitempresenter)
 
-NavigationViewItemPresenter <br> NavigationViewItemPresenter.Icon <br> NavigationViewItemPresenter.IconProperty <br> NavigationViewItemPresenter.#ctor
+NavigationViewItemPresenter <br> NavigationViewItemPresenter.Icon <br> NavigationViewItemPresenter.IconProperty <br> #Ctor NavigationViewItemPresenter.
 
 ### <a name="windowsuixamlcontrolshttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrols"></a>[Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
@@ -1397,7 +1397,7 @@ AnchorRequestedEventArgs <br> AnchorRequestedEventArgs.Anchor <br> AnchorRequest
 
 #### <a name="appbarelementcontainerhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsappbarelementcontainer"></a>[AppBarElementContainer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarelementcontainer)
 
-AppBarElementContainer <br> AppBarElementContainer.#ctor <br> AppBarElementContainer.DynamicOverflowOrder <br> AppBarElementContainer.DynamicOverflowOrderProperty <br> AppBarElementContainer.IsCompact <br> AppBarElementContainer.IsCompactProperty <br> AppBarElementContainer.IsInOverflow <br> AppBarElementContainer.IsInOverflowProperty
+AppBarElementContainer <br> #Ctor AppBarElementContainer. <br> AppBarElementContainer.DynamicOverflowOrder <br> AppBarElementContainer.DynamicOverflowOrderProperty <br> AppBarElementContainer.IsCompact <br> AppBarElementContainer.IsCompactProperty <br> AppBarElementContainer.IsInOverflow <br> AppBarElementContainer.IsInOverflowProperty
 
 #### <a name="autosuggestboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsautosuggestbox"></a>[AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)
 
@@ -1407,7 +1407,7 @@ AutoSuggestBox.Description <br> AutoSuggestBox.DescriptionProperty
 
 BackgroundSizing
 
-#### <a name="borderhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsborder"></a>[Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border)
+#### <a name="borderhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsborder"></a>[Borde](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border)
 
 Border.BackgroundSizing <br> Border.BackgroundSizingProperty <br> Border.BackgroundTransition
 
@@ -1425,7 +1425,7 @@ ComboBoxTextSubmittedEventArgs <br> ComboBoxTextSubmittedEventArgs.Handled <br> 
 
 #### <a name="commandbarflyouthttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscommandbarflyout"></a>[CommandBarFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbarflyout)
 
-CommandBarFlyout <br> CommandBarFlyout.#ctor <br> CommandBarFlyout.PrimaryCommands <br> CommandBarFlyout.SecondaryCommands
+CommandBarFlyout <br> #Ctor CommandBarFlyout. <br> CommandBarFlyout.PrimaryCommands <br> CommandBarFlyout.SecondaryCommands
 
 #### <a name="contentpresenterhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontentpresenter"></a>[ContentPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentpresenter)
 
@@ -1449,11 +1449,11 @@ DatePickerSelectedValueChangedEventArgs <br> DatePickerSelectedValueChangedEvent
 
 #### <a name="dropdownbuttonhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsdropdownbutton"></a>[DropDownButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.dropdownbutton)
 
-DropDownButton <br> DropDownButton.#ctor
+DropDownButton <br> #Ctor DropDownButton.
 
 #### <a name="dropdownbuttonautomationpeerhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsdropdownbuttonautomationpeer"></a>[DropDownButtonAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.dropdownbuttonautomationpeer)
 
-DropDownButtonAutomationPeer <br> DropDownButtonAutomationPeer.Collapse <br> DropDownButtonAutomationPeer.#ctor <br> DropDownButtonAutomationPeer.Expand <br> DropDownButtonAutomationPeer.ExpandCollapseState
+DropDownButtonAutomationPeer <br> DropDownButtonAutomationPeer.Collapse <br> #Ctor DropDownButtonAutomationPeer. <br> DropDownButtonAutomationPeer.Expand <br> DropDownButtonAutomationPeer.ExpandCollapseState
 
 #### <a name="framehttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsframe"></a>[Frame](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame)
 
@@ -1465,29 +1465,29 @@ Grid.BackgroundSizing <br> Grid.BackgroundSizingProperty
 
 #### <a name="iconsourceelementhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsiconsourceelement"></a>[IconSourceElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.iconsourceelement)
 
-IconSourceElement <br> IconSourceElement.IconSource <br> IconSourceElement.#ctor <br> IconSourceElement.IconSourceProperty
+IconSourceElement <br> IconSourceElement.IconSource <br> #Ctor IconSourceElement. <br> IconSourceElement.IconSourceProperty
 
 #### <a name="iscrollanchorproviderhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsiscrollanchorprovider"></a>[IScrollAnchorProvider](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider)
 
 IScrollAnchorProvider <br> IScrollAnchorProvider.CurrentAnchor <br> IScrollAnchorProvider.RegisterAnchorCandidate <br> IScrollAnchorProvider.UnregisterAnchorCandidate
 
-#### <a name="menubarhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsmenubar"></a>[MenuBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menubar)
+#### <a name="menubarhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsmenubar"></a>[Barra de menús](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menubar)
 
-MenuBar <br> MenuBar.Items <br> MenuBar.ItemsProperty <br> MenuBar.#ctor
+MenuBar <br> MenuBar.Items <br> MenuBar.ItemsProperty <br> #Ctor de barra de menús.
 
 #### <a name="menubaritemhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsmenubaritem"></a>[MenuBarItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menubaritem)
 
-MenuBarItem <br> MenuBarItem.Items <br> MenuBarItem.ItemsProperty <br> MenuBarItem.#ctor <br> MenuBarItem.Title <br> MenuBarItem.TitleProperty
+MenuBarItem <br> MenuBarItem.Items <br> MenuBarItem.ItemsProperty <br> #Ctor MenuBarItem. <br> MenuBarItem.Title <br> MenuBarItem.TitleProperty
 
 #### <a name="menubaritemflyouthttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsmenubaritemflyout"></a>[MenuBarItemFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menubaritemflyout)
 
-MenuBarItemFlyout <br> MenuBarItemFlyout.#ctor
+MenuBarItemFlyout <br> #Ctor MenuBarItemFlyout.
 
-#### <a name="navigationviewhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsnavigationview"></a>[NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
+#### <a name="navigationviewhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsnavigationview"></a>[Control NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
 NavigationView.ContentOverlay <br> NavigationView.ContentOverlayProperty <br> NavigationView.IsPaneVisible <br> NavigationView.IsPaneVisibleProperty <br> NavigationView.OverflowLabelMode <br> NavigationView.OverflowLabelModeProperty <br> NavigationView.PaneCustomContent <br> NavigationView.PaneCustomContentProperty <br> NavigationView.PaneDisplayMode <br> NavigationView.PaneDisplayModeProperty <br> NavigationView.PaneHeader <br> NavigationView.PaneHeaderProperty <br> NavigationView.SelectionFollowsFocus <br> NavigationView.SelectionFollowsFocusProperty <br> NavigationView.ShoulderNavigationEnabled <br> NavigationView.ShoulderNavigationEnabledProperty <br> NavigationView.TemplateSettings <br> NavigationView.TemplateSettingsProperty
 
-#### <a name="navigationviewitemhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsnavigationviewitem"></a>[NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem)
+#### <a name="navigationviewitemhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsnavigationviewitem"></a>[Elemento NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem)
 
 NavigationViewItem.SelectsOnInvoked <br> NavigationViewItem.SelectsOnInvokedProperty
 
@@ -1517,7 +1517,7 @@ NavigationViewShoulderNavigationEnabled
 
 #### <a name="navigationviewtemplatesettingshttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsnavigationviewtemplatesettings"></a>[NavigationViewTemplateSettings](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewtemplatesettings)
 
-NavigationViewTemplateSettings <br> NavigationViewTemplateSettings.BackButtonVisibility <br> NavigationViewTemplateSettings.BackButtonVisibilityProperty <br> NavigationViewTemplateSettings.LeftPaneVisibility <br> NavigationViewTemplateSettings.LeftPaneVisibilityProperty <br> NavigationViewTemplateSettings.#ctor <br> NavigationViewTemplateSettings.OverflowButtonVisibility <br> NavigationViewTemplateSettings.OverflowButtonVisibilityProperty <br> NavigationViewTemplateSettings.PaneToggleButtonVisibility <br> NavigationViewTemplateSettings.PaneToggleButtonVisibilityProperty <br> NavigationViewTemplateSettings.SingleSelectionFollowsFocus <br> NavigationViewTemplateSettings.SingleSelectionFollowsFocusProperty <br> NavigationViewTemplateSettings.TopPadding <br> NavigationViewTemplateSettings.TopPaddingProperty <br> NavigationViewTemplateSettings.TopPaneVisibility <br> NavigationViewTemplateSettings.TopPaneVisibilityProperty
+NavigationViewTemplateSettings <br> NavigationViewTemplateSettings.BackButtonVisibility <br> NavigationViewTemplateSettings.BackButtonVisibilityProperty <br> NavigationViewTemplateSettings.LeftPaneVisibility <br> NavigationViewTemplateSettings.LeftPaneVisibilityProperty <br> #Ctor NavigationViewTemplateSettings. <br> NavigationViewTemplateSettings.OverflowButtonVisibility <br> NavigationViewTemplateSettings.OverflowButtonVisibilityProperty <br> NavigationViewTemplateSettings.PaneToggleButtonVisibility <br> NavigationViewTemplateSettings.PaneToggleButtonVisibilityProperty <br> NavigationViewTemplateSettings.SingleSelectionFollowsFocus <br> NavigationViewTemplateSettings.SingleSelectionFollowsFocusProperty <br> NavigationViewTemplateSettings.TopPadding <br> NavigationViewTemplateSettings.TopPaddingProperty <br> NavigationViewTemplateSettings.TopPaneVisibility <br> NavigationViewTemplateSettings.TopPaneVisibilityProperty
 
 #### <a name="panelhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolspanel"></a>[Panel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel)
 
@@ -1557,13 +1557,13 @@ SplitButton <br> SplitButton.Click <br> SplitButton.Command <br> SplitButton.Com
 
 #### <a name="splitbuttonautomationpeerhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolssplitbuttonautomationpeer"></a>[SplitButtonAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitbuttonautomationpeer)
 
-SplitButtonAutomationPeer <br> SplitButtonAutomationPeer.Collapse <br> SplitButtonAutomationPeer.Expand <br> SplitButtonAutomationPeer.ExpandCollapseState <br> SplitButtonAutomationPeer.Invoke <br> SplitButtonAutomationPeer.#ctor
+SplitButtonAutomationPeer <br> SplitButtonAutomationPeer.Collapse <br> SplitButtonAutomationPeer.Expand <br> SplitButtonAutomationPeer.ExpandCollapseState <br> SplitButtonAutomationPeer.Invoke <br> #Ctor SplitButtonAutomationPeer.
 
 #### <a name="splitbuttonclickeventargshttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolssplitbuttonclickeventargs"></a>[SplitButtonClickEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitbuttonclickeventargs)
 
 SplitButtonClickEventArgs
 
-#### <a name="stackpanelhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsstackpanel"></a>[StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
+#### <a name="stackpanelhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsstackpanel"></a>[Elemento StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 StackPanel.BackgroundSizing <br> StackPanel.BackgroundSizingProperty
 
@@ -1581,7 +1581,7 @@ TextBoxSelectionChangingEventArgs <br> TextBoxSelectionChangingEventArgs.Cancel 
 
 #### <a name="textcommandbarflyouthttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstextcommandbarflyout"></a>[TextCommandBarFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textcommandbarflyout)
 
-TextCommandBarFlyout <br> TextCommandBarFlyout.#ctor
+TextCommandBarFlyout <br> #Ctor TextCommandBarFlyout.
 
 #### <a name="timepickerhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstimepicker"></a>[TimePicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker)
 
@@ -1597,17 +1597,17 @@ ToggleSplitButton <br> ToggleSplitButton.IsChecked <br> ToggleSplitButton.IsChec
 
 #### <a name="togglesplitbuttonautomationpeerhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstogglesplitbuttonautomationpeer"></a>[ToggleSplitButtonAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglesplitbuttonautomationpeer)
 
-ToggleSplitButtonAutomationPeer <br> ToggleSplitButtonAutomationPeer.Collapse <br> ToggleSplitButtonAutomationPeer.Expand <br> ToggleSplitButtonAutomationPeer.ExpandCollapseState <br> ToggleSplitButtonAutomationPeer.Toggle <br> ToggleSplitButtonAutomationPeer.#ctor <br> ToggleSplitButtonAutomationPeer.ToggleState
+ToggleSplitButtonAutomationPeer <br> ToggleSplitButtonAutomationPeer.Collapse <br> ToggleSplitButtonAutomationPeer.Expand <br> ToggleSplitButtonAutomationPeer.ExpandCollapseState <br> ToggleSplitButtonAutomationPeer.Toggle <br> #Ctor ToggleSplitButtonAutomationPeer. <br> ToggleSplitButtonAutomationPeer.ToggleState
 
 #### <a name="togglesplitbuttonischeckedchangedeventargshttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstogglesplitbuttonischeckedchangedeventargs"></a>[ToggleSplitButtonIsCheckedChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglesplitbuttonischeckedchangedeventargs)
 
 ToggleSplitButtonIsCheckedChangedEventArgs
 
-#### <a name="tooltiphttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstooltip"></a>[ToolTip](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltip)
+#### <a name="tooltiphttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstooltip"></a>[Información sobre herramientas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltip)
 
 ToolTip.PlacementRect <br> ToolTip.PlacementRectProperty
 
-#### <a name="treeviewhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstreeview"></a>[TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
+#### <a name="treeviewhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstreeview"></a>[Vista de árbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
 
 TreeView.CanDragItems <br> TreeView.CanDragItemsProperty <br> TreeView.CanReorderItems <br> TreeView.CanReorderItemsProperty <br> TreeView.ContainerFromItem <br> TreeView.ContainerFromNode <br> TreeView.DragItemsCompleted <br> TreeView.DragItemsStarting <br> TreeView.ItemContainerStyle <br> TreeView.ItemContainerStyleProperty <br> TreeView.ItemContainerStyleSelector <br> TreeView.ItemContainerStyleSelectorProperty <br> TreeView.ItemContainerTransitions <br> TreeView.ItemContainerTransitionsProperty <br> TreeView.ItemFromContainer <br> TreeView.ItemsSource <br> TreeView.ItemsSourceProperty <br> TreeView.ItemTemplate <br> TreeView.ItemTemplateProperty <br> TreeView.ItemTemplateSelector <br> TreeView.ItemTemplateSelectorProperty <br> TreeView.NodeFromContainer
 
@@ -1627,7 +1627,7 @@ TreeViewDragItemsStartingEventArgs <br> TreeViewDragItemsStartingEventArgs.Cance
 
 TreeViewExpandingEventArgs.Item
 
-#### <a name="treeviewitemhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstreeviewitem"></a>[TreeViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeviewitem)
+#### <a name="treeviewitemhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstreeviewitem"></a>[Elemento TreeViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeviewitem)
 
 TreeViewItem.HasUnrealizedChildren <br> TreeViewItem.HasUnrealizedChildrenProperty <br> TreeViewItem.ItemsSource <br> TreeViewItem.ItemsSourceProperty
 
@@ -1667,7 +1667,7 @@ XamlTypeIndex
 
 #### <a name="desktopwindowxamlsourcehttpsdocsmicrosoftcomuwpapiwindowsuixamlhostingdesktopwindowxamlsource"></a>[DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource)
 
-DesktopWindowXamlSource <br> DesktopWindowXamlSource.Close <br> DesktopWindowXamlSource.Content <br> DesktopWindowXamlSource.#ctor <br> DesktopWindowXamlSource.GotFocus <br> DesktopWindowXamlSource.HasFocus <br> DesktopWindowXamlSource.NavigateFocus <br> DesktopWindowXamlSource.TakeFocusRequested
+DesktopWindowXamlSource <br> DesktopWindowXamlSource.Close <br> DesktopWindowXamlSource.Content <br> #Ctor DesktopWindowXamlSource. <br> DesktopWindowXamlSource.GotFocus <br> DesktopWindowXamlSource.HasFocus <br> DesktopWindowXamlSource.NavigateFocus <br> DesktopWindowXamlSource.TakeFocusRequested
 
 #### <a name="desktopwindowxamlsourcegotfocuseventargshttpsdocsmicrosoftcomuwpapiwindowsuixamlhostingdesktopwindowxamlsourcegotfocuseventargs"></a>[DesktopWindowXamlSourceGotFocusEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsourcegotfocuseventargs)
 
@@ -1687,11 +1687,11 @@ XamlSourceFocusNavigationReason
 
 #### <a name="xamlsourcefocusnavigationrequesthttpsdocsmicrosoftcomuwpapiwindowsuixamlhostingxamlsourcefocusnavigationrequest"></a>[XamlSourceFocusNavigationRequest](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.xamlsourcefocusnavigationrequest)
 
-XamlSourceFocusNavigationRequest <br> XamlSourceFocusNavigationRequest.CorrelationId <br> XamlSourceFocusNavigationRequest.HintRect <br> XamlSourceFocusNavigationRequest.Reason <br> XamlSourceFocusNavigationRequest.#ctor <br> XamlSourceFocusNavigationRequest.#ctor <br> XamlSourceFocusNavigationRequest.#ctor
+XamlSourceFocusNavigationRequest <br> XamlSourceFocusNavigationRequest.CorrelationId <br> XamlSourceFocusNavigationRequest.HintRect <br> XamlSourceFocusNavigationRequest.Reason <br> #Ctor XamlSourceFocusNavigationRequest. <br> #Ctor XamlSourceFocusNavigationRequest. <br> #Ctor XamlSourceFocusNavigationRequest.
 
 #### <a name="xamlsourcefocusnavigationresulthttpsdocsmicrosoftcomuwpapiwindowsuixamlhostingxamlsourcefocusnavigationresult"></a>[XamlSourceFocusNavigationResult](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.xamlsourcefocusnavigationresult)
 
-XamlSourceFocusNavigationResult <br> XamlSourceFocusNavigationResult.WasFocusMoved <br> XamlSourceFocusNavigationResult.#ctor
+XamlSourceFocusNavigationResult <br> XamlSourceFocusNavigationResult.WasFocusMoved <br> #Ctor XamlSourceFocusNavigationResult.
 
 ### <a name="windowsuixamlinputhttpsdocsmicrosoftcomuwpapiwindowsuixamlinput"></a>[Windows.UI.Xaml.Input](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input)
 
@@ -1733,13 +1733,13 @@ StandardUICommandKind
 
 #### <a name="xamluicommandhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxamluicommand"></a>[XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)
 
-XamlUICommand <br> XamlUICommand.AccessKey <br> XamlUICommand.AccessKeyProperty <br> XamlUICommand.CanExecute <br> XamlUICommand.CanExecuteChanged <br> XamlUICommand.CanExecuteRequested <br> XamlUICommand.Command <br> XamlUICommand.CommandProperty <br> XamlUICommand.Description <br> XamlUICommand.DescriptionProperty <br> XamlUICommand.Execute <br> XamlUICommand.ExecuteRequested <br> XamlUICommand.IconSource <br> XamlUICommand.IconSourceProperty <br> XamlUICommand.KeyboardAccelerators <br> XamlUICommand.KeyboardAcceleratorsProperty <br> XamlUICommand.Label <br> XamlUICommand.LabelProperty <br> XamlUICommand.NotifyCanExecuteChanged <br> XamlUICommand.#ctor
+XamlUICommand <br> XamlUICommand.AccessKey <br> XamlUICommand.AccessKeyProperty <br> XamlUICommand.CanExecute <br> XamlUICommand.CanExecuteChanged <br> XamlUICommand.CanExecuteRequested <br> XamlUICommand.Command <br> XamlUICommand.CommandProperty <br> XamlUICommand.Description <br> XamlUICommand.DescriptionProperty <br> XamlUICommand.Execute <br> XamlUICommand.ExecuteRequested <br> XamlUICommand.IconSource <br> XamlUICommand.IconSourceProperty <br> XamlUICommand.KeyboardAccelerators <br> XamlUICommand.KeyboardAcceleratorsProperty <br> XamlUICommand.Label <br> XamlUICommand.LabelProperty <br> XamlUICommand.NotifyCanExecuteChanged <br> #Ctor XamlUICommand.
 
 ### <a name="windowsuixamlmarkuphttpsdocsmicrosoftcomuwpapiwindowsuixamlmarkup"></a>[Windows.UI.Xaml.Markup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup)
 
 #### <a name="fullxamlmetadataproviderattributehttpsdocsmicrosoftcomuwpapiwindowsuixamlmarkupfullxamlmetadataproviderattribute"></a>[FullXamlMetadataProviderAttribute](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.fullxamlmetadataproviderattribute)
 
-FullXamlMetadataProviderAttribute <br> FullXamlMetadataProviderAttribute.#ctor
+FullXamlMetadataProviderAttribute <br> #Ctor FullXamlMetadataProviderAttribute.
 
 #### <a name="ixamlbindscopediagnosticshttpsdocsmicrosoftcomuwpapiwindowsuixamlmarkupixamlbindscopediagnostics"></a>[IXamlBindScopeDiagnostics](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.ixamlbindscopediagnostics)
 
@@ -1753,7 +1753,7 @@ IXamlType2 <br> IXamlType2.BoxedType
 
 #### <a name="basicconnectedanimationconfigurationhttpsdocsmicrosoftcomuwpapiwindowsuixamlmediaanimationbasicconnectedanimationconfiguration"></a>[BasicConnectedAnimationConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.basicconnectedanimationconfiguration)
 
-BasicConnectedAnimationConfiguration <br> BasicConnectedAnimationConfiguration.#ctor
+BasicConnectedAnimationConfiguration <br> #Ctor BasicConnectedAnimationConfiguration.
 
 #### <a name="connectedanimationhttpsdocsmicrosoftcomuwpapiwindowsuixamlmediaanimationconnectedanimation"></a>[ConnectedAnimation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimation)
 
@@ -1765,11 +1765,11 @@ ConnectedAnimationConfiguration
 
 #### <a name="directconnectedanimationconfigurationhttpsdocsmicrosoftcomuwpapiwindowsuixamlmediaanimationdirectconnectedanimationconfiguration"></a>[DirectConnectedAnimationConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.directconnectedanimationconfiguration)
 
-DirectConnectedAnimationConfiguration <br> DirectConnectedAnimationConfiguration.#ctor
+DirectConnectedAnimationConfiguration <br> #Ctor DirectConnectedAnimationConfiguration.
 
 #### <a name="gravityconnectedanimationconfigurationhttpsdocsmicrosoftcomuwpapiwindowsuixamlmediaanimationgravityconnectedanimationconfiguration"></a>[GravityConnectedAnimationConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.gravityconnectedanimationconfiguration)
 
-GravityConnectedAnimationConfiguration <br> GravityConnectedAnimationConfiguration.#ctor
+GravityConnectedAnimationConfiguration <br> #Ctor GravityConnectedAnimationConfiguration.
 
 #### <a name="slidenavigationtransitioneffecthttpsdocsmicrosoftcomuwpapiwindowsuixamlmediaanimationslidenavigationtransitioneffect"></a>[SlideNavigationTransitionEffect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.slidenavigationtransitioneffect)
 
@@ -1781,7 +1781,7 @@ SlideNavigationTransitionInfo.Effect <br> SlideNavigationTransitionInfo.EffectPr
 
 ### <a name="windowsuixamlmediahttpsdocsmicrosoftcomuwpapiwindowsuixamlmedia"></a>[Windows.UI.Xaml.Media](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media)
 
-#### <a name="brushhttpsdocsmicrosoftcomuwpapiwindowsuixamlmediabrush"></a>[Brush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.brush)
+#### <a name="brushhttpsdocsmicrosoftcomuwpapiwindowsuixamlmediabrush"></a>[Pincel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.brush)
 
 Brush.PopulatePropertyInfo <br> Brush.PopulatePropertyInfoOverride
 
@@ -1815,11 +1815,11 @@ EffectiveViewportChangedEventArgs <br> EffectiveViewportChangedEventArgs.BringIn
 
 #### <a name="elementfactorygetargshttpsdocsmicrosoftcomuwpapiwindowsuixamlelementfactorygetargs"></a>[ElementFactoryGetArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementfactorygetargs)
 
-ElementFactoryGetArgs <br> ElementFactoryGetArgs.Data <br> ElementFactoryGetArgs.#ctor <br> ElementFactoryGetArgs.Parent
+ElementFactoryGetArgs <br> ElementFactoryGetArgs.Data <br> #Ctor ElementFactoryGetArgs. <br> ElementFactoryGetArgs.Parent
 
 #### <a name="elementfactoryrecycleargshttpsdocsmicrosoftcomuwpapiwindowsuixamlelementfactoryrecycleargs"></a>[ElementFactoryRecycleArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementfactoryrecycleargs)
 
-ElementFactoryRecycleArgs <br> ElementFactoryRecycleArgs.Element <br> ElementFactoryRecycleArgs.#ctor <br> ElementFactoryRecycleArgs.Parent
+ElementFactoryRecycleArgs <br> ElementFactoryRecycleArgs.Element <br> #Ctor ElementFactoryRecycleArgs. <br> ElementFactoryRecycleArgs.Parent
 
 #### <a name="frameworkelementhttpsdocsmicrosoftcomuwpapiwindowsuixamlframeworkelement"></a>[FrameworkElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement)
 
@@ -1831,7 +1831,7 @@ IElementFactory <br> IElementFactory.GetElement <br> IElementFactory.RecycleElem
 
 #### <a name="scalartransitionhttpsdocsmicrosoftcomuwpapiwindowsuixamlscalartransition"></a>[ScalarTransition](https://docs.microsoft.com/uwp/api/windows.ui.xaml.scalartransition)
 
-ScalarTransition <br> ScalarTransition.Duration <br> ScalarTransition.#ctor
+ScalarTransition <br> ScalarTransition.Duration <br> #Ctor ScalarTransition.
 
 #### <a name="uielementhttpsdocsmicrosoftcomuwpapiwindowsuixamluielement"></a>[UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)
 

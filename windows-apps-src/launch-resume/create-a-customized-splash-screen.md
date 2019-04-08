@@ -417,7 +417,7 @@ namespace SplashScreenExample
 }
 ```
 
-### <a name="appxamlcs"></a>App.xaml.cs
+### <a name="appxamlcs"></a>App.Xaml.cs
 
 Este proyecto se creó con la aplicación para UWP **aplicación en blanco (XAML)** plantilla de proyecto en Visual Studio. Los controladores de eventos `OnNavigationFailed` y `OnSuspending` se generan automáticamente y no es necesario cambiarlos para implementar una pantalla de presentación extendida. En este tema solo se modifica `OnLaunched`.
 

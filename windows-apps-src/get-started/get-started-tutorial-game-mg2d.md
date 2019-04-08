@@ -689,7 +689,7 @@ Aquí usamos el mismo método que antes para dibujar el texto centrado horizonta
 
 ![Fin del juego](images/monogame-tutorial-4.png)
 
-## <a name="publish-to-the-microsoft-store"></a>Publicar en la Microsoft Store
+## <a name="publish-to-the-microsoft-store"></a>Publicación en Microsoft Store
 Dado que se basa este juego como una aplicación para UWP, es posible publicar este proyecto en la Microsoft Store. Este proceso tiene diferentes pasos.
 
 Tienes que estar [registrado](https://developer.microsoft.com/en-us/store/register) como desarrollador de Windows.

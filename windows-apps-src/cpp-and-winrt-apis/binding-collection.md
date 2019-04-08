@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, contro
 ms.localizationpriority: medium
 ms.openlocfilehash: c3551ebcc59ebfe426b0be8d5bd20f7578517a25
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57649210"
@@ -121,9 +121,9 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 Ahora compila y ejecuta el proyecto. Haz clic en el botón para ejecutar el controlador de eventos **Clic**. Observamos que la implementación de **Append** genera un evento para informar a la interfaz de usuario de que ha cambiado la colección; y el **ListBox** vuelve a consultar la colección para actualizar sus propios valores de **Items**. Igual que antes, el título de uno de los libros cambia. Dicho cambio de título se refleja en el botón y en el cuadro de lista.
 
 ## <a name="important-apis"></a>API importantes
-* [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
+* [IObservableVector&lt;T&gt;:: VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
 * [plantilla de función winrt::Make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Consumo de API con C / c++ / WinRT](consume-apis.md)
-* [Crear las API con C++ / c++ / WinRT](author-apis.md)
+* [Consumir API con C++/WinRT](consume-apis.md)
+* [Crear API con C++/WinRT](author-apis.md)

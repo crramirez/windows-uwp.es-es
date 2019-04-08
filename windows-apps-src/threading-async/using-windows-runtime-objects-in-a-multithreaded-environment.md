@@ -161,6 +161,6 @@ De manera predeterminada, las clases en el componente que pueden activarse son �
 Para los objetos que se ejecutan en el subproceso de la interfaz de usuario e inician excepciones cuando se las llama desde un subproceso distinto del subproceso de la interfaz de usuario, puedes usar el objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) del subproceso de la interfaz de usuario para enviar la llamada.
 
 ## <a name="see-also"></a>Consulta también
-[C#Guía](/dotnet/csharp/)
+[Guía de C#](/dotnet/csharp/)
 
 [Guía de Visual Basic](/dotnet/visual-basic/)

@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, 
 ms.localizationpriority: medium
 ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57626670"
@@ -393,15 +393,15 @@ El constructor de clase base espera un **ToggleButton**. Y **MySpecializedToggle
 Hasta que no hayas realizado la modificación descrita anteriormente (pasar dicho parámetro del constructor a la clase base), el compilador marcará el constructor e indicará que no hay ningún constructor predeterminado adecuado disponible en un tipo llamado, en este caso, **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;**. En realidad es la clase base de la clase base de tu tipo de implementación.
 
 ## <a name="important-apis"></a>API importantes
-* [winrt::com_ptr struct template](/uwp/cpp-ref-for-winrt/com-ptr)
+* [plantilla de estructura winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
 * [función winrt::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
 * [plantilla de función winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
-* [winrt::get_self function template](/uwp/cpp-ref-for-winrt/get-self)
-* [winrt::implements struct template](/uwp/cpp-ref-for-winrt/implements)
+* [plantilla de función winrt::get_self](/uwp/cpp-ref-for-winrt/get-self)
+* [plantilla de estructura winrt::Implements](/uwp/cpp-ref-for-winrt/implements)
 * [plantilla de función winrt::Make](/uwp/cpp-ref-for-winrt/make)
-* [winrt::make_self function template](/uwp/cpp-ref-for-winrt/make-self)
-* [winrt::Windows::Foundation::IUnknown::as function](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [plantilla de función winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
+* [winrt::Windows::Foundation::IUnknown:: como función](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Consumo de API con C / c++ / WinRT](consume-apis.md)
-* [Controles XAML; enlazar a C++ / c++ / WinRT propiedad](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [Consumir API con C++/WinRT](consume-apis.md)
+* [Controles de XAML; enlazar a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

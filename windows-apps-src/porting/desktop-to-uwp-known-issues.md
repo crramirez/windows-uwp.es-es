@@ -105,7 +105,7 @@ Para conocer más detalles sobre Windows Update, consulta:
 
 La entrada Editor del manifiesto del paquete de la aplicación de Windows debe coincidir con el valor de Firmante del certificado con que firmas.  Puedes usar cualquiera de los métodos siguientes para ver el firmante del certificado.
 
-**Opción 1: Powershell**
+**Opción 1: PowerShell**
 
 Ejecuta el siguiente comando de PowerShell. Puedes usar .cer o .pfx como el archivo de certificado, ya que tienen la misma información de editor.
 

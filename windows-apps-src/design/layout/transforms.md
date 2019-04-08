@@ -50,7 +50,7 @@ En las pruebas de acceso, un objeto al que se ha aplicado una transformación si
 
 ## <a name="span-idothertransformpropertiesspanspan-idothertransformpropertiesspanspan-idothertransformpropertiesspanother-transform-properties"></a><span id="Other_transform_properties"></span><span id="other_transform_properties"></span><span id="OTHER_TRANSFORM_PROPERTIES"></span>Otras propiedades de transformación
 
--   [**Brush.Transform**](https://msdn.microsoft.com/library/windows/apps/BR228082), [**Brush.RelativeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228080): Estos influyen en cómo una [ **pincel** ](/uwp/api/Windows.UI.Xaml.Media.Brush) utiliza espacio de coordenadas en el área que la **pincel** se aplica para establecer propiedades visuales como colorear y fondos. Estas transformaciones no tienen relevancia en la mayoría de los pinceles (que suelen establecer colores sólidos con [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)), pero pueden ser de utilidad en un momento dado cuando se pintan áreas con [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) o con [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108).
+-   [**Brush.Transform**](https://msdn.microsoft.com/library/windows/apps/BR228082), [ **Brush.RelativeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228080): Estos influyen en cómo una [ **pincel** ](/uwp/api/Windows.UI.Xaml.Media.Brush) utiliza espacio de coordenadas en el área que la **pincel** se aplica para establecer propiedades visuales como colorear y fondos. Estas transformaciones no tienen relevancia en la mayoría de los pinceles (que suelen establecer colores sólidos con [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)), pero pueden ser de utilidad en un momento dado cuando se pintan áreas con [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) o con [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108).
 -   [**Geometry.Transform**](https://msdn.microsoft.com/library/windows/apps/BR210066): Puede usar esta propiedad para aplicar una transformación a un objeto geometry antes de usar ese geometría para una [ **Path.Data** ](https://msdn.microsoft.com/library/windows/apps/BR243356) valor de propiedad.
 
 ## <a name="span-idanimatingatransformspanspan-idanimatingatransformspanspan-idanimatingatransformspananimating-a-transform"></a><span id="Animating_a_transform"></span><span id="animating_a_transform"></span><span id="ANIMATING_A_TRANSFORM"></span>Animar una transformación
@@ -109,7 +109,7 @@ La descripción matemática de una transformación podría resultarte útil si t
 |---------------------------------------------|---------------------------------------------|-----|
 | [**M11**](https://msdn.microsoft.com/library/windows/apps/Hh673847)         | [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673851)         | 0   |
 | [**M12**](https://msdn.microsoft.com/library/windows/apps/Hh673853)         | [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673849)         | 0   |
-| [**OffsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) | [**offsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816) | 1   |
+| [**offsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) | [**offsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816) | 1   |
 
  
 

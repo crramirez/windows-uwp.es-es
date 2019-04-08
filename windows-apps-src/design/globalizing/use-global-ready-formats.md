@@ -169,7 +169,7 @@ En los escenarios en los que quieras ofrecer funcionalidades diferentes solo seg
 
 * [Calendario, fecha y controles de tiempo](../controls-and-patterns/date-and-time.md)
 * [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](manage-language-and-region.md)
-* [Adaptar los recursos de idioma, escalabilidad, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>Muestras
 

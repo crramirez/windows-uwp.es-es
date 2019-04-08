@@ -71,7 +71,7 @@ Direct3D admite los siguientes métodos de filtrado de texturas.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)
 
  
 

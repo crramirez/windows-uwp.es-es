@@ -41,7 +41,7 @@ Al exponer los bordes ocultos alrededor de los objetos, Reveal permite a los usu
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Reveal">abrir la aplicación y ver Reveal en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -60,10 +60,10 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 
 - [**ListView**](../controls-and-patterns/lists.md)
 - [**GridView**](../controls-and-patterns/lists.md)
-- [**TreeView**](../controls-and-patterns/tree-view.md)
+- [**Vista de árbol**](../controls-and-patterns/tree-view.md)
 - [**Control NavigationView**](../controls-and-patterns/navigationview.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
-- [**CommandBar**](../controls-and-patterns/app-bars.md)
+- [**Barra de comandos**](../controls-and-patterns/app-bars.md)
 
 Estas ilustraciones muestran revelar resaltar en varios controles diferentes:
 

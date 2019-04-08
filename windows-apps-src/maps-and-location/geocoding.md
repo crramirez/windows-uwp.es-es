@@ -121,11 +121,11 @@ town = Redmond
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplo de asignación de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Ejemplo de aplicación UWP tráfico](https://go.microsoft.com/fwlink/p/?LinkId=619982)
-* [Instrucciones de diseño de mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo: Aprovechamiento de mapas y ubicación en el teléfono, tableta y PC en sus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Centro para desarrolladores de Bing Maps](https://www.bingmapsportal.com/)
+* [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Vídeo: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [**MapLocationFinder** clase](https://msdn.microsoft.com/library/windows/apps/dn627550)
-* [**FindLocationsAsync** method](https://msdn.microsoft.com/library/windows/apps/dn636925)
-* [**FindLocationsAtAsync** method](https://msdn.microsoft.com/library/windows/apps/dn636928)
+* [**FindLocationsAsync** (método)](https://msdn.microsoft.com/library/windows/apps/dn636925)
+* [**FindLocationsAtAsync** (método)](https://msdn.microsoft.com/library/windows/apps/dn636928)

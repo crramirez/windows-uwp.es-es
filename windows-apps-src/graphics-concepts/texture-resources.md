@@ -29,7 +29,7 @@ La aplicación también puede establecer los estados de la perspectiva de la tex
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)
 
  
 

@@ -125,7 +125,7 @@ En este ejemplo, el [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.X
 </Grid>
 ```
 
-### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[Enabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[Habilitado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 Establece **XYFocusKeyboardNavigation** en **Enabled** para admitir la navegación direccional 2D a un control y cada uno de sus objetos secundarios [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement).
 
@@ -236,7 +236,7 @@ Como mencionamos en la sección anterior, para evitar una experiencia de navegac
 
    *Pestaña "Local" comportamiento de navegación*
 
-- **Once**  
+- **Vez**  
   El contenedor y todos los elementos secundarios reciben el foco una vez. Para este ejemplo, el orden de tabulación es B1, B2, B7, B1 (también se muestra la navegación interna mediante teclas de dirección).
 
    ![Establecer el comportamiento de navegación mediante tabulación "Una vez"](images/keyboard/tabnav-once.gif)

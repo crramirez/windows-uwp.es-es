@@ -19,7 +19,7 @@ ms.locfileid: "57606260"
 
 Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración.
 
-> **API importantes**: [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896), [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
+> **API importantes**: [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896), [ **ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
 
 En el [Reconocimiento de voz](speech-recognition.md) aprendiste a capturar y reconocer entradas de voz relativamente cortas usando los métodos [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) o [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) de un objeto [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226); por ejemplo, al redactar un mensaje SMS o al realizar una pregunta.
 

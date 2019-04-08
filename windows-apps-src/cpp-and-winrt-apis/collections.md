@@ -1,5 +1,5 @@
 ---
-description: C++ / c++ / WinRT proporciona funciones y clases base que le ahorrarán mucho tiempo y esfuerzo cuando desea implementar o pasar colecciones.
+description: C++/WinRT proporciona funciones y clases base que te ahorrarán mucho tiempo y esfuerzo cuando quieras implementar o pasar colecciones.
 title: Colecciones con C++ / WinRT
 ms.date: 10/03/2018
 ms.topic: article
@@ -330,17 +330,17 @@ private:
 * [Propiedad ItemsControl.ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)
 * [Interfaz IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)
 * [Interfaz de IVector](/uwp/api/windows.foundation.collections.ivector_t_)
-* [winrt::map_base struct template](/uwp/cpp-ref-for-winrt/map-base)
-* [winrt::map_view_base struct template](/uwp/cpp-ref-for-winrt/map-view-base)
-* [winrt::observable_map_base struct template](/uwp/cpp-ref-for-winrt/observable-map-base)
-* [winrt::observable_vector_base struct template](/uwp/cpp-ref-for-winrt/observable-vector-base)
+* [plantilla de estructura winrt::map_base](/uwp/cpp-ref-for-winrt/map-base)
+* [plantilla de estructura winrt::map_view_base](/uwp/cpp-ref-for-winrt/map-view-base)
+* [plantilla de estructura winrt::observable_map_base](/uwp/cpp-ref-for-winrt/observable-map-base)
+* [plantilla de estructura winrt::observable_vector_base](/uwp/cpp-ref-for-winrt/observable-vector-base)
 * [plantilla de función winrt::single_threaded_observable_map](/uwp/cpp-ref-for-winrt/single-threaded-observable-map)
 * [plantilla de función winrt::single_threaded_map](/uwp/cpp-ref-for-winrt/single-threaded-map)
 * [plantilla de función winrt::single_threaded_observable_vector](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)
 * [plantilla de función winrt::single_threaded_vector](/uwp/cpp-ref-for-winrt/single-threaded-vector)
-* [winrt::vector_base struct template](/uwp/cpp-ref-for-winrt/vector-base)
-* [winrt::vector_view_base struct template](/uwp/cpp-ref-for-winrt/vector-view-base)
+* [plantilla de estructura winrt::vector_base](/uwp/cpp-ref-for-winrt/vector-base)
+* [plantilla de estructura winrt::vector_view_base](/uwp/cpp-ref-for-winrt/vector-view-base)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Categorías de valor y las referencias a ellos](cpp-value-categories.md)
-* [Elementos de XAML de los controles; enlazar a C++ / c++ / WinRT colección](binding-collection.md)
+* [Categorías de valor y referencias a ellas](cpp-value-categories.md)
+* [Controles de elementos de XAML; enlazar a una colección C++/WinRT](binding-collection.md)

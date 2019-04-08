@@ -39,8 +39,8 @@ Hay dos maneras diferentes de usar vínculos de contenido:
 
 Este es el aspecto predeterminado de los vínculos de contenido en un RichEditBox y en un TextBlock.
 
-![content link in rich edit box](images/content-link-default-richedit.png)
-![content link in text block](images/content-link-default-textblock.png)
+![vínculo de contenido enriquecido en el cuadro de edición](images/content-link-default-richedit.png)
+![vínculo de contenido en el bloque de texto](images/content-link-default-textblock.png)
 
 Las diferencias de uso, representación y comportamiento se tratan en detalle en las siguientes secciones. En esta tabla encontrarás una breve comparación de las diferencias principales entre un vínculo de contenido en un RichEditBox y un bloque de texto.
 

@@ -33,7 +33,7 @@ El parámetro de comentarios es una variable **uint** que puedes proporcionar a 
 
 Esta es la sintaxis de [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083):
 
-**bool CheckAccessFullyMapped(in uint FeedbackVar);**
+**BOOL CheckAccessFullyMapped (en uint FeedbackVar);**
 
 [**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta el valor de *FeedbackVar* y devuelve true si todos los datos que se obtiene acceso se ha asignado en el recurso; de lo contrario, **CheckAccessFullyMapped**devuelve false.
 

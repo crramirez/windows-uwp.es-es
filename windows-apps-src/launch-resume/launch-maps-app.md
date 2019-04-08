@@ -40,7 +40,7 @@ Por ejemplo, el siguiente URI abre la aplicación Mapas de Windows y muestra un 
 
 A continuación se ofrece una descripción del esquema de URI:
 
-**bingmaps:?query**
+**¿bingmaps:? consulta**
 
 En este esquema de URI, *query* es una serie de pares nombre-valor de parámetros:
 
@@ -77,8 +77,8 @@ Para controlar el tipo de vista, usa los parámetros *sty* (estilo) y *ss* (Stre
 | bingmaps:?                                                                 | Abre la aplicación Mapas.                                                                                                                                                                            |
 | bingmaps:?cp=40.726966~-74.006076                                          | Muestra un mapa centrado sobre la ciudad de Nueva York.                                                                                                                                                    |
 | bingmaps:?cp=40.726966~-74.006076&lvl=10                                   | Muestra un mapa centrado sobre la ciudad de Nueva York con un nivel de zoom de 10.                                                                                                                            |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Muestra un mapa de la ciudad de Nueva York, que es el área especificada en el argumento **bb**.                                                                                                           |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | Muestra un mapa de la ciudad de Nueva York, que es el área especificada en el argumento del cuadro límite. Se omite el punto central para Seattle especificado en el argumento **cp** debido a que se especifica *bb*. |
+| ¿bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5                                   | Muestra un mapa de la ciudad de Nueva York, que es el área especificada en el argumento **bb**.                                                                                                           |
+| ¿bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5 & cp = 47 ~-122                        | Muestra un mapa de la ciudad de Nueva York, que es el área especificada en el argumento del cuadro límite. Se omite el punto central para Seattle especificado en el argumento **cp** debido a que se especifica *bb*. |
 | bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars % 20Palace & BCL = 16 | Muestra un mapa con un punto denominado Caesars Palace (en Las Vegas) y establece el nivel de zoom en 16.                                                                                                 |
 | bingmaps:?Collection=Point.40.726966\_-74.006076\_algunos 255FBusiness %        | Muestra una asignación con un punto de llamada algunos\_empresariales (en Las Vegas).                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | Muestra un mapa de la ciudad de Nueva York, con el tráfico activado y estilo de mapa aéreo.                                                                                                                          |
@@ -97,7 +97,7 @@ Al buscar lugares usando el parámetro *q*, recomendamos escribir los términos 
 | bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC     | Muestra un mapa y busca la dirección de la Casa Blanca en Washington, D.C. |
 | bingmaps:?q=coffee&where=Seattle                              | Busca cafeterías en Seattle.                                                    |
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | Busca Nueva York cerca del punto central especificado.                             |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | Busca pizza en el cuadro límite especificado (es decir, en la ciudad de Nueva York).      |
+| ¿bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5 & q = pizza              | Busca pizza en el cuadro límite especificado (es decir, en la ciudad de Nueva York).      |
 
  
 ## <a name="display-multiple-points"></a>Mostrar varios puntos
@@ -124,7 +124,7 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 
 | Ejemplo de URI                                                                                                              | Results                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | Muestra un mapa con indicaciones de un punto a otro. Puesto que *mode* no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario. |
+| bingmaps:?RTP=POS.44.9160\_-110.4158 ~ PDV 45.0475\_-109.4187                                                             | Muestra un mapa con indicaciones de un punto a otro. Puesto que *mode* no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario. |
 | bingmaps:?cp=43.0332~-87.9167&trfc=1                                                                                    | Muestra un mapa centrado sobre la ciudad de Milwaukee, WI, con tráfico.                                                                                                        |
 | ¿bingmaps:? rtp = adr. Uno Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | Muestra un mapa con indicaciones desde la dirección especificada hasta la ubicación especificada.                                                                            |
 | bingmaps:?RTP=ADR.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~POS.36.1223\_-111.9495\_Grand % 20Canyon % 20northern % 20rim | Muestra indicaciones desde 1 Microsoft Way, Redmond, Washington, 98052, para llegar a la costa norte del Gran Cañón.                                                                |
@@ -179,7 +179,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><b>cp</b></p></td>
+<td align="left"><p><b>CP</b></p></td>
 <td align="left"><p>Punto central</p></td>
 <td align="left"><p>cp = "cp=" cpval</p>
 <p>cpval = degreeslat "~" degreeslon</p>
@@ -208,7 +208,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>Los valores de latitud válidos están entre -90 y +90 incluidos.</p><p>Los parámetros cp y lvl se omiten cuando se proporciona un cuadro de límite.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>where</b></p></td>
+<td align="left"><p><b>Donde</b></p></td>
 <td align="left"><p>Ubicación</p></td>
 <td align="left"><p>where = "where=" whereval</p>
 <p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
@@ -217,7 +217,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Término de búsqueda para una ubicación, un punto de referencia o un lugar específicos.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>q</b></p></td>
+<td align="left"><p><b>Q</b></p></td>
 <td align="left"><p>Término de consulta</p></td>
 <td align="left"><p>q = "q="</p>
 <p>whereval</p>
@@ -226,7 +226,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Término de búsqueda para empresas locales o categorías de empresas.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>lvl</b></p></td>
+<td align="left"><p><b>BCL</b></p></td>
 <td align="left"><p>Nivel de zoom</p></td>
 <td align="left"><p>BCL = "BCL =" 1<i>2DIGIT ["." 1</i>2DIGIT]</p>
 <p>Por ejemplo:</p>
@@ -241,9 +241,9 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>sty=a</p></td>
 <td align="left"><p>Define el estilo de mapa. Los valores válidos para este parámetro son:</p>
 <ul>
-<li>**a**: Muestra una vista aérea del mapa.</li>
-<li>**r**: Mostrar una vista de carretera del mapa.</li>
-<li>**3d**: Mostrar una vista 3D del mapa. Usar conjuntamente con el parámetro **cp** y, opcionalmente, con el parámetro **rad**.</li>
+<li>**Un**: Muestra una vista aérea del mapa.</li>
+<li>**R**: Mostrar una vista de carretera del mapa.</li>
+<li>**3D**: Mostrar una vista 3D del mapa. Usar conjuntamente con el parámetro **cp** y, opcionalmente, con el parámetro **rad**.</li>
 </ul>
 <p>En Windows 10, los estilos de la vista aérea y la vista 3D son los mismos.</p>
 <div class="alert">
@@ -262,7 +262,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Un área circular que especifica la vista de mapa deseada. El valor de radio se mide en metros.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>pit</b></p></td>
+<td align="left"><p><b>Pit</b></p></td>
 <td align="left"><p>Rotación alrededor del eje x (pitch)</p></td>
 <td align="left"><p>pit = "pit=" rotación alrededor del eje x (pitch)</p>
 <p>Por ejemplo:</p>
@@ -306,7 +306,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>rtp</b></p></td>
+<td align="left"><p><b>RTP</b></p></td>
 <td align="left"><p>Ruta</p></td>
 <td align="left"><p>rtp = "rtp=" (waypoint "~" [waypoint]) / ("~" waypoint)</p>
 <p>waypoint = ("pos." point ) / ("adr." whereval)</p>
@@ -335,14 +335,14 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>mode</b></p></td>
+<td align="left"><p><b>Modo</b></p></td>
 <td align="left"><p>Modo de transporte</p></td>
 <td align="left"><p>mode = "mode=" ("d" / "t" / "w")</p>
 <p>Por ejemplo:</p>
 <p>mode=d</p></td>
 <td align="left"><p>Define el modo de transporte. Los valores válidos para este parámetro son:</p>
 <ul>
-<li>**d**: Muestra información general para indicaciones de ruta</li>
+<li>**d.**: Muestra información general para indicaciones de ruta</li>
 <li>**t**: Muestra información general de las direcciones de tránsito de ruta</li>
 <li>**w**: Muestra información general para recorrer las direcciones de ruta</li>
 </ul>
@@ -350,7 +350,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </tr>
 
 <tr class="even">
-<td align="left"><p><b>collection</b></p></td>
+<td align="left"><p><b>colección</b></p></td>
 <td align="left"><p>Colección</p></td>
 <td align="left"><p>collection = "collection="(name"~"/)point["~"point]</p>
 <p>name = "name." whereval </p>
@@ -387,9 +387,9 @@ El URI para iniciar una solicitud de indicaciones paso a paso de conducción no 
 
 | Parámetro | Definición | Ejemplo | Detalles |
 |------------|-----------|---------|---------|
-| **destination.latitude** | Latitud del destino | Ejemplo: destination.latitude=47.6451413797194 | La latitud del destino. Los valores de latitud válidos están entre -90 y +90 incluidos. |
-| **destination.longitude** | Longitud del destino | Ejemplo: destination.longitude=-122.141964733601 | La longitud del destino. Los valores de longitud válidos están entre -180 y +180 incluidos. |
-| **destination.name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No es necesario codificar el valor de **destination.name**. |
+| **Destination.Latitude** | Latitud del destino | Ejemplo: destination.latitude=47.6451413797194 | La latitud del destino. Los valores de latitud válidos están entre -90 y +90 incluidos. |
+| **Destination.Longitude** | Longitud del destino | Ejemplo: destination.longitude=-122.141964733601 | La longitud del destino. Los valores de longitud válidos están entre -180 y +180 incluidos. |
+| **Destination.Name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No es necesario codificar el valor de **destination.name**. |
 
  
 <span id="ms-walk-to-param-reference"/>
@@ -404,9 +404,9 @@ El URI para iniciar una solicitud de indicaciones paso a paso para ir a pie no n
 
 | Parámetro | Definición | Ejemplo | Detalles |
 |-----------|------------|---------|----------|
-| **destination.latitude** | Latitud del destino | Ejemplo: destination.latitude=47.6451413797194 | La latitud del destino. Los valores de latitud válidos están entre -90 y +90 incluidos. |
-| **destination.longitude** | Longitud del destino | Ejemplo: destination.longitude=-122.141964733601 | La longitud del destino. Los valores de longitud válidos están entre -180 y +180 incluidos. |
-| **destination.name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No es necesario codificar el valor de **destination.name**. |
+| **Destination.Latitude** | Latitud del destino | Ejemplo: destination.latitude=47.6451413797194 | La latitud del destino. Los valores de latitud válidos están entre -90 y +90 incluidos. |
+| **Destination.Longitude** | Longitud del destino | Ejemplo: destination.longitude=-122.141964733601 | La longitud del destino. Los valores de longitud válidos están entre -180 y +180 incluidos. |
+| **Destination.Name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No es necesario codificar el valor de **destination.name**. |
 
 ## <a name="ms-settings-parameter-reference"></a>ms-settings: referencia del parámetro
 
@@ -414,4 +414,4 @@ La sintaxis de parámetros específicos de aplicación para asigna el **ms-setti
 
 | Parámetro | Definición | Ejemplo | Detalles |
 |-----------|------------|---------|----------|
-| **latlong** | Punto que define la región de Mapa sin conexión. | Ejemplo: latlong=47.6,-122.3 | El GeoPoint se especifica mediante una latitud y una longitud separados por comas. Los valores de latitud válidos están entre -90 y +90 incluidos. Los valores de longitud válidos están entre -180 y +180 incluidos. |
+| **LatLong** | Punto que define la región de Mapa sin conexión. | Ejemplo: latlong=47.6,-122.3 | El GeoPoint se especifica mediante una latitud y una longitud separados por comas. Los valores de latitud válidos están entre -90 y +90 incluidos. Los valores de longitud válidos están entre -180 y +180 incluidos. |

@@ -83,7 +83,7 @@ Antes de establecer la longitud de descodificación, compruebe si la simbología
 
 * **AnyLength**: Descodificar longitudes de cualquier número.
 * **Discretos**: Descodificar longitudes de uno de ellos [DecodeLength1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength1) o [DecodeLength2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength2) caracteres de byte único.
-* **Range**: Descodificar longitudes entre **DecodeLength1** y **DecodeLength2** caracteres de byte único. El orden de **DecodeLength1** y **DecodeLength2** importa el (puede ser mayor o menor que el otro).
+* **Intervalo**: Descodificar longitudes entre **DecodeLength1** y **DecodeLength2** caracteres de byte único. El orden de **DecodeLength1** y **DecodeLength2** importa el (puede ser mayor o menor que el otro).
 
 Por último, puede establecer los valores de **DecodeLength1** y **DecodeLength2** para controlar la longitud de los datos que necesita.
 

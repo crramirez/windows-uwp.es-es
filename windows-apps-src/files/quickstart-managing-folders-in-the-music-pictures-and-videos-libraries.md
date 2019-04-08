@@ -32,7 +32,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 
     -   **Biblioteca de música**
     -   **Biblioteca de imágenes**
-    -   **Videos Library**
+    -   **Biblioteca de vídeos**
 
     Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 

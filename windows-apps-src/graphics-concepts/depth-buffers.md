@@ -50,7 +50,7 @@ La interpretación real de un valor de profundidad es específica del representa
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Búferes de profundidad y Galería de símbolos](depth-and-stencil-buffers.md)
+[Búferes de profundidad y de galerías de símbolos](depth-and-stencil-buffers.md)
 
  
 

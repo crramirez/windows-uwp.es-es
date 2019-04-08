@@ -48,7 +48,7 @@ Diseña y desarrolla tu aplicación de manera que funcione correctamente en sist
 * [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](manage-language-and-region.md)
 * [Etiquetas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Recursos de la aplicación y el sistema de administración de recursos](../../app-resources/index.md)
-* [Cómo coincide el sistema de administración de recursos con etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
+* [Cómo el sistema de administración de recursos compara etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 * [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](adjust-layout-and-fonts--and-support-rtl.md)
 * [Fuentes internacionales](loc-international-fonts.md)
 * [Hacer que la aplicación sea localizable](prepare-your-app-for-localization.md)

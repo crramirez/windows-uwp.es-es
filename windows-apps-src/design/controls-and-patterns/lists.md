@@ -92,7 +92,7 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 <td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue estas instrucciones para usar una lista invertida en tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pull-to-refresh.md">Pull-to-refresh</a></p></td>
+<td align="left"><p><a href="pull-to-refresh.md">Incorporación de cambios para actualizar</a></p></td>
 <td align="left"><p>El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa estas instrucciones para implementar el patrón extraer para actualizar en tu vista de lista.</p></td>
 </tr>
 <tr class="even">

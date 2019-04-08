@@ -77,7 +77,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | El identificador de producto de la aplicación de escritorio para el que se recuperaron datos de insights.     |
 | insightDate                | string | La fecha en la que hemos identificado que el cambio en una métrica específica. Esta fecha representa el final de la semana en que se detectó un aumento significativo o disminuir en una métrica en comparación con la semana anterior a éste. |
-| dataType     | string | Una cadena que especifica el área de análisis general que le informa de esta información. Actualmente, este método solo admite **estado**.    |
+| Tipo de datos     | string | Una cadena que especifica el área de análisis general que le informa de esta información. Actualmente, este método solo admite **estado**.    |
 | insightDetail          | array | Uno o varios [InsightDetail valores](#insightdetail-values) que representan los detalles para obtener información actual.    |
 
 
@@ -87,7 +87,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | FactName           | string | Una cadena que indica la métrica que describe la información actual o la dimensión actual. Actualmente, este método solo admite el valor **HitCount**.  |
 | SubDimensions         | array |  Uno o más objetos que describen una sola métrica para la perspectiva.   |
-| PercentChange            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
+| CambioPorcentual            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
 | DimensionName           | string |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, y **PackageVersion**.   |
 | DimensionValue              | string | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, **DimensionValue** podría ser **bloqueo** o **bloqueo** .   |
 | FactValue     | string | El valor absoluto de la métrica en la fecha en que se ha detectado la recomendación.  |

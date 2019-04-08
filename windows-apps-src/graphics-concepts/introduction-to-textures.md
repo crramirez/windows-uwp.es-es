@@ -128,4 +128,4 @@ El ajuste de dirección de textura ocurre después de que se calcule la ubicaci�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Textures](textures.md)
+[Texturas](textures.md)

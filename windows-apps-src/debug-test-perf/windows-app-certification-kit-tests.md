@@ -668,5 +668,5 @@ Actualiza el código JavaScript en segundo plano para que llame a Close() correc
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas de aplicación de puente de escritorio de Windows](windows-desktop-bridge-app-tests.md)
-* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  

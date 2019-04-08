@@ -1,5 +1,5 @@
 ---
-description: En este tema le guiará a través de los pasos de creación de un control personalizado simple con C / c++ / WinRT. Puede crear en la información aquí para crear sus propios controles de interfaz de usuario completos y personalizables.
+description: Este tema te guía por los pasos de creación de un control personalizado sencillo con C++/WinRT. Puedes usar esta información para crear tus propios controles de interfaz de usuario repletos de características y personalizables.
 title: Controles (con plantilla) personalizados de XAML con C++ / WinRT
 ms.date: 10/03/2018
 ms.topic: article

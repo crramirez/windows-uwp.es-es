@@ -233,7 +233,7 @@ Si creas o transfieres localmente aplicaciones en un dispositivo con Windows 8.1
 
 Después debes habilitar el dispositivo para el desarrollo, tal como se describe en este tema, para que puedas seguir desarrollando en este dispositivo. Si no lo haces, es posible que obtengas un error al depurar la aplicación o intentar crear un paquete para ella. Este es un ejemplo de este error:
 
-Error : DEP0700: No se pudo registrar la aplicación.
+Error: DEP0700: No se pudo registrar la aplicación.
 
 ## <a name="see-also"></a>Consulta también
 

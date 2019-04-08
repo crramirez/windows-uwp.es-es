@@ -46,9 +46,9 @@ Los formatos BC1, BC2 y BC3 son equivalentes a los formatos de compresión de te
 
 | Formato de compresión por bloques | Formato DXGI                                                                           | Formato equivalente en Direct3D 9                               | Bytes por bloque de píxeles de 4 x 4 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------|---------------------------|
-| BC1                      | DXGI\_FORMAT\_BC1\_UNORM, DXGI\_FORMAT\_BC1\_UNORM\_SRGB, DXGI\_FORMAT\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC = "DXT1"                                | 8                         |
-| BC2                      | DXGI\_FORMAT\_BC2\_UNORM, DXGI\_FORMAT\_BC2\_UNORM\_SRGB, DXGI\_FORMAT\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC="DXT2", D3DFMT\_DXT3, FourCC="DXT3" | 16                        |
-| BC3                      | DXGI\_FORMAT\_BC3\_UNORM, DXGI\_FORMAT\_BC3\_UNORM\_SRGB, DXGI\_FORMAT\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC="DXT4", D3DFMT\_DXT5, FourCC="DXT5" | 16                        |
+| BC1                      | DXGI\_FORMATO\_BC1\_UNORM, DXGI\_FORMATO\_BC1\_UNORM\_SRGB, DXGI\_FORMATO\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC = "DXT1"                                | 8                         |
+| BC2                      | DXGI\_FORMATO\_BC2\_UNORM, DXGI\_FORMATO\_BC2\_UNORM\_SRGB, DXGI\_FORMATO\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC = "DXT2" D3DFMT\_DXT3, FourCC = "DXT3" | 16                        |
+| BC3                      | DXGI\_FORMATO\_BC3\_UNORM, DXGI\_FORMATO\_BC3\_UNORM\_SRGB, DXGI\_FORMATO\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC = "DXT4" D3DFMT\_DXT5, FourCC = "DXT5" | 16                        |
 
  
 
@@ -64,7 +64,7 @@ Los formatos BC1, BC2 y BC3 son equivalentes a los formatos de compresión de te
 
  
 
-## <a name="span-idbc6hformatspanspan-idbc6hformatspanspan-idbc6hformatspanbc6h-format"></a><span id="BC6H_Format"></span><span id="bc6h_format"></span><span id="BC6H_FORMAT"></span>BC6H Format
+## <a name="span-idbc6hformatspanspan-idbc6hformatspanspan-idbc6hformatspanbc6h-format"></a><span id="BC6H_Format"></span><span id="bc6h_format"></span><span id="BC6H_FORMAT"></span>Formato BC6H
 
 
 Para obtener más información sobre este formato, consulta la documentación del enlace [Formato BC6H](https://msdn.microsoft.com/library/windows/desktop/hh308952) (en inglés).
@@ -84,7 +84,7 @@ Para obtener más información sobre este formato, consulta la documentación de
 
 | Formato de compresión por bloques | Formato DXGI                                                                           | Formato equivalente en Direct3D 9 | Bytes por bloque de píxeles de 4 x 4 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC7                      | DXGI\_FORMAT\_BC7\_UNORM, DXGI\_FORMAT\_BC7\_UNORM\_SRGB, DXGI\_FORMAT\_BC7\_TYPELESS | N/D                          | 16                        |
+| BC7                      | DXGI\_FORMATO\_BC7\_UNORM, DXGI\_FORMATO\_BC7\_UNORM\_SRGB, DXGI\_FORMATO\_BC7\_TYPELESS | N/D                          | 16                        |
 
  
 
@@ -95,7 +95,7 @@ El formato BC7 puede seleccionar diferentes modos de codificación para cada blo
 
 [Apéndices](appendix.md)
 
-[Textures](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
  
 

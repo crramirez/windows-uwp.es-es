@@ -130,8 +130,8 @@ La manipulación de la alineación en toda la aplicación puede parecer sencilla
 
 | | Cadena en inglés (LTR) | Cadena en hebreo (RTL) |
 | -------------- | ------------------- | ------------------- |
-| **Left-alignment** | Hello, World! | בוקר טוב! |
-| **Right-alignment** | !Hello, World | !בוקר טוב |
+| **Alineación a la izquierda** | Hello, World! | בוקר טוב! |
+| **Alineación a la derecha** | !Hello, World | !בוקר טוב |
 
 Para garantizar que la información del intérprete se muestre correctamente en la aplicación de música, el equipo de desarrollo separó las propiedades de diseño de texto de la alineación. En otras palabras, la información del intérprete probablemente se muestra como alineada a la derecha en muchos de los casos, pero el ajuste de diseño de la cadena se establece sobre la base del procesamiento en segundo plano personalizado. El procesamiento en segundo plano determina la mejor configuración de diseño direccional sobre la base del contenido de la cadena.
 

@@ -246,7 +246,7 @@ Esta es la lista completa de los parámetros (organizada por categorías) que pu
 * [Conversión](#conversion-params)
 * [Identidad del paquete](#identity-params)
 * [Manifiesto del paquete](#manifest-params)
-* [Cleanup](#cleanup-params)
+* [Limpieza](#cleanup-params)
 * [Arquitectura](#architecture-params)
 * [Varios](#other-params)
 

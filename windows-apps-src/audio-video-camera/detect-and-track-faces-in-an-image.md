@@ -100,6 +100,6 @@ Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/a
 * [Análisis de la escena para captura de medios](scene-analysis-for-media-capture.md)
 * [Ejemplo básico de detección de caras](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
 * [Ejemplo básico de seguimiento de caras](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
-* [Camera](camera.md)
+* [Cámara](camera.md)
 * [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Reproducción de multimedia](media-playback.md)

@@ -8,7 +8,7 @@ ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.localizationpriority: medium
 ms.openlocfilehash: d05528ecf4408a7e7483b909b75722037c6528b7
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645700"
@@ -18,7 +18,7 @@ Puedes obtener y configurar el espacio aislado de Xbox Live con esta API de REST
 
 ## <a name="get-the-xbox-live-sandbox"></a>Obtener el espacio aislado de Xbox Live
 
-**Request**
+**Solicitud**
 
 Puedes leer el valor actual del espacio aislado de Xbox Live del dispositivo con la siguiente solicitud:
 
@@ -54,7 +54,7 @@ Código de estado HTTP      | Descripción
 ## <a name="set-the-xbox-live-sandbox"></a>Configurar el espacio aislado de Xbox Live
 Puedes cambiar el espacio aislado de Xbox Live del dispositivo con la siguiente solicitud. Ten en cuenta que en Xbox One, el dispositivo debe reiniciarse para que la configuración surta efecto.
 
-**Request**
+**Solicitud**
 
 Puedes configurar el valor actual del espacio aislado de Xbox Live del dispositivo con la siguiente solicitud:
 

@@ -539,7 +539,7 @@ El proxy debe registrarse globalmente. La manera más sencilla de hacerlo es hac
 
 Se debe realizar otro paso de configuración adicional. Para que el proceso de prueba cargue y ejecute el proxy, el directorio debe estar marcado como "read / execute" para ALL_APPLICATION_PACKAGES. Esto se realiza mediante el **icacls.exe** herramienta de línea de comandos. Este comando debe ejecutarse en el directorio donde la implementación **winmd** y se encuentra el archivo dll de proxy/código auxiliar:
 
-*icacls . /T /grant \*S-1-15-2-1:RX*
+*icacls. /T /grant \*S-1-15-2-1:RX*
 
 ## <a name="patterns-and-performance"></a>Patrones y rendimiento
 
@@ -580,7 +580,7 @@ Cuando se realizan cambios en el servidor, hay que procurar que cualquier instan
 El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. La herramienta de línea de comandos **TaskList.exe **también se incluye y tiene una sintaxis flexible, por ejemplo:
 
   
- | **Command** | **Acción** |
+ | **Comando** | **Acción** |
  | ------------| ---------- |
  | tasklist | Genera una lista con todos los procesos en ejecución en orden aproximado de hora de creación, con los procesos más recientes al final. |
  | tasklist /FI "IMAGENAME eq dllhost.exe" /M | Genera una lista de todas las instancias de dllhost.exe. El conmutador /M enumera los módulos que se han cargado. |

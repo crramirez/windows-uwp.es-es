@@ -151,7 +151,7 @@ En este punto, has creado una aplicación muy sencilla. Este es un buen momento 
 
 De forma predeterminada, la aplicación se ejecuta en el equipo local. El menú del dispositivo de destino proporciona varias opciones para depurar la aplicación en dispositivos de la familia de dispositivos de escritorio.
 
--   **Simulator**
+-   **Simulador**
 -   **Máquina local**
 -   **Equipo remoto**
 

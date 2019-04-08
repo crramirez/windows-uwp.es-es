@@ -61,7 +61,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     * **Sistema operativo**: Elija los sistemas operativos en el que debe aparecer la instancia de ad. Solo se muestran los sistemas operativos admitidos por la aplicación.
 
-    * **Gender**: Elija si desea restringir la audiencia de la instancia de ad por género.
+    * **Sexo**: Elija si desea restringir la audiencia de la instancia de ad por género.
 
     * **Intervalo de edad**: Seleccione los intervalos de edad para la audiencia deseada.
 

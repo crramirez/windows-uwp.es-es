@@ -114,7 +114,7 @@ La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https:/
 * [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [Animaciones amplía su información](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Extensión de marcado {binding}](binding-markup-extension.md)
-* [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
+* [**propertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
 * [**enlace**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**Constructor de enlace**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)

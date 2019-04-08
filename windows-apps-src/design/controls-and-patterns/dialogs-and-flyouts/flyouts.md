@@ -35,20 +35,20 @@ Para obtener recomendaciones sobre cuándo usar un control flotante frente a cu�
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> o <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> en acción.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrirla y ver <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> o <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-##  <a name="how-to-create-a-flyout"></a>Cómo crear un control flotante
+##  <a name="how-to-create-a-flyout"></a>Creación de un control flotante
 
 
 Los controles flotantes se asocian a controles específicos. Puede usar el [colocación](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) propiedad para especificar dónde aparece una ventana flotante: Parte superior, izquierda, abajo, derecha o completo. Si seleccionas el [modo de colocación completa](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), la aplicación amplía el control flotante y lo centra dentro de la ventana de la aplicación. Algunos controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), proporcionan una propiedad [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que puedes usar para asociar un control flotante o [menú contextual](../menus.md).

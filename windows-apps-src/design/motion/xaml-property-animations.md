@@ -43,7 +43,7 @@ Esta tabla muestran las propiedades que puede usar para modificar la representac
 | [Escalar](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Escala el elemento, centrado en el punto central |
 | [Rotación](/uwp/api/windows.ui.xaml.uielement.rotation) | Flotante | Girar el elemento en torno a la RotationAxis y el punto central |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | El eje de giro |
-| [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | El punto central de la escala y rotación |
+| [Punto central](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | El punto central de la escala y rotación |
 
 El valor de propiedad TransformMatrix se combina con las propiedades de escala, rotación y traslación en el orden siguiente:  TransformMatrix, escala, rotación, traducción.
 
@@ -73,7 +73,7 @@ button.Scale = new Vector3(2.0f,2.0f,1.0f);
 Las propiedades que se pueden animar con un CompositionAnimation son reemplazos para varias propiedades UIElement existentes:
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
-- [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
+- [Valor de RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
 - [Proyección](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 

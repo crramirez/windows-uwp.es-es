@@ -67,15 +67,15 @@ Aunque **Aplicación vacía (Universal Window)** es una plantilla mínima, conti
 
 Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el **Explorador de soluciones**. 
 
-*default.css*
+*default.CSS*
 
 -  Hoja de estilos predeterminada que usa la aplicación.
 
-*main.js*
+*Main.js*
 
 - Archivo JavaScript predeterminado. Se hace referencia en el archivo index.html.
 
-*index.html*
+*index.HTML*
 
 - Página web de la aplicación, que se carga y muestra cuando se inicia la aplicación.
 

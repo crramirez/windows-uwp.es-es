@@ -7,7 +7,7 @@ keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, c
 ms.localizationpriority: medium
 ms.openlocfilehash: 193d821b44722e150f38da7430504f5d528770a4
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57602430"
@@ -233,11 +233,11 @@ winrt::hstring f(ListView listview)
 Si controla un evento con la función de miembro de un objeto, o desde dentro de una función lambda dentro de la función de miembro de un objeto, a continuación, debe considerar la duración relativa del destinatario de eventos (el objeto que controla el evento) y el origen del evento (el objeto Provoca el evento). Para obtener más información y ejemplos de código, vea [referencias fuertes y débiles en C / c++ / WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 ## <a name="important-apis"></a>API importantes
-* [winrt::auto_revoke_t marker struct](/uwp/cpp-ref-for-winrt/auto-revoke-t)
-* [winrt::implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
+* [winrt::auto_revoke_t marcador struct](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [función winrt::Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [función winrt::Implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Crear eventos en C / c++ / WinRT](author-events.md)
 * [Simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](concurrency.md)
-* [Las referencias fuertes y débiles en C / c++ / WinRT](weak-references.md)
+* [Referencias fuertes y débiles de C++/WinRT](weak-references.md)

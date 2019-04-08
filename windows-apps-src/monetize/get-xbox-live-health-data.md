@@ -7,7 +7,7 @@ keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store a
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b996d85776cb49d45cc5b699709b4eb107e7086
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57650910"
@@ -55,8 +55,8 @@ Para usar este método, primero debes hacer lo siguiente:
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de estado que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
-| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>sandboxId</strong></li></ul> | No   |
-| groupby | string | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>date</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>sandboxId</strong></li></ul><p/>Si especificas uno o más campos *groupby*, cualquier otro campo *groupby* que no especifiques tendrá el valor **All** en el cuerpo de respuesta. |  No  |
+| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>tipo de dispositivo</strong></li><li><strong>PackageVersion</strong></li><li><strong>SandboxId</strong></li></ul> | No   |
+| groupby | string | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>Fecha</strong></li><li><strong>tipo de dispositivo</strong></li><li><strong>PackageVersion</strong></li><li><strong>SandboxId</strong></li></ul><p/>Si especificas uno o más campos *groupby*, cualquier otro campo *groupby* que no especifiques tendrá el valor **All** en el cuerpo de respuesta. |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -84,7 +84,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | El Id. de Store del juego para la que estás recuperando los datos de estado.     |
 | fecha                | string | La primera fecha del intervalo de fechas de los datos de estado. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo en el que utilizó el juego:<p/><ul><li><strong>XboxOne</strong></li><li><strong>WindowsOneCore</strong> (este valor indica un PC)</li><li><strong>Unknown</strong></li></ul>  |
+| deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo en el que utilizó el juego:<p/><ul><li><strong>XboxOne</strong></li><li><strong>WindowsOneCore</strong> (este valor indica un PC)</li><li><strong>Desconocido</strong></li></ul>  |
 | sandboxId     | string |   El id. de espacio aislado creado para el juego. Este puede ser el valor RETAIL o el Id. de un espacio aislado privado.   |
 | packageVersion     | string |  La versión del paquete de cuatro partes del juego.  |
 | callingPattern     | object |  Un objeto [callingPattern](#callingpattern) que proporciona las respuestas de servicio, dispositivos y datos de usuario para cada código de estado devuelto por cada servicio de Xbox Live usado por el juego durante el intervalo de fechas especificado.     |

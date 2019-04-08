@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 88d150383d2be219e7f382e0e690771acbc9d2ee
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57651480"
@@ -50,7 +50,7 @@ Diseño de la palabra 0:
 | 3:0 (LSB\*)   | \[0\]\[0\] |
 | 7:4           | \[0\]\[1\] |
 | 11:8          | \[0\]\[2\] |
-| 15:12 (MSB\*) | \[0\]\[3\] |
+| 12:15 (MSB\*) | \[0\]\[3\] |
 
  
 
@@ -129,10 +129,10 @@ El diseño de la memoria del bloque alfa es la siguiente:
 | 0    | Alfa\_0                                                       |
 | 1    | Alfa\_1                                                       |
 | 2    | \[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]                    |
-| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB) |
+| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\] \[2\] (1 LSB) |
 | 4    | \[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)                    |
 | 5    | \[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]                    |
-| 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
+| 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\] \[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)                    |
 
  

@@ -2382,7 +2382,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E9F9.png" width="32" height="32" alt="ReportDocument" /></td>
   <td>E9F9</td>
-  <td>ReportDocument</td>
+  <td>Objeto ReportDocument</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA0C.png" width="32" height="32" alt="VideoSolid" /></td>
   <td>EA0C</td>
@@ -4013,7 +4013,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
   <td>Voz</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F000.png" width="32" height="32" alt="KnowledgeArticle" /></td>
-  <td>F000</td>
+  <td>OCULTA F000</td>
   <td>KnowledgeArticle</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F003.png" width="32" height="32" alt="Relationship" /></td>

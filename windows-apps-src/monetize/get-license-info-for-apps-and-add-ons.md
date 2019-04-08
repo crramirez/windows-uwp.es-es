@@ -8,7 +8,7 @@ keywords: windows 10, uwp, licencias, licenses, aplicaciones, apps, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57641920"
@@ -48,7 +48,7 @@ Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tie
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
 * [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar complemento consumibles compras](enable-consumable-add-on-purchases.md)

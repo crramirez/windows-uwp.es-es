@@ -1,6 +1,6 @@
 ---
 title: Implementar una aplicación a través del registro de archivos dinámico
-description: Esta guía muestra cómo usar el diseño del archivo flexible para validar y compartir aplicaciones de Windows 10 sin necesidad de empaquetarlos.
+description: En esta guía se muestra cómo usar el diseño de archivos dinámico para validar y compartir aplicaciones de Windows 10 sin necesidad de empaquetarlas.
 ms.date: 6/1/2018
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, Administrador de aplicaciones, implementación, sdk
@@ -14,7 +14,7 @@ ms.locfileid: "57635430"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación a través del registro de archivos dinámico 
 
-Esta guía muestra cómo usar el diseño del archivo flexible para validar y compartir aplicaciones de Windows 10 sin necesidad de empaquetarlos. Registrar los diseños de archivo dinámico permite a los desarrolladores validar rápidamente sus aplicaciones sin necesidad de paquete e instalar las aplicaciones. 
+En esta guía se muestra cómo usar el diseño de archivos dinámico para validar y compartir aplicaciones de Windows 10 sin necesidad de empaquetarlas. Registrar los diseños de archivo dinámico permite a los desarrolladores validar rápidamente sus aplicaciones sin necesidad de paquete e instalar las aplicaciones. 
 
 ## <a name="what-is-a-loose-file-layout"></a>¿Qué es un diseño de archivo dinámico?
 

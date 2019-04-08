@@ -133,19 +133,19 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>uniform</strong></p>
+<td align="left"><p><strong>Uniforme</strong></p>
 <p>Se pasa una variable uniform desde el código de la aplicación a los sombreadores de fragmentos o vértices. Debes establecer los valores de todos los uniformes antes de dibujar cualquier triángulo con esos sombreadores para que sus valores no cambien durante el proceso de dibujo de una malla de triángulo. Estos valores son uniformes. Algunos uniformes se establecen para todo el cuadro y otros exclusivamente para un par de sombreador de vértices y píxeles particular.</p>
 <p>Las variables uniformes son variables por polígono.</p></td>
 <td align="left"><p>Se usa el búfer de constantes.</p>
 <p>Vea <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">Cómo: Crear un búfer de constantes</a> y <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">constantes de sombreador</a>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>varying</strong></p>
+<td align="left"><p><strong>variable</strong></p>
 <p>Se inicializa una variable varying dentro del sombreador de vértices y se pasa a una variable varying con el mismo nombre en el sombreador de fragmentos. Dado que el sombreador de vértices solamente establece el valor de las variables cambiantes en cada vértice, el rasterizador interpola esos valores (de una forma correcta para la perspectiva) para generar valores por fragmento para pasarlos al sombreador de fragmentos. Estas variables varían en cada triángulo.</p></td>
 <td align="left">Se usa la estructura que se devuelve del sombreador de vértices como la entrada al sombreador de píxeles. Asegúrate de que los valores semánticos coincidan.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>attribute</strong></p>
+<td align="left"><p><strong>Atributo</strong></p>
 <p>Un elemento attribute es una parte de la descripción de un vértice que se pasa desde el código de la aplicación solo al sombreador de vértices. A diferencia de un uniforme, estableces el valor de cada atributo para cada vértice, el cual permite que cada vértice tenga un valor diferente. Las variables de atributo son variables por vértice.</p></td>
 <td align="left"><p>Define un búfer de vértices en tu código de la aplicación de Direct3D y hazlo coincidir con la entrada del vértice definida en el sombreador de vértices. Tienes la opción de definir un búfer de índice. Vea <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">Cómo: Crear un búfer de vértices</a> y <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">Cómo: Crear un búfer de índice</a>.</p>
 <p>Crea un diseño de entrada en el código de la aplicación de Direct3D y haz coincidir los valores semánticos con los que se encuentran en la entrada de vértice. Consulta el tema sobre <a href="https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout">cómo crear el diseño de entrada</a>.</p></td>
@@ -324,7 +324,7 @@ Usa esta tabla para migrar variables globales predefinidas de GLSL a HLSL.
 <p>Por ejemplo, float4 Color [4]: SV_Target;</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>gl_FragData[n]</strong></p>
+<td align="left"><p><strong>gl_FragData [n]</strong></p>
 <p>Esta variable es de tipo <strong>vec4</strong>.</p>
 <p>Color de fragmento para adjunto de color n</p></td>
 <td align="left"><p>SV_Target[n]</p>

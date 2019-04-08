@@ -36,7 +36,7 @@ Este artículo enumera las opciones de codificación que pueden usarse con [**Bi
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear, editar y guardar las imágenes de mapa de bits](imaging.md)
+* [Crear, editar y guardar imágenes de mapa de bits](imaging.md)
 * [Códecs admitidos](supported-codecs.md)
 
  

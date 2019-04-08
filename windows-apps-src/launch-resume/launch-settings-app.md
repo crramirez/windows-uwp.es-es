@@ -106,7 +106,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | & Historial de permisos | ms-settings:cortana-permissions |
 | Más detalles | ms-settings:cortana-moredetails |
 | Cortana entre mis dispositivos | ms-settings:cortana-notifications |
-| Hablar con Cortana | ms-settings:cortana-language<br/>ms-settings:cortana<br/>ms-settings:cortana-talktocortana |
+| Hablar con Cortana | ms-settings:cortana-language<br/>MS-cortana: configuración<br/>MS-configuración: cortana-talktocortana |
 
 > [!NOTE] 
 > Esta sección de configuración de escritorio se llamará búsqueda cuando el equipo está establecido en las regiones donde Cortana no está disponible actualmente o Cortana se ha deshabilitado. En este caso, páginas de Cortana específicas (Cortana en Mis dispositivos) y hablar a Cortana no se mostrará. 
@@ -135,8 +135,8 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Audio | ms-settings:easeofaccess-audio |
 | Subtítulos | ms-settings:easeofaccess-closedcaptioning |
-| Filtros de color | ms-settings:easeofaccess-colorfilter |
-| Tamaño del cursor & puntero | ms-settings:easeofaccess-cursorandpointersize |
+| Filtros de color | MS-configuración: easeofaccess-colorfilter |
+| Tamaño del cursor & puntero | MS-configuración: easeofaccess-cursorandpointersize |
 | Pantalla | ms-settings:easeofaccess-display |
 | Control ocular | ms-settings:easeofaccess-eyecontrol |
 | Fuentes | ms-settings:fonts |
@@ -188,7 +188,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Zona con cobertura inalámbrica móvil | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
 | Proxy | ms-settings:network-proxy |
-| Estado | ms-settings:network-status<br/>ms-settings:network |
+| Estado | ms-settings:network-status<br/>MS-red: configuración |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi (solo está disponible si el dispositivo tiene un adaptador Wi-Fi) |
 | Llamada por Wi-Fi | ms-settings:network-wificalling (solo está disponible si se habilitan las llamadas por Wi-Fi) |
@@ -199,7 +199,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Background | ms-settings:personalization-background |
 | Elegir las carpetas que aparecen en Inicio | ms-settings:personalization-start-places |
-| Colores | ms-settings:personalization-colors<br/>ms-settings:colors |
+| Colores | ms-settings:personalization-colors<br/>MS-configuración: colores |
 | Resumen | MS-configuración: personalización-vista (**en desuso en Windows 10, versión 1809 y versiones posterior**) |
 | Pantalla de bloqueo | ms-settings:lockscreen |
 | Barra de navegación | MS-configuración: personalización-barra de navegación (**en desuso en Windows 10, versión 1809 y versiones posterior**) |
@@ -212,7 +212,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 
 |Página Configuración| URI |
 |-------------|-----|
-| Tu teléfono | ms-settings:mobile-devices<br/>ms-settings:mobile-devices-addphone<br/>MS-configuración: mobile-dispositivos-addphone-directa (abre **Your Phone** app) |
+| Tu teléfono | ms-settings:mobile-devices<br/>MS-configuración: mobile-dispositivos-addphone<br/>MS-configuración: mobile-dispositivos-addphone-directa (abre **Your Phone** app) |
 
 ## <a name="privacy"></a>Privacidad
 
@@ -267,7 +267,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Ahorro de batería | ms-settings:batterysaver (solo está disponible en dispositivos que tengan batería, como una tableta) |
 | Configuración de ahorro de batería | ms-settings:batterysaver-settings (solo está disponible en dispositivos que tengan batería, como una tableta) |
 | Uso de la batería | ms-settings:batterysaver-usagedetails (solo está disponible en dispositivos que tengan batería, como una tableta) |
-| Portapapeles | ms-settings:clipboard |
+| Portapapeles | MS-Portapapeles: configuración |
 | Pantalla | ms-settings:display |
 | Ubicaciones de guardado predeterminadas | ms-settings:savelocations |
 | Pantalla | ms-settings:screenrotation |
@@ -298,7 +298,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Fecha y hora | ms-settings:dateandtime |
 | Configuración de IME de Japón | ms-settings:regionlanguage-jpnime (disponible si está instalado el Editor de métodos de entrada de Japón de Microsoft) |
-| Idioma | ms-settings:keyboard<br/>ms-settings:regionlanguage<br/>ms-settings:regionlanguage-bpmfime<br/>ms-settings:regionlanguage-cangjieime<br/>ms-settings:regionlanguage-chsime-pinyin-domainlexicon<br/>ms-settings:regionlanguage-chsime-pinyin-keyconfig<br/>ms-settings:regionlanguage-chsime-pinyin-udp<br/>ms-settings:regionlanguage-chsime-wubi-udp<br/>ms-settings:regionlanguage-quickime |
+| Idioma | MS-configuración: teclado<br/>ms-settings:regionlanguage<br/>MS-configuración: regionlanguage-bpmfime<br/>MS-configuración: regionlanguage-cangjieime<br/>MS-configuración: regionlanguage-chsime-pinyin-domainlexicon<br/>MS-configuración: regionlanguage-chsime-pinyin-keyconfig<br/>MS-configuración: regionlanguage-chsime-pinyin-udp<br/>MS-configuración: regionlanguage-chsime-wubi-udp<br/>MS-configuración: regionlanguage-quickime |
 | Configuración IME de Pinyin | ms-settings:regionlanguage-chsime-pinyin (disponible si está instalado el Editor de métodos de entrada de Pinyin de Microsoft) |
 | Voz | ms-settings:speech |
 | Configuración IME de Wubi  | ms-settings:regionlanguage-chsime-wubi (disponible si está instalado el Editor de métodos de entrada de Wubi de Microsoft) |
@@ -315,7 +315,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Recuperación | ms-settings:recovery |
 | Solucionar problemas | ms-settings:troubleshoot |
 | Seguridad de Windows | ms-settings:windowsdefender |
-| Programa Windows Insider | ms-settings:windowsinsider (solo está disponible si el usuario se inscribe en WIP)<br/>ms-settings:windowsinsider-optin |
+| Programa Windows Insider | ms-settings:windowsinsider (solo está disponible si el usuario se inscribe en WIP)<br/>MS-configuración: windowsinsider-optin |
 | Windows Update | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows Update: opciones avanzadas | ms-settings:windowsupdate-options |
 | Windows Update: opciones de reinicio | ms-settings:windowsupdate-restartoptions |

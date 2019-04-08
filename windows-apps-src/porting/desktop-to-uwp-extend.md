@@ -101,7 +101,7 @@ Para mostrar una interfaz de usuario basada en XAML, deberás hacer lo siguiente
 
 : uno: [Configuración de la solución](#solution-setup)
 
-:two: [Crear una interfaz de usuario de XAML](#xaml-UI)
+: dos: [Crear una interfaz de usuario de XAML](#xaml-UI)
 
 : tres: [Agregar una extensión de protocolo para el proyecto de UWP](#add-a-protocol-extension)
 
@@ -262,7 +262,7 @@ Para que la aplicación sea un destino de recursos compartidos, deberás hacer l
 
 : uno: [Agregar una extensión de recurso compartido de destino](#share-extension)
 
-:two: [Reemplazar el controlador de eventos OnShareTargetActivated](#override)
+: dos: [Reemplazar el controlador de eventos OnShareTargetActivated](#override)
 
 : tres: [Agregar extensiones de escritorio para el proyecto de UWP](#desktop-extensions)
 
@@ -409,7 +409,7 @@ Para crear un servicio en segundo plano, deberás hacer lo siguiente:
 
 : uno: [Implementar la tarea en segundo plano](#implement-task)
 
-:two: [Configurar la tarea en segundo plano](#configure-background-task)
+: dos: [Configurar la tarea en segundo plano](#configure-background-task)
 
 : tres: [Registrar la tarea en segundo plano](#register-background-task)
 

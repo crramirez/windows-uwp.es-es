@@ -42,7 +42,7 @@ De forma predeterminada, la interfaz de usuario de vista previa de impresión mu
 -   [**MediaType**](https://msdn.microsoft.com/library/windows/apps/BR226484)
 -   [**Limpieza**](https://msdn.microsoft.com/library/windows/apps/BR226485)
 -   [**PrintQuality**](https://msdn.microsoft.com/library/windows/apps/BR226487)
--   [**Staple**](https://msdn.microsoft.com/library/windows/apps/BR226488)
+-   [**Grapa**](https://msdn.microsoft.com/library/windows/apps/BR226488)
 
 Estas opciones se definen en la clase [**StandardPrintTaskOptions**](https://msdn.microsoft.com/library/windows/apps/BR226475). Puedes agregar o quitar opciones de la lista que se muestra en la interfaz de usuario de vista previa de impresión. También puedes cambiar el orden en que aparecen las opciones y establecer la configuración predeterminada que se muestra al usuario.
 

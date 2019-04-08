@@ -48,7 +48,7 @@ La principal diferencia entre una propiedad adjunta personalizada y una propieda
 
 La firma del descriptor de acceso **Get**_PropertyName_ debe ser esta:
 
-`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
+`public static` _valueType_ **obtener**_PropertyName_ `(DependencyObject target)`
 
 En Microsoft Visual Basic, es esta:
 
@@ -301,6 +301,6 @@ protected override Size ArrangeOverride(Size finalSize)
 ## <a name="related-topics"></a>Temas relacionados
 
 * [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)
-* [Información general sobre propiedades adjuntas](attached-properties-overview.md)
+* [Introducción a las propiedades adjuntas](attached-properties-overview.md)
 * [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
 * [Introducción a XAML](xaml-overview.md)

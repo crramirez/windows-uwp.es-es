@@ -35,7 +35,7 @@ El XAML UWP API de hospedaje proporciona la infraestructura de bajo nivel para h
 
 La forma de usar el XAML UWP API de hospedaje en el código depende de su tipo de aplicación, el diseño de la aplicación y otros factores. Para ayudar a ilustrar cómo se usa esta API en el contexto de una aplicación completa, este artículo se refiere al código de los ejemplos siguientes.
 
-### <a name="c-win32"></a>C++ Win32
+### <a name="c-win32"></a>Win32 de C++
 
 Hay varios ejemplos en GitHub que muestra cómo usar el XAML UWP API de hospedaje en una aplicación Win32 de C++:
 
@@ -57,7 +57,7 @@ El XAML UWP API de hospedaje tiene estos requisitos previos.
 
 * Para usar el XAML UWP API de hospedaje en su aplicación de escritorio, deberá configurar el proyecto para que se pueden llamar a las API de UWP.
 
-    * **C++ Win32:** Le recomendamos que configure el proyecto para usar [C++ / c++ / WinRT](../cpp-and-winrt-apis/index.md). Para obtener instrucciones, consulte [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / c++ / WinRT soporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+    * **Win32 de C++:** Le recomendamos que configure el proyecto para usar [C++ / c++ / WinRT](../cpp-and-winrt-apis/index.md). Para obtener instrucciones, consulte [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / c++ / WinRT soporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
     * **Windows Forms y WPF:** Siga [estas instrucciones](../porting/desktop-to-uwp-enhance.md).
 
@@ -160,7 +160,7 @@ Estos son los pasos principales para usar el XAML UWP API de hospedaje para hosp
 
 Para obtener ejemplos completos que demuestran estas tareas en el contexto de una aplicación de ejemplo funcional, consulte los archivos de código siguiente:
 
-  * **C++ Win32:** Consulte la [Main.cpp](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting/blob/master/XamlHostingSample/Main.cpp) de archivos en el [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting) ejemplo o el [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) de archivos en el [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) ejemplo.
+  * **Win32 de C++:** Consulte la [Main.cpp](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting/blob/master/XamlHostingSample/Main.cpp) de archivos en el [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting) ejemplo o el [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) de archivos en el [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) ejemplo.
   * **WPF:** Consulte la [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) y [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) archivos en el Kit de herramientas de la Comunidad de Windows.  
   * **Windows Forms:** Consulte la [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) y [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) archivos en el Kit de herramientas de la Comunidad de Windows.
 

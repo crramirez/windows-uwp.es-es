@@ -56,7 +56,7 @@ La parte visual de las ventanas contiene las especificaciones visuales para todo
 | **LockDetailedStatus1** | string | falso | Si se especifica, también debes proporcionar un enlace de TileWide. Se trata de la primera línea de texto que se mostrará en la pantalla de bloqueo, si el usuario ha seleccionado tu ventana como la aplicación de estado detallada. |
 | **LockDetailedStatus2** | string | falso | Si se especifica, también debes proporcionar un enlace de TileWide. Se trata de la segunda línea de texto que se mostrará en la pantalla de bloqueo, si el usuario ha seleccionado tu ventana como la aplicación de estado detallada. |
 | **LockDetailedStatus3** | string | falso | Si se especifica, también debes proporcionar un enlace de TileWide. Se trata de la tercera línea de texto que se mostrará en la pantalla de bloqueo, si el usuario ha seleccionado tu ventana como la aplicación de estado detallada. |
-| **BaseUri** | Uri | falso | URL base predeterminada que se combina con direcciones URL relativas en atributos de origen de imagen. |
+| **baseUri** | Uri | falso | URL base predeterminada que se combina con direcciones URL relativas en atributos de origen de imagen. |
 | **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
 | **Idioma**| string | falso | La configuración regional de destino de la carga visual al usar recursos localizados, especificados como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Esta configuración regional se reemplaza por cualquier configuración regional especificada en el enlace o texto. Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
 
@@ -70,7 +70,7 @@ El objeto de enlace contiene el contenido visual de un tamaño específico de ve
 | **Personalización de marca** | TileBranding | falso | La forma en la que debe usarse la ventana para mostrar la marca de la aplicación. De manera predeterminada, hereda la personalización de marca de la ventana predeterminada. |
 | **DisplayName** | string | falso | Una cadena opcional para invalidar el nombre para mostrar de la ventana para este tamaño. |
 | **Argumentos** | string | falso | Novedad en la actualización de aniversario de: Datos definidos en la aplicación que se pasan a la aplicación a través de la propiedad TileActivatedInfo en LaunchActivatedEventArgs cuando el usuario inicia la aplicación desde la ventana viva. Esto te permite saber las notificaciones de ventana que el usuario vio cuando pulsó tu Icono dinámico. En los dispositivos sin la actualización de aniversario, simplemente se omitirá. |
-| **BaseUri** | Uri | falso | URL base predeterminada que se combina con direcciones URL relativas en atributos de origen de imagen. |
+| **baseUri** | Uri | falso | URL base predeterminada que se combina con direcciones URL relativas en atributos de origen de imagen. |
 | **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
 | **Idioma**| string | falso | La configuración regional de destino de la carga visual al usar recursos localizados, especificados como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Esta configuración regional se reemplaza por cualquier configuración regional especificada en el enlace o texto. Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
 
@@ -92,7 +92,7 @@ Compatible con todos los tamaños. Esta es la manera recomendada de especificar 
 
 | Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Children** | IList<ITileBindingContentAdaptiveChild> | falso | Elementos visuales alineados. Los objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage), y [AdaptiveGroup](#adaptivegroup) pueden agregarse. Los elementos secundarios se muestran en una forma vertical de StackPanel. |
+| **Elementos secundarios** | IList<ITileBindingContentAdaptiveChild> | falso | Elementos visuales alineados. Los objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage), y [AdaptiveGroup](#adaptivegroup) pueden agregarse. Los elementos secundarios se muestran en una forma vertical de StackPanel. |
 | **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | falso | Una imagen de fondo opcional que obtiene muestra detrás del contenido de la ventana, sin bordes. |
 | **PeekImage** | [TilePeekImage](#tilepeekimage) | falso | Una animación de imagen que aparezca desde la parte superior de la ventana. |
 | **TextStacking** | [TileTextStacking](#tiletextstacking) | falso | Controla el apilamiento de texto (alineación vertical) del contenido de los elementos secundarios como un todo. |
@@ -119,22 +119,22 @@ El estilo de texto controla el tamaño, el espesor y la opacidad de la fuente. L
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. El estilo viene determinado por el representador. |
 | **Título** | De menor tamaño que el tamaño de la fuente del párrafo. |
-| **CaptionSubtle** | Igual que Caption pero con opacidad sutil. |
-| **Body** | Tamaño de fuente del párrafo. |
-| **BodySubtle** | Igual que Body pero con opacidad sutil. |
-| **Base** | Tamaño de fuente de párrafo, espesor de negrita. Básicamente, la versión negrita de Body. |
-| **BaseSubtle** | Igual que Base pero con opacidad sutil. |
-| **Subtitle** | Tamaño de fuente H4 |
-| **SubtitleSubtle** | Igual que Subtitle pero con opacidad sutil. |
-| **Title** | Tamaño de fuente H3 |
-| **TitleSubtle** | Igual que Title pero con opacidad sutil. |
-| **TitleNumeral** | Igual que Title pero con el espaciado superior o inferior quitado. |
-| **Subheader** | Tamaño de fuente H2 |
-| **SubheaderSubtle** | Igual que Subheader pero con opacidad sutil. |
-| **SubheaderNumeral** | Igual que Subheader pero con el espaciado superior o inferior quitado. |
-| **Header** | Tamaño de fuente H1 |
-| **HeaderSubtle** | Igual que Header pero con opacidad sutil. |
-| **HeaderNumeral** | Igual que Header pero con el espaciado superior o inferior quitado. |
+| **captionSubtle** | Igual que Caption pero con opacidad sutil. |
+| **Cuerpo** | Tamaño de fuente del párrafo. |
+| **bodySubtle** | Igual que Body pero con opacidad sutil. |
+| **base** | Tamaño de fuente de párrafo, espesor de negrita. Básicamente, la versión negrita de Body. |
+| **baseSubtle** | Igual que Base pero con opacidad sutil. |
+| **Subtítulo** | Tamaño de fuente H4 |
+| **subtitleSubtle** | Igual que Subtitle pero con opacidad sutil. |
+| **Título** | Tamaño de fuente H3 |
+| **titleSubtle** | Igual que Title pero con opacidad sutil. |
+| **titleNumeral** | Igual que Title pero con el espaciado superior o inferior quitado. |
+| **Subencabezado** | Tamaño de fuente H2 |
+| **subheaderSubtle** | Igual que Subheader pero con opacidad sutil. |
+| **subheaderNumeral** | Igual que Subheader pero con el espaciado superior o inferior quitado. |
+| **Encabezado** | Tamaño de fuente H1 |
+| **headerSubtle** | Igual que Header pero con opacidad sutil. |
+| **headerNumeral** | Igual que Header pero con el espaciado superior o inferior quitado. |
 
 
 ### <a name="adaptivetextalign"></a>AdaptiveTextAlign
@@ -144,9 +144,9 @@ Controla la alineación horizontal del texto.
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. La alineación la determina automáticamente el representador. |
 | **Auto** | Alineación determinada por el idioma y la referencia cultural actuales. |
-| **Left** | Alinea horizontalmente el texto a la izquierda. |
-| **Center** | Alinea el texto horizontalmente en el centro. |
-| **Right** | Alinea el texto horizontalmente a la derecha. |
+| **Izquierda** | Alinea horizontalmente el texto a la izquierda. |
+| **Centro** | Alinea el texto horizontalmente en el centro. |
+| **Correcto** | Alinea el texto horizontalmente a la derecha. |
 
 
 ## <a name="adaptiveimage"></a>AdaptiveImage
@@ -169,7 +169,7 @@ Especifica el recorte deseado de la imagen.
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. Comportamiento de recorte determinado por el representador. |
 | **Ninguno** | No se recorta la imagen. |
-| **Circle** | Se recorta la imagen a una forma de círculo. |
+| **Círculo** | Se recorta la imagen a una forma de círculo. |
 
 
 ### <a name="adaptiveimagealign"></a>AdaptiveImageAlign
@@ -179,9 +179,9 @@ Especifica la alineación horizontal para una imagen.
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. Comportamiento de alineación determinado por el representador. |
 | **Stretch** | La imagen se amplía para rellenar el ancho disponible (y potencialmente también el alto disponible, en función de donde se coloque la imagen). |
-| **Left** | Alinea la imagen a la izquierda y la muestra en su resolución nativa. |
-| **Center** | Alinea la imagen en el centro de forma horizontal y la muestra en su resolución nativa. |
-| **Right** | Alinea la imagen a la derecha y la muestra en su resolución nativa. |
+| **Izquierda** | Alinea la imagen a la izquierda y la muestra en su resolución nativa. |
+| **Centro** | Alinea la imagen en el centro de forma horizontal y la muestra en su resolución nativa. |
+| **Correcto** | Alinea la imagen a la derecha y la muestra en su resolución nativa. |
 
 
 ## <a name="adaptivegroup"></a>AdaptiveGroup
@@ -189,7 +189,7 @@ Los grupos identifican semánticamente que el contenido del grupo debe mostrarse
 
 | Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | falso | Los subgrupos se muestran como columnas verticales. Debes usar subgrupos para proporcionar cualquier contenido dentro de un AdaptiveGroup. |
+| **Elementos secundarios** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | falso | Los subgrupos se muestran como columnas verticales. Debes usar subgrupos para proporcionar cualquier contenido dentro de un AdaptiveGroup. |
 
 
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
@@ -197,7 +197,7 @@ Los subgrupos son columnas verticales que pueden contener texto e imágenes.
 
 | Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | falso | [AdaptiveText](#adaptivetext) y [AdaptiveImage](#adaptiveimage) son elementos secundarios válidos de subgrupos. |
+| **Elementos secundarios** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | falso | [AdaptiveText](#adaptivetext) y [AdaptiveImage](#adaptiveimage) son elementos secundarios válidos de subgrupos. |
 | **HintWeight** | int? | falso | Controla el ancho de esta columna de subgrupo especificando el grosor, en relación con los demás subgrupos. |
 | **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | falso | Controla la alineación vertical del contenido de este subgrupo. |
 
@@ -217,8 +217,8 @@ TextStacking especifica la alineación vertical del contenido.
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. El representador selecciona automáticamente la alineación vertical predeterminada. |
-| **Top** | Alineación vertical a la parte superior. |
-| **Center** | Alineación vertical al centro. |
+| **Arriba** | Alineación vertical a la parte superior. |
+| **Centro** | Alineación vertical al centro. |
 | **parte inferior** | Alineación vertical a la parte inferior. |
 
 
@@ -241,7 +241,7 @@ Controla el recorte de la imagen de fondo.
 |---|---|
 | **Valor predeterminado** | El recorte usa el comportamiento predeterminado del representador. |
 | **Ninguno** | No se recorta la imagen, se muestra cuadrada. |
-| **Circle** | Se recorta la imagen en un círculo. |
+| **Círculo** | Se recorta la imagen en un círculo. |
 
 
 ## <a name="tilepeekimage"></a>TilePeekImage
@@ -263,7 +263,7 @@ Controla el recorte de la imagen que aparece.
 |---|---|
 | **Valor predeterminado** | El recorte usa el comportamiento predeterminado del representador. |
 | **Ninguno** | No se recorta la imagen, se muestra cuadrada. |
-| **Circle** | Se recorta la imagen en un círculo. |
+| **Círculo** | Se recorta la imagen en un círculo. |
 
 
 ### <a name="tiletextstacking"></a>TileTextStacking
@@ -272,8 +272,8 @@ El apilamiento de texto especifica la alineación vertical del contenido.
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. El representador selecciona automáticamente la alineación vertical predeterminada. |
-| **Top** | Alineación vertical a la parte superior. |
-| **Center** | Alineación vertical al centro. |
+| **Arriba** | Alineación vertical a la parte superior. |
+| **Centro** | Alineación vertical al centro. |
 | **parte inferior** | Alineación vertical a la parte inferior. |
 
 

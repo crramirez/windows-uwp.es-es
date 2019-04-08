@@ -454,11 +454,11 @@ Puedes controlar los siguientes eventos de la clase [**MapControl**](https://msd
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Centro para desarrolladores de Bing Maps](https://www.bingmapsportal.com/)
-* [Ejemplo de asignación de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Obtener la ubicación actual](get-location.md)
-* [Instrucciones de diseño de aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [Instrucciones de diseño de mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Compilación 2015 vídeo: Aprovechamiento de mapas y ubicación en el teléfono, tableta y PC en sus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Ejemplo de aplicación UWP tráfico](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
+* [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)

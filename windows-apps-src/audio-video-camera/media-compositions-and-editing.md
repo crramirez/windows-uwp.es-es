@@ -109,7 +109,7 @@ Para agregar una pista de fondo a una composición, carga un archivo de audio y,
 
 [!code-cs[AddBackgroundAudioTrack](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddBackgroundAudioTrack)]
 
--   Un **MediaComposition** admite en segundo plano las pistas de audio en los siguientes formatos: MP3, WAV, FLAC
+-   Un **MediaComposition** admite en segundo plano las pistas de audio en los siguientes formatos: ARCHIVOS MP3, WAV, FLAC
 
 -   Una pista de audio de fondo
 

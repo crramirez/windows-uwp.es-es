@@ -25,7 +25,7 @@ Deberás implementar estos cinco métodos que el singleton de la aplicación lla
 * [__inicializar__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
 * [__Carga__](#load-method-of-the-view-provider)
-* [__Run__](#run-method-of-the-view-provider)
+* [__ejecutar__](#run-method-of-the-view-provider)
 * [__Anular la inicialización__](#uninitialize-method-of-the-view-provider)
 
 El método __Initialize__ se llama en el inicio de la aplicación. El método __SetWindow__ se llama después de __Initialize__. Y, después, se llama al método __Load__. El método __Run__ es el que ocurre cuando el juego se está ejecutando. Cuando el juego finaliza, se llama al método __Uninitialize__. Para obtener más información, consulta la [referencia de API __IFrameworkView__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview). 

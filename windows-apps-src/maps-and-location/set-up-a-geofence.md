@@ -22,7 +22,7 @@ Configura una [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn2
 
 **Sugerencia** Para obtener más información sobre el acceso a la ubicación en tu aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
--   [Ejemplo de asignación de universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Ejemplo de mapa de la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar la funcionalidad de ubicación
 
@@ -481,6 +481,6 @@ Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicaci�
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplo de geolocalización UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Ejemplo de ubicación geográfica de UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Instrucciones de diseño para el perímetro](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Instrucciones de diseño de aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)

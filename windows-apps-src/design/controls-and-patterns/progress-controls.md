@@ -54,7 +54,7 @@ Además, un control de progreso es de solo lectura y no es interactivo. Esto sig
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ProgressBar">ProgressBar</a> o <a href="xamlcontrolsgallery:/item/ProgressRing">ProgressRing</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación de galería de controles de XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -79,7 +79,7 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
     Si la operación usa estas palabras clave o si aparece texto junto con la operación de progreso que coincida con estas palabras clave, considera la posibilidad de usar una clase ProgressBar:
 
     - *Cargando...*
-    - *Retrieving*
+    - *Recuperar*
     - *Trabajando...*
 
 ### <a name="progressring"></a>ProgressRing
@@ -96,7 +96,7 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
 
     Si la operación usa estas palabras clave o si aparece texto junto con la operación de progreso que coincida con estas palabras clave; considera la posibilidad de usar una clase ProgressRing:
 
-    - *Refreshing*
+    - *Actualizar*
     - *Iniciando sesión...*
     - *Conectando...*
 

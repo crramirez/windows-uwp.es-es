@@ -88,8 +88,8 @@ Para ver una tabla de referencia de todos los valores de calificador posibles qu
 * [Adaptar los recursos de idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Directrices de activos de ventanas e iconos](app-assets.md).
 * [Globalización y localización](../../globalizing/globalizing-portal.md)
-* [Localizar cadenas en el manifiesto de paquete de interfaz de usuario y la aplicación](../../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../../app-resources/localize-strings-ui-manifest.md)
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
-* [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
+* [AddImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
 * [Esquema de icono](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
 * [Esquema de notificación del sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

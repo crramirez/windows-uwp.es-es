@@ -67,4 +67,4 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Seleccionar los contactos](selecting-contacts.md)
+* [Seleccionar contactos](selecting-contacts.md)
