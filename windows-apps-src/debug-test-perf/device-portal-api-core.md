@@ -1,45 +1,42 @@
 ---
-author: mukin
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
-description: "Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
-ms.author: mukin
-ms.date: 02/08/2017
+description: Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
+ms.date: 03/22/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: b6df8f361df82ef65098877027cf1857fa575b0b
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
-ms.translationtype: HT
+keywords: Windows 10, uwp, portal de dispositivos
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f541a27a96b88b37d3f32b98246ba0ccbe2c8cf
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59067860"
 ---
 # <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
-Todo lo que contiene Windows Device Portal se basa en las API de REST que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
+Toda la funcionalidad del Portal de dispositivos se basa en las API de REST que los desarrolladores pueden llamar directamente para acceder a recursos y controlar sus dispositivos mediante programación.
 
 ## <a name="app-deployment"></a>Implementación de la aplicación
 
----
 ### <a name="install-an-app"></a>Instalar una aplicación
 
 **Solicitud**
 
 Puedes instalar una aplicación mediante el siguiente formato de solicitud.
 
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/app/packagemanager/package
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/app/packagemanager/package |
+
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-package   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| paquete   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -53,14 +50,14 @@ package   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Implementar la solicitud aceptada y que se está procesando
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+| 200 | Implementar la solicitud aceptada y que se está procesando |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -69,17 +66,176 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-app-installation-status"></a>Obtener el estado de instalación de la aplicación
+<hr>
+### Instalar un conjunto relacionado
+
+**Solicitud**
+
+Puedes instalar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) mediante el siguiente formato de solicitud.
+
+| Método      | URI de la solicitud |
+| :------     | :------ |
+| EXPONER | /api/app/packagemanager/package |
+
+**Parámetros de URI**
+
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
+
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| paquete   | (**obligatorio**) Los nombres de archivo de paquetes que deben instalarse. |
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud** 
+- Agregue ".opt" a los nombres de archivo de los paquetes opcionales cuando los especifique como un parámetro, por ejemplo: "foo.appx.opt" o "bar.appxbundle.opt". 
+- El archivo .appx o .appxbundle, así como las dependencias necesarias de la aplicación. 
+- El certificado que se usa para firmar la aplicación, si el dispositivo es IoT o escritorio de Windows. Otras plataformas no requieren el certificado. 
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+| 200 | Implementar la solicitud aceptada y que se está procesando |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+<hr>
+### Registrar una aplicación en una carpeta dinámica
+
+**Solicitud**
+
+Puede registrar una aplicación en una carpeta dinámica mediante el siguiente formato de solicitud.
+
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/app/packagemanager/networkapp |
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+```json
+{
+    "mainpackage" :
+    {
+        "networkshare" : "\\some\share\path",
+        "username" : "optional_username",
+        "password" : "optional_password"
+    }
+}
+```
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+| 200 | Implementar la solicitud aceptada y que se está procesando |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+<hr>
+### Registrar un conjunto relacionado en carpetas dinámicas
+
+**Solicitud**
+
+Puede registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) en carpetas dinámicas mediante el siguiente formato de solicitud.
+
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/app/packagemanager/networkapp |
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+```json
+{
+    "mainpackage" :
+    {
+        "networkshare" : "\\some\share\path",
+        "username" : "optional_username",
+        "password" : "optional_password"
+    },
+    "optionalpackages" :
+    [
+        {
+            "networkshare" : "\\some\share\path2",
+            "username" : "optional_username2",
+            "password" : "optional_password2"
+        },
+        ...
+    ]
+}
+```
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+| 200 | Implementar la solicitud aceptada y que se está procesando |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+<hr>
+### Obtener el estado de instalación de la aplicación
 
 **Solicitud**
 
 Puedes obtener el estado de la instalación de una aplicación que está en curso mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/app/packagemanager/state
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/app/packagemanager/state |
+
 **Parámetros de URI**
 
 - Ninguno
@@ -96,14 +252,14 @@ GET | /api/app/packagemanager/state
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | El resultado de la última implementación
-204 | La instalación se está ejecutando
-404 | No se encontró ninguna acción de instalación
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+| 200 | El resultado de la última implementación |
+| 204 | La instalación se está ejecutando |
+| 404 | No se encontró ninguna acción de instalación |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -112,23 +268,22 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="uninstall-an-app"></a>Desinstalar una aplicación
+<hr>
+### Desinstalar una aplicación
 
 **Solicitud**
 
 Puedes desinstalar una aplicación mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/app/packagemanager/package
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/app/packagemanager/package |
 
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:---          | :---
-package   | (**obligatorio**) El elemento PackageFullName (de GET /api/app/packagemanager/packages) de la aplicación de destino
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| paquete   | (**obligatorio**) El elemento PackageFullName (de GET /api/app/packagemanager/packages) de la aplicación de destino |
 
 **Encabezados de solicitud**
 
@@ -142,14 +297,14 @@ package   | (**obligatorio**) El elemento PackageFullName (de GET /api/app/packa
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -158,17 +313,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-installed-apps"></a>Obtener aplicaciones instaladas
+<hr>
+### Obtener aplicaciones instaladas
 
 **Solicitud**
 
 Puedes obtener una lista de aplicaciones instaladas en el sistema mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/app/packagemanager/packages
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/app/packagemanager/packages |
+
 
 **Parámetros de URI**
 
@@ -185,7 +340,7 @@ GET | /api/app/packagemanager/packages
 **Respuesta**
 
 La respuesta incluye una lista de los paquetes instalados con detalles asociados. La plantilla para esta respuesta es la siguiente.
-```
+```json
 {"InstalledPackages": [
     {
         "Name": string,
@@ -211,14 +366,14 @@ La respuesta incluye una lista de los paquetes instalados con detalles asociados
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -227,19 +382,124 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-## Device manager
----
-### <a name="get-the-installed-devices-on-the-machine"></a>Obtener los dispositivos instalados en la máquina
+<hr>
+## Bluetooth
+<hr>
+
+### <a name="get-the-bluetooth-radios-on-the-machine"></a>Obtener las radios Bluetooth en la máquina
+
+**Solicitud**
+
+Puedes obtener una lista de radios Bluetooth que están instaladas en la máquina mediante el siguiente formato de solicitud. Esto se puede actualizar a una conexión de WebSocket, también con los mismos datos JSON.
+ 
+| Método        | URI de la solicitud |
+| :------          | :------ |
+| GET           | /api/bt/getradios |
+| GET/WebSocket | /api/bt/getradios |
+
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye una matriz JSON de las radios Bluetooth conectadas al dispositivo.
+```json
+{"BluetoothRadios" : [
+    {
+        "BluetoothAddress" : int64,
+        "DisplayName" : string,
+        "HasUnknownUsbDevice" : boolean,
+        "HasProblem" : boolean,
+        "ID" : string,
+        "ProblemCode" : int,
+        "State" : string
+    },...
+]}
+```
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP | Descripción |
+| :------             | :------ |
+| 200              | Aceptar |
+| 4XX              | Códigos de error |
+| 5XX              | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+<hr>
+### Activa o desactiva la radio Bluetooth.
+
+**Solicitud**
+
+Activa o desactivar una radio Bluetooth específica.
+ 
+| Método | URI de la solicitud |
+| :------   | :------ |
+| EXPONER   | /api/bt/setradio |
+
+**Parámetros de URI**
+
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
+
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| Id.            | (**obligatorio**) El id. de dispositivo de la radio Bluetooth y debe codificarse con base 64. |
+| Estado         | (**requiere**) puede ser `"On"` o `"Off"`. |
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP | Descripción |
+| :------             | :------ |
+| 200              | Aceptar |
+| 4XX              | Códigos de error |
+| 5XX              | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+<hr>
+## Administrador de dispositivos
+<hr>
+### Obtener los dispositivos instalados en la máquina
 
 **Solicitud**
 
 Puedes obtener una lista de dispositivos que están instalados en la máquina mediante el siguiente formato de solicitud.
- 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/devicemanager/devices
-<br />
+
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/devicemanager/devices |
 
 **Parámetros de URI**
 
@@ -256,7 +516,7 @@ GET | /api/devicemanager/devices
 **Respuesta**
 
 La respuesta incluye una matriz JSON de los dispositivos conectados al dispositivo.
-``` 
+```json
 {"DeviceList": [
     {
         "Class": string,
@@ -272,33 +532,117 @@ La respuesta incluye una matriz JSON de los dispositivos conectados al dispositi
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
 * Escritorio de Windows
 * IoT
 
----
-## Dump collection
----
-### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obtener la lista de todos los volcados de memoria de aplicaciones
+<hr>
+### Obtener datos de dispositivos o concentradores USB conectados
+
+**Solicitud**
+
+Puedes obtener una lista de los descriptores USB de los dispositivos y concentradores USB conectados mediante el siguiente formato de solicitud.
+
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /ext/devices/usbdevices |
+
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta es un archivo JSON que incluye el DeviceID del dispositivo USB junto con los descriptores USB y la información de puerto de los concentradores.
+```json
+{
+    "DeviceList": [
+        {
+        "ID": string,
+        "ParentID": string, // Will equal an "ID" within the list, or be blank
+        "Description": string, // optional
+        "Manufacturer": string, // optional
+        "ProblemCode": int, // optional
+        "StatusCode": int // optional
+        },
+        ...
+    ]
+}
+```
+
+**Ejemplo de datos devueltos**
+```json
+{
+    "DeviceList": [{
+        "ID": "System",
+        "ParentID": ""
+    }, {
+        "Class": "USB",
+        "Description": "Texas Instruments USB 3.0 xHCI Host Controller",
+        "ID": "PCI\\VEN_104C&DEV_8241&SUBSYS_1589103C&REV_02\\4&37085792&0&00E7",
+        "Manufacturer": "Texas Instruments",
+        "ParentID": "System",
+        "ProblemCode": 0,
+        "StatusCode": 25174026
+    }, {
+        "Class": "USB",
+        "Description": "USB Composite Device",
+        "DeviceDriverKey": "{36fc9e60-c465-11cf-8056-444553540000}\\0016",
+        "ID": "USB\\VID_045E&PID_00DB\\8&2994096B&0&1",
+        "Manufacturer": "(Standard USB Host Controller)",
+        "ParentID": "USB\\VID_0557&PID_8021\\7&2E9A8711&0&4",
+        "ProblemCode": 0,
+        "StatusCode": 25182218
+    }]
+}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* IoT
+
+<hr>
+## Colección de volcados de memoria
+<hr>
+### Obtener la lista de todos los volcados de memoria de aplicaciones
 
 **Solicitud**
 
 Puedes obtener la lista de todos los volcados de memoria disponibles para todas las aplicaciones transferidas localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/usermode/dumps
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/usermode/dumps |
+
 
 **Parámetros de URI**
 
@@ -318,14 +662,14 @@ La respuesta incluye una lista de volcados de memoria de cada aplicación transf
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile (en el Programa Windows Insider)
@@ -333,26 +677,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obtener la configuración de la colección de volcado de memoria de una aplicación
+<hr>
+### Obtener la configuración de la colección de volcado de memoria de una aplicación
 
 **Solicitud**
 
 Puedes obtener la configuración de colección de volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/usermode/crashcontrol
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/usermode/crashcontrol |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -364,20 +708,20 @@ packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicaci
 **Respuesta**
 
 La respuesta tiene el siguiente formato.
-```
+```json
 {"CrashDumpEnabled": bool}
 ```
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile (en el Programa Windows Insider)
@@ -385,27 +729,27 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Eliminar un volcado de memoria de una aplicación transferida localmente
+<hr>
+### Eliminar un volcado de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
 Puedes eliminar un volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/debug/dump/usermode/crashdump
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/debug/dump/usermode/crashdump |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que se debe eliminar.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente. |
+| fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que se debe eliminar. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -418,14 +762,14 @@ fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que se d
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile (en el Programa Windows Insider)
@@ -433,26 +777,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Deshabilitar volcados de memoria de una aplicación transferida localmente
+<hr>
+### Deshabilitar volcados de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
 Puedes deshabilitar los volcados de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/debug/dump/usermode/crashcontrol
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/debug/dump/usermode/crashcontrol |
 
-<br />
+
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -465,14 +809,14 @@ packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicaci
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile (en el Programa Windows Insider)
@@ -480,27 +824,27 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Descargar el volcado de memoria de una aplicación transferida localmente
+<hr>
+### Descargar el volcado de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
 Puedes descargar un volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/usermode/crashdump
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/usermode/crashdump |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que quieres descargar.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente. |
+| fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que quieres descargar. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -515,14 +859,14 @@ La respuesta incluye un archivo de volcado de memoria. Puedes usar WinDbg o Visu
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile (en el Programa Windows Insider)
@@ -530,26 +874,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar los volcados de memoria de una aplicación transferida localmente
+<hr>
+### Habilitar los volcados de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
 Puedes habilitar los volcados de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/debug/dump/usermode/crashcontrol
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/debug/dump/usermode/crashcontrol |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -562,12 +906,12 @@ packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicaci
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile (en el Programa Windows Insider)
@@ -575,17 +919,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-the-list-of-bugcheck-files"></a>Obtener la lista de archivos de comprobación de errores
+<hr>
+### Obtener la lista de archivos de comprobación de errores
 
 **Solicitud**
 
 Puedes obtener la lista de archivos de minivolcado de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/kernel/dumplist
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/kernel/dumplist |
+
 
 **Parámetros de URI**
 
@@ -602,7 +946,7 @@ GET | /api/debug/dump/kernel/dumplist
 **Respuesta**
 
 La respuesta incluye una lista de nombres de archivo de volcado de memoria y los tamaños de estos archivos. Esta lista tendrá el siguiente formato. 
-```
+```json
 {"DumpFiles": [
     {
         "FileName": string,
@@ -613,37 +957,38 @@ La respuesta incluye una lista de nombres de archivo de volcado de memoria y los
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="download-a-bugcheck-dump-file"></a>Descargar un archivo de volcado de memoria de comprobación de errores
+<hr>
+### Descargar un archivo de volcado de memoria de comprobación de errores
 
 **Solicitud**
 
 Puedes descargar un archivo de volcado de memoria de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/kernel/dump
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/kernel/dump |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-filename   | (**obligatorio**) Nombre del archivo de volcado de memoria. Puedes encontrarlo mediante la API para obtener la lista de volcado de memoria.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| nombreDeArchivo   | (**obligatorio**) Nombre del archivo de volcado de memoria. Puedes encontrarlo mediante la API para obtener la lista de volcado de memoria. |
+
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -658,31 +1003,31 @@ La respuesta incluye el archivo de volcado de memoria. Puedes inspeccionar este 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-the-bugcheck-crash-control-settings"></a>Obtener la configuración de control de bloqueo de comprobación de errores
+<hr>
+### Obtener la configuración de control de bloqueo de comprobación de errores
 
 **Solicitud**
 
 Puedes obtener la configuración del control de bloqueo de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/kernel/crashcontrol
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/kernel/crashcontrol |
 
-<br />
+
 **Parámetros de URI**
 
 - Ninguno
@@ -698,7 +1043,7 @@ GET | /api/debug/dump/kernel/crashcontrol
 **Respuesta**
 
 La respuesta incluye la configuración de control de bloqueo. Para obtener más información sobre CrashControl, consulta el artículo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx). La plantilla para la respuesta es la siguiente.
-```
+```json
 {
     "autoreboot": bool (0 or 1),
     "dumptype": int (0 to 4),
@@ -709,40 +1054,40 @@ La respuesta incluye la configuración de control de bloqueo. Para obtener más 
 
 **Tipos de volcado**
 
-0: Deshabilitado
+0: Deshabilitada
 
 1: Volcado de memoria completo (recopila toda la memoria en uso)
 
-2: Volcado de memoria de kernel (omite la memoria del modo de usuario)
+2: Volcado de memoria del kernel (ignora la memoria en modo de usuario)
 
-3: Minivolcado de kernel limitado
+3: Minivolcado kernel limitado
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-a-live-kernel-dump"></a>Obtener un volcado de memoria de kernel dinámico
+<hr>
+### Obtener un volcado de memoria de kernel dinámico
 
 **Solicitud**
 
 Puedes obtener un volcado de memoria de kernel dinámico mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/livekernel
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/livekernel |
+
 
 **Parámetros de URI**
 
@@ -762,39 +1107,39 @@ La respuesta incluye el volcado de memoria de modo kernel completo. Puedes inspe
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-a-dump-from-a-live-user-process"></a>Obtener un volcado de memoria de un proceso de usuario dinámico
+<hr>
+### Obtener un volcado de memoria de un proceso de usuario dinámico
 
 **Solicitud**
 
 Puedes obtener el volcado de memoria del proceso de usuario dinámico mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/debug/dump/usermode/live
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/debug/dump/usermode/live |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-pid   | (**obligatorio**) Identificador de proceso único para el proceso que te interesa.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| pid   | (**obligatorio**) Identificador de proceso único para el proceso que te interesa. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -809,42 +1154,42 @@ La respuesta incluye del volcado de memoria del proceso. Puedes inspeccionar est
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="set-the-bugcheck-crash-control-settings"></a>Establecer la configuración de control de bloqueo de comprobación de errores
+<hr>
+### Establecer la configuración de control de bloqueo de comprobación de errores
 
 **Solicitud**
 
 Puedes establecer la configuración para recopilar datos de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/debug/dump/kernel/crashcontrol
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/debug/dump/kernel/crashcontrol |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-autoreboot   | (**opcional**) True o false. Esto indica si el sistema se reinicia automáticamente después de que se produzca un error o se bloquee.
-dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).
-maxdumpcount   | (**opcional**) Número máximo de volcados de memoria que se deben guardar.
-sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o no los volcados de memoria antiguos cuando se alcanza el límite del contador de volcado de memoria especificado por *maxdumpcount*.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| autoreboot   | (**opcional**) True o false. Esto indica si el sistema se reinicia automáticamente después de que se produzca un error o se bloquee. |
+| dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).|
+| maxdumpcount   | (**opcional**) Número máximo de volcados de memoria que se deben guardar. |
+| sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o no los volcados de memoria antiguos cuando se alcanza el límite del contador de volcado de memoria especificado por *maxdumpcount*. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -857,32 +1202,32 @@ sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
+<hr>
 ## ETW
----
-### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Crear una sesión ETW en tiempo real a través de un WebSocket
+<hr>
+### Crear una sesión ETW en tiempo real a través de un WebSocket
 
 **Solicitud**
 
 Puedes crear una sesión ETW en tiempo real mediante el siguiente formato de solicitud. Se administrará a través de un websocket.  Los eventos ETW se procesan por lotes en el servidor y se envían al cliente una vez por segundo. 
  
-Método      | URI de solicitud
-:------     | :-----
-GET/WebSocket | /api/etw/session/realtime
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET/WebSocket | /api/etw/session/realtime |
+
 
 **Parámetros de URI**
 
@@ -902,14 +1247,14 @@ La respuesta incluye los eventos ETW de los proveedores habilitados.  Ver los co
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -920,13 +1265,13 @@ Código de estado HTTP      | Descripción
 ### <a name="etw-websocket-commands"></a>Comandos de ETW WebSocket
 Estos comandos se envían desde el cliente al servidor.
 
-Comando | Descripción
-:----- | :-----
-el proveedor *{guid}* habilita *{level}* | Habilita el proveedor marcado con *{guid}* (sin corchetes) en el nivel especificado. *{level}* es un **int** de 1 (mínimo detalle) a 5 (detallado).
-el proveedor *{guid}* deshabilita | Deshabilitar el proveedor con la marca *{guid}* (sin corchetes).
+| Comando | Descripción |
+| :----- | :----- |
+| el proveedor *{guid}* habilita *{level}* | Habilita el proveedor marcado con *{guid}* (sin corchetes) en el nivel especificado. *{level}* es un **int** de 1 (mínimo detalle) a 5 (detallado). |
+| el proveedor *{guid}* deshabilita | Deshabilitar el proveedor con la marca *{guid}* (sin corchetes). |
 
 Esta respuesta se envía desde el servidor al cliente. Esto se envía como texto y tú obtienes el siguiente formato analizando el JSON.
-```
+```json
 {
     "Events":[
         {
@@ -945,8 +1290,8 @@ Esta respuesta se envía desde el servidor al cliente. Esto se envía como texto
 
 Los objetos de carga son pares de clave-valor adicionales (string:string) que se proporcionan en el evento ETW original.
 
-Ejemplo:
-```
+Por ejemplo:
+```json
 {
     "ID" : 42, 
     "Keyword" : 9223372036854775824, 
@@ -966,17 +1311,17 @@ Ejemplo:
 }
 ```
 
----
-### <a name="enumerate-the-registered-etw-providers"></a>Enumerar los proveedores de ETW registrados
+<hr>
+### Enumerar los proveedores de ETW registrados
 
 **Solicitud**
 
 Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/etw/providers
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/etw/providers |
+
 
 **Parámetros de URI**
 
@@ -993,7 +1338,7 @@ GET | /api/etw/providers
 **Respuesta**
 
 La respuesta incluye la lista de proveedores de ETW. La lista incluye el nombre descriptivo y el GUID para cada proveedor en el siguiente formato.
-```
+```json
 {"Providers": [
     {
         "GUID": string, (GUID)
@@ -1004,12 +1349,12 @@ La respuesta incluye la lista de proveedores de ETW. La lista incluye el nombre 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+|  200 | Aceptar | 
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1017,17 +1362,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
+<hr>
+### Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
 
 **Solicitud**
 
 Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/etw/customproviders
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/etw/customproviders |
+
 
 **Parámetros de URI**
 
@@ -1045,7 +1390,7 @@ GET | /api/etw/customproviders
 
 200 Correcto. La respuesta incluye la lista de proveedores de ETW. La lista incluirá el nombre descriptivo y el GUID de cada proveedor.
 
-```
+```json
 {"Providers": [
     {
         "GUID": string, (GUID)
@@ -1057,7 +1402,7 @@ GET | /api/etw/customproviders
 **Código de estado**
 
 - Códigos de estado estándar.
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1065,19 +1410,232 @@ GET | /api/etw/customproviders
 * HoloLens
 * IoT
 
----
-## OS information
----
-### <a name="get-the-machine-name"></a>Obtener el nombre de la máquina
+<hr>
+## Ubicación
+<hr>
+
+### <a name="get-location-override-mode"></a>Obtener el modo de invalidación de ubicación
+
+**Solicitud**
+
+Puedes obtener el estado de invalidación de la pila de ubicaciones del dispositivo mediante el siguiente formato de solicitud. El modo de desarrollador debe estar activado para que esta llamada pueda tener éxito.
+ 
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /ext/location/override |
+
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye el estado de invalidación del dispositivo en el siguiente formato. 
+
+```json
+{"Override" : bool}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+|  200 | Aceptar | 
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+### <a name="set-location-override-mode"></a>Establecer el modo de invalidación de ubicación
+
+**Solicitud**
+
+Puedes establecer el estado de invalidación de la pila de ubicaciones del dispositivo mediante el siguiente formato de solicitud. Cuando está habilitada, la pila de ubicaciones permite la inyección de posición. El modo de desarrollador debe estar activado para que esta llamada pueda tener éxito.
+
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| PUT | /ext/location/override |
+
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+```json
+{"Override" : bool}
+```
+
+**Respuesta**
+
+La respuesta incluye el estado de invalidación que ha establecido el dispositivo en el siguiente formato. 
+
+```json
+{"Override" : bool}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+### <a name="get-the-injected-position"></a>Obtener la posición inyectada
+
+**Solicitud**
+
+Puedes obtener la ubicación inyectada del dispositivo (sin precisión) mediante el siguiente formato de solicitud. Se debe establecer una ubicación inyectada, o se producirá un error.
+ 
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /ext/location/position |
+
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye los valores de longitud y latitud inyectados en el siguiente formato. 
+
+```json
+{
+    "Latitude" : double,
+    "Longitude" : double
+}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+|  Código de estado HTTP      | Descripción | 
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+### <a name="set-the-injected-position"></a>Establecer la posición inyectada
+
+**Solicitud**
+
+Puedes establecer la ubicación inyectada del dispositivo (sin precisión) mediante el siguiente formato de solicitud. Primero debe estar habilitado el modo de invalidación de ubicación en el dispositivo y la ubicación establecida debe ser una ubicación válida, o se producirá un error.
+
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| PUT | /ext/location/override |
+
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+```json
+{
+    "Latitude" : double,
+    "Longitude" : double
+}
+```
+
+**Respuesta**
+
+La respuesta incluye la ubicación que se ha establecido en el siguiente formato. 
+
+```json
+{
+    "Latitude" : double,
+    "Longitude" : double
+}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+<hr>
+## Información del SO
+<hr>
+### Obtener el nombre de la máquina
 
 **Solicitud**
 
 Puedes obtener el nombre de una máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/os/machinename
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/os/machinename |
+
 
 **Parámetros de URI**
 
@@ -1095,20 +1653,20 @@ GET | /api/os/machinename
 
 La respuesta incluye el nombre del equipo en el siguiente formato. 
 
-```
+```json
 {"ComputerName": string}
 ```
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1117,17 +1675,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-the-operating-system-information"></a>Obtener la información del sistema operativo
+<hr>
+### Obtener la información del sistema operativo
 
 **Solicitud**
 
 Puedes obtener la información del sistema operativo de una máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/os/info
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/os/info |
+
 
 **Parámetros de URI**
 
@@ -1145,7 +1703,7 @@ GET | /api/os/info
 
 La respuesta incluye la información del sistema operativo en el siguiente formato.
 
-```
+```json
 {
     "ComputerName": string,
     "OsEdition": string,
@@ -1157,14 +1715,14 @@ La respuesta incluye la información del sistema operativo en el siguiente forma
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1173,17 +1731,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-the-device-family"></a>Obtén la familia de dispositivos. 
+<hr>
+### Obtén la familia de dispositivos. 
 
 **Solicitud**
 
 Puedes obtener la familia de dispositivos (Xbox, Teléfono, escritorio, etc.) mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/os/devicefamily
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/os/devicefamily |
+
 
 **Parámetros de URI**
 
@@ -1201,7 +1759,7 @@ GET | /api/os/devicefamily
 
 La respuesta incluye la familia de dispositivos (SKU - escritorio, Xbox, etc.).
 
-```
+```json
 {
    "DeviceType" : string
 }
@@ -1211,13 +1769,13 @@ DeviceType tendrá un aspecto como "Windows.Xbox", "Windows.Desktop", etc.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
 
 **Familias de dispositivos disponibles**
 
@@ -1227,26 +1785,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="set-the-machine-name"></a>Establecer el nombre de la máquina
+<hr>
+### Establecer el nombre de la máquina
 
 **Solicitud**
 
 Puedes establecer el nombre de una máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/os/machinename
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/os/machinename |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-name | (**obligatorio**) Nuevo nombre de la máquina.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| NAME | (**obligatorio**) Nuevo nombre de la máquina. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1259,12 +1817,12 @@ name | (**obligatorio**) Nuevo nombre de la máquina.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1273,19 +1831,19 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-## User information
----
-### <a name="get-the-active-user"></a>Obtener el usuario activo
+<hr>
+## Información de usuario
+<hr>
+### Obtener el usuario activo
 
 **Solicitud**
 
 Puedes obtener el nombre del usuario activo en el dispositivo mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/users/activeuser
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/users/activeuser |
+
 
 **Parámetros de URI**
 
@@ -1304,14 +1862,14 @@ GET | /api/users/activeuser
 La respuesta incluye la información del usuario en el siguiente formato. 
 
 Correcto: 
-```
+```json
 {
     "UserDisplayName" : string, 
     "UserSID" : string
 }
 ```
 Error:
-```
+```json
 {
     "Code" : int, 
     "CodeText" : string, 
@@ -1322,34 +1880,34 @@ Error:
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
 
----
-## Performance data
----
-### <a name="get-the-list-of-running-processes"></a>Obtener la lista de procesos en ejecución
+<hr>
+## Datos de rendimiento
+<hr>
+### Obtener la lista de procesos en ejecución
 
 **Solicitud**
 
 Puedes obtener la lista de procesos que se encuentran en ejecución actualmente mediante el siguiente formato de solicitud.  esto puede actualizarse a una conexión WebSocket también, con los mismos datos de JSON que se envían al cliente una vez por segundo. 
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/resourcemanager/processes
-GET/WebSocket | /api/resourcemanager/processes
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/resourcemanager/processes |
+| GET/WebSocket | /api/resourcemanager/processes |
+
 
 **Parámetros de URI**
 
@@ -1366,32 +1924,32 @@ GET/WebSocket | /api/resourcemanager/processes
 **Respuesta**
 
 La respuesta incluye una lista de procesos con detalles de cada proceso. La información está en formato JSON y tiene la siguiente plantilla.
-```
+```json
 {"Processes": [
     {
-        "CPUUsage": int,
+        "CPUUsage": float,
         "ImageName": string,
-        "PageFileUsage": int,
-        "PrivateWorkingSet": int,
+        "PageFileUsage": long,
+        "PrivateWorkingSet": long,
         "ProcessId": int,
         "SessionId": int,
         "UserName": string,
-        "VirtualSize": int,
-        "WorkingSetSize": int
+        "VirtualSize": long,
+        "WorkingSetSize": long
     },...
 ]}
 ```
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1399,18 +1957,18 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-the-system-performance-statistics"></a>Obtener las estadísticas de rendimiento del sistema
+<hr>
+### Obtener las estadísticas de rendimiento del sistema
 
 **Solicitud**
 
 Puedes obtener las estadísticas de rendimiento del sistema mediante el siguiente formato de solicitud. Esto incluye información como, por ejemplo, leer y escribir ciclos y la cantidad de memoria que se ha usado.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/resourcemanager/systemperf
-GET/WebSocket | /api/resourcemanager/systemperf
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/resourcemanager/systemperf |
+| GET/WebSocket | /api/resourcemanager/systemperf |
+
 Esto también se pueden actualizar a una conexión WebSocket.  Proporciona los mismos datos de JSON a continuación una vez por segundo. 
 
 **Parámetros de URI**
@@ -1428,7 +1986,7 @@ Esto también se pueden actualizar a una conexión WebSocket.  Proporciona los m
 **Respuesta**
 
 La respuesta incluye las estadísticas de rendimiento del sistema, como el uso de la CPU y GPU, el acceso a la memoria y el acceso a la red. Esta información está en formato JSON y tiene la siguiente plantilla.
-```
+```json
 {
     "AvailablePages": int,
     "CommitLimit": int,
@@ -1462,14 +2020,14 @@ La respuesta incluye las estadísticas de rendimiento del sistema, como el uso d
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1478,19 +2036,19 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-## Power
----
-### <a name="get-the-current-battery-state"></a>Obtener el estado actual de la batería
+<hr>
+## Alimentación
+<hr>
+### Obtener el estado actual de la batería
 
 **Solicitud**
 
 Puedes obtener el estado actual de la batería mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/battery
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/battery |
+
 
 **Parámetros de URI**
 
@@ -1507,7 +2065,7 @@ GET | /api/power/battery
 **Respuesta**
 
 La información del estado actual de la batería se devuelve mediante el siguiente formato.
-```
+```json
 {
     "AcOnline": int (0 | 1),
     "BatteryPresent": int (0 | 1),
@@ -1522,14 +2080,14 @@ La información del estado actual de la batería se devuelve mediante el siguien
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1537,17 +2095,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="get-the-active-power-scheme"></a>Obtener el plan de energía activo
+<hr>
+### Obtener el plan de energía activo
 
 **Solicitud**
 
 Puedes obtener el plan de energía activo mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/activecfg
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/activecfg |
+
 
 **Parámetros de URI**
 
@@ -1564,36 +2122,36 @@ GET | /api/power/activecfg
 **Respuesta**
 
 El plan de energía activo tiene el siguiente formato.
-```
+```json
 {"ActivePowerScheme": string (guid of scheme)}
 ```
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-the-sub-value-for-a-power-scheme"></a>Obtener el subvalor de un plan de energía
+<hr>
+### Obtener el subvalor de un plan de energía
 
 **Solicitud**
 
 Puedes obtener el subvalor de un plan de energía mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/cfg/*<power scheme path>*
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/cfg/*<power scheme path>* |
+
 Opciones:
 - SCHEME_CURRENT
 
@@ -1613,30 +2171,30 @@ Hay una lista completa de estados de energía disponible por aplicación y la co
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-the-power-state-of-the-system"></a>Obtener el estado de energía del sistema
+<hr>
+### Obtener el estado de energía del sistema
 
 **Solicitud**
 
 Puedes comprobar el estado de energía del sistema mediante el siguiente formato de solicitud. Esto te permitirá comprobar si se encuentra en un estado de energía bajo.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/state
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/state |
+
 
 **Parámetros de URI**
 
@@ -1653,46 +2211,46 @@ GET | /api/power/state
 **Respuesta**
 
 La información de estado de energía tiene la siguiente plantilla.
-```
-{"LowPowerStateAvailable": bool}
+```json
+{"LowPowerState" : false, "LowPowerStateAvailable" : true }
 ```
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
 
----
-### <a name="set-the-active-power-scheme"></a>Establecer el plan de energía activo
+<hr>
+### Establecer el plan de energía activo
 
 **Solicitud**
 
 Puedes establecer el plan de energía activo mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/power/activecfg
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/power/activecfg |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-scheme | (**obligatorio**) GUID del esquema que quiere establecer como plan de energía activo para el sistema.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| scheme | (**obligatorio**) GUID del esquema que quiere establecer como plan de energía activo para el sistema. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1705,40 +2263,40 @@ scheme | (**obligatorio**) GUID del esquema que quiere establecer como plan de e
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="set-the-sub-value-for-a-power-scheme"></a>Establecer el subvalor de un plan de energía
+<hr>
+### Establecer el subvalor de un plan de energía
 
 **Solicitud**
 
 Puedes establecer el subvalor de un plan de energía mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/power/cfg/*<power scheme path>*
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/power/cfg/*<power scheme path>* |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-valueAC | (**obligatorio**) Valor que se usará para alimentación CA.
-valueDC | (**obligatorio**) Valor que se usará para la energía de la batería.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| valueAC | (**obligatorio**) Valor que se usará para alimentación CA. |
+| valueDC | (**obligatorio**) Valor que se usará para la energía de la batería. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1751,33 +2309,33 @@ valueDC | (**obligatorio**) Valor que se usará para la energía de la batería.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-a-sleep-study-report"></a>Obtener un informe de estudio de suspensión
+<hr>
+### Obtener un informe de estudio de suspensión
 
 **Solicitud**
 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/sleepstudy/report
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/sleepstudy/report |
+
 Puedes obtener un informe de estudio de suspensión mediante el siguiente formato de solicitud.
 
 **Parámetros de URI**
-Parámetro de URI | Descripción
-:---          | :---
-FileName | (**obligatorio**) Nombre completo del archivo que quieres descargar. Este valor debe estar codificado mediante hex64.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| nombreDeArchivo | (**obligatorio**) Nombre completo del archivo que quieres descargar. Este valor debe estar codificado mediante hex64. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1792,30 +2350,30 @@ La respuesta es un archivo que contiene el estudio de suspensión.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar los informes de estudio de suspensión disponibles
+<hr>
+### Enumerar los informes de estudio de suspensión disponibles
 
 **Solicitud**
 
 Puedes enumerar los informes de estudio de suspensión disponibles mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/sleepstudy/reports
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/sleepstudy/reports |
+
 
 **Parámetros de URI**
 
@@ -1833,7 +2391,7 @@ GET | /api/power/sleepstudy/reports
 
 La lista de los informes disponibles tiene la siguiente plantilla.
 
-```
+```json
 {"Reports": [
     {
         "FileName": string
@@ -1843,30 +2401,30 @@ La lista de los informes disponibles tiene la siguiente plantilla.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-### <a name="get-the-sleep-study-transform"></a>Obtener la transformación de estudio de suspensión
+<hr>
+### Obtener la transformación de estudio de suspensión
 
 **Solicitud**
 
 Puedes obtener la transformación de estudio de suspensión mediante el siguiente formato de solicitud. Esta transformación es de tipo XSLT que convierte el informe de estudio de suspensión en un formato XML que puede leer una persona.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/sleepstudy/transform
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/power/sleepstudy/transform |
+
 
 **Parámetros de URI**
 
@@ -1886,32 +2444,32 @@ La respuesta contiene la transformación de estudio de suspensión.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * IoT
 
----
-## Remote control
----
-### <a name="restart-the-target-computer"></a>Reiniciar el equipo de destino
+<hr>
+## Control remoto
+<hr>
+### Reiniciar el equipo de destino
 
 **Solicitud**
 
 Puedes reiniciar el equipo de destino mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/control/restart
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/control/restart |
+
 
 **Parámetros de URI**
 
@@ -1929,12 +2487,12 @@ POST | /api/control/restart
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1943,17 +2501,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="shut-down-the-target-computer"></a>Apagar el equipo de destino
+<hr>
+### Apagar el equipo de destino
 
 **Solicitud**
 
 Puedes apagar el equipo de destino mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/control/shutdown
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/control/shutdown |
+
 
 **Parámetros de URI**
 
@@ -1971,14 +2529,14 @@ POST | /api/control/shutdown
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1987,29 +2545,29 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-## Task manager
----
-### <a name="start-a-modern-app"></a>Iniciar una aplicación moderna
+<hr>
+## Administrador de tareas
+<hr>
+### Iniciar una aplicación moderna
 
 **Solicitud**
 
 Puedes iniciar una aplicación moderna mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/taskmanager/app
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/taskmanager/app |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-appid   | (**obligatorio**) PRAID de la aplicación que quieres iniciar. Este valor debe estar codificado mediante hex64.
-package   | (**obligatorio**) Nombre completo del paquete de la aplicación que quiere iniciar. Este valor debe estar codificado mediante hex64.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| appid   | (**obligatorio**) PRAID de la aplicación que quieres iniciar. Este valor debe estar codificado mediante hex64. |
+| paquete   | (**obligatorio**) Nombre completo del paquete de la aplicación que quiere iniciar. Este valor debe estar codificado mediante hex64. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2022,14 +2580,14 @@ package   | (**obligatorio**) Nombre completo del paquete de la aplicación que 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2038,27 +2596,27 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="stop-a-modern-app"></a>Detener una aplicación moderna
+<hr>
+### Detener una aplicación moderna
 
 **Solicitud**
 
 Puedes detener una aplicación moderna mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/taskmanager/app
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/taskmanager/app |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-package   | (**obligatorio**) Nombre completo de los paquetes de la aplicación que quiere detener. Este valor debe estar codificado mediante hex64.
-forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forzar la detención de todos los procesos.
-<br />
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| paquete   | (**obligatorio**) Nombre completo de los paquetes de la aplicación que quiere detener. Este valor debe estar codificado mediante hex64. |
+| forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forzar la detención de todos los procesos. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2071,14 +2629,14 @@ forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forz
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2087,26 +2645,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="kill-process-by-pid"></a>Eliminar el proceso por PID
+<hr>
+### Eliminar el proceso por PID
 
 **Solicitud**
 
 Puedes eliminar el proceso mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/taskmanager/process
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/taskmanager/process |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-pid   | (**obligatorio**) Identificador de proceso único para detener el proceso.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| pid   | (**obligatorio**) Identificador de proceso único para detener el proceso. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2119,33 +2677,33 @@ pid   | (**obligatorio**) Identificador de proceso único para detener el proces
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
 
----
-## Networking
----
-### <a name="get-the-current-ip-configuration"></a>Obtener la configuración IP actual
+<hr>
+## Funciones de red
+<hr>
+### Obtener la configuración IP actual
 
 **Solicitud**
 
 Puedes obtener la configuración IP actual mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/networking/ipconfig
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/networking/ipconfig |
+
 
 **Parámetros de URI**
 
@@ -2163,7 +2721,7 @@ GET | /api/networking/ipconfig
 
 La respuesta incluye la configuración IP en la siguiente plantilla.
 
-```
+```json
 {"Adapters": [
     {
         "Description": string,
@@ -2205,14 +2763,14 @@ La respuesta incluye la configuración IP en la siguiente plantilla.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2221,17 +2779,74 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
---
-### <a name="enumerate-wireless-network-interfaces"></a>Enumerar las interfaces de red inalámbrica
+<hr>
+### Establecer una dirección IP estática (configuración de IPV4)
+
+**Solicitud**
+
+Establece la configuración de IPV4 con estático de direcciones IP y DNS. Si no se especifica una dirección IP estática, habilita DHCP. Si se especifica una dirección IP estática, DNS debe especificarse también.
+ 
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| PUT | /api/networking/ipv4config |
+
+
+**Parámetros de URI**
+
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| AdapterName | (**requiere**) el GUID de la interfaz de red. |
+| IPAddress | Para establecer la dirección IP estática. |
+| SubnetMask | (**requiere** si *IPAddress* no es null) la máscara de subred estático. |
+| DefaultGateway | (**requiere** si *IPAddress* no es null) la puerta de enlace estática. |
+| PrimaryDNS | (**requiere** si *IPAddress* no es null) el DNS principal estático para establecer. |
+| SecondayDNS | (**requiere** si *PrimaryDNS* no es null) el DNS estático secundario para establecer. |
+
+Para mayor claridad, para establecer una interfaz a DHCP, serializar solamente el `AdapterName` en la conexión:
+```
+{
+    "AdapterName":"{82F86C1B-2BAE-41E3-B08D-786CA44FEED7}"
+}
+```
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+<hr>
+### Enumerar las interfaces de red inalámbrica
 
 **Solicitud**
 
 Puedes enumerar las interfaces de red inalámbrica disponibles mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wifi/interfaces
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wifi/interfaces |
+
 
 **Parámetros de URI**
 
@@ -2249,7 +2864,7 @@ GET | /api/wifi/interfaces
 
 Una lista de las interfaces inalámbricas disponibles con detalles en el siguiente formato.
 
-``` 
+```json 
 {"Interfaces": [{
     "Description": string,
     "GUID": string (guid with curly brackets),
@@ -2267,14 +2882,14 @@ Una lista de las interfaces inalámbricas disponibles con detalles en el siguien
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2283,26 +2898,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="enumerate-wireless-networks"></a>Enumerar redes inalámbricas
+<hr>
+### Enumerar redes inalámbricas
 
 **Solicitud**
 
 Puedes enumerar la lista de redes inalámbricas en la interfaz especificada mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wifi/networks
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wifi/networks |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para buscar redes inalámbricas, sin corchetes. 
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para buscar redes inalámbricas, sin corchetes. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2315,7 +2930,7 @@ interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para buscar
 
 Lista de redes inalámbricas encontradas en la *interfaz* proporcionada. Esto incluye detalles para las redes en el siguiente formato.
 
-```
+```json
 {"AvailableNetworks": [
     {
         "AlreadyConnected": bool,
@@ -2337,14 +2952,14 @@ Lista de redes inalámbricas encontradas en la *interfaz* proporcionada. Esto in
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2353,29 +2968,29 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar y desconectar en una red Wi-Fi.
+<hr>
+### Conectar y desconectar en una red Wi-Fi.
 
 **Solicitud**
 
 Puedes conectarte a una red Wi-Fi o desconectarte de ella mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/wifi/network
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/wifi/network |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para conectarse a la red.
-op   | (**obligatorio**) Indica la acción que se debe realizar. Los valores posibles son connect o disconnect.
-ssid   | (**obligatorio si *op* == connect**) SSID al que se debe conectar.
-key   | (**obligatorio si *op* == connect and network requires authentication**) La clave compartida.
-createprofile | (**obligatorio**) Crea un perfil de la red en el dispositivo.  Esto hará que el dispositivo se conecte a la red automáticamente en el futuro. Esto puede ser **sí** o **no**. 
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para conectarse a la red. |
+| op   | (**obligatorio**) Indica la acción que se debe realizar. Los valores posibles son connect o disconnect.|
+| ssid   | (**obligatorio si *op* == conectar**) SSID al que se debe conectar. |
+| key   | (**obligatorio si *op* == connect and network requires authentication**) La clave compartida. |
+| createprofile | (**obligatorio**) Crea un perfil de la red en el dispositivo.  Esto hará que el dispositivo se conecte a la red automáticamente en el futuro. Esto puede ser **sí** o **no**. |
 
 **Encabezados de solicitud**
 
@@ -2389,12 +3004,12 @@ createprofile | (**obligatorio**) Crea un perfil de la red en el dispositivo.  E
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2403,27 +3018,27 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="delete-a-wi-fi-profile"></a>Eliminar un perfil de Wi-Fi
+<hr>
+### Eliminar un perfil de Wi-Fi
 
 **Solicitud**
 
 Puedes eliminar un perfil asociado con una red en una interfaz específica mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/wifi/network
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/wifi/profile |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-interface   | (**obligatorio**) GUID de la interfaz de red asociado con el perfil que se debe eliminar.
-profile   | (**obligatorio**) Nombre del perfil que se debe eliminar.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| interfaz   | (**obligatorio**) GUID de la interfaz de red asociado con el perfil que se debe eliminar. |
+| perfil   | (**obligatorio**) Nombre del perfil que se debe eliminar. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2436,12 +3051,12 @@ profile   | (**obligatorio**) Nombre del perfil que se debe eliminar.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2450,31 +3065,31 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-## Windows Error Reporting (WER)
----
-### <a name="download-a-windows-error-reporting-wer-file"></a>Descargar un archivo de Informe de errores de Windows (WER)
+<hr>
+## Informe de errores de Windows (WER)
+<hr>
+### Descargar un archivo de Informe de errores de Windows (WER)
 
 **Solicitud**
 
 Puedes descargar un archivo relacionado con WER mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wer/report/file
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wer/report/file |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-user   | (**obligatorio**) Nombre de usuario asociado con el informe.
-type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**.
-name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. 
-file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe. Esto debe estar codificado en Base64. 
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| usuario   | (**obligatorio**) Nombre de usuario asociado con el informe. |
+| Tipo   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
+| NAME   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
+| file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe. Esto debe estar codificado en Base64. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2489,49 +3104,49 @@ file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
 
----
-### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar archivos en un Informe de errores de Windows (WER)
+<hr>
+### Enumerar archivos en un Informe de errores de Windows (WER)
 
 **Solicitud**
 
 Puedes enumerar los archivos en un informe WER mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wer/report/files
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wer/report/files |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-user   | (**obligatorio**) Usuario asociado con el informe.
-type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**.
-name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. 
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| usuario   | (**obligatorio**) Usuario asociado con el informe. |
+| Tipo   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
+| NAME   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
+
 **Encabezados de solicitud**
 
 - Ninguno
 
 **Cuerpo de la solicitud**
 
-```
+```json
 {"Files": [
     {
         "Name": string, (Filename, not base64 encoded)
@@ -2544,31 +3159,31 @@ name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Bas
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
 
----
-### <a name="list-the-windows-error-reporting-wer-reports"></a>Enumerar en una lista los Informes de errores de Windows (WER)
+<hr>
+### Enumerar en una lista los Informes de errores de Windows (WER)
 
 **Solicitud**
 
 Puedes obtener los informes WER mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wer/reports
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wer/reports |
+
 
 **Parámetros de URI**
 
@@ -2586,7 +3201,7 @@ GET | /api/wer/reports
 
 Los informes WER en el siguiente formato.
 
-```
+```json
 {"WerReports": [
     {
         "User": string,
@@ -2602,33 +3217,33 @@ Los informes WER en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
 
----
+<hr>
 ## Windows Performance Recorder (WPR) 
----
-### <a name="start-tracing-with-a-custom-profile"></a>Iniciar el seguimiento con un perfil personalizado
+<hr>
+### Iniciar el seguimiento con un perfil personalizado
 
 **Solicitud**
 
 Puedes cargar un perfil WPR e iniciar un seguimiento con dicho perfil mediante el siguiente formato de solicitud.  Solo se puede ejecutar un seguimiento cada vez. El perfil no permanecerá en el dispositivo. 
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/wpr/customtrace
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/wpr/customtrace |
+
 
 **Parámetros de URI**
 
@@ -2646,7 +3261,7 @@ POST | /api/wpr/customtrace
 
 El estado de sesión WPR en el siguiente formato.
 
-```
+```json
 {
     "SessionType": string, (Running or Idle) 
     "State": string (normal or boot)
@@ -2655,14 +3270,14 @@ El estado de sesión WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2670,26 +3285,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="start-a-boot-performance-tracing-session"></a>Iniciar una sesión de seguimiento del rendimiento de arranque
+<hr>
+### Iniciar una sesión de seguimiento del rendimiento de arranque
 
 **Solicitud**
 
 Puedes iniciar una sesión de seguimiento de WPR de arranque mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/wpr/boottrace
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/wpr/boottrace |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-profile   | (**obligatorio**) Este parámetro es necesario en el inicio. Nombre del perfil que debe iniciar una sesión de seguimiento del rendimiento. Los perfiles posibles se almacenan en perfprofiles/profiles.json.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| perfil   | (**obligatorio**) Este parámetro es necesario en el inicio. Nombre del perfil que debe iniciar una sesión de seguimiento del rendimiento. Los perfiles posibles se almacenan en perfprofiles/profiles.json. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2702,7 +3317,7 @@ profile   | (**obligatorio**) Este parámetro es necesario en el inicio. Nombre 
 
 En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
 
-```
+```json
 {
     "SessionType": string, (Running or Idle) 
     "State": string (boot)
@@ -2711,14 +3326,14 @@ En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2726,17 +3341,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="stop-a-boot-performance-tracing-session"></a>Detener una sesión de seguimiento del rendimiento de arranque
+<hr>
+### Detener una sesión de seguimiento del rendimiento de arranque
 
 **Solicitud**
 
 Puedes detener una sesión de seguimiento de WPR de arranque mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wpr/boottrace
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wpr/boottrace |
+
 
 **Parámetros de URI**
 
@@ -2752,18 +3367,18 @@ GET | /api/wpr/boottrace
 
 **Respuesta**
 
--  Ninguna.  **Nota:** Esta es una operación de larga duración.  Devolverá cuando el archivo ETL haya terminado de escribirse en disco.
+-  Ninguno.  **Nota:** Se trata de una operación de larga ejecución.  Devolverá cuando el archivo ETL haya terminado de escribirse en disco.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2771,26 +3386,26 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="start-a-performance-tracing-session"></a>Iniciar una sesión de seguimiento del rendimiento
+<hr>
+### Iniciar una sesión de seguimiento del rendimiento
 
 **Solicitud**
 
 Puedes iniciar una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.  Solo se puede ejecutar un seguimiento cada vez. 
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/wpr/trace
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/wpr/trace |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-profile   | (**obligatorio**) Nombre del perfil que debe iniciar una sesión de seguimiento del rendimiento. Los perfiles posibles se almacenan en perfprofiles/profiles.json.
-<br />
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| perfil   | (**obligatorio**) Nombre del perfil que debe iniciar una sesión de seguimiento del rendimiento. Los perfiles posibles se almacenan en perfprofiles/profiles.json. |
+
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2803,7 +3418,7 @@ profile   | (**obligatorio**) Nombre del perfil que debe iniciar una sesión de 
 
 En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
 
-```
+```json
 {
     "SessionType": string, (Running or Idle) 
     "State": string (normal)
@@ -2812,14 +3427,14 @@ En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2827,17 +3442,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="stop-a-performance-tracing-session"></a>Detener una sesión de seguimiento del rendimiento
+<hr>
+### Detener una sesión de seguimiento del rendimiento
 
 **Solicitud**
 
 Puedes detener una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wpr/trace
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wpr/trace |
+
 
 **Parámetros de URI**
 
@@ -2853,18 +3468,18 @@ GET | /api/wpr/trace
 
 **Respuesta**
 
-- Ninguna.  **Nota:** Esta es una operación de larga duración.  Devolverá cuando el archivo ETL haya terminado de escribirse en disco.  
+- Ninguno.  **Nota:** Se trata de una operación de larga ejecución.  Devolverá cuando el archivo ETL haya terminado de escribirse en disco.  
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2872,17 +3487,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar el estado de una sesión de seguimiento
+<hr>
+### Recuperar el estado de una sesión de seguimiento
 
 **Solicitud**
 
 Puedes recuperar el estado de la sesión actual de WPR mediante el siguiente formato de solicitud
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wpr/status
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wpr/status |
+
 
 **Parámetros de URI**
 
@@ -2900,7 +3515,7 @@ GET | /api/wpr/status
 
 El estado de la sesión de seguimiento de WPR en el siguiente formato.
 
-```
+```json
 {
     "SessionType": string, (Running or Idle) 
     "State": string (normal or boot)
@@ -2909,14 +3524,14 @@ El estado de la sesión de seguimiento de WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2924,17 +3539,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="list-completed-tracing-sessions-etls"></a>Lista de sesiones de seguimiento completadas (ETL)
+<hr>
+### Lista de sesiones de seguimiento completadas (ETL)
 
 **Solicitud**
 
 Puedes obtener una lista del seguimientos de ETL en el dispositivo mediante el siguiente formato de solicitud. 
 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wpr/tracefiles
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wpr/tracefiles |
+
 
 **Parámetros de URI**
 
@@ -2952,7 +3567,7 @@ GET | /api/wpr/tracefiles
 
 La lista de sesiones de seguimiento completadas se proporciona en el siguiente formato.
 
-```
+```json
 {"Items": [{
     "CurrentDir": string (filepath),
     "DateCreated": int (File CreationTime),
@@ -2966,14 +3581,14 @@ La lista de sesiones de seguimiento completadas se proporciona en el siguiente f
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2981,25 +3596,25 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="download-a-tracing-session-etl"></a>Descargar una sesión de seguimiento (ETL)
+<hr>
+### Descargar una sesión de seguimiento (ETL)
 
 **Solicitud**
 
 Puedes descargar un archivo de seguimiento (seguimiento de arranque o el seguimiento de modo de usuario) mediante el siguiente formato de solicitud. 
 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/wpr/tracefile
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/wpr/tracefile |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-filename   | (**obligatorio**) El nombre del seguimiento ETL para descargar.  Los encontrarás en /api/wpr/tracefiles
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| nombreDeArchivo   | (**obligatorio**) El nombre del seguimiento ETL para descargar.  Los encontrarás en /api/wpr/tracefiles |
 
 **Encabezados de solicitud**
 
@@ -3015,14 +3630,14 @@ filename   | (**obligatorio**) El nombre del seguimiento ETL para descargar.  Lo
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3030,25 +3645,25 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="delete-a-tracing-session-etl"></a>Eliminar una sesión de seguimiento (ETL)
+<hr>
+### Eliminar una sesión de seguimiento (ETL)
 
 **Solicitud**
 
 Puedes eliminar un archivo de seguimiento (seguimiento de arranque o el seguimiento de modo de usuario) mediante el siguiente formato de solicitud. 
 
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/wpr/tracefile
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/wpr/tracefile |
+
 
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-Parámetro de URI | Descripción
-:---          | :---
-filename   | (**obligatorio**) Nombre del seguimiento ETL que se debe eliminar.  Los encontrarás en /api/wpr/tracefiles
+| Parámetro de URI | Descripción |
+| :------          | :------ |
+| nombreDeArchivo   | (**obligatorio**) Nombre del seguimiento ETL que se debe eliminar.  Los encontrarás en /api/wpr/tracefiles |
 
 **Encabezados de solicitud**
 
@@ -3064,14 +3679,14 @@ filename   | (**obligatorio**) Nombre del seguimiento ETL que se debe eliminar. 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3079,19 +3694,19 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-## DNS-SD Tags 
----
-### <a name="view-tags"></a>Ver etiquetas
+<hr>
+## Etiquetas de DNS-SD 
+<hr>
+### Ver etiquetas
 
 **Solicitud**
 
 Te permite ver las etiquetas aplicadas actualmente para el dispositivo.  Estas se anuncian a través de los registros TXT de DNS-SD en la tecla T.  
  
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/dns-sd/tags
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/dns-sd/tags |
+
 
 **Parámetros de URI**
 
@@ -3105,8 +3720,8 @@ GET | /api/dns-sd/tags
 
 - Ninguno
 
-**Respuesta** Las etiquetas aplicadas actualmente con el siguiente formato. 
-```
+**Respuesta** Las etiquetas aplicadas actualmente con el formato siguiente. 
+```json
  {
     "tags": [
         "tag1", 
@@ -3118,14 +3733,14 @@ GET | /api/dns-sd/tags
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-5XX | Error del servidor 
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 5XX | Error del servidor |
 
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3134,17 +3749,17 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="delete-tags"></a>Eliminar etiquetas
+<hr>
+### Eliminar etiquetas
 
 **Solicitud**
 
 Elimina todas las etiquetas anunciadas actualmente por DNS-SD.   
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/dns-sd/tags
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/dns-sd/tags |
+
 
 **Parámetros de URI**
 
@@ -3163,14 +3778,14 @@ DELETE | /api/dns-sd/tags
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-5XX | Error del servidor 
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 5XX | Error del servidor |
 
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3179,23 +3794,23 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
----
-### <a name="delete-tag"></a>Eliminar etiqueta
+<hr>
+### Eliminar etiqueta
 
 **Solicitud**
 
 Elimina una etiqueta anunciada actualmente por DNS-SD.   
  
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/dns-sd/tag
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/dns-sd/tag |
+
 
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-tagValue | (**obligatorio**) La etiqueta que se debe quitar.
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| tagValue | (**obligatorio**) La etiqueta que se debe quitar. |
 
 **Encabezados de solicitud**
 
@@ -3210,13 +3825,13 @@ tagValue | (**obligatorio**) La etiqueta que se debe quitar.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
 
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3225,23 +3840,23 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
  
----
-### <a name="add-a-tag"></a>Agregar una etiqueta
+<hr>
+### Agregar una etiqueta
 
 **Solicitud**
 
 Agrega una etiqueta al anuncio de DNS-SD.   
  
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/dns-sd/tag
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/dns-sd/tag |
+
 
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-tagValue | (**obligatorio**) La etiqueta que se debe agregar.
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| tagValue | (**obligatorio**) La etiqueta que se debe agregar. |
 
 **Encabezados de solicitud**
 
@@ -3256,14 +3871,14 @@ tagValue | (**obligatorio**) La etiqueta que se debe agregar.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-401 | Desbordamiento del espacio de la etiqueta.  Se produce si la etiqueta propuesta es demasiado larga para el registro de servicio de DNS-SD resultante.  
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 401 | Desbordamiento del espacio de la etiqueta.  Se produce si la etiqueta propuesta es demasiado larga para el registro de servicio de DNS-SD resultante. |
 
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3274,17 +3889,17 @@ Código de estado HTTP      | Descripción
 
 ## <a name="app-file-explorer"></a>Explorador de archivos de la aplicación
 
----
-### <a name="get-known-folders"></a>Obtener carpetas conocidas
+<hr>
+### Obtener carpetas conocidas
 
 **Solicitud**
 
 Obtén una lista de carpetas accesibles de nivel superior.
 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/filesystem/apps/knownfolders
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/filesystem/apps/knownfolders |
+
 
 **Parámetros de URI**
 
@@ -3299,7 +3914,7 @@ GET | /api/filesystem/apps/knownfolders
 - Ninguno
 
 **Respuesta** Las carpetas disponibles con el siguiente formato. 
-```
+```json
  {"KnownFolders": [
     "folder0",
     "folder1",...
@@ -3307,14 +3922,14 @@ GET | /api/filesystem/apps/knownfolders
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Implementar la solicitud aceptada y que se está procesando
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Implementar la solicitud aceptada y que se está procesando |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 
 **Familias de dispositivos disponibles**
 
@@ -3324,25 +3939,25 @@ Código de estado HTTP      | Descripción
 * Xbox
 * IoT
 
----
-### <a name="get-files"></a>Obtener archivos
+<hr>
+### Obtener archivos
 
 **Solicitud**
 
 Obtén una lista de los archivos que hay en una carpeta.
 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/filesystem/apps/files
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/filesystem/apps/files |
+
 
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres la lista de archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
-packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
-path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. 
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres la lista de archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
+| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
@@ -3353,7 +3968,7 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 - Ninguno
 
 **Respuesta** Las carpetas disponibles con el siguiente formato. 
-```
+```json
 {"Items": [
     {
         "CurrentDir": string (folder under the requested known folder),
@@ -3368,14 +3983,14 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3384,25 +3999,25 @@ Código de estado HTTP      | Descripción
 * Xbox
 * IoT
 
----
-### <a name="download-a-file"></a>Descargar un archivo
+<hr>
+### Descargar un archivo
 
 **Solicitud**
 
 Obtener un archivo de una carpeta conocida o appLocalData.
 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/filesystem/apps/file
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| GET | /api/filesystem/apps/file |
 
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-knownfolderid | (**obligatorio**) El directorio de nivel superior donde deseas descargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
-filename | (**obligatorio**) El nombre del archivo que se va a descargar. 
-packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete que te interesa. 
-path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| knownfolderid | (**obligatorio**) El directorio de nivel superior donde deseas descargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
+| nombreDeArchivo | (**obligatorio**) El nombre del archivo que se va a descargar. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete que te interesa. |
+| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
@@ -3416,14 +4031,14 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | El archivo solicitado
-404 | Archivo no encontrado
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | El archivo solicitado |
+| 404 | Archivo no encontrado |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3432,27 +4047,27 @@ Código de estado HTTP      | Descripción
 * Xbox
 * IoT
 
----
-### <a name="rename-a-file"></a>Cambiar el nombre de un archivo
+<hr>
+### Cambiar el nombre de un archivo
 
 **Solicitud**
 
 Cambiar el nombre de un archivo de una carpeta.
 
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/filesystem/apps/rename
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/filesystem/apps/rename |
 
-<br />
+
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-knownfolderid | (**obligatorio**) El directorio de nivel superior en el que se encuentra el archivo. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
-filename | (**obligatorio**) El nombre original del archivo cuyo nombre se va a cambiar. 
-newfilename | (**obligatorio**) El nuevo nombre del archivo.
-packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
-path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. 
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| knownfolderid | (**obligatorio**) El directorio de nivel superior en el que se encuentra el archivo. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
+| nombreDeArchivo | (**obligatorio**) El nombre original del archivo cuyo nombre se va a cambiar. |
+| newfilename | (**obligatorio**) El nuevo nombre del archivo.|
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
+| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
@@ -3468,14 +4083,14 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar. Se cambia el nombre del archivo.
-404 | Archivo no encontrado
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |. Se cambia el nombre del archivo.
+| 404 | Archivo no encontrado |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3484,25 +4099,25 @@ Código de estado HTTP      | Descripción
 * Xbox
 * IoT
 
----
-### <a name="delete-a-file"></a>Eliminar un archivo
+<hr>
+### Eliminar un archivo
 
 **Solicitud**
 
 Elimina un archivo de una carpeta.
 
-Método      | URI de solicitud
-:------     | :-----
-DELETE | /api/filesystem/apps/file
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| SUPRIMIR | /api/filesystem/apps/file |
+
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-knownfolderid | (**obligatorio**) El directorio de nivel superior del que quieres eliminar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
-filename | (**obligatorio**) El nombre del archivo que se va a eliminar. 
-packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
-path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| knownfolderid | (**obligatorio**) El directorio de nivel superior del que quieres eliminar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
+| nombreDeArchivo | (**obligatorio**) El nombre del archivo que se va a eliminar. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
+| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
@@ -3518,14 +4133,14 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar. Se elimina el archivo.
-404 | Archivo no encontrado
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |. Se elimina el archivo. |
+| 404 | Archivo no encontrado |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -3534,24 +4149,24 @@ Código de estado HTTP      | Descripción
 * Xbox
 * IoT
 
----
-### <a name="upload-a-file"></a>Cargar un archivo
+<hr>
+### Cargar un archivo
 
 **Solicitud**
 
 Carga un archivo en una carpeta.  Esto sobrescribirá cualquier archivo existente que tenga el mismo nombre, pero no creará carpetas nuevas. 
 
-Método      | URI de solicitud
-:------     | :-----
-POST | /api/filesystem/apps/file
-<br />
+| Método      | URI de la solicitud |
+| :------     | :----- |
+| EXPONER | /api/filesystem/apps/file |
+
 **Parámetros de URI**
 
-Parámetro de URI | Descripción
-:------     | :-----
-knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres cargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente.
-packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
-path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
+| Parámetro de URI | Descripción |
+| :------     | :----- |
+| knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres cargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
+| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
@@ -3565,14 +4180,14 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | Aceptar. El archivo se carga.
-4XX | Códigos de error
-5XX | Códigos de error
-<br />
+| Código de estado HTTP      | Descripción |
+| :------     | :----- |
+| 200 | Aceptar |. El archivo se carga. |
+| 4XX | Códigos de error |
+| 5XX | Códigos de error |
+
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
