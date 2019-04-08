@@ -88,7 +88,7 @@ Con el archivo de vídeo devuelto desde la interfaz de usuario de captura de cá
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Camera](camera.md)
+* [Cámara](camera.md)
 * [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 
  

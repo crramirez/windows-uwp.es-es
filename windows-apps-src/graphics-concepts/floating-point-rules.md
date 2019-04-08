@@ -150,7 +150,7 @@ Las reglas de punto flotante de 32 bits también incluyen números de punto flot
 
 [Recursos](https://msdn.microsoft.com/library/windows/desktop/ff476894)
 
-[Textures](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
  
 

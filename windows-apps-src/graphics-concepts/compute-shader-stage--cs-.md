@@ -26,7 +26,7 @@ Un sombreador de cálculo es una fase del sombreador programable por [HLSL](http
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Proceso de canalización](compute-pipeline.md)
+[Canalización del proceso](compute-pipeline.md)
 
 [Canalización de gráficos](graphics-pipeline.md)
 

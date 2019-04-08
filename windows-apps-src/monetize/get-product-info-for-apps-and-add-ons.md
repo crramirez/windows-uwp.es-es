@@ -8,7 +8,7 @@ keywords: windows 10, uwp, compras desde la aplicación, in-app purchases, IAP, 
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b923764c6374e403d2652db715f65a80c48bacf
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57623100"
@@ -83,7 +83,7 @@ El siguiente ejemplo recupera información sobre complementos duraderos con los 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Las pruebas y compras de la aplicación](in-app-purchases-and-trials.md)
+* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar complemento consumibles compras](enable-consumable-add-on-purchases.md)

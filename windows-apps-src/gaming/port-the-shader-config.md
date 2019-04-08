@@ -193,7 +193,7 @@ En nuestro ejemplo de OpenGL ES 2.0, tenemos que declarar un elemento **uniform*
 y dos valores **attribute** para los datos de vértice:
 
 -   **un\_posición**: un vector de 4 float para las coordenadas de modelo de un vértice.
--   **a\_color**: Un vector de 4 float para el valor de color RGBA asociado con el vértice.
+-   **un\_color**: Un vector de 4 float para el valor de color RGBA asociado con el vértice.
 
 OpenGL ES 2.0: Definiciones GLSL uniformes y atributos
 

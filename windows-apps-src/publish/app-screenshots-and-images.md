@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono,
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610190"
@@ -162,7 +162,7 @@ Existen requisitos adicionales según el tipo de archivo.
 <tr>
 <td>
 
-**Video:**
+**Vídeo:**
 
 <ul>
 <li>1080p ProRes (alta calidad cuando corresponda)</li>
@@ -187,7 +187,7 @@ Existen requisitos adicionales según el tipo de archivo.
 <tr>
 <td>
 
-**Video:**
+**Vídeo:**
 
 <ul>
 <li>Códec: H.264</li>
@@ -207,7 +207,7 @@ Existen requisitos adicionales según el tipo de archivo.
 <ul>
 <li>Códec: AAC-LC</li>
 <li>Canales: Estéreo o sonido envolvente</li>
-<li>Frecuencia de muestreo: 48 KHz</li>
+<li>Frecuencia de muestreo: 48 kHz</li>
 <li>Velocidad de bits de audio: 384 KB/s para estéreo, 512 KB/s para el sonido envolvente</li>
 </ul>
 </td>
