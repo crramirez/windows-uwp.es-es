@@ -6,12 +6,12 @@ ms.date: 01/25/2018
 ms.topic: article
 keywords: Windows 10, uwp, juegos, introducción
 localizationpriority: medium
-ms.openlocfilehash: f818837a6f8703721520a8be8c0ed9b062cf797a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 596d0b1eb371fec98825b23a214683421e388506
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653560"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162660"
 ---
 # <a name="getting-started"></a>Introducción
 
@@ -54,7 +54,7 @@ Para obtener más ejemplos, vea [ejemplos de juegos](e2e.md#game-samples).
 
 Si desea desarrollar un juego de Xbox o utilizar las características de Xbox Live en el juego, ya sea unir el [programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) o [ ID@Xbox ](https://www.xbox.com/Developers/id) programa. 
 
-Para más información acerca de las características de Xbox Live que están disponibles para cada uno de los programas, consulte [tabla de características](../xbox-live/developer-program-overview.md#feature-table). Para obtener más información, consulte [programas de desarrollador](e2e.md#developer-programs).
+Para más información acerca de las características de Xbox Live que están disponibles para cada uno de los programas, consulte [tabla de características](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#feature-table). Para obtener más información, consulte [programas de desarrollador](e2e.md#developer-programs).
 
 > [!Note]
 > Programa de creadores de Xbox Live está disponible para todos los desarrolladores. **Cualquier persona** puede publicar un juego de Xbox. Para que el elemento de título del programa creadores de Xbox Live, simplemente debe habilitar esta opción desde el centro de partners. Para obtener más información sobre cómo registrarse para obtener una cuenta de centro de partners, consulte [paso 5](#step-5-sign-up-for-a-partner-center-account) a continuación.

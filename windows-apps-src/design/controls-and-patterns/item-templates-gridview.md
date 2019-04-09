@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 1e2c8b7d9fb7bdc61595296a137c4448cadf52d3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: f1cc576bbc7fe7fc326d86072e22b7a385cfeb8b
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629270"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913955"
 ---
 # <a name="item-templates-for-grid-view"></a>Plantillas de elemento para vista de cuadrícula
 
@@ -19,7 +19,7 @@ Esta sección contiene las plantillas de elemento que puedes usar con un control
 Para demostrar el enlace de datos, enlazan estas plantillas **GridViewItems** a la clase de grabación de ejemplo desde el [información general sobre el enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-Actualmente, cuando una **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la **DataTemplate**. Para obtener más información sobre la accesibilidad, consulta [Información general sobre la accesibilidad](../accessibility/accessibility-overview.md).
+> Actualmente, cuando una **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la **DataTemplate**. Para obtener más información sobre la accesibilidad, consulta [Información general sobre la accesibilidad](../accessibility/accessibility-overview.md).
 
 ## <a name="icon-and-text"></a>Icono y texto
 Usa estas plantillas para mostrar una colección de aplicaciones en una cuadrícula con un icono y texto.
@@ -158,6 +158,6 @@ Usa esta plantilla para mostrar una colección de elementos multimedia con texto
 ## <a name="related-articles"></a>Artículos relacionados
 - [Clase GridView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md)
-- [Información general de Accessibililty](../accessibility/accessibility-overview.md)
-- [Ejemplo de ListView y GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [Información general sobre la accesibilidad](../accessibility/accessibility-overview.md)
+- [Muestra de ListView y GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 - [Imágenes en miniatura](../../files/thumbnails.md)

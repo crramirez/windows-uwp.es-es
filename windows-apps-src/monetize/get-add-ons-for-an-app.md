@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app products, productos desde la aplicación, IAPs, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: ec065eef5d411e35515837b169fd57d71e4ef6ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 8211d65f04b7487aeca6f683375fe87b80d1b9a9
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594560"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335003"
 ---
 # <a name="get-add-ons-for-an-app"></a>Obtener complementos para una aplicación
 
@@ -30,12 +30,12 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -58,14 +58,14 @@ No incluyas un cuerpo de la solicitud para este método.
 
 En el siguiente ejemplo se muestra cómo enumerar todos los complementos de una aplicación.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 En el siguiente ejemplo se muestra cómo enumerar los 10 primeros complementos de una aplicación.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -97,7 +97,7 @@ En el ejemplo siguiente se muestra el cuerpo de respuesta de JSON que devuelve u
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 50 complementos para la aplicación, el cuerpo de la respuesta incluirá un valor @nextLink de ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` para solicitar los 10 complementos siguientes. |
+| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 50 complementos para la aplicación, el cuerpo de la respuesta incluirá un valor @nextLink de `applications/{applicationid}/listinappproducts/?skip=10&top=10`, lo que indica que puedes llamar a `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10` para solicitar los 10 complementos siguientes. |
 | value      | array  | Una matriz de objetos que enumera el Id. de la Tienda de cada complemento de la aplicación especificada. Para obtener más información sobre los datos de cada objeto, consulta [Recurso de complemento](get-app-data.md#add-on-object).                                                                                                                           |
 | totalCount | entero    | El número total de filas del resultado de datos de la consulta (es decir, el número total de complementos de la aplicación especificada).    |
 

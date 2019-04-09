@@ -2,17 +2,17 @@
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Usar la API de análisis de Microsoft Store para recuperar mediante programación los datos de análisis de aplicaciones que están registradas en su o su organización '' s cuenta del centro de partners de Windows.
 title: Acceder a los datos de análisis mediante los servicios de la Store
-ms.date: 06/04/2018
+ms.date: 03/06/2019
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ab3e223c99a13e4520d5bc603454881803a3cb64
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592660"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334863"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -54,7 +54,7 @@ Antes de llamar a cualquiera de los métodos en la API de análisis de Microsoft
 
 Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
-```
+```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
 Host: login.microsoftonline.com
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -75,13 +75,19 @@ Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instruc
 
 Cuando tengas un token de acceso de Azure AD, podrás llamar a la API de análisis de Microsoft Store. Debes pasar el token de acceso al encabezado **Authorization** de cada método.
 
-### <a name="methods-for-uwp-apps"></a>Métodos para las aplicaciones para UWP
+### <a name="methods-for-uwp-apps-and-games"></a>Métodos para juegos y aplicaciones para UWP
+Los métodos siguientes están disponibles para aplicaciones y juegos adquisiciones y adquisiciones de complemento: 
+
+* [Obtener datos de adquisiciones para sus aplicaciones y juegos](acquisitions-data.md)
+* [Obtener datos de adquisiciones de complemento para las aplicaciones y juegos](add-on-acquisitions-data.md)
+
+### <a name="methods-for-uwp-apps"></a>Métodos para las aplicaciones para UWP 
 
 Los siguientes métodos de análisis están disponibles para aplicaciones para UWP en el centro de partners.
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
-| Adquisiciones, las conversiones, instala y uso |  <ul><li>[Obtener las adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener datos de embudo de adquisición de aplicaciones](get-acquisition-funnel-data.md)</li><li>[Obtener las conversiones de aplicación por canal](get-app-conversions-by-channel.md)</li><li>[Obtener las adquisiciones de complemento](get-in-app-acquisitions.md)</li><li>[Obtener suscripción adquisiciones de complemento](get-subscription-acquisitions.md)</li><li>[Obtener las conversiones del complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de aplicaciones](get-app-installs.md)</li><li>[Obtener el uso diario de las aplicaciones](get-app-usage-daily.md)</li><li>[Obtener el uso mensual de las aplicaciones](get-app-usage-monthly.md)</li></ul> |
+| Adquisiciones, las conversiones, instala y uso |  <ul><li>[Obtener las adquisiciones de la aplicación](get-app-acquisitions.md) (heredado)</li><li>[Obtener datos de aplicación adquisición embudo](get-acquisition-funnel-data.md) (heredado)</li><li>[Obtener las conversiones de aplicación por canal](get-app-conversions-by-channel.md)</li><li>[Obtener las adquisiciones de complemento](get-in-app-acquisitions.md)</li><li>[Obtener suscripción adquisiciones de complemento](get-subscription-acquisitions.md)</li><li>[Obtener las conversiones del complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de aplicaciones](get-app-installs.md)</li><li>[Obtener el uso diario de las aplicaciones](get-app-usage-daily.md)</li><li>[Obtener el uso mensual de las aplicaciones](get-app-usage-monthly.md)</li></ul> |
 | Errores de la aplicación | <ul><li>[Obtener datos de informes de errores](get-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)</li><li>[Obtener el seguimiento de pila para un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Descargue el archivo CAB para un error en la aplicación](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
 | Insights | <ul><li>[Obtener datos de insights para la aplicación](get-insights-data-for-your-app.md)</li></ul>  |
 | Calificaciones y opiniones | <ul><li>[Obtenga las clasificaciones de la aplicación](get-app-ratings.md)</li><li>[Obtener las revisiones de la aplicación](get-app-reviews.md)</li></ul> |
@@ -100,7 +106,7 @@ Los siguientes métodos de análisis están disponibles para que las cuentas de 
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para los servicios de Xbox Live
 
-Los siguientes métodos adicionales están disponibles para que las usen las cuentas de desarrollador con los juegos que usan [servicios de Xbox Live ](../xbox-live/developer-program-overview.md).
+Los siguientes métodos adicionales están disponibles para que las usen las cuentas de desarrollador con los juegos que usan [servicios de Xbox Live ](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md).
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
@@ -126,7 +132,7 @@ Las cuentas de desarrollador que pertenecen a la [programa del panel de Windows 
 El siguiente ejemplo de código muestra cómo obtener un token de acceso de Azure AD y llamar a la API de análisis de Microsoft Store desde una aplicación de consola C#. Para usar este ejemplo de código, asigna las variables *tenantId*, *clientId*, *clientSecret* y *appID* a los valores adecuados de tu escenario. En este ejemplo se necesita el [paquete Json.NET](https://www.newtonsoft.com/json) de Newtonsoft para deserializar los datos de JSON devueltos por la API de análisis de Microsoft Store.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
+[!code-csharp[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
 
 ## <a name="error-responses"></a>Respuestas de error
 

@@ -1,23 +1,23 @@
 ---
 description: Este tema muestra cómo registrar y revocar delegados de control de eventos con C++/WinRT.
 title: Controlar eventos usando delegados en C++/WinRT
-ms.date: 05/07/2018
+ms.date: 03/04/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 193d821b44722e150f38da7430504f5d528770a4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c647168f44ffbfc4d753700a87825b5ca7b28544
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602430"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921681"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Controlar eventos usando delegados en C++/WinRT
 
 Este tema muestra cómo registrar y revocar los delegados de control de eventos mediante [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Puedes controlar un evento usando cualquier objeto tipo función de C++ estándar.
 
 > [!NOTE]
-> Para obtener información sobre cómo instalar y usar C++ / c++ / extensión de Visual Studio (VSIX) de WinRT (que proporciona compatibilidad con plantillas de proyecto, así como C++ / c++ / WinRT MSBuild propiedades y destinos) vea [compatibilidad con Visual Studio C++ / c++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obtener información sobre cómo instalar y usar el C++extensión Visual Studio (VSIX) de WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y admitir la compilación), consulte [compatibilidad con Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>Registrar un delegado para controlar un evento
 
@@ -49,9 +49,9 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Cuando se registra el delegado, el ejemplo de código anterior pasa sin formato *esto* puntero (que señala al objeto actual). Para obtener información sobre cómo establecer un fuerte o una referencia débil al objeto actual, vea el **si usa una función miembro como un delegado** subsección en la sección [con seguridad de acceso a la *esto* puntero con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Al registrar el delegado, el ejemplo de código anterior pasa sin formato *esto* puntero (que señala al objeto actual). Para obtener información sobre cómo establecer un fuerte o una referencia débil al objeto actual, vea el **si usa una función miembro como un delegado** subsección en la sección [con seguridad de acceso a la *esto* puntero con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
-Hay otras formas de construir un **RoutedEventHandler**. A continuación te mostramos el bloque de sintaxis extraído del tema de documentación relativo al [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (elige *C++/WinRT* en la lista desplegable **Language** de la página). Ten en cuenta los diversos constructores: uno toma un lambda, otro una función libre y otro (el que hemos usado anteriormente) toma un objeto y un puntero a una función miembro.
+Hay otras formas de construir un **RoutedEventHandler**. A continuación está tomado del tema de documentación para el bloque de sintaxis [ **RoutedEventHandler** ](/uwp/api/windows.ui.xaml.routedeventhandler) (elija  *C++/WinRT* desde el **lenguaje** desplegable en la esquina superior derecha de la página Web). Ten en cuenta los diversos constructores: uno toma un lambda, otro una función libre y otro (el que hemos usado anteriormente) toma un objeto y un puntero a una función miembro.
 
 ```cppwinrt
 struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
@@ -67,7 +67,25 @@ struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
 
 También es útil ver la sintaxis del operador de llamada de la función. Te indica qué parámetros de tu delegado deben estar. Como puedes ver, en este caso la sintaxis del operador de la llamada de la función coincide con los parámetros de nuestro **MainPage::ClickHandler**.
 
-Si no vas a hacer mucho en tu controlador de eventos, puedes usar una función lambda en lugar de una función miembro. Una vez más, puede que sea evidente con el siguiente ejemplo de código, pero un delegado **RoutedEventHandler** se está construyendo a partir de una función lambda que, de nuevo, debe coincidir con la sintaxis del operador de la llamada de la función.
+> [!NOTE]
+> Para un evento determinado, para averiguar los detalles de su delegado y los parámetros de delegado, va primero al tema de documentación para el propio evento. Veamos el [UIElement.KeyDown eventos](/uwp/api/windows.ui.xaml.uielement.keydown) como ejemplo. Visite ese tema y elija  *C++/WinRT* desde el **lenguaje** lista desplegable. En el bloque de sintaxis al principio del tema, verá esto.
+> 
+> ```cppwinrt
+> // Register
+> event_token KeyDown(KeyEventHandler const& handler) const;
+> ```
+>
+> Que información nos indica que el **UIElement.KeyDown** evento (el tema que estamos en) tiene un tipo de delegado de **KeyEventHandler**, ya que es el tipo que se pasa al registrar un delegado con este tipo de evento. Por lo tanto, ahora se siga el vínculo en el tema al que [KeyEventHandler delegado](/uwp/api/windows.ui.xaml.input.keyeventhandler) tipo. En este caso, el bloque de sintaxis contiene un operador de llamada de función. Y, como se mencionó anteriormente, le indica qué parámetros del delegado deben ser.
+> 
+> ```cppwinrt
+> void operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+> ```
+>
+>  Como puede ver, el delegado necesita que se declara para que tome un **IInspectable** como el remitente y una instancia de la [KeyRoutedEventArgs clase](/uwp/api/windows.ui.xaml.input.keyroutedeventargs) como los argumentos.
+>
+> He aquí otro ejemplo, echemos un vistazo a la [Popup.Closed eventos](/uwp/api/windows.ui.xaml.controls.primitives.popup.closed). Su tipo de delegado es [EventHandler\<IInspectable\>](/uwp/api/windows.foundation.eventhandler). Por lo tanto, el delegado tardará un **IInspectable** como el remitente y otra **IInspectable** (porque el **EventHandler**del parámetro de tipo) como los argumentos.
+
+Si no vas a hacer mucho en tu controlador de eventos, puedes usar una función lambda en lugar de una función miembro. De nuevo, puede que no sea obvio desde el ejemplo de código siguiente, pero un **RoutedEventHandler** delegado se construye desde una función lambda que, de nuevo, debe coincidir con la sintaxis del operador de llamada de función que analizamos anteriormente.
 
 ```cppwinrt
 MainPage::MainPage()
@@ -233,11 +251,11 @@ winrt::hstring f(ListView listview)
 Si controla un evento con la función de miembro de un objeto, o desde dentro de una función lambda dentro de la función de miembro de un objeto, a continuación, debe considerar la duración relativa del destinatario de eventos (el objeto que controla el evento) y el origen del evento (el objeto Provoca el evento). Para obtener más información y ejemplos de código, vea [referencias fuertes y débiles en C / c++ / WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 ## <a name="important-apis"></a>API importantes
-* [winrt::auto_revoke_t marcador struct](/uwp/cpp-ref-for-winrt/auto-revoke-t)
-* [función winrt::Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
-* [función winrt::Implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
+* [winrt::auto_revoke_t marker struct](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [winrt::implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
+* [winrt::implements::get_strong function](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear eventos en C / c++ / WinRT](author-events.md)
-* [Simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](concurrency.md)
-* [Referencias fuertes y débiles de C++/WinRT](weak-references.md)
+* [Crear eventos en C++/WinRT](author-events.md)
+* [Operaciones simultáneas y asincrónicas con C++/WinRT](concurrency.md)
+* [Las referencias fuertes y débiles en C / c++ / WinRT](weak-references.md)

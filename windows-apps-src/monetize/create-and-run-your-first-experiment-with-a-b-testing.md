@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 463eb17d341ccad494058861b2e6d1cfd276005e
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660220"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334683"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
@@ -52,7 +52,7 @@ Para seguir este tutorial, debe tener una cuenta de centro de partners y debe co
 6. Arrastra un **botón** de **Herramientas** a la página.
 7. Haz doble clic en el botón del diseñador para abrir el archivo de código y agregar un controlador de eventos para el evento **Click**.  
 8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asignar el ```projectId``` variable a la [identificador del proyecto](run-app-experiments-with-a-b-testing.md#terms) valor que ha obtenido en el centro de partners en la sección anterior.
-    [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
+    [!code-csharp[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 9. Guarda el archivo de código y crea el proyecto.
 

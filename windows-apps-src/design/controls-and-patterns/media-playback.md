@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: afda713e4a3d0ae30a4ee1ad9e9308d835062108
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a39faf77237596179486eb6c1a0a59a40049155c
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640030"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58914015"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -43,7 +43,7 @@ Usa un reproductor multimedia cuando quieras reproducir audio o vídeo en tu apl
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles de XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/MediaPlayerElement">MediaPlayerElement</a> o <a href="xamlcontrolsgallery:/item/MediaPlayer">MediaPlayer</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -87,7 +87,7 @@ Se recomienda el diseño de controles de fila doble (a continuación) en la mayo
 
 ![Ejemplo de controles MTC en el teléfono, fila doble](images/controls/mtc_double_inprod.png)
 
-**Controles de transporte de medios del sistema**
+**Controles de transporte de contenido multimedia del sistema**
 
 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) se integra automáticamente con los controles de transporte de contenido multimedia del sistema. Los controles de transporte de contenido multimedia del sistema son los controles que aparecen cuando se presionan teclas multimedia de hardware, como los botones multimedia de los teclados. Para obtener más información, consulta [SystemMediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677).
 
@@ -173,7 +173,7 @@ Si la aplicación necesita acceso a las carpetas **Música** o **Vídeo** sin in
 
 El control [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) no requiere funcionalidades especiales para acceder a archivos en el sistema de archivos local, por ejemplo en las carpetas **Música** o **Vídeo** del usuario, porque el usuario tiene control total sobre el archivo al cual se accede. Desde una perspectiva de seguridad y privacidad, es mejor minimizar la cantidad de funcionalidades que usa la aplicación.
 
-**Para abrir medios locales mediante FileOpenPicker**
+**Para abrir contenido multimedia local con FileOpenPicker**
 
 1.  Llama a [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) para que el usuario pueda seleccionar un archivo multimedia.
 
@@ -246,7 +246,7 @@ Estas son algunas situaciones en las que debes liberar la solicitud de pantalla:
 
 > **Nota**&nbsp;&nbsp; Si [MediaPlayerElement.IsFullWindow](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.IsFullWindow.aspx) se establece en true y el contenido multimedia está en reproducción, automáticamente se impedirá que la pantalla se desactive.
 
-**Para mantener activa la pantalla**
+**Para mantener la pantalla activa**
 
 1.  Crea una variable [DisplayRequest](https://msdn.microsoft.com/library/windows/apps/br241816) global. Inicialízala como nula.
 ```csharp
@@ -259,8 +259,9 @@ private DisplayRequest appDisplayRequest = null;
 3.  Llama a [RequestRelease](https://msdn.microsoft.com/library/windows/apps/br241819) para liberar la solicitud de pantalla siempre que la reproducción de vídeo se detenga, ponga en pausa o se interrumpa por un error de reproducción. Cuando la aplicación ya no tiene ninguna solicitud de pantalla activa, Windows ahorra batería oscureciendo la pantalla (y terminará apagándola) cuando el dispositivo no esté en uso.
 
     Cada propiedad [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) tiene una propiedad [PlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx) de tipo [MediaPlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.aspx) que controla diversos aspectos de la reproducción de contenido multimedia como [PlaybackRate](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx), [PlaybackState](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstate.aspx) y [Position](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx). En este ejemplo se usa el evento [PlaybackStateChanged](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstatechanged.aspx) en [MediaPlayer.PlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx) para detectar situaciones en las que debes liberar la solicitud de pantalla. Por lo tanto, usa la propiedad [NaturalVideoHeight](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.naturalvideoheight.aspx) para determinar si hay un archivo de audio o vídeo en reproducción y mantener la pantalla activa solo si el vídeo se está reproduciendo.
+
     ```xaml
-<MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
+    <MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
     ```
 
     ```csharp
@@ -395,5 +396,5 @@ Los controles predeterminados se han optimizado para la reproducción de conteni
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn958433)
-- [Conceptos básicos del diseño de contenido para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)
+- [Conceptos básicos de diseño de los comandos para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958433)
+- [Conceptos básicos del diseño de contenido para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)

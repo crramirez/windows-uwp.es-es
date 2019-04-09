@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, ofertas dirigidas
 ms.localizationpriority: medium
-ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3ea4adac82692e80d652523d05a7ba0b901db300
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615690"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334403"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Administrar ofertas dirigidas usando los servicios de la Store
 
@@ -33,7 +33,7 @@ En el código de la aplicación, obtén un token de cuenta de Microsoft (MSA) pa
 
 Para obtener el token de MSA, usa la clase [WebAuthenticationCoreManager](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager) para solicitar un token usando el ámbito ```devcenter_implicit.basic,wl.basic```. En el siguiente ejemplo, se muestra cómo hacerlo. Este ejemplo es un fragmento del [ejemplo completo](#code-example) y requiere instrucciones **using** que se proporcionan en el ejemplo completo.
 
-[!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetMSAToken)]
+[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetMSAToken)]
 
 Para obtener más información sobre cómo obtener tokens de MSA, consulta [Administrador de cuentas web](../security/web-account-manager.md).
 
@@ -47,7 +47,7 @@ Este método devuelve los identificadores de producto de los complementos que es
 
 El siguiente ejemplo muestra cómo obtener las ofertas dirigidas para el usuario actual. Este ejemplo es un fragmento del [ejemplo completo](#code-example). Requiere la biblioteca de [Json.NET](https://www.newtonsoft.com/json) de Newtonsoft y clases adicionales e instrucciones **using** que se proporcionan en el ejemplo completo.
 
-[!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
+[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
 <span id="code-example" />
 
@@ -61,7 +61,7 @@ En el siguiente ejemplo de código se demuestran las siguientes tareas:
 
 Este ejemplo requiere la biblioteca [Json.NET](https://www.newtonsoft.com/json) de Newtonsoft. El ejemplo usa esta biblioteca para serializar y deserializar los datos con formato JSON.
 
-[!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
+[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 
 ## <a name="related-topics"></a>Temas relacionados
 

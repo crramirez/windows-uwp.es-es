@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, accesibilidad, juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 38060d0a6bead360ef8a682902a433670c79b495
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592940"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162783"
 ---
 #  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
@@ -196,7 +196,7 @@ Si el título permite a los jugadores comunicarse por voz y enviar mensajes de t
 
 Las personas que no tienen micrófonos conectados a su dispositivo de juegos aun pueden tener una conversación con alguien que está hablando. Pueden escribir texto en la ventana del chat y convertir esos mensajes en voz. También permite que alguien con dificultades auditivas pueda leer la transcripción de los mensajes de texto de la persona con la que están hablando.
 
-Para desarrolladores ID@Xbox y asociados administrados del programa, las funciones de texto a voz y voz a texto están disponibles como parte de las [funciones de accesibilidad Game Chat 2](../xbox-live/multiplayer/chat/using-game-chat-2.md#accessibility) en el servicio de Xbox Live. Para obtener más información, consulta [Game Chat 2 Overview](../xbox-live/multiplayer/chat/game-chat-2-overview.md).
+Para desarrolladores ID@Xbox y asociados administrados del programa, las funciones de texto a voz y voz a texto están disponibles como parte de las [funciones de accesibilidad Game Chat 2](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/using-game-chat-2.md#accessibility) en el servicio de Xbox Live. Para obtener más información, consulta [Game Chat 2 Overview](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/game-chat-2-overview.md).
 
 ### <a name="sound-feedback"></a>Información de sonido
 

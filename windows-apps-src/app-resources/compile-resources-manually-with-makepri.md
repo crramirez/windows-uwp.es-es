@@ -6,19 +6,19 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c6674fc38d41e3a18709dcb81edc95d164f9f86c
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645770"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320598"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>Compilar recursos manualmente con MakePri.exe
 
 MakePri.exe es una herramienta de línea de comandos que se puede usar para crear y volcar archivos PRI. Viene integrada como parte de MSBuild en Microsoft Visual Studio, pero podría serte útil para crear paquetes manualmente o con un sistema integrado personalizado.
 
 > [!NOTE]
-> Se instala MakePri.exe al comprobar la **Windows SDK para aplicaciones de UWP administradas** opción al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las demás arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> Se instala MakePri.exe al comprobar la **Windows SDK para aplicaciones de UWP administradas** opción al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las demás arquitecturas). Por ejemplo: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 El límite de tamaño de un archivo PRI es de 64 kilobytes.
 
@@ -43,17 +43,13 @@ MakePri.exe se suele usar con las opciones `new`, `versioned` y `resourcepack`. 
 
 ## <a name="makepriexe-warnings-and-error-messages"></a>Mensajes de advertencias y error de MakePri.exe
 
-```
-Resources found for language(s) '<language(s)>' but no resources found for default language(s): '<language(s)>'. Change the default language or qualify resources with the default language.
-```
+### <a name="resources-found-for-languages-languages-but-no-resources-found-for-default-languages-languages-change-the-default-language-or-qualify-resources-with-the-default-language"></a>Recursos que se encuentran para idiomas '< idiomas >' pero no se encontraron de recursos predeterminado idiomas: '< idiomas >'. Cambiar el idioma predeterminado o calificar los recursos con el idioma predeterminado.
 
-La advertencia anterior se muestra cuando MakePri.exe o MSBuild detecta archivos o recursos de cadena de un determinado recurso con nombre que parezca estar marcado con calificadores de idioma, pero no se encuentra ningún candidato para un idioma predeterminado. Se describe el proceso para usar calificadores en los nombres de archivos y carpetas en [Adaptar los recursos de idioma, escala y otros calificadores](tailor-resources-lang-scale-contrast.md). Un archivo o una carpeta pueden contener un nombre de idioma, pero no se detectan los recursos que estén calificados para el idioma predeterminado exacto. Por ejemplo, si un proyecto usa "en-US" como idioma predeterminado y tiene un archivo denominado "de/logo.png", pero no tiene ningún archivo marcado con el idioma predeterminado "en-US", aparecerá esta advertencia. Para quitar esta advertencia, los archivos o los recursos de cadena deberían estar calificados con el idioma predeterminado, o bien se debería cambiar el idioma predeterminado. Para cambiar el idioma predeterminado, con la solución abierta en Visual Studio, abre `Package.appxmanifest`. En la pestaña Aplicaciones, confirma que el idioma predeterminado esté establecido correctamente (por ejemplo, "en" o "en-US").
+Esta advertencia se muestra cuando MakePri.exe o MSBuild detecta archivos o recursos de cadena para un recurso con nombre determinado que parecen marcarse con calificadores de lenguaje, pero se encuentra ninguna candidata para un idioma predeterminado. Se describe el proceso para usar calificadores en los nombres de archivos y carpetas en [Adaptar los recursos de idioma, escala y otros calificadores](tailor-resources-lang-scale-contrast.md). Un archivo o una carpeta pueden contener un nombre de idioma, pero no se detectan los recursos que estén calificados para el idioma predeterminado exacto. Por ejemplo, si un proyecto usa "en-US" como idioma predeterminado y tiene un archivo denominado "de/logo.png", pero no tiene ningún archivo marcado con el idioma predeterminado "en-US", aparecerá esta advertencia. Para quitar esta advertencia, los archivos o los recursos de cadena deberían estar calificados con el idioma predeterminado, o bien se debería cambiar el idioma predeterminado. Para cambiar el idioma predeterminado, con la solución abierta en Visual Studio, abre `Package.appxmanifest`. En la pestaña Aplicaciones, confirma que el idioma predeterminado esté establecido correctamente (por ejemplo, "en" o "en-US").
 
-```
-No default or neutral resource given for '<resource identifier>'. The application may throw an exception for certain user configurations when retrieving the resources.
-```
+### <a name="no-default-or-neutral-resource-given-for-resource-identifier-the-application-may-throw-an-exception-for-certain-user-configurations-when-retrieving-the-resources"></a>Ningún valor predeterminado o recurso neutral para '<resource identifier>'. La aplicación puede producir una excepción para determinadas configuraciones de usuario al recuperar los recursos.
 
-La advertencia anterior se muestra cuando MakePri.exe o MSBuild detectan archivos o recursos que parecen estar marcados con calificadores de idioma para los que los recursos no están claros. Hay calificadores, pero sin garantía de que un candidato de recursos particular se pueda devolver para ese identificador de recursos en tiempo de ejecución. Si no se puede encontrar un candidato de recurso para un idioma particular, una región u otro calificador que sea un valor predeterminado o que coincida siempre con el contexto de un usuario, se mostrará esta advertencia. En el momento de ejecución, para configuraciones de usuario concretas, como las preferencias de idioma o la ubicación principal del usuario (**Configuración** > **Hora e idioma** > **Región e idioma**), las API usadas para recuperar el recurso pueden generar una excepción inesperada. Para quitar esta advertencia, se deberán proporcionar recursos predeterminados, como un recurso en el idioma predeterminado o la ubicación global del proyecto (homeregion-001).
+Esta advertencia se muestra cuando MakePri.exe o MSBuild detecta los archivos o recursos que aparecen esté marcado con calificadores de lenguaje para el que los recursos no están claros. Hay calificadores, pero sin garantía de que un candidato de recursos particular se pueda devolver para ese identificador de recursos en tiempo de ejecución. Si no se puede encontrar un candidato de recurso para un idioma particular, una región u otro calificador que sea un valor predeterminado o que coincida siempre con el contexto de un usuario, se mostrará esta advertencia. En el momento de ejecución, para configuraciones de usuario concretas, como las preferencias de idioma o la ubicación principal del usuario (**Configuración** > **Hora e idioma** > **Región e idioma**), las API usadas para recuperar el recurso pueden generar una excepción inesperada. Para quitar esta advertencia, se deberán proporcionar recursos predeterminados, como un recurso en el idioma predeterminado o la ubicación global del proyecto (homeregion-001).
 
 ## <a name="using-makepriexe-in-a-build-system"></a>Uso de MakePri.exe en un sistema de compilación
 

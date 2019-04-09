@@ -2,16 +2,16 @@
 Description: Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
 title: Tabla de categoría y subcategoría
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp, categoría, subcategoría, género, categorías, géneros
 ms.localizationpriority: medium
-ms.openlocfilehash: f8c28db9b0ca4437579e98ae156392c7b7b383ea
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4ff9cf72ce293c81065659472652715669eeeecd
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653650"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334793"
 ---
 # <a name="category-and-subcategory-table"></a>Tabla de categoría y subcategoría
 
@@ -20,7 +20,7 @@ Describir la aplicación en la categoría y subcategoría correctas ayuda a los 
 
 Debes elegir la categoría que mejor describa la aplicación. También puedes elegir una subcategoría, si está disponible. Si no estás seguro de qué categoría o subcategoría usar o no puedes encontrar una que se ajuste a la aplicación, elige una que creas que los clientes tengan más probabilidades de mirar al buscar aplicaciones como la tuya.
 
-Si elige **juegos** para la categoría, debe seleccionar al menos una subcategoría (llamado *género* para juegos). Puedes elegir tantos géneros adecuados para tu juego como quieras. Ten en cuenta que para poder publicar un juego para los clientes de Xbox, debes habilitar el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) o seguir el proceso de [aprobación de concepto](../gaming/concept-approval.md)). 
+Si elige **juegos** para la categoría, debe seleccionar al menos una subcategoría (llamado *género* para juegos). Puedes elegir tantos géneros adecuados para tu juego como quieras. Ten en cuenta que para poder publicar un juego para los clientes de Xbox, debes habilitar el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators) o seguir el proceso de [aprobación de concepto](../gaming/concept-approval.md)). 
 
 > [!IMPORTANT] 
 > Si publicas la aplicación en la categoría **Juegos**, no podrás elegir una categoría diferente en un nuevo envío; debe seguir publicada en la categoría **Juegos** (aunque puedes cambiar las selecciones de género en un nuevo envío). De igual modo, no puedes elegir la categoría **Juegos** al actualizar una aplicación que hayas publicado anteriormente en una categoría diferente.
@@ -55,7 +55,7 @@ Microsoft Store organiza las aplicaciones en las siguientes categorías y subcat
   </tr>
   <tr>
     <td>Educación</td>
-    <td>Libros y referencia <br> Aprendizaje preescolar <br> Herramientas didácticas <br> Idioma <br> Apoyo en el estudio</td>
+    <td>Libros y referencia <br> Aprendizaje preescolar <br> Herramientas didácticas <br> Lenguaje <br> Apoyo en el estudio</td>
   </tr>
   <tr>
     <td>Entretenimiento</td>

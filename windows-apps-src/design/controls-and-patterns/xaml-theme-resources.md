@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e65ad1f4dcb5a83eb7336fc8e1eb794b107dcf01
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7cae075b0d71925eb35ac2362aef291994b29801
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244411"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -65,7 +65,7 @@ El marco XAML proporciona un conjunto de recursos [Color](/uwp/api/Windows.UI.Co
 
 Esta tabla enumeran la clave, un nombre simple y representación de cadena del color (mediante el \#aarrggbb formato) para los recursos de "Claro" y "Oscuro" proporcionados por el marco de trabajo XAML. La clave se usa para hacer referencia al recurso en una aplicación. El "Nombre simple claro/oscuro" se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante.
 
-| Tecla                             | Nombre simple claro/oscuro | Claro      | Oscuro       |
+| Key                             | Nombre simple claro/oscuro | Claro      | Oscuro       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -151,7 +151,7 @@ Además del conjunto de recursos proporcionados por el marco XAML, hay un conjun
 
 Esta tabla enumera los colores de todo el sistema que XAML proporciona como objetos de recursos derivados de la paleta del sistema de Windows. La columna "Nombre de accesibilidad" muestra cómo se etiqueta el color en la interfaz de usuario de la configuración de Windows. La columna "Nombre simple de contraste alto" es una descripción en una palabra de cómo se aplica el color en los controles comunes de XAML. Se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante. La columna "Predeterminado inicial" muestra los valores que se obtendrían si el sistema no se ejecutara en contraste alto.
 
-| Tecla                           | Nombre de accesibilidad            | Nombre simple de contraste alto | Predeterminado inicial |
+| Key                           | Nombre de accesibilidad            | Nombre simple de contraste alto | Predeterminado inicial |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
 | SystemColorButtonFaceColor    | **Texto del botón** (segundo plano)   | Background               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **Texto del botón** (primer plano)   | Primer plano               | \#FF000000      |
@@ -159,8 +159,8 @@ Esta tabla enumera los colores de todo el sistema que XAML proporciona como obje
 | SystemColorHighlightColor     | **Texto seleccionado** (segundo plano) | Resaltar                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **Texto seleccionado** (primer plano) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hipervínculos**                 | Hyperlink                | \#FF0066CC      |
-| SystemColorWindowColor        | **En segundo plano**                 | PageBackground           | \#FFFFFFFF      |
-| SystemColorWindowTextColor    | **Texto**                       | PageText                 | \#FF000000      |
+| SystemColorWindowColor        | **Background**                 | PageBackground           | \#FFFFFFFF      |
+| SystemColorWindowTextColor    | **Text**                       | PageText                 | \#FF000000      |
 
 Windows proporciona distintos temas de contraste alto y permite al usuario establecer los colores específicos para su configuración de contraste alto a través del Centro de accesibilidad, como se muestra aquí. Por lo tanto, no es posible proporcionar una lista definitiva de valores de color de contraste alto.
 
@@ -177,7 +177,7 @@ Además de los colores de tema de contraste alto del sistema, el color de énfas
 
 ### <a name="theme-dependent-brushes"></a>Pinceles dependientes del tema
 
-Los recursos de color que se muestra en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo, `SystemControlBackroundAltHighBrush`.
+Los recursos de color que se muestra en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo: `SystemControlBackroundAltHighBrush`.
 
 Veamos cómo se determina el valor de color de este pincel en tiempo de ejecución. En los diccionarios de recursos "Light" y "Dark", el pincel se define así:
 
@@ -240,7 +240,7 @@ Proporciona las propiedades comunes para todos los demás estilos contenedores d
 <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
     <Setter Property="FontFamily" Value="Segoe UI"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
     <Setter Property="TextTrimming" Value="None"/>
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="LineStackingStrategy" Value="MaxHeight"/>
@@ -318,7 +318,7 @@ Proporciona las propiedades comunes para todos los demás estilos contenedores d
 <Style x:Key="BodyTextBlockStyle" TargetType="TextBlock" 
        BasedOn="{StaticResource BaseTextBlockStyle}">
     <Setter Property="FontWeight" Value="Normal"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
 </Style>
 ```
 
@@ -352,7 +352,7 @@ Proporciona las propiedades comunes para todos los demás estilos contenedores d
 <Style x:Key="BaseRichTextBlockStyle" TargetType="RichTextBlock">
     <Setter Property="FontFamily" Value="Segoe UI"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
     <Setter Property="TextTrimming" Value="None"/>
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="LineStackingStrategy" Value="MaxHeight"/>

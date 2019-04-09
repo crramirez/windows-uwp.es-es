@@ -2,16 +2,16 @@
 Description: Puede enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
 title: Idiomas admitidos
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
-ms.date: 02/20/2019
+ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 02a68cd325823bf671f7e0a99c64a899b17caddd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 716a6e86e03feb6edcbc5cde5aa37d0282df6aca
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244291"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
@@ -35,7 +35,7 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | Amárico               | am, am-et                                                                                                                                                                                             |
 | Armenio              | hy, hy-am                                                                                                                                                                                             |
 | Asamés              | as, as-in                                                                                                                                                                                             |
-| Azerbaiyano           | az, az-arab, az-arab-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
+| Azerbaiyano           | AZ árabes, árabes-az-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
 | Euskera (Euskera)       | eu, eu-es                                                                                                                                                                                             |
 | Bielorruso            | be, be-by                                                                                                                                                                                             |
 | Bangla                | bn, bn-bd, bn-in                                                                                                                                                                                      |
@@ -94,7 +94,7 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | Maorí                 | mi, mi-latn, mi-nz                                                                                                                                                                                    |
 | Marathi               | mr, mr-in                                                                                                                                                                                             |
 | Mongol (cirílico)  | mn-cyrl, mn-mong, mn-mn, mn-phag                                                                                                                                                                      |
-| Nepalí                | ne, ne-np                                                                                                                                                                                             |
+| Nepali                | ne, ne-np                                                                                                                                                                                             |
 | Noruego             | nb, nb-no, nn, nn-no, no, no-no                                                                                                                                                                      |
 | Odia                  | or, or-in                                                                                                                                                                                             |
 | Persa               | fa, fa-ir                                                                                                                                                                                             |

@@ -2,16 +2,16 @@
 Description: Si la aplicación muestra anuncios con el SDK de publicidad de Microsoft, utilice la página de anuncios en la aplicación del centro de partners para administrar el uso de anuncios.
 title: Anuncios en aplicaciones
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
-ms.date: 10/31/2018
+ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cfdc4bd81a96d3bbdb2dd369cbdd0444ca22ea4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4b8fc913818d5abe3317582cc18d5cb676a7a2fe
+ms.sourcegitcommit: 9f23bc9265c13f7ccedbc826261ceed2aff5ab83
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658030"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417061"
 ---
 # <a name="in-app-ads"></a>Anuncios en aplicaciones
 
@@ -117,7 +117,7 @@ En la tabla siguiente se muestran las redes de pago que admitimos actualmente pa
 | Outbrain |  Selecciona esta opción para proporcionar anuncios desde [Outbrain](https://www.outbrain.com/). |  Banner, Banner intersticial  |
 | Revcontent |  Selecciona esta opción para proporcionar anuncios desde [Revcontent](https://www.revcontent.com/). |  Banner, nativo  |
 | Smaato |  Selecciona esta opción para proporcionar anuncios desde [Smaato](https://www.smaato.com/). |  Banner  |
-| smartclip |  Selecciona esta opción para proporcionar anuncios desde [smartclip](https://www.smartclip.com/). |  Vídeo intersticial  |
+| smartclip |  Selecciona esta opción para proporcionar anuncios desde [smartclip](http://www.smartclip.com/). |  Vídeo intersticial  |
 | SpotX |  Selecciona esta opción para proporcionar anuncios desde [SpotX](https://www.spotx.tv/). |  Vídeo intersticial  |
 | Taboola |  Selecciona esta opción para proporcionar anuncios desde [Taboola](https://www.taboola.com/). |  Banner  |
 | Undertone | Seleccione esta opción para atender los anuncios de [Undertone](https://www.undertone.com/). | Banner intersticial |

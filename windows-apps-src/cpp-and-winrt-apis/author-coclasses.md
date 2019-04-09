@@ -6,16 +6,16 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, component
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e6b77f8be6c75070336ad48f0c6471fc0a824a4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 27c55e94a4e11bbbf550c21fd61ee384c8b21f9c
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244361"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Crear componentes COM con C++ / WinRT
 
-[C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudarle a crear el clásico modelo de objetos componentes (COM) componentes (o coclases), tal como le ayuda a crear las clases de Windows en tiempo de ejecución. Aquí es una ilustración simple, que puede probar si pega el código en el `pch.h` y `main.cpp` de un nuevo **aplicación de consola de Windows (C++ / c++ / WinRT)** proyecto.
+[C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudarle a crear el clásico modelo de objetos componentes (COM) componentes (o coclases), tal como le ayuda a crear las clases de Windows en tiempo de ejecución. Aquí es una ilustración simple, que puede probar si pega el código en el `pch.h` y `main.cpp` de un nuevo **Visual C++**   >  **Windows Desktop**  >  **Aplicación de consola de Windows (C++/WinRT)** proyecto.
 
 ```cppwinrt
 // pch.h
@@ -76,7 +76,7 @@ Encontrará más información sobre el área de características de notificació
 
 Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Desktop** > **aplicación de consola de Windows (C++ / c++ / WinRT)** del proyecto y asígnele el nombre  *ToastAndCallback*.
 
-Abra `pch.h`y agregue `#include <unknwn.h>` antes el incluye para C++ / c++ / WinRT encabezados.
+Abra `pch.h`y agregue `#include <unknwn.h>` antes el incluye para C++ / c++ / WinRT encabezados. Este es el resultado; puede reemplazar el contenido de su `pch.h` con esta lista.
 
 ```cppwinrt
 // pch.h
@@ -85,9 +85,16 @@ Abra `pch.h`y agregue `#include <unknwn.h>` antes el incluye para C++ / c++ / Wi
 #include <winrt/Windows.Foundation.h>
 ```
 
-Abra `main.cpp`y quitar las directivas using que genera la plantilla de proyecto. En su lugar, pegue el código siguiente (que nos proporciona las bibliotecas, encabezados y los nombres de tipo que es necesario).
+Abra `main.cpp`y quitar las directivas using que genera la plantilla de proyecto. En su lugar, inserte el código siguiente (que nos proporciona las bibliotecas, encabezados y los nombres de tipo que es necesario). Este es el resultado; puede reemplazar el contenido de su `main.cpp` con este anuncio (también hemos quitado el código de `main` en la lista siguiente, ya que se va a sustituir esa función más adelante).
 
 ```cppwinrt
+// main.cpp : Defines the entry point for the console application.
+//
+
+#include "pch.h"
+
+#pragma comment(lib, "advapi32")
+#pragma comment(lib, "ole32")
 #pragma comment(lib, "shell32")
 
 #include <iomanip>
@@ -102,7 +109,11 @@ Abra `main.cpp`y quitar las directivas using que genera la plantilla de proyecto
 using namespace winrt;
 using namespace Windows::Data::Xml::Dom;
 using namespace Windows::UI::Notifications;
+
+int main() { }
 ```
+
+No se compilará el proyecto aún; una vez que hemos terminado de agregar código, se le pedirá para compilar y ejecutar.
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Implementar la fábrica coclase y clase
 
@@ -176,7 +187,7 @@ Sin embargo, no debe permitir excepciones para las implementaciones de método d
 
 ## <a name="add-helper-types-and-functions"></a>Agregar funciones y tipos auxiliares
 
-En este paso, vamos a agregar algunos tipos de aplicación auxiliar y las funciones que realiza el resto del código de usan de. Por tanto, antes `main`, agregue lo siguiente.
+En este paso, vamos a agregar algunos tipos de aplicación auxiliar y las funciones que realiza el resto del código de usan de. Por tanto, inmediatamente antes `main`, agregue lo siguiente.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
@@ -248,7 +259,7 @@ std::wstring get_shortcut_path()
 
 ## <a name="implement-the-remaining-functions-and-the-wmain-entry-point-function"></a>Implemente las funciones restantes y la función de punto de entrada de wmain
 
-La plantilla de proyecto genera un `main` función para usted. Eliminar eso `main` función y en su lugar, pegue este código de lista, que incluye código para registrar la coclase y, a continuación, para entregar una notificación del sistema capaz de devolver la llamada la aplicación.
+Eliminar su `main` función y en su lugar, pegue este código de lista, que incluye código para registrar la coclase y, a continuación, para entregar una notificación del sistema capaz de devolver la llamada la aplicación.
 
 ```cppwinrt
 void register_callback()
@@ -345,6 +356,7 @@ void create_toast()
     ToastNotification toast{ xml };
     ToastNotifier notifier{ ToastNotificationManager::CreateToastNotifier(this_app_name) };
     notifier.Show(toast);
+    ::Sleep(50); // Give the callback chance to display.
 }
 
 void LaunchedNormally(HANDLE, INPUT_RECORD &, DWORD &);
@@ -376,7 +388,7 @@ void LaunchedNormally(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD & event
     try
     {
         bool runningAsAdmin{ ::IsUserAnAdmin() == TRUE };
-        std::wcout << this_app_name << L" is running" << (runningAsAdmin ? L" (Administrator)." : L".") << std::endl;
+        std::wcout << this_app_name << L" is running" << (runningAsAdmin ? L" (administrator)." : L" (NOT as administrator).") << std::endl;
 
         if (runningAsAdmin)
         {
@@ -408,7 +420,9 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 
 ## <a name="how-to-test-the-example-application"></a>Cómo probar la aplicación de ejemplo
 
-Compilar la aplicación y, a continuación, ejecútelo de al menos una vez como administrador para hacer que el registro y otro programa de instalación, la ejecución de código. Si se está ejecutando como administrador y luego presione ' t ' para hacer que una notificación del sistema que se mostrará. Puede, a continuación, haga clic en el **ToastAndCallback de devolución de llamada** botón directamente desde la notificación del sistema que se abre, o desde el centro de actividades y la aplicación se iniciará la coclase crea una instancia y el  **INotificationActivationCallback::Activate** método ejecutado.
+Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como administrador para hacer que el registro y otro programa de instalación, la ejecución de código. Una manera de hacerlo es ejecutar Visual Studio como administrador y, a continuación, ejecute la aplicación desde Visual Studio. Haga clic en Visual Studio en la barra de tareas para mostrar la lista de salto, haga clic en Visual Studio en la jump list de y, a continuación, haga clic en **ejecutar como administrador**. Acepte el símbolo del sistema y, a continuación, abra el proyecto. Al ejecutar la aplicación, se muestra un mensaje que indica si la aplicación se está ejecutando como administrador. Si no lo está, a continuación, el registro y otro programa de instalación no se ejecutan. Que el registro y otro programa de instalación debe ejecutar al menos una vez para la aplicación para que funcione correctamente.
+
+Si está ejecutando la aplicación como administrador, presione ' t ' para hacer que una notificación del sistema que se mostrará. Puede, a continuación, haga clic en el **ToastAndCallback de devolución de llamada** botón directamente desde la notificación del sistema que se abre, o desde el centro de actividades y la aplicación se iniciará la coclase crea una instancia y el  **INotificationActivationCallback::Activate** método ejecutado.
 
 ## <a name="in-process-com-server"></a>Servidor COM en proceso
 
@@ -527,9 +541,9 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [Interfaz IUnknown](https://msdn.microsoft.com/library/windows/desktop/ms680509)
-* [plantilla de estructura winrt::Implements](/uwp/cpp-ref-for-winrt/implements)
+* [Plantilla de estructura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir componentes COM con C++/WinRT](consume-com.md)
-* [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)
+* [Consumir componentes COM con C++ / WinRT](consume-com.md)
+* [Enviar una notificación de icono local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

@@ -2,16 +2,16 @@
 Description: La sección de anuncios de Store del proceso de envío es donde debe proporcionar el texto y las imágenes que los clientes verán al ver que la aplicación de la lista en la Microsoft Store.
 title: Creación de descripciones de la Tienda de aplicaciones
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
-ms.date: 10/31/2018
+ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: medium
-ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: cc0c257be2343244872945de17d8c90a23d736ae
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601860"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57977458"
 ---
 # <a name="create-app-store-listings"></a>Creación de descripciones de la Tienda de aplicaciones
 
@@ -130,7 +130,7 @@ Una descripción más corta y pegadizo que se puede usar en la parte superior de
 
 Para los juegos, la descripción corta también puede aparecer en la sección Información del Hub de juegos de Xbox One.
 
-Para obtener mejores resultados, mantenga la descripción breve en 270 caracteres. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán solo los primeros 270 caracteres (con un vínculo disponible para ver el resto de la descripción breve).
+Para obtener mejores resultados, mantenga la descripción breve en 270 caracteres. El campo tiene un límite de 1000 caracteres, pero en algunas vistas, se mostrarán solo los primeros 270 caracteres (con un vínculo disponible para ver el resto de la descripción breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionales del sistema

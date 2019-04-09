@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: fa5b5a62348a36f7758468a86e19b744cdde8754
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604870"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335094"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -55,7 +55,7 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="get-status-for-an-app-submission.md">Obtener el estado de un envío de la aplicación existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions</td>
 <td align="left"><a href="create-an-app-submission.md">Crear un nuevo envío de la aplicación</a></td>
 </tr>
@@ -65,12 +65,12 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="update-an-app-submission.md">Actualización de un envío de la aplicación existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-app-submission.md">Confirmar un envío de la aplicación nueva o actualizada</a></td>
 </tr>
 <tr>
-<td align="left">DELETE</td>
+<td align="left">SUPRIMIR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-an-app-submission.md">Eliminar un envío de la aplicación</a></td>
 </tr>
@@ -91,7 +91,7 @@ Para crear un envío de aplicación, sigue este proceso.
 
 3. [Crea un envío de aplicación](create-an-app-submission.md) ejecutando el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
     ```
 
@@ -104,7 +104,7 @@ Para crear un envío de aplicación, sigue este proceso.
 
 5. Revisa los datos de [envío de aplicación](#app-submission-object) con todos los cambios necesarios para el nuevo envío y ejecuta el siguiente método para [actualizar el envío de aplicación](update-an-app-submission.md).
 
-    ```
+    ```json
     PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
     ```
       > [!NOTE]
@@ -127,13 +127,13 @@ Para crear un envío de aplicación, sigue este proceso.
 
 5. Ejecuta el siguiente método para [confirmar el envío de aplicación](commit-an-app-submission.md). Se enviará una alerta centro de partners que haya terminado con el envío y que ahora se deben aplicar las actualizaciones a su cuenta.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
     ```
 
 6. Comprueba el estado de confirmación ejecutando el siguiente método para [obtener el estado del envío de aplicación](get-status-for-an-app-submission.md).
 
-    ```
+    ```json
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
     ```
 
@@ -175,17 +175,17 @@ Después de habilitar un lanzamiento de paquete gradual para un envío de aplica
 <td align="left"><a href="get-package-rollout-info-for-an-app-submission.md">Obtener la información de implementación gradual de un envío de la aplicación</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-an-app-submission.md">Actualizar el porcentaje de implementación gradual de un envío de la aplicación</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-an-app-submission.md">Detener la implementación gradual de un envío de la aplicación</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-an-app-submission.md">Finalizar la implementación gradual de un envío de la aplicación</a></td>
 </tr>
@@ -394,7 +394,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción    |
 |-----------------|---------|------|
-|  name               |    string     |   Nombre de la venta.    |     
+|  NAME               |    string     |   Nombre de la venta.    |     
 |  basePriceId               |   string      |  [Franja de precios](#price-tiers) que se usará para el precio base de la venta.    |     
 |  startDate               |   string      |   Fecha de inicio de la venta en formato ISO 8601.  |     
 |  endDate               |   string      |  Fecha de finalización de la venta en formato ISO 8601.      |     
@@ -526,7 +526,7 @@ Este recurso contiene información adicional acerca de las advertencias o los er
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
 |  code               |    string     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia.   |     
-|  details               |     string    |  Mensaje con más detalles sobre el problema.     |
+|  detalles               |     string    |  Mensaje con más detalles sobre el problema.     |
 
 
 <span id="application-package-object" />

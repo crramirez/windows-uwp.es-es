@@ -5,12 +5,12 @@ keywords: cliente de empresa, tutorial, datos, crear autenticación de eliminaci
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: med
-ms.openlocfilehash: 9c09e0fb73e42fd8a3d0c70bbb5396be32624387
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7bd3a180762c3ef06d7c24ae001fb2c7fb7fc55e
+ms.sourcegitcommit: 6df46d7d5b5522805eab11a9c0e07754f28673c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623250"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808303"
 ---
 # <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Crear una aplicación de base de datos de clientes
 
@@ -45,7 +45,7 @@ Si ejecuta la aplicación inmediatamente después de abrirla, verá algunos boto
 * Un **RadDataGrid** para mostrar y editar sus clientes. 
 * Un **StackPanel** para establecer los valores iniciales de un cliente nuevo.
 
-### <a name="viewmodels"></a>Modelos de vista
+### <a name="viewmodels"></a>ViewModels
 
 **ViewModels\CustomerListPageViewModel.cs** es donde se encuentra la lógica fundamental de la aplicación. Cada acción del usuario realizada en la vista se pasarán a este archivo para su procesamiento. En este tutorial, deberá agregar determinado código nuevo e implementar los métodos siguientes:
 
@@ -247,7 +247,7 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
         get => _newCustomer;
         set
         {
-            if {_newCustomer != value}
+            if (_newCustomer != value)
             {
                 _newCustomer = value;
                 OnPropertyChanged();
@@ -421,7 +421,7 @@ Eliminación de un cliente es la operación final básica que necesita para impl
 
 ## <a name="conclusion"></a>Conclusión
 
-Enhorabuena. Con todo esto hace, la aplicación tiene ahora una gama completa de las operaciones de base de datos local. Puede crear, leer, actualizar y eliminar a clientes dentro de la interfaz de usuario, y estos cambios se guardan en la base de datos y se conservarán entre distintas lanzamientos de la aplicación.
+¡Enhorabuena! Con todo esto hace, la aplicación tiene ahora una gama completa de las operaciones de base de datos local. Puede crear, leer, actualizar y eliminar a clientes dentro de la interfaz de usuario, y estos cambios se guardan en la base de datos y se conservarán entre distintas lanzamientos de la aplicación.
 
 Ahora que haya terminado, tenga en cuenta lo siguiente:
 * Si no lo ha hecho ya, consulte el [información general de la estructura de aplicación](../enterprise/customer-database-app-structure.md) para obtener más información sobre por qué se compila la aplicación, cómo lo está.
@@ -447,7 +447,7 @@ Los pasos necesarios para conectarse a su propia base de datos remota se estable
 * Asociar la aplicación a la Microsoft Store.
 * Copiar a través de la [proyecto de servicio](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoService) en su aplicación e implementarla en Azure.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticación
 
 Deberá crear un botón para iniciar una secuencia de autenticación y un elemento emergente o una página independiente para recopilar información del usuario. Una vez se haya creado, deberá proporcionar código que solicita la información del usuario y lo usa para adquirir un token de acceso. El ejemplo de la base de datos de pedidos de cliente encapsula las llamadas de Microsoft Graph con el **WebAccountManager** biblioteca para adquirir un token y controlar la autenticación en una cuenta de AAD.
 

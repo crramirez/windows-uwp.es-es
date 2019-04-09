@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244391"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -72,7 +72,7 @@ Debido a cómo funciona el sistema de ajuste de escala, estás diseñando en pí
 
 La tabla de tipos UWP establece relaciones cruciales entre los estilos de tipos de una página, ayudando a los usuarios a leer fácilmente el contenido. Todos los tamaños se encuentran en píxeles efectivos y están optimizados para aplicaciones para UWP que se ejecutan en todos los dispositivos.
 
-![Rampa de tipografías](images/type/type-ramp.svg)
+![Rampa de tipografías](images/type/type-ramp.png)
 
 ### <a name="using-the-type-ramp"></a>Usar la rampa de tipos
 
@@ -272,7 +272,7 @@ Las fuentes sin serifa son una buena opción para encabezados y elementos de int
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">Normal, semidelgada, delgada, negrita, seminegrita</td>
-<td align="left">Una fuente de código abierto que es métricamente compatible con Segoe UI, diseñada para aplicaciones en otras plataformas que no incluyen Segoe UI. <a href="https://github.com/Microsoft/Selawik">Obtener Selawik en GitHub.</a></td>
+<td align="left">Una fuente de código abierto que es métricamente compatible con Segoe UI, diseñada para aplicaciones en otras plataformas que no incluyen Segoe UI. <a href="https://github.com/Microsoft/Selawik">Obtén Selawik en GitHub.</a></td>
 </tr>
 
 </tbody>
@@ -348,6 +348,6 @@ Las fuentes con serifa son útiles para presentar grandes cantidades de texto.
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Controles de texto](../controls-and-patterns/text-controls.md)
-* [Recursos de tema XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
+* [Recursos de temas XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
 * [Estilos XAML](../controls-and-patterns/xaml-styles.md)
 * [Tipografía de Microsoft](https://docs.microsoft.com/typography/)

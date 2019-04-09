@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 88d150383d2be219e7f382e0e690771acbc9d2ee
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1a75c854d413f4681960c890691d99dd2529cc97
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651480"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291693"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturas con canales alfa
-
 
 Hay dos formas de codificar mapas de texturas que exhiben una transparencia más compleja. En cada caso, un bloque que describe la transparencia precede el bloque de 64 bits ya descrito. La transparencia se representa como un mapa de bits de 4×4 con 4 bits por píxel (codificación explícita), o con menos bits y una interpolación lineal que es similar a la que se usa para la codificación del color.
 
@@ -25,8 +24,6 @@ El bloque de transparencia y el bloque de color se organizan tal como se muestra
 |--------------|-----------------------------------|
 | 3:0          | Bloque de transparencia                |
 | 7:4          | Bloque de 64 bits ya descrito |
-
- 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Codificación de textura explícita
 
@@ -50,7 +47,7 @@ Diseño de la palabra 0:
 | 3:0 (LSB\*)   | \[0\]\[0\] |
 | 7:4           | \[0\]\[1\] |
 | 11:8          | \[0\]\[2\] |
-| 12:15 (MSB\*) | \[0\]\[3\] |
+| 15:12 (MSB\*) | \[0\]\[3\] |
 
  
 
@@ -98,7 +95,7 @@ La codificación de la transparencia para el formato BC3 se basa en un concepto 
 
 El siguiente ejemplo de código ilustra este algoritmo.
 
-```
+```cpp
 // 8-alpha or 6-alpha block?    
 if (alpha_0 > alpha_1) {    
     // 8-alpha block:  derive the other six alphas.    
@@ -129,10 +126,10 @@ El diseño de la memoria del bloque alfa es la siguiente:
 | 0    | Alfa\_0                                                       |
 | 1    | Alfa\_1                                                       |
 | 2    | \[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]                    |
-| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\] \[2\] (1 LSB) |
+| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB) |
 | 4    | \[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)                    |
 | 5    | \[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]                    |
-| 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\] \[2\] (1 LSB) |
+| 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)                    |
 
  

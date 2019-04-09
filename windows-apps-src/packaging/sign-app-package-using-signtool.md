@@ -6,15 +6,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a6d39a78ba73dcb598f209ea48c4b131e375ab6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7748ff7d5acf8a94c92e2b51953299131910d63e
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594810"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320578"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicaciones con SignTool
-
 
 **SignTool** es una herramienta de línea de comandos que se usa para firmar un paquete de aplicación o un lote de aplicaciones con un certificado. El certificado puede crearlo el usuario (con fines de prueba) o emitirlo una empresa (para distribución). Firmar un paquete de aplicación proporciona al usuario la verificación de que los datos de la aplicación no se han modificado después de haberse firmado, a la vez que confirma la identidad del usuario o la empresa que la firmara. **SignTool** puede firmar paquetes de aplicación y lotes de aplicaciones cifrados o sin cifrar.
 
@@ -43,7 +42,8 @@ Para obtener más información sobre la firma de código y los certificados en g
 Al usar **SignTool** para firmar el paquete de aplicación o el lote de aplicaciones, el algoritmo hash usado en **SignTool** debe ser el mismo que se usara para empaquetar la aplicación. Por ejemplo, si usaste **MakeAppx.exe** para crear el paquete de la aplicación con la configuración predeterminada, debes especificar SHA256 al usar **SignTool**, ya que es el algoritmo predeterminado usado por **MakeAppx.exe**.
 
 Para saber qué algoritmo hash se ha usado al empaquetar la aplicación, extrae el contenido del paquete de la aplicación e inspecciona el archivo AppxBlockMap.xml. Para obtener información sobre cómo desempaquetar o extraer un paquete de aplicación, consulta [Extraer archivos de un paquete o lote](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool#extract-files-from-a-package-or-bundle). El método de hash se encuentra en el elemento BlockMap y tiene este formato:
-```
+
+```xml
 <BlockMap xmlns="http://schemas.microsoft.com/appx/2010/blockmap" 
 HashMethod="http://www.w3.org/2001/04/xmlenc#sha256">
 ```
@@ -65,34 +65,42 @@ Esta tabla muestra cada valor de HashMethod y su algoritmo hash correspondiente:
 Una vez que tengas todos los requisitos previos y que hayas determinado qué algoritmo hash se usó para empaquetar tu aplicación, estarás listo para firmarlo. 
 
 La sintaxis general de la línea de comandos para la firma del paquete de **SignTool** es:
-```
+
+```syntax
 SignTool sign [options] <filename(s)>
 ```
 
 El certificado usado para firmar la aplicación debe ser un archivo .pfx o instalarse en un almacén de certificados.
 
 Para firmar el paquete de la aplicación con un certificado de un archivo .pfx, usa la sintaxis siguiente:
-```
+
+```syntax
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
 ```
-```
+
+```syntax
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msix
 ```
+
 Ten en cuenta que la opción `/a` permite a **SignTool** elegir el mejor certificado automáticamente.
 
 Si el certificado no es un archivo .pfx, usa la sintaxis siguiente:
-```
+
+```syntax
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.appx
 ```
-```
+
+```syntax
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.msix
 ```
 
 Como alternativa, puedes especificar el hash SHA1 del certificado deseado en lugar de &lt;Name of Certificate&gt; con esta sintaxis:
-```
+
+```syntax
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
 ```
-```
+
+```syntax
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
@@ -103,7 +111,7 @@ Cuando el paquete de la aplicación está firmado con un certificado válido, es
 ## <a name="common-errors-and-troubleshooting"></a>Errores comunes y solución de problemas
 Los tipos más comunes de errores al usar **SignTool** son internos y por lo general tienen este aspecto:
 
-```
+```syntax
 SignTool Error: An unexpected internal error has occurred.
 Error information: "Error: SignerSign() failed." (-2147024885 / 0x8007000B) 
 ```
@@ -111,7 +119,8 @@ Error information: "Error: SignerSign() failed." (-2147024885 / 0x8007000B)
 Si el código de error empieza por 0x8008, como 0x80080206 (APPX_E_CORRUPT_CONTENT), el paquete que se está firmando no es válido. Si recibes este tipo de error, debes volver a compilar el paquete y ejecutar **SignTool** otra vez.
 
 **SignTool** tiene disponible una opción de depuración para mostrar errores de certificado y filtrado. Para usar la característica de depuración, coloca la opción `/debug` directamente después de `sign`, seguida por el comando **SignTool** completo.
-```
+
+```syntax
 SignTool sign /debug [options]
 ``` 
 

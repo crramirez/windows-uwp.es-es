@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a382fd879ce656a81e1de4ae2d91180f622cd730
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647330"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334753"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
 
@@ -37,7 +37,7 @@ Superar estas limitaciones provocará fallos en la asignación de memoria. Para 
     * Juegos: acceso total a ciclos de GPU disponibles.
 
 * Compatibilidad con DirectX
-    * Aplicaciones: Nivel de características de DirectX 11 10.
+    * Aplicaciones: DirectX 11 Feature Level 10.
     * Juegos: DirectX 12 y el nivel de características de DirectX 11 10.
 
 * Todas las aplicaciones y juegos deben tener como destino la arquitectura x64 para su desarrollo o su envío a la Store para Xbox.  
@@ -52,8 +52,8 @@ Para obtener más información acerca de los recursos del sistema para aplicacio
 </br>
 <iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developing-xbox-one-applications-16860/Video-What-s-Unique--vk0fOPf9C_2006218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [UWP en Xbox One](index.md)
-- [Empezar a trabajar con el programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
+- [Empezar a trabajar con el programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-program)
 - [DirectX y UWP en Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
 

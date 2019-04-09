@@ -4,12 +4,12 @@ description: Obtén información sobre cómo acceder al tráfico HTTP desde la a
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1e7c07c92c1671cd9051393586e1e8562fa756d0
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244101"
 ---
 # <a name="http-monitor-api-reference"></a>Referencia de API del supervisor de HTTP   
 Puede acceder al tráfico de HTTP en tiempo real para la aplicación centrada mediante esta API si se ha habilitado el supervisor de HTTP en la consola Xbox, activando la casilla en Dev Home.
@@ -23,7 +23,7 @@ Puedes obtener si se ha habilitado el supervisor de HTTP en Dev Home.
 Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/httpmonitor/sessions
-<br />
+
 **Parámetros de URI**
 
 - Ninguno
@@ -52,6 +52,7 @@ Código de estado HTTP      | Descripción
 5XX | Códigos de error
 
 ## <a name="get-http-traffic-from-the-focused-app"></a>Obtener el tráfico de HTTP desde la aplicación centrada
+
 **Solicitud**
 
 Obtén en tiempo real el tráfico de HTTP desde la aplicación centrada en Xbox, siempre que no sea una aplicación de sistema, si se ha habilitado el supervisor de HTTP desde Dev Home.
@@ -59,7 +60,7 @@ Obtén en tiempo real el tráfico de HTTP desde la aplicación centrada en Xbox,
 Método      | URI de la solicitud
 :------     | :-----
 Websocket | /ext/httpmonitor/sessions
-<br />
+
 **Parámetros de URI**
 
 - Ninguno
@@ -98,7 +99,7 @@ Código de estado HTTP      | Descripción
 403 | Supervisor de HTTP deshabilitado, debe habilitarse en Dev Home
 5XX | Códigos de error
 
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Xbox

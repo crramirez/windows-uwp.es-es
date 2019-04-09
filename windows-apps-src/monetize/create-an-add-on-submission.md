@@ -6,15 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on submission, crear envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: fcc98252efb1157bc539b68656c96f7afec7104a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: cbb093576badf5cd84b132cfb139db9da7d31991
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661710"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334933"
 ---
 # <a name="create-an-add-on-submission"></a>Crear un envío de complemento
-
 
 Use este método en la API de envío de Microsoft Store para crear un nuevo envío de complementos (también conocido como aplicación producto o IAP) para una aplicación que está registrado en la cuenta del centro de partners. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-add-on-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-add-on-submission.md) para la recopilación y la publicación.
 
@@ -37,22 +36,19 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
-
+| EXPONER    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions` |
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
-
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Nombre        | Tipo   | Descripción                                                                 |
+| Name        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | inAppProductId | string | Obligatorio. Id. de la Tienda del complemento para el cual deseas crear un envío. El identificador de Store está disponible en el centro de partners, y se incluye en los datos de respuesta para las solicitudes a [crear un complemento](create-an-add-on.md) o [obtener los detalles del complemento](get-all-add-ons.md).  |
-
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -62,7 +58,7 @@ No incluyas un cuerpo de la solicitud para este método.
 
 El siguiente ejemplo muestra cómo crear un nuevo envío para un complemento.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -152,7 +148,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | No se pudo crear el envío porque la solicitud no es válida. |
 | 409  | El envío no se pudo crear debido al estado actual de la aplicación o la aplicación usa una característica del centro de partners que está [no compatible actualmente con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
-
 
 ## <a name="related-topics"></a>Temas relacionados
 

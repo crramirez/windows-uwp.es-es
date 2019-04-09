@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4227a3ad77eadaa40e47420a5fdab6d65c875da5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 74768202554a3eb49c0df8ee5f17a4fe5f979be8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594010"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291813"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas de alfa opacas y de 1 bit
-
 
 El formato de textura BC1 es para texturas opacas o que tienen un único color transparente.
 
@@ -29,7 +28,7 @@ En la codificación de tres colores, hay un color derivado y el cuarto código d
 
 En el siguiente ejemplo de código se muestra el algoritmo para decidir si se seleccionó la codificación de tres o cuatro colores:
 
-```
+```cpp
 if (color_0 > color_1) 
 {
     // Four-color block: derive the other two colors. 
@@ -89,8 +88,8 @@ Mapa de bits de Word\_0 se distribuyen como sigue:
 | 5:4           | Elemento de textura\[0\]\[2\] |
 | 7:6           | Elemento de textura\[0\]\[3\] |
 | 9:8           | Elemento de textura\[1\]\[0\] |
-| 11:10         | Elemento de textura\[1\]\[1\] |
-| 13:12         | Elemento de textura\[1\]\[2\] |
+| 11:10         | Texel\[1\]\[1\] |
+| 13:12         | Texel\[1\]\[2\] |
 | 15:14 (MSB\*) | Elemento de textura\[1\]\[3\] |
 
  
@@ -102,13 +101,13 @@ Mapa de bits de Word\_1 se distribuyen como sigue:
 | Bits        | Elemento de textura           |
 |-------------|-----------------|
 | 1:0 (LSB)   | Elemento de textura\[2\]\[0\] |
-| 3:2         | Elemento de textura\[2\]\[1\] |
-| 5:4         | Elemento de textura\[2\]\[2\] |
+| 3:2         | Texel\[2\]\[1\] |
+| 5:4         | Texel\[2\]\[2\] |
 | 7:6         | Elemento de textura\[2\]\[3\] |
 | 9:8         | Elemento de textura\[3\]\[0\] |
-| 11:10       | Elemento de textura\[3\]\[1\] |
+| 11:10       | Texel\[3\]\[1\] |
 | 13:12       | Elemento de textura\[3\]\[2\] |
-| 15:14 (MSB) | Elemento de textura\[3\]\[3\] |
+| 15:14 (MSB) | Texel\[3\]\[3\] |
 
  
 
@@ -117,7 +116,7 @@ Mapa de bits de Word\_1 se distribuyen como sigue:
 
 Como ejemplo de codificación opaca, supongamos que los colores rojo y negro se encuentran en los extremos. El color rojo es el color\_0 y negro es el color\_1. Hay cuatro colores interpolados que forman el degradado uniformemente distribuido entre ellos. Para determinar los valores del mapa de bits de 4x4, se usan los siguientes cálculos:
 
-```
+```cpp
 00 ? color_0
 01 ? color_1
 10 ? 2/3 color_0 + 1/3 color_1
@@ -149,7 +148,7 @@ Donde la imagen se muestra en blanco, el elemento de textura está codificado co
 
 La codificación del mapa de bits para los colores y la transparencia se determina con los siguientes cálculos.
 
-```
+```cpp
 00 ? color_0
 01 ? color_1
 10 ? 1/2 color_0 + 1/2 color_1

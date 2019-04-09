@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6cae88e57a61e6d4e982f1eac7e65582861ef5d2
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605730"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335013"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar la compra de productos
 
@@ -92,7 +92,7 @@ Para validar la autenticidad de un recibo, necesitas que tu sistema back-end (un
 Este es un ejemplo del proceso de validación. Este código se ejecuta en una aplicación de consola de .NET Framework que incluye una referencia al ensamblado **System.Security**.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
+[!code-csharp[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
 
@@ -129,7 +129,7 @@ Este elemento contiene la información de compra de la aplicación actual.
 
 |  Atributo  |  Descripción   |
 |-------------|-------------------|
-|  **Id.**  |    Identifica la compra.           |
+|  **Id**  |    Identifica la compra.           |
 |  **AppId**  |     El valor de Nombre de familia de paquete que usa el sistema operativo para la aplicación.           |
 |  **LicenseType**  |    **Completa**, si el usuario ha comprado la versión completa de la aplicación. **Prueba**, si el usuario ha descargado una versión de prueba de la aplicación.           |  
 |  **PurchaseDate**  |    Fecha cuando se adquirió la aplicación.          |  |
@@ -144,10 +144,10 @@ Este elemento contiene información sobre una compra desde la aplicación de la 
 
 |  Atributo  |  Descripción   |
 |-------------|-------------------|
-|  **Id.**  |    Identifica la compra.           |
+|  **Id**  |    Identifica la compra.           |
 |  **AppId**  |     Identifica la aplicación a través del cual el usuario realizó la compra.           |
 |  **ProductId**  |     Identifica el producto comprado.           |
-|  **productType**  |    Determina el tipo de producto. Actualmente solo admite un valor de **Duradero**.          |  
+|  **ProductType**  |    Determina el tipo de producto. Actualmente solo admite un valor de **Duradero**.          |  
 |  **PurchaseDate**  |    Fecha cuando se realizó la compra.          |  |
 
  

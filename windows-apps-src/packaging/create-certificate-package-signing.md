@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
-ms.openlocfilehash: 963c73bb7667ced5bbe9e33fef0cac561fe1183a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a8d94f43edbdc3ec410ae7f878b38d41cddf5145
+ms.sourcegitcommit: f15cf141c299bde9cb19965d8be5198d7f85adf8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57591550"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358610"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Crear un certificado para firmar paquetes
 
@@ -31,37 +31,51 @@ Necesitas cmdlets de PKI para crear y exportar el certificado de firma. Para obt
 
 ## <a name="create-a-self-signed-certificate"></a>Crear un certificado autofirmado
 
-Un certificado autofirmado es útil para probar la aplicación antes de que estés listo para publicarla en la Tienda. Sigue los pasos descritos en esta sección para crear un certificado autofirmado.
+Un certificado autofirmado es útil para probar la aplicación cuando esté listo para publicarlo en el Store. Siga los pasos descritos en esta sección para crear un certificado autofirmado.
 
 ### <a name="determine-the-subject-of-your-packaged-app"></a>Determinar al asunto de la aplicación empaquetada  
 
 Para usar un certificado para firmar el paquete de la aplicación, "Subject" en el certificado **debe** coincidir con la sección "Publisher" en el manifiesto de la aplicación.
 
 Por ejemplo, la sección "Identity" en el archivo AppxManifest.xml de tu aplicación debería ser similar al siguiente:
-```
+
+```xml
   <Identity Name="Contoso.AssetTracker" 
     Version="1.0.0.0" 
     Publisher="CN=Contoso Software, O=Contoso Corporation, C=US"/>
 ```
 
-En este caso, "Publisher" es "CN = Contoso Software, O = Contoso Corporation, C = US", que debe usarse para crear el certificado. 
+En este caso, "Publisher" es "CN = Contoso Software, O = Contoso Corporation, C = US", que debe usarse para crear el certificado.
 
 ### <a name="use-new-selfsignedcertificate-to-create-a-certificate"></a>Usa **New-SelfSignedCertificate** para crear un certificado
+
 Usa el cmdlet de PowerShell **New-SelfSignedCertificate** para crear un certificado autofirmado. **New-SelfSignedCertificate** tiene varios parámetros que deben personalizarse, pero, a los efectos de este artículo, nos centraremos en cómo crear un certificado sencillo que funcione con **SignTool**. Para obtener más ejemplos y usos de este cmdlet, consulta [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/New-SelfSignedCertificate).
 
 En función del archivo AppxManifest.xml del ejemplo anterior, debes usar la siguiente sintaxis para crear un certificado. En un símbolo del sistema de PowerShell con privilegios elevados:
+
+```powershell
+New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName "Your friendly name goes here" -CertStoreLocation "Cert:\LocalMachine\My" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.3", "2.5.29.19={text}")
 ```
-New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
-```
+
+Tenga en cuenta los detalles acerca de algunos de los parámetros siguientes:
+
+- **KeyUsage**: Este parámetro define lo que puede utilizarse el certificado. Para obtener un certificado autofirmado, este parámetro debe establecerse en **DigitalSignature**.
+
+- **TextExtension**: Este parámetro incluye la configuración para las siguientes extensiones:
+
+  - Uso mejorado de clave (EKU): Esta extensión indica otros propósitos para los que se puede usar la clave pública certificada. Para obtener un certificado autofirmado, este parámetro debe incluir la cadena de extensión **"2.5.29.37={text}1.3.6.1.5.5.7.3.3"**, que indica que el certificado que se usará para la firma de código.
+
+  - Restricciones básicas: Esta extensión indica si el certificado es una entidad de certificación (CA). Para obtener un certificado autofirmado, este parámetro debe incluir la cadena de extensión **"2.5.29.19={text}"**, lo que indica que el certificado es una entidad final (no una entidad de certificación).
 
 Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado del comando también producirá la huella digital del certificado.  
 
-**Note**  
 Puedes ver el certificado en una ventana de PowerShell mediante los siguientes comandos:
-```
+
+```powershell
 Set-Location Cert:\LocalMachine\My
 Get-ChildItem | Format-Table Subject, FriendlyName, Thumbprint
 ```
+
 Esta acción mostrará todos los certificados en el almacén local.
 
 ## <a name="export-a-certificate"></a>Exportar un certificado 
@@ -70,18 +84,21 @@ Para exportar el certificado en el almacén local a un archivo de intercambio de
 
 Al usar **Export-PfxCertificate**, debes crear y usar una contraseña o usar el parámetro "-ProtectTo" para especificar qué usuarios o grupos pueden acceder al archivo sin una contraseña. Ten en cuenta que se mostrará un error si no usas el parámetro "-Password" o "-ProtectTo".
 
-- **Uso de contraseñas**
-```
+### <a name="password-usage"></a>Uso de contraseñas
+
+```powershell
 $pwd = ConvertTo-SecureString -String <Your Password> -Force -AsPlainText 
 Export-PfxCertificate -cert "Cert:\LocalMachine\My\<Certificate Thumbprint>" -FilePath <FilePath>.pfx -Password $pwd
 ```
 
-- **Uso de ProtectTo**
-```
+### <a name="protectto-usage"></a>Uso de ProtectTo
+
+```powershell
 Export-PfxCertificate -cert Cert:\LocalMachine\My\<Certificate Thumbprint> -FilePath <FilePath>.pfx -ProtectTo <Username or group name>
 ```
 
 Después de crear y exportar el certificado, estás listo para firmar el paquete de la aplicación con **SignTool**. Para el siguiente paso en el proceso de empaquetado manual, consulta [Firmar un paquete de la aplicación con SignTool](https://msdn.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
 
-## <a name="security-considerations"></a>Consideraciones de seguridad 
+## <a name="security-considerations"></a>Consideraciones de seguridad
+
 Al agregar un certificado a los [almacenes de certificados del equipo local](https://msdn.microsoft.com/windows/hardware/drivers/install/local-machine-and-current-user-certificate-stores), afectas a la confianza de los certificados de todos los usuarios en el equipo. Se recomienda quitar dichos certificados cuando ya no sean necesarios, para impedir que se usen para poner en peligro la confianza del sistema.

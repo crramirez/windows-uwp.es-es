@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 84a08d480070e4a23147679dd9b5dda1f8c9cca1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3f59d86a03abdeb097ab60e1961d7869669875eb
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605500"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291593"
 ---
 # <a name="point-lists"></a>Listas de puntos
-
 
 Una lista de puntos es una colección de vértices que se representan como puntos aislados. La aplicación puede utilizar listas de puntos en escenas 3D para campos de asteriscos, o bien líneas de puntos en la superficie de un polígono.
 
@@ -30,7 +29,7 @@ La aplicación puede aplicar materiales y texturas a una lista de puntos. Los co
 
 El siguiente código muestra cómo crear vértices para esta lista de puntos.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
     float x,y,z;
@@ -49,7 +48,7 @@ CUSTOMVERTEX Vertices[] =
 
 El siguiente ejemplo de código muestra cómo representar esta lista de puntos en Direct3D.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to an IDirect3DDevice interface.

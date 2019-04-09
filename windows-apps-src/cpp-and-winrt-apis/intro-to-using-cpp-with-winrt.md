@@ -1,16 +1,16 @@
 ---
 description: Una introducción a C++/WinRT&mdash;una proyección de lenguaje C++ estándar para las API de Windows Runtime.
 title: Introducción a C++/WinRT
-ms.date: 01/31/2019
+ms.date: 04/02/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 883463f291864016ebc32f2d510936452c931366
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e9e84370f0503a8f361df9b43b60a2870be745a3
+ms.sourcegitcommit: 940645c705865ba9635ccae2da9d917420faf608
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58812604"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -21,7 +21,7 @@ C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API d
 C++ / c++ / WinRT está recomendada para sustituirla de Microsoft para la [C++ / c++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) proyección del lenguaje y el [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). La lista completa de [temas sobre C++ / c++ / WinRT](index.md#topics-about-cwinrt) incluye información sobre los interoperar con y portabilidad desde, C++ / c++ / CX y WRL.
 
 > [!IMPORTANT]
-> Dos de las partes más importantes de C++ / c++ / WinRT a tener en cuenta que se describen en las secciones [compatibilidad con SDK de C++ / c++ / WinRT](#sdk-support-for-cwinrt) y [compatibilidad con Visual Studio C++ / c++ / WinRT, XAML, la extensión VSIX y el paquete NuGet del paquete](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Algunas de las partes más importantes de C++/WinRT para tener en cuenta que se describen en las secciones [compatibilidad con SDK C++/WinRT](#sdk-support-for-cwinrt) y [compatibilidad con Visual Studio C++/WinRT, XAML, la extensión VSIX y NuGet paquete](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="language-projections"></a>Proyecciones de lenguaje
 Windows Runtime se basa en las API de modelos de objetos componentes (COM) y se ha diseñado para acceder a él a través de *proyecciones de lenguaje*. Una proyección oculta los detalles del COM y proporciona una experiencia de programación más natural para un determinado lenguaje.
@@ -30,12 +30,12 @@ Windows Runtime se basa en las API de modelos de objetos componentes (COM) y se 
 Cuando vayas a las [API de Windows UWP](https://docs.microsoft.com/uwp/api/), haz clic en el cuadro combinado **Language** en la esquina superior derecha y selecciona **C++/WinRT** para ver los bloques de sintaxis de API tal y como aparecen en la proyección de lenguaje C++/WinRT.
 
 ## <a name="sdk-support-for-cwinrt"></a>Soporte de SDK para C++/WinRT
-A partir de la versión 10.0.17134.0 (Windows 10, versión 1803), el Windows SDK contiene una biblioteca de C++ estándar basada en archivos de encabezado para el uso de API de Windows propias (API de Windows Runtime en espacios de nombres de Windows). C++/WinRT también se distribuye con la herramienta `cppwinrt.exe`, que puedes apuntar a un archivo de metadatos de Windows Runtime (`.winmd`) para generar una biblioteca de C++ estándar basados en archivos de encabezado que *proyecta* las API descritas en los metadatos para el consumo de código C++/WinRT. Los archivos de metadatos de Windows Runtime (`.winmd`) proporcionan una forma canónica de describir una superficie de API de Windows Runtime. Al apuntar a `cppwinrt.exe` en los metadatos, puedes generar una biblioteca para usarla con cualquier clase en tiempo de ejecución implementada en un componente de Windows Runtime de terceros o segunda parte o implementado en tu propia aplicación. Para obtener más información, consulta [Consumir API con C++/WinRT](consume-apis.md).
+A partir de la versión 10.0.17134.0 (Windows 10, versión 1803), el Windows SDK contiene una biblioteca de C++ estándar basada en archivos de encabezado para el uso de API de Windows propias (API de Windows Runtime en espacios de nombres de Windows).
 
-Con C++/WinRT, también puedes implementar tus propias clases en tiempo de ejecución con C++ estándar, sin tener que recurrir a la programación de estilo COM. Para una clase en tiempo de ejecución, solo tienes que describir tus tipos en un archivo IDL, y `midl.exe` y `cppwinrt.exe` generarán para ti tus archivos de código fuente de implementación reutilizable. Como alternativa puedes simplemente implementar interfaces derivando de una clase base de C++/WinRT. Para obtener más información, consulta [Crear API con C++/WinRT](author-apis.md).
+Para la compatibilidad, el SDK de Windows también incluye el `cppwinrt.exe` herramienta. Sin embargo, recomendamos que en su lugar, instalar y usar la versión más reciente de `cppwinrt.exe`, que se incluye con el **Microsoft.Windows.CppWinRT** paquete NuGet. Ese paquete, y `cppwinrt.exe`, se describen en la sección siguiente.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>Compatibilidad de Visual Studio para C / c++ / WinRT, XAML, la extensión VSIX y el paquete de NuGet
-Para obtener soporte técnico de Visual Studio, además de una versión de destino de Windows SDK mínima de 10.0.17134.0 (Windows 10, versión 1803), necesitará Visual Studio 2017 (al menos versión 15.6; se recomienda al menos 15.7), o Visual Studio de 2019. Si ya no ha instalado, deberá instalar el **herramientas de C++ Universal Windows Platform** opción desde dentro el instalador de Visual Studio. Y, en Windows **configuración** > **actualización \& seguridad** > **para desarrolladores**, elija el **para desarrolladores modo** opción en lugar de **agregar o quitar aplicaciones** opción.
+Para obtener soporte técnico de Visual Studio, además de una versión de destino de Windows SDK mínima de 10.0.17134.0 (Windows 10, versión 1803), necesitará 2019 de Visual Studio o Visual Studio 2017 (al menos la versión 15.6; se recomienda al menos 15.7). Si ya no ha instalado, deberá instalar el **herramientas de C++ Universal Windows Platform** opción desde dentro el instalador de Visual Studio. Y, en Windows **configuración** > **actualización \& seguridad** > **para desarrolladores**, elija el **para desarrolladores modo** opción en lugar de **agregar o quitar aplicaciones** opción.
 
 Deberá descargar e instalar la versión más reciente de la [C++ / c++ / extensión de Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix) desde el [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
@@ -47,13 +47,18 @@ Las plantillas de proyecto de Visual Studio para C / c++ / WinRT se describen a 
 > [!IMPORTANT]
 > Si tiene proyectos creados con (o actualizados para trabajar con) una versión de la extensión VSIX anteriormente que 1.0.190128.4, a continuación, consulte [versiones anteriores de la extensión VSIX](#earlier-versions-of-the-vsix-extension). Esa sección contiene información importante sobre la configuración de los proyectos, lo que necesita saber para actualizarlos para usar la versión más reciente de la extensión VSIX.
 
-Dado que C++ / c++ / WinRT usa las características del estándar C ++ 17, es necesario que la propiedad de proyecto **C o C++** > **lenguaje** > **estándar de lenguaje C++**  >  **Estándar ISO C ++ 17 (/ STD: c ++ 17)**. También puede establecer **modo de conformidad: Sí (/ permissive-)**, que restringe aún más el código sea compatible con los estándares.
-
-Otra propiedad de proyecto a tener en cuenta es **C/C++** > **General** > **Tratar advertencias como errores**. Establece esto a **Yes (/WX)** o **No (/WX-)** según te parezca. A veces, los archivos de origen generados por la herramienta `cppwinrt.exe` generan advertencias hasta que les agregas tu implementación.
+> [!NOTE]
+> Dado que C++/WinRT usa características de C ++ 17 estándar, el paquete NuGet establece la propiedad de proyecto **C /C++** > **lenguaje**  >   **C++Estándar de lenguaje** > **estándar ISO C ++ 17 (/ STD: c ++ 17)** en Visual Studio. También agrega el [/bigobj](/cpp/build/reference/bigobj-increase-number-of-sections-in-dot-obj-file) opción del compilador.
+> 
+> También puede establecer **modo de conformidad: Sí (/ permissive-)**, que restringe aún más el código sea compatible con los estándares. Otra propiedad de proyecto a tener en cuenta es **C/C++** > **General** > **Tratar advertencias como errores**. Establece esto a **Yes (/WX)** o **No (/WX-)** según te parezca. A veces, los archivos de origen generados por la herramienta `cppwinrt.exe` generan advertencias hasta que les agregas tu implementación.
 
 Con el sistema establecido como se describió anteriormente, podrá crear y compilar o abrir a + C, c++ / WinRT de proyecto en Visual Studio e implementarlo.
 
-Como alternativa, puede convertir un proyecto existente al instalar manualmente el **Microsoft.Windows.CppWinRT** paquete NuGet. Después de instalar (o actualizar a) la versión más reciente de la extensión VSIX, abra el proyecto existente en Visual Studio, haga clic en **proyecto** \> **administrar paquetes NuGet...** \> **Examinar**, escriba o pegue **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, seleccione el elemento en los resultados de búsqueda y, a continuación, haga clic en **instalar** para instalar el paquete para ese proyecto. Una vez haya agregado el paquete, obtendrá C++ / c++ / WinRT MSBuild soporte para el proyecto, incluidas invocando el `cppwinrt.exe` herramienta.
+Como alternativa, puede convertir un proyecto existente al instalar manualmente el **Microsoft.Windows.CppWinRT** paquete NuGet. Después de instalar (o actualizar a) la versión más reciente de la extensión VSIX, abra el proyecto existente en Visual Studio, haga clic en **proyecto** \> **administrar paquetes NuGet...** \> **Examinar**, escriba o pegue **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, seleccione el elemento en los resultados de búsqueda y, a continuación, haga clic en **instalar** para instalar el paquete para ese proyecto. Una vez haya agregado el paquete, obtendrá C++ / c++ / WinRT MSBuild soporte para el proyecto, incluidas invocando el `cppwinrt.exe` herramienta. A partir de la versión 2.0, el **Microsoft.Windows.CppWinRT** paquete NuGet incluye el `cppwinrt.exe` herramienta.
+
+Puede señalar el `cppwinrt.exe` herramienta en los metadatos de un Runtime de Windows (`.winmd`) archivo para generar un estándar basado en archivos de encabezado C++ biblioteca que *proyectos* las API descritas en los metadatos para su uso desde C++ / Código WinRT. Los archivos de metadatos de Windows Runtime (`.winmd`) proporcionan una forma canónica de describir una superficie de API de Windows Runtime. Al apuntar a `cppwinrt.exe` en los metadatos, puedes generar una biblioteca para usarla con cualquier clase en tiempo de ejecución implementada en un componente de Windows Runtime de terceros o segunda parte o implementado en tu propia aplicación. Para obtener más información, consulta [Consumir API con C++/WinRT](consume-apis.md).
+
+Con C++/WinRT, también puedes implementar tus propias clases en tiempo de ejecución con C++ estándar, sin tener que recurrir a la programación de estilo COM. Para una clase en tiempo de ejecución, solo tienes que describir tus tipos en un archivo IDL, y `midl.exe` y `cppwinrt.exe` generarán para ti tus archivos de código fuente de implementación reutilizable. Como alternativa puedes simplemente implementar interfaces derivando de una clase base de C++/WinRT. Para obtener más información, consulta [Crear API con C++/WinRT](author-apis.md).
 
 Puede identificar un proyecto que usa C++ / c++ / WinRT MSBuild soporte por la presencia de la **Microsoft.Windows.CppWinRT** paquete de NuGet instalado dentro del proyecto.
 

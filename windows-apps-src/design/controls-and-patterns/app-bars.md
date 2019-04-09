@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d2a7d34f00d40429863f08ffe6a9c34222daa32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 461d6d135838a5141e6606d4c77ce21972a45fe1
+ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649310"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901653"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -44,7 +44,7 @@ El control CommandBar es un control de propósito general, flexible y ligero que
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CommandBar">abrir la aplicación y ver CommandBar en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -121,8 +121,8 @@ También puedes agregar comandos a la colección **SecondaryCommands**, que se m
 
 Puedes mover los comandos mediante programación entre los objetos PrimaryCommands y SecondaryCommands, según sea necesario.
 
-- *Si hay un comando que podría aparecer de forma coherente en varias páginas, es mejor mantener ese comando en una ubicación coherente.*
-- *Se recomienda colocar Accept, sí, y aceptar comandos a la izquierda de rechazan, n y Cancelar. Coherencia ofrece a los usuarios la confianza para desplazarse por el sistema y les ayuda a transferir sus conocimientos de navegación de la aplicación desde la aplicación.*
+- *Si un comando aparece de manera coherente entre las páginas, es mejor mantener ese comando en una ubicación coherente.*
+- *Se recomienda colocar los comandos Aceptar y Sí a la izquierda de los comandos Rechazar, No y Cancelar. La coherencia le da confianza al usuario para moverse por el sistema y le ayuda a transferir su conocimiento sobre la navegación de una aplicación a otra.*
 
 ### <a name="app-bar-buttons"></a>Botones de la barra de la aplicación
 
@@ -177,7 +177,8 @@ Cuando la propiedad [ClosedDisplayMode](https://msdn.microsoft.com/library/windo
 
 ## <a name="open-and-closed-states"></a>Estados abiertos y cerrados
 
-La barra de comandos se puede abrir o cerrar. Cuando está abierta, se muestran los botones de comando principales con etiquetas de texto y el menú de desbordamiento se abre si hay comandos secundarios presentes.
+La barra de comandos se puede abrir o cerrar. Cuando está abierta, muestra los botones de comando principal con etiquetas de texto y abre el menú de desbordamiento (si hay comandos secundarios).
+La barra de comandos para abrir el menú de desbordamiento hacia arriba (por encima de los comandos principales) o hacia abajo (debajo de los comandos principales). La dirección predeterminada es hacia arriba, pero si no hay suficiente espacio para abrir el menú de desbordamiento hacia arriba, la barra de comandos abre hacia abajo. 
 
 Un usuario puede alternar entre estos Estados presionando el "vea más" \[•••\] botón. Puedes cambiar entre ellos mediante programación al establecer la propiedad [IsOpen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx). 
 
@@ -216,7 +217,7 @@ private void CommandBar_Closing(object sender, object e)
 
 Si un usuario interactúa con otras partes de una aplicación cuando una barra de comandos está abierta, se cerrará la barra automáticamente. Esto se denomina *cierre del elemento por cambio de foco*. Puedes controlar el comportamiento del cierre del elemento por cambio de foco ajustando configurando la propiedad [IsSticky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Cuando `IsSticky="true"`, la barra permanece abierta hasta que el usuario presiona el "vea más" \[•••\] botón o selecciona un elemento en el menú de desbordamiento. 
 
-Recomendamos evitar usar las barras de comando permanentes porque no cumplen con las expectativas de los usuarios sobre el cierre del elemento por cambio de foco.
+Se recomienda evitar las barras de comandos rápidas, ya que no cumplen con las expectativas de los usuarios para [luz descartar y comportamiento de foco de teclado](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus#light-dismiss).
 
 ### <a name="display-mode"></a>Modo de pantalla
 
@@ -277,9 +278,9 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 - [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
-- [Ejemplo de comandos de XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [Muestra de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](../basics/commanding-basics.md)
-* [Clase de barra de comandos](https://msdn.microsoft.com/library/windows/apps/dn279427)
+* [Conceptos básicos de diseño de los comandos para las aplicaciones para UWP](../basics/commanding-basics.md)
+* [Clase CommandBar](https://msdn.microsoft.com/library/windows/apps/dn279427)

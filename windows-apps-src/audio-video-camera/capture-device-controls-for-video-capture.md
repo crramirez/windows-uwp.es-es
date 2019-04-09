@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f144ef398fc55e79d2f0190c61214cdf1aa93b68
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f503910a46254f4e885dd2ded1d43b975d78f84e
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244321"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a>Controles manuales de la cámara para la captura de vídeo.
 
@@ -55,7 +55,7 @@ El [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/window
 
 El siguiente ejemplo usa una interfaz de usuario sencilla para proporcionar botones de radio que permiten al usuario pasar de un modo de eliminación de ruido a otro.
 
-[!code-cs[SnippetDenoiseXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetDenoiseXAML)]
+[!code-xml[SnippetDenoiseXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetDenoiseXAML)]
 
 En el siguiente método, la propiedad [**VideoTemporalDenoisingControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.supported) se comprueba para ver si se admite la eliminación de ruido temporal en todo el dispositivo actual. De ser así, comprobamos para asegurarnos de que se admiten **Off** y **Auto** o **On**, en cuyo caso hacemos que nuestros botones de radio estén visibles. A continuación, los botones **Auto** y **On** se vuelven visibles si se admiten esos métodos.
 
@@ -87,8 +87,8 @@ Para obtener más información acerca de la obtención de fotogramas de vídeo p
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
 *  [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)
  
 

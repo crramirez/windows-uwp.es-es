@@ -6,12 +6,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, java
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a98584fcac446a673bf76cd3d448e05455a89bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: db87b1f8f3fdf039fe6e8ee8ca8a0bc91d26b428
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599990"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334503"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de Java: envíos de aplicaciones, complementos y pilotos
 
@@ -38,7 +38,7 @@ En estos ejemplos se usan las bibliotecas siguientes:
 
 En el siguiente ejemplo se muestran las instrucciones imports que se usan en todos los ejemplos de código y se implementa un programa de línea de comandos que llama a los otros métodos de ejemplo.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/MainExample.java#L1-L64)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/MainExample.java#L1-L64)]
 
 <span id="token" />
 
@@ -46,7 +46,7 @@ En el siguiente ejemplo se muestran las instrucciones imports que se usan en tod
 
 En el siguiente ejemplo se muestra cómo [obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que puedas usar para llamar a métodos en la API de envío de Microsoft Store. Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Microsoft Store antes de que el token expire. Después de que el token expire, puedes generar uno nuevo.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L65-L95)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L65-L95)]
 
 <span id="create-add-on" />
 
@@ -54,7 +54,7 @@ En el siguiente ejemplo se muestra cómo [obtener un token de acceso de Azure AD
 
 En el siguiente ejemplo se muestra cómo [crear](create-an-add-on.md) y luego [eliminar](delete-an-add-on.md) un complemento.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 
 <span id="create-package-flight" />
 
@@ -62,13 +62,13 @@ En el siguiente ejemplo se muestra cómo [crear](create-an-add-on.md) y luego [e
 
 En el siguiente ejemplo se muestra cómo [crear](create-a-flight.md) y luego [eliminar](delete-a-flight.md) un paquete piloto.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L185-L221)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L185-L221)]
 
 <span id="create-app-submission" />
 
 ## <a name="create-an-app-submission"></a>Crear un envío de aplicación
 
-En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de aplicación. Para ello, el ```SubmitNewApplicationSubmission``` método crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el método ```SubmitNewApplicationSubmission``` realiza estas tareas:
+En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de aplicación. Para ello, el `SubmitNewApplicationSubmission` método crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el método `SubmitNewApplicationSubmission` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos de la aplicación especificada](get-an-app.md).
 2. A continuación, [elimina el envío pendiente de la aplicación](delete-an-app-submission.md), si existe uno.
@@ -77,13 +77,13 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 5. A continuación, lo [actualizaciones](update-an-app-submission.md) y, a continuación, [confirma](commit-an-app-submission.md) el nuevo envío al centro de partners.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-an-app-submission.md) hasta que el envío se confirma correctamente.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L97-L183)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L97-L183)]
 
 <span id="create-add-on-submission" />
 
 ## <a name="create-an-add-on-submission"></a>Crear un envío de complemento
 
-En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de complemento. Para ello, el ```SubmitNewInAppProductSubmission``` método crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el método ```SubmitNewInAppProductSubmission``` realiza estas tareas:
+En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de complemento. Para ello, el `SubmitNewInAppProductSubmission` método crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el método `SubmitNewInAppProductSubmission` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos del complemento especificado](get-an-add-on.md).
 2. A continuación, [elimina el envío pendiente del complemento](delete-an-add-on-submission.md), si existe uno.
@@ -92,13 +92,13 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 5. A continuación, lo [actualizaciones](update-an-add-on-submission.md) y, a continuación, [confirma](commit-an-add-on-submission.md) el nuevo envío al centro de partners.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-an-add-on-submission.md) hasta que el envío se confirma correctamente.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
 
 <span id="create-flight-submission" />
 
 ## <a name="create-a-package-flight-submission"></a>Crear un envío de paquete piloto
 
-En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de paquete piloto. Para ello, el ```SubmitNewFlightSubmission``` método crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el método ```SubmitNewFlightSubmission``` realiza estas tareas:
+En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de paquete piloto. Para ello, el `SubmitNewFlightSubmission` método crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el método `SubmitNewFlightSubmission` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos del paquete piloto especificado](get-a-flight.md).
 2. A continuación, [elimina el envío pendiente del paquete piloto](delete-a-flight-submission.md), si existe uno.
@@ -107,7 +107,7 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 5. A continuación, lo [actualizaciones](update-a-flight-submission.md) y, a continuación, [confirma](commit-a-flight-submission.md) el envío nuevo a PartnerCenter.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-a-flight-submission.md) hasta que el envío se confirma correctamente.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]
 
 <span id="utilities" />
 
@@ -118,7 +118,7 @@ Los siguientes métodos de utilidad muestran estas tareas:
 * Cómo cargar un archivo ZIP que contiene los nuevos recursos para el envío de una aplicación o complemento a Azure Blob Storage. Para obtener más información sobre cómo cargar un archivo ZIP a Azure Blob Storage para envíos de aplicaciones y complementos, consulta las instrucciones correspondientes en [Crear un envío de aplicación](manage-app-submissions.md#create-an-app-submission), [Crear un envío de complemento](manage-add-on-submissions.md#create-an-add-on-submission) y [Crear un envío de paquete piloto](manage-flight-submissions.md#create-a-package-flight-submission).
 * Cómo controlar las respuestas a solicitudes
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L433-L490)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L433-L490)]
 
 <span id="code-listing" />
 
@@ -126,7 +126,7 @@ Los siguientes métodos de utilidad muestran estas tareas:
 
 El listado de código siguiente contiene todos los ejemplos anteriores organizados en un archivo de origen.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L1-L491)]
+[!code-java[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L1-L491)]
 
 ## <a name="related-topics"></a>Temas relacionados
 

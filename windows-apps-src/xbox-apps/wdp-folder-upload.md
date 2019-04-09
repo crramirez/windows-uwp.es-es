@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
-ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 870d203271cb75ecf5531106bb2c10b3736db9b9
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244051"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>Cargar una carpeta en el directorio de desarrollo
 
@@ -21,8 +21,8 @@ Puedes cargar una carpeta completa de una vez en el id. de la carpeta conocida p
 
 Método      | URI de la solicitud
 :------     | :------
-POST | /api/app/packagemanager/upload 
-<br />
+EXPONER | /api/app/packagemanager/upload 
+
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
@@ -30,7 +30,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 Parámetro del URI      | Descripción
 :------     | :-----
 destinationFolder (necesario) | El nombre de la carpeta de destino de la carpeta que se va a cargar. Esta carpeta se colocará en d:\developmentfiles\LooseApps en la consola. El nombre de esta carpeta debe estar codificado en Base64, ya que puede contener separadores de ruta de acceso si la carpeta es una subcarpeta de LooseApps.
-<br />
+
 
 **Encabezados de solicitud**
 
@@ -51,7 +51,7 @@ Código de estado HTTP      | Descripción
 200 | Correcto
 4XX | Códigos de error
 5XX | Códigos de error
-<br />
+
 **Familias de dispositivos disponibles**
 
 * Windows Xbox

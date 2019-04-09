@@ -2,16 +2,16 @@
 Description: Puedes seleccionar las capturas de pantalla, logotipos y otros activos gráficos (como tráileres e imágenes promocionales) para incluirlos en la descripción de la aplicación en la Tienda.
 title: Capturas de pantalla, imágenes y tráileres de aplicaciones
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
-ms.date: 10/31/2018
+ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a27763d76d2be65c7e0d2c6ccaeb0cd13123bdae
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244317"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -128,7 +128,7 @@ Sigue estas recomendaciones para facilitar tus tráileres de manera eficaz:
 
 También debes seguir los requisitos que se describen a continuación.
 
-**Para agregar los finalizadores a la lista:**
+**Para agregar tráileres a tu descripción:**
 1. Subir el **archivo de vídeo** de tu tráiler en el cuadro indicado. También se muestra un menú desplegable en caso de que también quieras reutilizar una tráiler que ya has subido (quizá para descripción de Store en un idioma diferente).
 2. Una vez que hayas subido el tráiler, tendrás que subir una **imagen en miniatura** que lo complemente. Debe ser un archivo .png de 1920 x 1080 píxeles y, por lo general, suele ser una imagen estática sacada del tráiler.
 3. Haz clic en el icono de lápiz para agregar un **título** para tu tráiler (255 caracteres o menos).
@@ -144,7 +144,7 @@ Para quitar un tráiler de una descripción, haz clic en la **X** junto a su nom
 
 Al proporcionar los tráileres, asegúrate de seguir estos requisitos:
 
-- El formato del vídeo debe ser MOV o MP4. 
+- El formato del vídeo debe ser MOV o MP4. Si está cargando el vídeo de 4K, MP4 solo se admite.
 - La duración del vídeo no debe superar los 60 segundos.
 - El tamaño del archivo del tráiler no debe superar los 2 GB. 
 - La resolución de vídeo debe ser 1920 x 1080 píxeles o 3840 x 2160 píxeles.
@@ -158,61 +158,19 @@ Existen requisitos adicionales según el tipo de archivo.
 
 #### <a name="mov"></a>MOV
 
-<table>
-<tr>
-<td>
+| Vídeo | Audio | 
+| --- | --- | 
+| <ul><li>1080p ProRes (alta calidad cuando corresponda)</li><li>Velocidad de fotogramas nativa; 29,97 FPS (preferida)</li></ul> | <ul><li>Estéreo necesario</li><li>Nivel de Audio recomendado: -16 LKFS/LUFS</li></ul> |
 
-**Vídeo:**
-
-<ul>
-<li>1080p ProRes (alta calidad cuando corresponda)</li>
-<li>Velocidad de fotogramas nativa; 29,97 FPS (preferida)</li>
-</ul>
-</td>
-<td>
-
-**Audio:**
-
-<ul>
-<li>Estéreo necesario</li>
-<li>Nivel de Audio recomendado: -16 LKFS/LUFS</li>
-</ul> 
-</td>
-</tr>
-</table>
 
 #### <a name="mp4"></a>MP4
 
-<table>
-<tr>
-<td>
+| Vídeo | Audio |
+| --- | --- |
+| <ul><li>Códec: [H.264](https://docs.microsoft.com/en-us/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>Escaneo progresivo (no entrelazado)</li><li>Perfil alto</li><li>2 fotogramas B consecutivos</li><li>GOP cerrado. GOP de la mitad de la velocidad de fotogramas</li><li>CABAC</li><li>50 MB/s </li><li>Espacio de colores: 4.2.0</li></ul> | <ul><li>Códec: AAC-LC</li><li>Canales: Estéreo o sonido envolvente</li><li>Frecuencia de muestreo: 48 KHz</li><li>Velocidad de bits de audio: 384 KB/s para estéreo, 512 KB/s para el sonido envolvente</li></ul> |
 
-**Vídeo:**
-
-<ul>
-<li>Códec: H.264</li>
-<li>Escaneo progresivo (no entrelazado)</li>
-<li>Perfil alto</li>
-<li>2 fotogramas B consecutivos</li>
-<li>GOP cerrado. GOP de la mitad de la velocidad de fotogramas</li>
-<li>CABAC</li>
-<li>50 MB/s </li>
-<li>Espacio de colores: 4.2.0</li>
-</ul>
-</td>
-<td>
-
-**Audio:**
-
-<ul>
-<li>Códec: AAC-LC</li>
-<li>Canales: Estéreo o sonido envolvente</li>
-<li>Frecuencia de muestreo: 48 kHz</li>
-<li>Velocidad de bits de audio: 384 KB/s para estéreo, 512 KB/s para el sonido envolvente</li>
-</ul>
-</td>
-</tr>
-</table>
+> [!WARNING]
+> Los clientes no pueden escuchar el audio de archivos MP4 codificados con códecs que no sea AVC1.
 
 Para los archivos de Mezzanine H.264, se recomienda lo siguiente:
 - Contenedor: MP4

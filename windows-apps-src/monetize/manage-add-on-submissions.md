@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submissions, envíos de complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d3bf92e308d42b9dd93539ebbe44525067f23b6f
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647220"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335133"
 ---
 # <a name="manage-add-on-submissions"></a>Manage add-on submissions (Administrar envíos de complemento)
 
@@ -51,7 +51,7 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="get-status-for-an-add-on-submission.md">Obtener el estado de presentación de un complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
 <td align="left"><a href="create-an-add-on-submission.md">Crear una nueva presentación de complemento</a></td>
 </tr>
@@ -61,12 +61,12 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="update-an-add-on-submission.md">Actualizar la presentación de un complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-add-on-submission.md">Confirme el envío de un complemento nuevo o actualizado</a></td>
 </tr>
 <tr>
-<td align="left">DELETE</td>
+<td align="left">SUPRIMIR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-an-add-on-submission.md">Eliminar un envío de complemento</a></td>
 </tr>
@@ -85,7 +85,7 @@ Para crear un envío de un complemento, sigue este proceso.
 
 3. Ejecuta el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado. Para obtener más información, consulta [Crear un envío de complemento](create-an-add-on-submission.md).
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions
     ```
 
@@ -98,7 +98,7 @@ Para crear un envío de un complemento, sigue este proceso.
 
 5. Actualiza los [datos de envío](#add-on-submission-object) con todos los cambios necesarios para el nuevo envío y ejecuta el siguiente método para actualizar el envío. Para obtener más información, consulta [Actualizar un envío de complemento](update-an-add-on-submission.md).
 
-    ```
+    ```json
     PUT https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}
     ```
       > [!NOTE]
@@ -121,13 +121,13 @@ Para crear un envío de un complemento, sigue este proceso.
 
 5. Ejecuta el siguiente método para confirmar el envío. Se enviará una alerta centro de partners que haya terminado con el envío y que ahora se deben aplicar las actualizaciones a su cuenta. Para obtener más información, consulta [Confirmar un envío de complemento](commit-an-add-on-submission.md).
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
     ```
 
 6. Ejecuta el siguiente método para comprobar el estado de confirmación. Para obtener más información, consulta [Obtener el estado de un envío de complemento](get-status-for-an-add-on-submission.md).
 
-    ```
+    ```json
     GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status
     ```
 
@@ -297,7 +297,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción           |
 |-----------------|---------|------|
-|  name               |    string     |   Nombre de la venta.    |     
+|  NAME               |    string     |   Nombre de la venta.    |     
 |  basePriceId               |   string      |  [Franja de precios](#price-tiers) que se usará para el precio base de la venta.    |     
 |  startDate               |   string      |   Fecha de inicio de la venta en formato ISO 8601.  |     
 |  endDate               |   string      |  Fecha de finalización de la venta en formato ISO 8601.      |     
@@ -324,7 +324,7 @@ Este recurso contiene información adicional acerca de las advertencias o los er
 | Valor           | Tipo    | Descripción    |
 |-----------------|---------|------|
 |  code               |    string     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia.   |     
-|  details               |     string    |  Mensaje con más detalles sobre el problema.     |
+|  detalles               |     string    |  Mensaje con más detalles sobre el problema.     |
 
 <span id="certification-report-object" />
 

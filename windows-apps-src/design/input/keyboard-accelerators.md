@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e898b0552a9485cd15079a37940a2151e4bc9f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9cc696746de837c4883ae4a9ee8ebcf42cb78b12
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590740"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822890"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -28,7 +28,7 @@ Consulta el tema [Teclas de acceso](access-keys.md) para obtener más informaci�
 > [!NOTE]
 > Un teclado es indispensable para los usuarios que tienen ciertas discapacidades (véase [Accesibilidad del teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Normalmente, los aceleradores incluyen las teclas de función F1 a F12 o alguna combinación de una tecla estándar emparejada con una o más teclas modificadoras (CTRL, Mayús).
 
@@ -618,12 +618,9 @@ public class MyListView : ListView
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Interacciones de teclado](keyboard-interactions.md)
-* [Teclas de acceso](access-keys.md)
+- [Interacciones de teclado](keyboard-interactions.md)
+- [Teclas de acceso](access-keys.md)
 
-**Ejemplos**
-* [Galería de controles de XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+### <a name="samples"></a>Muestras
 
-
- 
-
+- [Galería de controles de XAML](https://github.com/Microsoft/Xaml-Controls-Gallery)

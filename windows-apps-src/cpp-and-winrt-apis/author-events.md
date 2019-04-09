@@ -5,19 +5,19 @@ ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, autor, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5c410d209972a0221928548901f79bd599c67eae
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644490"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921701"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
 Este tema muestra cómo crear un componente de Windows Runtime con una clase en tiempo de ejecución que representa una cuenta bancaria, lo cual genera un evento cuando su saldo pasa a estar en débito. También muestra una aplicación principal que consume la clase en tiempo de ejecución de la cuenta bancaria, llama a una función para ajustar el saldo y controla cualquier evento que surja.
 
 > [!NOTE]
-> Para obtener información sobre cómo instalar y usar el [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) extensión de Visual Studio (VSIX) (que proporciona compatibilidad con plantillas de proyecto) vea [compatibilidad con Visual Studio C++ / c++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obtener información sobre cómo instalar y usar el [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) extensión de Visual Studio (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y admitir la compilación), consulte [compatibilidad con Visual Studio C++/ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
@@ -41,7 +41,7 @@ namespace BankAccountWRC
 }
 ```
 
-Guarda el archivo. No compilará el proyecto hasta su finalización en este momento, pero crear ahora es algo útil hacer porque genera los archivos de código fuente en el que implementará el **BankAccount** clase en tiempo de ejecución. Así que ahora la compilación (los errores de compilación puede esperar ver en esta fase tienen que ver con `Class.h` y `Class.g.h` no haberse encontrado). Durante el proceso de compilación, el `midl.exe` se ejecuta la herramienta para crear el archivo de metadatos del componente en tiempo de ejecución de Windows (que es `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Después se ejecutará la herramienta `cppwinrt.exe` (con la opción `-component`) para generar archivos de código fuente y ayudarte a crear tu componente. Estos archivos incluyen códigos auxiliares para ayudarle a comenzar a implementar el **BankAccount** clase en tiempo de ejecución que declaró en el archivo IDL. Estos archivos de código auxiliar son `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` y `BankAccount.cpp`
+Guarde el archivo. No compilará el proyecto hasta su finalización en este momento, pero crear ahora es algo útil hacer porque genera los archivos de código fuente en el que implementará el **BankAccount** clase en tiempo de ejecución. Así que ahora la compilación (los errores de compilación puede esperar ver en esta fase tienen que ver con `Class.h` y `Class.g.h` no haberse encontrado). Durante el proceso de compilación, el `midl.exe` se ejecuta la herramienta para crear el archivo de metadatos del componente en tiempo de ejecución de Windows (que es `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Después se ejecutará la herramienta `cppwinrt.exe` (con la opción `-component`) para generar archivos de código fuente y ayudarte a crear tu componente. Estos archivos incluyen códigos auxiliares para ayudarle a comenzar a implementar el **BankAccount** clase en tiempo de ejecución que declaró en el archivo IDL. Estos archivos de código auxiliar son `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` y `BankAccount.cpp`
 
 Haga clic en el nodo del proyecto y haga clic en **Abrir carpeta en el Explorador de archivos**. Se abre la carpeta del proyecto en el Explorador de archivos. Allí, copie los archivos de código auxiliar `BankAccount.h` y `BankAccount.cpp` desde la carpeta `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` y en la carpeta que contiene los archivos de proyecto, que es `\BankAccountWRC\BankAccountWRC\`y reemplazar los archivos en el destino. Ahora, vamos a abrir `BankAccount.h` y `BankAccount.cpp` e implementar nuestra clase en tiempo de ejecución. En `BankAccount.h`, agrega dos miembros privados a la implementación (*no* la implementación de fábrica) de BankAccount.
 
@@ -285,4 +285,4 @@ Tenga en cuenta que estas instrucciones no se aplican necesariamente si va a dis
 ## <a name="related-topics"></a>Temas relacionados
 * [Crear API con C++/WinRT](author-apis.md)
 * [Consumir API con C++/WinRT](consume-apis.md)
-* [Controlar eventos mediante el uso de delegados en C / c++ / WinRT](handle-events.md)
+* [Controlar eventos usando delegados en C++/WinRT](handle-events.md)

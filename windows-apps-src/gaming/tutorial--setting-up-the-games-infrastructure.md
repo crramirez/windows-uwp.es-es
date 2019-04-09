@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, el programa de instalación, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 789b235220e5d22b85f7b3038d5d468729439501
+ms.sourcegitcommit: 7a3d28472901edbe4ecdde7e1a01a505ee5bc028
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608710"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658771"
 ---
 # <a name="set-up-the-game-project"></a>Configurar el proyecto de juego
 
@@ -89,9 +89,9 @@ int main(Platform::Array<Platform::String^>^)
 }
 ```
 
-En este método, crea una instancia del proveedor de vista Direct3D a partir de la fábrica del proveedor de vista (**Direct3DApplicationSource**, definido en **App.h**) y la pasa al singleton de la aplicación llamando a ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)). Esto significa que el punto de partida de tu juego vivirá en el cuerpo de la implementación del método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) y, en este caso, es el **App::Run**. 
+Este método crea una instancia del proveedor de la vista de Direct3D desde la fábrica de proveedor de vistas (**Direct3DApplicationSource**, definido en `App.h`) y lo pasa a singleton de la aplicación mediante una llamada a [  **CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run). Los métodos de la vista del marco de trabajo (que es el **aplicación** clase en este ejemplo) se llaman en el orden **inicializar**-**SetWindow** - **Carga**-**OnActivated**-**ejecutar**-**desinicializar**. Una llamada a **CoreApplication::Run** inicia ese lifycycle. El bucle principal de su juego reside en el cuerpo de la implementación de la [ **IFrameworkView::Run** método](/uwp/api/windows.applicationmodel.core.iframeworkview.run), y en este caso, tiene la **App::Run**.
 
-Desplázate hasta encontrar el método **App:: Run** en **App.cpp**. Aquí te mostramos el código:
+Desplázate hasta encontrar el método **App:: Run** en **App.cpp**. Este es el código.
 
 ```cpp
 //This method is called after the window becomes active.

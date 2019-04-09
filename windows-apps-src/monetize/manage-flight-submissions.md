@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 19ddd43d4e61480764882f1b10e6240aa2afeb8c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 74d93c700ecbfe3db39bf1ffc4c90e107b80f5a5
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662730"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335092"
 ---
 # <a name="manage-package-flight-submissions"></a>Manage package flight submissions (Administrar envíos de paquetes piloto)
 
@@ -51,7 +51,7 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="get-status-for-a-flight-submission.md">Obtener el estado de un envío de vuelos de paquete existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
 <td align="left"><a href="create-a-flight-submission.md">Crear un nuevo envío de vuelos de paquete</a></td>
 </tr>
@@ -61,12 +61,12 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="update-a-flight-submission.md">Actualizar un envío de vuelos de paquete existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-a-flight-submission.md">Confirme el envío de vuelo de un paquete nuevo o actualizado</a></td>
 </tr>
 <tr>
-<td align="left">DELETE</td>
+<td align="left">SUPRIMIR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-a-flight-submission.md">Eliminar el envío de un vuelo de paquetes</a></td>
 </tr>
@@ -85,7 +85,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
 3. [Crea un envío de paquete piloto](create-a-flight-submission.md) ejecutando el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
     ```
 
@@ -98,7 +98,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
 5. Revisa los datos de [envío de piloto](#flight-submission-object) con todos los cambios necesarios para el nuevo envío y ejecuta el siguiente método para [actualizar el envío de paquete piloto](update-a-flight-submission.md).
 
-    ```
+    ```json
     PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
     ```
       > [!NOTE]
@@ -121,13 +121,13 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
 5. Ejecuta el siguiente método para [confirmar el envío de paquete piloto](commit-a-flight-submission.md). Se enviará una alerta centro de partners que haya terminado con el envío y que ahora se deben aplicar las actualizaciones a su cuenta.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
     ```
 
 6. Comprueba el estado de confirmación ejecutando el siguiente método para [obtener el estado del envío de paquete piloto](get-status-for-a-flight-submission.md).
 
-    ```
+    ```json
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
     ```
 
@@ -185,17 +185,17 @@ Después de habilitar un lanzamiento de paquete gradual para un envío de paquet
 <td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obtener la información de implementación gradual de envío de vuelo de un paquete</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">El porcentaje de implementación gradual para el envío de vuelo de un paquete de actualización</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Detener la implementación gradual para el envío de un vuelo de paquetes</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalizar la implementación gradual para el envío de un vuelo de paquetes</a></td>
 </tr>
@@ -290,7 +290,7 @@ Este recurso contiene información adicional acerca de las advertencias o los er
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|------|
 |  code               |    string     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia. |  
-|  details               |     string    |  Mensaje con más detalles sobre el problema.     |
+|  detalles               |     string    |  Mensaje con más detalles sobre el problema.     |
 
 
 <span id="certification-report-object" />

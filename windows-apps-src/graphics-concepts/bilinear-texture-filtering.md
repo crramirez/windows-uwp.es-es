@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 437650883b4782ca02c0daf24cc8ebed01d954f6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1e76aeceafa3f75c78bd7078f57fa9a3b1edee2f
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651260"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291663"
 ---
 # <a name="bilinear-texture-filtering"></a>Filtrado de texturas bilineales
-
 
 El *filtrado bilineal* calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo. Este enfoque filtrado es más precisos y común que el filtrado por punto más cercano. Este enfoque es eficaz, porque está implementado en el hardware de gráficos moderno.
 
@@ -37,13 +36,13 @@ El esquema más sencillo es simplemente que el muestrario devuelva el color del 
 
 Un esquema de filtrado ligeramente más preciso y común es calcular el promedio ponderado de los 4 elementos de textura más cercano al punto de muestreo; esto se denomina *filtrado bilineal*. La carga de cálculos adicionales el filtrado bilineal suele ser insignificante, porque esta rutina está implementada en el hardware de gráficos moderno. Estos son los colores que obtenemos en algunos puntos de muestra diferentes con el filtrado bilineal:
 
-```
+```cpp
 UV: (0.5, 0.5)
 ```
 
 Este punto se encuentra en el borde exacto entre los elementos de textura rojo, verde, azul y blanco. El color que devuelve el muestrario es gris:
 
-```
+```cpp
   0.25 * (255, 0, 0)
   0.25 * (0, 255, 0) 
   0.25 * (0, 0, 255) 
@@ -52,13 +51,13 @@ Este punto se encuentra en el borde exacto entre los elementos de textura rojo, 
 = (128, 128, 128)
 ```
 
-```
+```cpp
 UV: (0.5, 0.375)
 ```
 
 Este punto se encuentra en el punto medio del borde entre los elementos de textura rojo y verde. El color que devuelve el muestrario es amarillo-gris (ten en cuenta que las contribuciones de los elementos de textura azul y blanco se escalan a 0):
 
-```
+```cpp
   0.5 * (255, 0, 0)
   0.5 * (0, 255, 0) 
   0.0 * (0, 0, 255) 
@@ -67,13 +66,13 @@ Este punto se encuentra en el punto medio del borde entre los elementos de textu
 = (128, 128, 0)
 ```
 
-```
+```cpp
 UV: (0.375, 0.375)
 ```
 
 Esta es la dirección del elemento de textura rojo, que es el color devuelto (todos los demás elementos de textura en el cálculo del filtrado se ponderan como 0):
 
-```
+```cpp
   1.0 * (255, 0, 0)
   0.0 * (0, 255, 0) 
   0.0 * (0, 0, 255) 

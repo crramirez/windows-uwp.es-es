@@ -7,22 +7,21 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a65a3532fe401f31fbf0da656aff1a141fa71a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d21f60694c55edacc7a5723e7ed470c37af992ab
+ms.sourcegitcommit: 9031a51f9731f0b675769e097aa4d914b4854e9e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636310"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618432"
 ---
 # <a name="mathematics-of-lighting"></a>Cálculos de iluminación
-
 
 El modelo de luz de Direct3D cubre la iluminación de ambiente, difusa, especular y de emisión. Es suficiente flexibilidad para resolver una gran variedad de situaciones de iluminación. La cantidad total de luz en una escena se conoce como *iluminación global*.
 
 La iluminación global se calcula del siguiente modo:
 
-```
-Global Illumination = Ambient Light + Diffuse Light + Specular Light + Emissive Light 
+```cpp
+global_illumination = ambient_lighting + diffuse_lighting + specular_lighting + emissive_lighting;
 ```
 
 [La luz de ambiente](ambient-lighting.md) es iluminación constante. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.

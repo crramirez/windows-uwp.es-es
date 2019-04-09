@@ -6,15 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a01814729e38668e05201b4b7c8876dc150c488e
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640150"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291773"
 ---
 # <a name="transform-overview"></a>Introducción a las transformaciones
-
 
 Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D.
 
@@ -63,7 +62,7 @@ Las matrices se escriben en orden de fila-columna. Una matriz que escala uniform
 
 En C++, Direct3D declara matrices como una matriz de dos dimensiones, una estructura de matriz. El siguiente ejemplo muestra cómo inicializar una estructura de [**D3DMATRIX**](https://msdn.microsoft.com/library/windows/desktop/bb172573) para que funcione como una matriz de escala uniforme (factor de escala "s").
 
-```
+```cpp
 D3DMATRIX scale = {
     5.0f,            0.0f,            0.0f,            0.0f,
     0.0f,            5.0f,            0.0f,            0.0f,
@@ -72,7 +71,7 @@ D3DMATRIX scale = {
 };
 ```
 
-## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>Traducir
+## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>Translate
 
 
 La siguiente ecuación traslada el punto (x, y, z) a un nuevo punto (x', y', z').
@@ -81,7 +80,7 @@ La siguiente ecuación traslada el punto (x, y, z) a un nuevo punto (x', y', z')
 
 Puedes crear manualmente una matriz de traslación en C++. El siguiente ejemplo muestra el código fuente de una función que crea una matriz para trasladar los vértices.
 
-```
+```cpp
 D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
     D3DXMATRIX ret;
 
@@ -121,7 +120,7 @@ En estas matrices de ejemplo, la letra griega theta significa el ángulo de rota
 
 El siguiente código muestra una función para controlar la rotación alrededor del eje X.
 
-```
+```cpp
     // Inputs are a pointer to a matrix (pOut) and an angle in radians.
     float sin, cos;
     sincosf(angle, &sin, &cos);  // Determine sin and cos of angle

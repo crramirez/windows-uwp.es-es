@@ -5,16 +5,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: c934a88dd1825fb0111083d71eb25e477956d79c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 71c47767cf026b962f682fb30ca93758dbd5e227
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244081"
 ---
 #<a name="xbox-live-user-management"></a>Administración # de Xbox Live del usuario
 
-**Solicitud**
+## <a name="request"></a>Solicitud
 
 Puedes obtener la lista de los usuarios en la consola o actualizar la lista al agregar, quitar, iniciar sesión, cerrar sesión o modificar los usuarios existentes.
 
@@ -22,7 +22,7 @@ Puedes obtener la lista de los usuarios en la consola o actualizar la lista al a
 | ------------- |-----------------|
 | GET           | /ext/user |
 | PUT           | /ext/user |
-<br>
+
 
 **Parámetros de URI**
 
@@ -45,9 +45,9 @@ Las llamadas a PUT deben incluir una matriz JSON con la estructura siguiente:
   * SponsoredUser (opcional): bool que especifica si agregar un usuario patrocinado.
   * Delete (opcional): valor booleano que especifica para eliminar este usuario de la consola
 
-###<a name="response"></a>Respuesta ###
+## <a name="response"></a>Respuesta
 
-**Cuerpo de respuesta**
+**Cuerpo de la respuesta**
 
 Las llamadas a GET devolverán una matriz JSON con las propiedades siguientes:
 
@@ -70,6 +70,3 @@ Esta API tiene los siguientes códigos de estado previstos.
 | 204                | La llamada a PUT se realizó correctamente y se han actualizado los usuarios de la consola |
 | 4XX                | Varios errores de formato o datos de solicitud no válidos |
 | 5XX                | Códigos de error para errores inesperados |
-<br>
-
-

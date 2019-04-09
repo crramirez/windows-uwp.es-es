@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 18208986d7d07e4d437e52dce844deecc03cf1f6
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240033"
 ---
 # <a name="composition-animations"></a>Animaciones de composición
 
@@ -37,7 +37,7 @@ Aquí, un efecto visual de paralaje mueve distintos objetos a diferentes velocid
 
 ## <a name="using-compositionanimations-to-create-motion"></a>Usar CompositionAnimations para crear el movimiento
 
-Para generar el movimiento de la interfaz de usuario, los desarrolladores pueden acceder a las animaciones en XAML (vínculo a guiones gráficos aquí) o en la capa Visual. Las animaciones en la capa Visual proporcionan a los desarrolladores con una serie de ventajas:
+Para generar el movimiento de la interfaz de usuario, los desarrolladores pueden acceder a las animaciones en XAML o en la capa Visual. Las animaciones en la capa Visual proporcionan a los desarrolladores con una serie de ventajas:
 
 - Rendimiento: en lugar de la animación enlazado a subprocesos de interfaz de usuario tradicionales, las animaciones de la plataforma de interfaz de usuario de Windows funcionan en un subproceso independiente a 60 FPS, permitir experiencias de movimiento suave.
 - : Modelo de plantillas de las animaciones en la capa de interfaz de usuario de Windows son plantillas, significado puede usar una animación única en varios objetos y modificar las propiedades o parámetros sin preocuparse de obstrucción anterior utiliza.

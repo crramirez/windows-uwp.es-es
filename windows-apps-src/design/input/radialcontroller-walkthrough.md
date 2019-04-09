@@ -3,15 +3,15 @@ ms.assetid: ''
 title: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP
 description: Un tutorial paso a paso para agregar compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP.
 keywords: dial, radial, tutorial
-ms.date: 01/25/2018
+ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1c8042bbe3ad8a37802b592e4e638a7c42e79a6d
+ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643990"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221471"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP
 
@@ -612,3 +612,35 @@ Para verlo en acción (necesitarás Surface Studio):
 ## <a name="summary"></a>Resumen
 
 Enhorabuena, ha completado la *Tutorial introductorio: Admitir la Surface Dial (y otros dispositivos de la rueda) en su aplicación para UWP*! Te hemos mostramos el código básico necesario para la compatibilidad con un dispositivo de rueda en tus aplicaciones para UWP y cómo proporcionar algunas de las mejores experiencias de usuario compatibles con las API de **RadialController**.
+
+## <a name="related-articles"></a>Artículos relacionados
+
+[Superficies interacciones de acceso telefónico](windows-wheel-interactions.md)
+
+### <a name="api-reference"></a>Referencia de la API
+
+- [**RadialController** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)
+- [**RadialControllerButtonClickedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [**RadialControllerConfiguration** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerConfiguration) 
+- [**RadialControllerControlAcquiredEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [**RadialControllerMenu** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenu) 
+- [**RadialControllerMenuItem** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem) 
+- [**RadialControllerRotationChangedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [**RadialControllerScreenContact** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact) 
+- [**RadialControllerScreenContactContinuedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [**RadialControllerScreenContactStartedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [**RadialControllerMenuKnownIcon** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuKnownIcon) 
+- [**RadialControllerSystemMenuItemKind** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
+
+### <a name="samples"></a>Muestras
+
+#### <a name="topic-samples"></a>Ejemplos del tema
+
+[Personalización de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
+
+#### <a name="other-samples"></a>Otras muestras
+[Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
+
+[Ejemplos de la plataforma de Windows universales (C# y C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+
+[Ejemplo de escritorio clásico de Windows](https://aka.ms/radialcontrollerclassicsample)

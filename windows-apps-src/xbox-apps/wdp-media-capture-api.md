@@ -6,23 +6,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a27d13f7ceedd14a84d5b4b4aa1233445037a1f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7dcd4c6c39a983ab11bfacd391bfa78942601258
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244061"
 ---
 # <a name="media-capture-api-reference"></a>Referencia de API de captura multimedia #
 
-**Solicitud**
+## <a name="request"></a>Solicitud
 
 Puedes capturar una representación de PNG de la pantalla actual mediante el siguiente formato de solicitud.
 
 | Método        | URI de la solicitud     | 
 | ------------- |-----------------|
 | GET           | /ext/screenshot |
-<br>
+
 
 **Parámetros de URI**
 
@@ -32,7 +32,6 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
 | descargar (opcional)| Un valor booleano que indica si los encabezados de respuesta HTTP deben configurarse para indicar que el explorador del host debe descargar la captura de pantalla como datos adjuntos en lugar de representarla en el explorador.  |
-<br>
 
 **Encabezados de solicitud**
 
@@ -42,7 +41,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 * Ninguno
 
-###<a name="response"></a>Respuesta ###
+## <a name="response"></a>Respuesta
 
 **Código de estado**
 

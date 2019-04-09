@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: API de Windows 10, uwp, WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: 2c297a04786c6fbf1eb0600e63a04a6d88585864
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2719c3228c95075eb2a940d12b6c91049b67f524
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648710"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291793"
 ---
 # <a name="wns-notification-priorities"></a>Prioridades de notificación de WNS
 Al establecer la prioridad de una notificación con un encabezado simple en mensajes POST WNS, puede controlar cómo se entregan las notificaciones en situaciones confidenciales de la batería.
@@ -72,4 +72,3 @@ Para excluir una aplicación de ahorro de batería, los usuarios deben ir a la "
 ## <a name="related-topics"></a>Temas relacionados
 - [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 - [Solicitando permiso para ejecutar en segundo plano](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_)
-- 

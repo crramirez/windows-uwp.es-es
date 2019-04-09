@@ -1,17 +1,17 @@
 ---
 description: Herramientas y técnicas para depurar y probar cómo funciona tu aplicación con Administración del ciclo de vida de los procesos.
 title: Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
-ms.date: 02/08/2017
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b3e37d4de3a346e0f29909727a46d3b31f9d59d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 94cbad6e497ea2f5b36a07a6b039bfc293175c4c
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244351"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
 
@@ -25,11 +25,11 @@ El depurador integrado de Visual Studio 2015 puede ayudarte a investigar posible
 
 ## <a name="the-plmdebug-tool"></a>La herramienta PLMDebug
 
-PLMDebug.exe es una herramienta de línea de comandos que te permite controlar el estado PLM de un paquete de aplicación y se incluye como parte de Windows SDK. Después de instalarlo, la herramienta reside en *C:\Program archivos (x86) \Windows Kits\10\Debuggers\x64* de manera predeterminada. 
+PLMDebug.exe es una herramienta de línea de comandos que te permite controlar el estado PLM de un paquete de aplicación y se incluye como parte de Windows SDK. Después de instalarlo, la herramienta reside en *C:\Program archivos (x86) \Windows Kits\10\Debuggers\x64* de manera predeterminada.
 
 PLMDebug también te permite deshabilitar PLM de cualquier paquete de la aplicación instalado, lo cual es necesario para algunos depuradores. La desactivación de PLM impide que el servicio Agente de tiempo de ejecución finalice la aplicación antes de poder depurar. Para deshabilitar PLM, usa el conmutador **/enableDebug**, seguido por el *nombre completo del paquete* de la aplicación para UWP (el nombre corto, el nombre de familia de paquete o el AUMID de un paquete no funcionará):
 
-```
+```cmd
 plmdebug /enableDebug [PackageFullName]
 ```
 
@@ -41,7 +41,7 @@ Opcionalmente, puedes especificar una ruta de acceso absoluta a un depurador que
 
 Puedes evitar esta limitación si escribes un script o con una herramienta que identifique el proceso del juego y después el shell ejecuta VSJITDebugger.exe, pasando el PID de la aplicación para UWP. El siguiente ejemplo de código C# muestra un enfoque sencillo para lograr esto.
 
-```
+```cs
 using System.Diagnostics;
 
 namespace VSJITLauncher
@@ -76,13 +76,15 @@ namespace VSJITLauncher
 
 Ejemplo de uso de esto en conjunto con PLMDebug:
 
-```
+```cmd
 plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwgxxfcg "\"C:\VSJITLauncher.exe\" Game"
 ```
+
 donde `Game` es el nombre de proceso y `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwgxxfcg` es el nombre de paquete completo del paquete de la aplicación para UWP de ejemplo.
 
 Ten en cuenta que cada llamada a **/enableDebug** debe ser posterior a otra llamada PLMDebug con el conmutador **/disableDebug**. Además, la ruta de acceso a un depurador debe ser absoluta (no se admiten las rutas de acceso relativas).
 
 ## <a name="related-topics"></a>Temas relacionados
+
 - [Implementación y depuración de aplicaciones para UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuración, pruebas y rendimiento](index.md)

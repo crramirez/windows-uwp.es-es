@@ -5,12 +5,12 @@ ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 075eaf5c02e5bddb4b87d7e4aaf931cbfde53cdd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d010816b1ba4c9941aea7bdcdb4bd4c50038aca6
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59067840"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Elegir el tipo adecuado de canal de notificación de inserción
 
@@ -20,11 +20,11 @@ Este artículo cubre los tres tipos de canales de notificaciones de inserción U
 
 ## <a name="types-of-push-channels"></a>Tipos de canales de inserción 
 
-Existen tres tipos de canales de inserción que pueden usarse para enviar notificaciones a una aplicación para UWP. Estos son: 
+Existen tres tipos de canales de inserción que pueden usarse para enviar notificaciones a una aplicación para UWP. Estas sobrecargas son: 
 
-[Canal principal](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_): el canal de inserción "tradicional". Puede utilizarlo cualquier aplicación de la tienda para enviar notificaciones del sistema, iconos, sin procesar o de distintivos (vínculo a descripciones de notificaciones del sistema/de iconos/de distintivos)
+[Canal principal](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_): el canal de inserción "tradicional". Se puede usar cualquier aplicación en el almacén del sistema de envío, icono, sin procesar, o notificaciones. [Puedes obtener más información aquí](windows-push-notification-services--wns--overview.md).
 
-[Canal de iconos secundario](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_): se usa para enviar actualizaciones de iconos para iconos secundarios. Solo puede usarse para enviar notificaciones de iconos o distintivos o a un icono secundario anclado en la pantalla de inicio del usuario
+[Canal de icono secundario](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : se usa para insertar actualizaciones de icono en un mosaico secundario. Solo puede usarse para enviar notificaciones de iconos o distintivos o a un icono secundario anclado en la pantalla de inicio del usuario
 
 [Canal alternativo](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_): un nuevo tipo de canal que se agregó en la actualización Creators Update. Permite que las notificaciones sin procesar se envíen a cualquier aplicación para UWP, incluidas aquellas que no están registradas en la Tienda. 
 
@@ -38,10 +38,10 @@ Son los más usados actualmente en Windows y son adecuados para casi todos los e
 
 ### <a name="what-do-primary-channels-enable"></a>¿Qué permiten los canales principales?
 
--   **Envío de actualizaciones de icono o un distintivo en el icono principal.** Si el usuario ha elegido anclar tu icono a la pantalla de inicio, esta es tu oportunidad de que esté a la vista. Envía actualizaciones con información útil o avisos de experiencias dentro de la aplicación. 
--   **Cómo enviar notificaciones.** Las notificaciones son una oportunidad de poner inmediatamente determinada información ante el usuario. Las hace mostrar el shell en la parte superior de la mayoría de las aplicaciones y, aparecen en vivo en el centro de actividades, por lo que el usuario puede volver atrás e interactuar con ellas más tarde. 
+-   **Enviar actualizaciones de iconos o distintivos para el icono principal.** Si el usuario ha elegido anclar tu icono a la pantalla de inicio, esta es tu oportunidad de que esté a la vista. Envía actualizaciones con información útil o avisos de experiencias dentro de la aplicación. 
+-   **Envío de notificaciones del sistema.** Las notificaciones son una oportunidad de poner inmediatamente determinada información ante el usuario. Las hace mostrar el shell en la parte superior de la mayoría de las aplicaciones y, aparecen en vivo en el centro de actividades, por lo que el usuario puede volver atrás e interactuar con ellas más tarde. 
 -   **Envío de notificaciones sin procesar para desencadenar una tarea en segundo plano.** A veces, quieres realizar algún trabajo en nombre del usuario, en función de una notificación. Las notificaciones sin procesar permiten que se ejecuten las tareas en segundo plano de tu aplicación 
--   **Cifrado de mensajes en tránsito proporcionado por Windows mediante TLS.** Los mensajes se cifran en la red tanto al llegar a WNS como al ir hacia el dispositivo del usuario.  
+-   **Cifrado de mensajes en tránsito proporcionado por Windows con TLS.** Los mensajes se cifran en la red tanto al llegar a WNS como al ir hacia el dispositivo del usuario.  
 
 ### <a name="limitations-of-primary-channels"></a>Limitaciones de los canales principales
 
@@ -84,21 +84,21 @@ PushNotificationChannel channel =
 Los canales alternativos permiten a las aplicaciones enviar notificaciones de inserción sin registrarse en la Microsoft Store ni crear canales de inserción distintos del principal utilizado para la aplicación. 
  
 ### <a name="what-do-alternate-channels-enable"></a>¿Qué permiten los canales alternativos?
--   Enviar notificaciones de inserción sin procesar a una UWP que se ejecute en cualquier dispositivo Windows. Los canales alternativos solo permiten notificaciones sin procesar.
+-   Enviar notificaciones de inserción sin procesar a una UWP que se ejecute en cualquier dispositivo Windows. Canales alternativos solo permiten notificaciones sin procesar (pero todavía puede reactivar una tarea en segundo plano para mostrar notificaciones del sistema local o notificaciones de icono).
 -   Permite que las aplicaciones creen varios canales de inserción sin procesar para diferentes funciones de la aplicación. Una aplicación puede crear hasta 1000 canales alternativos, siendo válido cada uno de ellos durante 30 días. Cada uno de estos canales puede administrado o revocarlo por separado la aplicación.
 -   Los canales de inserción alternativos pueden crearse sin registrar una aplicación en la Microsoft Store. Si tu aplicación va a instalarse en dispositivos sin registrarla en la Microsoft Store., podrá seguir recibiendo notificaciones de inserción.
 -   Los servidores pueden enviar notificaciones con el protocolo las API y VAPID REST de W3C estándar. Los canales alternativos usan el protocolo estándar W3C, lo que permite simplificar la lógica del servidor que haya que mantener.
 -   Cifrado de mensaje completo, de principio a fin. Mientras el canal principal proporciona cifrado en tránsito, si quieres una máxima seguridad, los canales alternativos permiten a tu aplicación pasar a través de los encabezados de cifrado para proteger un mensaje. 
 
 ### <a name="limitations-of-alternate-channels"></a>Limitaciones de los canales alternativos
--   Las aplicaciones no pueden enviar notificaciones de tipos del sistema, iconos o distintivos. El canal alternativo limita la capacidad de enviar otros tipos de notificaciones. Tu aplicación seguirá pudiendo enviar notificaciones locales desde tareas en segundo plano. 
+-   Servidor de la aplicación no puede enviar la inserción del sistema, icono o distintivo de notificaciones de tipo. Solo puede enviar inserción de notificaciones sin procesar. Tu aplicación seguirá pudiendo enviar notificaciones locales desde tareas en segundo plano. 
 -   Requiere una API REST diferente a la de los canales primarios o secundarios de iconos. El uso de la API REST estándar de W3C significa que tu aplicación deberá tener una lógica diferente para enviar notificaciones de inserción del sistema o actualizaciones de iconos.
 
 ### <a name="creating-an-alternate-channel"></a>Creación de un canal alternativo 
 
 ```csharp
 PushNotificationChannel webChannel = 
-    await PushNotificationChannelManager.Current.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId);
+    await PushNotificationChannelManager.GetDefault().CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId);
 ```
 
 ## <a name="channel-type-comparison"></a>Comparación de tipos de canal
@@ -108,19 +108,19 @@ Esta es una comparación rápida entre los distintos tipos de canales:
 
 <tr class="header">
 <th align="left"><b>Tipo</b></th>
-<th align="left"><b>¿Notificación de inserción?</b></th>
-<th align="left"><b>¿Icono/notificación de inserción?</b></th>
-<th align="left"><b>¿Sin procesar notificaciones de inserción?</b></th>
+<th align="left"><b>¿Notificación del sistema?</b></th>
+<th align="left"><b>¿Notificación de icono, distintivo?</b></th>
+<th align="left"><b>¿Notificaciones de inserción sin procesar?</b></th>
 <th align="left"><b>Autenticación</b></th>
 <th align="left"><b>API</b></th>
-<th align="left"><b>¿Requerido el registro de Store?</b></th>
+<th align="left"><b>¿Es obligatorio el registro en la Tienda?</b></th>
 <th align="left"><b>Canales</b></th>
 <th align="left"><b>Cifrado</b></th>
 </tr>
 
 
 <tr class="odd">
-<td align="left">Primario</td>
+<td align="left">Principal</td>
 <td align="left">Sí</td>
 <td align="left">Sí, solo el icono principal</td>
 <td align="left">Sí</td>
@@ -168,10 +168,10 @@ En general, te recomendamos que uses el canal principal en la aplicación, con u
 * [Enviar una notificación de icono local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Notificaciones del sistema interactivas y adaptables](../tiles-and-notifications/adaptive-interactive-toasts.md)
 * [Inicio rápido: Enviar una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Cómo actualizar una notificación a través de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
+* [Cómo actualizar un distintivo mediante notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
 * [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Directrices y lista de comprobación para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://msdn.microsoft.com/library/windows/apps/hh465450)
+* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
+* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://msdn.microsoft.com/library/windows/apps/hh465435)
+* [Directrices y lista de comprobación de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Notificaciones sin procesar](raw-notification-overview.md)

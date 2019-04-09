@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bbde90d848d3bc8fb18a5ecf370c85121adc02f6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c38259c303673c3c3c5494470d721856fcaaf6c9
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620500"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291723"
 ---
 # <a name="domain-shader-ds-stage"></a>Fase del sombreador de dominios (DS)
-
 
 La fase del sombreador de dominios (DS) calcula la posición del vértice de un punto subdividido en la revisión de salida; calcula la posición del vértice correspondiente a cada muestra de dominio. Un sombreador de dominios se ejecuta una vez por punto de salida de la fase del teselador y tiene acceso de solo lectura a las constantes de revisión de salida y de revisión de salida del sombreador de casco, y a las coordenadas de UV de salida de la fase del teselador.
 
@@ -45,7 +44,7 @@ Cuando se completa el sombreador de dominios, la teselación finaliza y los dato
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
-```
+```hlsl
 void main( out    MyDSOutput result, 
            float2 myInputUV : SV_DomainPoint, 
            MyDSInput DSInputs,

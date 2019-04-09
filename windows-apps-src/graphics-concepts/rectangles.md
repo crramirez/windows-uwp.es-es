@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6ce91b47d2846f945a0e4a15f705491ab22e9dea
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608020"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291673"
 ---
 # <a name="rectangles"></a>Rectángulos
-
 
 En la programación de Direct3D y Windows, se hace referencia a los objetos de la pantalla en términos de rectángulos delimitadores. Los lados de un rectángulo delimitador siempre son paralelos a los lados de la pantalla, por lo que se puede describir el rectángulo por dos puntos, la esquina superior izquierda y la esquina inferior derecha.
 
@@ -24,7 +23,7 @@ En la programación de Direct3D y Windows, se hace referencia a los objetos de l
 
 La mayoría de las aplicaciones utilizan la estructura [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) (o un alias typedef definido para esta) para transmitir información acerca de un rectángulo delimitador y usarla al realizar la transferencia de bloques de bits a la pantalla o al realizar la detección de coincidencias. En C++, la estructura **RECT** tiene la siguiente definición.
 
-```
+```cpp
 typedef struct tagRECT { 
     LONG    left;    // This is the upper-left corner x-coordinate.
     LONG    top;     // The upper-left corner y-coordinate.

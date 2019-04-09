@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ec132ccb3099f7b5c9f4763a2b276bf6270da859
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601060"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291653"
 ---
 # <a name="hull-shader-hs-stage"></a>Fase del sombreador de casco (HS)
-
 
 La fase del sombreador de casco (HS) es una de las fases de teselación, que divide de forma eficaz una sola superficie de un modelo en muchos triángulos. La fase del sombreador de casco (HS) produce una revisión de geometría (y constantes de revisión) que corresponden a cada revisión de entrada (cuadrado, triángulo o línea). Un sombreador de casco se invoca una vez por revisión y transforma los puntos de control de entrada que definen una superficie de orden inferior en puntos de control que conforman una revisión. También hace algunos cálculos por revisión para proporcionar datos de la [fase del teselador (TS)](tessellator-stage--ts-.md) y la [fase del sombreador de dominios (DS)](domain-shader-stage--ds-.md).
 
@@ -52,7 +51,7 @@ Entre 1 y 32 puntos de control de salida, que juntos forman una revisión.
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
-```
+```hlsl
 [patchsize(12)]
 [patchconstantfunc(MyPatchConstantFunc)]
 MyOutPoint main(uint Id : SV_ControlPointID,

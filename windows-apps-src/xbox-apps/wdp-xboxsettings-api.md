@@ -6,14 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 54a15be26adf0da97105f15f3a44f26ee7bfc96d
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240043"
 ---
-# <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
+# <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador
+
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.
 
 ## <a name="get-all-developer-settings-at-once"></a>Obtener todas las opciones de configuración del desarrollador al mismo tiempo
@@ -25,7 +26,7 @@ Puedes usar la siguiente solicitud para obtener todas las opciones de configurac
 Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/settings
-<br />
+
 **Parámetros de URI**
 
 - Ninguno
@@ -49,10 +50,12 @@ La respuesta es una matriz JSON de configuración que contiene toda la configura
 * Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
 
 Si el valor es un número:
+
 * Min - (número) de este campo indica el valor numérico mínimo de la configuración.
 * Max - (número) de este campo indica el valor numérico máximo de la configuración.
 
 Si se selecciona la configuración:
+
 * OptionsVariable - ("Sí" | "No") en este campo indica si las opciones de configuración son variables, si las opciones válidas se pueden cambiar sin tener que reiniciar.
 * Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
@@ -67,6 +70,7 @@ Código de estado HTTP      | Descripción
 5XX | Códigos de error
 
 ## <a name="get-settings-one-at-a-time"></a>Obtener las opciones de configuración de una en una
+
 Las opciones de configuración también se pueden recuperar individualmente.
 
 **Solicitud**
@@ -76,7 +80,7 @@ Puedes usar la siguiente solicitud para obtener información acerca de una opci�
 Método      | URI de la solicitud
 :------     | :-----
 GET | /ext/Settings/\<nombre de la configuración\>
-<br />
+
 **Parámetros de URI**
 
 - Ninguno
@@ -100,10 +104,12 @@ La respuesta es un objeto JSON con los siguientes campos:
 * Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
 
 Si el valor es un número:
+
 * Min - (número) de este campo indica el valor numérico mínimo de la configuración.
 * Max - (número) de este campo indica el valor numérico máximo de la configuración.
 
 Si se selecciona la configuración:
+
 * OptionsVariable - ("Sí" | "No") en este campo indica si las opciones de configuración son variables, si las opciones válidas se pueden cambiar sin tener que reiniciar.
 * Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
@@ -118,6 +124,7 @@ Código de estado HTTP      | Descripción
 5XX | Códigos de error
 
 ## <a name="set-the-value-of-a-setting"></a>Configurar el valor de una opción de configuración
+
 Puedes configurar el valor de una opción de configuración.
 
 **Solicitud**
@@ -127,7 +134,7 @@ Puedes usar la siguiente solicitud para configurar el valor para una opción de 
 Método      | URI de la solicitud
 :------     | :-----
 PUT | /ext/Settings/\<nombre de la configuración\>
-<br />
+
 **Parámetros de URI**
 
 - Ninguno
@@ -154,7 +161,6 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-<br />
 **Familias de dispositivos disponibles**
 
 * Windows Xbox

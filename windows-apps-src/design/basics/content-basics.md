@@ -5,16 +5,16 @@ ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 12/1/2017
+ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594590"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913965"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
 
@@ -80,7 +80,7 @@ Para crear estos patrones de página, debes usar una combinación de elementos d
 <tr class="odd">
 <td align="left">Audio y vídeo<br/><br/>
     <img src="images/content-basics/media-transport.png" alt="media transport control" /></td>
-<td align="left"><a href="../controls-and-patterns/media-playback.md">Controles de transporte y reproducción de multimedia</a></td>
+<td align="left"><a href="../controls-and-patterns/media-playback.md">Controles de transporte y reproducción de contenido multimedia</a></td>
 <td align="left">Reproduce audio y vídeo.</td>
 </tr>
 <tr class="even">

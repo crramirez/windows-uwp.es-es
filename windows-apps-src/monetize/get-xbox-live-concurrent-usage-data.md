@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, concurrent usage, uso simultáneo
 ms.localizationpriority: medium
-ms.openlocfilehash: 40d35b45065566db22aef791a94faa1cc0fa5c62
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e4ac2208ca5eca02e3007a88209aa26735e29612
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655660"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162871"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Obtener datos de uso simultáneo de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de uso casi en tiempo real (con latencia de 5-15 minutos) sobre el número medio de clientes que juegan tu [juego habilitado para Xbox Live](../xbox-live/index.md) cada minuto, hora o día durante un intervalo de tiempo especificado. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de uso casi en tiempo real (con latencia de 5-15 minutos) sobre el número medio de clientes que juegan tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md) cada minuto, hora o día durante un intervalo de tiempo especificado. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -39,7 +39,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -53,7 +53,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **concurrency**.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
-| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minuto**: Los últimos 60 registros de datos disponibles.</li><li>**hora**: Los últimos 24 registros de datos disponibles.</li><li>**día**: Los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minuto**: Registros de hasta 1440 (24 horas de datos).</li><li>**hora**: Hasta 720 registros (30 días de datos).</li><li>**día**: Hasta 60 registros (60 días de datos).</li></ul>  |  No  |
+| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minute**: Los últimos 60 registros de datos disponibles.</li><li>**hora**: Los últimos 24 registros de datos disponibles.</li><li>**day**: Los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minute**: Registros de hasta 1440 (24 horas de datos).</li><li>**hora**: Hasta 720 registros (30 días de datos).</li><li>**day**: Hasta 60 registros (60 días de datos).</li></ul>  |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud

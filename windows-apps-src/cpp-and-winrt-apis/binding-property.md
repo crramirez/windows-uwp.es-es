@@ -5,12 +5,12 @@ ms.date: 08/21/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, propiedad
 ms.localizationpriority: medium
-ms.openlocfilehash: 4033327fa51b0801583a518a0dea055f59e57fc8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9bdbfef54b799f8dff23ad739007cec9fef98af8
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616630"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921731"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; enlazar a una propiedad C++/WinRT
 Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Esta idea se basa en el modelo de diseño de software conocido como el *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)y cómo enlazar controles XAML a ellos.
@@ -24,7 +24,7 @@ Supongamos que una clase en tiempo de ejecución denominada **BookSku** tiene un
 Un elemento de texto XAML o control puede enlazarse a estos eventos y controlarlos mediante la recuperación de los valores actualizados y luego actualizarse automáticamente para mostrar el nuevo valor.
 
 > [!NOTE]
-> Para obtener información sobre cómo instalar y usar C++ / c++ / WinRT extensión de Visual Studio (VSIX) (que proporciona compatibilidad con plantillas de proyecto) vea [compatibilidad con Visual Studio C++ / c++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obtener información sobre cómo instalar y usar el C++extensión Visual Studio (VSIX) de WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y admitir la compilación), consulte [compatibilidad con Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="create-a-blank-app-bookstore"></a>Crear una aplicación en blanco (Bookstore)
 Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Universal** > **aplicación vacía (C++ / c++ / WinRT)** del proyecto y asígnele el nombre *librería*.
@@ -53,7 +53,7 @@ namespace Bookstore
 
 Guarda el archivo y compila el proyecto. Durante el proceso de compilación, la herramienta `midl.exe` se ejecutará para crear un archivo de metadatos de Windows Runtime (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`) que describe la clase en tiempo de ejecución. Después se ejecutará la herramienta `cppwinrt.exe` para generar archivos de código fuente y ayudarte a crear y consumir tu clase en tiempo de ejecución. Estos archivos incluyen códigos auxiliares para que puedas empezar a implementar la clase en tiempo de ejecución **BookSku** que declaraste en tu archivo IDL. Estos archivos de código auxiliar son `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` y `BookSku.cpp`
 
-Haga clic en el nodo del proyecto y haga clic en **Abrir carpeta en el Explorador de archivos**. Se abre la carpeta del proyecto en el Explorador de archivos. Allí, copie los archivos de código auxiliar `BookSku.h` y `BookSku.cpp` desde el `\Bookstore\Bookstore\Generated Files\sources\` carpeta y en la carpeta del proyecto, que es `\Bookstore\Bookstore\`. En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Haz clic con el botón derecho en los archivos de código auxiliar que has copiado y haz clic en **Incluir en el proyecto**.
+Haga clic en el nodo del proyecto y haga clic en **Abrir carpeta en el Explorador de archivos**. Se abre la carpeta del proyecto en el Explorador de archivos. Allí, copie los archivos de código auxiliar `BookSku.h` y `BookSku.cpp` desde el `\Bookstore\Bookstore\Generated Files\sources\` carpeta y en la carpeta del proyecto, que es `\Bookstore\Bookstore\`. En **el Explorador de soluciones**, con el nodo de proyecto seleccionado, asegúrese de que **mostrar todos los archivos** se alterna. Haz clic con el botón derecho en los archivos de código auxiliar que has copiado y haz clic en **Incluir en el proyecto**.
 
 ## <a name="implement-booksku"></a>Implementar **BookSku**
 Ahora, vamos a abrir `\Bookstore\Bookstore\BookSku.h` y `BookSku.cpp` e implementar nuestra clase en tiempo de ejecución. En `BookSku.h`, agrega un constructor que tome un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), un miembro privado para almacenar la cadena de título y otro para el evento que generaremos cuando cambie el título. Después de realizar estos cambios, su `BookSku.h` tendrá este aspecto.
@@ -204,7 +204,7 @@ namespace Bookstore
 }
 ```
 
-Guarda el archivo. No se compilará el proyecto hasta su finalización en este momento, pero crear ahora es algo útil porque lo vuelve a generar los archivos de código fuente en el que el **MainPage** se implementa la clase en tiempo de ejecución (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Así que compila ahora. El error de compilación puede esperar ver en esta fase es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
+Guarde el archivo. No se compilará el proyecto hasta su finalización en este momento, pero crear ahora es algo útil porque lo vuelve a generar los archivos de código fuente en el que el **MainPage** se implementa la clase en tiempo de ejecución (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Así que compila ahora. El error de compilación puede esperar ver en esta fase es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
 
 Si se omite el archivo de inclusión de `BookstoreViewModel.idl` (consulte la lista de `MainPage.idl` anteriormente), verá el error **espera \< cerca de "MainViewModel"**. Otra sugerencia es asegurarse de que deje todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en los listados de código.
 
@@ -278,7 +278,7 @@ Para la versión actualmente publicada de C / c++ / WinRT, con el fin de poder u
 
 ## <a name="important-apis"></a>API importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)
-* [plantilla de función winrt::Make](/uwp/cpp-ref-for-winrt/make)
+* [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Consumir API con C++/WinRT](consume-apis.md)

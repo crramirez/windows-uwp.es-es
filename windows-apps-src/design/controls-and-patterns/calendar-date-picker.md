@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 94d50554baf412c7329521df68eb19f58340387f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c899334b43353fbc69c3080cfd329df0ef9e0797
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658660"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913975"
 ---
 # <a name="calendar-date-picker"></a>Selector de fecha del calendario
 
@@ -44,7 +44,7 @@ Para obtener más información sobre cómo elegir el control adecuado, consulta 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CalendarDatePicker">abrir la aplicación y ver CalendarDatePicker en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -91,7 +91,7 @@ Al configurar la fecha en el código, el valor está restringido por las propied
 Puedes controlar el evento [DateChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para obtener una notificación cuando el valor Date haya cambiado.
 
 > [!NOTE]
-Para obtener información importante sobre los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
+> Para obtener información importante sobre los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
 
 ### <a name="setting-a-header-and-placeholder-text"></a>Establecer un encabezado y un texto de marcador de posición
 
@@ -111,6 +111,6 @@ El texto de marcador de posición predeterminado es "seleccionar una fecha". Pue
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de fecha y hora](date-and-time.md)
-- [Vista del calendario](calendar-view.md)
+- [Vista de calendario](calendar-view.md)
 - [Selector de fecha](date-picker.md)
 - [Selector de hora](time-picker.md)

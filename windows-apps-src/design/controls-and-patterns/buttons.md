@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f585d278d9420865c895d4e20fa1730196d9f0cd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 286b278d0c41edfbc5c008f31e5a8e28fa30f93a
+ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593030"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901643"
 ---
 # <a name="buttons"></a>Botones
 
@@ -30,14 +30,14 @@ El marco XAML proporciona un control de botón estándar, así como varios contr
 
 Control | Descripción
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Inicia una acción inmediata. Puede utilizarse con un enlace de comando o evento de clic.
+[Botón](/uwp/api/windows.ui.xaml.controls.button) | Inicia una acción inmediata. Puede utilizarse con un enlace de comando o evento de clic.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Un botón que provoca un evento de clic continuamente mientras se presiona.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Un botón que haya un estilo como un hipervínculo, usado para la navegación. Para obtener más información, consulta [Hipervínculos](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Botón con un botón de contenido adicional para abrir un ventana flotante adjunto.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Botón con los dos lados. Uno de los lados inicia una acción y el otro lado, abre un menú.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Un botón de alternancia con dos lados. Alterna un lado activado/desactivado y el otro lado, abre un menú.
 
-| **Obtención de la biblioteca de interfaz de usuario de Windows** |
+| **Obtener la biblioteca de interfaz de usuario de Windows** |
 | - |
 | DropDownButton SplitButton y ToggleSplitButton se incluyen como parte de la biblioteca de interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y características de interfaz de usuario para aplicaciones UWP. Para obtener más información, incluidas las instrucciones de instalación, consulte el [Introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
@@ -67,7 +67,7 @@ Use un **SplitButton** cuando desee que el usuario sea capaz de iniciar una acci
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Button">abrir la aplicación y ver el botón en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -140,7 +140,7 @@ El contenido de un botón suele ser texto. Estas son las recomendaciones de dise
 
 <table>
 <tr>
-<td> <b>Debe corregir:</b><br> Botones con texto que se desborda. </td>
+<td> <b>Tienes que arreglar:</b><br> Botones con texto que se desborda. </td>
 <td> <img src="images/button-wraptext.png"/> </td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 Un [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) es un botón que muestra un botón de contenido adicional como un indicador visual que tiene un control flotante adjunto que contiene las opciones más. Tiene el mismo comportamiento que un botón estándar con un control flotante; solo la apariencia es diferente.
 
-El botón desplegable hereda el evento Click, pero normalmente no se usa. En su lugar, se use la propiedad de control flotante para adjuntar un flotante e invocar acciones mediante las opciones de menú en el control flotante. El control flotante se abre automáticamente cuando se hace clic en el botón.
+El botón desplegable hereda el evento Click, pero normalmente no se usa. En su lugar, se use la propiedad de control flotante para adjuntar un flotante e invocar acciones mediante las opciones de menú en el control flotante. El control flotante se abre automáticamente cuando se hace clic en el botón. No olvide especificar el [colocación](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propiedad de la ventana flotante para garantizar la ubicación deseada en relación con el botón. El algoritmo de selección de ubicación predeterminado no podría producir la posición deseada en todas las situaciones.
 
 > [!TIP]
 > Para obtener más información sobre los controles flotantes, vea [menús y menús contextuales](menus.md).
@@ -224,7 +224,7 @@ En este ejemplo se muestra cómo crear un botón desplegable con un control flot
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
-    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16" Text="&#xE8E4;"/>
+    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="14" Text="&#xE8E4;"/>
     <DropDownButton.Flyout>
         <MenuFlyout Placement="BottomEdgeAlignedLeft">
             <MenuFlyoutItem Text="Left" Icon="AlignLeft" Tag="left"
@@ -284,6 +284,7 @@ El comportamiento típico de un botón de expansión es:
 ### <a name="example---split-button"></a>Ejemplo: botón de expansión
 
 En este ejemplo se muestra cómo crear un botón de expansión que se usa para cambiar el color de primer plano del texto seleccionado en un RichEditBox. (Para obtener más información y código, vea [cuadro de edición enriquecida](rich-edit-box.md)).
+Dividir los usos de ventana flotante del botón [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como el valor predeterminado para su [colocación](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propiedad. No se puede invalidar este valor.
 
 ![Un botón de expansión para seleccionar el color de primer plano](images/split-button-rtb.png)
 
@@ -292,7 +293,7 @@ En este ejemplo se muestra cómo crear un botón de expansión que se usa para c
              Click="BrushButtonClick">
     <Border x:Name="SelectedColorBorder" Width="20" Height="20"/>
     <SplitButton.Flyout>
-        <Flyout x:Name="BrushFlyout" Placement="BottomEdgeAlignedLeft">
+        <Flyout x:Name="BrushFlyout">
             <!-- Set SingleSelectionFollowsFocus="False"
                  so that keyboard navigation works correctly. -->
             <GridView ItemsSource="{x:Bind ColorOptions}" 
@@ -380,7 +381,7 @@ Un [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tien
 Un botón de alternancia de expansión se utiliza normalmente para habilitar o deshabilitar una característica cuando la característica tiene varias opciones que puede elegir el usuario. Por ejemplo, en un editor de documentos, se podría usar para activar las listas de activado o desactivado, mientras se usa la lista desplegable para elegir el estilo de la lista.
 
 > [!NOTE]
-> Cuando se invoca con toque, el botón de expansión se comporta como un botón desplegable. Con otros métodos de entrada, un usuario puede invocar cualquier mitad del botón por separado. Con tecnología táctil, ambas mitades del botón invocan la ventana flotante. Por lo tanto, debe incluir una opción en el contenido de la ventana flotante para activar o desactivar el botón Activar o desactivar.
+> Cuando se invoca con toque, el botón de alternancia de expansión se comporta como un botón desplegable. Con otros métodos de entrada, un usuario puede activar o desactivar e invocar las dos mitades del botón por separado. Con tecnología táctil, ambas mitades del botón invocan la ventana flotante. Por lo tanto, debe incluir una opción en el contenido de la ventana flotante para activar o desactivar el botón Activar o desactivar.
 
 ### <a name="differences-with-togglebutton"></a>Diferencias con ToggleButton
 
@@ -393,6 +394,7 @@ A diferencia de [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togg
 ### <a name="example---toggle-split-button"></a>Ejemplo: alternar el botón de expansión
 
 En el ejemplo siguiente se muestra cómo una botón de expansión de alternancia podría usarse para activar o desactivar el formato de lista y cambiar el estilo de la lista, en un RichEditBox. (Para obtener más información y código, vea [cuadro de edición enriquecida](rich-edit-box.md)).
+Usos de ventana flotante del botón de división de alternar [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como el valor predeterminado para su [colocación](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propiedad. No se puede invalidar este valor.
 
 ![Un botón de expansión de alternancia para seleccionar los estilos de lista](images/toggle-split-button-open.png)
 
@@ -401,9 +403,9 @@ En el ejemplo siguiente se muestra cómo una botón de expansión de alternancia
                    ToolTipService.ToolTip="List style"
                    Click="ListButton_Click"
                    IsCheckedChanged="ListStyleButton_IsCheckedChanged">
-    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16" Text="&#xE8FD;"/>
+    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="14" Text="&#xE8FD;"/>
     <ToggleSplitButton.Flyout>
-        <Flyout Placement="BottomEdgeAlignedLeft">
+        <Flyout>
             <ListView x:Name="ListStylesListView"
                       SelectionChanged="ListStylesListView_SelectionChanged" 
                       SingleSelectionFollowsFocus="False">
@@ -533,7 +535,7 @@ El botón Atrás es un elemento de la interfaz de usuario proporcionado por el s
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase de botón](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
+- [Clase Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 - [Botones de radio](radio-button.md)
-- [Casillas de verificación](checkbox.md)
-- [Modificadores de alternancia](toggles.md)
+- [Casillas](checkbox.md)
+- [Modificadores para alternar](toggles.md)

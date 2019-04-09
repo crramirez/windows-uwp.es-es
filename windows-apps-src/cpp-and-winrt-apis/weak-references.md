@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, referencia fuerte y débil,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 507b3cee71819df1d0163380a494e6a15936109f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0e2e40daaf777e36094b698d058f21840b1804c8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630820"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291833"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Las referencias fuertes y débiles en C / c++ / WinRT
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-**MyClass::RetrieveValueAsync** trabajar durante algún tiempo, y, a continuación, finalmente, devuelve una copia de la `MyClass::m_value` miembro de datos. Una llamada a **RetrieveValueAsync** hace que un objeto asincrónico en crearse, y ese objeto tiene implícita *esto* puntero (a través del cual, finalmente, `m_value` se tiene acceso).
+**MyClass::RetrieveValueAsync** invierte en algún trabajo de duración, y, finalmente, devuelve una copia de la `MyClass::m_value` miembro de datos. Una llamada a **RetrieveValueAsync** hace que un objeto asincrónico en crearse, y ese objeto tiene implícita *esto* puntero (a través del cual, finalmente, `m_value` se tiene acceso).
 
 Esta es la secuencia completa de eventos.
 
@@ -101,11 +101,11 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-Dado que C++ / c++ / WinRT objeto directa o indirectamente se deriva de la [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) plantilla, C++ / c++ / objeto WinRT puede llamar a su [ **implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) protegidos de la función miembro para recuperar una referencia fuerte a su *esto* puntero. Tenga en cuenta que no hay ninguna necesidad de usar realmente el `strong_this` variable; la llamada a **get_strong** incrementa el recuento de referencias y mantiene su implícita *esto* puntero válido.
+Dado que un C++/objeto WinRT directa o indirectamente se deriva de la [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) plantilla, el C++/objeto WinRT puede llamar a su [  **Implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) protegidos de la función miembro para recuperar una referencia fuerte a su *esto* puntero. Tenga en cuenta que no hay ninguna necesidad de usar realmente el `strong_this` variable; la llamada a **get_strong** incrementa el recuento de referencias y mantiene su implícita *esto* puntero válido.
 
 Esto resuelve el problema que teníamos anteriormente cuando se llegó al paso 4. Incluso si desaparecen todas las demás referencias a la instancia de clase, la corrutina ha tomado la precaución de garantizar que sus dependencias son estables.
 
-Si una referencia segura no es adecuada, a continuación, en su lugar, puede llamar a [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) para recuperar una referencia débil a *esto*. Confirma que puede recuperar una referencia segura antes de acceder a *esto*.
+Si una referencia segura no es adecuada, a continuación, en su lugar, puede llamar a [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar una referencia débil a *esto*. Confirma que puede recuperar una referencia segura antes de acceder a *esto*.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -243,7 +243,7 @@ En ambos casos, nos estamos simplemente captura sin formato *esto* puntero. Y qu
 
 ### <a name="the-solution"></a>La solución
 
-La solución consiste en capturar una referencia segura. Una referencia fuerte *does* incrementar el recuento de referencias y *does* mantener activo el objeto actual. Solo tiene que declarar una variable de captura (llamado `strong_this` en este ejemplo) y se inicializa con una llamada a [ **implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function), que recupera una referencia fuerte a nuestro  *Esto* puntero.
+La solución consiste en capturar una referencia segura. Una referencia fuerte *does* incrementar el recuento de referencias y *does* mantener activo el objeto actual. Solo tiene que declarar una variable de captura (llamado `strong_this` en este ejemplo) y se inicializa con una llamada a [ **implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function), que recupera una referencia fuerte a nuestro  *Esto* puntero.
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)
@@ -261,7 +261,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-Si una referencia segura no es adecuada, a continuación, en su lugar, puede llamar a [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) para recuperar una referencia débil a *esto*. Confirma que todavía puede recuperar una referencia segura de ella antes de acceder a los miembros.
+Si una referencia segura no es adecuada, a continuación, en su lugar, puede llamar a [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar una referencia débil a *esto*. Confirma que todavía puede recuperar una referencia segura de ella antes de acceder a los miembros.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -296,13 +296,13 @@ struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
 
 Se trata de la manera estándar, convencional para hacer referencia a un objeto y su función miembro. Para que esto sea segura, también puede&mdash;a partir de la versión 10.0.17763.0 (Windows 10, versión 1809) del SDK de Windows&mdash;establecer un fuerte o una referencia débil en el punto donde se registra el controlador. En ese momento, el objeto de destinatario de eventos se sabe que continúan activos.
 
-Para obtener una referencia fuerte, simplemente llame a [ **get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) en lugar de sin formato *esto* puntero. C++ / c++ / WinRT garantiza que el delegado resultante contiene una referencia fuerte al objeto actual.
+Para obtener una referencia fuerte, simplemente llame a [ **get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) en lugar de sin formato *esto* puntero. C++ / c++ / WinRT garantiza que el delegado resultante contiene una referencia fuerte al objeto actual.
 
 ```cppwinrt
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
-Para obtener una referencia débil, llame a [ **get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function). C++ / c++ / WinRT garantiza que el delegado resultante contiene una referencia débil. En el último minuto y segundo plano, el delegado intenta resolver la referencia débil a una fuerte y solo llama a la función miembro, si es correcto.
+Para obtener una referencia débil, llame a [ **get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function). C++ / c++ / WinRT garantiza que el delegado resultante contiene una referencia débil. En el último minuto y segundo plano, el delegado intenta resolver la referencia débil a una fuerte y solo llama a la función miembro, si es correcto.
 
 ```cppwinrt
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
@@ -368,7 +368,7 @@ if (Class strong = weak.get())
 }
 ```
 
-Siempre que exista alguna otra referencia fuerte, la llamada [**weak_ref::get**](/uwp/cpp-ref-for-winrt/weak-ref#weakrefget-function) incrementa el recuento de referencias y devuelve la referencia fuerte al autor de la llamada.
+Siempre que exista alguna otra referencia fuerte, la llamada [**weak_ref::get**](/uwp/cpp-ref-for-winrt/weak-ref#weak_refget-function) incrementa el recuento de referencias y devuelve la referencia fuerte al autor de la llamada.
 
 ### <a name="opting-out-of-weak-reference-support"></a>Rechazar el soporte de referencia débil
 El soporte de referencia débil es automático. Pero puedes optar por rechazar explícitamente tal soporte pasando la estructura del marcador [**winrt::no_weak_ref**](/uwp/cpp-ref-for-winrt/no-weak-ref) como un argumento plantilla a tu clase base.
@@ -394,7 +394,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
 No importa dónde aparezca la estructura del marcador dentro del paquete de parámetro variádicas. Si solicitas una referencia débil para un tipo rechazado, el compilador te ayudará con "*Esto es solo para soporte de referencia débil*".
 
 ## <a name="important-apis"></a>API importantes
-* [función Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
+* [función Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
 * [plantilla de función winrt::make_weak](/uwp/cpp-ref-for-winrt/make-weak)
 * [winrt::no_weak_ref marcador struct](/uwp/cpp-ref-for-winrt/no-weak-ref)
-* [plantilla de estructura winrt::weak_ref](/uwp/cpp-ref-for-winrt/weak-ref)
+* [winrt::weak_ref struct template](/uwp/cpp-ref-for-winrt/weak-ref)

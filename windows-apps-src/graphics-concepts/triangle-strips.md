@@ -7,20 +7,18 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a420ed5ed8f498eb9c900cbacb1b766c4a01214
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 62ad93fa480f0515c4ed6df2d73a745454197ac6
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599290"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291643"
 ---
 # <a name="triangle-strips"></a>Series de triángulos
-
 
 Una franja de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo. Por ejemplo, solo necesitas siete vértices para definir la franja de triángulos siguiente.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
-
 
 ![Ilustración de una franja de triángulos con siete vértices](images/tristrip.png)
 
@@ -34,7 +32,7 @@ La ilustración siguiente muestra una franja de triángulos representados.
 
 El siguiente código muestra cómo crear vértices para esta franja de triángulos.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
 float x,y,z;
@@ -53,7 +51,7 @@ CUSTOMVERTEX Vertices[] =
 
 El siguiente ejemplo de código muestra cómo representar esta franja de triángulos en Direct3D.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to a device interface.

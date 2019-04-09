@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dcf0176e20e498f8c6744a542010b5197689b8a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5b628c4d473c2a74eb63a17c12b17ade43c11964
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244421"
 ---
 # <a name="item-containers-and-templates"></a>Plantillas y contenedores de elementos
 
@@ -54,7 +54,7 @@ Este es el código XAML que crea este elemento. Explicaremos las plantillas más
                 <Image Source="Assets/placeholder.png" Width="44" Height="44"
                        HorizontalAlignment="Left"/>
                 <TextBlock Text="{x:Bind}" Foreground="Black"
-                           FontSize="15" Grid.Column="1"
+                           FontSize="14" Grid.Column="1"
                            VerticalAlignment="Center"
                            Padding="0,0,54,0"/>
             </Grid>
@@ -333,7 +333,7 @@ Para modificar otras propiedades de ListViewItemPresenter que no están vinculad
 > [!NOTE]
 > Los estilos predeterminados ListViewItem y GridViewItem establecen muchas propiedades en la clase ListViewItemPresenter. Debes comenzar siempre con una copia del estilo predeterminado y modificar solo las propiedades que necesites. De lo contrario, es probable que los elementos visuales no se muestren según lo previsto porque algunas propiedades no se establecerán correctamente.
 
-**Para realizar una copia de la plantilla predeterminada en Visual Studio**
+**Para crear una copia de la plantilla predeterminada en Visual Studio**
  
 1. Abre el panel Esquema del documento (**Ver > Otras ventanas > Esquema del documento**).
 2. Selecciona el elemento de lista o cuadrícula que quieres modificar. En este ejemplo, se modifica el elemento `colorsGridView`.
@@ -430,13 +430,13 @@ En esta tabla se muestran los estados visuales Common y Selection de ListViewIte
 
 Nombre del estado o pincel | Estilo en línea | Estilo de superposición
 ------------|--------------|--------------
-<b>Normal</b><ul><li><b>CheckBoxBrush = "Red"</b></li></ul> | ![Selección de elemento en línea normal](images/listview-item-normal.png) | ![Selección de elemento de superposición normal](images/gridview-item-normal.png)
-<b>PointerOver</b><ul><li><b>PointerOverForeground = "Anaranjado oscuro"</b></li><li><b>PointerOverBackground = "RosaDifuminado"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Selección de elemento en línea con el puntero encima](images/listview-item-pointerover.png) | ![Selección de elemento de superposición con el puntero encima](images/gridview-item-pointerover.png)
-<b>Presionado</b><ul><li><b>PressedBackground = "CiánClaro"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![Selección de elemento en línea presionada](images/listview-item-pressed.png) | ![Selección de elemento de superposición presionada](images/gridview-item-pressed.png)
-<b>seleccionado</b><ul><li><b>SelectedForeground = "Marina"</b></li><li><b>SelectedBackground = "Caqui"</b></li><li><b>CheckBrush = "Green"</b></li><li>CheckBoxBrush="Red" (solo en línea)</li></ul> | ![Selección de elemento en línea seleccionada](images/listview-item-selected.png) | ![Selección de elemento de superposición seleccionada](images/gridview-item-selected.png)
-<b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground = "Lavanda"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (solo superposición)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (solo en línea)</li></ul> | ![Selección de elemento en línea con el puntero encima seleccionada](images/listview-item-pointeroverselected.png) | ![Selección de elemento de superposición con el puntero encima seleccionada](images/gridview-item-pointeroverselected.png)
-<b>PressedSelected</b><ul><li><b>SelectedPressedBackground = "Turquesa medio"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (solo superposición)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (solo en línea)</li></ul> | ![Selección de elemento en línea presionada seleccionada](images/listview-item-pressedselected.png) | ![Selección de elemento de superposición presionada seleccionada](images/gridview-item-pressedselected.png)
-<b>Centrado</b><ul><li><b>FocusBorderBrush = "Rojo violáceo pálido"</b></li><li><b>FocusSecondaryBorderBrush = "Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Selección de elemento en línea enfocada](images/listview-item-focused.png) | ![Selección de elemento de superposición enfocada](images/gridview-item-focused.png)
+<b>Normal</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![Selección de elemento en línea normal](images/listview-item-normal.png) | ![Selección de elemento de superposición normal](images/gridview-item-normal.png)
+<b>PointerOver</b><ul><li><b>PointerOverForeground="DarkOrange"</b></li><li><b>PointerOverBackground="MistyRose"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Selección de elemento en línea con el puntero encima](images/listview-item-pointerover.png) | ![Selección de elemento de superposición con el puntero encima](images/gridview-item-pointerover.png)
+<b>Pressed</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![Selección de elemento en línea presionada](images/listview-item-pressed.png) | ![Selección de elemento de superposición presionada](images/gridview-item-pressed.png)
+<b>Selected</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground="Khaki"</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red" (solo en línea)</li></ul> | ![Selección de elemento en línea seleccionada](images/listview-item-selected.png) | ![Selección de elemento de superposición seleccionada](images/gridview-item-selected.png)
+<b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground="Lavender"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (solo superposición)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (solo en línea)</li></ul> | ![Selección de elemento en línea con el puntero encima seleccionada](images/listview-item-pointeroverselected.png) | ![Selección de elemento de superposición con el puntero encima seleccionada](images/gridview-item-pointeroverselected.png)
+<b>PressedSelected</b><ul><li><b>SelectedPressedBackground="MediumTurquoise"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (solo superposición)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (solo en línea)</li></ul> | ![Selección de elemento en línea presionada seleccionada](images/listview-item-pressedselected.png) | ![Selección de elemento de superposición presionada seleccionada](images/gridview-item-pressedselected.png)
+<b>Focused</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Selección de elemento en línea enfocada](images/listview-item-focused.png) | ![Selección de elemento de superposición enfocada](images/gridview-item-focused.png)
 
 ListViewItemPresenter tiene otras propiedades de pincel para los marcadores de posición de datos y los estados de arrastre. Si usas la carga incremental o la función de arrastrar y colocar en la vista de lista, debes considerar si también es necesario modificar estas propiedades de pincel adicionales. Consulta la clase ListViewItemPresenter para obtener una lista completa de propiedades que se pueden modificar. 
 

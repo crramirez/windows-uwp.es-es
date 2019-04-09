@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: bcdb8ca6843d126bc245e48f0b50209890740819
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3456742c4dbb3ca2ab146217763e8f7475c79df2
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639620"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822930"
 ---
 # <a name="surface-dial-interactions"></a>Interacciones de Surface Dial
 
 ![Imagen Surface Dial con superficie Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://aka.ms/purchasesurfacedial)).
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Los dispositivos de rueda de Windows, como Surface Dial, son una nueva categoría de dispositivos de entrada que permiten un abanico de experiencias de interacción del usuario atractivas y únicas para Windows y aplicaciones de Windows. 
 
@@ -85,7 +85,7 @@ Cuando quieras personalizar la experiencia del usuario de Surface Dial, siempre 
 
 En esta sección, analizaremos tanto las directrices sobre la experiencia del usuario como la guía para desarrolladores para personalizar las herramientas que se exponen en el menú de Surface Dial.
 
-### <a name="ux-guidance"></a>Directrices sobre la experiencia de usuario
+### <a name="ux-guidance-for-custom-tools"></a>Guía de experiencia de usuario para herramientas personalizadas
 
 **Asegurarte de que tus herramientas se corresponden con el contexto actual** Cuando consigues que resulte claro e intuitivo qué es lo que hace una herramienta y cómo funciona la interacción con Surface Dial, ayudas a que los usuarios aprendan rápidamente y se centren en sus tareas.
 
@@ -132,6 +132,8 @@ Puedes personalizar la experiencia de Surface Dial para complementar la funciona
 Como se mencionó anteriormente, el menú predeterminado de Surface Dial se rellena previamente con un conjunto de herramientas integradas que cubre una amplia gama de características básicas del sistema (volumen del sistema, brillo del sistema, desplazamiento, zoom, deshacer y control multimedia cuando el sistema detecta que se está reproduciendo audio o vídeo). Sin embargo, es posible que estas herramientas predeterminadas no proporcionen la funcionalidad necesaria para la aplicación. 
 
 En las siguientes secciones, describimos cómo agregar una herramienta personalizada al menú de Surface Dial y cómo especificar las herramientas integradas que se exponen.
+
+Descargue una versión más sólida de este ejemplo de [RadialController personalización](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip).
 
 **Agregar una herramienta personalizada**
 
@@ -298,7 +300,7 @@ El dispositivo se puede girar hacia la derecha y hacia la izquierda, y también 
 > [!NOTE]
 > El usuario puede deshabilitar los comentarios hápticos en la página **Configuración de Windows -> Dispositivos -> Rueda**.
 
-#### <a name="ux-guidance"></a>Directrices sobre la experiencia de usuario
+#### <a name="ux-guidance-for-custom-interactions"></a>Guía de experiencia de usuario para las interacciones personalizadas
 
 **Herramientas de sensibilidad de rotación alta o continua deben deshabilitar comentarios hápticos**
 
@@ -391,12 +393,13 @@ Cuando se hace clic en Surface Dial, se desencadena un evento [**RadialControlle
 Tal como se describió anteriormente, Surface Dial se puede usar junto con el Surface Studio para mostrar el menú de Surface Dial en un modo de pantalla especial. 
 
 En este modo, puedes aumentar la integración y la personalización de tus experiencias de interacción del Dial con tus aplicaciones. Estos son algunos ejemplos de experiencias únicas que solo son posibles con Surface Dial y Surface Studio:
+
 - Mostrar herramientas contextuales (como una paleta de colores) en función de la posición de Surface Dial, que hace que sean más fáciles de encontrar y usar.
 - Configurar la herramienta activa en función de la interfaz de usuario en la que esté colocado Surface Dial
 - Aumentar un área de la pantalla según la ubicación de Surface Dial
 - Interacciones únicas con los juegos en base a la ubicación en la pantalla
 
-#### <a name="ux-guidance"></a>Directrices sobre la experiencia de usuario
+#### <a name="ux-guidance-for-on-screen-interactions"></a>Guía de experiencia de usuario para que aparecen en pantalla las interacciones
 
 **Las aplicaciones deben responder cuando Surface Dial se detecta en la pantalla**
 
@@ -408,7 +411,7 @@ El dispositivo (y el cuerpo del usuario) pueden tapar partes críticas de la int
 
 **Ajustar la interfaz de usuario relacionados con Surface Dial según la interacción del usuario**
 
-Además de la oclusión de hardware, la mano o el brazo de un usuario pueden ocultar parte de la pantalla al usar el dispositivo. 
+Además de la oclusión de hardware, la mano o el brazo de un usuario pueden ocultar parte de la pantalla al usar el dispositivo.
 
 El área que queda oculta depende de la mano que se esté usando con el dispositivo. Como el dispositivo está diseñado para usarse principalmente con la mano no dominante, se debe ajustar la interfaz de usuario relacionada con Surface Dial a la mano opuesta a la especificada por el usuario (opción **Configuración de Windows > Dispositivo > Lápiz y Windows Ink > Elige la mano con la que escribes**).
 
@@ -645,22 +648,34 @@ Envía tu preguntas, sugerencias y comentarios a [radialcontroller@microsoft.com
 
 ## <a name="related-articles"></a>Artículos relacionados
 
+[Tutorial: Admitir la Surface Dial (y otros dispositivos de la rueda) en su aplicación para UWP](radialcontroller-walkthrough.md)
+
 ### <a name="api-reference"></a>Referencia de la API
 
 - [**RadialController** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)
-- [**RadialControllerButtonClickedEventArgs** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [**RadialControllerButtonClickedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
 - [**RadialControllerConfiguration** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerConfiguration) 
-- [**RadialControllerControlAcquiredEventArgs** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [**RadialControllerControlAcquiredEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
 - [**RadialControllerMenu** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenu) 
 - [**RadialControllerMenuItem** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem) 
-- [**RadialControllerRotationChangedEventArgs** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [**RadialControllerRotationChangedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
 - [**RadialControllerScreenContact** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact) 
-- [**RadialControllerScreenContactContinuedEventArgs** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
-- [**RadialControllerScreenContactStartedEventArgs** clase](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [**RadialControllerScreenContactContinuedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [**RadialControllerScreenContactStartedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
 - [**RadialControllerMenuKnownIcon** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuKnownIcon) 
 - [**RadialControllerSystemMenuItemKind** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
 
 ### <a name="samples"></a>Muestras
+
+#### <a name="topic-samples"></a>Ejemplos del tema
+
+[Personalización de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
+
+#### <a name="other-samples"></a>Otras muestras
+
+[Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
+
+[Tutorial de inicio: Admitir la Surface Dial (y otros dispositivos de la rueda) en su aplicación para UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController)
 
 [Ejemplos de la plataforma de Windows universales (C# y C++)](https://go.microsoft.com/fwlink/?linkid=832713)
 

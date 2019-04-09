@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, datos, tipos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b0b529bbf397b76acb1eb589095a84f5c85745c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 44de7b61264f8e0e04d1de6d2b1101844656f28b
+ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654290"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221461"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de datos C++ estándar y C++/WinRT
 
@@ -30,25 +30,25 @@ int main()
 
     InMemoryRandomAccessStream stream;
     DataWriter dataWriter{stream};
-    dataWriter.WriteBytes({ 99, 98, 97 }); // the initializer list is converted to an array_view before being passed to WriteBytes.
+    dataWriter.WriteBytes({ 99, 98, 97 }); // the initializer list is converted to a winrt::array_view before being passed to WriteBytes.
 }
 ```
 
 Hay dos piezas implicadas en este trabajo. En primer lugar, el método **DataWriter::WriteBytes** toma un parámetro de tipo [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view).
 
 ```cppwinrt
-void WriteBytes(array_view<uint8_t const> value) const
+void WriteBytes(winrt::array_view<uint8_t const> value) const
 ```
 
- **array_view** es un tipo C++/WinRT personalizado que representa de forma segura una serie contigua de valores (definida en la biblioteca base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`).
+**winrt::array_view** es personalizada C++/WinRT tipo que representa una serie de valores contigua de forma segura (se define en el C++/WinRT biblioteca base, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`).
 
-En segundo lugar, **array_view** tiene un constructor de listas de inicializadores.
+Segundo, **winrt::array_view** tiene un constructor de la lista de inicializadores.
 
 ```cppwinrt
-template <typename T> array_view(std::initializer_list<T> value) noexcept
+template <typename T> winrt::array_view(std::initializer_list<T> value) noexcept
 ```
 
-En muchos casos, puedes elegir si quieres tener en cuenta **array_view** o no en tu programación. Si eliges *no* tenerla en cuenta, no tendrás ningún código que cambiar si aparece un tipo equivalente en la biblioteca estándar de C++.
+En muchos casos, puede elegir si se deben tener en cuenta **winrt::array_view** en su programación. Si eliges *no* tenerla en cuenta, no tendrás ningún código que cambiar si aparece un tipo equivalente en la biblioteca estándar de C++.
 
 Puedes pasar una lista de inicializadores a una API de Windows Runtime que espera un parámetro de colección. Toma **StorageItemContentProperties::RetrievePropertiesAsync** como ejemplo.
 
@@ -65,28 +65,28 @@ IAsyncAction retrieve_properties_async(StorageFile const& storageFile)
 }
 ```
 
-Aquí funcionan dos factores. En primer lugar, el destinatario construye un **std:: vector** desde la lista de inicializadores (este destinatario es asincrónico, de modo que puede poseer dicho objeto, lo cual debe hacerse). En segundo lugar, C++/WinRT enlaza **std:: vector** de forma transparente (y sin introducir copias) como un parámetro de la colección de Windows Runtime.
+Aquí funcionan dos factores. En primer lugar, el destinatario crea un **std:: vector** desde la lista de inicializadores (este destinatario es asincrónica, por lo que es capaz de ese objeto, que debe ser el propietario). En segundo lugar, C++/WinRT enlaza **std:: vector** de forma transparente (y sin introducir copias) como un parámetro de la colección de Windows Runtime.
 
 ## <a name="standard-arrays-and-vectors"></a>Matrices y vectores estándares
-**array_view** también tiene los constructores de conversión desde **std:: vector** y **std::array**.
+[**winrt::array_view** ](/uwp/cpp-ref-for-winrt/array-view) también tiene los constructores de conversión de **std:: vector** y **std:: Array**.
 
 ```cppwinrt
-template <typename C, size_type N> array_view(std::array<C, N>& value) noexcept
-template <typename C> array_view(std::vector<C>& vectorValue) noexcept
+template <typename C, size_type N> winrt::array_view(std::array<C, N>& value) noexcept
+template <typename C> winrt::array_view(std::vector<C>& vectorValue) noexcept
 ```
 
 Por lo tanto, en lugar de ello podrías llamar a **DataWriter::WriteBytes** con un **std:: vector**.
 
 ```cppwinrt
 std::vector<byte> theVector{ 99, 98, 97 };
-dataWriter.WriteBytes(theVector); // theVector is converted to an array_view before being passed to WriteBytes.
+dataWriter.WriteBytes(theVector); // theVector is converted to a winrt::array_view before being passed to WriteBytes.
 ```
 
 O con un **std::array**.
 
 ```cppwinrt
 std::array<byte, 3> theArray{ 99, 98, 97 };
-dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
+dataWriter.WriteBytes(theArray); // theArray is converted to a winrt::array_view before being passed to WriteBytes.
 ```
 
 C++/WinRT enlaza **std:: vector** como un parámetro de la colección de Windows Runtime. Por lo tanto, puedes pasar un **std:: vector&lt;winrt::hstring&gt;**, y se convertirá a la colección adecuada de Windows Runtime de **winrt::hstring**. Hay un detalle adicional a tener en cuenta si el destinatario es asincrónico. Debido a los detalles de implementación de ese caso, deberá proporcionar un valor r, por lo que debe proporcionar una copia o el movimiento del vector. En el ejemplo de código siguiente, se mueve la propiedad del vector en el objeto del tipo de parámetro aceptado por el destinatario de async (y, a continuación, estamos cuidados de no tener acceso a `vecH` nuevamente después de moverla). Si desea obtener más información sobre rvalues, vea [categorías de valor y las referencias a ellos](cpp-value-categories.md).
@@ -108,23 +108,23 @@ IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vect
 ```
 
 ## <a name="raw-arrays-and-pointer-ranges"></a>Matrices sin procesar e intervalos de puntero
-Teniendo en cuenta que puede existir un tipo equivalente en el futuro en la biblioteca estándar de C++, también puedes trabajar directamente con **array_view** si así lo decides o lo necesitas.
+Teniendo en cuenta la salvedad de que exista un tipo equivalente en el futuro en el C++ biblioteca estándar, también puede trabajar directamente con **winrt::array_view** si elige, o que necesite.
 
-**array_view** tiene constructores de conversión de una matriz sin formato y de un intervalo de **T&ast;**  (punteros al tipo de elemento).
+**winrt::array_view** tiene constructores de conversión de una matriz sin formato y de un intervalo de **T&ast;**  (punteros al tipo de elemento).
 
 ```cppwinrt
 using namespace winrt;
 ...
 byte theRawArray[]{ 99, 98, 97 };
 array_view<byte const> fromRawArray{ theRawArray };
-dataWriter.WriteBytes(fromRawArray); // the array_view is passed to WriteBytes.
+dataWriter.WriteBytes(fromRawArray); // the winrt::array_view is passed to WriteBytes.
 
 array_view<byte const> fromRange{ theArray.data(), theArray.data() + 2 }; // just the first two elements.
-dataWriter.WriteBytes(fromRange); // the array_view is passed to WriteBytes.
+dataWriter.WriteBytes(fromRange); // the winrt::array_view is passed to WriteBytes.
 ```
 
 ## <a name="winrtarrayview-functions-and-operators"></a>Funciones y operadores de winrt::array_view
-Se ha implementado una gran cantidad de constructores, operadores, funciones e iteradores para **array_view**. Un **array_view** es un intervalo, así que puedes usarlo con `for` basado en intervalo o con **std::for_each**.
+Un host de constructores, operadores, funciones y los iteradores se implementan para **winrt::array_view**. Un **winrt::array_view** es un intervalo, por lo que puede usar con basado en rango `for`, o con **std:: for_each**.
 
 Para obtener más ejemplos e información, consulta el tema de referencia de API [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view).
 
@@ -154,7 +154,7 @@ Aún puede usar el [Parallel Patterns Library (PPL)](/cpp/parallel/concrt/parall
 
 ## <a name="important-apis"></a>API importantes
 * [IVector&lt;T&gt; interfaz](/uwp/api/windows.foundation.collections.ivector_t_)
-* [plantilla de estructura winrt::array_view](/uwp/cpp-ref-for-winrt/array-view)
+* [winrt::array_view struct template](/uwp/cpp-ref-for-winrt/array-view)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Cadena de control en C++ / c++ / WinRT](strings.md)

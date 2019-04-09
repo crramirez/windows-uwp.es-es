@@ -2,16 +2,16 @@
 Description: Puedes usar paquetes piloto para distribuir paquetes que solo se entregan a un grupo de prueba limitado.
 title: Paquetes piloto
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
-ms.date: 10/31/2018
+ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, distribución de paquetes piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 568fbff28d6c57acb6214bf274becc9cbc7f8830
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2070d1312df8f840c2368600197ca2bd7c506cdc
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244301"
 ---
 # <a name="package-flights"></a>Paquetes piloto
 
@@ -70,7 +70,7 @@ Para obtener más información, consulta [Gradual package rollout (Lanzamiento g
 
 ## <a name="configure-additional-package-flight-options"></a>Configurar las opciones de paquete piloto adicionales
 
-De manera predeterminada, tu paquete piloto se publicará y estará disponible para tu grupo de piloto tan pronto como se complete el proceso de certificación. Si quieres cambiar la [fecha de publicación](set-app-pricing-and-availability.md#publish-date) o agregar [Notas para la certificación](notes-for-certification.md), puedes hacerlo en la sección **Opciones de piloto**. Haz clic en **Guardar** para volver a la página de información general del paquete piloto. 
+De manera predeterminada, tu paquete piloto se publicará y estará disponible para tu grupo de piloto tan pronto como se complete el proceso de certificación. Si desea cambiar la [fecha de publicación](set-app-pricing-and-availability.md#publish-date), puede hacerlo en el **Flight opciones** sección. Haz clic en **Guardar** para volver a la página de información general del paquete piloto. 
 
 
 ## <a name="submit-your-package-flight-to-the-store"></a>Enviar el paquete piloto a la Tienda

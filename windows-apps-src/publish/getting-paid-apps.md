@@ -2,16 +2,16 @@
 Description: Obtenga información sobre la recepción de pagos para las aplicaciones, complementos (productos de la aplicación) y el anuncio de ganancias.
 title: Recibir pagos
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-ms.date: 10/31/2018
+ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d59519e23955b53b32d2178e37e75f195fd54eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 293f24122129e56fbb1521a0d3dd7e2ff51e4923
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244111"
 ---
 # <a name="getting-paid"></a>Recibir pagos
 Aquí es alguna información importante acerca de la recepción de pago para sus aplicaciones, complementos y utilidades de publicidad.
@@ -23,7 +23,7 @@ Aquí es alguna información importante acerca de la recepción de pago para sus
 
 Cuando te [registras para obtener una cuenta de desarrollador](https://go.microsoft.com/fwlink/p/?LinkID=615100), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Este acuerdo explica la relación que tienes con Microsoft en cuanto a la venta de aplicaciones en la Microsoft Store, incluida la comisión de la Store que Microsoft cobra por cada venta realizada.
 
-En la mayoría de los casos, la comisión de la Tienda es del 30%. Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Revisa siempre ese documento si tienes alguna duda.
+Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Revisa siempre ese documento si tienes alguna duda.
 
 La comisión de la Store se aplica a todas las ventas de aplicaciones realizadas a través de la Microsoft Store, incluidos los complementos.
 

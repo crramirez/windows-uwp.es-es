@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9cbf94420b8ed7a2e030ccb2799a8636f56bef2f
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635720"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162931"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -53,7 +53,7 @@ En **Cuentas de prueba de Xbox Live**, puedes administrar las cuentas asociadas 
 
 ### <a name="xbox-live-game-saves"></a>Xbox Live (partidas guardadas)
 
-Tanto el Portal de dispositivos Windows como el Portal de dispositivos para Xbox tienen una página **Xbox Live**. Sin embargo, el Portal de dispositivos para Xbox tiene una sección exclusiva, **Partidas guardadas de Xbox Live**, donde puedes guardar datos de juegos instalados en tu Xbox. Escribe el **Id. de configuración de servicio (SCID)** (consulta [Configuración del servicio de Xbox Live](../xbox-live/xbox-live-service-configuration.md#get-your-ids) para obtener más información), el **Nombre del miembro (MSA)** y el **Nombre de familia de paquete (PFN)** asociados con el título y la partida guardar, busca el **Archivo de entrada (.json o .xml)** y a continuación selecciona uno de los botones (**Restablecer**, **Importar**, **Exportar** y **Eliminar**) para manipular los datos guardados.
+Tanto el Portal de dispositivos Windows como el Portal de dispositivos para Xbox tienen una página **Xbox Live**. Sin embargo, el Portal de dispositivos para Xbox tiene una sección exclusiva, **Partidas guardadas de Xbox Live**, donde puedes guardar datos de juegos instalados en tu Xbox. Escribe el **Id. de configuración de servicio (SCID)** (consulta [Configuración del servicio de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//xbox-live-service-configuration.md#get-your-ids) para obtener más información), el **Nombre del miembro (MSA)** y el **Nombre de familia de paquete (PFN)** asociados con el título y la partida guardar, busca el **Archivo de entrada (.json o .xml)** y a continuación selecciona uno de los botones (**Restablecer**, **Importar**, **Exportar** y **Eliminar**) para manipular los datos guardados.
 
 En la sección **Generar**, puedes generar datos ficticios y guardar en el archivo de entrada especificado. Solo tienes que escribir los **Contenedores (valor predeterminado 2)**, **Blobs (valor predeterminado 3)** y **Tamaño del blob (valor predeterminado 1024)** y seleccionar **Generar**.
 
@@ -199,7 +199,7 @@ En el **datos de eventos de juegos** página, puede ver un gráfico en tiempo re
 
 ![Datos de eventos de juego](images/device-portal-xbox-22.PNG)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Información general de Windows Device Portal](device-portal.md)
 * [Núcleo de Portal de dispositivo referencia de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

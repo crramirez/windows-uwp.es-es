@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8bed97e060015f92ff95c9f7d797bbcb83db431
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e0fcb903bd272bd10d434a27d41e6e4558a624ea
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605840"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334903"
 ---
 # <a name="best-practices-for-writing-to-files"></a>Procedimientos recomendados para escribir en archivos
 
@@ -21,7 +21,9 @@ ms.locfileid: "57605840"
 
 Los desarrolladores a veces se ejecute en un conjunto de problemas comunes al usar el **escribir** métodos de la [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) y [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) clases para realizar operaciones de E/S del sistema de archivos. Por ejemplo, problemas comunes incluyen:
 
-• Un archivo se escribe parcialmente • la aplicación recibe una excepción al llamar a uno de los métodos. • Las operaciones de dejan atrás. Archivos TMP con un nombre similar al nombre del archivo de destino.
+* Parcialmente se escribe un archivo.
+* La aplicación recibe una excepción al llamar a uno de los métodos.
+* Las operaciones de dejan atrás. Archivos TMP con un nombre similar al nombre del archivo de destino.
 
 El **escribir** métodos de la [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) y [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) clases incluyen lo siguiente:
 
@@ -35,7 +37,7 @@ El **escribir** métodos de la [ **FileIO** ](https://docs.microsoft.com/uwp/api
 > [!NOTE]
 > En este artículo se centra en la **FileIO** métodos en los ejemplos y discusiones. Sin embargo, el **PathIO** métodos siguen un patrón similar y la mayoría de las instrucciones de este artículo también se aplica a esos métodos. 
 
-## <a name="conveience-vs-control"></a>Conveience frente a control
+## <a name="convenience-vs-control"></a>Comodidad frente a control
 
 Un [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) objeto no es un identificador de archivo, como el modelo de programación de Win32 nativo. En su lugar, un [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) es una representación de un archivo con los métodos para manipular su contenido.
 
@@ -75,12 +77,12 @@ Esta tabla presentan los códigos de error comunes que los desarrolladores de ap
 
 |  Error de nombre (valor)  |  Pasos  |  Causas  |  Soluciones  |
 |----------------------|---------|----------|-------------|
-|  ERROR_ACCESS_DENIED (0 X 80070005)  |  5  |  El archivo original se podría marcar para su eliminación, posiblemente desde una operación anterior.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
-|  ERROR_SHARING_VIOLATION (0 X 80070020)  |  5  |  Se abre el archivo original por otra operación de escritura exclusivo.   |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19 – 20  |  No se pudo reemplazar el archivo original (file.txt) porque está en uso. Otro proceso u operación obtenido acceso al archivo antes de que se reemplazarán.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
-|  ERROR_DISK_FULL (0 X 80070070)  |  7, 14, 16, 20  |  El modelo de transacción crea un archivo adicional, y Esto consume almacenamiento adicional.  |    |
+|  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  El archivo original se podría marcar para su eliminación, posiblemente desde una operación anterior.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
+|  ERROR_SHARING_VIOLATION (0x80070020)  |  5  |  Se abre el archivo original por otra operación de escritura exclusivo.   |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  No se pudo reemplazar el archivo original (file.txt) porque está en uso. Otro proceso u operación obtenido acceso al archivo antes de que se reemplazarán.  |  Vuelva a intentar la operación.</br>Asegúrese de que se sincroniza el acceso al archivo.  |
+|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  El modelo de transacción crea un archivo adicional, y Esto consume almacenamiento adicional.  |    |
 |  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  Esto puede deberse a varias operaciones de E/S pendientes o tamaños de archivo grandes.  |  Un enfoque más granular mediante el control de la secuencia podría resolver el error.  |
-|  E_FAIL (0 X 80004005) |  Cualquiera  |  Varios  |  Vuelva a intentar la operación. Si sigue sin funcionar, podría ser un error de la plataforma y la aplicación debe finalizar porque está en un estado incoherente. |
+|  E_FAIL (0x80004005) |  Cualquiera  |  Varios  |  Vuelva a intentar la operación. Si sigue sin funcionar, podría ser un error de la plataforma y la aplicación debe finalizar porque está en un estado incoherente. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Otras consideraciones para los Estados de los archivos que podrían conducir a errores
 
@@ -192,6 +194,6 @@ else
 
 El [Parallel Programming with .NET blog](https://blogs.msdn.microsoft.com/pfxteam/) es un excelente recurso para obtener instrucciones sobre la programación paralela. En concreto, el [escribir comentarios sobre un elemento AsyncReaderWriterLock](https://blogs.msdn.microsoft.com/pfxteam/2012/02/12/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) describe cómo mantener el acceso exclusivo a un archivo para escritura mientras que permita el acceso de lectura simultáneo. Tenga en cuenta que la serialización que e/s afectará al rendimiento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Crear, escribir y leer archivos](quickstart-reading-and-writing-files.md)

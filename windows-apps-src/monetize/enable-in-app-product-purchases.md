@@ -6,12 +6,12 @@ keywords: uwp, UWP, add-ons, complementos, in-app purchases, compras desde la ap
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a203ef79fc6ebb45107cd9ac9d79cadf330f7a5d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9be40d78e00e583988ba8c6b318e7a8941d7f971
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604370"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334983"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de productos desde la aplicación
 
@@ -34,7 +34,7 @@ Independientemente de que la aplicación sea gratuita o no, puedes vender conten
 Cuando se esté iniciando la aplicación, obtén el objeto [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) de la aplicación mediante la inicialización de la clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) o [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) para habilitar las compras de un producto desde la aplicación.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
+[!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
 
 ## <a name="step-2-add-the-in-app-offers-to-your-app"></a>Paso 2: Agregue las ofertas de la aplicación a la aplicación
 
@@ -61,7 +61,7 @@ Para cada función que quieras tener disponible a través de un producto desde l
     En este ejemplo se muestra cómo puedes codificar una función de producto llamada **featureName** en un bloqueo condicional específico de una licencia. La cadena **featureName** es el token que identifica este producto de manera única en la aplicación. También se usa para identificarlo en la Tienda.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
+    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
 
 3.  **Agregar la interfaz de usuario de la compra para esta característica**
 
@@ -70,7 +70,7 @@ Para cada función que quieras tener disponible a través de un producto desde l
     A continuación te mostramos cómo comprobar si el cliente ya tiene un producto desde la aplicación y, si no la tiene, cómo mostrar el cuadro de diálogo de compra para que puedan comprarla. Reemplaza el comentario "mostrar el cuadro de diálogo de compra" por el código personalizado del cuadro de diálogo de compra (como, por ejemplo, una página con un alegre botón que diga: “¡Comprar esta aplicación!” ).
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
+    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
 
 ## <a name="step-3-change-the-test-code-to-the-final-calls"></a>Paso 3: Cambiar el código de prueba a las llamadas al finales
 
@@ -83,7 +83,7 @@ En el centro de partners, vaya a la aplicación y [crear un complemento](../publ
   > [!NOTE]
   > El token de la oferta en la aplicación que usa en el código debe coincidir con el [Id. de producto](../publish/set-your-add-on-product-id.md#product-id) valor especificado para el complemento correspondiente en el centro de partners.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Si te interesa que los clientes cuenten con varios productos consumibles desde la aplicación (elementos que se puedan comprar, usar y después volver a comprar si se desea), consulta el tema [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md).
 

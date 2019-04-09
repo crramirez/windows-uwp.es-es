@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
-ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b6f1e12b82ec3ee41cdacc86fcc5f41d664262be
+ms.sourcegitcommit: 9031a51f9731f0b675769e097aa4d914b4854e9e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649640"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618402"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 
@@ -26,7 +26,7 @@ public:
     Uri(winrt::hstring uri) const;
 ```
 
-Pero **hstring** tiene [constructores de conversión](/uwp/api/windows.foundation.uri#hstringhstring-constructor) que te permiten trabajar con él sin necesidad de tenerlo en cuenta. Este es un ejemplo de código que muestra cómo realizar un **Uri** desde un literal de cadena de caracteres anchos y desde un **std:: wstring**.
+Pero **hstring** tiene [constructores de conversión](/uwp/cpp-ref-for-winrt/hstring#hstringhstring-constructor) que te permiten trabajar con él sin necesidad de tenerlo en cuenta. Este es un ejemplo de código que muestra cómo realizar un **Uri** desde un literal de cadena de caracteres anchos y desde un **std:: wstring**.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -60,7 +60,7 @@ public:
     winrt::hstring Domain();
 ```
 
-Pero, nuevamente, tener en cuenta este detalle es opcional gracias al [operador de conversión a**std::wstring_view**](/uwp/api/hstring#hstringoperator-stdwstringview) de **hstring**.
+Pero, nuevamente, tener en cuenta este detalle es opcional gracias al [operador de conversión a**std::wstring_view**](/uwp/cpp-ref-for-winrt/hstring#hstringoperator-stdwstring_view) de **hstring**.
 
 ```cppwinrt
 // Access a property of type hstring, via a conversion operator to a standard type.
@@ -91,7 +91,7 @@ hstring tostringHstring{ contosoUri.ToString() }; // L"http://www.contoso.com/"
 tostringHstring = awUri.ToString(); // L"http://www.adventure-works.com/"
 ```
 
-Puedes usar la función [**hstring::c_str function**](/uwp/api/windows.foundation.uri#hstringcstr-function) para obtener una cadena estándar de caracteres anchos de un **hstring** (del mismo modo que desde un **std::wstring**).
+Puedes usar la función [**hstring::c_str function**](/uwp/cpp-ref-for-winrt/hstring#hstringc_str-function) para obtener una cadena estándar de caracteres anchos de un **hstring** (del mismo modo que desde un **std::wstring**).
 
 ```cppwinrt
 #include <iostream>
@@ -156,7 +156,7 @@ Es posible que observes que los parámetros de entrada de C++/WinRT, que deben a
 
 El resultado es que puedes omitir en gran medida las características específicas de gestión de cadenas de Windows Runtime y trabajar así eficazmente con aquello que conoces. Y esto es importante, teniendo en cuenta la gran cantidad de cadenas que se utilizan en Windows Runtime.
 
-# <a name="formatting-strings"></a>Cadenas de formato
+## <a name="formatting-strings"></a>Cadenas de formato
 Una opción de formato de cadenas es **std::wstringstream**. Este es un ejemplo que da formato y muestra un mensaje de seguimiento de depuración simple.
 
 ```cppwinrt

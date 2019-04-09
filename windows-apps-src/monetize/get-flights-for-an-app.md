@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flights, pilotos, package flights, paquetes piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6f55a218c0cb4f4964fe12eb8e2eeb5b504f6405
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659880"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334783"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obtener paquetes piloto para una aplicación
 
@@ -30,12 +30,12 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -57,14 +57,14 @@ No incluyas un cuerpo de la solicitud para este método.
 
 En el siguiente ejemplo se muestra cómo enumerar todos los paquetes piloto de una aplicación.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 En el siguiente ejemplo se muestra cómo enumerar el primer paquete piloto de una aplicación.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights?top=1 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -101,7 +101,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 
 | Valor      | Tipo   | Descripción       |
 |------------|--------|---------------------|
-| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 2, pero hay 4 paquetes piloto para la aplicación, el cuerpo de la respuesta incluirá un valor @nextLink de ```applications/{applicationid}/listflights/?skip=2&top=2```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2``` para solicitar los 2 paquetes piloto siguientes. |
+| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 2, pero hay 4 paquetes piloto para la aplicación, el cuerpo de la respuesta incluirá un valor @nextLink de `applications/{applicationid}/listflights/?skip=2&top=2`, lo que indica que puedes llamar a `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2` para solicitar los 2 paquetes piloto siguientes. |
 | value      | array  | Una matriz de objetos que proporcionan información acerca de los paquetes piloto de la aplicación especificada. Para obtener más información sobre los datos de cada objeto, consulta [Recurso de piloto](get-app-data.md#flight-object).               |
 | totalCount | entero    | El número total de filas del resultado de datos de la consulta (es decir, el número total de paquetes piloto de la aplicación especificada).   |
 

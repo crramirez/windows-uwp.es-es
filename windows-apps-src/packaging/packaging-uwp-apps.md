@@ -2,19 +2,19 @@
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empaquetado de aplicaciones para UWP
 description: Para distribuir o vender tu aplicación de Plataforma universal de Windows (UWP), necesitas crear un paquete de aplicación para ella.
-ms.date: 01/02/2019
+ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d5ed75cb79488eb994135dcfef74483ec078a32e
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599140"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58173031"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
@@ -149,12 +149,12 @@ Para transferir localmente la aplicación en un dispositivo Windows 10 Mobile, u
 
 ### <a name="sideload-your-app-package-on-windows-10-anniversary-update-or-later"></a>Transferir localmente la aplicación del paquete de actualización de aniversario de Windows 10 o posterior
 
-Introducidos en la Actualización de aniversario de Windows 10, los paquetes de la aplicación se pueden instalar simplemente haciendo doble clic en el archivo de paquete de la aplicación. Para ello, vaya a su paquete de aplicación o el archivo de paquete de aplicación y haga doble clic en él. El instalador de aplicaciones se inicia y proporciona la información de la aplicación básica, así como un botón de instalación, barra de progreso de instalación y los mensajes de error pertinentes.
+Se introdujo en Windows 10 Anniversary Update (Windows 10, versión 1607), se pueden instalar los paquetes de aplicación simplemente haciendo doble clic en el archivo de paquete de aplicación. Para ello, vaya a su paquete de aplicación o el archivo de paquete de aplicación y haga doble clic en él. [Instalador de la aplicación](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) inicia y proporciona la información de la aplicación básica, así como un botón instalar, barra de progreso de instalación y los mensajes de error pertinente.
 
 ![Pantalla del instalador de aplicaciones para instalar una aplicación de ejemplo llamada Contoso](images/appinstaller-screen.png)
 
 > [!NOTE]
-> El instalador de aplicación da por hecho que el dispositivo confía en la aplicación. Si estás realizando la instalación de prueba de una aplicación de desarrollador o empresarial, tendrás que instalar el certificado de firma en el almacén de Entidades de certificación raíz de personas de confianza o editores de confianza en el dispositivo. Si no estás seguro de cómo hacerlo, consulta [Instalar certificados de prueba](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
+> Instalador de la aplicación se da por supuesto que la aplicación es de confianza por el dispositivo. Si estás realizando la instalación de prueba de una aplicación de desarrollador o empresarial, tendrás que instalar el certificado de firma en el almacén de Entidades de certificación raíz de personas de confianza o editores de confianza en el dispositivo. Si no estás seguro de cómo hacerlo, consulta [Instalar certificados de prueba](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
 
 ### <a name="sideload-your-app-package-on-previous-versions-of-windows"></a>Transferir localmente la aplicación de paquetes en versiones anteriores de Windows
 

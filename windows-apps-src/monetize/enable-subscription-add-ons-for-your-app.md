@@ -5,12 +5,12 @@ keywords: windows 10, uwp, suscripciones, complementos, add-ons, compras desde l
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cda22488f613c508b2c753c6b530b2b34b10909d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b937ca61110452e233061179c398cae0d047686e
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589990"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335063"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para tu aplicación
 
@@ -88,14 +88,14 @@ Este ejemplo muestra cómo solicitar la compra de un complemento de suscripción
 4. Finalmente, el código llama al método [**RequestPurchaseAsync**](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.RequestPurchaseAsync) para solicitar la compra de la suscripción. Si hay una versión de prueba para la suscripción, se ofrecerá al cliente la versión de prueba para la compra. De lo contrario, se te ofrecerá la suscripción completa para la compra.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseSubscriptionAddOnTrialPage.xaml.cs#PurchaseTrialSubscription)]
+[!code-csharp[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseSubscriptionAddOnTrialPage.xaml.cs#PurchaseTrialSubscription)]
 
 ### <a name="get-info-about-subscription-add-ons-for-the-current-app"></a>Obtener información sobre los complementos de una suscripción para la aplicación actual
 
 Este ejemplo de código muestra cómo obtener información para todos los complementos de una suscripción que están disponibles en tu aplicación. Para obtener esta información, usa primero el método [**GetAssociatedStoreProductsAsync**](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StoreContext.GetAssociatedStoreProductsAsync) para obtener la colección de objetos [**StoreProduct**](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StoreProduct) que representan cada uno de los complementos disponibles para la aplicación. A continuación, obtén el objeto [**StoreSku**](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) para cada producto y usa las propiedades [**IsSubscription**](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.IsSubscription) y [**SubscriptionInfo**](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.SubscriptionInfo) para acceder a la información de la suscripción.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/GetSubscriptionAddOnsPage.xaml.cs#GetSubscriptions)]
+[!code-csharp[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/GetSubscriptionAddOnsPage.xaml.cs#GetSubscriptions)]
 
 <span id="manage-subscriptions" />
 

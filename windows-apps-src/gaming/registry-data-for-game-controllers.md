@@ -2,16 +2,16 @@
 title: Datos del registro para dispositivos de juego
 description: Obtén información sobre los datos que se pueden agregar al registro del PC para permitir que tu controlador se use en juegos UWP.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
-ms.date: 06/25/2018
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, juegos, entrada, registro, personalizado
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5578faeb5a35ae909e590741de759c2597b9c7ed
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244401"
 ---
 # <a name="registry-data-for-game-controllers"></a>Datos del registro para dispositivos de juego
 
@@ -30,10 +30,10 @@ La siguiente tabla explica los valores esperados en la ubicación raíz del disp
 
 <table>
     <tr>
-        <th>Nombre</th>
+        <th>Name</th>
         <th>Tipo</th>
         <th>¿Obligatorio?</th>
-        <th>Información</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Deshabilitada</td>
@@ -66,7 +66,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
     <tr>
         <th>Subclave</th>
         <th>¿Obligatorio?</th>
-        <th>Información</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Menú</td>
@@ -179,7 +179,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
     <tr>
         <th>Subclave</th>
         <th>¿Obligatorio?</th>
-        <th>Información</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>PreviousGear</td>
@@ -338,7 +338,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
     <tr>
         <th>Subclave</th>
         <th>¿Obligatorio?</th>
-        <th>Información</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Acción 1</td>
@@ -399,7 +399,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
     <tr>
         <th>Subclave</th>
         <th>¿Obligatorio?</th>
-        <th>Información</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>FirePrimary</td>
@@ -442,7 +442,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
     <tr>
         <th>Subclave</th>
         <th>¿Obligatorio?</th>
-        <th>Información</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Menú</td>
@@ -597,7 +597,7 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
         </td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Conmutador</td>
+        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sí</td>
@@ -610,7 +610,7 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
         <td>
             <p>Indica la posición del conmutador que hará que el botón asignado informe de que está siendo presionado. Los valores de posición pueden ser una de las siguientes cadenas:</p>
             <ul>
-                <li>Arriba</li> 
+                <li>Arriba</li>
                 <li>UpRight</li>
                 <li>Derecha</li>
                 <li>DownRight</li>
@@ -713,7 +713,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
         <td>Indica que el valor de eje asignado se debe invertir antes de devolverlo.</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Conmutador</td>
+        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sí</td>
@@ -820,7 +820,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b>, o <b>EightWay</b>
+        <td><b>TwoWay</b>, <b>FourWay</b> o <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -898,7 +898,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
         <td>DWORD</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Conmutador</td>
+        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Índice en la matriz de conmutadores <b>RawGameController</b>.
@@ -1121,10 +1121,10 @@ La clave **Axes** asignará cada una de las posiciones de eje de la matriz de ej
 
 ### <a name="switch-labels"></a>Etiquetas de conmutadores
 
-Los mapas de claves **Switches** convierten las posiciones a etiquetas. Los valores siguen esta convención de nomenclatura: para etiquetar una posición de un conmutador, cuyo índice es *x* en la matriz de conmutadores **RawGameController**, agrega estos valores en la subclave **Switches**: 
+Los mapas de claves **Switches** convierten las posiciones a etiquetas. Los valores siguen esta convención de nomenclatura: para etiquetar una posición de un conmutador, cuyo índice es *x* en la matriz de conmutadores **RawGameController**, agrega estos valores en la subclave **Switches**:
 
-* SwitchxUp 
-* SwitchxUpRight 
+* SwitchxUp
+* SwitchxUpRight
 * SwitchxRight
 * SwitchxDownRight
 * SwitchxDown
@@ -1132,11 +1132,11 @@ Los mapas de claves **Switches** convierten las posiciones a etiquetas. Los valo
 * SwitchxUpLeft
 * SwitchxLeft
 
-La tabla siguiente muestra un ejemplo de conjunto de etiquetas para cambiar las posiciones de un conmutador de 4 vías que aparece en el índice 0 de la **RawGameController**: 
+La tabla siguiente muestra un ejemplo de conjunto de etiquetas para cambiar las posiciones de un conmutador de 4 vías que aparece en el índice 0 de la **RawGameController**:
 
 <table>
     <tr>
-        <th>Nombre</th>
+        <th>Name</th>
         <th>Valor (tipo: REG_SZ)</th>
     </tr>
     <tr>
@@ -1232,7 +1232,7 @@ La tabla siguiente muestra un ejemplo de conjunto de etiquetas para cambiar las 
 
 Para mostrar cómo todas estas asignaciones y valores se conjuntan, aquí viene un archivo de registro de ejemplo para una **RacingWheel** genérica:
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GameInput\Devices\1234567800010004]
@@ -1345,8 +1345,8 @@ Windows Registry Editor Version 5.00
 "Invert" = dword:00000000
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
-* [Windows.Gaming.Input.Custom Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
+* [Espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Espacio de nombres Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [Archivos INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

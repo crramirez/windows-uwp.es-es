@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bd59c1d32b4f09b58b7e78281e468fbb00a777d9
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629470"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291883"
 ---
 # <a name="stencil-buffers"></a>Búferes de galerías de símbolos
-
 
 Un *búfer de galería de símbolos* se usa para enmascarar píxeles en una imagen a fin de producir efectos especiales. La máscara controla si el píxel se dibuja o no. Entre los efectos especiales se incluyen la composición, el calcado, la disolución, la atenuación, el barrido; contornos y siluetas; o la galería de símbolos a doble cara. A continuación se muestran algunas de los efectos más habituales.
 
@@ -25,7 +24,6 @@ La información del búfer de la galería de símbolos se inserta en los datos d
 
 ## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>Cómo funciona el búfer de galería de símbolos
 
-
 Direct3D realiza una prueba del contenido del búfer de la galería de símbolos píxel a píxel. Para cada píxel de la superficie de destino, realiza una prueba empleando el valor correspondiente del búfer de la galería de símbolos, un valor de referencia de la galería de símbolos y un valor de máscara de la galería de símbolos. Si se pasa la prueba, Direct3D realiza una acción. La prueba se realiza mediante los siguientes pasos.
 
 1.  Realizar una operación AND bit a bit del valor de referencia de la galería de símbolos con la máscara de la galería de símbolos.
@@ -34,7 +32,7 @@ Direct3D realiza una prueba del contenido del búfer de la galería de símbolos
 
 Los pasos anteriores se muestran en la siguiente línea de código:
 
-```
+```cpp
 (StencilRef & StencilMask) CompFunc (StencilBufferValue & StencilMask)
 ```
 

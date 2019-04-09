@@ -13,18 +13,18 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: df81348dee781d1c329562d558ed8df30fd40bc5
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244121"
 ---
 # <a name="designing-for-mixed-reality"></a>Diseñar para realidad mixta
 
 Diseña tu aplicación para que se vea bien en realidad mixta y provecha los nuevos métodos de entrada.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 La [realidad mixta](https://developer.microsoft.com/windows/mixed-reality/mixed_reality) es el resultado de fusionar el mundo físico con el mundo digital. El espectro de experiencias con realidad mixta incluye, por un lado, dispositivos como HoloLens (un dispositivo que mezcla contenido generado por equipos con el mundo real) y, por otro lado, una vista completamente envolvente de realidad virtual (tal y como se ve con unos cascos de Windows Mixed Reality). Consulta [Tipos de aplicaciones de realidad mixta](https://developer.microsoft.com/en-us/windows/mixed-reality/types_of_mixed_reality_apps) para tener ejemplos sobre cómo varían las experiencias.
 
@@ -105,7 +105,7 @@ Deberás tener varias cosas en cuenta en el momento de crear una aplicación par
 * Una aplicación 2D recibe automáticamente una [barra de la aplicación](https://developer.microsoft.com/windows/mixed-reality/app_bar_and_bounding_box) para dejar que el usuario se mueva y escale por el entorno virtual. Puede cambiarse el tamaño vertical de las vistas o bien cambiar el tamaño mantenimiento la misma relación de aspecto.
 
 
-## <a name="2d-app-design-considerations-uiux"></a>Consideraciones de diseño de Direct2D: INTERFAZ DE USUARIO/EXPERIENCIA DE USUARIO
+## <a name="2d-app-design-considerations-uiux"></a>Consideraciones de diseño de Direct2D: UI/UX
 
 * Controles de XAML que implementan el [sistema Fluent Design](https://docs.microsoft.com/windows/uwp/design/fluent-design-system/) como la [vista de navegación](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) y los efectos como [Acrylic](https://docs.microsoft.com/windows/uwp/design/style/acrylic) funcionan especialmente bien en aplicaciones 2D de realidad mixta.
 
@@ -151,7 +151,7 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
             {
                 // Running on desktop
                 textBlock.Text = "I'm running on the desktop.";
-                textBlock.FontSize = 16;
+                textBlock.FontSize = 14;
             }
 
 ```
@@ -163,8 +163,8 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
 ## <a name="related-articles"></a>Artículos relacionados
 
 
-* [Limitaciones actuales para las aplicaciones mediante las API desde el shell](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
-* [Creación de aplicaciones 2D](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
+* [Limitaciones actuales para aplicaciones que usan API desde el shell](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
+* [Crear aplicaciones 2D](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
 * [HoloLens: Creación de aplicaciones UWP 2D para Microsoft HoloLens](https://channel9.msdn.com/Events/Build/2016/B854)
 * [XAML condicional](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/conditional-xaml)
 
