@@ -9,12 +9,12 @@ ms.date: 08/4/2017
 keywords: windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: ce1923fa071344a848b4b0c4fab1ed6da6da48f7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 21e6b168ccd656a15fc8efa70e8cded3f12916d4
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583712"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162630"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentación de la Plataforma universal de Windows
 La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows, como equipos, teléfonos, Xbox One, HoloLens y muchos más, y publicarlas en Microsoft Store.
@@ -162,7 +162,7 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                             <a href="xbox-apps/index.md">UWP en Xbox One</a>
                         </p>
                         <p>
-                            <a href="xbox-live/index.md">Xbox Live</a>
+                            <a href="https://docs.microsoft.com/gaming/xbox-live">Xbox Live</a>
                         </p>
                     </div>
                 </div>
