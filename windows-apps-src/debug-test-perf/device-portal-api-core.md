@@ -2,16 +2,17 @@
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
 description: Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
-ms.date: 4/8/2019
+ms.custom: 19H1
+ms.date: 04/19/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 58ae7d83c0889131313d136c13048b83a861f601
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 910e3108009704d444fb81b195f9dd9eae3daa9d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244141"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63798190"
 ---
 # <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
@@ -21,7 +22,7 @@ Toda la funcionalidad del Portal de dispositivos se basa en las API de REST que 
 
 ### <a name="install-an-app"></a>Instalar una aplicación
 
-**Solicitud**
+**Request**
 
 Puedes instalar una aplicación mediante el siguiente formato de solicitud.
 
@@ -67,9 +68,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Instalar un conjunto relacionado
 
-**Solicitud**
+### <a name="install-a-related-set"></a>Instalar un conjunto relacionado
+
+**Request**
 
 Puedes instalar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) mediante el siguiente formato de solicitud.
 
@@ -115,9 +117,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Registrar una aplicación en una carpeta dinámica
 
-**Solicitud**
+### <a name="register-an-app-in-a-loose-folder"></a>Registrar una aplicación en una carpeta dinámica
+
+**Request**
 
 Puede registrar una aplicación en una carpeta dinámica mediante el siguiente formato de solicitud.
 
@@ -166,9 +169,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Registrar un conjunto relacionado en carpetas dinámicas
 
-**Solicitud**
+### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar un conjunto relacionado en carpetas dinámicas
+
+**Request**
 
 Puede registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) en carpetas dinámicas mediante el siguiente formato de solicitud.
 
@@ -226,9 +230,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener el estado de instalación de la aplicación
 
-**Solicitud**
+### <a name="get-app-installation-status"></a>Obtener el estado de instalación de la aplicación
+
+**Request**
 
 Puedes obtener el estado de la instalación de una aplicación que está en curso mediante el siguiente formato de solicitud.
  
@@ -269,9 +274,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Desinstalar una aplicación
 
-**Solicitud**
+### <a name="uninstall-an-app"></a>Desinstalar una aplicación
+
+**Request**
 
 Puedes desinstalar una aplicación mediante el siguiente formato de solicitud.
  
@@ -314,9 +320,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener aplicaciones instaladas
 
-**Solicitud**
+### <a name="get-installed-apps"></a>Obtener aplicaciones instaladas
+
+**Request**
 
 Puedes obtener una lista de aplicaciones instaladas en el sistema mediante el siguiente formato de solicitud.
  
@@ -383,12 +390,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Bluetooth
+
+## <a name="bluetooth"></a>Bluetooth
+
 <hr>
 
 ### <a name="get-the-bluetooth-radios-on-the-machine"></a>Obtener las radios Bluetooth en la máquina
 
-**Solicitud**
+**Request**
 
 Puedes obtener una lista de radios Bluetooth que están instaladas en la máquina mediante el siguiente formato de solicitud. Esto se puede actualizar a una conexión de WebSocket, también con los mismos datos JSON.
  
@@ -443,9 +452,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Activa o desactiva la radio Bluetooth.
 
-**Solicitud**
+### <a name="turn-the-bluetooth-radio-on-or-off"></a>Activa o desactiva la radio Bluetooth.
+
+**Request**
 
 Activa o desactivar una radio Bluetooth específica.
  
@@ -488,12 +498,174 @@ Esta API tiene los siguientes códigos de estado previstos.
 * HoloLens
 * IoT
 
-<hr>
-## Administrador de dispositivos
-<hr>
-### Obtener los dispositivos instalados en la máquina
+---
+### <a name="get-a-list-of-paired-bluetooth-devices"></a>Obtener una lista de dispositivos Bluetooth emparejados
 
-**Solicitud**
+**Request**
+
+Puede obtener una lista de los dispositivos Bluetooth emparejados actualmente con el formato de solicitud siguiente. Esto se puede actualizar a una conexión de WebSocket con los mismos datos JSON. Durante la duración de la conexión de WebSocket, puede cambiar la lista de dispositivos. Una lista completa de los dispositivos se enviarán a través de la conexión de WebSocket cada vez que hay una actualización.
+
+| Método        | URI de la solicitud       |
+| :---          | :---              |
+| GET           | /API/BT/getpaired |
+| GET/WebSocket | /API/BT/getpaired |
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye una matriz JSON de los dispositivos Bluetooth que actualmente están emparejadas.
+```json
+{"PairedDevices": [
+    {
+        "Name" : string,
+        "ID" : string,
+        "AudioConnectionStatus" : string
+    },...
+]}
+```
+El *AudioConnectionStatus* campo estará presente si se puede usar el dispositivo de audio en este sistema. (Las directivas y los componentes opcionales pueden afectar a esto.) *AudioConnectionStatus* será "Conectado" o "Desconectado".
+
+---
+### <a name="get-a-list-of-available-bluetooth-devices"></a>Obtener una lista de dispositivos Bluetooth disponibles
+
+**Request**
+
+Puede obtener una lista de los dispositivos Bluetooth disponibles para el emparejamiento con el formato de solicitud siguiente. Esto se puede actualizar a una conexión de WebSocket con los mismos datos JSON. Durante la duración de la conexión de WebSocket, puede cambiar la lista de dispositivos. Una lista completa de los dispositivos se enviarán a través de la conexión de WebSocket cada vez que hay una actualización.
+
+| Método        | URI de la solicitud          |
+| :---          | :---                 |
+| GET           | /API/BT/getavailable |
+| GET/WebSocket | /API/BT/getavailable |
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye una matriz JSON de los dispositivos Bluetooth que están actualmente disponibles para el emparejamiento.
+```json
+{"AvailableDevices": [
+    {
+        "Name" : string,
+        "ID" : string
+    },...
+]}
+```
+
+---
+### <a name="connect-a-bluetooth-device"></a>Conectar un dispositivo Bluetooth
+
+**Request**
+
+Se conectará al dispositivo si se puede usar el dispositivo de audio en este sistema. (Las directivas y los componentes opcionales pueden afectar a esto.)
+
+| Método       | URI de la solicitud           |
+| :---         | :---                  |
+| EXPONER         | /api/bt/connectdevice |
+
+**Parámetros de URI**
+
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| Id.            | (**requiere**) el identificador del extremo de asociación para el dispositivo Bluetooth y debe estar codificado en Base64. |
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP | Descripción |
+| :---             | :--- |
+| 200              | Aceptar |
+| 4XX              | Códigos de error |
+| 5XX              | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+
+---
+### <a name="disconnect-a-bluetooth-device"></a>Desconectar un dispositivo Bluetooth
+
+**Request**
+
+Se desconectará el dispositivo si se puede usar el dispositivo de audio en este sistema. (Las directivas y los componentes opcionales pueden afectar a esto.)
+
+| Método       | URI de la solicitud              |
+| :---         | :---                     |
+| EXPONER         | /api/bt/disconnectdevice |
+
+**Parámetros de URI**
+
+| Parámetro de URI | Descripción |
+| :---          | :--- |
+| Id.            | (**requiere**) el identificador del extremo de asociación para el dispositivo Bluetooth y debe estar codificado en Base64. |
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado previstos.
+
+| Código de estado HTTP | Descripción |
+| :---             | :--- |
+| 200              | Aceptar |
+| 4XX              | Códigos de error |
+| 5XX              | Códigos de error |
+
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+---
+## <a name="device-manager"></a>Administrador de dispositivos
+<hr>
+
+### <a name="get-the-installed-devices-on-the-machine"></a>Obtener los dispositivos instalados en la máquina
+
+**Request**
 
 Puedes obtener una lista de dispositivos que están instalados en la máquina mediante el siguiente formato de solicitud.
 
@@ -547,9 +719,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener datos de dispositivos o concentradores USB conectados
 
-**Solicitud**
+### <a name="get-data-on-connected-usb-deviceshubs"></a>Obtener datos de dispositivos o concentradores USB conectados
+
+**Request**
 
 Puedes obtener una lista de los descriptores USB de los dispositivos y concentradores USB conectados mediante el siguiente formato de solicitud.
 
@@ -589,7 +762,7 @@ La respuesta es un archivo JSON que incluye el DeviceID del dispositivo USB junt
 }
 ```
 
-**Ejemplo de datos devueltos**
+**Devolver datos de ejemplo**
 ```json
 {
     "DeviceList": [{
@@ -631,11 +804,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Colección de volcados de memoria
-<hr>
-### Obtener la lista de todos los volcados de memoria de aplicaciones
 
-**Solicitud**
+## <a name="dump-collection"></a>Colección de volcados de memoria
+
+<hr>
+
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obtener la lista de todos los volcados de memoria de aplicaciones
+
+**Request**
 
 Puedes obtener la lista de todos los volcados de memoria disponibles para todas las aplicaciones transferidas localmente mediante el siguiente formato de solicitud.
  
@@ -678,9 +854,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener la configuración de la colección de volcado de memoria de una aplicación
 
-**Solicitud**
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obtener la configuración de la colección de volcado de memoria de una aplicación
+
+**Request**
 
 Puedes obtener la configuración de colección de volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
@@ -730,9 +907,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar un volcado de memoria de una aplicación transferida localmente
 
-**Solicitud**
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Eliminar un volcado de memoria de una aplicación transferida localmente
+
+**Request**
 
 Puedes eliminar un volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
@@ -778,9 +956,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Deshabilitar volcados de memoria de una aplicación transferida localmente
 
-**Solicitud**
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Deshabilitar volcados de memoria de una aplicación transferida localmente
+
+**Request**
 
 Puedes deshabilitar los volcados de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
@@ -825,9 +1004,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Descargar el volcado de memoria de una aplicación transferida localmente
 
-**Solicitud**
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Descargar el volcado de memoria de una aplicación transferida localmente
+
+**Request**
 
 Puedes descargar un volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
@@ -875,9 +1055,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Habilitar los volcados de memoria de una aplicación transferida localmente
 
-**Solicitud**
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar los volcados de memoria de una aplicación transferida localmente
+
+**Request**
 
 Puedes habilitar los volcados de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
@@ -920,9 +1101,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener la lista de archivos de comprobación de errores
 
-**Solicitud**
+### <a name="get-the-list-of-bugcheck-files"></a>Obtener la lista de archivos de comprobación de errores
+
+**Request**
 
 Puedes obtener la lista de archivos de minivolcado de comprobación de errores mediante el siguiente formato de solicitud.
  
@@ -969,9 +1151,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Descargar un archivo de volcado de memoria de comprobación de errores
 
-**Solicitud**
+### <a name="download-a-bugcheck-dump-file"></a>Descargar un archivo de volcado de memoria de comprobación de errores
+
+**Request**
 
 Puedes descargar un archivo de volcado de memoria de comprobación de errores mediante el siguiente formato de solicitud.
  
@@ -1017,9 +1200,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener la configuración de control de bloqueo de comprobación de errores
 
-**Solicitud**
+### <a name="get-the-bugcheck-crash-control-settings"></a>Obtener la configuración de control de bloqueo de comprobación de errores
+
+**Request**
 
 Puedes obtener la configuración del control de bloqueo de comprobación de errores mediante el siguiente formato de solicitud.
  
@@ -1052,7 +1236,7 @@ La respuesta incluye la configuración de control de bloqueo. Para obtener más 
 }
 ```
 
-**Tipos de volcado**
+**Tipos de volcado de memoria**
 
 0: Deshabilitada
 
@@ -1078,9 +1262,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener un volcado de memoria de kernel dinámico
 
-**Solicitud**
+### <a name="get-a-live-kernel-dump"></a>Obtener un volcado de memoria de kernel dinámico
+
+**Request**
 
 Puedes obtener un volcado de memoria de kernel dinámico mediante el siguiente formato de solicitud.
  
@@ -1121,9 +1306,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener un volcado de memoria de un proceso de usuario dinámico
 
-**Solicitud**
+### <a name="get-a-dump-from-a-live-user-process"></a>Obtener un volcado de memoria de un proceso de usuario dinámico
+
+**Request**
 
 Puedes obtener el volcado de memoria del proceso de usuario dinámico mediante el siguiente formato de solicitud.
  
@@ -1168,9 +1354,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Establecer la configuración de control de bloqueo de comprobación de errores
 
-**Solicitud**
+### <a name="set-the-bugcheck-crash-control-settings"></a>Establecer la configuración de control de bloqueo de comprobación de errores
+
+**Request**
 
 Puedes establecer la configuración para recopilar datos de comprobación de errores mediante el siguiente formato de solicitud.
  
@@ -1216,11 +1403,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## ETW
-<hr>
-### Crear una sesión ETW en tiempo real a través de un WebSocket
 
-**Solicitud**
+## <a name="etw"></a>ETW
+
+<hr>
+
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Crear una sesión ETW en tiempo real a través de un WebSocket
+
+**Request**
 
 Puedes crear una sesión ETW en tiempo real mediante el siguiente formato de solicitud. Se administrará a través de un websocket.  Los eventos ETW se procesan por lotes en el servidor y se envían al cliente una vez por segundo. 
  
@@ -1312,9 +1502,10 @@ Por ejemplo:
 ```
 
 <hr>
-### Enumerar los proveedores de ETW registrados
 
-**Solicitud**
+### <a name="enumerate-the-registered-etw-providers"></a>Enumerar los proveedores de ETW registrados
+
+**Request**
 
 Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
@@ -1363,9 +1554,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
 
-**Solicitud**
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
+
+**Request**
 
 Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
@@ -1411,12 +1603,14 @@ Puedes enumerar los proveedores registrados con el siguiente formato de solicitu
 * IoT
 
 <hr>
-## Ubicación
+
+## <a name="location"></a>Location
+
 <hr>
 
 ### <a name="get-location-override-mode"></a>Obtener el modo de invalidación de ubicación
 
-**Solicitud**
+**Request**
 
 Puedes obtener el estado de invalidación de la pila de ubicaciones del dispositivo mediante el siguiente formato de solicitud. El modo de desarrollador debe estar activado para que esta llamada pueda tener éxito.
  
@@ -1465,7 +1659,7 @@ Esta API tiene los siguientes códigos de estado previstos.
 
 ### <a name="set-location-override-mode"></a>Establecer el modo de invalidación de ubicación
 
-**Solicitud**
+**Request**
 
 Puedes establecer el estado de invalidación de la pila de ubicaciones del dispositivo mediante el siguiente formato de solicitud. Cuando está habilitada, la pila de ubicaciones permite la inyección de posición. El modo de desarrollador debe estar activado para que esta llamada pueda tener éxito.
 
@@ -1516,7 +1710,7 @@ Esta API tiene los siguientes códigos de estado previstos.
 
 ### <a name="get-the-injected-position"></a>Obtener la posición inyectada
 
-**Solicitud**
+**Request**
 
 Puedes obtener la ubicación inyectada del dispositivo (sin precisión) mediante el siguiente formato de solicitud. Se debe establecer una ubicación inyectada, o se producirá un error.
  
@@ -1568,7 +1762,7 @@ Esta API tiene los siguientes códigos de estado previstos.
 
 ### <a name="set-the-injected-position"></a>Establecer la posición inyectada
 
-**Solicitud**
+**Request**
 
 Puedes establecer la ubicación inyectada del dispositivo (sin precisión) mediante el siguiente formato de solicitud. Primero debe estar habilitado el modo de invalidación de ubicación en el dispositivo y la ubicación establecida debe ser una ubicación válida, o se producirá un error.
 
@@ -1624,11 +1818,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Información del SO
-<hr>
-### Obtener el nombre de la máquina
 
-**Solicitud**
+## <a name="os-information"></a>Información del SO
+
+<hr>
+
+### <a name="get-the-machine-name"></a>Obtener el nombre de la máquina
+
+**Request**
 
 Puedes obtener el nombre de una máquina mediante el siguiente formato de solicitud.
  
@@ -1676,9 +1873,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener la información del sistema operativo
 
-**Solicitud**
+### <a name="get-the-operating-system-information"></a>Obtener la información del sistema operativo
+
+**Request**
 
 Puedes obtener la información del sistema operativo de una máquina mediante el siguiente formato de solicitud.
  
@@ -1732,9 +1930,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtén la familia de dispositivos. 
 
-**Solicitud**
+### <a name="get-the-device-family"></a>Obtén la familia de dispositivos. 
+
+**Request**
 
 Puedes obtener la familia de dispositivos (Xbox, Teléfono, escritorio, etc.) mediante el siguiente formato de solicitud.
  
@@ -1786,9 +1985,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Establecer el nombre de la máquina
 
-**Solicitud**
+### <a name="set-the-machine-name"></a>Establecer el nombre de la máquina
+
+**Request**
 
 Puedes establecer el nombre de una máquina mediante el siguiente formato de solicitud.
  
@@ -1832,11 +2032,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Información de usuario
-<hr>
-### Obtener el usuario activo
 
-**Solicitud**
+## <a name="user-information"></a>Información de usuario
+
+<hr>
+
+### <a name="get-the-active-user"></a>Obtener el usuario activo
+
+**Request**
 
 Puedes obtener el nombre del usuario activo en el dispositivo mediante el siguiente formato de solicitud.
  
@@ -1895,11 +2098,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Datos de rendimiento
-<hr>
-### Obtener la lista de procesos en ejecución
 
-**Solicitud**
+## <a name="performance-data"></a>Datos de rendimiento
+
+<hr>
+
+### <a name="get-the-list-of-running-processes"></a>Obtener la lista de procesos en ejecución
+
+**Request**
 
 Puedes obtener la lista de procesos que se encuentran en ejecución actualmente mediante el siguiente formato de solicitud.  esto puede actualizarse a una conexión WebSocket también, con los mismos datos de JSON que se envían al cliente una vez por segundo. 
  
@@ -1958,9 +2164,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener las estadísticas de rendimiento del sistema
 
-**Solicitud**
+### <a name="get-the-system-performance-statistics"></a>Obtener las estadísticas de rendimiento del sistema
+
+**Request**
 
 Puedes obtener las estadísticas de rendimiento del sistema mediante el siguiente formato de solicitud. Esto incluye información como, por ejemplo, leer y escribir ciclos y la cantidad de memoria que se ha usado.
  
@@ -2037,11 +2244,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Alimentación
-<hr>
-### Obtener el estado actual de la batería
 
-**Solicitud**
+## <a name="power"></a>Alimentación
+
+<hr>
+
+### <a name="get-the-current-battery-state"></a>Obtener el estado actual de la batería
+
+**Request**
 
 Puedes obtener el estado actual de la batería mediante el siguiente formato de solicitud.
  
@@ -2096,9 +2306,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener el plan de energía activo
 
-**Solicitud**
+### <a name="get-the-active-power-scheme"></a>Obtener el plan de energía activo
+
+**Request**
 
 Puedes obtener el plan de energía activo mediante el siguiente formato de solicitud.
  
@@ -2142,9 +2353,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener el subvalor de un plan de energía
 
-**Solicitud**
+### <a name="get-the-sub-value-for-a-power-scheme"></a>Obtener el subvalor de un plan de energía
+
+**Request**
 
 Puedes obtener el subvalor de un plan de energía mediante el siguiente formato de solicitud.
  
@@ -2185,9 +2397,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener el estado de energía del sistema
 
-**Solicitud**
+### <a name="get-the-power-state-of-the-system"></a>Obtener el estado de energía del sistema
+
+**Request**
 
 Puedes comprobar el estado de energía del sistema mediante el siguiente formato de solicitud. Esto te permitirá comprobar si se encuentra en un estado de energía bajo.
  
@@ -2232,9 +2445,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Establecer el plan de energía activo
 
-**Solicitud**
+### <a name="set-the-active-power-scheme"></a>Establecer el plan de energía activo
+
+**Request**
 
 Puedes establecer el plan de energía activo mediante el siguiente formato de solicitud.
  
@@ -2277,9 +2491,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Establecer el subvalor de un plan de energía
 
-**Solicitud**
+### <a name="set-the-sub-value-for-a-power-scheme"></a>Establecer el subvalor de un plan de energía
+
+**Request**
 
 Puedes establecer el subvalor de un plan de energía mediante el siguiente formato de solicitud.
  
@@ -2321,9 +2536,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener un informe de estudio de suspensión
 
-**Solicitud**
+### <a name="get-a-sleep-study-report"></a>Obtener un informe de estudio de suspensión
+
+**Request**
 
 | Método      | URI de la solicitud |
 | :------     | :----- |
@@ -2364,9 +2580,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Enumerar los informes de estudio de suspensión disponibles
 
-**Solicitud**
+### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar los informes de estudio de suspensión disponibles
+
+**Request**
 
 Puedes enumerar los informes de estudio de suspensión disponibles mediante el siguiente formato de solicitud.
  
@@ -2415,9 +2632,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener la transformación de estudio de suspensión
 
-**Solicitud**
+### <a name="get-the-sleep-study-transform"></a>Obtener la transformación de estudio de suspensión
+
+**Request**
 
 Puedes obtener la transformación de estudio de suspensión mediante el siguiente formato de solicitud. Esta transformación es de tipo XSLT que convierte el informe de estudio de suspensión en un formato XML que puede leer una persona.
  
@@ -2458,11 +2676,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Control remoto
-<hr>
-### Reiniciar el equipo de destino
 
-**Solicitud**
+## <a name="remote-control"></a>Control remoto
+
+<hr>
+
+### <a name="restart-the-target-computer"></a>Reiniciar el equipo de destino
+
+**Request**
 
 Puedes reiniciar el equipo de destino mediante el siguiente formato de solicitud.
  
@@ -2502,9 +2723,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Apagar el equipo de destino
 
-**Solicitud**
+### <a name="shut-down-the-target-computer"></a>Apagar el equipo de destino
+
+**Request**
 
 Puedes apagar el equipo de destino mediante el siguiente formato de solicitud.
  
@@ -2546,11 +2768,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Administrador de tareas
-<hr>
-### Iniciar una aplicación moderna
 
-**Solicitud**
+## <a name="task-manager"></a>Administrador de tareas
+
+<hr>
+
+### <a name="start-a-modern-app"></a>Iniciar una aplicación moderna
+
+**Request**
 
 Puedes iniciar una aplicación moderna mediante el siguiente formato de solicitud.
  
@@ -2597,9 +2822,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Detener una aplicación moderna
 
-**Solicitud**
+### <a name="stop-a-modern-app"></a>Detener una aplicación moderna
+
+**Request**
 
 Puedes detener una aplicación moderna mediante el siguiente formato de solicitud.
  
@@ -2646,9 +2872,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar el proceso por PID
 
-**Solicitud**
+### <a name="kill-process-by-pid"></a>Eliminar el proceso por PID
+
+**Request**
 
 Puedes eliminar el proceso mediante el siguiente formato de solicitud.
  
@@ -2692,11 +2919,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Funciones de red
-<hr>
-### Obtener la configuración IP actual
 
-**Solicitud**
+## <a name="networking"></a>Funciones de red
+
+<hr>
+
+### <a name="get-the-current-ip-configuration"></a>Obtener la configuración IP actual
+
+**Request**
 
 Puedes obtener la configuración IP actual mediante el siguiente formato de solicitud.
  
@@ -2780,9 +3010,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Establecer una dirección IP estática (configuración de IPV4)
 
-**Solicitud**
+### <a name="set-a-static-ip-address-ipv4-configuration"></a>Establecer una dirección IP estática (configuración de IPV4)
+
+**Request**
 
 Establece la configuración de IPV4 con estático de direcciones IP y DNS. Si no se especifica una dirección IP estática, habilita DHCP. Si se especifica una dirección IP estática, DNS debe especificarse también.
  
@@ -2837,10 +3068,12 @@ Esta API tiene los siguientes códigos de estado previstos.
 * Xbox
 * HoloLens
 * IoT
-<hr>
-### Enumerar las interfaces de red inalámbrica
 
-**Solicitud**
+<hr>
+
+### <a name="enumerate-wireless-network-interfaces"></a>Enumerar las interfaces de red inalámbrica
+
+**Request**
 
 Puedes enumerar las interfaces de red inalámbrica disponibles mediante el siguiente formato de solicitud.
  
@@ -2900,9 +3133,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Enumerar redes inalámbricas
 
-**Solicitud**
+### <a name="enumerate-wireless-networks"></a>Enumerar redes inalámbricas
+
+**Request**
 
 Puedes enumerar la lista de redes inalámbricas en la interfaz especificada mediante el siguiente formato de solicitud.
  
@@ -2970,9 +3204,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Conectar y desconectar en una red Wi-Fi.
 
-**Solicitud**
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar y desconectar en una red Wi-Fi.
+
+**Request**
 
 Puedes conectarte a una red Wi-Fi o desconectarte de ella mediante el siguiente formato de solicitud.
  
@@ -3020,9 +3255,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar un perfil de Wi-Fi
 
-**Solicitud**
+### <a name="delete-a-wi-fi-profile"></a>Eliminar un perfil de Wi-Fi
+
+**Request**
 
 Puedes eliminar un perfil asociado con una red en una interfaz específica mediante el siguiente formato de solicitud.
  
@@ -3067,11 +3303,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Informe de errores de Windows (WER)
-<hr>
-### Descargar un archivo de Informe de errores de Windows (WER)
 
-**Solicitud**
+## <a name="windows-error-reporting-wer"></a>Informe de errores de Windows (WER)
+
+<hr>
+
+### <a name="download-a-windows-error-reporting-wer-file"></a>Descargar un archivo de Informe de errores de Windows (WER)
+
+**Request**
 
 Puedes descargar un archivo relacionado con WER mediante el siguiente formato de solicitud.
  
@@ -3087,7 +3326,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI | Descripción |
 | :------          | :------ |
 | usuario   | (**obligatorio**) Nombre de usuario asociado con el informe. |
-| Tipo   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
+| type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
 | NAME   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
 | file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe. Esto debe estar codificado en Base64. |
 
@@ -3120,9 +3359,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Enumerar archivos en un Informe de errores de Windows (WER)
 
-**Solicitud**
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar archivos en un Informe de errores de Windows (WER)
+
+**Request**
 
 Puedes enumerar los archivos en un informe WER mediante el siguiente formato de solicitud.
  
@@ -3138,7 +3378,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI | Descripción |
 | :------          | :------ |
 | usuario   | (**obligatorio**) Usuario asociado con el informe. |
-| Tipo   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
+| type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
 | NAME   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
@@ -3175,9 +3415,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Enumerar en una lista los Informes de errores de Windows (WER)
 
-**Solicitud**
+### <a name="list-the-windows-error-reporting-wer-reports"></a>Enumerar en una lista los Informes de errores de Windows (WER)
+
+**Request**
 
 Puedes obtener los informes WER mediante el siguiente formato de solicitud.
  
@@ -3233,11 +3474,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Windows Performance Recorder (WPR) 
-<hr>
-### Iniciar el seguimiento con un perfil personalizado
 
-**Solicitud**
+## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
+
+<hr>
+
+### <a name="start-tracing-with-a-custom-profile"></a>Iniciar el seguimiento con un perfil personalizado
+
+**Request**
 
 Puedes cargar un perfil WPR e iniciar un seguimiento con dicho perfil mediante el siguiente formato de solicitud.  Solo se puede ejecutar un seguimiento cada vez. El perfil no permanecerá en el dispositivo. 
  
@@ -3287,9 +3531,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Iniciar una sesión de seguimiento del rendimiento de arranque
 
-**Solicitud**
+### <a name="start-a-boot-performance-tracing-session"></a>Iniciar una sesión de seguimiento del rendimiento de arranque
+
+**Request**
 
 Puedes iniciar una sesión de seguimiento de WPR de arranque mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
@@ -3343,9 +3588,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Detener una sesión de seguimiento del rendimiento de arranque
 
-**Solicitud**
+### <a name="stop-a-boot-performance-tracing-session"></a>Detener una sesión de seguimiento del rendimiento de arranque
+
+**Request**
 
 Puedes detener una sesión de seguimiento de WPR de arranque mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
@@ -3388,9 +3634,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Iniciar una sesión de seguimiento del rendimiento
 
-**Solicitud**
+### <a name="start-a-performance-tracing-session"></a>Iniciar una sesión de seguimiento del rendimiento
+
+**Request**
 
 Puedes iniciar una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.  Solo se puede ejecutar un seguimiento cada vez. 
  
@@ -3444,9 +3691,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Detener una sesión de seguimiento del rendimiento
 
-**Solicitud**
+### <a name="stop-a-performance-tracing-session"></a>Detener una sesión de seguimiento del rendimiento
+
+**Request**
 
 Puedes detener una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
@@ -3489,9 +3737,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Recuperar el estado de una sesión de seguimiento
 
-**Solicitud**
+### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar el estado de una sesión de seguimiento
+
+**Request**
 
 Puedes recuperar el estado de la sesión actual de WPR mediante el siguiente formato de solicitud
  
@@ -3541,9 +3790,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Lista de sesiones de seguimiento completadas (ETL)
 
-**Solicitud**
+### <a name="list-completed-tracing-sessions-etls"></a>Lista de sesiones de seguimiento completadas (ETL)
+
+**Request**
 
 Puedes obtener una lista del seguimientos de ETL en el dispositivo mediante el siguiente formato de solicitud. 
 
@@ -3598,9 +3848,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Descargar una sesión de seguimiento (ETL)
 
-**Solicitud**
+### <a name="download-a-tracing-session-etl"></a>Descargar una sesión de seguimiento (ETL)
+
+**Request**
 
 Puedes descargar un archivo de seguimiento (seguimiento de arranque o el seguimiento de modo de usuario) mediante el siguiente formato de solicitud. 
 
@@ -3647,9 +3898,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar una sesión de seguimiento (ETL)
 
-**Solicitud**
+### <a name="delete-a-tracing-session-etl"></a>Eliminar una sesión de seguimiento (ETL)
+
+**Request**
 
 Puedes eliminar un archivo de seguimiento (seguimiento de arranque o el seguimiento de modo de usuario) mediante el siguiente formato de solicitud. 
 
@@ -3696,11 +3948,14 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-## Etiquetas de DNS-SD 
-<hr>
-### Ver etiquetas
 
-**Solicitud**
+## <a name="dns-sd-tags"></a>Etiquetas de DNS-SD 
+
+<hr>
+
+### <a name="view-tags"></a>Ver etiquetas
+
+**Request**
 
 Te permite ver las etiquetas aplicadas actualmente para el dispositivo.  Estas se anuncian a través de los registros TXT de DNS-SD en la tecla T.  
  
@@ -3751,9 +4006,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar etiquetas
 
-**Solicitud**
+### <a name="delete-tags"></a>Eliminar etiquetas
+
+**Request**
 
 Elimina todas las etiquetas anunciadas actualmente por DNS-SD.   
  
@@ -3796,9 +4052,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar etiqueta
 
-**Solicitud**
+### <a name="delete-tag"></a>Eliminar etiqueta
+
+**Request**
 
 Elimina una etiqueta anunciada actualmente por DNS-SD.   
  
@@ -3842,9 +4099,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
  
 <hr>
-### Agregar una etiqueta
 
-**Solicitud**
+### <a name="add-a-tag"></a>Agregar una etiqueta
+
+**Request**
 
 Agrega una etiqueta al anuncio de DNS-SD.   
  
@@ -3891,9 +4149,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 ## <a name="app-file-explorer"></a>Explorador de archivos de la aplicación
 
 <hr>
-### Obtener carpetas conocidas
 
-**Solicitud**
+### <a name="get-known-folders"></a>Obtener carpetas conocidas
+
+**Request**
 
 Obtén una lista de carpetas accesibles de nivel superior.
 
@@ -3941,9 +4200,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Obtener archivos
 
-**Solicitud**
+### <a name="get-files"></a>Obtener archivos
+
+**Request**
 
 Obtén una lista de los archivos que hay en una carpeta.
 
@@ -4001,9 +4261,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Descargar un archivo
 
-**Solicitud**
+### <a name="download-a-file"></a>Descargar un archivo
+
+**Request**
 
 Obtener un archivo de una carpeta conocida o appLocalData.
 
@@ -4049,9 +4310,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Cambiar el nombre de un archivo
 
-**Solicitud**
+### <a name="rename-a-file"></a>Cambiar el nombre de un archivo
+
+**Request**
 
 Cambiar el nombre de un archivo de una carpeta.
 
@@ -4101,9 +4363,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Eliminar un archivo
 
-**Solicitud**
+### <a name="delete-a-file"></a>Eliminar un archivo
+
+**Request**
 
 Elimina un archivo de una carpeta.
 
@@ -4151,9 +4414,10 @@ Esta API tiene los siguientes códigos de estado previstos.
 * IoT
 
 <hr>
-### Cargar un archivo
 
-**Solicitud**
+### <a name="upload-a-file"></a>Cargar un archivo
+
+**Request**
 
 Carga un archivo en una carpeta.  Esto sobrescribirá cualquier archivo existente que tenga el mismo nombre, pero no creará carpetas nuevas. 
 

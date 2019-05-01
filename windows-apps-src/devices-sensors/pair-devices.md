@@ -2,16 +2,17 @@
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
 title: Emparejar dispositivos
 description: Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres Windows.Devices.Enumeration admite tres modos de emparejar dispositivos.
-ms.date: 02/08/2017
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: 6f59a23f08abbd5edeb9d68be476fb29bd8aab2e
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653390"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63813617"
 ---
 # <a name="pair-devices"></a>Emparejar dispositivos
 
@@ -57,6 +58,8 @@ Para implementar el emparejamiento personalizado, debes obtener el objeto [**Dev
 Para admitir el emparejamiento personalizado, debes crear un controlador para el evento [**PairingRequested**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested.aspx). Este controlador debe asegurarse de tener en cuenta todas las enumeraciones [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) distintas que pueden usarse en un escenario de emparejamiento personalizado. La acción apropiada que deberás realizar dependerá de las enumeraciones **DevicePairingKinds** proporcionadas como parte de los argumentos del evento.
 
 Es importante tener en cuenta que el emparejamiento personalizado es siempre una operación de nivel del sistema. Por este motivo, cuando se usa en el escritorio o en Windows Phone, siempre se mostrará un cuadro de diálogo del sistema al usuario cuando se vaya a producir el emparejamiento. Esto es porque ambas plataformas plantean una experiencia de usuario que requiere consentimiento del usuario. Dado que el cuadro de diálogo se genera automáticamente, no necesitarás crear tu propio cuadro de diálogo cuando se opte por una enumeración [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) de tipo **ConfirmOnly** al operar en estas plataformas. En cuanto a las demás enumeraciones **DevicePairingKinds**, deberás realizar algunos controles especiales en función del valor **DevicePairingKinds** específico. Consulta la muestra para ver ejemplos de cómo controlar el emparejamiento personalizado en diferentes valores **DevicePairingKinds**.
+
+A partir de Windows 10, versión 1903, un nuevo **DevicePairingKinds** es compatible, **ProvidePasswordCredential**. Este valor significa que la aplicación debe solicitar un nombre de usuario y contraseña del usuario con el fin de autenticar con el dispositivo emparejado. Para controlar este caso, llame a la [ **AcceptWithPasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) método de los argumentos del evento de la **PairingRequested** controlador de eventos para aceptar el emparejamiento. Pase un [ **PasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) objeto que encapsula el nombre de usuario y la contraseña como un parámetro. Tenga en cuenta que el nombre de usuario y la contraseña para el dispositivo remoto son distintos de y a menudo no igual que las credenciales del usuario con sesión iniciada localmente.
 
 ## <a name="unpairing"></a>Desemparejamiento
 

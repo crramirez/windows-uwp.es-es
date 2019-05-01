@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, uwp, los nombres de aplicación, cambian el nombre de la aplicación, nombre de la actualización de aplicación, nombre del juego, nombre de producto
 ms.localizationpriority: medium
-ms.openlocfilehash: a27955f64a36fadde9b0f1781337929ce6871a9c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 786bfd7cbb4129274a2ff19bc33084824d296bcd
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657610"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63827522"
 ---
 # <a name="manage-app-names"></a>Administrar nombres de aplicación
 

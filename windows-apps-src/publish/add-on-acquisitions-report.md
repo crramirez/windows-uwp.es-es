@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
 ms.localizationpriority: medium
-ms.openlocfilehash: 8027276779dac59f0745dd8053ee73cf1615e630
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7996761076d7d913ad73f0d7e050c69f9b64084d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625840"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63777861"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
@@ -32,7 +32,7 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 
--   **Complemento**: El filtro predeterminado es **todos los complementos**, pero puede limitar los datos a uno o varios de los complementos de la aplicación.
+-   **Add-on**: El filtro predeterminado es **todos los complementos**, pero puede limitar los datos a uno o varios de los complementos de la aplicación.
 -   **Mercado**: El filtro predeterminado es **todos los mercados**, pero puede limitar los datos a las adquisiciones en uno o varios mercados.
 -   **Tipo de dispositivo**: El valor predeterminado es **todos los dispositivos**. Si quieres mostrar datos de adquisiciones de un determinado tipo de dispositivo únicamente (como PC, consola o tableta), aquí puedes elegir uno específico.
 

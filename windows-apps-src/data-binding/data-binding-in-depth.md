@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: fe86656756eab9d9286d68c2a37357a9b824561e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cd6620e8bfb2bba58a2bdc28d61e4855a75dd203
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636070"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63798164"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -27,6 +27,8 @@ ms.locfileid: "57636070"
 
 > [!NOTE]
 > En este tema se describen detalladamente las características del enlace de datos. Para obtener una introducción breve y práctica, consulta [Introducción al enlace de datos](data-binding-quickstart.md).
+
+Este tema trata sobre el enlace de datos en aplicaciones de plataforma Universal de Windows (UWP). Las API que se tratan aquí residen en el [ **Windows.UI.Xaml.Data** espacio de nombres](/uwp/api/windows.ui.xaml.data).
 
 El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos. El enlace de datos permite separar lo que concierne a los datos de lo que concierne a la interfaz de usuario y esto da como resultado un modelo conceptual más sencillo y una mejor legibilidad, comprobación y mantenimiento de la aplicación.
 
@@ -673,7 +675,7 @@ ItemsSource="{x:Bind AuthorHasACollectionOfBookSku}" ...>
 </GridView>
 ```
 
-Para implementar el patrón de "es un grupo" en uno de dos maneras. Es una forma crear tu propia clase de grupo. Deriva la clase de **List&lt;T&gt;** (donde *T* es el tipo de los elementos). Por ejemplo, `public class Author : List<BookSku>`. La segunda manera es usar una expresión [LINK](https://msdn.microsoft.com/library/bb397926.aspx) para crear dinámicamente objetos de grupo (y una clase de grupo) desde valores de propiedad similares de los elementos **BookSku**. Este enfoque, mantener solo una lista de elementos y agrupar sobre la marcha, es típico de una aplicación que accede a los datos de un servicio de nube. Obtienes la flexibilidad de agrupar libros según el autor o el género (por ejemplo), sin necesidad de disponer de clases de grupo especiales, como **Author** y **Genre**.
+Para implementar el patrón de "es un grupo" en uno de dos maneras. Es una forma crear tu propia clase de grupo. Deriva la clase de **List&lt;T&gt;** (donde *T* es el tipo de los elementos). Por ejemplo: `public class Author : List<BookSku>`. La segunda manera es usar una expresión [LINK](https://msdn.microsoft.com/library/bb397926.aspx) para crear dinámicamente objetos de grupo (y una clase de grupo) desde valores de propiedad similares de los elementos **BookSku**. Este enfoque, mantener solo una lista de elementos y agrupar sobre la marcha, es típico de una aplicación que accede a los datos de un servicio de nube. Obtienes la flexibilidad de agrupar libros según el autor o el género (por ejemplo), sin necesidad de disponer de clases de grupo especiales, como **Author** y **Genre**.
 
 El siguiente ejemplo muestra el uso del patrón "es un grupo" [LINQ](https://msdn.microsoft.com/library/bb397926.aspx). Esta vez agrupamos libros por género, mostrados con el nombre de género en los encabezados de grupo. Esto se indica en la ruta de acceso de la propiedad "Key" en referencia al valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) del grupo.
 
@@ -800,7 +802,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | Con {x: enlace} que enlace a un campo; Ruta de acceso raíz está en la página de forma predeterminada, por lo que cualquier elemento con nombre se puede acceder mediante su campo. | 
 | RelativeSource: Self (Automático) | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | Con {x: Bind}, nombre del elemento y usar su nombre en la ruta de acceso. | 
 | RelativeSource: TemplatedParent. | No necesaria | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Con {x: Bind} TargetType en ControlTemplate indica el enlace a plantilla primaria. Para {Binding} enlace a plantilla normal puede usarse en las plantillas de control para la mayoría de los casos. Pero usa TemplatedParent donde necesites usar un convertidor o un enlace bidireccional.< | 
-| Origen | No necesaria | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: Bind} puede usar directamente el elemento con nombre, use una propiedad o una ruta estática. | 
+| Source | No necesaria | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: Bind} puede usar directamente el elemento con nombre, use una propiedad o una ruta estática. | 
 | Modo | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | El modo puede ser OneTime, OneWay o TwoWay. {x: enlace} el valor predeterminado es OneTime; {Binding} predeterminado OneWay. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger puede ser Default, LostFocus o PropertyChanged. {x:Bind} no admite UpdateSourceTrigger=Explicit. {x: enlace} usa el comportamiento PropertyChanged para todos los casos excepto TextBox.Text, donde utiliza el comportamiento LostFocus. | 
 

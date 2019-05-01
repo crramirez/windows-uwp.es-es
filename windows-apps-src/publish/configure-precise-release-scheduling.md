@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, programación, fecha de lanzamiento, fechas, inicio
 ms.localizationpriority: medium
-ms.openlocfilehash: a1477a426a9cdf240e694efb19bd7521fcd734cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e247d59253d24fd309b26aebc450dcc7b5e9051d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597210"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787136"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar la programación precisa del lanzamiento
 
@@ -46,7 +46,7 @@ En la lista desplegable de **Lanzamiento**, puedes establecer cuando quieres que
 
 Estas son las opciones que se puede configurar para la programación del **lanzamiento** de un producto:
 - **Tan pronto como sea posible**: El producto se lanzará en cuanto se certified y se publica. Esta es la opción predeterminada.
-- **en**: El producto se publicará en la fecha y hora que seleccione. Tienes dos opciones adicionales:
+- **at**: El producto se publicará en la fecha y hora que seleccione. Tienes dos opciones adicionales:
    - **UTC**: La hora que seleccione será el tiempo de hora Universal coordinada (UTC), para que las versiones de la aplicación al mismo tiempo en todas partes.
    - **Local**: La hora que seleccione se usará en cada zona horaria asociada con un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, se usará la zona horario del Este).
 - **no se ha programado**: La aplicación no estará disponible en el Store. Si eliges esta opción, puede realizar la aplicación disponible en la Store creando más tarde un nuevo envío y eligiendo una de las otras opciones.

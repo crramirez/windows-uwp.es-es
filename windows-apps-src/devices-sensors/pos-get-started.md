@@ -5,12 +5,12 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 518529fecff9f25a83a03847b1623bf9f09a8145
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d059f0e33f7343fa0ac9919a243008ed486e31ff
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661160"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63772737"
 ---
 # <a name="getting-started-with-point-of-service"></a>Tareas iniciales con punto de servicio
 
@@ -207,7 +207,7 @@ if (claimedBarcodeScanner != null)
 > [!NOTE]
 > Tanto las clases de dispositivos de punto de servicio reclamados como los que no implementan la [interfaz IClosable](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable). Si un dispositivo está conectado a una aplicación a través de Bluetooth o de la red, tantos los objetos reclamados como los que no deben eliminarse antes de que otra aplicación pueda conectarse.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 + [Ejemplo de escáner de código de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
 + [Ejemplo de cajón de caja]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
 + [Ejemplo de línea para mostrar](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)

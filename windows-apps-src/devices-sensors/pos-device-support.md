@@ -5,12 +5,12 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5154593065ce40c5ac67a4873d58b2aac913d1f8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 865c95fe5453a038a73b397fdcf32f77f9e8defb
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57663100"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63828075"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Punto admitido de periféricos de servicio
 
@@ -35,17 +35,17 @@ ms.locfileid: "57663100"
 | Honeywell     | N5680                          | 2D         | Interno     | Componente    | Escáner de PDV HID           |
 | Honeywell     | N3680                          | 2D         | Interno     | Componente    | Escáner de PDV HID           |
 | Honeywell     | Orbital 7190g                    | 2D         | USB          | Presentación | Escáner de PDV HID           |
-| Honeywell     | 2700 Stratos                   | 2D         | USB          | En el contador   | Escáner de PDV HID           |
+| Honeywell     | Stratos 2700                   | 2D         | USB          | En el contador   | Escáner de PDV HID           |
 | Honeywell     | Voyager 1200g                  | 1D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Honeywell     | Voyager 1202g                  | 1D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Honeywell     | Voyager 1202-bf                | 1D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Honeywell     | Voyager 145Xg                  | 1D / 2D ¹   | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Honeywell     | Voyager 1602g                  | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Honeywell     | Xenón 1900g                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
-| Honeywell     | Xenón 1902g                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
+| Honeywell     | Xenon 1902g                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Honeywell     | Xenón 1902g-bf                 | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
-| Honeywell     | Xenón 1900h                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
-| Honeywell     | Xenón 1902h                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
+| Honeywell     | Xenon 1900h                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
+| Honeywell     | Xenon 1902h                    | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | HP            | Valor de escáner (HR2150) | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Intermec      | SG20                           | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 | Socket Mobile | CHS 7Ci                        | 1D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
@@ -61,9 +61,9 @@ ms.locfileid: "57663100"
 | Socket Mobile | SocketScan S740                | 2D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
 | Socket Mobile | SocketScan S800                | 1D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
 | Socket Mobile | SocketScan S850                | 2D         | Bluetooth    | Dispositivo de mano     | Perfil de puerto serie (SPP) |
-| Cebra         | DS2208²                        | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
-| Cebra         | DS2278                         | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
-| Cebra         | DS8108³                        | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
+| Zebra         | DS2208²                        | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
+| Zebra         | DS2278                         | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
+| Zebra         | DS8108³                        | 2D         | USB          | Dispositivo de mano     | Escáner de PDV HID           |
 |
 
 
@@ -82,16 +82,16 @@ Firmware mínimo de ³ 016 (2018.01.18) necesario. Que se pueden actualizar medi
 ### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>Dispositivos Windows Mobile con un escáner integrados
 | Fabricante   | Modelo | Sistema operativo |
 |----------------|-------|------------------|
-| Combinación       | EF400 | Windows Mobile   |
-| Combinación       | EF500 | Windows Mobile   |
-| Combinación       | EF500R | Windows Mobile   |
+| Bluebird       | EF400 | Windows Mobile   |
+| Bluebird       | EF500 | Windows Mobile   |
+| Bluebird       | EF500R | Windows Mobile   |
 | Honeywell      | CT50   | Windows Mobile   |
 | Honeywell      | D75e | Windows Mobile   |
 | Janam          | XT2      | Windows Mobile   |
-| Panasonic      | FZ E1 | Windows Mobile   |
-| Panasonic      | FZ F1 |Windows Mobile   |
+| Panasonic      | FZ-E1 | Windows Mobile   |
+| Panasonic      | FZ-F1 |Windows Mobile   |
 | PointMobile    | PM80 | Windows Mobile   |
-| Cebra          | TC700j | Windows Mobile   |
+| Zebra          | TC700j | Windows Mobile   |
 | HP             | X3 Elite chaquetas | Windows Mobile   |
 
 

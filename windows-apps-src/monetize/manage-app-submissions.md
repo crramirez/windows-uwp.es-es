@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: fa5b5a62348a36f7758468a86e19b744cdde8754
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 474abc2ec43b7f8eab408bd75cca33653d27d932
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335094"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63789677"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -499,7 +499,7 @@ Este recurso tiene los siguientes valores.
 |  localCooperativeMaxPlayers               |   entero      |   Especifica el número máximo de jugadores que el juego admite para cooperación local.  |     
 |  isBroadcastingPrivilegeGranted               |   boolean      |  Indica si el juego admite difusión.   |     
 |  isCrossPlayEnabled               |   boolean      |   Indica si el juego admite sesiones de varios jugadores entre jugadores en equipos con Windows 10 y Xbox.  |     
-|  kinectDataForExternal               |   string      |  Uno de los siguientes valores de cadena que indica si el juego puede recopilar datos de Kinect y enviarlos a los servicios externos: <ul><li>NotSet</li><li>Unknown</li><li>Habilitado</li><li>Deshabilitada</li></ul>   |
+|  kinectDataForExternal               |   string      |  Uno de los siguientes valores de cadena que indica si el juego puede recopilar datos de Kinect y enviarlos a los servicios externos: <ul><li>NotSet</li><li>Unknown</li><li>Enabled</li><li>Deshabilitada</li></ul>   |
 
 > [!NOTE]
 > El recurso *gamingOptions* se agregó en mayo de 2017, después del lanzamiento inicial de la API de envío de Microsoft Store para los desarrolladores. Si has creado un envío para una aplicación a través de la API de envío antes de que se introdujera este recurso y este envío todavía está en curso, el recurso no podrá quedar vacío para envíos para la aplicación hasta que confirmes correctamente el envío o lo elimines. SI el recurso *gamingOptions* no está disponible para envíos de una aplicación, el campo *hasAdvancedListingPermission* del [recurso de aplicación](get-app-data.md#application_object) devuelto por el método [obtener una aplicación](get-an-app.md) es false.
@@ -590,7 +590,7 @@ Este recurso proporciona acceso a los datos del informe de certificación de un 
 
 | Valor           | Tipo    | Descripción             |
 |-----------------|---------|------|
-|     fecha            |    string     |  La fecha y hora que se generó el informe, en formato ISO 8601.    |
+|     date            |    string     |  La fecha y hora que se generó el informe, en formato ISO 8601.    |
 |     reportUrl            |    string     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 
@@ -621,7 +621,7 @@ Este recurso tiene los siguientes valores.
 |-----------------|---------|------|
 | packageRollout   |   object      |  Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.   |  
 | isMandatoryUpdate    | boolean    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
-| mandatoryUpdateEffectiveDate    |  fecha   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
+| mandatoryUpdateEffectiveDate    |  date   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 
 <span id="package-rollout-object" />
 

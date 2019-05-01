@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c198bf9ebb8eb6f409277bfe09af6881530d5a7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d442792cb2b4175294ea8da053784ef0a99d18e2
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636980"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63811841"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para tu aplicación
 
@@ -61,7 +61,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     * **Sistema operativo**: Elija los sistemas operativos en el que debe aparecer la instancia de ad. Solo se muestran los sistemas operativos admitidos por la aplicación.
 
-    * **Sexo**: Elija si desea restringir la audiencia de la instancia de ad por género.
+    * **Gender**: Elija si desea restringir la audiencia de la instancia de ad por género.
 
     * **Intervalo de edad**: Seleccione los intervalos de edad para la audiencia deseada.
 

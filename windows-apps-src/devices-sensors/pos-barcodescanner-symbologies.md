@@ -5,12 +5,12 @@ ms.date: 08/29/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 690b6b8ee688f62dcae375ed48e07797c921bf43
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ee78ffbc49fdcb7f8e87844dea1e2ce29297e9f3
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637600"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63816687"
 ---
 # <a name="working-with-symbologies"></a>El trabajo con simbologías
 Una [simbología de código de barras](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) es la asignación de datos a un formato específico de código de barras. Algunos Simbologías comunes incluyen UPC, código 128, código QR y así sucesivamente.  El analizador de código de barras API de plataforma Universal de Windows permiten que una aplicación controlar cómo el analizador procesa estos Simbologías sin configurar manualmente el analizador. 
@@ -83,7 +83,7 @@ Antes de establecer la longitud de descodificación, compruebe si la simbología
 
 * **AnyLength**: Descodificar longitudes de cualquier número.
 * **Discretos**: Descodificar longitudes de uno de ellos [DecodeLength1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength1) o [DecodeLength2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength2) caracteres de byte único.
-* **Intervalo**: Descodificar longitudes entre **DecodeLength1** y **DecodeLength2** caracteres de byte único. El orden de **DecodeLength1** y **DecodeLength2** importa el (puede ser mayor o menor que el otro).
+* **Range**: Descodificar longitudes entre **DecodeLength1** y **DecodeLength2** caracteres de byte único. El orden de **DecodeLength1** y **DecodeLength2** importa el (puede ser mayor o menor que el otro).
 
 Por último, puede establecer los valores de **DecodeLength1** y **DecodeLength2** para controlar la longitud de los datos que necesita.
 
@@ -158,7 +158,7 @@ private async Task<bool> SetCheckDigitValidation(ClaimedBarcodeScanner scanner, 
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Escáner de código de barras](pos-barcodescanner.md)
 * [Clase BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies)

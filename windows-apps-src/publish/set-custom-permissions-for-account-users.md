@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
-ms.openlocfilehash: d1581757cb16cf2ed5d0082a6a0e4a4e09299361
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 450fc4d016debb72364cbefedb6b69a80cc6235b
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641040"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63790604"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -76,7 +76,7 @@ Si quieres habilitar un permiso para el usuario, activa o desactiva la casilla c
 
 - **Sin acceso**: El usuario no tendrá el permiso indicado.
 - **De sólo lectura**: El usuario tendrá acceso para ver las características relacionadas con el área indicado, pero no podrá realizar cambios. 
-- **Lectura/escritura**: El usuario tendrá acceso para realizar cambios asociados con el área, así como para verlo.
+- **Read/write**: El usuario tendrá acceso para realizar cambios asociados con el área, así como para verlo.
 - **Mixto**: No se selecciona esta opción directamente, pero la **mixto** indicador mostrará si ha permitido una combinación de acceso para ese permiso. Por ejemplo, si concedes acceso de **Solo lectura** a **Precios y disponibilidad** para **Todos los productos**, pero luego concedes acceso de **Lectura y escritura** a **Precios y disponibilidad** para un producto específico, el indicador **Precios y disponibilidad** de **Todos los productos** se mostrará como mixto. Lo mismo sucede si algunos productos presentan **Sin acceso** para un permiso y otros, acceso de **Lectura y escritura** o de **Solo lectura**.
 
 En el caso de algunos permisos, como los relacionados con la visualización de datos analíticos, solo se puede conceder acceso de **Solo lectura**. Ten en cuenta que en la implementación actual algunos permisos no distinguen en absoluto entre acceso de **Solo lectura** y de **Lectura y escritura**. Revisa los detalles de cada permiso para comprender las capacidades específicas que concede el acceso de **Solo lectura** y de **Lectura y escritura**.

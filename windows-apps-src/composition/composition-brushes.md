@@ -2,16 +2,17 @@
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: Pinceles de composición
 description: Un pincel pinta el área de un objeto Visual con su salida. Distintos pinceles tienen tipos de salida diferentes.
-ms.date: 02/08/2017
+ms.date: 04/19/2019
 ms.topic: article
+ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb0d48cee4fe6698ec371c882c913affa5af7729
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d51bc945c721ae15889dece8f84959f9a78192bc
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644890"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63790531"
 ---
 # <a name="composition-brushes"></a>Pinceles de composición
 Todos los elementos visibles en la pantalla de una aplicación para UWP están visibles porque se pintaron con un pincel. Los pinceles te permiten pintar objetos de la interfaz de usuario (IU) con contenido que abarca desde colores sencillos y sólidos, imágenes o dibujos hasta una cadena de efectos complejos. En este tema se presentan los conceptos de pintura con CompositionBrush.
@@ -23,7 +24,8 @@ Al trabajar con la capa Visual, debe usarse un CompositionBrush para pintar el �
 -   [Requisitos previos](./composition-brushes.md#prerequisites)
 -   [Pintar con CompositionBrush](./composition-brushes.md#paint-with-a-compositionbrush)
     -   [Pintar con un color sólido](./composition-brushes.md#paint-with-a-solid-color)
-    -   [Pintar con un degradado lineal](./composition-brushes.md#paint-with-a-linear-gradient)
+    -   [Pintar con un degradado lineal](./composition-brushes.md#paint-with-a-linear-gradient) 
+    -   [Pintar con un degradado radial](./composition-brushes.md#paint-with-a-radial-gradient)
     -   [Pintar con una imagen](./composition-brushes.md#paint-with-an-image)
     -   [Pintar con un dibujo personalizado](./composition-brushes.md#paint-with-a-custom-drawing)
     -   [Pintar con un vídeo](./composition-brushes.md#paint-with-a-video)
@@ -44,13 +46,14 @@ Un [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.
 
 |Clase                                   |Detalles                                         |Introducido en|
 |-------------------------------------|---------------------------------------------------------|--------------------------------------|
-|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |Pinta un área de un color sólido                        |Actualización de noviembre de Windows 10 de Windows (SDK 10586)|
-|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |Pinta un área con el contenido de una [ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)|Actualización de noviembre de Windows 10 de Windows (SDK 10586)|
-|[Respaldan](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |Pinta un área con el contenido de un efecto de composición |Actualización de noviembre de Windows 10 de Windows (SDK 10586)|
-|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Pinta un elemento visual con un CompositionBrush con una máscara de opacidad |Actualización de aniversario de Windows 10 (14393 de SDK)
-|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Pinta un área con un CompositionBrush con una cuadrícula NineGrid |Actualización de aniversario de Windows 10 SDK (14393)
-|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Pinta un área con un degradado lineal                    |Windows 10 Fall Creators Update (SDK de Insider Preview)
-|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Pinta un área mediante el muestreo de píxeles de fondo desde la aplicación o píxeles directamente detrás de la ventana de la aplicación en el escritorio. Se usa como una entrada a otra CompositionBrush como un CompositionEffectBrush | Actualización de aniversario de Windows 10 (SDK 14393)
+|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |Pinta un área de un color sólido                        |Windows 10, versión 1511 (SDK 10586)|
+|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |Pinta un área con el contenido de una [ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)|Windows 10, versión 1511 (SDK 10586)|
+|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |Pinta un área con el contenido de un efecto de composición |Windows 10, versión 1511 (SDK 10586)|
+|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Pinta un elemento visual con un CompositionBrush con una máscara de opacidad |Windows 10, versión 1607 (SDK 14393)
+|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Pinta un área con un CompositionBrush con una cuadrícula NineGrid |Windows 10, versión 1607 (SDK 14393)
+|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Pinta un área con un degradado lineal                    |Windows 10, versión 1709 (SDK 16299)
+|[CompositionRadialGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionradialgradientbrush)|Pinta un área con un degradado radial                    |Windows 10, versión 1903 (SDK de Insider Preview)
+|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Pinta un área mediante el muestreo de píxeles de fondo desde la aplicación o píxeles directamente detrás de la ventana de la aplicación en el escritorio. Se usa como una entrada a otra CompositionBrush como un CompositionEffectBrush | Windows 10, versión 1607 (SDK 14393)
 
 ### <a name="paint-with-a-solid-color"></a>Pintar con un color sólido
 
@@ -105,6 +108,29 @@ _redyellowBrush.ColorStops.Add(_compositor.CreateColorGradientStop(1, Colors.Yel
 _gradientVisual = _compositor.CreateSpriteVisual();
 _gradientVisual.Brush = _redyellowBrush;
 _gradientVisual.Size = new Vector2(156, 156);
+```
+
+### <a name="paint-with-a-radial-gradient"></a>Pintar con un degradado radial
+
+Un [CompositionRadialGradientBrush](/uwp/api/windows.ui.composition.compositionradialgradientbrush) pinta un área con un degradado radial. Un degradado radial que combina dos o más colores con el degradado empezando desde el centro de la elipse y terminando en radius de la elipse. Los objetos GradientStop se usan para definir los colores y su ubicación en el degradado.
+
+En la ilustración y el código siguiente se muestra un SpriteVisual pinta con RadialGradientBrush con 2 GradientStops.
+
+![CompositionRadialGradientBrush](images/radial-gradient-brush.png)
+
+```cs
+Compositor _compositor;
+SpriteVisual _gradientVisual;
+CompositionRadialGradientBrush RGBrush;
+
+_compositor = Window.Current.Compositor;
+
+RGBrush = _compositor.CreateRadialGradientBrush();
+RGBrush.ColorStops.Add(_compositor.CreateColorGradientStop(0, Colors.Aquamarine));
+RGBrush.ColorStops.Add(_compositor.CreateColorGradientStop(1, Colors.DeepPink));
+_gradientVisual = _compositor.CreateSpriteVisual();
+_gradientVisual.Brush = RGBrush;
+_gradientVisual.Size = new Vector2(200, 200);
 ```
 
 ### <a name="paint-with-an-image"></a>Pintar con una imagen
@@ -447,7 +473,7 @@ En la siguiente tabla se proporciona una lista de escenarios y si se recomienda 
 |Pintar un área con un dibujo 2D personalizado                                       |[CanvasControl](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm) de Win2D                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) con interoperación de Win2D
 |Pintar un área con una máscara no animada                                       |Usar XAML [formas](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) para definir una máscara   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
 |Pintar un área con una máscara animada                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
-|Pintar un área con un efecto de filtro animado                               |[Respaldan](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[Respaldan](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
+|Pintar un área con un efecto de filtro animado                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
 |Pintar un área con un efecto que se aplica a los píxeles de fondo        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)                                                                                        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)
 
 ## <a name="related-topics"></a>Temas relacionados

@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 176009cb3a2fb14eb5071d48d59a0b807d4c81d6
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641080"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63770367"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Habilitar aplicaciones para sitios Web con controladores URI de la aplicación
 
@@ -46,7 +46,7 @@ Por ejemplo, si la dirección del sitio web es "msn.com", realizarías la siguie
 </Applications>
 ```
 
-La declaración anterior registra la aplicación para que controle los vínculos del host especificado. Si el sitio web tiene varias direcciones (por ejemplo: m.example.com, www.example.com y example.com), agrega una entrada `<uap3:Host Name=... />` distinta en el `<uap3:AppUriHandler>` para cada dirección.
+La declaración anterior registra la aplicación para que controle los vínculos del host especificado. Si su sitio Web tiene varias direcciones (por ejemplo: m.example.com, www\.ejemplo.com y ejemplo.com), a continuación, agregue un `<uap3:Host Name=... />` entrada dentro de la `<uap3:AppUriHandler>` para cada dirección.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>Asociar la aplicación y el sitio web con un archivo JSON
 
@@ -71,7 +71,7 @@ Windows realizará una conexión https a tu sitio web y buscará el archivo JSON
 
 El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los caracteres comodín permiten admitir una gran variedad de vínculos con menos líneas de código. La vinculación de web a aplicación admite dos tipos de caracteres comodín en el archivo JSON:
 
-| **Carácter comodín** | **Descripción**               |
+| **Wildcard** | **Descripción**               |
 |--------------|-------------------------------|
 | **\***       | Representa cualquier subcadena      |
 | **?**        | Representa un carácter único |
@@ -154,7 +154,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 Puedes probar la configuración de la aplicación y el sitio web mediante la ejecución de la herramienta de comprobador de registro de host de la aplicación, que está disponible en:
 
-% windir %\\system32\\**AppHostRegistrationVerifier.exe**
+%windir%\\system32\\**AppHostRegistrationVerifier.exe**
 
 Prueba la configuración de la aplicación y el sitio web mediante la ejecución de esta herramienta con los siguientes parámetros:
 
@@ -186,14 +186,14 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 ## <a name="appurihandlers-tips"></a>Sugerencias sobre AppUriHandlers:
 
 - Asegúrate de especificar solo los vínculos que tu aplicación pueda controlar.
-- Lista todos los hosts que admitirás.  Ten en cuenta que www.example.com y example.com son hosts diferentes.
+- Lista todos los hosts que admitirás.  Tenga en cuenta que www\.ejemplo.com y ejemplo.com son hosts diferentes.
 - Los usuarios pueden elegir qué aplicación prefieren para controlar los sitios web en Configuración.
 - El archivo JSON debe cargarse en un servidor https.
 - Si necesitas cambiar las rutas de acceso que deseas admitir, puedes volver a publicar el archivo JSON sin tener que volver a publicar la aplicación. Los usuarios verán los cambios en un plazo de 1 a 8 días.
 - Todas las aplicaciones transferidas localmente con AppUriHandlers contarán con vínculos validados para el host en su instalación. No es necesario cargar un archivo JSON para probar la característica.
 - Esta característica funciona siempre que la aplicación sea una aplicación para UWP iniciada con [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) o una aplicación de escritorio de Windows que se inicie con [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Si la dirección URL se corresponde con un controlador de URI de aplicación registrado, se iniciará dicha aplicación en lugar del navegador.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Proyecto de ejemplo de web a aplicación](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [windows.protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)

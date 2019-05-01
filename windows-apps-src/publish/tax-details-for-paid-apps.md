@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: b0dca42fdc9229cf9d235fbb810f92774ec6f4de
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 82f10abe57d9d5542286183180012b26478f88cf
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58136663"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788151"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para los desarrolladores de aplicaciones y de juegos de Windows y los editores de Azure Marketplace
 
