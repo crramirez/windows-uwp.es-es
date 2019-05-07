@@ -7,12 +7,12 @@ keywords: dispositivo, digitalizador, entrada, interacción, inserción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2699917beed9330dd2044704f19b3c25256c3ca8
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 2ff3150d4c1ed713451669b8918906141daa9659
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343244"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065244"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular la entrada del usuario a través de la inserción de entrada
 
@@ -50,7 +50,8 @@ En este ejemplo se muestra cómo usar las API de inserción de entrada ([Windows
 1. En primer lugar, debemos configurar la interfaz de usuario (MainPage.xaml).
 
     Tenemos dos áreas de cuadrícula (una para la entrada del mouse y otra para la entrada táctil insertada), cada una de ellas con cuatro botones.
-       > [!NOTE] The Grid background must be assigned a value (`Transparent`, in this case), otherwise pointer events are not detected.
+      > [!NOTE] 
+      > El fondo de cuadrícula debe asignarse un valor (`Transparent`, en este caso), en caso contrario, no se detectan eventos de puntero.
 
     Cuando se detectan clics en el área de entrada, se inserta un evento táctil correspondiente en el área de inserción de entrada. Los clics de botón de la entrada de inserción se notifican en el área de título.
 
