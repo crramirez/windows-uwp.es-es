@@ -8,18 +8,34 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b3244c24ff4fa8e3c85ee9970536b1b35d8efd5
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646460"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444191"
 ---
 # <a name="page-transitions"></a>Transiciones de página
 
 Las transiciones de página sirven para que los usuarios se desplacen entre las páginas de una aplicación, proporcionando comentarios como la relación entre las páginas. Las transiciones de página ayudan a los usuarios a entender si están en la parte superior de una jerarquía de navegación, moviéndose entres las páginas del mismo nivel o adentrándose en la jerarquía de páginas.
 
 Se proporcionan dos animaciones diferentes para la navegación entre páginas en una aplicación, *Actualización de página* y *Drill*, y se representan mediante subclases de [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo).
+
+## <a name="examples"></a>Ejemplos
+
+<table>
+<th align="left">Galería de controles XAML<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/PageTransition">abra la aplicación y ver las transiciones de página en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="page-refresh"></a>Actualización de página
 
@@ -62,10 +78,10 @@ El sentimiento deseado es que el usuario se desplaza entre las páginas que est�
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage
-myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromRight } );
+myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight } );
 
 // Navigate to the left, ie. from RightPage to LeftPage
-myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromLeft } );
+myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft } );
 ```
 
 ## <a name="suppress"></a>Suprimir

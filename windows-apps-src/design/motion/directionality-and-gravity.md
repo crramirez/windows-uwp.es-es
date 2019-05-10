@@ -11,18 +11,33 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4bb6f0ba60e89720a6daa37604cbe93696fb2bb7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef005ffd018bf52d70067cdfedbb9c98b079bd89
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603080"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444207"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
 Las señales bidireccionales ayudan a solidificar el modelo mental del viaje de un usuario a través de experiencias. Es importante que la dirección del movimiento admita tanto la continuidad del espacio como la integridad de los objetos en el espacio.
 
 El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerzas al movimiento refuerza la apariencia natural del movimiento.
+
+## <a name="examples"></a>Ejemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/category/Motion">abra la aplicación y ver el movimiento en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="direction-of-movement"></a>Dirección de movimiento
 

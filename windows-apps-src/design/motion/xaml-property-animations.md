@@ -8,12 +8,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 81da1e769ab171e47a4f4046e8ec7e7c84ecf2d1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 183a5433553ff6fdfcb09f6960f6a642f2c8bc08
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630360"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444154"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animar elementos XAML con animaciones de composición
 
@@ -31,19 +31,35 @@ A partir de Windows 10, versión 1809, puede animar las propiedades de un objeto
 > [!NOTE]
 > Para usar estas propiedades en el elemento de IU, debe ser la versión de destino del proyecto UWP 1809 o posterior. Para obtener más información acerca de cómo configurar la versión del proyecto, vea [aplicaciones adaptables versión](../../debug-test-perf/version-adaptive-apps.md).
 
+## <a name="examples"></a>Ejemplos
+
+<table>
+<th align="left">Galería de controles XAML<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/XamlCompInterop">abra la aplicación y vea la interoperabilidad de animación en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
 ## <a name="new-rendering-properties-replace-old-rendering-properties"></a>Nuevas propiedades de representación reemplazar las propiedades de representación antiguo
 
 Esta tabla muestran las propiedades que puede usar para modificar la representación de un UIElement, que también se puede animar con un [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation).
 
-| Propiedad | Tipo | Descripción |
+| Property | Tipo | Descripción |
 | -- | -- | -- |
-| [Opacidad](/uwp/api/windows.ui.xaml.uielement.opacity) | Doble | El grado de opacidad del objeto |
+| [Opacidad](/uwp/api/windows.ui.xaml.uielement.opacity) | Double | El grado de opacidad del objeto |
 | [traducción](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | Variar la posición X, Y y Z del elemento |
 | [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | La matriz de transformación para aplicar al elemento |
 | [Escalar](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Escala el elemento, centrado en el punto central |
 | [Rotación](/uwp/api/windows.ui.xaml.uielement.rotation) | Flotante | Girar el elemento en torno a la RotationAxis y el punto central |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | El eje de giro |
-| [Punto central](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | El punto central de la escala y rotación |
+| [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | El punto central de la escala y rotación |
 
 El valor de propiedad TransformMatrix se combina con las propiedades de escala, rotación y traslación en el orden siguiente:  TransformMatrix, escala, rotación, traducción.
 
@@ -73,7 +89,7 @@ button.Scale = new Vector3(2.0f,2.0f,1.0f);
 Las propiedades que se pueden animar con un CompositionAnimation son reemplazos para varias propiedades UIElement existentes:
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
-- [Valor de RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
+- [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
 - [Proyección](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 

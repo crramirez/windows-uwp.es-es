@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7272abca9862eaf5ed7ceb161e433849497369a2
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599410"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444216"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -78,10 +78,24 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
     :::column-end:::
 :::row-end:::
 
+## <a name="examples"></a>Ejemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/ImplicitTransition">abra la aplicación y ver las transiciones implícitas en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
 ## <a name="implicit-animations"></a>Animaciones implícitas
 
 > Las animaciones implícitas requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior.
-
 
 Las animaciones implícitas son una manera sencilla para lograr el movimiento de Fluent al interpolar automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
 

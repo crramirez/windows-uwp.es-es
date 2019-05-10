@@ -11,16 +11,31 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b736a10a7284e3cc9aa193e082dc654e908afe40
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645270"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444173"
 ---
 # <a name="timing-and-easing"></a>Sincronización y aceleración
 
-Mientras el movimiento se basa en el mundo real, también somos un medio digital, que viene con una expectativa de velocidad y rendimiento. 
+Mientras el movimiento se basa en el mundo real, también somos un medio digital, que viene con una expectativa de velocidad y rendimiento.
+
+## <a name="examples"></a>Ejemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/EasingFunction">abra la aplicación y ver las funciones de aceleración en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="how-fluent-motion-uses-time"></a>Cómo el movimiento de Fluent usa el tiempo
 
@@ -40,8 +55,8 @@ La temporización de movimiento en Fluent usa 500 milisegundos (o medio segundo
 
 :::row:::
     :::column:::
-        Use for objects or pages that are exiting the scene or closing.
-        Allows for very quick directional feedback of exiting UI where timing does not impede upon framerate to achieve a smooth animation.
+Uso de objetos o páginas que se sale de la escena o cerrar.
+Permite que los comentarios direccionales muy rápidos de la salida de la interfaz de usuario donde la temporización no obstaculiza que la velocidad de fotogramas logre una animación fluida.
     :::column-end:::
     :::column:::
         ![150ms motion](images/150msAlt.gif)
@@ -52,8 +67,8 @@ La temporización de movimiento en Fluent usa 500 milisegundos (o medio segundo
 
 :::row:::
     :::column:::
-        Use for objects or pages that are entering the scene or opening.
-        Allows a reasonable amount of time to celebrate content as it enters the scene.
+Uso de objetos o páginas que entran en la escena o abrir.
+Permite una cantidad razonable de tiempo para celebrar el contenido conforme entra en la escena.
     :::column-end:::
     :::column:::
         ![300ms motion](images/300ms.gif)
@@ -64,7 +79,7 @@ La temporización de movimiento en Fluent usa 500 milisegundos (o medio segundo
 
 :::row:::
     :::column:::
-        Use for objects which are translating across a single scene or multiple scenes. 
+Se utiliza para objetos que se traduce en una sola escena o varias escenas. 
     :::column-end:::
     :::column:::
         ![500ms motion](images/500ms.gif)
@@ -87,10 +102,10 @@ Los ejemplos de código muestran cómo aplicar valores de aceleración recomenda
 
 :::row:::
     :::column:::
-        Use for UI or objects that are exiting the scene.
+Use la interfaz de usuario u objetos que están saliendo de la escena.
 
-        Objects become powered and gain momentum until they reach escape velocity.
-        The resulting feel is that the object is trying its hardest to get out of the user's way and make room for new content to come in.
+Los objetos se convierten en con la tecnología y obtienen momentum hasta que alcanzan la velocidad de escape.
+El comportamiento resultante es que el objeto está tratando su más difícil sacar partido al usuario y dejar espacio para el nuevo contenido al respecto.
     :::column-end:::
     :::column:::
         ![accelerate easing](images/accelEase.gif)
@@ -126,12 +141,12 @@ _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 
 :::row:::
     :::column:::
-        Use for objects or UI entering the scene, either navigating or spawning.
+Uso de objetos o la interfaz de usuario introducir la escena, navegar o generando.
 
-        Once on-scene, the object is met with extreme friction, which slows the object to rest.
-        The resulting feel is that the object traveled from a long distance away and entered at an extreme velocity, or is quickly returning to a rest state.
+Una vez en escena, el objeto se cumple con extrema fricción, lo que disminuye el objeto en el resto.
+El comportamiento resultante es que el objeto viajado desde una larga distancia y especificado a una velocidad extrema o es volver rápidamente a un estado de rest.
 
-        Even if it's preceded by a moment of unresponsiveness, the velocity of the incoming object has the effect of feeling fast and responsive.
+Incluso si se está precedido por un momento de falta de respuesta, la velocidad del objeto entrante tiene el efecto de sentirse rápido y con capacidad de respuesta.
     :::column-end:::
     :::column:::
         ![decelerate easing](images/decelEase.gif)
@@ -167,10 +182,10 @@ _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 
 :::row:::
     :::column:::
-        This is the baseline easing for any animated parameter change inside of the system.
-        Use standard easing for objects that change from state to state on-screen, such as a simple position change. Also, use it for objects morphing in-scene, like an object that grows.
+Se trata de la línea de base de aceleración para cualquier cambio animado parámetro dentro del sistema.
+Usa la aceleración estándar para los objetos que cambian de un estado a otro en pantalla, como un cambio de posición sencillo. Además, úsalo para objetos que se transforman en escena, como un objeto que crece.
 
-        The resulting feel is that objects changing state from A to B are overcoming, and taken over by, natural forces.
+El comportamiento resultante es que son superar objetos cambiando el estado de la A B, y realiza a través, fuerza natural.
     :::column-end:::
     :::column:::
         ![standard easing](images/standardEase.gif)
