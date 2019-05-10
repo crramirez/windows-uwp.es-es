@@ -12,18 +12,33 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2701844ccefdc5a535fa8fc20086c550cb7bc29e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1096bdab340c3f0fef24b5815423f72b0f5c8219
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583452"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444170"
 ---
 # <a name="motion-for-uwp-apps"></a>Movimiento para las aplicaciones para UWP
 
-![imagen principal](images/header-motion2.svg)
+![Icono de movimiento](../images/motion-2x.png)
 
 El movimiento de Fluent tiene un propósito en la aplicación. Proporciona comentarios inteligentes basados en el comportamiento del usuario, mantiene dinámica la sensación de la interfaz de usuario y guía la navegación del usuario en tu aplicación. El movimiento de Fluent provoca una conexión emocional entre un usuario y su experiencia digital. Nos basamos en el movimiento natural que el usuario comprende del mundo físico y ampliamos nuestro sistema desde ahí.
+
+## <a name="examples"></a>Ejemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/category/Motion">abrir la aplicación y ver Motion en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="fluent-motion-principles"></a>Principios de movimiento de Fluent
 
@@ -32,7 +47,7 @@ El movimiento de Fluent tiene un propósito en la aplicación. Proporciona comen
 Los objetos en movimiento muestran los comportamientos de los objetos en el mundo real. El movimiento fluido y dinámico hace que la experiencia resulte natural, ya que se crean conexiones emocionales y se agrega personalidad.
 
 ![Ejemplo de interfaz de usuario de movimiento físico](images/Physical.gif)
-> Al interactuar con la interfaz de usuario a través de la función táctil, el movimiento de la interfaz de usuario está relacionado directamente con la velocidad de la interacción. Y como la función táctil es manipulación directa, el objeto con el que interactúas afecta a los objetos que lo rodean.
+> Al interactuar con la interfaz de usuario a través de la función táctil, el movimiento de la interfaz de usuario está relacionado directamente con la velocidad de la interacción. Y como la función táctil es manipulación directa, el objeto con el que interactúas afecta a los objetos que están a su alrededor.
 
 ### <a name="functional"></a>Funcional
 
@@ -53,7 +68,7 @@ El movimiento fluido de punto a punto llama la atención de forma natural y guí
 El movimiento inteligente proporciona información al usuario de una manera que concuerda con cómo manipuló la interfaz de usuario. La interacción se centra en torno al usuario. El movimiento resulta adecuado para el factor de forma y está diseñado alrededor del escenario. Debe ser cómodo para cada usuario.
 
 ![Ejemplo de interfaz de usuario de movimiento contextual](images/Contextual.gif)
-> La animación se debe vincular a la interacción del usuario. Se implementa un menú contextual desde un punto donde lo activó el usuario. 
+> La animación se debe vincular a la interacción del usuario. Se implementa un menú contextual desde un punto donde lo activó el usuario.
 
 ## <a name="motion-articles"></a>Artículos sobre movimiento
 
