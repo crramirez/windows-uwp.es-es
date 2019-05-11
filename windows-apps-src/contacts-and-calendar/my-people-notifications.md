@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 291c2a922e2b2df7111da8bfc6aefb57b87e84bb
+ms.sourcegitcommit: 4bad5f9427e7db27b57bedc6d7df19077c62e8c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630570"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535190"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -51,15 +51,15 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 
 + **src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local.
-+ **spritesheet src**
++ **spritesheet-src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesaria para animaciones de spritesheet.
-+ **spritesheet alto**
++ **spritesheet-height**
     + Altura del fotograma (en píxeles). Solo es necesaria para animaciones de spritesheet.
-+ **spritesheet fps**
++ **spritesheet-fps**
     + Fotogramas por segundo (FPS). Solo es necesaria para animaciones de spritesheet. Solo se admiten los valores 1-120.
-+ **spritesheet startingFrame**
++ **spritesheet-startingFrame**
     + Número de fotogramas para comenzar la animación. Solo se usa para animaciones de spritesheet y, de no facilitarse, su valor predeterminado es 0.
-+ **ALT**
++ **alt**
     + Cadena de texto que se usa para la narración del lector de pantalla.
 
 > [!NOTE]
@@ -68,7 +68,7 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint-people** para especificar el contacto remitente. Este parámetro puede tener cualquiera de los valores siguientes:
 
 + **Dirección de correo electrónico** 
-    + P. ej. mailto:johndoe@mydomain.com
+    + P. ej. ` mailto:johndoe@mydomain.com `
 + **Número de teléfono** 
     + P. ej. tel:888-888-8888
 + **Id. remoto** 
@@ -150,7 +150,7 @@ No obstante, hay algunos casos en los que una notificación de Mis allegados se 
 
 Si una notificación de Mis allegados vuelve a ser notificación del sistema, se omite el segundo enlace específico de Mis allegados, y solo se usa el primer enlace para visualizar la notificación del sistema. Por eso es fundamental proporcionar una carga de reserva en el primer enlace de notificación del sistema.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 + [Mi ejemplo de notificaciones de personas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
 + [Admitir agregar personas de mi](my-people-support.md)
 + [Notificaciones del sistema adaptable](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
