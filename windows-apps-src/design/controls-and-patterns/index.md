@@ -8,15 +8,16 @@ ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 417f9b72c5708a85fa570476de2829bf6217c165
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6ffed5cdc063a35b4693aa4a9323e2143b69e4fc
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583174"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065348"
 ---
-# <a name="controls-and-patterns-for-uwp-apps"></a>Controles y patrones para aplicaciones para UWP
- 
+# <a name="controls-for-uwp-apps"></a>Controles de aplicaciones para UWP 
+
+![Controls](../images/controls-2x.png)
 
 En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
 

@@ -1,6 +1,6 @@
 ---
 Description: Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
-title: Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)
+title: Consideraciones sobre la interfaz de usuario para dispositivos de UWP
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
@@ -8,20 +8,22 @@ keywords: dispositivo, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 127c01321c0341e7125e8c6da955c789c4c65f2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6333345a79d92394539d337f1f2390118cff1153
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583552"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065338"
 ---
-#  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)
+#  <a name="ui-considerations-for-uwp-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos de UWP
 
+![Dispositivos](../images/devices-2x.png)
 
+Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
 
 ![dispositivos de Windows](images/device-primer/device-primer-ramp.png)
 
-Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma. Al diseñar un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo dónde, cuándo y cómo se usará la aplicación en el dispositivo y cómo interactuará el usuario con el dispositivo.
+ Al diseñar un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo dónde, cuándo y cómo se usará la aplicación en el dispositivo y cómo interactuará el usuario con el dispositivo.
 
 ## <a name="pcs-and-laptops"></a>PC y portátiles
 

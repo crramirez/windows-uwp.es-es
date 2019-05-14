@@ -7,16 +7,16 @@ ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7d5da19fc9fdab324db2c162a3cb6792fa91f120
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583775"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065368"
 ---
 # <a name="style-for-uwp-apps"></a>Estilo de aplicaciones para UWP
 
-![imagen principal](images/header-style.svg)
+![Icono de estilo](../images/style-2x.png)
 
 El estilo es lo que hace que tu aplicación destaque. Las instrucciones de estilo de esta sección te llevan por los pasos para crear un diseño Fluent Design mediante las características de color, tipografía y otras nuevas como material acrílico y revelar resaltado.
 
