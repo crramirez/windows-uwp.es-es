@@ -1,16 +1,16 @@
 ---
 title: Aplicaciones adaptables para versiones
 description: Aprende a aprovechar las nuevas API mientras mantienes la compatibilidad con versiones anteriores
-ms.date: 09/17/2018
+ms.date: 05/17/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 579f92cc51ed5f9eeea522d81cfdb030f85ef0da
+ms.sourcegitcommit: f282c906cddf0d57217484e61a5cbd2fe8469421
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631660"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65852277"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables de versión: Usar las nuevas API y mantener la compatibilidad con versiones anteriores
 
@@ -48,7 +48,7 @@ Para cambiar la versión mínima y de destino de un proyecto que ya se haya crea
 
 Como referencia, la siguiente tabla muestra los números de compilación de cada SDK.
 
-| Nombre descriptivo | Versión | Sistema operativo/compilación de SDK |
+| Nombre descriptivo | `Version` | Sistema operativo/compilación de SDK |
 | ---- | ---- | ---- |
 | RTM | 1507 | 10240 |
 | Actualización de noviembre | 1511 | 10586 |
@@ -57,6 +57,7 @@ Como referencia, la siguiente tabla muestra los números de compilación de cada
 | Fall Creators Update | 1709 | 16299 |
 | Actualización de abril de 2018 | 1803 | 17134 |
 | Actualización de octubre de 2018 | 1809 | 17763 |
+| Actualización de mayo de 2019 | 1903 | 18362 |
 
 Puedes descargar cualquier versión publicada del SDK desde [Windows SDK y el archivo del emulador](https://developer.microsoft.com/downloads/sdk-archive). Puedes descargar el Windows Insider Preview SDK más reciente desde la sección para desarrolladores del sitio [Windows Insider](https://insider.windows.com/Home/BuildWithWindows).
 
