@@ -7,12 +7,12 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificación del sistema local, puente de dispositivo de escritorio, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 82de349009350c970fce923a2aa503df0801c3b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: af6c4392d97bdbf06c3e185b8a1c0235225bfe5a
+ms.sourcegitcommit: 81021b7930905beb67383a08b09520cf95c68fd9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609850"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940312"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde aplicaciones de C++ (WRL) de escritorio
 
@@ -62,7 +62,7 @@ using namespace Microsoft::WRL;
 
 ## <a name="step-4-implement-the-activator"></a>Paso 4: Implementar el activador
 
-Debes implementar un controlador para la activación de la notificación del sistema de modo que, cuando el usuario haga clic en la notificación del sistema, la aplicación pueda hacer algo. Esto es necesario para que la notificación del sistema se conserve en el Centro de actividades (ya que se podría hacer clic en la notificación del sistema cuando se cierre la aplicación). Esta clase se puede colocar en cualquier lugar de tu proyecto.
+Debe implementar un controlador para la activación del sistema, de modo que cuando el usuario hace clic en la notificación del sistema, la aplicación puede hacer algo. Esto es necesario para que la notificación del sistema se conserve en el Centro de actividades (ya que se podría hacer clic en la notificación del sistema cuando se cierre la aplicación). Esta clase se puede colocar en cualquier lugar de tu proyecto.
 
 Implementa la interfaz de **INotificationActivationCallback** como se muestra a continuación, incluido un UUID y también llama a **CoCreatableClass** para marcar la clase como que se puede crear con COM. Para el UUID, crea un GUID único mediante uno de los muchos generadores GUID en línea. Este CLSID (identificador de clase) de GUID es la manera a través de la cual el Centro de actividades sabe qué clase de COM activar.
 
