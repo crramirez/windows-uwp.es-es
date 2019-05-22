@@ -5,12 +5,12 @@ keywords: diseño de aplicaciones para UWP, Plataforma universal de Windows, dis
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 03e30aa091a04e16ee84f38832dc962d34659e1b
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 78462d5d29ebcc31792aa46da7657c57fb960e13
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065443"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984109"
 ---
 # <a name="design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de las aplicaciones para UWP
 
@@ -24,7 +24,7 @@ Las instrucciones de diseño para la Plataforma universal de Windows (UWP) son u
 
 Introducción a las características de UWP combinada con procedimientos recomendados para crear aplicaciones que se escalan a la perfección en todo tipo de dispositivos diseñados para Windows.
 
-[**Fluent Design System**](../fluent-design-system/index.md)
+[**Fluent Design System**](/windows/apps/fluent-design-system)
 
 Fluent Design System presenta nuestros objetivos y principios para la creación de interfaces de usuario adaptables, comprensivas y atractivas.
 

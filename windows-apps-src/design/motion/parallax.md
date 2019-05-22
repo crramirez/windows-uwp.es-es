@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 953a92cdb8cc3168a2cbeae9a1f3610f771c6339
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 5feea95245a7e3ff6deefe73617b050f89243a90
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444185"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984126"
 ---
 # <a name="parallax"></a>Parallax
 
@@ -43,7 +43,7 @@ Parallax es un efecto visual donde elementos más cercanos al usuario se mueven 
 
 ## <a name="parallax-and-the-fluent-design-system"></a>Parallax y Fluent Design System
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Parallax es un componente de Fluent Design System que agrega movimiento, profundidad y escala a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](../fluent-design-system/index.md).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Parallax es un componente de Fluent Design System que agrega movimiento, profundidad y escala a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="how-it-works-in-a-user-interface"></a>Cómo funciona en una interfaz de usuario
 
@@ -122,5 +122,5 @@ Para obtener la lista completa de maneras de personalizar el paralaje, consulta 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
-- [Diseño Fluent para UWP](../fluent-design-system/index.md)
+- [Diseño Fluent para UWP](/windows/apps/fluent-design-system)
 - [Ciencia del sistema: Diseño Fluent y profundidad](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

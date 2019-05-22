@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 599c2625bffff40a30f26bfb40f7cce9c97acdd1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4607280fd031fa556bfc5d1c719f4b4e1aeb928e
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626410"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984101"
 ---
 # <a name="visual-layer"></a>Capa visual
 
@@ -61,6 +61,12 @@ Para más información, consulta la información general sobre las [animaciones 
 Puedes acceder a un elemento visual creado por el marco XAML y respaldando un objeto FrameworkElement visible, mediante la clase [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) en [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908). Ten en cuenta que los elementos visuales que el marco crea para ti vienen con algunas limitaciones en cuanto a personalización. Esto se debe a que el marco administra los desplazamientos, las transformaciones y los ciclos de vida. Sin embargo, puedes crear tus propios elementos visuales y adjuntarlos a un elemento XAML existente a través de ElementCompositionPreview o agregándolo a un objeto ContainerVisual existente en algún lugar de la estructura del árbol visual.
 
 Para más información, consulta la información general de [Uso de la capa visual con XAML](using-the-visual-layer-with-xaml.md).
+
+### <a name="working-with-your-desktop-app"></a>Trabajar con su aplicación de escritorio
+
+Puede usar la capa Visual para mejorar la apariencia, sensación y funcionalidad de su WPF, Windows Forms, y C++ aplicaciones de escritorio de Win32. Puede migrar islas de contenido para utilizar la capa Visual y mantener el resto de la interfaz de usuario en su marco de trabajo existente. Esto significa que puede realizar actualizaciones importantes y mejoras en la interfaz de usuario de la aplicación sin necesidad de realizar grandes cambios en el código existente base.
+
+Para obtener más información, consulte [modernizar sus aplicaciones de escritorio mediante la capa Visual](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

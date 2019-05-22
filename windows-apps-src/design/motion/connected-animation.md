@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 901aa1fa5c37c18a815e5e70becdf15001ed74c4
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 21e7c026d336507b1a82badba770ac3bb50e19f8
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444233"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984119"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animación conectada para aplicaciones para UWP
 
@@ -55,7 +55,7 @@ En este breve vídeo, una aplicación usa una animación conectada para animar u
 
 ## <a name="connected-animation-and-the-fluent-design-system"></a>Animación conectada y Fluent Design System
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. La animación conectada es un componente de Fluent Design System que agrega movimiento a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](../fluent-design-system/index.md).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. La animación conectada es un componente de Fluent Design System que agrega movimiento a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="why-connected-animation"></a>¿Por qué usar una animación conectada?
 
