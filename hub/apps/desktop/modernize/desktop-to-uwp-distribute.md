@@ -5,17 +5,19 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 274f69c71890423d9962efe67cca81646a1e8e68
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 2e1aa424fe038a50a5e29364c7f8246e324dc07c
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984485"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215008"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribuir la aplicación de escritorio empaquetada
 
-Si decide [empaquetar la aplicación de escritorio en un paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root), puede publicar la aplicación empaquetada a la Microsoft Store o transferir localmente en uno o varios dispositivos.
+Si decide [empaquetar la aplicación de escritorio en un paquete MSIX](/windows/msix/desktop/desktop-to-uwp-root), puede publicar la aplicación empaquetada a la Microsoft Store o transferir localmente en uno o varios dispositivos.
 
 > [!NOTE]
 > ¿Tiene un plan para cómo podría realizar la transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
@@ -26,12 +28,12 @@ Si decide [empaquetar la aplicación de escritorio en un paquete MSIX](https://d
 
 Publicar la aplicación en la Microsoft Store para llegar a la audiencia más amplia. Además, los clientes de la organización pueden adquirir la aplicación para distribuir internamente a sus organizaciones a través de la [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
-Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puede leer más sobre este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puede leer más sobre este requisito aquí: [Capacidades restringidas](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 No se debe firmar la aplicación antes de enviarla a la Store.
 
 >[!IMPORTANT]
-> Si va a publicar la aplicación en la Microsoft Store, asegúrese de que la aplicación funciona correctamente en los dispositivos que ejecutan Windows 10 S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s).
+> Si va a publicar la aplicación en la Microsoft Store, asegúrese de que la aplicación funciona correctamente en los dispositivos que ejecutan Windows 10 S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](/windows/msix/desktop/desktop-to-uwp-test-windows-s).
 
 <a id="side-load" />
 
@@ -43,7 +45,7 @@ Esta opción puede serte de ayuda si quieres controlar mejor la experiencia de d
 
 Para distribuir la aplicación a otros dispositivos sin colocarlo en el Store, tendrá que obtener un certificado, firmar la aplicación mediante el uso de ese certificado y, a continuación, transferir localmente su aplicación en esos dispositivos.
 
-Puedes [crear un certificado](/windows/uwp/packaging/create-certificate-package-signing.md) u obtenerlo de un proveedor habitual como [Verisign](https://www.verisign.com/).
+Puedes [crear un certificado](/windows/uwp/packaging/create-certificate-package-signing) u obtenerlo de un proveedor habitual como [Verisign](https://www.verisign.com/).
 
 Si va a distribuir la aplicación en dispositivos que ejecutan Windows 10 S, la aplicación debe estar firmado por la Microsoft Store, por lo que tendrá que pasar por el proceso de envío Store para poder distribuir su aplicación en esos dispositivos.
 
@@ -52,9 +54,9 @@ Si decides crear un certificado, tienes que instalarlo en el almacén de certifi
 > [!IMPORTANT]
 > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
 
-Para firmar la aplicación mediante un certificado, consulte [firmar un paquete de aplicación mediante SignTool](/windows/uwp/packaging/sign-app-package-using-signtool.md).
+Para firmar la aplicación mediante un certificado, consulte [firmar un paquete de aplicación mediante SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
-Para transferir localmente su aplicación en otros dispositivos, consulte [LOB transferir localmente aplicaciones de Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
+Para transferir localmente su aplicación en otros dispositivos, consulte [LOB transferir localmente aplicaciones de Windows 10](/windows/application-management/sideload-apps-in-windows-10).
 
 **Vídeos**
 

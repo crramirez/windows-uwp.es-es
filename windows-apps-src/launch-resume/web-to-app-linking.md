@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 176009cb3a2fb14eb5071d48d59a0b807d4c81d6
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 464aa35aa8362049042ad23a6816c4de21b25634
+ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63770367"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66184522"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Habilitar aplicaciones para sitios Web con controladores URI de la aplicación
 
@@ -76,7 +76,7 @@ El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los c
 | **\***       | Representa cualquier subcadena      |
 | **?**        | Representa un carácter único |
 
-Por ejemplo, si tomamos `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección de tu sitio web (por ejemplo, msn.com) **excepto** las que estén bajo `/news/` y `/blog/`. Se admitirá **msn.com/weather.html**, pero no ****msn.com/news/topnews.html****.
+Por ejemplo, si tomamos `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección de tu sitio web (por ejemplo, msn.com) **excepto** las que estén bajo `/news/` y `/blog/`. **MSN.com/Weather.HTML** se admitirá, pero no **msn.com/news/topnews.html**.
 
 ### <a name="multiple-apps"></a>Varias aplicaciones
 

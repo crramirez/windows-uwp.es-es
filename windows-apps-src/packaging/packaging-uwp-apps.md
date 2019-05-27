@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: d5ed75cb79488eb994135dcfef74483ec078a32e
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 8a7a34846cbadfa9e133976695239b98294a0dd2
+ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58173031"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66184579"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
@@ -99,9 +99,10 @@ Para distribuir una aplicación a través de Microsoft Store debe crear un paque
 6.  Asegúrate de seleccionar las tres configuraciones de arquitectura (x86, x64 y ARM) en el diálogo **Seleccionar y configurar paquetes** para garantizar que tu aplicación se puede implementar en la gama de dispositivos más amplia. En el cuadro de lista **Crear lote de aplicaciones**, selecciona **Siempre**. Se prefiere un lote de aplicaciones (.appxbundle o .msixbundle) a través de un archivo de paquete de aplicación único porque contiene una colección de paquetes de aplicaciones configurado para cada tipo de arquitectura de procesador. Cuando se elige generar el paquete de aplicación, el lote de aplicaciones se incluirán en la aplicación final cargar (.appxupload o .msixupload) archivo de paquete junto con información de depuración y análisis de bloqueo. Si no estás seguro de qué arquitecturas elegir o quieres obtener más información sobre qué arquitecturas se usan en varios dispositivos, consulta [Arquitecturas de paquete de aplicación](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Crear ventana de paquetes de aplicaciones con la configuración de paquete que se muestra](images/packaging-screen5.jpg)
 7.  Incluir archivos de símbolos PDB completos para [analizar el rendimiento de la aplicación](https://docs.microsoft.com/windows/uwp/publish/analytics) desde el centro de partners, una vez publicada su aplicación. Configura detalles adicionales, como la numeración de la versión o la ubicación de salida del paquete.
-9.  Haz clic en **Crear** para generar el paquete de aplicación. Si ha seleccionado uno de los **quiero crear paquetes para cargarlos en la Microsoft Store** opciones en el paso 3 y están creando un paquete para el envío del centro de partners, el asistente creará un archivo de carga de paquete (.appxupload o .msixupload). Si seleccionó **quiero crear paquetes para la instalación de prueba** en el paso 3, el asistente creará un paquete de aplicación única o un grupo de aplicaciones según las selecciones realizadas en el paso 6.
-10. Cuando la aplicación se ha empaquetado correctamente, verá este cuadro de diálogo y se puede recuperar el archivo de carga del paquete de aplicación de la ubicación de salida especificado. En este momento, puede [validar el paquete de aplicación en el equipo local o en un equipo remoto](#validate-your-app-package).
+8.  Haz clic en **Crear** para generar el paquete de aplicación. Si ha seleccionado uno de los **quiero crear paquetes para cargarlos en la Microsoft Store** opciones en el paso 3 y están creando un paquete para el envío del centro de partners, el asistente creará un archivo de carga de paquete (.appxupload o .msixupload). Si seleccionó **quiero crear paquetes para la instalación de prueba** en el paso 3, el asistente creará un paquete de aplicación única o un grupo de aplicaciones según las selecciones realizadas en el paso 6.
+9. Cuando la aplicación se ha empaquetado correctamente, verá este cuadro de diálogo y se puede recuperar el archivo de carga del paquete de aplicación de la ubicación de salida especificado. En este momento, puede [validar el paquete de aplicación en el equipo local o en un equipo remoto](#validate-your-app-package) y [automatizar enviarla a la tienda](#automate-store-submission).
     ![Creación del paquete completado de ventana con las opciones de validación que se muestran](images/packaging-screen6.jpg)
+
 
 ### <a name="to-create-your-app-package-upload-file-manually"></a>Para crear manualmente el archivo de carga del paquete de aplicación
 
@@ -138,6 +139,23 @@ Valide la aplicación antes de enviarla al centro de partners para la certificac
 5.  Especifica un tipo de dispositivo de la subred, o proporciona el nombre del servidor de nombres de dominio (DNS) o la dirección IP de un dispositivo que esté fuera de la subred.
 6.  En la lista **Modo de autenticación**, elige **Ninguno** si el dispositivo no requiere que inicies sesión con las credenciales de Windows.
 7.  Elige el botón **Seleccionar** y el botón **Iniciar el Kit para la certificación de aplicaciones en Windows**. Si se ejecutan herramientas remotas en este dispositivo, Visual Studio se conecta a al dispositivo y realiza las pruebas de validación. Consulta [Pruebas del Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186450).
+
+### <a name="automate-store-submission"></a>Automatizar el envío de almacén
+
+A partir de 2019 de Visual Studio, puede enviar el archivo .appxupload generado a la Microsoft Store directamente desde el IDE seleccionando el **enviar automáticamente a la Microsoft Store después de la validación del Kit de certificación de aplicaciones de Windows** opción. Debe especificar las credenciales usadas para el envío. Estas credenciales se componen de tres partes: el **Id. de inquilino de Azure**, el **Id. de cliente** y **secreto de cliente**. Siga estos pasos para obtenerlas:
+
+1. En el centro de partners, vaya a su **opciones del desarrollador**, haga clic en **usuarios**y asociar la cuenta del centro de desarrollo de su organización con el directorio de Azure AD de su organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+2. En el **usuarios** página, haga clic en **agregar aplicaciones de Azure AD**, agregar la aplicación de Azure AD que representa la aplicación o servicio que usará para tener acceso a los envíos de la cuenta del centro de desarrollo y asígnele el Rol de administrador. Si esta aplicación ya existe en el directorio de Azure AD, puede seleccionarla en la página de aplicaciones de Azure AD de agregar para agregarlo a la cuenta del centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulte [agregar usuarios, grupos y aplicaciones de Azure AD a su cuenta de centro de partners](/windows/uwp/publish/add-users-groups-and-azure-ad-applications).
+3. Vuelva a la **administrar usuarios** página, haga clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copie el **Id. de inquilino** y **Id. de cliente** valores.
+4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copie el valor de clave, que corresponde al secreto del cliente. No podrá volver a acceder a esta información después de salir de esta página, así que asegúrese de que no se pierda. Para obtener más información, consulte la información sobre la administración de claves en [agregar usuarios, grupos y aplicaciones de Azure AD a su cuenta de centro de partners](/windows/uwp/publish/add-users-groups-and-azure-ad-applications).
+    ![Compruebe y progreso de la publicación](images/packaging-screen8.jpg)
+    > [!Important] 
+    > Las credenciales pueden guardarse en su perfil para su uso en envíos futuros
+5. Haga clic en **Aceptar**.
+
+Una vez haya terminado la prueba WACK, se iniciará el envío. Puede realizar un seguimiento del progreso de envío en el **Compruebe y publicar** ventana.
+
+![Compruebe y progreso de la publicación](images/packaging-screen9.jpg)
 
 ## <a name="sideload-your-app-package"></a>Realizar la instalación de prueba del paquete de la aplicación
 

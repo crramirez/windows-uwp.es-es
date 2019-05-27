@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, directrices para los desa
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1875fecbdfa6b97cdc30413c8afa6cc58d3251ef
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 03bc41ca76f6c6b20f06c98b0e71e2bc5a361992
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595040"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984204"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novedades en los documentos de los desarrolladores de Windows de julio de 2017
 
@@ -112,7 +112,7 @@ Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-s
 
 ### <a name="test-your-windows-app-for-windows-10-s"></a>Probar la aplicación de Windows en Windows 10 S
 
-Prueba la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows S. Usa [esta guía nueva](../porting/desktop-to-uwp-test-windows-s.md) para obtener información sobre cómo hacerlo. 
+Prueba la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows S. Usa [esta guía nueva](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s) para obtener información sobre cómo hacerlo.
 
 ## <a name="samples"></a>Muestras
 

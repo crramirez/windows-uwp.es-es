@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 355cff08c6ab98b0837b8cc95f2480aa1fb17bd4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: bdcb8132052cd12444c192c93170fb2f8e94113a
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63784722"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215227"
 ---
 # <a name="in-app-ads"></a>Anuncios en aplicaciones
 
@@ -40,7 +40,7 @@ Para crear una unidad de anuncios para un [anuncio de banner](../monetize/banner
     * Si se muestran un ad intersticial de vídeo o titular intersticial en la aplicación, seleccione **intersticiales de vídeo** o **Banner intersticial** (no olvide seleccionar la opción adecuada para el tipo de intersticial ad que desea mostrar).
     * Si se muestra un anuncio nativo en la aplicación, seleccione **nativo**.
 
-5. En la lista desplegable **Familia de dispositivos**, selecciona la familia de dispositivos a la que está dirigida la aplicación en la que se usará la unidad de anuncios. Las opciones disponibles son: **UWP (Windows 10)**, **PC y Tablet PC (Windows 8.1)**, o **Mobile (Windows Phone 8.x)**.
+5. En la lista desplegable **Familia de dispositivos**, selecciona la familia de dispositivos a la que está dirigida la aplicación en la que se usará la unidad de anuncios. Las opciones disponibles son: **UWP (Windows 10)** , **PC y Tablet PC (Windows 8.1)** , o **Mobile (Windows Phone 8.x)** .
 
 6. Configura los siguientes valores adicionales según tus preferencias:
 
@@ -120,6 +120,7 @@ En la tabla siguiente se muestran las redes de pago que admitimos actualmente pa
 | smartclip |  Selecciona esta opción para proporcionar anuncios desde [smartclip](http://www.smartclip.com/). |  Vídeo intersticial  |
 | SpotX |  Selecciona esta opción para proporcionar anuncios desde [SpotX](https://www.spotx.tv/). |  Vídeo intersticial  |
 | Taboola |  Selecciona esta opción para proporcionar anuncios desde [Taboola](https://www.taboola.com/). |  Banner  |
+| Vungle | Seleccione esta opción para atender los anuncios de [Vungle](https://vungle.com/) | Vídeo intersticial |
 | Undertone | Seleccione esta opción para atender los anuncios de [Undertone](https://www.undertone.com/). | Banner intersticial |
 
 

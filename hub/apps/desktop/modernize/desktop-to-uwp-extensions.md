@@ -5,13 +5,15 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: a7815639c8dafa555be6d4f0eac0eb07b43dba98
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 063106362a36aa32d0874be15dd589b5fb573409
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984455"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66214946"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integre su aplicación de escritorio empaquetado con Windows 10 y UWP
 
@@ -58,7 +60,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).
 
-|Nombre | Descripción |
+|Name | Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.desktopAppMigration``
 |AumID |Identificador de modelo de usuario de aplicación de la aplicación empaquetada. |
@@ -177,7 +179,7 @@ La aplicación empaquetada puede asociar extensiones de tipo de archivo. Si un u
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
@@ -239,7 +241,7 @@ Puedes agregar opciones a ese menú. Estas opciones ofrecen a los usuarios difer
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category | Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -303,7 +305,7 @@ Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de f
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -369,7 +371,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.firewallRules``|
 |Archivo ejecutable |Nombre del archivo ejecutable que quieras agregar a la lista de excepciones del firewall |
@@ -406,9 +408,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="place-your-dll-files-into-any-folder-of-the-package"></a>Colocar los archivos DLL en cualquier carpeta del paquete
 
-Usa una extensión para identificar esas carpetas. De este modo, el sistema puede buscar y cargar los archivos que coloques en ellas. Piensa en esta extensión como un sustituto de la variable de entorno _%PATH%_.
+Usa una extensión para identificar esas carpetas. De este modo, el sistema puede buscar y cargar los archivos que coloques en ellas. Piensa en esta extensión como un sustituto de la variable de entorno _%PATH%_ .
 
-Si no usas esta extensión, el sistema busca el gráfico de dependencia del paquete del proceso, la carpeta raíz del paquete y, a continuación, el directorio del sistema (_%SystemRoot%\system32_) en ese orden. Para obtener más información, consulta [Orden de búsqueda de aplicaciones Windows](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).
+Si no usas esta extensión, el sistema busca el gráfico de dependencia del paquete del proceso, la carpeta raíz del paquete y, a continuación, el directorio del sistema ( _%SystemRoot%\system32_) en ese orden. Para obtener más información, consulta [Orden de búsqueda de aplicaciones Windows](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).
 
 Cada paquete puede contener solo una de estas extensiones. Esto significa que puedes agregar una de ellas al paquete principal y, a continuación, agregar una a cada uno de tus [paquetes opcionales y conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
 
@@ -493,7 +495,7 @@ Especifique cómo se comporta la aplicación cuando un usuario abre varios archi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -568,7 +570,7 @@ Permite que los usuarios vean una imagen en miniatura del contenido del archivo 
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -695,10 +697,10 @@ Para obtener más información sobre el campo **Kind** y los valores que puedes 
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Name |Identificador único de la aplicación. |
+|Nombre |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |value |[Valor Kind](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy) válido |
 
@@ -759,7 +761,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. |
+|Name |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid  |Identificador de clase de la aplicación. |
 
@@ -814,7 +816,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.cloudfiles``
 |iconResource |El icono que representa tu servicio de proveedor de archivos en la nube. Este icono aparece en el panel Navegación del Explorador de archivos.  Los usuarios eligen este icono para mostrar archivos desde tu servicio en la nube. |
@@ -884,10 +886,10 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.protocol``
-|Nombre |Nombre del protocolo. |
+|Name |Nombre del protocolo. |
 |Parámetros |La lista de parámetros y valores para pasar a la aplicación como argumentos de evento cuando se activa la aplicación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. |
 
 ### <a name="example"></a>Ejemplo
@@ -1144,7 +1146,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
@@ -1194,7 +1196,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.sharedFonts``
 |Archivo |Es el archivo que contiene las fuentes que quieres compartir. |

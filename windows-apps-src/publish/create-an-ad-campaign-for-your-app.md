@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: d442792cb2b4175294ea8da053784ef0a99d18e2
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 0d38d47c1b5e228e984faa4657cd12735e98bcf9
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63811841"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215231"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para tu aplicación
 
@@ -20,7 +20,7 @@ Puede crear campañas de anuncios en [centro de partners](https://partner.micros
 Puedes crear campañas de anuncios solo para las aplicaciones que hayan pasado a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md).
 
 > [!NOTE]
-> En esta sección de la documentación se describe cómo crear una campaña de publicidad en el centro de partners. De manera alternativa, puedes usar la [API de promociones de Microsoft Store](../monetize/run-ad-campaigns-using-windows-store-services.md) para crear y administrar campañas publicitarias mediante programación.
+> En esta sección de la documentación se describe cómo crear una campaña de publicidad en el centro de partners. Otras opciones de la campaña para crear y administrar campañas de anuncios mediante programación incluyen [Vungle](https://vungle.com/) y [promociones de Microsoft Store API](../monetize/run-ad-campaigns-using-windows-store-services.md).
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -36,8 +36,8 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 5.  Revisa el nombre proporcionado para la campaña en el campo **Nombre de la campaña** y realiza cambios, si lo deseas.
 6.  En **Tipo de campaña**, elige una de estas opciones:
     * **Ad de pago**: Estos anuncios se ejecutarán en cualquier aplicación que coincida con los dispositivos y la categoría de la aplicación. Para las campañas nuevas creadas a partir del 9 de enero de 2017, estos anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Las campañas de promoción de aplicaciones dirigidas a aplicaciones y propiedades premium de Microsoft se conocen como campañas *universales*.
-    * **Anuncio de la Comunidad (gratuita)**: Estos anuncios se ejecutarán en las aplicaciones publicadas por otros desarrolladores que también creación campañas de anuncios de la Comunidad. Para poder seleccionar esta opción, debes haber optado por mostrar los anuncios de la comunidad en la página **Monetizar** -> **Anuncios en la aplicación**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
-    * **Anuncio de casa (gratis)**: Estos anuncios se ejecutarán solo en las aplicaciones que coinciden con el tipo de dispositivo de la aplicación anunciado. La publicidad interna es gratuita. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
+    * **Anuncio de la Comunidad (gratuita)** : Estos anuncios se ejecutarán en las aplicaciones publicadas por otros desarrolladores que también creación campañas de anuncios de la Comunidad. Para poder seleccionar esta opción, debes haber optado por mostrar los anuncios de la comunidad en la página **Monetizar** -> **Anuncios en la aplicación**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
+    * **Anuncio de casa (gratis)** : Estos anuncios se ejecutarán solo en las aplicaciones que coinciden con el tipo de dispositivo de la aplicación anunciado. La publicidad interna es gratuita. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
 
 7.  En el caso de campañas publicitarias de pago, confirma la opción **Campaign duration** (el período de tiempo en el que se gastará el presupuesto asignado a la campaña). La opción predeterminada es **Mensualmente**, lo que significa que el presupuesto asignado a la campaña se gastará cada mes de forma recurrente hasta que finalices la campaña. Si tienes una cuenta premium, puedes elegir la opción **Personalizado** para especificar un intervalo de fecha y hora durante el que se gastará el presupuesto asignado a la campaña. Para obtener información sobre las cuentas premium, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
 
@@ -90,7 +90,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
 12.  Si tienes una [cuenta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), puedes usar la casilla **Dirección URL de destino** para controlar lo que sucede cuando un cliente hace clic en el anuncio.
     * Si dejas la casilla vacía, cuando un cliente haga clic en el anuncio, se mostrará la descripción de la Tienda de la aplicación.
-    * Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, escribe la dirección URL de seguimiento de instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](https://support.kochava.com/) y [Tune](https://help.tune.com/).
+    * Si usas el ajuste, Kochava, ajustar o Vungle para medir el análisis de la instalación de la aplicación, escriba la dirección URL de seguimiento de instalación. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información acerca del seguimiento de instalación con estos servicios, consulte el [ajustar](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [optimizar](https://help.tune.com/), y [Vungle](https://support.vungle.com/) documentación .
     * Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes especificar un [vínculo profundo de URI](../launch-resume/handle-uri-activation.md) para redirigir a los clientes del segmento seleccionado a una página específica dentro de la aplicación.
     * Si especificas cualquier destino que no sea la página de descripción de la aplicación o una página dentro de la aplicación, la campaña se pondrá en pausa automáticamente.
 

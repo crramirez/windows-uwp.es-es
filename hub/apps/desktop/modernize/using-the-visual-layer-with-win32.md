@@ -5,13 +5,15 @@ template: detail.hbs
 ms.date: 03/18/2019
 ms.topic: article
 keywords: UWP, representación, composición, win32
+ms.author: jimwalk
+author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cf4e45ac6214e714e2c73a73006654584f50799
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: c9b4ec38b0dd1f6eca3f43cfded74c6292c08100
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65985245"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215196"
 ---
 # <a name="using-the-visual-layer-with-win32"></a>Uso de la capa Visual con Win32
 
@@ -258,7 +260,7 @@ Esto es muy clase singleton para evitar problemas de subprocesamiento. Por ejemp
     {
         auto root = m_compositor.CreateContainerVisual();
         root.RelativeSizeAdjustment({ 1.0f, 1.0f });
-        root.Offset({ 24, 24, 0 });
+        root.Offset({ 124, 12, 0 });
         m_target.Root(root);
     }
     ```
@@ -271,7 +273,7 @@ Estos métodos se configuran los componentes necesarios para la interoperabilida
 
 Con la infraestructura en su lugar, ahora puede generar el contenido de composición que desea mostrar.
 
-En este ejemplo, agrega código que crea un cuadrado simple [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual).
+En este ejemplo, agregar código que crea un cuadrado de color aleatoriamente [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual) con una animación que hace que se interrumpa tras un breve retraso.
 
 1. Agregue un elemento de composición.
     - En CompositionHost.h, declare un método público denominado _al agregar elemento_ que toma 3 **float** valores como argumentos.
@@ -290,9 +292,28 @@ En este ejemplo, agrega código que crea un cuadrado simple [SpriteVisual](/uwp/
             auto visuals = m_target.Root().as<ContainerVisual>().Children();
             auto visual = m_compositor.CreateSpriteVisual();
 
-            visual.Brush(m_compositor.CreateColorBrush({ 0xDC, 0x5B, 0x9B, 0xD5 }));
-            visual.Size({ size, size });
-            visual.Offset({ x, y, 0.0f, });
+            auto element = m_compositor.CreateSpriteVisual();
+            uint8_t r = (double)(double)(rand() % 255);;
+            uint8_t g = (double)(double)(rand() % 255);;
+            uint8_t b = (double)(double)(rand() % 255);;
+
+            element.Brush(m_compositor.CreateColorBrush({ 255, r, g, b }));
+            element.Size({ size, size });
+            element.Offset({ x, y, 0.0f, });
+
+            auto animation = m_compositor.CreateVector3KeyFrameAnimation();
+            auto bottom = (float)600 - element.Size().y;
+            animation.InsertKeyFrame(1, { element.Offset().x, bottom, 0 });
+
+            using timeSpan = std::chrono::duration<int, std::ratio<1, 1>>;
+
+            std::chrono::seconds duration(2);
+            std::chrono::seconds delay(3);
+
+            animation.Duration(timeSpan(duration));
+            animation.DelayTime(timeSpan(delay));
+            element.StartAnimation(L"Offset", animation);
+            visuals.InsertAtTop(element);
 
             visuals.InsertAtTop(visual);
         }
@@ -301,27 +322,60 @@ En este ejemplo, agrega código que crea un cuadrado simple [SpriteVisual](/uwp/
 
 ## <a name="create-and-show-the-window"></a>Crear y mostrar la ventana
 
-Ahora, puede agregar el contenido de la composición de UWP a su interfaz de usuario de Win32. Usar la aplicación _InitInstance_ método para inicializar la composición de Windows y generar el contenido.
+Ahora, puede agregar un botón y el contenido de la composición de UWP a su interfaz de usuario de Win32.
 
-1. En HelloComposition.cpp, incluya _CompositionHost.h_ en la parte superior del archivo.
+1. En HelloComposition.cpp, en la parte superior del archivo, incluya _CompositionHost.h_, definir BTN_ADD y obtener una instancia de CompositionHost.
 
     ```cppwinrt
     #include "CompositionHost.h"
+
+    // #define MAX_LOADSTRING 100 // This is already in the file.
+    #define BTN_ADD 1000
+
+    CompositionHost* compHost = CompositionHost::GetInstance();
     ```
 
-1. En el `InitInstance` método, agregue código para inicializar y usar la clase CompositionHost.
-
-    Agregue este código después de crea el HWND y antes de llamar a `ShowWindow`.
+1. En el `InitInstance` método, cambiar el tamaño de la ventana que se crea. (En esta línea, cambie `CW_USEDEFAULT, 0` a `900, 672`.)
 
     ```cppwinrt
-    CompositionHost* compHost = CompositionHost::GetInstance();
-    compHost->Initialize(hWnd);
-    compHost->AddElement(150, 10, 10);
+    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, 0, 900, 672, nullptr, nullptr, hInstance, nullptr);
+    ```
+
+1. En la función WndProc, agregue `case WM_CREATE` a la _mensaje_ bloque switch. En este caso, inicialice el CompositionHost y crear el botón.
+
+    ```cppwinrt
+    case WM_CREATE:
+    {
+        compHost->Initialize(hWnd);
+        srand(time(nullptr));
+
+        CreateWindow(TEXT("button"), TEXT("Add element"),
+            WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
+            12, 12, 100, 50,
+            hWnd, (HMENU)BTN_ADD, nullptr, nullptr);
+    }
+    break;
+    ```
+
+1. También en la función WndProc, controle el clic de botón para agregar un elemento de composición a la interfaz de usuario. 
+
+    Agregar `case BTN_ADD` a la _wmId_ bloque switch dentro del bloque WM_COMMAND.
+
+    ```cppwinrt
+    case BTN_ADD: // addButton click
+    {
+        double size = (double)(rand() % 150 + 50);
+        double x = (double)(rand() % 600);
+        double y = (double)(rand() % 200);
+        compHost->AddElement(size, x, y);
+        break;
+    }
     ```
 
 Ahora puede compilar y ejecutar la aplicación. Si necesita, compruebe el código completo al final del tutorial para asegurarse de que todo el código está en los lugares correctos.
 
-Al ejecutar la aplicación, debería ver un cuadrado azul que se agregan a la interfaz de usuario.
+Cuando ejecute la aplicación y haga clic en el botón, debería ver animados cuadrados agregados a la interfaz de usuario.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
@@ -437,7 +491,7 @@ void CompositionHost::CreateCompositionRoot()
 {
     auto root = m_compositor.CreateContainerVisual();
     root.RelativeSizeAdjustment({ 1.0f, 1.0f });
-    root.Offset({ 24, 24, 0 });
+    root.Offset({ 124, 12, 0 });
     m_target.Root(root);
 }
 
@@ -448,37 +502,128 @@ void CompositionHost::AddElement(float size, float x, float y)
         auto visuals = m_target.Root().as<ContainerVisual>().Children();
         auto visual = m_compositor.CreateSpriteVisual();
 
-        visual.Brush(m_compositor.CreateColorBrush({ 0xDC, 0x5B, 0x9B, 0xD5 }));
-        visual.Size({ size, size });
-        visual.Offset({ x, y, 0.0f, });
+        auto element = m_compositor.CreateSpriteVisual();
+        uint8_t r = (double)(double)(rand() % 255);;
+        uint8_t g = (double)(double)(rand() % 255);;
+        uint8_t b = (double)(double)(rand() % 255);;
+
+        element.Brush(m_compositor.CreateColorBrush({ 255, r, g, b }));
+        element.Size({ size, size });
+        element.Offset({ x, y, 0.0f, });
+
+        auto animation = m_compositor.CreateVector3KeyFrameAnimation();
+        auto bottom = (float)600 - element.Size().y;
+        animation.InsertKeyFrame(1, { element.Offset().x, bottom, 0 });
+
+        using timeSpan = std::chrono::duration<int, std::ratio<1, 1>>;
+
+        std::chrono::seconds duration(2);
+        std::chrono::seconds delay(3);
+
+        animation.Duration(timeSpan(duration));
+        animation.DelayTime(timeSpan(delay));
+        element.StartAnimation(L"Offset", animation);
+        visuals.InsertAtTop(element);
 
         visuals.InsertAtTop(visual);
     }
 }
 ```
 
-### <a name="hellocompositioncpp---initinstance"></a>HelloComposition.cpp - InitInstance
+### <a name="hellocompositioncpp-partial"></a>HelloComposition.cpp (Partial)
 
 ```cppwinrt
+#include "pch.h"
+#include "HelloComposition.h"
+#include "CompositionHost.h"
+
+#define MAX_LOADSTRING 100
+#define BTN_ADD 1000
+
+CompositionHost* compHost = CompositionHost::GetInstance();
+
+// Global Variables:
+
+// ...
+// ... code not shown ...
+// ...
+
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // Store instance handle in our global variable
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+      CW_USEDEFAULT, 0, 900, 672, nullptr, nullptr, hInstance, nullptr);
 
-   if (!hWnd)
-   {
-      return FALSE;
-   }
-
-   CompositionHost* compHost = CompositionHost::GetInstance();
-   compHost->Initialize(hWnd);
-   compHost->AddElement(150, 10, 10);
-
-   ShowWindow(hWnd, nCmdShow);
-   UpdateWindow(hWnd);
-
-   return TRUE;
+// ...
+// ... code not shown ...
+// ...
 }
+
+// ...
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    switch (message)
+    {
+// Add this...
+    case WM_CREATE:
+    {
+        compHost->Initialize(hWnd);
+        srand(time(nullptr));
+
+        CreateWindow(TEXT("button"), TEXT("Add element"),
+            WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
+            12, 12, 100, 50,
+            hWnd, (HMENU)BTN_ADD, nullptr, nullptr);
+    }
+    break;
+// ...
+    case WM_COMMAND:
+    {
+        int wmId = LOWORD(wParam);
+        // Parse the menu selections:
+        switch (wmId)
+        {
+        case IDM_ABOUT:
+            DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+            break;
+        case IDM_EXIT:
+            DestroyWindow(hWnd);
+            break;
+// Add this...
+        case BTN_ADD: // addButton click
+        {
+            double size = (double)(rand() % 150 + 50);
+            double x = (double)(rand() % 600);
+            double y = (double)(rand() % 200);
+            compHost->AddElement(size, x, y);
+            break;
+        }
+// ...
+        default:
+            return DefWindowProc(hWnd, message, wParam, lParam);
+        }
+    }
+    break;
+    case WM_PAINT:
+    {
+        PAINTSTRUCT ps;
+        HDC hdc = BeginPaint(hWnd, &ps);
+        // TODO: Add any drawing code that uses hdc here...
+        EndPaint(hWnd, &ps);
+    }
+    break;
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
+    }
+    return 0;
+}
+
+// ...
+// ... code not shown ...
+// ...
 ```

@@ -1,0 +1,51 @@
+- name: Compilación de aplicaciones para Windows
+  href: apps/index.md
+  items:
+    - name: Compilación de aplicaciones de escritorio
+      items:
+        - name: Introducción
+          href: apps/desktop/index.md
+        - name: Elección de la plataforma de aplicaciones
+          href: apps/desktop/choose-your-platform.md
+    - name: Modernización de las aplicaciones de escritorio
+      items:
+        - name: Introducción
+          href: apps/desktop/modernize/index.md
+        - name: Llamada a las API de UWP
+          items:
+            - name: Introducción
+              href: apps/desktop/modernize/desktop-to-uwp-enhance.md
+            - name: API de UWP disponibles
+              href: apps/desktop/modernize/desktop-to-uwp-supported-api.md
+        - name: Hospedaje de controles XAML de UWP (islas XAML)
+          items:
+            - name: Introducción
+              href: apps/desktop/modernize/xaml-islands.md
+            - name: Usar la API de hospedaje XAML de UWP
+              href: apps/desktop/modernize/using-the-xaml-hosting-api.md
+        - name: Uso de la capa visual (Windows.UI.Composition)
+          items:
+            - name: Introducción
+              href: apps/desktop/modernize/visual-layer-in-desktop-apps.md
+            - name: WPF
+              href: apps/desktop/modernize/using-the-visual-layer-with-wpf.md
+            - name: Windows Forms
+              href: apps/desktop/modernize/using-the-visual-layer-with-windows-forms.md
+            - name: Win32
+              href: apps/desktop/modernize/using-the-visual-layer-with-win32.md
+        - name: Características que requieren la identidad del paquete
+          items:
+            - name: Introducción
+              href: apps/desktop/modernize/modernize-packaged-apps.md
+            - name: Integración con extensiones de paquete
+              href: apps/desktop/modernize/desktop-to-uwp-extensions.md
+            - name: Ampliación con componentes de UWP
+              href: apps/desktop/modernize/desktop-to-uwp-extend.md
+            - name: Distribución de la aplicación empaquetada
+              href: apps/desktop/modernize/desktop-to-uwp-distribute.md
+    - name: "Sistema Fluent\_Design"
+      href: apps/fluent-design-system.md
+    - name: Accesibilidad
+      href: apps/accessibility.md
+    - name: Características y tecnologías
+      href: apps/features-and-technologies.md

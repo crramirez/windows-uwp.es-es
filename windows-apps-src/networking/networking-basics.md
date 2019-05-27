@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ffc2f31b52e7913905c7d64ab797b2939cfb313d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8ed003fbae285f003724e5f540612d86902ee2d4
+ms.sourcegitcommit: f282c906cddf0d57217484e61a5cbd2fe8469421
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651660"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65852254"
 ---
 # <a name="networking-basics"></a>Conceptos básicos de redes
 Cosas que debes hacer para cualquier aplicación habilitada para la red
@@ -31,9 +31,9 @@ En determinadas circunstancias, existen otras funcionalidades que pueden ser nec
 
 | Capacidad | Descripción |
 |------------|-------------|
-| **enterpriseAuthentication** | Permite que una aplicación se conecte a los recursos de red que precisan credenciales de dominio. Esta funcionalidad requiere que un administrador de dominio habilite la función para todas las aplicaciones. Un ejemplo sería una aplicación que recupera datos de servidores SharePoint en una Intranet privada. <br/> Con esta funcionalidad puedes usar tus credenciales para acceder a recursos de la red en una red que exija credenciales. Una aplicación con esta funcionalidad puede suplantarte en la red. <br/> Esta funcionalidad no es necesaria para que la aplicación pueda obtener acceso a Internet a través de un proxy de autenticación. |
-| **Proximidad** | Es necesaria para la comunicación de datos en proximidad con dispositivos que se encuentran cerca del equipo. La comunicación de datos en proximidad puede usarse para realizar envíos o para conectar con una aplicación de un dispositivo cercano. <br/> Esta funcionalidad permite que la aplicación acceda a la red para conectarse a un dispositivo en proximidad, con el consentimiento del usuario para enviar una invitación o aceptarla. |
-| **sharedUserCertificates** | Esta funcionalidad permite que la aplicación obtenga acceso a los certificados de software y hardware como, por ejemplo, los certificados de una tarjeta inteligente. Cuando se invoca esta funcionalidad en tiempo de ejecución, el usuario debe realizar ciertas acciones, como insertar una tarjeta o seleccionar un certificado. <br/> Con esta funcionalidad, se usan los certificados de software y hardware o una tarjeta inteligente para la identificación en la aplicación. Esta funcionalidad la pueden usar para la identificación el empleador, el banco o los servicios gubernamentales. |
+| **enterpriseAuthentication** | Permite que una aplicación se conecte a los recursos de red que precisan credenciales de dominio. Por ejemplo, una aplicación que recupera datos de servidores de SharePoint en una Intranet privada. Con esta funcionalidad puedes usar tus credenciales para acceder a recursos de la red en una red que exija credenciales. Una aplicación con esta funcionalidad puede suplantarte en la red. No necesita esta capacidad con el fin de que la aplicación pueda tener acceso a Internet a través de un proxy de autenticación.<br/><br/>Para obtener más información, consulte la documentación de la *Enterprise* escenario de capacidad en [capacidades restringidas](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities). |
+| **Proximidad** | Es necesaria para la comunicación de datos en proximidad con dispositivos que se encuentran cerca del equipo. La comunicación de datos en proximidad puede usarse para realizar envíos o para conectar con una aplicación de un dispositivo cercano. <br/><br/> Esta funcionalidad permite que la aplicación acceda a la red para conectarse a un dispositivo en proximidad, con el consentimiento del usuario para enviar una invitación o aceptarla. |
+| **sharedUserCertificates** | Esta funcionalidad permite que la aplicación obtenga acceso a los certificados de software y hardware como, por ejemplo, los certificados de una tarjeta inteligente. Cuando se invoca esta funcionalidad en tiempo de ejecución, el usuario debe realizar ciertas acciones, como insertar una tarjeta o seleccionar un certificado. <br/><br/> Con esta funcionalidad, se usan los certificados de software y hardware o una tarjeta inteligente para la identificación en la aplicación. Esta funcionalidad la pueden usar para la identificación el empleador, el banco o los servicios gubernamentales. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicación cuando la aplicación no está en primer plano
 El artículo [Support your app with background tasks (Consigue que tu aplicación sea compatible con tareas en segundo plano)](https://msdn.microsoft.com/library/windows/apps/mt299103) contiene información general sobre el uso de tareas en segundo plano para que realicen trabajos cuando la aplicación no esté en primer plano. Más concretamente, tu código debe realizar unos pasos especiales para recibir notificaciones cuando no es la aplicación en primer plano actual y llegan datos a través de la red para esta. Usar desencadenadores de canal de Control para este propósito en Windows 8 y todavía se admiten en Windows 10. Encontrarás información completa acerca del uso de desencadenadores de canal de control [**aquí**](https://msdn.microsoft.com/library/windows/apps/hh701032). Una tecnología nueva en Windows 10 proporciona una mayor funcionalidad con una menor sobrecarga para algunos escenarios, como los sockets de secuencias push habilitada: el agente de socket y los desencadenadores de actividad de socket.
@@ -460,7 +460,7 @@ Además del cifrado con TLS/SSL, es posible que un servidor necesite un valor de
 
 Si la solicitud inicial del cliente no contiene este valor o proporciona un valor que no coincide con el que espera el servidor, el valor esperado se envía desde el servidor al cliente a modo de error de protocolo de enlace de WebSocket.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticación
 Cómo proporcionar credenciales de autenticación al conectarse a través de la red.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Proporcionar un certificado de cliente con la clase StreamSocket

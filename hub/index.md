@@ -1,17 +1,20 @@
 ---
 layout: HubPage
+uhfHeaderId: MSDocsHeader-DocsL1
 hide_bc: true
 ms.prod: windows
+ms.technology: hub
+ms.date: 04/09/2019
+ms.topic: hub-page
 title: Documentación de Windows
 description: Obtén documentos para profesionales de TI, hardware y desarrollador que te ayudarán a crear y mantener tu solución de Windows.
-ms.technology: hub
 localizationpriority: medium
-ms.openlocfilehash: 1926f38d4b7772488e086395d4e28545b1f85a81
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1e669d07fdfd1f97ddef43a14078033249a2e1d5
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583492"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983911"
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -23,7 +26,7 @@ ms.locfileid: "57583492"
                           <div class="card">
                               <div class="cardImageOuter">
                                   <div class="cardImage">
-                                      <img data-hoverimage="/media/hubs/windows/win_try-windows.svg" src="/media/hubs/windows/win_try-windows.png" alt="" />
+                                      <img data-hoverimage="/media/hubs/windows/win_try-windows.svg?branch=master" src="/media/hubs/windows/win_try-windows.png?branch=master" alt="" />
                                   </div>
                               </div>
                               <div class="cardText">
@@ -41,7 +44,7 @@ ms.locfileid: "57583492"
                           <div class="card">
                               <div class="cardImageOuter">
                                   <div class="cardImage">
-                                      <img data-hoverimage="/media/hubs/windows/win_insider.svg" src="/media/hubs/windows/win_insider.png" alt="" />
+                                      <img data-hoverimage="/media/hubs/windows/win_insider.svg?branch=master" src="/media/hubs/windows/win_insider.png?branch=master" alt="" />
                                   </div>
                               </div>
                               <div class="cardText">
@@ -59,7 +62,7 @@ ms.locfileid: "57583492"
                           <div class="card">
                               <div class="cardImageOuter">
                                   <div class="cardImage">
-                                      <img data-hoverimage="/media/hubs/windows/win_academy.svg" src="/media/hubs/windows/win_academy.png" alt="" />
+                                      <img data-hoverimage="/media/hubs/windows/win_academy.svg?branch=master" src="/media/hubs/windows/win_academy.png?branch=master" alt="" />
                                   </div>
                               </div>
                               <div class="cardText">
@@ -81,24 +84,24 @@ ms.locfileid: "57583492"
                 <li>
                     <a href="#developer-all">Todas</a>
                     <ul id="developer-all" class="cardsC">
-<li>
+                        <li>
                             <div class="container intro">
-                                <p>Compilar en Windows 10</p>
+                                <p>Compilación en Windows</p>
                             </div>
                         </li>
                         <li>
-                            <a href="https://docs.microsoft.com/windows/uwp/">
+                            <a href="/windows/apps/desktop">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-uwp.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-desktop.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Aplicaciones para UWP</h3>
-                                                <p>Crea aplicaciones para cualquier dispositivo Windows (PC, teléfonos, Xbox One, HoloLens y mucho más) y publícalas en Store. </p>
+                                                <h3>Aplicaciones de escritorio para PC</h3>
+                                                <p>Obtén las herramientas, averigua qué plataforma es la más adecuada para tus nuevas aplicaciones (UWP, WPF, Windows Forms y Win32) y aprende a mejorar las aplicaciones ya existentes con las características más recientes de Windows.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -106,18 +109,18 @@ ms.locfileid: "57583492"
                             </a>
                         </li>
                         <li>
-                            <a href="https://docs.microsoft.com/en-us/windows/desktop">
+                            <a href="/windows/uwp/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-desktop.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-uwp.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Aplicaciones de escritorio</h3>
-                                                <p>Obtén las herramientas, averigua cuál es la tecnología que mejor se adapta a ti y aprende a desarrollar aplicaciones de escritorio en la plataforma que elijas.</p>
+                                                <h3>Aplicaciones para UWP</h3>
+                                                <p>Crea aplicaciones para cualquier dispositivo Windows (PC, teléfonos, Xbox One, HoloLens y mucho más) y publícalas en Store. </p>
                                             </div>
                                         </div>
                                     </div>
@@ -131,7 +134,7 @@ ms.locfileid: "57583492"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-games.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-games.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -150,7 +153,7 @@ ms.locfileid: "57583492"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-iot.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-iot.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -169,7 +172,7 @@ ms.locfileid: "57583492"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-mixed-reality.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-mixed-reality.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -182,18 +185,18 @@ ms.locfileid: "57583492"
                             </a>
                         </li>
                         <li>
-                            <a href="https://docs.microsoft.com/microsoft-edge/">
+                            <a href="https://developer.microsoft.com/web/platforms-tech/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-edge.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-edge.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Web</h3>
-                                                <p>Crea experiencias con tecnología de Microsoft Edge y los estándares web más recientes.</p>
+                                                <p>Crear aplicaciones web progresivas, extensiones del explorador para Microsoft Edge, aplicaciones web modernas y mucho más con ASP.NET.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -207,7 +210,7 @@ ms.locfileid: "57583492"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/windows-ai.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/windows-ai.svg?branch=master" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">

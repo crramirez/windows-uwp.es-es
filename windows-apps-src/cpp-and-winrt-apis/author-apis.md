@@ -1,16 +1,16 @@
 ---
 description: Este tema muestra cómo crear API C++/WinRT mediante el uso de la estructura base **winrt::implements**, directa o indirectamente.
 title: Crear API con C++/WinRT
-ms.date: 01/10/2019
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 05997549b5f1c0d13b12d47e0bb180d54617dcf2
-ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.openlocfilehash: 526c6fba76539a5d43231c29479621478b2dde59
+ms.sourcegitcommit: 6c7e1aa3bd396a1ad714e8b77c0800759dc2d8e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921721"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821087"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -116,7 +116,7 @@ Puesto que su **aplicación** tipo *es un* **IFrameworkViewSource**, simplemente
 using namespace Windows::ApplicationModel::Core;
 int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 {
-    CoreApplication::Run(App{});
+    CoreApplication::Run(winrt::make<App>());
 }
 ```
 
@@ -155,8 +155,8 @@ namespace winrt::MyProject::implementation
     {
         MyRuntimeClass() = default;
 
-        hstring Name();
-        void Name(hstring const& value);
+        winrt::hstring Name();
+        void Name(winrt::hstring const& value);
     };
 }
 
@@ -393,15 +393,15 @@ El constructor de clase base espera un **ToggleButton**. Y **MySpecializedToggle
 Hasta que no hayas realizado la modificación descrita anteriormente (pasar dicho parámetro del constructor a la clase base), el compilador marcará el constructor e indicará que no hay ningún constructor predeterminado adecuado disponible en un tipo llamado, en este caso, **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;**. En realidad es la clase base de la clase base de tu tipo de implementación.
 
 ## <a name="important-apis"></a>API importantes
-* [Plantilla de estructura winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
+* [winrt::com_ptr struct template](/uwp/cpp-ref-for-winrt/com-ptr)
 * [función winrt::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)
-* [Plantilla de función winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
-* [plantilla de función winrt::get_self](/uwp/cpp-ref-for-winrt/get-self)
-* [Plantilla de estructura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
-* [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
-* [Plantilla de función winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
-* [Función winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [plantilla de función winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
+* [winrt::get_self function template](/uwp/cpp-ref-for-winrt/get-self)
+* [winrt::implements struct template](/uwp/cpp-ref-for-winrt/implements)
+* [plantilla de función winrt::Make](/uwp/cpp-ref-for-winrt/make)
+* [winrt::make_self function template](/uwp/cpp-ref-for-winrt/make-self)
+* [winrt::Windows::Foundation::IUnknown::as function](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Consumir API con C++/WinRT](consume-apis.md)
-* [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [Controles de XAML; enlazar a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

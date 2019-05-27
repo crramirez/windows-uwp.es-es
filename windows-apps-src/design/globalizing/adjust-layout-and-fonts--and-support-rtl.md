@@ -10,7 +10,7 @@ keywords: windows 10, uwp, localizabilidad, localización, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645310"
@@ -53,7 +53,7 @@ Cuando tu idioma está localizado para idiomas de derecha a izquierda (RTL), usa
 Establece **FlowDirection** en el panel de diseño raíz (o marco) de tu página o en la página en sí. Esto hace que todos los controles dentro hereden esa propiedad.
 
 > [!IMPORTANT]
-> Sin embargo, **FlowDirection***no* se establece automáticamente según el idioma de visualización seleccionada por el usuario en la configuración de Windows; ni tampoco cambia dinámicamente en respuesta al cambio del idioma de visualización del usuario. Si el usuario cambia la configuración de Windows de inglés a árabe, por ejemplo, la propiedad **FlowDirection***no* cambiará automáticamente de izquierda a derecha a de derecha a izquierda. Como desarrollador de aplicaciones, tienes que establecer **FlowDirection** de la forma apropiada para el idioma que se muestre actualmente.
+> Sin embargo, **FlowDirection** *no* se establece automáticamente según el idioma de visualización seleccionada por el usuario en la configuración de Windows; ni tampoco cambia dinámicamente en respuesta al cambio del idioma de visualización del usuario. Si el usuario cambia la configuración de Windows de inglés a árabe, por ejemplo, la propiedad **FlowDirection** *no* cambiará automáticamente de izquierda a derecha a de derecha a izquierda. Como desarrollador de aplicaciones, tienes que establecer **FlowDirection** de la forma apropiada para el idioma que se muestre actualmente.
 
 La técnica programática es usar la propiedad `LayoutDirection` del idioma de visualización preferido del usuario para establecer la propiedad [**FlowDirection**](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) (consulta el siguiente ejemplo de código). La mayoría de los controles incluidos en Windows ya usan **FlowDirection**. Si vas a implementar un control personalizado, este debería usar la propiedad **FlowDirection** para realizar los cambios de diseño adecuados para los idiomas RTL y LTR.
 

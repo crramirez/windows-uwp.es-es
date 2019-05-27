@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: aeba4dbd734ea4b521033726968e90c232c154cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0f6a4fef72206058874edf845d5fbbe0768c53ec
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628670"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984222"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -60,10 +60,10 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 
 - [**ListView**](../controls-and-patterns/lists.md)
 - [**GridView**](../controls-and-patterns/lists.md)
-- [**Vista de árbol**](../controls-and-patterns/tree-view.md)
+- [**TreeView**](../controls-and-patterns/tree-view.md)
 - [**Control NavigationView**](../controls-and-patterns/navigationview.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
-- [**Barra de comandos**](../controls-and-patterns/app-bars.md)
+- [**CommandBar**](../controls-and-patterns/app-bars.md)
 
 Estas ilustraciones muestran revelar resaltar en varios controles diferentes:
 
@@ -282,13 +282,13 @@ Cuando se habilita revelar en una superficie de comandos personalizada o de un c
 
 ## <a name="reveal-and-the-fluent-design-system"></a>Reveal y Fluent Design System
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Reveal es un componente de Fluent Design System que agrega luz a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](../fluent-design-system/index.md).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Reveal es un componente de Fluent Design System que agrega luz a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
 - [Acrílico](acrylic.md)
 - [Efectos de composición](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
-- [Diseño Fluent para UWP](../fluent-design-system/index.md)
+- [Diseño Fluent para UWP](/windows/apps/fluent-design-system)
 - [Ciencia del sistema: Diseño Fluent y profundidad](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciencia del sistema: Luz y diseño Fluent](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

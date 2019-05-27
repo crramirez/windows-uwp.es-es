@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bcceb8d44b6d92cab05a9c077531b3fe1b05c79
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5de4b51687e152ef5d25a583f949cdd108f2f029
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651760"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984209"
 ---
 # <a name="reveal-focus"></a>Revelar el foco
 
@@ -84,7 +84,7 @@ Además de los elementos estáticos, objetos visuales de foco revelar cuentan co
 
 Para cambiar el grosor de los tipos de borde de un control, usa estas propiedades:
 
-| Tipo de borde | Propiedad |
+| Tipo de borde | Property |
 | --- | --- |
 | Principal, Resplandor   | [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness)<br/> (Al cambiar el borde principal se cambia el grosor del resplandor de manera proporcional.)   |
 | Secundario   | [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness)   |
@@ -110,7 +110,7 @@ Un margen negativo aleja el borde del centro del control y un margen positivo ac
 
 Para cambiar el color del objeto visual de foco revelar, utilice el [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) y [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) propiedades.
 
-| Propiedad | Recurso predeterminado | Valor del recurso predeterminado |
+| Property | Recurso predeterminado | Valor del recurso predeterminado |
 | ---- | ---- | --- | 
 | [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) | SystemControlRevealFocusVisualBrush  | SystemAccentColor |
 | [FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush)  | SystemControlFocusVisualSecondaryBrush  | SystemAltMediumColor |
@@ -168,7 +168,7 @@ Otra manera de personalizar revelar enfoque es dejar de participar en los objeto
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Revelar el foco y el sistema Fluent Design
 
-Revelar el que foco es un componente de sistema de diseño Fluent que agrega luz a la aplicación. Para obtener más información sobre el sistema de Fluent Design y sus otros componentes, consulta la [Introducción de Fluent Design para UWP](../fluent-design-system/index.md).
+Revelar el que foco es un componente de sistema de diseño Fluent que agrega luz a la aplicación. Para obtener más información sobre el sistema de Fluent Design y sus otros componentes, consulta la [Introducción de Fluent Design para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artículos relacionados
 

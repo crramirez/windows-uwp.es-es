@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2089f9fcd54989234b52f95eb3ee9535f9b3ede3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603120"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66214736"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>Contribuir a la documentación conceptual para UWP
 
@@ -34,7 +34,7 @@ Los revisores asignados pueden aprobar o rechazar la solicitud o trabajan con us
 
 ## <a name="internal-contributions"></a>Contribuciones internas
 
-Si es empleado de Microsoft, que puede contribuir a través de la [repositorio de contenido privado](https://cpubwin.visualstudio.com/_git/windows-uwp). Puede encontrar instrucciones sobre cómo usar este repositorio en el [Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Documentación sobre las próximas características debe aportarse mediante el repositorio privado solo.
+Si es empleado de Microsoft, que puede contribuir a través de la [repositorio de contenido privado](https://github.com/microsoftdocs/windows-uwp-pr). Puede encontrar instrucciones sobre cómo usar este repositorio en el [Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Documentación sobre las próximas características debe aportarse mediante el repositorio privado solo.
 
 ### <a name="editing-a-file"></a>Edición de un archivo
 

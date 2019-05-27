@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4332bd0b19d381937e477efc472634d6d81afd58
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b7e8be3a2c2f3d6d4ecf3ade708741fa323167fc
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651090"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221039"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
@@ -49,6 +49,33 @@ La relación entre estas declaraciones es que XAML es una definición de lenguaj
 
 El lenguaje XAML especifica determinados elementos de lenguaje, cada uno de los cuales debe ser accesible mediante implementaciones del procesador XAML que trabajan con el espacio de nombres XAML. Las plantillas de proyecto, el código de muestra y la documentación de las características del lenguaje siguen la convención por la que se asigna "x:" al espacio de nombres XAML del lenguaje XAML. El espacio de nombres del lenguaje XAML define varias características de uso común, incluso para aplicaciones básicas de Windows en tiempo de ejecución con C++, C# o Visual Basic. Por ejemplo, para unir un código subyacente con un archivo XAML mediante una clase parcial, debes asignar un nombre a esa clase como el [atributo x:Class](x-class-attribute.md) en el elemento raíz del archivo XAML correspondiente. O bien, cualquier elemento que se defina en una página XAML como un recurso con clave de un [ResourceDictionary y referencias a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273) debe tener establecido el [atributo x:Key](x-key-attribute.md) en el elemento de objeto en cuestión.
 
+## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>Espacios de nombres de código que se asignan al espacio de nombres XAML predeterminado
+
+Lo siguiente es una lista de espacios de nombres de código que están asignadas actualmente al espacio de nombres XAML predeterminado.
+
+* Windows.UI
+* Windows.UI.Xaml
+* Windows.UI.Xaml.Automation
+* Windows.UI.Xaml.Automation.Peers
+* Windows.UI.Xaml.Automation.Provider
+* Windows.UI.Xaml.Automation.Text
+* Windows.UI.Xaml.Controls
+* Windows.UI.Xaml.Controls.Primitives
+* Windows.UI.Xaml.Data
+* Windows.UI.Xaml.Documents
+* Windows.UI.Xaml.Input
+* Windows.UI.Xaml.Interop
+* Windows.UI.Xaml.Markup
+* Windows.UI.Xaml.Media
+* Windows.UI.Xaml.Media.Animation
+* Windows.UI.Xaml.Media.Imaging
+* Windows.UI.Xaml.Media.Media3D
+* Windows.UI.Xaml.Navigation
+* Windows.UI.Xaml.Resources
+* Windows.UI.Xaml.Shapes
+* Windows.UI.Xaml.Threading
+* Windows.UI.Text
+
 <span id="other-XAML-namespaces"/>
 
 ## <a name="other-xaml-namespaces"></a>Otros espacios de nombres XAML
@@ -67,15 +94,15 @@ El "d:" Espacio de nombres XAML está diseñado para la compatibilidad con el di
 -   **d: DesignSource atributo:** Especifica un origen de datos de tiempo de diseño para un [ **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), reemplazo [ **origen**](https://msdn.microsoft.com/library/windows/apps/br209835).
 -   **d: DesignInstance con y d: DesignData extensiones de marcado:** Estas extensiones de marcado se usan para proporcionar los recursos de datos de tiempo de diseño para cualquier **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](https://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
-### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**MC: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
+### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 " mc:" indica y admite un modo de compatibilidad de marcado para leer XAML. Normalmente, el prefijo "d:" se asocia al atributo **mc:Ignorable**. Esta técnica permite a los analizadores XAML en tiempo de ejecución omitir los atributos de diseño en "d:".
 
 ### <a name="local-and-common"></a>**local:** y **common:**
 
-"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de uWP con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de UWP con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
+"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de uWP con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de UWP con plantilla es **common:** . Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
 
-### <a name="vsm"></a>**VSM:**
+### <a name="vsm"></a>**vsm:**
 
 No usar. "vsm:" es un prefijo que a veces se ve en plantillas XAML más antiguas importadas de otras tecnologías de Microsoft. El espacio de nombres en principio solucionaba un problema de utillaje de los espacios de nombres heredados. Deberías eliminar las definiciones de espacios de nombres XAML de "vsm:" en el código XAML que uses para Windows Runtime, y cambiar el uso de prefijos de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) y otros objetos relacionados para usar en su lugar el espacio de nombres XAML predeterminado. Para obtener más información sobre la migración de XAML, consulta [Migrar código XAML de WPF o Silverlight a una aplicación de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/br229571).
 

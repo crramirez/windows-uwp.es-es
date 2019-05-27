@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25dc7118fcb7d9c6e997fae458ef7846777b1262
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611760"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983917"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
@@ -20,7 +20,7 @@ ms.locfileid: "57611760"
 
 Las instrucciones sobre diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayudan a diseñar y crear fantásticas aplicaciones.
 
-No se trata de una lista de reglas prescriptivas: es un documento vivo, diseñado para adaptarse a la evolución de nuestro [sistema Fluent Design](../fluent-design-system/index.md), así como a las necesidades de nuestra comunidad de creación de aplicaciones.
+No se trata de una lista de reglas prescriptivas: es un documento vivo, diseñado para adaptarse a la evolución de nuestro [sistema Fluent Design](/windows/apps/fluent-design-system), así como a las necesidades de nuestra comunidad de creación de aplicaciones.
 
 Esta introducción proporciona una descripción general de las características de diseño universales que se incluyen en cada aplicación para UWP, lo que le ayuda a crear interfaces de usuario (IU) que se adapten con elegancia a una amplia gama de dispositivos.
 
@@ -98,7 +98,7 @@ También puedes usar el [Windows Template Studio](https://github.com/Microsoft
 
 ## <a name="controls"></a>Controls
 
-La plataforma de diseño de UWP proporciona un conjunto de controles comunes cuyo funcionamiento está garantizado en todos los dispositivos de Windows y que cumplen nuestros principios de [Sistema Fluent Design](../fluent-design-system/index.md). Estos controles incluyen todo, desde controles simples, como botones y los elementos de texto, hasta controles sofisticados que pueden generar listas a partir de un conjunto de datos y una plantilla.
+La plataforma de diseño de UWP proporciona un conjunto de controles comunes cuyo funcionamiento está garantizado en todos los dispositivos de Windows y que cumplen nuestros principios de [Sistema Fluent Design](/windows/apps/fluent-design-system). Estos controles incluyen todo, desde controles simples, como botones y los elementos de texto, hasta controles sofisticados que pueden generar listas a partir de un conjunto de datos y una plantilla.
 
 ![controles UWP](../style/images/color/windows-controls.svg)
 
@@ -172,10 +172,10 @@ Proporcionamos una serie de herramientas que te ayudarán en el proceso de dise�
 
 ## <a name="next-fluent-design-system"></a>Siguiente: Sistema Fluent Design
 
-Si quieres obtener información sobre los principios que rigen Fluent Design (el sistema de diseño de Microsoft) y ver más características que puedes incorporar a tu aplicación para UWP, sigue con [sistema Fluent Design](../fluent-design-system/index.md).
+Si quieres obtener información sobre los principios que rigen Fluent Design (el sistema de diseño de Microsoft) y ver más características que puedes incorporar a tu aplicación para UWP, sigue con [sistema Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [¿Qué es una aplicación para UWP?](../../get-started/universal-application-platform-guide.md)
-- [Sistema Fluent Design](../fluent-design-system/index.md)
+- [Sistema Fluent Design](/windows/apps/fluent-design-system)
 - [Introducción a la plataforma XAML](../../xaml-platform/index.md)

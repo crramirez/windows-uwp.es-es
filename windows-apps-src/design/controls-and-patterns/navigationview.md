@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4ba3a45701d82ad0b43591469bf390190ec18db0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1a396377eb332052ae7f238a23865f2b7dc0aa16
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642230"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984182"
 ---
 # <a name="navigation-view"></a>Vista de navegación
 
@@ -226,7 +226,7 @@ Puede colocar contenido en el panel de formato libre agregándolo a la [PaneCust
     :::column-end:::
 :::row-end:::
 
-### <a name="header"></a>Encabezado
+### <a name="header"></a>Header
 
 Puede agregar un título de página estableciendo la [encabezado](/uwp/api/windows.ui.xaml.controls.navigationview.header) propiedad.
 
@@ -250,7 +250,7 @@ Se recomienda 12 px márgenes para el área de contenido al control NavigationVi
 
 De forma predeterminada, la vista de navegación cambia automáticamente su modo de presentación según la cantidad de espacio de pantalla a su disposición. El [CompactModeThresholdWidth](/uwp/api/windows.ui.xaml.controls.navigationview.compactmodethresholdwidth) y [ExpandedModeThresholdWidth](/uwp/api/windows.ui.xaml.controls.navigationview.expandedmodethresholdwidth) propiedades especifican los puntos de interrupción en el que se cambia el modo de presentación. Puede modificar estos valores para personalizar el comportamiento del modo de pantalla adaptable.
 
-### <a name="default"></a>Predeterminado
+### <a name="default"></a>Default
 
 Cuando se establece PaneDisplayMode en su valor predeterminado de **automática**, es mostrar el comportamiento adaptable:
 
@@ -624,7 +624,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 }
 ```
 
-A continuación se presenta un [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/index) versión de la **NavView_ItemInvoked** controlador desde la C# ejemplo de código anterior. La técnica en C++ / c++ / WinRT controlador implica almacenar primero (en la etiqueta de la [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) el nombre de tipo completo de la página a la que desea desplazarse. En el controlador, unbox ese valor, se convertirá en un [ **Windows::UI::Xaml::Interop::TypeName** ](/uwp/api/windows.ui.xaml.interop.typename) de objetos y usarla para desplazarse a la página de destino. No es necesario para la variable de asignación denominada `_pages` que ve en el C# ejemplo; y será capaz de crear pruebas unitarias que confirma que los valores dentro de las etiquetas son de un tipo válido. Consulte también [valores escalares de conversión Boxing y unboxing a IInspectable con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
+A continuación se presenta un [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) versión de la **NavView_ItemInvoked** controlador desde la C# ejemplo de código anterior. La técnica en C++ / c++ / WinRT controlador implica almacenar primero (en la etiqueta de la [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) el nombre de tipo completo de la página a la que desea desplazarse. En el controlador, unbox ese valor, se convertirá en un [ **Windows::UI::Xaml::Interop::TypeName** ](/uwp/api/windows.ui.xaml.interop.typename) de objetos y usarla para desplazarse a la página de destino. No es necesario para la variable de asignación denominada `_pages` que ve en el C# ejemplo; y será capaz de crear pruebas unitarias que confirma que los valores dentro de las etiquetas son de un tipo válido. Consulte también [valores escalares de conversión Boxing y unboxing a IInspectable con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
@@ -715,4 +715,4 @@ En este ejemplo se muestra cómo reemplazar los recursos de tema en App.xaml. Cu
 - [Clase de control NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 - [Maestro/detalles](master-details.md)
 - [Conceptos básicos de navegación](../basics/navigation-basics.md)
-- [Diseño Fluent de introducción a UWP](../fluent-design-system/index.md)
+- [Diseño Fluent de introducción a UWP](/windows/apps/fluent-design-system)

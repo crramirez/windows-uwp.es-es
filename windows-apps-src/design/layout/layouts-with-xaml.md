@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d07a90ce34e9b4613eed6782338cbd889d7935c9
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 53a69393d945be1640f733b47410f88631fc7714
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58081877"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221047"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños adaptativos con XAML
 
@@ -27,7 +27,7 @@ En la práctica, usa una combinación de elementos estáticos y fluidos para cre
 Aquí describimos cómo usar las propiedades de XAML y los paneles de diseño para crear un diseño fluido.
 
 ### <a name="layout-properties"></a>Propiedades de diseño
-Las propiedades de diseños controlan el tamaño y la posición de un elemento. Para crear un diseño fluido, usa variaciones de tamaño automáticas o proporcionales para los elementos, y permite que los paneles de diseño establezcan la posición de sus elementos secundarios según sea necesario. 
+Las propiedades de diseños controlan el tamaño y la posición de un elemento. Para crear un diseño fluido, utilice el ajuste de tamaño proporcional o automático para los elementos y permitir que los paneles de diseño colocar a sus elementos secundarios según sea necesario. 
 
 Aquí se muestran algunas propiedades de diseño habituales y cómo usarlas para crear diseños fluidos.
 
@@ -348,7 +348,7 @@ Puedes agregar el calificador al nombre de archivo o agregar el archivo a una ca
 
 **Usar el nombre de archivo**
 
-Para usar el nombre de calificador con el archivo, usa este formato: *[pageName]*.DeviceFamily-*[qualifierString]*.xaml.
+Para usar el nombre de calificador con el archivo, usa este formato: *[pageName]* .DeviceFamily- *[qualifierString]* .xaml.
 
 Veamos un ejemplo de un archivo denominado MainPage.xaml. Para crear una vista para tabletas, denomina la vista XAML MainPage.DeviceFamily-Tablet.xaml. Para crear una vista para dispositivos de PC, denomina la vista MainPage.DeviceFamily-Desktop.xaml. Este es el aspecto de la solución en Microsoft Visual Studio.
 
@@ -356,7 +356,7 @@ Veamos un ejemplo de un archivo denominado MainPage.xaml. Para crear una vista p
 
 **Usar el nombre de carpeta**
 
-Para organizar las vistas en el proyecto de Visual Studio con carpetas, puedes usar el nombre de calificador con la carpeta. Para ello, asigne un nombre la carpeta similar al siguiente: DeviceFamily-*[qualifierString]*. En este caso, cada archivo de vista XAML tiene el mismo nombre. No incluyas el calificador en el nombre de archivo.
+Para organizar las vistas en el proyecto de Visual Studio con carpetas, puedes usar el nombre de calificador con la carpeta. Para ello, asigne un nombre la carpeta similar al siguiente: DeviceFamily- *[qualifierString]* . En este caso, cada archivo de vista XAML tiene el mismo nombre. No incluyas el calificador en el nombre de archivo.
 
 Este es un ejemplo, para un archivo denominado MainPage.xaml. Para crear una vista para tabletas, crea una carpeta denominada "DeviceFamily-Tablet" y coloca una vista XAML denominada MainPage.xaml en ella. Para crear una vista para dispositivos PC, crea una carpeta denominada "DeviceFamily-Desktop" y coloca otra vista XAML denominada MainPage.xaml en ella. Este es el aspecto de la solución en Visual Studio.
 

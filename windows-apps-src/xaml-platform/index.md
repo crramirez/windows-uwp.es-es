@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b725a823f31309c2419bcdc5095a78994d1929c0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e22a10e74a834daf4d256313f0e353a6829911c0
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583442"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984240"
 ---
 # <a name="xaml-platform"></a>Plataforma XAML
 
@@ -26,4 +26,4 @@ En esta sección se incluyen temas donde se explican los conceptos de programaci
 | [Introducción a las propiedades adjuntas](attached-properties-overview.md) | Explica el concepto de propiedad adjunta en XAML y proporciona algunos ejemplos. |
 | [Propiedades adjuntas personalizadas](custom-attached-properties.md) | Se explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML. |
 | [Introducción a eventos y eventos enrutados](events-and-routed-events-overview.md) | Aquí se describe el concepto de programación de eventos en una aplicación de Windows Runtime cuando se usa C#, Visual Basic o C++/CX como lenguaje de programación y XAML para la definición de la interfaz de usuario. Puedes asignar controladores para eventos como parte de las declaraciones de los elementos de la interfaz de usuario en XAML, o puedes agregar los controladores en el código. Windows Runtime admite **eventos enrutados**, lo que implica que ciertos eventos de entrada y eventos de datos puedan ser controlados por otros objetos distintos del objeto que originó el evento. Los eventos enrutados son útiles cuando tienes que definir plantillas de control o usar contenedores de páginas o de diseño. |
-|[Hospedar los controles de UWP en aplicaciones de WPF y Windows Forms](xaml-host-controls.md)| Se explica cómo usar controles de XAML para UWP para mejorar la interfaz de usuario de una aplicación de escritorio de WPF o Windows Forms.|
+|[Controles de UWP en aplicaciones de escritorio (islas XAML)](/windows/apps/desktop/modernize/xaml-islands)| Se explica cómo usar controles de XAML para UWP para mejorar la interfaz de usuario de una aplicación de escritorio de Windows Forms, WPF o Win32.|

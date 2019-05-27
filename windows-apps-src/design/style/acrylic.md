@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0600e66c672a28683befdb7b0090f5455a28c948
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4731ab089189a8a03656281d1a9a6da6e4d24e89
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624200"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984258"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -38,7 +38,7 @@ Acrílico es un tipo de [pincel](https://docs.microsoft.com/en-us/uwp/api/Window
 
 ## <a name="acrylic-and-the-fluent-design-system"></a>Acrylic y Fluent Design System
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Acrylic es un componente de Fluent Design System que agrega textura física (material) y profundidad a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](../fluent-design-system/index.md).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Acrylic es un componente de Fluent Design System que agrega textura física (material) y profundidad a tu aplicación. Para obtener más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
 
  ## <a name="video-summary"></a>Resumen en vídeo
 
@@ -48,14 +48,14 @@ Acrílico es un tipo de [pincel](https://docs.microsoft.com/en-us/uwp/api/Window
 
 :::row:::
     :::column span:::
-        ![Some image](images/XAML-controls-gallery-app-icon.png)
+![Algunas imágenes](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
     :::column span="2":::
-        **XAML Controls Gallery**<br>
-        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic">here</a> to open the app and see acrylic in action.
+**Galería de controles de XAML**<br>
+Si tiene instalada la aplicación de galería de controles de XAML, haga clic en <a href="xamlcontrolsgallery:/item/Acrylic">aquí</a> para abrir la aplicación y vea acrílico en acción.
 
-        <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
-        <a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Get the source code (GitHub)</a>
+<a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a><br>
+<a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a>
     :::column-end:::
 :::row-end:::
 
@@ -73,7 +73,7 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 ## <a name="when-to-use-acrylic"></a>Cuándo usar Acrylic
 
 * Utilice acrílico en la aplicación para admitir la interfaz de usuario, como en las superficies que se pueden superponer contenido cuando se desplaza o interactuar con ellos.
-* Utilice acrílico en segundo plano para los elementos de interfaz de usuario transitorios, como menús contextuales flotantes y la interfaz de usuario de la luz dimsissable.<br />Uso acrílico en escenarios transitorios ayuda a mantener una relación visual con el contenido que desencadenó la interfaz de usuario transitorio.
+* Utilice acrílico en segundo plano para los elementos de interfaz de usuario transitorios, como menús contextuales flotantes y UI light descartable.<br />Uso acrílico en escenarios transitorios ayuda a mantener una relación visual con el contenido que desencadenó la interfaz de usuario transitorio.
 
 Si utilizas acrílico en la aplicación en las superficies de navegación, considere la posibilidad de extender contenido bajo el panel acrílico para mejorar el flujo en la aplicación. Usar el control NavigationView hará esto por usted automáticamente. Sin embargo, para evitar la creación de un efecto de la creación de bandas, intente no colocar varios fragmentos de acrílico de lado a lado - puede crear un límite no deseado entre las dos superficies de difuminado. Acrílico es una herramienta para poner visual armonía a los diseños, pero cuando usa incorrectamente, puede dar lugar a ruido visual.
 
@@ -98,7 +98,7 @@ Para las aplicaciones con menús flotantes, menús emergentes no modal, o descar
 
 ![Patrón de aplicación de correo electrónico con un control flotante informativo](images/Mail_TransientContextMenu.png)
 
-Muchos de nuestros controles usará acrílico de forma predeterminada. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) y controles similares con elementos emergentes de luz dimiss todos usarán el acrílico transitorio cuando se invocan.
+Muchos de nuestros controles usará acrílico de forma predeterminada. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) y fácil de descartar controles similares con menús emergentes utilizarán todos el acrílico transitorio cuando se invocan.
 
 > [!Note]
 > Representación superficies acrílico consume GPU, que puede aumentar el consumo de energía del dispositivo y acortar la duración de la batería. Efectos acrílico se deshabilitan automáticamente cuando los dispositivos al modo de ahorro de batería, y los usuarios pueden deshabilitar efectos acrílico para todas las aplicaciones, si así lo eligen.
@@ -141,7 +141,7 @@ Hemos creado una colección recursos de temas de pincel para los tipos de acríl
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowMediumHighBrush, SystemControlAcrylicElementMediumHighBrush <br/> SystemControlBaseHighAcrylicWindowMediumHighBrush, SystemControlBaseHighAcrylicElementMediumHighBrush </td>
-        <td align="center"> 70 % </td>
+        <td align="center"> 70% </td>
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
@@ -166,7 +166,7 @@ Además de acrílico con color neutro, también hemos agregado recursos que ento
     </tr>
     <tr>
         <td> SystemControlAccentAcrylicWindowAccentMediumHighBrush, SystemControlAccentAcrylicElementAccentMediumHighBrush  </td>
-        <td align="center"> 70 % </td>
+        <td align="center"> 70% </td>
         <td> SystemAccentColor </td>
     </tr>
     <tr>
@@ -176,7 +176,7 @@ Además de acrílico con color neutro, también hemos agregado recursos que ento
     </tr>
     <tr>
         <td> SystemControlAccentDark2AcrylicWindowAccentDark2MediumHighBrush, SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush  </td>
-        <td align="center"> 70 % </td>
+        <td align="center"> 70% </td>
         <td> SystemAccentColorDark2 </td>
     </tr>
 </table>
@@ -319,7 +319,7 @@ Además, deberás dibujar el título de la aplicación, que normalmente aparece 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 * Usa el acrílico como material de fondo de superficies no principales de la aplicación, como los paneles de navegación.
 * Extiende el acrílico al menos a uno de los bordes de la aplicación para proporcionar una experiencia uniforme al mezclarlo de manera sutil con lo que rodea a la aplicación.
-* No incluya arylic escritorio en superficies de fondo de gran tamaño de la aplicación: esto interrumpe el modelo mental de acrílico que se utiliza principalmente para superficies transitorias.
+* No incluya acrílico escritorio en superficies de fondo de gran tamaño de la aplicación: esto interrumpe el modelo mental de acrílico que se utiliza principalmente para superficies transitorias.
 * No coloques acrílicos en la aplicación y en el fondo adyacentes directamente, para evitar tensión visual en las costuras.
 * No coloques varios paneles acrílicos con el mismo tono y opacidad uno junto a otro, ya que esto genera una costura visible indeseable.
 * No coloques texto de color de énfasis sobre superficies acrílicas.

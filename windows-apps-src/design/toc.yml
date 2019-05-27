@@ -6,8 +6,6 @@
       href: basics/index.md
     - name: Introducción al diseño de aplicaciones
       href: basics/design-and-ui-intro.md
-    - name: "Sistema Fluent\_Design"
-      href: fluent-design-system/index.md
     - name: Conceptos básicos de navegación
       items:
         - name: Introducción
@@ -375,6 +373,8 @@
           items:
             - name: Prioridades de WNS
               href: shell/tiles-and-notifications/wns-notification-priorities.md
+            - name: Tráfico de Allowlisting WNS
+              href: shell/tiles-and-notifications/firewall-allowlist-config.md
             - name: Código generado por el Asistente para notificaciones de inserción
               href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
         - name: Notificaciones sin procesar

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3411ee4c947d809009c2185389f5513a49afce98
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658470"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215034"
 ---
 # <a name="manage-creatives"></a>Administrar creativos
 
@@ -36,16 +36,16 @@ Estos métodos tienen los siguientes URI.
 
 | Tipo de método | URI de la solicitud     |  Descripción  |
 |--------|-----------------------------|---------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  Crea a un nuevo creativo.  |
+| EXPONER   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  Crea a un nuevo creativo.  |
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/{creativeId}``` |  Obtiene el creativo especificado por *creativeId*.  |
 
 > [!NOTE]
 > Esta API no admite actualmente un método PUT.
 
 
-### <a name="header"></a>Encabezado
+### <a name="header"></a>Header
 
-| Encabezado        | Tipo   | Descripción         |
+| Header        | Tipo   | Descripción         |
 |---------------|--------|---------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
@@ -113,16 +113,16 @@ Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [creativo]
 
 Los cuerpos de solicitud y respuesta para estos métodos contienen los siguientes campos. En esta tabla se muestran los campos que son de solo lectura (es decir, no se pueden cambiar en el método PUT) y los campos que son obligatorios en el cuerpo de la solicitud para el método POST.
 
-| Campo        | Tipo   |  Descripción      |  Solo lectura  | Predeterminado  |  Obligatorio para POST |  
+| Campo        | Tipo   |  Descripción      |  Solo lectura  | Default  |  Obligatorio para POST |  
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número entero   |  El id. del creativo.     |   Sí    |      |    No   |       
 |  name   |  string   |   El nombre del creativo.    |    No   |      |  Sí     |       
 |  content   |  string   |  El contenido de la imagen de creativo, en formato codificado en Base64.<br/><br/>**Nota**&nbsp;&nbsp;El tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.     |  No     |      |   Sí    |       
 |  height   |  número entero   |   La altura del creativo.    |    No    |      |   Sí    |       
 |  width   |  número entero   |  El ancho del creativo.     |  No    |     |    Sí   |       
-|  landingUrl   |  string   |  Si usas un servicio de seguimiento de campañas como Kochava, AppsFlyer o Tune para medir el análisis de instalación de la aplicación, asigna la dirección URL de seguimiento en este campo al llamar el método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |       
+|  landingUrl   |  string   |  Si usas una servicio como AppsFlyer, Kochava, ajustar o Vungle de seguimiento de la campaña para medir el análisis de la instalación de la aplicación, asigne el dirección URL de seguimiento en este campo cuando se llama al método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |
 |  format   |  string   |   El formato del anuncio. Actualmente, el único valor admitido es **Banner**.    |   No    |  Banner   |  No     |       
-|  imageAttributes   | [imageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
+|  imageAttributes   | [ImageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
 |  storeProductId   |  string   |   El [id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Store para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
 
 
