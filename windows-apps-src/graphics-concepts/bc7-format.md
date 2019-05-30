@@ -7,19 +7,19 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c55a12dfa7757a48874b6857c95af592e818c2b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25ee9960e55100eaf743d73d7007e9bcf51342ee
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590770"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370721"
 ---
 # <a name="bc7-format"></a>Formato BC7
 
 
 El formato BC7 es un formato de compresión de texturas usado para la compresión de alta calidad de datos RGB y RGBA.
 
-Para obtener información sobre los modos de bloques del formato BC7, consulta [Referencia al modo de formato BC7](https://msdn.microsoft.com/library/windows/desktop/hh308954).
+Para obtener información sobre los modos de bloques del formato BC7, consulta [Referencia al modo de formato BC7](https://docs.microsoft.com/windows/desktop/direct3d11/bc7-format-mode-reference).
 
 ## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>Acerca de BC7/DXGI\_formato\_BC7
 
@@ -27,10 +27,10 @@ Para obtener información sobre los modos de bloques del formato BC7, consulta [
 BC7 especificado por el siguiente DXGI\_valores de enumeración de formato:
 
 -   **DXGI\_FORMATO\_BC7\_TYPELESS**.
--   **DXGI\_FORMATO\_BC7\_UNORM**.
--   **DXGI\_FORMATO\_BC7\_UNORM\_SRGB**.
+-   **DXGI\_FORMAT\_BC7\_UNORM**.
+-   **DXGI\_FORMAT\_BC7\_UNORM\_SRGB**.
 
-El formato BC7 puede usarse para los recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
+El formato BC7 puede usarse para los recursos de textura [Texture2D](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-reference-resource-structures) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
 
 BC7 usa un tamaño de bloque fijo de 16 bytes (128 bits) y un tamaño de mosaico fijo de elementos de textura de 4×4. Al igual que con los formatos de BC anteriores, las imágenes de textura mayores que el tamaño de mosaico compatible (4×4) se comprimen mediante el uso de varios bloques. Esta identidad de direccionamiento también se aplica a imágenes tridimensionales, mapas MIP, mapas de cubo y matrices de texturas. Todos los mosaicos de imágenes deben tener el mismo formato.
 

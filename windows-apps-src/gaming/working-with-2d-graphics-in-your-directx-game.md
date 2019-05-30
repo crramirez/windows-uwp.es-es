@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, UWP, juegos, DirectX, 2d, gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e3a843c00d28d83157cf35a0bd9527be8c6b62f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632660"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367356"
 ---
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para juegos DirectX
 
@@ -21,7 +21,7 @@ Se analiza el uso de efectos y elementos gráficos de mapas de bits 2D y cómo u
 
 Los gráficos 2D son un subconjunto de gráficos 3D que se ocupan de los primitivos 2D o mapas de bits. De forma más general, no usan una coordenada Z del mismo modo en que lo haría un juego en 3D, dado que el juego suele limitarse al plano X-Y. A veces emplean técnicas de gráficos 3D para crear sus componentes visuales y, por lo general, son más sencillos de desarrollar. Si acabas de llegar al mundo de los juegos, un juego en 2D es el punto de partida ideal, y el desarrollo de gráficos 2D puede ser un buen entrenamiento para familiarizarte con DirectX.
 
-Puedes desarrollar gráficos para juegos en 2D en DirectX usando Direct2D o Direct3D, o alguna combinación. Muchas de las clases más útiles para desarrollar juegos en 2D se encuentran en Direct3D, como la clase [**Sprite**](https://msdn.microsoft.com/library/windows/desktop/bb205601). Direct2D es un conjunto de API dirigidas principalmente a interfaces de usuario y aplicaciones que requieren soporte para dibujar primitivos (como formas de círculos, líneas y polígonos planos). Teniendo esto en cuenta, sigue proporcionando un conjunto potente y con buen rendimiento de clases y métodos para crear gráficos para juegos, especialmente al crear superposiciones, interfaces y pantallas de visualización frontal (HUD, del inglés heads-up display), o para crear diversos juegos en 2D, desde uno simple hasta uno con un nivel razonable de detalle. Sin embargo, el método más eficaz para crear juegos en 2D es usar elementos de ambas bibliotecas, y es la forma en que vamos a tratar el desarrollo de gráficos 2D en este tema.
+Puedes desarrollar gráficos para juegos en 2D en DirectX usando Direct2D o Direct3D, o alguna combinación. Muchas de las clases más útiles para desarrollar juegos en 2D se encuentran en Direct3D, como la clase [**Sprite**](https://docs.microsoft.com/windows/desktop/direct3d10/id3dx10sprite). Direct2D es un conjunto de API dirigidas principalmente a interfaces de usuario y aplicaciones que requieren soporte para dibujar primitivos (como formas de círculos, líneas y polígonos planos). Teniendo esto en cuenta, sigue proporcionando un conjunto potente y con buen rendimiento de clases y métodos para crear gráficos para juegos, especialmente al crear superposiciones, interfaces y pantallas de visualización frontal (HUD, del inglés heads-up display), o para crear diversos juegos en 2D, desde uno simple hasta uno con un nivel razonable de detalle. Sin embargo, el método más eficaz para crear juegos en 2D es usar elementos de ambas bibliotecas, y es la forma en que vamos a tratar el desarrollo de gráficos 2D en este tema.
 
 ## <a name="concepts-at-a-glance"></a>Breve explicación de conceptos
 
@@ -56,6 +56,6 @@ Unas buenas ilustraciones serán tu activo más importante cuando se trate de ef
 ## <a name="reference"></a>Referencia
 
 
--   [Información general de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
--   [Guía de inicio rápido de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
--   [Información general de interoperabilidad de Direct2D y Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
+-   [Información general de Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-overview)
+-   [Guía de inicio rápido de Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/getting-started-with-direct2d)
+-   [Información general de interoperabilidad de Direct2D y Direct3D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-and-direct3d-interoperation-overview)

@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fb0e5aee9e7b3e57ebf0ebeaf3d035180e52c65b
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 1a0c632089c8c4cf84ecf6df99935671423b51a6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63817511"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370816"
 ---
 # <a name="launch-the-windows-settings-app"></a>Cómo iniciar la aplicación Configuración de Windows
 
 **API importantes**
 
--   [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)
--   [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
--   [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)
+-   [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
+-   [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
+-   [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
 Aprende a iniciar la aplicación Configuración de Windows. Este tema se describe la **ms-settings:** Esquema de URI. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración.
 
-El inicio de la aplicación Configuración es una parte importante de la programación de una aplicación compatible con la privacidad. Si la aplicación no puede obtener acceso a un recurso con información confidencial, se recomienda proporcionar al usuario un vínculo a la configuración de privacidad de ese recurso. Para obtener más información, consulta [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223).
+El inicio de la aplicación Configuración es una parte importante de la programación de una aplicación compatible con la privacidad. Si la aplicación no puede obtener acceso a un recurso con información confidencial, se recomienda proporcionar al usuario un vínculo a la configuración de privacidad de ese recurso. Para obtener más información, consulta [Directrices para aplicaciones compatibles con la privacidad](https://docs.microsoft.com/windows/uwp/security/index).
 
 ## <a name="how-to-launch-the-settings-app"></a>Cómo iniciar la aplicación Configuración
 
@@ -44,7 +44,7 @@ En este ejemplo, se usa un control de hipervínculo XAML para iniciar la página
 </TextBlock>
 ```
 
-Como alternativa, la aplicación puede llamar al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar la aplicación **Configuración**. Este ejemplo muestra cómo iniciar la página de configuración de privacidad de la cámara mediante el URI `ms-settings:privacy-webcam` .
+Como alternativa, la aplicación puede llamar al método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) para iniciar la aplicación **Configuración**. Este ejemplo muestra cómo iniciar la página de configuración de privacidad de la cámara mediante el URI `ms-settings:privacy-webcam` .
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
@@ -217,7 +217,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Barra de tareas | ms-settings:taskbar |
 | Temas | ms-settings:themes |
 
-## <a name="phone"></a>Teléfono
+## <a name="phone"></a>Phone
 
 |Página de configuración| URI |
 |-------------|-----|
@@ -290,14 +290,14 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Mensajería | ms-settings:messaging |
 | Multitarea | ms-settings:multitasking |
 | Ajustes de luz nocturna | ms-settings:nightlight |
-| Teléfono | ms-settings:phone-defaultapps |
+| Phone | ms-settings:phone-defaultapps |
 | Proyección en este PC | ms-settings:project |
 | Experiencias compartidas | ms-settings:crossdevice |
 | Modo tableta | ms-settings:tabletmode |
 | Barra de tareas | ms-settings:taskbar |
 | Notificaciones y acciones | ms-settings:notifications |
 | Escritorio remoto | ms-settings:remotedesktop |
-| Teléfono | MS-configuración: teléfono (**en desuso en Windows 10, versión 1809 y versiones posterior**) |
+| Phone | MS-configuración: teléfono (**en desuso en Windows 10, versión 1809 y versiones posterior**) |
 | Inicio/apagado y suspensión | ms-settings:powersleep |
 | Sonido | MS-sonido de configuración: |
 | Almacenamiento | ms-settings:storagesense |

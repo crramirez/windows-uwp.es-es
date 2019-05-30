@@ -6,12 +6,12 @@ ms.date: 02/21/2018
 ms.topic: article
 keywords: windows 10, uwp, juegos, .net, unity
 ms.localizationpriority: medium
-ms.openlocfilehash: 247761f47b578099bf8672d9e1b2469e6506682e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 878a598c8a0b71e4ee394f7f98c215e5462b44e7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641790"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368434"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Falta de API de .NET en Unity y UWP
 
@@ -19,7 +19,7 @@ Al crear un juego para UWP con. NET, es posible que algunas API que podrías usa
 
 Además, algunos motores de juego usan distintos tipos de .NET que no son totalmente compatibles con .NET para UWP, como Mono de Unity. Por lo que al escribir su juego, todo lo que podría funcionar bien en el editor, pero cuando vaya a compilar para UWP, podría obtener errores como este: **El tipo o espacio de nombres 'formateadores' no existe en el espacio de nombres 'System.Runtime.Serialization' (¿falta una referencia de ensamblado?)**
 
-Afortunadamente, Unity ofrece algunas de estas API que faltan como métodos de extensión y los tipos de reemplazo, que se describen en [plataforma Universal de Windows: Faltan los tipos de .NET en secuencias de comandos de back-end de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). Sin embargo, si la funcionalidad que necesitas no está aquí, [Introducción a .NET para aplicaciones de Windows 8.x](https://msdn.microsoft.com/library/windows/apps/br230302) describe formas de convertir el código para usar WinRT o .NET para API de UWP. (Trata de Windows 8, pero también es aplicable a las aplicaciones para UWP de Windows 10).
+Afortunadamente, Unity ofrece algunas de estas API que faltan como métodos de extensión y los tipos de reemplazo, que se describen en [plataforma Universal de Windows: Faltan los tipos de .NET en secuencias de comandos de back-end de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). Sin embargo, si la funcionalidad que necesitas no está aquí, [Introducción a .NET para aplicaciones de Windows 8.x](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) describe formas de convertir el código para usar WinRT o .NET para API de UWP. (Trata de Windows 8, pero también es aplicable a las aplicaciones para UWP de Windows 10).
 
 ## <a name="net-standard"></a>.NET estándar
 
@@ -115,7 +115,7 @@ private void UsingThreads()
 
 ### <a name="security"></a>Seguridad
 
-Algunos de los espacios de nombres **System.Security.***, como [System.Security.Cryptography.X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0), no están disponibles al compilar un juego Unity para UWP. En estos casos, usa la API **Windows.Security.***, que abarca gran parte de la misma funcionalidad.
+Algunos de los espacios de nombres **System.Security.** *, como [System.Security.Cryptography.X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0), no están disponibles al compilar un juego Unity para UWP. En estos casos, usa la API **Windows.Security.** *, que abarca gran parte de la misma funcionalidad.
 
 El siguiente ejemplo simplemente obtiene los certificados de un almacén de certificados con el nombre proporcionado:
 
@@ -138,12 +138,12 @@ Para obtener más información acerca de las API de seguridad WinRT, consulta [S
 
 ### <a name="networking"></a>Funciones de red
 
-Algunos de los espacios de nombres **System&period;Net.***, como [System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0), tampoco están disponibles al compilar un juego Unity para UWP. Para la mayoría de estas API, usa las correspondientes API **Windows.Networking.*** y **Windows.Web.*** WinRT para obtener una funcionalidad similar. Consulta [Servicios web y redes](https://docs.microsoft.com/windows/uwp/networking/) para obtener más información.
+Algunos de los espacios de nombres **System&period;Net.** *, como [System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0), tampoco están disponibles al compilar un juego Unity para UWP. Para la mayoría de estas API, usa las correspondientes API **Windows.Networking.** * y **Windows.Web.** * WinRT para obtener una funcionalidad similar. Consulta [Servicios web y redes](https://docs.microsoft.com/windows/uwp/networking/) para obtener más información.
 
 En el caso de **System.Net.Mail**, usa el espacio de nombres [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email). Consulta [Enviar correo electrónico](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para obtener más información.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Plataforma universal de Windows: Tipos de .NET que faltan en secuencias de comandos de back-end de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
-* [.NET para información general de aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/br230302)
+* [.NET para información general de aplicaciones UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))
 * [Guías de migración de UWP de Unity](https://unity3d.com/partners/microsoft/porting-guides)

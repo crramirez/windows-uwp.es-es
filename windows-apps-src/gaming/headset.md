@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, auriculares
 ms.localizationpriority: medium
-ms.openlocfilehash: b3de68cc59c9928a52eba5caeb840e9e825eecf0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 73815fb3f1b732537e9f08932639a1eccd7ed1b0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627960"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368623"
 ---
 # <a name="headset"></a>Auriculares
 
-En esta página se describen los conceptos básicos de programación para auriculares que usan [Windows.Gaming.Input.Headset][auriculares] y las API relacionadas para la Plataforma universal de Windows (UWP).
+En esta página se describen los conceptos básicos de programación para auriculares que usan [Windows.Gaming.Input.Headset][headset] y las API relacionadas para la Plataforma universal de Windows (UWP).
 
 En esta página encontrarás información sobre:
 * Cómo obtener acceso a auriculares conectados a un dispositivo de entrada o de navegación
@@ -63,9 +63,9 @@ inputDevice.HeadsetDisconnected += ref new TypedEventHandler<IGameController^, H
 
 ## <a name="using-the-headset"></a>Uso de los auriculares
 
-La clase [Auriculares][] se compone de dos cadenas que representan identificadores de punto de conexión XAudio: uno para la captura de audio (grabación desde el micrófono de los auriculares) y otro para la representación de audio (reproducción a través del auricular de los auriculares).
+La clase [Headset][] se compone de dos cadenas que representan identificadores de punto de conexión XAudio: uno para la captura de audio (grabación desde el micrófono de los auriculares) y otro para la representación de audio (reproducción a través del auricular de los auriculares).
 
-Los detalles del trabajo con XAudio no se explican aquí; para obtener más información, consulta el [Guía de programación de XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) y [XAudio2 API reference (Referencia de API XAudio)](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).
+Los detalles del trabajo con XAudio no se explican aquí; para obtener más información, consulta el [Guía de programación de XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/programming-guide) y [XAudio2 API reference (Referencia de API XAudio)](https://docs.microsoft.com/windows/desktop/xaudio2/programming-reference).
 
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
@@ -73,4 +73,4 @@ Los detalles del trabajo con XAudio no se explican aquí; para obtener más info
 [igamecontroller.headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headset.aspx
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
-[Auriculares]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
+[headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx

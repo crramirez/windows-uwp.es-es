@@ -5,16 +5,16 @@ ms.date: 03/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab, desktop application, aplicación de escritorio
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7a0c6203b3a55ecf8ca5e9473a41a7e6fb233000
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607790"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371295"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>Descargar el archivo CAB de un error en tu aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab que está asociado con un error concreto de una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método solo puede descargar el archivo .cab para un error en la aplicación que se haya producido en los últimos 30 días. Descargas de archivos CAB también están disponibles en el [informe de mantenimiento](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicaciones de escritorio en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab que está asociado con un error concreto de una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Este método solo puede descargar el archivo .cab para un error en la aplicación que se haya producido en los últimos 30 días. Descargas de archivos CAB también están disponibles en el [informe de mantenimiento](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) para aplicaciones de escritorio en el centro de partners.
 
 Antes de poder usar este método, tienes que emplear primero el método para [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) y recuperar el hash de id. del archivo .cab que quieres descargar.
 
@@ -39,7 +39,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -48,7 +48,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Requerido  |
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto de la aplicación de escritorio de la cual quieres descargar un archivo .cab. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [informes de análisis de centro de partners para su aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. |  Sí  |
+| applicationId | string | El identificador de producto de la aplicación de escritorio de la cual quieres descargar un archivo .cab. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [informes de análisis de centro de partners para su aplicación de escritorio](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. |  Sí  |
 | cabIdHash | string | El hash de id. exclusivo del archivo .cab que quieres descargar. Para obtener este valor, usa el método [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar los detalles de un error específico de tu aplicación de escritorio y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método. |  Sí  |
 
 

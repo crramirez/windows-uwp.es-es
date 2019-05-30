@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae76111f6feefa0bb63fd18516e033050cc06fc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3aeb30fca8e9fbad21f274162aab3106afcf2e45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589890"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370838"
 ---
 # <a name="tier-1"></a>Nivel 1
 
@@ -52,7 +52,7 @@ Los recursos de streaming con mapas MIP que no sean un múltiplo del tamaño de 
 
 Para cambiar entre los que hacen referencia a los iconos en un grupo de icono a través de un [búfer](introduction-to-buffers.md) recursos para hacer referencia a los iconos de la mismos a través de un [textura](introduction-to-textures.md) recurso, o viceversa, la más reciente actualización de las asignaciones de icono o la copia de las asignaciones de mosaico que define las asignaciones para esos icono deben ser mosaicos en grupo para la misma dimensión de recursos (búfer frente a textura\*) como la dimensión de recursos que se usará para tener acceso a los iconos. De lo contrario, el comportamiento es indefinido, incluida la posibilidad de un restablecimiento del dispositivo.
 
-Por lo tanto, por ejemplo, no es válido actualizar las asignaciones de mosaicos para definir las asignaciones de mosaicos de un búfer, luego actualizar las asignaciones de mosaicos a los mismos mosaicos en el grupo de mosaicos a través de un recurso [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) y luego acceder a los mosaicos a través del búfer. Las soluciones son redefinir las asignaciones de mosaicos de un recurso al conmutar entre la textura y el búfer (o viceversa) compartiendo los mosaicos, o simplemente no compartir nunca los mosaicos de un grupo de mosaicos entre los recursos de búfer y los recursos de textura.
+Por lo tanto, por ejemplo, no es válido actualizar las asignaciones de mosaicos para definir las asignaciones de mosaicos de un búfer, luego actualizar las asignaciones de mosaicos a los mismos mosaicos en el grupo de mosaicos a través de un recurso [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) y luego acceder a los mosaicos a través del búfer. Las soluciones son redefinir las asignaciones de mosaicos de un recurso al conmutar entre la textura y el búfer (o viceversa) compartiendo los mosaicos, o simplemente no compartir nunca los mosaicos de un grupo de mosaicos entre los recursos de búfer y los recursos de textura.
 
 ### <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtrado de reducción de Mín./máx.
 

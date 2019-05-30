@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, port, portar, shader, sombreador, direct3d, opengl
 ms.localizationpriority: medium
-ms.openlocfilehash: f061d31ca779cb4c6cbe76f163e190996a6985cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b800a32149011376e1d97e0da44d32c733ddfb93
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618750"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368236"
 ---
 # <a name="port-the-shader-objects"></a>Migrar objetos de sombreador
 
@@ -20,8 +20,8 @@ ms.locfileid: "57618750"
 
 **API importantes**
 
--   [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)
--   [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)
+-   [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device)
+-   [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)
 
 Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación.
 
@@ -29,7 +29,7 @@ Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es config
 
  
 
-De forma muy parecida a OpenGL ES 2.0, los sombreadores compilados en Direct3D deben asociarse con un contexto de dibujo. Ten en cuenta que Direct3D no tiene el concepto de un objeto de programa sombreador en sí; debes asignar sombreadores directamente a una interfaz [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385). Este paso sigue el proceso de OpenGL ES 2.0 para crear y enlazar objetos de sombreador y te proporciona los comportamientos de API correspondientes en Direct3D.
+De forma muy parecida a OpenGL ES 2.0, los sombreadores compilados en Direct3D deben asociarse con un contexto de dibujo. Ten en cuenta que Direct3D no tiene el concepto de un objeto de programa sombreador en sí; debes asignar sombreadores directamente a una interfaz [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext). Este paso sigue el proceso de OpenGL ES 2.0 para crear y enlazar objetos de sombreador y te proporciona los comportamientos de API correspondientes en Direct3D.
 
 <a name="instructions"></a>Instrucciones
 ------------
@@ -168,7 +168,7 @@ GLuint __cdecl LoadShaderProgram (const char *vertShaderSrcStr, const char *frag
 glUseProgram(renderer->programObject);
 ```
 
-Direct3D no tiene el concepto de un objeto de programa sombreador. En cambio, los sombreadores se crean cuando se llama a uno de los métodos de creación de sombreador en la interfaz [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (como [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) o [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)). Para establecer los sombreadores del contexto de dibujo actual, se los proporcionamos a la interfaz [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) correspondiente con un método de sombreador set, como [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) del sombreador de vértices o [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) del sombreador de fragmentos.
+Direct3D no tiene el concepto de un objeto de programa sombreador. En cambio, los sombreadores se crean cuando se llama a uno de los métodos de creación de sombreador en la interfaz [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device) (como [**ID3D11Device::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) o [**ID3D11Device::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader)). Para establecer los sombreadores del contexto de dibujo actual, se los proporcionamos a la interfaz [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) correspondiente con un método de sombreador set, como [**ID3D11DeviceContext::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader) del sombreador de vértices o [**ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader) del sombreador de fragmentos.
 
 Direct3D 11: Establezca a los sombreadores para el contexto de dibujo de dispositivo de gráficos.
 
@@ -193,7 +193,7 @@ En nuestro ejemplo de OpenGL ES 2.0, tenemos que declarar un elemento **uniform*
 y dos valores **attribute** para los datos de vértice:
 
 -   **un\_posición**: un vector de 4 float para las coordenadas de modelo de un vértice.
--   **un\_color**: Un vector de 4 float para el valor de color RGBA asociado con el vértice.
+-   **a\_color**: Un vector de 4 float para el valor de color RGBA asociado con el vértice.
 
 OpenGL ES 2.0: Definiciones GLSL uniformes y atributos
 
@@ -227,7 +227,7 @@ renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
 
 Direct3D no tiene el concepto de "atributo" ni "uniforme" en el mismo sentido (o al menos no comparte esta sintaxis). En cambio, tiene búferes de constantes, representados como subrecursos de Direct3D, recursos que se comparten entre el programa principal y los programas sombreadores. Algunos de estos subrecursos, como las posiciones de vértice y los colores, se describen como semántica de HLSL. Para obtener más información sobre búferes de constantes y semántica de HLSL, así como su relación con los conceptos de OpenGL ES 2.0, lee [Migrar objetos de búfer de trama, uniformes y atributos](porting-uniforms-and-attributes.md).
 
-Al trasladar este proceso a Direct3D, convertimos el elemento uniforme a un búfer de constantes de Direct3D (cbuffer) y le asignamos un registro de búsqueda mediante la semántica HLSL **register**. Los dos atributos de vértice se administran como elementos de entrada en las fases de canalización del sombreador y también se les asigna la [semántica de HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION y COLOR0) que se encarga de informar a los sombreadores. El sombreador de píxeles toma una VP\_posición con la VP\_ prefijo que indica que es un valor de sistema generado por la GPU. (En este caso, es una posición de píxel generada durante la conversión de análisis.) VertexShaderInput y PixelShaderInput no se declaran como constante almacena en búfer porque el primero se usará para definir el búfer de vértices (consulte [los búferes de vértices y los datos de puerto](port-the-vertex-buffers-and-data-config.md)), y los datos en el segundo caso se genera como resultado de una etapa anterior de la canalización, que en este caso es el sombreador de vértices.
+Al trasladar este proceso a Direct3D, convertimos el elemento uniforme a un búfer de constantes de Direct3D (cbuffer) y le asignamos un registro de búsqueda mediante la semántica HLSL **register**. Los dos atributos de vértice se administran como elementos de entrada en las fases de canalización del sombreador y también se les asigna la [semántica de HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps) (POSITION y COLOR0) que se encarga de informar a los sombreadores. El sombreador de píxeles toma una VP\_posición con la VP\_ prefijo que indica que es un valor de sistema generado por la GPU. (En este caso, es una posición de píxel generada durante la conversión de análisis.) VertexShaderInput y PixelShaderInput no se declaran como constante almacena en búfer porque el primero se usará para definir el búfer de vértices (consulte [los búferes de vértices y los datos de puerto](port-the-vertex-buffers-and-data-config.md)), y los datos en el segundo caso se genera como resultado de una etapa anterior de la canalización, que en este caso es el sombreador de vértices.
 
 Direct3D: Definiciones de HLSL para los búferes de constantes y los datos de vértice
 
@@ -275,7 +275,7 @@ struct VertexPositionColor
 
 Utilice el XM DirectXMath\* tipos para la constante del búfer elementos, ya que proporcionan una mejora del empaquetado adecuado y la alineación del contenido cuando se envían a la canalización de sombreador. Si usas matrices y tipos flotantes estándar de la plataforma de Windows, debes realizar el empaquetado y la alineación tú mismo.
 
-Para enlazar un búfer de constantes, cree una descripción de diseño como una [ **CD3D11\_búfer\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/jj151620) estructurar y pasarlo a [ **ID3DDevice:: CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501). A continuación, en el método de representación, pasa el búfer de constantes a [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) antes de dibujar nada.
+Para enlazar un búfer de constantes, cree una descripción de diseño como una [ **CD3D11\_búfer\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-cd3d11_buffer_desc) estructurar y pasarlo a [ **ID3DDevice:: CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer). A continuación, en el método de representación, pasa el búfer de constantes a [**ID3D11DeviceContext::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource) antes de dibujar nada.
 
 Direct3D 11: Enlazar el búfer de constantes
 

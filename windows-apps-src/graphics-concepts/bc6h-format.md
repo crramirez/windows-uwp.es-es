@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f147f4c30d2a662806df5928fc79178522b9b6a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 50c8fa623130412688f14307fa46540c81f38554
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633100"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370482"
 ---
 # <a name="bc6h-format"></a>Formato BC6H
 
@@ -27,8 +27,8 @@ El formato BC6H proporciona una compresión de alta calidad para imágenes que u
 BC6H especificado por el siguiente DXGI\_valores de enumeración de formato:
 
 -   **DXGI\_FORMATO\_BC6H\_TYPELESS**.
--   **DXGI\_FORMATO\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
--   **DXGI\_FORMATO\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
+-   **DXGI\_FORMAT\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
+-   **DXGI\_FORMAT\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
 
 **Tenga en cuenta**    el formato de punto de canales de color flotante de 16 bits a menudo se conoce como formato de punto flotante "medio". Este formato tiene el siguiente diseño de bits:
 |                       |                                                 |
@@ -40,7 +40,7 @@ BC6H especificado por el siguiente DXGI\_valores de enumeración de formato:
 
  
 
-El formato BC6H puede usarse para los recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
+El formato BC6H puede usarse para los recursos de textura [Texture2D](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-reference-resource-structures) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
 
 BC6H usa un tamaño de bloque fijo de 16 bytes (128 bits) y un tamaño de mosaico fijo de elementos de textura de 4×4. Al igual que con los formatos de BC anteriores, las imágenes de textura mayores que el tamaño de mosaico compatible (4×4) se comprimen mediante el uso de varios bloques. Esta identidad de direccionamiento también se aplica a imágenes tridimensionales, mapas MIP, mapas de cubo y matrices de texturas. Todos los mosaicos de imágenes deben tener el mismo formato.
 

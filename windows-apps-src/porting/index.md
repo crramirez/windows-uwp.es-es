@@ -6,21 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d8805f03f8476bcae8404395c27d9d78952f782
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 937d165d9305a3f4909383e872f49fcf08a3115c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984228"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371590"
 ---
 # <a name="porting-apps-to-windows10"></a>Migración de aplicaciones a Windows 10
 
 
 En esta sección se describe cómo migrar tu aplicación existente a la Plataforma universal de Windows (UWP), donde puedes crear un único paquete de la aplicación Windows 10 que los clientes pueden instalar en todo tipo de dispositivos. La aplicación se beneficiará de hardware nuevo y apasionante, oportunidades de gran rentabilidad, un conjunto de API moderno, controles de interfaz de usuario adaptables y una variedad de modalidades de entrada como el mouse, el teclado, la funcionalidad táctil y la voz.
 
-Windows en tiempo de ejecución (WinRT) es la tecnología que permite compilar aplicaciones para la Plataforma universal de Windows (UWP). Puedes consultar [¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?](https://msdn.microsoft.com/library/windows/apps/dn726767) para más información sobre las aplicaciones para UWP y WinRT.
+Windows en tiempo de ejecución (WinRT) es la tecnología que permite compilar aplicaciones para la Plataforma universal de Windows (UWP). Puedes consultar [¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?](https://docs.microsoft.com/windows/uwp/get-started/whats-a-uwp) para más información sobre las aplicaciones para UWP y WinRT.
 
-En esta guía de migración se explican las diferencias entre la tecnología de la aplicación actual y la Plataforma universal de Windows (UWP). Una vez entendida la ruta entre tecnologías, podrás entrar en el resto del Centro para desarrolladores, que es un recurso completo para desarrollar aplicaciones para UWP. Cuando estés listo, una buena manera de hacerlo es empezando con [Cómo desarrollar una aplicación de la Tienda](https://msdn.microsoft.com/library/windows/apps/dn726537).
+En esta guía de migración se explican las diferencias entre la tecnología de la aplicación actual y la Plataforma universal de Windows (UWP). Una vez entendida la ruta entre tecnologías, podrás entrar en el resto del Centro para desarrolladores, que es un recurso completo para desarrollar aplicaciones para UWP. Cuando estés listo, una buena manera de hacerlo es empezando con [Cómo desarrollar una aplicación de la Tienda](https://docs.microsoft.com/previous-versions/windows/apps/dn726537(v=win.10)).
 
 | Tema | Descripción |
 |-------|-------------|
@@ -33,6 +33,6 @@ En esta guía de migración se explican las diferencias entre la tecnología de 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Migrar de WPF y Silverlight a WinRT](https://msdn.microsoft.com/library/windows/apps/dn263237)
-* [Migrar de Android a WinRT](https://msdn.microsoft.com/library/windows/apps/jj945421)
-* [Migrar de la web a WinRT](https://msdn.microsoft.com/library/windows/apps/hh465151)
+* [Migrar de WPF y Silverlight a WinRT](https://docs.microsoft.com/previous-versions/windows/apps/dn263237(v=win.10))
+* [Migrar de Android a WinRT](https://docs.microsoft.com/previous-versions/windows/apps/jj945421(v=win.10))
+* [Migrar de la web a WinRT](https://docs.microsoft.com/previous-versions/windows/apps/hh465151(v=win.10))

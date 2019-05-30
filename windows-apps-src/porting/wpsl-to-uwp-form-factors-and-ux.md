@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9efa6cae8994c12ce742aac0a6301346d6eae0d1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: efd024838194876532dc3a1925f9c43430513cda
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622070"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370733"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migración de Windows Phone Silverlight a UWP de factor de formulario y experiencia de usuario
 
@@ -48,15 +48,15 @@ Hemos descrito los factores que intervienen en la comprensión del tamaño de pa
 
 La versión móvil está limitada solo a la orientación vertical porque es la mejor relación de aspecto para la lista de libros; y haríamos lo mismo para una página de texto, que es mejor mantenerla con una sola columna en dispositivos móviles. Pero las pantallas de PC y de las tabletas son grandes en cualquier orientación, por lo que la restricción del dispositivo móvil parece una limitación innecesaria en dispositivos más grandes.
 
-Si se hace zoom óptico de la aplicación para que se parezca a la versión móvil, pero más grande, no se aprovecha el dispositivo ni su espacio adicional, y eso no suele gustarle al usuario. Deberíamos considerar mostrar más contenido, en lugar del mismo contenido más grande. Incluso en un tabléfono, podríamos mostrar más filas de contenido. Podríamos usar espacio extra para mostrar contenido diferente, como anuncios, o podríamos cambiar el cuadro de lista por una vista de lista y usarlo para agrupar elementos en varias columnas, cuando sea posible, usar el espacio de esa forma. Consulta [Directrices para controles de lista y cuadrícula](https://msdn.microsoft.com/library/windows/apps/mt186889).
+Si se hace zoom óptico de la aplicación para que se parezca a la versión móvil, pero más grande, no se aprovecha el dispositivo ni su espacio adicional, y eso no suele gustarle al usuario. Deberíamos considerar mostrar más contenido, en lugar del mismo contenido más grande. Incluso en un tabléfono, podríamos mostrar más filas de contenido. Podríamos usar espacio extra para mostrar contenido diferente, como anuncios, o podríamos cambiar el cuadro de lista por una vista de lista y usarlo para agrupar elementos en varias columnas, cuando sea posible, usar el espacio de esa forma. Consulta [Directrices para controles de lista y cuadrícula](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists).
 
-Además de nuevos controles, como la vista de lista y vista de cuadrícula, la mayoría de los tipos de diseño establecidas desde Windows Phone Silverlight tiene equivalentes en la plataforma Universal de Windows (UWP). Por ejemplo, [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). La migración de gran parte de la interfaz de usuario que usa estos tipos debe ser un proceso sencillo, pero busca siempre formas de sacar provecho de las funcionalidades de diseño dinámico de estos paneles para que automáticamente se cambie el tamaño y se vuelva a diseñar en dispositivos de diferentes tamaños.
+Además de nuevos controles, como la vista de lista y vista de cuadrícula, la mayoría de los tipos de diseño establecidas desde Windows Phone Silverlight tiene equivalentes en la plataforma Universal de Windows (UWP). Por ejemplo, [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) y [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel). La migración de gran parte de la interfaz de usuario que usa estos tipos debe ser un proceso sencillo, pero busca siempre formas de sacar provecho de las funcionalidades de diseño dinámico de estos paneles para que automáticamente se cambie el tamaño y se vuelva a diseñar en dispositivos de diferentes tamaños.
 
 El diseño dinámico integrado en los controles del sistema y los paneles de diseño más allá, podemos usar una nueva característica de Windows 10 denominada [adaptable Visual State Manager](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 ## <a name="input-modalities"></a>Modalidades de entrada
 
-Una interfaz de Windows Phone Silverlight es específico de toque. Y, por supuesto, la interfaz de la aplicación portada debe admitir la entrada táctil, pero puedes elegir admitir también otras modalidades de entrada, como el mouse y el teclado. En UWP, se unifican mouse, lápiz y entrada táctil como *entrada del puntero*. Para obtener más información, consulta [Controlar la entrada de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610) e [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607).
+Una interfaz de Windows Phone Silverlight es específico de toque. Y, por supuesto, la interfaz de la aplicación portada debe admitir la entrada táctil, pero puedes elegir admitir también otras modalidades de entrada, como el mouse y el teclado. En UWP, se unifican mouse, lápiz y entrada táctil como *entrada del puntero*. Para obtener más información, consulta [Controlar la entrada de puntero](https://docs.microsoft.com/windows/uwp/input-and-devices/handle-pointer-input) e [Interacciones de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions).
 
 ## <a name="maximizing-markup-and-code-re-use"></a>Maximización de la reutilización de código y marcado
 
@@ -65,8 +65,8 @@ Vuelve a consultar la lista [Maximización de la reutilización de código y mar
 ## <a name="more-info-and-design-guidelines"></a>Más información y pautas de diseño
 
 -   [Diseñar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/apps/design)
--   [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394)
--   [Plan para diferentes factores de forma](https://msdn.microsoft.com/library/windows/apps/dn958435)
+-   [Directrices para fuentes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts)
+-   [Plan para diferentes factores de forma](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)
 
 ## <a name="related-topics"></a>Temas relacionados
 

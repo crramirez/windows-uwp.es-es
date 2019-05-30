@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: b358eecd1799e76573cf6d254a80e7a7971bc123
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 00eb1a865631ce51cfa065d27ed00b44c66a6757
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334173"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371264"
 ---
 # <a name="create-an-add-on"></a>Crear un complemento
 
@@ -50,7 +50,7 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 |  Parámetro  |  Tipo  |  Descripción  |  Requerido  |
 |------|------|------|------|
 |  applicationIds  |  array  |  Una matriz que contiene la Id. de la tienda de la aplicación asociada con este complemento. Solo se admite un elemento en esta matriz.   |  Sí  |
-|  productId  |  string  |  Id. del producto del complemento. Esto es un identificador que puede usarse en el código para hacer referencia al complemento. Para obtener más información, consulta [Establecer el tipo de producto y el id. del producto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sí  |
+|  productId  |  string  |  Id. del producto del complemento. Esto es un identificador que puede usarse en el código para hacer referencia al complemento. Para obtener más información, consulta [Establecer el tipo de producto y el id. del producto](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sí  |
 |  productType  |  string  |  Tipo de producto del complemento. Se admiten los siguientes valores: **Durable** y **consumibles**.  |  Sí  |
 
 

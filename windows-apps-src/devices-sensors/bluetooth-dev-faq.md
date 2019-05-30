@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cc1bafb90b20083d55a622873dea7be5efbf5b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 72e45f8ef0f5684b3a712056eb367975f8e6103a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633490"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370351"
 ---
 # <a name="bluetooth-developer-faq"></a>Preguntas más frecuentes de los desarrolladores de Bluetooth
 
@@ -63,7 +63,7 @@ En este ejemplo, iniciamos el emparejamiento con un dispositivo sin usar cifrado
 
 En el caso de los dispositivos Bluetooth RFCOMM (los clásicos), no es necesario. A partir de Windows 10, versión 1607, puedes simplemente consultar si hay dispositivos cercanos y conectarte a ellos. La [RFCOMM Chat Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) (Muestra de chat de RFCOMM) actualizada muestra esta funcionalidad. 
 
-**(14393 y anterior)** Esta característica no está disponible para Bluetooth Low Energy (cliente GATT), por lo que para acceder a estos dispositivos aún tendrás que emparejarlos mediante la página Configuración o mediante las API [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx) .
+**(14393 y anterior)** Esta característica no está disponible para Bluetooth Low Energy (cliente GATT), por lo que para acceder a estos dispositivos aún tendrás que emparejarlos mediante la página Configuración o mediante las API [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) .
 
 **(15030 y superior)** Ya no se necesita el emparejamiento de dispositivos Bluetooth. Usa las nuevas API de Async, como GetGattServicesAsync y GetCharacteristicsAsync, para consultar el estado actual del dispositivo remoto. Para más información, consulta los [documentos sobre clientes](gatt-client.md). 
 
@@ -77,10 +77,10 @@ No: esta es una característica dependiente de hardware, pero se proporciona un 
 ## <a name="can-i-access-these-apis-from-win32"></a>¿Puedo acceder a estas API de Win32?
 
 Sí, todas estas API deberían funcionar. En este blog se detalla la manera de llamar a las [API de Windows desde aplicaciones de escritorio](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/). 
-## <a name="is-this-functionality-supposed-to-exist-on--insert-sku-here-"></a>¿Esta funcionalidad debe existir en *-Insert SKU here-*?
+## <a name="is-this-functionality-supposed-to-exist-on--insert-sku-here-"></a>¿Esta funcionalidad debe existir en *-Insert SKU here-* ?
 
 **Bluetooth LE**: Sí, toda la funcionalidad está en OneCore y debe estar disponible en dispositivos más reciente con una pila Bluetooth LE funcione. 
 > Advertencia: Rol periférico es depende del hardware y algunas ediciones de Windows Server no son compatibles con Bluetooth. 
 
-**Bluetooth BR/EDR (clásico)**: Existen algunas variaciones, pero en general, tienen soporte técnico de nivel de perfil muy similares. Consulta los documentos en [RFCOMM](send-or-receive-files-with-rfcomm.md) y estos documentos de perfil admitidos para [PC](https://support.microsoft.com/en-us/help/10568/windows-10-supported-bluetooth-profiles) y [teléfonos](https://support.microsoft.com/en-us/help/10569/windows-10-mobile-supported-bluetooth-profiles).
+**Bluetooth BR/EDR (clásico)** : Existen algunas variaciones, pero en general, tienen soporte técnico de nivel de perfil muy similares. Consulta los documentos en [RFCOMM](send-or-receive-files-with-rfcomm.md) y estos documentos de perfil admitidos para [PC](https://support.microsoft.com/en-us/help/10568/windows-10-supported-bluetooth-profiles) y [teléfonos](https://support.microsoft.com/en-us/help/10569/windows-10-mobile-supported-bluetooth-profiles).
 

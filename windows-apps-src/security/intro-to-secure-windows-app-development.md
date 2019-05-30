@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ee386199fbee7d2f9b839d6b1805c6181e4d70a9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606520"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371391"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introducción al desarrollo seguro de aplicaciones de Windows
 
@@ -81,17 +81,17 @@ Con OAuth, los departamentos de TI pueden "subcontratar" eficazmente la compleji
 
 En estas plataformas los usuarios tienen control total sobre su identidad, pero las aplicaciones pueden solicitar un token del proveedor, después de que el usuario se autentique y con su consentimiento, lo que se puede usar para autorizar usuarios autenticados.
 
-El agente de autenticación web en Windows 10 proporciona un conjunto de API e infraestructura para que las aplicaciones usen protocolos de autenticación y autorización, como OAuth y OpenID. Las aplicaciones pueden iniciar operaciones de autenticación a través de las API de [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025), lo que da como resultado la devolución de un objeto [**WebAuthenticationResult**](https://msdn.microsoft.com/library/windows/apps/br227038). En la siguiente ilustración se muestra una visión general del flujo de comunicación.
+El agente de autenticación web en Windows 10 proporciona un conjunto de API e infraestructura para que las aplicaciones usen protocolos de autenticación y autorización, como OAuth y OpenID. Las aplicaciones pueden iniciar operaciones de autenticación a través de las API de [**WebAuthenticationBroker**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker), lo que da como resultado la devolución de un objeto [**WebAuthenticationResult**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationResult). En la siguiente ilustración se muestra una visión general del flujo de comunicación.
 
 ![Flujo de trabajo WAB](images/secure-wab.png)
 
-La aplicación actúa como el agente e inicia la autenticación con el proveedor de identidades a través de un objeto [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) en la aplicación. Cuando el proveedor de identidad ha autenticado al usuario, devuelve un token a la aplicación que puede usarse para solicitar información sobre el usuario del proveedor de identidad. Como medida de seguridad, la aplicación debe registrarse ante el proveedor de identidades para poder negociar los procesos de autenticación con el proveedor de identidades. Los pasos de registro son diferentes para cada proveedor.
+La aplicación actúa como el agente e inicia la autenticación con el proveedor de identidades a través de un objeto [**WebView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) en la aplicación. Cuando el proveedor de identidad ha autenticado al usuario, devuelve un token a la aplicación que puede usarse para solicitar información sobre el usuario del proveedor de identidad. Como medida de seguridad, la aplicación debe registrarse ante el proveedor de identidades para poder negociar los procesos de autenticación con el proveedor de identidades. Los pasos de registro son diferentes para cada proveedor.
 
-Este es el flujo de trabajo general para llamar a la API de [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025) y comunicarse con el proveedor.
+Este es el flujo de trabajo general para llamar a la API de [**WebAuthenticationBroker**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker) y comunicarse con el proveedor.
 
 -   Construye las cadenas de solicitud para enviarlas al proveedor de identidades. El número de cadenas y la información de cada cadena son diferentes para cada servicio web, pero normalmente se incluyen dos cadenas URI cada una con una dirección URL: una a la que se enviará la solicitud de autenticación y una a la que se redirigirá el usuario cuando se complete la autorización.
--   Llama a [**WebAuthenticationBroker.AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), pasa las cadenas de solicitud y espera la respuesta del proveedor de identidad.
--   Llama a [**WebAuthenticationResult.ResponseStatus**](https://msdn.microsoft.com/library/windows/apps/br227041) para obtener el estado cuando se reciba la respuesta.
+-   Llama a [**WebAuthenticationBroker.AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), pasa las cadenas de solicitud y espera la respuesta del proveedor de identidad.
+-   Llama a [**WebAuthenticationResult.ResponseStatus**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationresult.responsestatus) para obtener el estado cuando se reciba la respuesta.
 -   Si la comunicación es correcta, procesa la cadena de respuesta que ha devuelto el proveedor de identidad. Si no lo es, procesa el error.
 
 Si la comunicación es correcta, procesa la cadena de respuesta que ha devuelto el proveedor de identidad. Si no lo es, procesa el error.
@@ -175,7 +175,7 @@ El flujo de trabajo de registro de una aplicación puede ser parecido al siguien
 
 Puede que la información de registro que recopiles incluya mucha más información de identificación de lo que se ve este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrás que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario utilice el servicio.
 
-Para obtener más información sobre Windows Hello, consulta la [Guía de Windows Hello](https://msdn.microsoft.com/library/mt589441) y la [Guía para desarrolladores de Windows Hello](microsoft-passport.md).
+Para obtener más información sobre Windows Hello, consulta la [Guía de Windows Hello](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide) y la [Guía para desarrolladores de Windows Hello](microsoft-passport.md).
 
 ## <a name="3-data-in-flight-security-methods"></a>3 Métodos de seguridad de datos en desarrollo
 
@@ -214,7 +214,7 @@ Existen varias formas diferentes de implementar el anclaje SSL en las aplicacion
 
 Para conseguir mayor control sobre la lógica de validación, hay API disponibles para validar los certificados que devuelve el servidor en respuesta a una solicitud HTTP. Ten en cuenta que este método requiere el envío de una solicitud y la inspección de la respuesta, por lo que debes asegurarte de agregarlo como una validación antes de enviar información confidencial realmente en una solicitud.
 
-El siguiente código C# muestra este método de anclaje SSL. El método **ValidateSSLRoot** usa la clase [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) para ejecutar una solicitud HTTP. Después de que el cliente envíe la respuesta, usa la colección [**RequestMessage.TransportInformation.ServerIntermediateCertificates**](https://msdn.microsoft.com/library/windows/apps/dn279681) para inspeccionar los certificados que devuelve el servidor. A continuación, el cliente puede validar la cadena de certificados completa con las huellas digitales que ha incluido. Este método requiere que las huellas digitales de los certificados se actualicen en la aplicación una vez que el certificado de servidor expire y se renueve.
+El siguiente código C# muestra este método de anclaje SSL. El método **ValidateSSLRoot** usa la clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) para ejecutar una solicitud HTTP. Después de que el cliente envíe la respuesta, usa la colección [**RequestMessage.TransportInformation.ServerIntermediateCertificates**](https://docs.microsoft.com/uwp/api/windows.web.http.httptransportinformation.serverintermediatecertificates) para inspeccionar los certificados que devuelve el servidor. A continuación, el cliente puede validar la cadena de certificados completa con las huellas digitales que ha incluido. Este método requiere que las huellas digitales de los certificados se actualicen en la aplicación una vez que el certificado de servidor expire y se renueve.
 
 ```cs
 private async Task ValidateSSLRoot()
@@ -286,7 +286,7 @@ Cuando se reciben datos en un dispositivo, nos referimos a estos como "datos en 
 
 Tradicionalmente, Windows nunca ha tenido una definición de una aplicación. Solía denominarse "ejecutable" (.exe), pero esto nunca incluyó la instalación, el almacenamiento de estado, la longitud de ejecución, el control de versiones, la integración del sistema operativo ni la comunicación entre aplicaciones. El modelo de la Plataforma universal de Windows define un modelo de aplicaciones que trata la instalación, el entorno en tiempo de ejecución, la administración de recursos, las actualizaciones, el modelo de datos y la desinstalación.
 
-Las aplicaciones de Windows 10 que se ejecutan en un contenedor, lo que significa que tienen privilegios limitados de forma predeterminada (privilegios adicionales pueden solicitar y concedidos por el usuario). Por ejemplo, si una aplicación quiere acceder a los archivos del sistema, hay que usar un selector de archivos del espacio de nombres [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) para permitir que el usuario seleccione un archivo (no se habilita ningún tipo de acceso directo a los archivos). Otro ejemplo es si una aplicación quiere acceder a los datos de ubicación del usuario, debe permitir la declaración de las necesidades de funcionalidad de ubicación del dispositivo, solicitando al usuario en el momento de la descarga que esta aplicación solicitará acceso a la ubicación del usuario. Además de eso, la primera vez que la aplicación quiera acceder a la ubicación del usuario, se muestra una petición de consentimiento adicional al usuario en la que se pide permiso para acceder a los datos.
+Las aplicaciones de Windows 10 que se ejecutan en un contenedor, lo que significa que tienen privilegios limitados de forma predeterminada (privilegios adicionales pueden solicitar y concedidos por el usuario). Por ejemplo, si una aplicación quiere acceder a los archivos del sistema, hay que usar un selector de archivos del espacio de nombres [**Windows.Storage.Pickers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers) para permitir que el usuario seleccione un archivo (no se habilita ningún tipo de acceso directo a los archivos). Otro ejemplo es si una aplicación quiere acceder a los datos de ubicación del usuario, debe permitir la declaración de las necesidades de funcionalidad de ubicación del dispositivo, solicitando al usuario en el momento de la descarga que esta aplicación solicitará acceso a la ubicación del usuario. Además de eso, la primera vez que la aplicación quiera acceder a la ubicación del usuario, se muestra una petición de consentimiento adicional al usuario en la que se pide permiso para acceder a los datos.
 
 Ten en cuenta que este modelo de aplicaciones actúa como una "cárcel" para las aplicaciones, lo que significa que no pueden salir afuera. Sin embargo, no es un "castillo" inaccesible desde el exterior (evidentemente, las aplicaciones con privilegios de administrador aún pueden entrar). Device Guard en Windows 10, que permite a las organizaciones y los departamentos de TI especificar qué aplicaciones (Win32) se pueden ejecutar, puede ayudar aún más a limitar este acceso.
 
@@ -301,14 +301,14 @@ Para obtener más información, consulte [es Universal: Comprender el ciclo de v
 
 Las aplicaciones de Windows que acceden a servicios autenticados suelen proporcionar a los usuarios la opción de almacenar sus credenciales en el dispositivo local. Esto resulta útil para los usuarios; al proporcionar su nombre de usuario y contraseña, la aplicación los usa automáticamente en inicios posteriores de la aplicación. Dado que puede ser un problema de seguridad si un atacante obtiene acceso a los datos almacenados, Windows 10 ofrece la posibilidad de que las aplicaciones de Windows almacenen las credenciales de usuario en una caja de seguridad de credenciales. La aplicación llama a la API de Caja de seguridad de credenciales para almacenar y recuperar las credenciales que esta contiene, en lugar de almacenarlas en el contenedor de almacenamiento de la aplicación. La caja de seguridad de credenciales la administra el sistema operativo, pero el acceso está limitado a la aplicación que las almacena, a fin de ofrecer una solución administrada de forma segura para el almacenamiento de credenciales.
 
-Cuando un usuario proporciona las credenciales que deben almacenarse, la aplicación obtiene una referencia para la caja de seguridad de credenciales mediante el objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) del espacio de nombres [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089). A continuación, crea un objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contiene un identificador para la aplicación Windows, así como el nombre de usuario y la contraseña. Esta información se transfiere al método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para almacenar las credenciales en la caja de seguridad. En el siguiente ejemplo de código C# se muestra este procedimiento.
+Cuando un usuario proporciona las credenciales que deben almacenarse, la aplicación obtiene una referencia para la caja de seguridad de credenciales mediante el objeto [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) del espacio de nombres [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials). A continuación, crea un objeto [**PasswordCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordCredential) que contiene un identificador para la aplicación Windows, así como el nombre de usuario y la contraseña. Esta información se transfiere al método [**PasswordVault.Add**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.add) para almacenar las credenciales en la caja de seguridad. En el siguiente ejemplo de código C# se muestra este procedimiento.
 
 ```cs
 var vault = new PasswordVault();
 vault.Add(new PasswordCredential("My App", username, password));
 ```
 
-En el siguiente ejemplo de código C#, la aplicación solicita todas las credenciales correspondientes a la aplicación mediante una llamada al método [**FindAllByResource**](https://msdn.microsoft.com/library/windows/apps/br227083) del objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081). Si se devuelve más de una, se pide al usuario que escriba su nombre de usuario. Si las credenciales no están en la caja de seguridad, la aplicación pide al usuario que las especifique. El usuario inicia sesión en el servidor mediante las credenciales.
+En el siguiente ejemplo de código C#, la aplicación solicita todas las credenciales correspondientes a la aplicación mediante una llamada al método [**FindAllByResource**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.findallbyresource) del objeto [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault). Si se devuelve más de una, se pide al usuario que escriba su nombre de usuario. Si las credenciales no están en la caja de seguridad, la aplicación pide al usuario que las especifique. El usuario inicia sesión en el servidor mediante las credenciales.
 
 ```cs
 private string resourceName = "My App";
@@ -374,7 +374,7 @@ Con el cifrado simétrico, tanto el remitente como el destinatario tienen la mis
 
 Una respuesta es el cifrado asimétrico, donde se usa un par de claves pública y privada. La clave pública se comparte libremente con cualquier usuario que quiera cifrar un mensaje. La clave privada siempre se mantiene secreta para que solo tú puedas usarla para descifrar los datos. Una técnica común para permitir la detección de la clave pública es el uso de certificados digitales, que también se conocen simplemente como certificados. El certificado contiene información sobre la clave pública, así como sobre el usuario o el servidor, por ejemplo, el nombre, el emisor, la dirección de correo y el país o región.
 
-Los desarrolladores de aplicaciones Windows pueden usar las clases [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) y [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para implementar el cifrado simétrico y asimétrico en sus aplicaciones para UWP. Además, la clase [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) se puede usar para cifrar y descifrar datos, firmar contenido y comprobar firmas digitales. Las aplicaciones también pueden usar la clase [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) del espacio de nombres [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) para cifrar y descifrar los datos locales almacenados.
+Los desarrolladores de aplicaciones Windows pueden usar las clases [**SymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider) y [**AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) para implementar el cifrado simétrico y asimétrico en sus aplicaciones para UWP. Además, la clase [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) se puede usar para cifrar y descifrar datos, firmar contenido y comprobar firmas digitales. Las aplicaciones también pueden usar la clase [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) del espacio de nombres [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) para cifrar y descifrar los datos locales almacenados.
 
 ## <a name="432-detecting-message-tampering-macs-hashes-and-signatures"></a>4.3.2 Detección de manipulación de mensajes (códigos MAC, hash y firmas)
 
@@ -390,14 +390,14 @@ Los códigos MAC comprueban mensajes como este.
 
 ![verificación de mac](images/secure-macs.png)
 
-Las aplicaciones de Windows pueden implementar la comprobación de mensajes MAC mediante una llamada a la clase [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para generar la clave, y a la clase [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para realizar el algoritmo de cifrado MAC.
+Las aplicaciones de Windows pueden implementar la comprobación de mensajes MAC mediante una llamada a la clase [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para generar la clave, y a la clase [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) para realizar el algoritmo de cifrado MAC.
 
 ## <a name="433-using-hashes"></a>4.3.3 Uso de hash
 
 
 Una función hash es un algoritmo criptográfico que toma un bloque de datos de una longitud arbitraria y devuelve una cadena de bits de tamaño fijo, que se denomina "valor hash". Existe una familia completa de funciones hash que pueden hacer esto.
 
-Un valor hash puede usarse en lugar de un código MAC en el escenario de transferencia de mensajes anterior. El remitente envía un valor hash y un mensaje. El receptor deriva su propio valor hash del valor hash y el mensaje del remitente y, finalmente, compara ambos valores hash. Las aplicaciones que se ejecutan en Windows 10 pueden llamar a la clase [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) para enumerar los algoritmos hash disponibles y ejecutar uno de ellos. La clase [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) representa el valor hash. El método [**CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que volver a crear el objeto para cada uso. El método Append de la clase **CryptographicHash** agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El proceso completo se muestra en el siguiente ejemplo de código C#.
+Un valor hash puede usarse en lugar de un código MAC en el escenario de transferencia de mensajes anterior. El remitente envía un valor hash y un mensaje. El receptor deriva su propio valor hash del valor hash y el mensaje del remitente y, finalmente, compara ambos valores hash. Las aplicaciones que se ejecutan en Windows 10 pueden llamar a la clase [**HashAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) para enumerar los algoritmos hash disponibles y ejecutar uno de ellos. La clase [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) representa el valor hash. El método [**CryptographicHash.GetValueAndReset**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que volver a crear el objeto para cada uso. El método Append de la clase **CryptographicHash** agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El proceso completo se muestra en el siguiente ejemplo de código C#.
 
 ```cs
 public void SampleReusableHash()
@@ -445,7 +445,7 @@ La integridad de los datos de un mensaje almacenado firmado digitalmente se comp
 
 Aplicar valores hash a algoritmos es un proceso muy rápido, por lo que los valores hash pueden derivarse rápidamente incluso de mensajes de gran tamaño. El valor hash resultante es una longitud arbitraria y puede ser menor que el mensaje completo, por lo que usar claves públicas y privadas para cifrar y descifrar solo el resumen en lugar del mensaje completo es una opción de optimización.
 
-Para más información, echa un vistazo a los artículos [Firmas digitales](https://msdn.microsoft.com/library/windows/desktop/aa381977), [Mac, hash y firmas](macs-hashes-and-signatures.md) y [Criptografía](cryptography.md).
+Para más información, echa un vistazo a los artículos [Firmas digitales](https://docs.microsoft.com/windows/desktop/SecCrypto/digital-signatures), [Mac, hash y firmas](macs-hashes-and-signatures.md) y [Criptografía](cryptography.md).
 
 ## <a name="5-summary"></a>5 Resumen
 
@@ -489,16 +489,16 @@ Cuando los datos llegan al dispositivo, el modelo de aplicaciones de Windows ofr
 
 ### <a name="63-api-reference"></a>6.3 Referencia de API
 
--   [**Windows.Security.Authentication.OnlineId**](https://msdn.microsoft.com/library/windows/apps/hh701371)
--   [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)
--   [**Windows.Security.Authentication.Web.Core**](https://msdn.microsoft.com/library/windows/apps/dn921967)
--   [**Windows.Security.Authentication.Web.Provider**](https://msdn.microsoft.com/library/windows/apps/dn921965)
--   [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089)
--   [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089)
--   [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356)
--   [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404)
--   [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476)
--   [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547)
--   [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)
--   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
--   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
+-   [**Windows.Security.Authentication.OnlineId**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.OnlineId)
+-   [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web)
+-   [**Windows.Security.Authentication.Web.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core)
+-   [**Windows.Security.Authentication.Web.Provider**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider)
+-   [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
+-   [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
+-   [**Windows.Security.Credentials.UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI)
+-   [**Windows.Security.Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography)
+-   [**Windows.Security.Cryptography.Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates)
+-   [**Windows.Security.Cryptography.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core)
+-   [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection)
+-   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Security.ExchangeActiveSyncProvisioning)
+-   [**Windows.Security.EnterpriseData**](https://docs.microsoft.com/uwp/api/Windows.Security.EnterpriseData)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
-ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 27810fb850a54b70e620f06ea033b7c362792bfc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660690"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372959"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Qué novedades encontrarán los desarrolladores en la última actualización de UWP en Xbox One
 
@@ -21,7 +21,7 @@ La actualización más reciente de la Plataforma universal de Windows (UWP) en 
 Xbox ya no admite el desarrollo o envío de aplicaciones x86 a la Store.
 
 ## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>Las aplicaciones ahora pueden admitir la vuelta a la aplicación anterior 
-Las aplicaciones para UWP en Xbox One ahora pueden admitir la vuelta a la aplicación anterior. Para ello, suscríbete al evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) y establece la propiedad **Handled** en **false** en el controlador de eventos.
+Las aplicaciones para UWP en Xbox One ahora pueden admitir la vuelta a la aplicación anterior. Para ello, suscríbete al evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager) y establece la propiedad **Handled** en **false** en el controlador de eventos.
 
 > [!NOTE]
 > Por motivos de compatibilidad, esta funcionalidad está disponible solo para las aplicaciones creadas con la versión más reciente de UWP en Xbox One. 
@@ -41,13 +41,13 @@ Windows Device Portal (WDP) ahora incluye compatibilidad adicional para la confi
 ## <a name="you-can-now-switch-the-type-of-your-uwp-title-between-app-and-game"></a>Ahora puedes cambiar el tipo de título de UWP entre "Aplicación" y "Juego"
 Cambiar el tipo de título de UWP entre "Aplicación" y "Juego" te permite probar los escenarios de juego sin publicar en la Tienda. En Dev Home, selecciona la aplicación en el panel **Juegos y aplicaciones**, presiona el botón Vista en el mando, selecciona **Detalles de la aplicación** y luego cambia el tipo a "Aplicación" o "Juego".
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Problemas conocidos](known-issues.md)
 - [UWP en Xbox One](index.md)
  - Ya puedes obtener una captura de pantalla de la consola. Para obtener más información acerca de cómo hacer una captura de pantalla, consulta el tema de referencia [/ext/screenshot](wdp-media-capture-api.md).
  - La herramienta puede implementar una compilación de archivos sueltos de la aplicación. Para obtener más información sobre compilaciones de archivos sueltos, consulta el tema de referencia [/api/app/packagemanager/register](wdp-loose-folder-register-api.md).
  - Puedes acceder a los archivos de desarrollador de la consola desde el Explorador de archivos del equipo de desarrollo. Para obtener más información sobre cómo obtener acceso a archivos mediante el Explorador de archivos, consulta el tema de referencia [/ext/smb/developerfolder](wdp-smb-api.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Problemas conocidos](known-issues.md)
 - [UWP en Xbox One](index.md)

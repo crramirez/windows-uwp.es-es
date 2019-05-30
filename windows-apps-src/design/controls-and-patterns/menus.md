@@ -3,8 +3,9 @@ Description: Los menús y los menús contextuales muestran una lista de opciones
 title: Menús y menús contextuales
 label: Menus and context menus
 template: detail.hbs
-ms.date: 01/08/2019
+ms.date: 04/19/2019
 ms.topic: article
+ms.custom: RS5, 19H1
 keywords: windows 10, uwp
 ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
 pm-contact: yulikl
@@ -12,13 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.custom: RS5
-ms.openlocfilehash: d3ea8e2bff2455340a1183dbe5c1840fdb599d46
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
+ms.openlocfilehash: 10e91e8098f232d2875c802567674c9feacb2af9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59247193"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364619"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -26,13 +26,13 @@ Los menús y los menús contextuales muestran una lista de opciones o comandos c
 
 ![Ejemplo de un menú contextual típico](images/contextmenu_rs2_icons.png)
 
-| **Obtener la biblioteca de interfaz de usuario de Windows** |
+| **Obtención de la biblioteca de interfaz de usuario de Windows** |
 | - |
 | Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y características de interfaz de usuario para aplicaciones UWP. Para obtener más información, incluidas las instrucciones de instalación, consulte el [Introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 | **API de plataforma** | **API de biblioteca de interfaz de usuario de Windows** |
 | - | - |
-| [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [MenuBar clase](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout propiedad](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout propiedad](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) | [Clase de barra de menús](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [MenuBar clase](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout propiedad](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout propiedad](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Clase de barra de menús](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -61,7 +61,7 @@ También puede usar una barra de menús junto con una barra de comandos. Use la 
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/MenuFlyout">abrir la aplicación y ver MenuFlyout en acción</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -70,7 +70,7 @@ También puede usar una barra de menús junto con una barra de comandos. Use la 
 
 ## <a name="menus-vs-context-menus"></a>Menús frente a menús contextuales
 
-Menús y menús contextuales son similares en cómo se ven y lo que puede contener. De hecho, puede usar el mismo control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para crearlos. La diferencia es cómo permitir al usuario tener acceso a él.
+Menús y menús contextuales son similares en cómo se ven y lo que puede contener. De hecho, puede usar el mismo control, [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout), para crearlos. La diferencia es cómo permitir al usuario tener acceso a él.
 
 ¿Cuándo debes usar un menú o un menú contextual?
 
@@ -90,13 +90,13 @@ Si quieres agregar comandos (como cortar, copiar y pegar) a un elemento de texto
 - Tienen un solo punto de entrada (un menú Archivo en la parte superior de la pantalla, por ejemplo) que se muestra siempre.
 - Por lo general, se adjuntan a un botón o un elemento de menú principal.
 - Se invocan mediante un clic con el botón izquierdo (o una acción equivalente, como pulsar con el dedo).
-- Están asociados con un elemento a través de su [flotante](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) o [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) propiedades, o se agrupan en una barra de menús en la parte superior de la ventana de la aplicación.
+- Están asociados con un elemento a través de su [flotante](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button.flyout) o [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) propiedades, o se agrupan en una barra de menús en la parte superior de la ventana de la aplicación.
 
 ### <a name="context-menus"></a>Menús contextuales
 
 - Se adjuntan a un solo elemento y muestran comandos secundarios.
 - Se invocan al hacer clic con el botón derecho (o una acción equivalente, como pulsar y sostener con el dedo).
-- Se asocian con un elemento a través de su propiedad [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx).
+- Se asocian con un elemento a través de su propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout).
 
 ## <a name="icons"></a>Iconos
 
@@ -140,7 +140,7 @@ Estos objetos permiten:
 - [RadioMenuFlyoutItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.radiomenuflyoutitem): cambiar entre los elementos de menú se excluyen mutuamente.
 - [MenuFlyoutSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyoutseparator): separar visualmente los elementos de menú.
 
-Este ejemplo se crea un [MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) y usa el [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) propiedad, una propiedad disponible para la mayoría de los controles para mostrar el MenuFlyout como un menú contextual.
+Este ejemplo se crea un [MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) y usa el [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) propiedad, una propiedad disponible para la mayoría de los controles para mostrar el MenuFlyout como un menú contextual.
 
 ````xaml
 <Rectangle
@@ -171,7 +171,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-El siguiente ejemplo es casi idéntico, pero en lugar de usar la propiedad [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) para mostrar la [clase MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) como un menú contextual, el ejemplo usa la propiedad [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) para que se muestre como un menú.
+El siguiente ejemplo es casi idéntico, pero en lugar de usar la propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) para mostrar la [clase MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) como un menú contextual, el ejemplo usa la propiedad [FlyoutBase.ShowAttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) para que se muestre como un menú.
 
 ````xaml
 <Rectangle
@@ -210,7 +210,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ### <a name="light-dismiss"></a>Descartar luz
 
-Luz descartar controles, como menús, menús contextuales y otros controles flotantes, interceptar el foco de teclado y el controlador para juegos dentro de la interfaz de usuario transitorio hasta que se descarta. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la propiedad [LightDismissOverlayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). De forma predeterminada, las interfaces de usuario transitorios dibujará la superposición de descarte ligero en Xbox (**automática**), pero no otras familias de dispositivos. Puede elegir forzar la superposición para estar siempre **en** o siempre **desactivar**.
+Luz descartar controles, como menús, menús contextuales y otros controles flotantes, interceptar el foco de teclado y el controlador para juegos dentro de la interfaz de usuario transitorio hasta que se descarta. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la propiedad [LightDismissOverlayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode). De forma predeterminada, las interfaces de usuario transitorios dibujará la superposición de descarte ligero en Xbox (**automática**), pero no otras familias de dispositivos. Puede elegir forzar la superposición para estar siempre **en** o siempre **desactivar**.
 
 ```xaml
 <MenuFlyout LightDismissOverlayMode="Off" />
@@ -269,7 +269,7 @@ Utilice los mismos elementos para crear menús de una barra de menús, como se m
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 - [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
-- [Muestra del menú contextual XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
+- [Ejemplo de menú contextual de XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
 ## <a name="related-articles"></a>Artículos relacionados
 

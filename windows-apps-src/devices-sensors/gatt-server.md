@@ -5,19 +5,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 551f8b925ffd56950ba893da7b81fefb4579f558
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f59ae45486ee72f9d901898f6b03674e6b3e299c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635140"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370090"
 ---
 # <a name="bluetooth-gatt-server"></a>Servidor de GATT de Bluetooth
 
 
 **API importantes**
-- [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
-- [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
+- [**Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
+- [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 
 En este artículo se muestran las API del servidor de atributo genérico (GATT) de Bluetooth para las aplicaciones para la Plataforma universal de Windows (UWP), junto con código de muestra para tareas de servidor GATT comunes. 
@@ -27,7 +27,7 @@ En este artículo se muestran las API del servidor de atributo genérico (GATT) 
 - Responder a solicitudes de lectura y escritura
 - Enviar notificaciones a los clientes suscritos
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 Normalmente, Windows funciona en el rol de cliente. No obstante, surgen muchos escenarios que requieren que Windows también actúe como un servidor de GATT de Bluetooth LE. Casi todos los escenarios en los dispositivos de IoT, junto con la mayoría de las comunicaciones BLE multiplataforma, requerirán que Windows actúe como un servidor de GATT. Además, el envío de notificaciones a dispositivos puestos cercanos se ha convertido en un escenario popular que también requiere esta tecnología.  
 > Antes de continuar, asegúrate de que te queden claro todos los conceptos que se describen en los [documentos de cliente de GATT](gatt-client.md).  
 
@@ -40,7 +40,7 @@ La aplicación puede declarar uno o varios servicios que Windows publicará. Cad
 Cada servicio, característica y descriptor se define por su propio UUID único de 128 bits.
 > Todas las API de Windows usan el término GUID, pero el estándar de Bluetooth los define como UUID. Para nuestros propósitos, estos dos términos son intercambiables, de modo que seguiremos empleando el término UUID. 
 
-Si el atributo es estándar y está definido por la definición SIG de Bluetooth, también tendrá un identificador corto de 16 bits correspondiente (por ejemplo, UUID del nivel de batería es 0000**2A19**-0000-1000-8000-00805F9B34FB y el identificador corto es 0x2A19). Estos UUID estándares pueden verse en [GattServiceUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids.aspx) y [GattCharacteristicUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids.aspx).
+Si el atributo es estándar y está definido por la definición SIG de Bluetooth, también tendrá un identificador corto de 16 bits correspondiente (por ejemplo, UUID del nivel de batería es 0000**2A19**-0000-1000-8000-00805F9B34FB y el identificador corto es 0x2A19). Estos UUID estándares pueden verse en [GattServiceUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) y [GattCharacteristicUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids).
 
 Si la aplicación implementa su propio servicio personalizado, será necesario generar un UUID personalizado. Esto se hace fácilmente en Visual Studio a través de Herramientas -> CreateGuid (usa la opción 5 para obtenerlo en el formato "xxxx xxxxxxxx-xxxx-..."). Este UUID ahora se puede usar para declarar nuevos servicios, características o descriptores locales.
 

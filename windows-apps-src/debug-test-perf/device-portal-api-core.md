@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 910e3108009704d444fb81b195f9dd9eae3daa9d
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: b2e1e2dfdb1dd52e1dd07a146badd78a6bb809fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63798190"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359928"
 ---
 # <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
@@ -1373,7 +1373,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI | Descripción |
 | :---          | :--- |
 | autoreboot   | (**opcional**) True o false. Esto indica si el sistema se reinicia automáticamente después de que se produzca un error o se bloquee. |
-| dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).|
+| dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100)).|
 | maxdumpcount   | (**opcional**) Número máximo de volcados de memoria que se deben guardar. |
 | sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o no los volcados de memoria antiguos cuando se alcanza el límite del contador de volcado de memoria especificado por *maxdumpcount*. |
 
@@ -2003,7 +2003,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| NAME | (**obligatorio**) Nuevo nombre de la máquina. |
+| name | (**obligatorio**) Nuevo nombre de la máquina. |
 
 **Encabezados de solicitud**
 
@@ -2362,7 +2362,7 @@ Puedes obtener el subvalor de un plan de energía mediante el siguiente formato 
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| GET | /api/power/cfg/*<power scheme path>* |
+| GET | /api/power/cfg/ *<power scheme path>* |
 
 Opciones:
 - SCHEME_CURRENT
@@ -2500,7 +2500,7 @@ Puedes establecer el subvalor de un plan de energía mediante el siguiente forma
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/power/cfg/*<power scheme path>* |
+| EXPONER | /api/power/cfg/ *<power scheme path>* |
 
 
 **Parámetros de URI**
@@ -3327,7 +3327,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | :------          | :------ |
 | usuario   | (**obligatorio**) Nombre de usuario asociado con el informe. |
 | type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
-| NAME   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
+| name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
 | file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe. Esto debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
@@ -3379,7 +3379,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | :------          | :------ |
 | usuario   | (**obligatorio**) Usuario asociado con el informe. |
 | type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
-| NAME   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
+| name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
 

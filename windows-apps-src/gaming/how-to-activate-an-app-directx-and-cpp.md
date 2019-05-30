@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, activación, activation
 ms.localizationpriority: medium
-ms.openlocfilehash: 51c2435c8edeac2431198b7b5f3d9b1a307b5b78
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4aeba58af61cffa33626c64cebcbade272af109b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648850"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368604"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>Cómo activar una aplicación (DirectX y C++)
 
@@ -22,9 +22,9 @@ En este tema se muestra cómo definir la experiencia de activación de una aplic
 ## <a name="register-the-app-activation-event-handler"></a>Registrar el controlador de eventos de activación de la aplicación
 
 
-Primero, haz un registro para controlar el evento [**CoreApplicationView::Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), que se activa cuando el sistema operativo inicia e inicializa la aplicación.
+Primero, haz un registro para controlar el evento [**CoreApplicationView::Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated), que se activa cuando el sistema operativo inicia e inicializa la aplicación.
 
-Agrega este código a la implementación del método [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) del proveedor de vistas (denominado **MyViewProvider** en el ejemplo):
+Agrega este código a la implementación del método [**IFrameworkView::Initialize**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) del proveedor de vistas (denominado **MyViewProvider** en el ejemplo):
 
 ```cpp
 void App::Initialize(CoreApplicationView^ applicationView)
@@ -42,7 +42,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="activate-the-corewindow-instance-for-the-app"></a>Activar la instancia de CoreWindow para la aplicación
 
 
-Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para la aplicación. **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
+Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) para la aplicación. **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.getforcurrentthread). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.activate).
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)
@@ -55,7 +55,7 @@ void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^
 ## <a name="start-processing-event-message-for-the-main-app-window"></a>Iniciar el mensaje de evento de procesamiento para la ventana de aplicación principal
 
 
-Las devoluciones de llamada se producen a medida que [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) procesa los mensajes de eventos para el elemento [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) de la aplicación. Esta devolución de llamada no se invocará si no llamas a [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) desde el bucle principal de la aplicación (implementado en el método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) del proveedor de vistas).
+Las devoluciones de llamada se producen a medida que [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) procesa los mensajes de eventos para el elemento [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) de la aplicación. Esta devolución de llamada no se invocará si no llamas a [**CoreDispatcher::ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) desde el bucle principal de la aplicación (implementado en el método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) del proveedor de vistas).
 
 ``` syntax
 // This method is called after the window becomes active.

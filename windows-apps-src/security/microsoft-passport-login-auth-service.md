@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: de4d8fc797efe2a0dde7340f42208a97bccf0b10
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 98251ecba05dd27cbe3112a94b6cfcd36440d380
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645110"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371231"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Crear un servicio de inicio de sesión de Windows Hello
 
@@ -51,7 +51,7 @@ En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la 
     }
     ```
 
-    Habrás observado la lista comentada de PassportDevices. Esta es una modificación que deberá realizar en un modelo de usuario existente de tu implementación actual. La lista de PassportDevices contendrá un deviceID, la clave convertida en pública desde Windows Hello y un [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034). Para esta práctica de laboratorio deberás implementar el elemento keyAttestationResult, que solo proporciona Windows Hello en dispositivos que tienen un chip TPM (Módulos de plataforma segura). El **KeyCredentialAttestationResult** es una combinación de varias propiedades que deberían dividirse para poderse guardar y cargar con una base de datos.
+    Habrás observado la lista comentada de PassportDevices. Esta es una modificación que deberá realizar en un modelo de usuario existente de tu implementación actual. La lista de PassportDevices contendrá un deviceID, la clave convertida en pública desde Windows Hello y un [**KeyCredentialAttestationResult**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredentialAttestationResult). Para esta práctica de laboratorio deberás implementar el elemento keyAttestationResult, que solo proporciona Windows Hello en dispositivos que tienen un chip TPM (Módulos de plataforma segura). El **KeyCredentialAttestationResult** es una combinación de varias propiedades que deberían dividirse para poderse guardar y cargar con una base de datos.
 
 -   Crea una nueva clase en la carpeta AuthService denominada "PassportDevice.cs". Este es el modelo para los dispositivos de Windows Hello que se explicó anteriormente. Cambia la definición de clase a pública y agrega las siguientes propiedades.
 

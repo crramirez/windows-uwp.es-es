@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f627cf2a897de32aea0e35faf66f5ea70695efd5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 23d4a4e0159fc18ac524937326e69d6fbc3a627e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631080"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370712"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar una aplicación para obtener resultados
 
@@ -20,10 +20,10 @@ ms.locfileid: "57631080"
 
 **API importantes**
 
--   [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
--   [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
+-   [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)
+-   [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)
 
-Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina *iniciar una aplicación para obtener resultados*. En el siguiente ejemplo se muestra cómo usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar una aplicación para obtener resultados.
+Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina *iniciar una aplicación para obtener resultados*. En el siguiente ejemplo se muestra cómo usar [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) para iniciar una aplicación para obtener resultados.
 
 Nuevas comunicaciones de aplicación a las API de Windows 10 permiten aplicaciones de Windows (y las aplicaciones Web de Windows) iniciar una aplicación y exchange de los datos y archivos. Esto te permite crear soluciones combinadas a partir de varias aplicaciones. Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones ahora se pueden controlar sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.
 
@@ -32,13 +32,13 @@ La aplicación que inicias para obtener resultados se denomina la aplicación in
 ## <a name="step-1-register-the-protocol-to-be-handled-in-the-app-that-youll-launch-for-results"></a>Paso 1: Registrar el protocolo que se tratan de la aplicación que se podrá iniciar para obtener los resultados
 
 
-En el archivo Package.appxmanifest de la aplicación iniciada, agrega una extensión de protocolo a la sección **&lt;Application&gt;**. En el siguiente ejemplo se usa un protocolo ficticio denominado **test-app2app**.
+En el archivo Package.appxmanifest de la aplicación iniciada, agrega una extensión de protocolo a la sección **&lt;Application&gt;** . En el siguiente ejemplo se usa un protocolo ficticio denominado **test-app2app**.
 
 El atributo **ReturnResults** de la extensión de protocolo acepta uno de estos valores:
 
--   **optional**: es posible iniciar la aplicación para obtener resultados mediante el método [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) o para no obtenerlos, con [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Cuando se usa **optional**, la aplicación iniciada debe determinar si se inició para obtener resultados. Puede hacerlo si comprueba el argumento del evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330). Si la propiedad [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) del argumento devuelve [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693)o si el tipo del argumento del evento es [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742), la aplicación se inició mediante **LaunchUriForResultsAsync**.
--   **always**: la aplicación solo se puede iniciar para obtener resultados, es decir, solo puede responder a [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686).
--   **none**: la aplicación no se puede iniciar para obtener resultados; solo puede responder a [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476).
+-   **optional**: es posible iniciar la aplicación para obtener resultados mediante el método [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) o para no obtenerlos, con [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Cuando se usa **optional**, la aplicación iniciada debe determinar si se inició para obtener resultados. Puede hacerlo si comprueba el argumento del evento [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated). Si la propiedad [**IActivatedEventArgs.Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) del argumento devuelve [**ActivationKind.ProtocolForResults**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind)o si el tipo del argumento del evento es [**ProtocolActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs), la aplicación se inició mediante **LaunchUriForResultsAsync**.
+-   **always**: la aplicación solo se puede iniciar para obtener resultados, es decir, solo puede responder a [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows).
+-   **none**: la aplicación no se puede iniciar para obtener resultados; solo puede responder a [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
 
 En este ejemplo de extensión de protocolo, la aplicación solo puede iniciarse para obtener resultados. Esto simplifica la lógica dentro del método **OnActivated**, que se explica a continuación, ya que solo hay que controlar el caso "iniciado para obtener resultados" y no el resto de maneras mediante las que se pudo activar la aplicación.
 
@@ -88,7 +88,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-Como la extensión de protocolo del archivo Package.appxmanifest especifica **ReturnResults** como **always**, el código que se acaba de mostrar puede convertir `args` directamente en [**ProtocolForResultsActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn906905) con la seguridad que solamente se enviará **ProtocolForResultsActivatedEventArgs** a **OnActivated** para esta aplicación. Si la aplicación se puede activar de otras maneras distintas de para la obtención de resultados, puedes comprobar si la propiedad [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) devuelve [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) para indicar si la aplicación se inició para obtener resultados.
+Como la extensión de protocolo del archivo Package.appxmanifest especifica **ReturnResults** como **always**, el código que se acaba de mostrar puede convertir `args` directamente en [**ProtocolForResultsActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs) con la seguridad que solamente se enviará **ProtocolForResultsActivatedEventArgs** a **OnActivated** para esta aplicación. Si la aplicación se puede activar de otras maneras distintas de para la obtención de resultados, puedes comprobar si la propiedad [**IActivatedEventArgs.Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) devuelve [**ActivationKind.ProtocolForResults**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) para indicar si la aplicación se inició para obtener resultados.
 
 ## <a name="step-3-add-a-protocolforresultsoperation-field-to-the-app-you-launch-for-results"></a>Paso 3: Agregar un campo ProtocolForResultsOperation a la aplicación que se inicia para obtener los resultados
 
@@ -97,20 +97,20 @@ Como la extensión de protocolo del archivo Package.appxmanifest especifica **Re
 private Windows.System.ProtocolForResultsOperation _operation = null;
 ```
 
-El campo [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) se usará para indicar el momento en que la aplicación iniciada esté lista para devolver el resultado a la aplicación que llama. En este ejemplo, el campo se agrega a la clase **LaunchedForResultsPage** porque se completará la operación de inicio para obtener resultados desde esa página y se necesitará tener acceso a él.
+El campo [**ProtocolForResultsOperation**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.protocolforresultsactivatedeventargs.protocolforresultsoperation) se usará para indicar el momento en que la aplicación iniciada esté lista para devolver el resultado a la aplicación que llama. En este ejemplo, el campo se agrega a la clase **LaunchedForResultsPage** porque se completará la operación de inicio para obtener resultados desde esa página y se necesitará tener acceso a él.
 
 ## <a name="step-4-override-onnavigatedto-in-the-app-you-launch-for-results"></a>Paso 4: Invalidar OnNavigatedTo() en la aplicación que se inicia para obtener los resultados
 
 
-Reemplaza el método [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) en la página que se mostrará cuando se inicie la aplicación para obtener los resultados. Si este método aún no existe, créalo dentro de la clase de la página definida en &lt;nombrepágina&gt;.xaml.cs. Asegúrate de que se incluye la siguiente instrucción **using** en la parte superior del archivo:
+Reemplaza el método [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) en la página que se mostrará cuando se inicie la aplicación para obtener los resultados. Si este método aún no existe, créalo dentro de la clase de la página definida en &lt;nombrepágina&gt;.xaml.cs. Asegúrate de que se incluye la siguiente instrucción **using** en la parte superior del archivo:
 
 ```cs
 using Windows.ApplicationModel.Activation
 ```
 
-El objeto [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285) del método [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) contiene los datos pasados desde la aplicación que llama. Los datos no puede superar los 100 KB y se almacenan en un objeto [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131).
+El objeto [**NavigationEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Navigation.NavigationEventArgs) del método [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) contiene los datos pasados desde la aplicación que llama. Los datos no puede superar los 100 KB y se almacenan en un objeto [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet).
 
-En el código de ejemplo siguiente, la aplicación iniciada espera que los datos enviados desde la aplicación que llama estén en un elemento [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131), en una clave denominada **TestData**, ya que así es como se ha codificado que realice el envío la aplicación que llama del ejemplo.
+En el código de ejemplo siguiente, la aplicación iniciada espera que los datos enviados desde la aplicación que llama estén en un elemento [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet), en una clave denominada **TestData**, ya que así es como se ha codificado que realice el envío la aplicación que llama del ejemplo.
 
 ```cs
 using Windows.ApplicationModel.Activation;
@@ -133,7 +133,7 @@ private Windows.System.ProtocolForResultsOperation _operation = null;
 ## <a name="step-5-write-code-to-return-data-to-the-calling-app"></a>Paso 5: Escribir código para devolver datos a la aplicación que realiza la llamada
 
 
-En la aplicación iniciada, usa [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) para devolver los datos a la aplicación que llama. En el código de ejemplo siguiente, se crea un objeto [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) que contiene el valor que se devolverá a la aplicación que llama. Después, se usa el campo **ProtocolForResultsOperation** para enviar el valor a la aplicación que llama.
+En la aplicación iniciada, usa [**ProtocolForResultsOperation**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.protocolforresultsactivatedeventargs.protocolforresultsoperation) para devolver los datos a la aplicación que llama. En el código de ejemplo siguiente, se crea un objeto [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) que contiene el valor que se devolverá a la aplicación que llama. Después, se usa el campo **ProtocolForResultsOperation** para enviar el valor a la aplicación que llama.
 
 ```cs
     ValueSet result = new ValueSet();
@@ -173,20 +173,20 @@ async Task<string> LaunchAppForResults()
 }
 ```
 
-En este ejemplo, un elemento [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) que contiene la clave **TestData** se pasa a la aplicación iniciada. La aplicación iniciada crea un elemento **ValueSet** con una clave denominada **ReturnedData** que contiene el resultado que se devuelve al llamador.
+En este ejemplo, un elemento [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) que contiene la clave **TestData** se pasa a la aplicación iniciada. La aplicación iniciada crea un elemento **ValueSet** con una clave denominada **ReturnedData** que contiene el resultado que se devuelve al llamador.
 
-Debes compilar e implementar la aplicación que se iniciará para obtener resultados antes de ejecutar la aplicación que llama. De lo contrario, [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892) notificará **LaunchUriStatus.AppUnavailable**.
+Debes compilar e implementar la aplicación que se iniciará para obtener resultados antes de ejecutar la aplicación que llama. De lo contrario, [**LaunchUriResult.Status**](https://docs.microsoft.com/uwp/api/Windows.System.LaunchUriStatus) notificará **LaunchUriStatus.AppUnavailable**.
 
-Necesitarás el nombre de familia de la aplicación iniciada cuando establezcas la propiedad [**TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511). Una forma de obtener el nombre de familia es realizar la siguiente llamada desde la aplicación iniciada:
+Necesitarás el nombre de familia de la aplicación iniciada cuando establezcas la propiedad [**TargetApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.targetapplicationpackagefamilyname). Una forma de obtener el nombre de familia es realizar la siguiente llamada desde la aplicación iniciada:
 
 ```cs
 string familyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 
-En el ejemplo de este procedimiento se ofrece una introducción de tipo "hola a todos" a fin de iniciar una aplicación para obtener resultados. Los conceptos clave que se deben tener en cuenta son que la nueva API [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) permite iniciar una aplicación de manera asincrónica y comunicarse a través de la clase [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). La transmisión de datos a través de un elemento **ValueSet** está limitada a 100 KB. Si necesitas transmitir mayores volúmenes de datos, puedes compartir archivos mediante la clase [**SharedStorageAccessManager**](https://msdn.microsoft.com/library/windows/apps/dn889985) para crear tokens de archivo que se puedan pasar entre aplicaciones. Por ejemplo, si existe un elemento **ValueSet** denominado `inputData`, podrías almacenar el token en un archivo que quieras compartir con la aplicación iniciada:
+En el ejemplo de este procedimiento se ofrece una introducción de tipo "hola a todos" a fin de iniciar una aplicación para obtener resultados. Los conceptos clave que se deben tener en cuenta son que la nueva API [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) permite iniciar una aplicación de manera asincrónica y comunicarse a través de la clase [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet). La transmisión de datos a través de un elemento **ValueSet** está limitada a 100 KB. Si necesitas transmitir mayores volúmenes de datos, puedes compartir archivos mediante la clase [**SharedStorageAccessManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para crear tokens de archivo que se puedan pasar entre aplicaciones. Por ejemplo, si existe un elemento **ValueSet** denominado `inputData`, podrías almacenar el token en un archivo que quieras compartir con la aplicación iniciada:
 
 ```cs
 inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
@@ -197,9 +197,9 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [**LaunchUri**](https://msdn.microsoft.com/library/windows/apps/hh701476)
-* [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
-* [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
+* [**LaunchUri**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
+* [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)
+* [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)
 
  
 

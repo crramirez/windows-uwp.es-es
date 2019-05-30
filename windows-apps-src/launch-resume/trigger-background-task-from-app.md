@@ -5,12 +5,12 @@ ms.date: 07/06/2018
 ms.topic: article
 keywords: tarea en segundo plano, el desencadenador de tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 02e4bf3d7977c9bdd675f264a37e608a5082ef4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d5d163d36b51e414a403986d1fdd73db7925cc0b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608100"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371894"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Desencadenar una tarea en segundo plano desde dentro de la aplicación
 
@@ -56,7 +56,7 @@ ApplicationTrigger ^ _AppTrigger = ref new ApplicationTrigger();
 
 Puedes crear una condición de la tarea en segundo plano para controlar cuándo debe ejecutarse la tarea. Una condición evita que se ejecute la tarea en segundo plano hasta que se cumpla la condición. Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
-En este ejemplo se establece la condición en **InternetAvailable** para que se desencadena una vez, la tarea se ejecuta solo una vez que el acceso a internet está disponible. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+En este ejemplo se establece la condición en **InternetAvailable** para que se desencadena una vez, la tarea se ejecuta solo una vez que el acceso a internet está disponible. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -75,7 +75,7 @@ Para obtener información más detallada sobre las condiciones y los tipos de de
 
 ##  <a name="call-requestaccessasync"></a>Llamar a RequestAccessAsync()
 
-Antes de registrar la tarea en segundo plano **ApplicationTrigger**, llama a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) para determinar el nivel de actividad en segundo plano que el usuario permite porque el usuario puede haber deshabilitado la actividad en segundo plano para tu aplicación. Consulta [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) para obtener más información sobre las formas en que los usuarios pueden controlar la configuración para la actividad en segundo plano.
+Antes de registrar la tarea en segundo plano **ApplicationTrigger**, llama a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) para determinar el nivel de actividad en segundo plano que el usuario permite porque el usuario puede haber deshabilitado la actividad en segundo plano para tu aplicación. Consulta [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) para obtener más información sobre las formas en que los usuarios pueden controlar la configuración para la actividad en segundo plano.
 
 ```csharp
 var requestStatus = await Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync();
@@ -132,18 +132,18 @@ var result = await _AppTrigger.RequestAsync();
 
 ## <a name="manage-resources-for-your-background-task"></a>Administrar recursos para la tarea en segundo plano
 
-Usa [BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) para determinar si el usuario ha decidido que la actividad en segundo plano de la aplicación debe ser limitada. Ten en cuenta el uso de la batería y ejecuta aplicaciones en segundo plano solo cuando sea necesario completar una acción que requiera el usuario. Consulta [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) para obtener más información sobre las formas en que los usuarios pueden controlar la configuración para la actividad en segundo plano.  
+Usa [BackgroundExecutionManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager) para determinar si el usuario ha decidido que la actividad en segundo plano de la aplicación debe ser limitada. Ten en cuenta el uso de la batería y ejecuta aplicaciones en segundo plano solo cuando sea necesario completar una acción que requiera el usuario. Consulta [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) para obtener más información sobre las formas en que los usuarios pueden controlar la configuración para la actividad en segundo plano.  
 
-- Memoria: Optimizar el uso de memoria y la energía de la aplicación es esencial para garantizar que el sistema operativo permitirá la ejecución de tarea en segundo plano. Usa las [API de administración de memoria](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) para ver cuánta memoria está usando la tarea en segunda plano. Cuando más memoria use la tarea en segundo plano, más difícil será para el sistema operativo mantenerla en ejecución cuando otra aplicación esté en primer plano. El usuario es, en última instancia, quien controla toda la actividad en segundo plano que la aplicación puede llevar a cabo y quien tiene visibilidad sobre el impacto que la aplicación tiene sobre el uso de la batería.  
+- Memoria: Optimizar el uso de memoria y la energía de la aplicación es esencial para garantizar que el sistema operativo permitirá la ejecución de tarea en segundo plano. Usa las [API de administración de memoria](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) para ver cuánta memoria está usando la tarea en segunda plano. Cuando más memoria use la tarea en segundo plano, más difícil será para el sistema operativo mantenerla en ejecución cuando otra aplicación esté en primer plano. El usuario es, en última instancia, quien controla toda la actividad en segundo plano que la aplicación puede llevar a cabo y quien tiene visibilidad sobre el impacto que la aplicación tiene sobre el uso de la batería.  
 - Tiempo de CPU: Tareas en segundo plano están limitadas por la cantidad de tiempo de uso de reloj que obtengan en función de tipo de desencadenador. Tareas en segundo plano desencadenadas por el desencadenador de aplicación están limitadas a unos 10 minutos.
 
 Consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md) para conocer las restricciones de recursos que se aplican a las tareas en segundo plano.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 A partir de Windows 10, ya no es necesario para el usuario agregar la aplicación a la pantalla de bloqueo para poder utilizar las tareas en segundo plano.
 
-Solo se ejecutará una tarea en segundo plano mediante una **ApplicationTrigger** si ha llamado a [ **RequestAccessAsync** ](https://msdn.microsoft.com/library/windows/apps/hh700485) primero.
+Solo se ejecutará una tarea en segundo plano mediante una **ApplicationTrigger** si ha llamado a [ **RequestAccessAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) primero.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, aplicación de demostración comercial
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b1323f048c1b420a2cf0b239cd9f1a9fb63ff7
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 4c9f31da8e2509c41715a13fbc0bb0322782340a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334883"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366525"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de demostración (RDX) de venta directa a la aplicación
 
@@ -45,11 +45,11 @@ Esto puede usarse como una lista de comprobación para ayudarle a prepararse par
 
 Tan pronto como sea posible RDX compatible con aplicaciones que no cumplen estos requisitos críticos se quitará de todos los dispositivos de demostración de venta directa.
 
-* **No pedir información personal identificable (PII)**. Esto incluye información de inicio de sesión, información de cuenta Microsoft o póngase en contacto con los detalles.
+* **No pedir información personal identificable (PII)** . Esto incluye información de inicio de sesión, información de cuenta Microsoft o póngase en contacto con los detalles.
 
 * **Experiencia sin errores**. La aplicación debe ejecutarse sin errores. Además, no deben mostrarse mensajes emergentes o notificaciones de error a los clientes que usan los dispositivos de demostración comercial. Errores reflejan negativamente en la aplicación propia, su marca, marca del dispositivo, marca del fabricante del dispositivo y marca de Microsoft.
 
-* **Aplicaciones de pago deben tener un modo de prueba**. La aplicación o bien debe una segunda oportunidad o incluir un [modo de prueba](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
+* **Aplicaciones de pago deben tener un modo de prueba**. La aplicación o bien debe una segunda oportunidad o incluir un [modo de prueba](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
 
 ### <a name="high-priority-requirements"></a>Requisitos de alta prioridad
 
@@ -359,7 +359,7 @@ namespace MyCompany.MyApp
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Store y recuperar datos de la aplicación](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [Cómo crear y consumir un servicio de aplicación](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
-* [Localizar el contenido de la aplicación](https://msdn.microsoft.com/windows/uwp/globalizing/globalizing-portal)
+* [Store y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
+* [Cómo crear y consumir un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Localizar el contenido de la aplicación](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
 * [Experiencia de demostración de venta directa (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c12acd2148c8c85d69354a71c016d7a7230e590b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 07707160846f3d63c7d0c097fb7b84def08be9e7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605460"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366688"
 ---
 # <a name="drag-animations"></a>Animaciones de arrastre
 
@@ -22,7 +22,7 @@ ms.locfileid: "57605460"
 
 Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
 
-> **API importantes**: [**Clase DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
+> **API importantes**: [**Clase DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation.)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -57,12 +57,12 @@ Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por e
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Para desarrolladores**
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animación de secuencias de arrastrar y colocar](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
-* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**Clase DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
-* [**Clase DropTargetItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243186)
-* [**Clase DragOverThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243180)
+* [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [Animación de secuencias de arrastrar y colocar](https://docs.microsoft.com/previous-versions/windows/apps/jj649427(v=win.10))
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Clase DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation.)
+* [**Clase DropTargetItemThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.droptargetitemthemeanimation.)
+* [**Clase DragOverThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation.)
 
 
  

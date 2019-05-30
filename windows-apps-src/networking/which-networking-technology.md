@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b64ddadd0e543930fa72d0c44a6cacf0a873df89
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db2e444b9f13ba41127b362483774c92d45f1f77
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656310"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372756"
 ---
 # <a name="which-networking-technology"></a>¿Qué tecnología de red?
 
@@ -22,7 +22,7 @@ Una introducción rápida de las tecnologías de redes disponibles para un desar
 
 Usa los [sockets](sockets.md) al comunicarte con otro dispositivo y quieras usar tu propio protocolo.
 
-Existen dos implementaciones de sockets para los desarrolladores la plataforma Universal de Windows (UWP): [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960), y [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673). Si estás escribiendo código nuevo, Windows.Networking.Sockets tiene la ventaja de una API moderna, diseñada para los desarrolladores de UWP. Si estás usando bibliotecas de redes multiplataforma u otro código de Winsock existente, o prefieres la API de Winsock, úsalos.
+Existen dos implementaciones de sockets para los desarrolladores la plataforma Universal de Windows (UWP): [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets), y [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2). Si estás escribiendo código nuevo, Windows.Networking.Sockets tiene la ventaja de una API moderna, diseñada para los desarrolladores de UWP. Si estás usando bibliotecas de redes multiplataforma u otro código de Winsock existente, o prefieres la API de Winsock, úsalos.
 
 ### <a name="when-to-use-sockets"></a>Cuándo usar sockets
 
@@ -32,12 +32,12 @@ Existen dos implementaciones de sockets para los desarrolladores la plataforma U
 
 ### <a name="when-not-to-use-sockets"></a>Cuándo no usar sockets
 
--   No implementes tu propia pila de HTTP(S) mediante sockets. Usa los [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639).
--   Si los WebSockets (las clases [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) y [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)) satisfacen tus necesidades de comunicaciones (TCP a/desde un servidor web), considera la posibilidad de usarlos en lugar de dedicar tus propios recursos de desarrollo y tiempo a implementar una funcionalidad similar con sockets.
+-   No implementes tu propia pila de HTTP(S) mediante sockets. Usa los [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient).
+-   Si los WebSockets (las clases [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) y [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket)) satisfacen tus necesidades de comunicaciones (TCP a/desde un servidor web), considera la posibilidad de usarlos en lugar de dedicar tus propios recursos de desarrollo y tiempo a implementar una funcionalidad similar con sockets.
 
 ## <a name="websockets"></a>Websockets
 
-El protocolo [WebSockets](websockets.md) define un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet. Los datos se transfieren inmediatamente a través de una conexión de dúplex completo de un solo socket, lo que permite que ambos extremos reciban y envíen mensajes en tiempo real. WebSockets son ideales para juegos en tiempo real en los que las notificaciones instantáneas de redes sociales y la presentación actualizada de información (como las estadísticas de juegos) requieren una transferencia de datos segura y rápida. Los desarrolladores UWP pueden usar las clases [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) y [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) para conectar con los servidores que admiten el protocolo Websocket.
+El protocolo [WebSockets](websockets.md) define un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet. Los datos se transfieren inmediatamente a través de una conexión de dúplex completo de un solo socket, lo que permite que ambos extremos reciban y envíen mensajes en tiempo real. WebSockets son ideales para juegos en tiempo real en los que las notificaciones instantáneas de redes sociales y la presentación actualizada de información (como las estadísticas de juegos) requieren una transferencia de datos segura y rápida. Los desarrolladores UWP pueden usar las clases [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) y [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) para conectar con los servidores que admiten el protocolo Websocket.
 
 ### <a name="when-to-use-websockets"></a>Cuándo usar Websockets
 
@@ -50,13 +50,13 @@ El protocolo [WebSockets](websockets.md) define un mecanismo para una comunicaci
 
 ## <a name="httpclient"></a>HttpClient
 
-Usa [HttpClient](httpclient.md) (y el resto de la API de espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)) cuando estés usando HTTP(S) para comunicarte con un servicio web o un servidor web.
+Usa [HttpClient](httpclient.md) (y el resto de la API de espacio de nombres [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)) cuando estés usando HTTP(S) para comunicarte con un servicio web o un servidor web.
 
 ### <a name="when-to-use-httpclient"></a>Cuándo usar HttpClient
 
 -   Cuando usas HTTP(S) para comunicarte con servicios web.
 -   Cuando se carga o se descarga una pequeña cantidad de archivos más pequeños.
--   Si los WebSockets (las clases [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) y [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)) cumplen tus necesidades de comunicaciones (TCP a/desde un servidor web) y el servidor web en cuestión admite WebSockets, considera la posibilidad de usarlos en lugar de dedicar tus propios recursos de desarrollo y tiempo implementar una funcionalidad similar con HttpClient.
+-   Si los WebSockets (las clases [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) y [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket)) cumplen tus necesidades de comunicaciones (TCP a/desde un servidor web) y el servidor web en cuestión admite WebSockets, considera la posibilidad de usarlos en lugar de dedicar tus propios recursos de desarrollo y tiempo implementar una funcionalidad similar con HttpClient.
 -   Cuando estás transmitiendo en secuencias contenido en la red.
 
 ### <a name="when-not-to-use-httpclient"></a>Cuándo no usar HttpClient
@@ -80,50 +80,50 @@ Una nueva característica de transferencia en segundo plano en Windows 10 es la 
 
 ### <a name="when-not-to-use-background-transfers"></a>Cuándo no usar transferencias en segundo plano
 
--   Si vas a transferir una pequeña cantidad de archivos pequeños y no es necesario hacer ningún posprocesamiento cuando se complete la transferencia, considera el uso de los métodos PUT o POST de [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639).
--   Si deseas transmitir en secuencia datos y usarlos localmente a medida que llegan, usa [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639).
+-   Si vas a transferir una pequeña cantidad de archivos pequeños y no es necesario hacer ningún posprocesamiento cuando se complete la transferencia, considera el uso de los métodos PUT o POST de [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient).
+-   Si deseas transmitir en secuencia datos y usarlos localmente a medida que llegan, usa [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient).
 
 ## <a name="additional-network-related-technologies"></a>Otras tecnologías relacionadas con la red
 
 ### <a name="connection-quality"></a>Calidad de la conexión
 
-La API [**Windows.Networking.Connectivity**](https://msdn.microsoft.com/library/windows/apps/br207308) te permite obtener acceso a información de uso, costo y conectividad de red. Para obtener más información sobre cómo usar esta API, consulta el tema [Acceso al estado de conexión de la red y administrar los costos de red](https://msdn.microsoft.com/library/windows/apps/hh452983)
+La API [**Windows.Networking.Connectivity**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity) te permite obtener acceso a información de uso, costo y conectividad de red. Para obtener más información sobre cómo usar esta API, consulta el tema [Acceso al estado de conexión de la red y administrar los costos de red](https://docs.microsoft.com/previous-versions/windows/apps/hh452983(v=win.10))
 
 ### <a name="dns-service-discovery"></a>Detección de servicios DNS
 
-La API [**Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183) permite anunciar un servicio de red a otros dispositivos en la red mediante el protocolo DNS-SD descrito en IETF [RFC 2782](https://go.microsoft.com/fwlink/?LinkId=524158).
+La API [**Windows.Networking.ServiceDiscovery.Dnssd**](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd) permite anunciar un servicio de red a otros dispositivos en la red mediante el protocolo DNS-SD descrito en IETF [RFC 2782](https://go.microsoft.com/fwlink/?LinkId=524158).
 
 ### <a name="communicating-over-bluetooth"></a>Comunicación a través de Bluetooth
 
-Entre otras cosas, la API [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/dn263413) te permite usar Bluetooth para conectarte a otros dispositivos y transferir datos. Para obtener más información, consulta [Enviar o recibir archivos con RFCOMM](https://msdn.microsoft.com/library/windows/apps/mt270289).
+Entre otras cosas, la API [**Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth) te permite usar Bluetooth para conectarte a otros dispositivos y transferir datos. Para obtener más información, consulta [Enviar o recibir archivos con RFCOMM](https://docs.microsoft.com/windows/uwp/devices-sensors/send-or-receive-files-with-rfcomm).
 
 ### <a name="push-notifications-wns"></a>Notificaciones de inserción (WNS)
 
-La API [**Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) te permite usar el servicio de notificaciones de Windows (WNS) para recibir notificaciones de inserción a través de la red. Para obtener más información sobre el uso de esta API, consulta la [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203)
+La API [**Windows.Networking.PushNotifications**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications) te permite usar el servicio de notificaciones de Windows (WNS) para recibir notificaciones de inserción a través de la red. Para obtener más información sobre el uso de esta API, consulta la [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 
 ### <a name="near-field-communications"></a>Near Field Communications (NFC)
 
-La API [**Windows.Networking.Proximity**](https://msdn.microsoft.com/library/windows/apps/br241250) te permite usar comunicaciones de transmisión de datos para las aplicaciones que usan proximidad o conectar con dispositivos para que la transferencia de datos sea más fácil. Para obtener más información sobre cómo usar esta API, consulta el tema [Compatibilidad con proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
+La API [**Windows.Networking.Proximity**](https://docs.microsoft.com/uwp/api/Windows.Networking.Proximity) te permite usar comunicaciones de transmisión de datos para las aplicaciones que usan proximidad o conectar con dispositivos para que la transferencia de datos sea más fácil. Para obtener más información sobre cómo usar esta API, consulta el tema [Compatibilidad con proximidad y pulsación](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10)).
 
 ### <a name="rssatom-feeds"></a>Fuentes RSS y Atom
 
-La API [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) te permite administrar fuentes de sindicación con formatos RSS y Atom. Para obtener más información sobre cómo usar esta API, consulta [Fuentes RSS y Atom](web-feeds.md).
+La API [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) te permite administrar fuentes de sindicación con formatos RSS y Atom. Para obtener más información sobre cómo usar esta API, consulta [Fuentes RSS y Atom](web-feeds.md).
 
 ### <a name="wi-fi-enumeration-and-connection-control"></a>Control de enumeración y conexión Wi-Fi
 
-La API [**Windows.Devices.WiFi**](https://msdn.microsoft.com/library/windows/apps/dn975224) te permite enumerar adaptadores Wi-Fi, buscar redes Wi-Fi disponibles y conectar un adaptador a una red.
+La API [**Windows.Devices.WiFi**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFi) te permite enumerar adaptadores Wi-Fi, buscar redes Wi-Fi disponibles y conectar un adaptador a una red.
 
 ### <a name="radio-control"></a>Control de radio
 
-La API [**Windows.Devices.Radios**](https://msdn.microsoft.com/library/windows/apps/dn996447) te permite buscar y controlar las señales de radio en el dispositivo local, incluidos Wi-Fi y Bluetooth.
+La API [**Windows.Devices.Radios**](https://docs.microsoft.com/uwp/api/Windows.Devices.Radios) te permite buscar y controlar las señales de radio en el dispositivo local, incluidos Wi-Fi y Bluetooth.
 
 ### <a name="wi-fi-direct"></a>Wi-Fi Direct
 
-La API [**Windows.Devices.WiFiDirect**](https://msdn.microsoft.com/library/windows/apps/dn297687) permite conectarse y comunicarse con otros dispositivos locales mediante Wi-Fi Direct para crear redes inalámbricas locales ad-hoc.
+La API [**Windows.Devices.WiFiDirect**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect) permite conectarse y comunicarse con otros dispositivos locales mediante Wi-Fi Direct para crear redes inalámbricas locales ad-hoc.
 
 ### <a name="wi-fi-direct-services"></a>Servicios de Wi-Fi Direct
 
-La API [**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/library/windows/apps/dn996481) permite proporcionar servicios Wi-Fi Direct y conectarse a ellos. Los servicios de Wi-Fi Direct son la manera en que un dispositivo en una red Wi-Fi ad-hoc directa (un anunciante de servicio) ofrece capacidades a otro dispositivo (un solicitante de servicio) a través de una conexión Wi-Fi Direct.
+La API [**Windows.Devices.WiFiDirect.Services**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect.Services) permite proporcionar servicios Wi-Fi Direct y conectarse a ellos. Los servicios de Wi-Fi Direct son la manera en que un dispositivo en una red Wi-Fi ad-hoc directa (un anunciante de servicio) ofrece capacidades a otro dispositivo (un solicitante de servicio) a través de una conexión Wi-Fi Direct.
 
 ### <a name="mobile-operators"></a>Operadores de telefonía móvil
 
@@ -131,9 +131,9 @@ Windows 10 se expone a una audiencia amplia developer algunas API que anteriorme
 
 ### <a name="network-operations"></a>Operaciones de red
 
-La API [**Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library/windows/apps/br241148) trata principalmente la configuración y el aprovisionamiento de teléfonos. Como tal, el permiso para usar las funcionalidades que la controlan se limita a los fabricantes de dispositivos y los proveedores de telecomunicaciones.
+La API [**Windows.Networking.NetworkOperators**](https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators) trata principalmente la configuración y el aprovisionamiento de teléfonos. Como tal, el permiso para usar las funcionalidades que la controlan se limita a los fabricantes de dispositivos y los proveedores de telecomunicaciones.
 
 ### <a name="sms"></a>SMS
 
-El espacio de nombres [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) trata los SMS y los mensajes relacionados como entidades de bajo nivel. Se proporciona para su uso por parte de operadores de telefonía móvil para SMS dirigidos por aplicaciones, y se controla mediante una funcionalidad cuyo uso no estará aprobado para la mayoría de los desarrolladores de aplicaciones. Si estás escribiendo una aplicación para administrar mensajes, debes usar la API [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321) en su lugar, ya que está diseñada para controlar no solo los mensajes SMS, sino también los de otras fuentes, como las aplicaciones de chat en tiempo real, lo que permite una experiencia de mensajería o chat mucho más satisfactoria.
+El espacio de nombres [**Windows.Devices.Sms**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sms) trata los SMS y los mensajes relacionados como entidades de bajo nivel. Se proporciona para su uso por parte de operadores de telefonía móvil para SMS dirigidos por aplicaciones, y se controla mediante una funcionalidad cuyo uso no estará aprobado para la mayoría de los desarrolladores de aplicaciones. Si estás escribiendo una aplicación para administrar mensajes, debes usar la API [**Windows.ApplicationModel.Chat**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Chat) en su lugar, ya que está diseñada para controlar no solo los mensajes SMS, sino también los de otras fuentes, como las aplicaciones de chat en tiempo real, lo que permite una experiencia de mensajería o chat mucho más satisfactoria.
 

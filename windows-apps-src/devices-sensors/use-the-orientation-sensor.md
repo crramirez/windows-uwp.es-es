@@ -6,21 +6,21 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4426cbc2e2d3c6e7d980b0733b6deb5178025abb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 407c76c41d4a8620e2168e8e03dd2a3e24d73b61
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624100"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369573"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar el sensor de orientación
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
--   [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor)
+-   [**SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation)
 
 **Ejemplos**
 
@@ -29,11 +29,11 @@ ms.locfileid: "57624100"
 
 Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.
 
-Hay dos tipos diferentes de las API que se incluyen en el sensor de orientación del [ **Windows.Devices.Sensors** ](https://msdn.microsoft.com/library/windows/apps/BR206408) espacio de nombres: [**OrientationSensor** ](https://msdn.microsoft.com/library/windows/apps/BR206371) y [ **SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399). Si bien ambos sensores son sensores de orientación, ese término está sobrecargado y se usan para fines muy diferentes. Sin embargo, dado que ambos son sensores de orientación, se tratan en este artículo.
+Hay dos tipos diferentes de las API que se incluyen en el sensor de orientación del [ **Windows.Devices.Sensors** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) espacio de nombres: [**OrientationSensor** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) y [ **SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation). Si bien ambos sensores son sensores de orientación, ese término está sobrecargado y se usan para fines muy diferentes. Sin embargo, dado que ambos son sensores de orientación, se tratan en este artículo.
 
-La API de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se usa para aplicaciones 3D para obtener un cuaternión y una matriz de rotación. Un cuaternión puede entender más fácilmente como un giro de un punto de \[x, y, z\] alrededor de un eje arbitrario (contrastar con una matriz de rotación, que representa las rotaciones en torno a tres ejes). Las operaciones matemáticas en torno a los cuaterniones son bastante complejas, ya que implican las propiedades geométricas de números complejos y las propiedades matemáticas de números imaginarios. Sin embargo, es fácil trabajar con ellas y son compatibles con marcos como DirectX. Una aplicación compleja en 3D puede usar el sensor de orientación para ajustar la perspectiva del usuario. Este sensor combina los datos de entrada del acelerómetro, el girómetro y la brújula.
+La API de [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se usa para aplicaciones 3D para obtener un cuaternión y una matriz de rotación. Un cuaternión puede entender más fácilmente como un giro de un punto de \[x, y, z\] alrededor de un eje arbitrario (contrastar con una matriz de rotación, que representa las rotaciones en torno a tres ejes). Las operaciones matemáticas en torno a los cuaterniones son bastante complejas, ya que implican las propiedades geométricas de números complejos y las propiedades matemáticas de números imaginarios. Sin embargo, es fácil trabajar con ellas y son compatibles con marcos como DirectX. Una aplicación compleja en 3D puede usar el sensor de orientación para ajustar la perspectiva del usuario. Este sensor combina los datos de entrada del acelerómetro, el girómetro y la brújula.
 
-La API de [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) se usa para determinar la orientación actual del dispositivo en cuanto a las definiciones, como vertical hacia arriba, vertical hacia abajo, horizontal hacia la izquierda y horizontal hacia la derecha. También puede detectar si un dispositivo está boca arriba o boca abajo. En lugar de devolver propiedades como "vertical arriba" u "horizontal izquierda", este sensor devuelve un valor de rotación: "No gira", "Rotated90DegreesCounterclockwise" y así sucesivamente. En la siguiente tabla, se asignan las propiedades de orientación comunes a la lectura del sensor correspondiente.
+La API de [**SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation) se usa para determinar la orientación actual del dispositivo en cuanto a las definiciones, como vertical hacia arriba, vertical hacia abajo, horizontal hacia la izquierda y horizontal hacia la derecha. También puede detectar si un dispositivo está boca arriba o boca abajo. En lugar de devolver propiedades como "vertical arriba" u "horizontal izquierda", este sensor devuelve un valor de rotación: "No gira", "Rotated90DegreesCounterclockwise" y así sucesivamente. En la siguiente tabla, se asignan las propiedades de orientación comunes a la lectura del sensor correspondiente.
 
 | Orientación     | Lectura del sensor correspondiente      |
 |-----------------|-----------------------------------|
@@ -54,7 +54,7 @@ Esta sección se divide en dos subsecciones: En la primera subsección, conocer�
 
 ###  <a name="instructions"></a>Instrucciones
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -216,7 +216,7 @@ Esta sección se divide en dos subsecciones: En la primera subsección, conocer�
 
 ### <a name="instructions"></a>Instrucciones
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 

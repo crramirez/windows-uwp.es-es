@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 369aa076184f79aa1e43c3aac11706982a6be268
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ff7088ec4062973d0b9d1ff6d20d7992e4135c3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595420"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367955"
 ---
 # <a name="add-controls"></a>Agregar controles
 
@@ -43,11 +43,11 @@ Cuando la clase **MoveLookController** en la muestra de juego se inicializa, reg
 
 Evento | Descripción
 :------ | :-------
-[**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) | Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
-[**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) |El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
-[**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) |Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
-[**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275) |El puntero se movió fuera de la ventana principal.
-[**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) | El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas X-Y.
+[**CoreWindow::PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) | Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
+[**CoreWindow::PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) |El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
+[**CoreWindow::PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) |Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
+[**CoreWindow::PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerexited) |El puntero se movió fuera de la ventana principal.
+[**Windows::Devices::Input::MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) | El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas X-Y.
 
 
 Estos controladores de eventos se establecen para empezar a escuchar la entrada del usuario en cuanto **MoveLookController** se inicializa en la ventana de la aplicación.
@@ -105,7 +105,7 @@ Durante el estado **Activo**, la instancia **MoveLookController** está procesan
 
 
 Todas las entradas del puntero se registran en el estado **Activo**, con diferentes id. de puntero correspondientes a los distintas acciones de puntero.
-Cuando se recibe un evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278), **MoveLookController** obtiene el valor del identificador del puntero creado por la ventana. El id. de puntero represente un tipo específico de entrada. Por ejemplo, en un dispositivo multitoque, puede que haya varias entradas activas diferentes al mismo tiempo. Los identificadores se usan para llevar un seguimiento de la entrada que está usando el jugador. Si un evento se encuentra en el rectángulo de movimiento de la pantalla táctil, se asigna un id. de puntero para realizar un seguimiento de cualquier evento de puntero en el rectángulo de movimiento. Otros eventos de puntero en el rectángulo de disparo se siguen por separado, con id. de puntero diferentes.
+Cuando se recibe un evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed), **MoveLookController** obtiene el valor del identificador del puntero creado por la ventana. El id. de puntero represente un tipo específico de entrada. Por ejemplo, en un dispositivo multitoque, puede que haya varias entradas activas diferentes al mismo tiempo. Los identificadores se usan para llevar un seguimiento de la entrada que está usando el jugador. Si un evento se encuentra en el rectángulo de movimiento de la pantalla táctil, se asigna un id. de puntero para realizar un seguimiento de cualquier evento de puntero en el rectángulo de movimiento. Otros eventos de puntero en el rectángulo de disparo se siguen por separado, con id. de puntero diferentes.
 
 
 > [!NOTE]
@@ -160,7 +160,7 @@ Ahora, echemos un vistazo a la implementación de cada uno de los tres tipos de 
 
 Si se detecta un movimiento de mouse, queremos usarlo para averiguar la nueva rotación alrededor del eje 'x' y del eje 'y' de la cámara. Esto se logra implementando controles de ratón relativos, con los que controlamos la distancia que el ratón ha recorrido (el delta entre el inicio del movimiento hasta que el ratón se detiene ) en contraposición a grabar las coordenadas de píxel x-y absolutas del movimiento.
 
-Para ello, obtenemos los cambios en las coordenadas X (movimiento horizontal) e Y (movimiento vertical) examinando los campos [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) y **MouseDelta::Y** del objeto de argumento [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) que el evento [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) devuelve.
+Para ello, obtenemos los cambios en las coordenadas X (movimiento horizontal) e Y (movimiento vertical) examinando los campos [**MouseDelta::X**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDelta) y **MouseDelta::Y** del objeto de argumento [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://docs.microsoft.com/uwp/api/windows.devices.input.mouseeventargs.mousedelta) que el evento [**MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) devuelve.
 
 ```cpp
 void MoveLookController::OnMouseMoved(
@@ -220,8 +220,8 @@ Toca fuera del movimiento y dispara a rectángulo | Cambia la rotación (inclina
 
 El **MoveLookController** comprueba el id. del puntero para determinar dónde se produjo el evento y realiza una de las siguientes acciones:
 
--   Si se produjo el evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) en el rectángulo de disparo o movimiento, actualiza la posición de puntero para el controlador.
--   Si el evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) se produjo en alguna otra parte de la pantalla (definida como los controles de apariencia), calcula el cambio en la rotación alrededor del eje x y del eje y del vector de dirección que corresponde a la vista.
+-   Si se produjo el evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) en el rectángulo de disparo o movimiento, actualiza la posición de puntero para el controlador.
+-   Si el evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) se produjo en alguna otra parte de la pantalla (definida como los controles de apariencia), calcula el cambio en la rotación alrededor del eje x y del eje y del vector de dirección que corresponde a la vista.
 
 
 Una vez que hemos implementado nuestros controles táctiles, los rectángulos que obtuvimos anteriormente con Direct2D indicarán a los jugadores dónde están las zonas de movimiento, disparo y vista.
@@ -401,7 +401,7 @@ Puedes ver el código completo para el método **MoveLookController::OnPointerPr
 
 Aquí, **MoveLookController** asigna el identificador de puntero para el puntero que provocó el evento en una variable que corresponda a la región de vista. En el caso de una entrada táctil que se producen en la región de aspecto, el **m\_lookPointerID** variable se establece en el identificador de puntero que desencadenó el evento. Una variable booleana, **m\_lookInUse**, también se establece para indicar que el control tiene no se han publicado.
 
-Veamos ahora cómo la muestra de juego controla el evento de pantalla táctil [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276).
+Veamos ahora cómo la muestra de juego controla el evento de pantalla táctil [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved).
 
 
 Dentro del método **MoveLookController::OnPointerMoved**, se comprueba qué tipo de Id. de puntero se asignó al evento. Si es **m_lookPointerID**, calculamos el cambio de posición del puntero.
@@ -435,9 +435,9 @@ A continuación, usamos este delta para calcular cuánto debe cambiar la rotaci�
 
 
 
-Lo último que veremos es cómo maneja el ejemplo de juego el evento de pantalla táctil [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279).
+Lo último que veremos es cómo maneja el ejemplo de juego el evento de pantalla táctil [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased).
 Una vez que el usuario haya terminado el gesto de toque y quite el dedo de la pantalla, [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500) se inicia.
-Si el id. del puntero que desencadenó el evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) es el id. del puntero de movimiento registrado anteriormente, **MoveLookController** establece la velocidad a `0` porque el jugador ha dejado de tocar el área de vista.
+Si el id. del puntero que desencadenó el evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) es el id. del puntero de movimiento registrado anteriormente, **MoveLookController** establece la velocidad a `0` porque el jugador ha dejado de tocar el área de vista.
 
 ```cpp
     else if (pointerID == m_lookPointerID)
@@ -469,7 +469,7 @@ Movimiento del mouse | Cambia la rotación (inclinación y desvío) de la vista 
 Botón izquierdo del mouse | Disparar una esfera
 
 
-Para usar el teclado, la muestra de juego registra dos eventos nuevos, [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) y [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270), dentro del método [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88). Estos eventos controlan la pulsación y liberación de una tecla.
+Para usar el teclado, la muestra de juego registra dos eventos nuevos, [**CoreWindow::KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup) y [**CoreWindow::KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown), dentro del método [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88). Estos eventos controlan la pulsación y liberación de una tecla.
 
 ```cpp
 window->KeyDown +=

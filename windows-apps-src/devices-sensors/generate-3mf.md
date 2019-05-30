@@ -9,33 +9,33 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3615dac98c5bc8469c8c8ebc47ef718c0131844
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f7cc27df92329157f2987d8d02eb59039534d166
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653400"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370104"
 ---
 # <a name="generate-a-3mf-package"></a>Generar un paquete 3MF
 
 **API importantes**
 
--   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
+-   [**Windows.Graphics.Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d)
 
-En esta guía, se describe la estructura del documento de formato de fabricación 3D y cómo puede crearse y manipularse con la API [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx).
+En esta guía, se describe la estructura del documento de formato de fabricación 3D y cómo puede crearse y manipularse con la API [**Windows.Graphics.Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d).
 
 ## <a name="what-is-3mf"></a>¿Qué es 3MF?
 
 El formato de fabricación 3D es un conjunto de convenciones de uso de XML para describir el aspecto y la estructura de modelos 3D para la fabricación (impresión 3D). Define un conjunto de partes (algunas necesarias y algunas opcionales), y sus relaciones, con el objetivo de proporcionar toda la información necesaria para un dispositivo de fabricación 3D. Un conjunto de datos que se adhiere al formato de fabricación 3D puede guardarse como un archivo con la extensión .3mf.
 
-En Windows 10, la [ **Printing3D3MFPackage** ](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) clase en el **Windows.Graphics.Printing3D** espacio de nombres es análogo a un archivo único .3mf y otra clases se asignan a las determinados elementos XML en el archivo. En esta guía se describe cómo cada una de las partes principales de un documento 3MF puede crearse y definirse mediante programación, cómo se puede utilizar la extensión de materiales 3MF y cómo un objeto **Printing3D3MFPackage** puede convertirse y guardarse como un archivo .3mf. Para obtener más información sobre los estándares de 3MF o la extensión de materiales 3MF, consulta [3MF Specification (Especificación 3MF)](https://3mf.io/what-is-3mf/3mf-specification/).
+En Windows 10, la [ **Printing3D3MFPackage** ](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3d3mfpackage) clase en el **Windows.Graphics.Printing3D** espacio de nombres es análogo a un archivo único .3mf y otra clases se asignan a las determinados elementos XML en el archivo. En esta guía se describe cómo cada una de las partes principales de un documento 3MF puede crearse y definirse mediante programación, cómo se puede utilizar la extensión de materiales 3MF y cómo un objeto **Printing3D3MFPackage** puede convertirse y guardarse como un archivo .3mf. Para obtener más información sobre los estándares de 3MF o la extensión de materiales 3MF, consulta [3MF Specification (Especificación 3MF)](https://3mf.io/what-is-3mf/3mf-specification/).
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
 
 ## <a name="core-classes-in-the-3mf-structure"></a>Clases principales de la estructura 3MF
 
-La clase **Printing3D3MFPackage** representa un documento 3MF completo y en el centro de un documento 3MF hay su parte de modelo, que representa la clase [**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmodel.aspx). La mayoría de la información que queremos especificar sobre un modelo 3D se almacenará configurando las propiedades de la clase **Printing3DModel** y las propiedades de sus clases subyacentes.
+La clase **Printing3D3MFPackage** representa un documento 3MF completo y en el centro de un documento 3MF hay su parte de modelo, que representa la clase [**Printing3DModel**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dmodel). La mayoría de la información que queremos especificar sobre un modelo 3D se almacenará configurando las propiedades de la clase **Printing3DModel** y las propiedades de sus clases subyacentes.
 
 [!code-cs[InitClasses](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetInitClasses)]
 
@@ -49,7 +49,7 @@ El componente de modelo de un documento 3MF puede contener metadatos en forma de
 
 ## <a name="mesh-data"></a>Datos de malla
 
-En el contexto de esta guía, una malla es un cuerpo de geometría de 3 dimensiones construido a partir de un único conjunto de vértices (aunque no es necesario que aparezca como un único sólido). Una parte de la malla se representa mediante la clase [**Printing3DMesh**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmesh.aspx). Un objeto de malla válido debe contener información sobre la ubicación de todos sus vértices, así como todas las caras de triángulos que existan entre ciertos conjuntos de vértices.
+En el contexto de esta guía, una malla es un cuerpo de geometría de 3 dimensiones construido a partir de un único conjunto de vértices (aunque no es necesario que aparezca como un único sólido). Una parte de la malla se representa mediante la clase [**Printing3DMesh**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dmesh). Un objeto de malla válido debe contener información sobre la ubicación de todos sus vértices, así como todas las caras de triángulos que existan entre ciertos conjuntos de vértices.
 
 En el siguiente método se agregan los vértices a una malla y luego se les proporciona ubicaciones en el espacio 3D:
 
@@ -118,7 +118,7 @@ Para determinar los materiales que se asignan a los vértices de cada triángulo
 
 ## <a name="components-and-build"></a>Componentes y compilación
 
-La estructura de componentes permite al usuario colocar más de un objeto de malla en un modelo 3D imprimible. Un objeto [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) contiene una única malla y una lista de referencias a otros componentes. En realidad, se trata de una lista de objetos [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx). Cada objeto **Printing3DComponentWithMatrix** contiene un elemento **Printing3DComponent** y, lo que es importante, una matriz de transformación que se aplica a la malla y a los componentes que contiene dicho elemento **Printing3DComponent**.
+La estructura de componentes permite al usuario colocar más de un objeto de malla en un modelo 3D imprimible. Un objeto [**Printing3DComponent**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dcomponent) contiene una única malla y una lista de referencias a otros componentes. En realidad, se trata de una lista de objetos [**Printing3DComponentWithMatrix**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dcomponentwithmatrix). Cada objeto **Printing3DComponentWithMatrix** contiene un elemento **Printing3DComponent** y, lo que es importante, una matriz de transformación que se aplica a la malla y a los componentes que contiene dicho elemento **Printing3DComponent**.
 
 Por ejemplo, es posible que un modelo de un coche conste de un elemento **Printing3DComponent** de "cuerpo" que contenga la malla para la carrocería del coche. El componente de "cuerpo" puede contener referencias a cuatro objetos **Printing3DComponentWithMatrix** diferentes, que hacen referencia al mismo elemento **Printing3DComponent** con la malla de "rueda" y contienen cuatro matrices de transformación diferentes (al asignar las ruedas a cuatro distintas posiciones de la carrocería del coche). En este escenario, la malla de "cuerpo" y de "rueda" solo necesitaría almacenarse una vez, aunque el producto final presentara cinco mallas en total.
 
@@ -131,7 +131,7 @@ Ahora que tenemos un modelo con materiales y componentes definidos, podemos guar
 
 [!code-cs[SavePackage](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSavePackage)]
 
-Desde aquí, podemos iniciar un trabajo de impresión dentro de la aplicación (consulta [3D printing from your app [Impresión 3D desde la aplicación]](https://msdn.microsoft.com/library/windows/apps/mt204541.aspx)), o guardar este paquete **Printing3D3MFPackage** como un archivo .3mf.
+Desde aquí, podemos iniciar un trabajo de impresión dentro de la aplicación (consulta [3D printing from your app [Impresión 3D desde la aplicación]](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)), o guardar este paquete **Printing3D3MFPackage** como un archivo .3mf.
 
 En el siguiente método se toma un paquete **Printing3D3MFPackage** terminado y se guardan los datos en un archivo .3mf.
 
@@ -139,7 +139,7 @@ En el siguiente método se toma un paquete **Printing3D3MFPackage** terminado y 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Impresión en 3D de la aplicación](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
+[Impresión en 3D de la aplicación](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
 [Ejemplo UWP de impresión 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 

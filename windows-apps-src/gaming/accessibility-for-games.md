@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, accesibilidad, juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 38060d0a6bead360ef8a682902a433670c79b495
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: a3ef82db2d0ddb7883179279fd7e48c1acf38dd3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162783"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369175"
 ---
 #  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
@@ -35,7 +35,7 @@ Número de usuarios que pueden jugar al juego x Genialidad del juego = Ventas de
 
 Si hicieras un juego increíble que es muy complicado o complejo y al que solo un puñado de personas pudiera jugar, limitarías tus ventas. De forma parecida, si crearas un juego al que no pudieran jugar los usuarios con impedimentos cognitivos, sensoriales o físicos, perderías ventas potenciales. Por ejemplo, el [19 % de las personas en los Estados Unidos tiene algún tipo de discapacidad](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [un 14 % de los adultos en los Estados Unidos tienen dificultades para leer](https://nces.ed.gov/naal/estimates/overview.aspx) y [un 10 % de los hombres tiene alguna forma de discapacidad para distinguir colores](https://www.aao.org/eye-health/diseases/color-blindness-risk). Todo esto puede tener un gran impacto en los ingresos de tu título. 
 
-Para más justificaciones empresariales, consulta [Hacer que los videojuegos sean accesibles](https://msdn.microsoft.com/library/windows/desktop/ee415219).
+Para más justificaciones empresariales, consulta [Hacer que los videojuegos sean accesibles](https://docs.microsoft.com/windows/desktop/DxTechArts/accessibility-best-practices).
 
 ### <a name="better-games"></a>Mejores juegos
 
@@ -185,7 +185,7 @@ Estas son algunas directrices básicas a tener en cuenta cuando se diseñan los 
 
 *   Selecciona una fuente legible simple.
 *   Selecciona el tamaño de fuente lo suficientemente grande o ten en cuenta la opción de un tamaño de fuente ajustable para obtener una mayor flexibilidad. (El tamaño de fuente ideal depende del tamaño de la pantalla o la distancia a la pantalla, entre otros).
-*   Crea un alto contraste entre el color de fondo y el de la fuente. Usa un diseño fuerte y sombras para el texto. Usa una superposición de fondo oscura para los títulos y recuerda ofrecer opciones para activarlos o desactivarlos. (Para obtener más información, consulta [Información acerca de la relación de contraste](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
+*   Crea un alto contraste entre el color de fondo y el de la fuente. Usa un diseño fuerte y sombras para el texto. Usa una superposición de fondo oscura para los títulos y recuerda ofrecer opciones para activarlos o desactivarlos. (Para obtener más información, consulta [Información acerca de la relación de contraste](https://docs.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
 * Muestra frases cortas en pantalla, como máximo 38 caracteres por línea y un máximo de 2 o 3 líneas en cada momento. (Recuerda no revelar contenido del juego mostrando el texto antes de que ocurra el evento.)
 *   Distingue qué hace el sonido o quién habla. (Ejemplo: "Daniel: Hola!")
 *   Proporciona la opción de activar y desactivar los subtítulos. (Característica adicional: Capacidad de seleccionar se muestra la cantidad de sonido información basada en importancia).
@@ -271,5 +271,5 @@ Estos son algunos sitios externos que proporcionan información adicional sobre 
 ## <a name="related-links"></a>Vínculos relacionados
 * [Diseño inclusivo](https://www.microsoft.com/design/inclusive)
 * [Centro de accesibilidad de Microsoft para desarrolladores](https://developer.microsoft.com/windows/accessible-apps)
-* [Desarrollo de aplicaciones UWP accesible](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
+* [Desarrollo de aplicaciones UWP accesible](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
 * [Libro electrónico de Software de accesibilidad de ingeniería](https://www.microsoft.com/download/details.aspx?id=19262)

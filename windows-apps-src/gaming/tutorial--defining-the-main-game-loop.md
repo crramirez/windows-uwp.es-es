@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, objeto principal
 ms.localizationpriority: medium
-ms.openlocfilehash: 96aefc8b053dd7490f47910ca5bb79989855e1a3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a3c47f3c22c41e7ca73c8a8b5d4e26dc27fab343
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651500"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367652"
 ---
 # <a name="define-the-main-game-object"></a>Definir el objeto principal del juego
 
@@ -54,7 +54,7 @@ El ejemplo de juego configura los componentes siguientes en el objeto de juego:
 
 * Se crea un objeto de reproducción de audio.
 * Se crean matrices para los primitivos gráficos del juego, incluidas matrices para los primitivos de nivel, munición y obstáculos.
-* Se crea una ubicación denominada *Game* donde guardar los datos de estado de las partidas, y se coloca en la ubicación de almacenamiento de configuración de datos de aplicación especificada por [**ApplicationData::Current**](https://msdn.microsoft.com/library/windows/apps/br241619).
+* Se crea una ubicación denominada *Game* donde guardar los datos de estado de las partidas, y se coloca en la ubicación de almacenamiento de configuración de datos de aplicación especificada por [**ApplicationData::Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current).
 * Se crea un reloj de juego y el mapa de bits de representación en la partida inicial.
 * Se crea una nueva cámara con un conjunto específico de parámetros de vista y proyección.
 * El dispositivo de entrada (el mando) se establece con la misma rotación alrededor del eje x (pitch) y la misma rotación alrededor del eje y (yaw) de inicio que la cámara, de modo que el jugador tiene una correspondencia 1 a 1 entre la posición de control inicial y la posición de la cámara.
@@ -245,8 +245,8 @@ Los métodos internos definidos en **Simple3DGame** incluyen:
 
 -   **Inicializar**: Establece los valores iniciales de las variables globales e inicializa los objetos del juego. Este tema se trata en el [inicializar e iniciar el juego](#initialize-and-start-the-game) sección.
 -   **LoadGame**: Inicializa un nuevo nivel y comienza a cargarlo.
--   **LoadLevelAsync**: Se inicia una tarea asincrónica (si no está familiarizado con tareas asincrónicas, vea [Parallel Patterns Library](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)) para inicializar el nivel y, a continuación, invocar una tarea asincrónica en el representador para cargar los recursos de nivel de dispositivo específicos. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (en contraposición a los métodos [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**.
--   **FinalizeLoadLevel**: Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D 11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
+-   **LoadLevelAsync**: Se inicia una tarea asincrónica (si no está familiarizado con tareas asincrónicas, vea [Parallel Patterns Library](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)) para inicializar el nivel y, a continuación, invocar una tarea asincrónica en el representador para cargar los recursos de nivel de dispositivo específicos. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device) (en contraposición a los métodos [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**.
+-   **FinalizeLoadLevel**: Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D 11 ([**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)).
 -   **StartLevel**: Inicia el juego para un nuevo nivel.
 -   **PauseGame**: Pausa el juego.
 -   **RunGame**: Ejecuta una iteración del bucle del juego. Si el estado del juego es is **Active**, recibe una llamada de **App::Update** una vez cada iteración del bucle del juego.

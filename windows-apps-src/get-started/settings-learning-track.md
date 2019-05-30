@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, configuración, guardar configuración, cargar configuración
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 490dd8f0f3841fae089626ec9c283d54cc0d8cd9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614640"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370495"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Guardar y cargar la configuración en una aplicación para UWP
 
@@ -86,7 +86,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 
 | API | Descripción |
 |------|---------------|
-| [ApplicationData.LocalSettings](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.temporaryfolder) | Obtiene el contenedor de configuración de la aplicación del almacén de datos local de la aplicación. |
+| [ApplicationData.LocalSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder) | Obtiene el contenedor de configuración de la aplicación del almacén de datos local de la aplicación. |
 | [ApplicationData.RoamingSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings) | Obtiene el contenedor de configuración de la aplicación del almacén de datos de roaming de la aplicación. |
 | [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) | Contenedor de configuración de aplicación que admite la creación, la eliminación, la enumeración y el recorrido de la jerarquía de contenedores. |
 | [Windows.UI.ApplicationSettings Namespace](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings) | Proporciona clases que usarás para definir la configuración de la aplicación que aparece en el panel de configuración del shell de Windows. |

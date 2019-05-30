@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c53d93735d097aed3fe6e6f24912e659ad7d28a7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617630"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358698"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introducción a UWP para desarrolladores de iOS
 
@@ -32,10 +32,10 @@ Para empezar a trabajar con estos tutoriales, necesitará un equipo con Windows 
 | [Introducción: Elegir un lenguaje de programación](getting-started-choosing-a-programming-language.md) | Antes de continuar, debes conocer los lenguajes de programación que puedes elegir cuando desarrollas aplicaciones para UWP. |
 | [Introducción: Orientación en Visual Studio](getting-started-getting-around-in-visual-studio.md) | Volvamos al proyecto que creamos antes: te mostraremos cómo desplazarte por el entorno de desarrollo integrado (IDE) de Visual Studio. |
 | [Introducción: Controles comunes](getting-started-common-controls.md) | Estos son algunos controles comunes que usarás en las aplicaciones y sus equivalentes de iOS. |
-| [Introducción: Navegación](getting-started-navigation.md) | Una de las formas de administrar esta navegación en una aplicación de Windows 10 es usar la clase [Frame](https://msdn.microsoft.com/library/windows/apps/br242682). En el tutorial siguiente se muestra cómo puedes probarlo. |
+| [Introducción: Navegación](getting-started-navigation.md) | Una de las formas de administrar esta navegación en una aplicación de Windows 10 es usar la clase [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame). En el tutorial siguiente se muestra cómo puedes probarlo. |
 | [Introducción: Animación](getting-started-animation.md) | Las animaciones de las aplicaciones de Windows se pueden crear mediante programación, pero también pueden definirse mediante declaración con lenguaje XAML. |
 | [Introducción: ¿Qué sigue?](getting-started-what-next.md) | Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes. Para los próximos pasos, lee los siguientes temas y después abre Visual Studio y empieza a escribir código. |
-| [Asignación de conceptos de aplicación de Windows](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Qué hay que tener en cuenta de los conceptos de iOS en lo que respecta a las características de Windows (y Android) |
+| [Asignación de conceptos de aplicación de Windows](https://docs.microsoft.com/windows/uwp/porting/android-ios-uwp-map) | Qué hay que tener en cuenta de los conceptos de iOS en lo que respecta a las características de Windows (y Android) |
 
  
 

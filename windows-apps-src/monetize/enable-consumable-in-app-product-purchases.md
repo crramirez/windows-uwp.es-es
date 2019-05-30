@@ -6,19 +6,19 @@ keywords: uwp, UWP, consumable, consumibles, add-ons, complementos, in-app purch
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e3673db795e3edc2a7c9d83a3ba1036ad8feb659
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 81c37e915b0efa320b1a2f359c873356ed83b6ba
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334573"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371823"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de productos consumibles desde la aplicación
 
 Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar), a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
 
 > [!IMPORTANT]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos consumibles desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El **Windows.Services.Store** espacio de nombres es compatible con los tipos de complementos más recientes, como Store administrado puede usar complementos y las suscripciones y está diseñado para ser compatible con tipos futuros de productos y características admitidas por asociado El centro y el Store. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información sobre cómo habilitar las compras de productos consumibles desde la aplicación con el espacio de nombres **Windows.Services.Store**, consulta [este artículo](enable-consumable-add-on-purchases.md).
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) para habilitar las compras de productos consumibles desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) en su lugar. El **Windows.Services.Store** espacio de nombres es compatible con los tipos de complementos más recientes, como Store administrado puede usar complementos y las suscripciones y está diseñado para ser compatible con tipos futuros de productos y características admitidas por asociado El centro y el Store. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información sobre cómo habilitar las compras de productos consumibles desde la aplicación con el espacio de nombres **Windows.Services.Store**, consulta [este artículo](enable-consumable-add-on-purchases.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -42,7 +42,7 @@ Cuando se concede al cliente acceso al producto consumible desde la aplicación,
 > [!IMPORTANT]
 > Tu aplicación es responsable de generar informes precisos de suministros para la Store. Este paso es esencial para mantener una experiencia de compra justa y de confianza para tus clientes.
 
-En el siguiente ejemplo, se muestra el uso de las propiedades [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) desde la llamada a [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) en el paso anterior para identificar el producto comprado que se va a suministrar. Se usa una colección para almacenar la información de los productos en una ubicación a la que después se pueda hacer referencia para confirmar que el suministro local se ha realizado correctamente.
+En el siguiente ejemplo, se muestra el uso de las propiedades [PurchaseResults](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.PurchaseResults) desde la llamada a [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) en el paso anterior para identificar el producto comprado que se va a suministrar. Se usa una colección para almacenar la información de los productos en una ubicación a la que después se pueda hacer referencia para confirmar que el suministro local se ha realizado correctamente.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GrantFeatureLocally)]
@@ -78,7 +78,7 @@ En el siguiente ejemplo, se demuestra cómo se puede usar [GetUnfulfilledConsuma
 
 * [Habilitar las compras de productos desde la aplicación](enable-in-app-product-purchases.md)
 * [Ejemplo de Store (muestra las pruebas y compras de la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-* [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/br225197)
+* [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)
  
 
  

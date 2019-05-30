@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff3f89887235fc9c8d9d7afbbdea3d79bace810
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630800"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363035"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
 En el desarrollo de aplicaciones para UWP, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
 
-> **API importantes**: [Espacio de nombres Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+> **API importantes**: [Espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
 Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el [principal-detalle](master-details.md) patrón es una forma que puede usar un [SplitView](split-view.md) control para la navegación de la aplicación. De forma similar, puede personalizar la plantilla de un [NavigationView](navigationview.md) control para implementar el patrón de ficha.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>Temas relacionados
 
 -   [Índice de controles por función](controls-by-function.md)
--   [Espacio de nombres Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 -   [Diseño](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Facilidad de uso](../usability/index.md)

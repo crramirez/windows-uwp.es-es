@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63c678f4b2dde1a5e35c0131b5154493c9703951
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ea3e7ec73b042eeef560af3d88754afdfa5b441
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623380"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370461"
 ---
 # <a name="geometry-shader-gs-stage"></a>Fase de sombreador de geometría (GS)
 
@@ -28,7 +28,7 @@ La fase del sombreador de geometría procesa primitivos completos: triángulos (
 
 El sombreador de geometría también admite la amplificación y la desamplificación geométrica limitada. Dado un primitivo de entrada, el sombreador de geometría puede descartar el primitivo o emitir uno o más primitivos nuevos.
 
-La fase del sombreador de geometría (GS) es una fase de sombreador programable; se muestra como un bloque redondeado en el diagrama de [canalización de gráficos](graphics-pipeline.md). Esta fase del sombreador expone su propia funcionalidad única, integrada en modelos del sombreador (consulta [common-shader core](https://msdn.microsoft.com/library/windows/desktop/bb509580)).
+La fase del sombreador de geometría (GS) es una fase de sombreador programable; se muestra como un bloque redondeado en el diagrama de [canalización de gráficos](graphics-pipeline.md). Esta fase del sombreador expone su propia funcionalidad única, integrada en modelos del sombreador (consulta [common-shader core](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core)).
 
 La fase del sombreador de geometría es adecuada para algoritmos como los siguientes:
 
@@ -62,7 +62,7 @@ Abreviaturas de vértices comunes:
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Salida
 
 
-La fase del sombreador de geometría (GS) es capaz de presentar varios vértices que forman una sola topología seleccionada. Las topologías de salida del sombreador de geometría disponibles son **tristrip**, **linestrip** y **pointlist**. El número de primitivos emitido puede variar libremente dentro de cualquier invocación del sombreador de geometría, aunque el número máximo de vértices que podría emitirse debe declararse de forma estática. Las longitudes de franja emitidas desde una invocación del sombreador de geometría pueden ser arbitrarias, y pueden crearse nuevas franjas a través de la función HLSL [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660).
+La fase del sombreador de geometría (GS) es capaz de presentar varios vértices que forman una sola topología seleccionada. Las topologías de salida del sombreador de geometría disponibles son **tristrip**, **linestrip** y **pointlist**. El número de primitivos emitido puede variar libremente dentro de cualquier invocación del sombreador de geometría, aunque el número máximo de vértices que podría emitirse debe declararse de forma estática. Las longitudes de franja emitidas desde una invocación del sombreador de geometría pueden ser arbitrarias, y pueden crearse nuevas franjas a través de la función HLSL [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip).
 
 La ejecución de una instancia del sombreador de geometría es atómica de las otras invocaciones, excepto en que los datos agregados a las secuencias son de serie. Las salidas de una invocación determinada de un sombreador de geometría son independientes de otras invocaciones (aunque se respeta la ordenación). Un sombreador de geometría que genera franjas de triángulos iniciará una nueva franja en cada invocación.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 40df746d89757b481a47cefeaeda3f8a34091014
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e82a0ffc0ddcf2ac1973ba446ec50dfc61a7cd1a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636850"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361571"
 ---
 # <a name="playready-drm"></a>DRM de PlayReady
 
@@ -34,7 +34,7 @@ En la lista siguiente describe las nuevas características y los cambios realiza
 
     La compatibilidad con la protección de contenido basada en hardware permite la reproducción segura de contenido de alta definición (HD) y altísima definición (UHD) en diversas plataformas de dispositivos. Se protege el material de clave (incluyendo claves privadas, claves de contenido y cualquier otro material de clave que se use para derivar o desbloquear dichas claves), así como muestras de vídeo descifradas comprimidas y descomprimidas mediante el aprovechamiento de la seguridad de hardware. Cuando se usa DRM de hardware, los habilitadores desconocidos (reproducir en desconocido / reproducir en desconocido con downres) no tienen sentido, ya que la canalización HWDRM siempre sabe qué salida se está usando. Para más información, consulta [DRM de hardware](hardware-drm.md).
 
--   PlayReady ya no es un componente de marco appX, sino que es un componente integrado en el sistema operativo. Se ha cambiado el espacio de nombres de **Microsoft.Media.PlayReadyClient** a [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454).
+-   PlayReady ya no es un componente de marco appX, sino que es un componente integrado en el sistema operativo. Se ha cambiado el espacio de nombres de **Microsoft.Media.PlayReadyClient** a [**Windows.Media.Protection.PlayReady**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady).
 -   Los siguientes encabezados de definir los códigos de error PlayReady ahora forman parte del Kit de desarrollo de Software (SDK) de Windows: Windows.Media.Protection.PlayReadyErrors.h y Windows.Media.Protection.PlayReadyResults.h.
 -   Proporciona la adquisición proactiva de licencias no persistentes.
 
@@ -69,13 +69,13 @@ En la lista siguiente describe las nuevas características y los cambios realiza
 
 Se agregaron a la tecnología DRM de PlayReady las siguientes nuevas interfaces, clases y enumeraciones:
 
--   [**IPlayReadyLicenseAcquisitionServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986077) interfaz
--   [**IPlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986080) interfaz
--   [**IPlayReadySecureStopServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986090) interfaz
--   [**PlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986309) clase
--   [**PlayReadySecureStopIterable** ](https://msdn.microsoft.com/library/windows/apps/dn986371) clase
--   [**PlayReadySecureStopIterator** ](https://msdn.microsoft.com/library/windows/apps/dn986375) clase
--   [**PlayReadyHardwareDRMFeatures** ](https://msdn.microsoft.com/library/windows/apps/dn986265) enumerador
+-   [**IPlayReadyLicenseAcquisitionServiceRequest**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest) interface
+-   [**IPlayReadyLicenseSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession) interface
+-   [**IPlayReadySecureStopServiceRequest**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest) interface
+-   [**PlayReadyLicenseSession** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseSession) clase
+-   [**PlayReadySecureStopIterable** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable) clase
+-   [**PlayReadySecureStopIterator** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator) clase
+-   [**PlayReadyHardwareDRMFeatures** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures) enumerador
 
 Se ha creado una nueva muestra para mostrar cómo usar las nuevas características de la tecnología DRM de PlayReady. La muestra puede descargarse en [https://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](https://go.microsoft.com/fwlink/p/?linkid=331670).
 
@@ -397,7 +397,7 @@ En la siguiente tabla se describe la implementación de DRM de PlayReady para Wi
 
 Antes de empezar a crear la aplicación para UWP protegida con PlayReady, es necesario instalar el siguiente software en el sistema:
 
--   Windows 10.
+-   Windows 10.
 -   Si se está compilando aplicaciones para UWP cualquiera de los ejemplos de DRM de PlayReady, debe utilizar Microsoft Visual Studio 2015 o posterior para compilar los ejemplos. Todavía puede utilizar Microsoft Visual Studio 2013 para compilar cualquiera de los ejemplos de DRM de PlayReady para las aplicaciones de Windows 8.1 Store.
 
 <!--This is no longer available-->
@@ -407,7 +407,7 @@ Antes de empezar a crear la aplicación para UWP protegida con PlayReady, es nec
 
 Esta sección incluye información sobre cómo migrar las aplicaciones existentes de PlayReady Windows 8.x Store a Windows 10.
 
-El espacio de nombres PlayReady aplicaciones para UWP en Windows 10 se ha cambiado de **Microsoft.Media.PlayReadyClient** a [ **Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Esto significa que tendrás que buscar y reemplazar el espacio de nombres antiguo por uno nuevo en el código. Seguirás haciendo referencia a un archivo winmd. Forma parte de windows.media.winmd en el sistema operativo Windows 10. Está en el windows.winmd como parte del Windows SDK de TH. Para UWP, se hace referencia en windows.foundation.univeralappcontract.winmd.
+El espacio de nombres PlayReady aplicaciones para UWP en Windows 10 se ha cambiado de **Microsoft.Media.PlayReadyClient** a [ **Windows.Media.Protection.PlayReady**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady). Esto significa que tendrás que buscar y reemplazar el espacio de nombres antiguo por uno nuevo en el código. Seguirás haciendo referencia a un archivo winmd. Forma parte de windows.media.winmd en el sistema operativo Windows 10. Está en el windows.winmd como parte del Windows SDK de TH. Para UWP, se hace referencia en windows.foundation.univeralappcontract.winmd.
 
 Para reproducir contenido protegido por PlayReady de alta definición (HD) (1080p) y contenido de altísima definición (UHD), tendrás que implementar DRM de hardware PlayReady. Para obtener información sobre cómo implementar DRM de hardware PlayReady, consulta [DRM de hardware](hardware-drm.md).
 
@@ -519,14 +519,14 @@ Para usar DRM de PlayReady en una aplicación para UWP en Xbox One, primero debe
 Una vez que recibas la autorización, tendrás que agregar un elemento `<DeviceCapability>` adicional en el manifiesto de la aplicación. Tendrás que hacerlo de forma manual porque actualmente no hay ninguna opción disponible en el Diseñador de manifiestos de aplicaciones. Sigue estos pasos para configurarlo:
 
 1. Con el proyecto abierto en Visual Studio, abre el **Explorador de soluciones** y haz clic en **Package.appxmanifest**.
-2. Selecciona **Abrir con...**, elige **Editor XML (texto)** y haz clic en **Aceptar**.
+2. Selecciona **Abrir con...** , elige **Editor XML (texto)** y haz clic en **Aceptar**.
 3. Entre las etiquetas `<Capabilities>`, agrega la siguiente `<DeviceCapability>`:
 
     ```xml
     <DeviceCapability Name="6a7e5907-885c-4bcb-b40a-073c067bd3d5" />
     ```
 
-4. Guarda el archivo.
+4. Guarde el archivo.
 
 Por último, hay una última consideración al usar PlayReady en Xbox One: en los kits de desarrollo, existe un límite de SL150 (es decir, no pueden reproducir contenido de SL2000 o SL3000). Los dispositivos comerciales pueden reproducir contenido con mayor niveles de seguridad, pero para probar la aplicación en un kit de desarrollo, tendrás que usar contenido de SL150. Puedes probar este contenido de las siguientes formas:
 
@@ -536,7 +536,7 @@ Por último, hay una última consideración al usar PlayReady en Xbox One: en lo
 Usa el enfoque que tiene más sentido para tu empresa y el producto.
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Reproducción de multimedia](media-playback.md)
 
 

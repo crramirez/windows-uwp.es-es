@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ddadde2502e8512ba38dc30c6ac24d22631d62c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657020"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372642"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 
@@ -50,7 +50,7 @@ El marco del dispositivo complementario Windows Hello se implementa como un serv
 
 La integración con el marco del dispositivo complementario Windows Hello requiere:
 
-- Una aplicación del dispositivo complementario Windows Hello [Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) para el dispositivo complementario, descargada de la tienda de aplicaciones de Windows. 
+- Una aplicación del dispositivo complementario Windows Hello [Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) para el dispositivo complementario, descargada de la tienda de aplicaciones de Windows. 
 - La capacidad de crear dos claves HMAC de 256 bits en el dispositivo complementario Windows Hello y generar HMAC con él (mediante SHA-256).
 - Configuración de seguridad en el escritorio Windows 10 configurada correctamente. El servicio de autenticación complementario requerirá que se configure este PIN antes de que cualquier dispositivo complementario Windows Hello pueda conectarse a él. Los usuarios deben configurar un PIN a través de Configuración > Cuentas > Opciones de inicio de sesión.
 
@@ -187,7 +187,7 @@ Implementar estas características requiere que la aplicación del dispositivo c
 
 ## <a name="windows-hello-companion-device-framework-api-model"></a>Modelo de la API del marco del dispositivo complementario Windows Hello
 
-### <a name="overview"></a>Introducción
+### <a name="overview"></a>Información general
 
 Una aplicación del dispositivo complementario Windows Hello debe contener dos componentes: una aplicación en primer plano con interfaz de usuario responsable de registrar y anular el registro del dispositivo y una tarea en segundo plano que controla la autenticación.
 
@@ -346,7 +346,7 @@ namespace SecondaryAuthFactorSample
 }
 ```
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticación
 
 La autenticación requiere dos llamadas de API al servicio de autenticación complementarios: StartAuthenticationAsync y FinishAuthencationAsync.
 
@@ -642,7 +642,7 @@ Los mensajes de instrucciones y errores son los siguientes. El nombre del dispos
 - "Buscando *nombre del dispositivo*..."
 - "Conecta *nombre del dispositivo* en un puerto USB para iniciar sesión".
 
-**Errores**
+**Errors**
 
 - "Consulta *nombre del dispositivo* para obtener instrucciones de inicio de sesión".
 - "Activa el Bluetooth para usar *nombre del dispositivo* para iniciar sesión".

@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 063106362a36aa32d0874be15dd589b5fb573409
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 291c16d14428f8c6476b12fbadf00f84c26a4235
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66214946"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359476"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integre su aplicación de escritorio empaquetado con Windows 10 y UWP
 
@@ -60,7 +60,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).
 
-|Name | Descripción |
+|Nombre | Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.desktopAppMigration``
 |AumID |Identificador de modelo de usuario de aplicación de la aplicación empaquetada. |
@@ -99,7 +99,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de forma predeterminada para tipos específicos de archivos en lugar de abrir la versión de escritorio de la aplicación.
 
-Para ello, especifica el [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) de cada aplicación desde la cual quieras heredar asociaciones de archivos.
+Para ello, especifica el [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) de cada aplicación desde la cual quieras heredar asociaciones de archivos.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -123,8 +123,8 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
-|MigrationProgId |El [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que desea heredar las asociaciones de archivo.|
+|Name |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
+|MigrationProgId |El [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que desea heredar las asociaciones de archivo.|
 
 #### <a name="example"></a>Ejemplo
 
@@ -179,10 +179,10 @@ La aplicación empaquetada puede asociar extensiones de tipo de archivo. Si un u
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
+|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
 |FileType |Es el archivo de extensión compatible con la aplicación. |
 
 #### <a name="example"></a>Ejemplo
@@ -305,7 +305,7 @@ Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de f
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -371,7 +371,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.firewallRules``|
 |Archivo ejecutable |Nombre del archivo ejecutable que quieras agregar a la lista de excepciones del firewall |
@@ -410,7 +410,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Usa una extensión para identificar esas carpetas. De este modo, el sistema puede buscar y cargar los archivos que coloques en ellas. Piensa en esta extensión como un sustituto de la variable de entorno _%PATH%_ .
 
-Si no usas esta extensión, el sistema busca el gráfico de dependencia del paquete del proceso, la carpeta raíz del paquete y, a continuación, el directorio del sistema ( _%SystemRoot%\system32_) en ese orden. Para obtener más información, consulta [Orden de búsqueda de aplicaciones Windows](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).
+Si no usas esta extensión, el sistema busca el gráfico de dependencia del paquete del proceso, la carpeta raíz del paquete y, a continuación, el directorio del sistema ( _%SystemRoot%\system32_) en ese orden. Para obtener más información, consulta [Orden de búsqueda de aplicaciones Windows](https://docs.microsoft.com/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 Cada paquete puede contener solo una de estas extensiones. Esto significa que puedes agregar una de ellas al paquete principal y, a continuación, agregar una a cada uno de tus [paquetes opcionales y conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
 
@@ -431,7 +431,7 @@ Declara esta extensión en el nivel de paquete del manifiesto de la aplicación.
 
 ```
 
-|Nombre | Descripción |
+|Name | Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.loaderSearchPathOverride``
 |FolderPath | La ruta de la carpeta que contiene tus archivos dll. Especifica una ruta de acceso relativa a la carpeta raíz del paquete. En una extensión puedes especificar hasta cinco rutas de acceso. Si quieres que el sistema busque archivos en la carpeta raíz del paquete, usa una cadena vacía para una de estas rutas de acceso. No incluyas rutas de acceso duplicados y asegúrate de que las rutas de acceso no contengan barras diagonales iniciales y finales o barras diagonales inversas. <br><br> El sistema no buscará en subcarpetas, por tanto asegúrate de indicar explícitamente cada carpeta que contenga archivos DLL que quieres que cargue el sistema.|
@@ -570,7 +570,7 @@ Permite que los usuarios vean una imagen en miniatura del contenido del archivo 
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -635,7 +635,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. |
+|Name |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
 
@@ -673,7 +673,7 @@ Puedes asociar uno o más valores predefinidos de los tipos de archivo mediante 
 
 En el Explorador de archivos, los usuarios pueden agrupar estos archivos mediante ese campo. Los componentes del sistema también usan este campo para diversos fines, como la indización.
 
-Para obtener más información sobre el campo **Kind** y los valores que puedes usar en este campo, consulta [Using Kind Names (Usar nombres del campo Kind)](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx).
+Para obtener más información sobre el campo **Kind** y los valores que puedes usar en este campo, consulta [Using Kind Names (Usar nombres del campo Kind)](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names).
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -702,7 +702,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
-|value |[Valor Kind](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy) válido |
+|value |[Valor Kind](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names) válido |
 
 #### <a name="example"></a>Ejemplo
 
@@ -758,7 +758,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Name |Identificador único de la aplicación. |
@@ -886,7 +886,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.protocol``
 |Name |Nombre del protocolo. |
@@ -1004,7 +1004,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.startupTask``|
 |Archivo ejecutable |Ruta de acceso relativa para que se inicie el archivo ejecutable. |
@@ -1059,7 +1059,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </AutoPlayHandler>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.autoPlayHandler``
 |ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que se conectan a un equipo (por ejemplo: "Importar archivos" o "Reproducir vídeo"). |
@@ -1069,8 +1069,8 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |DropTargetHandler |El identificador de clase de la aplicación que implementa el [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interfaz. Los archivos del medio extraíble se pasan al método [Colocar](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) de tu implementación [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
 |Parámetros |No tienes que implementar la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) para todos los eventos de contenido. Para cualquiera de los eventos de contenido, podrías proporcionar los parámetros de línea de comandos en lugar de implementar la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017). Para estos eventos, reproducción automática iniciará la aplicación mediante el uso de esos parámetros de línea de comandos. Puedes analizar esos parámetros en el código de inicialización de la aplicación para determinar si se inició mediante Reproducción automática y, a continuación, proporcionar tu implementación personalizada. |
 |DeviceEvent |El nombre de un evento de dispositivo que hace que a los usuarios les aparezca tu ``ActionDisplayName`` y ``ProviderDisplayName``. Un evento de dispositivo de Reproducción automática se genera cuando se conecta un dispositivo al PC. Los eventos de dispositivo comienzan con la cadena ``WPD`` y puedes encontrarlos enumerados [aquí](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference). |
-|HWEventHandler |El identificador de clase de la aplicación que implementa el [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interfaz. |
-|InitCmdLine |El parámetro de cadena que desees pasar al método [Inicializar](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx) de la interfaz [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx). |
+|HWEventHandler |El identificador de clase de la aplicación que implementa el [IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) interfaz. |
+|InitCmdLine |El parámetro de cadena que desees pasar al método [Inicializar](https://docs.microsoft.com/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) de la interfaz [IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler). |
 
 ### <a name="example"></a>Ejemplo
 
@@ -1101,14 +1101,14 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 Si la aplicación está abierta cuando los usuarios instalen una actualización a él, se cierra la aplicación.
 
-Si desea que esa aplicación reiniciar después de la actualización se complete, llame a la [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) función en todos los procesos que desea reiniciar.
+Si desea que esa aplicación reiniciar después de la actualización se complete, llame a la [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) función en todos los procesos que desea reiniciar.
 
-Cada ventana activa en la aplicación recibe un [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) mensaje. En este momento, la aplicación puede llamar a la [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) función nuevo para actualizar la línea de comandos si es necesario.
+Cada ventana activa en la aplicación recibe un [WM_QUERYENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-queryendsession) mensaje. En este momento, la aplicación puede llamar a la [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) función nuevo para actualizar la línea de comandos si es necesario.
 
-Cuando cada ventana activa en la aplicación recibe el [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) mensaje, la aplicación debe guardar los datos y apagar.
+Cuando cada ventana activa en la aplicación recibe el [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) mensaje, la aplicación debe guardar los datos y apagar.
 
 >[!NOTE]
-Las ventanas activas, también recibirán el [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) del mensaje en caso de que la aplicación no controla el [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) mensaje.
+Las ventanas activas, también recibirán el [WM_CLOSE](https://docs.microsoft.com/windows/desktop/winmsg/wm-close) del mensaje en caso de que la aplicación no controla el [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) mensaje.
 
 En este momento, la aplicación tiene 30 segundos para cerrar los procesos de su propio o la plataforma lo detiene forzosamente.
 

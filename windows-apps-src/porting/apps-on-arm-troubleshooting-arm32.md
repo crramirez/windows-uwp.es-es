@@ -5,12 +5,12 @@ ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10 s, always connected, siempre conectado ARM32 apps on ARM, aplicaciones ARM32 en ARM, windows 10 on ARM, windows 10 en ARM, troubleshooting, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3431b12fc6f6b6ba2d870400ec4f6684f8290a61
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: ddf28627838ebc8cb2df620c398f3803c026cb17
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63815282"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366835"
 ---
 # <a name="troubleshooting-arm-uwp-apps"></a>Solución de problemas de aplicaciones para UWP de ARM
 
@@ -33,7 +33,7 @@ Aplicaciones universales de Windows Platform (UWP) que no se generan correctamen
 
 Pueden resolver estos problemas: quitar las dependencias no está disponible y volver a generar la aplicación mediante el uso de las versiones más recientes de Microsoft Visual Studio y UWP SDK; o como último recurso, quitar la aplicación ARM desde la Microsoft Store, por lo que la versión de la aplicación (si está disponible) se descarga en los equipos de los usuarios de x86.
 
-Para obtener más información sobre las API de .NET disponibles para aplicaciones para UWP, consulta [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)
+Para obtener más información sobre las API de .NET disponibles para aplicaciones para UWP, consulta [.NET para aplicaciones para UWP](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
 
 ### <a name="compiling-an-app-with-an-older-version-of-visual-studio-and-sdk"></a>Compilar una aplicación con una versión anterior de Visual Studio y SDK
 Si estás teniendo problemas, asegúrate de usar las versiones más recientes de Microsoft Visual Studio y Windows SDK para compilar la aplicación. Las aplicaciones compiladas con una versión anterior de Visual Studio y SDK pueden tener problemas corregidos en versiones posteriores.

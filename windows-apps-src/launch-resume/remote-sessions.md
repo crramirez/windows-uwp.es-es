@@ -6,12 +6,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd23603df1f1c3fac151da2aea2f8435b3ee423
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4787b6c14408dc8ee35e26764caafc5b6e7fbdc9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633420"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371887"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos a través de sesiones remotas
 
@@ -57,7 +57,7 @@ using Windows.System.RemoteSystems;
 
 ## <a name="create-a-remote-session"></a>Crear una sesión remota
 
-Para crear una instancia de sesión remota, debes comenzar con un objeto **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)**. Usa el marco siguiente para crear una nueva sesión y controlar solicitudes de unión de otros dispositivos.
+Para crear una instancia de sesión remota, debes comenzar con un objeto **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** . Usa el marco siguiente para crear una nueva sesión y controlar solicitudes de unión de otros dispositivos.
 
 ```csharp
 public async void CreateSession() {
@@ -107,7 +107,7 @@ public async void CreateSession() {
 
 Si deseas que la sesión remota se detecte públicamente, puedes hacerla solo de invitación. Solo los dispositivos que reciben una invitación podrán enviar solicitudes de unión. 
 
-El procedimiento es básicamente el mismo que el anterior, pero al construir la instancia **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)**, pasarás un objeto **[RemoteSystemSessionOptions](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.RemoteSystemSessionOptions)** configurado.
+El procedimiento es básicamente el mismo que el anterior, pero al construir la instancia **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** , pasarás un objeto **[RemoteSystemSessionOptions](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.RemoteSystemSessionOptions)** configurado.
 
 ```csharp
 // define the session options with the invite-only designation
@@ -156,7 +156,7 @@ public void DiscoverSessions() {
 }
 ```
 
-Cuando se obtiene una instancia **[RemoteSystemSessionInfo](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioninfo)**, se puede usar para emitir una solicitud de unión al dispositivo que controla la sesión correspondiente. Una solicitud de unión aceptada devolverá asincrónicamente un objeto **[RemoteSystemSessionJoinResult](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionjoinresult)** que contiene una referencia a la sesión unida.
+Cuando se obtiene una instancia **[RemoteSystemSessionInfo](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioninfo)** , se puede usar para emitir una solicitud de unión al dispositivo que controla la sesión correspondiente. Una solicitud de unión aceptada devolverá asincrónicamente un objeto **[RemoteSystemSessionJoinResult](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionjoinresult)** que contiene una referencia a la sesión unida.
 
 ```csharp
 public async void JoinSession(RemoteSystemSessionInfo sessionInfo) {
@@ -195,7 +195,7 @@ Un dispositivo se puede unir a varias sesiones al mismo tiempo. Por este motivo,
 
 ### <a name="receive-messages"></a>Recibir mensajes
 
-Puede intercambiar mensajes y datos con otros dispositivos participantes en la sesión mediante el uso de una instancia de **[RemoteSystemSessionMessageChannel](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionmessagechannel)**, que representa un canal de comunicación único para toda la sesión. En cuanto se inicializa, empieza a escuchar mensajes entrantes.
+Puede intercambiar mensajes y datos con otros dispositivos participantes en la sesión mediante el uso de una instancia de **[RemoteSystemSessionMessageChannel](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionmessagechannel)** , que representa un canal de comunicación único para toda la sesión. En cuanto se inicializa, empieza a escuchar mensajes entrantes.
 
 >[!NOTE]
 >Los mensajes se deben serializar y deserializar de matrices de bytes tras el envío y la recepción. Esta funcionalidad se incluye en los siguientes ejemplos, pero se puede implementar por separado para lograr una mejor modularidad de código. Consulta la [aplicación de muestra](https://github.com/microsoft/Windows-appsample-remote-system-sessions) para ver un ejemplo de esto.
@@ -322,4 +322,4 @@ public async void SendMessageToListAsync(RemoteSystemSessionMessageChannel messa
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Las aplicaciones conectadas y los dispositivos (proyecto Roma)](connected-apps-and-devices.md)
-* [Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [Referencia de API de sistemas remoto](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)

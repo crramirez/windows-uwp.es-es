@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 442b3b9328212a5115384b5175b519b76286dd28
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f41bf9f56b63f59844bec976e9d6e5e3d650b271
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620310"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370269"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
 
@@ -41,7 +41,7 @@ Device(RHPX)
 * _CID – Id. compatible Debe ser “MSFT8000”.
 * _UID: id. único Establecer en 1.
 
-Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.i2ccontroller.aspx) y [Windows.Devices.Spi.SpiController](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.spicontroller.aspx).
+Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) y [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller).
 
 ### <a name="spi"></a>SPI
 
@@ -156,7 +156,7 @@ De este modo se crea un bus denominado "SPI1" y se asocia al índice 2 del recur
 #### <a name="spi-driver-requirements"></a>Requisitos de los controladores SPI
 
 * Debes usar `SpbCx` o admitir SpbCx
-* Debes haber pasado las [Pruebas MITT SPI](https://msdn.microsoft.com/library/windows/hardware/dn919873.aspx)
+* Debes haber pasado las [Pruebas MITT SPI](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)
 * Debes admitir la velocidad de reloj de 4Mhz
 * Debe ser compatible con la longitud de datos de 8 bits
 * Debe admitir todos los modos de SPI: 0, 1, 2, 3
@@ -201,7 +201,7 @@ Los siguientes campos son marcadores de posición para los valores especificados
 #### <a name="i2c-driver-requirements"></a>Requisitos de los controladores I2C
 
 * Debes usar SpbCx o ser compatible con SpbCx
-* Debes haber pasado las [Pruebas MITT I2C](https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx)
+* Debes haber pasado las [Pruebas MITT I2C](https://docs.microsoft.com/windows-hardware/drivers/spb/run-mitt-tests-for-an-i2c-controller-)
 * Debes admitir el direccionamiento de 7 bits
 * Debes admitir la velocidad de reloj de 100kHz
 * Debes admitir la velocidad de reloj de 400kHz
@@ -228,7 +228,7 @@ GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, “\\_SB.GPI0”,) { 5 }
 
 Al declarar las patillas GPIO, se deben tener en cuenta los siguientes requisitos:
 
-* Solo se admiten los controladores de GPIO asignados en la memoria. No se admiten controladores de GPIO de interfaz sobre I2C y SPI. El controlador de controladora es un controlador asignado en la memoria si establece la marca [MemoryMappedController](https://msdn.microsoft.com/library/windows/hardware/hh439449.aspx) en la estructura [CLIENT_CONTROLLER_BASIC_INFORMATION](https://msdn.microsoft.com/library/windows/hardware/hh439358.aspx) en respuesta a la devolución de llamada de [CLIENT_QueryControllerBasicInformation](https://msdn.microsoft.com/library/windows/hardware/hh439399.aspx) .
+* Solo se admiten los controladores de GPIO asignados en la memoria. No se admiten controladores de GPIO de interfaz sobre I2C y SPI. El controlador de controladora es un controlador asignado en la memoria si establece la marca [MemoryMappedController](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_controller_attribute_flags) en la estructura [CLIENT_CONTROLLER_BASIC_INFORMATION](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_client_controller_basic_information) en respuesta a la devolución de llamada de [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information) .
 * Cada patilla requiere un GpioIO y un recurso GpioInt. El recurso GpioInt debe seguir inmediatamente al recurso GpioIO y debe hacer referencia al mismo número de patilla.
 * Los recursos GPIO se deben ordenar aumentando el número de patilla.
 * Cada recurso GpioIO y GpioInt debe contener exactamente un número de patilla en la lista de patillas.
@@ -282,7 +282,7 @@ Si se usa la numeración de patillas nativa, también debes especificar la propi
 Package (2) { “GPIO-PinCount”, 54 },
 ```
 
-La propiedad **PinCount** debe coincidir con el valor devuelto a través de la propiedad **TotalPins** en la devolución de llamada [CLIENT_QueryControllerBasicInformation](https://msdn.microsoft.com/library/windows/hardware/hh439399.aspx) del controlador `GpioClx`.
+La propiedad **PinCount** debe coincidir con el valor devuelto a través de la propiedad **TotalPins** en la devolución de llamada [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information) del controlador `GpioClx`.
 
 Elige el esquema de numeración que sea más compatible con la documentación publicada existente del panel. Por ejemplo, Raspberry Pi usa una numeración de patillas nativa porque muchos diagramas de patillaje existentes usan los números de patilla BCM2835. MinnowBoardMax usa una numeración de patillas secuencial porque hay pocos diagramas de patillaje existentes, y la numeración de patillas secuencial simplifica la experiencia del desarrollador porque solo se exponen 10 patillas de más de 200 patillas. La decisión de usar numeración de patillas secuencial o nativa debe apuntar a reducir la confusión del desarrollador.
 
@@ -331,9 +331,9 @@ De este modo se asigna el nombre descriptivo "UART2" al controlador, que es el i
 
 La multiplexación de patillas es la capacidad de usar la misma patilla física para diferentes funciones. Varios periféricos en chip diferentes, como un controlador I2C, un controlador SPI o un controlador GPIO, podrían enrutarse a la misma patilla física en un SOC. La multiplexación bloquea los controles cuya función está activa en la patilla en cualquier momento. Tradicionalmente, el firmware es responsable de establecer las asignaciones de función en el arranque, y esta asignación permanece estática a lo largo de la sesión de inicio. La multiplexación de patillas en tiempo de ejecución agrega la capacidad para volver a configurar las asignaciones de función de patilla en tiempo de ejecución. Al permitir a los usuarios elegir la función de una patilla en tiempo de ejecución, se acelera el desarrollo al permitir que los usuarios vuelvan a configurar rápidamente las patillas del panel, y permite que el hardware admita una gama más amplia de aplicaciones que si la configuración fuera estática.
 
-Los usuarios consumen compatibilidad con multiplexación para GPIO, I2C, SPI y UART sin necesidad de escribir ningún código adicional. Cuando un usuario abre un GPIO o un bus mediante [OpenPin()](https://msdn.microsoft.com/library/dn960157.aspx) o [FromIdAsync()](https://msdn.microsoft.com/windows.devices.i2c.i2cdevice.fromidasync), las patillas físicas subyacentes se multiplexan automáticamente en la función solicitada. Si las patillas ya están en uso por parte de una función diferente, se producirá un error en la llamada OpenPin() o FromIdAsync(). Cuando el usuario cierra el dispositivo al eliminar el objeto [GpioPin](https://msdn.microsoft.com/library/windows/apps/windows.devices.gpio.gpiopin.aspx), [I2cDevice](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.i2cdevice.aspx), [SpiDevice](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.spidevice.aspx) o [SerialDevice](https://msdn.microsoft.com/library/windows/apps/windows.devices.serialcommunication.serialdevice.aspx), se liberan las patillas, lo que les permite que se abran más tarde para una función diferente.
+Los usuarios consumen compatibilidad con multiplexación para GPIO, I2C, SPI y UART sin necesidad de escribir ningún código adicional. Cuando un usuario abre un GPIO o un bus mediante [OpenPin()](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiocontroller.openpin) o [FromIdAsync()](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice.fromidasync), las patillas físicas subyacentes se multiplexan automáticamente en la función solicitada. Si las patillas ya están en uso por parte de una función diferente, se producirá un error en la llamada OpenPin() o FromIdAsync(). Cuando el usuario cierra el dispositivo al eliminar el objeto [GpioPin](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiopin), [I2cDevice](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice), [SpiDevice](https://docs.microsoft.com/uwp/api/windows.devices.spi.spidevice) o [SerialDevice](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication.serialdevice), se liberan las patillas, lo que les permite que se abran más tarde para una función diferente.
 
-Windows contiene compatibilidad integrada para la multiplexación de patillas en los marcos [GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh439515.aspx), [SpbCx](https://msdn.microsoft.com/library/windows/hardware/hh406203.aspx) y [SerCx](https://msdn.microsoft.com/library/windows/hardware/dn265349.aspx). Estos marcos funcionan juntos para cambiar automáticamente una patilla para la función correcta cuando se accede a una patilla o bus de GPIO. El acceso a las patillas se arbitra para evitar conflictos entre los distintos clientes. Además de esta compatibilidad integrada, las interfaces y los protocolos para el multiplexación de patillas son un propósito general y se pueden extender a escenarios y dispositivos adicionales.
+Windows contiene compatibilidad integrada para la multiplexación de patillas en los marcos [GpioClx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index), [SpbCx](https://docs.microsoft.com/windows-hardware/drivers/spb/spb-framework-extension) y [SerCx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index). Estos marcos funcionan juntos para cambiar automáticamente una patilla para la función correcta cuando se accede a una patilla o bus de GPIO. El acceso a las patillas se arbitra para evitar conflictos entre los distintos clientes. Además de esta compatibilidad integrada, las interfaces y los protocolos para el multiplexación de patillas son un propósito general y se pueden extender a escenarios y dispositivos adicionales.
 
 Este documento describe primero las interfaces y los protocolos subyacentes implicados en la multiplexación de patillas y, a continuación, describe cómo agregar compatibilidad para la multiplexación de patillas en los controladores GpioClx, SpbCx y SerCx.
 
@@ -353,8 +353,8 @@ A continuación se muestra la secuencia de operaciones que participan en la mult
 
 ![Interacción del servidor de cliente de multiplexación de patillas](images/usermode-access-diagram-1.png)
 
-1. El cliente recibe recursos MsftFunctionConfig del firmware ACPI en su devolución de llamada a [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
-2. El cliente usa la función auxiliar del concentrador de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para crear una ruta de acceso desde el identificador de recurso y, a continuación, abre un identificador para la ruta de acceso (con [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) o [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
+1. El cliente recibe recursos MsftFunctionConfig del firmware ACPI en su devolución de llamada a [EvtDevicePrepareHardware()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nc-wdfdevice-evt_wdf_device_prepare_hardware).
+2. El cliente usa la función auxiliar del concentrador de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para crear una ruta de acceso desde el identificador de recurso y, a continuación, abre un identificador para la ruta de acceso (con [ZwCreateFile()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-ntcreatefile), [IoGetDeviceObjectPointer()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-iogetdeviceobjectpointer) o [WdfIoTargetOpen()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfiotarget/nf-wdfiotarget-wdfiotargetopen)).
 3. El servidor extrae el identificador de concentrador de recursos de la ruta del archivo que usa funciones auxiliares de concentrador de recursos `RESOURCE_HUB_ID_FROM_FILE_NAME()`, a continuación, consulta el concentrador de recursos para obtener el descriptor del recurso.
 4. El servidor realiza el arbitraje de uso compartido de cada patilla en el descriptor y completa la solicitud IRP_MJ_CREATE.
 5. El cliente emite una solicitud *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* en el identificador recibido.
@@ -369,7 +369,7 @@ Esta sección describe cómo un cliente consume la funcionalidad de multiplexaci
 
 #### <a name="parsing-resources"></a>Análisis de recursos
 
-Un controlador de WDF recibe recursos `MsftFunctionConfig()` en su rutina [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx). Los recursos MsftFunctionConfig se pueden identificar mediante los campos siguientes:
+Un controlador de WDF recibe recursos `MsftFunctionConfig()` en su rutina [EvtDevicePrepareHardware()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nc-wdfdevice-evt_wdf_device_prepare_hardware). Los recursos MsftFunctionConfig se pueden identificar mediante los campos siguientes:
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -504,7 +504,7 @@ NTSTATUS AcquireFunctionConfigResource (
 }
 ```
 
-El controlador debe almacenar el WDFIOTARGET en una de sus áreas de contexto para que se pueda cerrar más adelante. Cuando el controlador está listo para liberar la configuración de multiplexación, se debe cerrar el identificador de recursos mediante una llamada a [WdfObjectDelete()](https://msdn.microsoft.com/library/windows/hardware/ff548734.aspx) o [WdfIoTargetClose()](https://msdn.microsoft.com/library/windows/hardware/ff548586.aspx) si tienes intención de reutilizar WDFIOTARGET.
+El controlador debe almacenar el WDFIOTARGET en una de sus áreas de contexto para que se pueda cerrar más adelante. Cuando el controlador está listo para liberar la configuración de multiplexación, se debe cerrar el identificador de recursos mediante una llamada a [WdfObjectDelete()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfobject/nf-wdfobject-wdfobjectdelete) o [WdfIoTargetClose()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfiotarget/nf-wdfiotarget-wdfiotargetclose) si tienes intención de reutilizar WDFIOTARGET.
 
 ```cpp
     WdfObjectDelete(resourceHandle);
@@ -532,7 +532,7 @@ El arbitraje de uso compartido se realiza correctamente de forma general si el a
 
 Si se produce un error en el arbitraje de uso compartido, la solicitud debería completarse con *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*. Si el arbitraje de uso compartido se realiza correctamente, se debe completar la solicitud con *STATUS_SUCCESS*.
 
-Ten en cuenta que el modo de uso compartido de la solicitud entrante debe obtenerse del descriptor de MsftFunctionConfig, no de [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
+Ten en cuenta que el modo de uso compartido de la solicitud entrante debe obtenerse del descriptor de MsftFunctionConfig, no de [IrpSp -> Parameters.Create.ShareAccess](https://docs.microsoft.com/windows-hardware/drivers/ifs/irp-mj-create).
 
 #### <a name="handling-ioctlgpiocommitfunctionconfigpins-requests"></a>Controlar solicitudes de IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS
 
@@ -614,7 +614,7 @@ Además de los recursos de memoria e interrupción que suelen requerir los contr
 * CLIENT_ConnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto aplique la configuración de multiplexación especificada.
 * CLIENT_DisconnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto revierta la configuración de multiplexación.
 
-Consulta [funciones de devolución de llamada de eventos de GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh439464.aspx) para obtener una descripción de estas rutinas.
+Consulta [funciones de devolución de llamada de eventos de GpioClx](https://docs.microsoft.com/previous-versions//hh439464(v=vs.85)) para obtener una descripción de estas rutinas.
 
 Además de estas dos nuevas DDI, deben auditarse DDI existentes para la compatibilidad de multiplexación de patillas:
 
@@ -633,11 +633,11 @@ El siguiente diagrama muestra las dependencias entre cada uno de estos component
 
 En el tiempo de inicialización del dispositivo, los marcos `SpbCx` y `SerCx` analizan todos los recursos `MsftFunctionConfig()` suministrados como recursos de hardware para el dispositivo. A continuación, SpbCx/SerCx adquieren y liberan los recursos de multiplexación de patillas bajo petición.
 
-`SpbCx` aplica la configuración de pin muxing en su *IRP_MJ_CREATE* controlador, justo antes de llamar a los controladores de cliente [EvtSpbTargetConnect()](https://msdn.microsoft.com/library/windows/hardware/hh450818.aspx) devolución de llamada. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
+`SpbCx` aplica la configuración de pin muxing en su *IRP_MJ_CREATE* controlador, justo antes de llamar a los controladores de cliente [EvtSpbTargetConnect()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) devolución de llamada. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
 
-`SpbCx` revierte la configuración de pin muxing en su *IRP_MJ_CLOSE* controlador, justo después de invocar el controlador [EvtSpbTargetDisconnect()](https://msdn.microsoft.com/library/windows/hardware/hh450820.aspx) devolución de llamada. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
+`SpbCx` revierte la configuración de pin muxing en su *IRP_MJ_CLOSE* controlador, justo después de invocar el controlador [EvtSpbTargetDisconnect()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) devolución de llamada. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
 
-`SerCx` se comporta de forma similar. `SerCx` adquiere toda `MsftFunctionConfig()` recursos en su *IRP_MJ_CREATE* controlador justo antes de invocar el controlador [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) devolución de llamada y libera todos los recursos en su IRP_MJ_CLOSE controlador, justo después de invocar el controlador [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) devolución de llamada.
+`SerCx` se comporta de forma similar. `SerCx` adquiere toda `MsftFunctionConfig()` recursos en su *IRP_MJ_CREATE* controlador justo antes de invocar el controlador [EvtSerCx2FileOpen()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) devolución de llamada y libera todos los recursos en su IRP_MJ_CLOSE controlador, justo después de invocar el controlador [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) devolución de llamada.
 
 La implicación de la multiplexación dinámica de patillas para los controladores de controladora `SerCx` y `SpbCx` consiste en que deben ser capaces de tolerar las patillas que se multiplexan desde la función SPB/UART a horas determinadas. Los controladores de controladora deben asumir que las patillas no se multiplexarán hasta que se llame a `EvtSpbTargetConnect()` o `EvtSerCx2FileOpen()`. No es necesaria la multiplexación de las patillas en la función SPB/UART durante las siguientes devoluciones de llamada. La siguiente no es una lista completa, pero representa las rutinas de PNP más comunes implementadas por los controladores de controladora.
 
@@ -835,7 +835,7 @@ Haz clic en Ejecutar seleccionados. Hay documentación adicional disponible en c
 
 ## <a name="resources"></a>Recursos
 
-| Destination | Vínculo |
+| Destino | Vínculo |
 |-------------|------|
 | Especificación de ACPI 5.0 | http://acpi.info/spec.htm |
 | Asl.exe (Microsoft ASL Compiler) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |

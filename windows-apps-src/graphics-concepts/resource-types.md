@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9712b4498b03460568d20d4c8e27172ad5c14360
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661990"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362208"
 ---
 # <a name="resource-types"></a>Tipos de recursos
 
@@ -110,12 +110,12 @@ Cada fase del sombreador permite hasta 15 búferes de constantes del sombreador 
 
 Usa un búfer de constantes para almacenar los resultados de la fase de salida en secuencias.
 
-Consulta [Shader Constants (DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581) [Constantes de sombreador (DirectX HLSL)] para ver un ejemplo de declaración de un búfer de constantes en un sombreador.
+Consulta [Shader Constants (DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants) [Constantes de sombreador (DirectX HLSL)] para ver un ejemplo de declaración de un búfer de constantes en un sombreador.
 
 ## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>Recursos de textura
 
 
-Un recurso de textura es una colección estructurada de datos diseñada para almacenar elementos de textura. A diferencia de los búferes, las texturas se pueden filtrar por muestrarios de texturas, ya que las leen las unidades del sombreador. El tipo de textura afecta a cómo se filtra la textura. Un elemento de textura representa la unidad más pequeña de una textura que puede leer una canalización o a la que puede escribir. Cada elemento de textura contiene componentes de 1 a 4, organizados en uno de los formatos DXGI (consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
+Un recurso de textura es una colección estructurada de datos diseñada para almacenar elementos de textura. A diferencia de los búferes, las texturas se pueden filtrar por muestrarios de texturas, ya que las leen las unidades del sombreador. El tipo de textura afecta a cómo se filtra la textura. Un elemento de textura representa la unidad más pequeña de una textura que puede leer una canalización o a la que puede escribir. Cada elemento de textura contiene componentes de 1 a 4, organizados en uno de los formatos DXGI (consulte [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
 
 Las texturas se crean como un recurso estructurado para que se conozca su tamaño. Sin embargo, cada textura puede ser con o sin tipos en el momento de creación del recurso, siempre que el tipo esté totalmente especificado con una vista cuando la textura esté enlazada a la canalización.
 

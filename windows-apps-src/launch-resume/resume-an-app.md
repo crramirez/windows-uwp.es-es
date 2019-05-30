@@ -11,24 +11,24 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: f424a274d3e96b58f32875620f3165ccfac82ba6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d7f26e7a4ae05aaf3e197843e18273cb765754a0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612470"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371459"
 ---
 # <a name="handle-app-resume"></a>Controlar la reanudación de aplicaciones
 
 **API importantes**
 
-- [**Reanudar**](https://msdn.microsoft.com/library/windows/apps/br242339)
+- [**Reanudar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming)
 
-Aprende dónde actualizar la interfaz de usuario cuando el sistema reanuda la aplicación. El ejemplo de este tema registra un controlador de eventos para el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
+Aprende dónde actualizar la interfaz de usuario cuando el sistema reanuda la aplicación. El ejemplo de este tema registra un controlador de eventos para el evento [**Resuming**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming).
 
 ## <a name="register-the-resuming-event-handler"></a>Registrar el controlador de eventos de reanudación
 
-Haz el registro para controlar el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), que indica que el usuario abandonó la aplicación y después volvió.
+Haz el registro para controlar el evento [**Resuming**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming), que indica que el usuario abandonó la aplicación y después volvió.
 
 ```csharp
 partial class MainPage
@@ -73,7 +73,7 @@ MainPage::MainPage()
 
 El sistema suspende la aplicación unos segundos después de que el usuario cambie a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto en el que estaba. Para el usuario, parece como si la aplicación se haya estado ejecutando en segundo plano.
 
-Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) la aplicación se puede suspender durante horas o días. Se debe actualizar todo el contenido que pueda haber quedado obsoleto mientras la aplicación estaba suspendida, por ejemplo, fuentes de noticias o la ubicación del usuario.
+Cuando la aplicación controla el evento [**Resuming**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) la aplicación se puede suspender durante horas o días. Se debe actualizar todo el contenido que pueda haber quedado obsoleto mientras la aplicación estaba suspendida, por ejemplo, fuentes de noticias o la ubicación del usuario.
 
 También es un buen momento para restaurar todos los recursos exclusivos que liberaste cuando se suspendió la aplicación, como los identificadores de archivos, cámaras, dispositivos de E/S, dispositivos externos y recursos de red.
 
@@ -116,13 +116,13 @@ void MainPage::App_Resuming(Object^ sender, Object^ e)
 ```
 
 > [!NOTE]
-> Dado que el [ **Reanudando** ](https://msdn.microsoft.com/library/windows/apps/br242339) no se produce el evento desde el subproceso de interfaz de usuario, se debe usar un distribuidor en el controlador para enviar las llamadas a la interfaz de usuario.
+> Dado que el [ **Reanudando** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) no se produce el evento desde el subproceso de interfaz de usuario, se debe usar un distribuidor en el controlador para enviar las llamadas a la interfaz de usuario.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Cuando la aplicación está conectada al depurador de Visual Studio, no se suspenderá. Sin embargo, se puede suspender desde el depurador y luego volver a enviarle un evento **Resume**, para que puedas depurar el código. Asegúrate de que la **barra de herramientas Ubicación de depuración** es visible y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**.
 
-En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del evento [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
+En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) siempre va seguido del evento [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched), aunque la aplicación esté suspendida en el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
 ## <a name="related-topics"></a>Temas relacionados
 

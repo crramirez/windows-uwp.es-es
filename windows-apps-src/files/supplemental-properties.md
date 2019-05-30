@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: API de Windows 10, uwp, WinRT, indizador, búsqueda
 localizationpriority: medium
-ms.openlocfilehash: b2ac43c9aa2d27f8745e9075abc13d8feaba2370
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2a77bfc37d853efd28bde9bc3043d072888822f2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592690"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369263"
 ---
 # <a name="using-supplemental-properties"></a>Uso de propiedades adicionales  
 
@@ -27,7 +27,7 @@ Hacer que los metadatos que se puede buscar al instante permite a los usuarios a
 Durante décadas, la solución de búsqueda rápida en Windows ha sido el indexador y de Creators Update se ha actualizado para admitir estos nuevos escenarios. Las aplicaciones son capaces de etiquetar archivos con propiedades adicionales más allá de los que se extraen por el sistema. Estas propiedades se tratan como ciudadanos de primera clase  
 
 ## <a name="windows-properties"></a>Propiedades de Windows 
-El [sistema de propiedades de Windows](https://msdn.microsoft.com/library/windows/desktop/ff728898) ha sido una parte fundamental de la interacción con los archivos durante años. Permite que las aplicaciones leer las propiedades de archivos sin tener que entender el funcionamiento interno de todos los formatos de archivo diferentes o idiomas que podría ser un archivo en. Todo lo que se abstraen por usted como desarrollador, lo único que debe hacer es solicitar una lista y especificar el orden ascendente o descendente.  
+El [sistema de propiedades de Windows](https://docs.microsoft.com/windows/desktop/properties/windows-properties-system) ha sido una parte fundamental de la interacción con los archivos durante años. Permite que las aplicaciones leer las propiedades de archivos sin tener que entender el funcionamiento interno de todos los formatos de archivo diferentes o idiomas que podría ser un archivo en. Todo lo que se abstraen por usted como desarrollador, lo único que debe hacer es solicitar una lista y especificar el orden ascendente o descendente.  
 
 El sistema de propiedades es imbricado con el indizador de Windows: lee todas las propiedades de los archivos dentro de su ámbito y almacenarlos. Más adelante cuando una aplicación solicita una lista de todas las .docx en una carpeta se ordene por fecha de modificación, exceptuando aquellos creados por John Smith el indizador puede devolver la lista al instante.  
 

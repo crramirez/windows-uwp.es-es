@@ -6,12 +6,12 @@ ms.date: 03/08/2017
 ms.topic: article
 keywords: windows 10, uwp, tarjeta sd, almacenamiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ef97ed489f2dc35aece83821633a583dfba77e2
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
-ms.translationtype: HT
+ms.openlocfilehash: 4573e0959cf9d4af9b3cef8ffbbce14847a9e521
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63800224"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369495"
 ---
 # <a name="access-the-sd-card"></a>Acceso a la tarjeta SD
 
@@ -23,7 +23,7 @@ En la mayoría de casos, debes especificar la funcionalidad **removableStorage**
 
 Puedes almacenar archivos en la tarjeta SD opcional y tener acceso a ellos mediante los métodos siguientes:
 - Selectores de archivos.
-- Las API de [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346).
+- Las API de [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage).
 
 ## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>Elementos a los que puedes acceder y elementos a los que no puedes acceder en la tarjeta SD
 
@@ -36,7 +36,7 @@ Puedes almacenar archivos en la tarjeta SD opcional y tener acceso a ellos media
 
 - Tu aplicación no puede ver carpetas del sistema ni puede acceder a ellas ni a los archivos que contienen.
 - Tu aplicación no puede ver archivos marcados con el atributo Oculto. El atributo Hidden normalmente se usa para reducir el riesgo de eliminación accidental de datos.
-- Tu aplicación no puede ver la biblioteca de documentos ni acceder a ella mediante [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152). Sin embargo, puedes acceder a la biblioteca de documentos de la tarjeta SD recorriendo el sistema de archivos.
+- Tu aplicación no puede ver la biblioteca de documentos ni acceder a ella mediante [**KnownFolders.DocumentsLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.documentslibrary). Sin embargo, puedes acceder a la biblioteca de documentos de la tarjeta SD recorriendo el sistema de archivos.
 
 ## <a name="security-and-privacy-considerations"></a>Consideraciones de seguridad y privacidad
 
@@ -45,7 +45,7 @@ Cuando una aplicación guarda archivos en una ubicación global de la tarjeta SD
 - Mientras la tarjeta SD esté en el dispositivo, otras aplicaciones que se hayan registrado para administrar los mismos tipos de archivo pueden acceder a tus archivos.
 - Cuando la tarjeta SD se extrae del dispositivo y se abre en tu PC, los archivos que contiene pueden verse en el Explorador de archivos y otras aplicaciones pueden acceder a ellos.
 
-Sin embargo, cuando una aplicación instalada en la tarjeta SD guarda archivos en su [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621), estos archivos se cifran y otras aplicaciones no pueden tener acceso a ellos.
+Sin embargo, cuando una aplicación instalada en la tarjeta SD guarda archivos en su [**LocalFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder), estos archivos se cifran y otras aplicaciones no pueden tener acceso a ellos.
 
 ## <a name="requirements-for-accessing-files-on-the-sd-card"></a>Requisitos para tener acceso a archivos en la tarjeta SD
 
@@ -62,9 +62,9 @@ Para tener acceso a los archivos multimedia de las bibliotecas multimedia (Músi
 
 ### <a name="getting-a-reference-to-the-sd-card"></a>Obtención de una referencia a la tarjeta SD
 
-La carpeta [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) es la clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) de raíz lógica para el conjunto de dispositivos extraíbles actualmente conectados al dispositivo. Si está presente una tarjeta SD, la primera (y única) clase **StorageFolder** en la carpeta **KnownFolders.RemovableDevices** representa la tarjeta SD.
+La carpeta [**KnownFolders.RemovableDevices**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.removabledevices) es la clase [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) de raíz lógica para el conjunto de dispositivos extraíbles actualmente conectados al dispositivo. Si está presente una tarjeta SD, la primera (y única) clase **StorageFolder** en la carpeta **KnownFolders.RemovableDevices** representa la tarjeta SD.
 
-Usa código como el siguiente para determinar la presencia de una tarjeta SD y para obtener una referencia a ella como [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230).
+Usa código como el siguiente para determinar la presencia de una tarjeta SD y para obtener una referencia a ella como [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder).
 
 ```csharp
 using Windows.Storage;
@@ -90,16 +90,16 @@ else
 
 ### <a name="querying-the-contents-of-the-sd-card"></a>Consulta del contenido de la tarjeta SD
 
-La tarjeta SD puede contener muchas carpetas y archivos que no se reconocen como carpetas conocidas y que no se pueden consultar mediante el uso de una ubicación de [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151). Para buscar archivos, tu aplicación debe enumerar el contenido de la tarjeta recorriendo el sistema de archivos de forma recursiva. Usa [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) y [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281) para obtener el contenido de la tarjeta SD de un modo eficaz.
+La tarjeta SD puede contener muchas carpetas y archivos que no se reconocen como carpetas conocidas y que no se pueden consultar mediante el uso de una ubicación de [**KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders). Para buscar archivos, tu aplicación debe enumerar el contenido de la tarjeta recorriendo el sistema de archivos de forma recursiva. Usa [**GetFilesAsync (CommonFileQuery.DefaultQuery)** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) y [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfoldersasync) para obtener el contenido de la tarjeta SD de un modo eficaz.
 
 Te recomendamos que uses un subproceso en segundo plano para recorrer la tarjeta SD. Una tarjeta SD puede contener varios gigabytes de datos.
 
 Tu aplicación también solicitará al usuario que elija carpetas específicas mediante el selector de carpetas.
 
-Si accedes al sistema de archivos de la tarjeta SD con una ruta de acceso que derivaste de [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158), los métodos que figuran a continuación se comportan de la siguiente manera.
+Si accedes al sistema de archivos de la tarjeta SD con una ruta de acceso que derivaste de [**KnownFolders.RemovableDevices**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.removabledevices), los métodos que figuran a continuación se comportan de la siguiente manera.
 
--   El método [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227273) devuelve la unión de las extensiones de archivo que hayas registrado para controlar y las extensiones de archivo asociadas a las funcionalidades de biblioteca multimedia que hayas especificado.
--   El método [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) produce un error si no realizaste el registro necesario para controlar la extensión de archivo que tiene el archivo al que estás intentando acceder.
+-   El método [**GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) devuelve la unión de las extensiones de archivo que hayas registrado para controlar y las extensiones de archivo asociadas a las funcionalidades de biblioteca multimedia que hayas especificado.
+-   El método [**GetFileFromPathAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync) produce un error si no realizaste el registro necesario para controlar la extensión de archivo que tiene el archivo al que estás intentando acceder.
 
 ## <a name="identifying-the-individual-sd-card"></a>Identificación de la tarjeta SD individual
 

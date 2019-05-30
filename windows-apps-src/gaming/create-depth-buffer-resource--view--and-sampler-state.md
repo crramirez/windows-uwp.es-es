@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, Direct3D, búfer de profundidad
 ms.localizationpriority: medium
-ms.openlocfilehash: f5ce1ec522a194111e175e41f82c4275cda4fbf5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dfd45f620addcf7a3f6292ed2257bdfccc862cd3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613700"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368892"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Crear recursos de dispositivo para búferes de profundidad
 
@@ -38,7 +38,7 @@ Ten en cuenta que la creación de estos recursos debe incluirse en una rutina de
 ## <a name="check-feature-support"></a>Comprobar la compatibilidad de la característica
 
 
-Antes de crear el mapa de profundidad, llame a la [ **CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) método en el dispositivo Direct3D, solicitar **D3D11\_característica\_D3D9\_ SOMBRA\_soporte**y proporcione un [ **D3D11\_característica\_datos\_D3D9\_SOMBRA\_soporte** ](https://msdn.microsoft.com/library/windows/desktop/jj247569) estructura.
+Antes de crear el mapa de profundidad, llame a la [ **CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) método en el dispositivo Direct3D, solicitar **D3D11\_característica\_D3D9\_ SOMBRA\_soporte**y proporcione un [ **D3D11\_característica\_datos\_D3D9\_SOMBRA\_soporte** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d9_shadow_support) estructura.
 
 ```cpp
 D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT isD3D9ShadowSupported;
@@ -82,7 +82,7 @@ HRESULT hr = pD3DDevice->CreateTexture2D(
     );
 ```
 
-Después crea las vistas de recurso. Establece el segmento de MIP en cero en la vista de galería de símbolos de profundidad y establece los niveles de MIP en 1 en la vista de recursos del sombreador. Ambos tienen una dimensión de textura de TEXTURE2D, y ambos deben usar una coincidencia [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
+Después crea las vistas de recurso. Establece el segmento de MIP en cero en la vista de galería de símbolos de profundidad y establece los niveles de MIP en 1 en la vista de recursos del sombreador. Ambos tienen una dimensión de textura de TEXTURE2D, y ambos deben usar una coincidencia [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format).
 
 ```cpp
 D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc;

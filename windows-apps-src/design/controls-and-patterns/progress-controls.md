@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a162d992390e8fc7d05d52303ec292fcf8e920a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a409c4b940ad0e194428981f536823d880e56302
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634430"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364492"
 ---
 # <a name="progress-controls"></a>Controles de progreso
 
@@ -25,7 +25,7 @@ ms.locfileid: "57634430"
 
 Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga. Esto puede significar que el usuario no puede interactuar con la aplicación cuando el indicador de progreso está visible y también puede indicar el tiempo de espera aproximado, según el indicador que usa.
 
-> **API importantes**: [Clase ProgressBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx), [propiedad IsIndeterminate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx), [ProgressRing clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx), [propiedad IsActive](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)
+> **API importantes**: [Clase ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing clase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propiedad IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 ## <a name="types-of-progress"></a>Tipos de progreso
 
@@ -79,7 +79,7 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
     Si la operación usa estas palabras clave o si aparece texto junto con la operación de progreso que coincida con estas palabras clave, considera la posibilidad de usar una clase ProgressBar:
 
     - *Cargando...*
-    - *Recuperar*
+    - *Retrieving*
     - *Trabajando...*
 
 ### <a name="progressring"></a>ProgressRing
@@ -96,7 +96,7 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
 
     Si la operación usa estas palabras clave o si aparece texto junto con la operación de progreso que coincida con estas palabras clave; considera la posibilidad de usar una clase ProgressRing:
 
-    - *Actualizar*
+    - *Refreshing*
     - *Iniciando sesión...*
     - *Conectando...*
 
@@ -187,9 +187,9 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase ProgressBar](https://msdn.microsoft.com/library/windows/apps/br227529)
-- [Clase ProgressRing](https://msdn.microsoft.com/library/windows/apps/br227538)
+- [Clase ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar)
+- [Clase ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)
 
 **Para desarrolladores (XAML)**
-- [Agregar controles de progreso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)
+- [Agregar controles de progreso](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10))
 - [Cómo crear una barra de progreso indeterminada personalizado para Windows Phone](https://go.microsoft.com/fwlink/p/?LinkID=392426)

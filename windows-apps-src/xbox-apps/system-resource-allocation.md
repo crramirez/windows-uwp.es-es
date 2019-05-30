@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: a382fd879ce656a81e1de4ae2d91180f622cd730
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 40cf41df4ccf15206e5855f989bc46c599baa473
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334753"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372076"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
 
@@ -23,7 +23,7 @@ Las aplicaciones para UWP que se ejecutan en Xbox One comparten recursos con el 
 
 La memoria máxima disponible para una aplicación que se ejecute en segundo plano es de 128 MB. El modo en segundo plano solo se aplica a aplicaciones simultáneas, como reproductores de música en segundo plano.  Los juegos se suspenderán y terminarán en segundo plano.
 
-Superar estas limitaciones provocará fallos en la asignación de memoria. Para obtener más información acerca de la supervisión de memoria usa, consulta la referencia de la clase [MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx).
+Superar estas limitaciones provocará fallos en la asignación de memoria. Para obtener más información acerca de la supervisión de memoria usa, consulta la referencia de la clase [MemoryManager](https://docs.microsoft.com/uwp/api/windows.system.memorymanager).
     
     > [!NOTE]
     > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
@@ -55,5 +55,5 @@ Para obtener más información acerca de los recursos del sistema para aplicacio
 ## <a name="see-also"></a>Vea también
 - [UWP en Xbox One](index.md)
 - [Empezar a trabajar con el programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-program)
-- [DirectX y UWP en Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
+- [DirectX y UWP en Xbox One](https://walbourn.github.io/)
 

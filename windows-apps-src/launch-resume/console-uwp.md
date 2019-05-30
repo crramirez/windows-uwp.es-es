@@ -5,12 +5,12 @@ keywords: console uwp
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 111ef4d5e8830485a5de3b44d69826df256d1c4d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c2dba15d78301c84f4064bcd6548d44e3c17beb2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592110"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366356"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>Crear una aplicación de consola de Plataforma universal de Windows
 
@@ -24,7 +24,7 @@ Para ver en acción, este es un vídeo sobre la creación de una aplicación de 
 
 ## <a name="use-a-uwp-console-app-template"></a>Usar una plantilla de aplicación de consola UWP 
 
-Para crear una aplicación de consola UWP, instala primero las **plantillas de proyecto de aplicación de consola (universal)**, que están disponibles en [Visual Studio Marketplace ](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal). A continuación, están disponibles en las plantillas instaladas **nuevo proyecto** > **instalado** > **otros lenguajes**  >  **Visual C++** > **Windows Universal** como **C++ / aplicación de consola c++ / WinRT (Windows Universal)** y **C++ / aplicación de consola c++ / CX (Windows Universal )**.
+Para crear una aplicación de consola UWP, instala primero las **plantillas de proyecto de aplicación de consola (universal)** , que están disponibles en [Visual Studio Marketplace ](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal). A continuación, están disponibles en las plantillas instaladas **nuevo proyecto** > **instalado** > **otros lenguajes**  >  **Visual C++**  > **Windows Universal** como **C++ / aplicación de consola c++ / WinRT (Windows Universal)** y **C++ / aplicación de consola c++ / CX (Windows Universal )** .
 
 ## <a name="add-your-code-to-main"></a>Agregar el código a main()
 
@@ -60,7 +60,7 @@ int __cdecl main()
 
 Una aplicación de consola UWP puede obtener acceso al sistema de archivos desde el directorio desde el que se ejecuta y por debajo. Esto es posible porque la plantilla agrega la extensión [AppExecutionAlias](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias) al archivo Package.appxmanifest de tu aplicación. Esta extensión también permite al usuario escribir el alias desde una ventana de consola para iniciar la aplicación. La aplicación no tiene que estar en la ruta de acceso del sistema para iniciarse.
 
-Además puede proporcionar acceso total al sistema de archivos a tu aplicación de consola UWP agregando la funcionalidad restringida `broadFileSystemAccess`, tal y como se describe en [Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). Esta funcionalidad funciona con las API del espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346).
+Además puede proporcionar acceso total al sistema de archivos a tu aplicación de consola UWP agregando la funcionalidad restringida `broadFileSystemAccess`, tal y como se describe en [Permisos de acceso de archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). Esta funcionalidad funciona con las API del espacio de nombres [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage).
 
 Puedes ejecutar más de una instancia de una aplicación de consola UWP al mismo tiempo dado que la plantilla agrega la funcionalidad [SupportsMultipleInstances](multi-instance-uwp.md) al archivo Package.appxmanifest de tu aplicación.
 

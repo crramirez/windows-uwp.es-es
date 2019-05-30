@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 6517241826d06b63fd88b45237552acffbdc62da
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78b14023f61dd3f8c27bc31f5876407ff0ed0366
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651240"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371205"
 ---
 # <a name="macs-hashes-and-signatures"></a>MAC, hash y firmas
 
@@ -34,11 +34,11 @@ Eva, que interceptó la conversación de Roberto y Alicia, no puede manipular el
 
 Crear un código de autenticación de mensaje solo garantiza que no se manipuló el mensaje original y, mediante una clave secreta compartida, que alguien con acceso a esa clave privada firmó el hash de mensaje.
 
-Puedes usar el [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para enumerar los algoritmos de MAC disponibles y generar una clave simétrica. Puedes usar métodos estáticos en la clase [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para realizar el cifrado necesario para crear el valor MAC.
+Puedes usar el [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para enumerar los algoritmos de MAC disponibles y generar una clave simétrica. Puedes usar métodos estáticos en la clase [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) para realizar el cifrado necesario para crear el valor MAC.
 
 Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. Aunque los MAC usan claves privadas para permitir que el destinatario de un mensaje compruebe que no se ha manipulado un mensaje durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-Este código de ejemplo muestra cómo usar la clase [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para crear un código de autenticación de mensajes basado en hash (HMAC).
+Este código de ejemplo muestra cómo usar la clase [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para crear un código de autenticación de mensajes basado en hash (HMAC).
 
 ```cs
 using Windows.Security.Cryptography;
@@ -137,11 +137,11 @@ Una función hash criptográfica toma un bloque de datos de una longitud arbitra
 
 Ten en cuenta que Alicia envió un mensaje sin cifrar. Lo que cifró fue el hash. Este procedimiento solo garantiza que no se manipuló el mensaje original y, mediante la clave pública de Alicia, que alguien con acceso a la clave privada de Alicia (probablemente Alicia) firmó el hash de mensaje.
 
-Puedes usar la clase [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) para enumerar los algoritmos hash disponibles y crear un valor [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498).
+Puedes usar la clase [**HashAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) para enumerar los algoritmos hash disponibles y crear un valor [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash).
 
 Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. A diferencia de los MAC, que usan claves privadas para permitir que el destinatario de un mensaje compruebe que el mensaje no se ha manipulado durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-El objeto [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que recrear el objeto para cada uso. El método [**Append**](https://msdn.microsoft.com/library/windows/apps/br241499) agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El método [**GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) aplica el algoritmo hash a los datos y restablece el objeto para otro uso. Esto se muestra en el siguiente ejemplo.
+El objeto [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que recrear el objeto para cada uso. El método [**Append**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.append) agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El método [**GetValueAndReset**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) aplica el algoritmo hash a los datos y restablece el objeto para otro uso. Esto se muestra en el siguiente ejemplo.
 
 ```cs
 public void SampleReusableHash()
@@ -191,4 +191,4 @@ Pero como la mayoría de las operaciones de firma con clave pública requieren r
 
 La firma solo garantiza que no se manipuló el mensaje original y, mediante la clave pública del remitente, que alguien con acceso a la clave privada firmó el hash de mensaje.
 
-Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para firmar un mensaje o comprobar una firma.
+Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) para firmar un mensaje o comprobar una firma.

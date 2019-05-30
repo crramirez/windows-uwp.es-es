@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28419df1a37ff640db7246b54e50da5bfce9fedb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624360"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372619"
 ---
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 
@@ -53,18 +53,18 @@ El estándar de certificado de clave pública X.509 se ha revisado varias veces 
 
 ![Certificado x.509 versiones 1, 2 y 3](images/x509certificateversions.png)
 
-Algunos de estos campos y extensiones se pueden especificar directamente al usar la clase [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) para crear una solicitud de certificado. Pero la mayoría no se puede especificar. La autoridad emisora puede rellenar estos campos o pueden dejarse en blanco. Para obtener más información acerca de los campos, consulta las siguientes secciones:
+Algunos de estos campos y extensiones se pueden especificar directamente al usar la clase [**CertificateRequestProperties**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.CertificateRequestProperties) para crear una solicitud de certificado. Pero la mayoría no se puede especificar. La autoridad emisora puede rellenar estos campos o pueden dejarse en blanco. Para obtener más información acerca de los campos, consulta las siguientes secciones:
 
 ### <a name="version-1-fields"></a>Campos de la versión 1
 
 | Campo | Descripción |
 |-------|-------------|
-| Versión | Especifica el número de versión del certificado codificado. Actualmente, los valores posibles de este campo son 0, 1 o 2. |
+| `Version` | Especifica el número de versión del certificado codificado. Actualmente, los valores posibles de este campo son 0, 1 o 2. |
 | Número de serie | Contiene un entero positivo único asignado por la entidad de certificación (CA) al certificado. |
 | Algoritmo de firma | Contiene un identificador de objeto (OID) que especifica el algoritmo usado por la CA para firmar el certificado. Por ejemplo, 1.2.840.113549.1.1.5 especifica un algoritmo hash SHA-1 combinado con el algoritmo de cifrado RSA de RSA Laboratories. |
 | Emisor | Contiene el nombre distintivo (DN) X.500 de la entidad de certificación que creó y firmó el certificado. |
 | Validez | Especifica el intervalo de tiempo durante el cual el certificado es válido. Las fechas hasta el final de 2049 usan el formato de Hora universal coordinada (Hora del meridiano de Greenwich) (aammddhhmmssz). Las fechas a partir del 1 de enero de 2050 usan el formato de hora generalizada (aaaammddhhmmssz). |
-| Firmante | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
+| Subject | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
 | Clave pública | Contiene la clave pública y la información de algoritmo asociada. |
 
 ### <a name="version-2-fields"></a>Campos de la versión 2

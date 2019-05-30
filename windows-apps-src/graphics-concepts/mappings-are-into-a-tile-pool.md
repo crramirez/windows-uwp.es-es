@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a68623b0a61672426c9b6eef85cb7d1ddc990a19
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607360"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370990"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapas en un grupo de iconos
 
@@ -31,13 +31,13 @@ Nos gustaría explorar qué almacenamiento podría necesitar la tabla de página
 
 Supongamos que cada entrada de la tabla de página es de 64 bits.
 
-Para la tabla de páginas peor alcance de una sola superficie, dada los límites de recursos en Direct3D 11, supongamos que un recurso de transmisión por secuencias se crea con un formato de 128 bits por elemento (por ejemplo, un float RGBA), por lo que un icono de 64KB de tamaño contiene sólo 4096 píxeles. El límite máximo admitido [ **Texture2DArray** ](https://msdn.microsoft.com/library/windows/desktop/ff471526) tamaño de 16384\*16384\*2048 (pero con solo una asignación de MIP único) necesitaría aproximadamente 1 GB de almacenamiento en la tabla de páginas si rellena totalmente (sin incluir los mapas MIP) utilizando las entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3 GB.
+Para la tabla de páginas peor alcance de una sola superficie, dada los límites de recursos en Direct3D 11, supongamos que un recurso de transmisión por secuencias se crea con un formato de 128 bits por elemento (por ejemplo, un float RGBA), por lo que un icono de 64KB de tamaño contiene sólo 4096 píxeles. El límite máximo admitido [ **Texture2DArray** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray) tamaño de 16384\*16384\*2048 (pero con solo una asignación de MIP único) necesitaría aproximadamente 1 GB de almacenamiento en la tabla de páginas si rellena totalmente (sin incluir los mapas MIP) utilizando las entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3 GB.
 
 Este caso daría acceso a aproximadamente 10,6 terabytes de memoria direccionable. Puede haber un límite en la cantidad de memoria direccionable, pero podría reducir estas cantidades, quizás alrededor del rango de terabytes.
 
-Otro caso de tener en cuenta es una sola [ **Texture2D** ](https://msdn.microsoft.com/library/windows/desktop/ff471525) streaming de recursos de 16384\*16384 con un formato de 32 bits por elemento, incluidos los mapas MIP. El espacio necesario en una tabla de página completa sería aproximadamente de 170 KB con entradas de tabla de 64 bits.
+Otro caso de tener en cuenta es una sola [ **Texture2D** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) streaming de recursos de 16384\*16384 con un formato de 32 bits por elemento, incluidos los mapas MIP. El espacio necesario en una tabla de página completa sería aproximadamente de 170 KB con entradas de tabla de 64 bits.
 
-Por último, veamos un ejemplo con un formato BC, por ejemplo, BC7 con 128 bits por icono de 4x4 píxeles. Es un byte por píxel. Un [ **Texture2DArray** ](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 mapas MIP incluidos requeriría más o menos de 85 MB rellenar por completo esta memoria en una tabla de la página. No está mal teniendo en cuenta que esto permite que un recurso de streaming expanda 550 gigapíxeles (512 GB de memoria en este caso).
+Por último, veamos un ejemplo con un formato BC, por ejemplo, BC7 con 128 bits por icono de 4x4 píxeles. Es un byte por píxel. Un [ **Texture2DArray** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray) de 16384\*16384\*2048 mapas MIP incluidos requeriría más o menos de 85 MB rellenar por completo esta memoria en una tabla de la página. No está mal teniendo en cuenta que esto permite que un recurso de streaming expanda 550 gigapíxeles (512 GB de memoria en este caso).
 
 En la práctica, no se definiría nada parecido a estas asignaciones completas, dado que la cantidad de memoria física disponible no permitiría nada cercano a la cantidad asignada y de referencia a la vez. Pero, con un grupo de iconos, las aplicaciones pueden optar por volver a usar los iconos (como un ejemplo simple, reutilizar un icono de color "negro" para grandes regiones en negro de una imagen). Es eficaz si se usa el grupo de iconos (es decir, asignaciones de tabla de página) como una herramienta de compresión de memoria.
 

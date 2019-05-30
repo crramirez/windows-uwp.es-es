@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: f11207a774b1ffcebde95e316634592020e6ed49
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3afa1720ede9728e9cc25af434a431300faf26d6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631220"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371217"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usar objetos de Windows Runtime en un entorno multiproceso
 En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime.
@@ -20,7 +20,7 @@ En .NET Framework, puedes acceder a cualquier objeto desde varios subprocesos de
 
 Siempre que sea posible, Common Language Runtime (CLR) trata los objetos de otros orígenes, como Windows Runtime, como si fueran objetos de .NET Framework:
 
-- Si el objeto implementa la interfaz [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx) o tiene el atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) con [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023), CLR lo trata como ágil.
+- Si el objeto implementa la interfaz [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject) o tiene el atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) con [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023), CLR lo trata como ágil.
 
 - Si CLR puede serializar una llamada desde el subproceso de donde se hizo hasta el contexto de subproceso del objeto de destino, lo hace de manera transparente.
 
@@ -34,7 +34,7 @@ Todos los tipos en el componente que pueden activarse son ágiles de manera pred
 > [!NOTE]
 >  La agilidad no implica la seguridad de los subprocesos. Tanto en Windows Runtime como en .NET Framework, la mayoría de clases no son seguras para subprocesos, ya que la seguridad de los subprocesos tiene un costo de rendimiento, y a la mayoría de los objetos nunca se accede desde varios subprocesos. Es más eficiente sincronizar el acceso a objetos individuales (o usar clases seguras para subprocesos) según sea necesario únicamente.
 
-Cuando creas un componente de Windows Runtime, puedes invalidar el valor predeterminado. Consulta la interfaz [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) y la interfaz [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx).
+Cuando creas un componente de Windows Runtime, puedes invalidar el valor predeterminado. Consulta la interfaz [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) y la interfaz [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject).
 
 ## <a name="objects-from-the-windows-runtime"></a>Objetos de Windows Runtime
 La mayoría de las clases en Windows Runtime son ágiles, y CLR las trata como ágiles. En la documentación para estas clases aparece "MarshalingBehaviorAttribute(Agile)" entre los atributos de clase. Sin embargo, los miembros de algunas de estas clases ágiles, como los controles XAML, inician excepciones si no se los llama en el subproceso de la interfaz de usuario. Por ejemplo, el siguiente código intenta usar un subproceso en segundo plano para establecer una propiedad del botón donde se hizo clic. La propiedad [Content](https://go.microsoft.com/fwlink/p/?LinkId=256025) del botón inicia una excepción.
@@ -160,7 +160,7 @@ De manera predeterminada, las clases en el componente que pueden activarse son �
 
 Para los objetos que se ejecutan en el subproceso de la interfaz de usuario e inician excepciones cuando se las llama desde un subproceso distinto del subproceso de la interfaz de usuario, puedes usar el objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) del subproceso de la interfaz de usuario para enviar la llamada.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 [Guía de C#](/dotnet/csharp/)
 
 [Guía de Visual Basic](/dotnet/visual-basic/)

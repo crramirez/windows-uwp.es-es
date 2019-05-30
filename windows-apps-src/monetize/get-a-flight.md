@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight, piloto, package flight, paquete piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: e4f96d503d52abe71cff6fcdd1295c862e551e09
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 3a02a299682610cd516067acefc795df9512a268
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334393"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371766"
 ---
 # <a name="get-a-package-flight"></a>Obtener un paquete piloto
 
@@ -92,8 +92,8 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
 | friendlyName           | string  | El nombre del paquete piloto, según lo especifica el desarrollador.   |  
 | lastPublishedFlightSubmission       | object | Un objeto que proporciona información sobre el último envío publicado para el paquete piloto. Para obtener más información, consulta la sección [Objeto de envío](#submission_object) a continuación.  |
 | pendingFlightSubmission        | object  |  Un objeto que proporciona información sobre el envío pendiente actualmente para el paquete piloto. Para obtener más información, consulta la sección [Objeto de envío](#submission_object) a continuación.  |   
-| groupIds           | array  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| groupIds           | array  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 <span id="submission_object" />

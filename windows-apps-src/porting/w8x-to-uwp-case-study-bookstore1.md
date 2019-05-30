@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0b8ffbebdca920bc6cc584dd735062a364d1d9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fad621eb9b6ef9ef863240644ae0fa46d41baacc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627940"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371607"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows Runtime 8.x a UWP caso práctico: Bookstore1
 
 
-En este tema se presenta un caso práctico de migración de una aplicación muy sencilla de Universal 8.1 a una aplicación de Windows 10 Universal Windows Platform (UWP). Una aplicación Universal 8.1 es aquella que crea un paquete para Windows 8.1 y un paquete de aplicación diferente para Windows Phone 8.1. Con Windows 10, puede crear un paquete de aplicación única que pueden instalar los clientes en una amplia gama de dispositivos, y eso es lo que haremos en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+En este tema se presenta un caso práctico de migración de una aplicación muy sencilla de Universal 8.1 a una aplicación de Windows 10 Universal Windows Platform (UWP). Una aplicación Universal 8.1 es aquella que crea un paquete para Windows 8.1 y un paquete de aplicación diferente para Windows Phone 8.1. Con Windows 10, puede crear un paquete de aplicación única que pueden instalar los clientes en una amplia gama de dispositivos, y eso es lo que haremos en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
 
 La aplicación que portaremos consta de un enlace **ListBox** enlazado con un modelo de vista. El modelo de vista tiene una lista de libros que muestra el título, el autor y la portada de libro. Las imágenes de portada de libro tienen el valor de **Acción de compilación** establecido en **Contenido** y de **Copiar en el directorio de salida** establecido en **No copiar**.
 

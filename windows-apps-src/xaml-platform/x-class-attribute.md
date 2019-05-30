@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8eb1238499355cf37b3f5113dbb10c456de55961
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dcda1677a8b5d289fd4c5e86db69212004f00824
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624770"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371100"
 ---
 # <a name="xclass-attribute"></a>Atributo x:Class
 
@@ -34,9 +34,9 @@ Configura la compilación de XAML para unir clases parciales entre el marcado y 
 | espacio de nombres | Opcional. Especifica un espacio de nombres que contiene la clase parcial identificada por _classname_. Si se especifica _namespace_, un punto (.) separa _namespace_ y _classname_. Si se especifica _namespace_ , se da por hecho que _classname_ no tiene espacio de nombres. |
 | classname | Obligatorio. Especifica el nombre de la clase parcial que conecta el código XAML cargado y el código subyacente para ese XAML. | 
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-**x:Class** se puede declarar como un atributo para cualquier elemento que sea la raíz de un árbol de archivos u objetos XAML y que se compile mediante acciones de compilación, o para la raíz de [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) en la definición de una aplicación compilada. Declarar **x:Class** en cualquier elemento que no sea una raíz de nodo y en cualquier circunstancia referente a un archivo XAML que no esté compilado mediante la acción de compilación **Page**, genera un error en tiempo de compilación.
+**x:Class** se puede declarar como un atributo para cualquier elemento que sea la raíz de un árbol de archivos u objetos XAML y que se compile mediante acciones de compilación, o para la raíz de [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) en la definición de una aplicación compilada. Declarar **x:Class** en cualquier elemento que no sea una raíz de nodo y en cualquier circunstancia referente a un archivo XAML que no esté compilado mediante la acción de compilación **Page**, genera un error en tiempo de compilación.
 
 La clase que se utiliza como **x:Class** no puede ser una clase anidada.
 

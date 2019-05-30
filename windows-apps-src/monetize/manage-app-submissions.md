@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 474abc2ec43b7f8eab408bd75cca33653d27d932
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 65e8599a73a196ebb72fe3cc45ea984f82057741
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63789677"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371507"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -85,7 +85,7 @@ Para crear un envío de aplicación, sigue este proceso.
 
 1. Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
     > [!NOTE]
-    > Asegúrate de que la aplicación ya tenga al menos un envío completado con la información de [clasificación por edades](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) rellenada.
+    > Asegúrate de que la aplicación ya tenga al menos un envío completado con la información de [clasificación por edades](https://docs.microsoft.com/windows/uwp/publish/age-ratings) rellenada.
 
 2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
@@ -100,7 +100,7 @@ Para crear un envío de aplicación, sigue este proceso.
     > [!NOTE]
     > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-4. Si estás agregando nuevos paquetes, imágenes de descripciones o archivos de tráileres para el envío, [prepara los paquetes de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) y [prepara las imágenes y capturas de pantalla de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Agrega todos estos archivos a un archivo ZIP.
+4. Si estás agregando nuevos paquetes, imágenes de descripciones o archivos de tráileres para el envío, [prepara los paquetes de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) y [prepara las imágenes y capturas de pantalla de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Agrega todos estos archivos a un archivo ZIP.
 
 5. Revisa los datos de [envío de aplicación](#app-submission-object) con todos los cambios necesarios para el nuevo envío y ejecuta el siguiente método para [actualizar el envío de aplicación](update-an-app-submission.md).
 
@@ -116,7 +116,7 @@ Para crear un envío de aplicación, sigue este proceso.
     * [Almacenamiento de Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
     * [Almacenamiento de Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    En el siguiente ejemplo de código C# se muestra cómo cargar el archivo ZIP en Azure Blob Storage usando la clase [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) en la biblioteca de cliente de Azure Storage para. NET. En este ejemplo se supone que el archivo ZIP ya se ha escrito en un objeto de secuencia.
+    En el siguiente ejemplo de código C# se muestra cómo cargar el archivo ZIP en Azure Blob Storage usando la clase [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) en la biblioteca de cliente de Azure Storage para. NET. En este ejemplo se supone que el archivo ZIP ya se ha escrito en un objeto de secuencia.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -338,28 +338,28 @@ Este recurso tiene los siguientes valores.
 | Valor      | Tipo   | Descripción      |
 |------------|--------|-------------------|
 | id            | string  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de aplicación](create-an-app-submission.md), [obtener todas las aplicaciones](get-all-apps.md) y [obtener una aplicación](get-an-app.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
-| applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
+| applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para la aplicación.        |   
 | visibility           |  string  |  Visibilidad de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |  
 | listings           |   object  |  Diccionario de pares de clave-valor en el cual cada clave hace referencia al código de un país y cada valor hace referencia a un [recurso de lista](#listing-object) que contiene la descripción de la aplicación.       |   
-| hardwarePreferences           |  array  |   Matriz de cadenas que definen las [preferencias de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Función táctil</li><li>Teclado</li><li>Mouse</li><li>Cámara</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonía</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Indica si Windows puede incluir datos de la aplicación en copias de seguridad automáticas de OneDrive. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  boolean  |   Indica si los clientes pueden instalar la aplicación en el almacenamiento extraíble. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| hardwarePreferences           |  array  |   Matriz de cadenas que definen las [preferencias de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Función táctil</li><li>Teclado</li><li>Mouse</li><li>Cámara</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonía</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Indica si Windows puede incluir datos de la aplicación en copias de seguridad automáticas de OneDrive. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://docs.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| canInstallOnRemovableMedia           |  boolean  |   Indica si los clientes pueden instalar la aplicación en el almacenamiento extraíble. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  boolean |   Indica si se habilita game DVR en la aplicación.    |   
 | gamingOptions           |  array |   Matriz que contiene un [recurso de opciones de juegos](#gaming-options-object) que definir la configuración relacionada con juegos para la aplicación.     |   
-| hasExternalInAppProducts           |     boolean          |   Indica si la aplicación permite a los usuarios realizar compras fuera del sistema de comercio de Microsoft Store. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    boolean           |  Indica si la aplicación se ha probado para garantizar que cumple las directrices de accesibilidad. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
-| notesForCertification           |  string  |   Contiene [notas para la certificación](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) de la aplicación.    |    
+| hasExternalInAppProducts           |     boolean          |   Indica si la aplicación permite a los usuarios realizar compras fuera del sistema de comercio de Microsoft Store. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| meetAccessibilityGuidelines           |    boolean           |  Indica si la aplicación se ha probado para garantizar que cumple las directrices de accesibilidad. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://docs.microsoft.com/windows/uwp/publish/app-declarations).      |   
+| notesForCertification           |  string  |   Contiene [notas para la certificación](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification) de la aplicación.    |    
 | status           |   string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Publicación</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   object  | Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.       |    
 | fileUploadUrl           |   string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes, imágenes de descripciones o archivos de tráileres para el envío, carga el archivo ZIP que contiene los paquetes y las imágenes en este URI. Para obtener más información, consulta [Crear un envío de aplicación](#create-an-app-submission).       |    
 | applicationPackages           |   array  | Una matriz de [recursos de paquete de aplicación](#application-package-object) que proporcionan detalles acerca de cada paquete del envío. |    
 | packageDeliveryOptions    | object  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.  |
 | enterpriseLicensing           |  string  |  Uno de los [valores de licencia de empresa](#enterprise-licensing) indica el comportamiento de la licencia de empresa de la aplicación.  |    
-| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica si se permite que Microsoft [tenga la aplicación disponible para futuras familias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
-| allowTargetFutureDeviceFamilies           | object   |  Un diccionario de pares clave y valor, donde cada clave es una [familia de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) y cada valor es un booleano que indica si la aplicación puede seleccionar como destino la familia de dispositivos especificada.     |    
+| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica si se permite que Microsoft [tenga la aplicación disponible para futuras familias de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).    |    
+| allowTargetFutureDeviceFamilies           | object   |  Un diccionario de pares clave y valor, donde cada clave es una [familia de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) y cada valor es un booleano que indica si la aplicación puede seleccionar como destino la familia de dispositivos especificada.     |    
 | friendlyName           |   string  |  El nombre descriptivo del envío, tal como se muestra en el centro de partners. Generas este valor cuando creas el envío.       |  
 | tráileres           |  array |   Matriz que contiene hasta 15 [recursos de tráileres](#trailer-object) que representan tráileres de vídeo para la descripción de la aplicación.<br/><br/>   |  
 
@@ -373,9 +373,9 @@ Este recurso contiene información sobre precios de la aplicación. Este recurso
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  Cadena que especifica el período de prueba de la aplicación. Puede ser uno de los valores siguientes: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.      |     
+|  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.      |     
 |  sales               |   array      |  **En desuso**. Una matriz de [recursos de venta](#sale-object) que contienen información de ventas de la aplicación.   |     
-|  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) de la aplicación.   |     
+|  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection) de la aplicación.   |     
 |  isAdvancedPricingModel               |   boolean      |  Si está en **true**, tu cuenta de desarrollador tiene acceso al conjunto expandido de franjas de precios de 0,99 USD a 1999,99 USD. Si está en **false**, tu cuenta de desarrollador tiene acceso al conjunto original de franjas de precios de 0,99 USD a 999,99 USD. Para obtener más información sobre las diferentes franjas de precios, consulta [franjas de precios](#price-tiers).<br/><br/>**Nota**&nbsp;&nbsp;este campo es de solo lectura.   |
 
 
@@ -394,11 +394,11 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción    |
 |-----------------|---------|------|
-|  NAME               |    string     |   Nombre de la venta.    |     
+|  name               |    string     |   Nombre de la venta.    |     
 |  basePriceId               |   string      |  [Franja de precios](#price-tiers) que se usará para el precio base de la venta.    |     
 |  startDate               |   string      |   Fecha de inicio de la venta en formato ISO 8601.  |     
 |  endDate               |   string      |  Fecha de finalización de la venta en formato ISO 8601.      |     
-|  marketSpecificPricings               |   object      |   Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor *basePriceId* para el mercado especificado.    |
+|  marketSpecificPricings               |   object      |   Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Los elementos de este diccionario reemplazan el precio base especificado por el valor *basePriceId* para el mercado especificado.    |
 
 
 <span id="listing-object" />
@@ -420,15 +420,15 @@ Este recurso contiene la información de descripción de base de una aplicación
 
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|------|
-|  copyrightAndTrademarkInfo                |   string      |  [Información de copyright o marcas comerciales](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info) opcional.  |
-|  keywords                |  array       |  Matriz de [palabras clave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ayudar a tu aplicación a aparecer en los resultados de búsqueda.    |
-|  licenseTerms                |    string     | [Términos de licencia](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionales para tu aplicación.     |
+|  copyrightAndTrademarkInfo                |   string      |  [Información de copyright o marcas comerciales](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) opcional.  |
+|  keywords                |  array       |  Matriz de [palabras clave](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) para ayudar a tu aplicación a aparecer en los resultados de búsqueda.    |
+|  licenseTerms                |    string     | [Términos de licencia](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) opcionales para tu aplicación.     |
 |  privacyPolicy                |   string      |   Esta valor está obsoleta. Para establecer o cambiar la URL de la política de privacidad para la aplicación, debe hacerlo en el [propiedades](../publish/enter-app-properties.md#privacy-policy-url) página en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
 |  supportContact                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la compatibilidad con contacto dirección URL o correo electrónico para la aplicación, debe hacerlo en el [propiedades](../publish/enter-app-properties.md#support-contact-info) página en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.        |
 |  websiteUrl                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la página web para la aplicación, debe hacerlo en el [propiedades](../publish/enter-app-properties.md#website) página en el centro de partners. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.      |    
-|  description               |    string     |   [Descripción](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) de la aplicación.   |     
-|  features               |    array     |  Matriz de hasta 20 cadenas que enumera las [características](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) de tu aplicación.     |
-|  releaseNotes               |  string       |  [Notas de la versión](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) de tu aplicación.    |
+|  description               |    string     |   [Descripción](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) de la aplicación.   |     
+|  features               |    array     |  Matriz de hasta 20 cadenas que enumera las [características](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) de tu aplicación.     |
+|  releaseNotes               |  string       |  [Notas de la versión](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) de tu aplicación.    |
 |  images               |   array      |  Matriz de datos de recursos de [imagen e icono](#image-object) para la descripción de la aplicación.  |
 |  recommendedHardware               |   array      |  Matriz de hasta 11 cadenas que enumera las [configuraciones de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para tu aplicación.     |
 |  minimumHardware               |     string    |  Matriz de hasta 11 cadenas que enumera las [configuraciones de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para tu aplicación.    |  
@@ -572,10 +572,10 @@ Este recurso tiene los siguientes valores.
 | fileName   |   string      |  Nombre del paquete.    |  
 | fileStatus    | string    |  Estado del paquete. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor es proporcionado por el centro de partners.   |     
-| version    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| version    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  string   |  Arquitectura del paquete (por ejemplo, ARM).   |     
-| languages    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  Matriz de funcionalidades necesarias para el paquete. Para obtener más información acerca de las funcionalidades, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| languages    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  array   |  Matriz de funcionalidades necesarias para el paquete. Para obtener más información acerca de las funcionalidades, consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
 | minimumDirectXVersion    |  string   |  Versión mínima de DirectX que admite el paquete de aplicación. Esto puede establecerse solo para aplicaciones destinadas a Windows 8. x. Para aplicaciones destinadas a otras versiones de sistema operativo, este valor debe estar presente cuando se llama al método [actualizar el envío de una aplicación](update-an-app-submission.md), pero el valor especificado se ignora. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | string    |  RAM mínima que requiere el paquete de aplicación. Esto puede establecerse solo para aplicaciones destinadas a Windows 8. x. Para aplicaciones destinadas a otras versiones de sistema operativo, este valor debe estar presente cuando se llama al método [actualizar el envío de una aplicación](update-an-app-submission.md), pero el valor especificado se ignora. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Memory2GB</li></ul>   |       
 | targetDeviceFamilies    | array    |  Matriz de cadenas que representan las familias de dispositivos a las que está destinado el paquete. Este valor se usa solo para los paquetes destinados a Windows 10. para los paquetes destinados a versiones anteriores, este valor es **None**. Las siguientes cadenas de familia de dispositivos se admiten actualmente para paquetes de Windows 10, donde *{0}* es una cadena de versión de Windows 10 como 10.0.10240.0, 10.0.10586.0 o 10.0.14393.0: <ul><li>Windows.Universal min version *{0}*</li><li>Windows.Desktop min version *{0}*</li><li>Windows.Mobile min version *{0}*</li><li>Windows.Xbox min version *{0}*</li><li>Windows.Holographic min version *{0}*</li></ul>   |    
@@ -678,7 +678,7 @@ Este recurso tiene los siguientes valores.
 |  id               |    string     |   Identificador del tráiler. Este valor es proporcionado por el centro de partners.   |
 |  videoFileName               |    string     |    Nombre del archivo de vídeo de tráiler en el archivo ZIP que contiene archivos para el envío.    |     
 |  videoFileId               |   string      |  Identificador del archivo de vídeo de tráiler. Este valor es proporcionado por el centro de partners.   |     
-|  trailerAssets               |   object      |  Diccionario de pares de claves y valores en el cual cada clave hace referencia al código de un idioma y cada valor hace referencia a un [recurso de activos de tráiler](#trailer-assets-object) que contiene los activos específicos de configuración regional adicional para el tráiler. Para obtener más información acerca de los códigos de idioma admitidos, consulta [Idiomas admitidos](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
+|  trailerAssets               |   object      |  Diccionario de pares de claves y valores en el cual cada clave hace referencia al código de un idioma y cada valor hace referencia a un [recurso de activos de tráiler](#trailer-assets-object) que contiene los activos específicos de configuración regional adicional para el tráiler. Para obtener más información acerca de los códigos de idioma admitidos, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
 
 > [!NOTE]
 > El recurso *trailers* se agregó en mayo de 2017, después del lanzamiento inicial de la API de envío de Microsoft Store para los desarrolladores. Si has creado un envío para una aplicación a través de la API de envío antes de que se introdujera este recurso y este envío todavía está en curso, el recurso no podrá quedar vacío para envíos para la aplicación hasta que confirmes correctamente el envío o lo elimines. Si el recurso *trailers* no está disponible para envíos de una aplicación, el campo *hasAdvancedListingPermission* del [recurso de aplicación](get-app-data.md#application_object) devuelto por el método [obtener una aplicación](get-an-app.md) es false.
@@ -724,14 +724,14 @@ Los siguientes valores representan las franjas de precios disponibles en el [rec
 |  Base               |   No se establece la franja de precios; usa el precio base para la aplicación.      |     
 |  NotAvailable              |   La aplicación no está disponible en la región especificada.    |     
 |  Free              |   La aplicación es gratuita.    |    
-|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de los niveles de precios que están disponibles para la cuenta de desarrollador, incluidos los precios específicos del mercado que están asociados con cada nivel, vaya a la **precios y disponibilidad** página para cualquiera de los envíos de aplicaciones en Centro de asociados y haga clic en el **ver tabla** vincular en el **mercados y precios personalizados** sección (de algunas cuentas de desarrollador, este vínculo se encuentra en la **precios** sección).    |
+|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>** . Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de los niveles de precios que están disponibles para la cuenta de desarrollador, incluidos los precios específicos del mercado que están asociados con cada nivel, vaya a la **precios y disponibilidad** página para cualquiera de los envíos de aplicaciones en Centro de asociados y haga clic en el **ver tabla** vincular en el **mercados y precios personalizados** sección (de algunas cuentas de desarrollador, este vínculo se encuentra en la **precios** sección).    |
 
 
 <span id="enterprise-licensing" />
 
 ### <a name="enterprise-licensing-values"></a>Valores de licencia de empresa
 
-Los valores siguientes representan el comportamiento de las licencias organizativas para la aplicación. Para obtener más información acerca de estas opciones, consulta [Opciones de licencia organizativas](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
+Los valores siguientes representan el comportamiento de las licencias organizativas para la aplicación. Para obtener más información acerca de estas opciones, consulta [Opciones de licencia organizativas](https://docs.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
 > Aunque puedes configurar las opciones de licencias organizativas para el envío de aplicaciones a través de la API de envío, no puedes usar esta API para publicar envíos para [compras por volumen a través de la Microsoft Store para Empresas y Microsoft Store para Educación](../publish/organizational-licensing.md). Para publicar los envíos a la Microsoft Store para empresas y Microsoft Store para educación, debe usar el centro de partners.
@@ -773,4 +773,4 @@ Los valores siguientes representan el código de estado de un envío.
 
 * [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtención de datos de aplicación mediante la API de envío de Microsoft Store](get-app-data.md)
-* [Envíos de aplicaciones en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [Envíos de aplicaciones en el centro de partners](https://docs.microsoft.com/windows/uwp/publish/app-submissions)

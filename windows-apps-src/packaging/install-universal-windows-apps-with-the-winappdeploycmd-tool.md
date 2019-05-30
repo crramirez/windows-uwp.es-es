@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 479c4410384613b22ba86bc976a360125bb73c3a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 06107691a4551ae2af05e63c1db810485273dc9b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632810"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372814"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
 
@@ -20,7 +20,7 @@ Implementación de aplicaciones de Windows (WinAppDeployCmd.exe) es una herramie
 
 Basta con el SDK de Windows 10 instalado para ejecutar la herramienta WinAppDeployCmd desde un símbolo del sistema o un archivo de script. Cuando se instala una aplicación con WinAppDeployCmd.exe, utiliza el archivo.appx/.msix o AppxManifest (para archivos separados) para instalaciones de prueba de la aplicación en un dispositivo Windows 10. Este comando no instala el certificado necesario para la aplicación. Para ejecutar la aplicación, el dispositivo Windows 10 debe estar en modo de programador o ya tiene instalado el certificado.
 
-Para implementar en dispositivos móviles, primero debes crear un paquete. Puedes obtener más información [aquí](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+Para implementar en dispositivos móviles, primero debes crear un paquete. Puedes obtener más información [aquí](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 El **WinAppDeployCmd.exe** herramienta se encuentra aquí en tu PC con Windows 10: **C:\\archivos de programa (x86)\\Windows Kits\\10\\bin\\&lt;SDK versión&gt;\\x86\\WinAppDeployCmd.exe** () según la ruta de instalación para el SDK). 
 > [!NOTE]
@@ -60,7 +60,7 @@ Puedes instalar o desinstalar una aplicación en el dispositivo de destino, o bi
 La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 
 
-| **Comando**  | **Descripción**                                                     |
+| **Command**  | **Descripción**                                                     |
 |--------------|---------------------------------------------------------------------|
 | dispositivos      | Muestra la lista de dispositivos de red disponibles.                         |
 | instalar      | Instala un paquete de la aplicación para UWP en el dispositivo de destino.                     |
@@ -77,7 +77,7 @@ La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 
 
-| **Comando**  | **Descripción**  |
+| **Command**  | **Descripción**  |
 |--------------|------------------|
 | -h (-help)       | Muestra los comandos, las opciones y los argumentos. |
 | -ip              | Dirección IP del dispositivo de destino. |
@@ -96,7 +96,7 @@ La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 
-| **argumento**           | **Descripción**                                                              |
+| **Argumento**           | **Descripción**                                                              |
 |------------------------|------------------------------------------------------------------------------|
 | &lt;x&gt;              | Tiempo de expiración en segundos. (El valor predeterminado es 10)                                          |
 | &lt;address&gt;        | Dirección IP o identificador único del dispositivo de destino.                        |

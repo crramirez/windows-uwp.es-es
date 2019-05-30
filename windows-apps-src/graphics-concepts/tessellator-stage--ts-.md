@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b8960d9723460fcbb8cec71da0998958cac8a6e8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607400"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370941"
 ---
 # <a name="tessellator-ts-stage"></a>Fase de Tessellator (TS)
 
@@ -52,7 +52,7 @@ Ventajas de la teselación:
 
 La canalización de gráficos de Direct3D implementa la teselación en el hardware, lo que descarga el trabajo de la CPU a la GPU. Esto puede provocar enormes mejoras del rendimiento si una aplicación implementa un gran número de destinos de morfología o modelos de enmascaramiento/deformación más sofisticados.
 
-El Tessellator es una etapa de función fija que se inicializa mediante el enlace de un [sombreador de casco](hull-shader-stage--hs-.md) a la canalización. (consulte [How To: Inicializar la etapa del Teselador](https://msdn.microsoft.com/library/windows/desktop/ff476341)). El propósito de la fase de Tessellator es subdividir un dominio (cuadrado, triángulo o línea) en muchos objetos más pequeños (triángulos, puntos o líneas). El Tessellator descompone un dominio canónico en un sistema de coordenadas normalizado (de cero a uno). Por ejemplo, un dominio cuadrado se tesela en un cuadrado de la unidad.
+El Tessellator es una etapa de función fija que se inicializa mediante el enlace de un [sombreador de casco](hull-shader-stage--hs-.md) a la canalización. (consulte [How To: Inicializar la etapa del Teselador](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-advanced-stages-tessellator-initialize)). El propósito de la fase de Tessellator es subdividir un dominio (cuadrado, triángulo o línea) en muchos objetos más pequeños (triángulos, puntos o líneas). El Tessellator descompone un dominio canónico en un sistema de coordenadas normalizado (de cero a uno). Por ejemplo, un dominio cuadrado se tesela en un cuadrado de la unidad.
 
 ### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Fases de la etapa del Teselador (TS)
 
@@ -63,7 +63,7 @@ La fase de Tessellator (TS) funciona en dos fases:
 
     | Tipo de particiones | Intervalo                       |
     |----------------------|-----------------------------|
-    | Fraccionarios\_impar      | \[1.. 63\]                  |
+    | Fraccionarios\_impar      | \[1...63\]                  |
     | Fraccionarios\_incluso     | Intervalo de TessFactor: \[2..64\] |
     | Enteros              | Intervalo de TessFactor: \[1..64\] |
     | Pow2                 | Intervalo de TessFactor: \[1..64\] |

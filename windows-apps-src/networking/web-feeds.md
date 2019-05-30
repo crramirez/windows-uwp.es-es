@@ -6,23 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5312614c7060118fdb4678aa80ae51d6734486
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660310"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372784"
 ---
 # <a name="rssatom-feeds"></a>Fuentes RSS y Atom
 
 
 **API importantes**
 
--   [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819)
--   [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)
--   [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632)
+-   [**Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom)
+-   [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub)
+-   [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication)
 
-Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares RSS y Atom mediante características del espacio de nombres [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632).
+Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares RSS y Atom mediante características del espacio de nombres [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication).
 
 ## <a name="what-is-a-feed"></a>¿Qué es una fuente?
 
@@ -30,11 +30,11 @@ Una fuente web es un documento que contiene cualquier cantidad de entradas indiv
 
 ## <a name="which-feed-format-standards-are-supported"></a>¿Qué estándares de formato de fuentes se admiten?
 
-La Plataforma universal de Windows (UWP) admite la recuperación de fuentes para los estándares de formato RSS de 0.91 a RSS 2.0 y los estándares de Atom de 0.3 a 1.0. Las clases del espacio de nombres [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) pueden definir fuentes y elementos de fuente capaces de representar elementos tanto de RSS como de Atom.
+La Plataforma universal de Windows (UWP) admite la recuperación de fuentes para los estándares de formato RSS de 0.91 a RSS 2.0 y los estándares de Atom de 0.3 a 1.0. Las clases del espacio de nombres [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) pueden definir fuentes y elementos de fuente capaces de representar elementos tanto de RSS como de Atom.
 
-Además, los formatos de Atom 1.0 y RSS 2.0 permiten que los documentos de fuentes contengan elementos o atributos no definidos en las especificaciones oficiales. Con el tiempo, estos atributos y elementos personalizados han pasado a ser una forma de definir información específica de dominio consumida por otros formatos de datos de servicios web como GData y OData. Para admitir esta característica agregada, la clase [**SyndicationNode**](https://msdn.microsoft.com/library/windows/apps/br243585) representa elementos XML genéricos. Si se usa **SyndicationNode** con las clases del espacio de nombres [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819), las aplicaciones podrán obtener acceso a atributos, extensiones y otro contenido que incluyan.
+Además, los formatos de Atom 1.0 y RSS 2.0 permiten que los documentos de fuentes contengan elementos o atributos no definidos en las especificaciones oficiales. Con el tiempo, estos atributos y elementos personalizados han pasado a ser una forma de definir información específica de dominio consumida por otros formatos de datos de servicios web como GData y OData. Para admitir esta característica agregada, la clase [**SyndicationNode**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationNode) representa elementos XML genéricos. Si se usa **SyndicationNode** con las clases del espacio de nombres [**Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom), las aplicaciones podrán obtener acceso a atributos, extensiones y otro contenido que incluyan.
 
-Ten en cuenta que para la publicación de contenido sindicado, la implementación de UWP del protocolo de publicación Atom ([**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)) solo admite operaciones de contenido de fuentes según los estándares de Atom y Atom Publication.
+Ten en cuenta que para la publicación de contenido sindicado, la implementación de UWP del protocolo de publicación Atom ([**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub)) solo admite operaciones de contenido de fuentes según los estándares de Atom y Atom Publication.
 
 ## <a name="using-syndicated-content-with-network-isolation"></a>Uso de contenido sindicado con aislamiento de red
 
@@ -42,7 +42,7 @@ La característica de aislamiento de red de UWP permite al desarrollador control
 
 El aislamiento de red permite al desarrollador definir el ámbito de acceso a la red requerido para cada aplicación. Si una aplicación no tiene definido el ámbito de acceso apropiado, no podrá acceder al tipo especificado de red ni al tipo específico de solicitud de red (las solicitudes salientes iniciadas por el cliente o ambas, las solicitudes entrantes no solicitadas y las solicitudes salientes iniciadas por el cliente). La capacidad de establecer y exigir el aislamiento de red garantiza que si una aplicación se compromete, solo puede obtener acceso a las redes a las que se le haya concedido acceso de forma explícita. Esto reduce significativamente el ámbito del impacto en otras aplicaciones y en Windows.
 
-El aislamiento de red afecta a todos los elementos de clase en los espacios de nombres [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) y [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609) que intentan obtener acceso a la red. Windows aplica de manera activa el aislamiento de red. Si no se habilita la funcionalidad de red que corresponde, una llamada a un elemento de clase de los espacios de nombres **Windows.Web.Syndication** o **Windows.Web.AtomPub** que implique el acceso a la red puede presentar errores debido al aislamiento de red.
+El aislamiento de red afecta a todos los elementos de clase en los espacios de nombres [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) y [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub) que intentan obtener acceso a la red. Windows aplica de manera activa el aislamiento de red. Si no se habilita la funcionalidad de red que corresponde, una llamada a un elemento de clase de los espacios de nombres **Windows.Web.Syndication** o **Windows.Web.AtomPub** que implique el acceso a la red puede presentar errores debido al aislamiento de red.
 
 Las funcionalidades de red para una aplicación se configuran en su manifiesto al crear la aplicación. Las capacidades de red normalmente se agregan con Microsoft Visual Studio 2015 al desarrollar la aplicación. Las funcionalidades de red también pueden establecerse de forma manual en el archivo de manifiesto de la aplicación mediante el uso de un editor de texto.
 
@@ -50,7 +50,7 @@ Para obtener más información sobre las funcionalidades de red y el aislamiento
 
 ## <a name="how-to-access-a-web-feed"></a>Procedimiento para obtener acceso a una fuente web
 
-En esta sección se muestra cómo recuperar y mostrar una fuente web mediante clases del espacio de nombres [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) en la aplicación para UWP escrita en C# o Javascript.
+En esta sección se muestra cómo recuperar y mostrar una fuente web mediante clases del espacio de nombres [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) en la aplicación para UWP escrita en C# o Javascript.
 
 **Requisitos previos**
 
@@ -58,9 +58,9 @@ Para asegurarte de que la aplicación para UWP está lista para la red, debes es
 
 **Recuperar contenido sindicado desde una fuente web**
 
-Ahora revisaremos el código que demuestra cómo recuperar una fuente y luego mostraremos cada elemento en particular de la fuente. Para poder configurar y enviar la solicitud, definiremos algunas variables que usaremos durante la operación e inicializaremos una instancia de [**SyndicationClient**](https://msdn.microsoft.com/library/windows/apps/br243456), que define los métodos y las propiedades para recuperar y mostrar la fuente.
+Ahora revisaremos el código que demuestra cómo recuperar una fuente y luego mostraremos cada elemento en particular de la fuente. Para poder configurar y enviar la solicitud, definiremos algunas variables que usaremos durante la operación e inicializaremos una instancia de [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient), que define los métodos y las propiedades para recuperar y mostrar la fuente.
 
-El constructor [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) inicia una excepción si el valor *uriString* que se pasó al constructor no es un URI válido. Así que validamos *uriString* mediante un bloque try/catch.
+El constructor [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) inicia una excepción si el valor *uriString* que se pasó al constructor no es un URI válido. Así que validamos *uriString* mediante un bloque try/catch.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -93,13 +93,13 @@ try {
 }
 ```
 
-Después, para configurar la solicitud definimos las credenciales del servidor (la propiedad [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)), las credenciales de proxy (la propiedad [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)) y los encabezados HTTP (el método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)) necesarios. Con los parámetros de solicitud básicos configurados, creamos un objeto [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) válido mediante una cadena de URI de fuente proporcionada por la aplicación. Después, se pasa el objeto **URI** a la función [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) para solicitar la fuente.
+Después, para configurar la solicitud definimos las credenciales del servidor (la propiedad [**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential)), las credenciales de proxy (la propiedad [**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential)) y los encabezados HTTP (el método [**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader)) necesarios. Con los parámetros de solicitud básicos configurados, creamos un objeto [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) válido mediante una cadena de URI de fuente proporcionada por la aplicación. Después, se pasa el objeto **URI** a la función [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) para solicitar la fuente.
 
 Suponiendo que se devolvió el contenido deseado de la fuente, el código de ejemplo itera en cada elemento llamando a **displayCurrentItem** (definido a continuación) para mostrar elementos y su contenido en una lista a través de la interfaz de usuario.
 
 Debes escribir código para controlar las excepciones cuando llamas a la mayoría de los métodos de red asincrónicos. Tu controlador de excepciones puede recuperar información más detallada sobre la causa de la excepción para comprender mejor el error y tomar las decisiones adecuadas.
 
-El método [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) inicia una excepción si no se puede establecer una conexión con el servidor HTTP o si el objeto [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) no señala a una fuente AtomPub o RSS válida. En el código de muestra en Javascript se usa una función **onError** para captar las excepciones e imprimir información más detallada sobre la excepción si se produce un error.
+El método [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) inicia una excepción si no se puede establecer una conexión con el servidor HTTP o si el objeto [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) no señala a una fuente AtomPub o RSS válida. En el código de muestra en Javascript se usa una función **onError** para captar las excepciones e imprimir información más detallada sobre la excepción si se produce un error.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -157,7 +157,7 @@ function retreiveFeed(uri) {
 }
 ```
 
-En el paso anterior, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) devolvió el contenido de la fuente solicitada y el código de ejemplo tuvo que procesar iteraciones en los elementos disponibles de la fuente. Cada uno de estos elementos se representa con un objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) que contiene todo el contenido y las propiedades de los elementos contemplados en el estándar de redifusión web correspondiente (RSS o Atom). En el siguiente ejemplo, vemos la función **displayCurrentItem** trabajando en cada elemento y mostrando su contenido mediante distintos elementos denominados de la interfaz de usuario.
+En el paso anterior, [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) devolvió el contenido de la fuente solicitada y el código de ejemplo tuvo que procesar iteraciones en los elementos disponibles de la fuente. Cada uno de estos elementos se representa con un objeto [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) que contiene todo el contenido y las propiedades de los elementos contemplados en el estándar de redifusión web correspondiente (RSS o Atom). En el siguiente ejemplo, vemos la función **displayCurrentItem** trabajando en cada elemento y mostrando su contenido mediante distintos elementos denominados de la interfaz de usuario.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -199,7 +199,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-Como se sugirió anteriormente, el tipo de contenido representado por un objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) diferirá según el estándar de fuente (RSS o Atom) empleado para publicar la fuente. Por ejemplo, una fuente Atom puede proporcionar una lista de [**Contributors**](https://msdn.microsoft.com/library/windows/apps/br243540), mientras que la fuente RSS no puede hacerlo. Sin embargo, se puede obtener acceso a los elementos de extensión de la fuente que no sean compatibles con ninguno de los estándares (por ejemplo, elementos de extensión Dublin Core), por medio de la propiedad [**SyndicationItem.ElementExtensions**](https://msdn.microsoft.com/library/windows/apps/br243543). Después se pueden mostrar como en el siguiente código de ejemplo.
+Como se sugirió anteriormente, el tipo de contenido representado por un objeto [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) diferirá según el estándar de fuente (RSS o Atom) empleado para publicar la fuente. Por ejemplo, una fuente Atom puede proporcionar una lista de [**Contributors**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.contributors), mientras que la fuente RSS no puede hacerlo. Sin embargo, se puede obtener acceso a los elementos de extensión de la fuente que no sean compatibles con ninguno de los estándares (por ejemplo, elementos de extensión Dublin Core), por medio de la propiedad [**SyndicationItem.ElementExtensions**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.elementextensions). Después se pueden mostrar como en el siguiente código de ejemplo.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

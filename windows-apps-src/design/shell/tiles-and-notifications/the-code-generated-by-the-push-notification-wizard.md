@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac5ca785eab39612bb3a9c6ccd58779c6241059
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e30140a60906cb350940cc5ebd87347878845986
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596870"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365887"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  
@@ -216,20 +216,20 @@ La función sendNotifications envía una sola notificación en forma de notifica
 
 Windows admite notificaciones de otro tipo además de notificaciones de inserción. Para obtener información general sobre las notificaciones, consulta [Elección de un método de entrega de notificaciones](choosing-a-notification-delivery-method.md).
 
-Las notificaciones del sistema son fáciles de usar; puedes ver un ejemplo en el código Insert.js, en la tabla del canal que se ha generado automáticamente. Si tienes previsto usar notificaciones de icono o de rótulo informativo, deberás crear una plantilla XML para el icono y el rótulo informativo, y deberás especificar la codificación de la información empaquetada en la plantilla. Consulta [Trabajar con iconos, notificaciones y notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
+Las notificaciones del sistema son fáciles de usar; puedes ver un ejemplo en el código Insert.js, en la tabla del canal que se ha generado automáticamente. Si tienes previsto usar notificaciones de icono o de rótulo informativo, deberás crear una plantilla XML para el icono y el rótulo informativo, y deberás especificar la codificación de la información empaquetada en la plantilla. Consulta [Trabajar con iconos, notificaciones y notificaciones del sistema](https://docs.microsoft.com/previous-versions/windows/apps/hh868259(v=win.10)).
 
 Dado que Windows responde a las notificaciones del sistema, puede administrar la mayoría de estas notificaciones cuando la aplicación no se está ejecutando. Por ejemplo, una notificación de inserción permitiría al usuario saber cuándo ha recibido un nuevo mensaje de correo aunque la aplicación de correo local no se esté ejecutando. Windows administra las notificaciones del sistema mostrando un mensaje, como la primera línea de un mensaje de texto. Windows administra una notificación de icono o de rótulo informativo actualizando el icono dinámico de una aplicación para reflejar el número de mensajes de correo nuevos. De este modo, puedes solicitar a los usuarios de tu aplicación que la comprueben en busca de nueva información. Tu aplicación puede recibir notificaciones sin procesar mientras se está ejecutando y puedes usarlas para enviar datos a la aplicación. Si tu aplicación no se está ejecutando, puedes configurar una tarea en segundo plano para supervisar las notificaciones de inserción.
 
-Debes usar las notificaciones de inserción siguiendo las directrices para aplicaciones de la Plataforma universal de Windows (UWP), ya que estas notificaciones usan los recursos de un usuario y pueden resultar una distracción si se abusa de ellas. Consulta [Directrices y lista de comprobación de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462).
+Debes usar las notificaciones de inserción siguiendo las directrices para aplicaciones de la Plataforma universal de Windows (UWP), ya que estas notificaciones usan los recursos de un usuario y pueden resultar una distracción si se abusa de ellas. Consulta [Directrices y lista de comprobación de notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview).
 
-Si vas a actualizar iconos dinámicos con notificaciones de inserción, también deberías seguir las directrices de [Directrices y lista de comprobación para iconos y notificaciones](https://msdn.microsoft.com/library/windows/apps/hh465403).
+Si vas a actualizar iconos dinámicos con notificaciones de inserción, también deberías seguir las directrices de [Directrices y lista de comprobación para iconos y notificaciones](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 
 ### <a name="using-the-windows-push-notification-services-wns"></a>Uso de los Servicios de notificaciones de inserción de Windows (WNS)
 
-Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) directamente si los Servicios móviles no ofrecen la suficiente flexibilidad, si quieres escribir tu código de servidor en C# o Visual Basic, o si ya tienes un servicio en la nube y quieres usarlo para enviar notificaciones de inserción desde él. Al llamar directamente a WNS, puedes enviar notificaciones de inserción desde tu propio servicio en la nube, como un rol de trabajador que supervisa los datos desde una base de datos u otro servicio web. El servicio en la nube debe autenticarse en WNS para enviar notificaciones de inserción a tus aplicaciones. Consulta [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) o [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206).
+Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) directamente si los Servicios móviles no ofrecen la suficiente flexibilidad, si quieres escribir tu código de servidor en C# o Visual Basic, o si ya tienes un servicio en la nube y quieres usarlo para enviar notificaciones de inserción desde él. Al llamar directamente a WNS, puedes enviar notificaciones de inserción desde tu propio servicio en la nube, como un rol de trabajador que supervisa los datos desde una base de datos u otro servicio web. El servicio en la nube debe autenticarse en WNS para enviar notificaciones de inserción a tus aplicaciones. Consulta [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10)) o [(C#/C++/VB)](https://docs.microsoft.com/previous-versions/windows/apps/hh868206(v=win.10)).
 
 También puedes enviar notificaciones de inserción si ejecutas una tarea programada en tu servicio móvil. Consulta [Programación de trabajos periódicos en Servicios móviles](https://go.microsoft.com/fwlink/p/?linkid=301694).
 
@@ -242,9 +242,9 @@ También puedes enviar notificaciones de inserción si ejecutas una tarea progra
 
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Introducción a las notificaciones sin procesar](raw-notification-overview.md)
-* [Conectarse a Windows Azure Mobile Services (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
-* [Conectarse a Windows Azure Mobile Services (C#/C+ c++ / VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
-* [Inicio rápido: Agregar notificaciones de inserción para un servicio móvil (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
+* [Conectarse a Windows Azure Mobile Services (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/dn263160(v=win.10))
+* [Conectarse a Windows Azure Mobile Services (C#/C+ c++ / VB)](https://docs.microsoft.com/previous-versions/windows/apps/dn263175(v=win.10))
+* [Inicio rápido: Agregar notificaciones de inserción para un servicio móvil (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/dn263163(v=win.10))
  
 
  

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c8130c6a8e4d8441fdf8ff60c702bd1ae30bae6e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606750"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372264"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticación web
 
 
 
 
-En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc. El método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.
+En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc. El método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.
 
 >[!NOTE]
 >Para obtener una muestra de código completa que funcione, clona el [Repositorio del agente de autenticación web en GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
@@ -35,7 +35,7 @@ Debes registrar tu aplicación con el proveedor de identidad en línea con el cu
 
 El URI de solicitud consta de la dirección desde la que envías la solicitud de autenticación a tu proveedor en línea anexada con otra información obligatoria, como un secreto o identificador de la aplicación, un URI de redirección donde se envía al usuario después de completar la autenticación, y el tipo de respuesta esperado. Puedes preguntarle al proveedor qué parámetros se requieren.
 
-El URI de solicitud se envía como el parámetro *requestUri* del método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066). Debe ser una dirección segura (debe comenzar con `https://`)
+El URI de solicitud se envía como el parámetro *requestUri* del método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync). Debe ser una dirección segura (debe comenzar con `https://`)
 
 En el siguiente ejemplo se muestra cómo crear el URI de solicitud.
 
@@ -50,7 +50,7 @@ System.Uri endURI = new System.Uri(endURL);
 ## <a name="connect-to-the-online-provider"></a>Conectarse al proveedor en línea
 
 
-Llama al método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) para conectarte al proveedor de identidad en línea y obtener un token de acceso. El método toma el URI creado en el paso anterior como el parámetro *requestUri* y un URI al que quieres que se redireccione el usuario como el parámetro *callbackUri*.
+Llama al método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) para conectarte al proveedor de identidad en línea y obtener un token de acceso. El método toma el URI creado en el paso anterior como el parámetro *requestUri* y un URI al que quieres que se redireccione el usuario como el parámetro *callbackUri*.
 
 ```cs
 string result;
@@ -87,14 +87,14 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Además de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), el espacio de nombres [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contiene un método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). No llame a este método. Está diseñado para aplicaciones destinadas a Windows Phone 8.1 solo y está en desuso a partir de Windows 10.
+>Además de [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), el espacio de nombres [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) contiene un método [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods). No llame a este método. Está diseñado para aplicaciones destinadas a Windows Phone 8.1 solo y está en desuso a partir de Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Conéctate con inicio de sesión único (SSO).
 
 
-De forma predeterminada, el agente de autenticación web no permite que haya cookies. Por esto, aunque el usuario de la aplicación indique que quiere mantener la sesión iniciada (por ejemplo, al activar una casilla en el cuadro de diálogo de inicio de sesión del proveedor), deberá iniciar sesión cada vez que quiera tener acceso a los recursos de dicho proveedor. Para iniciar sesión con inicio de sesión único (SSO), el proveedor de identidad en línea debe haber habilitado SSO para el agente de autenticación web y la aplicación debe llamar la sobrecarga de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068), que no toma un parámetro *callbackUri*. Esto permitirá que las cookies persistentes se almacenen mediante el agente de autenticación web, para que las llamadas de autenticación futuras realizadas por la misma aplicación no requieran que el usuario inicie sesión varias veces (el usuario "ha iniciado sesión" de forma eficaz hasta que el token de acceso caduque).
+De forma predeterminada, el agente de autenticación web no permite que haya cookies. Por esto, aunque el usuario de la aplicación indique que quiere mantener la sesión iniciada (por ejemplo, al activar una casilla en el cuadro de diálogo de inicio de sesión del proveedor), deberá iniciar sesión cada vez que quiera tener acceso a los recursos de dicho proveedor. Para iniciar sesión con inicio de sesión único (SSO), el proveedor de identidad en línea debe haber habilitado SSO para el agente de autenticación web y la aplicación debe llamar la sobrecarga de [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), que no toma un parámetro *callbackUri*. Esto permitirá que las cookies persistentes se almacenen mediante el agente de autenticación web, para que las llamadas de autenticación futuras realizadas por la misma aplicación no requieran que el usuario inicie sesión varias veces (el usuario "ha iniciado sesión" de forma eficaz hasta que el token de acceso caduque).
 
-Para habilitar SSO, el proveedor en línea debe permitir registrar una URI de redirección en la forma de `ms-app://<appSID>`, donde `<appSID>` es el SID de tu aplicación. Puedes encontrar el SID de tu aplicación en la página del desarrollador de la aplicación, o llamando al método [**GetCurrentApplicationCallbackUri**](https://msdn.microsoft.com/library/windows/apps/br212069).
+Para habilitar SSO, el proveedor en línea debe permitir registrar una URI de redirección en la forma de `ms-app://<appSID>`, donde `<appSID>` es el SID de tu aplicación. Puedes encontrar el SID de tu aplicación en la página del desarrollador de la aplicación, o llamando al método [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri).
 
 ```cs
 string result;

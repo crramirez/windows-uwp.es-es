@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, API, información de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f6f4b2df1cda14bc1f363a1f9100e416f26489b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618140"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372462"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
 
@@ -36,7 +36,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -45,10 +45,10 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Requerido  
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto de la aplicación de escritorio para el que desea obtener datos de insights. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [análisis de informes para su aplicación de escritorio en el centro de partners](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. Si no especifica este parámetro, el cuerpo de respuesta contendrá datos de información para todas las aplicaciones registradas en su cuenta.  |  No  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | fecha | La fecha de finalización del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es la fecha actual. |  No  |
-| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *Filtro = tipo de datos eq 'adquisición'*. <p/><p/>Actualmente, este método solo admite el filtro **estado**.  | No   |
+| applicationId | string | El identificador de producto de la aplicación de escritorio para el que desea obtener datos de insights. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [análisis de informes para su aplicación de escritorio en el centro de partners](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. Si no especifica este parámetro, el cuerpo de respuesta contendrá datos de información para todas las aplicaciones registradas en su cuenta.  |  No  |
+| startDate | date | La fecha de inicio del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
+| endDate | date | La fecha de finalización del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es la fecha actual. |  No  |
+| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *Filtro = tipo de datos eq 'adquisición'* . <p/><p/>Actualmente, este método solo admite el filtro **estado**.  | No   |
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -77,7 +77,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | El identificador de producto de la aplicación de escritorio para el que se recuperaron datos de insights.     |
 | insightDate                | string | La fecha en la que hemos identificado que el cambio en una métrica específica. Esta fecha representa el final de la semana en que se detectó un aumento significativo o disminuir en una métrica en comparación con la semana anterior a éste. |
-| Tipo de datos     | string | Una cadena que especifica el área de análisis general que le informa de esta información. Actualmente, este método solo admite **estado**.    |
+| dataType     | string | Una cadena que especifica el área de análisis general que le informa de esta información. Actualmente, este método solo admite **estado**.    |
 | insightDetail          | array | Uno o varios [InsightDetail valores](#insightdetail-values) que representan los detalles para obtener información actual.    |
 
 
@@ -87,11 +87,11 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | FactName           | string | Una cadena que indica la métrica que describe la información actual o la dimensión actual. Actualmente, este método solo admite el valor **HitCount**.  |
 | SubDimensions         | array |  Uno o más objetos que describen una sola métrica para la perspectiva.   |
-| CambioPorcentual            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
+| PercentChange            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
 | DimensionName           | string |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, y **PackageVersion**.   |
 | DimensionValue              | string | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, **DimensionValue** podría ser **bloqueo** o **bloqueo** .   |
 | FactValue     | string | El valor absoluto de la métrica en la fecha en que se ha detectado la recomendación.  |
-| Dirección | string |  La dirección del cambio (**positivo** o **negativo**).   |
+| Direction | string |  La dirección del cambio (**positivo** o **negativo**).   |
 | Fecha              | string |  La fecha en la que hemos identificado que el cambio relacionado con la información actual o la dimensión actual.   |
 
 ### <a name="response-example"></a>Ejemplo de respuesta

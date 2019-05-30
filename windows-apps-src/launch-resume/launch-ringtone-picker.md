@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
-ms.openlocfilehash: 293c755ecaf81ce80fab148a8aca92a7e3a8fa48
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78ed118ba15f38f8914cf2046344d782cd0df71b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618590"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370795"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Elegir y guardar los tonos con el esquema de URI ms-tonepicker
 
@@ -23,7 +23,7 @@ Este tema describe cómo usar el **tonepicker de ms:** Esquema de URI. Este esqu
 
 ## <a name="ms-tonepicker-uri-scheme-reference"></a>ms-tonepicker: Referencia de esquema URI
 
-Este esquema de URI no pasa argumentos a través de la cadena de esquema de URI, sino que pasa argumentos a través de una clase [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). Todas las cadenas distinguen mayúsculas de minúsculas.
+Este esquema de URI no pasa argumentos a través de la cadena de esquema de URI, sino que pasa argumentos a través de una clase [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset). Todas las cadenas distinguen mayúsculas de minúsculas.
 
 En las siguientes secciones se indican los argumentos que se deben pasar para realizar la tarea especificada.
 
@@ -49,7 +49,7 @@ Los argumentos que puedes pasar para mostrar el selector de tono son los siguien
 | CurrentToneFilePath | string | no | Un token de tono existente. | Tono para mostrar como el tono actual en el selector de tono. Si no se establece este valor, el primer tono de la lista se selecciona de manera predeterminada.<br>No se trata, estrictamente hablando, de una ruta de archivo. Puedes obtener un valor adecuado para `CurrenttoneFilePath` del valor `ToneToken` que devuelve el selector de tono.  |
 | TypeFilter | string | no | "Tonos", "Notificaciones", "Alarmas", "Ninguno" | Selecciona los tonos que se van a agregar al selector. Si no se especifica ningún filtro, se muestran todos los tonos. |
 
-Valores que se devuelven en [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
+Valores que se devuelven en [LaunchUriResults.Result](https://docs.microsoft.com/uwp/api/windows.system.launchuriresult.result):
 
 | Valores devueltos | Tipo | Posibles valores | Descripción |
 |--------------|------|-------|-------------|
@@ -93,10 +93,10 @@ Los argumentos que puedes pasar para mostrar el protector de tono son los siguie
 | Parámetro | Tipo | Requerido | Posibles valores | Descripción |
 |-----------|------|----------|-------|-------------|
 | Acción | string | sí | "SaveRingtone" | Abre el selector para guardar un tono. |
-| ToneFileSharingToken | string | sí | Token de uso compartido de archivos [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) para el archivo de tonos que se va a guardar. | Guarda un archivo de sonido específico como un tono. Los tipos de contenido admitidos para el archivo son audio MPEG y audio x-ms-wma. |
+| ToneFileSharingToken | string | sí | Token de uso compartido de archivos [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager) para el archivo de tonos que se va a guardar. | Guarda un archivo de sonido específico como un tono. Los tipos de contenido admitidos para el archivo son audio MPEG y audio x-ms-wma. |
 | DisplayName | string | no | Nombre descriptivo del tono especificado. | Establece el nombre para mostrar que se usará al guardar el tono especificado. |
 
-Valores que se devuelven en [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
+Valores que se devuelven en [LaunchUriResults.Result](https://docs.microsoft.com/uwp/api/windows.system.launchuriresult.result):
 
 | Valores devueltos | Tipo | Posibles valores | Descripción |
 |--------------|------|-------|-------------|
@@ -159,7 +159,7 @@ Los argumentos que puedes pasar para obtener el nombre descriptivo de un tono so
 | Acción | string | sí | "GetToneName" | Indica que quieres obtener el nombre descriptivo de un tono. |
 | ToneToken | string | sí | Token de tono | Token de tono desde el que se obtiene un nombre para mostrar. |
 
-Valores que se devuelven en [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
+Valores que se devuelven en [LaunchUriResults.Result](https://docs.microsoft.com/uwp/api/windows.system.launchuriresult.result):
 
 | Valor devuelto | Tipo | Posibles valores | Descripción |
 |--------------|------|-------|-------------|

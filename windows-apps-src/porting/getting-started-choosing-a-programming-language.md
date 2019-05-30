@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48cea8c1a3a3c35a53a3376c48e3192c94caf709
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f5605c115c409771ce8dc9ddfeb1a4922e04aece
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620780"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372843"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introducción: Elección de un lenguaje de programación
 
 
 ## <a name="choosing-a-programming-language"></a>Elección de un lenguaje de programación
 
-Antes de continuar, debes conocer los lenguajes de programación que puedes elegir cuando desarrollas aplicaciones para la Plataforma universal de Windows (UWP). Aunque en los tutoriales de este artículo se usa C#, puedes desarrollar aplicaciones para UWP con uno o varios lenguajes de programación (consulta [Lenguajes, herramientas y marcos](https://msdn.microsoft.com/library/windows/apps/dn465799)).
+Antes de continuar, debes conocer los lenguajes de programación que puedes elegir cuando desarrollas aplicaciones para la Plataforma universal de Windows (UWP). Aunque en los tutoriales de este artículo se usa C#, puedes desarrollar aplicaciones para UWP con uno o varios lenguajes de programación (consulta [Lenguajes, herramientas y marcos](https://docs.microsoft.com/previous-versions/windows/apps/dn465799(v=win.10))).
 
 Puedes usar C++, C#, Microsoft Visual Basic y JavaScript para desarrollar. JavaScript usa el marcado HTML5 para el diseño de la UI, mientras que el resto de los lenguajes emplea un lenguaje de marcado conocido como *lenguaje XAML* para describir sus UI.
 
@@ -29,10 +29,10 @@ Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventaj
 -   [Cree su primera aplicación para UWP mediante JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 
 **Tenga en cuenta**  para aplicaciones que usan gráficos 3D, los estándares de OpenGL y OpenGL ES no están disponibles de forma nativa para aplicaciones UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
--   [ángulo](https://code.google.com/p/angleproject/)
--   [Cree su primera aplicación UWP con DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
+-   [Angle](https://code.google.com/p/angleproject/)
+-   [Cree su primera aplicación UWP con DirectX](https://docs.microsoft.com/previous-versions/windows/apps/br229580(v=win.10))
 -   [Ejemplos de aplicaciones para UWP que usan DirectX](https://go.microsoft.com/fwlink/p/?LinkId=263603)
--   [¿Dónde está el SDK de DirectX?](https://msdn.microsoft.com/library/windows/desktop/ee663275)
+-   [¿Dónde está el SDK de DirectX?](https://docs.microsoft.com/windows/desktop/directx-sdk--august-2009-)
 
 ## <a name="giving-c-a-go"></a>Dale una oportunidad a C#
 

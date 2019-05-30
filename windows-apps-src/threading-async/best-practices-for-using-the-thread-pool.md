@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c004feabf561c5a94fadba858762bf683c9ff0e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a498f685e7a810d19e2f1eb63ae112dd02587b84
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628050"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370692"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>Procedimientos recomendados para usar el grupo de subprocesos
 
@@ -26,9 +26,9 @@ En este tema se describen los procedimientos recomendados para trabajar con el g
 
 -   Crea elementos de trabajo de corta duración e independientes. Los elementos de trabajo se ejecutan de manera asincrónica y pueden enviarse al grupo en cualquier orden desde la cola.
 
--   Distribuye actualizaciones al subproceso de interfaz de usuario con el [**Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211).
+-   Distribuye actualizaciones al subproceso de interfaz de usuario con el [**Windows.UI.Core.CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher).
 
--   Usa [**ThreadPoolTimer.CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) en lugar de la función **Sleep**.
+-   Usa [**ThreadPoolTimer.CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) en lugar de la función **Sleep**.
 
 -   Usa el grupo de subprocesos en lugar de crear tu propio sistema de administración de subprocesos. El grupo de subprocesos se ejecuta en el nivel del sistema operativo con funcionalidades avanzadas y está optimizado para escalar dinámicamente según los recursos y la actividad del dispositivo en el proceso y en todo el sistema.
 
@@ -43,7 +43,7 @@ En este tema se describen los procedimientos recomendados para trabajar con el g
 
 -   No envíes elementos de trabajo periódicos que demoren más en completarse que la cantidad de tiempo especificada en el parámetro *period*.
 
--   No intentes enviar actualizaciones de interfaz de usuario (que no sean notificaciones del sistema y notificaciones) desde un elemento de trabajo que proviene de una tarea en segundo plano. En lugar de ello, usa los controladores de progreso y finalización de tareas en segundo plano, por ejemplo, [**IBackgroundTaskInstance.Progress**](https://msdn.microsoft.com/library/windows/apps/BR224800).
+-   No intentes enviar actualizaciones de interfaz de usuario (que no sean notificaciones del sistema y notificaciones) desde un elemento de trabajo que proviene de una tarea en segundo plano. En lugar de ello, usa los controladores de progreso y finalización de tareas en segundo plano, por ejemplo, [**IBackgroundTaskInstance.Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress).
 
 -   Cuando usas controladores de elemento de trabajo que usen la palabra clave **async**, ten en cuenta que el elemento de trabajo del grupo de subprocesos se puede establecer en el estado completo antes de que se haya ejecutado todo el código en el controlador. Es posible que el código que sigue a una palabra clave **await** dentro del controlador se ejecute después de que el elemento de trabajo se haya establecido en el estado completo.
 

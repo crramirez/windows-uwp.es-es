@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b6290fba9d4194df78c39902b8d96e952134682
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: eb0e870aa467641f82d24f03278a199ab56d0c8d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607420"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370971"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>Características de muestreo de texturas de recursos de streaming
 
@@ -27,12 +27,12 @@ Las características de muestreo de texturas descritas aquí requieren el [nivel
 ## <a name="span-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanshader-status-feedback-about-mapped-areas"></a><span id="Shader_status_feedback_about_mapped_areas"></span><span id="shader_status_feedback_about_mapped_areas"></span><span id="SHADER_STATUS_FEEDBACK_ABOUT_MAPPED_AREAS"></span>Comentarios sobre el estado del sombreador acerca de las áreas asignadas
 
 
-Cualquier instrucción de sombreador que lee o escribe en un recurso de streaming hace que se registre información sobre el estado. Este estado se expone como un valor de retorno adicional opcional en cada instrucción de acceso de recurso que entra en un registro temporal de 32 bits. El contenido del valor devuelto es opaco. Es decir, no se permite la lectura directa por parte del programa sombreador. No obstante, puedes usar la función [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) para extraer la información de estado.
+Cualquier instrucción de sombreador que lee o escribe en un recurso de streaming hace que se registre información sobre el estado. Este estado se expone como un valor de retorno adicional opcional en cada instrucción de acceso de recurso que entra en un registro temporal de 32 bits. El contenido del valor devuelto es opaco. Es decir, no se permite la lectura directa por parte del programa sombreador. No obstante, puedes usar la función [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) para extraer la información de estado.
 
 ## <a name="span-idfullymappedcheckspanspan-idfullymappedcheckspanspan-idfullymappedcheckspanfully-mapped-check"></a><span id="Fully_mapped_check"></span><span id="fully_mapped_check"></span><span id="FULLY_MAPPED_CHECK"></span>Verificación totalmente asignada
 
 
-La función [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta el estado devuelto desde un acceso a la memoria e indica si todos los datos a los que se tiene acceso se han asignado en el recurso. **CheckAccessFullyMapped** devuelve el valor true (0xFFFFFFFF) si los datos estaban asignados o false (0x00000000) si los datos estaban sin asignar.
+La función [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta el estado devuelto desde un acceso a la memoria e indica si todos los datos a los que se tiene acceso se han asignado en el recurso. **CheckAccessFullyMapped** devuelve el valor true (0xFFFFFFFF) si los datos estaban asignados o false (0x00000000) si los datos estaban sin asignar.
 
 Durante las operaciones de filtro, a veces el peso de un elemento de textura determinado termina siendo 0.0. Un ejemplo es un ejemplo lineal con las coordenadas de textura que se encuentran directamente en un centro de la textura: 3 otros elementos de textura (cuáles son pueden variar por hardware) contribuyen al filtro pero con el peso de 0. Estos elementos de textura de peso O no contribuyen al resultado del filtro, por lo que si se producen, se colocan en iconos **NULL** y no cuentan como un acceso sin asignar. Ten en cuenta que la misma garantía se aplica a los filtros de textura que incluyen varios niveles de MIP; si los elementos de textura de uno de los mapas MIP no está asignado, pero el peso de esos elementos de textura es 0, estos no cuentan como un acceso sin asignar.
 
@@ -40,7 +40,7 @@ Cuando el muestreo de un formato que tiene componentes de menos de 4 (como DXGI\
 
 El sombreador puede comprobar el estado y tomar cualquier curso de acción en caso de error. Por ejemplo, un curso de acción puede ser registrar los "elementos faltantes"(por ejemplo, a través de escritura UAV) o emitir otra lectura comprimida a un LOD más amplio que se sepa que está asignado. Una aplicación podría querer realizar el seguimiento de los accesos correctos también, para hacerse una idea de a qué parte del conjunto asignado de los iconos se ha accedido.
 
-Una complicación para el registro es que no existe ningún mecanismo para notificar el conjunto exacto de los iconos a los que se habría accedido. La aplicación puede hacer suposiciones conservadoras basadas en el conocimiento de las coordenadas que usa para acceder, así como usar la instrucción LOD; por ejemplo, [**tex2Dlod**](https://msdn.microsoft.com/library/windows/desktop/bb509680)) devuelve el cálculo del LOD de hardware.
+Una complicación para el registro es que no existe ningún mecanismo para notificar el conjunto exacto de los iconos a los que se habría accedido. La aplicación puede hacer suposiciones conservadoras basadas en el conocimiento de las coordenadas que usa para acceder, así como usar la instrucción LOD; por ejemplo, [**tex2Dlod**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)) devuelve el cálculo del LOD de hardware.
 
 Otra complicación es que un gran número de accesos será a los mismos iconos, por lo que se producirá mucho registro redundante y posiblemente contención en la memoria. Podría resultar conveniente si al hardware se le pudiera dar la opción de no molestarse en informar sobre los accesos a iconos si ya se han notificado antes en otra parte. Quizá el estado de dicho seguimiento podría restablecerse desde la API (probablemente en los límites del marco).
 
@@ -49,11 +49,11 @@ Otra complicación es que un gran número de accesos será a los mismos iconos, 
 
 Para ayudar a los sombreadores a evitar áreas en los recursos de streaming con mapas MIP que se sepa que no están asignadas, mayoría de las instrucciones de sombreador que implican el uso de una muestra (filtrado) tienen un modo que permite al sombreador pasar un parámetro de compresión MinLOD float32 adicional a la muestra de textura. Este valor está en el espacio de números de mapa MIP de la vista, en contra de lo que sucede en el recurso subyacente.
 
-El hardware realiza` max(fShaderMinLODClamp,fComputedLOD) `en el mismo lugar en el cálculo de LOD donde se produce la compresión MinLOD por recurso, que es también un [**max**](https://msdn.microsoft.com/library/windows/desktop/bb509624)().
+El hardware realiza` max(fShaderMinLODClamp,fComputedLOD) `en el mismo lugar en el cálculo de LOD donde se produce la compresión MinLOD por recurso, que es también un [**max**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-max)().
 
 Si el resultado de aplicar la abrazadera LOD por muestra y cualquier otras garras LOD definidas en la muestra es un conjunto vacío, el resultado es el mismo fuera de límites acceso resultado como el bloqueo de minLOD por recurso: 0 para los componentes en el formato de superficie y los valores predeterminados para los componentes que faltan.
 
-La instrucción LOD (por ejemplo, [**tex2Dlod**](https://msdn.microsoft.com/library/windows/desktop/bb509680)), que precede a la compresión minLOD por muestra descrita aquí, devuelve un LOD comprimido y un LOD sin comprimir. El LOD comprimido devuelto desde esta instrucción LOD refleja toda la compresión, incluida la compresión por recurso, pero no una compresión por muestra. La compresión por muestra la controla el sombreador y la conoce en cualquier caso, para que el creador del sombreador pueda aplicar manualmente esa compresión al valor devuelto de la instrucción LOD si lo desea.
+La instrucción LOD (por ejemplo, [**tex2Dlod**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)), que precede a la compresión minLOD por muestra descrita aquí, devuelve un LOD comprimido y un LOD sin comprimir. El LOD comprimido devuelto desde esta instrucción LOD refleja toda la compresión, incluida la compresión por recurso, pero no una compresión por muestra. La compresión por muestra la controla el sombreador y la conoce en cualquier caso, para que el creador del sombreador pueda aplicar manualmente esa compresión al valor devuelto de la instrucción LOD si lo desea.
 
 ## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtrado de reducción de Mín./máx.
 

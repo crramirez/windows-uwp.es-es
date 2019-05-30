@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0eb5a03a2a6de8624e8b414fa31c6eec51c04bbc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364889"
 ---
 # <a name="inking-controls"></a>Controles de entrada manuscrita
 
 
 
-Hay dos tipos de controles que facilitan la tinta en aplicaciones de la plataforma Universal de Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) y [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Hay dos tipos de controles que facilitan la tinta en aplicaciones de la plataforma Universal de Windows (UWP): [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) y [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
 El control InkCanvas representa la entrada manuscrita como un trazo de lápiz (con la configuración predeterminada de color y espesor) o un trazo de borrado. Este control es una superposición transparente que no incluye ninguna interfaz de usuario integrada para cambiar las propiedades de trazo de lápiz predeterminadas.
 
@@ -35,7 +35,7 @@ De manera predeterminada, el control InkToolbar incluye botones para dibujar, bo
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **API importantes**: [Clase InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [InkToolbar clase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [clase InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **API importantes**: [Clase InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), [InkToolbar clase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), [clase InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), [Windows.UI.Input.Inking](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
@@ -47,7 +47,7 @@ De manera predeterminada, los trazos se representan como entrada de lápiz al us
 Empareja el control InkCanvas con un control InkToolbar para proporcionar una interfaz de usuario para activar las características de entrada de lápiz y establecer propiedades de entrada de lápiz básicas, como el tamaño y el color del trazo o la forma de la punta del lápiz.
 
 > [!NOTE] 
-> Para realizar una mayor personalización del trazo de lápiz que se representa en un control InkCanvas, usa el objeto subyacente [InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx).
+> Para realizar una mayor personalización del trazo de lápiz que se representa en un control InkCanvas, usa el objeto subyacente [InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter).
 
 ## <a name="examples"></a>Ejemplos
 

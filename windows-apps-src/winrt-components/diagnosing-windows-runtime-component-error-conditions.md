@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4733edba06b7042c436918e882556f86dfa00071
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 72a7a7d4bbe6987781c538a7276bf3942f10cf5b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646570"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372202"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
 
 
 
-En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado. Expande la información que se proporciona en los mensajes de error de [Winmdexp.exe (herramienta de exportación de metadatos Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)y complementa la información sobre las restricciones que se proporciona en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado. Expande la información que se proporciona en los mensajes de error de [Winmdexp.exe (herramienta de exportación de metadatos Windows Runtime)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)y complementa la información sobre las restricciones que se proporciona en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 En este artículo no se abarcan todos los errores. Los errores que se tratan aquí se agrupan por categoría general, y cada categoría incluye una tabla de mensajes de error relacionados. Busca el texto del mensaje (omitiendo valores específicos de marcadores de posición) o el número de mensaje. Si no encuentras la información que necesitas aquí, por favor, ayúdanos a mejorar la documentación con el botón de comentarios al final de este artículo. Incluye el mensaje del error. Como alternativa, puedes presentar un error en el sitio Web de Microsoft Connect.
 
 ## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>El mensaje de error para implementar la interfaz asincrónica proporciona un tipo incorrecto
 
 
-Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
+Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions//br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
 
 | Número de error | Texto de mensaje|       
 |--------------|-------------|
@@ -124,13 +124,13 @@ Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico a
 
 La interfaz pública de tu componente debe exponer solo los tipos UWP. Sin embargo, .NET Framework proporciona asignaciones para varios tipos de uso frecuente que son ligeramente diferentes en .NET Framework y la UWP. Esto permite al desarrollador de .NET Framework trabajar con tipos familiares en lugar de aprender nuevos. Puedes usar estos tipos de .NET Framework asignados en la interfaz pública de tu componente. Consulta "Declarar tipos en componentes de Windows Runtime" y "Pasar tipos de la Plataforma universal de Windows a código administrado" en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) y [Asignaciones de .NET Framework de los tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
 
-Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](https://msdn.microsoft.com/library/5y536ey6.aspx) se asigna a la interfaz UWP [IVector&lt;T&gt;](https://msdn.microsoft.com/library/windows/apps/br206631.aspx). Si usas List&lt;string&gt; (`List(Of String)` en Visual Basic) en lugar de IList&lt;string&gt; como tipo de parámetro, Winmdexp.exe proporciona una lista de alternativas que incluye todas las interfaces asignadas implementadas por List&lt;T&gt;. Si usas los tipos genéricos anidados, como List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) en Visual Basic), Winmdexp.exe ofrece opciones para cada nivel de anidación. Estas listas pueden ser bastante largas.
+Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?redirectedfrom=MSDN) se asigna a la interfaz UWP [IVector&lt;T&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IVector_T_). Si usas List&lt;string&gt; (`List(Of String)` en Visual Basic) en lugar de IList&lt;string&gt; como tipo de parámetro, Winmdexp.exe proporciona una lista de alternativas que incluye todas las interfaces asignadas implementadas por List&lt;T&gt;. Si usas los tipos genéricos anidados, como List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) en Visual Basic), Winmdexp.exe ofrece opciones para cada nivel de anidación. Estas listas pueden ser bastante largas.
 
 En general, la mejor opción es la interfaz que más se asemeje al tipo. Por ejemplo, para Dictionary&lt;int, string&gt;, la mejor opción es probablemente IDictionary&lt;int, string&gt;.
 
 > **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
-> **Precaución**  evite usar la no genérica [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) y [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) interfaces si va a usar el componente de JavaScript. Estas interfaces se asignan a [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) y [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
+> **Precaución**  evite usar la no genérica [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN) y [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable?redirectedfrom=MSDN) interfaces si va a usar el componente de JavaScript. Estas interfaces se asignan a [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) y [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
 
  
 
@@ -157,7 +157,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>Método '{0}'tiene un parámetro de tipo'{1}' en la firma. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. {2}</p>
-> **Tenga en cuenta**  para {2}, Winmdexp.exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System.Collections.Generic.List&lt;T&gt;' en la firma del método a uno de los siguientes tipos en lugar de: "System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+> **Tenga en cuenta**  para {2}, Winmdexp.exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System.Collections.Generic.List&lt;T&gt;' en la firma del método a uno de los siguientes tipos en lugar de: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
 <tr class="even">
@@ -200,7 +200,7 @@ En la UWP, las matrices en las signaturas de miembros deben ser unidimensionales
 ## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>Los parámetros de matriz deben especificar si el contenido de la matriz es de lectura o escritura.
 
 
-En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se pueden marcar parámetros **ref** (**ByRef** sin el atributo [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) en Visual Basic). Esto se aplica al contenido de las matrices, por lo que los parámetros de las matrices deben indicar si el contenido de la matriz es de solo lectura o solo escritura. La dirección es clara para los parámetros **out** (parámetro **ByRef** con el atributo OutAttribute en Visual Basic), pero los parámetros de matrices pasados por valor (ByVal en Visual Basic) deben estar marcados. Consulta [Pasar matrices a un componente de Windows Runtime](passing-arrays-to-a-windows-runtime-component.md).
+En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se pueden marcar parámetros **ref** (**ByRef** sin el atributo [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute?redirectedfrom=MSDN) en Visual Basic). Esto se aplica al contenido de las matrices, por lo que los parámetros de las matrices deben indicar si el contenido de la matriz es de solo lectura o solo escritura. La dirección es clara para los parámetros **out** (parámetro **ByRef** con el atributo OutAttribute en Visual Basic), pero los parámetros de matrices pasados por valor (ByVal en Visual Basic) deben estar marcados. Consulta [Pasar matrices a un componente de Windows Runtime](passing-arrays-to-a-windows-runtime-component.md).
 
 | Número de error | Texto de mensaje         |
 |--------------|----------------------|
@@ -238,7 +238,7 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
 
 > **Tenga en cuenta**  si cambia el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, se producirá el error WME1091.
 
-El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
+El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute?redirectedfrom=MSDN).
 
 | Número de error | Texto de mensaje |
 |--------------|--------------|
@@ -251,4 +251,4 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Winmdexp.exe (herramienta de exportación de metadatos en tiempo de ejecución de Windows)](https://msdn.microsoft.com/library/hh925576.aspx)
+* [Winmdexp.exe (herramienta de exportación de metadatos en tiempo de ejecución de Windows)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)

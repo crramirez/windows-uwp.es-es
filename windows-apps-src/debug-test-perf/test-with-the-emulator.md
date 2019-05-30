@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6850a5d2458c29c81bacc195106af697b37dd23b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359902"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 
@@ -41,7 +41,7 @@ Sistema operativo
 -   64 bits
 -   Edición Pro o superior
 
-Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
+Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105)).
 
 Para comprobar los requisitos de RAM y del sistema operativo, en el Panel de control, selecciona **Sistema y seguridad**y, a continuación, selecciona **Sistema**.
 
@@ -96,7 +96,7 @@ Además de las nuevas funciones que se mencionan en la sección anterior, puedes
 
 -   **Marcación de exclusión y ciclo de vida de la aplicación**. Prueba el comportamiento de tu aplicación cuando esté desactivada o marcada para exclusión cambiando el valor de la opción **Marcador de exclusión tras la desactivación durante la depuración** en la página **Depurar** de las propiedades del proyecto.
 
--   **Almacenamiento de la carpeta local (anteriormente conocido como almacenamiento aislado)**. Los datos en el almacenamiento aislado persisten mientras el emulador se ejecuta, pero se pierden cuando el emulador se cierra.
+-   **Almacenamiento de la carpeta local (anteriormente conocido como almacenamiento aislado)** . Los datos en el almacenamiento aislado persisten mientras el emulador se ejecuta, pero se pierden cuando el emulador se cierra.
 
 -   **Micrófono**. Requiere y usa el micrófono en el equipo host.
 
@@ -215,7 +215,7 @@ Mediante el modo de proximidad, puedes inyectar mensajes como si proviniesen de 
 -   NDEF:URI
 -   NDEF:wkt.U
 
-Puedes crear estos mensajes editando las ventanas **Carga** o proporcionarlas en un archivo. Para más información sobre estos tipos y cómo usarlos, consulta la sección de Observaciones de la página de referencia[**ProximityDevice.PublishBinaryMessage**](https://msdn.microsoft.com/library/windows/apps/Hh701129).
+Puedes crear estos mensajes editando las ventanas **Carga** o proporcionarlas en un archivo. Para más información sobre estos tipos y cómo usarlos, consulta la sección de Observaciones de la página de referencia[**ProximityDevice.PublishBinaryMessage**](https://docs.microsoft.com/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage).
 
 El Kit de controladores de Windows 8 (WDK) incluye una muestra de controlador que expone el mismo protocolo que el emulador de Windows Phone 8. Deberás descargar el DDK, compilar ese controlador de muestra, instalarlo en un dispositivo de Windows 8 y, a continuación, agregar la dirección IP del dispositivo de Windows 8 o nombre de host a la lista de dispositivos y tocarlo con otro dispositivo de Windows 8 o con un emulador de Windows Phone 8.
 
@@ -268,7 +268,7 @@ A continuación te mostramos una referencia acerca de qué funcionalidad está d
 
 ### <a name="smart-card-reader-mode"></a>Modo de lector de tarjeta inteligente
 
-El emulador se puede conectar a un dispositivo lector de tarjetas inteligentes del equipo host. De este modo, las tarjetas inteligentes insertadas o tocadas se mostrarán en tu aplicación para móvil y podrás establecer comunicación con ellas mediante APDU con la clase [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002). Para que esto funcione, necesitarás conectar un dispositivo lector de tarjetas inteligentes compatible al equipo. Para ello hay disponibles lectores de tarjetas inteligentes USB (NFC/sin contactos e insertar/contacto). Para permitir al emulador funcionar con un lector de tarjeta inteligente conectado, primero elige el modo de **Lector de tarjetas** que debe mostrar un cuadro desplegable con todos los lectores de tarjetas inteligentes compatibles conectados al sistema host y, a continuación, elegir el dispositivo lector de tarjetas inteligentes al que deseas estar conectado en la lista desplegable.
+El emulador se puede conectar a un dispositivo lector de tarjetas inteligentes del equipo host. De este modo, las tarjetas inteligentes insertadas o tocadas se mostrarán en tu aplicación para móvil y podrás establecer comunicación con ellas mediante APDU con la clase [**Windows.Devices.SmartCards.SmartCardConnection**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection). Para que esto funcione, necesitarás conectar un dispositivo lector de tarjetas inteligentes compatible al equipo. Para ello hay disponibles lectores de tarjetas inteligentes USB (NFC/sin contactos e insertar/contacto). Para permitir al emulador funcionar con un lector de tarjeta inteligente conectado, primero elige el modo de **Lector de tarjetas** que debe mostrar un cuadro desplegable con todos los lectores de tarjetas inteligentes compatibles conectados al sistema host y, a continuación, elegir el dispositivo lector de tarjetas inteligentes al que deseas estar conectado en la lista desplegable.
 
 Ten en cuenta que no todos los lectores de tarjetas inteligentes compatibles con NFC admiten algunos tipos de tarjetas NFC, y algunos no son compatibles con los comandos APDU de tarjeta de almacenamiento PC/SC estándar.
 
@@ -319,7 +319,7 @@ Prueba aplicaciones que usen navegación o geovallas con la pestaña **Location*
 
 Puedes probar tu aplicación mientras simulas el movimiento de una ubicación a otra a velocidades distintas y con perfiles de precisión diferentes. El simulador de ubicación puede ayudarte a identificar cambios de uso de las API de ubicación que mejoran la experiencia del usuario. Por ejemplo, la herramienta puede ayudarte a identificar que debes ajustar los parámetros de geovalla, como el tamaño o el tiempo de permanencia, para detectar las geovallas de forma satisfactoria en escenarios distintos.
 
-La pestaña **Location** admite tres modos. En todos los modos, cuando el emulador recibe una posición nueva, esta posición está disponible para desencadenar el evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/BR225540) o para responder a una llamada [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/Hh973536) en tu aplicación compatible con la detección de ubicaciones.
+La pestaña **Location** admite tres modos. En todos los modos, cuando el emulador recibe una posición nueva, esta posición está disponible para desencadenar el evento [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) o para responder a una llamada [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) en tu aplicación compatible con la detección de ubicaciones.
 
 -   En modo **Pin** , colocas marcadores en el mapa. Al hacer clic en **Play all points**, el simulador de ubicación envía la ubicación de cada marcador al emulador, uno tras otro, con el intervalo en segundos especificado en el cuadro de texto **Seconds per pin**.
 
@@ -660,7 +660,7 @@ Para encontrar respuestas y solucionar problemas al empezar a trabajar con las h
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejecutar aplicaciones de Windows Phone en el emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
+* [Ejecutar aplicaciones de Windows Phone en el emulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
 * [Archivo del SDK de Windows y Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
 

@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ce91b47d2846f945a0e4a15f705491ab22e9dea
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 9d6a3b1eb64c89f231d0334a3cbe8e58d11c58ae
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291673"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370953"
 ---
 # <a name="rectangles"></a>Rectángulos
 
@@ -21,7 +21,7 @@ En la programación de Direct3D y Windows, se hace referencia a los objetos de l
 ## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Rectángulos
 
 
-La mayoría de las aplicaciones utilizan la estructura [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) (o un alias typedef definido para esta) para transmitir información acerca de un rectángulo delimitador y usarla al realizar la transferencia de bloques de bits a la pantalla o al realizar la detección de coincidencias. En C++, la estructura **RECT** tiene la siguiente definición.
+La mayoría de las aplicaciones utilizan la estructura [**RECT**](https://docs.microsoft.com/previous-versions//dd162897(v=vs.85)) (o un alias typedef definido para esta) para transmitir información acerca de un rectángulo delimitador y usarla al realizar la transferencia de bloques de bits a la pantalla o al realizar la detección de coincidencias. En C++, la estructura **RECT** tiene la siguiente definición.
 
 ```cpp
 typedef struct tagRECT { 

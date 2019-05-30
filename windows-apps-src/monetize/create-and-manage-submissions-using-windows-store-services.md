@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: c2f2638e93ecbe346cc5dccb503d94d926ddcdae
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e8e7653174eaf31f11341a5c8e21b69ec54a6189
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335153"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371278"
 ---
 # <a name="create-and-manage-submissions"></a>Crear y administrar usuarios
 
@@ -46,15 +46,15 @@ Antes de empezar a escribir código para llamar a la API de envío de Microsoft 
 
 * Preparación de la aplicación para su uso con la API de envío de Microsoft Store:
 
-  * Si la aplicación aún no existe en el centro de partners, deberá [crear la aplicación mediante la reserva de su nombre en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). No se puede usar la API de envío de Microsoft Store para crear una aplicación en el centro de partners; debe trabajar en el centro de partners para crearlo y, a continuación, después de que puede usar la API para acceder a la aplicación y crear mediante programación de envíos para él. Sin embargo, puedes usar la API para crear complementos y paquetes piloto mediante programación antes de crear envíos para estos.
+  * Si la aplicación aún no existe en el centro de partners, deberá [crear la aplicación mediante la reserva de su nombre en el centro de partners](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). No se puede usar la API de envío de Microsoft Store para crear una aplicación en el centro de partners; debe trabajar en el centro de partners para crearlo y, a continuación, después de que puede usar la API para acceder a la aplicación y crear mediante programación de envíos para él. Sin embargo, puedes usar la API para crear complementos y paquetes piloto mediante programación antes de crear envíos para estos.
 
-  * Antes de poder crear una presentación para una aplicación determinada mediante esta API, primero debe [crear una presentación de la aplicación en el centro de partners](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), incluidos responder a la [age clasificaciones](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) cuestionario. Después de realizar este paso, podrás crear mediante programación nuevos envíos para esta aplicación con la API. No es necesario crear un envío de complementos o de paquetes piloto antes de usar la API para esos tipos de envíos.
+  * Antes de poder crear una presentación para una aplicación determinada mediante esta API, primero debe [crear una presentación de la aplicación en el centro de partners](https://docs.microsoft.com/windows/uwp/publish/app-submissions), incluidos responder a la [age clasificaciones](https://docs.microsoft.com/windows/uwp/publish/age-ratings) cuestionario. Después de realizar este paso, podrás crear mediante programación nuevos envíos para esta aplicación con la API. No es necesario crear un envío de complementos o de paquetes piloto antes de usar la API para esos tipos de envíos.
 
-  * Si creas o actualizas un envío de aplicaciones y necesitas incluir un paquete de aplicaciones, [prepara el paquete de aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
+  * Si creas o actualizas un envío de aplicaciones y necesitas incluir un paquete de aplicaciones, [prepara el paquete de aplicaciones](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
-  * Si vas a crear o actualizar el envío de una aplicación y necesitas incluir capturas de pantalla o imágenes para la descripción de Tienda, [prepara las imágenes y capturas de pantalla de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
+  * Si vas a crear o actualizar el envío de una aplicación y necesitas incluir capturas de pantalla o imágenes para la descripción de Tienda, [prepara las imágenes y capturas de pantalla de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
 
-  * Si vas a crear o actualizar un envío de complementos y debes incluir un icono, [prepara el icono](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
+  * Si vas a crear o actualizar un envío de complementos y debes incluir un icono, [prepara el icono](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions).
 
 <span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 

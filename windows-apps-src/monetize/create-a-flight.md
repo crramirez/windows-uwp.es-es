@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create flight, crear piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: af5ffe0dd72f0c3aae21a2dc522b469358626bab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0c71dfc05bf2f283652087620848396b731871cd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603460"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371962"
 ---
 # <a name="create-a-package-flight"></a>Crear un paquete piloto
 
@@ -33,12 +33,12 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
+| EXPONER    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -47,7 +47,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación sobre la que quieres crear un paquete piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación sobre la que quieres crear un paquete piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -57,8 +57,8 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 |  Parámetro  |  Tipo  |  Descripción  |  Requerido  |
 |------|------|------|------|
 |  friendlyName  |  string  |  El nombre del paquete piloto, según lo especifica el desarrollador.  |  No  |
-|  groupIds  |  array  |  Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |  No  |
-|  rankHigherThan  |  string  |  El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Si no estableces este parámetro, el nuevo paquete piloto tendrá la puntuación más alta de todos los paquetes piloto. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).    |  No  |
+|  groupIds  |  array  |  Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |  No  |
+|  rankHigherThan  |  string  |  El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Si no estableces este parámetro, el nuevo paquete piloto tendrá la puntuación más alta de todos los paquetes piloto. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).    |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -100,8 +100,8 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | flightId            | string  | El identificador del paquete piloto. Este valor es proporcionado por el centro de partners.  |
 | friendlyName           | string  | El nombre del paquete piloto, como se especifica en la solicitud.   |  
-| groupIds           | array  | Una matriz de cadenas que contengan los identificadores de los grupos piloto asociados con el paquete piloto, como se especifica en la solicitud. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente menor que el paquete piloto actual, como se especifica en la solicitud. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| groupIds           | array  | Una matriz de cadenas que contengan los identificadores de los grupos piloto asociados con el paquete piloto, como se especifica en la solicitud. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente menor que el paquete piloto actual, como se especifica en la solicitud. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 ## <a name="error-codes"></a>Códigos de error

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: b7ac2a625b3769377ed6c8dddce3ca25177dee5f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 83f58f34ce7251415652496e74d83e24156015aa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608390"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372611"
 ---
 # <a name="credential-locker"></a>Caja de seguridad de credenciales
 
@@ -22,15 +22,15 @@ En este artículo se describe cómo las aplicaciones de la Plataforma universal 
 
 Por ejemplo, tienes una aplicación que se conecta a un servicio para obtener acceso a recursos protegidos como archivos multimedia o redes sociales. Tu servicio necesita la información de inicio de sesión de cada usuario. Has incorporado una interfaz de usuario a tu aplicación que obtiene el nombre de usuario y la contraseña que después se usan para iniciar la sesión del usuario en el servicio. Con la API de la caja de seguridad de credenciales, puedes guardar el nombre de usuario y la contraseña de tu usuario y recuperarlos fácilmente para iniciar la sesión del usuario automáticamente la próxima vez que abra tu aplicación, independientemente del dispositivo en que se encuentre.
 
-Las credenciales de usuario almacenadas en CredentialLocker *no* expiran, *no* les afecta [**ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) y *no* se borran debido a la inactividad como los datos móviles tradicionales. Sin embargo, solo puedes almacenar hasta 20 credenciales por aplicación en CredentialLocker.
+Las credenciales de usuario almacenadas en CredentialLocker *no* expiran, *no* les afecta [**ApplicationData.RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota) y *no* se borran debido a la inactividad como los datos móviles tradicionales. Sin embargo, solo puedes almacenar hasta 20 credenciales por aplicación en CredentialLocker.
 
 La caja de seguridad de credenciales funciona de forma diferente para cuentas de dominio. Si se guardan credenciales con tu cuenta Microsoft y asocias esa cuenta con una cuenta de dominio (como la cuenta que usas en el trabajo), las credenciales se trasferirán a esa cuenta de dominio. Sin embargo, las nuevas credenciales que se agregan al iniciar sesión con la cuenta de dominio no se incluirán en el perfil móvil. De esta manera se garantiza que las credenciales privadas del dominio no queden expuestas fuera del mismo.
 
 ## <a name="storing-user-credentials"></a>Almacenar credenciales de usuario
 
 
-1.  Obtén una referencia a la caja de seguridad de credenciales usando el objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) del espacio de nombres [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089).
-2.  Crea un objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contenga un identificador para tu aplicación, el nombre de usuario y la contraseña, y pásalo al método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para agregar la credencial a la caja de seguridad.
+1.  Obtén una referencia a la caja de seguridad de credenciales usando el objeto [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) del espacio de nombres [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials).
+2.  Crea un objeto [**PasswordCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordCredential) que contenga un identificador para tu aplicación, el nombre de usuario y la contraseña, y pásalo al método [**PasswordVault.Add**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.add) para agregar la credencial a la caja de seguridad.
 
 ```cs
 var vault = new Windows.Security.Credentials.PasswordVault();
@@ -41,15 +41,15 @@ vault.Add(new Windows.Security.Credentials.PasswordCredential(
 ## <a name="retrieving-user-credentials"></a>Recuperar credenciales de usuario
 
 
-Tienes varias maneras para recuperar credenciales de usuario de la caja de seguridad de credenciales una vez que tengas una referencia al objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081).
+Tienes varias maneras para recuperar credenciales de usuario de la caja de seguridad de credenciales una vez que tengas una referencia al objeto [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault).
 
--   Puedes recuperar todas las credenciales que el usuario ha proporcionado para tu aplicación en la caja de seguridad con el método [**PasswordVault.RetrieveAll**](https://msdn.microsoft.com/library/windows/apps/br227088).
+-   Puedes recuperar todas las credenciales que el usuario ha proporcionado para tu aplicación en la caja de seguridad con el método [**PasswordVault.RetrieveAll**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.retrieveall).
 
--   Si conoces el nombre de usuario de las credenciales almacenadas, puedes recuperar todas las credenciales de ese nombre de usuario con el método [**PasswordVault.FindAllByUserName**](https://msdn.microsoft.com/library/windows/apps/br227084).
+-   Si conoces el nombre de usuario de las credenciales almacenadas, puedes recuperar todas las credenciales de ese nombre de usuario con el método [**PasswordVault.FindAllByUserName**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.findallbyusername).
 
--   Si conoces el nombre de recurso de las credenciales almacenadas, puedes recuperar todas las credenciales de ese nombre de recurso con el método [**PasswordVault.FindAllByResource**](https://msdn.microsoft.com/library/windows/apps/br227083).
+-   Si conoces el nombre de recurso de las credenciales almacenadas, puedes recuperar todas las credenciales de ese nombre de recurso con el método [**PasswordVault.FindAllByResource**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.findallbyresource).
 
--   Por último, si conoces el nombre de usuario y el nombre de recurso de una credencial, puedes recuperar solo esa credencial con el método [**PasswordVault.Retrieve**](https://msdn.microsoft.com/library/windows/apps/br227087).
+-   Por último, si conoces el nombre de usuario y el nombre de recurso de una credencial, puedes recuperar solo esa credencial con el método [**PasswordVault.Retrieve**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.retrieve).
 
 Veamos un ejemplo en el que hemos almacenado el nombre de recurso globalmente en una aplicación e iniciamos la sesión del usuario automáticamente si encontramos unas credenciales para él. Si encontramos varias credenciales para el mismo usuario, le pedimos que seleccione la credencial predeterminada que se usará para iniciar sesión.
 
@@ -114,9 +114,9 @@ private Windows.Security.Credentials.PasswordCredential GetCredentialFromLocker(
 
 Eliminar las credenciales de usuario en la caja de seguridad de credenciales también es un proceso rápido en dos pasos.
 
-1.  Obtén una referencia a la caja de seguridad de credenciales usando el objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) del espacio de nombres [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089).
+1.  Obtén una referencia a la caja de seguridad de credenciales usando el objeto [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) del espacio de nombres [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials).
 
-2.  Pasa las credenciales que quieres eliminar al método [**PasswordVault.Remove**](https://msdn.microsoft.com/library/windows/apps/hh701242).
+2.  Pasa las credenciales que quieres eliminar al método [**PasswordVault.Remove**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.remove).
 
 ```cs
 var vault = new Windows.Security.Credentials.PasswordVault();

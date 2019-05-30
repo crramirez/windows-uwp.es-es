@@ -6,29 +6,29 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26eb371e767f0c1e7f3d5855cf68728958c0cda3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: effb28fa453ec884152dbc404245f00f4893ef5a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608940"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369423"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinación de la disponibilidad de los archivos de Microsoft OneDrive
 
 
 **API importantes**
 
--   [**Clase FileIO**](https://msdn.microsoft.com/library/windows/apps/Hh701440)
--   [**Clase de StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)
--   [**Propiedad StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)
+-   [**Clase FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO)
+-   [**Clase de StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
+-   [**Propiedad StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable)
 
-Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx).
+Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 -   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
 
-    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Mt187337). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/Mt187334).
+    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Declaraciones de capacidad para la aplicación**
 
@@ -38,7 +38,7 @@ Determina si un archivo de Microsoft OneDrive está disponible mediante la propi
 
 Los usuarios pueden marcar los archivos de OneDrive como disponibles sin conexión (valor predeterminado) o disponibles solo en línea. Esta función les permite mover archivos grandes (como imágenes y vídeos) a OneDrive, marcarlos como disponibles solo en línea y ahorrar espacio en disco (lo único que se guarda de manera local es un archivo de metadatos).
 
-[**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx), se usa para determinar si un archivo está disponible actualmente. En la siguiente tabla se muestra el valor de la propiedad **StorageFile.IsAvailable** en diversos escenarios.
+[**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable), se usa para determinar si un archivo está disponible actualmente. En la siguiente tabla se muestra el valor de la propiedad **StorageFile.IsAvailable** en diversos escenarios.
 
 | Tipo de archivo                              | Online | Red de uso medido        | Desconectado |
 |-------------------------------------------|--------|------------------------|---------|
@@ -52,11 +52,11 @@ Los usuarios pueden marcar los archivos de OneDrive como disponibles sin conexi�
 Los pasos siguientes ilustran cómo determinar si un archivo está disponible actualmente.
 
 1.  Declara una funcionalidad adecuada para la biblioteca a la que deseas obtener acceso.
-2.  Incluye el espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). Este espacio de nombres incluye los tipos para administrar archivos, carpetas y opciones de configuración de la aplicación. También incluye el tipo [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) necesario.
-3.  Adquiere un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para los archivos deseados. Si deseas enumerar una biblioteca, este paso suele completarse mediante una llamada al método [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252), seguida de una llamada al método [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) del objeto [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046) resultante. El método **GetFilesAsync** devuelve una colección [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970) de objetos **StorageFile**.
-4.  Cuando ya tengas acceso a un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) que represente los archivos deseados, el valor de la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) reflejará si el archivo está disponible o no.
+2.  Incluye el espacio de nombres [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage). Este espacio de nombres incluye los tipos para administrar archivos, carpetas y opciones de configuración de la aplicación. También incluye el tipo [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) necesario.
+3.  Adquiere un objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) para los archivos deseados. Si deseas enumerar una biblioteca, este paso suele completarse mediante una llamada al método [**StorageFolder.CreateFileQuery**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfilequery), seguida de una llamada al método [**GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) del objeto [**StorageFileQueryResult**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.StorageFileQueryResult) resultante. El método **GetFilesAsync** devuelve una colección [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970) de objetos **StorageFile**.
+4.  Cuando ya tengas acceso a un objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) que represente los archivos deseados, el valor de la propiedad [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) reflejará si el archivo está disponible o no.
 
-El siguiente método genérico muestra cómo enumerar cualquier carpeta y devolver la colección de objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para dicha carpeta. El método que llama itera en la colección devuelta haciendo referencia a la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) en cada archivo.
+El siguiente método genérico muestra cómo enumerar cualquier carpeta y devolver la colección de objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) para dicha carpeta. El método que llama itera en la colección devuelta haciendo referencia a la propiedad [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) en cada archivo.
 
 ```cs
 /// <summary>

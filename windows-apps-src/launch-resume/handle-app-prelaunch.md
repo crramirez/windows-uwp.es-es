@@ -6,22 +6,22 @@ ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4029bcdd554b05363397f6a6946b8ebc2bbdd1de
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658710"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371651"
 ---
 # <a name="handle-app-prelaunch"></a>Administrar el inicio previo de aplicaciones
 
-Obtén información sobre cómo controlar el inicio previo de las aplicaciones mediante el reemplazo del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Obtén información sobre cómo controlar el inicio previo de las aplicaciones mediante el reemplazo del método [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched).
 
 ## <a name="introduction"></a>Introducción
 
 Al permitir que los recursos del sistema disponibles, se mejora el rendimiento de inicio de aplicaciones para UWP en dispositivos de familia de dispositivos de escritorio, inicie las aplicaciones del usuario utilizadas con frecuencia en segundo plano de forma proactiva. Una aplicación iniciada previamente se pone en estado suspendido poco después de iniciarse. Después, cuando el usuario invoca la aplicación, esta pasa del estado de suspensión al de ejecución para reanudarse, lo que resulta más rápido que iniciarla en frío. La experiencia del usuario es que la aplicación se inicia muy rápidamente.
 
-Antes de Windows 10, las aplicaciones no aprovechaban el inicio previo automáticamente. En Windows 10, versión 1511, todas las aplicaciones de plataforma Universal de Windows (UWP) eran candidatos para la que se realizó un inicio previo. En Windows 10, versión 1607, debes participar en el comportamiento de inicio previo llamando a [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Es un buen lugar para poner esta llamada dentro de `OnLaunched()` cerca de la ubicación en que se realiza la comprobación `if (e.PrelaunchActivated == false)`.
+Antes de Windows 10, las aplicaciones no aprovechaban el inicio previo automáticamente. En Windows 10, versión 1511, todas las aplicaciones de plataforma Universal de Windows (UWP) eran candidatos para la que se realizó un inicio previo. En Windows 10, versión 1607, debes participar en el comportamiento de inicio previo llamando a [CoreApplication.EnablePrelaunch(true)](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch). Es un buen lugar para poner esta llamada dentro de `OnLaunched()` cerca de la ubicación en que se realiza la comprobación `if (e.PrelaunchActivated == false)`.
 
 Si una aplicación se inicia previamente depende de los recursos del sistema. Si el sistema experimenta una presión del recurso, las aplicaciones no se inician previamente.
 
@@ -35,7 +35,7 @@ Cuando se hace un inicio previo de una aplicación, esta enseguida entra en esta
 
 ## <a name="detect-and-handle-prelaunch"></a>Detectar y controlar el inicio previo
 
-Las aplicaciones reciben la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) durante la activación. Use esta marca para ejecutar el código que solo debe ejecutar cuando el usuario inicia explícitamente la aplicación, como se muestra en la siguiente modificación [ **Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Las aplicaciones reciben la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.prelaunchactivated) durante la activación. Use esta marca para ejecutar el código que solo debe ejecutar cuando el usuario inicia explícitamente la aplicación, como se muestra en la siguiente modificación [ **Application.OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched).
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -116,7 +116,7 @@ Hay también código en el ejemplo anterior que se puede quitar el comentario si
 
 ## <a name="use-the-visibilitychanged-event"></a>Usar el evento VisibilityChanged
 
-Las aplicaciones que se activan con el inicio previo no son visibles para el usuario. Son visibles cuando el usuario cambia a estas. Quizás quieras retrasar determinadas operaciones hasta que la ventana principal de la aplicación sea visible. Por ejemplo, si la aplicación muestra una lista de elementos de novedades de una fuente, podrías actualizar la lista durante el evento [**VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458), en lugar de usar la lista que se creó durante el inicio previo de la aplicación, ya que podría estar obsoleta en el momento en que el usuario active la aplicación. El siguiente código controla el evento **VisibilityChanged** de **MainPage**:
+Las aplicaciones que se activan con el inicio previo no son visibles para el usuario. Son visibles cuando el usuario cambia a estas. Quizás quieras retrasar determinadas operaciones hasta que la ventana principal de la aplicación sea visible. Por ejemplo, si la aplicación muestra una lista de elementos de novedades de una fuente, podrías actualizar la lista durante el evento [**VisibilityChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.visibilitychanged), en lugar de usar la lista que se creó durante el inicio previo de la aplicación, ya que podría estar obsoleta en el momento en que el usuario active la aplicación. El siguiente código controla el evento **VisibilityChanged** de **MainPage**:
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -138,7 +138,7 @@ public sealed partial class MainPage : Page
 
 ## <a name="directx-games-guidance"></a>Guía de juegos de DirectX
 
-Los juegos de DirectX, por lo general, no deben habilitar el inicio previo porque muchos juegos de DirectX hacen su inicialización antes de que el inicio previo pueda detectarse. A partir de Windows 1607, edición de aniversario, tu juego no se podrá iniciar previamente de manera predeterminada.  Si quieres que el juego aproveche el inicio previo, llama a [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx).
+Los juegos de DirectX, por lo general, no deben habilitar el inicio previo porque muchos juegos de DirectX hacen su inicialización antes de que el inicio previo pueda detectarse. A partir de Windows 1607, edición de aniversario, tu juego no se podrá iniciar previamente de manera predeterminada.  Si quieres que el juego aproveche el inicio previo, llama a [CoreApplication.EnablePrelaunch(true)](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch).
 
 Si el juego está destinado a una versión anterior de Windows 10, puedes controlar la condición de inicio previo para salir de la aplicación:
 
@@ -180,7 +180,7 @@ void ViewProvider::OnActivated(CoreApplicationView^ appView,IActivatedEventArgs^
 
 ## <a name="winjs-app-guidance"></a>Guía de aplicaciones de WinJS
 
-Si la aplicación de WinJS está destinada a una versión anterior de Windows 10, puedes controlar la condición de inicio previo desde el controlador [onactivated](https://msdn.microsoft.com/library/windows/apps/br212679.aspx):
+Si la aplicación de WinJS está destinada a una versión anterior de Windows 10, puedes controlar la condición de inicio previo desde el controlador [onactivated](https://docs.microsoft.com/previous-versions/windows/apps/br212679(v=win.10)):
 
 ```javascript
     app.onactivated = function (args) {
@@ -196,7 +196,7 @@ Si la aplicación de WinJS está destinada a una versión anterior de Windows 10
 ## <a name="general-guidance"></a>Instrucciones generales
 
 -   Las aplicaciones no deben realizar operaciones de ejecución prolongada durante el inicio previo porque la aplicación finalizará si no se puede suspender rápidamente.
--   Las aplicaciones no deben iniciar la reproducción de audio desde [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) si la aplicación ya está iniciada. De lo contrario, la aplicación no será visible y no estará claro por qué se está reproduciendo audio.
+-   Las aplicaciones no deben iniciar la reproducción de audio desde [**Application.OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) si la aplicación ya está iniciada. De lo contrario, la aplicación no será visible y no estará claro por qué se está reproduciendo audio.
 -   Durante el inicio, las aplicaciones no deben realizar operaciones que supongan que la aplicación es visible para el usuario o que el usuario la inició explícitamente. Dado que ahora se inicia una aplicación en segundo plano sin ninguna acción explícita del usuario, los desarrolladores deberían tener en cuenta la privacidad, la experiencia del usuario y las implicaciones de rendimiento.
     -   Un ejemplo de consideración de privacidad es la necesidad de que una aplicación social cambie el estado del usuario a conectado. Debería esperar hasta que el usuario cambie a la aplicación en lugar de cambiar el estado en el inicio previo de la aplicación.
     -   Un ejemplo de consideración de la experiencia del usuario es que si tienes una aplicación, como un juego, que muestra una secuencia de introducción al iniciarse, podrías retrasar la secuencia de introducción hasta que el usuario cambie a la aplicación.
@@ -208,4 +208,4 @@ Si la aplicación de WinJS está destinada a una versión anterior de Windows 10
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
-* [CoreApplication.EnablePrelaunch](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)
+* [CoreApplication.EnablePrelaunch](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)

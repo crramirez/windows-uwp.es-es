@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f6a4fef72206058874edf845d5fbbe0768c53ec
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 5cb076de6cd9c44280bf7030a59c645f601487bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984222"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370431"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -288,7 +288,7 @@ Cuando se habilita revelar en una superficie de comandos personalizada o de un c
 
 - [Clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
 - [Acrílico](acrylic.md)
-- [Efectos de composición](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
+- [Efectos de composición](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
 - [Diseño Fluent para UWP](/windows/apps/fluent-design-system)
 - [Ciencia del sistema: Diseño Fluent y profundidad](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciencia del sistema: Luz y diseño Fluent](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

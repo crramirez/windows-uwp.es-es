@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e0354b0e727e84d562bf63779e74be72f87198f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f5b44e60e3490f39a91724bf038aa8066de11bf0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632180"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370891"
 ---
 # <a name="the-need-for-streaming-resources"></a>La necesidad de recursos de streaming
 
@@ -33,7 +33,7 @@ En un sistema gráfico (es decir, el sistema operativo, el controlador de pantal
 
 En el caso de [búfer](introduction-to-buffers.md), dicho búfer al completo es el subrecurso.
 
-En el caso de una [textura](textures.md), (por ejemplo, [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)), cada nivel de MIP es un subrecurso; en el de una matriz de texturas, (por ejemplo, [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)) cada nivel de MIP de un segmento de la matriz determinado es un subrecurso. El sistema gráfico solo expone la capacidad para administrar la asignación de asignaciones en esta granularidad de los subrecursos. En el contexto de los recursos de streaming, "asignación" se refiere a hacer que los datos sean visibles para la GPU.
+En el caso de una [textura](textures.md), (por ejemplo, [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d)), cada nivel de MIP es un subrecurso; en el de una matriz de texturas, (por ejemplo, [**Texture2DArray**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray)) cada nivel de MIP de un segmento de la matriz determinado es un subrecurso. El sistema gráfico solo expone la capacidad para administrar la asignación de asignaciones en esta granularidad de los subrecursos. En el contexto de los recursos de streaming, "asignación" se refiere a hacer que los datos sean visibles para la GPU.
 
 ## <a name="span-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanwithout-tiling-cant-access-only-a-small-portion-of-mipmap-chain"></a><span id="Without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="WITHOUT_TILING__CAN_T_ACCESS_ONLY_A_SMALL_PORTION_OF_MIPMAP_CHAIN"></span>Sin mosaico, no se puede obtener acceso a solo una pequeña parte de la cadena de mipmap
 
@@ -47,7 +47,7 @@ En realidad, sin la compatibilidad con los recursos de streaming, el sistema gr�
 
 Puede usarse la paginación de software para dividir la superficie en mosaicos que sean lo suficientemente pequeños para que el hardware los administre.
 
-Direct3D admite superficies de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) con hasta 16 384 píxeles en un lugar determinado. Una imagen de 16 384 de ancho por 16 384 de alto y con 4 bytes por píxel consumirá 1 GB de memoria de vídeo (y si se suman los mapas MIP, podría doblar esa cantidad). En la práctica, rara vez será necesario hacer referencia a la totalidad de los 1 GB en una sola operación de representación.
+Direct3D admite superficies de [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) con hasta 16 384 píxeles en un lugar determinado. Una imagen de 16 384 de ancho por 16 384 de alto y con 4 bytes por píxel consumirá 1 GB de memoria de vídeo (y si se suman los mapas MIP, podría doblar esa cantidad). En la práctica, rara vez será necesario hacer referencia a la totalidad de los 1 GB en una sola operación de representación.
 
 Algunos desarrolladores de juegos modelan superficies de terreno de hasta 128 KB por 128 KB. La forma en que consiguen que esto funcione en las GPU existente es separar la superficie en mosaicos que sean lo suficientemente pequeños como para que el hardware los pueda administrar. La aplicación debe saber qué mosaicos pueden ser necesarios y cargarlos en una memoria caché de texturas en la GPU: un sistema de paginación de software.
 

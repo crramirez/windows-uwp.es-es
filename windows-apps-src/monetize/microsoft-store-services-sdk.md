@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: b74cb2b23b5fbfc7487d18be0531ff26170cbe3f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 48a19b2fc32733e13cb9a7b730bad7741307c328
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334523"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372807"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
@@ -31,7 +31,7 @@ En este momento, Microsoft Store Services SDK es compatible con los siguientes e
 |  [Ejecutar experimentos en la aplicación para UWP con un pruebas A/b](run-app-experiments-with-a-b-testing.md)    |  Ejecuta pruebas A/B en la aplicación para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el centro de partners, utilice el [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) clase para obtener las variaciones para el experimento en la aplicación, use estos datos para modificar el comportamiento de la característica que se está probando y, a continuación, use el [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) método envíe eventos de vista y los eventos de conversión al centro de partners. Por último, use el centro de partners para ver los resultados y administrar el experimento.  |
 |  [Iniciar el centro de comentarios desde la aplicación para UWP](launch-feedback-hub-from-your-app.md)    |  Usa la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) en tu aplicación para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra estas opiniones en el [Informe de comentarios](../publish/feedback-report.md) del Centro de partners. |
 |  [Configurar la aplicación UWP para recibir notificaciones de inserción del centro de partners](configure-your-app-to-receive-dev-center-notifications.md)    |  Use la [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) clase en la aplicación UWP para registrar la aplicación para recibir notificaciones de inserción de destino que se envían a sus clientes mediante el centro de partners.  |
-|   [Registrar eventos personalizados en su aplicación para UWP para el informe de uso en el centro de partners](log-custom-events-for-dev-center.md)   |  Use la [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) clase en su aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revise las apariciones totales para los eventos personalizados en el **eventos personalizados** sección de la [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el centro de partners.  |
+|   [Registrar eventos personalizados en su aplicación para UWP para el informe de uso en el centro de partners](log-custom-events-for-dev-center.md)   |  Use la [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) clase en su aplicación para UWP para registrar eventos personalizados que están asociados con la aplicación en el centro de partners. A continuación, revise las apariciones totales para los eventos personalizados en el **eventos personalizados** sección de la [informe de uso](https://docs.microsoft.com/windows/uwp/publish/usage-report) en el centro de partners.  |
 
 <span id="prerequisites" />
 

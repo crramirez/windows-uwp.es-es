@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372147"
 ---
 # <a name="get-app-data"></a>Obtención de datos de la aplicación
 
@@ -64,11 +64,11 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|---------------------|
-| id            | string  | Id. de la Tienda de la aplicación. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
+| id            | string  | Id. de la Tienda de la aplicación. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
 | primaryName   | string  | Nombre principal de la aplicación.      |
 | packageFamilyName | string  | El nombre de familia de paquete de la aplicación.      |
 | packageIdentityName          | string  | El nombre de identidad de paquete de la aplicación.                       |
-| publisherName       | string  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde a la **paquete/identidad/publicador** valor que aparece en el [identidad de aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) página de la aplicación en el centro de partners.       |
+| publisherName       | string  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde a la **paquete/identidad/publicador** valor que aparece en el [identidad de aplicación](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) página de la aplicación en el centro de partners.       |
 | firstPublishedDate      | string  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | object | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
 | pendingApplicationSubmission        | object  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
@@ -127,8 +127,8 @@ Este recurso tiene los siguientes valores.
 | friendlyName           | string  | El nombre del paquete piloto, según lo especifica el desarrollador.   |
 | lastPublishedFlightSubmission       | object | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
 | pendingFlightSubmission        | object  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    
-| groupIds           | array  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| groupIds           | array  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 <span id="submission_object" />
